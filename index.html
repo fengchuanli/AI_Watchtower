@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI Watchtower is a daily intelligence dashboard for tracking the newest AI products, research, models, policy, and market movement."
+    />
+    <title>AI Watchtower | 最新 AI 动向情报站</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="AI Watchtower home">
+        <span class="brand-mark">AW</span>
+        <span>AI Watchtower</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#today">今日重点</a>
+        <a href="#feed">新闻流</a>
+        <a href="#signals">排行榜</a>
+        <a href="#library">资料库</a>
+      </nav>
+      <a class="header-action" href="#subscribe">订阅</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="hero-media" src="./assets/ai-intel-hero.png" alt="" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Daily AI Intelligence</p>
+          <h1>每天 10 分钟，看清 AI 最新动向</h1>
+          <p class="hero-copy">
+            聚合全球 AI 产品、模型、研究、政策和资本信号，把碎片新闻整理成可判断的趋势。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#today">查看今日重点</a>
+            <a class="button secondary" href="#feed">浏览全部新闻</a>
+          </div>
+          <dl class="hero-stats" aria-label="Daily AI intelligence stats">
+            <div>
+              <dt>128</dt>
+              <dd>今日信号</dd>
+            </div>
+            <div>
+              <dt>24</dt>
+              <dd>高影响更新</dd>
+            </div>
+            <div>
+              <dt>6</dt>
+              <dd>趋势专题</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section compact" id="today">
+        <div class="section-heading">
+          <p class="eyebrow">Today Briefing</p>
+          <h2>今日深挖</h2>
+        </div>
+        <div class="briefing-grid">
+          <article class="lead-brief">
+            <span class="tag">模型</span>
+            <h3>多模态 Agent 正在从演示走向真实工作流</h3>
+            <p>
+              浏览器操作、文档处理、代码执行和企业内检索开始合流。下一轮竞争不只看模型能力，也看权限、记忆、可审计性和交付体验。
+            </p>
+            <a href="#feed">追踪相关信号</a>
+          </article>
+          <div class="brief-list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>开源模型继续压缩闭源优势</h3>
+                <p>社区版本迭代更快，企业采购会更关注推理成本与私有部署。</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>AI 搜索进入答案可信度竞争</h3>
+                <p>引用质量、可追溯和实时性成为产品留存的关键指标。</p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>各国监管从原则进入执行细则</h3>
+                <p>企业需要把模型风险、数据来源和用户告知机制产品化。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="feed">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow">Live Feed</p>
+            <h2>AI 新闻流</h2>
+          </div>
+          <div class="filter-tabs" role="tablist" aria-label="Filter news">
+            <button class="active" type="button" data-filter="all">全部</button>
+            <button type="button" data-filter="model">模型</button>
+            <button type="button" data-filter="product">产品</button>
+            <button type="button" data-filter="research">研究</button>
+            <button type="button" data-filter="policy">政策</button>
+          </div>
+        </div>
+        <div class="news-grid" id="newsGrid"></div>
+      </section>
+
+      <section class="section split" id="signals">
+        <div>
+          <p class="eyebrow">Signal Rank</p>
+          <h2>本周趋势排行榜</h2>
+          <p class="section-copy">
+            用影响力、讨论热度和落地速度综合排序，帮助你判断哪些 AI 变化值得继续跟踪。
+          </p>
+        </div>
+        <ol class="ranking-list">
+          <li>
+            <span>01</span>
+            <strong>浏览器 Agent</strong>
+            <em>+42%</em>
+          </li>
+          <li>
+            <span>02</span>
+            <strong>本地小模型</strong>
+            <em>+31%</em>
+          </li>
+          <li>
+            <span>03</span>
+            <strong>AI 视频工作流</strong>
+            <em>+27%</em>
+          </li>
+          <li>
+            <span>04</span>
+            <strong>企业知识库 RAG</strong>
+            <em>+19%</em>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="library">
+        <div class="section-heading">
+          <p class="eyebrow">Library</p>
+          <h2>资料库入口</h2>
+        </div>
+        <div class="library-grid">
+          <a href="#">
+            <span>Models</span>
+            <strong>模型数据库</strong>
+            <small>参数、上下文、价格、能力边界</small>
+          </a>
+          <a href="#">
+            <span>Tools</span>
+            <strong>AI 工具索引</strong>
+            <small>按行业、场景和成熟度筛选</small>
+          </a>
+          <a href="#">
+            <span>Papers</span>
+            <strong>论文速读</strong>
+            <small>把研究结论翻译成产品判断</small>
+          </a>
+          <a href="#">
+            <span>Policy</span>
+            <strong>监管追踪</strong>
+            <small>法规、版权、数据合规变化</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="subscribe" id="subscribe">
+        <div>
+          <p class="eyebrow">Newsletter</p>
+          <h2>把 AI 情报送到收件箱</h2>
+          <p>每日摘要、每周深度和重要模型更新提醒。</p>
+        </div>
+        <form>
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" />
+          <button type="submit">订阅</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>AI Watchtower</span>
+      <span>Built for daily AI trend discovery.</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
