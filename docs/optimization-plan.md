@@ -55,6 +55,7 @@ This plan guides two daily optimization passes for roughly 30 days. Each pass sh
 ## Rules For Each Optimization Run
 
 - Pull the latest `main` before editing.
+- Use `data/sources.json` and `docs/source-policy.md` as the source guide for content-related changes.
 - Make a scoped improvement that matches the plan.
 - Do not add secrets, private data, or unverified claims.
 - Prefer clear, useful editorial wording over decoration.

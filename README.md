@@ -26,7 +26,14 @@ npx serve .
 
 ## 后续接入真实数据
 
-当前新闻和趋势数据在 `app.js` 中，后续可以替换为：
+当前新闻和趋势数据在 `app.js` 中，后续可以按 `data/sources.json` 里的情报源逐步替换为真实数据。
+
+来源规则：
+
+- 情报源列表：`data/sources.json`
+- 来源使用规则：`docs/source-policy.md`
+
+后续数据接入方式可以是：
 
 - RSS 抓取
 - GitHub Actions 定时更新 JSON

@@ -2,6 +2,21 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-08 20:45 JST
+
+- Focus: Added the first source registry for future AI news ingestion.
+- Changed files:
+  - `data/sources.json`
+  - `docs/source-policy.md`
+  - `docs/optimization-plan.md`
+  - `docs/optimization-log.md`
+  - `README.md`
+- Verification:
+  - Validated `data/sources.json` parses successfully with 18 sources.
+  - Ran `node --check app.js`.
+  - Parsed `index.html` with Python's HTML parser.
+- Commit: Pending
+
 ## 2026-06-08 19:00 JST
 
 - Focus: Created the first long-term optimization plan and log.

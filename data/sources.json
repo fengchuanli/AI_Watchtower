@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-08",
+  "policy": {
+    "primaryRule": "Prefer official sources and RSS feeds. Use media reports for context. Treat community posts as trend signals until confirmed by official sources or reliable reporting.",
+    "language": "Summaries for the site should be written in Chinese, with source links preserved.",
+    "claimSafety": "Do not present rumors, leaks, or community speculation as facts. Label them as unconfirmed signals when included."
+  },
+  "trustLevels": {
+    "official": "Official company, lab, platform, or research organization source.",
+    "reliable_media": "Established media or industry publication. Useful for context and market movement.",
+    "research": "Academic or research-focused source. Useful for papers, benchmarks, and technical direction.",
+    "community_signal": "Community or trend source. Useful for discovery, not final confirmation."
+  },
+  "sources": [
+    {
+      "id": "openai-news",
+      "name": "OpenAI News",
+      "url": "https://openai.com/news",
+      "feedUrl": null,
+      "category": ["model", "product", "research", "safety", "policy"],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for OpenAI product releases, model updates, safety notes, research, and global affairs."
+    },
+    {
+      "id": "openai-developers-rss",
+      "name": "OpenAI Developers RSS",
+      "url": "https://developers.openai.com/",
+      "feedUrl": "https://developers.openai.com/rss.xml",
+      "category": ["product", "tool", "developer"],
+      "trustLevel": "official",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for API, developer tooling, and platform updates."
+    },
+    {
+      "id": "anthropic-news",
+      "name": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news",
+      "feedUrl": null,
+      "category": ["model", "product", "policy", "company", "safety"],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for Claude releases, Anthropic policy posts, company announcements, and safety updates."
+    },
+    {
+      "id": "google-deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/discover/blog/",
+      "feedUrl": null,
+      "category": ["model", "research", "science", "safety"],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for Gemini, DeepMind research, AI science, and responsibility updates."
+    },
+    {
+      "id": "mistral-news",
+      "name": "Mistral AI News",
+      "url": "https://mistral.ai/news/",
+      "feedUrl": null,
+      "category": ["model", "product", "open_model", "enterprise"],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for Mistral model releases, platform updates, and open model strategy."
+    },
+    {
+      "id": "huggingface-blog",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "feedUrl": "https://huggingface.co/blog/feed.xml",
+      "category": ["open_model", "tool", "research", "developer"],
+      "trustLevel": "official",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for open-source model, dataset, tooling, and community engineering updates."
+    },
+    {
+      "id": "nvidia-blog-ai",
+      "name": "NVIDIA AI Blog",
+      "url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+      "feedUrl": null,
+      "category": ["infrastructure", "model", "enterprise", "hardware"],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for AI infrastructure, GPU ecosystem, enterprise AI, and model acceleration updates."
+    },
+    {
+      "id": "meta-ai-blog",
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/",
+      "feedUrl": null,
+      "category": ["model", "open_model", "research", "product"],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for Llama, Meta AI research, open models, and product integration updates."
+    },
+    {
+      "id": "microsoft-ai-blog",
+      "name": "Microsoft AI Blog",
+      "url": "https://blogs.microsoft.com/ai/",
+      "feedUrl": null,
+      "category": ["product", "enterprise", "infrastructure", "policy"],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for Copilot, Azure AI, enterprise deployment, and Microsoft AI strategy."
+    },
+    {
+      "id": "arxiv-ai",
+      "name": "arXiv cs.AI",
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "feedUrl": "https://export.arxiv.org/rss/cs.AI",
+      "category": ["research"],
+      "trustLevel": "research",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for artificial intelligence preprints. Summaries should avoid overstating unreviewed claims."
+    },
+    {
+      "id": "arxiv-cl",
+      "name": "arXiv cs.CL",
+      "url": "https://arxiv.org/list/cs.CL/recent",
+      "feedUrl": "https://export.arxiv.org/rss/cs.CL",
+      "category": ["research", "language_model"],
+      "trustLevel": "research",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for NLP and language model research preprints."
+    },
+    {
+      "id": "arxiv-cv",
+      "name": "arXiv cs.CV",
+      "url": "https://arxiv.org/list/cs.CV/recent",
+      "feedUrl": "https://export.arxiv.org/rss/cs.CV",
+      "category": ["research", "vision", "multimodal"],
+      "trustLevel": "research",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for computer vision, image generation, and multimodal research preprints."
+    },
+    {
+      "id": "techcrunch-ai",
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/tag/artificial-intelligence/",
+      "feedUrl": null,
+      "category": ["startup", "funding", "product", "market"],
+      "trustLevel": "reliable_media",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for startup, funding, and product market coverage."
+    },
+    {
+      "id": "venturebeat-ai",
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/",
+      "feedUrl": "https://venturebeat.com/ai/venturebeat-rss",
+      "category": ["enterprise", "market", "product", "funding"],
+      "trustLevel": "reliable_media",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for enterprise AI adoption, business strategy, and market context."
+    },
+    {
+      "id": "mit-technology-review-ai",
+      "name": "MIT Technology Review AI",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+      "feedUrl": null,
+      "category": ["research", "policy", "society", "analysis"],
+      "trustLevel": "reliable_media",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for deeper analysis of AI research, society, and policy impact."
+    },
+    {
+      "id": "hacker-news-ai-search",
+      "name": "Hacker News AI Search",
+      "url": "https://hn.algolia.com/?q=AI",
+      "feedUrl": null,
+      "category": ["community", "developer", "trend"],
+      "trustLevel": "community_signal",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use only as a discovery signal. Confirm important items elsewhere before publishing as facts."
+    },
+    {
+      "id": "github-trending-ai",
+      "name": "GitHub Trending AI Topics",
+      "url": "https://github.com/trending?spoken_language_code=&since=daily",
+      "feedUrl": null,
+      "category": ["developer", "open_source", "trend"],
+      "trustLevel": "community_signal",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use to discover fast-moving open-source tools. Verify project quality before featuring."
+    },
+    {
+      "id": "product-hunt-ai",
+      "name": "Product Hunt AI",
+      "url": "https://www.producthunt.com/topics/artificial-intelligence",
+      "feedUrl": null,
+      "category": ["product", "startup", "trend"],
+      "trustLevel": "community_signal",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for early product discovery. Treat popularity as a signal, not proof of quality."
+    }
+  ]
+}
