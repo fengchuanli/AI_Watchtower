@@ -33,6 +33,16 @@ npx serve .
 - Notion / Airtable / Supabase 后台
 - OpenAI 总结和分类工作流
 
+## 自动优化
+
+项目使用一个约 30 天的优化计划持续改进：
+
+- 计划文件：`docs/optimization-plan.md`
+- 优化履历：`docs/optimization-log.md`
+- 频率：每天 01:00 和 05:00 JST 各一次
+
+每次优化都应该留下清楚的履历，并推送到 GitHub。
+
 ## 推送到新远程仓库
 
 你新建远程仓库后，在本目录执行：
