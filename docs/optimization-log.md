@@ -2,6 +2,23 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-09 14:03 JST
+
+- Focus: Improved product accessibility and keyboard behavior for the homepage news filter controls.
+- Changed files:
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated news filter tab ARIA wiring with a Python HTML parser check.
+  - Validated `data/sources.json` with `python3 -m json.tool`.
+  - Attempted browser verification; local port binding was blocked and Browser policy blocked `file://` navigation.
+- Commit: Pending.
+
 ## 2026-06-09 10:20 JST
 
 - Focus: Backfilled the missed 05:00 product-quality run by adding a visible source coverage section to the homepage.

@@ -64,6 +64,18 @@ const news = [
 const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
 
+function selectFilter(button) {
+  filterButtons.forEach((item) => {
+    const isSelected = item === button;
+    item.classList.toggle("active", isSelected);
+    item.setAttribute("aria-selected", String(isSelected));
+    item.tabIndex = isSelected ? 0 : -1;
+  });
+
+  newsGrid.setAttribute("aria-labelledby", button.id);
+  renderNews(button.dataset.filter);
+}
+
 function renderNews(filter = "all") {
   const visibleNews = filter === "all" ? news : news.filter((item) => item.category === filter);
 
@@ -87,9 +99,34 @@ function renderNews(filter = "all") {
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    filterButtons.forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    renderNews(button.dataset.filter);
+    selectFilter(button);
+  });
+
+  button.addEventListener("keydown", (event) => {
+    const keys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+
+    if (!keys.includes(event.key)) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const currentIndex = Array.from(filterButtons).indexOf(button);
+    let nextIndex = currentIndex;
+
+    if (event.key === "ArrowLeft") {
+      nextIndex = currentIndex === 0 ? filterButtons.length - 1 : currentIndex - 1;
+    } else if (event.key === "ArrowRight") {
+      nextIndex = currentIndex === filterButtons.length - 1 ? 0 : currentIndex + 1;
+    } else if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = filterButtons.length - 1;
+    }
+
+    const nextButton = filterButtons[nextIndex];
+    nextButton.focus();
+    selectFilter(nextButton);
   });
 });
 

@@ -358,6 +358,19 @@ h3 {
   box-shadow: 0 8px 18px rgb(25 32 44 / 8%);
 }
 
+.filter-tabs button:focus-visible,
+.button:focus-visible,
+.header-action:focus-visible,
+.brand:focus-visible,
+.nav-links a:focus-visible,
+.text-link:focus-visible,
+.library-grid a:focus-visible,
+.subscribe input:focus-visible,
+.subscribe button:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

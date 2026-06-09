@@ -109,14 +109,70 @@
             <h2>AI 新闻流</h2>
           </div>
           <div class="filter-tabs" role="tablist" aria-label="Filter news">
-            <button class="active" type="button" data-filter="all">全部</button>
-            <button type="button" data-filter="model">模型</button>
-            <button type="button" data-filter="product">产品</button>
-            <button type="button" data-filter="research">研究</button>
-            <button type="button" data-filter="policy">政策</button>
+            <button
+              class="active"
+              id="filter-all"
+              type="button"
+              role="tab"
+              aria-controls="newsGrid"
+              aria-selected="true"
+              data-filter="all"
+            >
+              全部
+            </button>
+            <button
+              id="filter-model"
+              type="button"
+              role="tab"
+              aria-controls="newsGrid"
+              aria-selected="false"
+              tabindex="-1"
+              data-filter="model"
+            >
+              模型
+            </button>
+            <button
+              id="filter-product"
+              type="button"
+              role="tab"
+              aria-controls="newsGrid"
+              aria-selected="false"
+              tabindex="-1"
+              data-filter="product"
+            >
+              产品
+            </button>
+            <button
+              id="filter-research"
+              type="button"
+              role="tab"
+              aria-controls="newsGrid"
+              aria-selected="false"
+              tabindex="-1"
+              data-filter="research"
+            >
+              研究
+            </button>
+            <button
+              id="filter-policy"
+              type="button"
+              role="tab"
+              aria-controls="newsGrid"
+              aria-selected="false"
+              tabindex="-1"
+              data-filter="policy"
+            >
+              政策
+            </button>
           </div>
         </div>
-        <div class="news-grid" id="newsGrid"></div>
+        <div
+          class="news-grid"
+          id="newsGrid"
+          role="tabpanel"
+          aria-labelledby="filter-all"
+          aria-live="polite"
+        ></div>
       </section>
 
       <section class="section source-board" id="sources">
