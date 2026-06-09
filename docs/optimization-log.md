@@ -2,6 +2,20 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-09 10:03 JST
+
+- Focus: Added visible source framing to homepage news cards so readers can distinguish official confirmation, media context, research leads, and unverified discovery signals.
+- Changed files:
+  - `app.js`
+  - `styles.css`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/sources.json` with `python3 -m json.tool`.
+- Commit: Pending; the final hash is only available after this log entry is committed.
+
 ## 2026-06-08 20:45 JST
 
 - Focus: Added the first source registry for future AI news ingestion.
