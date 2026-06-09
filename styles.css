@@ -253,7 +253,8 @@ h3 {
 .brief-list article,
 .news-card,
 .library-grid a,
-.subscribe {
+.subscribe,
+.source-grid article {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -378,6 +379,49 @@ h3 {
   color: var(--muted);
   font-size: 13px;
   font-weight: 700;
+}
+
+.text-link {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  border-bottom: 2px solid var(--cyan);
+}
+
+.source-board {
+  padding-top: 24px;
+}
+
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.source-grid article {
+  min-height: 214px;
+  padding: 24px;
+}
+
+.source-grid span {
+  display: inline-flex;
+  margin-bottom: 24px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.source-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.source-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .split {
@@ -530,7 +574,8 @@ h3 {
   }
 
   .news-grid,
-  .library-grid {
+  .library-grid,
+  .source-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -579,7 +624,8 @@ h3 {
   }
 
   .news-grid,
-  .library-grid {
+  .library-grid,
+  .source-grid {
     grid-template-columns: 1fr;
   }
 
