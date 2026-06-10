@@ -1,11 +1,17 @@
 # AI Watchtower 30-Day Optimization Plan
 
-This plan guides two daily optimization passes for roughly 30 days. Each pass should make one small, useful improvement, verify the site still works, update the optimization log, commit the change, and push to GitHub.
+This plan guides eight daily optimization passes for roughly 30 days. Each pass should make one small, useful improvement, verify the site still works, update the optimization log, commit the change, and push to GitHub.
 
 ## Daily Rhythm
 
 - 14:00 JST: Content and information pass. Improve headlines, summaries, categories, source framing, trend wording, or dated editorial notes.
 - 15:00 JST: Product and quality pass. Improve layout, accessibility, mobile behavior, loading, documentation, or the publishing workflow.
+- 16:00 JST: Content structure pass. Improve homepage news data, source links, editorial notes, archive readiness, or trend explanation.
+- 17:00 JST: Product quality pass. Improve validation, accessibility, responsive behavior, metadata, or implementation clarity.
+- 18:00 JST: Content depth pass. Improve source interpretation, topic coverage, ranking explanations, or category clarity.
+- 19:00 JST: Maintenance pass. Improve documentation, checks, GitHub Pages readiness, loading, or resilience.
+- 20:00 JST: Content polish pass. Improve Chinese copy, summaries, trust labels, provenance notes, or daily briefing structure.
+- 21:00 JST: Final quality pass. Improve consistency, performance, mobile layout, validation, or publishing workflow.
 
 ## Week 1: Foundation
 
