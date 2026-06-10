@@ -61,5 +61,5 @@ This plan guides two daily optimization passes for roughly 30 days. Each pass sh
 - Prefer clear, useful editorial wording over decoration.
 - Run lightweight checks before committing.
 - Update `docs/optimization-log.md` with date, time, focus, changed files, verification, and commit hash.
-- Commit with a concise message.
+- Commit with a concise Chinese message so the optimization is easy to understand from GitHub history.
 - Push to `origin main`.
