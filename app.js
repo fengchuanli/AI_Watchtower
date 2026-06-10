@@ -61,6 +61,7 @@ function renderNews(filter = "all") {
           <span class="category">${item.label}</span>
           <h3>${item.title}</h3>
           <p>${item.body}</p>
+          <p class="impact-note"><strong>影响</strong>${item.impact}</p>
           <p class="source-note"><strong>${item.trustLevel}</strong>${item.provenance}</p>
           <footer>
             <a href="${item.sourceUrl}" target="_blank" rel="noreferrer">${item.source}</a>

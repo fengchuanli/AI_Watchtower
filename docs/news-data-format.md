@@ -9,6 +9,7 @@ Homepage news items live in `data/news.json`. This keeps editorial content separ
 - `label`: Chinese category label shown on the card.
 - `title`: Chinese headline.
 - `body`: Short Chinese summary.
+- `impact`: Short editorial line explaining why the item matters or what to watch next.
 - `source`: Human-readable source group.
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.

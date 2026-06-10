@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-10 14:03 JST
+
+- Focus: Added per-item impact notes to the homepage news data so each headline includes a clear editorial reason to keep watching the signal.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-10 10:05 JST
 
 - Focus: Backfilled the missed 05:00 product-quality run by adding a data validator and news data format documentation.
