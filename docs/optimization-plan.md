@@ -4,8 +4,8 @@ This plan guides two daily optimization passes for roughly 30 days. Each pass sh
 
 ## Daily Rhythm
 
-- 01:00 JST: Content and information pass. Improve headlines, summaries, categories, source framing, trend wording, or dated editorial notes.
-- 05:00 JST: Product and quality pass. Improve layout, accessibility, mobile behavior, loading, documentation, or the publishing workflow.
+- 14:00 JST: Content and information pass. Improve headlines, summaries, categories, source framing, trend wording, or dated editorial notes.
+- 15:00 JST: Product and quality pass. Improve layout, accessibility, mobile behavior, loading, documentation, or the publishing workflow.
 
 ## Week 1: Foundation
 

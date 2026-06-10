@@ -54,7 +54,7 @@ node scripts/validate-data.mjs
 
 - 计划文件：`docs/optimization-plan.md`
 - 优化履历：`docs/optimization-log.md`
-- 频率：每天 01:00 和 05:00 JST 各一次
+- 频率：每天 14:00 和 15:00 JST 各一次
 
 每次优化都应该留下清楚的履历，并推送到 GitHub。
 
