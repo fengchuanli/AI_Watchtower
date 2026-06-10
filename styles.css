@@ -419,6 +419,7 @@ h3 {
   color: var(--ink);
 }
 
+.feed-state,
 .empty-state {
   grid-column: 1 / -1;
   margin: 0;
@@ -427,6 +428,16 @@ h3 {
   background: var(--panel);
   border: 1px dashed var(--line);
   border-radius: 8px;
+}
+
+.feed-state.loading {
+  border-style: solid;
+}
+
+.feed-state.error {
+  color: #8c2f1f;
+  background: #fff5f2;
+  border-color: rgb(216 102 79 / 42%);
 }
 
 .text-link {
