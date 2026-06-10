@@ -243,6 +243,13 @@ h3 {
   color: var(--muted);
 }
 
+.data-status {
+  max-width: 620px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .briefing-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -392,6 +399,20 @@ h3 {
   color: var(--muted);
   font-size: 13px;
   font-weight: 700;
+}
+
+.news-card footer a {
+  color: var(--ink);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 24px;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  border-radius: 8px;
 }
 
 .text-link {

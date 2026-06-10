@@ -2,6 +2,21 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-10 09:55 JST
+
+- Focus: Backfilled the missed 01:00 content run by moving homepage news items into `data/news.json` with source IDs, source URLs, dates, and data status metadata.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `index.html`
+  - `styles.css`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran `node --check app.js`.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+- Commit: Pending.
+
 ## 2026-06-09 14:03 JST
 
 - Focus: Improved product accessibility and keyboard behavior for the homepage news filter controls.
