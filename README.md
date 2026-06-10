@@ -31,7 +31,15 @@ npx serve .
 来源规则：
 
 - 情报源列表：`data/sources.json`
+- 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
+- 数据格式：`docs/news-data-format.md`
+
+提交内容更新前可以运行：
+
+```bash
+node scripts/validate-data.mjs
+```
 
 后续数据接入方式可以是：
 

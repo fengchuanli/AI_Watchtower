@@ -2,6 +2,21 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-10 10:05 JST
+
+- Focus: Backfilled the missed 05:00 product-quality run by adding a data validator and news data format documentation.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+- Commit: Pending.
+
 ## 2026-06-10 09:55 JST
 
 - Focus: Backfilled the missed 01:00 content run by moving homepage news items into `data/news.json` with source IDs, source URLs, dates, and data status metadata.
@@ -15,7 +30,7 @@ Use this file to record every automated or manual optimization. New entries go a
   - Ran `node --check app.js`.
   - Parsed `index.html` with Python's HTML parser.
   - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
-- Commit: Pending.
+- Commit: `c5e212e`
 
 ## 2026-06-09 14:03 JST
 
