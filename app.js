@@ -10,6 +10,7 @@ const requiredCardFields = [
   "title",
   "body",
   "trend",
+  "whyRanked",
   "impact",
   "nextCheck",
   "source",
@@ -122,6 +123,7 @@ function renderNews(filter = "all") {
           <h3>${escapeHtml(item.title)}</h3>
           <p>${escapeHtml(item.body)}</p>
           <p class="trend-note">${escapeHtml(item.trend)}</p>
+          <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
           <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)}</strong>${escapeHtml(item.provenance)}</p>

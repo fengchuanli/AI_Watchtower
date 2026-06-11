@@ -12,6 +12,7 @@ const requiredNewsFields = [
   "title",
   "body",
   "trend",
+  "whyRanked",
   "impact",
   "nextCheck",
   "source",
