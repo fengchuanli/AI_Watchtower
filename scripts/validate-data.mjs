@@ -23,6 +23,7 @@ const requiredNewsFields = [
   "publishedAt",
   "time",
 ];
+const requiredBriefingFields = ["label", "headline", "summary", "cta"];
 
 const errors = [];
 
@@ -32,6 +33,24 @@ if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
 
 if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json must include an items array.");
+}
+
+if (newsFeed.briefing) {
+  for (const field of requiredBriefingFields) {
+    if (!newsFeed.briefing[field]) {
+      errors.push(`data/news.json briefing is missing ${field}.`);
+    }
+  }
+
+  if (!Array.isArray(newsFeed.briefing.watchPoints) || newsFeed.briefing.watchPoints.length !== 3) {
+    errors.push("data/news.json briefing must include exactly three watchPoints.");
+  }
+
+  for (const [index, point] of (newsFeed.briefing.watchPoints || []).entries()) {
+    if (!point.title || !point.body) {
+      errors.push(`data/news.json briefing watchPoints[${index}] must include title and body.`);
+    }
+  }
 }
 
 for (const item of newsFeed.items || []) {

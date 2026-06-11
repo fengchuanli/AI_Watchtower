@@ -4,6 +4,11 @@ let currentFilter = "all";
 const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const newsMeta = document.querySelector("#newsMeta");
+const briefingLabel = document.querySelector("#briefingLabel");
+const briefingHeadline = document.querySelector("#briefingHeadline");
+const briefingSummary = document.querySelector("#briefingSummary");
+const briefingCta = document.querySelector("#briefingCta");
+const briefingWatchPoints = document.querySelector("#briefingWatchPoints");
 const subscribeForm = document.querySelector("#subscribeForm");
 const subscribeStatus = document.querySelector("#subscribeStatus");
 const requiredCardFields = [
@@ -35,6 +40,7 @@ async function loadNews() {
     const data = await response.json();
     validateNewsData(data);
     news = data.items;
+    updateTodayBriefing(data.briefing);
     updateNewsMeta(data);
   } catch (error) {
     news = [];
@@ -52,6 +58,8 @@ function validateNewsData(data) {
     throw new Error("News data must include an items array.");
   }
 
+  validateBriefing(data.briefing);
+
   const invalidItem = data.items.find((item) => requiredCardFields.some((field) => !item[field]));
 
   if (invalidItem) {
@@ -65,6 +73,28 @@ function validateNewsData(data) {
   }
 }
 
+function validateBriefing(briefing) {
+  if (!briefing) {
+    return;
+  }
+
+  const missingMainField = ["label", "headline", "summary", "cta"].find((field) => !briefing[field]);
+
+  if (missingMainField) {
+    throw new Error(`News briefing is missing ${missingMainField}.`);
+  }
+
+  if (!Array.isArray(briefing.watchPoints) || briefing.watchPoints.length !== 3) {
+    throw new Error("News briefing must include exactly three watch points.");
+  }
+
+  const invalidPoint = briefing.watchPoints.find((point) => !point.title || !point.body);
+
+  if (invalidPoint) {
+    throw new Error("Each briefing watch point must include title and body.");
+  }
+}
+
 function isValidSourceUrl(sourceUrl) {
   try {
     const url = new URL(sourceUrl);
@@ -72,6 +102,42 @@ function isValidSourceUrl(sourceUrl) {
   } catch {
     return false;
   }
+}
+
+function updateTodayBriefing(briefing) {
+  if (!briefing || !briefingWatchPoints) {
+    return;
+  }
+
+  if (briefingLabel) {
+    briefingLabel.textContent = briefing.label;
+  }
+
+  if (briefingHeadline) {
+    briefingHeadline.textContent = briefing.headline;
+  }
+
+  if (briefingSummary) {
+    briefingSummary.textContent = briefing.summary;
+  }
+
+  if (briefingCta) {
+    briefingCta.textContent = briefing.cta;
+  }
+
+  briefingWatchPoints.innerHTML = briefing.watchPoints
+    .map(
+      (point, index) => `
+        <article>
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <h3>${escapeHtml(point.title)}</h3>
+            <p>${escapeHtml(point.body)}</p>
+          </div>
+        </article>
+      `,
+    )
+    .join("");
 }
 
 function updateNewsMeta(data) {

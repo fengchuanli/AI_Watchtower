@@ -2,6 +2,16 @@
 
 Homepage news items live in `data/news.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
 
+## Briefing Fields
+
+The optional top-level `briefing` object powers the homepage Today Briefing section. Use it to summarize how readers should interpret the current feed, not to introduce unsupported claims.
+
+- `label`: Short Chinese label shown above the briefing headline.
+- `headline`: Chinese editorial headline for the daily briefing.
+- `summary`: Chinese paragraph that frames the current feed and verification posture.
+- `cta`: Short link text pointing readers toward the feed.
+- `watchPoints`: Exactly three Chinese observation objects, each with `title` and `body`.
+
 ## Required Fields
 
 - `id`: Stable unique item ID.
