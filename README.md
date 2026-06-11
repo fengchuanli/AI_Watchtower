@@ -18,6 +18,17 @@ npx serve .
 .
 ├── assets/
 │   └── ai-intel-hero.png
+├── data/
+│   ├── news.json
+│   └── sources.json
+├── docs/
+│   ├── news-data-format.md
+│   ├── optimization-log.md
+│   ├── optimization-plan.md
+│   └── source-policy.md
+├── scripts/
+│   ├── validate-data.mjs
+│   └── validate-site.mjs
 ├── app.js
 ├── index.html
 ├── styles.css
@@ -39,6 +50,7 @@ npx serve .
 
 ```bash
 node scripts/validate-data.mjs
+node scripts/validate-site.mjs
 ```
 
 后续数据接入方式可以是：

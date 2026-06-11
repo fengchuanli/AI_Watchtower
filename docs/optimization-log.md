@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-11 15:03 JST
+
+- Focus: Improved product maintainability and sharing quality by adding complete homepage metadata, a hero image preload, JSON-LD site identity, and a lightweight site metadata validator.
+- Changed files:
+  - `index.html`
+  - `scripts/validate-site.mjs`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-11 14:03 JST
 
 - Focus: Improved content verification quality by adding per-item next-check notes so each homepage news card states what should be confirmed before treating the signal as fully validated.
