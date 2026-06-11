@@ -29,6 +29,19 @@ for (const [attribute, value] of requiredMetaTags) {
   }
 }
 
+const skipLinkMatch = html.match(/<a\b(?=[^>]*\bclass="skip-link")(?=[^>]*\bhref="#([^"]+)")[^>]*>/);
+
+if (!skipLinkMatch) {
+  errors.push("index.html is missing a skip link to the main content.");
+} else {
+  const targetId = skipLinkMatch[1];
+  const targetPattern = new RegExp(`<main\\b(?=[^>]*\\bid="${targetId}")[^>]*>`, "s");
+
+  if (!targetPattern.test(html)) {
+    errors.push(`Skip link target #${targetId} does not match the main element.`);
+  }
+}
+
 const jsonLdMatch = html.match(
   /<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/,
 );
