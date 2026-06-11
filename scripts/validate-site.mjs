@@ -79,6 +79,22 @@ for (const assetRef of new Set(localAssetRefs)) {
   }
 }
 
+const subscribeFormMatch = html.match(/<form\b(?=[^>]*\bid="subscribeForm")[^>]*>[\s\S]*?<\/form>/);
+
+if (!subscribeFormMatch) {
+  errors.push("index.html is missing the newsletter subscription form.");
+} else {
+  const subscribeForm = subscribeFormMatch[0];
+
+  if (!/<input\b(?=[^>]*\bid="email")(?=[^>]*\btype="email")(?=[^>]*\brequired\b)[^>]*>/s.test(subscribeForm)) {
+    errors.push("Newsletter form must include a required email input.");
+  }
+
+  if (!/<p\b(?=[^>]*\bid="subscribeStatus")(?=[^>]*\brole="status")(?=[^>]*\baria-live="polite")[^>]*>/s.test(subscribeForm)) {
+    errors.push("Newsletter form must include a polite live status message.");
+  }
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);

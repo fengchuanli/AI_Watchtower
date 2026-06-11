@@ -4,6 +4,8 @@ let currentFilter = "all";
 const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const newsMeta = document.querySelector("#newsMeta");
+const subscribeForm = document.querySelector("#subscribeForm");
+const subscribeStatus = document.querySelector("#subscribeStatus");
 const requiredCardFields = [
   "category",
   "label",
@@ -170,11 +172,22 @@ filterButtons.forEach((button) => {
   });
 });
 
-document.querySelector("#subscribe form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const input = event.currentTarget.querySelector("input");
-  input.value = "";
-  input.placeholder = "已收到，明天见";
-});
+if (subscribeForm) {
+  subscribeForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!subscribeForm.checkValidity()) {
+      subscribeForm.reportValidity();
+      return;
+    }
+
+    const input = subscribeForm.querySelector("input");
+    input.value = "";
+
+    if (subscribeStatus) {
+      subscribeStatus.textContent = "已收到订阅请求，明天见。";
+    }
+  });
+}
 
 loadNews();

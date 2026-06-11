@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-11 19:02 JST
+
+- Focus: Improved product accessibility and maintainability by adding native email validation and a screen-reader-readable status message to the newsletter form, plus a validator guard so the affordance stays intact.
+- Changed files:
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-11 18:03 JST
 
 - Focus: Improved content depth by adding per-item homepage ranking explanations so readers can see why each sample signal deserves attention before treating it as a trend.

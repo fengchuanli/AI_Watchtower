@@ -37,7 +37,7 @@ npx serve .
 
 ## 后续接入真实数据
 
-当前新闻和趋势数据在 `app.js` 中，后续可以按 `data/sources.json` 里的情报源逐步替换为真实数据。
+当前新闻和趋势数据在 `data/news.json` 中维护，后续可以按 `data/sources.json` 里的情报源逐步替换为真实数据。
 
 来源规则：
 
