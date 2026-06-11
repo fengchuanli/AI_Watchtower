@@ -12,6 +12,7 @@ const requiredNewsFields = [
   "title",
   "body",
   "impact",
+  "nextCheck",
   "source",
   "sourceId",
   "sourceUrl",

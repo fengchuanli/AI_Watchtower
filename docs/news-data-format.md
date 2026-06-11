@@ -10,6 +10,7 @@ Homepage news items live in `data/news.json`. This keeps editorial content separ
 - `title`: Chinese headline.
 - `body`: Short Chinese summary.
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
+- `nextCheck`: Short editorial note stating what should be verified before treating the item as fully confirmed.
 - `source`: Human-readable source group.
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.
