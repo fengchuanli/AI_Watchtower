@@ -11,6 +11,7 @@ const requiredNewsFields = [
   "label",
   "title",
   "body",
+  "trend",
   "impact",
   "nextCheck",
   "source",
