@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 
 const html = readFileSync("index.html", "utf8");
+const appJs = readFileSync("app.js", "utf8");
 const errors = [];
 
 const requiredMetaTags = [
@@ -93,6 +94,10 @@ if (!subscribeFormMatch) {
   if (!/<p\b(?=[^>]*\bid="subscribeStatus")(?=[^>]*\brole="status")(?=[^>]*\baria-live="polite")[^>]*>/s.test(subscribeForm)) {
     errors.push("Newsletter form must include a polite live status message.");
   }
+}
+
+if (!/target="_blank"\s+rel="noopener noreferrer"/.test(appJs)) {
+  errors.push("Rendered news source links must include rel=\"noopener noreferrer\" for new tabs.");
 }
 
 if (errors.length) {

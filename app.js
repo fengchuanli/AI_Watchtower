@@ -196,7 +196,7 @@ function renderNews(filter = "all") {
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>
-            <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.source)}</a>
+            <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.source)}</a>
             <time>${escapeHtml(item.time)}</time>
           </footer>
         </article>

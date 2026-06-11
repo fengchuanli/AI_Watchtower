@@ -2,6 +2,23 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-11 21:02 JST
+
+- Focus: Improved product maintainability and link safety by adding `noopener` to data-rendered external news source links and covering the requirement in the site validator.
+- Changed files:
+  - `app.js`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --rebase origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-11 20:04 JST
 
 - Focus: Improved content and information quality by moving the homepage Today Briefing into `data/news.json`, adding a concise Chinese editorial frame for how to read the sample feed, and validating the new briefing structure.
