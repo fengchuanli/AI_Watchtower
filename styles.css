@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+main section[id] {
+  scroll-margin-top: 88px;
+}
+
 body {
   margin: 0;
   color: var(--ink);
@@ -674,6 +678,16 @@ h3 {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .skip-link {
+    transition: none;
+  }
 }
 
 @media (max-width: 920px) {

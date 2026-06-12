@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-12 15:02 JST
+
+- Focus: Improved in-page navigation accessibility by keeping anchored section headings clear of the sticky header and respecting the user's reduced-motion preference.
+- Changed files:
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, accessibility safeguards, and 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-12 14:30 JST
 
 - Focus: Backfilled the missed 14:00 content run by adding dedicated tool and funding categories, filters, and sample editorial entries.

@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 
 const html = readFileSync("index.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
+const styles = readFileSync("styles.css", "utf8");
 const errors = [];
 
 const requiredMetaTags = [
@@ -98,6 +99,14 @@ if (!subscribeFormMatch) {
 
 if (!/target="_blank"\s+rel="noopener noreferrer"/.test(appJs)) {
   errors.push("Rendered news source links must include rel=\"noopener noreferrer\" for new tabs.");
+}
+
+if (!/main section\[id\]\s*\{[^}]*scroll-margin-top:/s.test(styles)) {
+  errors.push("Anchored homepage sections must clear the sticky header.");
+}
+
+if (!/@media \(prefers-reduced-motion: reduce\)\s*\{[\s\S]*?scroll-behavior:\s*auto;/s.test(styles)) {
+  errors.push("Site styles must disable smooth scrolling when reduced motion is preferred.");
 }
 
 if (errors.length) {
