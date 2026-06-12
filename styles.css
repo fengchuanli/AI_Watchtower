@@ -445,6 +445,7 @@ h3 {
 .brand:focus-visible,
 .nav-links a:focus-visible,
 .text-link:focus-visible,
+.feed-state a:focus-visible,
 .subscribe input:focus-visible,
 .subscribe button:focus-visible {
   outline: 3px solid var(--cyan);
@@ -497,6 +498,12 @@ h3 {
   color: #8c2f1f;
   background: #fff5f2;
   border-color: rgb(216 102 79 / 42%);
+}
+
+.feed-state a {
+  color: var(--ink);
+  font-weight: 800;
+  border-bottom: 2px solid var(--cyan);
 }
 
 .text-link {

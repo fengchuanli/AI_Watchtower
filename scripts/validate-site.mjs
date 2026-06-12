@@ -85,6 +85,20 @@ if (/<a\b[^>]*\bhref="#"/s.test(html)) {
   errors.push('index.html must not include placeholder links with href="#".');
 }
 
+const newsGridMatch = html.match(
+  /<div\b(?=[^>]*\bid="newsGrid")[^>]*>[\s\S]*?<\/div>/,
+);
+
+if (!newsGridMatch) {
+  errors.push("index.html is missing the news feed container.");
+} else if (
+  !/<noscript>[\s\S]*?<a\b(?=[^>]*\bhref="\.\/data\/news\.json")[^>]*>[\s\S]*?<\/noscript>/.test(
+    newsGridMatch[0],
+  )
+) {
+  errors.push("News feed must include a no-JavaScript fallback linking to data/news.json.");
+}
+
 const subscribeFormMatch = html.match(/<form\b(?=[^>]*\bid="subscribeForm")[^>]*>[\s\S]*?<\/form>/);
 
 if (!subscribeFormMatch) {
