@@ -4,7 +4,7 @@ const sourceRegistry = JSON.parse(readFileSync("data/sources.json", "utf8"));
 const newsFeed = JSON.parse(readFileSync("data/news.json", "utf8"));
 
 const sourceIds = new Set(sourceRegistry.sources.map((source) => source.id));
-const allowedCategories = new Set(["all", "model", "product", "research", "policy"]);
+const allowedCategories = new Set(["all", "model", "product", "research", "tool", "funding", "policy"]);
 const requiredNewsFields = [
   "id",
   "category",

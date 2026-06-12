@@ -13,20 +13,20 @@
     <meta property="og:site_name" content="AI Watchtower" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
-    <meta property="og:title" content="AI Watchtower | 最新 AI 动向情报站" />
+    <meta property="og:title" content="AI Watchtower | AI 趋势研判工作台" />
     <meta
       property="og:description"
-      content="每日追踪 AI 产品、模型、研究、政策和市场信号，把碎片新闻整理成可判断的趋势。"
+      content="用来源分级、趋势判断和核对清单整理 AI 产品、模型、研究与政策信号。"
     />
     <meta property="og:image" content="./assets/ai-intel-hero.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AI Watchtower | 最新 AI 动向情报站" />
+    <meta name="twitter:title" content="AI Watchtower | AI 趋势研判工作台" />
     <meta
       name="twitter:description"
-      content="每日追踪 AI 产品、模型、研究、政策和市场信号，把碎片新闻整理成可判断的趋势。"
+      content="用来源分级、趋势判断和核对清单整理 AI 产品、模型、研究与政策信号。"
     />
     <meta name="twitter:image" content="./assets/ai-intel-hero.png" />
-    <title>AI Watchtower | 最新 AI 动向情报站</title>
+    <title>AI Watchtower | AI 趋势研判工作台</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="image" href="./assets/ai-intel-hero.png" />
@@ -68,9 +68,9 @@
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow">Daily AI Intelligence</p>
-          <h1>每天 10 分钟，看清 AI 最新动向</h1>
+          <h1>把 AI 信号整理成可核对的趋势判断</h1>
           <p class="hero-copy">
-            聚合全球 AI 产品、模型、研究、政策和资本信号，把碎片新闻整理成可判断的趋势。
+            当前以示例数据展示编辑方法：区分来源可信度，说明入选理由，并列出下一步核对项。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#today">查看今日重点</a>
@@ -78,16 +78,16 @@
           </div>
           <dl class="hero-stats" aria-label="Daily AI intelligence stats">
             <div>
-              <dt>128</dt>
-              <dd>今日信号</dd>
-            </div>
-            <div>
-              <dt>24</dt>
-              <dd>高影响更新</dd>
-            </div>
-            <div>
               <dt>6</dt>
-              <dd>趋势专题</dd>
+              <dd>示例信号</dd>
+            </div>
+            <div>
+              <dt>4</dt>
+              <dd>来源层级</dd>
+            </div>
+            <div>
+              <dt>逐条</dt>
+              <dd>核对清单</dd>
             </div>
           </dl>
         </div>
@@ -186,6 +186,28 @@
               研究
             </button>
             <button
+              id="filter-tool"
+              type="button"
+              role="tab"
+              aria-controls="newsGrid"
+              aria-selected="false"
+              tabindex="-1"
+              data-filter="tool"
+            >
+              工具
+            </button>
+            <button
+              id="filter-funding"
+              type="button"
+              role="tab"
+              aria-controls="newsGrid"
+              aria-selected="false"
+              tabindex="-1"
+              data-filter="funding"
+            >
+              资金
+            </button>
+            <button
               id="filter-policy"
               type="button"
               role="tab"
@@ -244,29 +266,29 @@
           <p class="eyebrow">Signal Rank</p>
           <h2>本周趋势排行榜</h2>
           <p class="section-copy">
-            用影响力、讨论热度和落地速度综合排序，帮助你判断哪些 AI 变化值得继续跟踪。
+            当前顺序用于展示编辑观察框架，不代表真实热度或市场涨幅；每项仍需结合来源与后续证据判断。
           </p>
         </div>
         <ol class="ranking-list">
           <li>
             <span>01</span>
             <strong>浏览器 Agent</strong>
-            <em>+42%</em>
+            <em>重点跟踪</em>
           </li>
           <li>
             <span>02</span>
             <strong>本地小模型</strong>
-            <em>+31%</em>
+            <em>持续验证</em>
           </li>
           <li>
             <span>03</span>
             <strong>AI 视频工作流</strong>
-            <em>+27%</em>
+            <em>观察落地</em>
           </li>
           <li>
             <span>04</span>
             <strong>企业知识库 RAG</strong>
-            <em>+19%</em>
+            <em>核对案例</em>
           </li>
         </ol>
       </section>

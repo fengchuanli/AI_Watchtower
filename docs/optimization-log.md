@@ -2,6 +2,40 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-12 14:30 JST
+
+- Focus: Backfilled the missed 14:00 content run by adding dedicated tool and funding categories, filters, and sample editorial entries.
+- Changed files:
+  - `data/news.json`
+  - `index.html`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Pending.
+
+## 2026-06-12 14:22 JST
+
+- Focus: Improved homepage editorial accuracy by replacing unsupported real-time counts and trend percentages with verifiable sample-data labels, and clarified that the trend ranking is an observation framework rather than a live popularity measure.
+- Changed files:
+  - `index.html`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-11 21:02 JST
 
 - Focus: Improved product maintainability and link safety by adding `noopener` to data-rendered external news source links and covering the requirement in the site validator.

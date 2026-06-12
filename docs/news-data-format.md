@@ -15,7 +15,7 @@ The optional top-level `briefing` object powers the homepage Today Briefing sect
 ## Required Fields
 
 - `id`: Stable unique item ID.
-- `category`: One of `model`, `product`, `research`, or `policy` for the current homepage filters.
+- `category`: One of `model`, `product`, `research`, `tool`, `funding`, or `policy` for the current homepage filters.
 - `label`: Chinese category label shown on the card.
 - `title`: Chinese headline.
 - `body`: Short Chinese summary.
