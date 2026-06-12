@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-12 21:02 JST
+
+- Focus: Reduced homepage loading cost by serving a 268 KB JPEG hero instead of the 1.7 MB PNG, while preserving the PNG as the source asset and adding intrinsic dimensions plus explicit loading hints.
+- Changed files:
+  - `assets/ai-intel-hero.jpg`
+  - `index.html`
+  - `scripts/validate-site.mjs`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --rebase origin main`, but GitHub DNS resolution failed in this environment.
+  - Confirmed the optimized hero remains 1672 by 941 pixels and reduced disk size from about 1.7 MB to 268 KB.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, hero performance safeguards, and 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-12 20:00 JST
 
 - Focus: Clarified per-card evidence framing by separating source tier from claim verification status, so sample headlines no longer appear confirmed merely because they point to an official source.

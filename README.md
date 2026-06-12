@@ -17,6 +17,7 @@ npx serve .
 ```text
 .
 ├── assets/
+│   ├── ai-intel-hero.jpg
 │   └── ai-intel-hero.png
 ├── data/
 │   ├── news.json

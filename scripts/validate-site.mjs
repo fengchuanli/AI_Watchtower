@@ -81,6 +81,18 @@ for (const assetRef of new Set(localAssetRefs)) {
   }
 }
 
+const heroImageMatch = html.match(
+  /<img\b(?=[^>]*\bclass="hero-media")(?=[^>]*\bsrc="\.\/assets\/ai-intel-hero\.jpg")(?=[^>]*\bwidth="1672")(?=[^>]*\bheight="941")(?=[^>]*\bdecoding="async")(?=[^>]*\bfetchpriority="high")[^>]*>/s,
+);
+
+if (!heroImageMatch) {
+  errors.push("Hero image must use the optimized JPEG with intrinsic dimensions and priority hints.");
+}
+
+if (/\.\/assets\/ai-intel-hero\.png/.test(html)) {
+  errors.push("Homepage must not load the unoptimized PNG hero asset.");
+}
+
 if (/<a\b[^>]*\bhref="#"/s.test(html)) {
   errors.push('index.html must not include placeholder links with href="#".');
 }
