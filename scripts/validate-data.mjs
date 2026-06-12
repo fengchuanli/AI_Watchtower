@@ -24,6 +24,8 @@ const requiredNewsFields = [
   "time",
 ];
 const requiredBriefingFields = ["label", "headline", "summary", "cta"];
+const requiredEditionFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
+const allowedArchiveStatuses = new Set(["preview", "published"]);
 
 const errors = [];
 
@@ -33,6 +35,34 @@ if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
 
 if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json must include an items array.");
+}
+
+if (!newsFeed.edition) {
+  errors.push("data/news.json must include edition metadata.");
+} else {
+  for (const field of requiredEditionFields) {
+    if (!newsFeed.edition[field]) {
+      errors.push(`data/news.json edition is missing ${field}.`);
+    }
+  }
+
+  if (newsFeed.edition.date !== newsFeed.updatedAt) {
+    errors.push("data/news.json edition.date must match updatedAt.");
+  }
+
+  if (!allowedArchiveStatuses.has(newsFeed.edition.archiveStatus)) {
+    errors.push(`data/news.json edition has unsupported archiveStatus ${newsFeed.edition.archiveStatus}.`);
+  }
+
+  if (!/^[a-z0-9-]+-\d{4}-\d{2}-\d{2}$/.test(newsFeed.edition.id || "")) {
+    errors.push("data/news.json edition.id must end with an ISO date and use lowercase letters, numbers, or hyphens.");
+  }
+
+  try {
+    new Intl.DateTimeFormat("zh-CN", { timeZone: newsFeed.edition.timezone }).format();
+  } catch {
+    errors.push(`data/news.json edition has invalid timezone ${newsFeed.edition.timezone}.`);
+  }
 }
 
 if (newsFeed.briefing) {

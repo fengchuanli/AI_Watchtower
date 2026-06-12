@@ -2,6 +2,17 @@
 
 Homepage news items live in `data/news.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
 
+## Edition Fields
+
+The required top-level `edition` object gives each homepage snapshot a stable archive identity. Update it whenever the feed advances to a new editorial date.
+
+- `id`: Stable lowercase archive key ending in an ISO date, such as `sample-2026-06-12`.
+- `date`: Editorial date in `YYYY-MM-DD` format; must match top-level `updatedAt`.
+- `timezone`: IANA timezone used to interpret the edition date, such as `Asia/Tokyo`.
+- `archiveStatus`: `preview` for sample or incomplete snapshots, or `published` for a reviewed edition.
+- `archiveLabel`: Short Chinese status label shown in the homepage feed metadata.
+- `note`: Chinese scope note explaining what the archived edition does and does not represent.
+
 ## Briefing Fields
 
 The optional top-level `briefing` object powers the homepage Today Briefing section. Use it to summarize how readers should interpret the current feed, not to introduce unsupported claims.
@@ -39,4 +50,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks required fields, category support, source ID references, and URL shape.
+The validator checks edition metadata, required item fields, category support, source ID references, and URL shape.

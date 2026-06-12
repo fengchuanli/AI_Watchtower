@@ -58,6 +58,7 @@ function validateNewsData(data) {
     throw new Error("News data must include an items array.");
   }
 
+  validateEdition(data.edition, data.updatedAt);
   validateBriefing(data.briefing);
 
   const invalidItem = data.items.find((item) => requiredCardFields.some((field) => !item[field]));
@@ -70,6 +71,18 @@ function validateNewsData(data) {
 
   if (itemWithInvalidUrl) {
     throw new Error(`News item ${itemWithInvalidUrl.id || "without id"} has an invalid source URL.`);
+  }
+}
+
+function validateEdition(edition, updatedAt) {
+  const requiredFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
+
+  if (!edition || requiredFields.some((field) => !edition[field])) {
+    throw new Error("News data must include complete edition metadata.");
+  }
+
+  if (edition.date !== updatedAt) {
+    throw new Error("News edition date must match updatedAt.");
   }
 }
 
@@ -146,7 +159,10 @@ function updateNewsMeta(data) {
   }
 
   const updatedAt = data.updatedAt ? `更新日期 ${data.updatedAt}` : "等待更新";
-  newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${data.editorNote || ""}`;
+  const edition = data.edition
+    ? `${data.edition.archiveLabel} ${data.edition.id} · 时区 ${data.edition.timezone} · ${data.edition.note}`
+    : "尚无期次信息";
+  newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${edition} · ${data.editorNote || ""}`;
 }
 
 function selectFilter(button) {

@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-12 16:02 JST
+
+- Focus: Prepared the homepage feed for daily archiving by adding a stable edition ID, editorial date, timezone, archive status, and a visible Chinese scope note that distinguishes the sample snapshot from a real news record.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --rebase origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-12 15:02 JST
 
 - Focus: Improved in-page navigation accessibility by keeping anchored section headings clear of the sticky header and respecting the user's reduced-motion preference.
