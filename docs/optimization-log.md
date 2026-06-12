@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-12 18:00 JST
+
+- Focus: Reframed the homepage trend ranking as an editorial observation priority, aligned all four entries with the current sample feed, and added a clear rationale plus evidence threshold for each topic so readers do not mistake the list for measured popularity.
+- Changed files:
+  - `index.html`
+  - `styles.css`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-12 17:01 JST
 
 - Focus: Improved product clarity and accessibility by replacing inactive library placeholder links with clearly labeled planned-content cards, making the brand link return to the GitHub Pages site root, and preventing placeholder links from returning through site validation.

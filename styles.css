@@ -559,11 +559,11 @@ h3 {
 
 .ranking-list li {
   display: grid;
-  grid-template-columns: 52px 1fr auto;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
   gap: 16px;
   align-items: center;
-  min-height: 78px;
-  padding: 0 24px;
+  min-height: 104px;
+  padding: 18px 24px;
   background: var(--dark);
   color: white;
   border-radius: 8px;
@@ -578,6 +578,18 @@ h3 {
   color: #88d7b0;
   font-style: normal;
   font-weight: 800;
+  font-size: 13px;
+}
+
+.ranking-copy strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ranking-copy p {
+  margin: 0;
+  color: rgb(255 255 255 / 68%);
+  font-size: 13px;
 }
 
 .library-grid {
