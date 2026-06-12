@@ -20,12 +20,14 @@ const requiredNewsFields = [
   "sourceUrl",
   "provenance",
   "trustLevel",
+  "verificationStatus",
   "publishedAt",
   "time",
 ];
 const requiredBriefingFields = ["label", "headline", "summary", "cta"];
 const requiredEditionFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
+const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
 
 const errors = [];
 
@@ -104,6 +106,10 @@ for (const item of newsFeed.items || []) {
     } catch {
       errors.push(`${item.id} has invalid sourceUrl ${item.sourceUrl}.`);
     }
+  }
+
+  if (item.verificationStatus && !allowedVerificationStatuses.has(item.verificationStatus)) {
+    errors.push(`${item.id} has unsupported verificationStatus ${item.verificationStatus}.`);
   }
 }
 

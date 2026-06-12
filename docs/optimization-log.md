@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-12 20:00 JST
+
+- Focus: Clarified per-card evidence framing by separating source tier from claim verification status, so sample headlines no longer appear confirmed merely because they point to an official source.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-12 19:00 JST
 
 - Focus: Improved GitHub Pages resilience by adding a no-JavaScript fallback in the news feed with a direct link to the structured edition data, plus styling and validation that keep the fallback usable.

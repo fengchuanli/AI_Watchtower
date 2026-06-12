@@ -24,6 +24,7 @@ const requiredCardFields = [
   "sourceUrl",
   "provenance",
   "trustLevel",
+  "verificationStatus",
   "time",
 ];
 
@@ -210,6 +211,7 @@ function renderNews(filter = "all") {
           <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
           <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
+          <p class="verification-status"><strong>核验状态</strong>${escapeHtml(item.verificationStatus)}</p>
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>
             <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.source)}</a>

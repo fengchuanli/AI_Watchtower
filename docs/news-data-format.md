@@ -38,7 +38,8 @@ The optional top-level `briefing` object powers the homepage Today Briefing sect
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.
 - `provenance`: How readers should interpret the source and claim quality.
-- `trustLevel`: Visible trust label such as official confirmation, media context, research lead, or unverified signal.
+- `trustLevel`: Visible source-tier label such as official, media, research, or community. It describes the source type, not whether the item claim has been verified.
+- `verificationStatus`: Claim-level review status. Use `结构样例，未作事实核验` for sample cards and reserve `已核验` for items whose central claim has been checked against the cited source.
 - `publishedAt`: ISO-like timestamp with timezone.
 - `time`: Short display time.
 
