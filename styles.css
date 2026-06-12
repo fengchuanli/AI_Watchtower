@@ -281,7 +281,7 @@ h3 {
 .lead-brief,
 .brief-list article,
 .news-card,
-.library-grid a,
+.library-grid article,
 .subscribe,
 .source-grid article {
   background: var(--panel);
@@ -445,7 +445,6 @@ h3 {
 .brand:focus-visible,
 .nav-links a:focus-visible,
 .text-link:focus-visible,
-.library-grid a:focus-visible,
 .subscribe input:focus-visible,
 .subscribe button:focus-visible {
   outline: 3px solid var(--cyan);
@@ -587,7 +586,7 @@ h3 {
   gap: 16px;
 }
 
-.library-grid a {
+.library-grid article {
   display: grid;
   min-height: 178px;
   align-content: start;
@@ -605,6 +604,18 @@ h3 {
 .library-grid strong {
   margin-bottom: 8px;
   font-size: 20px;
+}
+
+.library-grid em {
+  justify-self: start;
+  margin-top: 20px;
+  padding: 4px 8px;
+  color: var(--muted);
+  background: #edf0f4;
+  border-radius: 6px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
 }
 
 .subscribe {

@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-12 17:01 JST
+
+- Focus: Improved product clarity and accessibility by replacing inactive library placeholder links with clearly labeled planned-content cards, making the brand link return to the GitHub Pages site root, and preventing placeholder links from returning through site validation.
+- Changed files:
+  - `index.html`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-12 16:02 JST
 
 - Focus: Prepared the homepage feed for daily archiving by adding a stable edition ID, editorial date, timezone, archive status, and a visible Chinese scope note that distinguishes the sample snapshot from a real news record.

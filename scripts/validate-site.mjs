@@ -81,6 +81,10 @@ for (const assetRef of new Set(localAssetRefs)) {
   }
 }
 
+if (/<a\b[^>]*\bhref="#"/s.test(html)) {
+  errors.push('index.html must not include placeholder links with href="#".');
+}
+
 const subscribeFormMatch = html.match(/<form\b(?=[^>]*\bid="subscribeForm")[^>]*>[\s\S]*?<\/form>/);
 
 if (!subscribeFormMatch) {
