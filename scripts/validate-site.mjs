@@ -115,19 +115,33 @@ if (!newsGridMatch) {
   errors.push("News feed must include a no-JavaScript fallback linking to data/news.json.");
 }
 
-const subscribeFormMatch = html.match(/<form\b(?=[^>]*\bid="subscribeForm")[^>]*>[\s\S]*?<\/form>/);
+if (/<form\b(?=[^>]*\bid="subscribeForm")/s.test(html)) {
+  errors.push("Static site must not present a subscription form without a working submission endpoint.");
+}
 
-if (!subscribeFormMatch) {
-  errors.push("index.html is missing the newsletter subscription form.");
+const updatesSectionMatch = html.match(
+  /<section\b(?=[^>]*\bclass="subscribe")(?=[^>]*\bid="updates")[^>]*>[\s\S]*?<\/section>/,
+);
+
+if (!updatesSectionMatch) {
+  errors.push("index.html is missing the public update access section.");
 } else {
-  const subscribeForm = subscribeFormMatch[0];
+  const updatesSection = updatesSectionMatch[0];
 
-  if (!/<input\b(?=[^>]*\bid="email")(?=[^>]*\btype="email")(?=[^>]*\brequired\b)[^>]*>/s.test(subscribeForm)) {
-    errors.push("Newsletter form must include a required email input.");
+  if (!/不会收集或保存邮箱/.test(updatesSection)) {
+    errors.push("Update access section must disclose that the static site does not collect email addresses.");
   }
 
-  if (!/<p\b(?=[^>]*\bid="subscribeStatus")(?=[^>]*\brole="status")(?=[^>]*\baria-live="polite")[^>]*>/s.test(subscribeForm)) {
-    errors.push("Newsletter form must include a polite live status message.");
+  if (!/<a\b(?=[^>]*\bhref="\.\/data\/news\.json")[^>]*>/.test(updatesSection)) {
+    errors.push("Update access section must link to the current structured news data.");
+  }
+
+  if (
+    !/<a\b(?=[^>]*\bhref="https:\/\/github\.com\/fengchuanli\/AI_Watchtower\/commits\/main\/")(?=[^>]*\btarget="_blank")(?=[^>]*\brel="noopener noreferrer")[^>]*>/s.test(
+      updatesSection,
+    )
+  ) {
+    errors.push("Update access section must link safely to the public main branch history.");
   }
 }
 

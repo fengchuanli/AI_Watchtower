@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 09:14 JST
+
+- Focus: Replaced the non-functional newsletter form with honest public update links, clearly stating that the static GitHub Pages site does not collect or store email addresses.
+- Changed files:
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --rebase origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated metadata, public update links, email privacy disclosure, and 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-15 09:15 JST
 
 - Focus: Clarified the editorial boundaries of all six homepage news categories and added a dynamic filter summary showing each category's scope, evidence caveat, and current item count.

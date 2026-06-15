@@ -53,7 +53,7 @@
         <a href="#signals">观察优先级</a>
         <a href="#library">资料库</a>
       </nav>
-      <a class="header-action" href="#subscribe">订阅</a>
+      <a class="header-action" href="#updates">更新方式</a>
     </header>
 
     <main id="main-content">
@@ -348,29 +348,23 @@
         </div>
       </section>
 
-      <section class="subscribe" id="subscribe">
+      <section class="subscribe" id="updates">
         <div>
-          <p class="eyebrow">Newsletter</p>
-          <h2>把 AI 情报送到收件箱</h2>
-          <p>每日摘要、每周深度和重要模型更新提醒。</p>
+          <p class="eyebrow">Update Access</p>
+          <h2>通过公开记录跟进更新</h2>
+          <p>当前是静态 GitHub Pages 站点，尚未接入邮件订阅，也不会收集或保存邮箱。</p>
         </div>
-        <form id="subscribeForm">
-          <label class="sr-only" for="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="you@example.com"
-            autocomplete="email"
-            inputmode="email"
-            aria-describedby="subscribeStatus"
-            required
-          />
-          <button type="submit">订阅</button>
-          <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite">
-            输入邮箱后即可订阅每日摘要。
-          </p>
-        </form>
+        <div class="update-links" aria-label="AI Watchtower 更新入口">
+          <a class="button primary" href="./data/news.json">查看本期数据</a>
+          <a
+            class="button secondary"
+            href="https://github.com/fengchuanli/AI_Watchtower/commits/main/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            查看提交记录
+          </a>
+        </div>
       </section>
     </main>
 

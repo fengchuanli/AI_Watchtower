@@ -11,8 +11,6 @@ const briefingHeadline = document.querySelector("#briefingHeadline");
 const briefingSummary = document.querySelector("#briefingSummary");
 const briefingCta = document.querySelector("#briefingCta");
 const briefingWatchPoints = document.querySelector("#briefingWatchPoints");
-const subscribeForm = document.querySelector("#subscribeForm");
-const subscribeStatus = document.querySelector("#subscribeStatus");
 const requiredCardFields = [
   "category",
   "label",
@@ -299,23 +297,5 @@ filterButtons.forEach((button) => {
     selectFilter(nextButton);
   });
 });
-
-if (subscribeForm) {
-  subscribeForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (!subscribeForm.checkValidity()) {
-      subscribeForm.reportValidity();
-      return;
-    }
-
-    const input = subscribeForm.querySelector("input");
-    input.value = "";
-
-    if (subscribeStatus) {
-      subscribeStatus.textContent = "已收到订阅请求，明天见。";
-    }
-  });
-}
 
 loadNews();

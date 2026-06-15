@@ -473,8 +473,7 @@ h3 {
 .nav-links a:focus-visible,
 .text-link:focus-visible,
 .feed-state a:focus-visible,
-.subscribe input:focus-visible,
-.subscribe button:focus-visible {
+.update-links a:focus-visible {
   outline: 3px solid var(--cyan);
   outline-offset: 3px;
 }
@@ -684,40 +683,22 @@ h3 {
   color: var(--muted);
 }
 
-.subscribe form {
-  display: grid;
-  grid-template-columns: 1fr 104px;
+.update-links {
+  display: flex;
+  justify-content: flex-end;
   gap: 10px;
 }
 
-.subscribe input,
-.subscribe button {
-  height: 48px;
-  border-radius: 8px;
-  font: inherit;
-  font-weight: 700;
-}
-
-.subscribe input {
-  min-width: 0;
-  padding: 0 14px;
-  background: white;
-  border: 1px solid var(--line);
-}
-
-.subscribe button {
+.update-links .button.primary {
   color: white;
   background: var(--ink);
-  border: 0;
-  cursor: pointer;
 }
 
-.subscribe-status {
-  grid-column: 1 / -1;
-  min-height: 20px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
+.update-links .button.secondary {
+  margin-left: 0;
+  color: var(--ink);
+  border-color: var(--line);
+  background: white;
 }
 
 .site-footer {
@@ -765,6 +746,10 @@ h3 {
   .split,
   .subscribe {
     grid-template-columns: 1fr;
+  }
+
+  .update-links {
+    justify-content: flex-start;
   }
 
   .news-grid,
