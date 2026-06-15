@@ -26,6 +26,7 @@ const requiredCardFields = [
   "provenance",
   "trustLevel",
   "verificationStatus",
+  "publishedAt",
   "time",
 ];
 
@@ -258,8 +259,8 @@ function renderNews(filter = "all") {
           <p class="source-role"><strong>来源用途</strong>${escapeHtml(item.sourceRole)}</p>
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>
-            <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.source)}</a>
-            <time>${escapeHtml(item.time)}</time>
+            <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${item.source}（在新窗口打开）`)}">${escapeHtml(item.source)}</a>
+            <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
           </footer>
         </article>
       `,

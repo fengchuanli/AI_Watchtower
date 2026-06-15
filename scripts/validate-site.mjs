@@ -149,6 +149,18 @@ if (!/target="_blank"\s+rel="noopener noreferrer"/.test(appJs)) {
   errors.push("Rendered news source links must include rel=\"noopener noreferrer\" for new tabs.");
 }
 
+if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(appJs)) {
+  errors.push("Rendered news source links must announce that they open in a new window.");
+}
+
+if (
+  !/<time datetime="\$\{escapeHtml\(item\.publishedAt\)\}">\$\{escapeHtml\(item\.time\)\}<\/time>/.test(
+    appJs,
+  )
+) {
+  errors.push("Rendered news timestamps must expose publishedAt through the time datetime attribute.");
+}
+
 if (!/main section\[id\]\s*\{[^}]*scroll-margin-top:/s.test(styles)) {
   errors.push("Anchored homepage sections must clear the sticky header.");
 }

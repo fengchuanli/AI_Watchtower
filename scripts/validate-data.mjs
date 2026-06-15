@@ -153,6 +153,10 @@ for (const item of newsFeed.items || []) {
     }
   }
 
+  if (item.publishedAt && Number.isNaN(Date.parse(item.publishedAt))) {
+    errors.push(`${item.id} has invalid publishedAt ${item.publishedAt}.`);
+  }
+
   if (item.verificationStatus && !allowedVerificationStatuses.has(item.verificationStatus)) {
     errors.push(`${item.id} has unsupported verificationStatus ${item.verificationStatus}.`);
   }

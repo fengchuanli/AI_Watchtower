@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 17:02 JST
+
+- Focus: Improved news-card accessibility by exposing machine-readable publication timestamps and announcing that external source links open in a new window, with validation guards for both behaviors and valid publication dates.
+- Changed files:
+  - `app.js`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources, including parseable publication timestamps.
+  - Ran `node scripts/validate-site.mjs` and validated the accessible external-link labels, semantic timestamps, homepage metadata, and 1 local asset reference.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html` and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit pending; final hash will be recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-15 16:02 JST
 
 - Focus: Added a controlled source-role label to every homepage news item so readers can distinguish official verification, research originals, media background, community discovery, and vendor claims; also clarified that a vendor blog cannot confirm a regulatory requirement.
