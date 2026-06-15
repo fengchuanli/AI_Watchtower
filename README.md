@@ -24,6 +24,7 @@ npx serve .
 │   └── sources.json
 ├── docs/
 │   ├── news-data-format.md
+│   ├── editorial-checklist.md
 │   ├── optimization-log.md
 │   ├── optimization-plan.md
 │   └── source-policy.md
@@ -45,6 +46,7 @@ npx serve .
 - 情报源列表：`data/sources.json`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
+- 编辑核对清单：`docs/editorial-checklist.md`
 - 数据格式：`docs/news-data-format.md`
 
 提交内容更新前可以运行：

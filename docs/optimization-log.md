@@ -2,6 +2,23 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 09:16 JST
+
+- Focus: Ran the 20:00 content-quality pass by adding a Chinese editorial checklist that defines publish, signal, and rejection thresholds plus concrete checks for sources, dates, numbers, scope, and editorial interpretation.
+- Changed files:
+  - `docs/editorial-checklist.md`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-15 09:14 JST
 
 - Focus: Ran the 19:00 maintenance pass by removing the homepage's Google Fonts runtime dependency, using a cross-platform system font stack instead, and adding a validator guard against reintroducing third-party font requests.
