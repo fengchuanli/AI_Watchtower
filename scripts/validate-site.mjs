@@ -168,6 +168,10 @@ if (!updatesSectionMatch) {
     errors.push("Update access section must link to the current structured news data.");
   }
 
+  if (!/<a\b(?=[^>]*\bhref="\.\/archive\.html")[^>]*>/.test(updatesSection)) {
+    errors.push("Update access section must link to the edition archive.");
+  }
+
   if (
     !/<a\b(?=[^>]*\bhref="https:\/\/github\.com\/fengchuanli\/AI_Watchtower\/commits\/main\/")(?=[^>]*\btarget="_blank")(?=[^>]*\brel="noopener noreferrer")[^>]*>/s.test(
       updatesSection,

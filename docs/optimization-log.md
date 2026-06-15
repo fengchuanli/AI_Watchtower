@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 20:02 JST
+
+- Focus: Added a clear Chinese edition archive entry point that distinguishes the current unverified structure preview from future fact-checked, frozen published editions, without presenting sample observations as historical news.
+- Changed files:
+  - `archive.html`
+  - `index.html`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 7 local references, the archive entry point, and all same-page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit pending; final hash will be recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-15 19:02 JST
 
 - Focus: Strengthened GitHub Pages readiness by validating every homepage `href` and `src`, rejecting missing or repository-escaping local paths and project-site-breaking root-absolute paths, and confirming that same-page links target existing IDs.
