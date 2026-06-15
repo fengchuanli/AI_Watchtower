@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 15:02 JST
+
+- Focus: Added a contributor and publishing guide that documents root-hosted GitHub Pages constraints, safe content and code update flows, validation commands, and scoped commit expectations.
+- Changed files:
+  - `docs/contributing.md`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran syntax checks for `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html` and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: `bd052ab`
+
 ## 2026-06-15 14:02 JST
 
 - Focus: Rewrote all eight sample trend notes as conditional, evidence-based observations so unverified cards no longer state market direction as established fact.
