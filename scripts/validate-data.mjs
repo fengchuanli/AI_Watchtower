@@ -15,6 +15,7 @@ const requiredNewsFields = [
   "whyRanked",
   "impact",
   "nextCheck",
+  "evidenceThreshold",
   "source",
   "sourceId",
   "sourceUrl",

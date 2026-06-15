@@ -42,6 +42,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `whyRanked`: Short Chinese explanation for why the item deserves homepage attention or ranking priority.
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
 - `nextCheck`: Short editorial note stating what should be verified before treating the item as fully confirmed.
+- `evidenceThreshold`: Concrete minimum evidence required before the observation can be upgraded to a confirmed editorial judgment. Name the source type and proof needed rather than using a vague phrase such as "more evidence".
 - `source`: Human-readable source group.
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.
@@ -60,4 +61,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, required item fields, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, required item fields including evidence thresholds, source ID references, and URL shape.

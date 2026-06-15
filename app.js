@@ -20,6 +20,7 @@ const requiredCardFields = [
   "whyRanked",
   "impact",
   "nextCheck",
+  "evidenceThreshold",
   "source",
   "sourceUrl",
   "sourceRole",
@@ -255,6 +256,7 @@ function renderNews(filter = "all") {
           <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
           <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
+          <p class="evidence-threshold"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="verification-status"><strong>核验状态</strong>${escapeHtml(item.verificationStatus)}</p>
           <p class="source-role"><strong>来源用途</strong>${escapeHtml(item.sourceRole)}</p>
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)}</strong>${escapeHtml(item.provenance)}</p>
