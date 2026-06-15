@@ -22,21 +22,24 @@ Use this file to record every automated or manual optimization. New entries go a
   - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
 - Commit: `bd052ab`
 
-## 2026-06-15 14:02 JST
+## 2026-06-15 09:20 JST
 
-- Focus: Rewrote all eight sample trend notes as conditional, evidence-based observations so unverified cards no longer state market direction as established fact.
+- Focus: Improved GitHub Pages readiness by adding a custom Chinese 404 fallback and a dedicated validator for responsive metadata, noindex behavior, reusable styling, relative site-root navigation, and project-site-safe asset paths.
 - Changed files:
-  - `data/news.json`
+  - `404.html`
+  - `scripts/validate-pages.mjs`
   - `docs/optimization-log.md`
 - Verification:
   - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
   - Ran `node --check app.js`.
   - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
   - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
-  - Parsed `index.html` with Python's HTML parser.
-  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
-  - Ran `git diff --check`.
-  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html` and `404.html` with Python's HTML parser.
+  - Ran `git diff --check` for the new Pages files.
 - Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
 
 ## 2026-06-15 09:17 JST
@@ -53,7 +56,6 @@ Use this file to record every automated or manual optimization. New entries go a
   - Parsed `index.html` with Python's HTML parser.
   - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
   - Ran `git diff --check`.
-  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
 - Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
 
 ## 2026-06-15 09:14 JST
@@ -72,6 +74,23 @@ Use this file to record every automated or manual optimization. New entries go a
   - Ran `node --check scripts/validate-site.mjs`.
   - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
   - Ran `node scripts/validate-site.mjs` and validated metadata, public update links, email privacy disclosure, and 1 local asset reference.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
+## 2026-06-15 09:16 JST
+
+- Focus: Ran the 20:00 content-quality pass by adding a Chinese editorial checklist that defines publish, signal, and rejection thresholds plus concrete checks for sources, dates, numbers, scope, and editorial interpretation.
+- Changed files:
+  - `docs/editorial-checklist.md`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
   - Parsed `index.html` with Python's HTML parser.
   - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
   - Ran `git diff --check`.
@@ -100,43 +119,6 @@ Use this file to record every automated or manual optimization. New entries go a
   - Ran `git diff --check`.
 - Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
 
-## 2026-06-15 09:20 JST
-
-- Focus: Improved GitHub Pages readiness by adding a custom Chinese 404 fallback and a dedicated validator for responsive metadata, noindex behavior, reusable styling, relative site-root navigation, and project-site-safe asset paths.
-- Changed files:
-  - `404.html`
-  - `scripts/validate-pages.mjs`
-  - `docs/optimization-log.md`
-- Verification:
-  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
-  - Ran `node --check app.js`.
-  - Ran `node --check scripts/validate-data.mjs`.
-  - Ran `node --check scripts/validate-site.mjs`.
-  - Ran `node --check scripts/validate-pages.mjs`.
-  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
-  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
-  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
-  - Parsed `index.html` and `404.html` with Python's HTML parser.
-  - Ran `git diff --check` for the new Pages files.
-- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
-
-## 2026-06-15 09:16 JST
-
-- Focus: Ran the 20:00 content-quality pass by adding a Chinese editorial checklist that defines publish, signal, and rejection thresholds plus concrete checks for sources, dates, numbers, scope, and editorial interpretation.
-- Changed files:
-  - `docs/editorial-checklist.md`
-  - `README.md`
-  - `docs/optimization-log.md`
-- Verification:
-  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
-  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
-  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
-  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
-  - Parsed `index.html` with Python's HTML parser.
-  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
-  - Ran `git diff --check`.
-- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
-
 ## 2026-06-15 09:14 JST
 
 - Focus: Ran the 19:00 maintenance pass by removing the homepage's Google Fonts runtime dependency, using a cross-platform system font stack instead, and adding a validator guard against reintroducing third-party font requests.
@@ -154,6 +136,7 @@ Use this file to record every automated or manual optimization. New entries go a
   - Ran `node scripts/validate-site.mjs` and validated homepage metadata, local assets, and the third-party font safeguard.
   - Parsed `index.html` with Python's HTML parser.
   - Ran `git diff --check`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
 - Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
 
 ## 2026-06-12 21:02 JST
