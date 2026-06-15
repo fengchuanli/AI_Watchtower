@@ -493,6 +493,11 @@ h3 {
   box-shadow: 0 8px 18px rgb(25 32 44 / 8%);
 }
 
+.filter-tabs button:disabled {
+  cursor: wait;
+  opacity: 0.56;
+}
+
 .filter-tabs button:focus-visible,
 .skip-link:focus-visible,
 .button:focus-visible,
@@ -501,6 +506,7 @@ h3 {
 .nav-links a:focus-visible,
 .text-link:focus-visible,
 .feed-state a:focus-visible,
+.feed-retry:focus-visible,
 .update-links a:focus-visible {
   outline: 3px solid var(--cyan);
   outline-offset: 3px;
@@ -552,6 +558,23 @@ h3 {
   color: #8c2f1f;
   background: #fff5f2;
   border-color: rgb(216 102 79 / 42%);
+}
+
+.feed-state p {
+  margin-bottom: 0;
+}
+
+.feed-retry {
+  min-height: 40px;
+  margin-top: 16px;
+  padding: 0 16px;
+  color: white;
+  background: var(--ink);
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
 }
 
 .feed-state a {

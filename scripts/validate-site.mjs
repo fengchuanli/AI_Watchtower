@@ -197,6 +197,21 @@ if (
   errors.push("Rendered news timestamps must expose publishedAt through the time datetime attribute.");
 }
 
+if (
+  !/setFiltersDisabled\(true\);[\s\S]*renderFeedMessage\("loading"/.test(appJs) ||
+  !/setFiltersDisabled\(false\);\s*renderNews\(currentFilter\);/.test(appJs)
+) {
+  errors.push("News filters must stay disabled until the data has loaded successfully.");
+}
+
+if (
+  !/renderFeedMessage\("error",\s*"新闻数据暂时无法读取。",\s*true\)/.test(appJs) ||
+  !/class="feed-retry"[\s\S]*重新加载/.test(appJs) ||
+  !/querySelector\("\.feed-retry"\)\?\.addEventListener\("click", loadNews\)/.test(appJs)
+) {
+  errors.push("News loading errors must provide a working retry button.");
+}
+
 if (!/main section\[id\]\s*\{[^}]*scroll-margin-top:/s.test(styles)) {
   errors.push("Anchored homepage sections must clear the sticky header.");
 }

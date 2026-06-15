@@ -32,6 +32,7 @@ const requiredCardFields = [
 ];
 
 async function loadNews() {
+  setFiltersDisabled(true);
   renderFeedMessage("loading", "正在读取新闻数据...");
 
   try {
@@ -49,12 +50,14 @@ async function loadNews() {
     updateNewsMeta(data);
   } catch (error) {
     news = [];
-    updateNewsMeta({ statusLabel: "数据未加载", editorNote: "新闻数据暂时无法读取，请稍后刷新。" });
-    renderFeedMessage("error", "新闻数据暂时无法读取，请稍后刷新。");
+    updateNewsMeta({ statusLabel: "数据未加载", editorNote: "新闻数据暂时无法读取，请稍后重试。" });
+    updateCategoryMeta();
+    renderFeedMessage("error", "新闻数据暂时无法读取。", true);
     console.warn(error);
     return;
   }
 
+  setFiltersDisabled(false);
   renderNews(currentFilter);
 }
 
@@ -197,6 +200,11 @@ function updateCategoryMeta(filter) {
     return;
   }
 
+  if (!news.length) {
+    categoryMeta.textContent = "分类筛选将在新闻数据加载后启用。";
+    return;
+  }
+
   if (filter === "all") {
     categoryMeta.textContent = `全部 · ${news.length} 条 · 按模型、产品、研究、工具、资金与政策六类整理。`;
     return;
@@ -211,6 +219,10 @@ function updateCategoryMeta(filter) {
 }
 
 function selectFilter(button) {
+  if (button.disabled) {
+    return;
+  }
+
   filterButtons.forEach((item) => {
     const isSelected = item === button;
     item.classList.toggle("active", isSelected);
@@ -232,8 +244,25 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
-function renderFeedMessage(type, message) {
-  newsGrid.innerHTML = `<p class="feed-state ${type}" role="status">${escapeHtml(message)}</p>`;
+function setFiltersDisabled(isDisabled) {
+  filterButtons.forEach((button) => {
+    button.disabled = isDisabled;
+  });
+}
+
+function renderFeedMessage(type, message, canRetry = false) {
+  const retryButton = canRetry
+    ? '<button class="feed-retry" type="button">重新加载</button>'
+    : "";
+
+  newsGrid.innerHTML = `
+    <div class="feed-state ${type}" role="status">
+      <p>${escapeHtml(message)}</p>
+      ${retryButton}
+    </div>
+  `;
+
+  newsGrid.querySelector(".feed-retry")?.addEventListener("click", loadNews);
 }
 
 function renderNews(filter = "all") {
