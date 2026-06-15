@@ -2,6 +2,23 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 09:17 JST
+
+- Focus: Rewrote all unverified sample headlines and summaries as explicit observation hypotheses with concrete evidence checks, and advanced the dated sample edition so readers do not mistake editorial examples for confirmed news.
+- Changed files:
+  - `data/news.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Parsed `index.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-15 09:14 JST
 
 - Focus: Replaced the non-functional newsletter form with honest public update links, clearly stating that the static GitHub Pages site does not collect or store email addresses.
