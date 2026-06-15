@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 09:20 JST
+
+- Focus: Improved GitHub Pages readiness by adding a custom Chinese 404 fallback and a dedicated validator for responsive metadata, noindex behavior, reusable styling, relative site-root navigation, and project-site-safe asset paths.
+- Changed files:
+  - `404.html`
+  - `scripts/validate-pages.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata plus 1 local asset reference.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html` and `404.html` with Python's HTML parser.
+  - Ran `git diff --check` for the new Pages files.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-15 09:16 JST
 
 - Focus: Ran the 20:00 content-quality pass by adding a Chinese editorial checklist that defines publish, signal, and rejection thresholds plus concrete checks for sources, dates, numbers, scope, and editorial interpretation.
