@@ -23,6 +23,7 @@ npx serve .
 │   ├── news.json
 │   └── sources.json
 ├── docs/
+│   ├── contributing.md
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
 │   ├── optimization-log.md
@@ -48,6 +49,7 @@ npx serve .
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`
 - 数据格式：`docs/news-data-format.md`
+- 贡献与发布流程：`docs/contributing.md`
 
 提交内容更新前可以运行：
 
