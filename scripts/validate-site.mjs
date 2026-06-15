@@ -1,9 +1,11 @@
 import { existsSync, readFileSync } from "node:fs";
+import { isAbsolute, relative, resolve, sep } from "node:path";
 
 const html = readFileSync("index.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const errors = [];
+const repositoryRoot = process.cwd();
 
 const requiredMetaTags = [
   ["name", "description"],
@@ -70,14 +72,44 @@ if (!jsonLdMatch) {
   }
 }
 
-const localAssetRefs = Array.from(
-  html.matchAll(/<(?:meta|link)\b[^>]*(?:content|href)="(\.\/assets\/[^"]+)"/g),
-  (match) => match[1].replace("./", ""),
-);
+const pageRefs = Array.from(html.matchAll(/\b(?:href|src)="([^"]+)"/g), (match) => match[1]);
+const localFileRefs = new Set();
+const pageIds = new Set(Array.from(html.matchAll(/\bid="([^"]+)"/g), (match) => match[1]));
 
-for (const assetRef of new Set(localAssetRefs)) {
-  if (!existsSync(assetRef)) {
-    errors.push(`Referenced asset does not exist: ${assetRef}`);
+for (const pageRef of pageRefs) {
+  if (pageRef.startsWith("#")) {
+    const targetId = pageRef.slice(1);
+
+    if (targetId && !pageIds.has(targetId)) {
+      errors.push(`Same-page link target does not exist: ${pageRef}`);
+    }
+
+    continue;
+  }
+
+  if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(pageRef)) {
+    continue;
+  }
+
+  if (pageRef.startsWith("/")) {
+    errors.push(`Root-absolute reference breaks GitHub project sites: ${pageRef}`);
+    continue;
+  }
+
+  const localRef = pageRef.split(/[?#]/, 1)[0];
+
+  if (!localRef) {
+    continue;
+  }
+
+  localFileRefs.add(localRef);
+  const resolvedRef = resolve(repositoryRoot, localRef);
+  const relativeRef = relative(repositoryRoot, resolvedRef);
+
+  if (relativeRef === ".." || relativeRef.startsWith(`..${sep}`) || isAbsolute(relativeRef)) {
+    errors.push(`Local reference escapes the repository root: ${pageRef}`);
+  } else if (!existsSync(resolvedRef)) {
+    errors.push(`Referenced local path does not exist: ${pageRef}`);
   }
 }
 
@@ -174,4 +206,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validated site metadata and ${new Set(localAssetRefs).size} local asset reference.`);
+console.log(
+  `Validated site metadata, ${localFileRefs.size} local references, and same-page link targets.`,
+);
