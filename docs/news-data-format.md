@@ -23,6 +23,14 @@ The optional top-level `briefing` object powers the homepage Today Briefing sect
 - `cta`: Short link text pointing readers toward the feed.
 - `watchPoints`: Exactly three Chinese observation objects, each with `title` and `body`.
 
+## Category Fields
+
+The top-level `categories` array defines the editorial boundary of every homepage filter. Keep one definition for each supported category so the page can explain what is included instead of relying on a short label alone.
+
+- `id`: Stable category code matching item `category` and the homepage filter.
+- `label`: Chinese label shared by the filter and every item in that category.
+- `description`: Concise Chinese scope note covering what belongs in the category and any important evidence caveat.
+
 ## Required Fields
 
 - `id`: Stable unique item ID.
@@ -51,4 +59,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, required item fields, category support, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, required item fields, source ID references, and URL shape.

@@ -26,6 +26,7 @@ const requiredNewsFields = [
 ];
 const requiredBriefingFields = ["label", "headline", "summary", "cta"];
 const requiredEditionFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
+const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
 const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
 
@@ -37,6 +38,40 @@ if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
 
 if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json must include an items array.");
+}
+
+if (!Array.isArray(newsFeed.categories) || !newsFeed.categories.length) {
+  errors.push("data/news.json must include category definitions.");
+} else {
+  const categoryIds = new Set();
+
+  for (const [index, category] of newsFeed.categories.entries()) {
+    for (const field of requiredCategoryFields) {
+      if (!category[field]) {
+        errors.push(`data/news.json categories[${index}] is missing ${field}.`);
+      }
+    }
+
+    if (category.id && categoryIds.has(category.id)) {
+      errors.push(`data/news.json has duplicate category id ${category.id}.`);
+    }
+
+    categoryIds.add(category.id);
+  }
+
+  const expectedCategoryIds = new Set([...allowedCategories].filter((category) => category !== "all"));
+
+  for (const categoryId of expectedCategoryIds) {
+    if (!categoryIds.has(categoryId)) {
+      errors.push(`data/news.json is missing category definition ${categoryId}.`);
+    }
+  }
+
+  for (const categoryId of categoryIds) {
+    if (!expectedCategoryIds.has(categoryId)) {
+      errors.push(`data/news.json has unsupported category definition ${categoryId}.`);
+    }
+  }
 }
 
 if (!newsFeed.edition) {
@@ -94,6 +129,14 @@ for (const item of newsFeed.items || []) {
 
   if (item.category && !allowedCategories.has(item.category)) {
     errors.push(`${item.id} has unsupported category ${item.category}.`);
+  }
+
+  const categoryDefinition = newsFeed.categories?.find((category) => category.id === item.category);
+
+  if (item.category && !categoryDefinition) {
+    errors.push(`${item.id} references undefined category ${item.category}.`);
+  } else if (categoryDefinition && item.label !== categoryDefinition.label) {
+    errors.push(`${item.id} label must match category label ${categoryDefinition.label}.`);
   }
 
   if (item.sourceId && !sourceIds.has(item.sourceId)) {

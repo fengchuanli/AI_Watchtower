@@ -1,9 +1,11 @@
 let news = [];
+let newsCategories = [];
 let currentFilter = "all";
 
 const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const newsMeta = document.querySelector("#newsMeta");
+const categoryMeta = document.querySelector("#categoryMeta");
 const briefingLabel = document.querySelector("#briefingLabel");
 const briefingHeadline = document.querySelector("#briefingHeadline");
 const briefingSummary = document.querySelector("#briefingSummary");
@@ -41,6 +43,7 @@ async function loadNews() {
     const data = await response.json();
     validateNewsData(data);
     news = data.items;
+    newsCategories = data.categories;
     updateTodayBriefing(data.briefing);
     updateNewsMeta(data);
   } catch (error) {
@@ -60,6 +63,7 @@ function validateNewsData(data) {
   }
 
   validateEdition(data.edition, data.updatedAt);
+  validateCategories(data.categories, data.items);
   validateBriefing(data.briefing);
 
   const invalidItem = data.items.find((item) => requiredCardFields.some((field) => !item[field]));
@@ -72,6 +76,27 @@ function validateNewsData(data) {
 
   if (itemWithInvalidUrl) {
     throw new Error(`News item ${itemWithInvalidUrl.id || "without id"} has an invalid source URL.`);
+  }
+}
+
+function validateCategories(categories, items) {
+  if (!Array.isArray(categories) || !categories.length) {
+    throw new Error("News data must include category definitions.");
+  }
+
+  const categoryIds = new Set(categories.map((category) => category.id));
+  const invalidCategory = categories.find(
+    (category) => !category.id || !category.label || !category.description,
+  );
+
+  if (invalidCategory) {
+    throw new Error("Each news category must include id, label, and description.");
+  }
+
+  const itemWithoutCategory = items.find((item) => !categoryIds.has(item.category));
+
+  if (itemWithoutCategory) {
+    throw new Error(`News item ${itemWithoutCategory.id || "without id"} has no category definition.`);
   }
 }
 
@@ -166,6 +191,24 @@ function updateNewsMeta(data) {
   newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${edition} · ${data.editorNote || ""}`;
 }
 
+function updateCategoryMeta(filter) {
+  if (!categoryMeta) {
+    return;
+  }
+
+  if (filter === "all") {
+    categoryMeta.textContent = `全部 · ${news.length} 条 · 按模型、产品、研究、工具、资金与政策六类整理。`;
+    return;
+  }
+
+  const category = newsCategories.find((item) => item.id === filter);
+  const itemCount = news.filter((item) => item.category === filter).length;
+
+  categoryMeta.textContent = category
+    ? `${category.label} · ${itemCount} 条 · ${category.description}`
+    : "当前分类缺少编辑说明。";
+}
+
 function selectFilter(button) {
   filterButtons.forEach((item) => {
     const isSelected = item === button;
@@ -194,6 +237,7 @@ function renderFeedMessage(type, message) {
 
 function renderNews(filter = "all") {
   const visibleNews = filter === "all" ? news : news.filter((item) => item.category === filter);
+  updateCategoryMeta(filter);
 
   if (!visibleNews.length) {
     renderFeedMessage("empty", "暂无匹配内容，后续接入真实来源后会自动补充。");
