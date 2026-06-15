@@ -93,6 +93,10 @@ if (/\.\/assets\/ai-intel-hero\.png/.test(html)) {
   errors.push("Homepage must not load the unoptimized PNG hero asset.");
 }
 
+if (/fonts\.(?:googleapis|gstatic)\.com/.test(html)) {
+  errors.push("Homepage must not depend on third-party Google Fonts requests.");
+}
+
 if (/<a\b[^>]*\bhref="#"/s.test(html)) {
   errors.push('index.html must not include placeholder links with href="#".');
 }

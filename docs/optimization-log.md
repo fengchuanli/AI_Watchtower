@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-15 09:14 JST
+
+- Focus: Ran the 19:00 maintenance pass by removing the homepage's Google Fonts runtime dependency, using a cross-platform system font stack instead, and adding a validator guard against reintroducing third-party font requests.
+- Changed files:
+  - `index.html`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, local assets, and the third-party font safeguard.
+  - Parsed `index.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Local commit created; final hash recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-12 21:02 JST
 
 - Focus: Reduced homepage loading cost by serving a 268 KB JPEG hero instead of the 1.7 MB PNG, while preserving the PNG as the source asset and adding intrinsic dimensions plus explicit loading hints.
