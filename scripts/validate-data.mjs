@@ -18,6 +18,7 @@ const requiredNewsFields = [
   "source",
   "sourceId",
   "sourceUrl",
+  "sourceRole",
   "provenance",
   "trustLevel",
   "verificationStatus",
@@ -29,6 +30,7 @@ const requiredEditionFields = ["id", "date", "timezone", "archiveStatus", "archi
 const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
 const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
+const allowedSourceRoles = new Set(["官方核对", "研究原文", "媒体背景", "社区发现", "厂商主张"]);
 
 const errors = [];
 
@@ -153,6 +155,10 @@ for (const item of newsFeed.items || []) {
 
   if (item.verificationStatus && !allowedVerificationStatuses.has(item.verificationStatus)) {
     errors.push(`${item.id} has unsupported verificationStatus ${item.verificationStatus}.`);
+  }
+
+  if (item.sourceRole && !allowedSourceRoles.has(item.sourceRole)) {
+    errors.push(`${item.id} has unsupported sourceRole ${item.sourceRole}.`);
   }
 }
 

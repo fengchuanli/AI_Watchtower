@@ -12,10 +12,12 @@ AI Watchtower should grow from a clear source list instead of scraping random pa
 ## Publishing Rules
 
 - Preserve the original source URL for each item.
+- State the source's role in the item: official verification, research original, media background, community discovery, or vendor claim.
 - Write summaries in Chinese.
 - Do not copy full articles.
 - Do not present community discussion, rumors, leaks, or unconfirmed posts as facts.
 - Prefer official confirmation when covering model releases, company claims, pricing, policy changes, or funding.
+- Do not use a vendor blog as confirmation of regulation; link the applicable law, regulator, or platform policy before publishing.
 - Mark uncertain items as signals instead of confirmed news.
 
 ## Automation Notes
