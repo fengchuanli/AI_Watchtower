@@ -11,6 +11,16 @@ const briefingHeadline = document.querySelector("#briefingHeadline");
 const briefingSummary = document.querySelector("#briefingSummary");
 const briefingCta = document.querySelector("#briefingCta");
 const briefingWatchPoints = document.querySelector("#briefingWatchPoints");
+const deepKicker = document.querySelector("#deepKicker");
+const deepDate = document.querySelector("#deepDate");
+const deepTitle = document.querySelector("#deepTitle");
+const deepSubtitle = document.querySelector("#deepSubtitle");
+const deepOverview = document.querySelector("#deepOverview");
+const deepMetrics = document.querySelector("#deepMetrics");
+const deepTimeline = document.querySelector("#deepTimeline");
+const deepSections = document.querySelector("#deepSections");
+const deepActions = document.querySelector("#deepActions");
+const deepReferences = document.querySelector("#deepReferences");
 const requiredCardFields = [
   "category",
   "label",
@@ -47,6 +57,7 @@ async function loadNews() {
     news = data.items;
     newsCategories = data.categories;
     updateTodayBriefing(data.briefing);
+    updateDeepBriefing(data.deepBriefing);
     updateNewsMeta(data);
   } catch (error) {
     news = [];
@@ -69,6 +80,7 @@ function validateNewsData(data) {
   validateEdition(data.edition, data.updatedAt);
   validateCategories(data.categories, data.items);
   validateBriefing(data.briefing);
+  validateDeepBriefing(data.deepBriefing);
 
   const invalidItem = data.items.find((item) => requiredCardFields.some((field) => !item[field]));
 
@@ -138,6 +150,35 @@ function validateBriefing(briefing) {
   }
 }
 
+function validateDeepBriefing(deepBriefing) {
+  if (!deepBriefing) {
+    throw new Error("News data must include a deepBriefing object.");
+  }
+
+  const requiredFields = ["kicker", "title", "subtitle", "dateLabel", "status", "overview"];
+  const missingField = requiredFields.find((field) => !deepBriefing[field]);
+
+  if (missingField) {
+    throw new Error(`Deep briefing is missing ${missingField}.`);
+  }
+
+  if (!Array.isArray(deepBriefing.timeline) || deepBriefing.timeline.length < 3) {
+    throw new Error("Deep briefing must include at least three timeline items.");
+  }
+
+  if (!Array.isArray(deepBriefing.keyNumbers) || deepBriefing.keyNumbers.length < 3) {
+    throw new Error("Deep briefing must include at least three key numbers.");
+  }
+
+  if (!Array.isArray(deepBriefing.sections) || deepBriefing.sections.length < 3) {
+    throw new Error("Deep briefing must include at least three sections.");
+  }
+
+  if (!Array.isArray(deepBriefing.actions) || deepBriefing.actions.length < 2) {
+    throw new Error("Deep briefing must include reader actions.");
+  }
+}
+
 function isValidSourceUrl(sourceUrl) {
   try {
     const url = new URL(sourceUrl);
@@ -178,6 +219,66 @@ function updateTodayBriefing(briefing) {
             <p>${escapeHtml(point.body)}</p>
           </div>
         </article>
+      `,
+    )
+    .join("");
+}
+
+function updateDeepBriefing(deepBriefing) {
+  if (!deepBriefing || !deepSections) {
+    return;
+  }
+
+  deepKicker.textContent = deepBriefing.kicker;
+  deepDate.textContent = `${deepBriefing.dateLabel} · ${deepBriefing.status}`;
+  deepTitle.textContent = deepBriefing.title;
+  deepSubtitle.textContent = deepBriefing.subtitle;
+  deepOverview.textContent = deepBriefing.overview;
+
+  deepMetrics.innerHTML = deepBriefing.keyNumbers
+    .map(
+      (metric) => `
+        <div>
+          <dt>${escapeHtml(metric.value)}</dt>
+          <dd>${escapeHtml(metric.label)}</dd>
+        </div>
+      `,
+    )
+    .join("");
+
+  deepTimeline.innerHTML = deepBriefing.timeline
+    .map(
+      (item) => `
+        <article>
+          <span>${escapeHtml(item.label)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.body)}</p>
+        </article>
+      `,
+    )
+    .join("");
+
+  deepSections.innerHTML = deepBriefing.sections
+    .map(
+      (section) => `
+        <article class="deep-section">
+          <span>${escapeHtml(section.number)} · ${escapeHtml(section.label)}</span>
+          <h3>${escapeHtml(section.title)}</h3>
+          <p>${escapeHtml(section.body)}</p>
+          <p class="deep-so-what"><strong>So What?</strong>${escapeHtml(section.soWhat)}</p>
+        </article>
+      `,
+    )
+    .join("");
+
+  deepActions.innerHTML = deepBriefing.actions.map((action) => `<li>${escapeHtml(action)}</li>`).join("");
+  deepReferences.innerHTML = deepBriefing.references
+    .map(
+      (reference, index) => `
+        <a href="${escapeHtml(reference.url)}">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          ${escapeHtml(reference.label)}
+        </a>
       `,
     )
     .join("");
@@ -280,17 +381,17 @@ function renderNews(filter = "all") {
         <article class="news-card">
           <span class="category">${escapeHtml(item.label)}</span>
           <h3>${escapeHtml(item.title)}</h3>
-          <p>${escapeHtml(item.body)}</p>
-          <p class="trend-note">${escapeHtml(item.trend)}</p>
+          <p class="card-summary"><strong>发生了什么</strong>${escapeHtml(item.body)}</p>
+          <p class="trend-note"><strong>趋势判断</strong>${escapeHtml(item.trend)}</p>
           <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
           <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
           <p class="evidence-threshold"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="verification-status"><strong>核验状态</strong>${escapeHtml(item.verificationStatus)}</p>
-          <p class="source-role"><strong>来源用途</strong>${escapeHtml(item.sourceRole)}</p>
-          <p class="source-note"><strong>${escapeHtml(item.trustLevel)}</strong>${escapeHtml(item.provenance)}</p>
+          <p class="source-note"><strong>${escapeHtml(item.trustLevel)} · ${escapeHtml(item.sourceRole)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>
-            <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${item.source}（在新窗口打开）`)}">${escapeHtml(item.source)}</a>
+            <span>参考来源：${escapeHtml(item.source)}</span>
+            <a class="reference-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${item.source}（在新窗口打开）`)}">原始来源</a>
             <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
           </footer>
         </article>

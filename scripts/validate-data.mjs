@@ -27,6 +27,7 @@ const requiredNewsFields = [
   "time",
 ];
 const requiredBriefingFields = ["label", "headline", "summary", "cta"];
+const requiredDeepBriefingFields = ["kicker", "title", "subtitle", "dateLabel", "status", "overview"];
 const requiredEditionFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
 const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
@@ -120,6 +121,32 @@ if (newsFeed.briefing) {
     if (!point.title || !point.body) {
       errors.push(`data/news.json briefing watchPoints[${index}] must include title and body.`);
     }
+  }
+}
+
+if (!newsFeed.deepBriefing) {
+  errors.push("data/news.json must include deepBriefing.");
+} else {
+  for (const field of requiredDeepBriefingFields) {
+    if (!newsFeed.deepBriefing[field]) {
+      errors.push(`data/news.json deepBriefing is missing ${field}.`);
+    }
+  }
+
+  if (!Array.isArray(newsFeed.deepBriefing.timeline) || newsFeed.deepBriefing.timeline.length < 3) {
+    errors.push("data/news.json deepBriefing must include at least three timeline items.");
+  }
+
+  if (!Array.isArray(newsFeed.deepBriefing.keyNumbers) || newsFeed.deepBriefing.keyNumbers.length < 3) {
+    errors.push("data/news.json deepBriefing must include at least three keyNumbers.");
+  }
+
+  if (!Array.isArray(newsFeed.deepBriefing.sections) || newsFeed.deepBriefing.sections.length < 3) {
+    errors.push("data/news.json deepBriefing must include at least three sections.");
+  }
+
+  if (!Array.isArray(newsFeed.deepBriefing.actions) || newsFeed.deepBriefing.actions.length < 2) {
+    errors.push("data/news.json deepBriefing must include reader actions.");
   }
 }
 

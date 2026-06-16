@@ -23,6 +23,22 @@ The optional top-level `briefing` object powers the homepage Today Briefing sect
 - `cta`: Short link text pointing readers toward the feed.
 - `watchPoints`: Exactly three Chinese observation objects, each with `title` and `body`.
 
+## Deep Briefing Fields
+
+The required top-level `deepBriefing` object powers the homepage long-form explanation section. It should make the news understandable inside AI Watchtower, using original links only as references.
+
+- `kicker`: Short English or Chinese section label.
+- `title`: Chinese briefing title.
+- `subtitle`: Chinese one-paragraph summary of the briefing angle.
+- `dateLabel`: Human-readable date label.
+- `status`: Publication or verification status.
+- `overview`: Chinese overview explaining the whole briefing.
+- `timeline`: At least three objects with `label`, `title`, and `body`.
+- `keyNumbers`: At least three metric objects with `value` and `label`.
+- `sections`: At least three explainer sections with `number`, `label`, `title`, `body`, and `soWhat`.
+- `actions`: Reader actions or takeaways.
+- `references`: Source references retained for verification rather than primary navigation.
+
 ## Category Fields
 
 The top-level `categories` array defines the editorial boundary of every homepage filter. Keep one definition for each supported category so the page can explain what is included instead of relying on a short label alone.
