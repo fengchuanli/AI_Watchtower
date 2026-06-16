@@ -22,4 +22,4 @@ AI Watchtower should grow from a clear source list instead of scraping random pa
 
 ## Automation Notes
 
-When future jobs ingest live data, they should start with sources where `hasRss` is `true`, then add official non-RSS pages with conservative fetching rules.
+News intelligence jobs run at 08:00 and 17:00 JST. They should start with sources where `hasRss` is `true`, then add official non-RSS pages with conservative fetching rules. The site should summarize and explain the news in Chinese, while keeping original URLs as references rather than forcing readers to leave the page.

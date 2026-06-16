@@ -4,10 +4,17 @@ This plan guides eight daily optimization passes for roughly 30 days. Each pass 
 
 ## Daily Rhythm
 
+News intelligence updates run twice per day. These jobs should collect recent AI signals from `data/sources.json`, summarize them in Chinese inside the site, preserve source URLs as references, and avoid turning the page into a link directory.
+
+- 08:00 JST: Morning news intelligence update.
+- 17:00 JST: Evening news intelligence update.
+
+Site optimization runs separately. These jobs should improve the presentation, validation, editorial structure, and publishing quality around the news data.
+
 - 14:00 JST: Content and information pass. Improve headlines, summaries, categories, source framing, trend wording, or dated editorial notes.
 - 15:00 JST: Product and quality pass. Improve layout, accessibility, mobile behavior, loading, documentation, or the publishing workflow.
 - 16:00 JST: Content structure pass. Improve homepage news data, source links, editorial notes, archive readiness, or trend explanation.
-- 17:00 JST: Product quality pass. Improve validation, accessibility, responsive behavior, metadata, or implementation clarity.
+- 17:30 JST: Product quality pass. Improve validation, accessibility, responsive behavior, metadata, or implementation clarity.
 - 18:00 JST: Content depth pass. Improve source interpretation, topic coverage, ranking explanations, or category clarity.
 - 19:00 JST: Maintenance pass. Improve documentation, checks, GitHub Pages readiness, loading, or resilience.
 - 20:00 JST: Content polish pass. Improve Chinese copy, summaries, trust labels, provenance notes, or daily briefing structure.
