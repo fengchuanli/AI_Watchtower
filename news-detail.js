@@ -1,4 +1,26 @@
 const detailShell = document.querySelector("#detailShell");
+const requiredDetailFields = [
+  "label",
+  "title",
+  "body",
+  "trend",
+  "whyRanked",
+  "impact",
+  "readerUse",
+  "nextCheck",
+  "followUpQuestions",
+  "evidenceThreshold",
+  "claimBoundary",
+  "counterEvidence",
+  "source",
+  "sourceUrl",
+  "sourceRole",
+  "provenance",
+  "trustLevel",
+  "verificationStatus",
+  "publishedAt",
+  "time",
+];
 
 function escapeHtml(value) {
   return String(value)
@@ -29,6 +51,7 @@ async function loadDetail() {
     }
 
     const data = await response.json();
+    validateDetailFeed(data);
     const item = data.items.find((entry) => entry.id === newsId);
 
     if (!item) {
@@ -40,6 +63,28 @@ async function loadDetail() {
   } catch (error) {
     console.warn(error);
     renderError("新闻解读暂时无法读取。", "请稍后刷新，或返回首页查看新闻流。", true);
+  }
+}
+
+function validateDetailFeed(data) {
+  if (!data.edition?.date || !data.edition?.archiveLabel) {
+    throw new Error("News detail data must include edition date and archive label.");
+  }
+
+  if (!Array.isArray(data.items)) {
+    throw new Error("News detail data must include an items array.");
+  }
+}
+
+function validateDetailItem(item) {
+  const missingField = requiredDetailFields.find((field) => !item[field]);
+
+  if (missingField) {
+    throw new Error(`News detail item ${item.id || "without id"} is missing ${missingField}.`);
+  }
+
+  if (!Array.isArray(item.followUpQuestions) || item.followUpQuestions.length < 2) {
+    throw new Error(`News detail item ${item.id || "without id"} must include follow-up questions.`);
   }
 }
 
@@ -58,6 +103,7 @@ function renderError(title, message, canRetry = false) {
 }
 
 function renderDetail(item, data) {
+  validateDetailItem(item);
   document.title = `${item.title} | AI Watchtower`;
   const followUpQuestions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
 

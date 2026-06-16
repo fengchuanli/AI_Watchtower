@@ -295,6 +295,15 @@ if (!/href="\$\{escapeHtml\(item\.sourceUrl\)\}" target="_blank" rel="noopener n
   errors.push("News detail page must keep original source links safe and secondary.");
 }
 
+if (
+  !/const requiredDetailFields = \[[\s\S]*"counterEvidence"[\s\S]*"time"[\s\S]*\];/.test(detailJs) ||
+  !/validateDetailFeed\(data\);/.test(detailJs) ||
+  !/function validateDetailItem\(item\) \{[\s\S]*requiredDetailFields\.find/.test(detailJs) ||
+  !/validateDetailItem\(item\);\s*document\.title/.test(detailJs)
+) {
+  errors.push("News detail page must validate required display fields before rendering.");
+}
+
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {
   errors.push("News detail source links must announce that they open in a new window.");
 }

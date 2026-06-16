@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 21:02 JST
+
+- Focus: Improved product maintainability by making the in-site news detail page validate required feed and item display fields before rendering, so incomplete JSON fails into the existing retry/error state instead of producing a partial explainer.
+- Changed files:
+  - `news-detail.js`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 19 local references, static page link targets, and detail-page display-field validation.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit pending; final hash will be recorded in the automation run summary because amending this log line changes repository history.
+
 ## 2026-06-16 20:05 JST
 
 - Focus: Added per-item downgrade signals so homepage news cards and detail pages explain what later evidence would weaken or narrow each editorial judgment, reducing one-sided trend framing.
