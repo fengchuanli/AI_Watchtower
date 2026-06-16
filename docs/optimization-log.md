@@ -2,6 +2,23 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 08:01 JST
+
+- Focus: Published the 08:00 JST AI news intelligence update with official-source signals on OpenAI Deployment Simulation, Anthropic Public Record, Anthropic/TCS regulated-industry delivery, and continued Agent/system-safety posture.
+- Changed files:
+  - `data/news.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 19 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: Included in the local automation commit; push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-16 22:20 JST
 
 - Focus: Shortened homepage news cards to only show what happened, trend judgment, and selection reason, while moving richer explanations into dedicated detail-page fields.
