@@ -1,13 +1,21 @@
 import { existsSync, readFileSync } from "node:fs";
-import { isAbsolute, relative, resolve, sep } from "node:path";
+import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 
 const html = readFileSync("index.html", "utf8");
 const detailHtml = readFileSync("news-detail.html", "utf8");
+const archiveHtml = readFileSync("archive.html", "utf8");
+const notFoundHtml = readFileSync("404.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
 const detailJs = readFileSync("news-detail.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
+const htmlPages = new Map([
+  ["index.html", html],
+  ["news-detail.html", detailHtml],
+  ["archive.html", archiveHtml],
+  ["404.html", notFoundHtml],
+]);
 
 const requiredMetaTags = [
   ["name", "description"],
@@ -74,46 +82,96 @@ if (!jsonLdMatch) {
   }
 }
 
-const pageRefs = Array.from(html.matchAll(/\b(?:href|src)="([^"]+)"/g), (match) => match[1]);
-const localFileRefs = new Set();
-const pageIds = new Set(Array.from(html.matchAll(/\bid="([^"]+)"/g), (match) => match[1]));
+function getPageIds(pageHtml) {
+  return new Set(Array.from(pageHtml.matchAll(/\bid="([^"]+)"/g), (match) => match[1]));
+}
 
-for (const pageRef of pageRefs) {
-  if (pageRef.startsWith("#")) {
-    const targetId = pageRef.slice(1);
+function getHtmlTarget(refPath, currentFile) {
+  if (!refPath || refPath === ".") {
+    return "index.html";
+  }
 
-    if (targetId && !pageIds.has(targetId)) {
-      errors.push(`Same-page link target does not exist: ${pageRef}`);
+  const normalizedPath = refPath.replace(/^\.\//, "");
+
+  if (normalizedPath.endsWith("/")) {
+    return `${normalizedPath}index.html`;
+  }
+
+  if (normalizedPath.endsWith(".html")) {
+    return normalizedPath;
+  }
+
+  if (normalizedPath === currentFile) {
+    return currentFile;
+  }
+
+  return null;
+}
+
+function validateStaticPageReferences(fileName, pageHtml) {
+  const pageRefs = Array.from(pageHtml.matchAll(/\b(?:href|src)="([^"]+)"/g), (match) => match[1]);
+  const pageIds = getPageIds(pageHtml);
+  const localRefs = new Set();
+
+  for (const pageRef of pageRefs) {
+    if (pageRef.startsWith("#")) {
+      const targetId = pageRef.slice(1);
+
+      if (targetId && !pageIds.has(targetId)) {
+        errors.push(`${fileName} links to a missing same-page target: ${pageRef}`);
+      }
+
+      continue;
     }
 
-    continue;
+    if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(pageRef)) {
+      continue;
+    }
+
+    if (pageRef.startsWith("/")) {
+      errors.push(`${fileName} has a root-absolute reference that breaks GitHub project sites: ${pageRef}`);
+      continue;
+    }
+
+    const [refWithoutFragment, fragment] = pageRef.split("#", 2);
+    const localRef = refWithoutFragment.split("?", 1)[0];
+
+    if (!localRef) {
+      continue;
+    }
+
+    localRefs.add(pageRef);
+    const resolvedRef = resolve(dirname(resolve(repositoryRoot, fileName)), localRef);
+    const relativeRef = relative(repositoryRoot, resolvedRef);
+
+    if (relativeRef === ".." || relativeRef.startsWith(`..${sep}`) || isAbsolute(relativeRef)) {
+      errors.push(`${fileName} has a local reference that escapes the repository root: ${pageRef}`);
+      continue;
+    }
+
+    if (!existsSync(resolvedRef)) {
+      errors.push(`${fileName} references a local path that does not exist: ${pageRef}`);
+      continue;
+    }
+
+    const htmlTarget = getHtmlTarget(relativeRef, fileName);
+
+    if (fragment && htmlTarget && htmlPages.has(htmlTarget)) {
+      const targetIds = getPageIds(htmlPages.get(htmlTarget));
+
+      if (!targetIds.has(fragment)) {
+        errors.push(`${fileName} links to a missing target in ${htmlTarget}: #${fragment}`);
+      }
+    }
   }
 
-  if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(pageRef)) {
-    continue;
-  }
-
-  if (pageRef.startsWith("/")) {
-    errors.push(`Root-absolute reference breaks GitHub project sites: ${pageRef}`);
-    continue;
-  }
-
-  const localRef = pageRef.split(/[?#]/, 1)[0];
-
-  if (!localRef) {
-    continue;
-  }
-
-  localFileRefs.add(localRef);
-  const resolvedRef = resolve(repositoryRoot, localRef);
-  const relativeRef = relative(repositoryRoot, resolvedRef);
-
-  if (relativeRef === ".." || relativeRef.startsWith(`..${sep}`) || isAbsolute(relativeRef)) {
-    errors.push(`Local reference escapes the repository root: ${pageRef}`);
-  } else if (!existsSync(resolvedRef)) {
-    errors.push(`Referenced local path does not exist: ${pageRef}`);
-  }
+  return localRefs.size;
 }
+
+const localReferenceCount = Array.from(htmlPages).reduce(
+  (count, [fileName, pageHtml]) => count + validateStaticPageReferences(fileName, pageHtml),
+  0,
+);
 
 const heroImageMatch = html.match(
   /<img\b(?=[^>]*\bclass="hero-media")(?=[^>]*\bsrc="\.\/assets\/ai-intel-hero\.jpg")(?=[^>]*\bwidth="1672")(?=[^>]*\bheight="941")(?=[^>]*\bdecoding="async")(?=[^>]*\bfetchpriority="high")[^>]*>/s,
@@ -248,5 +306,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Validated site metadata, ${localFileRefs.size} local references, and same-page link targets.`,
+  `Validated site metadata, ${localReferenceCount} local references, and static page link targets.`,
 );

@@ -2,6 +2,22 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 17:32 JST
+
+- Focus: Strengthened GitHub Pages readiness by extending static reference validation from the homepage to every root HTML page, including cross-page fragment targets for local links.
+- Changed files:
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 19 local references, and static page link targets across `index.html`, `news-detail.html`, `archive.html`, and `404.html`.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+- Commit: Local commit pending; final hash will be recorded in the automation run summary because amending this log line changes repository history.
+
 ## 2026-06-16 16:04 JST
 
 - Focus: Added per-item reader-use notes so each homepage signal states which audience can use it and what decision or checklist it should inform.
