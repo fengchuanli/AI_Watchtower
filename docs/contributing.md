@@ -50,6 +50,7 @@ git diff --check
 ## 提交与发布
 
 - 开始编辑前运行 `git pull --ff-only origin main`；网络不可用时在优化日志中明确记录。
+- 远程仓库使用 SSH：`git@github.com:fengchuanli/AI_Watchtower.git`。不要把 `origin` 或 `pushurl` 改成 HTTPS。
 - 提交信息应简短说明实际改进，不使用宽泛的“更新”或“优化”。
 - 推送前确认提交只包含本次任务相关文件。
 - 推送到 `origin main` 后检查 GitHub Pages 部署状态；无法推送时保留本地提交并记录具体错误。
