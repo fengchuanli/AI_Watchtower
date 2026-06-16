@@ -26,10 +26,12 @@ const requiredMetaTags = [
   ["property", "og:title"],
   ["property", "og:description"],
   ["property", "og:image"],
+  ["property", "og:image:alt"],
   ["name", "twitter:card"],
   ["name", "twitter:title"],
   ["name", "twitter:description"],
   ["name", "twitter:image"],
+  ["name", "twitter:image:alt"],
 ];
 
 function hasMetaTag(attribute, value) {
@@ -41,6 +43,34 @@ for (const [attribute, value] of requiredMetaTags) {
   if (!hasMetaTag(attribute, value)) {
     errors.push(`index.html is missing required metadata: ${attribute}="${value}"`);
   }
+}
+
+function getMetaContent(attribute, value) {
+  const pattern = new RegExp(
+    `<meta\\b(?=[^>]*\\b${attribute}="${value}")(?=[^>]*\\bcontent="([^"]+)")[^>]*>`,
+    "s",
+  );
+  const match = html.match(pattern);
+
+  return match ? match[1].trim() : "";
+}
+
+const socialImage = getMetaContent("property", "og:image");
+const twitterImage = getMetaContent("name", "twitter:image");
+const socialImageAlt = getMetaContent("property", "og:image:alt");
+const twitterImageAlt = getMetaContent("name", "twitter:image:alt");
+
+if (socialImage !== "./assets/ai-intel-hero.jpg" || twitterImage !== socialImage) {
+  errors.push("Social preview image metadata must use the optimized hero JPEG consistently.");
+}
+
+if (
+  !socialImageAlt ||
+  socialImageAlt !== twitterImageAlt ||
+  !/AI Watchtower/.test(socialImageAlt) ||
+  !/预览图/.test(socialImageAlt)
+) {
+  errors.push("Social preview image metadata must include matching, descriptive alt text.");
 }
 
 const skipLinkMatch = html.match(/<a\b(?=[^>]*\bclass="skip-link")(?=[^>]*\bhref="#([^"]+)")[^>]*>/);

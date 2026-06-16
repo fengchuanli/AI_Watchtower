@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 19:02 JST
+
+- Focus: Improved social sharing metadata accessibility by adding descriptive alt text for the homepage preview image and validating that Open Graph and Twitter preview metadata stay consistent.
+- Changed files:
+  - `index.html`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, social preview image alt text, 19 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit pending; final hash will be recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-16 18:05 JST
 
 - Focus: Added concrete editorial follow-up questions to every homepage news item so the next content pass has source-specific questions to answer before upgrading or reframing a signal.
