@@ -743,6 +743,23 @@ Use this file to record every automated or manual optimization. New entries go a
   - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
 - Commit: `c5e212e`
 
+## 2026-06-16 17:08 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update with verified official-source signals replacing the sample feed.
+- Changed files:
+  - `data/news.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `news-detail.html`, and `archive.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `JSON.parse`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: `更新17点AI新闻情报`
+
 ## 2026-06-09 14:03 JST
 
 - Focus: Improved product accessibility and keyboard behavior for the homepage news filter controls.

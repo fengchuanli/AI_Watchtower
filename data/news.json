@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15",
-  "status": "sample",
-  "statusLabel": "示例数据",
-  "editorNote": "编辑复核于 2026-06-15：当前新闻流仅用于验证数据结构、来源标注和页面展示，标题均为待验证的观察命题，不代表已确认新闻。",
+  "updatedAt": "2026-06-16",
+  "status": "published",
+  "statusLabel": "17:00 JST 实讯",
+  "editorNote": "编辑复核于 2026-06-16 17:00 JST：本期只收录官方页面可核对的 AI 信号；涉及政府动作的条目仅确认厂商公开声明本身，后续仍需补充监管或政府原文。",
   "edition": {
-    "id": "sample-2026-06-15",
-    "date": "2026-06-15",
+    "id": "news-2026-06-16",
+    "date": "2026-06-16",
     "timezone": "Asia/Tokyo",
-    "archiveStatus": "preview",
-    "archiveLabel": "归档预览",
-    "note": "本期是 2026-06-15 编辑结构快照，不代表当天的真实新闻记录。"
+    "archiveStatus": "published",
+    "archiveLabel": "17:00 JST 发布",
+    "note": "本期为 2026-06-16 17:00 JST 新闻情报快照，聚焦 6 月中旬官方来源已发布的企业落地、Agent 基础设施和安全治理信号。"
   },
   "categories": [
     {
@@ -45,286 +45,253 @@
     }
   ],
   "briefing": {
-    "label": "样例简报",
-    "headline": "今日先看工作流、治理和部署边界",
-    "summary": "这批示例信号不用于判断真实新闻热度，重点展示 AI Watchtower 的编辑框架：先区分官方确认、媒体背景、研究线索和待验证社区信号，再决定是否继续跟踪。",
-    "cta": "追踪新闻流信号",
+    "label": "17:00 JST 简报",
+    "headline": "企业 AI 从模型能力转向交付、治理和可持续运行",
+    "summary": "本期信号显示，前沿模型公司正在把竞争重点放到企业交付网络、长任务 Agent 运行环境、组织学习体系和前沿风险治理上。多数条目来自官方公告，可信度较高；但涉及政府指令和安全争议的内容仍需等待监管或政府原文补充。",
+    "cta": "阅读本期站内解读",
     "watchPoints": [
       {
-        "title": "模型能力要回到任务链评估",
-        "body": "推理、工具调用和验证步骤被包装成默认能力后，应优先核对任务链是否可追溯、可回滚。"
+        "title": "企业交付开始生态化",
+        "body": "OpenAI 的伙伴网络、Oracle 采购路径和 Academy 课程说明，企业 AI 采用正在从单点工具转向培训、集成、治理和交付伙伴共同推进。"
       },
       {
-        "title": "企业采购信号必须看治理证据",
-        "body": "浏览器助手、视频工作流和知识库连接都需要权限、审计和客户案例支撑，不能只看演示热度。"
+        "title": "Agent 需要持久运行边界",
+        "body": "Ona 收购意向指向长任务 Agent 的生产化问题：环境隔离、权限范围、日志和人工复核会成为采购重点。"
       },
       {
-        "title": "政策与研究内容避免过度外推",
-        "body": "监管要求要标明地区和生效时间，预印本结论要保留数据集、基线和真实部署证据的核对项。"
+        "title": "安全治理进入系统层",
+        "body": "Anthropic 的政策框架和 Google DeepMind 的多智能体安全资助都提示，评估对象正从单个模型扩展到模型部署、群体交互和社会韧性。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "Incident Briefing",
-    "title": "从示例信号到可核对的 AI 情报",
-    "subtitle": "本期用 8 条样例信号演示 AI Watchtower 的站内解读格式：先讲清发生了什么，再说明为什么重要，最后列出下一步核对动作。",
-    "dateLabel": "2026 · 06 · 15 · Mon",
-    "status": "结构样例",
-    "overview": "AI Watchtower 不把新闻列表当作出口，而是把外部来源整理成可读的中文简报。每条信息都必须回答三个问题：这件事是什么、它为什么值得关注、还缺哪些证据。",
+    "kicker": "17:00 JST Intelligence Briefing",
+    "title": "AI 产业进入“可交付、可治理、可持续运行”的竞争段",
+    "subtitle": "6 月中旬的官方信号不再只围绕模型榜单，而是集中在企业部署路径、Agent 运行环境、员工学习体系和前沿风险治理。",
+    "dateLabel": "2026 · 06 · 16 · Tue",
+    "status": "17:00 JST 已发布",
+    "overview": "这期 AI Watchtower 把官方公告整理为 6 个可核对信号。OpenAI 强化伙伴生态、培训和云采购入口；Anthropic 同时推进社会扩散、政策框架并披露 Fable/Mythos 访问中断；Google DeepMind 将多智能体安全设为独立研究资助方向。共同结论是：AI 产品竞争正在转向企业能否稳定引入、审计和持续运行。",
     "timeline": [
       {
-        "label": "Step 1",
-        "title": "收集信号",
-        "body": "从官方、研究、媒体和社区来源发现模型、产品、研究、工具、资金与政策变化。"
+        "label": "Jun 10-12",
+        "title": "采购与培训路径先铺开",
+        "body": "OpenAI 公布 Oracle 云承诺接入和 Academy 新课程，把模型能力接入既有采购、培训和工作流改造流程。"
       },
       {
-        "label": "Step 2",
-        "title": "站内解读",
-        "body": "把原始新闻转写成中文摘要、趋势判断、影响说明、确认门槛和下次核对项。"
+        "label": "Jun 11-14",
+        "title": "Agent 生产化成为交付重点",
+        "body": "OpenAI 拟收购 Ona 并推出伙伴网络，强调长任务 Agent 需要可控云环境、实施伙伴和行业交付能力。"
       },
       {
-        "label": "Step 3",
-        "title": "保留出处",
-        "body": "原始链接只作为参考来源保留在底部，读者不用跳走也能先理解事件结构。"
+        "label": "Jun 10-12",
+        "title": "前沿风险被推向制度层",
+        "body": "Anthropic 发布政策框架并披露 Fable/Mythos 访问中断，治理讨论从模型卡扩展到政府权力、独立评估和部署阻断程序。"
+      },
+      {
+        "label": "Jun 11",
+        "title": "多智能体安全单独成题",
+        "body": "Google DeepMind 与伙伴发起最高 1000 万美元研究资助，聚焦 Agent 群体行为、沙箱、身份信誉协议和系统级监控。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "8",
-        "label": "站内解读条目"
-      },
-      {
         "value": "6",
-        "label": "编辑分类"
+        "label": "本期核验条目"
       },
       {
-        "value": "18",
-        "label": "候选情报源"
+        "value": "$150M",
+        "label": "OpenAI 伙伴生态投入"
+      },
+      {
+        "value": "1,000",
+        "label": "Claude Corps 首批 Fellows"
+      },
+      {
+        "value": "$10M",
+        "label": "多智能体安全资助上限"
       }
     ],
     "sections": [
       {
         "number": "01",
         "label": "What Happened",
-        "title": "新闻先变成问题，而不是结论",
-        "body": "当前条目使用“观察命题”写法，避免把未核验信号包装成已确认新闻。每条内容都先描述需要核对的现象，再说明可能对应的趋势。",
-        "soWhat": "这样能减少标题党和误读，让读者先知道哪些信息已经有来源，哪些仍然只是待确认线索。"
+        "title": "企业 AI 正在补齐“最后一公里”",
+        "body": "OpenAI 连续发布伙伴网络、培训课程、Oracle 采购路径和 Ona 收购意向，说明前沿模型供应商不再只卖 API，而是在补交付伙伴、云采购、员工能力和长任务运行环境。",
+        "soWhat": "企业团队评估供应商时，应把模型能力和实施生态一起看：谁能支持治理、集成、复核和规模化 adoption，谁才更接近生产价值。"
       },
       {
         "number": "02",
-        "label": "Why It Matters",
-        "title": "重点从“谁发布了什么”转向“影响什么决策”",
-        "body": "卡片不再只给外链，而是解释这条信号影响模型选型、企业采购、研究判断、工具链采用、融资理解或政策合规中的哪一部分。",
-        "soWhat": "读者可以先在站内形成判断，再决定是否打开原文做深读。"
+        "label": "Risk Posture",
+        "title": "安全争议从产品发布扩展到部署许可",
+        "body": "Anthropic 的政策框架主张对高风险模型引入透明度、独立评估和政府阻断权；其 Fable/Mythos 访问中断声明则展示了前沿模型部署可能被监管动作直接影响。",
+        "soWhat": "这一类信息不能只按厂商叙述判断。AI Watchtower 将其标为官方声明已核验，但对政府依据、技术细节和适用范围保留后续核对项。"
       },
       {
         "number": "03",
-        "label": "Verification",
-        "title": "每条信号都有确认门槛",
-        "body": "确认门槛会说明至少需要哪类证据，例如官方文档、客户案例、论文设置、监管原文或投资方确认。",
-        "soWhat": "这让 AI Watchtower 更像情报工作台，而不是新闻转发列表。"
+        "label": "Agent Systems",
+        "title": "Agent 的安全边界正在从单模型走向群体系统",
+        "body": "Google DeepMind 把多智能体交互列为资助方向，OpenAI 则从产品侧强化长任务 Agent 的持久运行环境。两边合起来看，关键问题是独立系统之间如何识别、协作、失效和被监控。",
+        "soWhat": "后续不应只问“Agent 能做什么”，还要问它运行在哪里、怎样授权、谁能中止、日志如何审计，以及多个 Agent 互动时是否会出现系统级风险。"
       }
     ],
     "actions": [
-      "优先阅读站内摘要、影响和确认门槛，再决定是否查看原始来源。",
-      "把社区热度当作发现信号，不把它直接当成事实。",
-      "真正接入新闻抓取后，每天 08:00 和 17:00 更新本期简报。"
+      "企业读者优先核对供应商是否提供采购、培训、集成和审计证据，而不只看演示视频。",
+      "安全与法务团队应把 Anthropic 的政策框架当作议题输入，并等待政府或监管原文再形成合规判断。",
+      "产品团队评估 Agent 工具时，应把持久运行环境、权限边界、人工复核和跨系统监控列为必查项。"
     ],
     "references": [
       {
-        "label": "来源清单",
-        "url": "./data/sources.json"
+        "label": "OpenAI Partner Network",
+        "url": "https://openai.com/index/introducing-openai-partner-network/"
       },
       {
-        "label": "来源使用规则",
-        "url": "./docs/source-policy.md"
+        "label": "Anthropic Fable/Mythos access statement",
+        "url": "https://www.anthropic.com/news/fable-mythos-access"
+      },
+      {
+        "label": "Google DeepMind multi-agent safety funding call",
+        "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/"
       }
     ]
   },
   "items": [
     {
-      "id": "sample-reasoning-workflows",
-      "category": "model",
-      "label": "模型",
-      "title": "观察命题：推理模型是否正把长任务拆解变成默认能力",
-      "body": "待核对模型发布说明中的计划、工具调用和验证能力，以及这些能力是否已成为稳定的基础体验。",
-      "trend": "趋势判断：模型能力正在从“更会回答”转向“更会组织任务”，后续应持续观察任务链是否可追溯、可回滚。",
-      "whyRanked": "它影响 Agent 产品的基础能力定义，也会改变企业评估模型时的测试重点。",
-      "impact": "关注点从单次回答质量转向可审计的任务执行链，适合继续跟踪企业级 Agent 能力。",
-      "readerUse": "模型评测、Agent 产品和企业架构团队可用它更新长任务测试清单。",
-      "nextCheck": "核对官方发布页中的能力边界、可用地区和价格变化。",
-      "evidenceThreshold": "至少需要官方能力说明与可复现任务记录同时证明计划、工具调用和验证步骤稳定可用。",
-      "claimBoundary": "当前样例不能证明所有推理模型都已具备稳定 Agent 能力，也不能替代具体产品测试。",
-      "source": "官方模型发布",
+      "id": "openai-partner-network-2026-06-14",
+      "category": "product",
+      "label": "产品",
+      "title": "OpenAI 推出 Partner Network，企业 AI 交付转向生态化",
+      "body": "OpenAI 在 6 月 14 日宣布 Partner Network，面向全球伙伴共同构建、销售和交付 AI 解决方案，并称将投入 1.5 亿美元支持生态、计划到 2026 年底培训 30 万名认证顾问。",
+      "trend": "趋势判断：前沿模型公司正在把企业 adoption 的瓶颈从“模型是否够强”改写为“能否重复识别场景、重设计流程、接入现有系统并完成变更管理”。",
+      "whyRanked": "它把模型供应商、咨询集成商和行业客户放进同一交付网络，直接影响企业采购和 AI 转型项目的实施方式。",
+      "impact": "企业买 AI 时会更关注伙伴等级、行业交付经验、共售能力和治理支持，而不是只比较模型榜单。",
+      "readerUse": "企业应用、采购和转型团队可用它更新供应商评估表，把实施生态与模型能力放在同一权重下。",
+      "nextCheck": "继续核对 Partner Network 的伙伴名单、认证细则、客户案例和实际交付指标是否公开。",
+      "evidenceThreshold": "至少需要官方项目规则、可核对伙伴名单，以及客户在生产环境中的部署结果或案例指标。",
+      "claimBoundary": "该公告不能证明所有伙伴都具备同等交付能力，也不能证明 1.5 亿美元投入会直接带来企业 ROI。",
+      "source": "OpenAI Partner Network 公告",
       "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/news",
+      "sourceUrl": "https://openai.com/index/introducing-openai-partner-network/",
       "sourceRole": "官方核对",
-      "provenance": "需保留模型厂商原始公告链接；性能和价格变化以官方说明为准。",
-      "trustLevel": "来源层级：官方",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-10T09:20:00+09:00",
-      "time": "09:20"
+      "provenance": "OpenAI 官方公告可确认项目、金额、伙伴网络目标和认证顾问规划；实际交付效果仍需客户案例与第三方验证。来源可信度：高。",
+      "trustLevel": "来源层级：官方，高可信",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-06-14T09:00:00+09:00",
+      "time": "06/14"
     },
     {
-      "id": "sample-browser-ai-procurement",
-      "category": "product",
-      "label": "产品",
-      "title": "观察命题：AI 浏览器工具能否进入企业采购流程",
-      "body": "待寻找团队级权限、审计日志、知识库连接和真实客户案例，判断产品是否已从个人插件走向企业工作台。",
-      "trend": "趋势判断：浏览器入口的竞争重点正在从个人效率转向企业治理，权限、日志和知识库连接会决定采购优先级。",
-      "whyRanked": "浏览器是高频入口，一旦进入企业采购流程，分发和留存逻辑都会发生变化。",
-      "impact": "若权限和审计成为标配，浏览器助手会从个人插件升级为企业工作入口。",
-      "readerUse": "企业应用、采购和安全团队可用它判断浏览器助手是否值得进入试点。",
-      "nextCheck": "寻找企业客户案例、管理后台截图或厂商安全文档。",
-      "evidenceThreshold": "至少需要正式企业版文档，并有一个可核对的客户案例说明权限、审计或知识库接入。",
-      "claimBoundary": "当前样例不能证明浏览器助手已经普遍进入企业采购，也不能推断某一产品已满足治理要求。",
-      "source": "产品与企业媒体",
-      "sourceId": "venturebeat-ai",
-      "sourceUrl": "https://venturebeat.com/category/ai/",
-      "sourceRole": "媒体背景",
-      "provenance": "可用媒体报道补充采购动向；企业采用结论需交叉验证案例或厂商材料。",
-      "trustLevel": "来源层级：媒体",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-10T10:45:00+09:00",
-      "time": "10:45"
-    },
-    {
-      "id": "sample-small-model-distillation",
-      "category": "research",
-      "label": "研究",
-      "title": "观察命题：小模型蒸馏能否降低垂直行业部署成本",
-      "body": "待比较实验基线、推理成本和真实部署证据，判断小模型组合是否适合医疗、金融、制造等高约束场景。",
-      "trend": "趋势判断：行业部署会更重视可控成本和数据边界，小模型组合可能先在高约束场景形成稳定需求。",
-      "whyRanked": "它提示部署决策正在从模型规模转向成本、延迟、合规和可维护性的综合权衡。",
-      "impact": "成本、延迟和数据边界会成为行业 AI 选型核心，不应只比较通用榜单分数。",
-      "readerUse": "行业解决方案和平台团队可用它设计成本、延迟、隐私并重的评估表。",
-      "nextCheck": "确认实验数据集、基线模型和是否已有真实部署证据。",
-      "evidenceThreshold": "至少需要公开实验设置、可比成本指标，以及超出单一基准测试的部署或复现实证。",
-      "claimBoundary": "当前样例不能证明小模型蒸馏已在垂直行业形成通用降本方案，预印本也不能直接等同于生产效果。",
-      "source": "研究论文与技术博客",
-      "sourceId": "arxiv-ai",
-      "sourceUrl": "https://arxiv.org/list/cs.AI/recent",
-      "sourceRole": "研究原文",
-      "provenance": "预印本和实验结果按技术方向解读，避免直接包装成已验证行业结论。",
-      "trustLevel": "来源层级：研究",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-10T11:10:00+09:00",
-      "time": "11:10"
-    },
-    {
-      "id": "sample-ai-content-labeling",
-      "category": "policy",
-      "label": "政策",
-      "title": "观察命题：AI 生成内容标识是否正进入发布流程",
-      "body": "待核对具体地区的监管或平台政策原文，确认标识、申诉、检测和留痕要求是否已有明确生效安排。",
-      "trend": "趋势判断：合规要求正在从原则声明进入发布流程，平台需要把标识、申诉和留痕做成默认能力。",
-      "whyRanked": "标识规则会直接影响内容平台、广告投放和创作者工具的发布链路设计。",
-      "impact": "内容平台和营销团队需要把合规动作前移到生产流程，而不是发布后补救。",
-      "readerUse": "内容平台、法务和增长团队可用它检查发布流程是否预留标识与申诉环节。",
-      "nextCheck": "回到监管或平台政策原文，标明适用地区和生效时间。",
-      "evidenceThreshold": "必须找到监管机构或平台政策原文，并明确适用主体、地区、生效日期和执行要求。",
-      "claimBoundary": "当前样例不能确认任何地区已经新增监管义务；厂商博客只能提示议题，不能替代法规原文。",
-      "source": "监管与政策来源",
-      "sourceId": "microsoft-ai-blog",
-      "sourceUrl": "https://blogs.microsoft.com/ai/",
-      "sourceRole": "厂商主张",
-      "provenance": "当前链接只能提供厂商视角，不能确认监管要求；发布前必须补充法规、监管机构或平台政策原文。",
-      "trustLevel": "来源层级：官方",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-10T13:35:00+09:00",
-      "time": "13:35"
-    },
-    {
-      "id": "sample-ai-video-workflows",
-      "category": "product",
-      "label": "产品",
-      "title": "观察命题：AI 视频工具是否正转向完整制作流程",
-      "body": "待核对正式产品功能和可复现案例，判断脚本、分镜、素材、配音、字幕及品牌模板是否已形成连续工作流。",
-      "trend": "趋势判断：视频工具的分水岭会从生成效果转向生产管理，协作、资产复用和品牌控制更能体现商业价值。",
-      "whyRanked": "视频是生成式 AI 商业化最直观的场景之一，工作流完整度比单点演示更能说明成熟度。",
-      "impact": "产品价值会更多体现在协作、资产管理和品牌一致性，而不只是单段生成效果。",
-      "readerUse": "品牌、营销和创意工具团队可用它区分演示效果与可交付制作流程。",
-      "nextCheck": "区分社区热度、正式功能发布和可复现的成片质量。",
-      "evidenceThreshold": "至少需要正式功能文档与可复现案例覆盖脚本到交付的多个连续制作环节。",
-      "claimBoundary": "当前样例不能证明视频工具已经普遍覆盖完整制作流程，也不能用社区热度替代功能可复现性。",
-      "source": "产品发布与创作者社区",
-      "sourceId": "product-hunt-ai",
-      "sourceUrl": "https://www.producthunt.com/topics/artificial-intelligence",
-      "sourceRole": "社区发现",
-      "provenance": "社区热度只作为发现信号；功能成熟度需以产品文档或实测为依据。",
-      "trustLevel": "来源层级：社区",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-10T14:05:00+09:00",
-      "time": "14:05"
-    },
-    {
-      "id": "sample-edge-model-privacy",
-      "category": "model",
-      "label": "模型",
-      "title": "观察命题：端侧模型能否成为隐私场景的常用选项",
-      "body": "待确认客户案例、硬件要求和数据回传边界，判断云端大模型与本地小模型的混合架构是否已进入常态部署。",
-      "trend": "趋势判断：混合架构把敏感处理留在本地、把复杂推理交给云端，隐私场景会更看重部署边界说明。",
-      "whyRanked": "端侧模型关系到隐私、成本和离线体验，是企业从试点走向常态部署时必须回答的问题。",
-      "impact": "混合部署让隐私和体验可以分层处理，后续应区分厂商演示与真实客户案例。",
-      "readerUse": "终端产品、隐私合规和企业 IT 团队可用它核对端云分工边界。",
-      "nextCheck": "优先确认客户案例、端侧硬件要求和云端数据回传边界。",
-      "evidenceThreshold": "至少需要公开硬件要求、数据流说明和一个真实部署案例证明端云分工可持续运行。",
-      "claimBoundary": "当前样例不能证明端侧模型已成为隐私场景默认方案，也不能省略具体硬件和数据流核对。",
-      "source": "基础设施厂商与案例",
-      "sourceId": "nvidia-blog-ai",
-      "sourceUrl": "https://blogs.nvidia.com/blog/category/deep-learning/",
-      "sourceRole": "厂商主张",
-      "provenance": "部署趋势应区分厂商主张和真实客户案例，成本结论需等待可比数据。",
-      "trustLevel": "来源层级：官方",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-10T15:40:00+09:00",
-      "time": "15:40"
-    },
-    {
-      "id": "sample-open-source-ai-tooling",
+      "id": "openai-ona-codex-persistent-agents-2026-06-11",
       "category": "tool",
       "label": "工具",
-      "title": "观察命题：开源 AI 工具是否正从演示转向可组合组件",
-      "body": "待核对项目版本、接口、许可证和维护记录，判断模型、数据集、评测、推理及部署工具能否稳定组合。",
-      "trend": "趋势判断：AI 工具竞争正在从单一功能转向生态兼容性，能否接入现有开发流程会影响采用速度。",
-      "whyRanked": "工具链决定模型能力能否稳定进入生产环境，也是开源生态商业化的重要入口。",
-      "impact": "应重点观察接口稳定性、许可证、维护频率和与主流模型生态的兼容程度。",
-      "readerUse": "开发者平台和工程团队可用它决定是否把开源组件纳入内部工具链。",
-      "nextCheck": "核对项目版本、维护者、许可证、发布记录和可复现的使用文档。",
-      "evidenceThreshold": "至少需要明确许可证、近期版本记录、可运行文档，以及与一个主流模型或部署框架的稳定集成。",
-      "claimBoundary": "当前样例不能证明某个开源工具已适合生产采用，项目热度也不能替代许可证和维护质量审查。",
-      "source": "开源工具与开发者平台",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog",
+      "title": "OpenAI 拟收购 Ona，为 Codex 补持久云端执行环境",
+      "body": "OpenAI 6 月 11 日宣布将收购 Ona，计划把其安全云执行与编排技术纳入 Codex，让长任务 Agent 可以在客户可控的云环境中持续工作。交易仍需满足常规交割条件和监管批准。",
+      "trend": "趋势判断：Coding Agent 正从本地会话工具走向可持续运行的生产基础设施，关键能力变成环境隔离、凭据范围、活动日志和复核流程。",
+      "whyRanked": "Codex 若要承担小时级或天级任务，必须解决“运行在哪里、访问什么、谁负责复核”的企业安全问题。",
+      "impact": "开发平台和安全团队需要把 Agent 运行环境纳入基础设施治理，而不是把它当作普通聊天入口。",
+      "readerUse": "开发者平台、安全和工程效率团队可用它检查内部 Agent 试点是否具备持久环境、权限控制和审计日志。",
+      "nextCheck": "跟踪交易是否完成，以及 OpenAI 是否公布 Codex 企业部署、数据边界和审计功能的具体文档。",
+      "evidenceThreshold": "至少需要交易完成公告、产品文档、企业安全说明和客户控制模型的可核对细节。",
+      "claimBoundary": "该公告不能证明 Ona 技术已经整合进 Codex，也不能证明所有客户都能立即获得持久 Agent 环境。",
+      "source": "OpenAI 收购 Ona 公告",
+      "sourceId": "openai-news",
+      "sourceUrl": "https://openai.com/index/openai-to-acquire-ona/",
       "sourceRole": "官方核对",
-      "provenance": "官方技术博客可用于确认功能与版本；社区热度不能替代维护质量和真实采用证据。",
-      "trustLevel": "来源层级：官方",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-12T16:10:00+09:00",
-      "time": "16:10"
+      "provenance": "OpenAI 官方公告可确认收购意向、战略理由和待交割状态；产品可用性需以后续文档为准。来源可信度：高。",
+      "trustLevel": "来源层级：官方，高可信",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-06-11T09:00:00+09:00",
+      "time": "06/11"
     },
     {
-      "id": "sample-ai-funding-signals",
-      "category": "funding",
-      "label": "资金",
-      "title": "观察命题：AI 投资判断是否更重视收入质量和基础设施成本",
-      "body": "待结合融资公告和经营数据，判断付费留存、推理成本、客户集中度及持续交付能力是否正成为核心评估项。",
-      "trend": "趋势判断：AI 融资叙事正在进入经营验证阶段，商业模式和单位经济性会比单纯模型标签更重要。",
-      "whyRanked": "资金流向能反映市场预期，但需要把融资规模与产品收入、成本结构和客户质量分开判断。",
-      "impact": "后续应关注资金是否用于算力、产品交付、并购或市场扩张，以及这些投入能否形成可持续收入。",
-      "readerUse": "投资、战略和商务团队可用它把融资新闻拆成收入质量与成本结构问题。",
-      "nextCheck": "交叉核对公司公告、投资方信息、融资条款和可靠媒体报道。",
-      "evidenceThreshold": "至少需要公司或投资方确认融资事实，并由可靠报道补足金额、轮次或资金用途。",
-      "claimBoundary": "当前样例不能确认任何具体融资交易，也不能把融资叙事直接解读为收入质量改善。",
-      "source": "创业与融资媒体",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/tag/artificial-intelligence/",
-      "sourceRole": "媒体背景",
-      "provenance": "融资消息需尽量找到公司或投资方确认；匿名消息和估值传闻只能作为待验证信号。",
-      "trustLevel": "来源层级：媒体",
-      "verificationStatus": "结构样例，未作事实核验",
-      "publishedAt": "2026-06-12T16:40:00+09:00",
-      "time": "16:40"
+      "id": "anthropic-fable-mythos-access-statement-2026-06-12",
+      "category": "policy",
+      "label": "政策",
+      "title": "Anthropic 称因美国政府指令暂停 Fable 5 与 Mythos 5 访问",
+      "body": "Anthropic 6 月 12 日发布声明称，美国政府基于国家安全权限发出出口管制指令，要求暂停外国国民访问 Fable 5 与 Mythos 5；Anthropic 表示为合规将移除所有用户访问，同时不同意将狭窄潜在越狱作为召回商业模型的标准。",
+      "trend": "趋势判断：前沿模型部署正在进入更强监管摩擦区，模型安全评估、政府阻断程序和技术证据披露会成为下一阶段核心争议。",
+      "whyRanked": "这是少见的模型访问被厂商公开称为政府指令影响的案例，会影响全球客户对前沿模型稳定性、合规风险和部署连续性的判断。",
+      "impact": "企业客户需要把模型供应连续性、替代方案和监管触发条件纳入关键系统的风险计划。",
+      "readerUse": "法务、安全、采购和平台团队可用它复查前沿模型依赖是否有地区、国籍、出口管制和应急替代预案。",
+      "nextCheck": "等待美国政府、监管机构或法院文件披露指令依据、适用范围和技术评估材料。",
+      "evidenceThreshold": "至少需要政府或监管原文、正式法律依据、技术风险报告，以及 Anthropic 后续恢复或限制访问的官方说明。",
+      "claimBoundary": "当前只确认 Anthropic 已发布该声明；不能独立证明政府指令细节、越狱严重性或 Anthropic 对风险的评估完全成立。",
+      "source": "Anthropic Fable/Mythos 访问声明",
+      "sourceId": "anthropic-news",
+      "sourceUrl": "https://www.anthropic.com/news/fable-mythos-access",
+      "sourceRole": "官方核对",
+      "provenance": "Anthropic 官方声明可确认其自身说法和采取的访问下线动作；政府立场与技术细节需独立来源补强。来源可信度：中高，事实边界需严格限定。",
+      "trustLevel": "来源层级：官方，中高可信",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-06-12T09:00:00+09:00",
+      "time": "06/12"
+    },
+    {
+      "id": "anthropic-claude-corps-2026-06-11",
+      "category": "policy",
+      "label": "政策",
+      "title": "Anthropic 推出 Claude Corps，把 AI 扩散绑定到公益与劳动力转型",
+      "body": "Anthropic 6 月 11 日宣布 Claude Corps，计划培训 1,000 名早期职业 Fellows，匹配至少 400 家美国非营利组织，并承诺初始投入 1.5 亿美元。",
+      "trend": "趋势判断：前沿 AI 公司正在把“收益广泛分享”从原则声明转成项目化投入，劳动力再培训和非营利组织能力建设会成为公共叙事重点。",
+      "whyRanked": "它把 AI 普及、职业技能和社会影响放进同一个项目，回应了 AI 对工作冲击与收益分配的争议。",
+      "impact": "公共部门和公益组织可能获得更直接的 AI 人才与工具支持，但项目效果需要真实评估而非只看投入金额。",
+      "readerUse": "公益、教育、公共政策和企业社会责任团队可用它设计 AI 能力建设项目的评估指标。",
+      "nextCheck": "核对 Fellows 招募进度、非营利组织名单、评估方法和一年后产出。",
+      "evidenceThreshold": "至少需要项目执行数据、第三方或合作方评估、受助组织成果，以及资金使用和规模化路径说明。",
+      "claimBoundary": "该公告不能证明 Claude Corps 已经缓解 AI 对就业的冲击，也不能代表所有社区都能平等受益。",
+      "source": "Anthropic Claude Corps 公告",
+      "sourceId": "anthropic-news",
+      "sourceUrl": "https://www.anthropic.com/news/claude-corps",
+      "sourceRole": "官方核对",
+      "provenance": "Anthropic 官方公告可确认项目规模、合作方和初始资金承诺；社会效果需后续评估数据支撑。来源可信度：高。",
+      "trustLevel": "来源层级：官方，高可信",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-06-11T09:00:00+09:00",
+      "time": "06/11"
+    },
+    {
+      "id": "anthropic-ai-exponential-policy-2026-06-10",
+      "category": "policy",
+      "label": "政策",
+      "title": "Anthropic 发布 AI Exponential 政策框架，主张独立评估与政府阻断权",
+      "body": "Anthropic 6 月 10 日发布 Policy on the AI Exponential，提出 Advanced AI Framework 与 Economic Policy Framework，主张对高能力模型引入透明度、独立评估、强安全计划，并在重大风险时赋予政府阻断或威慑部署的法定权力。",
+      "trend": "趋势判断：前沿 AI 治理正在从自愿安全框架转向法定程序、收入或算力阈值、独立评估和社会韧性建设。",
+      "whyRanked": "它给出了一家前沿模型公司的监管蓝图，涉及生物、网络、失控和自动化研发风险，也会影响美国联邦与州级监管讨论。",
+      "impact": "政策制定者和企业合规团队需要关注监管阈值、独立评估生态和政府权限边界如何被定义。",
+      "readerUse": "政策、合规、安全和公共事务团队可用它整理监管议题清单，并对照现有模型治理制度。",
+      "nextCheck": "查看完整 PDF、相关州法和国会提案，确认哪些建议进入正式立法或监管程序。",
+      "evidenceThreshold": "至少需要完整框架文本、立法草案或监管文件引用，以及独立评估机构对可执行性的反馈。",
+      "claimBoundary": "该框架是 Anthropic 的政策主张，不等同于现行法律，也不能证明其建议会被政府采纳。",
+      "source": "Anthropic Policy on the AI Exponential",
+      "sourceId": "anthropic-news",
+      "sourceUrl": "https://www.anthropic.com/policy-on-the-ai-exponential",
+      "sourceRole": "厂商主张",
+      "provenance": "Anthropic 官方政策页可确认其监管主张和风险分类；法律状态必须回到监管或立法原文确认。来源可信度：高，主张性质明确。",
+      "trustLevel": "来源层级：官方，高可信",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-06-10T09:00:00+09:00",
+      "time": "06/10"
+    },
+    {
+      "id": "deepmind-multi-agent-safety-funding-2026-06-11",
+      "category": "research",
+      "label": "研究",
+      "title": "Google DeepMind 与伙伴设最高 1000 万美元资助多智能体安全研究",
+      "body": "Google DeepMind 6 月 11 日宣布与 Schmidt Sciences、Cooperative AI Foundation、ARIA 和 Google.org 发起最高 1000 万美元技术研究资助，面向全球研究者征集多智能体安全项目。",
+      "trend": "趋势判断：安全评估对象正在从单个模型扩展到多 Agent 群体，包括沙箱、群体行为、身份信誉协议、基础设施压力测试和系统级监督。",
+      "whyRanked": "当不同组织构建的 Agent 开始互相沟通、协商和交易时，个体模型评测不足以覆盖系统性风险。",
+      "impact": "研究与平台团队需要提前建立可复现实验环境，观察 Agent 群体如何出现突发能力、失败模式或安全漏洞。",
+      "readerUse": "研究、安全评测和 Agent 平台团队可用它更新 2026 年下半年的评测与资助机会清单。",
+      "nextCheck": "跟踪 2026 年 8 月 8 日申请截止后的获奖项目、测试环境和公开研究产出。",
+      "evidenceThreshold": "至少需要资助项目名单、研究计划、可复现实验环境，以及论文或开源工具证明方法有效。",
+      "claimBoundary": "该公告不能证明多智能体风险已经被解决，也不能说明资助项目一定会产出可部署标准。",
+      "source": "Google DeepMind 多智能体安全资助公告",
+      "sourceId": "google-deepmind-blog",
+      "sourceUrl": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
+      "sourceRole": "官方核对",
+      "provenance": "Google DeepMind 官方公告可确认资助方、金额上限、研究方向和截止日期；研究效果需以后续项目产出为准。来源可信度：高。",
+      "trustLevel": "来源层级：官方，高可信",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-06-11T09:00:00+09:00",
+      "time": "06/11"
     }
   ]
 }
