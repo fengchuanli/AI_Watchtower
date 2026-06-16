@@ -29,6 +29,7 @@ const requiredCardFields = [
   "trend",
   "whyRanked",
   "impact",
+  "readerUse",
   "nextCheck",
   "evidenceThreshold",
   "claimBoundary",
@@ -390,6 +391,7 @@ function renderNews(filter = "all") {
           <p class="trend-note"><strong>趋势判断</strong>${escapeHtml(item.trend)}</p>
           <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
           <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
+          <p class="reader-use"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
           <p class="evidence-threshold"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="claim-boundary"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>

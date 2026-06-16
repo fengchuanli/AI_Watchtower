@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 16:04 JST
+
+- Focus: Added per-item reader-use notes so each homepage signal states which audience can use it and what decision or checklist it should inform.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources, including required reader-use notes.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 7 local references, and same-page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit pending; final hash will be recorded in a log follow-up because adding this hash changes repository history.
+
 ## 2026-06-16 15:02 JST
 
 - Focus: Improved homepage news-card link accessibility and maintainability by giving repeated detail links item-specific accessible names and validating the shared detail URL pattern.

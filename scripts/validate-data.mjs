@@ -14,6 +14,7 @@ const requiredNewsFields = [
   "trend",
   "whyRanked",
   "impact",
+  "readerUse",
   "nextCheck",
   "evidenceThreshold",
   "claimBoundary",
@@ -192,6 +193,10 @@ for (const item of newsFeed.items || []) {
 
   if (item.sourceRole && !allowedSourceRoles.has(item.sourceRole)) {
     errors.push(`${item.id} has unsupported sourceRole ${item.sourceRole}.`);
+  }
+
+  if (item.readerUse && !/团队|读者|用户|编辑/.test(item.readerUse)) {
+    errors.push(`${item.id} readerUse must name the audience or user group for the signal.`);
   }
 }
 
