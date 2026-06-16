@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 00:20 JST
+
+- Focus: Added in-site news detail pages so homepage news cards open a richer explanation page instead of sending readers directly to original sources.
+- Changed files:
+  - `news-detail.html`
+  - `news-detail.js`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran `node --check app.js` and `node --check news-detail.js`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and confirmed homepage cards link to in-site detail pages rather than original sources.
+  - Parsed `index.html` and `news-detail.html` with Python's HTML parser.
+  - Validated `data/news.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Pending.
+
 ## 2026-06-16 00:00 JST
 
 - Focus: Manually upgraded the homepage from link-oriented news cards into in-site explainers and added a long-form deep briefing section.

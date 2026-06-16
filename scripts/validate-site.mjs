@@ -2,7 +2,9 @@ import { existsSync, readFileSync } from "node:fs";
 import { isAbsolute, relative, resolve, sep } from "node:path";
 
 const html = readFileSync("index.html", "utf8");
+const detailHtml = readFileSync("news-detail.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
+const detailJs = readFileSync("news-detail.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
@@ -181,12 +183,24 @@ if (!updatesSectionMatch) {
   }
 }
 
-if (!/target="_blank"\s+rel="noopener noreferrer"/.test(appJs)) {
-  errors.push("Rendered news source links must include rel=\"noopener noreferrer\" for new tabs.");
+if (!/href="\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}"/.test(appJs)) {
+  errors.push("Homepage news cards must link to the in-site news detail page.");
 }
 
-if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(appJs)) {
-  errors.push("Rendered news source links must announce that they open in a new window.");
+if (/class="reference-link" href="\$\{escapeHtml\(item\.sourceUrl\)\}"/.test(appJs)) {
+  errors.push("Homepage news cards must not link directly to original sources.");
+}
+
+if (!/<script src="\.\/news-detail\.js"><\/script>/.test(detailHtml)) {
+  errors.push("news-detail.html must load the detail renderer.");
+}
+
+if (!/href="\$\{escapeHtml\(item\.sourceUrl\)\}" target="_blank" rel="noopener noreferrer"/.test(detailJs)) {
+  errors.push("News detail page must keep original source links safe and secondary.");
+}
+
+if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {
+  errors.push("News detail source links must announce that they open in a new window.");
 }
 
 if (

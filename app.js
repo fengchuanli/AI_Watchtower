@@ -380,7 +380,7 @@ function renderNews(filter = "all") {
       (item) => `
         <article class="news-card">
           <span class="category">${escapeHtml(item.label)}</span>
-          <h3>${escapeHtml(item.title)}</h3>
+          <h3><a class="card-detail-link" href="./news-detail.html?id=${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a></h3>
           <p class="card-summary"><strong>发生了什么</strong>${escapeHtml(item.body)}</p>
           <p class="trend-note"><strong>趋势判断</strong>${escapeHtml(item.trend)}</p>
           <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
@@ -391,7 +391,7 @@ function renderNews(filter = "all") {
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)} · ${escapeHtml(item.sourceRole)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>
             <span>参考来源：${escapeHtml(item.source)}</span>
-            <a class="reference-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${item.source}（在新窗口打开）`)}">原始来源</a>
+            <a class="reference-link" href="./news-detail.html?id=${encodeURIComponent(item.id)}">查看站内解读</a>
             <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
           </footer>
         </article>

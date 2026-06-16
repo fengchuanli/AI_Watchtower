@@ -512,6 +512,15 @@ h3 {
   font-size: 12px;
 }
 
+.card-detail-link {
+  color: var(--ink);
+  border-bottom: 2px solid transparent;
+}
+
+.card-detail-link:hover {
+  border-color: var(--cyan);
+}
+
 .news-card .impact-note {
   margin: 12px 0 0;
   padding-left: 12px;
@@ -650,6 +659,7 @@ h3 {
 .filter-tabs button:focus-visible,
 .skip-link:focus-visible,
 .button:focus-visible,
+.card-detail-link:focus-visible,
 .header-action:focus-visible,
 .brand:focus-visible,
 .nav-links a:focus-visible,
@@ -693,6 +703,110 @@ h3 {
 
 .news-card footer .reference-link {
   color: var(--ink);
+}
+
+.detail-page {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 78px;
+}
+
+.detail-shell {
+  display: grid;
+  gap: 22px;
+}
+
+.detail-header {
+  padding: 34px;
+  color: white;
+  background: var(--dark);
+  border-radius: 8px;
+}
+
+.detail-header h1 {
+  max-width: 920px;
+  margin-bottom: 18px;
+  font-size: clamp(36px, 5vw, 66px);
+}
+
+.detail-date,
+.detail-lede {
+  max-width: 780px;
+  color: rgb(255 255 255 / 76%);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 18px;
+  align-items: start;
+}
+
+.detail-main,
+.detail-side {
+  display: grid;
+  gap: 16px;
+}
+
+.detail-block,
+.detail-side section {
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgb(25 32 44 / 7%);
+}
+
+.detail-block span {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--coral);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.detail-block h2,
+.detail-side h2 {
+  font-size: 24px;
+}
+
+.detail-so-what {
+  margin: 18px 0 0;
+  padding: 14px 0 0;
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+}
+
+.detail-so-what strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--cyan);
+  font-size: 12px;
+}
+
+.detail-side dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.detail-side dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.detail-side dd {
+  margin: 2px 0 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .feed-state,
@@ -952,7 +1066,8 @@ h3 {
   .briefing-grid,
   .split,
   .subscribe,
-  .deep-actions {
+  .deep-actions,
+  .detail-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1012,8 +1127,13 @@ h3 {
   }
 
   .section,
-  .subscribe {
+  .subscribe,
+  .detail-page {
     width: min(100% - 32px, 1180px);
+  }
+
+  .detail-header {
+    padding: 24px;
   }
 
   .news-grid,
