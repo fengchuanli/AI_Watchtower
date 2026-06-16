@@ -34,6 +34,7 @@ const requiredCardFields = [
   "followUpQuestions",
   "evidenceThreshold",
   "claimBoundary",
+  "counterEvidence",
   "source",
   "sourceUrl",
   "sourceRole",
@@ -413,6 +414,7 @@ function renderNews(filter = "all") {
           </div>
           <p class="evidence-threshold"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="claim-boundary"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
+          <p class="counter-evidence"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
           <p class="verification-status"><strong>核验状态</strong>${escapeHtml(item.verificationStatus)}</p>
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)} · ${escapeHtml(item.sourceRole)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>

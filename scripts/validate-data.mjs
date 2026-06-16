@@ -19,6 +19,7 @@ const requiredNewsFields = [
   "followUpQuestions",
   "evidenceThreshold",
   "claimBoundary",
+  "counterEvidence",
   "source",
   "sourceId",
   "sourceUrl",
@@ -212,6 +213,10 @@ for (const item of newsFeed.items || []) {
         errors.push(`${item.id} followUpQuestions[${index}] is too vague for editorial follow-up.`);
       }
     }
+  }
+
+  if (item.counterEvidence && !/如果|若|缺少|未|不/.test(item.counterEvidence)) {
+    errors.push(`${item.id} counterEvidence must name a condition that would weaken the current editorial judgment.`);
   }
 }
 

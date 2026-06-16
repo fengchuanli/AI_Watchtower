@@ -62,6 +62,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `followUpQuestions`: At least two concrete Chinese questions ending in `？` that guide the next editorial update or source check.
 - `evidenceThreshold`: Concrete minimum evidence required before the observation can be upgraded to a confirmed editorial judgment. Name the source type and proof needed rather than using a vague phrase such as "more evidence".
 - `claimBoundary`: Short Chinese caution stating what the current item does not prove, so readers do not overread a signal beyond its available evidence.
+- `counterEvidence`: Short Chinese condition explaining what later evidence would weaken, downgrade, or narrow the current editorial judgment.
 - `source`: Human-readable source group.
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.
@@ -80,4 +81,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, required item fields including reader-use notes, editorial follow-up questions, evidence thresholds and claim boundaries, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, required item fields including reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
