@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 22:20 JST
+
+- Focus: Shortened homepage news cards to only show what happened, trend judgment, and selection reason, while moving richer explanations into dedicated detail-page fields.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `news-detail.js`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources, including longer detail-page explanation fields.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 19 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Included in this change set.
+
 ## 2026-06-16 21:02 JST
 
 - Focus: Improved product maintainability by making the in-site news detail page validate required feed and item display fields before rendering, so incomplete JSON fails into the existing retry/error state instead of producing a partial explainer.

@@ -3,7 +3,9 @@ const requiredDetailFields = [
   "label",
   "title",
   "body",
+  "detailBody",
   "trend",
+  "detailTrend",
   "whyRanked",
   "impact",
   "readerUse",
@@ -120,12 +122,12 @@ function renderDetail(item, data) {
         <section class="detail-block">
           <span>01 · What Happened</span>
           <h2>发生了什么</h2>
-          <p>${escapeHtml(item.body)}</p>
+          <p>${escapeHtml(item.detailBody)}</p>
         </section>
         <section class="detail-block">
           <span>02 · Trend</span>
           <h2>趋势判断</h2>
-          <p>${escapeHtml(item.trend)}</p>
+          <p>${escapeHtml(item.detailTrend)}</p>
         </section>
         <section class="detail-block">
           <span>03 · Why It Matters</span>

@@ -11,7 +11,9 @@ const requiredNewsFields = [
   "label",
   "title",
   "body",
+  "detailBody",
   "trend",
+  "detailTrend",
   "whyRanked",
   "impact",
   "readerUse",
@@ -187,6 +189,14 @@ for (const item of newsFeed.items || []) {
 
   if (item.publishedAt && Number.isNaN(Date.parse(item.publishedAt))) {
     errors.push(`${item.id} has invalid publishedAt ${item.publishedAt}.`);
+  }
+
+  if (item.detailBody && item.body && item.detailBody.length <= item.body.length + 40) {
+    errors.push(`${item.id} detailBody must be meaningfully longer than the homepage body.`);
+  }
+
+  if (item.detailTrend && item.trend && item.detailTrend.length <= item.trend.length + 40) {
+    errors.push(`${item.id} detailTrend must be meaningfully longer than the homepage trend.`);
   }
 
   if (item.verificationStatus && !allowedVerificationStatuses.has(item.verificationStatus)) {

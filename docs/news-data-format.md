@@ -53,8 +53,10 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `category`: One of `model`, `product`, `research`, `tool`, `funding`, or `policy` for the current homepage filters.
 - `label`: Chinese category label shown on the card.
 - `title`: Chinese headline.
-- `body`: Short Chinese summary.
+- `body`: Short Chinese summary for homepage cards. Keep it focused on what happened.
+- `detailBody`: Longer Chinese explanation for the detail page. It must add context beyond `body` and be meaningfully longer.
 - `trend`: Chinese editorial interpretation that links the item to a broader observable trend without adding unverified facts.
+- `detailTrend`: Longer Chinese trend explanation for the detail page. It must add context beyond `trend` and be meaningfully longer.
 - `whyRanked`: Short Chinese explanation for why the item deserves homepage attention or ranking priority.
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
 - `readerUse`: Short Chinese line naming who should use the signal and what decision or checklist it informs.
@@ -81,4 +83,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, required item fields including reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, required item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

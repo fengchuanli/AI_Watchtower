@@ -403,22 +403,8 @@ function renderNews(filter = "all") {
           <p class="card-summary"><strong>发生了什么</strong>${escapeHtml(item.body)}</p>
           <p class="trend-note"><strong>趋势判断</strong>${escapeHtml(item.trend)}</p>
           <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
-          <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
-          <p class="reader-use"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
-          <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
-          <div class="follow-up-questions">
-            <strong>编辑追问</strong>
-            <ul>
-              ${item.followUpQuestions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}
-            </ul>
-          </div>
-          <p class="evidence-threshold"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
-          <p class="claim-boundary"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
-          <p class="counter-evidence"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
-          <p class="verification-status"><strong>核验状态</strong>${escapeHtml(item.verificationStatus)}</p>
-          <p class="source-note"><strong>${escapeHtml(item.trustLevel)} · ${escapeHtml(item.sourceRole)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>
-            <span>参考来源：${escapeHtml(item.source)}</span>
+            <span>${escapeHtml(item.trustLevel)}</span>
             <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看站内解读</a>
             <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
           </footer>
