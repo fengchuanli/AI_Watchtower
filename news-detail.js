@@ -91,6 +91,7 @@ function renderDetail(item, data) {
           <h2>还需要核对什么</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
           <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
+          <p class="detail-so-what"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
         </section>
       </div>
 

@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 14:01 JST
+
+- Focus: Added explicit claim-boundary notes to every homepage sample item so readers can see what each unverified signal does not prove before opening the source.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`, `node --check news-detail.js`, and `node --check scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 news items against 18 sources, including the required claim-boundary notes.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 7 local references, and same-page link targets.
+  - Parsed `index.html` and `news-detail.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local commit pending; final hash will be recorded in the automation run summary because amending this log line changes the commit hash.
+
 ## 2026-06-16 00:20 JST
 
 - Focus: Added in-site news detail pages so homepage news cards open a richer explanation page instead of sending readers directly to original sources.

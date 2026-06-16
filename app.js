@@ -31,6 +31,7 @@ const requiredCardFields = [
   "impact",
   "nextCheck",
   "evidenceThreshold",
+  "claimBoundary",
   "source",
   "sourceUrl",
   "sourceRole",
@@ -387,6 +388,7 @@ function renderNews(filter = "all") {
           <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
           <p class="evidence-threshold"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
+          <p class="claim-boundary"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
           <p class="verification-status"><strong>核验状态</strong>${escapeHtml(item.verificationStatus)}</p>
           <p class="source-note"><strong>${escapeHtml(item.trustLevel)} · ${escapeHtml(item.sourceRole)}</strong>${escapeHtml(item.provenance)}</p>
           <footer>

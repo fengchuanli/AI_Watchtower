@@ -16,6 +16,7 @@ const requiredNewsFields = [
   "impact",
   "nextCheck",
   "evidenceThreshold",
+  "claimBoundary",
   "source",
   "sourceId",
   "sourceUrl",
