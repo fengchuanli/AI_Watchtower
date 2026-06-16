@@ -16,6 +16,7 @@ const requiredNewsFields = [
   "impact",
   "readerUse",
   "nextCheck",
+  "followUpQuestions",
   "evidenceThreshold",
   "claimBoundary",
   "source",
@@ -197,6 +198,20 @@ for (const item of newsFeed.items || []) {
 
   if (item.readerUse && !/团队|读者|用户|编辑/.test(item.readerUse)) {
     errors.push(`${item.id} readerUse must name the audience or user group for the signal.`);
+  }
+
+  if (!Array.isArray(item.followUpQuestions) || item.followUpQuestions.length < 2) {
+    errors.push(`${item.id} must include at least two followUpQuestions.`);
+  } else {
+    for (const [index, question] of item.followUpQuestions.entries()) {
+      if (typeof question !== "string" || !question.trim()) {
+        errors.push(`${item.id} followUpQuestions[${index}] must be a non-empty string.`);
+      } else if (!question.endsWith("？")) {
+        errors.push(`${item.id} followUpQuestions[${index}] must be written as a Chinese question.`);
+      } else if (question.length < 18) {
+        errors.push(`${item.id} followUpQuestions[${index}] is too vague for editorial follow-up.`);
+      }
+    }
   }
 }
 

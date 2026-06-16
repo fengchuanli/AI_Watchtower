@@ -31,6 +31,7 @@ const requiredCardFields = [
   "impact",
   "readerUse",
   "nextCheck",
+  "followUpQuestions",
   "evidenceThreshold",
   "claimBoundary",
   "source",
@@ -94,6 +95,17 @@ function validateNewsData(data) {
 
   if (itemWithInvalidUrl) {
     throw new Error(`News item ${itemWithInvalidUrl.id || "without id"} has an invalid source URL.`);
+  }
+
+  const itemWithInvalidFollowUp = data.items.find(
+    (item) =>
+      !Array.isArray(item.followUpQuestions) ||
+      item.followUpQuestions.length < 2 ||
+      item.followUpQuestions.some((question) => !question || !question.endsWith("？")),
+  );
+
+  if (itemWithInvalidFollowUp) {
+    throw new Error(`News item ${itemWithInvalidFollowUp.id || "without id"} must include follow-up questions.`);
   }
 }
 
@@ -393,6 +405,12 @@ function renderNews(filter = "all") {
           <p class="impact-note"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="reader-use"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
           <p class="next-check"><strong>下次核对</strong>${escapeHtml(item.nextCheck)}</p>
+          <div class="follow-up-questions">
+            <strong>编辑追问</strong>
+            <ul>
+              ${item.followUpQuestions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}
+            </ul>
+          </div>
           <p class="evidence-threshold"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="claim-boundary"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
           <p class="verification-status"><strong>核验状态</strong>${escapeHtml(item.verificationStatus)}</p>

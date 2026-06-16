@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-16 18:05 JST
+
+- Focus: Added concrete editorial follow-up questions to every homepage news item so the next content pass has source-specific questions to answer before upgrading or reframing a signal.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 news items against 18 sources, including required editorial follow-up questions.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 19 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit pending; final hash will be recorded in the automation run summary because adding this hash changes repository history.
+
 ## 2026-06-16 17:32 JST
 
 - Focus: Strengthened GitHub Pages readiness by extending static reference validation from the homepage to every root HTML page, including cross-page fragment targets for local links.

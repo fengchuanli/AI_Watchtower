@@ -59,6 +59,7 @@ function renderError(title, message, canRetry = false) {
 
 function renderDetail(item, data) {
   document.title = `${item.title} | AI Watchtower`;
+  const followUpQuestions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
 
   detailShell.innerHTML = `
     <div class="detail-header">
@@ -91,6 +92,12 @@ function renderDetail(item, data) {
           <span>04 · Verification</span>
           <h2>还需要核对什么</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
+          <div class="detail-question-list">
+            <strong>编辑追问</strong>
+            <ul>
+              ${followUpQuestions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}
+            </ul>
+          </div>
           <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="detail-so-what"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
         </section>

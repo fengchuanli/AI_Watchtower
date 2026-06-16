@@ -59,6 +59,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
 - `readerUse`: Short Chinese line naming who should use the signal and what decision or checklist it informs.
 - `nextCheck`: Short editorial note stating what should be verified before treating the item as fully confirmed.
+- `followUpQuestions`: At least two concrete Chinese questions ending in `？` that guide the next editorial update or source check.
 - `evidenceThreshold`: Concrete minimum evidence required before the observation can be upgraded to a confirmed editorial judgment. Name the source type and proof needed rather than using a vague phrase such as "more evidence".
 - `claimBoundary`: Short Chinese caution stating what the current item does not prove, so readers do not overread a signal beyond its available evidence.
 - `source`: Human-readable source group.
@@ -79,4 +80,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, required item fields including reader-use notes, evidence thresholds and claim boundaries, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, required item fields including reader-use notes, editorial follow-up questions, evidence thresholds and claim boundaries, source ID references, and URL shape.
