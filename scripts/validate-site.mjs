@@ -183,8 +183,16 @@ if (!updatesSectionMatch) {
   }
 }
 
-if (!/href="\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}"/.test(appJs)) {
+if (!/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}`;/.test(appJs)) {
   errors.push("Homepage news cards must link to the in-site news detail page.");
+}
+
+if (
+  !/const detailLabel = escapeHtml\(`查看站内解读：\$\{item\.title\}`\);/.test(appJs) ||
+  !/<a class="card-detail-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">/.test(appJs) ||
+  !/<a class="reference-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">查看站内解读<\/a>/.test(appJs)
+) {
+  errors.push("Homepage detail links must expose item-specific accessible labels.");
 }
 
 if (/class="reference-link" href="\$\{escapeHtml\(item\.sourceUrl\)\}"/.test(appJs)) {
