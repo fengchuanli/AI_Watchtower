@@ -187,6 +187,16 @@ if (!newsFeed.deepBriefing) {
   if (!Array.isArray(newsFeed.deepBriefing.actions) || newsFeed.deepBriefing.actions.length < 2) {
     errors.push("data/news.json deepBriefing must include reader actions.");
   }
+
+  if (!Array.isArray(newsFeed.deepBriefing.coverageLimits) || newsFeed.deepBriefing.coverageLimits.length < 2) {
+    errors.push("data/news.json deepBriefing must include at least two coverageLimits.");
+  }
+
+  for (const [index, limit] of (newsFeed.deepBriefing.coverageLimits || []).entries()) {
+    if (!limit.label || !limit.body) {
+      errors.push(`data/news.json deepBriefing coverageLimits[${index}] must include label and body.`);
+    }
+  }
 }
 
 for (const item of newsFeed.items || []) {

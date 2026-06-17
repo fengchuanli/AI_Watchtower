@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 14:02 JST
+
+- Focus: Added edition-level coverage limits to the deep briefing and removed stale homepage sample-data wording so the current 3-item published feed is framed with clearer time, source, and conclusion boundaries.
+- Changed files:
+  - `index.html`
+  - `data/news.json`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including deep-briefing coverage limits.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 29 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Pending until this run is committed; final hash will be recorded in the automation memory because amending this log line would change the commit hash.
+
 ## 2026-06-17 13:37 JST
 
 - Focus: Removed repeated captured sources from the latest news batch, enforced newest-first sorting for current and historical lists, and expanded detail-page explanations so source facts and caveats are preserved outside the homepage cards.

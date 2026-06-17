@@ -21,6 +21,7 @@ const deepMetrics = document.querySelector("#deepMetrics");
 const deepTimeline = document.querySelector("#deepTimeline");
 const deepSections = document.querySelector("#deepSections");
 const deepActions = document.querySelector("#deepActions");
+const deepLimits = document.querySelector("#deepLimits");
 const deepReferences = document.querySelector("#deepReferences");
 const requiredCardFields = [
   "category",
@@ -205,6 +206,16 @@ function validateDeepBriefing(deepBriefing) {
   if (!Array.isArray(deepBriefing.actions) || deepBriefing.actions.length < 2) {
     throw new Error("Deep briefing must include reader actions.");
   }
+
+  if (!Array.isArray(deepBriefing.coverageLimits) || deepBriefing.coverageLimits.length < 2) {
+    throw new Error("Deep briefing must include coverage limits.");
+  }
+
+  const invalidCoverageLimit = deepBriefing.coverageLimits.find((limit) => !limit.label || !limit.body);
+
+  if (invalidCoverageLimit) {
+    throw new Error("Each deep briefing coverage limit must include label and body.");
+  }
 }
 
 function isValidSourceUrl(sourceUrl) {
@@ -300,6 +311,16 @@ function updateDeepBriefing(deepBriefing) {
     .join("");
 
   deepActions.innerHTML = deepBriefing.actions.map((action) => `<li>${escapeHtml(action)}</li>`).join("");
+  deepLimits.innerHTML = deepBriefing.coverageLimits
+    .map(
+      (limit) => `
+        <article>
+          <span>${escapeHtml(limit.label)}</span>
+          <p>${escapeHtml(limit.body)}</p>
+        </article>
+      `,
+    )
+    .join("");
   deepReferences.innerHTML = deepBriefing.references
     .map(
       (reference, index) => `

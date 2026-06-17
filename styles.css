@@ -489,6 +489,33 @@ h3 {
   padding-left: 18px;
 }
 
+.deep-limits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.deep-limits article {
+  padding: 20px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+}
+
+.deep-limits span {
+  display: block;
+  margin-bottom: 8px;
+  color: #9a3412;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.deep-limits p {
+  margin: 0;
+  color: var(--ink);
+}
+
 .deep-references {
   display: flex;
   gap: 14px;
@@ -1276,7 +1303,8 @@ h3 {
   .library-grid,
   .source-grid,
   .deep-timeline,
-  .deep-sections {
+  .deep-sections,
+  .deep-limits {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1338,7 +1366,8 @@ h3 {
   .library-grid,
   .source-grid,
   .deep-timeline,
-  .deep-sections {
+  .deep-sections,
+  .deep-limits {
     grid-template-columns: 1fr;
   }
 

@@ -37,6 +37,7 @@ The required top-level `deepBriefing` object powers the homepage long-form expla
 - `keyNumbers`: At least three metric objects with `value` and `label`.
 - `sections`: At least three explainer sections with `number`, `label`, `title`, `body`, and `soWhat`.
 - `actions`: Reader actions or takeaways.
+- `coverageLimits`: At least two objects with `label` and `body` that state the edition's time, source, or conclusion boundaries so readers do not treat a snapshot as complete market coverage.
 - `references`: Source references retained for verification rather than primary navigation.
 
 ## Category Fields
@@ -99,4 +100,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
