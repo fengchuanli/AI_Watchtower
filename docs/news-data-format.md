@@ -38,7 +38,7 @@ The required top-level `deepBriefing` object powers the homepage long-form expla
 - `sections`: At least three explainer sections with `number`, `label`, `title`, `body`, and `soWhat`.
 - `actions`: Reader actions or takeaways.
 - `coverageLimits`: At least two objects with `label` and `body` that state the edition's time, source, or conclusion boundaries so readers do not treat a snapshot as complete market coverage.
-- `references`: Source references retained for verification rather than primary navigation.
+- `references`: Source references retained for verification rather than primary navigation. Each reference needs `label` and an `http` or `https` `url`; the homepage opens these links in a new window with an explicit accessible label.
 
 ## Category Fields
 

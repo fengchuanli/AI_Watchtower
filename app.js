@@ -211,10 +211,22 @@ function validateDeepBriefing(deepBriefing) {
     throw new Error("Deep briefing must include coverage limits.");
   }
 
+  if (!Array.isArray(deepBriefing.references) || !deepBriefing.references.length) {
+    throw new Error("Deep briefing must include source references.");
+  }
+
   const invalidCoverageLimit = deepBriefing.coverageLimits.find((limit) => !limit.label || !limit.body);
 
   if (invalidCoverageLimit) {
     throw new Error("Each deep briefing coverage limit must include label and body.");
+  }
+
+  const invalidReference = deepBriefing.references.find(
+    (reference) => !reference.label || !isValidSourceUrl(reference.url),
+  );
+
+  if (invalidReference) {
+    throw new Error("Each deep briefing reference must include a label and valid source URL.");
   }
 }
 
@@ -324,7 +336,7 @@ function updateDeepBriefing(deepBriefing) {
   deepReferences.innerHTML = deepBriefing.references
     .map(
       (reference, index) => `
-        <a href="${escapeHtml(reference.url)}">
+        <a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${reference.label}（在新窗口打开）`)}">
           <span>${String(index + 1).padStart(2, "0")}</span>
           ${escapeHtml(reference.label)}
         </a>

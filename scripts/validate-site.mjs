@@ -346,6 +346,16 @@ if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)
 }
 
 if (
+  !/Deep briefing must include source references\./.test(appJs) ||
+  !/Each deep briefing reference must include a label and valid source URL\./.test(appJs) ||
+  !/<a href="\$\{escapeHtml\(reference\.url\)\}" target="_blank" rel="noopener noreferrer" aria-label="\$\{escapeHtml\(`\$\{reference\.label\}（在新窗口打开）`\)\}">/.test(
+    appJs,
+  )
+) {
+  errors.push("Homepage deep briefing references must validate source URLs and announce new-window behavior.");
+}
+
+if (
   !/<time datetime="\$\{escapeHtml\(item\.publishedAt\)\}">\$\{escapeHtml\(item\.time\)\}<\/time>/.test(
     appJs,
   )
