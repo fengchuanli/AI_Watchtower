@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AI Watchtower 公司标签聚合：OpenAI、Anthropic、Google、Meta。" />
+    <meta name="theme-color" content="#111827" />
+    <title>公司标签 | AI Watchtower</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="AI Watchtower 首页">
+        <span class="brand-mark">AW</span>
+        <span>AI Watchtower</span>
+      </a>
+      <nav class="nav-links" aria-label="Tag navigation">
+        <a href="./#feed">最新新闻流</a>
+        <a href="./all-news.html">全部情报</a>
+        <a href="./archive.html">期次归档</a>
+      </nav>
+      <a class="header-action" href="./">返回首页</a>
+    </header>
+
+    <main id="main-content" class="tag-page">
+      <section class="section compact">
+        <p class="eyebrow">Company Tags</p>
+        <h1>公司标签聚合</h1>
+        <p class="section-copy">按 OpenAI、Anthropic、Google、Meta 聚合已抓取的 AI 情报，点击条目仍会进入站内事件简报。</p>
+        <div class="tag-tabs" id="tagTabs" aria-label="公司标签"></div>
+      </section>
+
+      <section class="section compact" aria-labelledby="tag-title">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow" id="tagEyebrow">Tag Feed</p>
+            <h2 id="tag-title">正在读取标签...</h2>
+            <p class="category-status" id="tagMeta">正在读取历史情报...</p>
+          </div>
+        </div>
+        <div class="tag-results" id="tagResults" aria-live="polite">
+          <p class="feed-state">正在生成标签聚合...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>AI Watchtower</span>
+      <span>Company-level AI intelligence tags.</span>
+    </footer>
+
+    <script src="./tags.js"></script>
+  </body>
+</html>

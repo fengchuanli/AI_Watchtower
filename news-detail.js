@@ -190,28 +190,28 @@ function getOverviewCards(item) {
 function getDiagramNodes(item) {
   return [
     {
-      label: "原始信号",
-      title: item.source,
+      label: "发生了什么",
+      title: "一句话看懂",
       body: item.body,
-      icon: "S",
+      icon: "1",
     },
     {
-      label: "核心变化",
-      title: item.title,
-      body: item.detailBody,
-      icon: "C",
-    },
-    {
-      label: "趋势含义",
-      title: "这意味着什么",
-      body: item.detailTrend,
-      icon: "T",
-    },
-    {
-      label: "影响对象",
-      title: "谁需要关注",
+      label: "为什么重要",
+      title: "影响对象",
       body: item.impact,
-      icon: "I",
+      icon: "2",
+    },
+    {
+      label: "趋势判断",
+      title: "背后的方向",
+      body: item.detailTrend,
+      icon: "3",
+    },
+    {
+      label: "核对边界",
+      title: "别急着下结论",
+      body: item.claimBoundary,
+      icon: "4",
     },
   ];
 }
@@ -278,24 +278,35 @@ function renderRiskCards(cards) {
     .join("");
 }
 
-function getIncidentTimeline(item, data) {
+function getQuickSummary(item) {
   return [
     {
-      label: item.time,
-      title: "原始信号出现",
+      label: "发生了什么",
       body: item.body,
     },
     {
-      label: data.edition.archiveLabel,
-      title: "进入 Watchtower 研判",
-      body: item.detailWhyRanked,
+      label: "为什么重要",
+      body: item.impact,
     },
     {
-      label: "Next",
-      title: "下一步核对",
+      label: "接下来要看",
       body: item.nextCheck,
     },
   ];
+}
+
+function renderQuickSummary(summaryItems) {
+  return summaryItems
+    .map(
+      (summaryItem, index) => `
+        <li>
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <strong>${escapeHtml(summaryItem.label)}</strong>
+          <p>${escapeHtml(summaryItem.body)}</p>
+        </li>
+      `,
+    )
+    .join("");
 }
 
 function renderMetricList(metrics) {
@@ -306,20 +317,6 @@ function renderMetricList(metrics) {
           <dt>${escapeHtml(metric.value)}</dt>
           <dd>${escapeHtml(metric.label)}</dd>
         </div>
-      `,
-    )
-    .join("");
-}
-
-function renderIncidentTimeline(timeline) {
-  return timeline
-    .map(
-      (event) => `
-        <article>
-          <span>${escapeHtml(event.label)}</span>
-          <h3>${escapeHtml(event.title)}</h3>
-          <p>${escapeHtml(event.body)}</p>
-        </article>
       `,
     )
     .join("");
@@ -344,7 +341,7 @@ function renderDetail(item, data) {
   document.title = `${item.title} | AI Watchtower`;
   const followUpQuestions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
   const metrics = getImpactMetrics(item);
-  const timeline = getIncidentTimeline(item, data);
+  const quickSummary = getQuickSummary(item);
   const overviewCards = getOverviewCards(item);
   const diagramNodes = getDiagramNodes(item);
   const riskCards = getRiskCards(item);
@@ -361,13 +358,23 @@ function renderDetail(item, data) {
     </div>
 
     <nav class="incident-jump-nav" aria-label="事件简报导航">
+      <a href="#quick-summary">3行总结</a>
       <a href="#incident-map">解析图</a>
       <a href="#incident-overview">事件全貌</a>
       <a href="#incident-stakes">为什么重要</a>
-      <a href="#incident-timeline">时间线</a>
       <a href="#incident-verification">事实边界</a>
       <a href="#incident-source">来源</a>
     </nav>
+
+    <section class="quick-summary" id="quick-summary" aria-label="3行总结">
+      <div>
+        <p class="eyebrow">30-second Summary</p>
+        <h2>3行总结</h2>
+      </div>
+      <ol>
+        ${renderQuickSummary(quickSummary)}
+      </ol>
+    </section>
 
     <section class="overview-diagram" id="incident-map" aria-label="新闻全貌解析图">
       <div class="overview-card-row">
@@ -406,9 +413,6 @@ function renderDetail(item, data) {
           <p>${escapeHtml(item.detailWhyRanked)}</p>
           <p class="detail-so-what"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
-        </section>
-        <section class="incident-timeline" id="incident-timeline" aria-label="事件时间线">
-          ${renderIncidentTimeline(timeline)}
         </section>
         <section class="detail-block incident-block" id="incident-verification">
           <span>04 · Verification</span>

@@ -13,6 +13,7 @@ const briefingHeadline = document.querySelector("#briefingHeadline");
 const briefingSummary = document.querySelector("#briefingSummary");
 const briefingCta = document.querySelector("#briefingCta");
 const briefingWatchPoints = document.querySelector("#briefingWatchPoints");
+const topStories = document.querySelector("#topStories");
 const heroSignalCount = document.querySelector("#heroSignalCount");
 const heroSourceCount = document.querySelector("#heroSourceCount");
 const heroChecklistMode = document.querySelector("#heroChecklistMode");
@@ -80,12 +81,14 @@ async function loadNews() {
     news = sortNewsItems(data.items);
     newsCategories = data.categories;
     updateTodayBriefing(data.briefing);
+    updateTopStories(news);
     updateDeepBriefing(data.deepBriefing);
     updateHeroStats(data);
     updateNewsMeta(data);
   } catch (error) {
     news = [];
     updateHeroStats();
+    updateTopStories([]);
     updateNewsMeta({ statusLabel: "数据未加载", editorNote: "新闻数据暂时无法读取，请稍后重试。" });
     updateCategoryMeta();
     renderFeedMessage("error", "新闻数据暂时无法读取。", true);
@@ -302,6 +305,55 @@ function updateTodayBriefing(briefing) {
         </article>
       `,
     )
+    .join("");
+}
+
+function getThreeLineSummary(item) {
+  return [
+    { label: "发生了什么", body: item.body },
+    { label: "为什么重要", body: item.impact },
+    { label: "接下来要看", body: item.nextCheck },
+  ];
+}
+
+function updateTopStories(items) {
+  if (!topStories) {
+    return;
+  }
+
+  const topItems = Array.isArray(items) ? items.slice(0, 3) : [];
+
+  if (!topItems.length) {
+    topStories.innerHTML = '<p class="feed-state">暂无 TOP3，新闻数据加载后会自动生成。</p>';
+    return;
+  }
+
+  topStories.innerHTML = topItems
+    .map((item, index) => {
+      const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}`;
+      const summaryLines = getThreeLineSummary(item)
+        .map(
+          (line) => `
+            <li>
+              <strong>${escapeHtml(line.label)}</strong>
+              <span>${escapeHtml(line.body)}</span>
+            </li>
+          `,
+        )
+        .join("");
+
+      return `
+        <article class="top-story">
+          <span class="top-rank">${String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <p class="eyebrow">${escapeHtml(item.label)} · ${escapeHtml(item.time)}</p>
+            <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
+            <ol>${summaryLines}</ol>
+            <a class="reference-link" href="${detailUrl}">查看事件简报</a>
+          </div>
+        </article>
+      `;
+    })
     .join("");
 }
 

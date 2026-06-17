@@ -4,11 +4,13 @@ import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 const html = readFileSync("index.html", "utf8");
 const detailHtml = readFileSync("news-detail.html", "utf8");
 const allNewsHtml = readFileSync("all-news.html", "utf8");
+const tagsHtml = readFileSync("tags.html", "utf8");
 const archiveHtml = readFileSync("archive.html", "utf8");
 const notFoundHtml = readFileSync("404.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
 const detailJs = readFileSync("news-detail.js", "utf8");
 const allNewsJs = readFileSync("all-news.js", "utf8");
+const tagsJs = readFileSync("tags.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
@@ -16,6 +18,7 @@ const htmlPages = new Map([
   ["index.html", html],
   ["news-detail.html", detailHtml],
   ["all-news.html", allNewsHtml],
+  ["tags.html", tagsHtml],
   ["archive.html", archiveHtml],
   ["404.html", notFoundHtml],
 ]);
@@ -269,6 +272,10 @@ if (!updatesSectionMatch) {
     errors.push("Update access section must link to the all-news intelligence history.");
   }
 
+  if (!/<a\b(?=[^>]*\bhref="\.\/tags\.html")[^>]*>/.test(updatesSection)) {
+    errors.push("Update access section must link to the company tag aggregation page.");
+  }
+
   if (
     !/<a\b(?=[^>]*\bhref="https:\/\/github\.com\/fengchuanli\/AI_Watchtower\/commits\/main\/")(?=[^>]*\btarget="_blank")(?=[^>]*\brel="noopener noreferrer")[^>]*>/s.test(
       updatesSection,
@@ -284,6 +291,10 @@ if (!/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\
 
 if (!/latestCapture\.textContent = `最新抓取：/.test(appJs)) {
   errors.push("Homepage must clearly label the latest captured news batch.");
+}
+
+if (!/id="top3"/.test(html) || !/function updateTopStories/.test(appJs) || !/getThreeLineSummary/.test(appJs)) {
+  errors.push("Homepage must render a dynamic Today TOP3 section with three-line summaries.");
 }
 
 if (
@@ -305,6 +316,14 @@ if (
 
 if (!/<script src="\.\/all-news\.js"><\/script>/.test(allNewsHtml)) {
   errors.push("all-news.html must load the history renderer.");
+}
+
+if (!/<script src="\.\/tags\.js"><\/script>/.test(tagsHtml)) {
+  errors.push("tags.html must load the company tag renderer.");
+}
+
+if (!/OpenAI/.test(tagsJs) || !/Anthropic/.test(tagsJs) || !/Google/.test(tagsJs) || !/Meta/.test(tagsJs)) {
+  errors.push("Company tag aggregation must include OpenAI, Anthropic, Google, and Meta.");
 }
 
 if (
@@ -350,10 +369,11 @@ if (
   !/Incident Briefing ·/.test(detailJs) ||
   !/incident-metrics/.test(detailJs) ||
   !/incident-jump-nav/.test(detailJs) ||
+  !/quick-summary/.test(detailJs) ||
+  !/function getQuickSummary/.test(detailJs) ||
   !/overview-diagram/.test(detailJs) ||
   !/function getDiagramNodes/.test(detailJs) ||
   !/function renderDiagramNodes/.test(detailJs) ||
-  !/function getIncidentTimeline/.test(detailJs) ||
   !/事件全貌/.test(detailJs) ||
   !/事实边界/.test(detailJs)
 ) {
