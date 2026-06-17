@@ -350,11 +350,18 @@ if (
   !/Incident Briefing ·/.test(detailJs) ||
   !/incident-metrics/.test(detailJs) ||
   !/incident-jump-nav/.test(detailJs) ||
+  !/overview-diagram/.test(detailJs) ||
+  !/function getDiagramNodes/.test(detailJs) ||
+  !/function renderDiagramNodes/.test(detailJs) ||
   !/function getIncidentTimeline/.test(detailJs) ||
   !/事件全貌/.test(detailJs) ||
   !/事实边界/.test(detailJs)
 ) {
   errors.push("News detail page must render each item as an incident briefing deck.");
+}
+
+if (!/\.overview-flow::before/.test(styles) || !/\.overview-risk-grid/.test(styles)) {
+  errors.push("News detail incident pages must include an auto-generated overview diagram style.");
 }
 
 if (!/AI Watchtower 不追求把所有官方更新铺满首页/.test(html) || !/范式变化/.test(html)) {

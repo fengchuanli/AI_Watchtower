@@ -162,6 +162,122 @@ function getImpactMetrics(item) {
   ];
 }
 
+function getOverviewCards(item) {
+  return [
+    {
+      value: item.time,
+      label: "事件时间",
+      tone: "amber",
+    },
+    {
+      value: item.label,
+      label: "情报类别",
+      tone: "ink",
+    },
+    {
+      value: item.sourceRole,
+      label: "可核对来源",
+      tone: "coral",
+    },
+    {
+      value: item.verificationStatus,
+      label: "当前状态",
+      tone: "blue",
+    },
+  ];
+}
+
+function getDiagramNodes(item) {
+  return [
+    {
+      label: "原始信号",
+      title: item.source,
+      body: item.body,
+      icon: "S",
+    },
+    {
+      label: "核心变化",
+      title: item.title,
+      body: item.detailBody,
+      icon: "C",
+    },
+    {
+      label: "趋势含义",
+      title: "这意味着什么",
+      body: item.detailTrend,
+      icon: "T",
+    },
+    {
+      label: "影响对象",
+      title: "谁需要关注",
+      body: item.impact,
+      icon: "I",
+    },
+  ];
+}
+
+function getRiskCards(item) {
+  return [
+    {
+      title: "事实边界",
+      body: item.claimBoundary,
+    },
+    {
+      title: "降级信号",
+      body: item.counterEvidence,
+    },
+    {
+      title: "下一步核对",
+      body: item.nextCheck,
+    },
+  ];
+}
+
+function renderOverviewCards(cards) {
+  return cards
+    .map(
+      (card) => `
+        <article class="overview-card ${escapeHtml(card.tone)}">
+          <strong>${escapeHtml(card.value)}</strong>
+          <span>${escapeHtml(card.label)}</span>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderDiagramNodes(nodes) {
+  return nodes
+    .map(
+      (node) => `
+        <article class="diagram-node">
+          <span>${escapeHtml(node.label)}</span>
+          <div class="diagram-node-body">
+            <b aria-hidden="true">${escapeHtml(node.icon)}</b>
+            <div>
+              <h3>${escapeHtml(node.title)}</h3>
+              <p>${escapeHtml(node.body)}</p>
+            </div>
+          </div>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderRiskCards(cards) {
+  return cards
+    .map(
+      (card) => `
+        <article>
+          <h3>${escapeHtml(card.title)}</h3>
+          <p>${escapeHtml(card.body)}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function getIncidentTimeline(item, data) {
   return [
     {
@@ -229,6 +345,9 @@ function renderDetail(item, data) {
   const followUpQuestions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
   const metrics = getImpactMetrics(item);
   const timeline = getIncidentTimeline(item, data);
+  const overviewCards = getOverviewCards(item);
+  const diagramNodes = getDiagramNodes(item);
+  const riskCards = getRiskCards(item);
 
   detailShell.innerHTML = `
     <div class="incident-hero">
@@ -242,12 +361,32 @@ function renderDetail(item, data) {
     </div>
 
     <nav class="incident-jump-nav" aria-label="事件简报导航">
+      <a href="#incident-map">解析图</a>
       <a href="#incident-overview">事件全貌</a>
       <a href="#incident-stakes">为什么重要</a>
       <a href="#incident-timeline">时间线</a>
       <a href="#incident-verification">事实边界</a>
       <a href="#incident-source">来源</a>
     </nav>
+
+    <section class="overview-diagram" id="incident-map" aria-label="新闻全貌解析图">
+      <div class="overview-card-row">
+        ${renderOverviewCards(overviewCards)}
+      </div>
+      <div class="overview-map-shell">
+        <div class="overview-map-heading">
+          <p class="eyebrow">Auto Overview Diagram</p>
+          <h2>${escapeHtml(item.title)}</h2>
+          <p>${escapeHtml(item.detailWhyRanked)}</p>
+        </div>
+        <div class="overview-flow" aria-label="从原始信号到影响判断的链路">
+          ${renderDiagramNodes(diagramNodes)}
+        </div>
+        <div class="overview-risk-grid" aria-label="风险与核对点">
+          ${renderRiskCards(riskCards)}
+        </div>
+      </div>
+    </section>
 
     <section class="detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
