@@ -6,6 +6,7 @@ const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
+const coverageMix = document.querySelector("#coverageMix");
 const categoryMeta = document.querySelector("#categoryMeta");
 const briefingLabel = document.querySelector("#briefingLabel");
 const briefingHeadline = document.querySelector("#briefingHeadline");
@@ -154,6 +155,18 @@ function validateEdition(edition, updatedAt) {
 
   if (edition.date !== updatedAt) {
     throw new Error("News edition date must match updatedAt.");
+  }
+
+  if (!Array.isArray(edition.coverageMix) || edition.coverageMix.length < 2) {
+    throw new Error("News edition must include a coverage mix.");
+  }
+
+  const invalidCoverage = edition.coverageMix.find(
+    (item) => !item.label || !Number.isInteger(item.count) || item.count < 1 || !item.meaning,
+  );
+
+  if (invalidCoverage) {
+    throw new Error("Each edition coverage mix item must include label, count, and meaning.");
   }
 }
 
@@ -362,6 +375,20 @@ function updateNewsMeta(data) {
     ? `${data.edition.archiveLabel} ${data.edition.id} · 时区 ${data.edition.timezone} · ${data.edition.note}`
     : "尚无期次信息";
   newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${edition} · ${data.editorNote || ""}`;
+
+  if (coverageMix) {
+    const mixItems = data.edition?.coverageMix || [];
+    coverageMix.innerHTML = mixItems
+      .map(
+        (item) => `
+          <span>
+            <strong>${escapeHtml(item.label)} · ${escapeHtml(item.count)} 条</strong>
+            ${escapeHtml(item.meaning)}
+          </span>
+        `,
+      )
+      .join("");
+  }
 }
 
 function updateCategoryMeta(filter) {

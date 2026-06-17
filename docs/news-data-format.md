@@ -12,6 +12,7 @@ The required top-level `edition` object gives each homepage snapshot a stable ar
 - `archiveStatus`: `preview` for sample or incomplete snapshots, or `published` for a reviewed edition.
 - `archiveLabel`: Short Chinese status label shown in the homepage feed metadata.
 - `note`: Chinese scope note explaining what the archived edition does and does not represent.
+- `coverageMix`: At least two objects with `label`, positive integer `count`, and Chinese `meaning`. The counts must add up to the current `items.length`, and each meaning should explain how readers should use that signal group.
 
 ## Briefing Fields
 

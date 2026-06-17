@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 16:04 JST
+
+- Focus: Added edition-level coverage mix framing so the homepage states how many current signals belong to research evaluation, enterprise delivery, and policy trust, with validation that the counts match the live feed and each group explains reader use.
+- Changed files:
+  - `data/news.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including edition coverage-mix counts and reader-use wording.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 29 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Pending until this run is committed; final hash will be recorded in the automation memory because amending this log line would change the commit hash.
+
 ## 2026-06-17 15:03 JST
 
 - Focus: Improved deep-briefing source reference accessibility and maintainability by validating reference labels and HTTP(S) URLs before rendering, then opening those external verification links with safe new-window attributes and explicit accessible labels.

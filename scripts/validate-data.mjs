@@ -134,6 +134,28 @@ if (!newsFeed.edition) {
     errors.push(`data/news.json edition has unsupported archiveStatus ${newsFeed.edition.archiveStatus}.`);
   }
 
+  if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
+    errors.push("data/news.json edition must include at least two coverageMix entries.");
+  } else {
+    const coverageCount = newsFeed.edition.coverageMix.reduce((count, entry) => {
+      return count + (Number.isInteger(entry.count) ? entry.count : 0);
+    }, 0);
+
+    if (coverageCount !== newsFeed.items.length) {
+      errors.push("data/news.json edition coverageMix counts must match the number of current news items.");
+    }
+
+    for (const [index, entry] of newsFeed.edition.coverageMix.entries()) {
+      if (!entry.label || !Number.isInteger(entry.count) || entry.count < 1 || !entry.meaning) {
+        errors.push(`data/news.json edition coverageMix[${index}] must include label, positive count, and meaning.`);
+      }
+
+      if (entry.meaning && !/用于观察|用于判断|用于核对/.test(entry.meaning)) {
+        errors.push(`data/news.json edition coverageMix[${index}] must explain how readers should use that signal group.`);
+      }
+    }
+  }
+
   if (!/^[a-z0-9-]+-\d{4}-\d{2}-\d{2}$/.test(newsFeed.edition.id || "")) {
     errors.push("data/news.json edition.id must end with an ISO date and use lowercase letters, numbers, or hyphens.");
   }
