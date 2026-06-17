@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 19:23 JST
+
+- Focus: Cleaned up the detail-page overview diagram by removing redundant small labels, unified homepage news-card wording with the detail page, and replaced the monthly optimization plan with a 2026-06-17 through 2026-07-16 roadmap that continues by writing the next 30-day plan when complete. Updated the eight daily site-optimization automations so they follow the plan in order and roll over to the next plan instead of stopping.
+- Changed files:
+  - `app.js`
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-plan.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, the unified labels, the detail diagram label cleanup, and the monthly plan rollover rule.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+  - Attempted local static preview on port 4173, but this environment blocked binding a local preview server; no browser visual pass was completed.
+- Commit: Included in this change set; final Git commit hash is reported after commit creation.
+
 ## 2026-06-17 20:03 JST
 
 - Focus: Improved homepage content clarity by showing each `今日 TOP3` item's existing ranking rationale before its three-line summary, and added validation so TOP3 ranking reasons stay present and distinct.

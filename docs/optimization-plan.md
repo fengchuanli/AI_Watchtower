@@ -1,78 +1,82 @@
 # AI Watchtower 30-Day Optimization Plan
 
-This plan guides eight daily optimization passes for roughly 30 days. Each pass should make one small, useful improvement, verify the site still works, update the optimization log, commit the change, and push to GitHub.
+This plan guides daily AI Watchtower optimization work from 2026-06-17 through 2026-07-16. Each automated optimization pass should complete one small, verifiable improvement from the current phase, update `docs/optimization-log.md`, commit with a Chinese message, and push to `origin main` when network access allows.
+
+When all tasks in this plan are complete, create the next 30-day plan in this same file before continuing optimization. Do not stop daily optimization just because this plan ends.
 
 ## Daily Rhythm
 
-News intelligence updates run twice per day. These jobs should collect recent AI signals from `data/sources.json`, summarize them in Chinese inside the site, preserve source URLs as references, and avoid turning the page into a link directory.
+News intelligence updates run twice per day.
 
 - 08:00 JST: Morning news intelligence update.
 - 17:00 JST: Evening news intelligence update.
 
-Site optimization runs separately. These jobs should improve the presentation, validation, editorial structure, and publishing quality around the news data.
+Site optimization runs separately and should follow this plan.
 
-- 14:00 JST: Content and information pass. Improve headlines, summaries, categories, source framing, trend wording, or dated editorial notes.
-- 15:00 JST: Product and quality pass. Improve layout, accessibility, mobile behavior, loading, documentation, or the publishing workflow.
-- 16:00 JST: Content structure pass. Improve homepage news data, source links, editorial notes, archive readiness, or trend explanation.
-- 17:30 JST: Product quality pass. Improve validation, accessibility, responsive behavior, metadata, or implementation clarity.
-- 18:00 JST: Content depth pass. Improve source interpretation, topic coverage, ranking explanations, or category clarity.
-- 19:00 JST: Maintenance pass. Improve documentation, checks, GitHub Pages readiness, loading, or resilience.
-- 20:00 JST: Content polish pass. Improve Chinese copy, summaries, trust labels, provenance notes, or daily briefing structure.
-- 21:00 JST: Final quality pass. Improve consistency, performance, mobile layout, validation, or publishing workflow.
+- 14:00 JST: Content and structure improvement.
+- 15:00 JST: Product quality, layout, accessibility, or validation improvement.
+- 16:00 JST: Editorial depth, source framing, or data structure improvement.
+- 17:30 JST: Detail-page, navigation, or interaction improvement.
+- 18:00 JST: Readability, wording, or visual hierarchy improvement.
+- 19:00 JST: Maintenance, documentation, checks, or publishing resilience.
+- 20:00 JST: Content polish, Chinese copy, summaries, or category clarity.
+- 21:00 JST: Final quality pass, consistency check, or deployment hygiene.
 
-## Week 1: Foundation
+## Phase 1: Clarity And Reading Flow
 
-- Day 1: Create the optimization plan and log, confirm GitHub Pages workflow.
-- Day 2: Move sample news data into a clearer structure and make updates easier.
-- Day 3: Add date labels and a daily briefing area that can be refreshed.
-- Day 4: Improve mobile readability and spacing.
-- Day 5: Add clearer category labels for models, products, research, policy, funding, and tools.
-- Day 6: Add a simple source policy so every news item has provenance.
-- Day 7: Review visual hierarchy and remove any weak placeholder wording.
+- Day 1: Remove repeated labels in detail pages and unify terms across homepage and detail pages.
+- Day 2: Improve the auto overview diagram so it explains relationships visually, not just with text.
+- Day 3: Tighten the `速览` block so every article can be understood in 30 seconds.
+- Day 4: Add clearer visual hierarchy between `速览`, `全貌图`, `事件解读`, `核验边界`, and `来源`.
+- Day 5: Review mobile detail pages and reduce dense text blocks.
+- Day 6: Improve `今日 TOP3` ranking cards and make the ranking reason obvious.
+- Day 7: Audit all labels and remove remaining generic wording.
 
-## Week 2: Content Depth
+## Phase 2: Better Topic Discovery
 
-- Day 8: Add a weekly trend summary section.
-- Day 9: Add ranking explanations for why each trend matters.
-- Day 10: Add a model watch section for notable model releases.
-- Day 11: Add an AI tools watch section for product launches.
-- Day 12: Add research-to-product interpretation cards.
-- Day 13: Add regulation and copyright tracking notes.
-- Day 14: Review copy consistency across the homepage.
+- Day 8: Improve company tag pages for OpenAI, Anthropic, Google, and Meta.
+- Day 9: Add source-family grouping such as official, research, media, and community signals.
+- Day 10: Add topic grouping for Agent, model, enterprise, policy, infrastructure, and developer tooling.
+- Day 11: Improve all-news history filters and sorting.
+- Day 12: Add “new this batch” vs “already archived” explanations.
+- Day 13: Add empty states for companies or topics with no captured items.
+- Day 14: Review navigation between homepage, tag pages, all-news, archive, and detail pages.
 
-## Week 3: Usability
+## Phase 3: Editorial Quality
 
-- Day 15: Improve navigation between sections.
-- Day 16: Add empty and loading states for future data integration.
-- Day 17: Improve keyboard and screen reader behavior.
-- Day 18: Tighten typography and contrast.
-- Day 19: Add compact cards for quicker scanning.
-- Day 20: Add a clear archive or previous updates entry point.
-- Day 21: Review GitHub Pages behavior after deployment.
+- Day 15: Add stronger selection scoring for impact, novelty, narrative strength, evidence quality, and reader utility.
+- Day 16: Add validation that every promoted item can support an incident briefing.
+- Day 17: Improve source-boundary wording so readers can distinguish facts from interpretation.
+- Day 18: Add stronger de-duplication checks across source URLs and similar titles.
+- Day 19: Improve source policy for VisionHub-style narrative events without weakening fact safety.
+- Day 20: Add checks for stale items and repeated historical coverage.
+- Day 21: Review Chinese copy for clarity, brevity, and consistency.
 
-## Week 4: Automation Readiness
+## Phase 4: Visual And Product Polish
 
-- Day 22: Prepare the data layer for RSS or API ingestion.
-- Day 23: Add a contributor/editor guide.
-- Day 24: Add a checklist for validating AI news quality.
-- Day 25: Add JSON examples for future automated content updates.
-- Day 26: Improve performance by reviewing image weight and CSS.
-- Day 27: Add metadata for social sharing.
-- Day 28: Review content freshness and remove stale placeholders.
+- Day 22: Improve visual rhythm and spacing of cards on desktop and mobile.
+- Day 23: Improve accessibility labels, keyboard navigation, and skip links.
+- Day 24: Add better metadata and sharing descriptions for detail pages and tag pages.
+- Day 25: Optimize CSS size and remove unused selectors.
+- Day 26: Improve loading and error states for `data/news.json` and `data/news-history.json`.
+- Day 27: Add lightweight visual QA instructions for local preview checks.
+- Day 28: Review GitHub Pages compatibility and root-relative link safety.
 
-## Final Polish
+## Phase 5: Rollover And Next Plan
 
-- Day 29: Full homepage review across desktop and mobile.
-- Day 30: Summarize progress, list remaining opportunities, and prepare the next 30-day plan.
+- Day 29: Summarize what improved during the month and list remaining weaknesses.
+- Day 30: Write the next 30-day optimization plan, keeping completed work as historical context.
 
 ## Rules For Each Optimization Run
 
-- Pull the latest `main` before editing.
-- Use `data/sources.json` and `docs/source-policy.md` as the source guide for content-related changes.
-- Make a scoped improvement that matches the plan.
-- Do not add secrets, private data, or unverified claims.
-- Prefer clear, useful editorial wording over decoration.
+- Pull the latest `main` before editing when network access works.
+- Follow this plan in order unless a user request overrides it.
+- If the plan is complete, write the next 30-day plan before making further daily improvements.
+- Use `data/sources.json`, `docs/source-policy.md`, and `docs/editorial-checklist.md` for content-related decisions.
+- Avoid publishing repeated source URLs or stale signals as new news.
+- Keep original source links as references, not the primary reading path.
+- Prefer readable Chinese labels and avoid repeated section titles.
 - Run lightweight checks before committing.
-- Update `docs/optimization-log.md` with date, time, focus, changed files, verification, and commit hash.
-- Commit with a concise Chinese message so the optimization is easy to understand from GitHub history.
-- Push to `origin main`.
+- Update `docs/optimization-log.md` with focus, changed files, verification, and commit status.
+- Commit with a concise Chinese message.
+- Push to `origin main` when GitHub network access is available.

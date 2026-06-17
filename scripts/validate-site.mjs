@@ -12,6 +12,7 @@ const detailJs = readFileSync("news-detail.js", "utf8");
 const allNewsJs = readFileSync("all-news.js", "utf8");
 const tagsJs = readFileSync("tags.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
+const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
 const htmlPages = new Map([
@@ -403,8 +404,28 @@ if (
   errors.push("News detail page must render each item as an incident briefing deck.");
 }
 
+if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
+  errors.push("News detail overview diagram must not render redundant small text labels inside each node.");
+}
+
+if (
+  !/<p class="card-summary"><strong>事件简述<\/strong>/.test(appJs) ||
+  !/<p class="trend-note"><strong>趋势研判<\/strong>/.test(appJs) ||
+  !/<p class="rank-note"><strong>关注价值<\/strong>/.test(appJs)
+) {
+  errors.push("Homepage news cards must use the same readable labels as the detail page.");
+}
+
 if (!/\.overview-flow::before/.test(styles) || !/\.overview-risk-grid/.test(styles)) {
   errors.push("News detail incident pages must include an auto-generated overview diagram style.");
+}
+
+if (
+  !/2026-06-17 through 2026-07-16/.test(optimizationPlan) ||
+  !/create the next 30-day plan/.test(optimizationPlan) ||
+  !/Do not stop daily optimization/.test(optimizationPlan)
+) {
+  errors.push("Optimization plan must cover the next month and continue by creating the following month plan.");
 }
 
 if (

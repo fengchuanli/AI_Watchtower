@@ -191,25 +191,25 @@ function getDiagramNodes(item) {
   return [
     {
       label: "事件简述",
-      title: "一句话看懂",
+      title: "事件简述",
       body: item.body,
       icon: "1",
     },
     {
       label: "关注价值",
-      title: "影响对象",
+      title: "关注价值",
       body: item.impact,
       icon: "2",
     },
     {
       label: "趋势研判",
-      title: "背后的方向",
+      title: "趋势研判",
       body: item.detailTrend,
       icon: "3",
     },
     {
       label: "核对边界",
-      title: "别急着下结论",
+      title: "核对边界",
       body: item.claimBoundary,
       icon: "4",
     },
@@ -251,7 +251,6 @@ function renderDiagramNodes(nodes) {
     .map(
       (node) => `
         <article class="diagram-node">
-          <span>${escapeHtml(node.label)}</span>
           <div class="diagram-node-body">
             <b aria-hidden="true">${escapeHtml(node.icon)}</b>
             <div>

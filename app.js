@@ -310,8 +310,8 @@ function updateTodayBriefing(briefing) {
 
 function getThreeLineSummary(item) {
   return [
-    { label: "发生了什么", body: item.body },
-    { label: "为什么重要", body: item.impact },
+    { label: "核心事件", body: item.body },
+    { label: "关键影响", body: item.impact },
     { label: "接下来要看", body: item.nextCheck },
   ];
 }
@@ -597,9 +597,9 @@ function renderNews(filter = "all") {
         <article class="news-card">
           <span class="category">${escapeHtml(item.label)}</span>
           <h3><a class="card-detail-link" href="${detailUrl}" aria-label="${detailLabel}">${escapeHtml(item.title)}</a></h3>
-          <p class="card-summary"><strong>发生了什么</strong>${escapeHtml(item.body)}</p>
-          <p class="trend-note"><strong>趋势判断</strong>${escapeHtml(item.trend)}</p>
-          <p class="rank-note"><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
+          <p class="card-summary"><strong>事件简述</strong>${escapeHtml(item.body)}</p>
+          <p class="trend-note"><strong>趋势研判</strong>${escapeHtml(item.trend)}</p>
+          <p class="rank-note"><strong>关注价值</strong>${escapeHtml(item.whyRanked)}</p>
           <footer>
             <span>${escapeHtml(item.trustLevel)}</span>
             <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看站内解读</a>
