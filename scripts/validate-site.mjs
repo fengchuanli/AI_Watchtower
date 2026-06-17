@@ -346,6 +346,21 @@ if (
   errors.push("News detail page must validate required display fields before rendering.");
 }
 
+if (
+  !/Incident Briefing ·/.test(detailJs) ||
+  !/incident-metrics/.test(detailJs) ||
+  !/incident-jump-nav/.test(detailJs) ||
+  !/function getIncidentTimeline/.test(detailJs) ||
+  !/事件全貌/.test(detailJs) ||
+  !/事实边界/.test(detailJs)
+) {
+  errors.push("News detail page must render each item as an incident briefing deck.");
+}
+
+if (!/AI Watchtower 不追求把所有官方更新铺满首页/.test(html) || !/范式变化/.test(html)) {
+  errors.push("Homepage must explain the narrative-first editorial selection logic.");
+}
+
 if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function findHistoryContext/.test(detailJs)) {
   errors.push("News detail page must fall back to the historical intelligence file for archived items.");
 }

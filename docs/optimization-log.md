@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 17:42 JST
+
+- Focus: Converted every in-site news detail into a VisionHub-style incident briefing page and updated editorial selection rules to prioritize narrative-worthy AI events with clear impact, tension, evidence, and reader utility.
+- Changed files:
+  - `news-detail.js`
+  - `styles.css`
+  - `index.html`
+  - `docs/source-policy.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `news-detail.js`, `app.js`, `all-news.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 29 local references, static page link targets, incident briefing detail rendering, and narrative-first selection logic.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Included in this change set.
+
 ## 2026-06-17 17:35 JST
 
 - Focus: Improved homepage maintainability by rendering hero stats from validated feed metadata instead of hard-coded counts, and added source-count validation so the source registry number cannot drift silently.

@@ -141,6 +141,74 @@ function validateDetailItem(item) {
   }
 }
 
+function getImpactMetrics(item) {
+  return [
+    {
+      label: "事件日期",
+      value: item.time,
+    },
+    {
+      label: "情报类型",
+      value: item.label,
+    },
+    {
+      label: "来源角色",
+      value: item.sourceRole,
+    },
+    {
+      label: "核验状态",
+      value: item.verificationStatus,
+    },
+  ];
+}
+
+function getIncidentTimeline(item, data) {
+  return [
+    {
+      label: item.time,
+      title: "原始信号出现",
+      body: item.body,
+    },
+    {
+      label: data.edition.archiveLabel,
+      title: "进入 Watchtower 研判",
+      body: item.detailWhyRanked,
+    },
+    {
+      label: "Next",
+      title: "下一步核对",
+      body: item.nextCheck,
+    },
+  ];
+}
+
+function renderMetricList(metrics) {
+  return metrics
+    .map(
+      (metric) => `
+        <div>
+          <dt>${escapeHtml(metric.value)}</dt>
+          <dd>${escapeHtml(metric.label)}</dd>
+        </div>
+      `,
+    )
+    .join("");
+}
+
+function renderIncidentTimeline(timeline) {
+  return timeline
+    .map(
+      (event) => `
+        <article>
+          <span>${escapeHtml(event.label)}</span>
+          <h3>${escapeHtml(event.title)}</h3>
+          <p>${escapeHtml(event.body)}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function renderError(title, message, canRetry = false) {
   detailShell.innerHTML = `
     <p class="eyebrow">News Explainer</p>
@@ -159,35 +227,51 @@ function renderDetail(item, data) {
   validateDetailItem(item);
   document.title = `${item.title} | AI Watchtower`;
   const followUpQuestions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
+  const metrics = getImpactMetrics(item);
+  const timeline = getIncidentTimeline(item, data);
 
   detailShell.innerHTML = `
-    <div class="detail-header">
-      <p class="eyebrow">${escapeHtml(item.label)} Explainer</p>
+    <div class="incident-hero">
+      <p class="eyebrow">Incident Briefing · ${escapeHtml(item.label)}</p>
       <p class="detail-date">${escapeHtml(data.edition.date)} · ${escapeHtml(data.edition.archiveLabel)} · ${escapeHtml(item.verificationStatus)}</p>
       <h1>${escapeHtml(item.title)}</h1>
       <p class="detail-lede">${escapeHtml(item.body)}</p>
+      <dl class="incident-metrics" aria-label="事件关键指标">
+        ${renderMetricList(metrics)}
+      </dl>
     </div>
+
+    <nav class="incident-jump-nav" aria-label="事件简报导航">
+      <a href="#incident-overview">事件全貌</a>
+      <a href="#incident-stakes">为什么重要</a>
+      <a href="#incident-timeline">时间线</a>
+      <a href="#incident-verification">事实边界</a>
+      <a href="#incident-source">来源</a>
+    </nav>
 
     <section class="detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
-        <section class="detail-block">
+        <section class="detail-block incident-block" id="incident-overview">
           <span>01 · What Happened</span>
           <h2>发生了什么</h2>
           <p>${escapeHtml(item.detailBody)}</p>
         </section>
-        <section class="detail-block">
+        <section class="detail-block incident-block" id="incident-stakes">
           <span>02 · Trend</span>
           <h2>趋势判断</h2>
           <p>${escapeHtml(item.detailTrend)}</p>
         </section>
-        <section class="detail-block">
+        <section class="detail-block incident-block">
           <span>03 · Why It Matters</span>
           <h2>为什么值得看</h2>
           <p>${escapeHtml(item.detailWhyRanked)}</p>
           <p class="detail-so-what"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
-        <section class="detail-block">
+        <section class="incident-timeline" id="incident-timeline" aria-label="事件时间线">
+          ${renderIncidentTimeline(timeline)}
+        </section>
+        <section class="detail-block incident-block" id="incident-verification">
           <span>04 · Verification</span>
           <h2>还需要核对什么</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
@@ -203,7 +287,7 @@ function renderDetail(item, data) {
         </section>
       </div>
 
-      <aside class="detail-side" aria-label="来源与状态">
+      <aside class="detail-side" id="incident-source" aria-label="来源与状态">
         <section>
           <h2>来源可信度</h2>
           <dl>
