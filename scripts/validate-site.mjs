@@ -364,6 +364,15 @@ if (!/\.overview-flow::before/.test(styles) || !/\.overview-risk-grid/.test(styl
   errors.push("News detail incident pages must include an auto-generated overview diagram style.");
 }
 
+if (
+  !/id="deepSourceFrame"/.test(html) ||
+  !/function renderSourceFrame/.test(appJs) ||
+  !/"sourceFacts", "editorialJudgment", "unknowns"/.test(appJs) ||
+  !/\.deep-source-frame/.test(styles)
+) {
+  errors.push("Homepage deep briefing must render an explicit source frame for facts, judgment, and unknowns.");
+}
+
 if (!/AI Watchtower 不追求把所有官方更新铺满首页/.test(html) || !/范式变化/.test(html)) {
   errors.push("Homepage must explain the narrative-first editorial selection logic.");
 }

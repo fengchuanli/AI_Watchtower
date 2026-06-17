@@ -22,6 +22,7 @@ const deepTitle = document.querySelector("#deepTitle");
 const deepSubtitle = document.querySelector("#deepSubtitle");
 const deepOverview = document.querySelector("#deepOverview");
 const deepMetrics = document.querySelector("#deepMetrics");
+const deepSourceFrame = document.querySelector("#deepSourceFrame");
 const deepTimeline = document.querySelector("#deepTimeline");
 const deepSections = document.querySelector("#deepSections");
 const deepActions = document.querySelector("#deepActions");
@@ -229,6 +230,17 @@ function validateDeepBriefing(deepBriefing) {
     throw new Error("Deep briefing must include coverage limits.");
   }
 
+  if (!deepBriefing.sourceFrame) {
+    throw new Error("Deep briefing must include a source frame.");
+  }
+
+  const sourceFrameFields = ["sourceFacts", "editorialJudgment", "unknowns"];
+  const missingSourceFrameField = sourceFrameFields.find((field) => !Array.isArray(deepBriefing.sourceFrame[field]));
+
+  if (missingSourceFrameField) {
+    throw new Error(`Deep briefing source frame is missing ${missingSourceFrameField}.`);
+  }
+
   if (!Array.isArray(deepBriefing.references) || !deepBriefing.references.length) {
     throw new Error("Deep briefing must include source references.");
   }
@@ -315,6 +327,8 @@ function updateDeepBriefing(deepBriefing) {
     )
     .join("");
 
+  deepSourceFrame.innerHTML = renderSourceFrame(deepBriefing.sourceFrame);
+
   deepTimeline.innerHTML = deepBriefing.timeline
     .map(
       (item) => `
@@ -358,6 +372,36 @@ function updateDeepBriefing(deepBriefing) {
           <span>${String(index + 1).padStart(2, "0")}</span>
           ${escapeHtml(reference.label)}
         </a>
+      `,
+    )
+    .join("");
+}
+
+function renderSourceFrame(sourceFrame) {
+  const groups = [
+    {
+      label: "来源能直接支持",
+      items: sourceFrame.sourceFacts,
+    },
+    {
+      label: "本站编辑判断",
+      items: sourceFrame.editorialJudgment,
+    },
+    {
+      label: "仍需等待证据",
+      items: sourceFrame.unknowns,
+    },
+  ];
+
+  return groups
+    .map(
+      (group) => `
+        <article>
+          <span>${escapeHtml(group.label)}</span>
+          <ul>
+            ${group.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </article>
       `,
     )
     .join("");

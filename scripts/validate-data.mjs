@@ -218,6 +218,16 @@ if (!newsFeed.deepBriefing) {
     errors.push("data/news.json deepBriefing must include at least two coverageLimits.");
   }
 
+  if (!newsFeed.deepBriefing.sourceFrame) {
+    errors.push("data/news.json deepBriefing must include a sourceFrame.");
+  } else {
+    for (const field of ["sourceFacts", "editorialJudgment", "unknowns"]) {
+      if (!Array.isArray(newsFeed.deepBriefing.sourceFrame[field]) || newsFeed.deepBriefing.sourceFrame[field].length < 2) {
+        errors.push(`data/news.json deepBriefing sourceFrame.${field} must include at least two entries.`);
+      }
+    }
+  }
+
   for (const [index, limit] of (newsFeed.deepBriefing.coverageLimits || []).entries()) {
     if (!limit.label || !limit.body) {
       errors.push(`data/news.json deepBriefing coverageLimits[${index}] must include label and body.`);

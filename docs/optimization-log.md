@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 18:05 JST
+
+- Focus: Added an edition-level source frame to the homepage deep briefing so readers can separate official-source facts from AI Watchtower editorial judgment and still-unproven evidence gaps.
+- Changed files:
+  - `data/news.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including the new source-frame requirements.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 29 local references, static page link targets, and source-frame rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Included in this change set.
+
 ## 2026-06-17 17:55 JST
 
 - Focus: Added an auto-generated overview diagram to every incident briefing detail page, using each news item's existing fields to render key cards, signal-to-impact flow, and risk/verification panels without requiring uploaded images.
