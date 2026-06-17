@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 08:04 JST
+
+- Focus: Published the 08:00 JST AI news intelligence update with official-source signals on OpenAI's near-autonomous AI chemist case, OpenAI LifeSciBench, and Anthropic's Seoul office/Korean AI ecosystem partnerships; skipped community rumors and older source pages outside the current window.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked official/reliable source pages from `data/sources.json` guidance, including OpenAI News, Anthropic Newsroom, Google DeepMind Blog, Mistral News, and RSS-capable source attempts where available.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: Included in local implementation commit; push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-17 23:51 JST
 
 - Focus: Added a product-principles document that records AI Watchtower's purpose as a Chinese AI intelligence companion for readers who are not comfortable tracking English sources, documented the short-term and mid-term goals, and added mobile reading principles so future optimization plans stay centered on easier daily understanding rather than generic news volume.
