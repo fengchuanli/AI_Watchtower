@@ -55,6 +55,7 @@
         <a href="#feed">新闻流</a>
         <a href="#signals">观察优先级</a>
         <a href="#library">资料库</a>
+        <a href="./all-news.html">全部情报</a>
         <a href="./archive.html">期次归档</a>
       </nav>
       <a class="header-action" href="#updates">更新方式</a>
@@ -165,6 +166,7 @@
           <div>
             <p class="eyebrow">Live Feed</p>
             <h2>AI 新闻流</h2>
+            <p class="latest-capture" id="latestCapture">正在确认最新抓取批次...</p>
             <p class="data-status" id="newsMeta">正在读取新闻数据...</p>
             <p class="category-status" id="categoryMeta">正在读取分类说明...</p>
           </div>
@@ -258,7 +260,7 @@
           <noscript>
             <p class="feed-state">
               当前浏览器未启用 JavaScript，无法生成新闻卡片。你仍可
-              <a href="./data/news.json">查看本期结构化新闻数据</a>。
+              <a href="./all-news.html">查看全部历史情报</a>。
             </p>
           </noscript>
         </div>
@@ -381,6 +383,7 @@
         </div>
         <div class="update-links" aria-label="AI Watchtower 更新入口">
           <a class="button primary" href="./data/news.json">查看本期数据</a>
+          <a class="button secondary" href="./all-news.html">查看全部情报</a>
           <a class="button secondary" href="./archive.html">查看期次归档</a>
           <a
             class="button secondary"

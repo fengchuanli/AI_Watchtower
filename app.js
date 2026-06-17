@@ -4,6 +4,7 @@ let currentFilter = "all";
 
 const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
+const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
 const categoryMeta = document.querySelector("#categoryMeta");
 const briefingLabel = document.querySelector("#briefingLabel");
@@ -300,6 +301,13 @@ function updateDeepBriefing(deepBriefing) {
 }
 
 function updateNewsMeta(data) {
+  if (latestCapture) {
+    const captureDate = data.edition?.date || data.updatedAt || "等待更新";
+    const captureLabel = data.edition?.archiveLabel || data.statusLabel || "尚无批次标签";
+    const itemCount = Array.isArray(data.items) ? data.items.length : 0;
+    latestCapture.textContent = `最新抓取：${captureDate} · ${captureLabel} · ${itemCount} 条`;
+  }
+
   if (!newsMeta) {
     return;
   }

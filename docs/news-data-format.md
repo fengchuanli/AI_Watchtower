@@ -1,6 +1,6 @@
 # News Data Format
 
-Homepage news items live in `data/news.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
+Homepage news items live in `data/news.json`. Captured historical items live in `data/news-history.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
 
 ## Edition Fields
 
@@ -47,6 +47,21 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `label`: Chinese label shared by the filter and every item in that category.
 - `description`: Concise Chinese scope note covering what belongs in the category and any important evidence caveat.
 
+## History Fields
+
+`data/news-history.json` keeps every captured edition visible after the homepage advances to a newer batch.
+
+- `version`: History schema version.
+- `updatedAt`: Latest history update date.
+- `totalItems`: Total captured item count across all editions.
+- `editions`: Newest-first array of captured batches.
+- `editions[].id`: Edition ID matching `data/news.json` when the edition is current.
+- `editions[].date`: Capture or editorial date.
+- `editions[].timezone`: IANA timezone for the capture batch.
+- `editions[].archiveLabel`: Human-readable batch label, such as `17:00 JST 发布`.
+- `editions[].itemCount`: Number of items in the batch; must match `items.length`.
+- `editions[].items`: Full item objects using the same required fields as the current feed.
+
 ## Required Fields
 
 - `id`: Stable unique item ID.
@@ -83,4 +98,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, required item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

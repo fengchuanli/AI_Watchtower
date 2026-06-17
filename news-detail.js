@@ -37,8 +37,30 @@ function getNewsId() {
   return new URLSearchParams(window.location.search).get("id");
 }
 
+function getEditionId() {
+  return new URLSearchParams(window.location.search).get("edition");
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path, { cache: "no-store" });
+
+  if (!response.ok) {
+    throw new Error(`${path} request failed with ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function toDetailContext(feed) {
+  return {
+    edition: feed.edition,
+    items: feed.items,
+  };
+}
+
 async function loadDetail() {
   const newsId = getNewsId();
+  const editionId = getEditionId();
 
   if (!newsId) {
     renderError("没有指定新闻条目。", "请从首页新闻流点击进入站内解读。");
@@ -46,26 +68,54 @@ async function loadDetail() {
   }
 
   try {
-    const response = await fetch("./data/news.json", { cache: "no-store" });
+    const currentFeed = await fetchJson("./data/news.json");
+    validateDetailFeed(currentFeed);
+    const currentContext = toDetailContext(currentFeed);
+    const currentItem = (!editionId || editionId === currentFeed.edition.id)
+      ? currentFeed.items.find((entry) => entry.id === newsId)
+      : null;
 
-    if (!response.ok) {
-      throw new Error(`News request failed with ${response.status}`);
+    if (currentItem) {
+      renderDetail(currentItem, currentContext);
+      return;
     }
 
-    const data = await response.json();
-    validateDetailFeed(data);
-    const item = data.items.find((entry) => entry.id === newsId);
+    const history = await fetchJson("./data/news-history.json");
+    const historyContext = findHistoryContext(history, newsId, editionId);
 
-    if (!item) {
+    if (!historyContext) {
       renderError("没有找到这条新闻解读。", "它可能已被归档、改名或从当前期次中移除。");
       return;
     }
 
-    renderDetail(item, data);
+    renderDetail(historyContext.item, historyContext);
   } catch (error) {
     console.warn(error);
     renderError("新闻解读暂时无法读取。", "请稍后刷新，或返回首页查看新闻流。", true);
   }
+}
+
+function findHistoryContext(history, newsId, editionId) {
+  if (!Array.isArray(history.editions)) {
+    throw new Error("News history must include editions.");
+  }
+
+  for (const edition of history.editions) {
+    if (editionId && edition.id !== editionId) {
+      continue;
+    }
+
+    const item = edition.items?.find((entry) => entry.id === newsId);
+
+    if (item) {
+      return {
+        edition,
+        item,
+      };
+    }
+  }
+
+  return null;
 }
 
 function validateDetailFeed(data) {
@@ -188,6 +238,7 @@ function renderDetail(item, data) {
 
     <div class="detail-actions">
       <a class="button primary" href="./#feed">返回新闻流</a>
+      <a class="button secondary" href="./all-news.html">查看全部情报</a>
       <a class="button secondary" href="./#deep-briefing">查看本期深度简报</a>
     </div>
   `;

@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 
 const sourceRegistry = JSON.parse(readFileSync("data/sources.json", "utf8"));
 const newsFeed = JSON.parse(readFileSync("data/news.json", "utf8"));
+const newsHistory = JSON.parse(readFileSync("data/news-history.json", "utf8"));
 
 const sourceIds = new Set(sourceRegistry.sources.map((source) => source.id));
 const allowedCategories = new Set(["all", "model", "product", "research", "tool", "funding", "policy"]);
@@ -227,6 +228,55 @@ for (const item of newsFeed.items || []) {
 
   if (item.counterEvidence && !/如果|若|缺少|未|不/.test(item.counterEvidence)) {
     errors.push(`${item.id} counterEvidence must name a condition that would weaken the current editorial judgment.`);
+  }
+}
+
+if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
+  errors.push("data/news-history.json must include at least one edition.");
+} else {
+  const latestHistoryEdition = newsHistory.editions[0];
+  const historyItemTotal = newsHistory.editions.reduce((count, edition) => {
+    return count + (Array.isArray(edition.items) ? edition.items.length : 0);
+  }, 0);
+
+  if (newsHistory.totalItems !== historyItemTotal) {
+    errors.push("data/news-history.json totalItems must match the total number of historical items.");
+  }
+
+  if (latestHistoryEdition.id !== newsFeed.edition?.id) {
+    errors.push("data/news-history.json latest edition must match data/news.json edition.id.");
+  }
+
+  for (const [editionIndex, edition] of newsHistory.editions.entries()) {
+    for (const field of ["id", "date", "timezone", "archiveLabel", "itemCount", "items"]) {
+      if (!edition[field] && edition[field] !== 0) {
+        errors.push(`data/news-history.json editions[${editionIndex}] is missing ${field}.`);
+      }
+    }
+
+    if (!Array.isArray(edition.items)) {
+      continue;
+    }
+
+    if (edition.itemCount !== edition.items.length) {
+      errors.push(`data/news-history.json edition ${edition.id} itemCount must match items length.`);
+    }
+
+    const seenItemIds = new Set();
+
+    for (const item of edition.items) {
+      if (seenItemIds.has(item.id)) {
+        errors.push(`data/news-history.json edition ${edition.id} has duplicate item ${item.id}.`);
+      }
+
+      seenItemIds.add(item.id);
+
+      for (const field of requiredNewsFields) {
+        if (!item[field]) {
+          errors.push(`data/news-history.json item ${item.id || "unknown item"} is missing ${field}.`);
+        }
+      }
+    }
   }
 }
 

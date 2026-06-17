@@ -3,16 +3,19 @@ import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 
 const html = readFileSync("index.html", "utf8");
 const detailHtml = readFileSync("news-detail.html", "utf8");
+const allNewsHtml = readFileSync("all-news.html", "utf8");
 const archiveHtml = readFileSync("archive.html", "utf8");
 const notFoundHtml = readFileSync("404.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
 const detailJs = readFileSync("news-detail.js", "utf8");
+const allNewsJs = readFileSync("all-news.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
 const htmlPages = new Map([
   ["index.html", html],
   ["news-detail.html", detailHtml],
+  ["all-news.html", allNewsHtml],
   ["archive.html", archiveHtml],
   ["404.html", notFoundHtml],
 ]);
@@ -230,11 +233,11 @@ const newsGridMatch = html.match(
 if (!newsGridMatch) {
   errors.push("index.html is missing the news feed container.");
 } else if (
-  !/<noscript>[\s\S]*?<a\b(?=[^>]*\bhref="\.\/data\/news\.json")[^>]*>[\s\S]*?<\/noscript>/.test(
+  !/<noscript>[\s\S]*?<a\b(?=[^>]*\bhref="\.\/all-news\.html")[^>]*>[\s\S]*?<\/noscript>/.test(
     newsGridMatch[0],
   )
 ) {
-  errors.push("News feed must include a no-JavaScript fallback linking to data/news.json.");
+  errors.push("News feed must include a no-JavaScript fallback linking to all-news.html.");
 }
 
 if (/<form\b(?=[^>]*\bid="subscribeForm")/s.test(html)) {
@@ -262,6 +265,10 @@ if (!updatesSectionMatch) {
     errors.push("Update access section must link to the edition archive.");
   }
 
+  if (!/<a\b(?=[^>]*\bhref="\.\/all-news\.html")[^>]*>/.test(updatesSection)) {
+    errors.push("Update access section must link to the all-news intelligence history.");
+  }
+
   if (
     !/<a\b(?=[^>]*\bhref="https:\/\/github\.com\/fengchuanli\/AI_Watchtower\/commits\/main\/")(?=[^>]*\btarget="_blank")(?=[^>]*\brel="noopener noreferrer")[^>]*>/s.test(
       updatesSection,
@@ -273,6 +280,23 @@ if (!updatesSectionMatch) {
 
 if (!/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}`;/.test(appJs)) {
   errors.push("Homepage news cards must link to the in-site news detail page.");
+}
+
+if (!/latestCapture\.textContent = `最新抓取：/.test(appJs)) {
+  errors.push("Homepage must clearly label the latest captured news batch.");
+}
+
+if (!/<script src="\.\/all-news\.js"><\/script>/.test(allNewsHtml)) {
+  errors.push("all-news.html must load the history renderer.");
+}
+
+if (
+  !/fetch\("\.\/data\/news-history\.json"/.test(allNewsJs) ||
+  !/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}&edition=\$\{encodeURIComponent\(edition\.id\)\}`;/.test(
+    allNewsJs,
+  )
+) {
+  errors.push("All-news page must read news-history.json and link entries to in-site detail pages with edition IDs.");
 }
 
 if (
@@ -297,11 +321,15 @@ if (!/href="\$\{escapeHtml\(item\.sourceUrl\)\}" target="_blank" rel="noopener n
 
 if (
   !/const requiredDetailFields = \[[\s\S]*"counterEvidence"[\s\S]*"time"[\s\S]*\];/.test(detailJs) ||
-  !/validateDetailFeed\(data\);/.test(detailJs) ||
+  !/validateDetailFeed\(currentFeed\);/.test(detailJs) ||
   !/function validateDetailItem\(item\) \{[\s\S]*requiredDetailFields\.find/.test(detailJs) ||
   !/validateDetailItem\(item\);\s*document\.title/.test(detailJs)
 ) {
   errors.push("News detail page must validate required display fields before rendering.");
+}
+
+if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function findHistoryContext/.test(detailJs)) {
+  errors.push("News detail page must fall back to the historical intelligence file for archived items.");
 }
 
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {
