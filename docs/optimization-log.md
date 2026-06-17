@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 17:08 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update with official-source signals on Google DeepMind's UK planning prototype, NVIDIA/HPE agentic AI factory infrastructure, and OpenAI Academy enterprise AI work courses; preserved 08:00 JST as a historical snapshot and avoided repeating already archived source URLs.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked official/reliable source pages from `data/sources.json` guidance; no newer afternoon OpenAI/Anthropic/DeepMind homepage item was found beyond the morning current flow, so this run used non-duplicated official signals with clear route-map and pilot boundaries.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 29 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+- Commit: Pending until this run is committed; final hash will be recorded in the automation memory because amending this log line would change the commit hash.
+
 ## 2026-06-17 16:04 JST
 
 - Focus: Added edition-level coverage mix framing so the homepage states how many current signals belong to research evaluation, enterprise delivery, and policy trust, with validation that the counts match the live feed and each group explains reader use.
