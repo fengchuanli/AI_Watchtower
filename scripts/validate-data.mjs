@@ -83,6 +83,10 @@ if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json items must be sorted newest first by publishedAt.");
 }
 
+if (newsFeed.sourceCount !== sourceRegistry.sources.length) {
+  errors.push("data/news.json sourceCount must match data/sources.json sources.length.");
+}
+
 if (!Array.isArray(newsFeed.categories) || !newsFeed.categories.length) {
   errors.push("data/news.json must include category definitions.");
 } else {

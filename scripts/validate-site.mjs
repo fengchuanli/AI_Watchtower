@@ -286,6 +286,23 @@ if (!/latestCapture\.textContent = `最新抓取：/.test(appJs)) {
   errors.push("Homepage must clearly label the latest captured news batch.");
 }
 
+if (
+  !/id="heroSignalCount">--<\/dt>/.test(html) ||
+  !/id="heroSourceCount">--<\/dt>/.test(html) ||
+  !/id="heroChecklistMode">逐条<\/dt>/.test(html) ||
+  !/function updateHeroStats\(data = \{\}\)/.test(appJs) ||
+  !/heroSignalCount\.textContent = Array\.isArray\(data\.items\) \? String\(data\.items\.length\) : "--";/.test(
+    appJs,
+  ) ||
+  !/Number\.isInteger\(data\.sourceCount\) && data\.sourceCount > 0 \? String\(data\.sourceCount\) : "--";/.test(
+    appJs,
+  ) ||
+  !/updateHeroStats\(data\);/.test(appJs) ||
+  !/updateHeroStats\(\);/.test(appJs)
+) {
+  errors.push("Hero stats must render from validated feed data instead of hard-coded counts.");
+}
+
 if (!/<script src="\.\/all-news\.js"><\/script>/.test(allNewsHtml)) {
   errors.push("all-news.html must load the history renderer.");
 }

@@ -13,6 +13,9 @@ const briefingHeadline = document.querySelector("#briefingHeadline");
 const briefingSummary = document.querySelector("#briefingSummary");
 const briefingCta = document.querySelector("#briefingCta");
 const briefingWatchPoints = document.querySelector("#briefingWatchPoints");
+const heroSignalCount = document.querySelector("#heroSignalCount");
+const heroSourceCount = document.querySelector("#heroSourceCount");
+const heroChecklistMode = document.querySelector("#heroChecklistMode");
 const deepKicker = document.querySelector("#deepKicker");
 const deepDate = document.querySelector("#deepDate");
 const deepTitle = document.querySelector("#deepTitle");
@@ -77,9 +80,11 @@ async function loadNews() {
     newsCategories = data.categories;
     updateTodayBriefing(data.briefing);
     updateDeepBriefing(data.deepBriefing);
+    updateHeroStats(data);
     updateNewsMeta(data);
   } catch (error) {
     news = [];
+    updateHeroStats();
     updateNewsMeta({ statusLabel: "数据未加载", editorNote: "新闻数据暂时无法读取，请稍后重试。" });
     updateCategoryMeta();
     renderFeedMessage("error", "新闻数据暂时无法读取。", true);
@@ -388,6 +393,21 @@ function updateNewsMeta(data) {
         `,
       )
       .join("");
+  }
+}
+
+function updateHeroStats(data = {}) {
+  if (heroSignalCount) {
+    heroSignalCount.textContent = Array.isArray(data.items) ? String(data.items.length) : "--";
+  }
+
+  if (heroSourceCount) {
+    heroSourceCount.textContent =
+      Number.isInteger(data.sourceCount) && data.sourceCount > 0 ? String(data.sourceCount) : "--";
+  }
+
+  if (heroChecklistMode) {
+    heroChecklistMode.textContent = Array.isArray(data.items) && data.items.length ? "逐条" : "--";
   }
 }
 

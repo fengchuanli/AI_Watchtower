@@ -2,6 +2,10 @@
 
 Homepage news items live in `data/news.json`. Captured historical items live in `data/news-history.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
 
+## Feed Metadata
+
+- `sourceCount`: Number of registered sources available to the current homepage. It must match `data/sources.json` `sources.length` so the hero stats do not drift from the source registry.
+
 ## Edition Fields
 
 The required top-level `edition` object gives each homepage snapshot a stable archive identity. Update it whenever the feed advances to a new editorial date.
@@ -101,4 +105,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

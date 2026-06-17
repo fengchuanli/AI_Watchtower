@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 17:35 JST
+
+- Focus: Improved homepage maintainability by rendering hero stats from validated feed metadata instead of hard-coded counts, and added source-count validation so the source registry number cannot drift silently.
+- Changed files:
+  - `index.html`
+  - `app.js`
+  - `data/news.json`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including the new source-count metadata.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 29 local references, static page link targets, and dynamic hero stat rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Pending until this run is committed; final hash will be recorded in the automation memory because amending this log line would change the commit hash.
+
 ## 2026-06-17 17:08 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update with official-source signals on Google DeepMind's UK planning prototype, NVIDIA/HPE agentic AI factory infrastructure, and OpenAI Academy enterprise AI work courses; preserved 08:00 JST as a historical snapshot and avoided repeating already archived source URLs.
