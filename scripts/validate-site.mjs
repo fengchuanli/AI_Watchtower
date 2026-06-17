@@ -13,6 +13,7 @@ const allNewsJs = readFileSync("all-news.js", "utf8");
 const tagsJs = readFileSync("tags.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
+const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
 const htmlPages = new Map([
@@ -438,6 +439,18 @@ if (
   !/Do not stop daily optimization/.test(optimizationPlan)
 ) {
   errors.push("Optimization plan must cover the next month and continue by creating the following month plan.");
+}
+
+if (
+  !/中文母语/.test(productPrinciples) ||
+  !/手机阅读原则/.test(productPrinciples) ||
+  !/轻松/.test(productPrinciples)
+) {
+  errors.push("Product principles must preserve the Chinese-reader intelligence companion purpose and mobile reading guidance.");
+}
+
+if (!/docs\/product-principles\.md/.test(optimizationPlan)) {
+  errors.push("Optimization plan must reference the product principles before future planning work.");
 }
 
 if (

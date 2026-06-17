@@ -28,6 +28,7 @@ npx serve .
 │   ├── editorial-checklist.md
 │   ├── optimization-log.md
 │   ├── optimization-plan.md
+│   ├── product-principles.md
 │   └── source-policy.md
 ├── scripts/
 │   ├── validate-data.mjs
@@ -44,6 +45,7 @@ npx serve .
 
 来源规则：
 
+- 产品目标与优化基准：`docs/product-principles.md`
 - 情报源列表：`data/sources.json`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
@@ -75,6 +77,8 @@ node scripts/validate-site.mjs
 - 页面与内容优化：每天 14:00、15:00、16:00、17:30、18:00、19:00、20:00、21:00 JST 各一次
 
 每次优化都应该留下清楚的履历，并推送到 GitHub。
+
+所有优化都应优先服务一个核心目标：让不擅长英语和 AI 情报收集的中文读者，可以轻松、愉悦、可信地跟上 AI 时代的重要变化。
 
 ## 推送到新远程仓库
 

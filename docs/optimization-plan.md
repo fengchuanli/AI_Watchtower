@@ -70,8 +70,10 @@ Site optimization runs separately and should follow this plan.
 ## Rules For Each Optimization Run
 
 - Pull the latest `main` before editing when network access works.
+- Read `docs/product-principles.md` first and keep every improvement aligned with the product purpose.
 - Follow this plan in order unless a user request overrides it.
 - If the plan is complete, write the next 30-day plan before making further daily improvements.
+- When writing the next 30-day plan, preserve the product goal: help Chinese-native readers who are not comfortable tracking English AI sources understand important AI changes easily.
 - Use `data/sources.json`, `docs/source-policy.md`, and `docs/editorial-checklist.md` for content-related decisions.
 - Avoid publishing repeated source URLs or stale signals as new news.
 - Keep original source links as references, not the primary reading path.

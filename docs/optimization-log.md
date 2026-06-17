@@ -2,6 +2,22 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 23:51 JST
+
+- Focus: Added a product-principles document that records AI Watchtower's purpose as a Chinese AI intelligence companion for readers who are not comfortable tracking English sources, documented the short-term and mid-term goals, and added mobile reading principles so future optimization plans stay centered on easier daily understanding rather than generic news volume.
+- Changed files:
+  - `docs/product-principles.md`
+  - `README.md`
+  - `docs/optimization-plan.md`
+  - `docs/editorial-checklist.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, product-principles coverage, and optimization-plan reference to the product principles.
+  - Ran `git diff --check`.
+- Commit: Included in this change set.
+
 ## 2026-06-17 21:03 JST
 
 - Focus: Improved detail-page reading flow for mobile and desktop by splitting long incident narrative fields into shorter prose chunks, keeping the existing section structure while reducing dense text blocks.
