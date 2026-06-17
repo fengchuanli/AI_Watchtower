@@ -1491,6 +1491,17 @@ h3 {
   font-size: 24px;
 }
 
+.detail-prose {
+  display: grid;
+  gap: 12px;
+}
+
+.detail-prose p {
+  max-width: 74ch;
+  margin: 0;
+  color: var(--ink);
+}
+
 .detail-so-what {
   margin: 18px 0 0;
   padding: 14px 0 0;
@@ -1930,6 +1941,10 @@ h3 {
 
   .quick-summary li {
     grid-template-columns: 1fr;
+  }
+
+  .detail-prose {
+    gap: 10px;
   }
 
   .subscribe {

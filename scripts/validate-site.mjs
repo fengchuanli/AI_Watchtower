@@ -409,6 +409,18 @@ if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
 }
 
 if (
+  !/function splitDetailProse/.test(detailJs) ||
+  !/function renderDetailProse/.test(detailJs) ||
+  !/class="detail-prose"/.test(detailJs) ||
+  !/renderDetailProse\(item\.detailBody\)/.test(detailJs) ||
+  !/renderDetailProse\(item\.detailTrend\)/.test(detailJs) ||
+  !/renderDetailProse\(item\.detailWhyRanked\)/.test(detailJs) ||
+  !/\.detail-prose\s*\{[^}]*display:\s*grid;[^}]*gap:\s*12px;/s.test(styles)
+) {
+  errors.push("News detail narrative sections must split long prose into readable chunks.");
+}
+
+if (
   !/<p class="card-summary"><strong>事件简述<\/strong>/.test(appJs) ||
   !/<p class="trend-note"><strong>趋势研判<\/strong>/.test(appJs) ||
   !/<p class="rank-note"><strong>关注价值<\/strong>/.test(appJs)

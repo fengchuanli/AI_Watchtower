@@ -277,6 +277,50 @@ function renderRiskCards(cards) {
     .join("");
 }
 
+function splitDetailProse(value) {
+  const sentences = String(value)
+    .trim()
+    .match(/[^。！？.!?]+[。！？.!?]?/g);
+
+  if (!sentences || sentences.length <= 1) {
+    return [String(value).trim()];
+  }
+
+  const paragraphs = [];
+  let currentParagraph = "";
+
+  for (const sentence of sentences) {
+    const normalizedSentence = sentence.trim();
+
+    if (!normalizedSentence) {
+      continue;
+    }
+
+    const nextParagraph = currentParagraph
+      ? `${currentParagraph}${normalizedSentence}`
+      : normalizedSentence;
+
+    if (currentParagraph && nextParagraph.length > 120) {
+      paragraphs.push(currentParagraph);
+      currentParagraph = normalizedSentence;
+    } else {
+      currentParagraph = nextParagraph;
+    }
+  }
+
+  if (currentParagraph) {
+    paragraphs.push(currentParagraph);
+  }
+
+  return paragraphs.length ? paragraphs : [String(value).trim()];
+}
+
+function renderDetailProse(value) {
+  return splitDetailProse(value)
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
+}
+
 function getQuickSummary(item) {
   return [
     {
@@ -400,17 +444,23 @@ function renderDetail(item, data) {
         <section class="detail-block incident-block" id="incident-overview">
           <span>01 · What Happened</span>
           <h2>事件简述</h2>
-          <p>${escapeHtml(item.detailBody)}</p>
+          <div class="detail-prose">
+            ${renderDetailProse(item.detailBody)}
+          </div>
         </section>
         <section class="detail-block incident-block" id="incident-stakes">
           <span>02 · Trend</span>
           <h2>趋势研判</h2>
-          <p>${escapeHtml(item.detailTrend)}</p>
+          <div class="detail-prose">
+            ${renderDetailProse(item.detailTrend)}
+          </div>
         </section>
         <section class="detail-block incident-block" id="incident-value">
           <span>03 · Why It Matters</span>
           <h2>关注价值</h2>
-          <p>${escapeHtml(item.detailWhyRanked)}</p>
+          <div class="detail-prose">
+            ${renderDetailProse(item.detailWhyRanked)}
+          </div>
           <p class="detail-so-what"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
