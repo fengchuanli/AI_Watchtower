@@ -2,6 +2,30 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 13:37 JST
+
+- Focus: Removed repeated captured sources from the latest news batch, enforced newest-first sorting for current and historical lists, and expanded detail-page explanations so source facts and caveats are preserved outside the homepage cards.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `app.js`
+  - `all-news.js`
+  - `news-detail.js`
+  - `archive.html`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including historical de-duplication and newest-first sorting checks.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 29 local references, static page link targets, all-news sorting, and detail-page history fallback.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Included in this change set.
+
 ## 2026-06-17 09:32 JST
 
 - Focus: Made the latest captured news batch explicit on the homepage and added an all-news intelligence history page so older captured items remain visible and link to in-site detail explainers.

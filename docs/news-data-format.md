@@ -54,7 +54,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `version`: History schema version.
 - `updatedAt`: Latest history update date.
 - `totalItems`: Total captured item count across all editions.
-- `editions`: Newest-first array of captured batches.
+- `editions`: Newest-first array of captured batches. A source URL may appear only once across history; repeated source URLs should be skipped instead of re-captured.
 - `editions[].id`: Edition ID matching `data/news.json` when the edition is current.
 - `editions[].date`: Capture or editorial date.
 - `editions[].timezone`: IANA timezone for the capture batch.
@@ -73,6 +73,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `trend`: Chinese editorial interpretation that links the item to a broader observable trend without adding unverified facts.
 - `detailTrend`: Longer Chinese trend explanation for the detail page. It must add context beyond `trend` and be meaningfully longer.
 - `whyRanked`: Short Chinese explanation for why the item deserves homepage attention or ranking priority.
+- `detailWhyRanked`: Longer Chinese detail-page explanation of why the item matters. It should preserve important source facts, boundaries, and caveats that are too long for the homepage card.
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
 - `readerUse`: Short Chinese line naming who should use the signal and what decision or checklist it informs.
 - `nextCheck`: Short editorial note stating what should be verified before treating the item as fully confirmed.
@@ -98,4 +99,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks edition metadata, category definitions and label consistency, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks edition metadata, category definitions and label consistency, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

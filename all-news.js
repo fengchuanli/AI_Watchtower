@@ -17,6 +17,30 @@ const requiredHistoryItemFields = [
   "time",
 ];
 
+function sortHistoryEditions(editions) {
+  return [...editions].sort((a, b) => {
+    const dateDiff = Date.parse(b.date) - Date.parse(a.date);
+
+    if (dateDiff) {
+      return dateDiff;
+    }
+
+    return String(b.archiveLabel).localeCompare(String(a.archiveLabel), "zh-CN");
+  });
+}
+
+function sortHistoryItems(items) {
+  return [...items].sort((a, b) => {
+    const dateDiff = Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
+
+    if (dateDiff) {
+      return dateDiff;
+    }
+
+    return String(a.title).localeCompare(String(b.title), "zh-CN");
+  });
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -75,11 +99,12 @@ function validateHistory(history) {
 }
 
 function renderHistory(history) {
-  const totalItems = history.editions.reduce((count, edition) => count + edition.items.length, 0);
-  const latestEdition = history.editions[0];
+  const sortedEditions = sortHistoryEditions(history.editions);
+  const totalItems = sortedEditions.reduce((count, edition) => count + edition.items.length, 0);
+  const latestEdition = sortedEditions[0];
   historyMeta.textContent = `目前共 ${history.editions.length} 个抓取批次 · ${totalItems} 条情报 · 最新抓取：${latestEdition.date} · ${latestEdition.archiveLabel}`;
 
-  historyList.innerHTML = history.editions
+  historyList.innerHTML = sortedEditions
     .map(
       (edition, editionIndex) => `
         <section class="history-edition" aria-label="${escapeHtml(`${edition.date} ${edition.archiveLabel}`)}">
@@ -92,7 +117,7 @@ function renderHistory(history) {
             <span>${edition.items.length} 条</span>
           </div>
           <div class="history-card-grid">
-            ${edition.items
+            ${sortHistoryItems(edition.items)
               .map((item) => {
                 const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}&edition=${encodeURIComponent(edition.id)}`;
 

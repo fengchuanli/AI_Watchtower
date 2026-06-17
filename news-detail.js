@@ -7,6 +7,7 @@ const requiredDetailFields = [
   "trend",
   "detailTrend",
   "whyRanked",
+  "detailWhyRanked",
   "impact",
   "readerUse",
   "nextCheck",
@@ -182,7 +183,7 @@ function renderDetail(item, data) {
         <section class="detail-block">
           <span>03 · Why It Matters</span>
           <h2>为什么值得看</h2>
-          <p>${escapeHtml(item.whyRanked)}</p>
+          <p>${escapeHtml(item.detailWhyRanked)}</p>
           <p class="detail-so-what"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>

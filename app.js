@@ -46,6 +46,18 @@ const requiredCardFields = [
   "time",
 ];
 
+function sortNewsItems(items) {
+  return [...items].sort((a, b) => {
+    const dateDiff = Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
+
+    if (dateDiff) {
+      return dateDiff;
+    }
+
+    return String(a.title).localeCompare(String(b.title), "zh-CN");
+  });
+}
+
 async function loadNews() {
   setFiltersDisabled(true);
   renderFeedMessage("loading", "正在读取新闻数据...");
@@ -59,7 +71,7 @@ async function loadNews() {
 
     const data = await response.json();
     validateNewsData(data);
-    news = data.items;
+    news = sortNewsItems(data.items);
     newsCategories = data.categories;
     updateTodayBriefing(data.briefing);
     updateDeepBriefing(data.deepBriefing);

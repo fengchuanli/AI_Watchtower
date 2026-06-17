@@ -321,6 +321,7 @@ if (!/href="\$\{escapeHtml\(item\.sourceUrl\)\}" target="_blank" rel="noopener n
 
 if (
   !/const requiredDetailFields = \[[\s\S]*"counterEvidence"[\s\S]*"time"[\s\S]*\];/.test(detailJs) ||
+  !/"detailWhyRanked"/.test(detailJs) ||
   !/validateDetailFeed\(currentFeed\);/.test(detailJs) ||
   !/function validateDetailItem\(item\) \{[\s\S]*requiredDetailFields\.find/.test(detailJs) ||
   !/validateDetailItem\(item\);\s*document\.title/.test(detailJs)
@@ -330,6 +331,14 @@ if (
 
 if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function findHistoryContext/.test(detailJs)) {
   errors.push("News detail page must fall back to the historical intelligence file for archived items.");
+}
+
+if (!/function sortNewsItems/.test(appJs) || !/news = sortNewsItems\(data\.items\)/.test(appJs)) {
+  errors.push("Homepage news items must be sorted newest first before rendering.");
+}
+
+if (!/function sortHistoryEditions/.test(allNewsJs) || !/function sortHistoryItems/.test(allNewsJs)) {
+  errors.push("All-news page must sort editions and items newest first before rendering.");
 }
 
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {

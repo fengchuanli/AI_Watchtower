@@ -16,6 +16,7 @@ const requiredNewsFields = [
   "trend",
   "detailTrend",
   "whyRanked",
+  "detailWhyRanked",
   "impact",
   "readerUse",
   "nextCheck",
@@ -43,12 +44,43 @@ const allowedSourceRoles = new Set(["官方核对", "研究原文", "媒体背�
 
 const errors = [];
 
+function sortSignature(items) {
+  return items
+    .map((item) => `${item.publishedAt || ""}|${item.title || ""}`)
+    .join("\n");
+}
+
+function expectedSortSignature(items) {
+  return [...items]
+    .sort((a, b) => {
+      const dateDiff = Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
+
+      if (dateDiff) {
+        return dateDiff;
+      }
+
+      return String(a.title).localeCompare(String(b.title), "zh-CN");
+    })
+    .map((item) => `${item.publishedAt || ""}|${item.title || ""}`)
+    .join("\n");
+}
+
+function normalizeSourceKey(item) {
+  return String(item.sourceUrl || item.id || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[?#].*$/, "")
+    .replace(/\/$/, "");
+}
+
 if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
   errors.push("data/sources.json must include at least one source.");
 }
 
 if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json must include an items array.");
+} else if (sortSignature(newsFeed.items) !== expectedSortSignature(newsFeed.items)) {
+  errors.push("data/news.json items must be sorted newest first by publishedAt.");
 }
 
 if (!Array.isArray(newsFeed.categories) || !newsFeed.categories.length) {
@@ -200,6 +232,10 @@ for (const item of newsFeed.items || []) {
     errors.push(`${item.id} detailTrend must be meaningfully longer than the homepage trend.`);
   }
 
+  if (item.detailWhyRanked && item.whyRanked && item.detailWhyRanked.length <= item.whyRanked.length + 60) {
+    errors.push(`${item.id} detailWhyRanked must add source-based context beyond homepage whyRanked.`);
+  }
+
   if (item.verificationStatus && !allowedVerificationStatuses.has(item.verificationStatus)) {
     errors.push(`${item.id} has unsupported verificationStatus ${item.verificationStatus}.`);
   }
@@ -247,6 +283,8 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
     errors.push("data/news-history.json latest edition must match data/news.json edition.id.");
   }
 
+  const allHistorySourceKeys = new Set();
+
   for (const [editionIndex, edition] of newsHistory.editions.entries()) {
     for (const field of ["id", "date", "timezone", "archiveLabel", "itemCount", "items"]) {
       if (!edition[field] && edition[field] !== 0) {
@@ -262,14 +300,32 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
       errors.push(`data/news-history.json edition ${edition.id} itemCount must match items length.`);
     }
 
+    if (sortSignature(edition.items) !== expectedSortSignature(edition.items)) {
+      errors.push(`data/news-history.json edition ${edition.id} items must be sorted newest first by publishedAt.`);
+    }
+
     const seenItemIds = new Set();
+    const seenSourceKeys = new Set();
 
     for (const item of edition.items) {
+      const sourceKey = normalizeSourceKey(item);
+
       if (seenItemIds.has(item.id)) {
         errors.push(`data/news-history.json edition ${edition.id} has duplicate item ${item.id}.`);
       }
 
       seenItemIds.add(item.id);
+
+      if (sourceKey && seenSourceKeys.has(sourceKey)) {
+        errors.push(`data/news-history.json edition ${edition.id} repeats source ${item.sourceUrl}.`);
+      }
+
+      if (sourceKey && allHistorySourceKeys.has(sourceKey)) {
+        errors.push(`data/news-history.json repeats previously captured source ${item.sourceUrl}.`);
+      }
+
+      seenSourceKeys.add(sourceKey);
+      allHistorySourceKeys.add(sourceKey);
 
       for (const field of requiredNewsFields) {
         if (!item[field]) {
@@ -277,6 +333,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         }
       }
     }
+
   }
 }
 
