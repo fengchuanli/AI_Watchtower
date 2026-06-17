@@ -79,17 +79,30 @@ if (
   errors.push("Social preview image metadata must include matching, descriptive alt text.");
 }
 
-const skipLinkMatch = html.match(/<a\b(?=[^>]*\bclass="skip-link")(?=[^>]*\bhref="#([^"]+)")[^>]*>/);
+function validateSkipLink(fileName, pageHtml) {
+  const mainMatch = pageHtml.match(/<main\b(?=[^>]*\bid="([^"]+)")[^>]*>/);
 
-if (!skipLinkMatch) {
-  errors.push("index.html is missing a skip link to the main content.");
-} else {
-  const targetId = skipLinkMatch[1];
-  const targetPattern = new RegExp(`<main\\b(?=[^>]*\\bid="${targetId}")[^>]*>`, "s");
-
-  if (!targetPattern.test(html)) {
-    errors.push(`Skip link target #${targetId} does not match the main element.`);
+  if (!mainMatch) {
+    return;
   }
+
+  const mainId = mainMatch[1];
+  const skipLinkMatch = pageHtml.match(
+    /<a\b(?=[^>]*\bclass="skip-link")(?=[^>]*\bhref="#([^"]+)")[^>]*>/,
+  );
+
+  if (!skipLinkMatch) {
+    errors.push(`${fileName} is missing a skip link to the main content.`);
+    return;
+  }
+
+  if (skipLinkMatch[1] !== mainId) {
+    errors.push(`${fileName} skip link target #${skipLinkMatch[1]} does not match main #${mainId}.`);
+  }
+}
+
+for (const [fileName, pageHtml] of htmlPages) {
+  validateSkipLink(fileName, pageHtml);
 }
 
 const jsonLdMatch = html.match(
