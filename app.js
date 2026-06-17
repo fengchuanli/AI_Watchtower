@@ -348,6 +348,7 @@ function updateTopStories(items) {
           <div>
             <p class="eyebrow">${escapeHtml(item.label)} · ${escapeHtml(item.time)}</p>
             <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
+            <p class="top-rank-reason"><strong>为什么排进 TOP3</strong>${escapeHtml(item.whyRanked)}</p>
             <ol>${summaryLines}</ol>
             <a class="reference-link" href="${detailUrl}">查看事件简报</a>
           </div>

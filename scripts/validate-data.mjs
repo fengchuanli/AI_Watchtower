@@ -81,6 +81,16 @@ if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json must include an items array.");
 } else if (sortSignature(newsFeed.items) !== expectedSortSignature(newsFeed.items)) {
   errors.push("data/news.json items must be sorted newest first by publishedAt.");
+} else {
+  const topRankingReasons = newsFeed.items.slice(0, 3).map((item) => item.whyRanked?.trim()).filter(Boolean);
+
+  if (topRankingReasons.length !== Math.min(newsFeed.items.length, 3)) {
+    errors.push("Top news items must include ranking reasons for the homepage TOP3.");
+  }
+
+  if (new Set(topRankingReasons).size !== topRankingReasons.length) {
+    errors.push("Homepage TOP3 ranking reasons must be distinct.");
+  }
 }
 
 if (newsFeed.sourceCount !== sourceRegistry.sources.length) {

@@ -306,8 +306,15 @@ if (!/latestCapture\.textContent = `最新抓取：/.test(appJs)) {
   errors.push("Homepage must clearly label the latest captured news batch.");
 }
 
-if (!/id="top3"/.test(html) || !/function updateTopStories/.test(appJs) || !/getThreeLineSummary/.test(appJs)) {
-  errors.push("Homepage must render a dynamic Today TOP3 section with three-line summaries.");
+if (
+  !/id="top3"/.test(html) ||
+  !/function updateTopStories/.test(appJs) ||
+  !/getThreeLineSummary/.test(appJs) ||
+  !/class="top-rank-reason"/.test(appJs) ||
+  !/为什么排进 TOP3/.test(appJs) ||
+  !/\.top-rank-reason/.test(styles)
+) {
+  errors.push("Homepage must render a dynamic Today TOP3 section with ranking reasons and three-line summaries.");
 }
 
 if (
