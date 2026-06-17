@@ -374,8 +374,11 @@ if (
   !/overview-diagram/.test(detailJs) ||
   !/function getDiagramNodes/.test(detailJs) ||
   !/function renderDiagramNodes/.test(detailJs) ||
-  !/事件全貌/.test(detailJs) ||
-  !/事实边界/.test(detailJs)
+  !/事件简述/.test(detailJs) ||
+  !/趋势研判/.test(detailJs) ||
+  !/关注价值/.test(detailJs) ||
+  !/核验边界/.test(detailJs) ||
+  !/原始来源/.test(detailJs)
 ) {
   errors.push("News detail page must render each item as an incident briefing deck.");
 }

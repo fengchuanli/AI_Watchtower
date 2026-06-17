@@ -190,19 +190,19 @@ function getOverviewCards(item) {
 function getDiagramNodes(item) {
   return [
     {
-      label: "发生了什么",
+      label: "事件简述",
       title: "一句话看懂",
       body: item.body,
       icon: "1",
     },
     {
-      label: "为什么重要",
+      label: "关注价值",
       title: "影响对象",
       body: item.impact,
       icon: "2",
     },
     {
-      label: "趋势判断",
+      label: "趋势研判",
       title: "背后的方向",
       body: item.detailTrend,
       icon: "3",
@@ -219,7 +219,7 @@ function getDiagramNodes(item) {
 function getRiskCards(item) {
   return [
     {
-      title: "事实边界",
+      title: "核验边界",
       body: item.claimBoundary,
     },
     {
@@ -227,7 +227,7 @@ function getRiskCards(item) {
       body: item.counterEvidence,
     },
     {
-      title: "下一步核对",
+      title: "继续观察",
       body: item.nextCheck,
     },
   ];
@@ -281,15 +281,15 @@ function renderRiskCards(cards) {
 function getQuickSummary(item) {
   return [
     {
-      label: "发生了什么",
+      label: "核心事件",
       body: item.body,
     },
     {
-      label: "为什么重要",
+      label: "关键影响",
       body: item.impact,
     },
     {
-      label: "接下来要看",
+      label: "继续观察",
       body: item.nextCheck,
     },
   ];
@@ -358,25 +358,26 @@ function renderDetail(item, data) {
     </div>
 
     <nav class="incident-jump-nav" aria-label="事件简报导航">
-      <a href="#quick-summary">3行总结</a>
-      <a href="#incident-map">解析图</a>
-      <a href="#incident-overview">事件全貌</a>
-      <a href="#incident-stakes">为什么重要</a>
-      <a href="#incident-verification">事实边界</a>
+      <a href="#quick-summary">速览</a>
+      <a href="#incident-map">全貌图</a>
+      <a href="#incident-overview">事件简述</a>
+      <a href="#incident-stakes">趋势研判</a>
+      <a href="#incident-value">关注价值</a>
+      <a href="#incident-verification">核验边界</a>
       <a href="#incident-source">来源</a>
     </nav>
 
-    <section class="quick-summary" id="quick-summary" aria-label="3行总结">
+    <section class="quick-summary" id="quick-summary" aria-label="速览">
       <div>
         <p class="eyebrow">30-second Summary</p>
-        <h2>3行总结</h2>
+        <h2>速览</h2>
       </div>
       <ol>
         ${renderQuickSummary(quickSummary)}
       </ol>
     </section>
 
-    <section class="overview-diagram" id="incident-map" aria-label="新闻全貌解析图">
+    <section class="overview-diagram" id="incident-map" aria-label="新闻全貌图">
       <div class="overview-card-row">
         ${renderOverviewCards(overviewCards)}
       </div>
@@ -386,7 +387,7 @@ function renderDetail(item, data) {
           <h2>${escapeHtml(item.title)}</h2>
           <p>${escapeHtml(item.detailWhyRanked)}</p>
         </div>
-        <div class="overview-flow" aria-label="从原始信号到影响判断的链路">
+        <div class="overview-flow" aria-label="从事件到影响的解读链路">
           ${renderDiagramNodes(diagramNodes)}
         </div>
         <div class="overview-risk-grid" aria-label="风险与核对点">
@@ -399,24 +400,24 @@ function renderDetail(item, data) {
       <div class="detail-main">
         <section class="detail-block incident-block" id="incident-overview">
           <span>01 · What Happened</span>
-          <h2>发生了什么</h2>
+          <h2>事件简述</h2>
           <p>${escapeHtml(item.detailBody)}</p>
         </section>
         <section class="detail-block incident-block" id="incident-stakes">
           <span>02 · Trend</span>
-          <h2>趋势判断</h2>
+          <h2>趋势研判</h2>
           <p>${escapeHtml(item.detailTrend)}</p>
         </section>
-        <section class="detail-block incident-block">
+        <section class="detail-block incident-block" id="incident-value">
           <span>03 · Why It Matters</span>
-          <h2>为什么值得看</h2>
+          <h2>关注价值</h2>
           <p>${escapeHtml(item.detailWhyRanked)}</p>
           <p class="detail-so-what"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
         <section class="detail-block incident-block" id="incident-verification">
           <span>04 · Verification</span>
-          <h2>还需要核对什么</h2>
+          <h2>核验边界</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
           <div class="detail-question-list">
             <strong>编辑追问</strong>
@@ -453,7 +454,7 @@ function renderDetail(item, data) {
           </dl>
         </section>
         <section>
-          <h2>怎么理解这个来源</h2>
+          <h2>来源说明</h2>
           <p>${escapeHtml(item.provenance)}</p>
         </section>
         <section>

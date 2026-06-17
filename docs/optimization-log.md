@@ -2,6 +2,23 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-17 18:46 JST
+
+- Focus: Cleaned up incident detail wording by replacing repeated generic headings with clearer section names: speed-read overview, event summary, trend read, value, verification boundary, and source explanation while keeping `原始来源` unchanged.
+- Changed files:
+  - `news-detail.js`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and renamed incident detail sections.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Included in this change set.
+
 ## 2026-06-17 18:21 JST
 
 - Focus: Simplified incident detail pages by adding a 30-second three-line summary and removing the duplicate timeline block, added a dynamic homepage Today TOP3 section, and added company tag aggregation for OpenAI, Anthropic, Google, and Meta.
