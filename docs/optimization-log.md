@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 08:04 JST
+
+- Focus: Published the 08:00 JST AI news intelligence update with official Google DeepMind signals on Agent control, UK public-sector planning workflows, and multi-agent safety research.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Pending local commit `更新08点AI新闻情报`; push may be blocked if GitHub DNS remains unavailable.
+
 ## 2026-06-18 21:02 JST
 
 - Focus: Improved Phase 1 Day 4 detail-page visual hierarchy by adding a clear reading-path band before the briefing sections. The detail page now explicitly guides readers from `速览` to `全貌图`, `事件解读`, `核对边界`, and `来源`, with responsive styling and source-panel emphasis so the original source remains a verification step rather than the primary reading path.
