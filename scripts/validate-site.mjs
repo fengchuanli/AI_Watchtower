@@ -510,6 +510,21 @@ if (!/function sortHistoryEditions/.test(allNewsJs) || !/function sortHistoryIte
   errors.push("All-news page must sort editions and items newest first before rendering.");
 }
 
+if (
+  !/id="historyControls"/.test(allNewsHtml) ||
+  !/id="historyCategoryFilters"/.test(allNewsHtml) ||
+  !/id="historySort"/.test(allNewsHtml) ||
+  !/id="historyResultNote"/.test(allNewsHtml) ||
+  !/function getHistoryCategories\(history\)/.test(allNewsJs) ||
+  !/function getFilteredEditions\(history\)/.test(allNewsJs) ||
+  !/selectedSort = historySort\.value === "oldest" \? "oldest" : "newest";/.test(allNewsJs) ||
+  !/原始来源仍只作为核对线索，优先阅读站内解读/.test(allNewsJs) ||
+  !/\.history-controls/.test(styles) ||
+  !/\.history-filter-tabs button\.active/.test(styles)
+) {
+  errors.push("All-news history must support category filtering, sort switching, and an editorial result note.");
+}
+
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {
   errors.push("News detail source links must announce that they open in a new window.");
 }

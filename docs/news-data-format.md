@@ -71,6 +71,8 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `editions[].itemCount`: Number of items in the batch; must match `items.length`.
 - `editions[].items`: Full item objects using the same required fields as the current feed.
 
+The all-news history page derives its category filters from historical item `category` and `label` values, then lets readers switch between newest-first and oldest-first batch order. Keep historical categories stable and labels readable so older coverage remains discoverable without using original source links as the primary reading path.
+
 ## Required Fields
 
 - `id`: Stable unique item ID.

@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 18:04 JST
+
+- Focus: Improved Phase 2 Day 11 all-news history discovery by adding category filters, newest/oldest sort switching, and a Chinese result note that explains the current slice and reminds readers to use original sources as verification cues rather than the primary reading path.
+- Changed files:
+  - `all-news.html`
+  - `all-news.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on easier discovery for Chinese readers.
+  - Ran `node --check app.js`, `node --check all-news.js`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and all-news history filtering/sorting.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit.
+
 ## 2026-06-18 17:33 JST
 
 - Focus: Improved Phase 2 Day 10 topic discovery by adding edition-level topic groups for model, developer tooling, and enterprise workflow signals. The homepage now renders these groups alongside coverage and source-family framing, while validation ensures each group uses the planned topic vocabulary and references current news items.

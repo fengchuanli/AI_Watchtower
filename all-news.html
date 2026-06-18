@@ -34,6 +34,20 @@
           <p id="historyMeta">正在读取历史情报...</p>
           <a class="text-link" href="./data/news-history.json">查看历史数据</a>
         </div>
+        <div class="history-controls" id="historyControls" hidden>
+          <div>
+            <p class="control-label">按主题缩小</p>
+            <div class="history-filter-tabs" id="historyCategoryFilters" aria-label="按分类筛选历史情报"></div>
+          </div>
+          <label class="history-sort-control" for="historySort">
+            <span class="control-label">排序</span>
+            <select id="historySort" aria-label="历史情报排序">
+              <option value="newest">最新批次优先</option>
+              <option value="oldest">最早批次优先</option>
+            </select>
+          </label>
+        </div>
+        <p class="history-result-note" id="historyResultNote" aria-live="polite"></p>
       </section>
 
       <section class="section compact" aria-labelledby="history-list-title">

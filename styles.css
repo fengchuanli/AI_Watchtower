@@ -1086,6 +1086,71 @@ h3 {
   font-weight: 800;
 }
 
+.history-controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 16px;
+  padding: 18px 20px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.history-controls[hidden] {
+  display: none;
+}
+
+.control-label {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.history-filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.history-filter-tabs button,
+.history-sort-control select {
+  min-height: 38px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.history-filter-tabs button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.history-filter-tabs button.active {
+  color: white;
+  background: var(--dark);
+  border-color: var(--dark);
+}
+
+.history-sort-control select {
+  min-width: 168px;
+  padding: 8px 34px 8px 12px;
+}
+
+.history-result-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .history-list {
   display: grid;
   gap: 22px;
