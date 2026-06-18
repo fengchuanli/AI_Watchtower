@@ -196,14 +196,14 @@ function getDiagramNodes(item) {
       icon: "1",
     },
     {
-      label: "关注价值",
-      title: "关注价值",
+      label: "为什么值得看",
+      title: "为什么值得看",
       body: item.impact,
       icon: "2",
     },
     {
-      label: "趋势研判",
-      title: "趋势研判",
+      label: "这意味着",
+      title: "这意味着",
       body: item.detailTrend,
       icon: "3",
     },
@@ -219,7 +219,7 @@ function getDiagramNodes(item) {
 function getRiskCards(item) {
   return [
     {
-      title: "核验边界",
+      title: "核对边界",
       body: item.claimBoundary,
     },
     {
@@ -404,9 +404,9 @@ function renderDetail(item, data) {
       <a href="#quick-summary">速览</a>
       <a href="#incident-map">全貌图</a>
       <a href="#incident-overview">事件简述</a>
-      <a href="#incident-stakes">趋势研判</a>
-      <a href="#incident-value">关注价值</a>
-      <a href="#incident-verification">核验边界</a>
+      <a href="#incident-stakes">这意味着</a>
+      <a href="#incident-value">为什么值得看</a>
+      <a href="#incident-verification">核对边界</a>
       <a href="#incident-source">来源</a>
     </nav>
 
@@ -450,14 +450,14 @@ function renderDetail(item, data) {
         </section>
         <section class="detail-block incident-block" id="incident-stakes">
           <span>02 · Trend</span>
-          <h2>趋势研判</h2>
+          <h2>这意味着</h2>
           <div class="detail-prose">
             ${renderDetailProse(item.detailTrend)}
           </div>
         </section>
         <section class="detail-block incident-block" id="incident-value">
           <span>03 · Why It Matters</span>
-          <h2>关注价值</h2>
+          <h2>为什么值得看</h2>
           <div class="detail-prose">
             ${renderDetailProse(item.detailWhyRanked)}
           </div>
@@ -466,7 +466,7 @@ function renderDetail(item, data) {
         </section>
         <section class="detail-block incident-block" id="incident-verification">
           <span>04 · Verification</span>
-          <h2>核验边界</h2>
+          <h2>核对边界</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
           <div class="detail-question-list">
             <strong>编辑追问</strong>

@@ -598,8 +598,8 @@ function renderNews(filter = "all") {
           <span class="category">${escapeHtml(item.label)}</span>
           <h3><a class="card-detail-link" href="${detailUrl}" aria-label="${detailLabel}">${escapeHtml(item.title)}</a></h3>
           <p class="card-summary"><strong>事件简述</strong>${escapeHtml(item.body)}</p>
-          <p class="trend-note"><strong>趋势研判</strong>${escapeHtml(item.trend)}</p>
-          <p class="rank-note"><strong>关注价值</strong>${escapeHtml(item.whyRanked)}</p>
+          <p class="trend-note"><strong>这意味着</strong>${escapeHtml(item.trend)}</p>
+          <p class="rank-note"><strong>为什么值得看</strong>${escapeHtml(item.whyRanked)}</p>
           <footer>
             <span>${escapeHtml(item.trustLevel)}</span>
             <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看站内解读</a>

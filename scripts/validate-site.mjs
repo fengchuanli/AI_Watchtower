@@ -397,9 +397,9 @@ if (
   !/function getDiagramNodes/.test(detailJs) ||
   !/function renderDiagramNodes/.test(detailJs) ||
   !/事件简述/.test(detailJs) ||
-  !/趋势研判/.test(detailJs) ||
-  !/关注价值/.test(detailJs) ||
-  !/核验边界/.test(detailJs) ||
+  !/这意味着/.test(detailJs) ||
+  !/为什么值得看/.test(detailJs) ||
+  !/核对边界/.test(detailJs) ||
   !/原始来源/.test(detailJs)
 ) {
   errors.push("News detail page must render each item as an incident briefing deck.");
@@ -423,8 +423,8 @@ if (
 
 if (
   !/<p class="card-summary"><strong>事件简述<\/strong>/.test(appJs) ||
-  !/<p class="trend-note"><strong>趋势研判<\/strong>/.test(appJs) ||
-  !/<p class="rank-note"><strong>关注价值<\/strong>/.test(appJs)
+  !/<p class="trend-note"><strong>这意味着<\/strong>/.test(appJs) ||
+  !/<p class="rank-note"><strong>为什么值得看<\/strong>/.test(appJs)
 ) {
   errors.push("Homepage news cards must use the same readable labels as the detail page.");
 }
