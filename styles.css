@@ -293,7 +293,8 @@ h3 {
 }
 
 .coverage-mix,
-.source-families {
+.source-families,
+.topic-groups {
   display: flex;
   max-width: 760px;
   flex-wrap: wrap;
@@ -301,12 +302,14 @@ h3 {
   margin-top: 12px;
 }
 
-.source-families {
+.source-families,
+.topic-groups {
   margin-top: 8px;
 }
 
 .coverage-mix span,
-.source-families span {
+.source-families span,
+.topic-groups span {
   max-width: 240px;
   padding: 9px 11px;
   color: var(--muted);
@@ -321,8 +324,14 @@ h3 {
   border-color: rgb(37 99 235 / 18%);
 }
 
+.topic-groups span {
+  background: #fff8ed;
+  border-color: rgb(214 147 53 / 24%);
+}
+
 .coverage-mix strong,
-.source-families strong {
+.source-families strong,
+.topic-groups strong {
   display: block;
   margin-bottom: 3px;
   color: var(--ink);

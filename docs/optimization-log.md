@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 17:33 JST
+
+- Focus: Improved Phase 2 Day 10 topic discovery by adding edition-level topic groups for model, developer tooling, and enterprise workflow signals. The homepage now renders these groups alongside coverage and source-family framing, while validation ensures each group uses the planned topic vocabulary and references current news items.
+- Changed files:
+  - `data/news.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on easier discovery for Chinese readers.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including edition topic groups.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and topic-group rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+- Commit: Local implementation commit will be created after this log entry; push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-18 17:09 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update. Official source indexes did not show a newer post after the 08:00 run, so this batch uses non-repeated Google/DeepMind official signals that still support full in-site briefings: DiffusionGemma's diffusion-text low-latency model route, the Sierra Leone Guided Learning RCT, and Gemini 3.5 Live Translate.

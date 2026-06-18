@@ -8,6 +8,7 @@ const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceFamilies = document.querySelector("#sourceFamilies");
+const topicGroups = document.querySelector("#topicGroups");
 const categoryMeta = document.querySelector("#categoryMeta");
 const briefingLabel = document.querySelector("#briefingLabel");
 const briefingHeadline = document.querySelector("#briefingHeadline");
@@ -106,7 +107,7 @@ function validateNewsData(data) {
     throw new Error("News data must include an items array.");
   }
 
-  validateEdition(data.edition, data.updatedAt);
+  validateEdition(data.edition, data.updatedAt, data.items);
   validateCategories(data.categories, data.items);
   validateBriefing(data.briefing);
   validateDeepBriefing(data.deepBriefing);
@@ -156,7 +157,7 @@ function validateCategories(categories, items) {
   }
 }
 
-function validateEdition(edition, updatedAt) {
+function validateEdition(edition, updatedAt, items = []) {
   const requiredFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
 
   if (!edition || requiredFields.some((field) => !edition[field])) {
@@ -189,6 +190,29 @@ function validateEdition(edition, updatedAt) {
 
   if (invalidSourceFamily) {
     throw new Error("Each edition source family must include family, label, count, and role.");
+  }
+
+  if (!Array.isArray(edition.topicGroups) || !edition.topicGroups.length) {
+    throw new Error("News edition must include topic groups.");
+  }
+
+  const itemIds = new Set(items.map((item) => item.id));
+  const allowedTopics = new Set(["agent", "model", "enterprise", "policy", "infrastructure", "developer-tooling"]);
+  const invalidTopicGroup = edition.topicGroups.find(
+    (topic) =>
+      !topic.id ||
+      !topic.label ||
+      !Number.isInteger(topic.count) ||
+      topic.count < 1 ||
+      !Array.isArray(topic.itemIds) ||
+      topic.itemIds.length !== topic.count ||
+      !topic.meaning ||
+      !allowedTopics.has(topic.id) ||
+      topic.itemIds.some((id) => !itemIds.has(id)),
+  );
+
+  if (invalidTopicGroup) {
+    throw new Error("Each edition topic group must use a supported topic and reference current news items.");
   }
 }
 
@@ -513,6 +537,20 @@ function updateNewsMeta(data) {
           <span>
             <strong>${escapeHtml(item.label)} · ${escapeHtml(item.count)} 条</strong>
             ${escapeHtml(item.role)}
+          </span>
+        `,
+      )
+      .join("");
+  }
+
+  if (topicGroups) {
+    const topics = data.edition?.topicGroups || [];
+    topicGroups.innerHTML = topics
+      .map(
+        (topic) => `
+          <span>
+            <strong>${escapeHtml(topic.label)} · ${escapeHtml(topic.count)} 条</strong>
+            ${escapeHtml(topic.meaning)}
           </span>
         `,
       )

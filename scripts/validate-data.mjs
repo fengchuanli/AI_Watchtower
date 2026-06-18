@@ -8,6 +8,7 @@ const sourceIds = new Set(sourceRegistry.sources.map((source) => source.id));
 const sourcesById = new Map(sourceRegistry.sources.map((source) => [source.id, source]));
 const allowedCategories = new Set(["all", "model", "product", "research", "tool", "funding", "policy"]);
 const allowedSourceFamilies = new Set(["official", "research", "reliable_media", "community_signal"]);
+const allowedTopicGroups = new Set(["agent", "model", "enterprise", "policy", "infrastructure", "developer-tooling"]);
 const requiredNewsFields = [
   "id",
   "category",
@@ -215,6 +216,50 @@ if (!newsFeed.edition) {
       if (count > 0 && !seenFamilies.has(family)) {
         errors.push(`data/news.json edition sourceFamilies is missing current source family ${family}.`);
       }
+    }
+  }
+
+  if (!Array.isArray(newsFeed.edition.topicGroups) || !newsFeed.edition.topicGroups.length) {
+    errors.push("data/news.json edition must include topicGroups entries.");
+  } else {
+    const currentItemIds = new Set((newsFeed.items || []).map((item) => item.id));
+    const seenTopics = new Set();
+
+    for (const [index, entry] of newsFeed.edition.topicGroups.entries()) {
+      if (
+        !entry.id ||
+        !entry.label ||
+        !Number.isInteger(entry.count) ||
+        entry.count < 1 ||
+        !Array.isArray(entry.itemIds) ||
+        !entry.meaning
+      ) {
+        errors.push(`data/news.json edition topicGroups[${index}] must include id, label, positive count, itemIds, and meaning.`);
+      }
+
+      if (entry.id && !allowedTopicGroups.has(entry.id)) {
+        errors.push(`data/news.json edition topicGroups[${index}] has unsupported topic ${entry.id}.`);
+      }
+
+      if (entry.id && seenTopics.has(entry.id)) {
+        errors.push(`data/news.json edition topicGroups repeats topic ${entry.id}.`);
+      }
+
+      if (entry.itemIds && entry.count !== entry.itemIds.length) {
+        errors.push(`data/news.json edition topicGroups[${index}] count must match itemIds.length.`);
+      }
+
+      for (const itemId of entry.itemIds || []) {
+        if (!currentItemIds.has(itemId)) {
+          errors.push(`data/news.json edition topicGroups[${index}] references unknown current item ${itemId}.`);
+        }
+      }
+
+      if (entry.meaning && !/观察|跟踪|核对|判断/.test(entry.meaning)) {
+        errors.push(`data/news.json edition topicGroups[${index}] must explain how readers should use that topic group.`);
+      }
+
+      seenTopics.add(entry.id);
     }
   }
 
