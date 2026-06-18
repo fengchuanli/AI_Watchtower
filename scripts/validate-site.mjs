@@ -349,6 +349,19 @@ if (!/OpenAI/.test(tagsJs) || !/Anthropic/.test(tagsJs) || !/Google/.test(tagsJs
 }
 
 if (
+  !/<div class="tag-context" id="tagContext" aria-live="polite"><\/div>/.test(tagsHtml) ||
+  !/const tagContext = document\.querySelector\("#tagContext"\);/.test(tagsJs) ||
+  !/function summarizeTagItems\(items\) \{/.test(tagsJs) ||
+  !/function renderTagContext\(tag, items\) \{/.test(tagsJs) ||
+  !/公司观察重点/.test(tagsJs) ||
+  !/最新覆盖/.test(tagsJs) ||
+  !/核对线索/.test(tagsJs) ||
+  !/\.tag-context\s*\{[\s\S]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/.test(styles)
+) {
+  errors.push("Company tag pages must render context cards with focus, latest coverage, and source-check cues.");
+}
+
+if (
   !/fetch\("\.\/data\/news-history\.json"/.test(allNewsJs) ||
   !/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}&edition=\$\{encodeURIComponent\(edition\.id\)\}`;/.test(
     allNewsJs,

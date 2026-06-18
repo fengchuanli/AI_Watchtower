@@ -2,13 +2,34 @@ const tagTabs = document.querySelector("#tagTabs");
 const tagEyebrow = document.querySelector("#tagEyebrow");
 const tagTitle = document.querySelector("#tag-title");
 const tagMeta = document.querySelector("#tagMeta");
+const tagContext = document.querySelector("#tagContext");
 const tagResults = document.querySelector("#tagResults");
 
 const tagDefinitions = [
-  { id: "openai", label: "OpenAI", match: /openai/i },
-  { id: "anthropic", label: "Anthropic", match: /anthropic/i },
-  { id: "google", label: "Google", match: /google|deepmind/i },
-  { id: "meta", label: "Meta", match: /meta/i },
+  {
+    id: "openai",
+    label: "OpenAI",
+    match: /openai/i,
+    focus: "重点观察模型能力、科学工作流、企业产品和安全边界。",
+  },
+  {
+    id: "anthropic",
+    label: "Anthropic",
+    match: /anthropic/i,
+    focus: "重点观察 Claude 产品、企业采用、安全治理和区域合作。",
+  },
+  {
+    id: "google",
+    label: "Google",
+    match: /google|deepmind/i,
+    focus: "重点观察 DeepMind 研究、Gemini 产品、云端部署和开发者生态。",
+  },
+  {
+    id: "meta",
+    label: "Meta",
+    match: /meta/i,
+    focus: "重点观察开源模型、消费级 AI、基础设施和平台分发。",
+  },
 ];
 
 function escapeHtml(value) {
@@ -67,6 +88,18 @@ function itemMatchesTag(item, tag) {
   return tag.match.test(`${item.sourceId || ""} ${item.source || ""} ${item.sourceUrl || ""}`);
 }
 
+function summarizeTagItems(items) {
+  const latestItem = items[0];
+  const categories = [...new Set(items.map((item) => item.label || item.category).filter(Boolean))];
+  const sourceRoles = [...new Set(items.map((item) => item.sourceRole || item.trustLevel).filter(Boolean))];
+
+  return {
+    latestLabel: latestItem ? `${latestItem.editionDate} · ${latestItem.editionLabel}` : "暂无匹配批次",
+    categoryLabel: categories.length ? categories.slice(0, 4).join(" / ") : "暂无分类",
+    sourceLabel: sourceRoles.length ? sourceRoles.slice(0, 3).join(" / ") : "等待来源",
+  };
+}
+
 function renderTagTabs(selectedTagId) {
   tagTabs.innerHTML = tagDefinitions
     .map(
@@ -83,6 +116,7 @@ function renderTagResults(history, selectedTagId) {
   tagEyebrow.textContent = `${tag.label} Intelligence`;
   tagTitle.textContent = `${tag.label} 情报`;
   tagMeta.textContent = `${items.length} 条 · 来自全部历史抓取批次`;
+  renderTagContext(tag, items);
 
   if (!items.length) {
     tagResults.innerHTML = `<p class="feed-state">暂无 ${escapeHtml(tag.label)} 情报，后续抓取到相关来源后会自动出现在这里。</p>`;
@@ -104,6 +138,28 @@ function renderTagResults(history, selectedTagId) {
       `;
     })
     .join("");
+}
+
+function renderTagContext(tag, items) {
+  const summary = summarizeTagItems(items);
+
+  tagContext.innerHTML = `
+    <article class="tag-context-card">
+      <p class="eyebrow">公司观察重点</p>
+      <h3>${escapeHtml(tag.label)} 为什么单独看</h3>
+      <p>${escapeHtml(tag.focus)}</p>
+    </article>
+    <article class="tag-context-card">
+      <p class="eyebrow">最新覆盖</p>
+      <h3>${escapeHtml(summary.latestLabel)}</h3>
+      <p>当前标签下共 ${items.length} 条情报；分类覆盖：${escapeHtml(summary.categoryLabel)}。</p>
+    </article>
+    <article class="tag-context-card">
+      <p class="eyebrow">核对线索</p>
+      <h3>${escapeHtml(summary.sourceLabel)}</h3>
+      <p>先读站内事件简报，再把原始来源作为事实边界和后续追踪依据。</p>
+    </article>
+  `;
 }
 
 loadTags();
