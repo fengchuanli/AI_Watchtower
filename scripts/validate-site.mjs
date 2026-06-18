@@ -404,6 +404,8 @@ if (
   !/Incident Briefing ·/.test(detailJs) ||
   !/incident-metrics/.test(detailJs) ||
   !/incident-jump-nav/.test(detailJs) ||
+  !/detail-reading-path/.test(detailJs) ||
+  !/先判断，再深读，最后核对/.test(detailJs) ||
   !/quick-summary/.test(detailJs) ||
   !/function getQuickSummary/.test(detailJs) ||
   !/overview-diagram/.test(detailJs) ||
@@ -444,6 +446,14 @@ if (
 
 if (!/\.overview-flow::before/.test(styles) || !/\.overview-risk-grid/.test(styles)) {
   errors.push("News detail incident pages must include an auto-generated overview diagram style.");
+}
+
+if (
+  !/\.detail-reading-path\s*\{[^}]*grid-template-columns:\s*230px 1fr;[^}]*background:\s*#14171f;/s.test(styles) ||
+  !/\.detail-reading-path ol\s*\{[^}]*grid-template-columns:\s*repeat\(5, minmax\(0, 1fr\)\);/s.test(styles) ||
+  !/\.detail-side section:first-child\s*\{[^}]*border-top:\s*4px solid var\(--amber\);/s.test(styles)
+) {
+  errors.push("News detail pages must keep a clear visual hierarchy between speed-read, map, interpretation, verification, and source sections.");
 }
 
 if (

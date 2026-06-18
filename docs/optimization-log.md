@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 21:02 JST
+
+- Focus: Improved Phase 1 Day 4 detail-page visual hierarchy by adding a clear reading-path band before the briefing sections. The detail page now explicitly guides readers from `速览` to `全貌图`, `事件解读`, `核对边界`, and `来源`, with responsive styling and source-panel emphasis so the original source remains a verification step rather than the primary reading path.
+- Changed files:
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on lower reading burden for Chinese readers on detail pages.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-site.mjs`, `scripts/validate-data.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and detail-page hierarchy coverage.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit. Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-18 20:02 JST
 
 - Focus: Improved Phase 2 Day 13 topic empty states by making planned but uncovered homepage topics visible instead of silently omitting them. The current edition now shows covered topic groups normally and also labels Agent, policy, infrastructure, or other absent planned themes as `本期未捕捉` with Chinese editorial reasons, so readers understand that no eligible signal was selected rather than assuming the site forgot the topic.

@@ -410,6 +410,40 @@ function renderDetail(item, data) {
       <a href="#incident-source">来源</a>
     </nav>
 
+    <section class="detail-reading-path" aria-label="详情页阅读层级">
+      <div>
+        <p class="eyebrow">Reading Path</p>
+        <h2>先判断，再深读，最后核对</h2>
+      </div>
+      <ol>
+        <li>
+          <span>01</span>
+          <strong>速览</strong>
+          <p>先用三行判断是否值得继续看。</p>
+        </li>
+        <li>
+          <span>02</span>
+          <strong>全貌图</strong>
+          <p>再看事件、趋势、价值和风险之间的关系。</p>
+        </li>
+        <li>
+          <span>03</span>
+          <strong>事件解读</strong>
+          <p>需要背景时阅读正文，不必从外部链接开始。</p>
+        </li>
+        <li>
+          <span>04</span>
+          <strong>核对边界</strong>
+          <p>确认哪些已经可证，哪些还要继续观察。</p>
+        </li>
+        <li>
+          <span>05</span>
+          <strong>来源</strong>
+          <p>最后用原始来源核对事实，不把它当主阅读入口。</p>
+        </li>
+      </ol>
+    </section>
+
     <section class="quick-summary" id="quick-summary" aria-label="速览">
       <div>
         <p class="eyebrow">30-second Summary</p>
