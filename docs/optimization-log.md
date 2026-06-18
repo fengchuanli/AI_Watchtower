@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 20:02 JST
+
+- Focus: Improved Phase 2 Day 13 topic empty states by making planned but uncovered homepage topics visible instead of silently omitting them. The current edition now shows covered topic groups normally and also labels Agent, policy, infrastructure, or other absent planned themes as `本期未捕捉` with Chinese editorial reasons, so readers understand that no eligible signal was selected rather than assuming the site forgot the topic.
+- Changed files:
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on clearer daily understanding for Chinese readers.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-site.mjs`, `scripts/validate-data.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and topic empty-state rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit.
+
 ## 2026-06-18 19:04 JST
 
 - Focus: Improved Phase 2 Day 12 history clarity by explaining the difference between the latest capture batch and already archived batches on the all-news page. Each history edition now carries a visible latest/archived status note, so readers can use the latest batch for current reading and archived batches for background without treating old items as new news.

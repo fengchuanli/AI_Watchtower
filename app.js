@@ -31,6 +31,38 @@ const deepSections = document.querySelector("#deepSections");
 const deepActions = document.querySelector("#deepActions");
 const deepLimits = document.querySelector("#deepLimits");
 const deepReferences = document.querySelector("#deepReferences");
+const plannedTopicGroups = [
+  {
+    id: "agent",
+    label: "Agent",
+    emptyNote: "本期未捕捉到足够清楚的 Agent 工作流信号；暂不把概念演示当作重点新闻。",
+  },
+  {
+    id: "model",
+    label: "模型路线",
+    emptyNote: "本期没有新的模型路线入选；历史模型消息不重复当作今日新增。",
+  },
+  {
+    id: "enterprise",
+    label: "企业工作流",
+    emptyNote: "本期没有新的企业工作流信号达到站内解读门槛。",
+  },
+  {
+    id: "policy",
+    label: "政策监管",
+    emptyNote: "本期未捕捉到可核对的政策监管变化；旧政策不重复发布。",
+  },
+  {
+    id: "infrastructure",
+    label: "基础设施",
+    emptyNote: "本期没有新的算力、部署或基础设施信号入选。",
+  },
+  {
+    id: "developer-tooling",
+    label: "开发者工具",
+    emptyNote: "本期没有新的开发者工具信号入选；等待可试用或可核对来源。",
+  },
+];
 const requiredCardFields = [
   "category",
   "label",
@@ -197,7 +229,7 @@ function validateEdition(edition, updatedAt, items = []) {
   }
 
   const itemIds = new Set(items.map((item) => item.id));
-  const allowedTopics = new Set(["agent", "model", "enterprise", "policy", "infrastructure", "developer-tooling"]);
+  const allowedTopics = new Set(plannedTopicGroups.map((topic) => topic.id));
   const invalidTopicGroup = edition.topicGroups.find(
     (topic) =>
       !topic.id ||
@@ -545,16 +577,27 @@ function updateNewsMeta(data) {
 
   if (topicGroups) {
     const topics = data.edition?.topicGroups || [];
-    topicGroups.innerHTML = topics
-      .map(
+    const coveredTopicIds = new Set(topics.map((topic) => topic.id));
+    const missingTopics = plannedTopicGroups.filter((topic) => !coveredTopicIds.has(topic.id));
+
+    topicGroups.innerHTML = [
+      ...topics.map(
         (topic) => `
           <span>
             <strong>${escapeHtml(topic.label)} · ${escapeHtml(topic.count)} 条</strong>
             ${escapeHtml(topic.meaning)}
           </span>
         `,
-      )
-      .join("");
+      ),
+      ...missingTopics.map(
+        (topic) => `
+          <span class="empty-topic">
+            <strong>${escapeHtml(topic.label)} · 本期未捕捉</strong>
+            ${escapeHtml(topic.emptyNote)}
+          </span>
+        `,
+      ),
+    ].join("");
   }
 }
 

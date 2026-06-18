@@ -487,11 +487,20 @@ if (
 if (
   !/id="topicGroups"/.test(html) ||
   !/const topicGroups = document\.querySelector\("#topicGroups"\);/.test(appJs) ||
+  !/const plannedTopicGroups = \[/.test(appJs) ||
   !/edition\.topicGroups/.test(appJs) ||
-  !/"agent", "model", "enterprise", "policy", "infrastructure", "developer-tooling"/.test(appJs) ||
-  !/\.topic-groups/.test(styles)
+  !/id: "agent"/.test(appJs) ||
+  !/id: "model"/.test(appJs) ||
+  !/id: "enterprise"/.test(appJs) ||
+  !/id: "policy"/.test(appJs) ||
+  !/id: "infrastructure"/.test(appJs) ||
+  !/id: "developer-tooling"/.test(appJs) ||
+  !/本期未捕捉/.test(appJs) ||
+  !/class="empty-topic"/.test(appJs) ||
+  !/\.topic-groups/.test(styles) ||
+  !/\.topic-groups span\.empty-topic/.test(styles)
 ) {
-  errors.push("Homepage feed metadata must render edition topic grouping for the planned topic vocabulary.");
+  errors.push("Homepage feed metadata must render edition topic grouping and empty states for the planned topic vocabulary.");
 }
 
 if (!/AI Watchtower 不追求把所有官方更新铺满首页/.test(html) || !/范式变化/.test(html)) {
