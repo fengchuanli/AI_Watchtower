@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 19:04 JST
+
+- Focus: Improved Phase 2 Day 12 history clarity by explaining the difference between the latest capture batch and already archived batches on the all-news page. Each history edition now carries a visible latest/archived status note, so readers can use the latest batch for current reading and archived batches for background without treating old items as new news.
+- Changed files:
+  - `all-news.html`
+  - `all-news.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on easier discovery for Chinese readers, especially batch freshness on mobile.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check scripts/validate-site.mjs`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and latest-vs-archived history status.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit.
+
 ## 2026-06-18 18:04 JST
 
 - Focus: Improved Phase 2 Day 11 all-news history discovery by adding category filters, newest/oldest sort switching, and a Chinese result note that explains the current slice and reminds readers to use original sources as verification cues rather than the primary reading path.

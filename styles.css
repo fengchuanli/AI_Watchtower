@@ -1086,6 +1086,34 @@ h3 {
   font-weight: 800;
 }
 
+.batch-explainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.batch-explainer > div {
+  padding: 16px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.batch-explainer strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.batch-explainer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
 .history-controls {
   display: flex;
   align-items: flex-end;
@@ -1182,15 +1210,37 @@ h3 {
   color: rgb(255 255 255 / 76%);
 }
 
-.history-edition-header > span {
+.history-edition-header .batch-status-note {
+  margin-bottom: 8px;
+  color: white;
+  font-weight: 800;
+}
+
+.history-edition-badges {
   flex: 0 0 auto;
+  display: grid;
+  gap: 8px;
   align-self: start;
+}
+
+.history-edition-badges span {
   padding: 8px 12px;
   color: var(--dark);
   background: white;
   border-radius: 8px;
   font-size: 13px;
   font-weight: 800;
+  text-align: center;
+}
+
+.history-edition-badges .batch-status.latest {
+  color: white;
+  background: var(--dark);
+}
+
+.history-edition-badges .batch-status.archived {
+  color: var(--ink);
+  background: #e5e7eb;
 }
 
 .history-card-grid {
@@ -2031,9 +2081,11 @@ h3 {
   }
 
   .history-toolbar,
+  .batch-explainer,
   .history-edition-header {
     align-items: flex-start;
     flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .deep-hero {

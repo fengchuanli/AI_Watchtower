@@ -98,6 +98,26 @@ function getFilteredEditions(history) {
     .filter((edition) => edition.items.length);
 }
 
+function getEditionKey(edition) {
+  return `${edition.id}::${edition.archiveLabel}`;
+}
+
+function getLatestEdition(history) {
+  return sortHistoryEditions(history.editions)[0];
+}
+
+function getEditionBatchStatus(edition, latestEdition) {
+  const isLatest = getEditionKey(edition) === getEditionKey(latestEdition);
+
+  return {
+    label: isLatest ? "最新抓取" : "已归档",
+    tone: isLatest ? "latest" : "archived",
+    note: isLatest
+      ? "本批次对应当前首页新闻流，可优先阅读。"
+      : "本批次已进入历史记录，用来回看背景，不作为今日新消息重复发布。",
+  };
+}
+
 function renderHistoryControls(history) {
   const categories = getHistoryCategories(history);
 
@@ -195,13 +215,14 @@ function renderHistory(history) {
   const filteredEditions = getFilteredEditions(history);
   const sortedEditions = sortHistoryEditions(filteredEditions, selectedSort);
   const totalItems = sortedEditions.reduce((count, edition) => count + edition.items.length, 0);
-  const latestEdition = sortHistoryEditions(history.editions)[0];
+  const latestEdition = getLatestEdition(history);
+  const archivedEditionCount = Math.max(history.editions.length - 1, 0);
   const categoryLabel =
     getHistoryCategories(history).find((category) => category.id === selectedCategory)?.label || "全部";
   const sortLabel = selectedSort === "oldest" ? "最早批次优先" : "最新批次优先";
 
   historyMeta.textContent = `目前共 ${history.editions.length} 个抓取批次 · ${history.totalItems || totalItems} 条情报 · 最新抓取：${latestEdition.date} · ${latestEdition.archiveLabel}`;
-  historyResultNote.textContent = `当前显示：${categoryLabel} · ${sortedEditions.length} 个批次 · ${totalItems} 条情报 · ${sortLabel}。原始来源仍只作为核对线索，优先阅读站内解读。`;
+  historyResultNote.textContent = `当前显示：${categoryLabel} · ${sortedEditions.length} 个批次 · ${totalItems} 条情报 · ${sortLabel}。最新抓取批次用于先看本次新增，${archivedEditionCount} 个已归档批次只用于回看背景；原始来源仍只作为核对线索，优先阅读站内解读。`;
   renderHistoryControls(history);
 
   if (!sortedEditions.length) {
@@ -215,15 +236,22 @@ function renderHistory(history) {
 
   historyList.innerHTML = sortedEditions
     .map(
-      (edition, editionIndex) => `
+      (edition) => {
+        const batchStatus = getEditionBatchStatus(edition, latestEdition);
+
+        return `
         <section class="history-edition" aria-label="${escapeHtml(`${edition.date} ${edition.archiveLabel}`)}">
           <div class="history-edition-header">
             <div>
-              <p class="eyebrow">${editionIndex === 0 ? "Latest Capture" : "Past Capture"}</p>
+              <p class="eyebrow">${batchStatus.tone === "latest" ? "Latest Capture" : "Archived Capture"}</p>
               <h3>${escapeHtml(edition.date)} · ${escapeHtml(edition.archiveLabel)}</h3>
+              <p class="batch-status-note">${escapeHtml(batchStatus.note)}</p>
               <p>${escapeHtml(edition.note || edition.editorNote || "本批次暂无补充说明。")}</p>
             </div>
-            <span>${edition.items.length} 条</span>
+            <div class="history-edition-badges" aria-label="${escapeHtml(batchStatus.label)}">
+              <span class="batch-status ${escapeHtml(batchStatus.tone)}">${escapeHtml(batchStatus.label)}</span>
+              <span>${edition.items.length} 条</span>
+            </div>
           </div>
           <div class="history-card-grid">
             ${sortHistoryItems(edition.items, selectedSort)
@@ -250,7 +278,8 @@ function renderHistory(history) {
               .join("")}
           </div>
         </section>
-      `,
+      `;
+      },
     )
     .join("");
 }

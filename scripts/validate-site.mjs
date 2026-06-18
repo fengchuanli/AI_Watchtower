@@ -515,6 +515,8 @@ if (
   !/id="historyCategoryFilters"/.test(allNewsHtml) ||
   !/id="historySort"/.test(allNewsHtml) ||
   !/id="historyResultNote"/.test(allNewsHtml) ||
+  !/最新抓取批次/.test(allNewsHtml) ||
+  !/已归档批次/.test(allNewsHtml) ||
   !/function getHistoryCategories\(history\)/.test(allNewsJs) ||
   !/function getFilteredEditions\(history\)/.test(allNewsJs) ||
   !/selectedSort = historySort\.value === "oldest" \? "oldest" : "newest";/.test(allNewsJs) ||
@@ -523,6 +525,17 @@ if (
   !/\.history-filter-tabs button\.active/.test(styles)
 ) {
   errors.push("All-news history must support category filtering, sort switching, and an editorial result note.");
+}
+
+if (
+  !/function getEditionBatchStatus\(edition, latestEdition\)/.test(allNewsJs) ||
+  !/最新抓取批次用于先看本次新增/.test(allNewsJs) ||
+  !/不作为今日新消息重复发布/.test(allNewsJs) ||
+  !/class="batch-status \$\{escapeHtml\(batchStatus\.tone\)\}"/.test(allNewsJs) ||
+  !/\.batch-explainer/.test(styles) ||
+  !/\.history-edition-badges \.batch-status\.archived/.test(styles)
+) {
+  errors.push("All-news history must distinguish the latest capture batch from archived batches.");
 }
 
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {
