@@ -475,6 +475,15 @@ if (
   errors.push("Homepage deep briefing must render an explicit source frame for facts, judgment, and unknowns.");
 }
 
+if (
+  !/id="sourceFamilies"/.test(html) ||
+  !/const sourceFamilies = document\.querySelector\("#sourceFamilies"\);/.test(appJs) ||
+  !/edition\.sourceFamilies/.test(appJs) ||
+  !/\.source-families/.test(styles)
+) {
+  errors.push("Homepage feed metadata must render edition source-family framing.");
+}
+
 if (!/AI Watchtower 不追求把所有官方更新铺满首页/.test(html) || !/范式变化/.test(html)) {
   errors.push("Homepage must explain the narrative-first editorial selection logic.");
 }

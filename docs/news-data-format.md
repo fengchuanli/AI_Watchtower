@@ -17,6 +17,7 @@ The required top-level `edition` object gives each homepage snapshot a stable ar
 - `archiveLabel`: Short Chinese status label shown in the homepage feed metadata.
 - `note`: Chinese scope note explaining what the archived edition does and does not represent.
 - `coverageMix`: At least two objects with `label`, positive integer `count`, and Chinese `meaning`. The counts must add up to the current `items.length`, and each meaning should explain how readers should use that signal group.
+- `sourceFamilies`: One object for each source tier used by current `items`, with `family`, `label`, positive integer `count`, and Chinese `role`. Counts must match item `sourceId` entries through `data/sources.json` `trustLevel`; use this to explain whether a batch relies on official sources, research originals, reliable media, or community signals.
 
 ## Briefing Fields
 

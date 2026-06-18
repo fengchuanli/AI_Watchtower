@@ -7,6 +7,7 @@ const filterButtons = document.querySelectorAll("[data-filter]");
 const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
 const coverageMix = document.querySelector("#coverageMix");
+const sourceFamilies = document.querySelector("#sourceFamilies");
 const categoryMeta = document.querySelector("#categoryMeta");
 const briefingLabel = document.querySelector("#briefingLabel");
 const briefingHeadline = document.querySelector("#briefingHeadline");
@@ -176,6 +177,18 @@ function validateEdition(edition, updatedAt) {
 
   if (invalidCoverage) {
     throw new Error("Each edition coverage mix item must include label, count, and meaning.");
+  }
+
+  if (!Array.isArray(edition.sourceFamilies) || !edition.sourceFamilies.length) {
+    throw new Error("News edition must include source family framing.");
+  }
+
+  const invalidSourceFamily = edition.sourceFamilies.find(
+    (item) => !item.family || !item.label || !Number.isInteger(item.count) || item.count < 1 || !item.role,
+  );
+
+  if (invalidSourceFamily) {
+    throw new Error("Each edition source family must include family, label, count, and role.");
   }
 }
 
@@ -486,6 +499,20 @@ function updateNewsMeta(data) {
           <span>
             <strong>${escapeHtml(item.label)} · ${escapeHtml(item.count)} 条</strong>
             ${escapeHtml(item.meaning)}
+          </span>
+        `,
+      )
+      .join("");
+  }
+
+  if (sourceFamilies) {
+    const families = data.edition?.sourceFamilies || [];
+    sourceFamilies.innerHTML = families
+      .map(
+        (item) => `
+          <span>
+            <strong>${escapeHtml(item.label)} · ${escapeHtml(item.count)} 条</strong>
+            ${escapeHtml(item.role)}
           </span>
         `,
       )

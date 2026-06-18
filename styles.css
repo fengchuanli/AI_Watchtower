@@ -292,7 +292,8 @@ h3 {
   font-size: 14px;
 }
 
-.coverage-mix {
+.coverage-mix,
+.source-families {
   display: flex;
   max-width: 760px;
   flex-wrap: wrap;
@@ -300,7 +301,12 @@ h3 {
   margin-top: 12px;
 }
 
-.coverage-mix span {
+.source-families {
+  margin-top: 8px;
+}
+
+.coverage-mix span,
+.source-families span {
   max-width: 240px;
   padding: 9px 11px;
   color: var(--muted);
@@ -310,7 +316,13 @@ h3 {
   font-size: 13px;
 }
 
-.coverage-mix strong {
+.source-families span {
+  background: #f7fbff;
+  border-color: rgb(37 99 235 / 18%);
+}
+
+.coverage-mix strong,
+.source-families strong {
   display: block;
   margin-bottom: 3px;
   color: var(--ink);

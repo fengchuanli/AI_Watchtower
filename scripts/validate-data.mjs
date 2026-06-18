@@ -5,7 +5,9 @@ const newsFeed = JSON.parse(readFileSync("data/news.json", "utf8"));
 const newsHistory = JSON.parse(readFileSync("data/news-history.json", "utf8"));
 
 const sourceIds = new Set(sourceRegistry.sources.map((source) => source.id));
+const sourcesById = new Map(sourceRegistry.sources.map((source) => [source.id, source]));
 const allowedCategories = new Set(["all", "model", "product", "research", "tool", "funding", "policy"]);
+const allowedSourceFamilies = new Set(["official", "research", "reliable_media", "community_signal"]);
 const requiredNewsFields = [
   "id",
   "category",
@@ -166,6 +168,52 @@ if (!newsFeed.edition) {
 
       if (entry.meaning && !/用于观察|用于判断|用于核对/.test(entry.meaning)) {
         errors.push(`data/news.json edition coverageMix[${index}] must explain how readers should use that signal group.`);
+      }
+    }
+  }
+
+  if (!Array.isArray(newsFeed.edition.sourceFamilies) || !newsFeed.edition.sourceFamilies.length) {
+    errors.push("data/news.json edition must include sourceFamilies entries.");
+  } else {
+    const sourceFamilyCounts = new Map();
+    const seenFamilies = new Set();
+
+    for (const item of newsFeed.items || []) {
+      const source = sourcesById.get(item.sourceId);
+      const family = source?.trustLevel;
+
+      if (family) {
+        sourceFamilyCounts.set(family, (sourceFamilyCounts.get(family) || 0) + 1);
+      }
+    }
+
+    for (const [index, entry] of newsFeed.edition.sourceFamilies.entries()) {
+      if (!entry.family || !entry.label || !Number.isInteger(entry.count) || entry.count < 1 || !entry.role) {
+        errors.push(`data/news.json edition sourceFamilies[${index}] must include family, label, positive count, and role.`);
+      }
+
+      if (entry.family && !allowedSourceFamilies.has(entry.family)) {
+        errors.push(`data/news.json edition sourceFamilies[${index}] has unsupported family ${entry.family}.`);
+      }
+
+      if (entry.family && seenFamilies.has(entry.family)) {
+        errors.push(`data/news.json edition sourceFamilies repeats family ${entry.family}.`);
+      }
+
+      if (entry.family && entry.count !== sourceFamilyCounts.get(entry.family)) {
+        errors.push(`data/news.json edition sourceFamilies[${index}] count must match current item source tiers.`);
+      }
+
+      if (entry.role && !/来源|原文|事实|核对|信号/.test(entry.role)) {
+        errors.push(`data/news.json edition sourceFamilies[${index}] must explain how that source family should be used.`);
+      }
+
+      seenFamilies.add(entry.family);
+    }
+
+    for (const [family, count] of sourceFamilyCounts.entries()) {
+      if (count > 0 && !seenFamilies.has(family)) {
+        errors.push(`data/news.json edition sourceFamilies is missing current source family ${family}.`);
       }
     }
   }

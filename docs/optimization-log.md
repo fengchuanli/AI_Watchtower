@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 16:03 JST
+
+- Focus: Improved Phase 2 Day 9 source-family grouping by adding edition-level source-family framing to the homepage feed metadata. The current batch now explains that all three promoted items are supported by official source pages, and validation cross-checks those counts against each item's `sourceId` and `data/sources.json` trust tier so source framing cannot drift from the registry.
+- Changed files:
+  - `data/news.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including edition source-family counts.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and source-family rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit created; final hash is recorded in the automation memory and run summary because amending this log changes the commit hash. Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-18 15:03 JST
 
 - Focus: Improved Phase 2 Day 8 company tag discovery by adding per-company context cards for OpenAI, Anthropic, Google, and Meta. Each tag page now explains why the company is worth tracking, shows the latest matching coverage batch and category spread, and reminds readers to treat original links as fact-boundary references after reading the station's own event briefings.
