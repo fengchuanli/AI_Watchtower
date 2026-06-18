@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-18 17:09 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update. Official source indexes did not show a newer post after the 08:00 run, so this batch uses non-repeated Google/DeepMind official signals that still support full in-site briefings: DiffusionGemma's diffusion-text low-latency model route, the Sierra Leone Guided Learning RCT, and Gemini 3.5 Live Translate.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked `data/sources.json` and `docs/source-policy.md` before selecting sources.
+  - Used official Google/DeepMind pages as fact sources and skipped media rumors, community discussion, and repeated historical source URLs.
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+  - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
+- Commit: `更新17点AI新闻情报`
+
 ## 2026-06-18 16:03 JST
 
 - Focus: Improved Phase 2 Day 9 source-family grouping by adding edition-level source-family framing to the homepage feed metadata. The current batch now explains that all three promoted items are supported by official source pages, and validation cross-checks those counts against each item's `sourceId` and `data/sources.json` trust tier so source framing cannot drift from the registry.
