@@ -822,7 +822,7 @@ h3 {
 }
 
 .news-card .card-summary {
-  margin-bottom: 12px;
+  margin: 0;
   color: var(--ink);
 }
 
@@ -844,7 +844,7 @@ h3 {
 }
 
 .news-card .impact-note {
-  margin: 12px 0 0;
+  margin: 0;
   padding-left: 12px;
   border-left: 3px solid var(--amber);
   color: var(--ink);
@@ -852,14 +852,14 @@ h3 {
 }
 
 .news-card .trend-note {
-  margin: 12px 0 0;
+  margin: 0;
   color: var(--ink);
   font-size: 14px;
   font-weight: 700;
 }
 
 .news-card .rank-note {
-  margin: 10px 0 0;
+  margin: 0;
   padding: 10px 12px;
   color: var(--ink);
   background: #f1f4f8;
@@ -875,6 +875,7 @@ h3 {
 }
 
 .news-card .selection-score {
+  margin: 0;
   background: #fff8e7;
 }
 
@@ -885,7 +886,7 @@ h3 {
 }
 
 .news-card .reader-use {
-  margin: 8px 0 0;
+  margin: 0;
   padding-left: 12px;
   border-left: 3px solid var(--cyan);
   color: var(--ink);
@@ -899,7 +900,7 @@ h3 {
 }
 
 .news-card .next-check {
-  margin: 8px 0 0;
+  margin: 0;
   padding-left: 12px;
   border-left: 3px solid var(--green);
   color: var(--ink);
@@ -914,7 +915,7 @@ h3 {
 
 .news-card .follow-up-questions,
 .detail-question-list {
-  margin: 8px 0 0;
+  margin: 0;
   padding: 10px 12px;
   color: var(--ink);
   background: #f7f2ea;
@@ -945,7 +946,7 @@ h3 {
 }
 
 .news-card .evidence-threshold {
-  margin: 8px 0 0;
+  margin: 0;
   padding: 10px 12px;
   color: var(--ink);
   background: #f6f8f4;
@@ -963,7 +964,7 @@ h3 {
 
 .news-card .claim-boundary,
 .news-card .counter-evidence {
-  margin: 8px 0 0;
+  margin: 0;
   padding: 10px 12px;
   color: var(--ink);
   background: #fff7ed;
@@ -992,7 +993,7 @@ h3 {
 }
 
 .news-card .source-role {
-  margin: 8px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: 12px;
 }
@@ -1003,7 +1004,7 @@ h3 {
 }
 
 .news-card .source-note {
-  margin: 8px 0 0;
+  margin: 0;
   padding-top: 14px;
   border-top: 1px solid var(--line);
   font-size: 13px;
@@ -1072,7 +1073,23 @@ h3 {
   display: flex;
   min-height: 252px;
   flex-direction: column;
+  gap: 16px;
   padding: 24px;
+}
+
+.news-card .category {
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+
+.news-card-body {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.news-card-body h3 {
+  margin: 0;
 }
 
 .news-card footer {
@@ -1081,8 +1098,9 @@ h3 {
   gap: 10px;
   flex-wrap: wrap;
   margin-top: auto;
-  padding-top: 24px;
+  padding-top: 18px;
   color: var(--muted);
+  border-top: 1px solid var(--line);
   font-size: 13px;
   font-weight: 700;
 }
@@ -2284,6 +2302,15 @@ h3 {
   .top-story,
   .ranking-list li {
     grid-template-columns: 1fr;
+  }
+
+  .news-card {
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .news-card-body {
+    gap: 10px;
   }
 
   .quick-summary li {

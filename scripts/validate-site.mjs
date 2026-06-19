@@ -458,6 +458,16 @@ if (
   errors.push("Homepage news cards must use the same readable labels as the detail page.");
 }
 
+if (
+  !/class="news-card-body"/.test(appJs) ||
+  !/\.news-card\s*\{[^}]*display:\s*flex;[^}]*gap:\s*16px;/s.test(styles) ||
+  !/\.news-card-body\s*\{[^}]*display:\s*grid;[^}]*gap:\s*12px;/s.test(styles) ||
+  !/\.news-card footer\s*\{[^}]*border-top:\s*1px solid var\(--line\);/s.test(styles) ||
+  !/@media \(max-width: 620px\)\s*\{[\s\S]*?\.news-card\s*\{[^}]*gap:\s*14px;[^}]*padding:\s*20px;/s.test(styles)
+) {
+  errors.push("Homepage news cards must keep deliberate desktop and mobile visual rhythm.");
+}
+
 if (!/\.overview-flow::before/.test(styles) || !/\.overview-risk-grid/.test(styles)) {
   errors.push("News detail incident pages must include an auto-generated overview diagram style.");
 }

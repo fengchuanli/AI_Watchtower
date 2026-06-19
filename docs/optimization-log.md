@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 21:04 JST
+
+- Focus: Improved Phase 4 Day 22 homepage card visual rhythm and mobile spacing. News cards now render their title, summary, trend, ranking reason, and selection score inside a dedicated card body with explicit grid gaps, while the footer is separated by a quiet rule. Mobile cards use slightly tighter padding and spacing so the current TOP3 feed remains easier to scan without removing editorial context or source-boundary cues.
+- Changed files:
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on reducing homepage reading burden for Chinese readers.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and the homepage card rhythm guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing. `package-lock.json` is absent in this checkout.
+  - Ran `git diff --check`.
+  - Attempted a local browser render check, but the sandbox denied local port binding and the in-app browser security policy blocked `file://` navigation.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit. Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-19 20:03 JST
 
 - Focus: Improved Phase 3 Day 21 Chinese copy clarity and consistency for the homepage deep briefing. Localized reader-facing structural labels such as the deep briefing kicker, section labels, `So What?`, `FinOps`, and `checklist` wording into Chinese-first copy while preserving product names, model names, API names, source facts, and verification boundaries. Added validation to prevent common unexplained English structural phrases from returning to visible editorial copy.
