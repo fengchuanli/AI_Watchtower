@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 18:02 JST
+
+- Focus: Improved Phase 3 Day 19 source policy for VisionHub-style narrative events without weakening fact safety. The source policy now explains how to handle vendor-written customer stories, policy proposals, benchmarks, and company narratives: use `厂商主张` when appropriate, verify only the narrow fact that the vendor made the claim, and require missing external proof before upgrading outcomes. The data validator now enforces this boundary for `厂商主张` items across the current feed and history.
+- Changed files:
+  - `docs/source-policy.md`
+  - `docs/news-data-format.md`
+  - `scripts/validate-data.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/source-policy.md`, and `docs/editorial-checklist.md`; kept the change focused on clearer Chinese source framing and fact-vs-vendor-claim boundaries.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including vendor-claim boundary checks.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing. `package-lock.json` is absent in this checkout.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `78a5fb8` (`强化厂商叙事来源边界`). Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-19 17:33 JST
 
 - Focus: Improved Phase 3 Day 18 product maintainability by strengthening de-duplication before publication. The data validator now normalizes Chinese/Latin titles, compares title-token overlap, and rejects near-duplicate current or historical headlines in addition to the existing repeated source URL checks, so the archive is less likely to republish the same event with slightly different wording.
