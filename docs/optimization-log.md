@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 08:06 JST
+
+- Focus: Published the 08:00 JST AI news intelligence update with official Microsoft Security and NVIDIA signals on AutoJack agent control-plane risk, agentic marketing infrastructure, and France/Europe AI infrastructure production narratives. Kept NVIDIA items explicitly framed as vendor claims and skipped repeated OpenAI, Anthropic, DeepMind, and Google items already covered in the current archive.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `data/sources.json` and `docs/source-policy.md`; used official/RSS-oriented source policy and avoided random scraping, rumors, search-result snippets, and community discussion.
+  - Checked OpenAI News, OpenAI Developers RSS, Anthropic Newsroom, Google DeepMind News, Mistral News, NVIDIA AI Blog, Microsoft AI/ Security pages, and historical source URLs to avoid repeated coverage.
+  - Ran `node scripts/validate-data.mjs` after the data rewrite and fixed the only structural issue before continuing.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs`, `node scripts/validate-site.mjs`, and `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing. `package-lock.json` is absent in this checkout.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; push may be blocked if GitHub DNS/network access remains unavailable.
+
 ## 2026-06-19 21:04 JST
 
 - Focus: Improved Phase 4 Day 22 homepage card visual rhythm and mobile spacing. News cards now render their title, summary, trend, ranking reason, and selection score inside a dedicated card body with explicit grid gaps, while the footer is separated by a quiet rule. Mobile cards use slightly tighter padding and spacing so the current TOP3 feed remains easier to scan without removing editorial context or source-boundary cues.
