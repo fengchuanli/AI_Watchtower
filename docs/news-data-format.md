@@ -34,7 +34,7 @@ The optional top-level `briefing` object powers the homepage Today Briefing sect
 
 The required top-level `deepBriefing` object powers the homepage long-form explanation section. It should make the news understandable inside AI Watchtower, using original links only as references.
 
-- `kicker`: Short English or Chinese section label.
+- `kicker`: Short Chinese-first section label; keep English only when it is a product or source name readers need to recognize.
 - `title`: Chinese briefing title.
 - `subtitle`: Chinese one-paragraph summary of the briefing angle.
 - `dateLabel`: Human-readable date label.
@@ -47,6 +47,8 @@ The required top-level `deepBriefing` object powers the homepage long-form expla
 - `coverageLimits`: At least two objects with `label` and `body` that state the edition's time, source, or conclusion boundaries so readers do not treat a snapshot as complete market coverage.
 - `sourceFrame`: Required object that separates what sources directly support from AI Watchtower's interpretation. It needs `sourceFacts`, `editorialJudgment`, and `unknowns`; each array should contain at least two Chinese statements.
 - `references`: Source references retained for verification rather than primary navigation. Each reference needs `label` and an `http` or `https` `url`; the homepage opens these links in a new window with an explicit accessible label.
+
+Deep-briefing visible labels should be Chinese-first. Avoid unexplained structural English such as `Intelligence Briefing`, `Health AI`, `Medical Research`, `Enterprise Ops`, `So What?`, `checklist`, or `FinOps` in reader-facing copy when a clear Chinese label works. Product names, model names, API names, and source titles may remain in English when that is the actual name readers need to recognize.
 
 ## Category Fields
 

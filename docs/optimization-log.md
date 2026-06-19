@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 20:03 JST
+
+- Focus: Improved Phase 3 Day 21 Chinese copy clarity and consistency for the homepage deep briefing. Localized reader-facing structural labels such as the deep briefing kicker, section labels, `So What?`, `FinOps`, and `checklist` wording into Chinese-first copy while preserving product names, model names, API names, source facts, and verification boundaries. Added validation to prevent common unexplained English structural phrases from returning to visible editorial copy.
+- Changed files:
+  - `data/news.json`
+  - `app.js`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on easier Chinese reading without changing source-backed claims.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including Chinese-first editorial copy checks.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and the Chinese-first deep-briefing guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing. `package-lock.json` is absent in this checkout.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit. Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-19 19:03 JST
 
 - Focus: Improved Phase 3 Day 20 product maintainability by adding stale-item and repeated historical coverage guards. The data validator now rejects current feed items whose `publishedAt` is more than seven days behind the edition date, blocks current source URLs already captured in older archive batches, and flags current titles that resemble older archive coverage unless a fresh source fact makes the update distinct.

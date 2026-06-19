@@ -508,7 +508,7 @@ function updateDeepBriefing(deepBriefing) {
           <span>${escapeHtml(section.number)} · ${escapeHtml(section.label)}</span>
           <h3>${escapeHtml(section.title)}</h3>
           <p>${escapeHtml(section.body)}</p>
-          <p class="deep-so-what"><strong>So What?</strong>${escapeHtml(section.soWhat)}</p>
+          <p class="deep-so-what"><strong>为什么重要</strong>${escapeHtml(section.soWhat)}</p>
         </article>
       `,
     )

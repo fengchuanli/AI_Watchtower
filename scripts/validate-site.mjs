@@ -322,6 +322,16 @@ if (
 }
 
 if (
+  /So What\?/.test(appJs) ||
+  !/为什么重要/.test(appJs) ||
+  !/validateChineseEditorialCopy/.test(validateDataJs) ||
+  !/Intelligence Briefing/.test(validateDataJs) ||
+  !/FinOps/.test(validateDataJs)
+) {
+  errors.push("Homepage deep briefing must use Chinese-first editorial labels and validate common English drift.");
+}
+
+if (
   !/id="heroSignalCount">--<\/dt>/.test(html) ||
   !/id="heroSourceCount">--<\/dt>/.test(html) ||
   !/id="heroChecklistMode">逐条<\/dt>/.test(html) ||

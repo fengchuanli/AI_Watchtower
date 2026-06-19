@@ -324,6 +324,64 @@ function validateVendorClaimBoundary(item, context) {
   }
 }
 
+function hasChineseText(value) {
+  return /\p{Script=Han}/u.test(String(value || ""));
+}
+
+function validateChineseEditorialCopy(data) {
+  const deepBriefing = data.deepBriefing;
+  const forbiddenVisiblePhrases = [
+    "Intelligence Briefing",
+    "Health AI",
+    "Medical Research",
+    "Enterprise Ops",
+    "So What?",
+    "checklist",
+    "FinOps",
+  ];
+  const visibleText = [
+    data.briefing?.headline,
+    data.briefing?.summary,
+    ...(data.briefing?.watchPoints || []).flatMap((point) => [point.title, point.body]),
+    deepBriefing?.kicker,
+    deepBriefing?.title,
+    deepBriefing?.subtitle,
+    deepBriefing?.overview,
+    ...(deepBriefing?.timeline || []).flatMap((item) => [item.title, item.body]),
+    ...(deepBriefing?.sections || []).flatMap((section) => [
+      section.label,
+      section.title,
+      section.body,
+      section.soWhat,
+    ]),
+    ...(deepBriefing?.actions || []),
+    ...(deepBriefing?.sourceFrame?.editorialJudgment || []),
+    ...(data.items || []).flatMap((item) => [
+      item.readerUse,
+      item.evidenceThreshold,
+      item.detailTrend,
+    ]),
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  for (const phrase of forbiddenVisiblePhrases) {
+    if (visibleText.includes(phrase)) {
+      errors.push(`Visible Chinese editorial copy should avoid unexplained English structural phrase "${phrase}".`);
+    }
+  }
+
+  if (deepBriefing?.kicker && !hasChineseText(deepBriefing.kicker)) {
+    errors.push("data/news.json deepBriefing.kicker must be Chinese-readable.");
+  }
+
+  for (const [index, section] of (deepBriefing?.sections || []).entries()) {
+    if (section.label && !hasChineseText(section.label)) {
+      errors.push(`data/news.json deepBriefing.sections[${index}].label must be Chinese-readable.`);
+    }
+  }
+}
+
 if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
   errors.push("data/sources.json must include at least one source.");
 }
@@ -333,6 +391,7 @@ if (!Array.isArray(newsFeed.items)) {
 } else if (sortSignature(newsFeed.items) !== expectedSortSignature(newsFeed.items)) {
   errors.push("data/news.json items must be sorted newest first by publishedAt.");
 } else {
+  validateChineseEditorialCopy(newsFeed);
   validateSimilarTitles(newsFeed.items, "data/news.json");
   validateCurrentItemFreshness(newsFeed.items, newsFeed.updatedAt);
 
