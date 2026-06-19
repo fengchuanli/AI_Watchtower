@@ -103,6 +103,8 @@ The all-news history page derives its category filters from historical item `cat
 - `publishedAt`: ISO-like timestamp with timezone.
 - `time`: Short display time.
 
+Promoted items, including the current `今日 TOP3` and the latest archived snapshot, must be able to support a full in-site incident briefing before publication. The validator treats promotion as a combined contract: each promoted item needs event explanation, trend meaning, ranking value, reader impact, reader use, next checks, evidence threshold, claim boundary, downgrade signal, source role, provenance, verification status, at least two follow-up questions, and selection scores with enough narrative strength and evidence quality. If an item lacks these sections, keep it out of the promoted feed until the source material can support the briefing.
+
 ## Validation
 
 Run this before committing content updates:
@@ -111,4 +113,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

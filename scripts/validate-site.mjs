@@ -12,6 +12,7 @@ const detailJs = readFileSync("news-detail.js", "utf8");
 const allNewsJs = readFileSync("all-news.js", "utf8");
 const tagsJs = readFileSync("tags.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
+const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const errors = [];
@@ -392,12 +393,14 @@ if (!/href="\$\{escapeHtml\(item\.sourceUrl\)\}" target="_blank" rel="noopener n
 
 if (
   !/const requiredDetailFields = \[[\s\S]*"counterEvidence"[\s\S]*"time"[\s\S]*\];/.test(detailJs) ||
+  !/const incidentBriefingSections = \[[\s\S]*"detailBody"[\s\S]*"verificationStatus"[\s\S]*\];/.test(detailJs) ||
   !/"detailWhyRanked"/.test(detailJs) ||
   !/validateDetailFeed\(currentFeed\);/.test(detailJs) ||
   !/function validateDetailItem\(item\) \{[\s\S]*requiredDetailFields\.find/.test(detailJs) ||
+  !/missingBriefingSection/.test(detailJs) ||
   !/validateDetailItem\(item\);\s*document\.title/.test(detailJs)
 ) {
-  errors.push("News detail page must validate required display fields before rendering.");
+  errors.push("News detail page must validate required display fields and incident-briefing sections before rendering.");
 }
 
 if (
@@ -524,6 +527,15 @@ if (
   !/\.selection-score/.test(styles)
 ) {
   errors.push("Homepage must render editorial selection scores for impact, novelty, narrative strength, evidence quality, and reader utility.");
+}
+
+if (
+  !/const incidentBriefingSections = \[/.test(validateDataJs) ||
+  !/function validateIncidentBriefingReadiness/.test(validateDataJs) ||
+  !/data\/news\.json promoted item/.test(validateDataJs) ||
+  !/data\/news-history\.json latest promoted item/.test(validateDataJs)
+) {
+  errors.push("Data validation must confirm every promoted item can support an incident briefing.");
 }
 
 if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function findHistoryContext/.test(detailJs)) {

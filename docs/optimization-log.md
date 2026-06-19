@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 15:04 JST
+
+- Focus: Improved Phase 3 Day 16 product quality by adding validation that every promoted item can support an in-site incident briefing. The data validator now checks current TOP3 items and the latest archive snapshot for event explanation, trend meaning, ranking value, reader impact, reader use, next checks, evidence threshold, claim boundary, downgrade signal, source role, provenance, verification status, follow-up questions, and sufficient narrative/evidence scores before promotion; the detail page also rejects items that cannot fill the incident briefing sections before rendering.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `news-detail.js`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on clearer, source-bounded Chinese incident briefings.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including promoted-item incident briefing readiness.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and the incident-briefing validation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit. Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-19 14:04 JST
 
 - Focus: Improved Phase 3 Day 15 editorial quality by adding structured selection scoring for the current TOP3 items. Each current item now records impact, novelty, narrative strength, evidence quality, reader utility, total score, and a short Chinese scoring note; the homepage renders the score beside the ranking reason, and validation checks score shape and totals for the current feed and latest archive snapshot.

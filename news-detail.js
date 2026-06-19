@@ -24,6 +24,20 @@ const requiredDetailFields = [
   "publishedAt",
   "time",
 ];
+const incidentBriefingSections = [
+  ["detailBody", 40],
+  ["detailTrend", 40],
+  ["detailWhyRanked", 40],
+  ["impact", 12],
+  ["readerUse", 12],
+  ["nextCheck", 12],
+  ["evidenceThreshold", 12],
+  ["claimBoundary", 12],
+  ["counterEvidence", 12],
+  ["sourceRole", 2],
+  ["provenance", 20],
+  ["verificationStatus", 2],
+];
 
 function escapeHtml(value) {
   return String(value)
@@ -134,6 +148,14 @@ function validateDetailItem(item) {
 
   if (missingField) {
     throw new Error(`News detail item ${item.id || "without id"} is missing ${missingField}.`);
+  }
+
+  const missingBriefingSection = incidentBriefingSections.find(([field, minLength]) => {
+    return typeof item[field] !== "string" || item[field].trim().length < minLength;
+  });
+
+  if (missingBriefingSection) {
+    throw new Error(`News detail item ${item.id || "without id"} cannot support incident briefing section ${missingBriefingSection[0]}.`);
   }
 
   if (!Array.isArray(item.followUpQuestions) || item.followUpQuestions.length < 2) {

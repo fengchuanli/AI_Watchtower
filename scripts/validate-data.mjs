@@ -44,6 +44,20 @@ const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
 const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
 const allowedSourceRoles = new Set(["官方核对", "研究原文", "媒体背景", "社区发现", "厂商主张"]);
+const incidentBriefingSections = [
+  ["detailBody", "what happened", 40],
+  ["detailTrend", "trend meaning", 40],
+  ["detailWhyRanked", "why it matters", 40],
+  ["impact", "reader impact", 12],
+  ["readerUse", "reader use", 12],
+  ["nextCheck", "next checks", 12],
+  ["evidenceThreshold", "evidence threshold", 12],
+  ["claimBoundary", "claim boundary", 12],
+  ["counterEvidence", "downgrade signal", 12],
+  ["sourceRole", "source role", 2],
+  ["provenance", "source boundary", 20],
+  ["verificationStatus", "verification status", 2],
+];
 
 const errors = [];
 
@@ -101,6 +115,43 @@ function validateSelectionScore(score, itemId, context) {
   }
 }
 
+function validateIncidentBriefingReadiness(item, context) {
+  for (const [field, label, minLength] of incidentBriefingSections) {
+    if (typeof item[field] !== "string" || item[field].trim().length < minLength) {
+      errors.push(`${context} ${item.id || "unknown item"} must include ${label} for an incident briefing.`);
+    }
+  }
+
+  if (!Array.isArray(item.followUpQuestions) || item.followUpQuestions.length < 2) {
+    errors.push(`${context} ${item.id || "unknown item"} must include follow-up questions for an incident briefing.`);
+  }
+
+  if (!item.selectionScore || item.selectionScore.narrativeStrength < 3 || item.selectionScore.evidenceQuality < 3) {
+    errors.push(
+      `${context} ${item.id || "unknown item"} must have narrativeStrength and evidenceQuality scores of at least 3 before promotion.`,
+    );
+  }
+
+  const briefingText = [
+    item.detailBody,
+    item.detailTrend,
+    item.detailWhyRanked,
+    item.claimBoundary,
+    item.nextCheck,
+    item.provenance,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  if (!/不能|不证明|仍需|边界|待验证|待核对|缺少|如果|若/.test(briefingText)) {
+    errors.push(`${context} ${item.id || "unknown item"} must name a verification boundary before promotion.`);
+  }
+
+  if (!/因为|所以|意味着|影响|用于|观察|判断|核对/.test(briefingText)) {
+    errors.push(`${context} ${item.id || "unknown item"} must explain the reader-facing reason for promotion.`);
+  }
+}
+
 if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
   errors.push("data/sources.json must include at least one source.");
 }
@@ -111,6 +162,7 @@ if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json items must be sorted newest first by publishedAt.");
 } else {
   const topRankingReasons = newsFeed.items.slice(0, 3).map((item) => item.whyRanked?.trim()).filter(Boolean);
+  const promotedItems = newsFeed.items.slice(0, 3);
 
   if (topRankingReasons.length !== Math.min(newsFeed.items.length, 3)) {
     errors.push("Top news items must include ranking reasons for the homepage TOP3.");
@@ -118,6 +170,10 @@ if (!Array.isArray(newsFeed.items)) {
 
   if (new Set(topRankingReasons).size !== topRankingReasons.length) {
     errors.push("Homepage TOP3 ranking reasons must be distinct.");
+  }
+
+  for (const item of promotedItems) {
+    validateIncidentBriefingReadiness(item, "data/news.json promoted item");
   }
 }
 
@@ -511,6 +567,10 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
 
       if (editionIndex === 0 || item.selectionScore) {
         validateSelectionScore(item.selectionScore, item.id, "data/news-history.json item");
+      }
+
+      if (editionIndex === 0) {
+        validateIncidentBriefingReadiness(item, "data/news-history.json latest promoted item");
       }
     }
 
