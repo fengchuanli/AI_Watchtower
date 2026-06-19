@@ -255,6 +255,40 @@ function getRiskCards(item) {
   ];
 }
 
+function getSourceBoundaryCards(item) {
+  return [
+    {
+      title: "来源已支持",
+      label: item.sourceRole,
+      body: item.provenance,
+    },
+    {
+      title: "本站解读",
+      label: item.verificationStatus,
+      body: item.detailTrend,
+    },
+    {
+      title: "仍不能推出",
+      label: "边界",
+      body: item.claimBoundary,
+    },
+  ];
+}
+
+function renderSourceBoundaryCards(cards) {
+  return cards
+    .map(
+      (card) => `
+        <article>
+          <span>${escapeHtml(card.label)}</span>
+          <h3>${escapeHtml(card.title)}</h3>
+          <p>${escapeHtml(card.body)}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function renderOverviewCards(cards) {
   return cards
     .map(
@@ -410,6 +444,7 @@ function renderDetail(item, data) {
   const overviewCards = getOverviewCards(item);
   const diagramNodes = getDiagramNodes(item);
   const riskCards = getRiskCards(item);
+  const sourceBoundaryCards = getSourceBoundaryCards(item);
 
   detailShell.innerHTML = `
     <div class="incident-hero">
@@ -492,6 +527,16 @@ function renderDetail(item, data) {
         <div class="overview-risk-grid" aria-label="风险与核对点">
           ${renderRiskCards(riskCards)}
         </div>
+      </div>
+    </section>
+
+    <section class="source-boundary-panel" aria-label="事实、解读与未知边界">
+      <div class="source-boundary-heading">
+        <p class="eyebrow">Source Boundary</p>
+        <h2>把事实、解读和未知分开看</h2>
+      </div>
+      <div class="source-boundary-grid">
+        ${renderSourceBoundaryCards(sourceBoundaryCards)}
       </div>
     </section>
 

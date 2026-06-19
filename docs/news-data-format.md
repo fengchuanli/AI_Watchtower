@@ -103,6 +103,8 @@ The all-news history page derives its category filters from historical item `cat
 - `publishedAt`: ISO-like timestamp with timezone.
 - `time`: Short display time.
 
+The detail page derives a source-boundary panel from existing item fields rather than adding a separate claim layer. `provenance` is shown as what the linked source can directly support, `detailTrend` is shown as AI Watchtower's interpretation, and `claimBoundary` is shown as what the item still cannot prove. Keep these fields written so a reader can distinguish source-backed facts from editorial judgment without leaving the page.
+
 Promoted items, including the current `今日 TOP3` and the latest archived snapshot, must be able to support a full in-site incident briefing before publication. The validator treats promotion as a combined contract: each promoted item needs event explanation, trend meaning, ranking value, reader impact, reader use, next checks, evidence threshold, claim boundary, downgrade signal, source role, provenance, verification status, at least two follow-up questions, and selection scores with enough narrative strength and evidence quality. If an item lacks these sections, keep it out of the promoted feed until the source material can support the briefing.
 
 ## Validation

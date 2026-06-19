@@ -542,6 +542,19 @@ if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function 
   errors.push("News detail page must fall back to the historical intelligence file for archived items.");
 }
 
+if (
+  !/function getSourceBoundaryCards\(item\)/.test(detailJs) ||
+  !/function renderSourceBoundaryCards\(cards\)/.test(detailJs) ||
+  !/class="source-boundary-panel"/.test(detailJs) ||
+  !/把事实、解读和未知分开看/.test(detailJs) ||
+  !/来源已支持/.test(detailJs) ||
+  !/本站解读/.test(detailJs) ||
+  !/仍不能推出/.test(detailJs) ||
+  !/\.source-boundary-grid/.test(styles)
+) {
+  errors.push("News detail pages must separate source-supported facts, editorial interpretation, and unknown boundaries.");
+}
+
 if (!/function sortNewsItems/.test(appJs) || !/news = sortNewsItems\(data\.items\)/.test(appJs)) {
   errors.push("Homepage news items must be sorted newest first before rendering.");
 }
