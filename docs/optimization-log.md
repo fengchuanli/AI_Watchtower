@@ -20,7 +20,7 @@ Use this file to record every automated or manual optimization. New entries go a
   - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
   - Validated `data/news.json`, `data/news-history.json`, `data/sources.json`, and `package-lock.json` when present with `python3 -m json.tool`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit will be created after this log update; final hash will be recorded in a follow-up log entry if the working tree remains writable. Push is pending until GitHub DNS/network access is available.
+- Commit: Local implementation commit `c82c8ca`; log follow-up commit recorded separately because adding this hash changes repository history. Push is pending until GitHub DNS/network access is available.
 
 ## 2026-06-19 17:00 JST
 
