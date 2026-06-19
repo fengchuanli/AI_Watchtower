@@ -43,6 +43,19 @@ Low-priority items should be skipped or kept in source notes when they are routi
 - Do not use a vendor blog as confirmation of regulation; link the applicable law, regulator, or platform policy before publishing.
 - Mark uncertain items as signals instead of confirmed news.
 
+## Narrative Event Sources
+
+VisionHub-style incident briefings work best when an item has a clear storyline: who acted, what changed, why there is tension, and what the reader should watch next. Narrative strength is useful for selection, but it must not lower the evidence bar.
+
+When a source is mainly a company narrative, customer story, policy proposal, benchmark page, or vendor-written case study:
+
+- Use `sourceRole: "厂商主张"` unless the linked page directly verifies an official release fact, research paper, regulator action, or other stronger source category.
+- Treat the page as evidence of the author's claim, framing, dates, named partners, and disclosed numbers only.
+- Do not treat vendor-written outcomes as independent proof of market adoption, ROI, safety, clinical effect, legal status, customer satisfaction, or regulatory acceptance.
+- Keep `verificationStatus: "已核验"` only when the central sentence is limited to "this vendor made this claim or proposal" and the page supports that sentence.
+- Require `provenance`, `claimBoundary`, `nextCheck`, and `evidenceThreshold` to name the missing external confirmation, such as customer-side metrics, paper replication, regulator text, contract filing, audit result, or independent benchmark.
+- Downgrade or skip the item if the narrative is vivid but the source cannot support a concrete event, timeline, tension, and next verification step.
+
 ## Automation Notes
 
 News intelligence jobs run at 08:00 and 17:00 JST. They should start with sources where `hasRss` is `true`, then add official non-RSS pages with conservative fetching rules. The site should summarize and explain the news in Chinese, while keeping original URLs as references rather than forcing readers to leave the page.

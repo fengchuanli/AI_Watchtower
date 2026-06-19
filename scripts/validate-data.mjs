@@ -219,6 +219,32 @@ function validateIncidentBriefingReadiness(item, context) {
   }
 }
 
+function validateVendorClaimBoundary(item, context) {
+  if (item.sourceRole !== "厂商主张") {
+    return;
+  }
+
+  const itemLabel = `${context} ${item.id || "unknown item"}`;
+  const provenance = String(item.provenance || "");
+  const claimBoundary = String(item.claimBoundary || "");
+  const nextCheck = String(item.nextCheck || "");
+  const evidenceThreshold = String(item.evidenceThreshold || "");
+  const counterEvidence = String(item.counterEvidence || "");
+  const combinedVerificationText = [claimBoundary, nextCheck, evidenceThreshold, counterEvidence].join("\n");
+
+  if (!/主张|声称|提案|厂商|公司|官方/.test(provenance)) {
+    errors.push(`${itemLabel} uses 厂商主张 and must frame provenance as a vendor claim or proposal.`);
+  }
+
+  if (!/不等同|不能|不证明|仍需|必须|需要/.test(claimBoundary)) {
+    errors.push(`${itemLabel} uses 厂商主张 and must state what the vendor narrative does not prove.`);
+  }
+
+  if (!/客户|用户|监管|立法|法律|论文|复现|审计|第三方|独立|基准|合同|文件|数据|原文/.test(combinedVerificationText)) {
+    errors.push(`${itemLabel} uses 厂商主张 and must name the external proof needed before upgrading the claim.`);
+  }
+}
+
 if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
   errors.push("data/sources.json must include at least one source.");
 }
@@ -565,6 +591,7 @@ for (const item of newsFeed.items || []) {
     errors.push(`${item.id} counterEvidence must name a condition that would weaken the current editorial judgment.`);
   }
 
+  validateVendorClaimBoundary(item, "data/news.json item");
   validateSelectionScore(item.selectionScore, item.id, "data/news.json item");
 }
 
@@ -644,6 +671,8 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
       if (editionIndex === 0) {
         validateIncidentBriefingReadiness(item, "data/news-history.json latest promoted item");
       }
+
+      validateVendorClaimBoundary(item, "data/news-history.json item");
     }
 
   }
