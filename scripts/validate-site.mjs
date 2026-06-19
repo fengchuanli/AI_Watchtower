@@ -13,6 +13,7 @@ const allNewsJs = readFileSync("all-news.js", "utf8");
 const tagsJs = readFileSync("tags.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
+const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const errors = [];
@@ -548,6 +549,16 @@ if (
   !/validateSimilarTitles\(allHistoryItems, "data\/news-history\.json"\)/.test(validateDataJs)
 ) {
   errors.push("Data validation must reject repeated source URLs and near-duplicate titles before publishing.");
+}
+
+if (
+  !/stale current items/.test(newsDataFormat) ||
+  !/repeated current-vs-history coverage/.test(newsDataFormat) ||
+  !/function validateCurrentItemFreshness\(items, editionDate\)/.test(validateDataJs) ||
+  !/function validateCurrentItemsAgainstOlderHistory\(currentItems, historicalEditions\)/.test(validateDataJs) ||
+  !/maxCurrentItemAgeDays/.test(validateDataJs)
+) {
+  errors.push("Data validation must reject stale current items and repeated current-vs-history coverage.");
 }
 
 if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function findHistoryContext/.test(detailJs)) {

@@ -58,7 +58,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 
 ## History Fields
 
-`data/news-history.json` keeps every captured edition visible after the homepage advances to a newer batch.
+`data/news-history.json` keeps every captured edition visible after the homepage advances to a newer batch. Current homepage items should represent fresh source facts, not old archive items resurfaced as new coverage.
 
 - `version`: History schema version.
 - `updatedAt`: Latest history update date.
@@ -72,6 +72,8 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `editions[].items`: Full item objects using the same required fields as the current feed.
 
 The all-news history page derives its category filters from historical item `category` and `label` values, then lets readers switch between newest-first and oldest-first batch order. Keep historical categories stable and labels readable so older coverage remains discoverable without using original source links as the primary reading path.
+
+The current feed must not promote stale background material as a new batch. Keep `publishedAt` within seven days of `updatedAt` unless a new source fact produces a distinct fresh item. If an older archive item already uses the same normalized source URL or a near-duplicate title, reuse the archive for background context instead of re-publishing the item as current news.
 
 ## Required Fields
 
@@ -117,4 +119,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs and near-duplicate titles across history, current and historical item fields including dedicated detail-page explanations, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, stale current items, repeated current-vs-history coverage, repeated source URLs and near-duplicate titles across history, current and historical item fields including dedicated detail-page explanations, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

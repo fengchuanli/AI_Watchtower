@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 19:03 JST
+
+- Focus: Improved Phase 3 Day 20 product maintainability by adding stale-item and repeated historical coverage guards. The data validator now rejects current feed items whose `publishedAt` is more than seven days behind the edition date, blocks current source URLs already captured in older archive batches, and flags current titles that resemble older archive coverage unless a fresh source fact makes the update distinct.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on reducing stale or repeated current coverage for Chinese readers.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including stale current-item and current-vs-history repeat checks.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and stale/repeat validation coverage.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing. `package-lock.json` is absent in this checkout.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash is recorded in the automation memory and run summary because this log entry is part of the commit. Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-19 18:02 JST
 
 - Focus: Improved Phase 3 Day 19 source policy for VisionHub-style narrative events without weakening fact safety. The source policy now explains how to handle vendor-written customer stories, policy proposals, benchmarks, and company narratives: use `厂商主张` when appropriate, verify only the narrow fact that the vendor made the claim, and require missing external proof before upgrading outcomes. The data validator now enforces this boundary for `厂商主张` items across the current feed and history.

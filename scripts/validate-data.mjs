@@ -44,6 +44,8 @@ const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
 const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
 const allowedSourceRoles = new Set(["官方核对", "研究原文", "媒体背景", "社区发现", "厂商主张"]);
+const maxCurrentItemAgeDays = 7;
+const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const incidentBriefingSections = [
   ["detailBody", "what happened", 40],
   ["detailTrend", "trend meaning", 40],
@@ -157,6 +159,83 @@ function validateSimilarTitles(items, context) {
   }
 }
 
+function getEditionDateEnd(editionDate) {
+  const parsedDate = Date.parse(`${editionDate}T23:59:59+09:00`);
+
+  return Number.isNaN(parsedDate) ? null : parsedDate;
+}
+
+function validateCurrentItemFreshness(items, editionDate) {
+  const editionDateEnd = getEditionDateEnd(editionDate);
+
+  if (!editionDateEnd) {
+    errors.push("data/news.json updatedAt must be a valid ISO date for stale-item checks.");
+    return;
+  }
+
+  for (const item of items) {
+    const publishedAt = Date.parse(item.publishedAt);
+
+    if (Number.isNaN(publishedAt)) {
+      continue;
+    }
+
+    const ageDays = (editionDateEnd - publishedAt) / millisecondsPerDay;
+
+    if (ageDays > maxCurrentItemAgeDays) {
+      errors.push(
+        `${item.id || "unknown item"} is too old for the current feed. Move stale background coverage to history unless a new source fact refreshed it within ${maxCurrentItemAgeDays} days.`,
+      );
+    }
+
+    if (publishedAt > editionDateEnd + millisecondsPerDay) {
+      errors.push(`${item.id || "unknown item"} publishedAt is after the current edition date window.`);
+    }
+  }
+}
+
+function validateCurrentItemsAgainstOlderHistory(currentItems, historicalEditions) {
+  const olderHistoryItems = historicalEditions
+    .slice(1)
+    .flatMap((edition) => (Array.isArray(edition.items) ? edition.items : []));
+  const olderSourceKeys = new Map();
+  const olderTitleRecords = [];
+
+  for (const item of olderHistoryItems) {
+    const sourceKey = normalizeSourceKey(item);
+    const titleKey = normalizeTitleKey(item);
+
+    if (sourceKey && !olderSourceKeys.has(sourceKey)) {
+      olderSourceKeys.set(sourceKey, item.id || "unknown item");
+    }
+
+    if (titleKey) {
+      olderTitleRecords.push({ id: item.id || "unknown item", titleKey });
+    }
+  }
+
+  for (const item of currentItems) {
+    const sourceKey = normalizeSourceKey(item);
+    const titleKey = normalizeTitleKey(item);
+
+    if (sourceKey && olderSourceKeys.has(sourceKey)) {
+      errors.push(
+        `data/news.json item ${item.id || "unknown item"} repeats source already captured by ${olderSourceKeys.get(sourceKey)}. Use the archive item unless a new source URL supports a fresh development.`,
+      );
+    }
+
+    for (const record of olderTitleRecords) {
+      const similarity = getTitleSimilarity(titleKey, record.titleKey);
+
+      if (similarity >= 0.86 && Math.min(titleKey.length, record.titleKey.length) >= 14) {
+        errors.push(
+          `data/news.json item ${item.id || "unknown item"} resembles older archive item ${record.id}. Skip repeated historical coverage unless new source facts make it a distinct update.`,
+        );
+      }
+    }
+  }
+}
+
 function validateSelectionScore(score, itemId, context) {
   const criteria = ["impact", "novelty", "narrativeStrength", "evidenceQuality", "readerUtility"];
 
@@ -255,6 +334,7 @@ if (!Array.isArray(newsFeed.items)) {
   errors.push("data/news.json items must be sorted newest first by publishedAt.");
 } else {
   validateSimilarTitles(newsFeed.items, "data/news.json");
+  validateCurrentItemFreshness(newsFeed.items, newsFeed.updatedAt);
 
   const topRankingReasons = newsFeed.items.slice(0, 3).map((item) => item.whyRanked?.trim()).filter(Boolean);
   const promotedItems = newsFeed.items.slice(0, 3);
@@ -605,6 +685,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   const allHistoryItems = newsHistory.editions.flatMap((edition) => (Array.isArray(edition.items) ? edition.items : []));
 
   validateSimilarTitles(allHistoryItems, "data/news-history.json");
+  validateCurrentItemsAgainstOlderHistory(newsFeed.items || [], newsHistory.editions);
 
   if (newsHistory.totalItems !== historyItemTotal) {
     errors.push("data/news-history.json totalItems must match the total number of historical items.");
