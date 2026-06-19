@@ -85,6 +85,7 @@ The all-news history page derives its category filters from historical item `cat
 - `detailTrend`: Longer Chinese trend explanation for the detail page. It must add context beyond `trend` and be meaningfully longer.
 - `whyRanked`: Short Chinese explanation for why the item deserves homepage attention or ranking priority.
 - `detailWhyRanked`: Longer Chinese detail-page explanation of why the item matters. It should preserve important source facts, boundaries, and caveats that are too long for the homepage card.
+- `selectionScore`: Object with integer 1-5 scores for `impact`, `novelty`, `narrativeStrength`, `evidenceQuality`, and `readerUtility`, plus a matching `total` and Chinese `note` explaining the editorial tradeoff.
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
 - `readerUse`: Short Chinese line naming who should use the signal and what decision or checklist it informs.
 - `nextCheck`: Short editorial note stating what should be verified before treating the item as fully confirmed.
@@ -110,4 +111,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

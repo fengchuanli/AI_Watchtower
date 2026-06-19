@@ -2,6 +2,30 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 14:04 JST
+
+- Focus: Improved Phase 3 Day 15 editorial quality by adding structured selection scoring for the current TOP3 items. Each current item now records impact, novelty, narrative strength, evidence quality, reader utility, total score, and a short Chinese scoring note; the homepage renders the score beside the ranking reason, and validation checks score shape and totals for the current feed and latest archive snapshot.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on clearer editorial value for Chinese readers.
+  - Ran syntax checks for `app.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including selection scores.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and selection-score rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit created; final hash is recorded in the automation memory and run summary because this log entry is part of the commit. Push failed because GitHub DNS resolution is unavailable in this environment.
+
 ## 2026-06-19 08:04 JST
 
 - Focus: Published the 08:00 JST AI news intelligence update with official Google DeepMind signals on Agent control, UK public-sector planning workflows, and multi-agent safety research.

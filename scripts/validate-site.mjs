@@ -517,6 +517,15 @@ if (!/AI Watchtower 不追求把所有官方更新铺满首页/.test(html) || !/
   errors.push("Homepage must explain the narrative-first editorial selection logic.");
 }
 
+if (
+  !/selectionScore/.test(appJs) ||
+  !/function renderSelectionScore/.test(appJs) ||
+  !/编辑评分 \$\{score\.total\}\/25/.test(appJs) ||
+  !/\.selection-score/.test(styles)
+) {
+  errors.push("Homepage must render editorial selection scores for impact, novelty, narrative strength, evidence quality, and reader utility.");
+}
+
 if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function findHistoryContext/.test(detailJs)) {
   errors.push("News detail page must fall back to the historical intelligence file for archived items.");
 }

@@ -21,6 +21,15 @@
           "body": "Google DeepMind 6 月 18 日发布 AI Control Roadmap，把越来越强的内部 AI Agent 按潜在“内部威胁”建模，并用检测、防止、响应三层控制来约束编码、科研和产品开发等高权限任务。",
           "trend": "趋势判断：Agent 安全正在从“模型是否对齐”扩展到系统级访问控制、实时监控和事故响应；越是能自主执行任务的 Agent，越需要类似网络安全的分层防御。",
           "whyRanked": "它给出 Google 内部部署高级 Agent 的控制框架、能力分级、监控指标和已分析百万条编码 Agent 轨迹的实践线索，是本期最强的官方安全信号。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "高权限 Agent 控制直接影响企业上线门槛，官方框架和实践指标充足，但仍需外部复测。"
+          },
           "impact": "企业安全、平台工程和政策团队需要把 Agent 权限、监控覆盖率、误用召回率和响应时延纳入上线门槛。",
           "readerUse": "CISO、平台负责人和 Agent 产品团队可用它更新 Agent 上线 checklist，把 sandbox、权限递进、监控和阻断机制写成硬要求。",
           "nextCheck": "继续核对 AI Control Roadmap 技术报告、Three Layers of Agent Security 政策框架、Gemini Spark 监控案例和外部复测。",
@@ -52,6 +61,15 @@
           "body": "Google 6 月 9 日称，Google DeepMind Accelerator: Robotics 选出 15 家欧洲早期机器人公司，提供 3 个月导师、产品和技术支持，并让团队接触 Google AI stack 与 Gemini robotics models。",
           "trend": "趋势判断：实体 AI 正从实验室模型扩展到创业公司和垂直场景，物流、制造、医疗、气候和导航等硬件工作流开始成为模型能力落地入口。",
           "whyRanked": "它把 Gemini Robotics 相关能力放进欧洲早期公司生态，列出 15 家具体团队和应用方向，是观察 embodied AI 商业化路径的官方采用信号。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "具备清楚的实体 AI 生态线索和公司名单，但仍是项目启动公告，成效证据较少。"
+          },
           "impact": "机器人、制造、医疗设备和气候技术团队需要关注 foundation model 如何与传感、遥操作、质量控制和现场部署结合。",
           "readerUse": "机器人创业、产业投资和企业创新团队可用它跟踪实体 AI 应用簇，优先核对哪些场景能从模型演示走向可交付产品。",
           "nextCheck": "继续核对加速器项目页、15 家公司后续 demo、客户试点、融资进展，以及 Gemini robotics models 在真实硬件上的能力边界。",
@@ -83,6 +101,15 @@
           "body": "Google 6 月 3 日发布 Gemma 4 12B，称这是面向笔记本本地运行的中型开放多模态模型，采用 unified、encoder-free 架构，支持视觉和原生音频输入，16GB VRAM 或统一内存即可运行。",
           "trend": "趋势判断：开放模型竞争正在从纯文本和大参数转向本地多模态 Agent，关键指标变成内存占用、延迟、音视频输入路径和开发者生态支持。",
           "whyRanked": "它补齐 Gemma 4 系列中 E4B 与 26B MoE 之间的本地多模态档位，并明确 Apache 2.0、MTP drafters、Hugging Face/Kaggle 权重和主流推理框架支持。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "本地多模态路线对开发者有实用价值，官方细节充分，但生产可用性仍待第三方测试。"
+          },
           "impact": "端侧 AI、隐私敏感应用和开发工具团队可以评估在笔记本上运行多模态 Agent 的可能性，但必须复测质量和硬件边界。",
           "readerUse": "模型工程、端侧产品和开发者工具团队可用它更新本地多模态评测清单，测试视觉、音频、延迟、内存和任务成功率。",
           "nextCheck": "继续核对权重下载、开发者 guide、第三方 benchmark、llama.cpp/MLX/vLLM/SGLang 支持质量和真实端侧应用案例。",

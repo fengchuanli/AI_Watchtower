@@ -76,6 +76,31 @@ function normalizeSourceKey(item) {
     .replace(/\/$/, "");
 }
 
+function validateSelectionScore(score, itemId, context) {
+  const criteria = ["impact", "novelty", "narrativeStrength", "evidenceQuality", "readerUtility"];
+
+  if (!score || typeof score !== "object" || Array.isArray(score)) {
+    errors.push(`${context} ${itemId} must include a selectionScore object.`);
+    return;
+  }
+
+  for (const criterion of criteria) {
+    if (!Number.isInteger(score[criterion]) || score[criterion] < 1 || score[criterion] > 5) {
+      errors.push(`${context} ${itemId} selectionScore.${criterion} must be an integer from 1 to 5.`);
+    }
+  }
+
+  const expectedTotal = criteria.reduce((sum, criterion) => sum + (Number.isInteger(score[criterion]) ? score[criterion] : 0), 0);
+
+  if (score.total !== expectedTotal) {
+    errors.push(`${context} ${itemId} selectionScore.total must equal the five scoring criteria.`);
+  }
+
+  if (typeof score.note !== "string" || score.note.trim().length < 18) {
+    errors.push(`${context} ${itemId} selectionScore.note must explain the editorial scoring tradeoff.`);
+  }
+}
+
 if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
   errors.push("data/sources.json must include at least one source.");
 }
@@ -414,6 +439,8 @@ for (const item of newsFeed.items || []) {
   if (item.counterEvidence && !/如果|若|缺少|未|不/.test(item.counterEvidence)) {
     errors.push(`${item.id} counterEvidence must name a condition that would weaken the current editorial judgment.`);
   }
+
+  validateSelectionScore(item.selectionScore, item.id, "data/news.json item");
 }
 
 if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
@@ -480,6 +507,10 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         if (!item[field]) {
           errors.push(`data/news-history.json item ${item.id || "unknown item"} is missing ${field}.`);
         }
+      }
+
+      if (editionIndex === 0 || item.selectionScore) {
+        validateSelectionScore(item.selectionScore, item.id, "data/news-history.json item");
       }
     }
 

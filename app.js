@@ -70,6 +70,7 @@ const requiredCardFields = [
   "body",
   "trend",
   "whyRanked",
+  "selectionScore",
   "impact",
   "readerUse",
   "nextCheck",
@@ -166,6 +167,42 @@ function validateNewsData(data) {
   if (itemWithInvalidFollowUp) {
     throw new Error(`News item ${itemWithInvalidFollowUp.id || "without id"} must include follow-up questions.`);
   }
+
+  const itemWithInvalidSelectionScore = data.items.find((item) => !isValidSelectionScore(item.selectionScore));
+
+  if (itemWithInvalidSelectionScore) {
+    throw new Error(`News item ${itemWithInvalidSelectionScore.id || "without id"} has an invalid selection score.`);
+  }
+}
+
+function isValidSelectionScore(score) {
+  if (!score || typeof score !== "object") {
+    return false;
+  }
+
+  const criteria = ["impact", "novelty", "narrativeStrength", "evidenceQuality", "readerUtility"];
+  const total = criteria.reduce((sum, key) => sum + score[key], 0);
+
+  return (
+    criteria.every((key) => Number.isInteger(score[key]) && score[key] >= 1 && score[key] <= 5) &&
+    Number.isInteger(score.total) &&
+    score.total === total &&
+    typeof score.note === "string" &&
+    score.note.trim().length >= 18
+  );
+}
+
+function renderSelectionScore(score) {
+  if (!isValidSelectionScore(score)) {
+    return "";
+  }
+
+  return `
+    <p class="selection-score">
+      <strong>编辑评分 ${score.total}/25</strong>
+      ${escapeHtml(score.note)}
+    </p>
+  `;
 }
 
 function validateCategories(categories, items) {
@@ -418,6 +455,7 @@ function updateTopStories(items) {
             <p class="eyebrow">${escapeHtml(item.label)} · ${escapeHtml(item.time)}</p>
             <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
             <p class="top-rank-reason"><strong>为什么排进 TOP3</strong>${escapeHtml(item.whyRanked)}</p>
+            ${renderSelectionScore(item.selectionScore)}
             <ol>${summaryLines}</ol>
             <a class="reference-link" href="${detailUrl}">查看事件简报</a>
           </div>
@@ -708,6 +746,7 @@ function renderNews(filter = "all") {
           <p class="card-summary"><strong>事件简述</strong>${escapeHtml(item.body)}</p>
           <p class="trend-note"><strong>这意味着</strong>${escapeHtml(item.trend)}</p>
           <p class="rank-note"><strong>为什么值得看</strong>${escapeHtml(item.whyRanked)}</p>
+          ${renderSelectionScore(item.selectionScore)}
           <footer>
             <span>${escapeHtml(item.trustLevel)}</span>
             <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看站内解读</a>
