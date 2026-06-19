@@ -63,7 +63,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `version`: History schema version.
 - `updatedAt`: Latest history update date.
 - `totalItems`: Total captured item count across all editions.
-- `editions`: Newest-first array of captured batches. A source URL may appear only once across history; repeated source URLs should be skipped instead of re-captured.
+- `editions`: Newest-first array of captured batches. A source URL may appear only once across history; repeated source URLs should be skipped instead of re-captured. Near-duplicate titles are also rejected after normalization so the archive does not republish the same event with slightly different wording unless the source facts are clearly distinct.
 - `editions[].id`: Edition ID matching `data/news.json` when the edition is current.
 - `editions[].date`: Capture or editorial date.
 - `editions[].timezone`: IANA timezone for the capture batch.
@@ -115,4 +115,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs across history, current and historical item fields including dedicated detail-page explanations, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks source-count metadata, edition metadata, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, repeated source URLs and near-duplicate titles across history, current and historical item fields including dedicated detail-page explanations, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.

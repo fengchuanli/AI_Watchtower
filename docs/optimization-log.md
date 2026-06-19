@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-19 17:33 JST
+
+- Focus: Improved Phase 3 Day 18 product maintainability by strengthening de-duplication before publication. The data validator now normalizes Chinese/Latin titles, compares title-token overlap, and rejects near-duplicate current or historical headlines in addition to the existing repeated source URL checks, so the archive is less likely to republish the same event with slightly different wording.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on clearer, lower-noise AI intelligence for Chinese readers.
+  - Ran syntax checks for `app.js`, `news-detail.js`, `all-news.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources, including near-duplicate title checks.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and the de-duplication validation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, `data/sources.json`, and `package-lock.json` when present with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; final hash will be recorded in a follow-up log entry if the working tree remains writable. Push is pending until GitHub DNS/network access is available.
+
 ## 2026-06-19 17:00 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update with official OpenAI signals on ChatGPT health intelligence, rare-disease genomic reanalysis, and ChatGPT Enterprise usage analytics/spend controls. Kept source boundaries explicit: health and enterprise metrics are OpenAI vendor disclosures, while the rare-disease item still needs continued NEJM AI and external clinical validation.

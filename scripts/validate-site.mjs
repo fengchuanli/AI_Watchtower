@@ -538,6 +538,18 @@ if (
   errors.push("Data validation must confirm every promoted item can support an incident briefing.");
 }
 
+if (
+  !/function normalizeSourceKey\(item\)/.test(validateDataJs) ||
+  !/function normalizeTitleKey\(item\)/.test(validateDataJs) ||
+  !/function getTitleSimilarity\(firstTitleKey, secondTitleKey\)/.test(validateDataJs) ||
+  !/function validateSimilarTitles\(items, context\)/.test(validateDataJs) ||
+  !/similar titles/.test(validateDataJs) ||
+  !/validateSimilarTitles\(newsFeed\.items, "data\/news\.json"\)/.test(validateDataJs) ||
+  !/validateSimilarTitles\(allHistoryItems, "data\/news-history\.json"\)/.test(validateDataJs)
+) {
+  errors.push("Data validation must reject repeated source URLs and near-duplicate titles before publishing.");
+}
+
 if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function findHistoryContext/.test(detailJs)) {
   errors.push("News detail page must fall back to the historical intelligence file for archived items.");
 }

@@ -90,6 +90,73 @@ function normalizeSourceKey(item) {
     .replace(/\/$/, "");
 }
 
+function normalizeTitleKey(item) {
+  return String(item.title || "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFKC")
+    .replace(/[“”"‘’'《》<>()[\]（）【】{}]/g, "")
+    .replace(/[，。！？、：；,.!?:;\s-]+/g, "");
+}
+
+function getTitleTokens(titleKey) {
+  const cjkChars = [...titleKey].filter((char) => /\p{Script=Han}/u.test(char));
+  const latinWords = titleKey.match(/[a-z0-9]{2,}/g) || [];
+  const cjkBigrams = [];
+
+  for (let index = 0; index < cjkChars.length - 1; index += 1) {
+    cjkBigrams.push(`${cjkChars[index]}${cjkChars[index + 1]}`);
+  }
+
+  return new Set([...cjkBigrams, ...latinWords]);
+}
+
+function getTitleSimilarity(firstTitleKey, secondTitleKey) {
+  if (!firstTitleKey || !secondTitleKey) {
+    return 0;
+  }
+
+  if (firstTitleKey === secondTitleKey) {
+    return 1;
+  }
+
+  const firstTokens = getTitleTokens(firstTitleKey);
+  const secondTokens = getTitleTokens(secondTitleKey);
+
+  if (!firstTokens.size || !secondTokens.size) {
+    return 0;
+  }
+
+  const sharedTokenCount = [...firstTokens].filter((token) => secondTokens.has(token)).length;
+  const unionTokenCount = new Set([...firstTokens, ...secondTokens]).size;
+
+  return sharedTokenCount / unionTokenCount;
+}
+
+function validateSimilarTitles(items, context) {
+  const titleRecords = [];
+
+  for (const item of items) {
+    const titleKey = normalizeTitleKey(item);
+
+    if (!titleKey) {
+      continue;
+    }
+
+    for (const record of titleRecords) {
+      const similarity = getTitleSimilarity(titleKey, record.titleKey);
+
+      if (similarity >= 0.86 && Math.min(titleKey.length, record.titleKey.length) >= 14) {
+        errors.push(
+          `${context} has similar titles: ${record.id} and ${item.id || "unknown item"}. Skip repeated coverage or rewrite only after confirming distinct source facts.`,
+        );
+      }
+    }
+
+    titleRecords.push({ id: item.id || "unknown item", titleKey });
+  }
+}
+
 function validateSelectionScore(score, itemId, context) {
   const criteria = ["impact", "novelty", "narrativeStrength", "evidenceQuality", "readerUtility"];
 
@@ -161,6 +228,8 @@ if (!Array.isArray(newsFeed.items)) {
 } else if (sortSignature(newsFeed.items) !== expectedSortSignature(newsFeed.items)) {
   errors.push("data/news.json items must be sorted newest first by publishedAt.");
 } else {
+  validateSimilarTitles(newsFeed.items, "data/news.json");
+
   const topRankingReasons = newsFeed.items.slice(0, 3).map((item) => item.whyRanked?.trim()).filter(Boolean);
   const promotedItems = newsFeed.items.slice(0, 3);
 
@@ -506,6 +575,9 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   const historyItemTotal = newsHistory.editions.reduce((count, edition) => {
     return count + (Array.isArray(edition.items) ? edition.items.length : 0);
   }, 0);
+  const allHistoryItems = newsHistory.editions.flatMap((edition) => (Array.isArray(edition.items) ? edition.items : []));
+
+  validateSimilarTitles(allHistoryItems, "data/news-history.json");
 
   if (newsHistory.totalItems !== historyItemTotal) {
     errors.push("data/news-history.json totalItems must match the total number of historical items.");
