@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 18:04 JST
+
+- Focus: Improved Phase 4 Day 28 GitHub Pages compatibility and root-relative link safety by adding a dedicated publishing readiness checklist, exposing it from README and contribution guidance, and turning the 404 page into a Chinese recovery path for homepage, all-news, archive, and public current data access. Extended validation so the readiness document and 404 recovery links stay discoverable and project-site safe.
+- Changed files:
+  - `docs/github-pages-readiness.md`
+  - `README.md`
+  - `docs/contributing.md`
+  - `404.html`
+  - `scripts/validate-pages.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`; kept the change focused on helping Chinese readers recover from broken project-site paths without leaving the in-site reading flow.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 39 local references, static page link targets, publishing readiness documentation, and 404 recovery discoverability.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `6bb276e2d60f851cfb049bd1db8068f46626b1ed` (`明确Pages发布恢复路径`). Log follow-up commit will be created after this entry. Push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 17:30 JST
 
 - Focus: Improved Phase 4 Day 27 local visual QA readiness by adding a lightweight preview checklist for desktop, tablet, and mobile viewports; primary Chinese-reader paths; loading-failure states; keyboard and reduced-motion checks; and GitHub Pages publishing safety. Linked the checklist from the README and added `scripts/validate-site.mjs` coverage so the documentation stays discoverable and complete.
