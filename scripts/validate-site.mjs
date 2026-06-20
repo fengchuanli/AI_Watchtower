@@ -14,6 +14,7 @@ const tagsJs = readFileSync("tags.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
 const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
+const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const errors = [];
@@ -379,17 +380,33 @@ if (
 
 if (
   !/fetch\("\.\/data\/news-history\.json"/.test(allNewsJs) ||
-  !/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}&edition=\$\{encodeURIComponent\(edition\.id\)\}`;/.test(
+  !/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}&edition=\$\{encodeURIComponent\(item\.editionId\)\}`;/.test(
     allNewsJs,
   )
 ) {
-  errors.push("All-news page must read news-history.json and link entries to in-site detail pages with edition IDs.");
+  errors.push("All-news page must read news-history.json and link flat title rows to in-site detail pages with edition IDs.");
+}
+
+if (
+  !/aria-label="AI Watchtower 主要栏目"/.test(html) ||
+  !/aria-label="本期 AI 情报概况"/.test(html) ||
+  !/aria-label="按主题筛选更多新闻流"/.test(html) ||
+  !/aria-label="查看今日 TOP3 之外的更多新闻流"/.test(html) ||
+  !/aria-label="打开全部情报题目列表"/.test(html) ||
+  !/aria-label="全部情报相关页面"/.test(allNewsHtml) ||
+  !/AI Watchtower 全部历史情报题目列表/.test(allNewsHtml) ||
+  !/aria-label="打开原始历史情报 JSON 数据"/.test(allNewsHtml) ||
+  !/aria-label="按新闻发布时间排序历史情报"/.test(allNewsHtml) ||
+  !/aria-label="历史情报题目列表"/.test(allNewsHtml) ||
+  !/查看 \$\{item\.archiveLabel\} 的站内解读/.test(allNewsJs)
+) {
+  errors.push("Homepage and all-news page must use Chinese, context-rich accessible labels for navigation, filters, and history links.");
 }
 
 if (
   !/const detailLabel = escapeHtml\(`查看站内解读：\$\{item\.title\}`\);/.test(appJs) ||
   !/<a class="card-detail-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">/.test(appJs) ||
-  !/<a class="reference-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">查看站内解读<\/a>/.test(appJs)
+  !/<a class="reference-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">详情<\/a>/.test(appJs)
 ) {
   errors.push("Homepage detail links must expose item-specific accessible labels.");
 }
@@ -456,10 +473,9 @@ if (
 
 if (
   !/<p class="card-summary"><strong>事件简述<\/strong>/.test(appJs) ||
-  !/<p class="trend-note"><strong>这意味着<\/strong>/.test(appJs) ||
-  !/<p class="rank-note"><strong>为什么值得看<\/strong>/.test(appJs)
+  !/<p class="trend-note"><strong>这意味着<\/strong>/.test(appJs)
 ) {
-  errors.push("Homepage news cards must use the same readable labels as the detail page.");
+  errors.push("Homepage non-TOP3 news cards must keep concise readable labels.");
 }
 
 if (
@@ -606,6 +622,15 @@ if (!/function sortNewsItems/.test(appJs) || !/news = sortNewsItems\(data\.items
   errors.push("Homepage news items must be sorted newest first before rendering.");
 }
 
+if (
+  !/const topStoryIds = new Set\(news\.slice\(0, 3\)\.map/.test(appJs) ||
+  !/compact-feed-card/.test(appJs) ||
+  !/本批次 TOP3 已覆盖全部新闻流/.test(appJs) ||
+  /<p class="rank-note"><strong>为什么值得看<\/strong>/.test(appJs)
+) {
+  errors.push("Homepage feed must avoid duplicating TOP3 and keep non-TOP3 feed cards concise.");
+}
+
 if (!/function sortHistoryEditions/.test(allNewsJs) || !/function sortHistoryItems/.test(allNewsJs)) {
   errors.push("All-news page must sort editions and items newest first before rendering.");
 }
@@ -615,32 +640,42 @@ if (
   !/id="historyCategoryFilters"/.test(allNewsHtml) ||
   !/id="historySort"/.test(allNewsHtml) ||
   !/id="historyResultNote"/.test(allNewsHtml) ||
-  !/最新抓取批次/.test(allNewsHtml) ||
-  !/已归档批次/.test(allNewsHtml) ||
   !/function getHistoryCategories\(history\)/.test(allNewsJs) ||
-  !/function getFilteredEditions\(history\)/.test(allNewsJs) ||
+  !/function getFilteredHistoryItems\(history\)/.test(allNewsJs) ||
+  !/function sortHistoryFlatItems\(items, sortOrder = "newest"\)/.test(allNewsJs) ||
   !/selectedSort = historySort\.value === "oldest" \? "oldest" : "newest";/.test(allNewsJs) ||
-  !/原始来源仍只作为核对线索，优先阅读站内解读/.test(allNewsJs) ||
+  !/本页只显示题目，点击进入站内解读/.test(allNewsJs) ||
   !/\.history-controls/.test(styles) ||
   !/\.history-filter-tabs button\.active/.test(styles) ||
-  !/class="history-title-list"/.test(allNewsJs) ||
+  !/class="history-title-list flat"/.test(allNewsJs) ||
   !/class="history-title-item"/.test(allNewsJs) ||
-  !/\.history-title-list/.test(styles) ||
+  !/class="history-title-meta"/.test(allNewsJs) ||
+  !/\.history-title-list\.flat/.test(styles) ||
   !/\.history-title-item/.test(styles) ||
+  /<section class="history-edition"/.test(allNewsJs) ||
   /<p><strong>发生了什么<\/strong>/.test(allNewsJs)
 ) {
-  errors.push("All-news history must support category filtering, sort switching, an editorial result note, and compact title-only history rows.");
+  errors.push("All-news history must support category filtering, sort switching, an editorial result note, and flat compact title-only rows.");
 }
 
 if (
   !/function getEditionBatchStatus\(edition, latestEdition\)/.test(allNewsJs) ||
-  !/最新抓取批次用于先看本次新增/.test(allNewsJs) ||
-  !/不作为今日新消息重复发布/.test(allNewsJs) ||
-  !/class="batch-status \$\{escapeHtml\(batchStatus\.tone\)\}"/.test(allNewsJs) ||
-  !/\.batch-explainer/.test(styles) ||
-  !/\.history-edition-badges \.batch-status\.archived/.test(styles)
+  !/最新抓取/.test(allNewsJs) ||
+  !/已归档/.test(allNewsJs) ||
+  !/class="batch-status \$\{escapeHtml\(item\.batchStatus\.tone\)\}"/.test(allNewsJs) ||
+  !/\.history-title-meta \.batch-status\.archived/.test(styles)
 ) {
-  errors.push("All-news history must distinguish the latest capture batch from archived batches.");
+  errors.push("All-news title rows must distinguish the latest capture batch from archived batches without large batch panels.");
+}
+
+
+if (
+  !/Leadership and capital shock/.test(sourcePolicy) ||
+  !/AI-adjacent business events/.test(sourcePolicy) ||
+  !/Jensen Huang/.test(sourcePolicy) ||
+  !/Elon Musk\/xAI\/SpaceX/.test(sourcePolicy)
+) {
+  errors.push("Source policy must include AI leader, capital, acquisition, and AI-adjacent strategic event selection logic.");
 }
 
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {

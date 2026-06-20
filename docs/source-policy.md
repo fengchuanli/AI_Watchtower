@@ -20,6 +20,7 @@ Prioritize items that match at least one of these story patterns:
 - **Workflow replacement**: AI turns a manual profession, coding flow, research process, design loop, or business operation into a new operating model.
 - **Infrastructure unlock**: new hardware, orchestration, memory, evaluation, observability, or agent runtime makes previously experimental AI deployable.
 - **Adoption proof**: a credible enterprise, government, medical, finance, education, or public-sector case gives evidence about real deployment and governance.
+- **Leadership and capital shock**: statements, investments, acquisitions, IPO/listing plans, compute commitments, or strategic reorganizations by AI leaders and AI-adjacent giants materially change the AI market map. Examples include Jensen Huang on demand or supply constraints, Elon Musk/xAI/SpaceX moves that affect AI compute or capital, Sam Altman on OpenAI strategy, major hyperscaler AI spending, or acquisitions of important AI companies.
 - **Open-source or developer shock**: a tool, repo, SDK, CLI, or protocol changes how builders work, especially when it affects agent teams, codebases, memory, or automation.
 
 Use this scoring before publishing:
@@ -29,6 +30,8 @@ Use this scoring before publishing:
 - **Narrative strength**: whether the event has a timeline, tension, numbers, and a clear "so what".
 - **Evidence quality**: whether the central claim can be traced to an official source, paper, reliable media report, or clearly labeled signal.
 - **Reader utility**: whether a founder, developer, enterprise buyer, policy watcher, or operator can make a decision or update a checklist from it.
+
+AI-adjacent business events should be considered when they have a direct AI consequence: compute capacity, model competition, AI talent, enterprise adoption, chip supply, cloud spending, data-center buildout, AI company valuation, acquisition, or regulatory exposure. Do not include celebrity or stock-market noise unless the story can be explained as an AI infrastructure, capital, governance, or product-shift signal.
 
 Low-priority items should be skipped or kept in source notes when they are routine marketing, small feature updates without a larger pattern, repeated coverage of an already captured source, or claims that cannot be verified.
 

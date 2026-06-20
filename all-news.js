@@ -118,6 +118,47 @@ function getEditionBatchStatus(edition, latestEdition) {
   };
 }
 
+function getFilteredHistoryItems(history) {
+  const latestEdition = getLatestEdition(history);
+
+  return history.editions.flatMap((edition) => {
+    const batchStatus = getEditionBatchStatus(edition, latestEdition);
+    const items = selectedCategory === "all"
+      ? edition.items
+      : edition.items.filter((item) => item.category === selectedCategory);
+
+    return items.map((item) => ({
+      ...item,
+      editionId: edition.id,
+      editionDate: edition.date,
+      archiveLabel: edition.archiveLabel,
+      batchStatus,
+    }));
+  });
+}
+
+function sortHistoryFlatItems(items, sortOrder = "newest") {
+  return [...items].sort((a, b) => {
+    const dateDiff = sortOrder === "oldest"
+      ? Date.parse(a.publishedAt) - Date.parse(b.publishedAt)
+      : Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
+
+    if (dateDiff) {
+      return dateDiff;
+    }
+
+    const editionDiff = sortOrder === "oldest"
+      ? Date.parse(a.editionDate) - Date.parse(b.editionDate)
+      : Date.parse(b.editionDate) - Date.parse(a.editionDate);
+
+    if (editionDiff) {
+      return editionDiff;
+    }
+
+    return String(a.title).localeCompare(String(b.title), "zh-CN");
+  });
+}
+
 function renderHistoryControls(history) {
   const categories = getHistoryCategories(history);
 
@@ -212,20 +253,19 @@ function validateHistory(history) {
 }
 
 function renderHistory(history) {
-  const filteredEditions = getFilteredEditions(history);
-  const sortedEditions = sortHistoryEditions(filteredEditions, selectedSort);
-  const totalItems = sortedEditions.reduce((count, edition) => count + edition.items.length, 0);
+  const filteredItems = getFilteredHistoryItems(history);
+  const sortedItems = sortHistoryFlatItems(filteredItems, selectedSort);
   const latestEdition = getLatestEdition(history);
   const archivedEditionCount = Math.max(history.editions.length - 1, 0);
   const categoryLabel =
     getHistoryCategories(history).find((category) => category.id === selectedCategory)?.label || "全部";
-  const sortLabel = selectedSort === "oldest" ? "最早批次优先" : "最新批次优先";
+  const sortLabel = selectedSort === "oldest" ? "最早新闻优先" : "最新新闻优先";
 
-  historyMeta.textContent = `目前共 ${history.editions.length} 个抓取批次 · ${history.totalItems || totalItems} 条情报 · 最新抓取：${latestEdition.date} · ${latestEdition.archiveLabel}`;
-  historyResultNote.textContent = `当前显示：${categoryLabel} · ${sortedEditions.length} 个批次 · ${totalItems} 条情报 · ${sortLabel}。最新抓取批次用于先看本次新增，${archivedEditionCount} 个已归档批次只用于回看背景；原始来源仍只作为核对线索，优先阅读站内解读。`;
+  historyMeta.textContent = `目前共 ${history.editions.length} 个抓取批次 · ${history.totalItems || filteredItems.length} 条情报 · 最新抓取：${latestEdition.date} · ${latestEdition.archiveLabel}`;
+  historyResultNote.textContent = `当前显示：${categoryLabel} · ${sortedItems.length} 条情报 · ${sortLabel}。本页只显示题目，点击进入站内解读；最新抓取批次会用小标签标出，${archivedEditionCount} 个已归档批次用于回看背景。`;
   renderHistoryControls(history);
 
-  if (!sortedEditions.length) {
+  if (!sortedItems.length) {
     historyList.innerHTML = `
       <div class="feed-state" role="status">
         <p>这个分类暂时没有历史情报。</p>
@@ -234,47 +274,29 @@ function renderHistory(history) {
     return;
   }
 
-  historyList.innerHTML = sortedEditions
-    .map(
-      (edition) => {
-        const batchStatus = getEditionBatchStatus(edition, latestEdition);
+  historyList.innerHTML = `
+    <ol class="history-title-list flat">
+      ${sortedItems
+        .map((item) => {
+          const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}&edition=${encodeURIComponent(item.editionId)}`;
 
-        return `
-        <section class="history-edition" aria-label="${escapeHtml(`${edition.date} ${edition.archiveLabel}`)}">
-          <div class="history-edition-header">
-            <div>
-              <p class="eyebrow">${batchStatus.tone === "latest" ? "Latest Capture" : "Archived Capture"}</p>
-              <h3>${escapeHtml(edition.date)} · ${escapeHtml(edition.archiveLabel)}</h3>
-              <p class="batch-status-note">${escapeHtml(batchStatus.note)}</p>
-              <p>${escapeHtml(edition.note || edition.editorNote || "本批次暂无补充说明。")}</p>
-            </div>
-            <div class="history-edition-badges" aria-label="${escapeHtml(batchStatus.label)}">
-              <span class="batch-status ${escapeHtml(batchStatus.tone)}">${escapeHtml(batchStatus.label)}</span>
-              <span>${edition.items.length} 条</span>
-            </div>
-          </div>
-          <ol class="history-title-list">
-            ${sortHistoryItems(edition.items, selectedSort)
-              .map((item) => {
-                const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}&edition=${encodeURIComponent(edition.id)}`;
-
-                return `
-                  <li class="history-title-item">
-                    <a href="${detailUrl}" aria-label="${escapeHtml(`查看站内解读：${item.title}`)}">
-                      <span class="category">${escapeHtml(item.label)}</span>
-                      <strong>${escapeHtml(item.title)}</strong>
-                    </a>
-                    <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
-                  </li>
-                `;
-              })
-              .join("")}
-          </ol>
-        </section>
-      `;
-      },
-    )
-    .join("");
+          return `
+            <li class="history-title-item">
+              <a href="${detailUrl}" aria-label="${escapeHtml(`查看 ${item.archiveLabel} 的站内解读：${item.title}`)}">
+                <span class="category">${escapeHtml(item.label)}</span>
+                <strong>${escapeHtml(item.title)}</strong>
+              </a>
+              <div class="history-title-meta">
+                <span class="batch-status ${escapeHtml(item.batchStatus.tone)}">${escapeHtml(item.batchStatus.label)}</span>
+                <span>${escapeHtml(item.archiveLabel)}</span>
+                <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
+              </div>
+            </li>
+          `;
+        })
+        .join("")}
+    </ol>
+  `;
 }
 
 attachHistoryControlEvents();

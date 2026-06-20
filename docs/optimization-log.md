@@ -2,6 +2,30 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 14:02 JST
+
+- Focus: Flattened the all-news page into a compact time-ordered title list without large batch panels, changed the homepage feed so it no longer duplicates the TOP3 items and only shows concise non-TOP3 signals, and expanded the source policy to include AI leader, capital, acquisition, IPO/listing, compute, and strategic company events when they materially affect the AI landscape.
+- Changed files:
+  - `all-news.html`
+  - `all-news.js`
+  - `app.js`
+  - `index.html`
+  - `styles.css`
+  - `data/sources.json`
+  - `data/news.json`
+  - `docs/source-policy.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `app.js`, `all-news.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, compact all-news rows, non-duplicated homepage feed behavior, and the expanded AI-adjacent strategic event selection logic.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html` and `all-news.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit; push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 13:40 JST
 
 - Focus: Moved the `查看全部情报` entry directly after `今日 TOP3` so readers can continue from today's priority items into the full archive without scrolling to the bottom, and changed the all-news page from long explanation cards into compact title-only rows that link to the in-site detail pages.

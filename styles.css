@@ -900,6 +900,15 @@ h3 {
   font-size: 12px;
 }
 
+.compact-feed-card {
+  min-height: 0;
+}
+
+.compact-feed-card .card-summary,
+.compact-feed-card .trend-note {
+  font-size: 13px;
+}
+
 .news-card .selection-score {
   margin: 0;
   background: #fff8e7;
@@ -1324,6 +1333,10 @@ h3 {
   list-style: none;
 }
 
+.history-title-list.flat {
+  grid-template-columns: 1fr;
+}
+
 .history-title-item {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1349,6 +1362,32 @@ h3 {
 
 .history-title-item a:hover strong {
   color: var(--cyan);
+}
+
+.history-title-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.history-title-meta .batch-status {
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.history-title-meta .batch-status.latest {
+  color: white;
+  background: var(--dark);
+}
+
+.history-title-meta .batch-status.archived {
+  color: var(--ink);
+  background: #e5e7eb;
 }
 
 .history-title-item time {
@@ -2215,6 +2254,10 @@ h3 {
   .history-title-item {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .history-title-meta {
+    justify-content: flex-start;
   }
 
   .history-title-item time {

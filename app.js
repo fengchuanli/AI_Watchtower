@@ -725,11 +725,21 @@ function renderFeedMessage(type, message, canRetry = false) {
 }
 
 function renderNews(filter = "all") {
-  const visibleNews = filter === "all" ? news : news.filter((item) => item.category === filter);
+  const topStoryIds = new Set(news.slice(0, 3).map((item) => item.id));
+  const scopedNews = filter === "all" ? news : news.filter((item) => item.category === filter);
+  const visibleNews = scopedNews.filter((item) => !topStoryIds.has(item.id));
   updateCategoryMeta(filter);
 
-  if (!visibleNews.length) {
+  if (!scopedNews.length) {
     renderFeedMessage("empty", "暂无匹配内容，后续接入真实来源后会自动补充。");
+    return;
+  }
+
+  if (!visibleNews.length) {
+    const message = filter === "all"
+      ? "本批次 TOP3 已覆盖全部新闻流；下一批抓取更多情报后，这里会展示 TOP3 之外的简短条目。"
+      : "这个分类目前只有 TOP3 条目；后续抓取更多情报后会在这里单独显示。";
+    renderFeedMessage("empty", message);
     return;
   }
 
@@ -740,18 +750,16 @@ function renderNews(filter = "all") {
         const detailLabel = escapeHtml(`查看站内解读：${item.title}`);
 
         return `
-        <article class="news-card">
+        <article class="news-card compact-feed-card">
           <span class="category">${escapeHtml(item.label)}</span>
           <div class="news-card-body">
             <h3><a class="card-detail-link" href="${detailUrl}" aria-label="${detailLabel}">${escapeHtml(item.title)}</a></h3>
             <p class="card-summary"><strong>事件简述</strong>${escapeHtml(item.body)}</p>
             <p class="trend-note"><strong>这意味着</strong>${escapeHtml(item.trend)}</p>
-            <p class="rank-note"><strong>为什么值得看</strong>${escapeHtml(item.whyRanked)}</p>
-            ${renderSelectionScore(item.selectionScore)}
           </div>
           <footer>
             <span>${escapeHtml(item.trustLevel)}</span>
-            <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看站内解读</a>
+            <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">详情</a>
             <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
           </footer>
         </article>
