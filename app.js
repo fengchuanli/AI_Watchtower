@@ -6,6 +6,7 @@ const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
+const readerFrame = document.querySelector("#readerFrame");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceFamilies = document.querySelector("#sourceFamilies");
 const topicGroups = document.querySelector("#topicGroups");
@@ -241,6 +242,8 @@ function validateEdition(edition, updatedAt, items = []) {
     throw new Error("News edition must include a coverage mix.");
   }
 
+  validateReaderFrame(edition.readerFrame);
+
   const invalidCoverage = edition.coverageMix.find(
     (item) => !item.label || !Number.isInteger(item.count) || item.count < 1 || !item.meaning,
   );
@@ -282,6 +285,20 @@ function validateEdition(edition, updatedAt, items = []) {
 
   if (invalidTopicGroup) {
     throw new Error("Each edition topic group must use a supported topic and reference current news items.");
+  }
+}
+
+function validateReaderFrame(frame) {
+  if (!frame || !frame.headline || !frame.whyItMatters) {
+    throw new Error("News edition must include a reader frame.");
+  }
+
+  if (!Array.isArray(frame.useThisIssueFor) || frame.useThisIssueFor.length < 2) {
+    throw new Error("News edition reader frame must include reader uses.");
+  }
+
+  if (!Array.isArray(frame.notProvenYet) || frame.notProvenYet.length < 2) {
+    throw new Error("News edition reader frame must include unresolved proof boundaries.");
   }
 }
 
@@ -585,6 +602,10 @@ function updateNewsMeta(data) {
     : "尚无期次信息";
   newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${edition} · ${data.editorNote || ""}`;
 
+  if (readerFrame) {
+    readerFrame.innerHTML = renderReaderFrame(data.edition?.readerFrame);
+  }
+
   if (coverageMix) {
     const mixItems = data.edition?.coverageMix || [];
     coverageMix.innerHTML = mixItems
@@ -637,6 +658,35 @@ function updateNewsMeta(data) {
       ),
     ].join("");
   }
+}
+
+function renderReaderFrame(frame) {
+  if (!frame) {
+    return "";
+  }
+
+  const readerUses = frame.useThisIssueFor
+    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .join("");
+  const boundaries = frame.notProvenYet
+    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .join("");
+
+  return `
+    <article>
+      <span>本期读者使用框架</span>
+      <h3>${escapeHtml(frame.headline)}</h3>
+      <p>${escapeHtml(frame.whyItMatters)}</p>
+      <div>
+        <strong>可以用来</strong>
+        <ul>${readerUses}</ul>
+      </div>
+      <div>
+        <strong>尚未证明</strong>
+        <ul>${boundaries}</ul>
+      </div>
+    </article>
+  `;
 }
 
 function updateHeroStats(data = {}) {

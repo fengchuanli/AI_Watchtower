@@ -2,6 +2,32 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 20:04 JST
+
+- Focus: Completed the rollover from the prior 30-day plan by writing the next plan for 2026-06-20 through 2026-07-19, then started Phase 1 Day 1 content quality work. Added a current-edition reader frame that tells Chinese readers how to use this batch, why it matters, and which conclusions remain unproven, without adding new external claims. Rendered the frame on the homepage, copied it to the latest archive edition, documented the data contract, and added validation so future editions keep the same orientation and proof-boundary structure.
+- Changed files:
+  - `docs/optimization-plan.md`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`; kept the new plan and reader frame focused on reducing Chinese readers' understanding burden and preserving source/proof boundaries.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 39 local references, static page link targets, and the edition reader-frame rendering/validation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this entry. Push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 19:04 JST
 
 - Focus: Improved Phase 5 Day 29 monthly maintainability by adding a concise optimization summary for the current 2026-06-17 to 2026-07-16 plan. The summary records what improved, where product quality is still weak, and which next priorities should guide later runs so automation can avoid repeating recent work. Linked the summary from README and extended site validation so the summary stays discoverable and covers improvements, weaknesses, and next priorities.

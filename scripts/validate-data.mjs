@@ -324,6 +324,41 @@ function validateVendorClaimBoundary(item, context) {
   }
 }
 
+function validateReaderFrame(frame, context) {
+  if (!frame || typeof frame !== "object" || Array.isArray(frame)) {
+    errors.push(`${context} must include a readerFrame object.`);
+    return;
+  }
+
+  if (typeof frame.headline !== "string" || frame.headline.trim().length < 18) {
+    errors.push(`${context} readerFrame.headline must explain how to read the edition.`);
+  }
+
+  if (typeof frame.whyItMatters !== "string" || frame.whyItMatters.trim().length < 40) {
+    errors.push(`${context} readerFrame.whyItMatters must explain why this batch matters.`);
+  }
+
+  if (!Array.isArray(frame.useThisIssueFor) || frame.useThisIssueFor.length < 2) {
+    errors.push(`${context} readerFrame.useThisIssueFor must include at least two reader uses.`);
+  }
+
+  for (const [index, item] of (frame.useThisIssueFor || []).entries()) {
+    if (typeof item !== "string" || !/团队|读者|用户|编辑/.test(item)) {
+      errors.push(`${context} readerFrame.useThisIssueFor[${index}] must name a concrete reader or team.`);
+    }
+  }
+
+  if (!Array.isArray(frame.notProvenYet) || frame.notProvenYet.length < 2) {
+    errors.push(`${context} readerFrame.notProvenYet must include at least two proof boundaries.`);
+  }
+
+  for (const [index, item] of (frame.notProvenYet || []).entries()) {
+    if (typeof item !== "string" || !/不能|尚未|不证明|仍需|缺少/.test(item)) {
+      errors.push(`${context} readerFrame.notProvenYet[${index}] must state an unresolved proof boundary.`);
+    }
+  }
+}
+
 function hasChineseText(value) {
   return /\p{Script=Han}/u.test(String(value || ""));
 }
@@ -465,6 +500,8 @@ if (!newsFeed.edition) {
   if (!allowedArchiveStatuses.has(newsFeed.edition.archiveStatus)) {
     errors.push(`data/news.json edition has unsupported archiveStatus ${newsFeed.edition.archiveStatus}.`);
   }
+
+  validateReaderFrame(newsFeed.edition.readerFrame, "data/news.json edition");
 
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
     errors.push("data/news.json edition must include at least two coverageMix entries.");
@@ -753,6 +790,8 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   if (latestHistoryEdition.id !== newsFeed.edition?.id) {
     errors.push("data/news-history.json latest edition must match data/news.json edition.id.");
   }
+
+  validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
 
   const allHistorySourceKeys = new Set();
 

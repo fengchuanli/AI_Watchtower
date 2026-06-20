@@ -526,7 +526,7 @@ if (
 }
 
 if (
-  !/2026-06-17 through 2026-07-16/.test(optimizationPlan) ||
+  !/2026-06-20 through 2026-07-19/.test(optimizationPlan) ||
   !/create the next 30-day plan/.test(optimizationPlan) ||
   !/Do not stop daily optimization/.test(optimizationPlan)
 ) {
@@ -600,6 +600,18 @@ if (
   !/\.deep-source-frame/.test(styles)
 ) {
   errors.push("Homepage deep briefing must render an explicit source frame for facts, judgment, and unknowns.");
+}
+
+if (
+  !/id="readerFrame"/.test(html) ||
+  !/const readerFrame = document\.querySelector\("#readerFrame"\);/.test(appJs) ||
+  !/function renderReaderFrame/.test(appJs) ||
+  !/edition\.readerFrame/.test(appJs) ||
+  !/\.reader-frame/.test(styles) ||
+  !/readerFrame/.test(validateDataJs) ||
+  !/readerFrame/.test(newsDataFormat)
+) {
+  errors.push("Homepage feed metadata must render and validate the edition reader frame.");
 }
 
 if (
