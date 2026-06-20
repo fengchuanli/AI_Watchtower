@@ -18,6 +18,8 @@ const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
+const githubPagesReadiness = readFileSync("docs/github-pages-readiness.md", "utf8");
+const contributing = readFileSync("docs/contributing.md", "utf8");
 const readme = readFileSync("README.md", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
@@ -544,6 +546,7 @@ if (!/docs\/product-principles\.md/.test(optimizationPlan)) {
 
 if (
   !/docs\/local-preview-qa\.md/.test(readme) ||
+  !/docs\/github-pages-readiness\.md/.test(readme) ||
   !/390px/.test(localPreviewQa) ||
   !/768px/.test(localPreviewQa) ||
   !/1280px/.test(localPreviewQa) ||
@@ -557,6 +560,21 @@ if (
   (!/GitHub Pages/.test(localPreviewQa) && !/Publish Readiness/.test(localPreviewQa))
 ) {
   errors.push("Local preview QA docs must cover core viewports, reader paths, loading failures, accessibility, and publishing readiness.");
+}
+
+if (
+  !/GitHub Pages 发布兼容清单/.test(githubPagesReadiness) ||
+  !/根绝对路径/.test(githubPagesReadiness) ||
+  !/\.\/all-news\.html/.test(githubPagesReadiness) ||
+  !/\.\/archive\.html/.test(githubPagesReadiness) ||
+  !/\.\/data\/news\.json/.test(githubPagesReadiness) ||
+  !/404 恢复路径/.test(githubPagesReadiness) ||
+  !/scripts\/validate-pages\.mjs/.test(githubPagesReadiness) ||
+  !/GitHub Pages 发布兼容：`docs\/github-pages-readiness\.md`/.test(readme) ||
+  !/docs\/github-pages-readiness\.md/.test(contributing) ||
+  !/页面未找到后的站内恢复入口/.test(notFoundHtml)
+) {
+  errors.push("GitHub Pages readiness docs and 404 recovery links must stay discoverable and project-site safe.");
 }
 
 if (

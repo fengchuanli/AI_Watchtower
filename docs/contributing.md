@@ -26,9 +26,11 @@
 2. 新增本地资源时使用相对 URL，并确认文件已经纳入版本控制。
 3. 修改交互时同时检查键盘操作、焦点状态、无脚本降级和窄屏布局。
 4. 修改元数据、页面入口或回退页时同步扩展对应校验脚本。
-5. 在 `docs/optimization-log.md` 记录目标、文件、检查结果和提交哈希。
+5. 修改 GitHub Pages 发布路径、404 或站内入口时同步检查 `docs/github-pages-readiness.md`。
+6. 在 `docs/optimization-log.md` 记录目标、文件、检查结果和提交哈希。
 
 `scripts/validate-site.mjs` 会检查首页的本地 `href`、`src` 和页内锚点，阻止缺失文件、逃逸仓库根目录的路径及不兼容 GitHub 项目站点的根绝对路径。
+`scripts/validate-pages.mjs` 会检查 404 页是否保留相对路径、noindex 和站内恢复入口。
 
 ## 提交前检查
 
