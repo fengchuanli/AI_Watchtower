@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 08:08 JST
+
+- Focus: Published the 08:00 JST AI news intelligence update with three non-duplicated reliable-media signals after official source indexes showed no stronger fresh official release: Axios on G7 AI CEO governance dynamics, TechCrunch on the reported SpaceX/Cursor $60B stock acquisition, and TechCrunch/Sensor Tower on AI assistant share moving into multi-player competition.
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `data/sources.json`, `docs/source-policy.md`, and `docs/news-data-format.md`; checked official OpenAI, Anthropic, Google DeepMind, Mistral, NVIDIA, Microsoft, RSS-oriented and reliable-media sources; skipped duplicate historical URLs and kept all media-sourced claims marked as `媒体背景` / `reported`.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 23 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新08点AI新闻情报`. `git push origin main` failed three times because this environment could not resolve `github.com`.
+
 ## 2026-06-21 01:30 JST
 
 - Focus: Strengthened copyright-safety rules with explicit paywall/login-wall limits, AI rewrite input limits, original-dependency planning, quotation limits, image and chart rules, structured source reliability and claim-status fields, takedown/correction workflow, and commercialization review triggers.
