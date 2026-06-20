@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 17:30 JST
+
+- Focus: Improved Phase 4 Day 27 local visual QA readiness by adding a lightweight preview checklist for desktop, tablet, and mobile viewports; primary Chinese-reader paths; loading-failure states; keyboard and reduced-motion checks; and GitHub Pages publishing safety. Linked the checklist from the README and added `scripts/validate-site.mjs` coverage so the documentation stays discoverable and complete.
+- Changed files:
+  - `docs/local-preview-qa.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`; kept the checklist focused on reducing mobile and desktop reading friction for Chinese readers.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, and local preview QA documentation coverage.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `dc04f65db27a5e26e4fae4604183784cee4359d8` (`增加本地预览QA清单`). Log follow-up commit will be created after this entry. Push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 17:05 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update with three non-duplicated official-source signals: Microsoft Security's Mastra npm supply-chain compromise affecting AI Agent development stacks, NVIDIA's FERC large-load interconnection readout for AI factories and energy access, and NVIDIA XR AI public beta for AR/XR multimodal agents in field workflows. OpenAI, Anthropic, Google DeepMind, and previously used NVIDIA/OpenAI URLs were skipped where they repeated historical archive coverage.
