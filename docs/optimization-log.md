@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 13:40 JST
+
+- Focus: Moved the `查看全部情报` entry directly after `今日 TOP3` so readers can continue from today's priority items into the full archive without scrolling to the bottom, and changed the all-news page from long explanation cards into compact title-only rows that link to the in-site detail pages.
+- Changed files:
+  - `index.html`
+  - `all-news.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `app.js`, `all-news.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 18 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, the TOP3 follow-up entry, and compact all-news title rows.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html` and `all-news.html` with Python's HTML parser.
+  - Validated `data/news.json` and `data/news-history.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit; push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 08:06 JST
 
 - Focus: Published the 08:00 JST AI news intelligence update with official Microsoft Security and NVIDIA signals on AutoJack agent control-plane risk, agentic marketing infrastructure, and France/Europe AI infrastructure production narratives. Kept NVIDIA items explicitly framed as vendor claims and skipped repeated OpenAI, Anthropic, DeepMind, and Google items already covered in the current archive.

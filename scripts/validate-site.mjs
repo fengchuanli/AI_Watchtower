@@ -321,6 +321,10 @@ if (
   errors.push("Homepage must render a dynamic Today TOP3 section with ranking reasons and three-line summaries.");
 }
 
+if (!/class="top3-followup"/.test(html) || !/href="\.\/all-news\.html">查看全部情报<\/a>/.test(html) || !/\.top3-followup/.test(styles)) {
+  errors.push("Homepage must place a prominent all-news entry directly after Today TOP3.");
+}
+
 if (
   /So What\?/.test(appJs) ||
   !/为什么重要/.test(appJs) ||
@@ -618,9 +622,14 @@ if (
   !/selectedSort = historySort\.value === "oldest" \? "oldest" : "newest";/.test(allNewsJs) ||
   !/原始来源仍只作为核对线索，优先阅读站内解读/.test(allNewsJs) ||
   !/\.history-controls/.test(styles) ||
-  !/\.history-filter-tabs button\.active/.test(styles)
+  !/\.history-filter-tabs button\.active/.test(styles) ||
+  !/class="history-title-list"/.test(allNewsJs) ||
+  !/class="history-title-item"/.test(allNewsJs) ||
+  !/\.history-title-list/.test(styles) ||
+  !/\.history-title-item/.test(styles) ||
+  /<p><strong>发生了什么<\/strong>/.test(allNewsJs)
 ) {
-  errors.push("All-news history must support category filtering, sort switching, and an editorial result note.");
+  errors.push("All-news history must support category filtering, sort switching, an editorial result note, and compact title-only history rows.");
 }
 
 if (

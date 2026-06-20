@@ -253,30 +253,23 @@ function renderHistory(history) {
               <span>${edition.items.length} 条</span>
             </div>
           </div>
-          <div class="history-card-grid">
+          <ol class="history-title-list">
             ${sortHistoryItems(edition.items, selectedSort)
               .map((item) => {
                 const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}&edition=${encodeURIComponent(edition.id)}`;
 
                 return `
-                  <article class="history-card">
-                    <div>
+                  <li class="history-title-item">
+                    <a href="${detailUrl}" aria-label="${escapeHtml(`查看站内解读：${item.title}`)}">
                       <span class="category">${escapeHtml(item.label)}</span>
-                      <h4><a href="${detailUrl}">${escapeHtml(item.title)}</a></h4>
-                      <p><strong>发生了什么</strong>${escapeHtml(item.body)}</p>
-                      <p><strong>趋势判断</strong>${escapeHtml(item.trend)}</p>
-                      <p><strong>入选理由</strong>${escapeHtml(item.whyRanked)}</p>
-                    </div>
-                    <footer>
-                      <span>${escapeHtml(item.trustLevel)}</span>
-                      <a class="reference-link" href="${detailUrl}">查看站内解读</a>
-                      <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
-                    </footer>
-                  </article>
+                      <strong>${escapeHtml(item.title)}</strong>
+                    </a>
+                    <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
+                  </li>
                 `;
               })
               .join("")}
-          </div>
+          </ol>
         </section>
       `;
       },
