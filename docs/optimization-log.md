@@ -2,6 +2,24 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 17:05 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update with three non-duplicated official-source signals: Microsoft Security's Mastra npm supply-chain compromise affecting AI Agent development stacks, NVIDIA's FERC large-load interconnection readout for AI factories and energy access, and NVIDIA XR AI public beta for AR/XR multimodal agents in field workflows. OpenAI, Anthropic, Google DeepMind, and previously used NVIDIA/OpenAI URLs were skipped where they repeated historical archive coverage.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `data/sources.json` and `docs/source-policy.md`; used official source pages and avoided search-result snippets, rumors, random scraping, and community discussion.
+  - Checked current OpenAI News, Anthropic Newsroom, Google DeepMind News, Mistral News, NVIDIA AI Blog, Microsoft AI/Security pages, and existing history source URLs to avoid repeated coverage.
+  - Ran `node --check app.js` plus syntax checks for `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs`, `node scripts/validate-site.mjs`, and `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local news intelligence commit uses message `更新17点AI新闻情报`. Push is pending because this environment still could not resolve `github.com`.
+
 ## 2026-06-20 16:03 JST
 
 - Focus: Improved Phase 4 Day 26 loading and error states for current news and all-news history. Homepage data failures now explain that the structured data file failed to load rather than implying the news feed is empty, and they provide fallback paths to all-news, the current JSON data, and the edition archive. The all-news page now shows an explicit loading state, distinguishes archive-fetch failure from empty history, and offers retry plus fallback links to raw history data, homepage, and archive.

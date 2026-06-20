@@ -2,31 +2,31 @@
   "version": 1,
   "updatedAt": "2026-06-20",
   "status": "published",
-  "statusLabel": "08:00 JST 实讯",
+  "statusLabel": "17:00 JST 实讯",
   "sourceCount": 22,
-  "editorNote": "编辑复核于 2026-06-20 08:00 JST：优先检查官方索引、RSS 和可靠来源；OpenAI、Anthropic 与 DeepMind 官方索引没有比既有归档更适合收录的新条目，本期采用 Microsoft Security 与 NVIDIA 官方可核对信号，并把厂商叙事边界写入每条。",
+  "editorNote": "编辑复核于 2026-06-20 17:00 JST：已尝试拉取 origin/main 但 GitHub DNS 失败；优先使用 data/sources.json 与 source-policy 指定的官方来源，跳过重复历史 URL、媒体传闻和社区讨论。本期采用 Microsoft Security 与 NVIDIA 官方可核对信号，并对 NVIDIA 条目保留厂商主张边界。",
   "edition": {
     "id": "news-2026-06-20",
     "date": "2026-06-20",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "08:00 JST 发布",
-    "note": "本期为 2026-06-20 08:00 JST 新闻情报快照。前次 17:00 版已收录 OpenAI 6 月 18 日健康、医学和企业治理信号；本次没有重复 DeepMind/Google 与 OpenAI 旧条目，改为聚焦代理安全、行业 agentic AI 和欧洲 AI 基础设施的未归档官方信号。",
+    "archiveLabel": "17:00 JST 发布",
+    "note": "本期为 2026-06-20 17:00 JST 新闻情报快照。官方索引没有 6 月 20 日下午新增模型发布；为避免重复上午版和历史归档，本期选择三个未归档且证据足够的官方信号，聚焦 AI Agent 开发供应链、AI 工厂能源并网和 AR/XR 现场 Agent。",
     "coverageMix": [
       {
-        "label": "代理安全",
+        "label": "供应链安全",
         "count": 1,
-        "meaning": "用于观察 AI 代理如何把浏览器、MCP 和本机控制面变成新的安全边界问题。"
+        "meaning": "用于观察 AI Agent 框架进入开发链路后，npm、维护者账号和 CI/CD 如何成为风险入口。"
       },
       {
-        "label": "行业工作流",
+        "label": "能源基础设施",
         "count": 1,
-        "meaning": "用于判断 agentic AI 是否正在进入广告营销等实时业务执行层。"
+        "meaning": "用于判断 AI 工厂扩张如何受电网并网、灵活负载和监管机制影响。"
       },
       {
-        "label": "基础设施",
+        "label": "现场 Agent",
         "count": 1,
-        "meaning": "用于核对欧洲 AI 工厂、开放模型和本地化产业部署的进展。"
+        "meaning": "用于观察多模态 Agent 从浏览器/IDE 走向 AR/XR 现场工作流的试点节奏，供企业创新、现场运营和平台团队核对。"
       }
     ],
     "sourceFamilies": [
@@ -34,7 +34,7 @@
         "family": "official",
         "label": "官方来源",
         "count": 3,
-        "role": "三条信号均来自官方博客或安全研究页面；可核对发布日期、项目名称和厂商/研究主张，但业务效果仍需外部来源补强。"
+        "role": "三条信号均来自官方安全或厂商博客；Microsoft 条目可核对攻击链和防护建议，NVIDIA 条目为厂商政策/产品叙事，需监管或客户侧材料补强。"
       }
     ],
     "topicGroups": [
@@ -43,27 +43,27 @@
         "label": "安全与治理",
         "count": 1,
         "itemIds": [
-          "microsoft-autojack-agent-rce-2026-06-18"
+          "microsoft-mastra-npm-supply-chain-2026-06-19"
         ],
-        "meaning": "跟踪代理安全、控制面认证和企业防守清单如何变化。"
-      },
-      {
-        "id": "enterprise",
-        "label": "企业工作流",
-        "count": 1,
-        "itemIds": [
-          "nvidia-agentic-marketing-workflows-2026-06-18"
-        ],
-        "meaning": "观察 AI 代理是否从内容生成进入真实行业运营链路。"
+        "meaning": "跟踪 AI Agent 开发栈、包供应链和 CI/CD 安全边界。"
       },
       {
         "id": "infrastructure",
-        "label": "算力与主权 AI",
+        "label": "算力与能源",
         "count": 1,
         "itemIds": [
-          "nvidia-france-ai-infrastructure-2026-06-17"
+          "nvidia-ferc-large-load-ai-factories-2026-06-18"
         ],
-        "meaning": "核对欧洲 AI 基础设施、开放模型和本地合规生态的落地节奏。"
+        "meaning": "观察 AI 工厂是否能通过能源与监管机制获得可落地的算力供给。"
+      },
+      {
+        "id": "agent",
+        "label": "Agent 工作流",
+        "count": 1,
+        "itemIds": [
+          "nvidia-xr-ai-ar-agents-public-beta-2026-06-16"
+        ],
+        "meaning": "跟踪空间多模态 Agent 如何进入实验室、工厂、医院和设计现场。"
       }
     ]
   },
@@ -100,150 +100,150 @@
     }
   ],
   "briefing": {
-    "label": "08:00 JST 简报",
-    "headline": "本期 AI 信号转向代理安全、营销自动化和欧洲 AI 基础设施",
-    "summary": "本期收录 3 条官方可核对信号：Microsoft Security 披露 AutoJack 代理安全链路，NVIDIA 展示广告营销中的 agentic AI 基础设施，NVIDIA 综述法国 AI 工厂、开放模型和产业代理应用。共同结论是，AI 正从模型能力竞争进入控制面安全、业务执行和本地算力治理。",
+    "label": "17:00 JST 简报",
+    "headline": "本期 AI 信号转向 Agent 供应链、AI 工厂能源和现场多模态工作流",
+    "summary": "本期收录 3 条官方可核对信号：Microsoft Security 披露 Mastra npm 供应链攻击与 AI Agent 开发栈风险，NVIDIA 解读 FERC 大负载并网对 AI factories 的影响，NVIDIA XR AI public beta 把多模态 Agent 接入 AR/XR 现场工作。共同结论是，AI 落地正在同时受软件供应链、能源并网和现场交互基础设施约束。",
     "cta": "阅读本期站内解读",
     "watchPoints": [
       {
-        "title": "localhost 不再天然安全",
-        "body": "带浏览能力的代理可把外部网页、MCP 和本机控制面连成新的攻击链。"
+        "title": "Agent 框架进入供应链威胁面",
+        "body": "npm 维护者账号、postinstall 和 CI/CD 环境成为 AI 开发项目必须审计的入口。"
       },
       {
-        "title": "营销代理进入运营链路",
-        "body": "广告竞价、创意生产、内容理解和归因开始依赖低延迟 AI 基础设施。"
+        "title": "AI 工厂离不开电网规则",
+        "body": "大负载并网、灵活负载和自备发电会影响算力扩张速度与成本。"
       },
       {
-        "title": "欧洲 AI 落到算力与合规",
-        "body": "法国案例把 AI 工厂、开放模型、数据 provenance 和行业部署放进同一条线。"
+        "title": "现场 Agent 需要新护栏",
+        "body": "AR/XR Agent 会采集视频、音频和空间数据，必须处理低延迟、权限和安全注意力。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "08:00 JST 情报简报",
-    "title": "代理时代的风险和基础设施正在同时成形",
-    "subtitle": "本期跳过重复旧条目，选择三条未归档且有明确来源边界的官方信号。",
+    "kicker": "17:00 JST 情报简报",
+    "title": "AI 落地的约束正在从模型转向系统边界",
+    "subtitle": "本期避开已归档来源，选择三个能说明开发、能源和现场工作流变化的官方信号。",
     "dateLabel": "2026 · 06 · 20 · Sat",
-    "status": "08:00 JST 已发布",
-    "overview": "这期 AI Watchtower 整理 3 个官方可核对信号。Microsoft Security 6 月 18 日披露 AutoJack，说明当代理能浏览外部网页并接触本机 MCP 控制面时，localhost 信任边界会被削弱；该链路已在 AutoGen Studio main 分支修复，且当前 PyPI 包不含相关攻击面。NVIDIA 同日称 Cannes Lions 合作方正在把 AI 用于广告竞价、营销代理、内容理解和推荐训练，其中包括 Criteo 约 2 倍训练提速和 Higgsfield 营销代理叙事。NVIDIA 6 月 17 日还发布法国 AI 基础设施综述，连接 Mistral 数据中心、Campus AI、Scaleway、开放模型和企业代理应用。共同结论是：AI 的下一轮落地需要同时处理控制面安全、行业工作流和本地算力治理。",
+    "status": "17:00 JST 已发布",
+    "overview": "这期 AI Watchtower 整理 3 个官方可核对信号。Microsoft Security 更新 Mastra npm 供应链攻击分析，说明 AI Agent 框架进入开发链路后，维护者账号、包依赖和 CI/CD 会成为凭证与构建环境风险入口。NVIDIA 同日解读 FERC large-load interconnection 行动，把 AI factories 的扩张与电网并网、灵活负载和自备发电联系起来。NVIDIA 6 月 16 日还宣布 XR AI public beta，推动多模态 Agent 进入 AR 眼镜、实验室、工厂、医院和设计现场。共同结论是：AI 的下一轮生产化不只看模型能力，还要看供应链、电力和现场交互控制。",
     "timeline": [
       {
-        "label": "Jun 17",
-        "title": "NVIDIA 综述法国 AI 基础设施",
-        "body": "法国 AI 工厂、开放模型、产业代理和本地算力被放入同一生产叙事。"
+        "label": "Jun 16",
+        "title": "NVIDIA XR AI 进入 public beta",
+        "body": "AR/XR 设备的视频、音频、深度和姿态数据被接入多模态 Agent 开发框架。"
       },
       {
         "label": "Jun 18",
-        "title": "Microsoft 披露 AutoJack",
-        "body": "浏览代理、恶意网页、localhost MCP WebSocket 和命令执行组成可学习的 agent 安全链路。"
+        "title": "NVIDIA 解读 FERC 大负载并网行动",
+        "body": "AI 工厂被放进电网并网、灵活负载和自备发电的基础设施叙事。"
       },
       {
-        "label": "Jun 18",
-        "title": "NVIDIA 展示营销代理工作流",
-        "body": "广告竞价、创意生产、内容理解和归因被包装为低延迟 AI 基础设施场景。"
+        "label": "Jun 19",
+        "title": "Microsoft 更新 Mastra 攻击归因",
+        "body": "Mastra npm 供应链攻击被归因到 Sapphire Sleet，并暴露开发机与 CI/CD 风险。"
       }
     ],
     "keyNumbers": [
       {
+        "value": "140+",
+        "label": "受影响 Mastra npm 包"
+      },
+      {
+        "value": "60天",
+        "label": "灵活负载研究期主张"
+      },
+      {
+        "value": "5类",
+        "label": "XR AI 现场输入类型"
+      },
+      {
         "value": "3",
         "label": "本期官方信号"
-      },
-      {
-        "value": "2x",
-        "label": "Criteo 训练提速主张"
-      },
-      {
-        "value": "18,000",
-        "label": "Mistral GB200 系统主张"
-      },
-      {
-        "value": "0",
-        "label": "AutoJack 指定链路进入当前 PyPI 包"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "代理安全",
-        "title": "AI 代理让本机控制面重新成为攻击面",
-        "body": "AutoJack 的重点不是单个漏洞，而是代理浏览外部内容后仍能触达本机 MCP、WebSocket 和命令执行工具。传统 localhost 假设在代理时代需要重新审计。",
-        "soWhat": "开发者应把代理浏览器、MCP、代码执行器和本机服务隔离到沙箱或低权限环境，并对控制面做认证、授权和审计。"
+        "label": "供应链安全",
+        "title": "AI Agent 项目的依赖树就是攻击面",
+        "body": "Mastra 事件显示，攻击者可以通过 npm 维护者账号、typosquat 包和 postinstall hook 进入开发者机器与 CI/CD，而不必攻破模型服务本身。",
+        "soWhat": "开发团队应把 Agent 框架依赖纳入生产级供应链治理，审计锁文件、install scripts、发布权限、egress 日志和 token 暴露。"
       },
       {
         "number": "02",
-        "label": "行业工作流",
-        "title": "营销 AI 正从生成内容进入实时运营",
-        "body": "NVIDIA 的 Cannes Lions 叙事把广告竞价、推荐训练、营销代理和视频理解放进同一基础设施栈，说明垂直行业正在追求可运行、可审计、低延迟的 AI。",
-        "soWhat": "营销技术团队应重点核对权限、品牌安全、预算上限、审计日志和客户侧业务指标，而不是只评估生成质量。"
+        "label": "能源基础设施",
+        "title": "AI 工厂竞争进入电网并网阶段",
+        "body": "NVIDIA 对 FERC 行动的解读说明，AI 数据中心扩张会受大负载并网队列、网络升级、灵活负载和本地电价机制影响。",
+        "soWhat": "基础设施团队应把电力合同、并网周期、自备发电、州级监管和灵活负载能力放进算力规划，而不是只追踪 GPU 交付。"
       },
       {
         "number": "03",
-        "label": "基础设施",
-        "title": "欧洲 AI 竞争进入算力、开放模型和合规组合战",
-        "body": "法国信号把 AI 工厂、开放模型、合成数据、企业代理和本地部署连接起来，显示主权 AI 的核心是基础设施和 governance，而不只是模型名称。",
-        "soWhat": "企业和政策团队应把算力、电力、数据 provenance、模型透明度和客户侧部署结果放在同一张核对表里。"
+        "label": "现场 Agent",
+        "title": "多模态 Agent 开始进入物理工作流",
+        "body": "XR AI public beta 把视频、音频、深度、姿态、企业检索和工具调用组合进 AR/XR 设备，目标是服务实验室、工厂、医院和设计现场。",
+        "soWhat": "企业试点应先定义延迟、遮挡、安全注意力、数据权限、审计和人工接管标准，再评估现场 Agent 是否能进入高风险工作流。"
       }
     ],
     "actions": [
-      "安全团队应把所有 agent localhost 控制面列入资产盘点，并要求认证、allowlist 和隔离。",
-      "企业运营团队应要求营销代理提供权限、审计、预算和品牌安全证据后再进入生产。",
-      "基础设施团队应交叉核对厂商生态叙事、政府文件、客户指标和能源接入进度。"
+      "开发平台团队应立即检查是否使用受影响的 mastra/@mastra 版本，并轮换可能暴露的凭证和 token。",
+      "基础设施团队应跟踪 FERC/DOE 原文和州级实施，而不是只采信厂商对 AI 工厂并网收益的描述。",
+      "企业创新团队应把 AR/XR Agent 试点限定在低风险场景，先验证延迟、权限、审计和失败处理。"
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "Microsoft Security 官方页面可支持 AutoJack 链路、修复状态、PyPI 发布包边界和防守建议。",
-        "NVIDIA Cannes Lions 页面可支持合作方名单、广告/营销工作流、Criteo 训练提速主张和 agent toolkit 叙事。",
-        "NVIDIA 法国页面可支持其对 AI 工厂、Mistral 部署、开放模型生态和行业案例的官方叙事。"
+        "Microsoft Security 官方页面可支持 Mastra/npm 攻击链、Sapphire Sleet 归因、受影响包范围、IOC 和防护建议。",
+        "NVIDIA FERC 页面可支持其对大负载并网行动、AI factories 和 flexible grid assets 的官方解读。",
+        "NVIDIA XR AI 页面可支持 public beta、开发库能力、输入类型、工具栈和合作案例叙事。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 将 AutoJack 视为代理控制面安全信号，而非所有 AutoGen 用户受影响的漏洞通报。",
-        "本站将 NVIDIA 两条内容标记为厂商主张，采用其项目和数字作为观察入口，不把业务效果当作已独立证明。",
-        "本期判断是 AI 落地正在进入安全、行业执行和基础设施治理三条线。"
+        "本站将 Mastra 事件视为 AI Agent 开发供应链风险，而非所有 Agent 框架均受影响的结论。",
+        "本站将 FERC 与 XR AI 两条 NVIDIA 内容标记为厂商主张，采用其项目和时间线作为观察入口，不把政策收益或客户效果视为已独立证明。",
+        "本期判断是 AI 生产化正在同时受软件供应链、电力并网和现场交互基础设施约束。"
       ],
       "unknowns": [
-        "其他代理框架是否存在同型 localhost 控制面风险仍需独立排查。",
-        "NVIDIA 合作方的营销 ROI、品牌安全和客户侧稳定性仍缺少第三方验证。",
-        "法国 AI 基础设施项目的能源接入、交付节奏和客户效果仍需政府、合作方和客户侧材料交叉核对。"
+        "Mastra/npm 事件的真实安装量、企业暴露程度和凭证损失仍需 npm、项目方和客户侧材料确认。",
+        "FERC 行动的实施细则、州级执行、电价影响和 AI 工厂商业部署效果仍需监管与公共事业材料交叉核对。",
+        "XR AI 在真实工厂、实验室和医疗场景的延迟、隐私、安全和 ROI 仍缺少客户侧公开指标。"
       ]
     },
     "coverageLimits": [
       {
         "label": "时间边界",
-        "body": "本期是 2026-06-20 08:00 JST 快照；重点覆盖 6 月 17-18 日仍未进入历史归档的官方信号。"
+        "body": "本期是 2026-06-20 17:00 JST 快照；重点覆盖 6 月 16-19 日未进入历史归档的官方信号。"
       },
       {
         "label": "来源边界",
-        "body": "本期采用 Microsoft Security 和 NVIDIA 官方页面；NVIDIA 条目属于厂商叙事，不能替代客户侧或第三方证据。"
+        "body": "本期采用 Microsoft Security 与 NVIDIA 官方页面；NVIDIA 条目属于厂商叙事，不能替代监管原文或客户侧证据。"
       },
       {
         "label": "结论边界",
-        "body": "三条信号支持安全和基础设施观察，但不能证明所有代理框架受影响、营销 ROI 成立或欧洲项目全部按期落地。"
+        "body": "三条信号支持系统边界观察，但不能证明所有 Agent 框架受影响、AI 工厂并网收益成立或 XR Agent 已可进入高风险生产。"
       }
     ],
     "references": [
       {
-        "label": "Microsoft Security 披露 AutoJack 代理安全链路",
-        "url": "https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/"
+        "label": "Microsoft 披露 Mastra npm 供应链攻击：AI Agent 开发栈成为凭证与 CI/CD 风险入口",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
       },
       {
-        "label": "NVIDIA 展示广告营销中的 AI 代理和基础设施信号",
-        "url": "https://blogs.nvidia.com/blog/nvidia-ai-marketing-advertising-cannes-lions/"
+        "label": "NVIDIA 解读 FERC 大负载并网行动：AI 工厂能源接入成为基础设施竞争变量",
+        "url": "https://blogs.nvidia.com/blog/ferc-large-load-interconnection/"
       },
       {
-        "label": "NVIDIA 综述法国 AI 工厂、开放模型和产业部署进展",
-        "url": "https://blogs.nvidia.com/blog/france-advances-europes-ai-future/"
+        "label": "NVIDIA XR AI 公测：把多模态 Agent 放进 AR 眼镜和现场工作流",
+        "url": "https://blogs.nvidia.com/blog/nvidia-xr-ai/"
       }
     ]
   },
   "items": [
     {
-      "id": "microsoft-autojack-agent-rce-2026-06-18",
+      "id": "microsoft-mastra-npm-supply-chain-2026-06-19",
       "category": "policy",
       "label": "政策",
-      "title": "Microsoft Security 披露 AutoJack：浏览代理可跨 localhost 触发开发机 RCE",
-      "body": "Microsoft Security 6 月 18 日发布 AutoJack 研究，称一个恶意网页可诱导带浏览能力的 AutoGen Studio 代理连接本机 MCP WebSocket，并在受影响开发构建中触发任意进程执行。",
-      "trend": "趋势判断：AI 代理安全正在从提示注入扩展到本机控制平面、MCP 连接、开发工具认证和代理身份隔离，localhost 不再天然等同安全边界。",
-      "whyRanked": "它把“代理浏览外部内容”和“本机开发控制面”之间的信任假设击穿，并说明受影响路径已在发布前修复，是本期最强的 agent 安全信号。",
+      "title": "Microsoft 披露 Mastra npm 供应链攻击：AI Agent 开发栈成为凭证与 CI/CD 风险入口",
+      "body": "Microsoft Security 6 月 17 日发布并于 6 月 19 日更新 Mastra npm 供应链攻击分析，称 Sapphire Sleet 通过接管 npm 维护者账号，向 140 多个 mastra 与 @mastra scope 包注入 easy-day-js 依赖，postinstall payload 可在开发机和 CI/CD 环境执行。",
+      "trend": "趋势判断：AI Agent 框架正在进入企业开发链路，攻击者不必攻破模型本身，只要污染包管理、安装脚本和维护者账号，就可能获取开发者凭证、构建环境和下游软件完整性。",
+      "whyRanked": "它把 AI Agent 生态、npm 包供应链、开发机持久化和 CI/CD 暴露放在同一事件链里，并给出受影响包数量、时间线、IOC 和防护建议，是本期最强的安全信号。",
       "selectionScore": {
         "impact": 5,
         "novelty": 5,
@@ -251,39 +251,79 @@
         "evidenceQuality": 5,
         "readerUtility": 5,
         "total": 25,
-        "note": "代理本机控制面风险影响开发者和企业安全，研究给出链路、边界和修复状态，证据强。"
+        "note": "AI Agent 框架供应链影响开发者、CI/CD 和企业凭证安全，官方技术细节完整且行动建议明确。"
       },
-      "impact": "开发者平台、安全、红队和企业 IT 团队需要把代理浏览器、MCP 控制面、localhost 服务和命令执行工具放进同一威胁模型。",
-      "readerUse": "安全团队和开发平台团队可用它更新代理应用上线清单，重点检查本机端口认证、MCP 参数 allowlist、沙箱和低权限账户。",
-      "nextCheck": "继续核对 AutoGen Studio 发布版本、main 分支修复提交、MCP 路由认证变化、Microsoft Defender 检测覆盖和其他代理框架是否存在同型风险。",
+      "impact": "使用 JavaScript/TypeScript Agent 框架的开发团队、安全团队和平台工程团队需要立即审计依赖树、锁文件、CI/CD 日志、npm 维护者权限和 postinstall 脚本执行策略。",
+      "readerUse": "开发平台团队可把本事件转成检查清单：锁定已知安全版本、搜索 easy-day-js、轮换可能暴露的 token、禁用不必要 install scripts，并复核包发布权限。",
+      "nextCheck": "继续核对 npm 安全公告、Mastra 官方修复说明、受影响版本清单、Sapphire Sleet 后续归因更新、企业 CI/CD 暴露报告和 GitHub/npm 账户保护变化。",
       "followUpQuestions": [
-        "其他支持浏览、代码执行和 MCP 工具的代理框架是否也把 localhost 当作过强信任边界？",
-        "企业能否通过代理身份隔离、容器化和控制面认证，把同类链路限制在开发沙箱内？"
+        "企业是否能确认所有 AI Agent 项目没有安装受影响的 mastra 或 @mastra 版本，且 CI/CD 中没有触发恶意 postinstall？",
+        "npm 维护者账号、GitHub Actions OIDC 发布路径和包锁定策略能否减少类似 AI 开发栈供应链攻击？"
       ],
-      "evidenceThreshold": "至少需要上游修复提交、发布版本确认、独立复现实验、其他框架排查报告和企业端检测数据，才能判断此类风险已被系统性缓解。",
-      "claimBoundary": "Microsoft 研究支持 AutoJack 链路和修复状态，但不能证明所有 AutoGen 安装都受影响；文中明确 PyPI 当前发布包不包含该 MCP WebSocket 攻击面。",
-      "counterEvidence": "如果后续确认受影响代码范围更窄、其他框架没有同型控制面、或企业默认已隔离代理浏览器，应下调其外溢风险判断。",
+      "evidenceThreshold": "至少需要 npm 或项目方完整受影响版本清单、企业侧暴露复盘、凭证轮换结果、包生态修复证明和独立威胁情报交叉验证，才能判断风险已被充分收敛。",
+      "claimBoundary": "Microsoft 报告支持该攻击链、归因判断、140 多个包受影响和防护建议；但不能证明所有 Mastra 用户都被成功入侵，也不能替代项目方或企业侧的暴露确认。",
+      "counterEvidence": "如果后续确认恶意版本安装量很低、CI/CD 未广泛执行 payload、或 npm 生态快速阻断传播，应下调其实际外溢影响；但供应链防护意义仍成立。",
       "source": "Microsoft Security Blog",
       "sourceId": "microsoft-ai-blog",
-      "sourceUrl": "https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/",
+      "sourceUrl": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/",
       "sourceRole": "官方核对",
-      "provenance": "Microsoft Defender Security Research Team 官方安全博客可确认发布日期、AutoJack 名称、AutoGen Studio MCP WebSocket 链路、localhost 信任边界问题、main 分支修复和 PyPI 发布包未暴露该具体链路；其他框架影响仍需独立排查。来源可信度：高。",
+      "provenance": "Microsoft Security 官方博客可确认发布日期与 6 月 19 日更新、Mastra/@mastra npm 包影响范围、easy-day-js typosquat、postinstall payload、Sapphire Sleet 高可信归因、IOC、Defender 覆盖和缓解建议；项目方与企业侧实际暴露仍需补强。来源可信度：高。",
       "trustLevel": "来源层级：官方，高可信",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-06-18T23:00:00+09:00",
-      "time": "06/18",
-      "detailBody": "Microsoft Security 6 月 18 日发布 AutoJack 研究，描述一个针对 AutoGen Studio 开发构建的代理安全链路：当带浏览能力的代理渲染外部网页时，网页脚本可借代理所在本机身份连接 localhost 上的 MCP WebSocket 控制面；受影响实现又存在 MCP 路径认证跳过和从 URL 参数读取 StdioServerParams 并启动进程的问题，最终形成远程代码执行原语。Microsoft 表示该问题已通过 MSRC 流程反馈并在上游 main 分支修复，WebSocket 不再从查询串读取 server_params，MCP 路径也回到正常认证流程；同时强调受影响攻击面未进入当前 PyPI 发布包。",
-      "detailTrend": "这条信号说明 agent 安全的核心风险正在从“模型会不会被提示注入”扩展到“代理运行在哪些控制面旁边”。传统 Web 安全里，localhost 常被视为比公网更可信；但当代理会浏览不可信内容、执行 JavaScript、调用本机 WebSocket、连接 MCP 服务和启动工具时，外部内容就可能通过代理身份跨过本机边界。对企业来说，代理开发环境要像真实生产入口一样治理：控制面必须认证和授权，高风险命令要 allowlist，浏览身份要与开发者身份隔离，日志和 EDR 要能还原代理动作。",
-      "detailWhyRanked": "本条排在首位，因为它提供了完整事件链、清晰修复状态和可行动的防守含义。来源是 Microsoft Security 官方研究，能支撑“该链路存在于开发构建并已修复”的中心事实；同时它不把风险夸大为所有用户受影响，而是明确 PyPI 发布包边界。AI Watchtower 将其视为代理框架安全范式信号：一旦代理能浏览外部内容并接触本机控制平面，localhost、MCP 和开发工具默认配置都需要重新进入安全审计。"
+      "publishedAt": "2026-06-19T10:00:00+09:00",
+      "time": "06/19",
+      "detailBody": "Microsoft Security 6 月 17 日发布并于 6 月 19 日更新 Mastra npm 供应链攻击分析。报告称，攻击者接管拥有 Mastra 生态发布权限的 npm 维护者账号 ehindero，先发布冒充 dayjs 的 easy-day-js 包，再向 140 多个 mastra 和 @mastra scope 包注入该依赖。easy-day-js@1.11.21 先作为干净诱饵发布，1.11.22 随后加入 postinstall hook；当开发者或 CI/CD 运行 npm install 或 npm update 时，恶意 setup.cjs 会执行、关闭 TLS 校验、联系 C2、下载第二阶段 payload，并可在 Windows、macOS、Linux 上建立持久化。Microsoft 还称该活动与朝鲜相关 Sapphire Sleet 高度一致，风险覆盖开发机、凭证、token、构建环境和下游软件完整性。",
+      "detailTrend": "这条信号说明 AI Agent 开发栈已经成为供应链攻击目标。Mastra 本身是开发者构建 Agent 工作流的生态组件，攻击者利用的不是模型推理漏洞，而是包发布权限、typosquat、semver 解析和 postinstall 执行这些传统软件供应链环节。AI 团队通常把注意力放在提示注入、模型越权和工具调用，但真实风险还包括依赖树被污染后，开发机和 CI/CD 中的云密钥、模型 API key、源码和构建产物被窃取。对企业来说，Agent 项目应进入与生产代码相同的供应链治理：锁文件、包签名、发布身份、install scripts、egress 控制和日志留存都要被检查。",
+      "detailWhyRanked": "本条排在首位，因为它具备清晰事件链、可操作 IOC、具体影响范围和直接读者用途。Microsoft 页面给出时间线、恶意包名、受影响范围、payload 行为、防护建议和 Defender 检测覆盖，足以支持站内解读。AI Watchtower 将其视为“AI 开发框架供应链风险”信号，而不是泛化为所有 Agent 框架均受影响；后续仍需等待 Mastra/npm 官方清单、企业侧暴露数据和更多威胁情报交叉验证。"
     },
     {
-      "id": "nvidia-agentic-marketing-workflows-2026-06-18",
+      "id": "nvidia-ferc-large-load-ai-factories-2026-06-18",
+      "category": "tool",
+      "label": "工具",
+      "title": "NVIDIA 解读 FERC 大负载并网行动：AI 工厂能源接入成为基础设施竞争变量",
+      "body": "NVIDIA 6 月 18 日称，美国 FERC 针对 large-load interconnection 的行动会影响 AI factories、半导体制造支持系统和先进制造设施接入电网的方式，并把能源称为 AI 技术创新的基础层。",
+      "trend": "趋势判断：AI 基础设施竞争正在从 GPU 和数据中心扩展到电网并网、灵活负载、自备发电和监管排队机制；算力扩张能否落地越来越取决于能源治理。",
+      "whyRanked": "它把 FERC 行动、AI 工厂、大负载并网、灵活用电和商业部署时间表放在同一叙事中，是观察美国 AI 基础设施瓶颈的强政策/产业信号。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 21,
+        "note": "能源并网会影响 AI 工厂扩张，但页面属于 NVIDIA 政策解读，监管细节仍需 FERC/DOE 原文确认。"
+      },
+      "impact": "云厂商、AI 数据中心、能源公司和政策团队需要把电力并网、灵活负载、网络升级成本和本地电价影响纳入 AI 基础设施规划。",
+      "readerUse": "基础设施团队、能源政策观察者和数据中心规划团队可用它建立后续核对表：FERC 文件、DOE 指令、州级公用事业规则、AI 工厂自备发电和灵活负载合同。",
+      "nextCheck": "继续核对 FERC 原始行动、DOE 指令、NVIDIA/Emerald AI 商业部署、州级电网运营商执行规则和数据中心用电费率影响。",
+      "followUpQuestions": [
+        "FERC large-load interconnection 框架会不会实质缩短 AI 工厂并网周期，还是仍受州级队列、输电容量和地方审批限制？",
+        "AI 工厂作为 flexible grid assets 的商业部署能否证明降低电价或提升电网可靠性，而不是把成本转嫁给其他用户？"
+      ],
+      "evidenceThreshold": "至少需要 FERC/DOE 原文、实施细则、并网队列数据、公共事业委员会文件、商业项目上线证明和电价影响评估，才能升级为已验证基础设施改善结论。",
+      "claimBoundary": "NVIDIA 页面支持其对 FERC 行动与 AI 工厂能源需求的解读，但不能替代监管原文，也不能证明所有 AI 数据中心都会降低电价或快速获批。",
+      "counterEvidence": "如果实施细则放缓、地方审批受阻、电网升级成本上升、居民电价承压或灵活负载未兑现，应下调该信号的基础设施改善判断。",
+      "source": "NVIDIA AI Blog",
+      "sourceId": "nvidia-blog-ai",
+      "sourceUrl": "https://blogs.nvidia.com/blog/ferc-large-load-interconnection/",
+      "sourceRole": "厂商主张",
+      "provenance": "NVIDIA 官方博客可确认发布日期、其对 FERC large-load interconnection 行动的解读、AI factories 与半导体/先进制造设施并网关系、60 天研究期主张、NVIDIA 与 Emerald AI flexible grid asset 叙事和年内商业部署说法；监管事实需 FERC/DOE 原文交叉核对。来源可信度：中高。",
+      "trustLevel": "来源层级：官方，高可信",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-06-18T23:30:00+09:00",
+      "time": "06/18",
+      "detailBody": "NVIDIA 6 月 18 日发布对 FERC large-load interconnection 行动的解读，称该行动会影响 AI factories、半导体制造支持系统和先进制造设施接入电网的方式。文章把能源描述为 AI 创新的基础层，并称 FERC 行动是在美国能源部长 Chris Wright 指令后建立全国性政策路径，让大负载用户通过自费网络升级、带来新增发电和提供灵活负载来更快进入电网。NVIDIA 还称，能够展示负载灵活性的客户可能进入更快研究周期，并提到 NVIDIA 与 Emerald AI 正在构建一种从设计阶段就作为 flexible grid assets 的 AI factories，商业部署计划从今年晚些时候开始。",
+      "detailTrend": "这条信号的价值在于提醒读者，AI 基础设施的约束不只是芯片供给。大规模训练和推理设施需要稳定电力、并网审批、输电容量、冷却和本地社区接受度；如果并网队列和电价机制不能跟上，GPU 采购也无法转化为可用算力。NVIDIA 把 AI 工厂描述为可调度、可自带发电、可响应电网状态的大负载资产，这代表数据中心与能源系统关系正在重写。对企业和政策团队来说，未来 AI 产能规划要同时看芯片、地产、电力、监管、负载灵活性和成本分摊。",
+      "detailWhyRanked": "本条进入 TOP3，是因为它连接了 AI 资本开支、能源监管和基础设施落地。来源是 NVIDIA 官方博客，能支持其观点、日期、合作方和商业部署表述；但它明显是厂商政策解读，不能替代 FERC/DOE 原始文件，也不能证明成本和可靠性收益已实现。因此本站标记为厂商主张，后续以监管文本、州级执行、实际并网周期和电价影响来检验。"
+    },
+    {
+      "id": "nvidia-xr-ai-ar-agents-public-beta-2026-06-16",
       "category": "product",
       "label": "产品",
-      "title": "NVIDIA 在 Cannes Lions 展示营销代理和广告实时决策基础设施",
-      "body": "NVIDIA 6 月 18 日称，AWS、Criteo、Higgsfield、KERV.ai、Taboola 等合作方正在用 NVIDIA 技术支撑广告竞价、内容理解和营销代理工作流。",
-      "trend": "趋势判断：agentic AI 正从办公助手进入垂直行业的实时运营系统，广告竞价、创意生产、内容匹配和预算归因开始依赖可审计的 AI 基础设施。",
-      "whyRanked": "它把低延迟推理、推荐训练、营销代理、企业权限和多模态内容理解放在同一行业场景中，显示 AI 基础设施正在进入业务执行层。",
+      "title": "NVIDIA XR AI 公测：把多模态 Agent 放进 AR 眼镜和现场工作流",
+      "body": "NVIDIA 6 月 16 日宣布 XR AI public beta，称开发者可用该框架把 AR/XR 设备的视频、音频、深度、姿态和传感器数据接入模型、企业知识库、工具和加速运行时，构建现场多模态 Agent。",
+      "trend": "趋势判断：Agent 正从浏览器和 IDE 进入实验室、工厂、医院与设计评审现场；下一步竞争会围绕低延迟感知、空间上下文、企业检索、工具调用和不干扰用户注意力展开。",
+      "whyRanked": "它给出 public beta、核心能力、模型/工具栈和多个行业研究案例，显示空间计算正在成为 AI Agent 从数字任务走向物理任务的接口。",
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
@@ -291,70 +331,30 @@
         "evidenceQuality": 4,
         "readerUtility": 4,
         "total": 20,
-        "note": "行业应用场景具体且数字充足，但属于 NVIDIA 和合作方叙事，外部效果仍需客户数据验证。"
+        "note": "现场多模态 Agent 方向明确且案例丰富，但多数案例仍是探索或展示，生产效果需要客户侧验证。"
       },
-      "impact": "广告技术、品牌营销和企业平台团队需要评估 AI 代理是否具备实时性、权限控制、审计、成本和品牌安全机制。",
-      "readerUse": "企业运营和营销技术团队可用它检查代理是否真正嵌入竞价、创意、投放、归因和安全审核流程，而不只是生成内容。",
-      "nextCheck": "继续核对 Cannes Lions 展示后的客户案例、Criteo 训练提速独立数据、Higgsfield 企业权限落地、KERV 基准细节和广告平台合规反馈。",
+      "impact": "制造、科研、医疗、培训和设计团队可以开始评估 AR/XR Agent 对现场指导、知识检索、记录留痕和安全注意力管理的价值与风险。",
+      "readerUse": "企业创新和平台团队可用它制定试点要求：延迟、遮挡控制、数据权限、审计记录、设备兼容性、模型失败处理和人工接管。",
+      "nextCheck": "继续核对开发者资源、public beta API/SDK 限制、Siemens/Rana/UPMC/VITURE/Innoactive 后续客户指标、隐私条款和设备端延迟。",
       "followUpQuestions": [
-        "营销代理在真实品牌环境中如何处理权限、审计、版权、错误投放和预算上限？",
-        "广告实时竞价中的 AI 推理提速能否转化为可验证的成本、转化率和品牌安全改进？"
+        "AR 眼镜上的 Agent 能否在嘈杂、遮挡和高风险现场保持低延迟、低干扰和可审计行为？",
+        "实验室、手术室和工厂场景中的数据采集、隐私、责任边界和错误提示机制是否足够清楚？"
       ],
-      "evidenceThreshold": "至少需要客户侧指标、第三方基准、广告平台合规文件、审计日志样例和品牌安全事故数据，才能证明这些代理工作流已稳定创造业务价值。",
-      "claimBoundary": "NVIDIA 页面支持其合作方在 Cannes Lions 展示相关能力和部分性能主张，但不等同于独立证明营销 ROI、品牌安全或所有企业部署成熟。",
-      "counterEvidence": "如果客户侧数据缺少、基准不可复核、权限控制未落地或出现错误投放和品牌安全事故，应下调该信号的采用成熟度。",
+      "evidenceThreshold": "至少需要公开 SDK 文档、第三方 demo、客户侧安全/效率指标、现场失败案例、隐私与审计方案和设备兼容测试，才能判断 XR Agent 是否可进入生产。",
+      "claimBoundary": "NVIDIA 页面支持 XR AI public beta、能力组成和合作案例叙事，但不能证明所有行业场景已生产化，也不能证明 AR Agent 在医疗或工厂高风险环境中足够安全。",
+      "counterEvidence": "如果后续试点显示延迟高、遮挡提示干扰工作、企业数据权限难控、设备续航不足或客户指标缺失，应下调其落地成熟度。",
       "source": "NVIDIA AI Blog",
       "sourceId": "nvidia-blog-ai",
-      "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-ai-marketing-advertising-cannes-lions/",
+      "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-xr-ai/",
       "sourceRole": "厂商主张",
-      "provenance": "NVIDIA 官方博客可确认发布日期、Cannes Lions 展示、合作方名单、AWS 广告竞价参考实现、Criteo 约 2 倍训练提速和约 17,000 GPU 小时节省、Higgsfield 营销代理叙事、KERV.ai 速度效率主张；业务结果仍需客户或第三方验证。来源可信度：中高。",
+      "provenance": "NVIDIA 官方博客可确认发布日期、XR AI public beta、AR/XR 输入类型、Metropolis/VSS、NeMo Retriever、Nemotron/Cosmos Reason、NeMo Agent Toolkit、DGX/RTX 运行基础设施，以及 Siemens、Rana、UPMC、VITURE、Innoactive 等案例叙事；客户侧效果仍需补强。来源可信度：中高。",
       "trustLevel": "来源层级：官方，高可信",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-06-18T21:30:00+09:00",
-      "time": "06/18",
-      "detailBody": "NVIDIA 6 月 18 日发布 Cannes Lions 相关博客，称广告与营销行业正在从采用 AI 生成内容，转向让 AI 支撑更自主的运营流程。页面列出 Alembic、AWS、Criteo、Higgsfield、KERV.ai 和 Taboola 等合作方：AWS 提供面向广告竞价的参考实现，使用 Triton Inference Server 支撑实时拍卖窗口内的 AI 推理；Criteo 与 NVIDIA 合作在 Blackwell GPU 和 cuEmbed 上获得约 2 倍训练提速，并称每年释放约 17,000 GPU 小时；Higgsfield 描述可覆盖创意、生产、发布和优化的营销代理工作流；KERV.ai 则称用 Nemotron 3 Nano Omni 优化视频理解和内容匹配。",
-      "detailTrend": "这条信号的价值不在单个营销案例，而在行业工作流正在被 AI 基础设施重写。广告和营销天然要求低延迟、大规模数据处理、多模态理解、品牌安全和预算约束；如果 AI 代理进入投放、创意和归因流程，就必须具备安全护栏、审计、角色权限和成本可控性。NVIDIA 叙事把 GPU、推理服务、开源模型、代理工具包和合作方产品打包到业务执行层，说明企业 AI 竞争正在从“生成一段内容”走向“持续运行一套业务操作系统”。",
-      "detailWhyRanked": "本条被收录，是因为它有明确发布时间、行业会议、多个合作方、具体工作流和若干可核对数字，足以支撑一个垂直行业采用信号。但 AI Watchtower 将其标记为厂商主张：页面能证明 NVIDIA 和合作方如何描述这些能力，不能独立证明广告 ROI、品牌安全或长期稳定性。后续应重点看客户侧指标、第三方基准、权限审计和真实营销事故反馈。"
-    },
-    {
-      "id": "nvidia-france-ai-infrastructure-2026-06-17",
-      "category": "tool",
-      "label": "工具",
-      "title": "NVIDIA 称法国 AI 工厂、开放模型和产业代理应用正进入生产阶段",
-      "body": "NVIDIA 6 月 17 日发布法国 AI 基础设施综述，称 Mistral、Scaleway、Bull/Foxconn、Schneider Electric、Sanofi、Orange Business 等正在推进本地算力、开放模型和企业代理部署。",
-      "trend": "趋势判断：欧洲 AI 竞争正在围绕主权算力、开放模型、合规数据 provenance 和行业代理应用展开，基础设施本地化成为政策和产业共同议题。",
-      "whyRanked": "它把数据中心容量、AI 工厂、开放模型、企业代理和医疗/制造/电信案例连接起来，是观察欧洲 AI 基础设施落地节奏的窗口。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "欧洲 AI 基础设施影响大，但信息主要来自 NVIDIA 厂商综述，需要合作方和政策文件继续交叉核对。"
-      },
-      "impact": "欧洲企业、公共部门和基础设施团队需要同时跟踪算力可得性、数据驻留、开放模型治理、能源约束和供应链本地化。",
-      "readerUse": "政策观察、企业平台和基础设施团队可用它更新欧洲 AI 部署雷达，分别核对算力、模型、数据、能源和行业应用。",
-      "nextCheck": "继续核对 Mistral 数据中心进度、Campus AI 文件、Scaleway 实例可用性、欧洲 AI gigafactory 竞标结果、Orange 和 Sanofi 客户侧指标。",
-      "followUpQuestions": [
-        "法国 AI 工厂和开放模型生态能否形成可持续的欧洲主权 AI 供给，而不只是会议期集中披露？",
-        "Sanofi、Orange Business 和制造业案例是否有客户侧效率、成本、安全和合规指标支撑？"
-      ],
-      "evidenceThreshold": "至少需要合作方公告、政府或投资文件、数据中心上线证明、客户侧采用指标、能源连接进度和第三方审计数据，才能升级为已验证的产业落地结论。",
-      "claimBoundary": "NVIDIA 综述支持其对法国 AI 生态进展的官方叙事，但不等同于证明所有项目按期完成、客户 ROI 成立或欧洲合规要求已经完全满足。",
-      "counterEvidence": "如果后续项目延期、能源接入受阻、客户指标缺失、开放模型 provenance 不足或监管要求变化，应下调该生态落地判断。",
-      "source": "NVIDIA AI Blog",
-      "sourceId": "nvidia-blog-ai",
-      "sourceUrl": "https://blogs.nvidia.com/blog/france-advances-europes-ai-future/",
-      "sourceRole": "厂商主张",
-      "provenance": "NVIDIA 官方博客可确认发布日期、法国 AI 基础设施叙事、Mistral 44MW 数据中心与 18,000 GB200 系统主张、Campus AI、Scaleway Blackwell 实例、Bull/Foxconn 欧洲制造、开放模型和若干企业案例；需要合作方、政府和客户侧材料交叉验证。来源可信度：中高。",
-      "trustLevel": "来源层级：官方，高可信",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-06-17T23:30:00+09:00",
-      "time": "06/17",
-      "detailBody": "NVIDIA 6 月 17 日发布“France Advances Europe’s AI Future With NVIDIA Technologies”，把法国过去一年 AI 基础设施、开放模型和产业应用进展放在同一框架中。页面称 Mistral 在 Bruyeres-le-Chatel 建设 44MW 数据中心，首个部署已运行 18,000 个 NVIDIA GB200 系统，并将作为到 2027 年欧洲 200MW 算力路线图的一部分；还提到 Campus AI、Scaleway 的 Blackwell B300-SXM 实例、Bull 与 Foxconn 在欧洲生产 Vera Rubin NVL72、Schneider Electric AI 工厂蓝图，以及 LINAGORA、H Company、Pleias 等围绕 Nemotron、开放模型和合规 provenance 的工作。产业侧，NVIDIA 将 Sanofi、Orange Business、Stellantis、Dassault Systemes、TotalEnergies 和 L’Oreal 纳入生产应用叙事。",
-      "detailTrend": "这条信号说明欧洲 AI 竞争不是单点模型发布，而是算力、电力、开放模型、数据来源、行业平台和合规要求的组合战。法国案例尤其适合观察“主权 AI”如何从政策口号变成基础设施：本地数据中心和 AI 工厂提供算力，开放模型与合成数据支持透明度和可审计性，行业企业把代理、数字孪生和内部平台接入真实业务。对读者而言，重要问题是这些项目能否同时满足成本、能源、数据驻留、EU AI Act provenance 和客户侧效率，而不是只看厂商生态规模。",
-      "detailWhyRanked": "本条进入 TOP3，是因为它把欧洲基础设施落地、开放模型治理和企业采用放到一个可跟踪时间线上。NVIDIA 页面给出多个项目名称、合作方和容量数字，足以形成观察清单；但它仍属于厂商综述，不能独立证明项目完成度或客户收益。AI Watchtower 将其作为“欧洲 AI 基础设施进入生产叙事”的信号，后续需要用 Mistral、法国政府、Scaleway、Campus AI、Orange 和 Sanofi 的材料交叉核对。"
+      "publishedAt": "2026-06-16T21:00:00+09:00",
+      "time": "06/16",
+      "detailBody": "NVIDIA 6 月 16 日宣布 NVIDIA XR AI public beta，称这是面向 AR glasses 和 XR devices 的多模态 Agent 开发框架。该库把视频、音频、深度、姿态和传感器输入连接到 AI 模型、企业数据、工具和加速计算；同时整合 NVIDIA Metropolis/VSS 做视觉理解，NeMo Retriever 做企业知识检索，Nemotron reasoning models、Cosmos Reason 和其他 foundation models 做推理，NeMo Agent Toolkit 支持工具调用、推理工作流和多 Agent 协调，DGX Spark、DGX Station 和 RTX PRO 系统提供云、数据中心与边缘推理基础设施。文章列出 Siemens 工厂工程研究、Rana LabOS 在 Stanford/Princeton 相关实验室的科研流程指导、UPMC Surreality Lab 手术室上下文辅助、VITURE 眼镜接口和 Innoactive 设计评审等案例。",
+      "detailTrend": "这条信号说明 Agent 的交互界面正在从聊天窗口移向现场工作。实验室、工厂、医院和设计空间里的用户需要双手操作、实时感知、企业知识检索和低干扰提示，传统聊天 UI 并不适合。XR AI 把空间感知、企业检索、推理模型和工具调用打包成开发库，目标是让 Agent 能看到现场、理解上下文、查询知识并指导下一步。它也引入新的风险：错误提示可能干扰手术或维修，摄像头和传感器会采集敏感数据，企业需要明确记录、权限、审计和人工接管机制。",
+      "detailWhyRanked": "本条被收录，是因为它有明确 public beta、开发者资源和可跟踪行业场景，能说明 Agent 正在向物理工作流扩张。NVIDIA 页面给出能力模块和合作案例，足以支撑站内解读；但多数内容仍是厂商与合作方叙事，不等于生产安全性和 ROI 已被验证。因此本站将其视为“空间多模态 Agent 开发框架进入公测”的信号，后续重点看 SDK 文档、客户指标、现场失败案例和隐私/安全控制。"
     }
   ]
 }
