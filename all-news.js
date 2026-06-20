@@ -203,6 +203,14 @@ function attachHistoryControlEvents() {
 }
 
 async function loadHistory() {
+  historyMeta.textContent = "正在读取历史情报...";
+  historyResultNote.textContent = "";
+  historyList.innerHTML = `
+    <div class="feed-state loading" role="status">
+      <p>正在读取历史情报题目...</p>
+    </div>
+  `;
+
   try {
     const response = await fetch("./data/news-history.json", { cache: "no-store" });
 
@@ -217,13 +225,27 @@ async function loadHistory() {
     renderHistory(history);
   } catch (error) {
     console.warn(error);
-    historyMeta.textContent = "历史情报暂时无法读取。";
-    historyList.innerHTML = `
-      <div class="feed-state error" role="status">
-        <p>历史情报暂时无法读取，请稍后刷新。</p>
-      </div>
-    `;
+    renderHistoryLoadError();
   }
+}
+
+function renderHistoryLoadError() {
+  historyMeta.textContent = "历史情报暂时无法读取。";
+  historyControls.hidden = true;
+  historyResultNote.textContent = "这通常是结构化归档文件未能下载成功，不代表历史情报为空。";
+  historyList.innerHTML = `
+    <div class="feed-state error" role="status">
+      <p>历史情报暂时无法读取，请稍后刷新。</p>
+      <p>可以先打开原始归档数据，或回到首页查看最新批次摘要。</p>
+      <div class="feed-state-actions" aria-label="历史情报加载失败后的备用入口">
+        <a href="./data/news-history.json">打开历史数据</a>
+        <a href="./index.html">返回首页</a>
+        <a href="./archive.html">查看期次归档</a>
+      </div>
+      <button class="feed-retry" type="button">重新加载</button>
+    </div>
+  `;
+  historyList.querySelector(".feed-retry")?.addEventListener("click", loadHistory);
 }
 
 function validateHistory(history) {

@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 16:03 JST
+
+- Focus: Improved Phase 4 Day 26 loading and error states for current news and all-news history. Homepage data failures now explain that the structured data file failed to load rather than implying the news feed is empty, and they provide fallback paths to all-news, the current JSON data, and the edition archive. The all-news page now shows an explicit loading state, distinguishes archive-fetch failure from empty history, and offers retry plus fallback links to raw history data, homepage, and archive.
+- Changed files:
+  - `app.js`
+  - `all-news.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/source-policy.md`, and `docs/editorial-checklist.md`; kept the change focused on clearer Chinese reader guidance without adding new claims.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-site.mjs`, and `scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, informative loading-error fallback links, and all-news retry behavior.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this entry. Push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 15:04 JST
 
 - Focus: Improved Phase 4 Day 25 CSS maintainability by removing obsolete selectors left behind by earlier expanded homepage cards, old all-news batch panels, and unused detail/fallback styles. Added the missing `--soft` design token used by the history controls and extended site validation to catch undefined CSS custom properties and retired selectors before they reappear.

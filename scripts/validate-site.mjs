@@ -730,9 +730,21 @@ if (
 if (
   !/renderFeedMessage\("error",\s*"新闻数据暂时无法读取。",\s*true\)/.test(appJs) ||
   !/class="feed-retry"[\s\S]*重新加载/.test(appJs) ||
-  !/querySelector\("\.feed-retry"\)\?\.addEventListener\("click", loadNews\)/.test(appJs)
+  !/querySelector\("\.feed-retry"\)\?\.addEventListener\("click", loadNews\)/.test(appJs) ||
+  !/结构化数据文件暂时没有下载成功/.test(appJs) ||
+  !/href="\.\/all-news\.html"[\s\S]*href="\.\/data\/news\.json"[\s\S]*href="\.\/archive\.html"/.test(appJs) ||
+  !/\.feed-state-actions/.test(styles)
 ) {
-  errors.push("News loading errors must provide a working retry button.");
+  errors.push("News loading errors must provide a working retry button and informative fallback links.");
+}
+
+if (
+  !/function renderHistoryLoadError\(\)/.test(allNewsJs) ||
+  !/结构化归档文件未能下载成功/.test(allNewsJs) ||
+  !/href="\.\/data\/news-history\.json"[\s\S]*href="\.\/index\.html"[\s\S]*href="\.\/archive\.html"/.test(allNewsJs) ||
+  !/historyList\.querySelector\("\.feed-retry"\)\?\.addEventListener\("click", loadHistory\)/.test(allNewsJs)
+) {
+  errors.push("All-news loading errors must distinguish data-fetch failure from empty history and offer retry/fallback paths.");
 }
 
 if (!/main section\[id\]\s*\{[^}]*scroll-margin-top:/s.test(styles)) {

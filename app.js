@@ -713,10 +713,21 @@ function renderFeedMessage(type, message, canRetry = false) {
   const retryButton = canRetry
     ? '<button class="feed-retry" type="button">重新加载</button>'
     : "";
+  const recoveryLinks = type === "error"
+    ? `
+      <div class="feed-state-actions" aria-label="新闻数据加载失败后的备用入口">
+        <a href="./all-news.html">查看全部情报</a>
+        <a href="./data/news.json">打开本期数据</a>
+        <a href="./archive.html">查看期次归档</a>
+      </div>
+    `
+    : "";
 
   newsGrid.innerHTML = `
     <div class="feed-state ${type}" role="status">
       <p>${escapeHtml(message)}</p>
+      ${type === "error" ? "<p>这通常表示结构化数据文件暂时没有下载成功，不代表本期没有情报。可以先查看历史题目、原始数据或期次归档。</p>" : ""}
+      ${recoveryLinks}
       ${retryButton}
     </div>
   `;
