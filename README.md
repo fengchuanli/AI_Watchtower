@@ -49,6 +49,7 @@ npx serve .
 来源规则：
 
 - 产品目标与优化基准：`docs/product-principles.md`
+- 版权安全规则：`docs/copyright-safety.md`
 - 情报源列表：`data/sources.json`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`

@@ -24,6 +24,7 @@ Site optimization runs separately and should follow this plan.
 
 ## Phase 1: Edition-Level Understanding
 
+- Day 0: Establish copyright-safety rules before further content expansion, so the site remains an AI intelligence explainer rather than a media-article replacement.
 - Day 1: Add a reader frame for each current edition so readers know the top conclusion, why this batch matters, and what remains unproven.
 - Day 2: Add a short "what changed since last batch" summary that distinguishes fresh facts from repeated background.
 - Day 3: Make the edition note shorter and split operational status from editorial interpretation.
@@ -71,10 +72,12 @@ Site optimization runs separately and should follow this plan.
 
 - Pull the latest `main` before editing when network access works.
 - Read `docs/product-principles.md` first and keep every improvement aligned with the product purpose.
+- Read `docs/copyright-safety.md` before changing news content, source policy, detail-page copy, or future optimization plans.
 - Follow this plan in order unless a user request overrides it.
 - If the plan is complete, write the next 30-day plan before making further daily improvements.
 - When writing the next 30-day plan, preserve the product goal: help Chinese-native readers who are not comfortable tracking English AI sources understand important AI changes easily.
 - Use `data/sources.json`, `docs/source-policy.md`, and `docs/editorial-checklist.md` for content-related decisions.
+- Preserve the balance: make AI news understandable through original analysis, but do not create a substitute for the original source article.
 - Avoid publishing repeated source URLs or stale signals as new news.
 - Keep original source links as references, not the primary reading path.
 - Prefer readable Chinese labels and avoid repeated section titles.

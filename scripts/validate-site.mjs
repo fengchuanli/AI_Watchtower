@@ -15,6 +15,7 @@ const styles = readFileSync("styles.css", "utf8");
 const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
 const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
+const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
@@ -546,6 +547,24 @@ if (!/docs\/product-principles\.md/.test(optimizationPlan)) {
 }
 
 if (
+  !/原文中文版替代品/.test(copyrightSafety) ||
+  !/媒体来源/.test(copyrightSafety) ||
+  !/最小必要事实/.test(copyrightSafety) ||
+  !/仍需要点原始来源/.test(copyrightSafety) ||
+  !/不抓取付费墙正文/.test(copyrightSafety)
+) {
+  errors.push("Copyright safety rules must preserve the non-substitution, media-source, minimum-fact, original-link, and paywall boundaries.");
+}
+
+if (
+  !/docs\/copyright-safety\.md/.test(optimizationPlan) ||
+  !/Preserve the balance: make AI news understandable/.test(optimizationPlan) ||
+  !/Day 0: Establish copyright-safety rules/.test(optimizationPlan)
+) {
+  errors.push("Optimization plan must prioritize copyright safety before further content expansion.");
+}
+
+if (
   !/docs\/local-preview-qa\.md/.test(readme) ||
   !/docs\/github-pages-readiness\.md/.test(readme) ||
   !/390px/.test(localPreviewQa) ||
@@ -775,6 +794,22 @@ if (
   !/Elon Musk\/xAI\/SpaceX/.test(sourcePolicy)
 ) {
   errors.push("Source policy must include AI leader, capital, acquisition, and AI-adjacent strategic event selection logic.");
+}
+
+if (
+  !/Chinese replacement for a media article/.test(sourcePolicy) ||
+  !/minimum necessary fact/.test(sourcePolicy) ||
+  !/docs\/copyright-safety\.md/.test(sourcePolicy)
+) {
+  errors.push("Source policy must reference copyright safety and require minimum-fact media handling.");
+}
+
+if (
+  !/docs\/copyright-safety\.md/.test(newsDataFormat) ||
+  !/minimum-fact summary/.test(newsDataFormat) ||
+  !/not a rewritten version of the source article/.test(newsDataFormat)
+) {
+  errors.push("News data format must keep source facts short and reserve detail fields for original interpretation.");
 }
 
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {

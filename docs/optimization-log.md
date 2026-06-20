@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 01:15 JST
+
+- Focus: Added copyright-safety rules as the first-priority guardrail for future AI Watchtower content work, keeping the site understandable through original analysis while avoiding media-article replacement, full-text copying, paywall scraping, and overlong source summaries.
+- Changed files:
+  - `docs/copyright-safety.md`
+  - `docs/source-policy.md`
+  - `docs/editorial-checklist.md`
+  - `docs/news-data-format.md`
+  - `docs/optimization-plan.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 39 local references, static page link targets, copyright-safety rules, source-policy copyright references, and optimization-plan priority.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, and `news-detail.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `python3 -m json.tool`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit; push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 21:04 JST
 
 - Focus: Improved Phase 1 Day 2 edition-level understanding by adding a "what changed since last batch" summary to the current edition. The homepage now separates this batch's fresh source facts from repeated background so Chinese readers can quickly see what is new without mistaking long-running Agent, infrastructure, or vendor-claim context for a new conclusion. The same change summary is copied into the latest archive edition, documented in the news data format, and guarded by data/site validation.

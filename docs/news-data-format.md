@@ -2,6 +2,8 @@
 
 Homepage news items live in `data/news.json`. Captured historical items live in `data/news-history.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
 
+All item fields must follow `docs/copyright-safety.md`. The data model should help readers understand the news, but it must not turn source articles into full Chinese replacements. Use source fields for minimum necessary facts, and use editorial fields for AI Watchtower's own interpretation, trend reading, reader use, and verification boundary.
+
 ## Feed Metadata
 
 - `sourceCount`: Number of registered sources available to the current homepage. It must match `data/sources.json` `sources.length` so the hero stats do not drift from the source registry.
@@ -88,9 +90,9 @@ The current feed must not promote stale background material as a new batch. Keep
 - `label`: Chinese category label shown on the card.
 - `title`: Chinese headline.
 - `body`: Short Chinese summary for homepage cards. Keep it focused on what happened.
-- `detailBody`: Longer Chinese explanation for the detail page. It must add context beyond `body` and be meaningfully longer.
+- `detailBody`: Source-supported event explanation for the detail page. It must add context beyond `body`, but for media sources it should remain a minimum-fact summary rather than a replacement for the original article.
 - `trend`: Chinese editorial interpretation that links the item to a broader observable trend without adding unverified facts.
-- `detailTrend`: Longer Chinese trend explanation for the detail page. It must add context beyond `trend` and be meaningfully longer.
+- `detailTrend`: Longer Chinese trend explanation for the detail page. It should be AI Watchtower's own interpretation, not a rewritten version of the source article.
 - `whyRanked`: Short Chinese explanation for why the item deserves homepage attention or ranking priority.
 - `detailWhyRanked`: Longer Chinese detail-page explanation of why the item matters. It should preserve important source facts, boundaries, and caveats that are too long for the homepage card.
 - `selectionScore`: Object with integer 1-5 scores for `impact`, `novelty`, `narrativeStrength`, `evidenceQuality`, and `readerUtility`, plus a matching `total` and Chinese `note` explaining the editorial tradeoff.
@@ -105,7 +107,7 @@ The current feed must not promote stale background material as a new batch. Keep
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.
 - `sourceRole`: Controlled Chinese label describing what the linked source can support: `官方核对`, `研究原文`, `媒体背景`, `社区发现`, or `厂商主张`.
-- `provenance`: How readers should interpret the source and claim quality.
+- `provenance`: How readers should interpret the source and claim quality. For media sources, it should remind readers that full facts, quotes, charts, interviews, and context belong in the original source.
 - `trustLevel`: Visible source-tier label such as official, media, research, or community. It describes the source type, not whether the item claim has been verified.
 - `verificationStatus`: Claim-level review status. Use `结构样例，未作事实核验` for sample cards and reserve `已核验` for items whose central claim has been checked against the cited source.
 - `publishedAt`: ISO-like timestamp with timezone.

@@ -41,10 +41,13 @@ Low-priority items should be skipped or kept in source notes when they are routi
 - State the source's role in the item: official verification, research original, media background, community discovery, or vendor claim.
 - Write summaries in Chinese.
 - Do not copy full articles.
+- Do not create a Chinese replacement for a media article. For media sources, extract only the minimum necessary fact, then write AI Watchtower's own trend interpretation, source boundary, and next-check guidance.
+- Keep source-fact summaries short enough that readers still need the original source for full facts, quotes, charts, interviews, and context.
 - Do not present community discussion, rumors, leaks, or unconfirmed posts as facts.
 - Prefer official confirmation when covering model releases, company claims, pricing, policy changes, or funding.
 - Do not use a vendor blog as confirmation of regulation; link the applicable law, regulator, or platform policy before publishing.
 - Mark uncertain items as signals instead of confirmed news.
+- Follow `docs/copyright-safety.md` before publishing or expanding any item from a media source.
 
 ## Narrative Event Sources
 
