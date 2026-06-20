@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 15:04 JST
+
+- Focus: Improved Phase 4 Day 25 CSS maintainability by removing obsolete selectors left behind by earlier expanded homepage cards, old all-news batch panels, and unused detail/fallback styles. Added the missing `--soft` design token used by the history controls and extended site validation to catch undefined CSS custom properties and retired selectors before they reappear.
+- Changed files:
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md` and kept the change focused on lower-maintenance static Pages styling without changing the reader-facing information flow.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-site.mjs`, `scripts/validate-data.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, undefined CSS custom properties, and retired CSS selectors.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran a lightweight class-selector scan and found no obvious unused class selectors.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `4d86bf4` (`清理未使用样式选择器`). Log follow-up commit will be created after this entry. Push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 14:03 JST
 
 - Focus: Improved Phase 4 Day 24 sharing metadata for the all-news page. The historical intelligence page now has Chinese page description, application metadata, Open Graph title/description, and Twitter summary metadata that frame it as a time-, topic-, and batch-oriented path into in-site Chinese briefings rather than raw external links.
