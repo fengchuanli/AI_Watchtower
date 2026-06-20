@@ -17,6 +17,8 @@ const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
+const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
+const readme = readFileSync("README.md", "utf8");
 const errors = [];
 const repositoryRoot = process.cwd();
 const htmlPages = new Map([
@@ -538,6 +540,23 @@ if (
 
 if (!/docs\/product-principles\.md/.test(optimizationPlan)) {
   errors.push("Optimization plan must reference the product principles before future planning work.");
+}
+
+if (
+  !/docs\/local-preview-qa\.md/.test(readme) ||
+  !/390px/.test(localPreviewQa) ||
+  !/768px/.test(localPreviewQa) ||
+  !/1280px/.test(localPreviewQa) ||
+  !/今日 TOP3/.test(localPreviewQa) ||
+  !/全部情报/.test(localPreviewQa) ||
+  !/公司标签/.test(localPreviewQa) ||
+  !/data\/news\.json/.test(localPreviewQa) ||
+  !/data\/news-history\.json/.test(localPreviewQa) ||
+  !/skip link/.test(localPreviewQa) ||
+  !/reduced motion/.test(localPreviewQa) ||
+  (!/GitHub Pages/.test(localPreviewQa) && !/Publish Readiness/.test(localPreviewQa))
+) {
+  errors.push("Local preview QA docs must cover core viewports, reader paths, loading failures, accessibility, and publishing readiness.");
 }
 
 if (

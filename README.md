@@ -51,6 +51,7 @@ npx serve .
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`
 - 数据格式：`docs/news-data-format.md`
+- 本地视觉 QA：`docs/local-preview-qa.md`
 - 贡献与发布流程：`docs/contributing.md`
 
 提交内容更新前可以运行：
