@@ -294,6 +294,7 @@ h3 {
 }
 
 .reader-frame,
+.edition-change,
 .coverage-mix,
 .source-families,
 .topic-groups {
@@ -318,6 +319,15 @@ h3 {
   border-radius: 8px;
 }
 
+.edition-change article {
+  width: 100%;
+  max-width: 760px;
+  padding: 14px;
+  background: #fffaf1;
+  border: 1px solid rgb(214 147 53 / 26%);
+  border-radius: 8px;
+}
+
 .reader-frame span {
   display: block;
   margin-bottom: 6px;
@@ -326,7 +336,20 @@ h3 {
   font-weight: 800;
 }
 
+.edition-change span {
+  display: block;
+  margin-bottom: 6px;
+  color: #8a5b1e;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .reader-frame h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.edition-change h3 {
   margin: 0;
   font-size: 16px;
 }
@@ -342,6 +365,10 @@ h3 {
   margin-top: 10px;
 }
 
+.edition-change div {
+  margin-top: 10px;
+}
+
 .reader-frame strong {
   display: block;
   margin-bottom: 5px;
@@ -349,7 +376,23 @@ h3 {
   font-size: 12px;
 }
 
+.edition-change strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 12px;
+}
+
 .reader-frame ul {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.edition-change ul {
   display: grid;
   gap: 5px;
   margin: 0;

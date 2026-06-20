@@ -7,6 +7,7 @@ const filterButtons = document.querySelectorAll("[data-filter]");
 const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
 const readerFrame = document.querySelector("#readerFrame");
+const editionChange = document.querySelector("#editionChange");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceFamilies = document.querySelector("#sourceFamilies");
 const topicGroups = document.querySelector("#topicGroups");
@@ -243,6 +244,7 @@ function validateEdition(edition, updatedAt, items = []) {
   }
 
   validateReaderFrame(edition.readerFrame);
+  validateEditionChange(edition.changeSummary);
 
   const invalidCoverage = edition.coverageMix.find(
     (item) => !item.label || !Number.isInteger(item.count) || item.count < 1 || !item.meaning,
@@ -299,6 +301,20 @@ function validateReaderFrame(frame) {
 
   if (!Array.isArray(frame.notProvenYet) || frame.notProvenYet.length < 2) {
     throw new Error("News edition reader frame must include unresolved proof boundaries.");
+  }
+}
+
+function validateEditionChange(changeSummary) {
+  if (!changeSummary || !changeSummary.headline) {
+    throw new Error("News edition must include a change summary.");
+  }
+
+  if (!Array.isArray(changeSummary.freshFacts) || changeSummary.freshFacts.length < 2) {
+    throw new Error("News edition change summary must include fresh facts.");
+  }
+
+  if (!Array.isArray(changeSummary.repeatedContext) || changeSummary.repeatedContext.length < 2) {
+    throw new Error("News edition change summary must separate repeated context.");
   }
 }
 
@@ -606,6 +622,10 @@ function updateNewsMeta(data) {
     readerFrame.innerHTML = renderReaderFrame(data.edition?.readerFrame);
   }
 
+  if (editionChange) {
+    editionChange.innerHTML = renderEditionChange(data.edition?.changeSummary);
+  }
+
   if (coverageMix) {
     const mixItems = data.edition?.coverageMix || [];
     coverageMix.innerHTML = mixItems
@@ -658,6 +678,34 @@ function updateNewsMeta(data) {
       ),
     ].join("");
   }
+}
+
+function renderEditionChange(changeSummary) {
+  if (!changeSummary) {
+    return "";
+  }
+
+  const freshFacts = changeSummary.freshFacts
+    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .join("");
+  const repeatedContext = changeSummary.repeatedContext
+    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .join("");
+
+  return `
+    <article>
+      <span>相比上一批次</span>
+      <h3>${escapeHtml(changeSummary.headline)}</h3>
+      <div>
+        <strong>本期新鲜事实</strong>
+        <ul>${freshFacts}</ul>
+      </div>
+      <div>
+        <strong>重复背景</strong>
+        <ul>${repeatedContext}</ul>
+      </div>
+    </article>
+  `;
 }
 
 function renderReaderFrame(frame) {

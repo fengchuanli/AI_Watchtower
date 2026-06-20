@@ -359,6 +359,37 @@ function validateReaderFrame(frame, context) {
   }
 }
 
+function validateEditionChangeSummary(changeSummary, context) {
+  if (!changeSummary || typeof changeSummary !== "object" || Array.isArray(changeSummary)) {
+    errors.push(`${context} must include a changeSummary object.`);
+    return;
+  }
+
+  if (typeof changeSummary.headline !== "string" || changeSummary.headline.trim().length < 18) {
+    errors.push(`${context} changeSummary.headline must explain what changed since the last batch.`);
+  }
+
+  if (!Array.isArray(changeSummary.freshFacts) || changeSummary.freshFacts.length < 2) {
+    errors.push(`${context} changeSummary.freshFacts must include at least two fresh source facts.`);
+  }
+
+  if (!Array.isArray(changeSummary.repeatedContext) || changeSummary.repeatedContext.length < 2) {
+    errors.push(`${context} changeSummary.repeatedContext must include at least two repeated background notes.`);
+  }
+
+  for (const [index, item] of (changeSummary.freshFacts || []).entries()) {
+    if (typeof item !== "string" || !/本期新增|新事实|新增/.test(item)) {
+      errors.push(`${context} changeSummary.freshFacts[${index}] must be written as a fresh fact from this batch.`);
+    }
+  }
+
+  for (const [index, item] of (changeSummary.repeatedContext || []).entries()) {
+    if (typeof item !== "string" || !/仍是|延续|重复|旧/.test(item)) {
+      errors.push(`${context} changeSummary.repeatedContext[${index}] must be written as repeated background, not a fresh fact.`);
+    }
+  }
+}
+
 function hasChineseText(value) {
   return /\p{Script=Han}/u.test(String(value || ""));
 }
@@ -502,6 +533,7 @@ if (!newsFeed.edition) {
   }
 
   validateReaderFrame(newsFeed.edition.readerFrame, "data/news.json edition");
+  validateEditionChangeSummary(newsFeed.edition.changeSummary, "data/news.json edition");
 
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
     errors.push("data/news.json edition must include at least two coverageMix entries.");
@@ -792,6 +824,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   }
 
   validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
+  validateEditionChangeSummary(latestHistoryEdition.changeSummary, "data/news-history.json latest edition");
 
   const allHistorySourceKeys = new Set();
 

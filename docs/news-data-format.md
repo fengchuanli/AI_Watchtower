@@ -17,6 +17,7 @@ The required top-level `edition` object gives each homepage snapshot a stable ar
 - `archiveLabel`: Short Chinese status label shown in the homepage feed metadata.
 - `note`: Chinese scope note explaining what the archived edition does and does not represent.
 - `readerFrame`: Required Chinese object explaining how readers should use this edition. Include `headline`, `whyItMatters`, at least two `useThisIssueFor` bullets naming concrete readers or teams, and at least two `notProvenYet` bullets stating what the batch still does not prove. Keep it focused on reader orientation, not new unsupported claims.
+- `changeSummary`: Required Chinese object explaining what changed since the previous batch. Include `headline`, at least two `freshFacts` bullets written as this batch's new source facts, and at least two `repeatedContext` bullets naming background or older storylines that should not be mistaken for new facts.
 - `coverageMix`: At least two objects with `label`, positive integer `count`, and Chinese `meaning`. The counts must add up to the current `items.length`, and each meaning should explain how readers should use that signal group.
 - `sourceFamilies`: One object for each source tier used by current `items`, with `family`, `label`, positive integer `count`, and Chinese `role`. Counts must match item `sourceId` entries through `data/sources.json` `trustLevel`; use this to explain whether a batch relies on official sources, research originals, reliable media, or community signals.
 - `topicGroups`: One or more topic discovery groups for the current `items`, with `id`, `label`, positive integer `count`, `itemIds`, and Chinese `meaning`. Supported IDs are `agent`, `model`, `enterprise`, `policy`, `infrastructure`, and `developer-tooling`; each `itemIds` value must reference a current news item, and `count` must match `itemIds.length`.
@@ -72,6 +73,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `editions[].timezone`: IANA timezone for the capture batch.
 - `editions[].archiveLabel`: Human-readable batch label, such as `17:00 JST 发布`.
 - `editions[].readerFrame`: Copy of the latest current edition's reader frame, so archive readers retain the same use case and proof-boundary context after the homepage advances.
+- `editions[].changeSummary`: Copy of the latest current edition's change summary, so archive readers can distinguish fresh facts from repeated background after the homepage advances.
 - `editions[].itemCount`: Number of items in the batch; must match `items.length`.
 - `editions[].items`: Full item objects using the same required fields as the current feed.
 

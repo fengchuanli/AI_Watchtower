@@ -615,6 +615,20 @@ if (
 }
 
 if (
+  !/id="editionChange"/.test(html) ||
+  !/const editionChange = document\.querySelector\("#editionChange"\);/.test(appJs) ||
+  !/function renderEditionChange/.test(appJs) ||
+  !/edition\.changeSummary/.test(appJs) ||
+  !/本期新鲜事实/.test(appJs) ||
+  !/重复背景/.test(appJs) ||
+  !/\.edition-change/.test(styles) ||
+  !/changeSummary/.test(validateDataJs) ||
+  !/changeSummary/.test(newsDataFormat)
+) {
+  errors.push("Homepage feed metadata must render and validate what changed since the last batch.");
+}
+
+if (
   !/id="sourceFamilies"/.test(html) ||
   !/const sourceFamilies = document\.querySelector\("#sourceFamilies"\);/.test(appJs) ||
   !/edition\.sourceFamilies/.test(appJs) ||
