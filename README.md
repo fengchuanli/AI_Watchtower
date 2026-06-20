@@ -27,6 +27,8 @@ npx serve .
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
 │   ├── github-pages-readiness.md
+│   ├── local-preview-qa.md
+│   ├── monthly-optimization-summary.md
 │   ├── optimization-log.md
 │   ├── optimization-plan.md
 │   ├── product-principles.md
@@ -54,6 +56,7 @@ npx serve .
 - 数据格式：`docs/news-data-format.md`
 - 本地视觉 QA：`docs/local-preview-qa.md`
 - GitHub Pages 发布兼容：`docs/github-pages-readiness.md`
+- 月度优化总结：`docs/monthly-optimization-summary.md`
 - 贡献与发布流程：`docs/contributing.md`
 
 提交内容更新前可以运行：

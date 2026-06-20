@@ -19,6 +19,7 @@ const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
 const githubPagesReadiness = readFileSync("docs/github-pages-readiness.md", "utf8");
+const monthlyOptimizationSummary = readFileSync("docs/monthly-optimization-summary.md", "utf8");
 const contributing = readFileSync("docs/contributing.md", "utf8");
 const readme = readFileSync("README.md", "utf8");
 const errors = [];
@@ -575,6 +576,21 @@ if (
   !/页面未找到后的站内恢复入口/.test(notFoundHtml)
 ) {
   errors.push("GitHub Pages readiness docs and 404 recovery links must stay discoverable and project-site safe.");
+}
+
+if (
+  !/docs\/monthly-optimization-summary\.md/.test(readme) ||
+  !/月度优化总结/.test(monthlyOptimizationSummary) ||
+  !/2026-06-17 至 2026-07-16/.test(monthlyOptimizationSummary) ||
+  !/已改善的方向/.test(monthlyOptimizationSummary) ||
+  !/仍然薄弱的地方/.test(monthlyOptimizationSummary) ||
+  !/下一步优先级/.test(monthlyOptimizationSummary) ||
+  !/今日 TOP3/.test(monthlyOptimizationSummary) ||
+  !/GitHub Pages/.test(monthlyOptimizationSummary) ||
+  !/人工事实判断/.test(monthlyOptimizationSummary) ||
+  !/避免重复劳动/.test(monthlyOptimizationSummary)
+) {
+  errors.push("Monthly optimization summary must stay discoverable and cover improvements, weaknesses, and next priorities.");
 }
 
 if (
