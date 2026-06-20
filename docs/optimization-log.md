@@ -2,6 +2,31 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 21:04 JST
+
+- Focus: Improved Phase 1 Day 2 edition-level understanding by adding a "what changed since last batch" summary to the current edition. The homepage now separates this batch's fresh source facts from repeated background so Chinese readers can quickly see what is new without mistaking long-running Agent, infrastructure, or vendor-claim context for a new conclusion. The same change summary is copied into the latest archive edition, documented in the news data format, and guarded by data/site validation.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`; kept the change focused on reducing reader confusion and distinguishing source-backed new facts from repeated background.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 39 local references, static page link targets, and the edition change-summary rendering/validation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `cdd88f9fbdf5cf9d1c5324d262dea02f9cc3853c` (`说明本期批次变化`). Log follow-up commit will be created after this entry. Push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-20 20:04 JST
 
 - Focus: Completed the rollover from the prior 30-day plan by writing the next plan for 2026-06-20 through 2026-07-19, then started Phase 1 Day 1 content quality work. Added a current-edition reader frame that tells Chinese readers how to use this batch, why it matters, and which conclusions remain unproven, without adding new external claims. Rendered the frame on the homepage, copied it to the latest archive edition, documented the data contract, and added validation so future editions keep the same orientation and proof-boundary structure.
