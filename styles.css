@@ -9,6 +9,7 @@
   --amber: #d69335;
   --coral: #d8664f;
   --dark: #0f1620;
+  --soft: #eef2f6;
 }
 
 * {
@@ -492,7 +493,6 @@ h3 {
 .lead-brief,
 .brief-list article,
 .news-card,
-.history-card,
 .library-grid article,
 .subscribe,
 .source-grid article {
@@ -526,7 +526,6 @@ h3 {
 
 .tag,
 .news-card .category,
-.history-card .category,
 .history-title-item .category {
   display: inline-flex;
   margin-bottom: 18px;
@@ -645,7 +644,6 @@ h3 {
 
 .brief-list p,
 .news-card p,
-.history-card p,
 .library-grid small {
   color: var(--muted);
 }
@@ -869,35 +867,11 @@ h3 {
   border-color: var(--cyan);
 }
 
-.news-card .impact-note {
-  margin: 0;
-  padding-left: 12px;
-  border-left: 3px solid var(--amber);
-  color: var(--ink);
-  font-size: 14px;
-}
-
 .news-card .trend-note {
   margin: 0;
   color: var(--ink);
   font-size: 14px;
   font-weight: 700;
-}
-
-.news-card .rank-note {
-  margin: 0;
-  padding: 10px 12px;
-  color: var(--ink);
-  background: #f1f4f8;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font-size: 13px;
-}
-
-.news-card .rank-note strong {
-  margin-right: 8px;
-  color: var(--cyan);
-  font-size: 12px;
 }
 
 .compact-feed-card {
@@ -914,41 +888,6 @@ h3 {
   background: #fff8e7;
 }
 
-.news-card .impact-note strong {
-  margin-right: 8px;
-  color: var(--amber);
-  font-size: 12px;
-}
-
-.news-card .reader-use {
-  margin: 0;
-  padding-left: 12px;
-  border-left: 3px solid var(--cyan);
-  color: var(--ink);
-  font-size: 13px;
-}
-
-.news-card .reader-use strong {
-  margin-right: 8px;
-  color: var(--cyan);
-  font-size: 12px;
-}
-
-.news-card .next-check {
-  margin: 0;
-  padding-left: 12px;
-  border-left: 3px solid var(--green);
-  color: var(--ink);
-  font-size: 13px;
-}
-
-.news-card .next-check strong {
-  margin-right: 8px;
-  color: var(--green);
-  font-size: 12px;
-}
-
-.news-card .follow-up-questions,
 .detail-question-list {
   margin: 0;
   padding: 10px 12px;
@@ -959,7 +898,6 @@ h3 {
   font-size: 13px;
 }
 
-.news-card .follow-up-questions strong,
 .detail-question-list strong {
   display: block;
   margin-bottom: 6px;
@@ -967,7 +905,6 @@ h3 {
   font-size: 12px;
 }
 
-.news-card .follow-up-questions ul,
 .detail-question-list ul {
   display: grid;
   gap: 6px;
@@ -975,81 +912,8 @@ h3 {
   padding-left: 18px;
 }
 
-.news-card .follow-up-questions li,
 .detail-question-list li {
   margin: 0;
-}
-
-.news-card .evidence-threshold {
-  margin: 0;
-  padding: 10px 12px;
-  color: var(--ink);
-  background: #f6f8f4;
-  border: 1px solid rgb(47 125 106 / 24%);
-  border-radius: 8px;
-  font-size: 13px;
-}
-
-.news-card .evidence-threshold strong {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--green);
-  font-size: 12px;
-}
-
-.news-card .claim-boundary,
-.news-card .counter-evidence {
-  margin: 0;
-  padding: 10px 12px;
-  color: var(--ink);
-  background: #fff7ed;
-  border: 1px solid rgb(201 92 66 / 28%);
-  border-radius: 8px;
-  font-size: 13px;
-}
-
-.news-card .claim-boundary strong,
-.news-card .counter-evidence strong {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--coral);
-  font-size: 12px;
-}
-
-.news-card .verification-status {
-  margin: 10px 0 0;
-  color: #8c2f1f;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.news-card .verification-status strong {
-  margin-right: 8px;
-}
-
-.news-card .source-role {
-  margin: 0;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.news-card .source-role strong {
-  margin-right: 8px;
-  color: var(--ink);
-}
-
-.news-card .source-note {
-  margin: 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  font-size: 13px;
-}
-
-.news-card .source-note strong {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--ink);
-  font-size: 12px;
 }
 
 .filter-tabs {
@@ -1167,34 +1031,6 @@ h3 {
   font-weight: 800;
 }
 
-.batch-explainer {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.batch-explainer > div {
-  padding: 16px;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.batch-explainer strong {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--ink);
-  font-size: 14px;
-}
-
-.batch-explainer p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.65;
-}
-
 .history-controls {
   display: flex;
   align-items: flex-end;
@@ -1263,65 +1099,6 @@ h3 {
 .history-list {
   display: grid;
   gap: 22px;
-}
-
-.history-edition {
-  display: grid;
-  gap: 16px;
-}
-
-.history-edition-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 24px;
-  color: white;
-  background: var(--dark);
-  border-radius: 8px;
-}
-
-.history-edition-header h3 {
-  margin-bottom: 8px;
-  font-size: 26px;
-}
-
-.history-edition-header p {
-  max-width: 760px;
-  margin-bottom: 0;
-  color: rgb(255 255 255 / 76%);
-}
-
-.history-edition-header .batch-status-note {
-  margin-bottom: 8px;
-  color: white;
-  font-weight: 800;
-}
-
-.history-edition-badges {
-  flex: 0 0 auto;
-  display: grid;
-  gap: 8px;
-  align-self: start;
-}
-
-.history-edition-badges span {
-  padding: 8px 12px;
-  color: var(--dark);
-  background: white;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 800;
-  text-align: center;
-}
-
-.history-edition-badges .batch-status.latest {
-  color: white;
-  background: var(--dark);
-}
-
-.history-edition-badges .batch-status.archived {
-  color: var(--ink);
-  background: #e5e7eb;
 }
 
 .history-title-list {
@@ -1408,7 +1185,6 @@ h3 {
   gap: 22px;
 }
 
-.detail-header,
 .incident-hero {
   padding: 34px;
   color: white;
@@ -1418,7 +1194,6 @@ h3 {
   border-radius: 8px;
 }
 
-.detail-header h1,
 .incident-hero h1 {
   max-width: 920px;
   margin-bottom: 18px;
@@ -1928,8 +1703,7 @@ h3 {
   flex-wrap: wrap;
 }
 
-.feed-state,
-.empty-state {
+.feed-state {
   grid-column: 1 / -1;
   margin: 0;
   padding: 24px;
@@ -2149,15 +1923,6 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -2302,10 +2067,6 @@ h3 {
     width: min(100% - 32px, 1180px);
   }
 
-  .detail-header {
-    padding: 24px;
-  }
-
   .incident-hero {
     padding: 24px;
   }
@@ -2355,9 +2116,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .history-toolbar,
-  .batch-explainer,
-  .history-edition-header {
+  .history-toolbar {
     align-items: flex-start;
     flex-direction: column;
     grid-template-columns: 1fr;

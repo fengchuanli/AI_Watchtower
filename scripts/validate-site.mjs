@@ -743,6 +743,47 @@ if (!/@media \(prefers-reduced-motion: reduce\)\s*\{[\s\S]*?scroll-behavior:\s*a
   errors.push("Site styles must disable smooth scrolling when reduced motion is preferred.");
 }
 
+const definedCssProperties = new Set(
+  Array.from(styles.matchAll(/(--[a-z0-9-]+)\s*:/gi), (match) => match[1]),
+);
+const referencedCssProperties = new Set(
+  Array.from(styles.matchAll(/var\((--[a-z0-9-]+)/gi), (match) => match[1]),
+);
+
+for (const property of referencedCssProperties) {
+  if (!definedCssProperties.has(property)) {
+    errors.push(`styles.css references undefined custom property ${property}.`);
+  }
+}
+
+const retiredCssSelectors = [
+  ".batch-explainer",
+  ".history-card",
+  ".history-edition",
+  ".history-edition-header",
+  ".history-edition-badges",
+  ".detail-header",
+  ".empty-state",
+  ".sr-only",
+  ".news-card .impact-note",
+  ".news-card .rank-note",
+  ".news-card .reader-use",
+  ".news-card .next-check",
+  ".news-card .follow-up-questions",
+  ".news-card .evidence-threshold",
+  ".news-card .claim-boundary",
+  ".news-card .counter-evidence",
+  ".news-card .verification-status",
+  ".news-card .source-role",
+  ".news-card .source-note",
+];
+
+for (const selector of retiredCssSelectors) {
+  if (styles.includes(selector)) {
+    errors.push(`styles.css still contains retired selector ${selector}.`);
+  }
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
