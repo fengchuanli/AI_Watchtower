@@ -322,7 +322,11 @@ if (
   errors.push("Homepage must render a dynamic Today TOP3 section with ranking reasons and three-line summaries.");
 }
 
-if (!/class="top3-followup"/.test(html) || !/href="\.\/all-news\.html">查看全部情报<\/a>/.test(html) || !/\.top3-followup/.test(styles)) {
+if (
+  !/class="top3-followup"/.test(html) ||
+  !/href="\.\/all-news\.html"[^>]*aria-label="打开全部情报题目列表"[^>]*>查看全部情报<\/a>/.test(html) ||
+  !/\.top3-followup/.test(styles)
+) {
   errors.push("Homepage must place a prominent all-news entry directly after Today TOP3.");
 }
 
@@ -401,6 +405,22 @@ if (
   !/查看 \$\{item\.archiveLabel\} 的站内解读/.test(allNewsJs)
 ) {
   errors.push("Homepage and all-news page must use Chinese, context-rich accessible labels for navigation, filters, and history links.");
+}
+
+if (
+  !/<meta name="description" content="AI Watchtower 全部历史情报题目列表，按时间、主题和抓取批次帮助中文读者进入站内详情解读。"/.test(allNewsHtml) ||
+  !/<meta name="application-name" content="AI Watchtower" \/>/.test(allNewsHtml) ||
+  !/<meta property="og:title" content="全部情报 \| AI Watchtower" \/>/.test(allNewsHtml) ||
+  !/<meta\s+property="og:description"\s+content="按时间、主题和抓取批次回看 AI Watchtower 已收录情报，并进入站内中文解读。"\s+\/>/s.test(
+    allNewsHtml,
+  ) ||
+  !/<meta name="twitter:card" content="summary" \/>/.test(allNewsHtml) ||
+  !/<meta name="twitter:title" content="全部情报 \| AI Watchtower" \/>/.test(allNewsHtml) ||
+  !/<meta\s+name="twitter:description"\s+content="按时间、主题和抓取批次回看 AI Watchtower 已收录情报，并进入站内中文解读。"\s+\/>/s.test(
+    allNewsHtml,
+  )
+) {
+  errors.push("All-news page must provide Chinese sharing metadata that explains the historical intelligence reading path.");
 }
 
 if (

@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-20 14:03 JST
+
+- Focus: Improved Phase 4 Day 24 sharing metadata for the all-news page. The historical intelligence page now has Chinese page description, application metadata, Open Graph title/description, and Twitter summary metadata that frame it as a time-, topic-, and batch-oriented path into in-site Chinese briefings rather than raw external links.
+- Changed files:
+  - `all-news.html`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/source-policy.md`, and `docs/editorial-checklist.md`; kept the change focused on clearer Chinese reader paths and source/data framing.
+  - Ran syntax checks for `app.js`, `all-news.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `node scripts/validate-site.mjs` and validated homepage metadata, 36 local references, static page link targets, context-rich accessible labels, and all-news sharing metadata.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html` and `all-news.html` with Python's HTML parser.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with JSON parsing.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this log update; push may be blocked if GitHub DNS/network access remains unavailable.
+
 ## 2026-06-20 14:02 JST
 
 - Focus: Flattened the all-news page into a compact time-ordered title list without large batch panels, changed the homepage feed so it no longer duplicates the TOP3 items and only shows concise non-TOP3 signals, and expanded the source policy to include AI leader, capital, acquisition, IPO/listing, compute, and strategic company events when they materially affect the AI landscape.
