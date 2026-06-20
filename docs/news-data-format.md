@@ -110,6 +110,10 @@ The current feed must not promote stale background material as a new batch. Keep
 - `provenance`: How readers should interpret the source and claim quality. For media sources, it should remind readers that full facts, quotes, charts, interviews, and context belong in the original source.
 - `trustLevel`: Visible source-tier label such as official, media, research, or community. It describes the source type, not whether the item claim has been verified.
 - `verificationStatus`: Claim-level review status. Use `结构样例，未作事实核验` for sample cards and reserve `已核验` for items whose central claim has been checked against the cited source.
+- `originalDependency`: Planned copyright-safety field. Use `must-read`, `recommended`, or `optional`; media sources should default to `must-read` so readers know the original article remains necessary for full facts.
+- `sourceType`: Planned structured source field. Use `official`, `research`, `regulator`, `reliable_media`, `media_report`, or `community_signal`.
+- `sourceReliability`: Planned structured source reliability field. Use `high`, `medium`, `low`, or `unknown`.
+- `claimStatus`: Planned structured claim status field. Use `confirmed`, `reported`, `rumored`, `disputed`, or `unclear`.
 - `publishedAt`: ISO-like timestamp with timezone.
 - `time`: Short display time.
 

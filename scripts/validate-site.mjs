@@ -551,9 +551,18 @@ if (
   !/媒体来源/.test(copyrightSafety) ||
   !/最小必要事实/.test(copyrightSafety) ||
   !/仍需要点原始来源/.test(copyrightSafety) ||
-  !/不抓取付费墙正文/.test(copyrightSafety)
+  !/禁止抓取付费墙或登录墙标题以外内容/.test(copyrightSafety) ||
+  !/不得把媒体全文、大段正文或多个段落直接输入 AI/.test(copyrightSafety) ||
+  !/originalDependency/.test(copyrightSafety) ||
+  !/must-read/.test(copyrightSafety) ||
+  !/原文引用上限/.test(copyrightSafety) ||
+  !/图片与图表规则/.test(copyrightSafety) ||
+  !/sourceReliability/.test(copyrightSafety) ||
+  !/claimStatus/.test(copyrightSafety) ||
+  !/删除与更正规则/.test(copyrightSafety) ||
+  !/商业化前复查/.test(copyrightSafety)
 ) {
-  errors.push("Copyright safety rules must preserve the non-substitution, media-source, minimum-fact, original-link, and paywall boundaries.");
+  errors.push("Copyright safety rules must preserve paywall, AI-rewrite, original-dependency, quotation, image, source-status, takedown, and commercialization boundaries.");
 }
 
 if (
@@ -807,9 +816,13 @@ if (
 if (
   !/docs\/copyright-safety\.md/.test(newsDataFormat) ||
   !/minimum-fact summary/.test(newsDataFormat) ||
-  !/not a rewritten version of the source article/.test(newsDataFormat)
+  !/not a rewritten version of the source article/.test(newsDataFormat) ||
+  !/originalDependency/.test(newsDataFormat) ||
+  !/sourceType/.test(newsDataFormat) ||
+  !/sourceReliability/.test(newsDataFormat) ||
+  !/claimStatus/.test(newsDataFormat)
 ) {
-  errors.push("News data format must keep source facts short and reserve detail fields for original interpretation.");
+  errors.push("News data format must keep source facts short and reserve detail fields for original interpretation, original dependency, and structured claim status.");
 }
 
 if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {

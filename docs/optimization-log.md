@@ -2,6 +2,22 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 01:30 JST
+
+- Focus: Strengthened copyright-safety rules with explicit paywall/login-wall limits, AI rewrite input limits, original-dependency planning, quotation limits, image and chart rules, structured source reliability and claim-status fields, takedown/correction workflow, and commercialization review triggers.
+- Changed files:
+  - `docs/copyright-safety.md`
+  - `docs/editorial-checklist.md`
+  - `docs/news-data-format.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-site.mjs` and validated copyright-safety coverage for paywall, AI rewrite, original dependency, quotation, image, source-status, takedown, and commercialization boundaries.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 22 sources.
+  - Ran `git diff --check`.
+- Commit: Included in the copyright-safety change set.
+
 ## 2026-06-21 01:15 JST
 
 - Focus: Added copyright-safety rules as the first-priority guardrail for future AI Watchtower content work, keeping the site understandable through original analysis while avoiding media-article replacement, full-text copying, paywall scraping, and overlong source summaries.
