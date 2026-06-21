@@ -87,6 +87,7 @@ const requiredCardFields = [
   "whyRanked",
   "selectionScore",
   "impact",
+  "whoShouldCare",
   "readerUse",
   "nextCheck",
   "followUpQuestions",
@@ -505,6 +506,7 @@ function updateTodayBriefing(briefing) {
 function getThreeLineSummary(item) {
   return [
     { label: "核心事件", body: item.body },
+    { label: "谁该关心", body: item.whoShouldCare || item.readerUse },
     { label: "关键影响", body: item.impact },
     { label: "接下来要看", body: item.nextCheck },
   ];

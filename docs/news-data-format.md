@@ -104,6 +104,7 @@ The current feed must not promote stale background material as a new batch. Keep
 - `detailWhyRanked`: Longer Chinese detail-page explanation of why the item matters. It should preserve important source facts, boundaries, and caveats that are too long for the homepage card.
 - `selectionScore`: Object with integer 1-5 scores for `impact`, `novelty`, `narrativeStrength`, `evidenceQuality`, and `readerUtility`, plus a matching `total` and Chinese `note` explaining the editorial tradeoff.
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
+- `whoShouldCare`: Required for promoted current items and the latest archived snapshot. Write one Chinese sentence naming the concrete audience that should care before describing how they should use the signal, for example legal, procurement, policy, infrastructure, strategy, investment, or product teams.
 - `readerUse`: Short Chinese line naming who should use the signal and what decision or checklist it informs.
 - `nextCheck`: Short editorial note stating what should be verified before treating the item as fully confirmed.
 - `followUpQuestions`: At least two concrete Chinese questions ending in `？` that guide the next editorial update or source check.

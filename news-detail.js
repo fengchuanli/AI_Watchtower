@@ -612,6 +612,7 @@ function renderDetail(item, data) {
           <div class="detail-prose">
             ${renderDetailProse(item.detailWhyRanked)}
           </div>
+          ${item.whoShouldCare ? `<p class="detail-so-what"><strong>谁该关心</strong>${escapeHtml(item.whoShouldCare)}</p>` : ""}
           <p class="detail-so-what"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>

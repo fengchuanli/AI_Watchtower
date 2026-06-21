@@ -468,6 +468,21 @@ function validateEditionMetadataReadability(edition, context, editorNote = "") {
   }
 }
 
+function validateWhoShouldCare(item, context) {
+  if (!item.whoShouldCare) {
+    errors.push(`${context} ${item.id} must include whoShouldCare for promoted readers.`);
+    return;
+  }
+
+  if (item.whoShouldCare.length < 24 || !/团队|读者|用户|负责人|投资|采购|法务|合规|政策|业务/.test(item.whoShouldCare)) {
+    errors.push(`${context} ${item.id} whoShouldCare must name a concrete audience.`);
+  }
+
+  if (item.readerUse && normalizedCopy(item.whoShouldCare) === normalizedCopy(item.readerUse)) {
+    errors.push(`${context} ${item.id} whoShouldCare must be distinct from readerUse.`);
+  }
+}
+
 function validateChineseEditorialCopy(data) {
   const deepBriefing = data.deepBriefing;
   const forbiddenVisiblePhrases = [
@@ -497,6 +512,7 @@ function validateChineseEditorialCopy(data) {
     ...(deepBriefing?.actions || []),
     ...(deepBriefing?.sourceFrame?.editorialJudgment || []),
     ...(data.items || []).flatMap((item) => [
+      item.whoShouldCare,
       item.readerUse,
       item.evidenceThreshold,
       item.detailTrend,
@@ -547,6 +563,7 @@ if (!Array.isArray(newsFeed.items)) {
   }
 
   for (const item of promotedItems) {
+    validateWhoShouldCare(item, "data/news.json promoted item");
     validateIncidentBriefingReadiness(item, "data/news.json promoted item");
   }
 }
@@ -1009,6 +1026,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
       }
 
       if (editionIndex === 0) {
+        validateWhoShouldCare(item, "data/news-history.json latest promoted item");
         validateIncidentBriefingReadiness(item, "data/news-history.json latest promoted item");
       }
 

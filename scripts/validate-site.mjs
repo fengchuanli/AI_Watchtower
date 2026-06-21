@@ -673,6 +673,16 @@ if (
 }
 
 if (
+  !/谁该关心/.test(appJs) ||
+  !/item\.whoShouldCare \|\| item\.readerUse/.test(appJs) ||
+  !/whoShouldCare/.test(detailJs) ||
+  !/function validateWhoShouldCare/.test(validateDataJs) ||
+  !/whoShouldCare/.test(newsDataFormat)
+) {
+  errors.push("Promoted news items must name who should care before explaining reader use.");
+}
+
+if (
   !/operationalStatus/.test(appJs) ||
   !/editorialInterpretation/.test(appJs) ||
   !/运行：/.test(appJs) ||

@@ -2,6 +2,30 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 20:04 JST
+
+- Focus: Improved Phase 2 Day 9 promoted-item audience clarity by adding explicit `whoShouldCare` sentences to the current TOP3 and latest archived snapshot. Homepage TOP3 now shows "谁该关心" before impact and next-check lines, detail pages show the same audience sentence before reader-use guidance, and validation requires promoted items to name a concrete audience distinct from reader-use instructions.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `app.js`
+  - `news-detail.js`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on Chinese editorial audience clarity without adding new source claims.
+  - Ran `node --check app.js`, `node --check news-detail.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this entry. Push pending until network access to GitHub works.
+
 ## 2026-06-21 19:04 JST
 
 - Focus: Improved Phase 2 Day 8 detail-page briefing clarity by making the facts, impact, proof boundary, and next-check path explicit. Detail pages now render a four-block briefing band from existing item fields before the longer explanation, with responsive styling and site validation so future edits preserve the structure.
