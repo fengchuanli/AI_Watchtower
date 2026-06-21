@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 15:04 JST
+
+- Focus: Improved Phase 1 Day 4 homepage selection clarity by turning omitted planned topics into explicit editorial boundaries. Empty topic cards now explain why the topic was not promoted, what evidence would make it promotable, and where readers can look instead, so the homepage does not imply that missing topics were ignored or silently de-prioritized.
+- Changed files:
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on homepage selection wording and avoided adding new factual claims.
+  - Ran `node --check app.js`, `node --check scripts/validate-site.mjs`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 23 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `354d8ae` (`说明未入选主题边界`). Push pending until network access to GitHub works.
+
 ## 2026-06-21 14:02 JST
 
 - Focus: Improved Phase 1 Day 3 edition-level clarity by shortening the current edition note and splitting mixed metadata into explicit operational status and editorial interpretation. The homepage now labels the batch scope, run/source-check status, and editorial evidence boundary separately, while validators and data-format docs require future batches to keep those responsibilities separate.

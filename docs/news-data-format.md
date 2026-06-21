@@ -26,6 +26,8 @@ The required top-level `edition` object gives each homepage snapshot a stable ar
 - `sourceFamilies`: One object for each source tier used by current `items`, with `family`, `label`, positive integer `count`, and Chinese `role`. Counts must match item `sourceId` entries through `data/sources.json` `trustLevel`; use this to explain whether a batch relies on official sources, research originals, reliable media, or community signals.
 - `topicGroups`: One or more topic discovery groups for the current `items`, with `id`, `label`, positive integer `count`, `itemIds`, and Chinese `meaning`. Supported IDs are `agent`, `model`, `enterprise`, `policy`, `infrastructure`, and `developer-tooling`; each `itemIds` value must reference a current news item, and `count` must match `itemIds.length`.
 
+Homepage topic groups also render planned-topic omission boundaries for supported topics that are not represented in the current batch. Each omitted topic should explain why it was not promoted, what evidence would make it promotable, and where readers can look instead. Keep this wording editorial and source-boundary focused; do not use omitted-topic copy to introduce new factual claims.
+
 ## Briefing Fields
 
 The optional top-level `briefing` object powers the homepage Today Briefing section. Use it to summarize how readers should interpret the current feed, not to introduce unsupported claims.

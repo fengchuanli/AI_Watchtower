@@ -37,32 +37,44 @@ const plannedTopicGroups = [
   {
     id: "agent",
     label: "Agent",
-    emptyNote: "本期未捕捉到足够清楚的 Agent 工作流信号；暂不把概念演示当作重点新闻。",
+    emptyReason: "本期未捕捉到足够清楚的 Agent 工作流信号；概念演示不足以单独进入 TOP3。",
+    promotionThreshold: "需要可核对的上线、客户使用、安全事件或工程变更，且能说明对读者的实际影响。",
+    fallback: "可先查看历史 Agent 与开发者工具条目，作为背景而非本期新事实。",
   },
   {
     id: "model",
     label: "模型路线",
-    emptyNote: "本期没有新的模型路线入选；历史模型消息不重复当作今日新增。",
+    emptyReason: "本期没有新的模型路线入选；历史模型消息不重复当作今日新增。",
+    promotionThreshold: "需要官方发布、研究原文或可复核评测支持新的能力、价格、上下文或部署边界。",
+    fallback: "可从归档中回看上一轮模型发布和评测信号，避免把旧背景当作新变化。",
   },
   {
     id: "enterprise",
     label: "企业工作流",
-    emptyNote: "本期没有新的企业工作流信号达到站内解读门槛。",
+    emptyReason: "本期没有新的企业工作流信号达到站内解读门槛。",
+    promotionThreshold: "需要明确客户、工作流、部署范围或治理控制，而不是泛化的厂商案例叙事。",
+    fallback: "可结合本期市场份额和开发者入口信号，更新企业采购观察清单。",
   },
   {
     id: "policy",
     label: "政策监管",
-    emptyNote: "本期未捕捉到可核对的政策监管变化；旧政策不重复发布。",
+    emptyReason: "本期未捕捉到可核对的正式政策变化；媒体场景不等同于新规则落地。",
+    promotionThreshold: "需要政府文件、监管公告、正式会议公报或公司官方承诺来支撑政策判断。",
+    fallback: "本期可把 G7 媒体信号当作后续核对入口，暂不当作政策更新。",
   },
   {
     id: "infrastructure",
     label: "基础设施",
-    emptyNote: "本期没有新的算力、部署或基础设施信号入选。",
+    emptyReason: "本期没有新的算力、部署或基础设施信号入选。",
+    promotionThreshold: "需要芯片、数据中心、电力、云区域或部署能力的可核对变化，而非单纯远期愿景。",
+    fallback: "可回看归档中的 AI 工厂、电力并网和欧洲基础设施条目作为背景。",
   },
   {
     id: "developer-tooling",
     label: "开发者工具",
-    emptyNote: "本期没有新的开发者工具信号入选；等待可试用或可核对来源。",
+    emptyReason: "本期没有新的可试用工具发布入选；并购报道已作为资本信号处理。",
+    promotionThreshold: "需要产品发布、开源仓库、迁移文档、安全公告或开发者可验证的能力变化。",
+    fallback: "本期可先阅读 Cursor 交易报道的站内解读，关注开发者入口控制权。",
   },
 ];
 const requiredCardFields = [
@@ -281,6 +293,14 @@ function validateEdition(edition, updatedAt, items = []) {
 
   if (!Array.isArray(edition.topicGroups) || !edition.topicGroups.length) {
     throw new Error("News edition must include topic groups.");
+  }
+
+  const invalidPlannedTopic = plannedTopicGroups.find(
+    (topic) => !topic.emptyReason || !topic.promotionThreshold || !topic.fallback,
+  );
+
+  if (invalidPlannedTopic) {
+    throw new Error("Each planned topic must explain why it was omitted, what would promote it, and where to read instead.");
   }
 
   const itemIds = new Set(items.map((item) => item.id));
@@ -691,7 +711,12 @@ function updateNewsMeta(data) {
         (topic) => `
           <span class="empty-topic">
             <strong>${escapeHtml(topic.label)} · 本期未捕捉</strong>
-            ${escapeHtml(topic.emptyNote)}
+            <em>未入选原因</em>
+            ${escapeHtml(topic.emptyReason)}
+            <em>入选门槛</em>
+            ${escapeHtml(topic.promotionThreshold)}
+            <em>替代阅读</em>
+            ${escapeHtml(topic.fallback)}
           </span>
         `,
       ),

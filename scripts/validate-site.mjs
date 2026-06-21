@@ -690,11 +690,19 @@ if (
   !/id: "infrastructure"/.test(appJs) ||
   !/id: "developer-tooling"/.test(appJs) ||
   !/本期未捕捉/.test(appJs) ||
+  !/emptyReason/.test(appJs) ||
+  !/promotionThreshold/.test(appJs) ||
+  !/fallback/.test(appJs) ||
+  !/未入选原因/.test(appJs) ||
+  !/入选门槛/.test(appJs) ||
+  !/替代阅读/.test(appJs) ||
   !/class="empty-topic"/.test(appJs) ||
   !/\.topic-groups/.test(styles) ||
-  !/\.topic-groups span\.empty-topic/.test(styles)
+  !/\.topic-groups span\.empty-topic/.test(styles) ||
+  !/\.topic-groups span\.empty-topic em/.test(styles) ||
+  !/planned-topic omission boundaries/.test(newsDataFormat)
 ) {
-  errors.push("Homepage feed metadata must render edition topic grouping and empty states for the planned topic vocabulary.");
+  errors.push("Homepage feed metadata must render edition topic grouping and omission boundaries for the planned topic vocabulary.");
 }
 
 if (!/AI Watchtower 不追求把所有官方更新铺满首页/.test(html) || !/范式变化/.test(html)) {
