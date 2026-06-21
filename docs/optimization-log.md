@@ -22,7 +22,7 @@ Use this file to record every automated or manual optimization. New entries go a
   - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `9ff4ba5` (`细化降级信号校验`). Push pending until network access to GitHub works.
+- Commit: Local implementation commit `9ff4ba5` (`细化降级信号校验`), followed by log-status commit `7c819bd` (`记录21点降级信号哈希`). `git push origin main` failed because this environment could not resolve `github.com`.
 
 ## 2026-06-21 20:04 JST
 
