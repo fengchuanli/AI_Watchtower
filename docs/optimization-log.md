@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 17:06 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update with three non-duplicated reliable-media signals after official indexes and RSS-oriented checks showed no stronger post-morning official release: FT on Anthropic export-ban narrative risk, Guardian on Europe 2031 and AI sovereignty anxiety, and MarketWatch on Google/DeepMind talent scarcity as an AI competition variable.
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `data/sources.json` and `docs/source-policy.md`; checked official OpenAI, Anthropic, Google DeepMind, Mistral, OpenAI Developers RSS, Hugging Face RSS, and reliable-media search results; kept all media-sourced claims marked as `媒体背景` / `reported`.
+  - Added FT, Guardian, and MarketWatch to `data/sources.json` as reliable media sources with paywall/search-index boundaries where relevant.
+  - Ran `node --check app.js` and syntax checks for `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit created with message `更新17点AI新闻情报`; final hash is recorded in automation memory and run summary. `git push origin main` failed because this environment could not resolve `github.com`.
+
 ## 2026-06-21 16:04 JST
 
 - Focus: Improved Phase 1 Day 5 coverage-mix clarity by rewriting the current edition's coverage groups and topic groups as concrete reader actions. The homepage now tells readers what to update, check, or adjust for policy, engineering-platform, and product-growth use cases instead of only naming what to observe, and validation now rejects passive coverage/topic meanings.
