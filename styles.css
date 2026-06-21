@@ -296,6 +296,7 @@ h3 {
 .reader-frame,
 .edition-change,
 .coverage-mix,
+.source-risk,
 .source-families,
 .topic-groups {
   display: flex;
@@ -307,6 +308,10 @@ h3 {
 
 .source-families,
 .topic-groups {
+  margin-top: 8px;
+}
+
+.source-risk {
   margin-top: 8px;
 }
 
@@ -402,6 +407,7 @@ h3 {
 }
 
 .coverage-mix span,
+.source-risk span,
 .source-families span,
 .topic-groups span {
   max-width: 240px;
@@ -411,6 +417,20 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   font-size: 13px;
+}
+
+.source-risk span {
+  max-width: 500px;
+  background: #fff5f4;
+  border-color: rgb(191 82 73 / 22%);
+}
+
+.source-risk em {
+  display: block;
+  margin-top: 6px;
+  color: #8f312b;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .source-families span {

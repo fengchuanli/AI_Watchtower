@@ -48,6 +48,7 @@ const requiredEditionFields = [
   "note",
   "operationalStatus",
   "editorialInterpretation",
+  "sourceRisk",
 ];
 const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
@@ -599,6 +600,26 @@ if (!newsFeed.edition) {
 
       if (family) {
         sourceFamilyCounts.set(family, (sourceFamilyCounts.get(family) || 0) + 1);
+      }
+    }
+
+    if (
+      !newsFeed.edition.sourceRisk ||
+      !newsFeed.edition.sourceRisk.label ||
+      !newsFeed.edition.sourceRisk.note ||
+      !newsFeed.edition.sourceRisk.nextCheck
+    ) {
+      errors.push("data/news.json edition must include sourceRisk label, note, and nextCheck.");
+    } else {
+      const maxFamilyCount = Math.max(...sourceFamilyCounts.values(), 0);
+      const dominantFamily = maxFamilyCount > 0 && maxFamilyCount >= Math.ceil((newsFeed.items || []).length * 0.67);
+
+      if (dominantFamily && !/集中|单一|同一|全部|占比|偏向/.test(newsFeed.edition.sourceRisk.note)) {
+        errors.push("data/news.json edition.sourceRisk.note must explain source concentration when one source family dominates.");
+      }
+
+      if (!/官方|原文|公告|文件|核对|复核/.test(newsFeed.edition.sourceRisk.nextCheck)) {
+        errors.push("data/news.json edition.sourceRisk.nextCheck must name the independent source check needed next.");
       }
     }
 

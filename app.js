@@ -9,6 +9,7 @@ const newsMeta = document.querySelector("#newsMeta");
 const readerFrame = document.querySelector("#readerFrame");
 const editionChange = document.querySelector("#editionChange");
 const coverageMix = document.querySelector("#coverageMix");
+const sourceRisk = document.querySelector("#sourceRisk");
 const sourceFamilies = document.querySelector("#sourceFamilies");
 const topicGroups = document.querySelector("#topicGroups");
 const categoryMeta = document.querySelector("#categoryMeta");
@@ -290,6 +291,17 @@ function validateEdition(edition, updatedAt, items = []) {
 
   if (!Array.isArray(edition.sourceFamilies) || !edition.sourceFamilies.length) {
     throw new Error("News edition must include source family framing.");
+  }
+
+  if (
+    !edition.sourceRisk ||
+    !edition.sourceRisk.label ||
+    !edition.sourceRisk.note ||
+    !edition.sourceRisk.nextCheck ||
+    !/来源|媒体|官方|核对|集中|单一/.test(edition.sourceRisk.note) ||
+    !/官方|原文|核对|复核|文件|公告/.test(edition.sourceRisk.nextCheck)
+  ) {
+    throw new Error("News edition must include a source concentration risk note and next-check boundary.");
   }
 
   const invalidSourceFamily = edition.sourceFamilies.find(
@@ -689,6 +701,10 @@ function updateNewsMeta(data) {
       .join("");
   }
 
+  if (sourceRisk) {
+    sourceRisk.innerHTML = renderSourceRisk(data.edition?.sourceRisk);
+  }
+
   if (sourceFamilies) {
     const families = data.edition?.sourceFamilies || [];
     sourceFamilies.innerHTML = families
@@ -732,6 +748,20 @@ function updateNewsMeta(data) {
       ),
     ].join("");
   }
+}
+
+function renderSourceRisk(risk) {
+  if (!risk) {
+    return "";
+  }
+
+  return `
+    <span>
+      <strong>${escapeHtml(risk.label)}</strong>
+      ${escapeHtml(risk.note)}
+      <em>${escapeHtml(risk.nextCheck)}</em>
+    </span>
+  `;
 }
 
 function renderEditionChange(changeSummary) {

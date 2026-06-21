@@ -2,6 +2,31 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 17:30 JST
+
+- Focus: Improved Phase 1 Day 6 source-risk clarity by adding a compact source-concentration note to the current edition. The homepage now tells readers that the current batch is dominated by reliable-media signals and should be used as a trend radar, while validation requires future batches to name the independent official/original check needed next when one source family dominates.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on source framing without adding new external claims.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this entry. Push pending until network access to GitHub works.
+
 ## 2026-06-21 17:06 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update with three non-duplicated reliable-media signals after official indexes and RSS-oriented checks showed no stronger post-morning official release: FT on Anthropic export-ban narrative risk, Guardian on Europe 2031 and AI sovereignty anxiety, and MarketWatch on Google/DeepMind talent scarcity as an AI competition variable.

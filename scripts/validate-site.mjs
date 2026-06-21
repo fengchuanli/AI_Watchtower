@@ -670,6 +670,18 @@ if (
 }
 
 if (
+  !/id="sourceRisk"/.test(html) ||
+  !/const sourceRisk = document\.querySelector\("#sourceRisk"\);/.test(appJs) ||
+  !/function renderSourceRisk/.test(appJs) ||
+  !/edition\.sourceRisk/.test(appJs) ||
+  !/sourceRisk/.test(validateDataJs) ||
+  !/\.source-risk/.test(styles) ||
+  !/sourceRisk/.test(newsDataFormat)
+) {
+  errors.push("Homepage feed metadata must render and validate compact source-concentration risk notes.");
+}
+
+if (
   !/id="sourceFamilies"/.test(html) ||
   !/const sourceFamilies = document\.querySelector\("#sourceFamilies"\);/.test(appJs) ||
   !/edition\.sourceFamilies/.test(appJs) ||
