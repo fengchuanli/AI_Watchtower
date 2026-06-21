@@ -483,6 +483,28 @@ function validateWhoShouldCare(item, context) {
   }
 }
 
+function validateCounterEvidenceSpecificity(item, context) {
+  const counterEvidence = String(item.counterEvidence || "");
+
+  if (!counterEvidence) {
+    return;
+  }
+
+  if (!/如果|若|缺少|未|不/.test(counterEvidence)) {
+    errors.push(`${context} ${item.id} counterEvidence must name a condition that would weaken the current editorial judgment.`);
+  }
+
+  if (!/文件|公告|说明|声明|日志|记录|指标|数据|审批|采购|政策|角色|职责|发布|复测|确认|否认|通过/.test(counterEvidence)) {
+    errors.push(
+      `${context} ${item.id} counterEvidence must name a concrete proof type, source artifact, or observable outcome for follow-up.`,
+    );
+  }
+
+  if (!/下调|收窄|削弱|降低|降级|限定/.test(counterEvidence)) {
+    errors.push(`${context} ${item.id} counterEvidence must say how the editorial judgment should be downgraded.`);
+  }
+}
+
 function validateChineseEditorialCopy(data) {
   const deepBriefing = data.deepBriefing;
   const forbiddenVisiblePhrases = [
@@ -926,9 +948,7 @@ for (const item of newsFeed.items || []) {
     }
   }
 
-  if (item.counterEvidence && !/如果|若|缺少|未|不/.test(item.counterEvidence)) {
-    errors.push(`${item.id} counterEvidence must name a condition that would weaken the current editorial judgment.`);
-  }
+  validateCounterEvidenceSpecificity(item, "data/news.json item");
 
   validateVendorClaimBoundary(item, "data/news.json item");
   validateSelectionScore(item.selectionScore, item.id, "data/news.json item");
@@ -1028,6 +1048,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
       if (editionIndex === 0) {
         validateWhoShouldCare(item, "data/news-history.json latest promoted item");
         validateIncidentBriefingReadiness(item, "data/news-history.json latest promoted item");
+        validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
       }
 
       validateVendorClaimBoundary(item, "data/news-history.json item");

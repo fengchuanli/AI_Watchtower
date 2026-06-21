@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 21:04 JST
+
+- Focus: Improved Phase 2 Day 10 downgrade-signal specificity. The current TOP3 and latest archived snapshot now name concrete follow-up artifacts or outcomes that would weaken each editorial judgment, and validation requires `counterEvidence` to include a conditional trigger, a concrete proof type or observable result, and an explicit downgrade action.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/editorial-checklist.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on editorial follow-up clarity without adding new source claims.
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `85fa410` (`细化降级信号校验`). Push pending until network access to GitHub works.
+
 ## 2026-06-21 20:04 JST
 
 - Focus: Improved Phase 2 Day 9 promoted-item audience clarity by adding explicit `whoShouldCare` sentences to the current TOP3 and latest archived snapshot. Homepage TOP3 now shows "谁该关心" before impact and next-check lines, detail pages show the same audience sentence before reader-use guidance, and validation requires promoted items to name a concrete audience distinct from reader-use instructions.

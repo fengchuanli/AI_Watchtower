@@ -110,7 +110,7 @@ The current feed must not promote stale background material as a new batch. Keep
 - `followUpQuestions`: At least two concrete Chinese questions ending in `？` that guide the next editorial update or source check.
 - `evidenceThreshold`: Concrete minimum evidence required before the observation can be upgraded to a confirmed editorial judgment. Name the source type and proof needed rather than using a vague phrase such as "more evidence".
 - `claimBoundary`: Short Chinese caution stating what the current item does not prove, so readers do not overread a signal beyond its available evidence.
-- `counterEvidence`: Short Chinese condition explaining what later evidence would weaken, downgrade, or narrow the current editorial judgment.
+- `counterEvidence`: Short Chinese condition explaining what later evidence would weaken, downgrade, or narrow the current editorial judgment. For promoted current items and the latest archived snapshot, name a concrete proof type, source artifact, or observable outcome such as policy text, official announcement, access logs, approval records, adoption metrics, role confirmation, third-party retest, or product delivery status; avoid vague phrasing like "更多证据".
 - `source`: Human-readable source group.
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.
@@ -141,4 +141,4 @@ Run this before committing content updates:
 node scripts/validate-data.mjs
 ```
 
-The validator checks source-count metadata, concise edition metadata without repeated explanations, action-oriented coverage and topic meanings, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, stale current items, repeated current-vs-history coverage, repeated source URLs and near-duplicate titles across history, current and historical item fields including dedicated detail-page explanations, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals, source ID references, and URL shape.
+The validator checks source-count metadata, concise edition metadata without repeated explanations, action-oriented coverage and topic meanings, category definitions and label consistency, deep-briefing coverage limits, newest-first sorting, stale current items, repeated current-vs-history coverage, repeated source URLs and near-duplicate titles across history, current and historical item fields including dedicated detail-page explanations, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, downgrade signals with concrete follow-up artifacts, source ID references, and URL shape.
