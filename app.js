@@ -206,6 +206,10 @@ function isValidSelectionScore(score) {
   );
 }
 
+function isActionOrientedSignalUse(text) {
+  return /用来(更新|检查|调整|核对|评估|复查|列出)/.test(String(text || ""));
+}
+
 function renderSelectionScore(score) {
   if (!isValidSelectionScore(score)) {
     return "";
@@ -272,11 +276,16 @@ function validateEdition(edition, updatedAt, items = []) {
   validateEditionChange(edition.changeSummary);
 
   const invalidCoverage = edition.coverageMix.find(
-    (item) => !item.label || !Number.isInteger(item.count) || item.count < 1 || !item.meaning,
+    (item) =>
+      !item.label ||
+      !Number.isInteger(item.count) ||
+      item.count < 1 ||
+      !item.meaning ||
+      !isActionOrientedSignalUse(item.meaning),
   );
 
   if (invalidCoverage) {
-    throw new Error("Each edition coverage mix item must include label, count, and meaning.");
+    throw new Error("Each edition coverage mix item must include label, count, and an action-oriented meaning.");
   }
 
   if (!Array.isArray(edition.sourceFamilies) || !edition.sourceFamilies.length) {
@@ -314,12 +323,13 @@ function validateEdition(edition, updatedAt, items = []) {
       !Array.isArray(topic.itemIds) ||
       topic.itemIds.length !== topic.count ||
       !topic.meaning ||
+      !isActionOrientedSignalUse(topic.meaning) ||
       !allowedTopics.has(topic.id) ||
       topic.itemIds.some((id) => !itemIds.has(id)),
   );
 
   if (invalidTopicGroup) {
-    throw new Error("Each edition topic group must use a supported topic and reference current news items.");
+    throw new Error("Each edition topic group must use a supported topic, reference current news items, and name the reader action.");
   }
 }
 

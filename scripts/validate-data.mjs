@@ -270,6 +270,10 @@ function validateSelectionScore(score, itemId, context) {
   }
 }
 
+function isActionOrientedSignalUse(value) {
+  return /用来(更新|检查|调整|核对|评估|复查|列出)/.test(String(value || ""));
+}
+
 function validateIncidentBriefingReadiness(item, context) {
   for (const [field, label, minLength] of incidentBriefingSections) {
     if (typeof item[field] !== "string" || item[field].trim().length < minLength) {
@@ -575,8 +579,10 @@ if (!newsFeed.edition) {
         errors.push(`data/news.json edition coverageMix[${index}] must include label, positive count, and meaning.`);
       }
 
-      if (entry.meaning && !/用于观察|用于判断|用于核对/.test(entry.meaning)) {
-        errors.push(`data/news.json edition coverageMix[${index}] must explain how readers should use that signal group.`);
+      if (entry.meaning && !isActionOrientedSignalUse(entry.meaning)) {
+        errors.push(
+          `data/news.json edition coverageMix[${index}] must name a concrete reader action, such as updating, checking, adjusting, or verifying a list.`,
+        );
       }
     }
   }
@@ -663,8 +669,10 @@ if (!newsFeed.edition) {
         }
       }
 
-      if (entry.meaning && !/观察|跟踪|核对|判断/.test(entry.meaning)) {
-        errors.push(`data/news.json edition topicGroups[${index}] must explain how readers should use that topic group.`);
+      if (entry.meaning && !isActionOrientedSignalUse(entry.meaning)) {
+        errors.push(
+          `data/news.json edition topicGroups[${index}] must name a concrete reader action, such as updating, checking, adjusting, or verifying a list.`,
+        );
       }
 
       seenTopics.add(entry.id);

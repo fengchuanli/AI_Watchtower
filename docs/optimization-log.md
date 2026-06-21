@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 16:04 JST
+
+- Focus: Improved Phase 1 Day 5 coverage-mix clarity by rewriting the current edition's coverage groups and topic groups as concrete reader actions. The homepage now tells readers what to update, check, or adjust for policy, engineering-platform, and product-growth use cases instead of only naming what to observe, and validation now rejects passive coverage/topic meanings.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `app.js`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on Chinese editorial action framing without adding new external claims.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 23 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this entry. Push pending until network access to GitHub works.
+
 ## 2026-06-21 15:04 JST
 
 - Focus: Improved Phase 1 Day 4 homepage selection clarity by turning omitted planned topics into explicit editorial boundaries. Empty topic cards now explain why the topic was not promoted, what evidence would make it promotable, and where readers can look instead, so the homepage does not imply that missing topics were ignored or silently de-prioritized.
