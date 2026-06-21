@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 18:03 JST
+
+- Focus: Improved Phase 1 Day 7 current-edition metadata readability by shortening repeated editor, operational, source-family, and source-risk wording. The homepage metadata line now uses the dedicated edition fields without appending the full editor note, and validation now caps noisy metadata fields and rejects exact repetition between the editor note and edition/source-risk fields.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `app.js`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on Chinese metadata readability without adding source claims.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json` and `data/news-history.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `cc6d026` (`精简期次元数据说明`). Push pending until network access to GitHub works.
+
 ## 2026-06-21 17:30 JST
 
 - Focus: Improved Phase 1 Day 6 source-risk clarity by adding a compact source-concentration note to the current edition. The homepage now tells readers that the current batch is dominated by reliable-media signals and should be used as a trend radar, while validation requires future batches to name the independent official/original check needed next when one source family dominates.
