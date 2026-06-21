@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 19:04 JST
+
+- Focus: Improved Phase 2 Day 8 detail-page briefing clarity by making the facts, impact, proof boundary, and next-check path explicit. Detail pages now render a four-block briefing band from existing item fields before the longer explanation, with responsive styling and site validation so future edits preserve the structure.
+- Changed files:
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on detail-page structure without adding source claims.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check tags.js`, `node --check news-detail.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+  - Browser verification was attempted, but the sandbox blocked starting a localhost server and the in-app browser blocked direct `file://` navigation by policy.
+- Commit: Local implementation commit will be created after this entry. Push pending until network access to GitHub works.
+
 ## 2026-06-21 18:03 JST
 
 - Focus: Improved Phase 1 Day 7 current-edition metadata readability by shortening repeated editor, operational, source-family, and source-risk wording. The homepage metadata line now uses the dedicated edition fields without appending the full editor note, and validation now caps noisy metadata fields and rejects exact repetition between the editor note and edition/source-risk fields.

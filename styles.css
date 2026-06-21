@@ -1725,6 +1725,55 @@ h3 {
   align-items: start;
 }
 
+.canonical-briefing {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.canonical-briefing h2 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.canonical-briefing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.canonical-briefing article {
+  min-width: 0;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.canonical-briefing span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.canonical-briefing h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.canonical-briefing p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .detail-main,
 .detail-side {
   display: grid;
@@ -2090,6 +2139,7 @@ h3 {
   .deep-actions,
   .detail-reading-path,
   .quick-summary,
+  .canonical-briefing,
   .detail-grid {
     grid-template-columns: 1fr;
   }
@@ -2128,6 +2178,7 @@ h3 {
   .overview-card-row,
   .detail-reading-path ol,
   .overview-flow,
+  .canonical-briefing-grid,
   .source-boundary-grid,
   .overview-risk-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2284,6 +2335,14 @@ h3 {
   }
 
   .quick-summary li {
+    grid-template-columns: 1fr;
+  }
+
+  .canonical-briefing {
+    padding: 20px;
+  }
+
+  .canonical-briefing-grid {
     grid-template-columns: 1fr;
   }
 

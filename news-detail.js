@@ -255,6 +255,31 @@ function getRiskCards(item) {
   ];
 }
 
+function getCanonicalBriefingBlocks(item) {
+  return [
+    {
+      label: "01",
+      title: "最小事实",
+      body: item.detailBody,
+    },
+    {
+      label: "02",
+      title: "影响判断",
+      body: item.impact,
+    },
+    {
+      label: "03",
+      title: "核验边界",
+      body: item.claimBoundary,
+    },
+    {
+      label: "04",
+      title: "下一步核对",
+      body: item.nextCheck,
+    },
+  ];
+}
+
 function getSourceBoundaryCards(item) {
   return [
     {
@@ -273,6 +298,20 @@ function getSourceBoundaryCards(item) {
       body: item.claimBoundary,
     },
   ];
+}
+
+function renderCanonicalBriefingBlocks(blocks) {
+  return blocks
+    .map(
+      (block) => `
+        <article>
+          <span>${escapeHtml(block.label)}</span>
+          <h3>${escapeHtml(block.title)}</h3>
+          <p>${escapeHtml(block.body)}</p>
+        </article>
+      `,
+    )
+    .join("");
 }
 
 function renderSourceBoundaryCards(cards) {
@@ -444,6 +483,7 @@ function renderDetail(item, data) {
   const overviewCards = getOverviewCards(item);
   const diagramNodes = getDiagramNodes(item);
   const riskCards = getRiskCards(item);
+  const canonicalBriefingBlocks = getCanonicalBriefingBlocks(item);
   const sourceBoundaryCards = getSourceBoundaryCards(item);
 
   detailShell.innerHTML = `
@@ -537,6 +577,16 @@ function renderDetail(item, data) {
       </div>
       <div class="source-boundary-grid">
         ${renderSourceBoundaryCards(sourceBoundaryCards)}
+      </div>
+    </section>
+
+    <section class="canonical-briefing" aria-label="事实、影响、边界与下一步">
+      <div>
+        <p class="eyebrow">Briefing Blocks</p>
+        <h2>按四件事读这条情报</h2>
+      </div>
+      <div class="canonical-briefing-grid">
+        ${renderCanonicalBriefingBlocks(canonicalBriefingBlocks)}
       </div>
     </section>
 

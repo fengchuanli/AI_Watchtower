@@ -527,6 +527,22 @@ if (
 }
 
 if (
+  !/function getCanonicalBriefingBlocks\(item\)/.test(detailJs) ||
+  !/function renderCanonicalBriefingBlocks\(blocks\)/.test(detailJs) ||
+  !/class="canonical-briefing"/.test(detailJs) ||
+  !/事实、影响、边界与下一步/.test(detailJs) ||
+  !/最小事实/.test(detailJs) ||
+  !/影响判断/.test(detailJs) ||
+  !/核验边界/.test(detailJs) ||
+  !/下一步核对/.test(detailJs) ||
+  !/\.canonical-briefing\s*\{[^}]*grid-template-columns:\s*220px 1fr;/s.test(styles) ||
+  !/\.canonical-briefing-grid\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\);/s.test(styles) ||
+  !/@media \(max-width: 620px\)\s*\{[\s\S]*?\.canonical-briefing-grid\s*\{[^}]*grid-template-columns:\s*1fr;/s.test(styles)
+) {
+  errors.push("News detail pages must expose a canonical facts, impact, boundary, and next-check briefing block.");
+}
+
+if (
   !/2026-06-20 through 2026-07-19/.test(optimizationPlan) ||
   !/create the next 30-day plan/.test(optimizationPlan) ||
   !/Do not stop daily optimization/.test(optimizationPlan)
