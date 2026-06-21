@@ -229,7 +229,16 @@ function validateCategories(categories, items) {
 }
 
 function validateEdition(edition, updatedAt, items = []) {
-  const requiredFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
+  const requiredFields = [
+    "id",
+    "date",
+    "timezone",
+    "archiveStatus",
+    "archiveLabel",
+    "note",
+    "operationalStatus",
+    "editorialInterpretation",
+  ];
 
   if (!edition || requiredFields.some((field) => !edition[field])) {
     throw new Error("News data must include complete edition metadata.");
@@ -237,6 +246,10 @@ function validateEdition(edition, updatedAt, items = []) {
 
   if (edition.date !== updatedAt) {
     throw new Error("News edition date must match updatedAt.");
+  }
+
+  if (edition.note.length > 80) {
+    throw new Error("News edition note must stay short and leave status details to dedicated fields.");
   }
 
   if (!Array.isArray(edition.coverageMix) || edition.coverageMix.length < 2) {
@@ -614,7 +627,13 @@ function updateNewsMeta(data) {
 
   const updatedAt = data.updatedAt ? `更新日期 ${data.updatedAt}` : "等待更新";
   const edition = data.edition
-    ? `${data.edition.archiveLabel} ${data.edition.id} · 时区 ${data.edition.timezone} · ${data.edition.note}`
+    ? [
+        `${data.edition.archiveLabel} ${data.edition.id}`,
+        `时区 ${data.edition.timezone}`,
+        `范围：${data.edition.note}`,
+        `运行：${data.edition.operationalStatus}`,
+        `编辑：${data.edition.editorialInterpretation}`,
+      ].join(" · ")
     : "尚无期次信息";
   newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${edition} · ${data.editorNote || ""}`;
 

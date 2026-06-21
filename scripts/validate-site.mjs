@@ -657,6 +657,19 @@ if (
 }
 
 if (
+  !/operationalStatus/.test(appJs) ||
+  !/editorialInterpretation/.test(appJs) ||
+  !/运行：/.test(appJs) ||
+  !/编辑：/.test(appJs) ||
+  !/operationalStatus/.test(validateDataJs) ||
+  !/editorialInterpretation/.test(validateDataJs) ||
+  !/operationalStatus/.test(newsDataFormat) ||
+  !/editorialInterpretation/.test(newsDataFormat)
+) {
+  errors.push("Homepage edition metadata must split short scope note, operational status, and editorial interpretation.");
+}
+
+if (
   !/id="sourceFamilies"/.test(html) ||
   !/const sourceFamilies = document\.querySelector\("#sourceFamilies"\);/.test(appJs) ||
   !/edition\.sourceFamilies/.test(appJs) ||

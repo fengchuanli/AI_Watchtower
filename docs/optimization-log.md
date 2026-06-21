@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-21 14:02 JST
+
+- Focus: Improved Phase 1 Day 3 edition-level clarity by shortening the current edition note and splitting mixed metadata into explicit operational status and editorial interpretation. The homepage now labels the batch scope, run/source-check status, and editorial evidence boundary separately, while validators and data-format docs require future batches to keep those responsibilities separate.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `app.js`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on clearer Chinese reader framing without adding new claims or source-summary detail.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 23 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this entry. Push is pending because this environment could not resolve `github.com`.
+
 ## 2026-06-21 08:08 JST
 
 - Focus: Published the 08:00 JST AI news intelligence update with three non-duplicated reliable-media signals after official source indexes showed no stronger fresh official release: Axios on G7 AI CEO governance dynamics, TechCrunch on the reported SpaceX/Cursor $60B stock acquisition, and TechCrunch/Sensor Tower on AI assistant share moving into multi-player competition.

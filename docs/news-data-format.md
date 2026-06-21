@@ -17,7 +17,9 @@ The required top-level `edition` object gives each homepage snapshot a stable ar
 - `timezone`: IANA timezone used to interpret the edition date, such as `Asia/Tokyo`.
 - `archiveStatus`: `preview` for sample or incomplete snapshots, or `published` for a reviewed edition.
 - `archiveLabel`: Short Chinese status label shown in the homepage feed metadata.
-- `note`: Chinese scope note explaining what the archived edition does and does not represent.
+- `note`: Short Chinese scope note explaining what the archived edition represents. Keep it under 80 characters; do not mix operational status or editorial interpretation into this field.
+- `operationalStatus`: Chinese retrieval and source-check status for this batch, such as pull/network outcome and whether official/source indexes were checked.
+- `editorialInterpretation`: Chinese editorial reading of why this batch was selected and which evidence boundary still applies. Keep this as AI Watchtower's interpretation, not a source-article replacement.
 - `readerFrame`: Required Chinese object explaining how readers should use this edition. Include `headline`, `whyItMatters`, at least two `useThisIssueFor` bullets naming concrete readers or teams, and at least two `notProvenYet` bullets stating what the batch still does not prove. Keep it focused on reader orientation, not new unsupported claims.
 - `changeSummary`: Required Chinese object explaining what changed since the previous batch. Include `headline`, at least two `freshFacts` bullets written as this batch's new source facts, and at least two `repeatedContext` bullets naming background or older storylines that should not be mistaken for new facts.
 - `coverageMix`: At least two objects with `label`, positive integer `count`, and Chinese `meaning`. The counts must add up to the current `items.length`, and each meaning should explain how readers should use that signal group.
@@ -74,6 +76,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `editions[].date`: Capture or editorial date.
 - `editions[].timezone`: IANA timezone for the capture batch.
 - `editions[].archiveLabel`: Human-readable batch label, such as `17:00 JST 发布`.
+- `editions[].note`, `editions[].operationalStatus`, and `editions[].editorialInterpretation`: Copy of the current edition's short scope, operational status, and editorial reading, so archive readers can distinguish running state from editorial judgment.
 - `editions[].readerFrame`: Copy of the latest current edition's reader frame, so archive readers retain the same use case and proof-boundary context after the homepage advances.
 - `editions[].changeSummary`: Copy of the latest current edition's change summary, so archive readers can distinguish fresh facts from repeated background after the homepage advances.
 - `editions[].itemCount`: Number of items in the batch; must match `items.length`.

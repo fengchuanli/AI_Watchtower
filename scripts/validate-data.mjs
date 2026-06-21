@@ -39,7 +39,16 @@ const requiredNewsFields = [
 ];
 const requiredBriefingFields = ["label", "headline", "summary", "cta"];
 const requiredDeepBriefingFields = ["kicker", "title", "subtitle", "dateLabel", "status", "overview"];
-const requiredEditionFields = ["id", "date", "timezone", "archiveStatus", "archiveLabel", "note"];
+const requiredEditionFields = [
+  "id",
+  "date",
+  "timezone",
+  "archiveStatus",
+  "archiveLabel",
+  "note",
+  "operationalStatus",
+  "editorialInterpretation",
+];
 const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
 const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
@@ -532,6 +541,21 @@ if (!newsFeed.edition) {
     errors.push(`data/news.json edition has unsupported archiveStatus ${newsFeed.edition.archiveStatus}.`);
   }
 
+  if (newsFeed.edition.note && newsFeed.edition.note.length > 80) {
+    errors.push("data/news.json edition.note must stay short; use operationalStatus and editorialInterpretation for status details.");
+  }
+
+  if (newsFeed.edition.operationalStatus && !/拉取|检查|来源|索引|发布|DNS/.test(newsFeed.edition.operationalStatus)) {
+    errors.push("data/news.json edition.operationalStatus must describe retrieval or source-check status.");
+  }
+
+  if (
+    newsFeed.edition.editorialInterpretation &&
+    !/媒体|官方|reported|边界|复核|信号|判断/.test(newsFeed.edition.editorialInterpretation)
+  ) {
+    errors.push("data/news.json edition.editorialInterpretation must state the editorial reading and evidence boundary.");
+  }
+
   validateReaderFrame(newsFeed.edition.readerFrame, "data/news.json edition");
   validateEditionChangeSummary(newsFeed.edition.changeSummary, "data/news.json edition");
 
@@ -832,6 +856,18 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
     for (const field of ["id", "date", "timezone", "archiveLabel", "itemCount", "items"]) {
       if (!edition[field] && edition[field] !== 0) {
         errors.push(`data/news-history.json editions[${editionIndex}] is missing ${field}.`);
+      }
+    }
+
+    if (editionIndex === 0) {
+      for (const field of ["note", "operationalStatus", "editorialInterpretation"]) {
+        if (!edition[field]) {
+          errors.push(`data/news-history.json latest edition is missing ${field}.`);
+        }
+      }
+
+      if (edition.note && edition.note.length > 80) {
+        errors.push("data/news-history.json latest edition.note must stay short.");
       }
     }
 
