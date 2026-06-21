@@ -408,6 +408,66 @@ function hasChineseText(value) {
   return /\p{Script=Han}/u.test(String(value || ""));
 }
 
+function normalizedCopy(value) {
+  return String(value || "")
+    .replace(/\s+/g, "")
+    .replace(/[，。！？、：；,.!?:;·]/g, "");
+}
+
+function assertReadableMetadataLine(value, limit, message) {
+  if (typeof value === "string" && value.length > limit) {
+    errors.push(message);
+  }
+}
+
+function validateEditionMetadataReadability(edition, context, editorNote = "") {
+  if (!edition) {
+    return;
+  }
+
+  assertReadableMetadataLine(
+    editorNote,
+    120,
+    `${context} editorNote should stay concise and avoid repeating dedicated edition metadata.`,
+  );
+  assertReadableMetadataLine(
+    edition.operationalStatus,
+    90,
+    `${context} operationalStatus should stay concise and only describe retrieval/source checks.`,
+  );
+  assertReadableMetadataLine(
+    edition.editorialInterpretation,
+    90,
+    `${context} editorialInterpretation should stay concise and avoid repeating operational details.`,
+  );
+  assertReadableMetadataLine(
+    edition.sourceRisk?.note,
+    80,
+    `${context} sourceRisk.note should be a compact source-concentration warning.`,
+  );
+  assertReadableMetadataLine(
+    edition.sourceRisk?.nextCheck,
+    70,
+    `${context} sourceRisk.nextCheck should name the next independent check concisely.`,
+  );
+
+  const editorNoteText = normalizedCopy(editorNote);
+  const repeatedFields = [
+    ["operationalStatus", edition.operationalStatus],
+    ["editorialInterpretation", edition.editorialInterpretation],
+    ["sourceRisk.note", edition.sourceRisk?.note],
+    ["sourceRisk.nextCheck", edition.sourceRisk?.nextCheck],
+  ];
+
+  for (const [field, value] of repeatedFields) {
+    const fieldText = normalizedCopy(value);
+
+    if (editorNoteText && fieldText && (editorNoteText.includes(fieldText) || fieldText.includes(editorNoteText))) {
+      errors.push(`${context} editorNote repeats ${field}; keep each metadata field responsible for one job.`);
+    }
+  }
+}
+
 function validateChineseEditorialCopy(data) {
   const deepBriefing = data.deepBriefing;
   const forbiddenVisiblePhrases = [
@@ -563,6 +623,7 @@ if (!newsFeed.edition) {
 
   validateReaderFrame(newsFeed.edition.readerFrame, "data/news.json edition");
   validateEditionChangeSummary(newsFeed.edition.changeSummary, "data/news.json edition");
+  validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);
 
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
     errors.push("data/news.json edition must include at least two coverageMix entries.");
@@ -898,6 +959,8 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
       if (edition.note && edition.note.length > 80) {
         errors.push("data/news-history.json latest edition.note must stay short.");
       }
+
+      validateEditionMetadataReadability(edition, "data/news-history.json latest edition");
     }
 
     if (!Array.isArray(edition.items)) {

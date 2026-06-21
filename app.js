@@ -668,16 +668,16 @@ function updateNewsMeta(data) {
   }
 
   const updatedAt = data.updatedAt ? `更新日期 ${data.updatedAt}` : "等待更新";
-  const edition = data.edition
+  const editionParts = data.edition
     ? [
         `${data.edition.archiveLabel} ${data.edition.id}`,
         `时区 ${data.edition.timezone}`,
         `范围：${data.edition.note}`,
         `运行：${data.edition.operationalStatus}`,
         `编辑：${data.edition.editorialInterpretation}`,
-      ].join(" · ")
-    : "尚无期次信息";
-  newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${edition} · ${data.editorNote || ""}`;
+      ]
+    : ["尚无期次信息", data.editorNote].filter(Boolean);
+  newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${editionParts.join(" · ")}`;
 
   if (readerFrame) {
     readerFrame.innerHTML = renderReaderFrame(data.edition?.readerFrame);

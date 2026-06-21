@@ -661,12 +661,18 @@ if (
   !/editorialInterpretation/.test(appJs) ||
   !/运行：/.test(appJs) ||
   !/编辑：/.test(appJs) ||
+  /newsMeta\.textContent = `\$\{data\.statusLabel \|\| "数据状态"\} · \$\{updatedAt\} · \$\{editionParts\.join\(" · "\)\} · \$\{data\.editorNote \|\| ""\}`/.test(
+    appJs,
+  ) ||
+  !/validateEditionMetadataReadability/.test(validateDataJs) ||
+  !/keep each metadata field responsible for one job/.test(validateDataJs) ||
   !/operationalStatus/.test(validateDataJs) ||
   !/editorialInterpretation/.test(validateDataJs) ||
   !/operationalStatus/.test(newsDataFormat) ||
-  !/editorialInterpretation/.test(newsDataFormat)
+  !/editorialInterpretation/.test(newsDataFormat) ||
+  !/Metadata readability/.test(newsDataFormat)
 ) {
-  errors.push("Homepage edition metadata must split short scope note, operational status, and editorial interpretation.");
+  errors.push("Homepage edition metadata must split short scope note, operational status, editorial interpretation, and concise non-repeating copy.");
 }
 
 if (
