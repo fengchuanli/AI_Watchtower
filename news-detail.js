@@ -654,20 +654,22 @@ function renderDetail(item, data) {
           <p class="detail-so-what"><strong>尚不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
           <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="detail-so-what"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
-          <p class="detail-source-reminder">本站只做中文解读，完整事实请查看原文。</p>
-          <a class="button source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
+          <p class="detail-so-what"><strong></strong></p>
           <details class="detail-editor-details">
             <summary>编辑评分与入选理由</summary>
             <p><strong>为什么入选</strong>${escapeHtml(getDetailTopReason(item))}</p>
             ${renderDetailSelectionScore(getDetailEditorScore(item))}
           </details>
+          <p class="detail-source-reminder">本站只做中文解读，完整事实请查看原文。</p>
+          <p class="detail-so-what"><strong></strong></p>
+          <a class="button source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
         </section>
       </div>
     </section>
 
     <div class="detail-actions">
       <a class="button primary" href="./#feed">返回新闻流</a>
-      <a class="button secondary" href="./all-news.html">查看全部 AI 新闻 →</a>
+      <a class="button secondary" href="./all-news.html">查看全部 AI 新闻</a>
       <a class="button secondary" href="./#deep-briefing">查看本期深度简报</a>
     </div>
   `;
