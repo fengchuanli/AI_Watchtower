@@ -55,6 +55,7 @@ const allowedArchiveStatuses = new Set(["preview", "published"]);
 const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
 const allowedSourceRoles = new Set(["官方核对", "研究原文", "媒体背景", "社区发现", "厂商主张"]);
 const maxCurrentItemAgeDays = 7;
+const maxDetailParagraphLength = 180;
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const incidentBriefingSections = [
   ["detailBody", "what happened", 40],
@@ -309,6 +310,25 @@ function validateIncidentBriefingReadiness(item, context) {
 
   if (!/因为|所以|意味着|影响|用于|观察|判断|核对/.test(briefingText)) {
     errors.push(`${context} ${item.id || "unknown item"} must explain the reader-facing reason for promotion.`);
+  }
+}
+
+function validateDetailParagraphLength(item, context) {
+  const detailFields = ["detailBody", "detailTrend", "detailWhyRanked"];
+
+  for (const field of detailFields) {
+    const paragraphs = String(item[field] || "")
+      .split(/\n+/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean);
+
+    for (const [index, paragraph] of paragraphs.entries()) {
+      if (paragraph.length > maxDetailParagraphLength) {
+        errors.push(
+          `${context} ${item.id || "unknown item"} ${field} paragraph ${index + 1} is ${paragraph.length} characters; keep detail-page paragraphs under ${maxDetailParagraphLength} Chinese characters for mobile reading.`,
+        );
+      }
+    }
   }
 }
 
@@ -1014,6 +1034,7 @@ for (const item of newsFeed.items || []) {
   }
 
   validateCounterEvidenceSpecificity(item, "data/news.json item");
+  validateDetailParagraphLength(item, "data/news.json item");
 
   validateVendorClaimBoundary(item, "data/news.json item");
   validateSelectionScore(item.selectionScore, item.id, "data/news.json item");
@@ -1115,6 +1136,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         validateIncidentBriefingReadiness(item, "data/news-history.json latest promoted item");
         validateEvidenceThresholdSpecificity(item, "data/news-history.json latest promoted item");
         validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
+        validateDetailParagraphLength(item, "data/news-history.json latest promoted item");
       }
 
       validateVendorClaimBoundary(item, "data/news-history.json item");
