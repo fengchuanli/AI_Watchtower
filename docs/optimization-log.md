@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 08:06 JST
+
+- Focus: Published the 2026-06-23 08:00 JST AI news intelligence update. This edition uses three June 22 OpenAI official signals to explain AI cybersecurity moving from vulnerability discovery toward governed access, patch validation, open-source maintainer support, and long-running Codex workspaces.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `index.html`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read the automation memory, `data/sources.json`, `docs/source-policy.md`, and `docs/news-data-format.md` before editing.
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked official OpenAI, Anthropic, Mistral, Microsoft, Meta, NVIDIA, and RSS/reliable-source surfaces; selected only sufficiently sourced non-duplicate June 22 OpenAI official items.
+  - Marked Daybreak and Patch the Planet as `厂商主张` because the central claims are OpenAI-authored platform and initiative narratives; kept Codex long-running work as official source verification with customer-impact caveats.
+- Verification:
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+- Commit: Local commit created with message `更新08点AI新闻情报`. Push failed because this environment could not resolve `github.com`.
+
 ## 2026-06-22 21:02 JST
 
 - Focus: Improved Phase 3 Day 16 company tag pages for product quality and maintainability. Company pages now surface the latest matched signal, the last-seen edition date, and a source-boundary caveat derived from existing history item fields, so OpenAI, Anthropic, Google, and Meta pages work better as continuity views without creating new unverified claims.

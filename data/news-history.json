@@ -1,8 +1,296 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-22",
-  "totalItems": 39,
+  "updatedAt": "2026-06-23",
+  "totalItems": 42,
   "editions": [
+    {
+      "id": "news-0800-2026-06-23",
+      "date": "2026-06-23",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "08:00 JST 发布",
+      "note": "本期为 2026-06-23 08:00 JST 新闻情报快照。",
+      "operationalStatus": "已尝试拉取 origin/main 但 GitHub DNS 失败；已复核官方索引和可靠来源入口。",
+      "editorialInterpretation": "早间版用三条 OpenAI 官方信号观察 AI 从发现能力进入受控修复、开源协作和长任务执行。",
+      "readerFrame": {
+        "headline": "把本期当作 AI 安全工具化与长任务 Agent 雷达",
+        "whyItMatters": "Daybreak 和 Patch the Planet 把 AI 网络安全能力从演示转向受控访问、补丁验证和维护者协作；Codex 长任务白皮书则说明代码 Agent 正被定位成持续工作区。本期重点不是证明成效，而是更新治理清单。",
+        "useThisIssueFor": [
+          "安全团队检查 AI 漏洞发现、验证、补丁和披露流程是否有人工复核和审计记录。",
+          "开源办公室和供应链安全团队评估 AI 安全研究进入项目时如何控制误报、工作量和披露风险。",
+          "研发效能团队复核代码 Agent 长任务是否有目标拆分、验收标准、上下文交接和回滚规则。"
+        ],
+        "notProvenYet": [
+          "不能证明 Daybreak 已让客户环境风险实际下降。",
+          "不能证明 Patch the Planet 的所有发现有效或补丁已被项目合入。",
+          "不能证明 Codex 长任务模式已经稳定提升企业研发效率。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "早间版从研究预印本切到官方安全工具与 Agent 工作方式",
+        "freshFacts": [
+          "本期新增 OpenAI 6 月 22 日 Daybreak 官方发布，列出 GPT-5.5-Cyber、Codex Security、伙伴计划和关键基础设施协作。",
+          "本期新增 OpenAI 6 月 22 日 Patch the Planet 官方发布，列出 Trail of Bits、HackerOne、Calif 和多个初始开源项目。",
+          "本期新增 OpenAI 6 月 22 日 Codex 长任务白皮书入口，强调持续上下文、可验证步骤和复杂工作流管理。"
+        ],
+        "repeatedContext": [
+          "AI 安全和 Agent 治理是延续议题，本期只记录 6 月 22 日的新官方发布。",
+          "开源安全减负是延续背景，本期只把 Patch the Planet 作为新倡议跟踪。",
+          "企业代码 Agent 采用是延续趋势，本期不重复 Samsung/Codex 员工导入旧条目。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "网络防御",
+          "count": 1,
+          "meaning": "用来检查 AI 安全能力的访问审批、任务范围、监控和补丁验证。"
+        },
+        {
+          "label": "开源修复",
+          "count": 1,
+          "meaning": "用来更新开源供应链安全流程：误报过滤、复现证据、补丁测试和披露协调。"
+        },
+        {
+          "label": "长任务 Agent",
+          "count": 1,
+          "meaning": "用来调整研发效能清单：目标拆分、上下文保留、并行工作和人工接管。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 3,
+          "role": "三条均来自 OpenAI 官方页面，可确认发布事实、主题和自述指标；实际安全成效、项目合入和生产效率需要外部证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "来源集中提示",
+        "note": "本期全部来自 OpenAI 官方发布，因此适合作为厂商路线雷达，不应被读成独立市场共识或已验证效果。",
+        "nextCheck": "优先核对政府/伙伴独立公告、Trail of Bits 技术报告、项目合入记录、客户案例和第三方评测。"
+      },
+      "trendNotes": [
+        {
+          "topic": "ai-cyber-governance",
+          "label": "AI 网络安全治理",
+          "note": "跨期看，Agent 安全和沙盒证据议题正在延伸到真实漏洞修复链：发现、验证、补丁、披露和审计要一起治理。",
+          "boundary": "这仍不证明 AI 安全工具已经降低真实事故率；仍需第三方评测、披露记录、客户侧修复指标和审计材料。"
+        },
+        {
+          "topic": "open-source-maintenance",
+          "label": "开源维护压力",
+          "note": "跨期看，AI 能更快发现问题后，维护者负担成为新瓶颈；本期 Patch the Planet 把专家复核和补丁协作放到中心。",
+          "boundary": "这不能证明维护者负担已经下降；仍需项目合入记录、维护者反馈、误报率、补丁回归测试或披露公告。"
+        },
+        {
+          "topic": "agentic-workflow",
+          "label": "长任务执行链",
+          "note": "跨期看，Codex、MCP 和科学工作流信号持续指向同一方向：Agent 的价值要靠可验证步骤和持续上下文落地。",
+          "boundary": "这尚未证明企业研发效率稳定提升；仍需客户案例、交付指标、缺陷率、失败复盘和权限审计。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "安全与治理",
+          "count": 2,
+          "itemIds": [
+            "openai-daybreak-cyber-defense-tools-2026-06-22",
+            "openai-patch-the-planet-open-source-maintainers-2026-06-22"
+          ],
+          "meaning": "用来更新 AI 安全治理清单：受控访问、人工复核、补丁证据和披露流程必须写清楚。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发者工具",
+          "count": 1,
+          "itemIds": [
+            "openai-codex-maxxing-long-running-work-2026-06-22"
+          ],
+          "meaning": "用来检查代码 Agent 是否能支撑长任务，而不是只完成单次代码生成。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "openai-daybreak-cyber-defense-tools-2026-06-22",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI 发布 Daybreak，把 GPT-5.5-Cyber、Codex Security 与可信访问打包给防御方",
+          "body": "OpenAI 发布 Daybreak 扩展，打包网络防御模型、工具和伙伴计划。",
+          "summary": "OpenAI 发布 Daybreak，主张把 AI 网络安全能力从漏洞发现推进到验证、补丁和受控防御访问。",
+          "whyItMatters": "AI 安全竞争的重点正在从“谁能发现漏洞”转向“谁能在治理边界内帮助防御方落地修复”。",
+          "trend": "趋势判断：AI 网络安全进入受控防御平台化。",
+          "whyRanked": "本期最完整的官方安全信号。",
+          "topReason": "它把模型、插件、伙伴和政府协作放在同一个防御治理叙事里。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方原文给出发布时间、工具组合、受控访问和部分指标；实际防御效果仍需第三方复核、披露报告和客户侧证据。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方原文给出发布时间、工具组合、受控访问和部分指标；实际防御效果仍需第三方复核、披露报告和客户侧证据。"
+          },
+          "impact": "安全、平台和政策团队需要把 AI 网络安全工具当成受控能力管理：谁可访问、可做什么、证据如何留存、补丁如何进入生产。",
+          "whoShouldCare": "最该关注的是企业安全、开源安全、关键基础设施、政府网络防御和平台治理团队。",
+          "readerUse": "企业安全团队可用它检查内部 AI 安全工具是否已有访问审批、任务范围、人工复核、补丁验证和披露流程。",
+          "nextCheck": "继续核对 CAISI/ONCD/OSTP 或合作政府是否发布独立说明，伙伴产品是否上线，披露案例和客户侧修复指标是否可验证。",
+          "followUpQuestions": [
+            "GPT-5.5-Cyber 的可信访问机制如何定义获准防御方、任务边界和审计责任？",
+            "Codex Security 生成的补丁进入生产前，哪些验证和披露步骤必须由人类安全工程师确认？"
+          ],
+          "evidenceThreshold": "至少需要第三方评测、政府或伙伴独立公告、协调披露记录、客户侧修复数据或审计报告，才能从官方平台发布升级为“已验证防御效果”的结论。",
+          "claimBoundary": "OpenAI 原文可支持 Daybreak、GPT-5.5-Cyber、Codex Security、伙伴计划和部分自述指标；不能证明客户环境风险已实际下降或治理机制已被外部审计。",
+          "counterEvidence": "如果后续第三方评测、披露记录或客户审计显示高误报、补丁不可用、访问控制失效或滥用事件，应下调其“可规模化防御基础设施”的判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/daybreak-securing-the-world/",
+          "originalUrl": "https://openai.com/index/daybreak-securing-the-world/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方文章可确认 2026 年 6 月 22 日 Daybreak 扩展、工具组合、受控访问叙事和自述指标；防御成效、客户部署和监管采纳仍需独立证据。来源可信度：高，结论边界需保留。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-22T12:00:00+09:00",
+          "time": "06/22",
+          "detailBody": "OpenAI 6 月 22 日发布 Daybreak 扩展，列出 GPT-5.5-Cyber、Codex Security 插件、Cyber Partner Program、Patch the Planet 和关键基础设施协作；文中还给出部分扫描与修复自述指标。",
+          "detailTrend": "AI 网络安全能力正在被产品化为受控防御系统。真正要验证的不只是模型分数，还包括获准访问、人工复核、补丁质量、披露流程和客户环境里的风险下降。",
+          "detailWhyRanked": "本条排在首位，因为 OpenAI 原文同时覆盖模型、插件、伙伴、政府协作和关键基础设施场景，并把漏洞发现到补丁修复写成完整闭环；但中心证据仍是厂商自述。"
+        },
+        {
+          "id": "openai-patch-the-planet-open-source-maintainers-2026-06-22",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI 与 Trail of Bits 推出 Patch the Planet，面向开源维护者做 AI 辅助修复",
+          "body": "OpenAI 宣布 Patch the Planet，面向开源维护者推进 AI 辅助修复。",
+          "summary": "Patch the Planet 把 AI 安全研究、专家复核和开源维护流程放进同一修复链。",
+          "whyItMatters": "开源维护者最缺的不是更多告警，而是可复现证据、低噪声 triage、可审查补丁和披露协调。",
+          "trend": "趋势判断：开源安全焦点转向低噪声修复。",
+          "whyRanked": "它落在开源维护流程。",
+          "topReason": "它直接回答 AI 发现漏洞后由谁验证、谁修复、谁决定合入的问题。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方原文给出参与方、初始项目和工作方式；漏洞数量、补丁有效性和维护者体验仍需项目侧披露或独立报告。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方原文给出参与方、初始项目和工作方式；漏洞数量、补丁有效性和维护者体验仍需项目侧披露或独立报告。"
+          },
+          "impact": "开源、平台安全和供应链团队应关注 AI 是否能把历史 CVE、模糊测试、差分测试和补丁生成变成可维护的工作流，而不是把更多噪声丢给维护者。",
+          "whoShouldCare": "最该关注的是开源维护者、企业开源办公室、应用安全、供应链安全和开发者平台团队。",
+          "readerUse": "企业开源办公室和供应链安全团队可用它检查漏洞协作流程：证据复现、误报过滤、严重性复核、补丁测试和披露协调是否有人负责。",
+          "nextCheck": "继续核对 Trail of Bits 技术报告、参与项目的合入记录、CVE/公告、维护者反馈、补丁回归测试和后续披露。",
+          "followUpQuestions": [
+            "AI 辅助安全研究进入开源项目时，维护者如何限制噪声、工作量和披露风险？",
+            "参与项目后续是否会公开补丁质量、误报率、复现材料和维护者负担变化？"
+          ],
+          "evidenceThreshold": "至少需要参与项目的公开合入记录、CVE 或安全公告、Trail of Bits 技术报告、维护者反馈或第三方复测，才能从官方倡议升级为“已验证开源修复成效”的结论。",
+          "claimBoundary": "OpenAI 原文可支持倡议名称、合作方、初始参与项目和自述工作方式；不能证明所有发现均有效、补丁均已合入，或维护者负担已经整体下降。",
+          "counterEvidence": "如果项目侧记录、维护者反馈或第三方复测显示误报率高、补丁被拒、披露延误或维护者负担上升，应下调其开源治理价值判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/patch-the-planet/",
+          "originalUrl": "https://openai.com/index/patch-the-planet/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方文章可确认 Patch the Planet 的参与方、初始项目、AI 辅助安全研究和专家复核框架；项目侧合入、漏洞披露和维护者反馈仍需独立核对。来源可信度：高，成效待证。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-22T11:00:00+09:00",
+          "time": "06/22",
+          "detailBody": "OpenAI 宣布 Patch the Planet，由 Trail of Bits 参与初始推进，并与 HackerOne、Calif 等协作；文章列出 cURL、Go、Python、Sigstore、aiohttp、NATS Server 等初始项目。",
+          "detailTrend": "开源安全正在从“报告更多漏洞”转向“帮助维护者完成修复”。AI 的价值要看误报过滤、人工复现、补丁测试、披露协作和项目侧合入是否真的减负。",
+          "detailWhyRanked": "本条进入 TOP3，因为 OpenAI 页面把 AI 安全能力放到开源供应链最薄弱的维护环节，并列出 Trail of Bits、HackerOne、Calif 和多个初始项目；但补丁质量仍待项目侧证据。"
+        },
+        {
+          "id": "openai-codex-maxxing-long-running-work-2026-06-22",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 发布 Codex 长任务白皮书，强调把 Agent 当作持续工作区使用",
+          "body": "OpenAI 发布 Codex 长任务白皮书入口。",
+          "summary": "OpenAI 把 Codex 叙事从一次性代码生成推进到长任务、持续上下文和人机分工。",
+          "whyItMatters": "企业采用代码 Agent 时，关键不再只是模型会写代码，而是任务能否拆解、验证、延续和交接。",
+          "trend": "趋势判断：代码 Agent 走向长期工作区。",
+          "whyRanked": "它补充 Agent 工作方式信号。",
+          "topReason": "它说明厂商正在把 Codex 定位成可持续执行的工作空间，而不是代码补全插件。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方页面可确认白皮书主题和使用框架；实际生产效率、失败率和企业采用深度需要用户侧案例或指标验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方页面可确认白皮书主题和使用框架；实际生产效率、失败率和企业采用深度需要用户侧案例或指标验证。"
+          },
+          "impact": "工程团队应把代码 Agent 管理成长期协作者：目标拆分、验收标准、上下文保留、并行工作流、权限边界和人工复核都要明确。",
+          "whoShouldCare": "最该关注的是软件工程管理、平台工程、开发者体验、研发效能和代码治理团队。",
+          "readerUse": "研发效能团队可用它检查 Codex 或其他代码 Agent 是否有目标分解、验证步骤、上下文交接、失败回滚和人工接管规则。",
+          "nextCheck": "继续核对白皮书全文、企业案例、Codex 使用数据、长任务失败模式、权限控制和团队实际交付指标。",
+          "followUpQuestions": [
+            "长任务代码 Agent 的验收标准应由人类先写，还是由 Agent 在执行中生成后再复核？",
+            "多条 Codex 工作流并行时，谁负责上下文冲突、依赖顺序和最终合并风险？"
+          ],
+          "evidenceThreshold": "至少需要白皮书全文、客户案例、交付指标、代码审查记录或长任务失败分析，才能从官方方法论升级为“已验证研发效能模式”的结论。",
+          "claimBoundary": "OpenAI 页面可支持白皮书主题、作者和长任务方法论入口；不能证明 Codex 在企业中稳定提升交付速度或降低缺陷率。",
+          "counterEvidence": "如果后续客户案例、审查记录或失败分析显示上下文漂移、验收不清、返工增加或缺陷率上升，应下调其长任务工作区价值判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/codex-maxxing-long-running-work/",
+          "originalUrl": "https://openai.com/index/codex-maxxing-long-running-work/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI 官方页面可确认 2026 年 6 月 22 日发布 Codex 长任务白皮书入口及其核心主题；实际效果、适用边界和团队落地仍需原文、客户案例和指标补强。来源可信度：高。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-22T10:00:00+09:00",
+          "time": "06/22",
+          "detailBody": "OpenAI 页面介绍 Codex-maxxing for long-running work，称白皮书讨论把 Codex 作为保留上下文、管理复杂工作流、拆分可验证步骤并延续项目进展的持续工作区。",
+          "detailTrend": "代码 Agent 的竞争点正在从单次生成质量扩展到项目连续性。团队要治理的是任务拆分、验收标准、上下文、权限、冲突处理、失败回滚和最终责任。",
+          "detailWhyRanked": "本条排入本期，是因为 OpenAI 页面把 Codex 放进长期工作组织方式，并明确指向复杂工作流、可验证步骤和人类监督时机；但生产收益仍需用户侧指标验证。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-06-22",
       "date": "2026-06-22",
