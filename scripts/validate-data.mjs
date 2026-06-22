@@ -527,6 +527,40 @@ function validateEvidenceThresholdSpecificity(item, context) {
   }
 }
 
+function validateDeepBriefingReference(reference, index, context) {
+  const label = String(reference?.label || "").trim();
+  const url = String(reference?.url || "").trim();
+  const sourceNamePattern = /(OpenAI|Anthropic|Google|DeepMind|Microsoft|Meta|Mistral|NVIDIA|FT|Financial Times|Guardian|MarketWatch|Reuters|AP|The Verge|TechCrunch|arXiv|论文|官方|博客|公告|研究|媒体|监管)/i;
+  const sourceFactPattern = /(发布|宣布|报道|分析|确认|披露|说明|介绍|提出|显示|追踪|讨论|限制|禁令|主权|人才|模型|政策|研究|实验|基准|融资|收购|合作|访问|来源|原文)/;
+
+  if (!label || !url) {
+    errors.push(`${context} references[${index}] must include label and url.`);
+    return;
+  }
+
+  try {
+    const parsedUrl = new URL(url);
+
+    if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+      errors.push(`${context} references[${index}] must use an http or https URL.`);
+    }
+  } catch {
+    errors.push(`${context} references[${index}] has invalid url ${url}.`);
+  }
+
+  if (label.length < 12 || label.length > 48) {
+    errors.push(`${context} references[${index}] label should be a concise source-fact description.`);
+  }
+
+  if (!sourceNamePattern.test(label)) {
+    errors.push(`${context} references[${index}] label must name the source or source family.`);
+  }
+
+  if (!sourceFactPattern.test(label)) {
+    errors.push(`${context} references[${index}] label must describe the source fact, not just the source owner.`);
+  }
+}
+
 function validateChineseEditorialCopy(data) {
   const deepBriefing = data.deepBriefing;
   const forbiddenVisiblePhrases = [
@@ -879,6 +913,14 @@ if (!newsFeed.deepBriefing) {
 
   if (!Array.isArray(newsFeed.deepBriefing.coverageLimits) || newsFeed.deepBriefing.coverageLimits.length < 2) {
     errors.push("data/news.json deepBriefing must include at least two coverageLimits.");
+  }
+
+  if (!Array.isArray(newsFeed.deepBriefing.references) || !newsFeed.deepBriefing.references.length) {
+    errors.push("data/news.json deepBriefing must include source references.");
+  } else {
+    for (const [index, reference] of newsFeed.deepBriefing.references.entries()) {
+      validateDeepBriefingReference(reference, index, "data/news.json deepBriefing");
+    }
   }
 
   if (!newsFeed.deepBriefing.sourceFrame) {
