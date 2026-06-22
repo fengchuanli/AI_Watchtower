@@ -297,6 +297,7 @@ h3 {
 .edition-change,
 .coverage-mix,
 .source-risk,
+.trend-notes,
 .source-families,
 .topic-groups {
   display: flex;
@@ -307,6 +308,7 @@ h3 {
 }
 
 .source-families,
+.trend-notes,
 .topic-groups {
   margin-top: 8px;
 }
@@ -408,6 +410,7 @@ h3 {
 
 .coverage-mix span,
 .source-risk span,
+.trend-notes span,
 .source-families span,
 .topic-groups span {
   max-width: 240px;
@@ -429,6 +432,20 @@ h3 {
   display: block;
   margin-top: 6px;
   color: #8f312b;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.trend-notes span {
+  max-width: 360px;
+  background: #f6f8ff;
+  border-color: rgb(93 106 178 / 20%);
+}
+
+.trend-notes em {
+  display: block;
+  margin-top: 6px;
+  color: #4a55a0;
   font-style: normal;
   font-weight: 700;
 }
@@ -460,6 +477,7 @@ h3 {
 }
 
 .coverage-mix strong,
+.trend-notes strong,
 .source-families strong,
 .topic-groups strong {
   display: block;

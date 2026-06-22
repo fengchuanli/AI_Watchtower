@@ -710,6 +710,19 @@ if (
 }
 
 if (
+  !/id="trendNotes"/.test(html) ||
+  !/const trendNotes = document\.querySelector\("#trendNotes"\);/.test(appJs) ||
+  !/function renderTrendNotes/.test(appJs) ||
+  !/edition\.trendNotes/.test(appJs) ||
+  !/function validateTrendNotes/.test(validateDataJs) ||
+  !/\.trend-notes/.test(styles) ||
+  !/trendNotes/.test(newsDataFormat) ||
+  !/跨期趋势提示/.test(html)
+) {
+  errors.push("Homepage feed metadata must render and validate cross-edition trend notes.");
+}
+
+if (
   !/id="sourceFamilies"/.test(html) ||
   !/const sourceFamilies = document\.querySelector\("#sourceFamilies"\);/.test(appJs) ||
   !/edition\.sourceFamilies/.test(appJs) ||

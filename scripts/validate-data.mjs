@@ -424,6 +424,54 @@ function validateEditionChangeSummary(changeSummary, context) {
   }
 }
 
+function validateTrendNotes(notes, context) {
+  if (!Array.isArray(notes) || notes.length < 2) {
+    errors.push(`${context} must include at least two cross-edition trend notes.`);
+    return;
+  }
+
+  const seenTopics = new Set();
+
+  for (const [index, note] of notes.entries()) {
+    if (!note || typeof note !== "object" || Array.isArray(note)) {
+      errors.push(`${context} trendNotes[${index}] must be an object.`);
+      continue;
+    }
+
+    if (
+      typeof note.topic !== "string" ||
+      typeof note.label !== "string" ||
+      typeof note.note !== "string" ||
+      typeof note.boundary !== "string"
+    ) {
+      errors.push(`${context} trendNotes[${index}] must include topic, label, note, and boundary.`);
+      continue;
+    }
+
+    if (seenTopics.has(note.topic)) {
+      errors.push(`${context} trendNotes repeats topic ${note.topic}.`);
+    }
+
+    if (note.label.trim().length < 4 || note.label.trim().length > 18) {
+      errors.push(`${context} trendNotes[${index}].label should be a compact Chinese label.`);
+    }
+
+    if (!/跨期|连续|再次|延续|历史|归档/.test(note.note)) {
+      errors.push(`${context} trendNotes[${index}].note must frame a recurring cross-edition signal.`);
+    }
+
+    if (!/不证明|不能|仍需|尚未/.test(note.boundary)) {
+      errors.push(`${context} trendNotes[${index}].boundary must state the evidence boundary.`);
+    }
+
+    if (!/官方|原文|公告|文件|复核|复现|第三方|审计|监管|数据|指标/.test(note.boundary)) {
+      errors.push(`${context} trendNotes[${index}].boundary must name the next evidence source or proof type.`);
+    }
+
+    seenTopics.add(note.topic);
+  }
+}
+
 function hasChineseText(value) {
   return /\p{Script=Han}/u.test(String(value || ""));
 }
@@ -739,6 +787,7 @@ if (!newsFeed.edition) {
 
   validateReaderFrame(newsFeed.edition.readerFrame, "data/news.json edition");
   validateEditionChangeSummary(newsFeed.edition.changeSummary, "data/news.json edition");
+  validateTrendNotes(newsFeed.edition.trendNotes, "data/news.json edition");
   validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);
 
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
@@ -1062,6 +1111,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
 
   validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
   validateEditionChangeSummary(latestHistoryEdition.changeSummary, "data/news-history.json latest edition");
+  validateTrendNotes(latestHistoryEdition.trendNotes, "data/news-history.json latest edition");
 
   const allHistorySourceKeys = new Set();
 

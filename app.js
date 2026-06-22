@@ -10,6 +10,7 @@ const readerFrame = document.querySelector("#readerFrame");
 const editionChange = document.querySelector("#editionChange");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceRisk = document.querySelector("#sourceRisk");
+const trendNotes = document.querySelector("#trendNotes");
 const sourceFamilies = document.querySelector("#sourceFamilies");
 const topicGroups = document.querySelector("#topicGroups");
 const categoryMeta = document.querySelector("#categoryMeta");
@@ -276,6 +277,7 @@ function validateEdition(edition, updatedAt, items = []) {
 
   validateReaderFrame(edition.readerFrame);
   validateEditionChange(edition.changeSummary);
+  validateTrendNotes(edition.trendNotes);
 
   const invalidCoverage = edition.coverageMix.find(
     (item) =>
@@ -371,6 +373,26 @@ function validateEditionChange(changeSummary) {
 
   if (!Array.isArray(changeSummary.repeatedContext) || changeSummary.repeatedContext.length < 2) {
     throw new Error("News edition change summary must separate repeated context.");
+  }
+}
+
+function validateTrendNotes(notes) {
+  if (!Array.isArray(notes) || notes.length < 2) {
+    throw new Error("News edition must include cross-edition trend notes.");
+  }
+
+  const invalidNote = notes.find(
+    (note) =>
+      !note.label ||
+      !note.topic ||
+      !note.note ||
+      !note.boundary ||
+      !/跨期|连续|再次|延续|历史|归档/.test(note.note) ||
+      !/不证明|不能|仍需|尚未/.test(note.boundary),
+  );
+
+  if (invalidNote) {
+    throw new Error("Each cross-edition trend note must name the repeated signal and its proof boundary.");
   }
 }
 
@@ -720,6 +742,10 @@ function updateNewsMeta(data) {
     sourceRisk.innerHTML = renderSourceRisk(data.edition?.sourceRisk);
   }
 
+  if (trendNotes) {
+    trendNotes.innerHTML = renderTrendNotes(data.edition?.trendNotes);
+  }
+
   if (sourceFamilies) {
     const families = data.edition?.sourceFamilies || [];
     sourceFamilies.innerHTML = families
@@ -777,6 +803,24 @@ function renderSourceRisk(risk) {
       <em>${escapeHtml(risk.nextCheck)}</em>
     </span>
   `;
+}
+
+function renderTrendNotes(notes) {
+  if (!Array.isArray(notes) || !notes.length) {
+    return "";
+  }
+
+  return notes
+    .map(
+      (note) => `
+        <span>
+          <strong>${escapeHtml(note.label)}</strong>
+          ${escapeHtml(note.note)}
+          <em>${escapeHtml(note.boundary)}</em>
+        </span>
+      `,
+    )
+    .join("");
 }
 
 function renderEditionChange(changeSummary) {
