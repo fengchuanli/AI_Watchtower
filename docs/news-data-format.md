@@ -90,6 +90,8 @@ The top-level `categories` array defines the editorial boundary of every homepag
 
 The all-news history page derives its category filters from historical item `category` and `label` values, then lets readers switch between newest-first and oldest-first batch order. Keep historical categories stable and labels readable so older coverage remains discoverable without using original source links as the primary reading path.
 
+Company tag pages derive OpenAI, Anthropic, Google, and Meta views from historical `sourceId`, `source`, and `sourceUrl` fields. Each tag context should show the latest matched signal, the last-seen edition date, and a source caveat derived from `claimBoundary`, `provenance`, or `nextCheck`, so company pages remain a tracking aid rather than a new source of unverified claims.
+
 The current feed must not promote stale background material as a new batch. Keep `publishedAt` within seven days of `updatedAt` unless a new source fact produces a distinct fresh item. If an older archive item already uses the same normalized source URL or a near-duplicate title, reuse the archive for background context instead of re-publishing the item as current news.
 
 ## Required Fields

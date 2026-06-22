@@ -92,11 +92,17 @@ function summarizeTagItems(items) {
   const latestItem = items[0];
   const categories = [...new Set(items.map((item) => item.label || item.category).filter(Boolean))];
   const sourceRoles = [...new Set(items.map((item) => item.sourceRole || item.trustLevel).filter(Boolean))];
+  const sourceCaveat = latestItem
+    ? latestItem.claimBoundary || latestItem.provenance || latestItem.nextCheck || "先读站内事件简报，再用原始来源核对完整事实。"
+    : "暂无来源边界；等待后续抓取到相关公司信号。";
 
   return {
     latestLabel: latestItem ? `${latestItem.editionDate} · ${latestItem.editionLabel}` : "暂无匹配批次",
+    latestSignal: latestItem ? latestItem.title : "暂无最新信号",
+    lastSeenDate: latestItem ? latestItem.editionDate : "暂无记录",
     categoryLabel: categories.length ? categories.slice(0, 4).join(" / ") : "暂无分类",
     sourceLabel: sourceRoles.length ? sourceRoles.slice(0, 3).join(" / ") : "等待来源",
+    sourceCaveat,
   };
 }
 
@@ -152,12 +158,23 @@ function renderTagContext(tag, items) {
     <article class="tag-context-card">
       <p class="eyebrow">最新覆盖</p>
       <h3>${escapeHtml(summary.latestLabel)}</h3>
+      <dl class="tag-signal-list">
+        <div>
+          <dt>最新信号</dt>
+          <dd>${escapeHtml(summary.latestSignal)}</dd>
+        </div>
+        <div>
+          <dt>最后出现</dt>
+          <dd>${escapeHtml(summary.lastSeenDate)}</dd>
+        </div>
+      </dl>
       <p>当前标签下共 ${items.length} 条情报；分类覆盖：${escapeHtml(summary.categoryLabel)}。</p>
     </article>
     <article class="tag-context-card">
-      <p class="eyebrow">核对线索</p>
+      <p class="eyebrow">来源边界</p>
       <h3>${escapeHtml(summary.sourceLabel)}</h3>
-      <p>先读站内事件简报，再把原始来源作为事实边界和后续追踪依据。</p>
+      <p>${escapeHtml(summary.sourceCaveat)}</p>
+      <p class="tag-source-note">先读站内事件简报，再把原始来源作为事实边界和后续追踪依据。</p>
     </article>
   `;
 }

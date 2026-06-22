@@ -385,10 +385,22 @@ if (
   !/function renderTagContext\(tag, items\) \{/.test(tagsJs) ||
   !/公司观察重点/.test(tagsJs) ||
   !/最新覆盖/.test(tagsJs) ||
-  !/核对线索/.test(tagsJs) ||
-  !/\.tag-context\s*\{[\s\S]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/.test(styles)
+  !/最新信号/.test(tagsJs) ||
+  !/最后出现/.test(tagsJs) ||
+  !/来源边界/.test(tagsJs) ||
+  !/sourceCaveat/.test(tagsJs) ||
+  !/latestItem\.claimBoundary \|\| latestItem\.provenance \|\| latestItem\.nextCheck/.test(tagsJs) ||
+  !/class="tag-signal-list"/.test(tagsJs) ||
+  !/class="tag-source-note"/.test(tagsJs) ||
+  !/Company tag pages derive OpenAI, Anthropic, Google, and Meta views/.test(newsDataFormat) ||
+  !/latest matched signal/.test(newsDataFormat) ||
+  !/last-seen edition date/.test(newsDataFormat) ||
+  !/source caveat/.test(newsDataFormat) ||
+  !/\.tag-context\s*\{[\s\S]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/.test(styles) ||
+  !/\.tag-signal-list\s*\{[\s\S]*gap:\s*10px;/.test(styles) ||
+  !/\.tag-source-note\s*\{[\s\S]*border-top:\s*1px solid var\(--line\);/.test(styles)
 ) {
-  errors.push("Company tag pages must render context cards with focus, latest coverage, and source-check cues.");
+  errors.push("Company tag pages must render focus, latest signal, last-seen date, and source-boundary context.");
 }
 
 if (

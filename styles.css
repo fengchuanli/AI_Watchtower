@@ -725,6 +725,38 @@ h3 {
   color: var(--muted);
 }
 
+.tag-signal-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 14px;
+}
+
+.tag-signal-list div {
+  display: grid;
+  gap: 4px;
+}
+
+.tag-signal-list dt {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tag-signal-list dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.tag-source-note {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
 .tag-results {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
