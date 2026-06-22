@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-22 15:03 JST
+
+- Focus: Improved Phase 2 Day 12 source-reference label quality for product maintainability. Deep-briefing references are now validated so labels must name both the source/source family and the specific source fact they support, keeping original links as verification aids instead of vague outbound navigation.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change to validation/documentation without adding new source claims.
+  - Ran `node --check scripts/validate-data.mjs`, `node --check app.js`, and `node --check news-detail.js`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `f0af51e` (`校验来源引用标签`). Push pending until network access to GitHub works.
+
 ## 2026-06-22 15:20 JST
 
 - Focus: Lowered the homepage, news feed, and detail-page reading threshold for ordinary Chinese mobile readers. TOP3 now shows the news content first, moves editor judgment into an expandable area, and sends readers to clearer in-site detail pages. The wider news feed now stays compact and hides additional items behind an expand button, while detail pages use a simpler six-part structure with source and verification boundaries at the end.
