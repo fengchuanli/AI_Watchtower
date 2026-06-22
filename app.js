@@ -604,7 +604,6 @@ function updateTopStories(items) {
               <span>${escapeHtml(sourceType)}</span>
               <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
             </div>
-            <a class="reference-link" href="${detailUrl}" aria-label="${escapeHtml(`查看站内解读：${item.title}`)}">查看详情 →</a>
             <details class="top-editor-details">
               <summary>编辑判断</summary>
               <p><strong>为什么入选 TOP3</strong>${escapeHtml(topReason)}</p>
@@ -692,6 +691,19 @@ function renderSourceFrame(sourceFrame) {
     .join("");
 }
 
+function renderFeedMetaDetails(label, body, isOpen = false) {
+  if (!body) {
+    return "";
+  }
+
+  return `
+    <details class="feed-meta-details"${isOpen ? " open" : ""}>
+      <summary>${escapeHtml(label)}</summary>
+      <div class="feed-meta-details-body">${body}</div>
+    </details>
+  `;
+}
+
 function updateNewsMeta(data) {
   if (latestCapture) {
     const captureDate = data.edition?.date || data.updatedAt || "等待更新";
@@ -717,16 +729,16 @@ function updateNewsMeta(data) {
   newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${editionParts.join(" · ")}`;
 
   if (readerFrame) {
-    readerFrame.innerHTML = renderReaderFrame(data.edition?.readerFrame);
+    readerFrame.innerHTML = renderFeedMetaDetails("本期读者使用框架", renderReaderFrame(data.edition?.readerFrame));
   }
 
   if (editionChange) {
-    editionChange.innerHTML = renderEditionChange(data.edition?.changeSummary);
+    editionChange.innerHTML = renderFeedMetaDetails("本期相对上一批次的变化", renderEditionChange(data.edition?.changeSummary));
   }
 
   if (coverageMix) {
     const mixItems = data.edition?.coverageMix || [];
-    coverageMix.innerHTML = mixItems
+    const coverageBody = mixItems
       .map(
         (item) => `
           <span>
@@ -736,19 +748,20 @@ function updateNewsMeta(data) {
         `,
       )
       .join("");
+    coverageMix.innerHTML = renderFeedMetaDetails("本期覆盖结构", coverageBody);
   }
 
   if (sourceRisk) {
-    sourceRisk.innerHTML = renderSourceRisk(data.edition?.sourceRisk);
+    sourceRisk.innerHTML = renderFeedMetaDetails("本期来源集中度", renderSourceRisk(data.edition?.sourceRisk));
   }
 
   if (trendNotes) {
-    trendNotes.innerHTML = renderTrendNotes(data.edition?.trendNotes);
+    trendNotes.innerHTML = renderFeedMetaDetails("跨期趋势提示", renderTrendNotes(data.edition?.trendNotes));
   }
 
   if (sourceFamilies) {
     const families = data.edition?.sourceFamilies || [];
-    sourceFamilies.innerHTML = families
+    const familyBody = families
       .map(
         (item) => `
           <span>
@@ -758,6 +771,7 @@ function updateNewsMeta(data) {
         `,
       )
       .join("");
+    sourceFamilies.innerHTML = renderFeedMetaDetails("本期来源族群", familyBody);
   }
 
   if (topicGroups) {
@@ -765,7 +779,7 @@ function updateNewsMeta(data) {
     const coveredTopicIds = new Set(topics.map((topic) => topic.id));
     const missingTopics = plannedTopicGroups.filter((topic) => !coveredTopicIds.has(topic.id));
 
-    topicGroups.innerHTML = [
+    const topicBody = [
       ...topics.map(
         (topic) => `
           <span>
@@ -788,6 +802,7 @@ function updateNewsMeta(data) {
         `,
       ),
     ].join("");
+    topicGroups.innerHTML = renderFeedMetaDetails("本期主题分组", topicBody);
   }
 }
 

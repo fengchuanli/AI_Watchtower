@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-22 20:45 JST
+
+- Focus: Reduced mobile reading load after the 20:00 update. TOP3 titles now act as the clear blue detail links, homepage feed metadata is collapsed behind optional panels, and detail-page source/follow-up actions use stronger button styling. The detail-page fact section now keeps more source-supported context while staying within the copyright-safety boundary.
+- Changed files:
+  - `app.js`
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, and validation scripts.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed main HTML files with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+  - `npm run build` was not available because this static site has no `package.json` build script.
+- Commit: Local commit created (`优化移动端阅读层级`); push failed because this environment could not resolve `github.com`.
+
 ## 2026-06-22 20:04 JST
 
 - Focus: Improved Phase 3 Day 15 cross-edition continuity for content quality. The current edition and latest archive snapshot now include compact `trendNotes` that connect recurring enterprise AI governance, Agent assurance, and MCP/workflow execution themes across batches while stating what each pattern still does not prove.

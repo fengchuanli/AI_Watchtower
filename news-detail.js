@@ -459,14 +459,23 @@ function getDetailOriginalDependency(item) {
 
 function limitDetailFact(item) {
   const sourceType = String(getDetailSourceType(item) || "").toLowerCase();
-  const limit = /media|媒体/.test(sourceType) ? 120 : 220;
-  const text = String(item.detailBody || item.body || "").trim();
+  const isMediaSource = /media|媒体/.test(sourceType);
+  const limit = isMediaSource ? 180 : 320;
+  const factParts = [item.detailBody || item.body];
+
+  if (item.provenance) {
+    factParts.push(`来源边界：${item.provenance}`);
+  }
+
+  const text = factParts.join(" ").replace(/\s+/g, " ").trim();
 
   if (text.length <= limit) {
     return text;
   }
 
-  return `${text.slice(0, limit)}…`;
+  const clipped = text.slice(0, limit);
+  const sentenceEnd = Math.max(clipped.lastIndexOf("。"), clipped.lastIndexOf("；"), clipped.lastIndexOf("，"));
+  return `${clipped.slice(0, sentenceEnd > 90 ? sentenceEnd + 1 : limit)}…`;
 }
 
 function getQuickSummary(item) {
@@ -646,7 +655,7 @@ function renderDetail(item, data) {
           <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="detail-so-what"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
           <p class="detail-source-reminder">本站只做中文解读，完整事实请查看原文。</p>
-          <a class="text-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文 →</a>
+          <a class="button source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
           <details class="detail-editor-details">
             <summary>编辑评分与入选理由</summary>
             <p><strong>为什么入选</strong>${escapeHtml(getDetailTopReason(item))}</p>

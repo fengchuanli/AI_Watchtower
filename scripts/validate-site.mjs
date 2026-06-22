@@ -474,7 +474,7 @@ if (
   !/趋势判断/.test(detailJs) ||
   !/接下来关注什么/.test(detailJs) ||
   !/来源与核验边界/.test(detailJs) ||
-  !/查看原文 →/.test(detailJs) ||
+  !/查看原文/.test(detailJs) ||
   !/本站只做中文解读，完整事实/.test(detailJs)
 ) {
   errors.push("News detail page must render a simplified reader-first structure with source boundaries at the end.");
@@ -515,9 +515,11 @@ if (
   !/class="feed-expand"/.test(appJs) ||
   !/feed-extra/.test(appJs) ||
   !/getItemSummary\(item\)/.test(appJs) ||
-  !/查看详情 →/.test(appJs)
+  !/查看详情 →/.test(appJs) ||
+  !/function renderFeedMetaDetails/.test(appJs) ||
+  !/\.feed-meta-details/.test(styles)
 ) {
-  errors.push("Homepage non-TOP3 news cards must stay compact and hide additional items behind an expand button.");
+  errors.push("Homepage non-TOP3 news cards and metadata must stay compact behind expand/collapse controls.");
 }
 
 if (
@@ -534,7 +536,8 @@ if (
   !/\.simplified-detail-grid/.test(styles) ||
   !/\.source-verification-list/.test(styles) ||
   !/\.detail-editor-details/.test(styles) ||
-  !/\.detail-source-reminder/.test(styles)
+  !/\.detail-source-reminder/.test(styles) ||
+  !/\.source-button/.test(styles)
 ) {
   errors.push("News detail pages must keep a simplified mobile-first hierarchy with source and editor details at the end.");
 }
