@@ -662,7 +662,7 @@ function renderDetail(item, data) {
           </details>
           <p class="detail-source-reminder">本站只做中文解读，完整事实请查看原文。</p>
           <p class="detail-so-what"><strong></strong></p>
-          <a class="button source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
+          <a class="text-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
         </section>
       </div>
     </section>
