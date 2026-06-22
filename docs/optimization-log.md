@@ -2,6 +2,29 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-22 17:08 JST
+
+- Focus: Published the 2026-06-22 17:00 JST AI news intelligence update. This edition uses one new official OpenAI enterprise-adoption signal and two recent arXiv research signals to explain how AI deployment is moving toward governed employee tool stacks, sandbox evidence boundaries, and auditable scientific workflow execution.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read `data/sources.json` and `docs/source-policy.md` before editing.
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked official OpenAI, Anthropic, and Google DeepMind indexes and avoided reusing already archived Google/DeepMind URLs.
+  - Used OpenAI News as official source verification for the Samsung Electronics / ChatGPT / Codex signal.
+  - Used arXiv source pages as research originals for AI Sandboxes and AI-assisted scientific workflow management, explicitly marking both as preprints requiring replication, code/data, peer review, or regulatory/customer evidence before upgrade.
+- Verification:
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation committed with message `更新17点AI新闻情报`. Push failed repeatedly because this environment could not resolve `github.com`.
+
 ## 2026-06-22 16:04 JST
 
 - Focus: Improved Phase 2 Day 13 detail-page paragraph readability for current and latest archived promoted items. The data validator now rejects overlong `detailBody`, `detailTrend`, and `detailWhyRanked` paragraphs above 180 Chinese characters, and the current TOP3 detail copy was shortened without adding new claims or replacing original sources.

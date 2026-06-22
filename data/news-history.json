@@ -1,8 +1,248 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-21",
-  "totalItems": 36,
+  "updatedAt": "2026-06-22",
+  "totalItems": 39,
   "editions": [
+    {
+      "id": "news-1700-2026-06-22",
+      "date": "2026-06-22",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-06-22 17:00 JST 新闻情报快照。",
+      "operationalStatus": "已尝试拉取 origin/main 但 GitHub DNS 失败；已复核官方索引、可靠来源和研究入口。",
+      "editorialInterpretation": "下午版用一条官方企业采用信号和两条研究预印本，观察 AI 从员工工具进入可治理执行系统。",
+      "readerFrame": {
+        "headline": "把本期当作企业 AI 工具栈与可审计执行系统雷达",
+        "whyItMatters": "Samsung/OpenAI 信号指向大企业员工入口，AI Sandboxes 和科学工作流预印本则把 Agent 安全与执行链治理具体化。共同结论是，AI 落地正在从“能不能用”转向“能否被授权、监控、复现和审计”。",
+        "useThisIssueFor": [
+          "企业平台团队检查 ChatGPT、Codex 和代码代理是否需要统一身份、权限、日志与预算治理。",
+          "安全和合规团队用 AI Sandboxes 框架复核测试环境能证明什么、不能证明什么。",
+          "科研计算与数据平台团队评估 Agent 是否应先产出可验证规格，再进入执行和调试链。"
+        ],
+        "notProvenYet": [
+          "不能证明 Samsung 已完成全员部署或产生可量化生产率提升。",
+          "不能把 arXiv 预印本直接当作同行评议结论或行业标准。",
+          "不能证明 MCP 科学工作流方案已经跨领域稳定生产运行。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "下午版从媒体雷达切换到企业采用与研究证据边界",
+        "freshFacts": [
+          "OpenAI 新闻索引新增 Samsung Electronics 将 ChatGPT 与 Codex 带给员工的官方公告主题。",
+          "本期新增 arXiv 2606.18532，对 AI Sandboxes 的威胁模型、分类法和测量框架给出预印本研究信号。",
+          "本期新增 arXiv 2606.18425，对 LLM 调试 Agent、Pegasus 工作流系统和 MCP 控制层给出预印本研究信号。"
+        ],
+        "repeatedContext": [
+          "企业 AI 采用是延续议题，本期只记录新的 OpenAI/Samsung 官方入口。",
+          "Agent 安全和测试治理是延续背景，本期只补充沙盒证据边界这一研究视角。",
+          "MCP 和 Agent 工作流是延续技术趋势，本期只把科学计算执行链作为新样本。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "企业采用",
+          "count": 1,
+          "meaning": "用来检查员工 AI 工具栈：聊天助手、代码代理、权限、审计和培训是否统一治理。"
+        },
+        {
+          "label": "安全评估",
+          "count": 1,
+          "meaning": "用来检查沙盒证据清单：测试环境能证明什么、哪些风险仍会外溢。"
+        },
+        {
+          "label": "科研工作流",
+          "count": 1,
+          "meaning": "用来更新科研自动化清单：Agent 是否具备提交、监控、调试和人工接管路径。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "OpenAI 官方索引可确认公司公告主题，但部署细节仍需原文和 Samsung 侧材料补强。"
+        },
+        {
+          "family": "research",
+          "label": "研究预印本",
+          "count": 2,
+          "role": "两条 arXiv 预印本来源用来发现研究信号和检查评估清单，不用于证明同行评议、监管采纳或生产稳定性。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "来源边界提示",
+        "note": "本期包含 1 条官方索引信号和 2 条预印本研究信号；官方条目细节待补，研究条目不得外推为已验证标准。",
+        "nextCheck": "优先核对 OpenAI/Samsung 原文、预印本后续版本、代码复现、第三方评测和监管引用。"
+      },
+      "topicGroups": [
+        {
+          "id": "enterprise",
+          "label": "企业与市场",
+          "count": 1,
+          "itemIds": [
+            "openai-samsung-chatgpt-codex-employees-2026-06-21"
+          ],
+          "meaning": "用来检查企业员工 AI 工具栈是否从聊天扩展到代码代理和统一治理。"
+        },
+        {
+          "id": "policy",
+          "label": "安全与治理",
+          "count": 1,
+          "itemIds": [
+            "arxiv-ai-sandbox-assurance-framework-2026-06-16"
+          ],
+          "meaning": "用来更新 AI 安全评估清单：沙盒的边界、证据和最弱环节必须写清楚。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发者工具",
+          "count": 1,
+          "itemIds": [
+            "arxiv-scientific-workflow-mcp-agent-2026-06-16"
+          ],
+          "meaning": "用来更新开发者工具清单：检查 MCP、调试 Agent 和执行系统的授权与监控边界。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "openai-samsung-chatgpt-codex-employees-2026-06-21",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 称 Samsung Electronics 将向员工引入 ChatGPT 与 Codex",
+          "body": "OpenAI 新闻索引 6 月 21 日列出 Samsung Electronics 将 ChatGPT 与 Codex 带给员工的公司公告主题。",
+          "trend": "趋势判断：企业 AI 采购正在把聊天助手和代码代理放进同一员工工具栈。",
+          "whyRanked": "本期最新官方企业采用信号。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方索引可确认标题、日期和公司对象；员工覆盖范围、部署节奏和治理细节仍需原文或 Samsung 侧材料补强。"
+          },
+          "impact": "大型企业的 AI 采购会更像员工平台工程：同时处理聊天助手、代码代理、权限、审计、培训和数据边界。",
+          "whoShouldCare": "最该关注的是企业 AI 平台、开发者工具、采购、安全和员工生产力团队。",
+          "readerUse": "企业团队可用它检查 ChatGPT 与代码代理是否需要统一身份、日志、预算、数据分类和员工培训规则。",
+          "nextCheck": "继续核对 OpenAI 原文、Samsung Electronics 是否发布独立说明、覆盖员工范围、Codex 使用场景、数据处理条款和企业管理控制。",
+          "followUpQuestions": [
+            "ChatGPT 与 Codex 进入同一企业员工入口后，企业是否需要统一治理聊天、代码生成和自动化动作？",
+            "大型制造企业部署代码代理时，哪些代码库、供应链和知识产权边界需要先被锁定？"
+          ],
+          "evidenceThreshold": "至少需要 OpenAI 正文、Samsung 侧公告、企业管理文档或客户案例，才能从官方索引信号升级为“已确认部署范围与治理模式”的企业采用结论。",
+          "claimBoundary": "OpenAI 新闻索引可支持标题、日期和公告主题；不能证明全员已上线、具体使用规模、生产率提升或 Samsung 内部治理效果。",
+          "counterEvidence": "如果 Samsung 侧公告、OpenAI 正文或企业管理文档显示只是小范围试点，或没有 Codex 生产代码库使用记录，应下调“企业级全面部署”的判断。",
+          "source": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/samsung-electronics-brings-chatgpt-and-codex-to-employees/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI 新闻索引可确认 2026 年 6 月 21 日存在 Samsung Electronics、ChatGPT 与 Codex 员工导入主题；完整事实、范围和条款仍需阅读 OpenAI 原文与 Samsung 侧材料。来源可信度：高，细节待补。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed_source_topic",
+          "publishedAt": "2026-06-21T10:00:00+09:00",
+          "time": "06/21",
+          "detailBody": "OpenAI 新闻页 6 月 21 日列出 Samsung Electronics brings ChatGPT and Codex to employees。本站只确认官方公告主题和日期；员工覆盖、上线节奏、Codex 场景与数据条款仍需原文补强。",
+          "detailTrend": "这条信号把企业 AI 从单一聊天助手推进到“聊天 + 代码代理”的统一员工工具栈。对大型制造企业而言，难点会落在身份、权限、代码库边界、审计、预算和员工培训。",
+          "detailWhyRanked": "本条排在首位，因为 OpenAI 官方索引给出最新公司级采用主题，并把 ChatGPT 与 Codex 同时放进员工场景；它支持趋势观察，但不能确认部署深度。"
+        },
+        {
+          "id": "arxiv-ai-sandbox-assurance-framework-2026-06-16",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv 论文提出 AI Sandboxes 框架：把测试边界、证据和治理产物一起定义",
+          "body": "arXiv 预印本提出 AI Sandboxes 框架。",
+          "trend": "趋势判断：AI 评估转向可审计环境。",
+          "whyRanked": "它提供证据边界语言。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "研究原文清楚，但仍是预印本；框架价值高，实际监管采纳和跨场景有效性需要后续验证。"
+          },
+          "impact": "部署 AI Agent、机器人或 AIoT 系统的团队需要说明沙盒能覆盖哪些风险、哪些风险会穿透环境，以及哪些证据可用于安全或合规判断。",
+          "whoShouldCare": "最该关注的是 AI 安全评估、机器人、工业自动化、合规、审计和监管技术团队。",
+          "readerUse": "评测团队可用它重写测试计划：逐项列出 fidelity、controllability、observability、containment、reproducibility 和 governance artifacts。",
+          "nextCheck": "继续核对论文后续版本、同行评议、真实沙盒案例、监管机构是否采用类似证据语言，以及企业是否发布可复现实验记录。",
+          "followUpQuestions": [
+            "AI 沙盒报告是否应强制写明“最弱证据环节”，避免把局部测试包装成整体安全证明？",
+            "具身 AI 和网络物理系统的沙盒，哪些传感器、执行器和人工干预风险最容易被漏测？"
+          ],
+          "evidenceThreshold": "至少需要同行评议论文、第三方复现实验报告、监管指南引用或真实部署审计案例，才能从研究框架升级为“可作为行业标准证据模型”的结论。",
+          "claimBoundary": "arXiv 页面可支持论文题目、作者、日期和框架主张；不能证明该框架已被监管采纳、能覆盖所有 AI 系统，或能单独证明生产安全。",
+          "counterEvidence": "如果后续复现显示框架难以量化关键指标，或真实事故来自沙盒外部因素，应下调其作为通用保证框架的判断。",
+          "source": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2606.18532",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 预印本可确认作者提出 AI Sandboxes 威胁模型、分类法和测量框架；它是研究原文而非同行评议结论，实际有效性需后续复现、审计案例和监管引用补强。来源可信度：中。",
+          "trustLevel": "来源层级：研究预印本，中可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "preprint",
+          "publishedAt": "2026-06-16T22:57:24+09:00",
+          "time": "06/16",
+          "detailBody": "arXiv 6 月 16 日论文 AI Sandboxes 提出威胁模型、分类法和测量框架，覆盖数字 AI、具身自治和网络物理部署；作者强调沙盒证据受环境边界和最弱环节限制。",
+          "detailTrend": "沙盒正在从演示环境变成证据基础设施。未来 AI 安全报告需要说明测试边界、最弱证据环节、复现条件、治理产物和无法覆盖的外部风险。",
+          "detailWhyRanked": "本条进入本期，是因为它把 AI 评估、监管证明和具身系统安全连接起来，并给出 fidelity、containment、observability 等可检查维度；但仍需复现。"
+        },
+        {
+          "id": "arxiv-scientific-workflow-mcp-agent-2026-06-16",
+          "category": "tool",
+          "label": "工具",
+          "title": "arXiv 工作流论文把 LLM、Pegasus 与 MCP 接到科学计算执行链",
+          "body": "6 月 16 日 arXiv 预印本提出 AI 辅助科学工作流管理方法。",
+          "trend": "趋势判断：Agent 进入执行链。",
+          "whyRanked": "它连接 MCP 与科学工作流。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "预印本提供系统设计和评估主张，但生产稳定性、泛化能力和失败处理仍需独立复现。"
+          },
+          "impact": "科研平台和数据工程团队可以把自然语言需求、结构化规格、执行引擎和调试 Agent 拆开治理，降低黑箱代码生成的风险。",
+          "whoShouldCare": "最该关注的是科研计算平台、数据工程、MLOps、Agent 工具链和高性能计算工作流团队。",
+          "readerUse": "平台团队可用它检查自己的 Agent 工作流是否有规格层、执行层、监控层、失败诊断层和人工接管路径。",
+          "nextCheck": "继续核对论文代码或数据是否发布、Pegasus/MCP 集成是否可复现、医学影像联邦学习案例规模、失败案例和独立团队复测。",
+          "followUpQuestions": [
+            "科研 Agent 应先生成可验证规格，还是直接生成执行代码？",
+            "MCP 接入工作流系统后，哪些提交、监控和控制动作必须保留人工审批？"
+          ],
+          "evidenceThreshold": "至少需要开源实现、可复现实验、第三方工作流复测或生产平台案例，才能从预印本系统方案升级为“可推广科研 Agent 工作流模式”的结论。",
+          "claimBoundary": "arXiv 页面可支持论文题目、日期、系统组件和作者摘要中的评估主张；不能证明该方案已在多领域生产环境稳定运行。",
+          "counterEvidence": "如果后续开源代码、复测报告或失败数据确认规格层无法覆盖复杂依赖，或 MCP 控制面难以安全授权，应下调其平台化意义。",
+          "source": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2606.18425",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 预印本可确认论文提出规格驱动工作流生成、LLM 调试 Agent、Pegasus 集成和 MCP 控制层；结论仍需代码、数据、复现和同行评议补强。来源可信度：中。",
+          "trustLevel": "来源层级：研究预印本，中可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "preprint",
+          "publishedAt": "2026-06-16T19:21:09+09:00",
+          "time": "06/16",
+          "detailBody": "arXiv 6 月 16 日论文提出 AI 辅助科学工作流管理：规格驱动生成、LLM 调试 Agent、Pegasus 分布式执行，并用 MCP 层统一提交、监控和控制。摘要称案例涉及医学影像联邦学习工作流。",
+          "detailTrend": "Agent 工具链正在靠近真实执行系统。关键变化不是“自动写代码”，而是把需求、规格、执行、监控、失败修复和人工控制拆成可审计链路。",
+          "detailWhyRanked": "本条值得收录，因为它把 MCP 放进科学工作流执行链，而不是只作为聊天工具连接器；摘要给出 Pegasus、MCP 和调试 Agent 组件，但仍需代码复现。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-06-21",
       "date": "2026-06-21",
