@@ -503,13 +503,49 @@ function updateTodayBriefing(briefing) {
     .join("");
 }
 
+function getItemSummary(item) {
+  return item.summary || item.body;
+}
+
+function getWhyItMatters(item) {
+  return item.whyItMatters || item.impact || item.trend || item.whyRanked;
+}
+
+function getTopReason(item) {
+  return item.topReason || item.whyRanked;
+}
+
+function getEditorScore(item) {
+  return item.editorScore || item.selectionScore;
+}
+
+function getSourceName(item) {
+  return item.sourceName || item.source;
+}
+
+function getSourceType(item) {
+  return item.sourceType || item.sourceRole || item.trustLevel;
+}
+
+function getClaimStatus(item) {
+  return item.claimStatus || item.verificationStatus;
+}
+
+function getOriginalDependency(item) {
+  if (item.originalDependency) {
+    return item.originalDependency;
+  }
+
+  const sourceType = String(getSourceType(item) || "").toLowerCase();
+  return /media|媒体/.test(sourceType) ? "must-read" : "recommended";
+}
+
 function getThreeLineSummary(item) {
   return [
-    { label: "核心事件", body: item.body },
-    { label: "谁该关心", body: item.whoShouldCare || item.readerUse },
-    { label: "关键影响", body: item.impact },
-    { label: "接下来要看", body: item.nextCheck },
-  ];
+    { label: "发生了什么", body: getItemSummary(item) },
+    { label: "为什么重要", body: getWhyItMatters(item) },
+    { label: "下一步看什么", body: item.nextCheck },
+  ].filter((line) => line.body);
 }
 
 function updateTopStories(items) {
@@ -527,27 +563,34 @@ function updateTopStories(items) {
   topStories.innerHTML = topItems
     .map((item, index) => {
       const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}`;
-      const summaryLines = getThreeLineSummary(item)
-        .map(
-          (line) => `
-            <li>
-              <strong>${escapeHtml(line.label)}</strong>
-              <span>${escapeHtml(line.body)}</span>
-            </li>
-          `,
-        )
-        .join("");
+      const sourceName = getSourceName(item);
+      const sourceType = getSourceType(item);
+      const claimStatus = getClaimStatus(item);
+      const topReason = getTopReason(item);
+      const nextCheck = item.nextCheck;
 
       return `
         <article class="top-story">
           <span class="top-rank">${String(index + 1).padStart(2, "0")}</span>
-          <div>
+          <div class="top-story-body">
             <p class="eyebrow">${escapeHtml(item.label)} · ${escapeHtml(item.time)}</p>
             <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
-            <p class="top-rank-reason"><strong>为什么排进 TOP3</strong>${escapeHtml(item.whyRanked)}</p>
-            ${renderSelectionScore(item.selectionScore)}
-            <ol>${summaryLines}</ol>
-            <a class="reference-link" href="${detailUrl}">查看事件简报</a>
+            <p class="top-summary">${escapeHtml(getItemSummary(item))}</p>
+            <p class="top-why"><strong>为什么值得关注</strong>${escapeHtml(getWhyItMatters(item))}</p>
+            <div class="top-meta" aria-label="来源和发布时间">
+              <span>${escapeHtml(sourceName)}</span>
+              <span>${escapeHtml(sourceType)}</span>
+              <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
+            </div>
+            <a class="reference-link" href="${detailUrl}" aria-label="${escapeHtml(`查看站内解读：${item.title}`)}">查看详情 →</a>
+            <details class="top-editor-details">
+              <summary>编辑判断</summary>
+              <p><strong>为什么入选 TOP3</strong>${escapeHtml(topReason)}</p>
+              ${renderSelectionScore(getEditorScore(item))}
+              <p><strong>可核验程度</strong>${escapeHtml(claimStatus)}</p>
+              <p><strong>下一步核验项</strong>${escapeHtml(nextCheck)}</p>
+              <p><strong>原文依赖</strong>${escapeHtml(getOriginalDependency(item))}</p>
+            </details>
           </div>
         </article>
       `;
@@ -566,44 +609,14 @@ function updateDeepBriefing(deepBriefing) {
   deepSubtitle.textContent = deepBriefing.subtitle;
   deepOverview.textContent = deepBriefing.overview;
 
-  deepMetrics.innerHTML = deepBriefing.keyNumbers
-    .map(
-      (metric) => `
-        <div>
-          <dt>${escapeHtml(metric.value)}</dt>
-          <dd>${escapeHtml(metric.label)}</dd>
-        </div>
-      `,
-    )
-    .join("");
+  deepMetrics.hidden = true;
+  deepTimeline.hidden = true;
+  deepSections.hidden = true;
+  deepMetrics.innerHTML = "";
+  deepTimeline.innerHTML = "";
+  deepSections.innerHTML = "";
 
   deepSourceFrame.innerHTML = renderSourceFrame(deepBriefing.sourceFrame);
-
-  deepTimeline.innerHTML = deepBriefing.timeline
-    .map(
-      (item) => `
-        <article>
-          <span>${escapeHtml(item.label)}</span>
-          <h3>${escapeHtml(item.title)}</h3>
-          <p>${escapeHtml(item.body)}</p>
-        </article>
-      `,
-    )
-    .join("");
-
-  deepSections.innerHTML = deepBriefing.sections
-    .map(
-      (section) => `
-        <article class="deep-section">
-          <span>${escapeHtml(section.number)} · ${escapeHtml(section.label)}</span>
-          <h3>${escapeHtml(section.title)}</h3>
-          <p>${escapeHtml(section.body)}</p>
-          <p class="deep-so-what"><strong>为什么重要</strong>${escapeHtml(section.soWhat)}</p>
-        </article>
-      `,
-    )
-    .join("");
-
   deepActions.innerHTML = deepBriefing.actions.map((action) => `<li>${escapeHtml(action)}</li>`).join("");
   deepLimits.innerHTML = deepBriefing.coverageLimits
     .map(
@@ -900,7 +913,7 @@ function renderFeedMessage(type, message, canRetry = false) {
   const recoveryLinks = type === "error"
     ? `
       <div class="feed-state-actions" aria-label="新闻数据加载失败后的备用入口">
-        <a href="./all-news.html">查看全部情报</a>
+        <a href="./all-news.html">查看全部 AI 新闻 →</a>
         <a href="./data/news.json">打开本期数据</a>
         <a href="./archive.html">查看期次归档</a>
       </div>
@@ -923,6 +936,7 @@ function renderNews(filter = "all") {
   const topStoryIds = new Set(news.slice(0, 3).map((item) => item.id));
   const scopedNews = filter === "all" ? news : news.filter((item) => item.category === filter);
   const visibleNews = scopedNews.filter((item) => !topStoryIds.has(item.id));
+  const initialLimit = 5;
   updateCategoryMeta(filter);
 
   if (!scopedNews.length) {
@@ -932,36 +946,48 @@ function renderNews(filter = "all") {
 
   if (!visibleNews.length) {
     const message = filter === "all"
-      ? "本批次 TOP3 已覆盖全部新闻流；下一批抓取更多情报后，这里会展示 TOP3 之外的简短条目。"
-      : "这个分类目前只有 TOP3 条目；后续抓取更多情报后会在这里单独显示。";
+      ? "本批次 TOP3 已覆盖全部新闻流；下一批抓取更多 AI 新闻后，这里会展示 TOP3 之外的简短条目。"
+      : "这个分类目前只有 TOP3 条目；后续抓取更多 AI 新闻后会在这里单独显示。";
     renderFeedMessage("empty", message);
     return;
   }
 
-  newsGrid.innerHTML = visibleNews
+  const cards = visibleNews
     .map(
-      (item) => {
+      (item, index) => {
         const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}`;
         const detailLabel = escapeHtml(`查看站内解读：${item.title}`);
+        const isExtra = index >= initialLimit;
 
         return `
-        <article class="news-card compact-feed-card">
+        <article class="news-card compact-feed-card${isExtra ? " feed-extra" : ""}"${isExtra ? " hidden" : ""}>
           <span class="category">${escapeHtml(item.label)}</span>
           <div class="news-card-body">
             <h3><a class="card-detail-link" href="${detailUrl}" aria-label="${detailLabel}">${escapeHtml(item.title)}</a></h3>
-            <p class="card-summary"><strong>事件简述</strong>${escapeHtml(item.body)}</p>
-            <p class="trend-note"><strong>这意味着</strong>${escapeHtml(item.trend)}</p>
+            <p class="card-summary">${escapeHtml(getItemSummary(item))}</p>
           </div>
-          <footer>
-            <span>${escapeHtml(item.trustLevel)}</span>
-            <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">详情</a>
+          <footer class="feed-card-meta">
+            <span>${escapeHtml(getSourceType(item))}</span>
             <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
+            <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看详情 →</a>
           </footer>
         </article>
       `;
       },
     )
     .join("");
+
+  const expandButton = visibleNews.length > initialLimit
+    ? `<button class="feed-expand" type="button" aria-controls="newsGrid">展开更多新闻（${visibleNews.length - initialLimit} 条）</button>`
+    : "";
+
+  newsGrid.innerHTML = `${cards}${expandButton}`;
+  newsGrid.querySelector(".feed-expand")?.addEventListener("click", (event) => {
+    newsGrid.querySelectorAll(".feed-extra").forEach((card) => {
+      card.hidden = false;
+    });
+    event.currentTarget.remove();
+  });
 }
 
 filterButtons.forEach((button) => {

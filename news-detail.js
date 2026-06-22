@@ -416,21 +416,87 @@ function renderDetailProse(value) {
     .join("");
 }
 
+function getDetailSummary(item) {
+  return item.summary || item.body;
+}
+
+function getDetailWhyItMatters(item) {
+  return item.whyItMatters || item.impact || item.trend || item.whyRanked;
+}
+
+function getDetailTopReason(item) {
+  return item.topReason || item.whyRanked;
+}
+
+function getDetailEditorScore(item) {
+  return item.editorScore || item.selectionScore;
+}
+
+function getDetailSourceName(item) {
+  return item.sourceName || item.source;
+}
+
+function getDetailSourceType(item) {
+  return item.sourceType || item.sourceRole || item.trustLevel;
+}
+
+function getDetailClaimStatus(item) {
+  return item.claimStatus || item.verificationStatus;
+}
+
+function getDetailOriginalUrl(item) {
+  return item.originalUrl || item.sourceUrl;
+}
+
+function getDetailOriginalDependency(item) {
+  if (item.originalDependency) {
+    return item.originalDependency;
+  }
+
+  const sourceType = String(getDetailSourceType(item) || "").toLowerCase();
+  return /media|媒体/.test(sourceType) ? "must-read" : "recommended";
+}
+
+function limitDetailFact(item) {
+  const sourceType = String(getDetailSourceType(item) || "").toLowerCase();
+  const limit = /media|媒体/.test(sourceType) ? 120 : 220;
+  const text = String(item.detailBody || item.body || "").trim();
+
+  if (text.length <= limit) {
+    return text;
+  }
+
+  return `${text.slice(0, limit)}…`;
+}
+
 function getQuickSummary(item) {
   return [
     {
-      label: "核心事件",
-      body: item.body,
+      label: "发生了什么",
+      body: getDetailSummary(item),
     },
     {
-      label: "关键影响",
-      body: item.impact,
+      label: "为什么重要",
+      body: getDetailWhyItMatters(item),
     },
     {
-      label: "继续观察",
+      label: "下一步看什么",
       body: item.nextCheck,
     },
   ];
+}
+
+function renderDetailSelectionScore(score) {
+  if (!score || typeof score !== "object" || !Number.isInteger(score.total)) {
+    return "";
+  }
+
+  return `
+    <p class="selection-score">
+      <strong>编辑评分 ${score.total}/25</strong>
+      ${escapeHtml(score.note || "")}
+    </p>
+  `;
 }
 
 function renderQuickSummary(summaryItems) {
@@ -478,68 +544,30 @@ function renderDetail(item, data) {
   validateDetailItem(item);
   document.title = `${item.title} | AI Watchtower`;
   const followUpQuestions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
-  const metrics = getImpactMetrics(item);
   const quickSummary = getQuickSummary(item);
-  const overviewCards = getOverviewCards(item);
-  const diagramNodes = getDiagramNodes(item);
-  const riskCards = getRiskCards(item);
-  const canonicalBriefingBlocks = getCanonicalBriefingBlocks(item);
-  const sourceBoundaryCards = getSourceBoundaryCards(item);
+  const originalUrl = getDetailOriginalUrl(item);
+  const sourceName = getDetailSourceName(item);
+  const sourceType = getDetailSourceType(item);
+  const claimStatus = getDetailClaimStatus(item);
+  const originalDependency = getDetailOriginalDependency(item);
 
   detailShell.innerHTML = `
-    <div class="incident-hero">
+    <div class="incident-hero simplified-detail-hero">
       <p class="eyebrow">Incident Briefing · ${escapeHtml(item.label)}</p>
-      <p class="detail-date">${escapeHtml(data.edition.date)} · ${escapeHtml(data.edition.archiveLabel)} · ${escapeHtml(item.verificationStatus)}</p>
+      <p class="detail-date">${escapeHtml(data.edition.date)} · ${escapeHtml(data.edition.archiveLabel)} · ${escapeHtml(claimStatus)}</p>
       <h1>${escapeHtml(item.title)}</h1>
-      <p class="detail-lede">${escapeHtml(item.body)}</p>
-      <dl class="incident-metrics" aria-label="事件关键指标">
-        ${renderMetricList(metrics)}
-      </dl>
+      <p class="detail-lede">${escapeHtml(getDetailSummary(item))}</p>
+      <p class="detail-source-reminder">本站只做中文解读，完整事实、采访细节和上下文请查看原文。</p>
     </div>
 
     <nav class="incident-jump-nav" aria-label="事件简报导航">
       <a href="#quick-summary">速览</a>
-      <a href="#incident-map">全貌图</a>
-      <a href="#incident-overview">事件简述</a>
-      <a href="#incident-stakes">这意味着</a>
-      <a href="#incident-value">为什么值得看</a>
-      <a href="#incident-verification">核对边界</a>
-      <a href="#incident-source">来源</a>
+      <a href="#incident-overview">发生了什么</a>
+      <a href="#incident-analysis">本站解读</a>
+      <a href="#incident-trend">趋势判断</a>
+      <a href="#incident-next">接下来关注</a>
+      <a href="#incident-source">来源与核验</a>
     </nav>
-
-    <section class="detail-reading-path" aria-label="详情页阅读层级">
-      <div>
-        <p class="eyebrow">Reading Path</p>
-        <h2>先判断，再深读，最后核对</h2>
-      </div>
-      <ol>
-        <li>
-          <span>01</span>
-          <strong>速览</strong>
-          <p>先用三行判断是否值得继续看。</p>
-        </li>
-        <li>
-          <span>02</span>
-          <strong>全貌图</strong>
-          <p>再看事件、趋势、价值和风险之间的关系。</p>
-        </li>
-        <li>
-          <span>03</span>
-          <strong>事件解读</strong>
-          <p>需要背景时阅读正文，不必从外部链接开始。</p>
-        </li>
-        <li>
-          <span>04</span>
-          <strong>核对边界</strong>
-          <p>确认哪些已经可证，哪些还要继续观察。</p>
-        </li>
-        <li>
-          <span>05</span>
-          <strong>来源</strong>
-          <p>最后用原始来源核对事实，不把它当主阅读入口。</p>
-        </li>
-      </ol>
-    </section>
 
     <section class="quick-summary" id="quick-summary" aria-label="速览">
       <div>
@@ -551,124 +579,86 @@ function renderDetail(item, data) {
       </ol>
     </section>
 
-    <section class="overview-diagram" id="incident-map" aria-label="新闻全貌图">
-      <div class="overview-card-row">
-        ${renderOverviewCards(overviewCards)}
-      </div>
-      <div class="overview-map-shell">
-        <div class="overview-map-heading">
-          <p class="eyebrow">Auto Overview Diagram</p>
-          <h2>${escapeHtml(item.title)}</h2>
-          <p>${escapeHtml(item.detailWhyRanked)}</p>
-        </div>
-        <div class="overview-flow" aria-label="从事件到影响的解读链路">
-          ${renderDiagramNodes(diagramNodes)}
-        </div>
-        <div class="overview-risk-grid" aria-label="风险与核对点">
-          ${renderRiskCards(riskCards)}
-        </div>
-      </div>
-    </section>
-
-    <section class="source-boundary-panel" aria-label="事实、解读与未知边界">
-      <div class="source-boundary-heading">
-        <p class="eyebrow">Source Boundary</p>
-        <h2>把事实、解读和未知分开看</h2>
-      </div>
-      <div class="source-boundary-grid">
-        ${renderSourceBoundaryCards(sourceBoundaryCards)}
-      </div>
-    </section>
-
-    <section class="canonical-briefing" aria-label="事实、影响、边界与下一步">
-      <div>
-        <p class="eyebrow">Briefing Blocks</p>
-        <h2>按四件事读这条情报</h2>
-      </div>
-      <div class="canonical-briefing-grid">
-        ${renderCanonicalBriefingBlocks(canonicalBriefingBlocks)}
-      </div>
-    </section>
-
-    <section class="detail-grid" aria-label="新闻解读主体">
+    <section class="detail-grid simplified-detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
         <section class="detail-block incident-block" id="incident-overview">
-          <span>01 · What Happened</span>
-          <h2>事件简述</h2>
+          <span>01 · Fact</span>
+          <h2>发生了什么</h2>
           <div class="detail-prose">
-            ${renderDetailProse(item.detailBody)}
+            ${renderDetailProse(limitDetailFact(item))}
           </div>
         </section>
-        <section class="detail-block incident-block" id="incident-stakes">
-          <span>02 · Trend</span>
-          <h2>这意味着</h2>
-          <div class="detail-prose">
-            ${renderDetailProse(item.detailTrend)}
-          </div>
-        </section>
-        <section class="detail-block incident-block" id="incident-value">
-          <span>03 · Why It Matters</span>
-          <h2>为什么值得看</h2>
+        <section class="detail-block incident-block" id="incident-analysis">
+          <span>02 · AI Watchtower</span>
+          <h2>本站解读</h2>
           <div class="detail-prose">
             ${renderDetailProse(item.detailWhyRanked)}
           </div>
           ${item.whoShouldCare ? `<p class="detail-so-what"><strong>谁该关心</strong>${escapeHtml(item.whoShouldCare)}</p>` : ""}
-          <p class="detail-so-what"><strong>影响</strong>${escapeHtml(item.impact)}</p>
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
-        <section class="detail-block incident-block" id="incident-verification">
-          <span>04 · Verification</span>
-          <h2>核对边界</h2>
+        <section class="detail-block incident-block" id="incident-trend">
+          <span>03 · Trend</span>
+          <h2>趋势判断</h2>
+          <div class="detail-prose">
+            ${renderDetailProse(item.detailTrend)}
+          </div>
+          <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
+        </section>
+        <section class="detail-block incident-block" id="incident-next">
+          <span>04 · Next Check</span>
+          <h2>接下来关注什么</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
           <div class="detail-question-list">
-            <strong>编辑追问</strong>
+            <strong>后续观察点</strong>
             <ul>
               ${followUpQuestions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}
             </ul>
           </div>
-          <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
-          <p class="detail-so-what"><strong>不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
-          <p class="detail-so-what"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
         </section>
-      </div>
-
-      <aside class="detail-side" id="incident-source" aria-label="来源与状态">
-        <section>
-          <h2>来源可信度</h2>
-          <dl>
+        <section class="detail-block incident-block source-verification-block" id="incident-source">
+          <span>05 · Source Boundary</span>
+          <h2>来源与核验边界</h2>
+          <dl class="source-verification-list">
             <div>
-              <dt>来源层级</dt>
-              <dd>${escapeHtml(item.trustLevel)}</dd>
+              <dt>来源</dt>
+              <dd>${escapeHtml(sourceName)}</dd>
             </div>
             <div>
-              <dt>来源用途</dt>
-              <dd>${escapeHtml(item.sourceRole)}</dd>
-            </div>
-            <div>
-              <dt>核验状态</dt>
-              <dd>${escapeHtml(item.verificationStatus)}</dd>
+              <dt>来源类型</dt>
+              <dd>${escapeHtml(sourceType)}</dd>
             </div>
             <div>
               <dt>发布时间</dt>
               <dd><time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time></dd>
             </div>
+            <div>
+              <dt>核验状态</dt>
+              <dd>${escapeHtml(claimStatus)}</dd>
+            </div>
+            <div>
+              <dt>原文依赖</dt>
+              <dd>${escapeHtml(originalDependency)}</dd>
+            </div>
           </dl>
+          <p class="detail-so-what"><strong>来源能支持</strong>${escapeHtml(item.provenance)}</p>
+          <p class="detail-so-what"><strong>尚不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
+          <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
+          <p class="detail-so-what"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
+          <p class="detail-source-reminder">本站只做中文解读，完整事实请查看原文。</p>
+          <a class="text-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文 →</a>
+          <details class="detail-editor-details">
+            <summary>编辑评分与入选理由</summary>
+            <p><strong>为什么入选</strong>${escapeHtml(getDetailTopReason(item))}</p>
+            ${renderDetailSelectionScore(getDetailEditorScore(item))}
+          </details>
         </section>
-        <section>
-          <h2>来源说明</h2>
-          <p>${escapeHtml(item.provenance)}</p>
-        </section>
-        <section>
-          <h2>原始来源</h2>
-          <p>原始链接仅用于核对，不是本站阅读主入口。</p>
-          <a class="text-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${item.source}（在新窗口打开）`)}">${escapeHtml(item.source)}</a>
-        </section>
-      </aside>
+      </div>
     </section>
 
     <div class="detail-actions">
       <a class="button primary" href="./#feed">返回新闻流</a>
-      <a class="button secondary" href="./all-news.html">查看全部情报</a>
+      <a class="button secondary" href="./all-news.html">查看全部 AI 新闻 →</a>
       <a class="button secondary" href="./#deep-briefing">查看本期深度简报</a>
     </div>
   `;

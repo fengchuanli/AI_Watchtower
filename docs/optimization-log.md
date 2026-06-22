@@ -2,6 +2,38 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-22 15:20 JST
+
+- Focus: Lowered the homepage, news feed, and detail-page reading threshold for ordinary Chinese mobile readers. TOP3 now shows the news content first, moves editor judgment into an expandable area, and sends readers to clearer in-site detail pages. The wider news feed now stays compact and hides additional items behind an expand button, while detail pages use a simpler six-part structure with source and verification boundaries at the end.
+- Changed files:
+  - `index.html`
+  - `app.js`
+  - `news-detail.js`
+  - `styles.css`
+  - `all-news.html`
+  - `all-news.js`
+  - `archive.html`
+  - `tags.html`
+  - `news-detail.html`
+  - `404.html`
+  - `docs/news-data-format.md`
+  - `docs/product-principles.md`
+  - `docs/local-preview-qa.md`
+  - `docs/github-pages-readiness.md`
+  - `docs/monthly-optimization-summary.md`
+  - `scripts/validate-site.mjs`
+  - `scripts/validate-pages.mjs`
+- Verification:
+  - Ran JavaScript syntax checks for the homepage, all-news page, detail page, and validation scripts.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed main HTML files with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+  - `npm run build` was not available because this static site has no `package.json` build script.
+- Commit: Local commit created; push failed because this environment could not resolve `github.com`.
+
 ## 2026-06-22 14:03 JST
 
 - Focus: Improved Phase 2 Day 11 upgrade-evidence clarity. The current TOP3 and latest archived snapshot now say what concrete material would move each media signal into a stronger verified status, and validation requires promoted `evidenceThreshold` fields to name the proof artifact or observable result plus the upgraded editorial status.

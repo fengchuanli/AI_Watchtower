@@ -1,6 +1,6 @@
 # News Data Format
 
-Homepage news items live in `data/news.json`. Captured historical items live in `data/news-history.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
+Homepage news items live in `data/news.json`. 首页优先读取 `summary` and `whyItMatters`; the detail page can use longer detail fields after the reader chooses to open an item. Captured historical items live in `data/news-history.json`. This keeps editorial content separate from page behavior and prepares the site for future RSS or API ingestion.
 
 All item fields must follow `docs/copyright-safety.md`. The data model should help readers understand the news, but it must not turn source articles into full Chinese replacements. Use source fields for minimum necessary facts, and use editorial fields for AI Watchtower's own interpretation, trend reading, reader use, and verification boundary.
 
@@ -97,12 +97,16 @@ The current feed must not promote stale background material as a new batch. Keep
 - `label`: Chinese category label shown on the card.
 - `title`: Chinese headline.
 - `body`: Short Chinese summary for homepage cards. Keep it focused on what happened.
+- `summary`: Preferred one-sentence homepage news content. Keep it to 1-2 mobile lines. During migration, `body` remains the fallback.
+- `whyItMatters`: Preferred one-sentence reader-facing reason this item matters. During migration, `impact`, `trend`, or `whyRanked` remain fallbacks.
 - `detailBody`: Source-supported event explanation for the detail page. It must add context beyond `body`, but for media sources it should remain a minimum-fact summary rather than a replacement for the original article.
 - `trend`: Chinese editorial interpretation that links the item to a broader observable trend without adding unverified facts.
 - `detailTrend`: Longer Chinese trend explanation for the detail page. It should be AI Watchtower's own interpretation, not a rewritten version of the source article.
 - `whyRanked`: Short Chinese explanation for why the item deserves homepage attention or ranking priority.
+- `topReason`: Preferred concise explanation for why the item entered Today TOP3. Keep it behind the expandable editorial judgment area on the homepage.
 - `detailWhyRanked`: Longer Chinese detail-page explanation of why the item matters. It should preserve important source facts, boundaries, and caveats that are too long for the homepage card.
 - `selectionScore`: Object with integer 1-5 scores for `impact`, `novelty`, `narrativeStrength`, `evidenceQuality`, and `readerUtility`, plus a matching `total` and Chinese `note` explaining the editorial tradeoff.
+- `editorScore`: Preferred alias for `selectionScore` when future ingestion separates editorial scoring from source facts.
 - `impact`: Short editorial line explaining why the item matters or what to watch next.
 - `whoShouldCare`: Required for promoted current items and the latest archived snapshot. Write one Chinese sentence naming the concrete audience that should care before describing how they should use the signal, for example legal, procurement, policy, infrastructure, strategy, investment, or product teams.
 - `readerUse`: Short Chinese line naming who should use the signal and what decision or checklist it informs.
@@ -112,8 +116,10 @@ The current feed must not promote stale background material as a new batch. Keep
 - `claimBoundary`: Short Chinese caution stating what the current item does not prove, so readers do not overread a signal beyond its available evidence.
 - `counterEvidence`: Short Chinese condition explaining what later evidence would weaken, downgrade, or narrow the current editorial judgment. For promoted current items and the latest archived snapshot, name a concrete proof type, source artifact, or observable outcome such as policy text, official announcement, access logs, approval records, adoption metrics, role confirmation, third-party retest, or product delivery status; avoid vague phrasing like "更多证据".
 - `source`: Human-readable source group.
+- `sourceName`: Preferred human-readable source name for cards and detail pages. During migration, `source` remains the fallback.
 - `sourceId`: Must match an entry in `data/sources.json`.
 - `sourceUrl`: Original source or source-group URL.
+- `originalUrl`: Preferred original source URL. During migration, `sourceUrl` remains the fallback.
 - `sourceRole`: Controlled Chinese label describing what the linked source can support: `官方核对`, `研究原文`, `媒体背景`, `社区发现`, or `厂商主张`.
 - `provenance`: How readers should interpret the source and claim quality. For media sources, it should remind readers that full facts, quotes, charts, interviews, and context belong in the original source.
 - `trustLevel`: Visible source-tier label such as official, media, research, or community. It describes the source type, not whether the item claim has been verified.

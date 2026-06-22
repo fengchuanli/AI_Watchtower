@@ -320,17 +320,20 @@ if (!/latestCapture\.textContent = `最新抓取：/.test(appJs)) {
 if (
   !/id="top3"/.test(html) ||
   !/function updateTopStories/.test(appJs) ||
-  !/getThreeLineSummary/.test(appJs) ||
-  !/class="top-rank-reason"/.test(appJs) ||
-  !/为什么排进 TOP3/.test(appJs) ||
-  !/\.top-rank-reason/.test(styles)
+  !/function getItemSummary/.test(appJs) ||
+  !/function getWhyItMatters/.test(appJs) ||
+  !/class="top-summary"/.test(appJs) ||
+  !/class="top-why"/.test(appJs) ||
+  !/class="top-editor-details"/.test(appJs) ||
+  !/编辑判断/.test(appJs) ||
+  !/\.top-editor-details/.test(styles)
 ) {
-  errors.push("Homepage must render a dynamic Today TOP3 section with ranking reasons and three-line summaries.");
+  errors.push("Homepage TOP3 must show news content first and move editorial judgment into an expandable area.");
 }
 
 if (
   !/class="top3-followup"/.test(html) ||
-  !/href="\.\/all-news\.html"[^>]*aria-label="打开全部情报题目列表"[^>]*>查看全部情报<\/a>/.test(html) ||
+  !/href="\.\/all-news\.html"[^>]*aria-label="打开全部 AI 新闻题目列表"[^>]*>查看全部 AI 新闻 →<\/a>/.test(html) ||
   !/\.top3-followup/.test(styles)
 ) {
   errors.push("Homepage must place a prominent all-news entry directly after Today TOP3.");
@@ -402,37 +405,37 @@ if (
   !/aria-label="本期 AI 情报概况"/.test(html) ||
   !/aria-label="按主题筛选更多新闻流"/.test(html) ||
   !/aria-label="查看今日 TOP3 之外的更多新闻流"/.test(html) ||
-  !/aria-label="打开全部情报题目列表"/.test(html) ||
-  !/aria-label="全部情报相关页面"/.test(allNewsHtml) ||
-  !/AI Watchtower 全部历史情报题目列表/.test(allNewsHtml) ||
-  !/aria-label="打开原始历史情报 JSON 数据"/.test(allNewsHtml) ||
-  !/aria-label="按新闻发布时间排序历史情报"/.test(allNewsHtml) ||
-  !/aria-label="历史情报题目列表"/.test(allNewsHtml) ||
+  !/aria-label="打开全部 AI 新闻题目列表"/.test(html) ||
+  !/aria-label="全部 AI 新闻相关页面"/.test(allNewsHtml) ||
+  !/AI Watchtower 全部 AI 新闻列表/.test(allNewsHtml) ||
+  !/aria-label="打开原始历史 AI 新闻 JSON 数据"/.test(allNewsHtml) ||
+  !/aria-label="按新闻发布时间排序历史 AI 新闻"/.test(allNewsHtml) ||
+  !/aria-label="历史 AI 新闻题目列表"/.test(allNewsHtml) ||
   !/查看 \$\{item\.archiveLabel\} 的站内解读/.test(allNewsJs)
 ) {
   errors.push("Homepage and all-news page must use Chinese, context-rich accessible labels for navigation, filters, and history links.");
 }
 
 if (
-  !/<meta name="description" content="AI Watchtower 全部历史情报题目列表，按时间、主题和抓取批次帮助中文读者进入站内详情解读。"/.test(allNewsHtml) ||
+  !/<meta name="description" content="AI Watchtower 全部 AI 新闻列表，按时间顺序整理进入本站的新闻线索，点击标题查看中文解读与原始来源。"/.test(allNewsHtml) ||
   !/<meta name="application-name" content="AI Watchtower" \/>/.test(allNewsHtml) ||
-  !/<meta property="og:title" content="全部情报 \| AI Watchtower" \/>/.test(allNewsHtml) ||
-  !/<meta\s+property="og:description"\s+content="按时间、主题和抓取批次回看 AI Watchtower 已收录情报，并进入站内中文解读。"\s+\/>/s.test(
+  !/<meta property="og:title" content="全部 AI 新闻 \| AI Watchtower" \/>/.test(allNewsHtml) ||
+  !/<meta\s+property="og:description"\s+content="按时间顺序整理进入 AI Watchtower 的 AI 新闻线索。点击标题查看本站解读与原始来源。"\s+\/>/s.test(
     allNewsHtml,
   ) ||
   !/<meta name="twitter:card" content="summary" \/>/.test(allNewsHtml) ||
-  !/<meta name="twitter:title" content="全部情报 \| AI Watchtower" \/>/.test(allNewsHtml) ||
-  !/<meta\s+name="twitter:description"\s+content="按时间、主题和抓取批次回看 AI Watchtower 已收录情报，并进入站内中文解读。"\s+\/>/s.test(
+  !/<meta name="twitter:title" content="全部 AI 新闻 \| AI Watchtower" \/>/.test(allNewsHtml) ||
+  !/<meta\s+name="twitter:description"\s+content="按时间顺序整理进入 AI Watchtower 的 AI 新闻线索。点击标题查看本站解读与原始来源。"\s+\/>/s.test(
     allNewsHtml,
   )
 ) {
-  errors.push("All-news page must provide Chinese sharing metadata that explains the historical intelligence reading path.");
+  errors.push("All-news page must provide Chinese sharing metadata that explains the AI news reading path.");
 }
 
 if (
   !/const detailLabel = escapeHtml\(`查看站内解读：\$\{item\.title\}`\);/.test(appJs) ||
   !/<a class="card-detail-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">/.test(appJs) ||
-  !/<a class="reference-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">详情<\/a>/.test(appJs)
+  !/<a class="reference-link" href="\$\{detailUrl\}" aria-label="\$\{detailLabel\}">查看详情 →<\/a>/.test(appJs)
 ) {
   errors.push("Homepage detail links must expose item-specific accessible labels.");
 }
@@ -445,7 +448,7 @@ if (!/<script src="\.\/news-detail\.js"><\/script>/.test(detailHtml)) {
   errors.push("news-detail.html must load the detail renderer.");
 }
 
-if (!/href="\$\{escapeHtml\(item\.sourceUrl\)\}" target="_blank" rel="noopener noreferrer"/.test(detailJs)) {
+if (!/href="\$\{escapeHtml\(originalUrl\)\}" target="_blank" rel="noopener noreferrer"/.test(detailJs)) {
   errors.push("News detail page must keep original source links safe and secondary.");
 }
 
@@ -463,22 +466,18 @@ if (
 
 if (
   !/Incident Briefing ·/.test(detailJs) ||
-  !/incident-metrics/.test(detailJs) ||
   !/incident-jump-nav/.test(detailJs) ||
-  !/detail-reading-path/.test(detailJs) ||
-  !/先判断，再深读，最后核对/.test(detailJs) ||
   !/quick-summary/.test(detailJs) ||
   !/function getQuickSummary/.test(detailJs) ||
-  !/overview-diagram/.test(detailJs) ||
-  !/function getDiagramNodes/.test(detailJs) ||
-  !/function renderDiagramNodes/.test(detailJs) ||
-  !/事件简述/.test(detailJs) ||
-  !/这意味着/.test(detailJs) ||
-  !/为什么值得看/.test(detailJs) ||
-  !/核对边界/.test(detailJs) ||
-  !/原始来源/.test(detailJs)
+  !/发生了什么/.test(detailJs) ||
+  !/本站解读/.test(detailJs) ||
+  !/趋势判断/.test(detailJs) ||
+  !/接下来关注什么/.test(detailJs) ||
+  !/来源与核验边界/.test(detailJs) ||
+  !/查看原文 →/.test(detailJs) ||
+  !/本站只做中文解读，完整事实/.test(detailJs)
 ) {
-  errors.push("News detail page must render each item as an incident briefing deck.");
+  errors.push("News detail page must render a simplified reader-first structure with source boundaries at the end.");
 }
 
 if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
@@ -489,7 +488,7 @@ if (
   !/function splitDetailProse/.test(detailJs) ||
   !/function renderDetailProse/.test(detailJs) ||
   !/class="detail-prose"/.test(detailJs) ||
-  !/renderDetailProse\(item\.detailBody\)/.test(detailJs) ||
+  !/renderDetailProse\(limitDetailFact\(item\)\)/.test(detailJs) ||
   !/renderDetailProse\(item\.detailTrend\)/.test(detailJs) ||
   !/renderDetailProse\(item\.detailWhyRanked\)/.test(detailJs) ||
   !/\.detail-prose\s*\{[^}]*display:\s*grid;[^}]*gap:\s*12px;/s.test(styles)
@@ -498,10 +497,12 @@ if (
 }
 
 if (
-  !/<p class="card-summary"><strong>事件简述<\/strong>/.test(appJs) ||
-  !/<p class="trend-note"><strong>这意味着<\/strong>/.test(appJs)
+  !/class="feed-expand"/.test(appJs) ||
+  !/feed-extra/.test(appJs) ||
+  !/getItemSummary\(item\)/.test(appJs) ||
+  !/查看详情 →/.test(appJs)
 ) {
-  errors.push("Homepage non-TOP3 news cards must keep concise readable labels.");
+  errors.push("Homepage non-TOP3 news cards must stay compact and hide additional items behind an expand button.");
 }
 
 if (
@@ -514,32 +515,13 @@ if (
   errors.push("Homepage news cards must keep deliberate desktop and mobile visual rhythm.");
 }
 
-if (!/\.overview-flow::before/.test(styles) || !/\.overview-risk-grid/.test(styles)) {
-  errors.push("News detail incident pages must include an auto-generated overview diagram style.");
-}
-
 if (
-  !/\.detail-reading-path\s*\{[^}]*grid-template-columns:\s*230px 1fr;[^}]*background:\s*#14171f;/s.test(styles) ||
-  !/\.detail-reading-path ol\s*\{[^}]*grid-template-columns:\s*repeat\(5, minmax\(0, 1fr\)\);/s.test(styles) ||
-  !/\.detail-side section:first-child\s*\{[^}]*border-top:\s*4px solid var\(--amber\);/s.test(styles)
+  !/\.simplified-detail-grid/.test(styles) ||
+  !/\.source-verification-list/.test(styles) ||
+  !/\.detail-editor-details/.test(styles) ||
+  !/\.detail-source-reminder/.test(styles)
 ) {
-  errors.push("News detail pages must keep a clear visual hierarchy between speed-read, map, interpretation, verification, and source sections.");
-}
-
-if (
-  !/function getCanonicalBriefingBlocks\(item\)/.test(detailJs) ||
-  !/function renderCanonicalBriefingBlocks\(blocks\)/.test(detailJs) ||
-  !/class="canonical-briefing"/.test(detailJs) ||
-  !/事实、影响、边界与下一步/.test(detailJs) ||
-  !/最小事实/.test(detailJs) ||
-  !/影响判断/.test(detailJs) ||
-  !/核验边界/.test(detailJs) ||
-  !/下一步核对/.test(detailJs) ||
-  !/\.canonical-briefing\s*\{[^}]*grid-template-columns:\s*220px 1fr;/s.test(styles) ||
-  !/\.canonical-briefing-grid\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\);/s.test(styles) ||
-  !/@media \(max-width: 620px\)\s*\{[\s\S]*?\.canonical-briefing-grid\s*\{[^}]*grid-template-columns:\s*1fr;/s.test(styles)
-) {
-  errors.push("News detail pages must expose a canonical facts, impact, boundary, and next-check briefing block.");
+  errors.push("News detail pages must keep a simplified mobile-first hierarchy with source and editor details at the end.");
 }
 
 if (
@@ -596,7 +578,7 @@ if (
   !/768px/.test(localPreviewQa) ||
   !/1280px/.test(localPreviewQa) ||
   !/今日 TOP3/.test(localPreviewQa) ||
-  !/全部情报/.test(localPreviewQa) ||
+  !/全部 AI 新闻/.test(localPreviewQa) ||
   !/公司标签/.test(localPreviewQa) ||
   !/data\/news\.json/.test(localPreviewQa) ||
   !/data\/news-history\.json/.test(localPreviewQa) ||
@@ -673,9 +655,8 @@ if (
 }
 
 if (
-  !/谁该关心/.test(appJs) ||
-  !/item\.whoShouldCare \|\| item\.readerUse/.test(appJs) ||
-  !/whoShouldCare/.test(detailJs) ||
+  !/谁该关心/.test(detailJs) ||
+  !/item\.whoShouldCare/.test(detailJs) ||
   !/function validateWhoShouldCare/.test(validateDataJs) ||
   !/whoShouldCare/.test(newsDataFormat)
 ) {
@@ -801,14 +782,12 @@ if (!/fetchJson\("\.\/data\/news-history\.json"\)/.test(detailJs) || !/function 
 }
 
 if (
-  !/function getSourceBoundaryCards\(item\)/.test(detailJs) ||
-  !/function renderSourceBoundaryCards\(cards\)/.test(detailJs) ||
-  !/class="source-boundary-panel"/.test(detailJs) ||
-  !/把事实、解读和未知分开看/.test(detailJs) ||
-  !/来源已支持/.test(detailJs) ||
-  !/本站解读/.test(detailJs) ||
-  !/仍不能推出/.test(detailJs) ||
-  !/\.source-boundary-grid/.test(styles)
+  !/来源与核验边界/.test(detailJs) ||
+  !/来源能支持/.test(detailJs) ||
+  !/尚不能证明/.test(detailJs) ||
+  !/确认门槛/.test(detailJs) ||
+  !/降级信号/.test(detailJs) ||
+  !/\.source-verification-list/.test(styles)
 ) {
   errors.push("News detail pages must separate source-supported facts, editorial interpretation, and unknown boundaries.");
 }
@@ -888,12 +867,14 @@ if (
   !/originalDependency/.test(newsDataFormat) ||
   !/sourceType/.test(newsDataFormat) ||
   !/sourceReliability/.test(newsDataFormat) ||
-  !/claimStatus/.test(newsDataFormat)
+  !/claimStatus/.test(newsDataFormat) ||
+  !/summary/.test(newsDataFormat) ||
+  !/whyItMatters/.test(newsDataFormat)
 ) {
   errors.push("News data format must keep source facts short and reserve detail fields for original interpretation, original dependency, and structured claim status.");
 }
 
-if (!/aria-label="\$\{escapeHtml\(`\$\{item\.source\}（在新窗口打开）`\)\}"/.test(detailJs)) {
+if (!/aria-label="\$\{escapeHtml\(`\$\{sourceName\}（在新窗口打开）`\)\}"/.test(detailJs)) {
   errors.push("News detail source links must announce that they open in a new window.");
 }
 

@@ -12,7 +12,7 @@ const requirements = [
   [/<a\b(?=[^>]*\bhref="\.\/")[^>]*>/s, "404.html must provide a relative link back to the site root."],
   [/GitHub Pages 项目路径/, "404.html must explain project-site path recovery in Chinese."],
   [/<div\b(?=[^>]*\bclass="feed-state-actions")(?=[^>]*\baria-label="页面未找到后的站内恢复入口")[^>]*>/s, "404.html must group recovery links with a clear accessible label."],
-  [/<a\b(?=[^>]*\bhref="\.\/all-news\.html")[^>]*>查看全部情报<\/a>/s, "404.html must link to all-news for historical recovery."],
+  [/<a\b(?=[^>]*\bhref="\.\/all-news\.html")[^>]*>查看全部 AI 新闻<\/a>/s, "404.html must link to all-news for AI news recovery."],
   [/<a\b(?=[^>]*\bhref="\.\/archive\.html")[^>]*>查看期次归档<\/a>/s, "404.html must link to the edition archive."],
   [/<a\b(?=[^>]*\bhref="\.\/data\/news\.json")[^>]*>打开最新数据<\/a>/s, "404.html must link to the public current data file."],
 ];

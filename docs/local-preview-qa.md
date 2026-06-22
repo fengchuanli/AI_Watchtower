@@ -29,7 +29,7 @@ Follow the primary Chinese-reader path:
 1. Open the homepage and scan `今日 TOP3`.
 2. Open one TOP3 detail page and read `30 秒速览`, `全貌图`, `事件解读`, `核验边界`, and `来源`.
 3. Return to the homepage through normal navigation.
-4. Open `全部情报`, change category and sort controls, then open one archived detail page.
+4. Open `全部 AI 新闻`, change category and sort controls, then open one archived detail page.
 5. Open `公司标签` and confirm OpenAI, Anthropic, Google, and Meta pages show useful empty or populated states.
 
 The site should keep original sources secondary; readers should be able to understand each item through the in-site Chinese explanation first.
