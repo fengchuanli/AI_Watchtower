@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-22 14:03 JST
+
+- Focus: Improved Phase 2 Day 11 upgrade-evidence clarity. The current TOP3 and latest archived snapshot now say what concrete material would move each media signal into a stronger verified status, and validation requires promoted `evidenceThreshold` fields to name the proof artifact or observable result plus the upgraded editorial status.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/editorial-checklist.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on editorial verification thresholds without adding new source claims.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local commit `02ee10e5827efea56618490f486fa2d08e767dc2` (`明确升级证据门槛`). Push pending until network access to GitHub works.
+
 ## 2026-06-21 21:04 JST
 
 - Focus: Improved Phase 2 Day 10 downgrade-signal specificity. The current TOP3 and latest archived snapshot now name concrete follow-up artifacts or outcomes that would weaken each editorial judgment, and validation requires `counterEvidence` to include a conditional trigger, a concrete proof type or observable result, and an explicit downgrade action.
