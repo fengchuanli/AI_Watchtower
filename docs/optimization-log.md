@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-22 19:03 JST
+
+- Focus: Improved Phase 2 Day 14 mobile detail-page reading order for product quality and maintainability. Detail pages now mark the core explanation sections as primary and the source/editor block as secondary context, with CSS order rules and site validation that keep provenance, evidence thresholds, downgrade signals, original-source links, and editor scores below the primary explanation on mobile.
+- Changed files:
+  - `news-detail.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/news-data-format.md`; kept the change focused on mobile reading order and source-boundary placement without adding new factual claims.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 39 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will be created after this entry. Push pending until network access to GitHub works.
+
 ## 2026-06-22 17:08 JST
 
 - Focus: Published the 2026-06-22 17:00 JST AI news intelligence update. This edition uses one new official OpenAI enterprise-adoption signal and two recent arXiv research signals to explain how AI deployment is moving toward governed employee tool stacks, sandbox evidence boundaries, and auditable scientific workflow execution.

@@ -1780,6 +1780,20 @@ h3 {
   gap: 16px;
 }
 
+.detail-primary-section {
+  order: 1;
+}
+
+.detail-secondary-context {
+  order: 2;
+  background: #f8fafc;
+  border-color: #d8e0eb;
+}
+
+.detail-secondary-context::before {
+  background: var(--amber);
+}
+
 .detail-block,
 .detail-side section {
   padding: 24px;
@@ -2582,5 +2596,11 @@ h3 {
 
   .source-verification-list {
     grid-template-columns: 1fr;
+  }
+
+  .detail-secondary-context {
+    margin-top: 4px;
+    padding: 20px;
+    box-shadow: none;
   }
 }

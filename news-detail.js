@@ -581,14 +581,14 @@ function renderDetail(item, data) {
 
     <section class="detail-grid simplified-detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
-        <section class="detail-block incident-block" id="incident-overview">
+        <section class="detail-block incident-block detail-primary-section" id="incident-overview">
           <span>01 · Fact</span>
           <h2>发生了什么</h2>
           <div class="detail-prose">
             ${renderDetailProse(limitDetailFact(item))}
           </div>
         </section>
-        <section class="detail-block incident-block" id="incident-analysis">
+        <section class="detail-block incident-block detail-primary-section" id="incident-analysis">
           <span>02 · AI Watchtower</span>
           <h2>本站解读</h2>
           <div class="detail-prose">
@@ -597,7 +597,7 @@ function renderDetail(item, data) {
           ${item.whoShouldCare ? `<p class="detail-so-what"><strong>谁该关心</strong>${escapeHtml(item.whoShouldCare)}</p>` : ""}
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
-        <section class="detail-block incident-block" id="incident-trend">
+        <section class="detail-block incident-block detail-primary-section" id="incident-trend">
           <span>03 · Trend</span>
           <h2>趋势判断</h2>
           <div class="detail-prose">
@@ -605,7 +605,7 @@ function renderDetail(item, data) {
           </div>
           <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
         </section>
-        <section class="detail-block incident-block" id="incident-next">
+        <section class="detail-block incident-block detail-primary-section" id="incident-next">
           <span>04 · Next Check</span>
           <h2>接下来关注什么</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
@@ -616,7 +616,7 @@ function renderDetail(item, data) {
             </ul>
           </div>
         </section>
-        <section class="detail-block incident-block source-verification-block" id="incident-source">
+        <section class="detail-block incident-block source-verification-block detail-secondary-context" id="incident-source">
           <span>05 · Source Boundary</span>
           <h2>来源与核验边界</h2>
           <dl class="source-verification-list">

@@ -480,6 +480,21 @@ if (
   errors.push("News detail page must render a simplified reader-first structure with source boundaries at the end.");
 }
 
+const incidentNextIndex = detailJs.indexOf('id="incident-next"');
+const incidentSourceIndex = detailJs.indexOf('id="incident-source"');
+if (
+  incidentNextIndex === -1 ||
+  incidentSourceIndex === -1 ||
+  incidentSourceIndex < incidentNextIndex ||
+  !/detail-primary-section/.test(detailJs) ||
+  !/detail-secondary-context/.test(detailJs) ||
+  !/\.detail-primary-section\s*\{[^}]*order:\s*1;/s.test(styles) ||
+  !/\.detail-secondary-context\s*\{[^}]*order:\s*2;/s.test(styles) ||
+  !/@media \(max-width: 620px\)\s*\{[\s\S]*?\.detail-secondary-context\s*\{[^}]*box-shadow:\s*none;/s.test(styles)
+) {
+  errors.push("News detail mobile order must keep source and editor context below the primary explanation.");
+}
+
 if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
   errors.push("News detail overview diagram must not render redundant small text labels inside each node.");
 }
