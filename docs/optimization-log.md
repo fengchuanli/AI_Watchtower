@@ -22,7 +22,7 @@ Use this file to record every automated or manual optimization. New entries go a
   - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Local commit `02ee10e5827efea56618490f486fa2d08e767dc2` (`明确升级证据门槛`). Push pending until network access to GitHub works.
+- Commit: Local implementation commit `6bdf9bc` (`明确升级证据门槛`), followed by a log-status commit. Push pending until network access to GitHub works.
 
 ## 2026-06-21 21:04 JST
 
