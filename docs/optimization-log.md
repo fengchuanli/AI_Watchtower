@@ -2,6 +2,30 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 18:03 JST
+
+- Focus: Improved Phase 3 Day 21 navigation copy between homepage, all-news, archive, tags, and detail pages. Cross-page labels now distinguish latest news flow, title-list scanning, company continuity, in-site detail briefings, and edition archive status, so Chinese readers can choose the right next reading path without guessing from generic labels.
+- Changed files:
+  - `index.html`
+  - `all-news.html`
+  - `archive.html`
+  - `tags.html`
+  - `news-detail.html`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/optimization-decision-index.md`; continued after Day 20 because it was already completed earlier today.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check archive.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new cross-page navigation-copy guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `787cf06` (`明确跨页导航路径`). Push pending until network access to GitHub works.
+
 ## 2026-06-23 17:33 JST
 
 - Focus: Improved Phase 3 Day 20 product maintainability by adding a recent-decision index for optimization logs. The new index summarizes the latest completed plan days, their local commit anchors, the current blocker, and the next useful task so future automation runs can avoid scanning the full log or repeating already completed work.

@@ -708,7 +708,8 @@ if (
   !/Day 18[\s\S]*e6bc26d[\s\S]*Archive page/.test(optimizationDecisionIndex) ||
   !/Day 19[\s\S]*5a98d51[\s\S]*latest history/.test(optimizationDecisionIndex) ||
   !/Day 20[\s\S]*This index now summarizes recent optimization decisions/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
+  !/Day 21[\s\S]*787cf06[\s\S]*Cross-page navigation copy/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

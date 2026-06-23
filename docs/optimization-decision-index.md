@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-20 through 2026-07-19
 - Current phase: Phase 3, Discovery And Continuity
-- Last indexed run: 2026-06-23 17:30 JST
+- Last indexed run: 2026-06-23 18:00 JST
 - Network status: GitHub DNS resolution failed in recent runs; local commits may be ahead of `origin/main`.
 
 ## Recent Plan-Day Decisions
@@ -20,12 +20,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 18 | Complete | `e6bc26d` | Archive page already renders morning/evening labels and current-vs-archived status from structured data. |
 | Day 19 | Complete | `5a98d51` | Data validation already checks current feed and latest history agree on key archive snapshot fields. |
 | Day 20 | Complete | `a808e4d` | This index now summarizes recent optimization decisions and points future runs to the next useful plan item. |
+| Day 21 | Complete | `787cf06` | Cross-page navigation copy now distinguishes latest feed, title-list scanning, company continuity, in-site detail briefings, and edition archive status. |
 
 ## Next Useful Task
 
-- Continue with Day 21: review navigation copy between homepage, all-news, archive, tags, and detail pages.
+- Continue with Day 22: strengthen stale-news validation with source-specific exceptions only when a fresh source fact exists.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 21 first.
-- If Day 21 is already complete, move to Phase 4 Day 22 and strengthen stale-news validation with source-specific exceptions only when a fresh source fact exists.
+- If Day 22 is already complete, move to Day 23 and add validation for repeated source-owner concentration in the current batch.
 
 ## Update Rules
 
