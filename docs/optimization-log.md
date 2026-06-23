@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 17:07 JST
+
+- Focus: Published the 2026-06-23 17:00 JST AI news intelligence update. This edition uses three arXiv recent research-original signals to explain Agent deployment risks and infrastructure needs: cross-application privacy disclosure, long-task plan/context persistence, and feedback-based model routing for coding tasks.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read the automation memory, `data/sources.json`, and `docs/source-policy.md` before editing.
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked official OpenAI, Anthropic, Google DeepMind, Mistral, Microsoft, NVIDIA, reliable-media search results, and arXiv recent pages; skipped already captured OpenAI June 22 URLs from the 08:00 edition.
+  - Selected three non-duplicate arXiv cs.AI research-original items and marked all central claims as preprint signals requiring code/data, third-party replication, real task evidence, and peer review before stronger conclusions.
+- Verification:
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 40 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新17点AI新闻情报`. Push failed because this environment could not resolve `github.com`.
+
 ## 2026-06-23 16:03 JST
 
 - Focus: Improved Phase 3 Day 19 archive readiness for content and information quality. The data validator now checks that the current homepage edition and the latest history snapshot agree on key edition framing, source context, topic/trend structure, item count, and item order before publication, so archive readers do not see stale or mismatched current-batch context.

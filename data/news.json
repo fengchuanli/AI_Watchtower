@@ -2,114 +2,294 @@
   "version": 1,
   "updatedAt": "2026-06-23",
   "status": "published",
-  "statusLabel": "08:00 JST 实讯",
+  "statusLabel": "17:00 JST 实讯",
   "sourceCount": 26,
-  "editorNote": "编辑复核于 2026-06-23 08:00 JST：本期使用 3 条 6 月 22 日 OpenAI 官方信号；来源集中在单一厂商，安全成效、开源补丁落地和 Codex 长任务收益均需独立证据继续核对。",
+  "editorNote": "编辑复核于 2026-06-23 17:00 JST：本期使用 3 条 arXiv 研究原文信号；均为预印本，需等待复现和真实任务证据。",
   "edition": {
-    "id": "news-0800-2026-06-23",
+    "id": "news-1700-2026-06-23",
     "date": "2026-06-23",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "08:00 JST 发布",
-    "note": "本期为 2026-06-23 08:00 JST 新闻情报快照。",
-    "operationalStatus": "已尝试拉取 origin/main 但 GitHub DNS 失败；已复核官方索引和可靠来源入口。",
-    "editorialInterpretation": "早间版用三条 OpenAI 官方信号观察 AI 从发现能力进入受控修复、开源协作和长任务执行。",
+    "archiveLabel": "17:00 JST 发布",
+    "note": "本期为 2026-06-23 17:00 JST 新闻情报快照。",
+    "operationalStatus": "已尝试拉取 origin/main 但 GitHub DNS 失败；已复核 source policy、官方索引、可靠来源入口和 arXiv recent。",
+    "editorialInterpretation": "17:00 版从早间 OpenAI 官方安全工具转向研究侧 Agent 风险与基础设施：隐私披露、计划上下文和模型路由。",
     "readerFrame": {
-      "headline": "把本期当作 AI 安全工具化与长任务 Agent 雷达",
-      "whyItMatters": "Daybreak 和 Patch the Planet 把 AI 网络安全能力从演示转向受控访问、补丁验证和维护者协作；Codex 长任务白皮书则说明代码 Agent 正被定位成持续工作区。本期重点不是证明成效，而是更新治理清单。",
+      "headline": "把本期当作 Agent 上线前评测清单",
+      "whyItMatters": "三篇预印本从不同角度指向同一问题：Agent 不是只要能操作工具就能进生产，还要证明不会越界披露、不会丢失长任务计划，并能在多模型环境中可验证地选择执行路径。",
       "useThisIssueFor": [
-        "安全团队检查 AI 漏洞发现、验证、补丁和披露流程是否有人工复核和审计记录。",
-        "开源办公室和供应链安全团队评估 AI 安全研究进入项目时如何控制误报、工作量和披露风险。",
-        "研发效能团队复核代码 Agent 长任务是否有目标拆分、验收标准、上下文交接和回滚规则。"
+        "安全和隐私团队检查跨应用 Agent 是否有最小披露、收件人校验和上下文隔离测试。",
+        "Agent 平台团队复核长任务计划、约束和验收标准是否被外部化、重显和审计。",
+        "研发效能团队评估多模型代码 Agent 是否需要路由器、验证器、回退和成本治理。"
       ],
       "notProvenYet": [
-        "不能证明 Daybreak 已让客户环境风险实际下降。",
-        "不能证明 Patch the Planet 的所有发现有效或补丁已被项目合入。",
-        "不能证明 Codex 长任务模式已经稳定提升企业研发效率。"
+        "不能证明所有商用 Computer-use Agent 都有相同泄露率。",
+        "不能证明计划衰减是所有长任务 Agent 的主要失败原因。",
+        "不能证明 Agent 路由在真实企业代码库中已经稳定降低成本或提升质量。"
       ]
     },
     "changeSummary": {
-      "headline": "早间版从研究预印本切到官方安全工具与 Agent 工作方式",
+      "headline": "17:00 版从官方发布切到 Agent 风险研究流",
       "freshFacts": [
-        "本期新增 OpenAI 6 月 22 日 Daybreak 官方发布，列出 GPT-5.5-Cyber、Codex Security、伙伴计划和关键基础设施协作。",
-        "本期新增 OpenAI 6 月 22 日 Patch the Planet 官方发布，列出 Trail of Bits、HackerOne、Calif 和多个初始开源项目。",
-        "本期新增 OpenAI 6 月 22 日 Codex 长任务白皮书入口，强调持续上下文、可验证步骤和复杂工作流管理。"
+        "本期新增 arXiv AgentCIBench 预印本，提出跨应用隐私披露的可执行评测。",
+        "本期新增 arXiv Plans Don't Persist 预印本，提出长任务计划信号衰减诊断。",
+        "本期新增 arXiv Agent-as-a-Router 预印本，提出代码任务多模型路由和 CodeRouterBench。"
       ],
       "repeatedContext": [
-        "AI 安全和 Agent 治理是延续议题，本期只记录 6 月 22 日的新官方发布。",
-        "开源安全减负是延续背景，本期只把 Patch the Planet 作为新倡议跟踪。",
-        "企业代码 Agent 采用是延续趋势，本期不重复 Samsung/Codex 员工导入旧条目。"
+        "早间 OpenAI Daybreak、Patch the Planet 和 Codex 长任务仍是安全/Agent 主线背景，本期不重复其 URL。",
+        "研究预印本边界是延续风险：本期不把论文自述当作厂商发布、生产采用或独立成效证明。",
+        "代码、数据、第三方复现和真实场景验证仍是跨期重复检查项。"
       ]
     },
     "coverageMix": [
       {
-        "label": "网络防御",
+        "label": "Agent 隐私",
         "count": 1,
-        "meaning": "用来检查 AI 安全能力的访问审批、任务范围、监控和补丁验证。"
+        "meaning": "用来检查跨应用操作、收件人、任务上下文和最小披露。"
       },
       {
-        "label": "开源修复",
+        "label": "长任务上下文",
         "count": 1,
-        "meaning": "用来更新开源供应链安全流程：误报过滤、复现证据、补丁测试和披露协调。"
+        "meaning": "用来检查计划、约束和状态是否能跨步骤保留。"
       },
       {
-        "label": "长任务 Agent",
+        "label": "模型路由",
         "count": 1,
-        "meaning": "用来调整研发效能清单：目标拆分、上下文保留、并行工作和人工接管。"
+        "meaning": "用来检查多模型代码 Agent 的选择、验证、回退和成本治理。"
       }
     ],
     "sourceFamilies": [
       {
-        "family": "official",
-        "label": "官方来源",
+        "family": "research",
+        "label": "研究来源",
         "count": 3,
-        "role": "三条均来自 OpenAI 官方页面，可确认发布事实、主题和自述指标；实际安全成效、项目合入和生产效率需要外部证据。"
+        "role": "三条均来自 arXiv cs.AI 研究原文来源，适合作为技术信号和评测清单；可核对题名、作者、提交时间和摘要事实，但实验结论仍需同行评议、开源实现、第三方复现和真实任务验证。"
       }
     ],
     "sourceRisk": {
-      "label": "来源集中提示",
-      "note": "本期全部来自 OpenAI 官方发布，因此适合作为厂商路线雷达，不应被读成独立市场共识或已验证效果。",
-      "nextCheck": "优先核对政府/伙伴独立公告、Trail of Bits 技术报告、项目合入记录、客户案例和第三方评测。"
+      "label": "预印本边界提示",
+      "note": "本期全部来自研究预印本，适合作为技术雷达和评测清单，不应被读成生产成效、行业标准或已验证安全结论。",
+      "nextCheck": "优先核对代码/数据发布、第三方复现、厂商回应、真实企业任务测试和同行评议版本。"
     },
     "trendNotes": [
       {
-        "topic": "ai-cyber-governance",
-        "label": "AI 网络安全治理",
-        "note": "跨期看，Agent 安全和沙盒证据议题正在延伸到真实漏洞修复链：发现、验证、补丁、披露和审计要一起治理。",
-        "boundary": "这仍不证明 AI 安全工具已经降低真实事故率；仍需第三方评测、披露记录、客户侧修复指标和审计材料。"
+        "topic": "agent-privacy",
+        "label": "Agent 最小披露",
+        "note": "跨期看，Agent 安全议题连续从工具权限延伸到上下文完整性：有权访问不代表当前任务有权披露。",
+        "boundary": "这仍不证明所有商用 Agent 都有同类泄露率；仍需公开原文数据、第三方复现、真实企业系统复核和厂商修复说明。"
       },
       {
-        "topic": "open-source-maintenance",
-        "label": "开源维护压力",
-        "note": "跨期看，AI 能更快发现问题后，维护者负担成为新瓶颈；本期 Patch the Planet 把专家复核和补丁协作放到中心。",
-        "boundary": "这不能证明维护者负担已经下降；仍需项目合入记录、维护者反馈、误报率、补丁回归测试或披露公告。"
+        "topic": "agent-context-management",
+        "label": "长任务上下文治理",
+        "note": "跨期看，Codex 长任务、MCP 工作流和本期计划衰减论文再次指向同一问题：上下文管理是 Agent 可靠性基础设施。",
+        "boundary": "这仍不能证明计划衰减是所有长任务失败主因；仍需跨模型复现、真实代码库数据、运行日志和指标验证。"
       },
       {
-        "topic": "agentic-workflow",
-        "label": "长任务执行链",
-        "note": "跨期看，Codex、MCP 和科学工作流信号持续指向同一方向：Agent 的价值要靠可验证步骤和持续上下文落地。",
-        "boundary": "这尚未证明企业研发效率稳定提升；仍需客户案例、交付指标、缺陷率、失败复盘和权限审计。"
+        "topic": "agent-routing",
+        "label": "多模型编排",
+        "note": "跨期看，开发者工具从单模型能力比较延续到多模型编排、验证器和成本治理，代码 Agent 平台层正在变重。",
+        "boundary": "这尚未证明路由器在生产中稳定优于人工选择；仍需开源原文代码、第三方复现、成本指标和模型漂移审计。"
       }
     ],
     "topicGroups": [
       {
-        "id": "policy",
-        "label": "安全与治理",
+        "id": "agent",
+        "label": "Agent",
         "count": 2,
         "itemIds": [
-          "openai-daybreak-cyber-defense-tools-2026-06-22",
-          "openai-patch-the-planet-open-source-maintainers-2026-06-22"
+          "arxiv-agentcibench-computer-use-agent-privacy-2026-06-22",
+          "arxiv-plans-dont-persist-llm-agent-context-2026-06-22"
         ],
-        "meaning": "用来更新 AI 安全治理清单：受控访问、人工复核、补丁证据和披露流程必须写清楚。"
+        "meaning": "用来更新 Agent 上线前的隐私、上下文和长任务可靠性检查。"
       },
       {
         "id": "developer-tooling",
         "label": "开发者工具",
         "count": 1,
         "itemIds": [
-          "openai-codex-maxxing-long-running-work-2026-06-22"
+          "arxiv-agent-as-router-coding-tasks-2026-06-22"
         ],
-        "meaning": "用来检查代码 Agent 是否能支撑长任务，而不是只完成单次代码生成。"
+        "meaning": "用来检查多模型代码 Agent 是否需要独立路由、验证、回退和成本治理清单。"
+      }
+    ],
+    "itemCount": 3,
+    "items": [
+      {
+        "id": "arxiv-agentcibench-computer-use-agent-privacy-2026-06-22",
+        "category": "research",
+        "label": "研究",
+        "title": "AgentCIBench 预印本把 Computer-use Agent 的跨应用隐私泄露变成可执行评测",
+        "body": "一篇 arXiv 预印本提出 AgentCIBench，评测电脑使用型 Agent 是否遵守上下文隐私边界。",
+        "summary": "论文把邮箱、日历、待办等跨应用访问中的“越界披露”转成可评分场景，并报告 15 个前沿 Agent 的高泄露率。",
+        "whyItMatters": "如果 Agent 要代表用户操作真实应用，隐私风险不只来自权限过大，还来自任务上下文、收件人和界面邻近信息被错误混用。",
+        "trend": "趋势判断：Computer-use Agent 的安全评测正在从“能否完成任务”扩展到“是否只披露当前任务应披露的信息”。",
+        "whyRanked": "它直接对应企业部署桌面/浏览器 Agent 时最难外包给模型自觉处理的隐私边界。",
+        "topReason": "它把上下文完整性问题做成可执行、可确定评分的测试集，适合加入上线前评测清单。",
+        "selectionScore": {
+          "impact": 5,
+          "novelty": 5,
+          "narrativeStrength": 4,
+          "evidenceQuality": 3,
+          "readerUtility": 5,
+          "total": 22,
+          "note": "研究原文给出评测框架、三类失败模式和自述结果；仍需代码/数据、第三方复现、更多模型和真实工作流验证。"
+        },
+        "editorScore": {
+          "impact": 5,
+          "novelty": 5,
+          "narrativeStrength": 4,
+          "evidenceQuality": 3,
+          "readerUtility": 5,
+          "total": 22,
+          "note": "研究原文给出评测框架、三类失败模式和自述结果；仍需代码/数据、第三方复现、更多模型和真实工作流验证。"
+        },
+        "impact": "产品、安全和法务团队需要把 Agent 权限治理从 OAuth scope 扩展到任务意图、收件人、上下文隔离和最小披露。",
+        "whoShouldCare": "最该关注的是企业 Agent 平台、浏览器/桌面 Agent、隐私工程、合规和安全评测团队。",
+        "readerUse": "企业 Agent 平台、安全和隐私团队可以把它转成上线门槛：每个跨应用 Agent 都要测试视觉邻近泄露、模糊任务过度披露和收件人错配。",
+        "nextCheck": "继续核对作者是否发布 AgentCIBench 代码与场景、第三方是否复现 15 个 Agent 结果，以及厂商是否加入类似隐私评测。",
+        "followUpQuestions": [
+          "企业内部 Agent 是否能把“用户授权访问”进一步收窄到“当前任务可披露”？",
+          "评测结果在真实企业邮箱、日历、CRM 和文档系统中是否仍成立？"
+        ],
+        "evidenceThreshold": "至少需要公开 benchmark、可复现实验脚本、模型版本记录、第三方复测和真实应用场景验证，才能升级为稳定安全结论。",
+        "claimBoundary": "arXiv 原文可支持 AgentCIBench、三类失败模式和作者自述实验结果；不能证明所有商用 Agent 都有同等泄露率，或该 benchmark 已成为行业标准。",
+        "counterEvidence": "如果公开复测数据、厂商说明或真实应用指标显示场景过窄、提示可轻易规避、模型版本差异显著或泄露率低，应下调其普遍性判断。",
+        "source": "arXiv cs.AI",
+        "sourceName": "arXiv cs.AI",
+        "sourceId": "arxiv-ai",
+        "sourceUrl": "https://arxiv.org/abs/2606.23189",
+        "originalUrl": "https://arxiv.org/abs/2606.23189",
+        "sourceRole": "研究原文",
+        "provenance": "arXiv 页面可确认题名、作者、提交时间、摘要和论文自述实验；该来源是研究预印本，不等同于同行评议、独立复现或生产系统证明。来源可信度：中高，结论需保留预印本边界。",
+        "trustLevel": "来源层级：研究来源，中高可信",
+        "verificationStatus": "已核验",
+        "originalDependency": "must-read",
+        "sourceType": "research",
+        "sourceReliability": "medium-high",
+        "claimStatus": "preprint",
+        "publishedAt": "2026-06-22T20:36:58+09:00",
+        "time": "06/22",
+        "detailBody": "arXiv 6 月 22 日提交的论文提出 AgentCIBench，面向 Computer-use Agents 构造可执行、确定性评分的隐私场景，覆盖视觉邻近、任务模糊过度披露和收件人错配。作者称评测 15 个前沿 Agent 后，多数在超过半数场景中泄露不应披露的信息。",
+        "detailTrend": "这把 Agent 评测从任务完成率拉回到上下文完整性：一个 Agent 即使有工具权限，也仍需要证明它理解当前任务、当前对象和当前收件人的披露边界。对企业读者来说，关键变化是评测目标从“能否完成”扩展为“是否只披露应该披露的内容”。",
+        "detailWhyRanked": "本条排在首位，因为 arXiv 原文给出 AgentCIBench、三类失败模式和 15 个前沿 Agent 的自述评测，能把早间 OpenAI 安全工具叙事落成更具体的上线前隐私测试维度；但它仍是预印本，不能直接当成行业基准。"
+      },
+      {
+        "id": "arxiv-plans-dont-persist-llm-agent-context-2026-06-22",
+        "category": "research",
+        "label": "研究",
+        "title": "“Plans Don’t Persist” 预印本提示长任务 Agent 的计划可能只是停留在上下文里",
+        "body": "一篇 arXiv 预印本用 replay pairing 诊断长任务 Agent 的计划信号是否会随上下文压缩衰减。",
+        "summary": "论文主张，标准 LLM Agent 并不会稳定把计划内化成持久状态，计划被压缩或逐出后会影响长任务执行。",
+        "whyItMatters": "长任务 Agent 的可靠性不只取决于模型能力，还取决于计划、目标、约束和中间结论能否在上下文管理中被保护。",
+        "trend": "趋势判断：长任务 Agent 的基础设施瓶颈正在转向上下文生命周期管理。",
+        "whyRanked": "它直接补充早间 Codex 长任务信号：持续工作区需要可验证的上下文保留机制，而不只是更长窗口。",
+        "topReason": "它把“计划会不会留在模型内部”变成可测诊断，并指出简单逐出计划会伤害 ALFWorld 成功率。",
+        "selectionScore": {
+          "impact": 4,
+          "novelty": 5,
+          "narrativeStrength": 4,
+          "evidenceQuality": 3,
+          "readerUtility": 5,
+          "total": 21,
+          "note": "论文给出诊断方法和若干模型/任务结果；仍需更多模型、真实代码任务、开源实现和独立复现。"
+        },
+        "editorScore": {
+          "impact": 4,
+          "novelty": 5,
+          "narrativeStrength": 4,
+          "evidenceQuality": 3,
+          "readerUtility": 5,
+          "total": 21,
+          "note": "论文给出诊断方法和若干模型/任务结果；仍需更多模型、真实代码任务、开源实现和独立复现。"
+        },
+        "impact": "研发效能和 Agent 平台团队需要把任务计划、验收标准、约束、失败记录和恢复点作为可管理状态，而不是任由摘要器压缩。",
+        "whoShouldCare": "最该关注的是代码 Agent、长任务自动化、上下文工程、评测平台和企业研发效能团队。",
+        "readerUse": "代码 Agent、长任务自动化和研发效能团队可以据此检查是否有计划重显、状态快照、摘要质量评测和人工接管点。",
+        "nextCheck": "继续核对论文是否开源 replay pairing 工具、不同模型是否复现、以及代码/浏览器/办公 Agent 的真实任务是否出现同类计划衰减。",
+        "followUpQuestions": [
+          "现有 Agent 平台是否知道哪些上下文不能被摘要或逐出？",
+          "长任务失败复盘能否区分模型推理失败和上下文管理失败？"
+        ],
+        "evidenceThreshold": "至少需要开源诊断工具、跨模型复现、真实长任务数据、消融实验和失败案例，才能把它升级为通用工程规则。",
+        "claimBoundary": "arXiv 原文可支持作者提出 replay pairing、计划信号衰减和压缩压力测试；不能证明所有长任务 Agent 都以同样方式失败。",
+        "counterEvidence": "如果后续复现数据、运行日志或真实任务指标显示计划重写、外部状态机或专用记忆机制能稳定消除衰减，应下调“模型固有限制”的判断，并收窄为工程配置问题。",
+        "source": "arXiv cs.AI",
+        "sourceName": "arXiv cs.AI",
+        "sourceId": "arxiv-ai",
+        "sourceUrl": "https://arxiv.org/abs/2606.22953",
+        "originalUrl": "https://arxiv.org/abs/2606.22953",
+        "sourceRole": "研究原文",
+        "provenance": "arXiv 页面可确认题名、作者、提交时间、摘要和论文自述实验；该来源是研究预印本，不等同于同行评议、独立复现或生产系统证明。来源可信度：中高，结论需保留预印本边界。",
+        "trustLevel": "来源层级：研究来源，中高可信",
+        "verificationStatus": "已核验",
+        "originalDependency": "must-read",
+        "sourceType": "research",
+        "sourceReliability": "medium-high",
+        "claimStatus": "preprint",
+        "publishedAt": "2026-06-22T16:30:47+09:00",
+        "time": "06/22",
+        "detailBody": "arXiv 6 月 22 日提交的论文提出 replay pairing 诊断方法，对比同一轨迹中保留/移除计划时的隐藏状态差异。作者报告计划信号在动作-观察步骤后快速衰减，并称天真逐出计划会显著降低 ALFWorld 成功率。",
+        "detailTrend": "这说明长任务 Agent 的关键不是无限堆上下文，而是识别哪些计划、约束和证据必须被保护、重显或外部化。对平台团队来说，计划应被当作可审计状态管理，而不是被普通摘要器视为可丢弃文本。",
+        "detailWhyRanked": "本条入选是因为 arXiv 原文提出 replay pairing、计划信号衰减、reasoning-trace confound 和压缩压力测试，把 Codex/Agent 长任务叙事落到一个可测试的工程风险：上下文管理本身是承载能力的一部分。它还给出 ALFWorld 压缩压力测试的自述结果，因此适合转化为平台评测项，但仍需开源工具和真实任务复现。"
+      },
+      {
+        "id": "arxiv-agent-as-router-coding-tasks-2026-06-22",
+        "category": "tool",
+        "label": "工具",
+        "title": "Agent-as-a-Router 预印本把代码模型选择从静态路由推向带反馈的执行循环",
+        "body": "一篇 arXiv 预印本提出 ACRouter，把代码任务模型路由做成 Context-Action-Feedback 循环。",
+        "summary": "论文称多模型环境下没有单一 LLM 支配所有代码任务，因此路由器需要在部署中积累执行反馈来降低 regret。",
+        "whyItMatters": "企业同时使用多个前沿模型时，成本、质量、延迟和任务类型的组合会让“选哪个模型”成为 Agent 平台能力。",
+        "trend": "趋势判断：多模型编程 Agent 正从手工默认模型转向可评测、可记忆、可反馈的路由系统。",
+        "whyRanked": "它把 AI 编程工具的竞争焦点从单模型能力扩展到编排层和持续评测层。",
+        "topReason": "它附带 CodeRouterBench 与约 1 万个任务实例的自述 benchmark，适合观察模型路由是否变成开发者平台基础设施。",
+        "selectionScore": {
+          "impact": 4,
+          "novelty": 4,
+          "narrativeStrength": 4,
+          "evidenceQuality": 3,
+          "readerUtility": 4,
+          "total": 19,
+          "note": "论文给出框架、benchmark 和自述实验；仍需独立复现、生产成本数据、模型更新后的稳定性和真实企业任务验证。"
+        },
+        "editorScore": {
+          "impact": 4,
+          "novelty": 4,
+          "narrativeStrength": 4,
+          "evidenceQuality": 3,
+          "readerUtility": 4,
+          "total": 19,
+          "note": "论文给出框架、benchmark 和自述实验；仍需独立复现、生产成本数据、模型更新后的稳定性和真实企业任务验证。"
+        },
+        "impact": "开发者平台团队需要把模型选择、验证器、记忆、回退策略和成本预算纳入同一 Agent 运行时，而不是把所有代码任务固定给一个模型。",
+        "whoShouldCare": "最该关注的是代码 Agent、AI IDE、平台工程、LLM 网关、成本治理和研发效能团队。",
+        "readerUse": "代码 Agent、平台工程和研发效能团队可以用它检查内部模型网关是否支持任务维度评估、执行反馈、成本-质量路由和模型更新后的回归测试。",
+        "nextCheck": "继续核对代码和 benchmark 是否可用，ACRouter 在真实仓库任务、私有代码、不同价格模型和模型升级后是否仍稳定。",
+        "followUpQuestions": [
+          "企业是否有足够的已验证代码任务数据来训练或校准模型路由？",
+          "路由器错误选择模型时，系统如何发现、回退并记录成本和质量损失？"
+        ],
+        "evidenceThreshold": "至少需要开源实现、benchmark 复现、真实仓库任务评测、成本/延迟报告和模型版本漂移测试，才能升级为生产路由建议。",
+        "claimBoundary": "arXiv 原文可支持 ACRouter、C-A-F 循环、CodeRouterBench 和作者自述实验；不能证明该路由器已在生产环境持续优于人工或商业网关。",
+        "counterEvidence": "如果真实企业任务记录、成本指标或第三方复测显示 verifier 不可靠、任务分布变化过快或路由成本超过收益，应下调其平台化价值判断。",
+        "source": "arXiv cs.AI",
+        "sourceName": "arXiv cs.AI",
+        "sourceId": "arxiv-ai",
+        "sourceUrl": "https://arxiv.org/abs/2606.22902",
+        "originalUrl": "https://arxiv.org/abs/2606.22902",
+        "sourceRole": "研究原文",
+        "provenance": "arXiv 页面可确认题名、作者、提交时间、摘要和论文自述实验；该来源是研究预印本，不等同于同行评议、独立复现或生产系统证明。来源可信度：中高，结论需保留预印本边界。",
+        "trustLevel": "来源层级：研究来源，中高可信",
+        "verificationStatus": "已核验",
+        "originalDependency": "must-read",
+        "sourceType": "research",
+        "sourceReliability": "medium-high",
+        "claimStatus": "preprint",
+        "publishedAt": "2026-06-22T15:37:31+09:00",
+        "time": "06/22",
+        "detailBody": "arXiv 6 月 22 日提交的论文提出 Agent-as-a-Router，将代码任务路由形式化为 Context-Action-Feedback-Context 循环，并实例化为 ACRouter。作者还介绍 CodeRouterBench，称包含约 1 万个任务实例和 8 个前沿 LLM 的验证分数。",
+        "detailTrend": "多模型时代的编程 Agent 不一定由单一最强模型获胜，平台层可能通过任务识别、反馈记忆和验证器来动态选择模型。对开发者平台来说，这意味着模型网关需要记录任务、结果、成本和失败原因，而不是只转发请求。",
+        "detailWhyRanked": "本条排在第三，因为 arXiv 原文更偏工具链基础设施，但 ACRouter、Verifier、Memory 和 CodeRouterBench 这些源事实能提示研发团队把模型路由纳入成本和质量治理，而不是只比较单次 benchmark。"
       }
     ]
   },
@@ -146,61 +326,61 @@
     }
   ],
   "briefing": {
-    "label": "08:00 JST 简报",
-    "headline": "早间版聚焦 AI 安全修复链与长任务 Codex",
-    "summary": "本期收录 3 条 6 月 22 日 OpenAI 官方信号：Daybreak 把 GPT-5.5-Cyber、Codex Security 和可信访问打包成防御平台叙事；Patch the Planet 把 AI 安全研究接入开源维护者修复流程；Codex 长任务白皮书把代码 Agent 定位成持续工作区。来源集中在单一厂商，本站只确认发布事实和厂商主张，成效仍需外部证据。",
+    "label": "17:00 JST 简报",
+    "headline": "晚间版聚焦 Agent 隐私、上下文和路由",
+    "summary": "本期收录 3 条 arXiv recent 研究信号：AgentCIBench 把 Computer-use Agent 的跨应用隐私泄露做成可执行评测；Plans Don't Persist 指出长任务 Agent 的计划可能依赖上下文保留；Agent-as-a-Router 把代码任务模型选择做成带反馈的执行循环。三条均为预印本，适合作为评测清单，不是生产结论。",
     "cta": "阅读本期站内解读",
     "watchPoints": [
       {
-        "title": "安全工具要管访问",
-        "body": "GPT-5.5-Cyber 与 Codex Security 的关键问题是获准防御方、任务范围、监控和人工复核。"
+        "title": "Agent 要最小披露",
+        "body": "跨应用权限之外，还要验证任务上下文、收件人和邻近信息不会被错误混用。"
       },
       {
-        "title": "开源需要低噪声修复",
-        "body": "Patch the Planet 的价值要看项目侧补丁、披露记录和维护者反馈，而不只是发现数量。"
+        "title": "计划要能留住",
+        "body": "长任务 Agent 需要保护计划、约束和验收标准，而不是只依赖普通上下文摘要。"
       },
       {
-        "title": "代码 Agent 走向长任务",
-        "body": "Codex 长任务模式提示研发团队先建立目标拆分、验收、上下文交接和回滚规则。"
+        "title": "路由要可验证",
+        "body": "多模型代码 Agent 需要验证器、反馈记忆、成本预算和失败回退。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "08:00 JST 情报简报",
-    "title": "AI 能力正在进入受控修复和持续执行",
-    "subtitle": "本期用三条 OpenAI 官方发布观察同一转向：前沿模型不只展示能力，而是被包装成可访问、可复核、可修复、可延续的工作系统。",
+    "kicker": "17:00 JST 情报简报",
+    "title": "Agent 上线前需要新的评测与运行时清单",
+    "subtitle": "三篇 arXiv 预印本把今天的重点从厂商发布拉回工程细节：隐私边界、计划保留和多模型路由。",
     "dateLabel": "2026 · 06 · 23 · Tue",
-    "status": "08:00 JST 已发布",
-    "overview": "这期 AI Watchtower 选择 3 个非重复官方信号。Daybreak 把 GPT-5.5-Cyber、Codex Security、伙伴计划和关键基础设施协作放进同一防御框架。Patch the Planet 把 Trail of Bits 等专家复核流程接入开源维护者补丁链。Codex 长任务白皮书则把代码 Agent 从一次性生成推向持续上下文和复杂工作流管理。本期的核心不是证明效果，而是更新企业、开源和研发团队的治理清单。",
+    "status": "17:00 JST 已发布",
+    "overview": "这期 AI Watchtower 选择 3 个研究原文信号。AgentCIBench 把 Computer-use Agent 的跨应用隐私泄露转成可执行场景；Plans Don't Persist 用 replay pairing 观察长任务计划信号是否随上下文管理衰减；Agent-as-a-Router 则把代码任务模型选择变成带执行反馈的路由循环。本期的核心不是宣布新产品，而是为企业 Agent 上线前评测补上可操作检查项。",
     "timeline": [
       {
         "label": "Jun 22",
-        "title": "Daybreak 扩展发布",
-        "body": "OpenAI 发布 Daybreak 文章，列出 GPT-5.5-Cyber、Codex Security、伙伴计划和关键基础设施协作。"
+        "title": "AgentCIBench 提交",
+        "body": "论文提出面向电脑使用型 Agent 的上下文隐私披露评测，覆盖视觉邻近、模糊任务和收件人错配。"
       },
       {
         "label": "Jun 22",
-        "title": "Patch the Planet 公布",
-        "body": "OpenAI 宣布与 Trail of Bits、HackerOne、Calif 等协作，面向开源项目推进漏洞验证、补丁和测试。"
+        "title": "计划衰减诊断提交",
+        "body": "论文提出 replay pairing，观察长任务计划信号在上下文管理中的保留和衰减。"
       },
       {
         "label": "Jun 22",
-        "title": "Codex 长任务白皮书上线",
-        "body": "OpenAI 发布 Codex-maxxing 页面，强调持续上下文、可验证步骤和复杂工作流管理。"
+        "title": "代码路由框架提交",
+        "body": "论文提出 ACRouter 和 CodeRouterBench，把多模型代码任务选择做成带反馈的路由问题。"
       }
     ],
     "keyNumbers": [
       {
         "value": "3条",
-        "label": "本期官方信号"
+        "label": "本期研究信号"
       },
       {
-        "value": "1家",
-        "label": "来源厂商"
+        "value": "15个",
+        "label": "AgentCIBench 自述评测 Agent 数"
       },
       {
-        "value": "06/22",
-        "label": "三条发布时间"
+        "value": "~10K",
+        "label": "CodeRouterBench 自述任务量"
       },
       {
         "value": "26个",
@@ -210,253 +390,253 @@
     "sections": [
       {
         "number": "01",
-        "label": "网络防御",
-        "title": "AI 安全能力要进入受控访问和补丁闭环",
-        "body": "Daybreak 的重点不是单个模型分数，而是把模型、Codex Security、伙伴产品、政府协作和关键基础设施防御放进一个受控体系。",
-        "soWhat": "安全团队应把 AI 防御工具纳入权限、任务范围、日志、人工复核和补丁验证流程。"
+        "label": "隐私",
+        "title": "有工具权限不等于有披露权限",
+        "body": "Computer-use Agent 在邮箱、日历、待办和文档之间移动时，可能把其他上下文的信息带进当前任务。",
+        "soWhat": "上线前要把最小披露、收件人校验和上下文隔离变成自动化测试。"
       },
       {
         "number": "02",
-        "label": "开源维护",
-        "title": "发现漏洞之后，维护者负担成为瓶颈",
-        "body": "Patch the Planet 指向一个实际问题：AI 可以产生更多发现，但开源项目需要专家复核、误报过滤、补丁测试和披露协调。",
-        "soWhat": "企业开源办公室应关注项目侧合入记录、CVE/公告、维护者反馈和回归测试，而不是只看发现数量。"
+        "label": "上下文",
+        "title": "长任务计划不能只靠窗口运气",
+        "body": "如果计划只是保留在上下文里，摘要、逐出或压缩都可能让 Agent 后续步骤偏离目标。",
+        "soWhat": "平台应管理计划、约束、验收标准和恢复点，并记录何时重显给模型。"
       },
       {
         "number": "03",
-        "label": "长任务 Agent",
-        "title": "Codex 正被定位成持续工作区",
-        "body": "Codex 长任务白皮书把重点放在保留上下文、拆分可验证步骤、管理复杂工作流和判断何时交给人类复核。",
-        "soWhat": "研发团队应先定义验收标准、上下文交接、并行工作冲突、权限边界和回滚路径。"
+        "label": "路由",
+        "title": "代码 Agent 进入多模型编排阶段",
+        "body": "不同模型在不同代码任务上的表现、成本和延迟不同，静态默认模型可能不是最优。",
+        "soWhat": "研发平台应评估验证器、反馈记忆、回退策略和成本预算，而不是只看单模型榜单。"
       }
     ],
     "actions": [
-      "安全团队应为 AI 漏洞发现和补丁生成建立访问审批、任务范围、证据留存、人工复核和披露流程。",
-      "开源办公室应跟踪参与项目的合入记录、维护者反馈、误报率、CVE/公告和补丁回归测试。",
-      "研发效能团队应把代码 Agent 长任务纳入项目管理：目标拆分、验收标准、上下文交接、冲突处理和失败回滚。"
+      "把跨应用 Agent 的隐私泄露场景加入上线前评测，包括视觉邻近、模糊任务和收件人错配。",
+      "把长任务计划、约束和验收标准外部化为可审计状态，并测试摘要/逐出后的恢复能力。",
+      "为多模型代码 Agent 建立任务维度评测、验证器、路由日志和模型升级回归测试。"
     ],
     "coverageLimits": [
       {
         "label": "时间边界",
-        "body": "本期是 2026-06-23 08:00 JST 快照，重点收录 6 月 22 日后可核对的最新官方发布。"
+        "body": "本期是 2026-06-23 17:00 JST 快照，重点使用 arXiv recent 中新出现的 6 月 22 日研究原文。"
       },
       {
         "label": "来源边界",
-        "body": "三条均来自 OpenAI 官方页面，适合作为厂商路线信号，不等同于独立市场共识或已验证效果。"
+        "body": "三条均为 arXiv 预印本，只能确认论文提交与作者自述，不等同于同行评议或生产验证。"
       },
       {
         "label": "结论边界",
-        "body": "本期不能证明客户环境风险下降、开源补丁全部合入，或 Codex 长任务稳定提升研发效率。"
+        "body": "本期不能证明具体商用 Agent 的泄露率、长任务失败率或代码路由收益。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI Daybreak 页面可支持 6 月 22 日发布、GPT-5.5-Cyber、Codex Security、伙伴计划和关键基础设施协作主题。",
-        "OpenAI Patch the Planet 页面可支持倡议名称、Trail of Bits、HackerOne、Calif、初始项目和专家复核流程。",
-        "OpenAI Codex-maxxing 页面可支持白皮书入口、长任务、持续上下文、可验证步骤和复杂工作流管理主题。"
+        "arXiv 2606.23189 页面可支持 AgentCIBench 的题名、提交时间、作者、三类失败模式和自述评测结果。",
+        "arXiv 2606.22953 页面可支持 replay pairing、计划信号衰减、压缩压力测试和作者自述结果。",
+        "arXiv 2606.22902 页面可支持 ACRouter、C-A-F 循环、CodeRouterBench 和作者自述实验。"
       ],
       "editorialJudgment": [
-        "本站把三条信号解读为 AI 从能力展示进入受控修复和持续执行，而不是把厂商自述写成已验证成效。",
-        "本站把 Daybreak 和 Patch the Planet 放进安全治理清单，把 Codex 长任务放进研发工作流治理清单。"
+        "本站把三条信号解读为 Agent 工程治理清单，而不是把预印本自述写成行业事实。",
+        "本站把隐私、上下文和路由放在同一版，是因为它们共同决定 Agent 能否从演示进入可审计生产运行。"
       ],
       "unknowns": [
-        "仍未知 Daybreak 在客户环境中的误报率、补丁可用性、风险下降和访问控制审计结果。",
-        "仍未知 Patch the Planet 参与项目的最终合入比例、维护者负担变化和披露质量。",
-        "仍未知 Codex 长任务白皮书方法在真实团队中的交付速度、缺陷率和返工率。"
+        "尚未看到 AgentCIBench 在更多商用 Agent、真实企业系统和不同提示策略下的第三方复现。",
+        "尚未看到计划衰减诊断在真实代码任务、浏览器 Agent 和长期工作区日志中的独立数据。",
+        "尚未看到 ACRouter 在私有代码库、模型价格变化和模型升级后的生产成本/质量指标。"
       ]
     },
     "references": [
       {
-        "label": "OpenAI 发布 Daybreak 安全工具组合",
-        "url": "https://openai.com/index/daybreak-securing-the-world/"
+        "label": "arXiv 原文提出 AgentCIBench 隐私评测",
+        "url": "https://arxiv.org/abs/2606.23189"
       },
       {
-        "label": "OpenAI 宣布 Patch the Planet 开源修复",
-        "url": "https://openai.com/index/patch-the-planet/"
+        "label": "arXiv 原文提出计划信号衰减诊断",
+        "url": "https://arxiv.org/abs/2606.22953"
       },
       {
-        "label": "OpenAI 介绍 Codex 长任务白皮书",
-        "url": "https://openai.com/index/codex-maxxing-long-running-work/"
+        "label": "arXiv 原文提出代码模型路由基准",
+        "url": "https://arxiv.org/abs/2606.22902"
       }
     ]
   },
   "items": [
     {
-      "id": "openai-daybreak-cyber-defense-tools-2026-06-22",
-      "category": "policy",
-      "label": "政策",
-      "title": "OpenAI 发布 Daybreak，把 GPT-5.5-Cyber、Codex Security 与可信访问打包给防御方",
-      "body": "OpenAI 发布 Daybreak 扩展，打包网络防御模型、工具和伙伴计划。",
-      "summary": "OpenAI 发布 Daybreak，主张把 AI 网络安全能力从漏洞发现推进到验证、补丁和受控防御访问。",
-      "whyItMatters": "AI 安全竞争的重点正在从“谁能发现漏洞”转向“谁能在治理边界内帮助防御方落地修复”。",
-      "trend": "趋势判断：AI 网络安全进入受控防御平台化。",
-      "whyRanked": "本期最完整的官方安全信号。",
-      "topReason": "它把模型、插件、伙伴和政府协作放在同一个防御治理叙事里。",
+      "id": "arxiv-agentcibench-computer-use-agent-privacy-2026-06-22",
+      "category": "research",
+      "label": "研究",
+      "title": "AgentCIBench 预印本把 Computer-use Agent 的跨应用隐私泄露变成可执行评测",
+      "body": "一篇 arXiv 预印本提出 AgentCIBench，评测电脑使用型 Agent 是否遵守上下文隐私边界。",
+      "summary": "论文把邮箱、日历、待办等跨应用访问中的“越界披露”转成可评分场景，并报告 15 个前沿 Agent 的高泄露率。",
+      "whyItMatters": "如果 Agent 要代表用户操作真实应用，隐私风险不只来自权限过大，还来自任务上下文、收件人和界面邻近信息被错误混用。",
+      "trend": "趋势判断：Computer-use Agent 的安全评测正在从“能否完成任务”扩展到“是否只披露当前任务应披露的信息”。",
+      "whyRanked": "它直接对应企业部署桌面/浏览器 Agent 时最难外包给模型自觉处理的隐私边界。",
+      "topReason": "它把上下文完整性问题做成可执行、可确定评分的测试集，适合加入上线前评测清单。",
       "selectionScore": {
         "impact": 5,
         "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 24,
-        "note": "官方原文给出发布时间、工具组合、受控访问和部分指标；实际防御效果仍需第三方复核、披露报告和客户侧证据。"
+        "total": 22,
+        "note": "研究原文给出评测框架、三类失败模式和自述结果；仍需代码/数据、第三方复现、更多模型和真实工作流验证。"
       },
       "editorScore": {
         "impact": 5,
         "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 24,
-        "note": "官方原文给出发布时间、工具组合、受控访问和部分指标；实际防御效果仍需第三方复核、披露报告和客户侧证据。"
+        "total": 22,
+        "note": "研究原文给出评测框架、三类失败模式和自述结果；仍需代码/数据、第三方复现、更多模型和真实工作流验证。"
       },
-      "impact": "安全、平台和政策团队需要把 AI 网络安全工具当成受控能力管理：谁可访问、可做什么、证据如何留存、补丁如何进入生产。",
-      "whoShouldCare": "最该关注的是企业安全、开源安全、关键基础设施、政府网络防御和平台治理团队。",
-      "readerUse": "企业安全团队可用它检查内部 AI 安全工具是否已有访问审批、任务范围、人工复核、补丁验证和披露流程。",
-      "nextCheck": "继续核对 CAISI/ONCD/OSTP 或合作政府是否发布独立说明，伙伴产品是否上线，披露案例和客户侧修复指标是否可验证。",
+      "impact": "产品、安全和法务团队需要把 Agent 权限治理从 OAuth scope 扩展到任务意图、收件人、上下文隔离和最小披露。",
+      "whoShouldCare": "最该关注的是企业 Agent 平台、浏览器/桌面 Agent、隐私工程、合规和安全评测团队。",
+      "readerUse": "企业 Agent 平台、安全和隐私团队可以把它转成上线门槛：每个跨应用 Agent 都要测试视觉邻近泄露、模糊任务过度披露和收件人错配。",
+      "nextCheck": "继续核对作者是否发布 AgentCIBench 代码与场景、第三方是否复现 15 个 Agent 结果，以及厂商是否加入类似隐私评测。",
       "followUpQuestions": [
-        "GPT-5.5-Cyber 的可信访问机制如何定义获准防御方、任务边界和审计责任？",
-        "Codex Security 生成的补丁进入生产前，哪些验证和披露步骤必须由人类安全工程师确认？"
+        "企业内部 Agent 是否能把“用户授权访问”进一步收窄到“当前任务可披露”？",
+        "评测结果在真实企业邮箱、日历、CRM 和文档系统中是否仍成立？"
       ],
-      "evidenceThreshold": "至少需要第三方评测、政府或伙伴独立公告、协调披露记录、客户侧修复数据或审计报告，才能从官方平台发布升级为“已验证防御效果”的结论。",
-      "claimBoundary": "OpenAI 原文可支持 Daybreak、GPT-5.5-Cyber、Codex Security、伙伴计划和部分自述指标；不能证明客户环境风险已实际下降或治理机制已被外部审计。",
-      "counterEvidence": "如果后续第三方评测、披露记录或客户审计显示高误报、补丁不可用、访问控制失效或滥用事件，应下调其“可规模化防御基础设施”的判断。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/daybreak-securing-the-world/",
-      "originalUrl": "https://openai.com/index/daybreak-securing-the-world/",
-      "sourceRole": "厂商主张",
-      "provenance": "OpenAI 官方文章可确认 2026 年 6 月 22 日 Daybreak 扩展、工具组合、受控访问叙事和自述指标；防御成效、客户部署和监管采纳仍需独立证据。来源可信度：高，结论边界需保留。",
-      "trustLevel": "来源层级：官方来源，高可信",
+      "evidenceThreshold": "至少需要公开 benchmark、可复现实验脚本、模型版本记录、第三方复测和真实应用场景验证，才能升级为稳定安全结论。",
+      "claimBoundary": "arXiv 原文可支持 AgentCIBench、三类失败模式和作者自述实验结果；不能证明所有商用 Agent 都有同等泄露率，或该 benchmark 已成为行业标准。",
+      "counterEvidence": "如果公开复测数据、厂商说明或真实应用指标显示场景过窄、提示可轻易规避、模型版本差异显著或泄露率低，应下调其普遍性判断。",
+      "source": "arXiv cs.AI",
+      "sourceName": "arXiv cs.AI",
+      "sourceId": "arxiv-ai",
+      "sourceUrl": "https://arxiv.org/abs/2606.23189",
+      "originalUrl": "https://arxiv.org/abs/2606.23189",
+      "sourceRole": "研究原文",
+      "provenance": "arXiv 页面可确认题名、作者、提交时间、摘要和论文自述实验；该来源是研究预印本，不等同于同行评议、独立复现或生产系统证明。来源可信度：中高，结论需保留预印本边界。",
+      "trustLevel": "来源层级：研究来源，中高可信",
       "verificationStatus": "已核验",
       "originalDependency": "must-read",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-06-22T12:00:00+09:00",
+      "sourceType": "research",
+      "sourceReliability": "medium-high",
+      "claimStatus": "preprint",
+      "publishedAt": "2026-06-22T20:36:58+09:00",
       "time": "06/22",
-      "detailBody": "OpenAI 6 月 22 日发布 Daybreak 扩展，列出 GPT-5.5-Cyber、Codex Security 插件、Cyber Partner Program、Patch the Planet 和关键基础设施协作；文中还给出部分扫描与修复自述指标。",
-      "detailTrend": "AI 网络安全能力正在被产品化为受控防御系统。真正要验证的不只是模型分数，还包括获准访问、人工复核、补丁质量、披露流程和客户环境里的风险下降。",
-      "detailWhyRanked": "本条排在首位，因为 OpenAI 原文同时覆盖模型、插件、伙伴、政府协作和关键基础设施场景，并把漏洞发现到补丁修复写成完整闭环；但中心证据仍是厂商自述。"
+      "detailBody": "arXiv 6 月 22 日提交的论文提出 AgentCIBench，面向 Computer-use Agents 构造可执行、确定性评分的隐私场景，覆盖视觉邻近、任务模糊过度披露和收件人错配。作者称评测 15 个前沿 Agent 后，多数在超过半数场景中泄露不应披露的信息。",
+      "detailTrend": "这把 Agent 评测从任务完成率拉回到上下文完整性：一个 Agent 即使有工具权限，也仍需要证明它理解当前任务、当前对象和当前收件人的披露边界。对企业读者来说，关键变化是评测目标从“能否完成”扩展为“是否只披露应该披露的内容”。",
+      "detailWhyRanked": "本条排在首位，因为 arXiv 原文给出 AgentCIBench、三类失败模式和 15 个前沿 Agent 的自述评测，能把早间 OpenAI 安全工具叙事落成更具体的上线前隐私测试维度；但它仍是预印本，不能直接当成行业基准。"
     },
     {
-      "id": "openai-patch-the-planet-open-source-maintainers-2026-06-22",
+      "id": "arxiv-plans-dont-persist-llm-agent-context-2026-06-22",
+      "category": "research",
+      "label": "研究",
+      "title": "“Plans Don’t Persist” 预印本提示长任务 Agent 的计划可能只是停留在上下文里",
+      "body": "一篇 arXiv 预印本用 replay pairing 诊断长任务 Agent 的计划信号是否会随上下文压缩衰减。",
+      "summary": "论文主张，标准 LLM Agent 并不会稳定把计划内化成持久状态，计划被压缩或逐出后会影响长任务执行。",
+      "whyItMatters": "长任务 Agent 的可靠性不只取决于模型能力，还取决于计划、目标、约束和中间结论能否在上下文管理中被保护。",
+      "trend": "趋势判断：长任务 Agent 的基础设施瓶颈正在转向上下文生命周期管理。",
+      "whyRanked": "它直接补充早间 Codex 长任务信号：持续工作区需要可验证的上下文保留机制，而不只是更长窗口。",
+      "topReason": "它把“计划会不会留在模型内部”变成可测诊断，并指出简单逐出计划会伤害 ALFWorld 成功率。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "论文给出诊断方法和若干模型/任务结果；仍需更多模型、真实代码任务、开源实现和独立复现。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "论文给出诊断方法和若干模型/任务结果；仍需更多模型、真实代码任务、开源实现和独立复现。"
+      },
+      "impact": "研发效能和 Agent 平台团队需要把任务计划、验收标准、约束、失败记录和恢复点作为可管理状态，而不是任由摘要器压缩。",
+      "whoShouldCare": "最该关注的是代码 Agent、长任务自动化、上下文工程、评测平台和企业研发效能团队。",
+      "readerUse": "代码 Agent、长任务自动化和研发效能团队可以据此检查是否有计划重显、状态快照、摘要质量评测和人工接管点。",
+      "nextCheck": "继续核对论文是否开源 replay pairing 工具、不同模型是否复现、以及代码/浏览器/办公 Agent 的真实任务是否出现同类计划衰减。",
+      "followUpQuestions": [
+        "现有 Agent 平台是否知道哪些上下文不能被摘要或逐出？",
+        "长任务失败复盘能否区分模型推理失败和上下文管理失败？"
+      ],
+      "evidenceThreshold": "至少需要开源诊断工具、跨模型复现、真实长任务数据、消融实验和失败案例，才能把它升级为通用工程规则。",
+      "claimBoundary": "arXiv 原文可支持作者提出 replay pairing、计划信号衰减和压缩压力测试；不能证明所有长任务 Agent 都以同样方式失败。",
+      "counterEvidence": "如果后续复现数据、运行日志或真实任务指标显示计划重写、外部状态机或专用记忆机制能稳定消除衰减，应下调“模型固有限制”的判断，并收窄为工程配置问题。",
+      "source": "arXiv cs.AI",
+      "sourceName": "arXiv cs.AI",
+      "sourceId": "arxiv-ai",
+      "sourceUrl": "https://arxiv.org/abs/2606.22953",
+      "originalUrl": "https://arxiv.org/abs/2606.22953",
+      "sourceRole": "研究原文",
+      "provenance": "arXiv 页面可确认题名、作者、提交时间、摘要和论文自述实验；该来源是研究预印本，不等同于同行评议、独立复现或生产系统证明。来源可信度：中高，结论需保留预印本边界。",
+      "trustLevel": "来源层级：研究来源，中高可信",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "research",
+      "sourceReliability": "medium-high",
+      "claimStatus": "preprint",
+      "publishedAt": "2026-06-22T16:30:47+09:00",
+      "time": "06/22",
+      "detailBody": "arXiv 6 月 22 日提交的论文提出 replay pairing 诊断方法，对比同一轨迹中保留/移除计划时的隐藏状态差异。作者报告计划信号在动作-观察步骤后快速衰减，并称天真逐出计划会显著降低 ALFWorld 成功率。",
+      "detailTrend": "这说明长任务 Agent 的关键不是无限堆上下文，而是识别哪些计划、约束和证据必须被保护、重显或外部化。对平台团队来说，计划应被当作可审计状态管理，而不是被普通摘要器视为可丢弃文本。",
+      "detailWhyRanked": "本条入选是因为 arXiv 原文提出 replay pairing、计划信号衰减、reasoning-trace confound 和压缩压力测试，把 Codex/Agent 长任务叙事落到一个可测试的工程风险：上下文管理本身是承载能力的一部分。它还给出 ALFWorld 压缩压力测试的自述结果，因此适合转化为平台评测项，但仍需开源工具和真实任务复现。"
+    },
+    {
+      "id": "arxiv-agent-as-router-coding-tasks-2026-06-22",
       "category": "tool",
       "label": "工具",
-      "title": "OpenAI 与 Trail of Bits 推出 Patch the Planet，面向开源维护者做 AI 辅助修复",
-      "body": "OpenAI 宣布 Patch the Planet，面向开源维护者推进 AI 辅助修复。",
-      "summary": "Patch the Planet 把 AI 安全研究、专家复核和开源维护流程放进同一修复链。",
-      "whyItMatters": "开源维护者最缺的不是更多告警，而是可复现证据、低噪声 triage、可审查补丁和披露协调。",
-      "trend": "趋势判断：开源安全焦点转向低噪声修复。",
-      "whyRanked": "它落在开源维护流程。",
-      "topReason": "它直接回答 AI 发现漏洞后由谁验证、谁修复、谁决定合入的问题。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方原文给出参与方、初始项目和工作方式；漏洞数量、补丁有效性和维护者体验仍需项目侧披露或独立报告。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方原文给出参与方、初始项目和工作方式；漏洞数量、补丁有效性和维护者体验仍需项目侧披露或独立报告。"
-      },
-      "impact": "开源、平台安全和供应链团队应关注 AI 是否能把历史 CVE、模糊测试、差分测试和补丁生成变成可维护的工作流，而不是把更多噪声丢给维护者。",
-      "whoShouldCare": "最该关注的是开源维护者、企业开源办公室、应用安全、供应链安全和开发者平台团队。",
-      "readerUse": "企业开源办公室和供应链安全团队可用它检查漏洞协作流程：证据复现、误报过滤、严重性复核、补丁测试和披露协调是否有人负责。",
-      "nextCheck": "继续核对 Trail of Bits 技术报告、参与项目的合入记录、CVE/公告、维护者反馈、补丁回归测试和后续披露。",
-      "followUpQuestions": [
-        "AI 辅助安全研究进入开源项目时，维护者如何限制噪声、工作量和披露风险？",
-        "参与项目后续是否会公开补丁质量、误报率、复现材料和维护者负担变化？"
-      ],
-      "evidenceThreshold": "至少需要参与项目的公开合入记录、CVE 或安全公告、Trail of Bits 技术报告、维护者反馈或第三方复测，才能从官方倡议升级为“已验证开源修复成效”的结论。",
-      "claimBoundary": "OpenAI 原文可支持倡议名称、合作方、初始参与项目和自述工作方式；不能证明所有发现均有效、补丁均已合入，或维护者负担已经整体下降。",
-      "counterEvidence": "如果项目侧记录、维护者反馈或第三方复测显示误报率高、补丁被拒、披露延误或维护者负担上升，应下调其开源治理价值判断。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/patch-the-planet/",
-      "originalUrl": "https://openai.com/index/patch-the-planet/",
-      "sourceRole": "厂商主张",
-      "provenance": "OpenAI 官方文章可确认 Patch the Planet 的参与方、初始项目、AI 辅助安全研究和专家复核框架；项目侧合入、漏洞披露和维护者反馈仍需独立核对。来源可信度：高，成效待证。",
-      "trustLevel": "来源层级：官方来源，高可信",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-06-22T11:00:00+09:00",
-      "time": "06/22",
-      "detailBody": "OpenAI 宣布 Patch the Planet，由 Trail of Bits 参与初始推进，并与 HackerOne、Calif 等协作；文章列出 cURL、Go、Python、Sigstore、aiohttp、NATS Server 等初始项目。",
-      "detailTrend": "开源安全正在从“报告更多漏洞”转向“帮助维护者完成修复”。AI 的价值要看误报过滤、人工复现、补丁测试、披露协作和项目侧合入是否真的减负。",
-      "detailWhyRanked": "本条进入 TOP3，因为 OpenAI 页面把 AI 安全能力放到开源供应链最薄弱的维护环节，并列出 Trail of Bits、HackerOne、Calif 和多个初始项目；但补丁质量仍待项目侧证据。"
-    },
-    {
-      "id": "openai-codex-maxxing-long-running-work-2026-06-22",
-      "category": "product",
-      "label": "产品",
-      "title": "OpenAI 发布 Codex 长任务白皮书，强调把 Agent 当作持续工作区使用",
-      "body": "OpenAI 发布 Codex 长任务白皮书入口。",
-      "summary": "OpenAI 把 Codex 叙事从一次性代码生成推进到长任务、持续上下文和人机分工。",
-      "whyItMatters": "企业采用代码 Agent 时，关键不再只是模型会写代码，而是任务能否拆解、验证、延续和交接。",
-      "trend": "趋势判断：代码 Agent 走向长期工作区。",
-      "whyRanked": "它补充 Agent 工作方式信号。",
-      "topReason": "它说明厂商正在把 Codex 定位成可持续执行的工作空间，而不是代码补全插件。",
+      "title": "Agent-as-a-Router 预印本把代码模型选择从静态路由推向带反馈的执行循环",
+      "body": "一篇 arXiv 预印本提出 ACRouter，把代码任务模型路由做成 Context-Action-Feedback 循环。",
+      "summary": "论文称多模型环境下没有单一 LLM 支配所有代码任务，因此路由器需要在部署中积累执行反馈来降低 regret。",
+      "whyItMatters": "企业同时使用多个前沿模型时，成本、质量、延迟和任务类型的组合会让“选哪个模型”成为 Agent 平台能力。",
+      "trend": "趋势判断：多模型编程 Agent 正从手工默认模型转向可评测、可记忆、可反馈的路由系统。",
+      "whyRanked": "它把 AI 编程工具的竞争焦点从单模型能力扩展到编排层和持续评测层。",
+      "topReason": "它附带 CodeRouterBench 与约 1 万个任务实例的自述 benchmark，适合观察模型路由是否变成开发者平台基础设施。",
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "官方页面可确认白皮书主题和使用框架；实际生产效率、失败率和企业采用深度需要用户侧案例或指标验证。"
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "论文给出框架、benchmark 和自述实验；仍需独立复现、生产成本数据、模型更新后的稳定性和真实企业任务验证。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "官方页面可确认白皮书主题和使用框架；实际生产效率、失败率和企业采用深度需要用户侧案例或指标验证。"
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "论文给出框架、benchmark 和自述实验；仍需独立复现、生产成本数据、模型更新后的稳定性和真实企业任务验证。"
       },
-      "impact": "工程团队应把代码 Agent 管理成长期协作者：目标拆分、验收标准、上下文保留、并行工作流、权限边界和人工复核都要明确。",
-      "whoShouldCare": "最该关注的是软件工程管理、平台工程、开发者体验、研发效能和代码治理团队。",
-      "readerUse": "研发效能团队可用它检查 Codex 或其他代码 Agent 是否有目标分解、验证步骤、上下文交接、失败回滚和人工接管规则。",
-      "nextCheck": "继续核对白皮书全文、企业案例、Codex 使用数据、长任务失败模式、权限控制和团队实际交付指标。",
+      "impact": "开发者平台团队需要把模型选择、验证器、记忆、回退策略和成本预算纳入同一 Agent 运行时，而不是把所有代码任务固定给一个模型。",
+      "whoShouldCare": "最该关注的是代码 Agent、AI IDE、平台工程、LLM 网关、成本治理和研发效能团队。",
+      "readerUse": "代码 Agent、平台工程和研发效能团队可以用它检查内部模型网关是否支持任务维度评估、执行反馈、成本-质量路由和模型更新后的回归测试。",
+      "nextCheck": "继续核对代码和 benchmark 是否可用，ACRouter 在真实仓库任务、私有代码、不同价格模型和模型升级后是否仍稳定。",
       "followUpQuestions": [
-        "长任务代码 Agent 的验收标准应由人类先写，还是由 Agent 在执行中生成后再复核？",
-        "多条 Codex 工作流并行时，谁负责上下文冲突、依赖顺序和最终合并风险？"
+        "企业是否有足够的已验证代码任务数据来训练或校准模型路由？",
+        "路由器错误选择模型时，系统如何发现、回退并记录成本和质量损失？"
       ],
-      "evidenceThreshold": "至少需要白皮书全文、客户案例、交付指标、代码审查记录或长任务失败分析，才能从官方方法论升级为“已验证研发效能模式”的结论。",
-      "claimBoundary": "OpenAI 页面可支持白皮书主题、作者和长任务方法论入口；不能证明 Codex 在企业中稳定提升交付速度或降低缺陷率。",
-      "counterEvidence": "如果后续客户案例、审查记录或失败分析显示上下文漂移、验收不清、返工增加或缺陷率上升，应下调其长任务工作区价值判断。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/codex-maxxing-long-running-work/",
-      "originalUrl": "https://openai.com/index/codex-maxxing-long-running-work/",
-      "sourceRole": "官方核对",
-      "provenance": "OpenAI 官方页面可确认 2026 年 6 月 22 日发布 Codex 长任务白皮书入口及其核心主题；实际效果、适用边界和团队落地仍需原文、客户案例和指标补强。来源可信度：高。",
-      "trustLevel": "来源层级：官方来源，高可信",
+      "evidenceThreshold": "至少需要开源实现、benchmark 复现、真实仓库任务评测、成本/延迟报告和模型版本漂移测试，才能升级为生产路由建议。",
+      "claimBoundary": "arXiv 原文可支持 ACRouter、C-A-F 循环、CodeRouterBench 和作者自述实验；不能证明该路由器已在生产环境持续优于人工或商业网关。",
+      "counterEvidence": "如果真实企业任务记录、成本指标或第三方复测显示 verifier 不可靠、任务分布变化过快或路由成本超过收益，应下调其平台化价值判断。",
+      "source": "arXiv cs.AI",
+      "sourceName": "arXiv cs.AI",
+      "sourceId": "arxiv-ai",
+      "sourceUrl": "https://arxiv.org/abs/2606.22902",
+      "originalUrl": "https://arxiv.org/abs/2606.22902",
+      "sourceRole": "研究原文",
+      "provenance": "arXiv 页面可确认题名、作者、提交时间、摘要和论文自述实验；该来源是研究预印本，不等同于同行评议、独立复现或生产系统证明。来源可信度：中高，结论需保留预印本边界。",
+      "trustLevel": "来源层级：研究来源，中高可信",
       "verificationStatus": "已核验",
       "originalDependency": "must-read",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-06-22T10:00:00+09:00",
+      "sourceType": "research",
+      "sourceReliability": "medium-high",
+      "claimStatus": "preprint",
+      "publishedAt": "2026-06-22T15:37:31+09:00",
       "time": "06/22",
-      "detailBody": "OpenAI 页面介绍 Codex-maxxing for long-running work，称白皮书讨论把 Codex 作为保留上下文、管理复杂工作流、拆分可验证步骤并延续项目进展的持续工作区。",
-      "detailTrend": "代码 Agent 的竞争点正在从单次生成质量扩展到项目连续性。团队要治理的是任务拆分、验收标准、上下文、权限、冲突处理、失败回滚和最终责任。",
-      "detailWhyRanked": "本条排入本期，是因为 OpenAI 页面把 Codex 放进长期工作组织方式，并明确指向复杂工作流、可验证步骤和人类监督时机；但生产收益仍需用户侧指标验证。"
+      "detailBody": "arXiv 6 月 22 日提交的论文提出 Agent-as-a-Router，将代码任务路由形式化为 Context-Action-Feedback-Context 循环，并实例化为 ACRouter。作者还介绍 CodeRouterBench，称包含约 1 万个任务实例和 8 个前沿 LLM 的验证分数。",
+      "detailTrend": "多模型时代的编程 Agent 不一定由单一最强模型获胜，平台层可能通过任务识别、反馈记忆和验证器来动态选择模型。对开发者平台来说，这意味着模型网关需要记录任务、结果、成本和失败原因，而不是只转发请求。",
+      "detailWhyRanked": "本条排在第三，因为 arXiv 原文更偏工具链基础设施，但 ACRouter、Verifier、Memory 和 CodeRouterBench 这些源事实能提示研发团队把模型路由纳入成本和质量治理，而不是只比较单次 benchmark。"
     }
   ]
 }
