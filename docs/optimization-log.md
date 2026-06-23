@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 15:04 JST
+
+- Focus: Improved Phase 3 Day 18 archive clarity for product quality and maintainability. The archive page now renders from `data/news.json` and `data/news-history.json`, labels 08:00 batches as early editions and 17:00 batches as evening editions, and clearly separates the current homepage batch from already archived batches instead of carrying stale hard-coded dates.
+- Changed files:
+  - `archive.html`
+  - `archive.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, and `docs/copyright-safety.md`; kept the change to archive labels and existing structured data without adding new claims.
+  - Ran `node --check archive.js`, `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 40 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `e6bc26d` (`完善期次归档标签`). Push pending until network access to GitHub works.
+
 ## 2026-06-23 14:03 JST
 
 - Focus: Improved Phase 3 Day 17 topic-section information quality. The homepage planned topic vocabulary now includes concise why-now summaries for Agent, model, enterprise workflow, policy, infrastructure, and developer-tooling themes, and the topic section renders those summaries for both covered and omitted topics so readers can understand topic relevance without treating omissions as new facts.
