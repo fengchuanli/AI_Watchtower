@@ -308,8 +308,8 @@ function validateEdition(edition, updatedAt, items = []) {
     !edition.sourceRisk.label ||
     !edition.sourceRisk.note ||
     !edition.sourceRisk.nextCheck ||
-    !/来源|媒体|官方|核对|集中|单一/.test(edition.sourceRisk.note) ||
-    !/官方|原文|核对|复核|文件|公告/.test(edition.sourceRisk.nextCheck)
+    !/来源|媒体|官方|核对|集中|单一|研究|预印本/.test(edition.sourceRisk.note) ||
+    !/官方|原文|核对|复核|文件|公告|第三方|复现|同行评议|代码|数据/.test(edition.sourceRisk.nextCheck)
   ) {
     throw new Error("News edition must include a source concentration risk note and next-check boundary.");
   }

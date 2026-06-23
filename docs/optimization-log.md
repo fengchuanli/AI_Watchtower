@@ -2,6 +2,23 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 21:35 JST
+
+- Focus: Fixed a homepage rendering failure caused by runtime source-risk validation being narrower than the accepted data rules. Research/preprint source-risk notes and next checks such as third-party reproduction, peer review, code, and data are now accepted by the browser-side guard, so 今日深挖, 本期信号来源等级, 今日 TOP3, 深度简报, and 更多新闻流 can render normally for the current edition.
+- Changed files:
+  - `app.js`
+  - `docs/optimization-log.md`
+- Verification:
+  - Reproduced the homepage load path with a local `app.js` VM simulation and confirmed `briefingHeadline`, `topStories`, `deepTitle`, `newsGrid`, `readerFrame`, and `sourceRisk` render.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, and validation scripts.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed main HTML files with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local commit created (`修复首页来源风险校验`); push failed because this environment could not resolve `github.com`.
+
 ## 2026-06-23 21:04 JST
 
 - Focus: Improved Phase 4 Day 24 product quality and maintainability by adding a candidate-source checklist for future semi-automated news gathering. Candidate URLs now have a documented gate for source identity, source role, minimum evidence, copyright/paywall safety, duplicate checks, source-owner concentration, and drafting handoff before they become structured news items.
