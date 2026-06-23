@@ -4,6 +4,8 @@ Homepage news items live in `data/news.json`. 首页优先读取 `summary` and `
 
 All item fields must follow `docs/copyright-safety.md`. The data model should help readers understand the news, but it must not turn source articles into full Chinese replacements. Use source fields for minimum necessary facts, and use editorial fields for AI Watchtower's own interpretation, trend reading, reader use, and verification boundary.
 
+Before a semi-automated gathering run drafts item fields, use `docs/candidate-source-checklist.md` to confirm the candidate URL, source identity, source role, duplicate status, freshness posture, copyright/paywall safety, and source-owner concentration risk. Only candidates that pass that gate should be turned into the structured fields below.
+
 ## Feed Metadata
 
 - `sourceCount`: Number of registered sources available to the current homepage. It must match `data/sources.json` `sources.length` so the hero stats do not drift from the source registry.

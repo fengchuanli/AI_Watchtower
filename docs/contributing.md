@@ -12,11 +12,12 @@
 
 ## 内容更新流程
 
-1. 阅读 `docs/source-policy.md` 和 `docs/editorial-checklist.md`。
-2. 在 `data/sources.json` 中确认来源；缺少来源时先补充来源记录。
-3. 按 `docs/news-data-format.md` 更新 `data/news.json`。
-4. 核对标题、摘要、日期、链接、核验状态和下一步检查项。
-5. 运行数据与站点校验，再提交改动。
+1. 阅读 `docs/source-policy.md`、`docs/candidate-source-checklist.md` 和 `docs/editorial-checklist.md`。
+2. 对半自动采集或批量候选 URL，先用候选来源清单筛掉付费墙、重复、来源角色不清或证据不足的 URL。
+3. 在 `data/sources.json` 中确认来源；缺少来源时先补充来源记录。
+4. 按 `docs/news-data-format.md` 更新 `data/news.json`。
+5. 核对标题、摘要、日期、链接、核验状态和下一步检查项。
+6. 运行数据与站点校验，再提交改动。
 
 内容编辑应优先链接支持中心事实的原始页面。自动校验只能检查结构，不能代替来源阅读和事实判断。
 

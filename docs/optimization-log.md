@@ -2,6 +2,32 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 21:04 JST
+
+- Focus: Improved Phase 4 Day 24 product quality and maintainability by adding a candidate-source checklist for future semi-automated news gathering. Candidate URLs now have a documented gate for source identity, source role, minimum evidence, copyright/paywall safety, duplicate checks, source-owner concentration, and drafting handoff before they become structured news items.
+- Changed files:
+  - `docs/candidate-source-checklist.md`
+  - `docs/source-policy.md`
+  - `docs/editorial-checklist.md`
+  - `docs/copyright-safety.md`
+  - `docs/news-data-format.md`
+  - `docs/contributing.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+  - `README.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/source-policy.md`, `docs/editorial-checklist.md`, and `docs/optimization-decision-index.md`; continued after Day 17 through Day 23 were already complete earlier today.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check archive.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the candidate-source checklist documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Pending local implementation commit. Push pending until network access to GitHub works.
+
 ## 2026-06-23 20:03 JST
 
 - Focus: Improved Phase 4 Day 23 source-owner concentration validation for content and information quality. Current editions now need structured `sourceConcentration` metadata when one registered source owner supplies at least two thirds of the batch, and the homepage source-risk panel names the dominant owner, count/share, caveat, and next independent source check.

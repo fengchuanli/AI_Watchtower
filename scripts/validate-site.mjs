@@ -17,6 +17,7 @@ const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
 const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
+const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
@@ -595,6 +596,26 @@ if (
 }
 
 if (
+  !/Candidate Source Checklist/.test(candidateSourceChecklist) ||
+  !/Candidate Identity/.test(candidateSourceChecklist) ||
+  !/Source Role/.test(candidateSourceChecklist) ||
+  !/Minimum Evidence/.test(candidateSourceChecklist) ||
+  !/Copyright And Paywall Safety/.test(candidateSourceChecklist) ||
+  !/Duplicate And Concentration Checks/.test(candidateSourceChecklist) ||
+  !/Drafting Handoff/.test(candidateSourceChecklist) ||
+  !/paywall, login-wall, private channel/.test(candidateSourceChecklist) ||
+  !/sourceConcentration/.test(candidateSourceChecklist) ||
+  !/docs\/candidate-source-checklist\.md/.test(sourcePolicy) ||
+  !/candidate-source-checklist\.md/.test(readme) ||
+  !/candidate-source-checklist\.md/.test(contributing) ||
+  !/candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
+  !/candidate-source-checklist\.md/.test(newsDataFormat) ||
+  !/candidate-source-checklist\.md/.test(copyrightSafety)
+) {
+  errors.push("Semi-automated gathering must keep a maintained candidate-source checklist linked from source, contributor, data, copyright, and decision docs.");
+}
+
+if (
   !/class="news-card-body"/.test(appJs) ||
   !/\.news-card\s*\{[^}]*display:\s*flex;[^}]*gap:\s*16px;/s.test(styles) ||
   !/\.news-card-body\s*\{[^}]*display:\s*grid;[^}]*gap:\s*12px;/s.test(styles) ||
@@ -723,7 +744,8 @@ if (
   !/Day 21[\s\S]*787cf06[\s\S]*Cross-page navigation copy/.test(optimizationDecisionIndex) ||
   !/Day 22[\s\S]*freshSourceFact/.test(optimizationDecisionIndex) ||
   !/Day 23[\s\S]*source-owner concentration/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
+  !/Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

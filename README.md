@@ -24,6 +24,7 @@ npx serve .
 │   └── sources.json
 ├── docs/
 │   ├── contributing.md
+│   ├── candidate-source-checklist.md
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
 │   ├── github-pages-readiness.md
@@ -52,6 +53,7 @@ npx serve .
 - 产品目标与优化基准：`docs/product-principles.md`
 - 版权安全规则：`docs/copyright-safety.md`
 - 情报源列表：`data/sources.json`
+- 候选来源筛选清单：`docs/candidate-source-checklist.md`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`

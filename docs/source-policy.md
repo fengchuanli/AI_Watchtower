@@ -67,3 +67,5 @@ When a source is mainly a company narrative, customer story, policy proposal, be
 News intelligence jobs run at 08:00 and 17:00 JST. They should start with sources where `hasRss` is `true`, then add official non-RSS pages with conservative fetching rules. The site should summarize and explain the news in Chinese, while keeping original URLs as references rather than forcing readers to leave the page.
 
 Each published item should have enough material for an in-site incident briefing: what happened, why it matters, trend meaning, timeline, source boundaries, and next checks. If an item cannot support that structure, do not promote it into the homepage feed.
+
+Before a semi-automated gathering run turns a discovered URL into a draft, apply `docs/candidate-source-checklist.md`. The checklist is the candidate gate: it confirms source identity, role, minimum evidence, copyright/paywall safety, duplicate status, and source-owner concentration before the editorial checklist handles the drafted item.
