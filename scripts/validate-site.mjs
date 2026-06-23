@@ -701,7 +701,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-06-20 through 2026-07-19/.test(optimizationDecisionIndex) ||
-  !/Phase 3, Discovery And Continuity/.test(optimizationDecisionIndex) ||
+  !/Phase 4, Editorial Safety And Validation/.test(optimizationDecisionIndex) ||
   !/Day 15[\s\S]*9445425[\s\S]*Cross-edition trend notes/.test(optimizationDecisionIndex) ||
   !/Day 16[\s\S]*19403f2[\s\S]*Company tag pages/.test(optimizationDecisionIndex) ||
   !/Day 17[\s\S]*898216d[\s\S]*Topic sections/.test(optimizationDecisionIndex) ||
@@ -709,7 +709,8 @@ if (
   !/Day 19[\s\S]*5a98d51[\s\S]*latest history/.test(optimizationDecisionIndex) ||
   !/Day 20[\s\S]*This index now summarizes recent optimization decisions/.test(optimizationDecisionIndex) ||
   !/Day 21[\s\S]*787cf06[\s\S]*Cross-page navigation copy/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
+  !/Day 22[\s\S]*freshSourceFact/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

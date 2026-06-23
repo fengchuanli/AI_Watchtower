@@ -54,6 +54,14 @@ const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
 const allowedVerificationStatuses = new Set(["结构样例，未作事实核验", "已核验"]);
 const allowedSourceRoles = new Set(["官方核对", "研究原文", "媒体背景", "社区发现", "厂商主张"]);
+const allowedStructuredSourceTypes = new Set([
+  "official",
+  "research",
+  "regulator",
+  "reliable_media",
+  "media_report",
+  "community_signal",
+]);
 const maxCurrentItemAgeDays = 7;
 const maxDetailParagraphLength = 180;
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
@@ -194,13 +202,77 @@ function validateCurrentItemFreshness(items, editionDate) {
     const ageDays = (editionDateEnd - publishedAt) / millisecondsPerDay;
 
     if (ageDays > maxCurrentItemAgeDays) {
-      errors.push(
-        `${item.id || "unknown item"} is too old for the current feed. Move stale background coverage to history unless a new source fact refreshed it within ${maxCurrentItemAgeDays} days.`,
-      );
+      validateFreshSourceFactException(item, editionDateEnd);
     }
 
     if (publishedAt > editionDateEnd + millisecondsPerDay) {
       errors.push(`${item.id || "unknown item"} publishedAt is after the current edition date window.`);
+    }
+  }
+}
+
+function validateFreshSourceFactException(item, editionDateEnd) {
+  const itemLabel = item.id || "unknown item";
+  const exception = item.freshSourceFact;
+
+  if (!exception || typeof exception !== "object" || Array.isArray(exception)) {
+    errors.push(
+      `${itemLabel} is too old for the current feed. Move stale background coverage to history unless freshSourceFact records a source-specific new fact within ${maxCurrentItemAgeDays} days.`,
+    );
+    return;
+  }
+
+  const sourceType = String(item.sourceType || "").trim();
+  const exceptionSourceType = String(exception.sourceType || "").trim();
+  const exceptionPublishedAt = Date.parse(exception.publishedAt);
+  const exceptionFact = String(exception.fact || "").trim();
+  const exceptionUrl = String(exception.sourceUrl || "").trim();
+
+  if (!allowedStructuredSourceTypes.has(sourceType)) {
+    errors.push(`${itemLabel} needs a supported sourceType before using a freshSourceFact stale-news exception.`);
+  }
+
+  if (exceptionSourceType !== sourceType) {
+    errors.push(`${itemLabel} freshSourceFact.sourceType must match item.sourceType so stale exceptions stay source-specific.`);
+  }
+
+  if (Number.isNaN(exceptionPublishedAt)) {
+    errors.push(`${itemLabel} freshSourceFact.publishedAt must be a valid source timestamp.`);
+  } else {
+    const exceptionAgeDays = (editionDateEnd - exceptionPublishedAt) / millisecondsPerDay;
+
+    if (exceptionAgeDays > maxCurrentItemAgeDays || exceptionPublishedAt > editionDateEnd + millisecondsPerDay) {
+      errors.push(`${itemLabel} freshSourceFact.publishedAt must fall within the current ${maxCurrentItemAgeDays}-day freshness window.`);
+    }
+  }
+
+  if (!exceptionUrl) {
+    errors.push(`${itemLabel} freshSourceFact.sourceUrl must point to the source that refreshed the stale item.`);
+  } else {
+    try {
+      const parsedUrl = new URL(exceptionUrl);
+
+      if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+        errors.push(`${itemLabel} freshSourceFact.sourceUrl must use http or https.`);
+      }
+    } catch {
+      errors.push(`${itemLabel} freshSourceFact.sourceUrl is invalid.`);
+    }
+  }
+
+  if (exceptionFact.length < 24 || !/新增|更新|发布|宣布|提交|披露|确认|修订|回应|报告/.test(exceptionFact)) {
+    errors.push(`${itemLabel} freshSourceFact.fact must name the concrete new source fact, not repeated background.`);
+  }
+
+  if (["reliable_media", "media_report"].includes(sourceType) && item.originalDependency !== "must-read") {
+    errors.push(`${itemLabel} media-based stale exceptions must keep originalDependency as must-read.`);
+  }
+
+  if (sourceType === "community_signal") {
+    const verificationText = [item.claimBoundary, item.nextCheck, item.evidenceThreshold, exceptionFact].join("\n");
+
+    if (!/官方|原文|监管|媒体|第三方|复核|确认/.test(verificationText)) {
+      errors.push(`${itemLabel} community-signal stale exceptions must name the non-community source needed for confirmation.`);
     }
   }
 }

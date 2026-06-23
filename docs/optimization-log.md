@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 19:02 JST
+
+- Focus: Improved Phase 4 Day 22 stale-news validation for product quality and maintainability. Current-feed items older than seven days now need a structured `freshSourceFact` exception that records the source type, source URL, fresh source timestamp, and concrete new source fact before they can remain in the current batch.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/optimization-decision-index.md`; continued after Day 21 because it was already completed earlier today.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check archive.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources, including the new source-specific stale-news exception contract.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `5b78d0087360ae4e793b0bc071ad0c43df8f56e9` (`强化陈旧新闻校验`). Push pending until network access to GitHub works.
+
 ## 2026-06-23 18:03 JST
 
 - Focus: Improved Phase 3 Day 21 navigation copy between homepage, all-news, archive, tags, and detail pages. Cross-page labels now distinguish latest news flow, title-list scanning, company continuity, in-site detail briefings, and edition archive status, so Chinese readers can choose the right next reading path without guessing from generic labels.
