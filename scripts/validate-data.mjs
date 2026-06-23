@@ -49,6 +49,7 @@ const requiredEditionFields = [
   "operationalStatus",
   "editorialInterpretation",
   "sourceRisk",
+  "sourceConcentration",
 ];
 const requiredCategoryFields = ["id", "label", "description"];
 const allowedArchiveStatuses = new Set(["preview", "published"]);
@@ -580,6 +581,7 @@ function assertLatestHistoryMatchesCurrent(currentEdition, latestHistoryEdition,
     "coverageMix",
     "sourceFamilies",
     "sourceRisk",
+    "sourceConcentration",
     "trendNotes",
     "topicGroups",
   ];
@@ -656,6 +658,16 @@ function validateEditionMetadataReadability(edition, context, editorNote = "") {
     70,
     `${context} sourceRisk.nextCheck should name the next independent check concisely.`,
   );
+  assertReadableMetadataLine(
+    edition.sourceConcentration?.note,
+    90,
+    `${context} sourceConcentration.note should be a compact source-owner concentration warning.`,
+  );
+  assertReadableMetadataLine(
+    edition.sourceConcentration?.nextCheck,
+    80,
+    `${context} sourceConcentration.nextCheck should name the next independent owner or source type concisely.`,
+  );
 
   const editorNoteText = normalizedCopy(editorNote);
   const repeatedFields = [
@@ -663,6 +675,8 @@ function validateEditionMetadataReadability(edition, context, editorNote = "") {
     ["editorialInterpretation", edition.editorialInterpretation],
     ["sourceRisk.note", edition.sourceRisk?.note],
     ["sourceRisk.nextCheck", edition.sourceRisk?.nextCheck],
+    ["sourceConcentration.note", edition.sourceConcentration?.note],
+    ["sourceConcentration.nextCheck", edition.sourceConcentration?.nextCheck],
   ];
 
   for (const [field, value] of repeatedFields) {
@@ -822,6 +836,63 @@ function validateChineseEditorialCopy(data) {
   }
 }
 
+function validateSourceConcentration(concentration, items, context) {
+  const sourceCounts = new Map();
+
+  for (const item of items || []) {
+    const sourceId = String(item.sourceId || "").trim();
+
+    if (sourceId) {
+      sourceCounts.set(sourceId, (sourceCounts.get(sourceId) || 0) + 1);
+    }
+  }
+
+  const dominantEntry = [...sourceCounts.entries()].sort((first, second) => second[1] - first[1])[0];
+  const dominantSourceId = dominantEntry?.[0];
+  const dominantCount = dominantEntry?.[1] || 0;
+  const itemCount = (items || []).length;
+  const hasDominantOwner = itemCount > 1 && dominantCount >= Math.ceil(itemCount * 0.67);
+
+  if (!hasDominantOwner) {
+    return;
+  }
+
+  if (!concentration || typeof concentration !== "object" || Array.isArray(concentration)) {
+    errors.push(`${context} must include sourceConcentration when one source owner supplies most current items.`);
+    return;
+  }
+
+  const source = sourcesById.get(concentration.sourceId);
+
+  if (!source) {
+    errors.push(`${context} sourceConcentration.sourceId must match data/sources.json.`);
+  }
+
+  if (concentration.sourceId !== dominantSourceId) {
+    errors.push(`${context} sourceConcentration.sourceId must name the dominant current source owner.`);
+  }
+
+  if (concentration.sourceName !== source?.name) {
+    errors.push(`${context} sourceConcentration.sourceName must match the registered source name.`);
+  }
+
+  if (concentration.count !== dominantCount) {
+    errors.push(`${context} sourceConcentration.count must match current item sourceId concentration.`);
+  }
+
+  if (concentration.share !== `${dominantCount}/${itemCount}`) {
+    errors.push(`${context} sourceConcentration.share must be written as dominant count over current item count.`);
+  }
+
+  if (!/同一|单一|集中|全部|来源/.test(String(concentration.note || ""))) {
+    errors.push(`${context} sourceConcentration.note must explicitly warn about one source owner concentration.`);
+  }
+
+  if (!/其他|独立|官方|媒体|监管|论文|原文|第三方|复现/.test(String(concentration.nextCheck || ""))) {
+    errors.push(`${context} sourceConcentration.nextCheck must name the independent source owner or source type to check next.`);
+  }
+}
+
 if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
   errors.push("data/sources.json must include at least one source.");
 }
@@ -926,6 +997,7 @@ if (!newsFeed.edition) {
   validateReaderFrame(newsFeed.edition.readerFrame, "data/news.json edition");
   validateEditionChangeSummary(newsFeed.edition.changeSummary, "data/news.json edition");
   validateTrendNotes(newsFeed.edition.trendNotes, "data/news.json edition");
+  validateSourceConcentration(newsFeed.edition.sourceConcentration, newsFeed.items || [], "data/news.json edition");
   validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);
 
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
@@ -1251,6 +1323,11 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
   validateEditionChangeSummary(latestHistoryEdition.changeSummary, "data/news-history.json latest edition");
   validateTrendNotes(latestHistoryEdition.trendNotes, "data/news-history.json latest edition");
+  validateSourceConcentration(
+    latestHistoryEdition.sourceConcentration,
+    latestHistoryEdition.items || [],
+    "data/news-history.json latest edition",
+  );
 
   const allHistorySourceKeys = new Set();
 

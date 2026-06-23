@@ -2,6 +2,30 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 20:03 JST
+
+- Focus: Improved Phase 4 Day 23 source-owner concentration validation for content and information quality. Current editions now need structured `sourceConcentration` metadata when one registered source owner supplies at least two thirds of the batch, and the homepage source-risk panel names the dominant owner, count/share, caveat, and next independent source check.
+- Changed files:
+  - `app.js`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/optimization-decision-index.md`; continued after Day 22 because it was already completed earlier today.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check archive.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources, including the new source-owner concentration contract.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the homepage/runtime guard for source-owner concentration.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Pending local commit; push pending until network access to GitHub works.
+
 ## 2026-06-23 19:02 JST
 
 - Focus: Improved Phase 4 Day 22 stale-news validation for product quality and maintainability. Current-feed items older than seven days now need a structured `freshSourceFact` exception that records the source type, source URL, fresh source timestamp, and concrete new source fact before they can remain in the current batch.

@@ -583,6 +583,18 @@ if (
 }
 
 if (
+  !/function validateSourceConcentration\(concentration, items = \[\]\)/.test(appJs) ||
+  !/validateSourceConcentration\(edition\.sourceConcentration, items\);/.test(appJs) ||
+  !/renderSourceRisk\(data\.edition\?\.sourceRisk, data\.edition\?\.sourceConcentration\)/.test(appJs) ||
+  !/function validateSourceConcentration\(concentration, items, context\)/.test(validateDataJs) ||
+  !/sourceConcentration\.share must be written as dominant count over current item count/.test(validateDataJs) ||
+  !/sourceConcentration/.test(newsDataFormat) ||
+  !/same feed or owner/.test(newsDataFormat)
+) {
+  errors.push("Current editions must validate and render repeated source-owner concentration separately from source-family risk.");
+}
+
+if (
   !/class="news-card-body"/.test(appJs) ||
   !/\.news-card\s*\{[^}]*display:\s*flex;[^}]*gap:\s*16px;/s.test(styles) ||
   !/\.news-card-body\s*\{[^}]*display:\s*grid;[^}]*gap:\s*12px;/s.test(styles) ||
@@ -710,7 +722,8 @@ if (
   !/Day 20[\s\S]*This index now summarizes recent optimization decisions/.test(optimizationDecisionIndex) ||
   !/Day 21[\s\S]*787cf06[\s\S]*Cross-page navigation copy/.test(optimizationDecisionIndex) ||
   !/Day 22[\s\S]*freshSourceFact/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
+  !/Day 23[\s\S]*source-owner concentration/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

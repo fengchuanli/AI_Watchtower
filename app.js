@@ -284,6 +284,7 @@ function validateEdition(edition, updatedAt, items = []) {
   validateReaderFrame(edition.readerFrame);
   validateEditionChange(edition.changeSummary);
   validateTrendNotes(edition.trendNotes);
+  validateSourceConcentration(edition.sourceConcentration, items);
 
   const invalidCoverage = edition.coverageMix.find(
     (item) =>
@@ -353,6 +354,37 @@ function validateEdition(edition, updatedAt, items = []) {
 
   if (invalidTopicGroup) {
     throw new Error("Each edition topic group must use a supported topic, reference current news items, and name the reader action.");
+  }
+}
+
+function validateSourceConcentration(concentration, items = []) {
+  const sourceCounts = new Map();
+
+  for (const item of items) {
+    if (item.sourceId) {
+      sourceCounts.set(item.sourceId, (sourceCounts.get(item.sourceId) || 0) + 1);
+    }
+  }
+
+  const dominantEntry = [...sourceCounts.entries()].sort((first, second) => second[1] - first[1])[0];
+  const dominantSourceId = dominantEntry?.[0];
+  const dominantCount = dominantEntry?.[1] || 0;
+  const hasDominantOwner = items.length > 1 && dominantCount >= Math.ceil(items.length * 0.67);
+
+  if (!hasDominantOwner) {
+    return;
+  }
+
+  if (
+    !concentration ||
+    concentration.sourceId !== dominantSourceId ||
+    concentration.count !== dominantCount ||
+    concentration.share !== `${dominantCount}/${items.length}` ||
+    !concentration.sourceName ||
+    !/同一|单一|集中|全部|来源/.test(concentration.note || "") ||
+    !/其他|独立|官方|媒体|监管|论文|原文|第三方|复现/.test(concentration.nextCheck || "")
+  ) {
+    throw new Error("News edition must explain repeated source-owner concentration and the next independent check.");
   }
 }
 
@@ -760,7 +792,10 @@ function updateNewsMeta(data) {
   }
 
   if (sourceRisk) {
-    sourceRisk.innerHTML = renderFeedMetaDetails("本期来源集中度", renderSourceRisk(data.edition?.sourceRisk));
+    sourceRisk.innerHTML = renderFeedMetaDetails(
+      "本期来源集中度",
+      renderSourceRisk(data.edition?.sourceRisk, data.edition?.sourceConcentration),
+    );
   }
 
   if (trendNotes) {
@@ -823,18 +858,31 @@ function updateNewsMeta(data) {
   }
 }
 
-function renderSourceRisk(risk) {
-  if (!risk) {
+function renderSourceRisk(risk, concentration) {
+  if (!risk && !concentration) {
     return "";
   }
 
-  return `
+  const riskBody = risk
+    ? `
     <span>
       <strong>${escapeHtml(risk.label)}</strong>
       ${escapeHtml(risk.note)}
       <em>${escapeHtml(risk.nextCheck)}</em>
     </span>
-  `;
+  `
+    : "";
+  const concentrationBody = concentration
+    ? `
+    <span>
+      <strong>${escapeHtml(concentration.sourceName)} · ${escapeHtml(concentration.share)}</strong>
+      ${escapeHtml(concentration.note)}
+      <em>${escapeHtml(concentration.nextCheck)}</em>
+    </span>
+  `
+    : "";
+
+  return `${riskBody}${concentrationBody}`;
 }
 
 function renderTrendNotes(notes) {

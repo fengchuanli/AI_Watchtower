@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-20 through 2026-07-19
 - Current phase: Phase 4, Editorial Safety And Validation
-- Last indexed run: 2026-06-23 19:00 JST
+- Last indexed run: 2026-06-23 20:00 JST
 - Network status: GitHub DNS resolution failed in recent runs; local commits may be ahead of `origin/main`.
 
 ## Recent Plan-Day Decisions
@@ -22,12 +22,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 20 | Complete | `a808e4d` | This index now summarizes recent optimization decisions and points future runs to the next useful plan item. |
 | Day 21 | Complete | `787cf06` | Cross-page navigation copy now distinguishes latest feed, title-list scanning, company continuity, in-site detail briefings, and edition archive status. |
 | Day 22 | Complete | `3fa91e1` | Stale current-feed items now need a source-specific `freshSourceFact` exception with a fresh source timestamp, URL, type, and concrete new source fact. |
+| Day 23 | Complete | pending | Current editions now validate and render source-owner concentration when one registered `sourceId` supplies most of the batch. |
 
 ## Next Useful Task
 
-- Continue with Day 23: add validation for repeated source-owner concentration in the current batch.
+- Continue with Day 24: add a candidate-source checklist for future semi-automated news gathering.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 21 first.
-- If Day 23 is already complete, move to Day 24 and add a candidate-source checklist for future semi-automated news gathering.
+- If Day 24 is already complete, move to Day 25 and add a duplicate-candidate report for URLs and near-matching titles before publication.
 
 ## Update Rules
 
