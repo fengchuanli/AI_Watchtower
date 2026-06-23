@@ -472,6 +472,72 @@ function validateTrendNotes(notes, context) {
   }
 }
 
+function stableStringify(value) {
+  if (Array.isArray(value)) {
+    return `[${value.map((item) => stableStringify(item)).join(",")}]`;
+  }
+
+  if (value && typeof value === "object") {
+    return `{${Object.keys(value)
+      .sort()
+      .map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`)
+      .join(",")}}`;
+  }
+
+  return JSON.stringify(value);
+}
+
+function assertLatestHistoryMatchesCurrent(currentEdition, latestHistoryEdition, currentItems) {
+  if (!currentEdition || !latestHistoryEdition) {
+    return;
+  }
+
+  const scalarFields = [
+    "id",
+    "date",
+    "timezone",
+    "archiveStatus",
+    "archiveLabel",
+    "note",
+    "operationalStatus",
+    "editorialInterpretation",
+  ];
+  const structuredFields = [
+    "readerFrame",
+    "changeSummary",
+    "coverageMix",
+    "sourceFamilies",
+    "sourceRisk",
+    "trendNotes",
+    "topicGroups",
+  ];
+
+  for (const field of scalarFields) {
+    if (latestHistoryEdition[field] !== currentEdition[field]) {
+      errors.push(`Archive readiness mismatch: latest history edition ${field} must match data/news.json edition.${field}.`);
+    }
+  }
+
+  for (const field of structuredFields) {
+    if (stableStringify(latestHistoryEdition[field]) !== stableStringify(currentEdition[field])) {
+      errors.push(`Archive readiness mismatch: latest history edition ${field} must match data/news.json edition.${field}.`);
+    }
+  }
+
+  if (latestHistoryEdition.itemCount !== currentItems.length) {
+    errors.push("Archive readiness mismatch: latest history edition itemCount must match current items length.");
+  }
+
+  const currentItemIds = currentItems.map((item) => item.id);
+  const latestItemIds = Array.isArray(latestHistoryEdition.items)
+    ? latestHistoryEdition.items.map((item) => item.id)
+    : [];
+
+  if (stableStringify(latestItemIds) !== stableStringify(currentItemIds)) {
+    errors.push("Archive readiness mismatch: latest history edition item order must match current news item order.");
+  }
+}
+
 function hasChineseText(value) {
   return /\p{Script=Han}/u.test(String(value || ""));
 }
@@ -1109,6 +1175,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
     errors.push("data/news-history.json latest edition must match data/news.json edition.id.");
   }
 
+  assertLatestHistoryMatchesCurrent(newsFeed.edition, latestHistoryEdition, newsFeed.items || []);
   validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
   validateEditionChangeSummary(latestHistoryEdition.changeSummary, "data/news-history.json latest edition");
   validateTrendNotes(latestHistoryEdition.trendNotes, "data/news-history.json latest edition");

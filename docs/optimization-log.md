@@ -2,6 +2,25 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 16:03 JST
+
+- Focus: Improved Phase 3 Day 19 archive readiness for content and information quality. The data validator now checks that the current homepage edition and the latest history snapshot agree on key edition framing, source context, topic/trend structure, item count, and item order before publication, so archive readers do not see stale or mismatched current-batch context.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, and `docs/copyright-safety.md`; continued after already completed Day 14 through Day 18 work and kept this run to archive-readiness validation without adding news claims.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources, including the new current-vs-latest-history archive readiness check.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 40 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `21133aa` (`校验归档快照一致性`). Push pending until network access to GitHub works.
+
 ## 2026-06-23 15:04 JST
 
 - Focus: Improved Phase 3 Day 18 archive clarity for product quality and maintainability. The archive page now renders from `data/news.json` and `data/news-history.json`, labels 08:00 batches as early editions and 17:00 batches as evening editions, and clearly separates the current homepage batch from already archived batches instead of carrying stale hard-coded dates.
