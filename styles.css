@@ -2127,6 +2127,46 @@ h3 {
   font-weight: 800;
 }
 
+.archive-edition-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.archive-edition-card {
+  gap: 10px;
+}
+
+.archive-edition-card small {
+  min-height: 50px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.archive-edition-card .text-link {
+  justify-self: start;
+  margin-top: 8px;
+}
+
+.archive-label-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.library-grid .archive-label-row em {
+  margin-top: 0;
+}
+
+.library-grid .archive-status.current {
+  color: white;
+  background: var(--dark);
+}
+
+.library-grid .archive-status.archived {
+  color: var(--ink);
+  background: #e5e7eb;
+}
+
 .subscribe {
   display: grid;
   grid-template-columns: 1fr minmax(300px, 460px);

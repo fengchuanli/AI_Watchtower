@@ -11,6 +11,7 @@ const appJs = readFileSync("app.js", "utf8");
 const detailJs = readFileSync("news-detail.js", "utf8");
 const allNewsJs = readFileSync("all-news.js", "utf8");
 const tagsJs = readFileSync("tags.js", "utf8");
+const archiveJs = readFileSync("archive.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
 const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
@@ -370,6 +371,10 @@ if (!/<script src="\.\/all-news\.js"><\/script>/.test(allNewsHtml)) {
   errors.push("all-news.html must load the history renderer.");
 }
 
+if (!/<script src="\.\/archive\.js"><\/script>/.test(archiveHtml)) {
+  errors.push("archive.html must load the edition archive renderer.");
+}
+
 if (!/<script src="\.\/tags\.js"><\/script>/.test(tagsHtml)) {
   errors.push("tags.html must load the company tag renderer.");
 }
@@ -410,6 +415,28 @@ if (
   )
 ) {
   errors.push("All-news page must read news-history.json and link flat title rows to in-site detail pages with edition IDs.");
+}
+
+if (
+  !/id="currentArchiveMeta"/.test(archiveHtml) ||
+  !/id="currentEditionGrid"/.test(archiveHtml) ||
+  !/id="archiveEditionGrid"/.test(archiveHtml) ||
+  !/href="\.\/data\/news\.json"[\s\S]*href="\.\/all-news\.html"/.test(archiveHtml) ||
+  !/fetchJson\("\.\/data\/news\.json"\)/.test(archiveJs) ||
+  !/fetchJson\("\.\/data\/news-history\.json"\)/.test(archiveJs) ||
+  !/function getEditionTimeLabel/.test(archiveJs) ||
+  !/早间版/.test(archiveJs) ||
+  !/晚间版/.test(archiveJs) ||
+  !/当前首页批次/.test(archiveJs) ||
+  !/已归档批次/.test(archiveJs) ||
+  !/function renderEditionCard/.test(archiveJs) ||
+  !/class="archive-status \$\{escapeHtml\(status\.tone\)\}"/.test(archiveJs) ||
+  !/期次归档暂时无法生成动态标签/.test(archiveJs) ||
+  !/\.archive-edition-grid/.test(styles) ||
+  !/\.library-grid \.archive-status\.current/.test(styles) ||
+  !/\.library-grid \.archive-status\.archived/.test(styles)
+) {
+  errors.push("Archive page must render data-driven morning/evening edition labels and current-vs-archived status.");
 }
 
 if (
