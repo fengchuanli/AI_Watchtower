@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-24 08:07 JST
+
+- Focus: Published the 2026-06-24 08:00 JST AI news intelligence update. This edition uses three non-duplicate June 23 official-source signals to explain AI moving into production workflows: Anthropic Claude Tag for Slack team Agent collaboration, Mistral OCR 4 for structured document intelligence, and OpenAI's GPT-5 immunology applied-AI case study.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read the automation memory, `data/sources.json`, `docs/source-policy.md`, and `docs/news-data-format.md` before editing.
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked official/source-guided surfaces including OpenAI News, Anthropic Newsroom, Mistral News, Google DeepMind, Microsoft AI/Source, Meta AI Blog, reliable search context, and prior history URLs.
+  - Marked vendor-written outcome claims with explicit boundaries: Claude Tag customer productivity, OCR 4 benchmark/customer advantage, and GPT-5 scientific-mechanism conclusions all require customer-side, third-party, paper/data, audit, or replication evidence before stronger conclusions.
+- Verification:
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, `node --check archive.js`, `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local commit created (`更新08点AI新闻情报`).
+
 ## 2026-06-23 21:35 JST
 
 - Focus: Fixed a homepage rendering failure caused by runtime source-risk validation being narrower than the accepted data rules. Research/preprint source-risk notes and next checks such as third-party reproduction, peer review, code, and data are now accepted by the browser-side guard, so 今日深挖, 本期信号来源等级, 今日 TOP3, 深度简报, and 更多新闻流 can render normally for the current edition.

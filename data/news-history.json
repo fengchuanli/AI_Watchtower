@@ -1,8 +1,312 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-23",
-  "totalItems": 45,
+  "updatedAt": "2026-06-24",
+  "totalItems": 48,
   "editions": [
+    {
+      "id": "news-0800-2026-06-24",
+      "date": "2026-06-24",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "08:00 JST 发布",
+      "note": "本期为 2026-06-24 08:00 JST 新闻情报快照。",
+      "operationalStatus": "已尝试拉取 origin/main 但 GitHub DNS 失败；已检查官方来源入口、可靠媒体和重复 URL。",
+      "editorialInterpretation": "08:00 版从昨晚研究预印本转向官方产品与应用信号：团队协作 Agent、企业文档入口和科学发现辅助同时进入可部署叙事。",
+      "readerFrame": {
+        "headline": "把本期当作企业 Agent 与科学 AI 的上线检查表",
+        "whyItMatters": "三条官方来源同时指向一个变化：AI 正从聊天与单点工具进入共享协作、文档入口和科学假设流程；但越接近生产，越需要权限、审计、复核和独立证据。",
+        "useThisIssueFor": [
+          "企业 IT 和安全团队检查 Slack/频道 Agent 的权限、记忆、费用和日志设计。",
+          "RAG 与数据平台团队评估文档解析是否具备位置、结构、置信度和自托管能力。",
+          "科研与安全治理团队复核 AI 生成假设是否进入实验记录、专家审查和双重用途评估。"
+        ],
+        "notProvenYet": [
+          "不能证明 Claude Tag 已经在客户侧稳定提升团队生产率。",
+          "不能证明 Mistral OCR 4 的 benchmark 与客户收益可在所有企业文档集复现。",
+          "不能证明 OpenAI 案例中的机制解释已经成为独立确认的科学结论。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "08:00 版新增三条 6 月 23 日官方来源信号",
+        "freshFacts": [
+          "本期新增事实：Anthropic 发布 Claude Tag，并开放 Slack beta 给 Enterprise 和 Team 客户。",
+          "本期新增事实：Mistral 发布 OCR 4，新增位置框、块分类、置信度和自托管路径。",
+          "本期新增事实：OpenAI 发布 GPT-5 Pro 辅助免疫学实验分析的应用案例。"
+        ],
+        "repeatedContext": [
+          "昨晚 arXiv Agent 隐私、计划衰减和模型路由研究仍是评测背景，本期不重复其 URL。",
+          "6 月 22 日 OpenAI Daybreak、Patch the Planet 和 Codex 长任务仍是安全/Agent 背景，本期不重复发布。",
+          "厂商叙事边界仍是重复背景：采用效果、benchmark 优势和科学结论仍需独立证据。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "团队 Agent",
+          "count": 1,
+          "meaning": "用来检查协作频道中的权限、记忆、费用和日志。"
+        },
+        {
+          "label": "文档入口",
+          "count": 1,
+          "meaning": "用来检查 RAG 与文档 Agent 的结构化输入、置信度和自托管要求。"
+        },
+        {
+          "label": "科学辅助",
+          "count": 1,
+          "meaning": "用来检查 AI 生成假设如何进入专家审查、实验复核和安全治理。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 3,
+          "role": "三条均来自公司官方页面，适合核对发布日期、产品形态、功能边界和案例叙事；采用效果、benchmark 优势和科学结论仍需客户侧、第三方或论文数据验证。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源与厂商叙事边界",
+        "note": "本期全部来自官方来源，来源类型集中；发布事实可信，效果和科学结论仍待外部证据。",
+        "nextCheck": "下一批优先核对独立媒体、论文原文、第三方 benchmark 和官方补充文件。"
+      },
+      "trendNotes": [
+        {
+          "topic": "team-agent",
+          "label": "团队协作 Agent",
+          "note": "跨期看，Codex 长任务、Claude Tag 和研究侧计划持久化都在把 Agent 从一次性响应推向持续协作环境。",
+          "boundary": "这仍不能证明团队 Agent 已稳定提高生产率；仍需客户侧任务日志、采用率、质量指标和安全审计。"
+        },
+        {
+          "topic": "enterprise-ingestion",
+          "label": "企业文档入口",
+          "note": "跨期看，企业 AI 的竞争点继续下沉到可治理输入层：结构、位置、置信度和自托管决定 RAG 与 Agent 的可信度。",
+          "boundary": "这仍不能证明单一 OCR 模型在所有企业文档上领先；仍需第三方 benchmark、真实文档集复测和成本/延迟指标。"
+        },
+        {
+          "topic": "ai-science",
+          "label": "科学假设辅助",
+          "note": "跨期看，AI 科学从自动化实验、医学诊断案例延伸到专家假设生成，应用价值和双重用途风险同时上升。",
+          "boundary": "这仍不能证明模型发现了独立确认的新机制；仍需论文、原始数据、独立实验复现和安全评估。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 1,
+          "itemIds": [
+            "anthropic-claude-tag-slack-team-agent-2026-06-23"
+          ],
+          "meaning": "用来更新团队 Agent 在共享频道中的权限、记忆、异步任务和审计清单。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 1,
+          "itemIds": [
+            "mistral-ocr-4-document-intelligence-2026-06-23"
+          ],
+          "meaning": "用来检查企业知识库、RAG 和文档自动化入口是否满足结构化与自托管要求。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 1,
+          "itemIds": [
+            "openai-gpt5-immunology-mystery-applied-ai-2026-06-23"
+          ],
+          "meaning": "用来评估前沿模型在科学假设生成中的专家复核和实验验证要求。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "anthropic-claude-tag-slack-team-agent-2026-06-23",
+          "category": "product",
+          "label": "产品",
+          "title": "Anthropic 发布 Claude Tag，把 Claude 放进 Slack 频道协作流",
+          "body": "Anthropic 6 月 23 日发布 Claude Tag，先在 Slack 中让团队以 @Claude 方式委派任务。",
+          "summary": "Claude Tag 面向 Enterprise 和 Team 客户 beta，上线 Slack，支持频道级权限、工具连接、记忆、异步任务和日志。",
+          "whyItMatters": "团队 Agent 正从个人聊天框进入共享频道，权限、记忆边界、费用控制和审计日志会成为企业采购前置问题。",
+          "trend": "趋势判断：企业 Agent 的交互入口正在从单人会话转向多人协作空间，模型需要理解频道上下文并接受管理员治理。",
+          "whyRanked": "它把 Agent 产品化焦点放在团队协作、频道记忆和异步委派，而不是单次问答能力。",
+          "topReason": "Claude Tag 是一个明确的团队 Agent 上线信号，直接影响 Slack 工作流、工具授权和审计设计。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方页面可核对发布日期、Slack beta、权限、日志和迁移安排；内部采用比例仍是厂商自述，需要客户侧数据验证。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方页面可核对发布日期、Slack beta、权限、日志和迁移安排；内部采用比例仍是厂商自述，需要客户侧数据验证。"
+          },
+          "impact": "IT、数据、安全和业务运营团队需要把 Slack 频道视为 Agent 执行环境，重新检查工具授权、记忆隔离、费用上限和日志留存。",
+          "whoShouldCare": "最该关注的是企业协作平台管理员、Agent 平台团队、安全合规、研发效能和采购团队。",
+          "readerUse": "企业 IT 和 Agent 平台团队可用它更新 Slack Agent 准入清单：频道权限、工具连接、记忆范围、任务日志和预算控制。",
+          "nextCheck": "继续核对 beta 客户反馈、Slack 之外的入口、管理员日志粒度、数据保留政策和真实跨团队任务完成率。",
+          "followUpQuestions": [
+            "频道级记忆和工具授权是否足以防止不同团队之间的数据串用？",
+            "企业能否从日志中还原 Claude 每次任务调用了哪些工具和数据？"
+          ],
+          "evidenceThreshold": "需要客户侧部署案例、管理员日志样例、安全审计说明和独立使用指标，才能升级为已验证企业协作 Agent 成效。",
+          "claimBoundary": "官方页面可证明 Anthropic 发布了 Claude Tag beta 及其功能边界；不能证明其内部代码占比、客户采用或生产效率提升已被独立验证。",
+          "counterEvidence": "如果客户案例、审计报告或产品文档显示频道记忆难以隔离、日志不可追溯、费用失控或 Slack 外扩展受限，应下调企业可用性判断。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/news/introducing-claude-tag",
+          "originalUrl": "https://www.anthropic.com/news/introducing-claude-tag",
+          "sourceRole": "官方核对",
+          "provenance": "Anthropic 官方页面可核对 Claude Tag 的发布日期、Slack beta、权限/工具/日志设计和迁移安排；内部使用比例属于厂商自述，需客户侧和审计材料补强。来源可信度：高，效果结论保留厂商边界。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-23T00:00:00+09:00",
+          "time": "06/23",
+          "detailBody": "Anthropic 6 月 23 日发布 Claude Tag，先在 Slack 面向 Enterprise 和 Team 客户 beta。管理员可限定频道、工具和数据访问，用户以 @Claude 委派任务，系统提供费用限制和任务日志。",
+          "detailTrend": "这把 Agent 从个人助手推向团队工作台：模型不只回答问题，还要在共享上下文里记住项目、调用工具、异步推进任务，并接受企业级权限和审计约束。频道记忆越有用，越需要证明它不会跨团队串用，也不会把临时讨论误写成长期事实。",
+          "detailWhyRanked": "本条排在首位，因为官方页面给出 Slack beta、频道权限、工具连接、费用限制、任务日志和 30 天迁移安排，已足够支持企业评估入口变化。它还直接连接 Claude Code/Cowork 的协作路线，但内部采用比例和效率提升仍需客户侧指标验证。"
+        },
+        {
+          "id": "mistral-ocr-4-document-intelligence-2026-06-23",
+          "category": "tool",
+          "label": "工具",
+          "title": "Mistral OCR 4 把文档解析升级为带位置、类型和置信度的企业入口",
+          "body": "Mistral 6 月 23 日发布 OCR 4，强调 bounding boxes、block classification、inline confidence scores 和自托管部署。",
+          "summary": "OCR 4 支持 170 种语言、单容器自托管、API/Document AI 路径，并面向企业搜索、RAG 和 Agent 工作流。",
+          "whyItMatters": "企业 AI 的质量常卡在文档入口；结构化 OCR 能影响检索引用、表单处理、合规抽取和人工复核效率。",
+          "trend": "趋势判断：模型公司正在把“读文档”从文本抽取升级为可定位、可分类、可置信度复核的生产数据管线。",
+          "whyRanked": "它把文档智能、RAG 和 Agent 执行连接到同一个输入层，并给出自托管与价格信号。",
+          "topReason": "OCR 4 直接影响企业知识库和文档 Agent 的输入可信度，是生产 AI 的基础设施信号。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方页面可核对功能、语言覆盖、价格和部署路径；benchmark 与客户引语多为厂商页面呈现，需独立测试。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方页面可核对功能、语言覆盖、价格和部署路径；benchmark 与客户引语多为厂商页面呈现，需独立测试。"
+          },
+          "impact": "企业搜索、RAG、法务、金融、医疗和档案团队需要评估 OCR 输出是否带位置、类型和置信度，以便支持引用、脱敏和人工复核。",
+          "whoShouldCare": "最该关注的是企业搜索/RAG 平台、文档自动化、合规、数据治理和基础设施采购团队。",
+          "readerUse": "RAG 和文档自动化团队可用它更新供应商评测：抽取准确率之外，还要测试版面定位、块类型、置信度、自托管和价格。",
+          "nextCheck": "继续核对 API 文档、第三方 benchmark、客户侧延迟/成本数据、自托管要求和 Snowflake 等集成是否按期可用。",
+          "followUpQuestions": [
+            "OCR 4 在企业自己的复杂 PDF、扫描件、表格和多语种档案上是否仍有优势？",
+            "置信度和 block type 是否能真实降低人工复核成本，而不只是增加元数据？"
+          ],
+          "evidenceThreshold": "需要第三方 benchmark、客户侧生产指标、自托管部署文档和真实文档集复测，才能升级为已验证企业文档入口优势。",
+          "claimBoundary": "Mistral 页面可证明 OCR 4 发布及其功能、价格和部署路径；不能独立证明所有 benchmark 排名、客户成本优势或生产 ROI。",
+          "counterEvidence": "如果第三方测试、客户指标或自托管部署报告显示复杂文档错误率高、成本优势缩小、置信度不可校准或集成延迟，应下调基础设施价值判断。",
+          "source": "Mistral AI News",
+          "sourceName": "Mistral AI News",
+          "sourceId": "mistral-news",
+          "sourceUrl": "https://mistral.ai/news/ocr-4/",
+          "originalUrl": "https://mistral.ai/news/ocr-4/",
+          "sourceRole": "厂商主张",
+          "provenance": "Mistral 官方页面可核对 OCR 4 的发布日期、功能、价格、语言覆盖和部署路径；性能排名、客户引语和成本/延迟优势属于厂商呈现，需独立测试。来源可信度：高，效果结论保留厂商边界。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-23T00:00:00+09:00",
+          "time": "06/23",
+          "detailBody": "Mistral 6 月 23 日发布 OCR 4，输出文本同时提供位置框、块类型和置信度，支持 170 种语言、API 与 Document AI 路径，并提供企业自托管选项。页面还披露每千页 API/Batch/Document AI 价格，并提示 benchmark 分数应按方向性理解。",
+          "detailTrend": "企业 AI 的入口正在结构化：RAG、搜索和 Agent 不再只需要“文本”，还需要来源位置、文档结构、置信度和可复核流程，才能进入合规和高吞吐生产线。OCR 越靠近数据入口，越会影响引用、脱敏和人工复核。",
+          "detailWhyRanked": "本条入选是因为官方页面同时给出功能、价格、语言覆盖、API/Document AI、自托管路径和 benchmark caveat，能支持企业采购清单更新。它把文档入口与 Search Toolkit、RAG 和 Agent 工作流连接起来，但客户收益仍需第三方或客户侧复测。"
+        },
+        {
+          "id": "openai-gpt5-immunology-mystery-applied-ai-2026-06-23",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI 披露 GPT-5 辅助免疫学家重启三年前 T 细胞谜题",
+          "body": "OpenAI 6 月 23 日发布应用案例，称 GPT-5 Pro 帮助免疫学家 Derya Unutmaz 分析 T 细胞实验机制。",
+          "summary": "案例称 GPT-5 Pro 提出 deoxyglucose 可能影响 IL-2 构建，从而解释 T 细胞向 Th17 分化的差异。",
+          "whyItMatters": "科学 AI 的价值不只在文献检索，还在帮助专家重组假设、筛选实验和模拟尚未发表的结果。",
+          "trend": "趋势判断：AI 科学助手正在从“查资料”走向“提出可检验机制”，但仍必须由领域专家和实验复核把关。",
+          "whyRanked": "它为“AI 参与科学发现”提供了具体实验链条，同时暴露出生命科学双重用途和验证边界。",
+          "topReason": "案例把 GPT-5 的科学辅助能力落到免疫学实验解释和预测，但所有效果仍需论文、数据和独立复核。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "OpenAI 页面可核对案例叙事、人物、实验背景和模型建议；科学结论仍需论文、原始数据、实验复现和独立同行验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "OpenAI 页面可核对案例叙事、人物、实验背景和模型建议；科学结论仍需论文、原始数据、实验复现和独立同行验证。"
+          },
+          "impact": "生命科学、研发管理和安全治理团队需要同时关注 AI 缩短假设探索周期的机会，以及生物/化学能力带来的双重用途风险。",
+          "whoShouldCare": "最该关注的是生命科学研究团队、科研平台、AI 安全治理、医药研发和实验室负责人。",
+          "readerUse": "科研团队可用它更新 AI 科学助手流程：模型建议必须进入假设记录、专家审查、实验复核和双重用途风险评估。",
+          "nextCheck": "继续核对是否有论文、原始实验数据、实验复现、实验室外部评价，以及 OpenAI Preparedness Framework 下的具体防护说明。",
+          "followUpQuestions": [
+            "该机制解释是否已经通过新的湿实验或同行评议论文确认？",
+            "实验室如何记录 AI 生成假设、专家判断和失败路径，避免把模型建议误当结论？"
+          ],
+          "evidenceThreshold": "需要论文或预印本、原始数据、独立实验复现、专家评议和安全评估材料，才能升级为已验证科学发现辅助案例。",
+          "claimBoundary": "OpenAI 页面可证明其发布了该应用案例和相关叙事；不能证明 GPT-5 的机制解释已经成为独立确认的免疫学结论。",
+          "counterEvidence": "如果后续论文、实验数据或外部专家复核显示机制解释不成立、预测不可复现或模型依赖未披露信息，应下调科学发现意义。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/gpt-5-immunology-mystery/",
+          "originalUrl": "https://openai.com/index/gpt-5-immunology-mystery/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方页面可核对发布日期、人物、实验背景、GPT-5 Pro 建议和安全框架引用；科学成效属于厂商案例叙事，需论文、数据和独立复核。来源可信度：高，结论需保留应用案例边界。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-23T00:00:00+09:00",
+          "time": "06/23",
+          "detailBody": "OpenAI 6 月 23 日发布案例称，免疫学家 Derya Unutmaz 用 GPT-5 Pro 重看三年前 T 细胞实验，模型提出 deoxyglucose 可能通过 IL-2 影响 Th17 分化，并被用于预测未发表实验结果。",
+          "detailTrend": "科学助手的关键变化是从文献检索进入假设生成和实验优先级排序。对生命科学团队来说，模型输出应成为可审计假设，而不是绕过专家和实验复核的结论。越接近生物机制推断，越需要记录数据来源、专家判断和双重用途治理。",
+          "detailWhyRanked": "本条入选是因为官方页面提供人物、实验背景、模型建议、预测叙事和 Preparedness Framework 引用，具备完整科学工作流线索。它把 AI 科学助手价值与生命科学风险放在同一案例中，但科学结论仍需论文、数据和独立实验确认。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "anthropic-news",
+        "sourceName": "Anthropic Newsroom",
+        "count": 1,
+        "share": "1/3",
+        "note": "本期没有单一来源占多数；仍需警惕官方页面集中于厂商叙事。",
+        "nextCheck": "下一批优先核对独立媒体、论文原文、第三方 benchmark 和客户侧材料。"
+      }
+    },
     {
       "id": "news-1700-2026-06-23",
       "date": "2026-06-23",
