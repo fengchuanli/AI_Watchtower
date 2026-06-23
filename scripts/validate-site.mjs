@@ -446,7 +446,7 @@ if (
   !/aria-label="按主题筛选更多新闻流"/.test(html) ||
   !/aria-label="查看今日 TOP3 之外的更多新闻流"/.test(html) ||
   !/aria-label="打开全部 AI 新闻题目列表"/.test(html) ||
-  !/aria-label="全部 AI 新闻相关页面"/.test(allNewsHtml) ||
+  !/aria-label="全部题目列表相关页面"/.test(allNewsHtml) ||
   !/AI Watchtower 全部 AI 新闻列表/.test(allNewsHtml) ||
   !/aria-label="打开原始历史 AI 新闻 JSON 数据"/.test(allNewsHtml) ||
   !/aria-label="按新闻发布时间排序历史 AI 新闻"/.test(allNewsHtml) ||
@@ -454,6 +454,26 @@ if (
   !/查看 \$\{item\.archiveLabel\} 的站内解读/.test(allNewsJs)
 ) {
   errors.push("Homepage and all-news page must use Chinese, context-rich accessible labels for navigation, filters, and history links.");
+}
+
+if (
+  !/最新新闻流/.test(html) ||
+  !/公司连续观察/.test(html) ||
+  !/全部题目列表/.test(html) ||
+  !/期次归档状态/.test(html) ||
+  !/aria-label="全部题目列表相关页面"/.test(allNewsHtml) ||
+  !/本页适合快速扫标题/.test(allNewsHtml) ||
+  !/href="\.\/tags\.html"[\s\S]*公司连续观察/.test(allNewsHtml) ||
+  !/aria-label="期次归档相关页面"/.test(archiveHtml) ||
+  !/href="\.\/all-news\.html"[\s\S]*全部题目列表/.test(archiveHtml) ||
+  !/想按题目快速回看/.test(archiveHtml) ||
+  !/aria-label="公司连续观察相关页面"/.test(tagsHtml) ||
+  !/本页适合看同一公司的连续信号/.test(tagsHtml) ||
+  !/aria-label="站内解读相关页面"/.test(detailHtml) ||
+  !/返回最新新闻流/.test(detailHtml) ||
+  !/href="\.\/tags\.html"[\s\S]*公司连续观察/.test(detailHtml)
+) {
+  errors.push("Cross-page navigation copy must explain each reader path: latest feed, title list, company continuity, detail briefing, and edition archive.");
 }
 
 if (
