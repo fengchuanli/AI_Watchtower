@@ -39,6 +39,7 @@ const plannedTopicGroups = [
   {
     id: "agent",
     label: "Agent",
+    whyNow: "Agent 正从演示走向权限、验收和失败接管问题，需要持续区分真实工作流和概念展示。",
     emptyReason: "本期未捕捉到足够清楚的 Agent 工作流信号；概念演示不足以单独进入 TOP3。",
     promotionThreshold: "需要可核对的上线、客户使用、安全事件或工程变更，且能说明对读者的实际影响。",
     fallback: "可先查看历史 Agent 与开发者工具条目，作为背景而非本期新事实。",
@@ -46,6 +47,7 @@ const plannedTopicGroups = [
   {
     id: "model",
     label: "模型路线",
+    whyNow: "模型变化会影响价格、上下文、部署边界和能力预期，但必须等待官方或评测证据。",
     emptyReason: "本期没有新的模型路线入选；历史模型消息不重复当作今日新增。",
     promotionThreshold: "需要官方发布、研究原文或可复核评测支持新的能力、价格、上下文或部署边界。",
     fallback: "可从归档中回看上一轮模型发布和评测信号，避免把旧背景当作新变化。",
@@ -53,6 +55,7 @@ const plannedTopicGroups = [
   {
     id: "enterprise",
     label: "企业工作流",
+    whyNow: "企业 AI 正进入采购、权限、审计和员工流程，读者需要先看清部署证据而非案例叙事。",
     emptyReason: "本期没有新的企业工作流信号达到站内解读门槛。",
     promotionThreshold: "需要明确客户、工作流、部署范围或治理控制，而不是泛化的厂商案例叙事。",
     fallback: "可结合本期市场份额和开发者入口信号，更新企业采购观察清单。",
@@ -60,6 +63,7 @@ const plannedTopicGroups = [
   {
     id: "policy",
     label: "政策监管",
+    whyNow: "AI 治理变化会改变企业合规、采购和发布节奏，但正式文件应优先于媒体场景。",
     emptyReason: "本期未捕捉到可核对的正式政策变化；媒体场景不等同于新规则落地。",
     promotionThreshold: "需要政府文件、监管公告、正式会议公报或公司官方承诺来支撑政策判断。",
     fallback: "本期可把 G7 媒体信号当作后续核对入口，暂不当作政策更新。",
@@ -67,6 +71,7 @@ const plannedTopicGroups = [
   {
     id: "infrastructure",
     label: "基础设施",
+    whyNow: "算力、数据中心、电力和云区域决定 AI 能力能否落地，远期愿景要和实际建设分开。",
     emptyReason: "本期没有新的算力、部署或基础设施信号入选。",
     promotionThreshold: "需要芯片、数据中心、电力、云区域或部署能力的可核对变化，而非单纯远期愿景。",
     fallback: "可回看归档中的 AI 工厂、电力并网和欧洲基础设施条目作为背景。",
@@ -74,6 +79,7 @@ const plannedTopicGroups = [
   {
     id: "developer-tooling",
     label: "开发者工具",
+    whyNow: "开发者入口正在影响代码生成、测试、安全和团队协作，工具信号需要可试用或可迁移证据。",
     emptyReason: "本期没有新的可试用工具发布入选；并购报道已作为资本信号处理。",
     promotionThreshold: "需要产品发布、开源仓库、迁移文档、安全公告或开发者可验证的能力变化。",
     fallback: "本期可先阅读 Cursor 交易报道的站内解读，关注开发者入口控制权。",
@@ -320,11 +326,13 @@ function validateEdition(edition, updatedAt, items = []) {
   }
 
   const invalidPlannedTopic = plannedTopicGroups.find(
-    (topic) => !topic.emptyReason || !topic.promotionThreshold || !topic.fallback,
+    (topic) => !topic.whyNow || !topic.emptyReason || !topic.promotionThreshold || !topic.fallback,
   );
 
   if (invalidPlannedTopic) {
-    throw new Error("Each planned topic must explain why it was omitted, what would promote it, and where to read instead.");
+    throw new Error(
+      "Each planned topic must explain why it matters now, why it was omitted, what would promote it, and where to read instead.",
+    );
   }
 
   const itemIds = new Set(items.map((item) => item.id));
@@ -778,20 +786,29 @@ function updateNewsMeta(data) {
     const topics = data.edition?.topicGroups || [];
     const coveredTopicIds = new Set(topics.map((topic) => topic.id));
     const missingTopics = plannedTopicGroups.filter((topic) => !coveredTopicIds.has(topic.id));
+    const plannedTopicsById = new Map(plannedTopicGroups.map((topic) => [topic.id, topic]));
 
     const topicBody = [
       ...topics.map(
-        (topic) => `
+        (topic) => {
+          const plannedTopic = plannedTopicsById.get(topic.id);
+
+          return `
           <span>
             <strong>${escapeHtml(topic.label)} · ${escapeHtml(topic.count)} 条</strong>
+            ${plannedTopic?.whyNow ? `<em>为什么现在看</em>${escapeHtml(plannedTopic.whyNow)}` : ""}
+            <em>本期怎么用</em>
             ${escapeHtml(topic.meaning)}
           </span>
-        `,
+        `;
+        },
       ),
       ...missingTopics.map(
         (topic) => `
           <span class="empty-topic">
             <strong>${escapeHtml(topic.label)} · 本期未捕捉</strong>
+            <em>为什么现在看</em>
+            ${escapeHtml(topic.whyNow)}
             <em>未入选原因</em>
             ${escapeHtml(topic.emptyReason)}
             <em>入选门槛</em>
