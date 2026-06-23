@@ -29,6 +29,7 @@ npx serve .
 │   ├── github-pages-readiness.md
 │   ├── local-preview-qa.md
 │   ├── monthly-optimization-summary.md
+│   ├── optimization-decision-index.md
 │   ├── optimization-log.md
 │   ├── optimization-plan.md
 │   ├── product-principles.md
@@ -58,6 +59,7 @@ npx serve .
 - 本地视觉 QA：`docs/local-preview-qa.md`
 - GitHub Pages 发布兼容：`docs/github-pages-readiness.md`
 - 月度优化总结：`docs/monthly-optimization-summary.md`
+- 最近优化决策索引：`docs/optimization-decision-index.md`
 - 贡献与发布流程：`docs/contributing.md`
 
 提交内容更新前可以运行：
@@ -79,6 +81,7 @@ node scripts/validate-site.mjs
 项目使用一个约 30 天的优化计划持续改进：
 
 - 计划文件：`docs/optimization-plan.md`
+- 最近决策索引：`docs/optimization-decision-index.md`
 - 优化履历：`docs/optimization-log.md`
 - 新闻情报更新：每天 08:00 和 17:00 JST 各一次
 - 页面与内容优化：每天 14:00、15:00、16:00、17:30、18:00、19:00、20:00、21:00 JST 各一次

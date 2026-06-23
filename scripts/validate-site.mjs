@@ -22,6 +22,7 @@ const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
 const githubPagesReadiness = readFileSync("docs/github-pages-readiness.md", "utf8");
 const monthlyOptimizationSummary = readFileSync("docs/monthly-optimization-summary.md", "utf8");
+const optimizationDecisionIndex = readFileSync("docs/optimization-decision-index.md", "utf8");
 const contributing = readFileSync("docs/contributing.md", "utf8");
 const readme = readFileSync("README.md", "utf8");
 const errors = [];
@@ -674,6 +675,24 @@ if (
   !/避免重复劳动/.test(monthlyOptimizationSummary)
 ) {
   errors.push("Monthly optimization summary must stay discoverable and cover improvements, weaknesses, and next priorities.");
+}
+
+if (
+  !/docs\/optimization-decision-index\.md/.test(readme) ||
+  !/Recent Decision Index/.test(optimizationDecisionIndex) ||
+  !/2026-06-20 through 2026-07-19/.test(optimizationDecisionIndex) ||
+  !/Phase 3, Discovery And Continuity/.test(optimizationDecisionIndex) ||
+  !/Day 15[\s\S]*9445425[\s\S]*Cross-edition trend notes/.test(optimizationDecisionIndex) ||
+  !/Day 16[\s\S]*19403f2[\s\S]*Company tag pages/.test(optimizationDecisionIndex) ||
+  !/Day 17[\s\S]*898216d[\s\S]*Topic sections/.test(optimizationDecisionIndex) ||
+  !/Day 18[\s\S]*e6bc26d[\s\S]*Archive page/.test(optimizationDecisionIndex) ||
+  !/Day 19[\s\S]*5a98d51[\s\S]*latest history/.test(optimizationDecisionIndex) ||
+  !/Day 20[\s\S]*This index now summarizes recent optimization decisions/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
+  !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
+  !/avoid duplicate work/.test(optimizationDecisionIndex)
+) {
+  errors.push("Optimization decision index must stay discoverable and summarize recent completed plan days, commit anchors, and the next useful task.");
 }
 
 if (

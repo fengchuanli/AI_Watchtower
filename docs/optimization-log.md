@@ -2,6 +2,27 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-23 17:33 JST
+
+- Focus: Improved Phase 3 Day 20 product maintainability by adding a recent-decision index for optimization logs. The new index summarizes the latest completed plan days, their local commit anchors, the current blocker, and the next useful task so future automation runs can avoid scanning the full log or repeating already completed work.
+- Changed files:
+  - `docs/optimization-decision-index.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, and `docs/copyright-safety.md`; continued after Day 19 because it was already completed earlier today.
+  - Ran `node --check app.js`, `node --check all-news.js`, `node --check news-detail.js`, `node --check tags.js`, and `node --check archive.js`.
+  - Ran `node --check scripts/validate-data.mjs`, `node --check scripts/validate-site.mjs`, and `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 40 local references, and static page link targets, including the new decision-index guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `bc67b48` (`增加优化决策索引`). Push pending until network access to GitHub works.
+
 ## 2026-06-23 17:07 JST
 
 - Focus: Published the 2026-06-23 17:00 JST AI news intelligence update. This edition uses three arXiv recent research-original signals to explain Agent deployment risks and infrastructure needs: cross-application privacy disclosure, long-task plan/context persistence, and feedback-based model routing for coding tasks.
