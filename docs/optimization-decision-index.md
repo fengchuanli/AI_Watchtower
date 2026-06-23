@@ -19,7 +19,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 17 | Complete | `898216d` | Topic sections already include why-now summaries and omission boundaries for the planned topic vocabulary. |
 | Day 18 | Complete | `e6bc26d` | Archive page already renders morning/evening labels and current-vs-archived status from structured data. |
 | Day 19 | Complete | `5a98d51` | Data validation already checks current feed and latest history agree on key archive snapshot fields. |
-| Day 20 | Complete | `bc67b48` | This index now summarizes recent optimization decisions and points future runs to the next useful plan item. |
+| Day 20 | Complete | `a808e4d` | This index now summarizes recent optimization decisions and points future runs to the next useful plan item. |
 
 ## Next Useful Task
 
