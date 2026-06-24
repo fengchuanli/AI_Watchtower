@@ -24,7 +24,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 22 | Complete | `3fa91e1` | Stale current-feed items now need a source-specific `freshSourceFact` exception with a fresh source timestamp, URL, type, and concrete new source fact. |
 | Day 23 | Complete | `7d39ab9` | Current editions now validate and render source-owner concentration when one registered `sourceId` supplies most of the batch. |
 | Day 24 | Complete | `539ff62` | `docs/candidate-source-checklist.md` now gates semi-automated candidates by source identity, role, evidence, copyright/paywall safety, duplicates, and concentration before drafting. |
-| Day 25 | Complete | `785c5d3` | `scripts/report-duplicate-candidates.mjs` now produces a pre-drafting report for repeated candidate URLs and near-matching titles against current and historical items. |
+| Day 25 | Complete | `2b7fe85` | `scripts/report-duplicate-candidates.mjs` now produces a pre-drafting report for repeated candidate URLs and near-matching titles against current and historical items. |
 
 ## Next Useful Task
 
