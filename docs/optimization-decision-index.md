@@ -27,7 +27,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 25 | Complete | `2b7fe85` | `scripts/report-duplicate-candidates.mjs` now produces a pre-drafting report for repeated candidate URLs and near-matching titles against current and historical items. |
 | Day 26 | Complete | `7b1087d` | `docs/source-policy.md` now gives promote/hold/source-posture examples for AI-adjacent capital, compute, leadership, and infrastructure events. |
 | Day 27 | Complete | `7cf3f07` | Vendor-claim next checks now need to name independent evidence directly, so customer stories, benchmark pages, and vendor-written case studies point readers to the next external proof path. |
-| Day 28 | Complete | `pending` | Editorial validator limits are now documented so future runs can distinguish useful strictness from false positives before loosening data or site checks. |
+| Day 28 | Complete | `f186a87` | Editorial validator limits are now documented so future runs can distinguish useful strictness from false positives before loosening data or site checks. |
 
 ## Next Useful Task
 
