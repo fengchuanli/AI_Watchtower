@@ -19,6 +19,7 @@ const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
 const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
+const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -619,6 +620,26 @@ if (
 }
 
 if (
+  !/Candidate Intake Format/.test(candidateIntakeFormat) ||
+  !/candidateUrl/.test(candidateIntakeFormat) ||
+  !/sourceBackedFact/.test(candidateIntakeFormat) ||
+  !/aiRelevance/.test(candidateIntakeFormat) ||
+  !/proofBoundary/.test(candidateIntakeFormat) ||
+  !/nextIndependentCheck/.test(candidateIntakeFormat) ||
+  !/duplicateStatus/.test(candidateIntakeFormat) ||
+  !/copyrightPosture/.test(candidateIntakeFormat) ||
+  !/draftingDecision/.test(candidateIntakeFormat) ||
+  !/`draft`[\s\S]*`hold`[\s\S]*`reject`/.test(candidateIntakeFormat) ||
+  !/Do not paste source paragraphs/.test(candidateIntakeFormat) ||
+  !/candidate-intake-format\.md/.test(candidateSourceChecklist) ||
+  !/candidate-intake-format\.md/.test(readme) ||
+  !/sourceBackedFact/.test(candidateSourceChecklist) ||
+  !/nextIndependentCheck/.test(candidateSourceChecklist)
+) {
+  errors.push("Candidate gathering must define a lightweight intake record before drafting news copy.");
+}
+
+if (
   !/report-duplicate-candidates\.mjs/.test(candidateSourceChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
   !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
@@ -653,7 +674,8 @@ if (
 }
 
 if (
-  !/2026-06-20 through 2026-07-19/.test(optimizationPlan) ||
+  !/2026-06-24 through 2026-07-23/.test(optimizationPlan) ||
+  !/Candidate Intake And Editorial Triage/.test(optimizationPlan) ||
   !/create the next 30-day plan/.test(optimizationPlan) ||
   !/Do not stop daily optimization/.test(optimizationPlan)
 ) {
@@ -694,7 +716,8 @@ if (
 if (
   !/docs\/copyright-safety\.md/.test(optimizationPlan) ||
   !/Preserve the balance: make AI news understandable/.test(optimizationPlan) ||
-  !/Day 0: Establish copyright-safety rules/.test(optimizationPlan)
+  !/copyright, source, duplicate, or vendor-claim boundaries/.test(optimizationPlan) ||
+  !/candidate workflow, or future optimization plans/.test(optimizationPlan)
 ) {
   errors.push("Optimization plan must prioritize copyright safety before further content expansion.");
 }
@@ -753,26 +776,19 @@ if (
 if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
-  !/2026-06-20 through 2026-07-19/.test(optimizationDecisionIndex) ||
-  !/Phase 5, Rollover And Next Plan/.test(optimizationDecisionIndex) ||
-  !/Day 15[\s\S]*9445425[\s\S]*Cross-edition trend notes/.test(optimizationDecisionIndex) ||
-  !/Day 16[\s\S]*19403f2[\s\S]*Company tag pages/.test(optimizationDecisionIndex) ||
-  !/Day 17[\s\S]*898216d[\s\S]*Topic sections/.test(optimizationDecisionIndex) ||
-  !/Day 18[\s\S]*e6bc26d[\s\S]*Archive page/.test(optimizationDecisionIndex) ||
-  !/Day 19[\s\S]*5a98d51[\s\S]*latest history/.test(optimizationDecisionIndex) ||
-  !/Day 20[\s\S]*This index now summarizes recent optimization decisions/.test(optimizationDecisionIndex) ||
-  !/Day 21[\s\S]*787cf06[\s\S]*Cross-page navigation copy/.test(optimizationDecisionIndex) ||
-  !/Day 22[\s\S]*freshSourceFact/.test(optimizationDecisionIndex) ||
-  !/Day 23[\s\S]*source-owner concentration/.test(optimizationDecisionIndex) ||
-  !/Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
-  !/Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
+  !/2026-06-24 through 2026-07-23/.test(optimizationDecisionIndex) ||
+  !/Phase 1, Candidate Intake And Editorial Triage/.test(optimizationDecisionIndex) ||
+  !/Previous Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
+  !/Previous Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
+  !/Previous Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Day 27[\s\S]*[Vv]endor-claim next checks/.test(optimizationDecisionIndex) ||
-  !/Day 28[\s\S]*Editorial validator limits/.test(optimizationDecisionIndex) ||
-  !/Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 30/.test(optimizationDecisionIndex) ||
+  !/Previous Day 27[\s\S]*Vendor-claim next checks/.test(optimizationDecisionIndex) ||
+  !/Previous Day 28[\s\S]*Editorial validator limits/.test(optimizationDecisionIndex) ||
+  !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
+  !/Previous Day 30[\s\S]*optimization-plan\.md/.test(optimizationDecisionIndex) ||
+  !/Day 0[\s\S]*candidate-intake-format\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 1/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

@@ -1,6 +1,6 @@
 # Candidate Source Checklist
 
-Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. It is a gate for source candidates, not a replacement for `docs/editorial-checklist.md` after drafting.
+Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md` or `docs/editorial-checklist.md` after drafting.
 
 ## 1. Candidate Identity
 
@@ -60,4 +60,4 @@ Only hand a candidate to drafting when it can answer these six prompts:
 5. What evidence would weaken or downgrade the claim?
 6. Which original source link should readers use for full context?
 
-After drafting, run `docs/editorial-checklist.md` and `node scripts/validate-data.mjs` before committing.
+Before drafting, capture those answers in `docs/candidate-intake-format.md` terms: `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, `draftingDecision`, and `decisionReason`. After drafting, run `docs/editorial-checklist.md` and `node scripts/validate-data.mjs` before committing.

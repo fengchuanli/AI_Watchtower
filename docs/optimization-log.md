@@ -1,4 +1,27 @@
 
+## 2026-06-24 20:04 JST
+
+- Focus: Completed the previous plan's Day 30 rollover and the new 2026-06-24 to 2026-07-23 plan's Day 0 content-workflow task. The new plan shifts the next cycle toward lower-friction daily news updates, candidate triage, archive reliability, reader-first homepage copy, detail continuity, and validation. Added a lightweight candidate-intake format so future semi-automated gathering records source-backed fact, AI relevance, proof boundary, next independent check, duplicate status, copyright posture, and draft/hold/reject decision before writing news copy.
+- Changed files:
+  - `docs/optimization-plan.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/monthly-optimization-summary.md`, `docs/news-data-format.md`, `docs/candidate-source-checklist.md`, and `docs/optimization-decision-index.md`; continued after Day 29 because the decision index pointed to Day 30 rollover.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, the new plan window, the updated decision index, and the candidate-intake documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Pending.
+
 ## 2026-06-24 18:01 JST
 
 - Focus: Completed Phase 5 Day 29 by updating the monthly optimization summary for the current 2026-06-20 to 2026-07-19 plan. The summary now names concrete improvements in edition framing, detail briefings, discovery paths, editorial safety, candidate workflow, and publishing resilience, then lists remaining weaknesses and Day 30 priorities for the next 30-day plan.
