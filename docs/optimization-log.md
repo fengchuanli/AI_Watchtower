@@ -1,4 +1,27 @@
 
+## 2026-06-25 08:08 JST
+
+- Focus: Published the 2026-06-25 08:00 JST AI news intelligence update. This edition uses two official-source signals and one reliable-media follow-up to explain AI moving into external constraints: OpenAI/Broadcom Jalapeno inference hardware, Mistral connector governance for production agents, and Axios reporting on mixed primary results after AI political spending.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read the automation memory, `data/sources.json`, `docs/source-policy.md`, and `docs/news-data-format.md` before editing.
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Checked official/source-guided surfaces including OpenAI News, Anthropic Newsroom, Mistral News, Google DeepMind, Microsoft AI/Source, Meta AI Blog, NVIDIA AI Blog, Hugging Face/OpenAI developer RSS context, and reliable media search context.
+  - Preserved original URLs and kept OpenAI performance/cost claims, Mistral governance-effect claims, and Axios election-influence interpretation bounded by explicit next checks: technical reports, third-party benchmarks, partner delivery files, customer audits, FEC disclosures, official election data, and state-law text.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 更新08点AI新闻情报.
+- Git note: `git pull --ff-only origin main` failed before editing due to GitHub DNS resolution in this environment; local commit was created, but `git push origin main` failed with the same `ssh: Could not resolve hostname github.com: -65563` error.
+
 ## 2026-06-24 20:04 JST
 
 - Focus: Completed the previous plan's Day 30 rollover and the new 2026-06-24 to 2026-07-23 plan's Day 0 content-workflow task. The new plan shifts the next cycle toward lower-friction daily news updates, candidate triage, archive reliability, reader-first homepage copy, detail continuity, and validation. Added a lightweight candidate-intake format so future semi-automated gathering records source-backed fact, AI relevance, proof boundary, next independent check, duplicate status, copyright posture, and draft/hold/reject decision before writing news copy.

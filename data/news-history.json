@@ -1,8 +1,312 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-24",
-  "totalItems": 51,
+  "updatedAt": "2026-06-25",
+  "totalItems": 54,
   "editions": [
+    {
+      "id": "news-0800-2026-06-25",
+      "date": "2026-06-25",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "08:00 JST 发布",
+      "note": "本期为 2026-06-25 08:00 JST 新闻情报快照。",
+      "operationalStatus": "已尝试拉取 origin/main 但 GitHub DNS 失败；已检查官方入口、可靠媒体、历史重复 URL 和来源边界。",
+      "editorialInterpretation": "08:00 版把重点放在 AI 推理基础设施、企业 Agent 连接治理和 AI 政策资金的结果核查；官方来源支持发布事实，性能、采用和选举影响仍需独立数据补证。",
+      "readerFrame": {
+        "headline": "阅读本期：用三条信号更新推理成本、Agent 权限和政策资金边界",
+        "whyItMatters": "三条信号共同说明，AI 落地正在从模型能力转向推理芯片、连接器权限和政治约束：谁能控制成本、身份和外部许可，谁才更可能稳定规模化。",
+        "useThisIssueFor": [
+          "基础设施和云团队检查自研推理芯片是否会改变供应商依赖、单位成本和交付时间表。",
+          "企业平台和安全团队更新 Agent 连接器、服务账号、工具级权限和 MCP 调试清单。",
+          "政策和公共事务团队把 AI PAC、数据中心选区和州级 AI 安全立场纳入选举监测。"
+        ],
+        "notProvenYet": [
+          "不能证明 OpenAI Jalapeno 已达到或超过现有量产加速器的独立性能水平。",
+          "不能证明 Mistral 连接器治理已经在客户侧降低 Agent 权限或身份风险。",
+          "不能证明 AI 竞选资金已经决定初选结果或让反行业立场具有普遍政治优势。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "08:00 版新增两条官方来源和一条媒体后续",
+        "freshFacts": [
+          "本期新增事实：OpenAI 6 月 24 日宣布与 Broadcom 推出 Jalapeno 推理芯片，并称样片已在实验室运行机器学习负载。",
+          "本期新增事实：Mistral 6 月 24 日发布连接器治理更新，包含工具级控制、连接器作用域 API key、多账号连接和调试器。",
+          "本期新增事实：Axios 6 月 24 日报道 AI 政治资金在纽约、犹他等初选后的混合结果。"
+        ],
+        "repeatedContext": [
+          "昨日 17:00 的 Microsoft、Micron/Anthropic 和 AI PAC 媒体背景仍是基础设施与政策背景，本期只推进非重复 URL。",
+          "昨日 08:00 的 Claude Tag、Mistral OCR 4 和 OpenAI 科学案例仍是生产应用背景，本期不重复其来源。",
+          "此前 OpenAI Daybreak、DeepMind Agent 安全和 Microsoft Agent 安全漏洞仍是 Agent 治理背景，不作为本期新事实。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "推理芯片",
+          "count": 1,
+          "meaning": "用来检查模型厂商是否开始把推理成本、芯片架构和数据中心交付纳入全栈竞争。"
+        },
+        {
+          "label": "连接治理",
+          "count": 1,
+          "meaning": "用来更新企业 Agent 接入外部系统时的权限、身份、调试和长任务运行清单。"
+        },
+        {
+          "label": "政策资金",
+          "count": 1,
+          "meaning": "用来检查 AI 资金进入选举后，监管立场和数据中心议题如何被实际投票结果约束。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 2,
+          "role": "两条官方来源可核对发布事实、功能范围和厂商披露数字；性能、采用效果和安全改善仍需第三方评测、客户指标或审计材料。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 1,
+          "role": "用来作为政策资金和初选结果的背景信号；读者应据此规划 FEC、官方选举结果、候选人文件和州法文本核查，而不是直接判断因果影响。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方发布为主，效果仍待外部证据",
+        "note": "本期 2/3 来自官方来源，适合确认发布和功能边界；OpenAI 性能、Mistral 治理效果和 Axios 政治影响都没有升级为独立事实结论。",
+        "nextCheck": "下一批优先核对 OpenAI 技术报告、Broadcom/数据中心伙伴交付材料、Mistral 客户侧审计、FEC 披露和州级选举数据。"
+      },
+      "trendNotes": [
+        {
+          "topic": "ai-inference-stack",
+          "label": "推理栈垂直整合",
+          "note": "跨期看，AI 基础设施信号从电力、内存和云资本开支继续推进到模型厂商自研推理加速器。",
+          "boundary": "这仍不能证明单位推理成本已经下降；仍需技术报告、量产交付、第三方基准和云端价格指标。"
+        },
+        {
+          "topic": "agent-governance",
+          "label": "Agent 连接治理",
+          "note": "跨期看，Agent 从 Slack 协作、长任务和安全漏洞，继续进入连接器权限、服务账号和 MCP 调试这类生产控制面。",
+          "boundary": "这仍不能证明企业风险已被解决；仍需客户侧部署指标、安全审计、权限日志和事故率数据。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 1,
+          "itemIds": [
+            "openai-broadcom-jalapeno-inference-chip-2026-06-24"
+          ],
+          "meaning": "用来更新推理芯片、数据中心伙伴、单位成本和交付时间表观察表。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 1,
+          "itemIds": [
+            "mistral-connectors-governance-controls-2026-06-24"
+          ],
+          "meaning": "用来检查 Agent 接外部工具时的权限、身份、调试和长任务依赖。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "axios-ai-money-primary-results-2026-06-24"
+          ],
+          "meaning": "用来更新 AI 政治资金、初选结果、数据中心议题和州级 AI 安全立场监测。"
+        }
+      ],
+      "itemCount": 3,
+      "sourceConcentration": {
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "count": 1,
+        "share": "1/3",
+        "note": "本期没有单一来源占多数；但官方发布占 2/3，效果判断需等待外部证据。",
+        "nextCheck": "下一批优先核对第三方基准、客户审计、FEC 披露、选举结果数据和合作伙伴交付文件。"
+      },
+      "items": [
+        {
+          "id": "axios-ai-money-primary-results-2026-06-24",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios 报道 AI 政治资金在初选后遇到阻力，监管立场未被简单压平",
+          "body": "Axios 6 月 24 日报道，AI 相关政治资金已成为选举版图的一部分，但纽约和犹他初选结果显示，其影响并不是单向碾压。",
+          "summary": "Axios 将纽约、犹他等初选结果放在 AI 资金、AI 安全立场和数据中心议题的同一张政治地图上，提示监管路线仍受地方选民约束。",
+          "whyItMatters": "AI 公司和监管倡议者不能只看资金流向，还要看候选人立场、数据中心争议和地方选区结果如何共同改变政策风险。",
+          "detailBody": "Axios 报道称，AI 资金已经进入选举格局，但纽约 Alex Bores 败选、犹他 Doug Fiefia 胜选以及 Blake Moore 相关竞选显示，AI 安全立场、行业资金和数据中心议题的政治结果更复杂。",
+          "trend": "趋势判断：AI 政策正在从技术公司游说，进入初选、地方数据中心争议和州级 AI 安全立场的组合战。",
+          "detailTrend": "昨日的 AI PAC 信号需要用选举结果回看。Axios 的后续报道说明，资金能放大议题和候选人能见度，但不能自动决定候选人胜负；数据中心、地方监管和州级 AI 安全立场仍会重新塑造政策叙事。",
+          "whyRanked": "它给昨日 AI PAC 资金报道增加了结果反馈，帮助读者避免把政治资金误读成确定政策能力。",
+          "topReason": "这是 AI 政策资金信号的最新结果核查，能修正“资金必胜”的过度解读。",
+          "detailWhyRanked": "本条入选是因为它用初选结果更新了 AI 政治资金的证据边界，并与昨日 Guardian 资金报道形成后续核查；Axios 还把纽约、犹他和数据中心议题放在同一报道框架中，但报道只能作为媒体背景，仍需 FEC、官方结果和候选人文件补证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持结果背景；资金规模、因果影响和政策后果仍需官方披露与选举数据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持结果背景；资金规模、因果影响和政策后果仍需官方披露与选举数据。"
+          },
+          "impact": "政策、公共事务和合规团队需要把 AI 选举风险从“行业资金强弱”拆成资金流、候选人结果、数据中心议题和州级立法四类指标。",
+          "whoShouldCare": "最该关注的是政策团队、公共事务、法务合规、数据中心选址和 AI 公司战略团队。",
+          "readerUse": "政策团队可用它更新 AI 监管观察表：FEC 支出、初选结果、候选人 AI 立场、数据中心地方争议和州法推进。",
+          "nextCheck": "继续核对 FEC 披露、各州官方选举结果、候选人竞选文件、州级 AI 法案文本和数据中心许可记录。",
+          "followUpQuestions": [
+            "AI PAC 支出在纽约初选中到底提升了哪些指标，是否转化为胜选？",
+            "数据中心争议是否会比抽象 AI 安全立场更影响地方候选人和州法？"
+          ],
+          "evidenceThreshold": "需要 FEC 明细、官方选举结果、候选人文件、投票分区数据和州法进展，才能升级为已验证政治影响判断。",
+          "claimBoundary": "Axios 可作为媒体背景说明其报道了初选后的混合结果；不能单独证明 AI 资金造成或未造成某个候选人的胜负。",
+          "counterEvidence": "如果后续 FEC 披露、官方投票数据、候选人文件或州法进展显示 AI 资金与结果高度一致，应下调“资金遇阻”的编辑判断并改为资金影响增强。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/06/24/ai-money-early-test-ballot-box",
+          "originalUrl": "https://www.axios.com/2026/06/24/ai-money-early-test-ballot-box",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 报道提供 AI 资金、纽约和犹他初选、数据中心议题的媒体背景；完整事实、引述和上下文仍应读原文，因果判断需官方数据验证。来源可信度：可靠媒体，中高。",
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-06-25T03:05:46+09:00",
+          "time": "06/25"
+        },
+        {
+          "id": "mistral-connectors-governance-controls-2026-06-24",
+          "category": "tool",
+          "label": "工具",
+          "title": "Mistral 扩展连接器治理，把 Agent 权限控制推进到工具级和账号级",
+          "body": "Mistral 6 月 24 日发布连接器更新，加入工作区/组织级控制、工具级开关、连接器作用域 API key、多账号连接和 MCP 连接调试器。",
+          "summary": "Mistral 把企业 Agent 的外部系统接入从“能连接”推进到“能分权、能追踪、能用服务账号运行”。",
+          "whyItMatters": "生产 Agent 的风险通常出在身份、权限和连接失败；连接器治理成为企业是否敢让 Agent 触达 CRM、代码库和知识库的前置条件。",
+          "detailBody": "Mistral 称新增连接器管理能力：管理员可按组织/工作区和具体工具控制访问，API key 可限定连接器范围，多账号连接可选择任务身份，Debugger 可检查 MCP 连接链路，Workflows 可声明长任务所需连接。页面还标注多项 GA 与 Preview 状态。",
+          "trend": "趋势判断：Agent 平台竞争正在从模型能力，转向企业数据连接、权限边界、服务账号和可观测调试。",
+          "detailTrend": "连接器是 Agent 进入企业系统的控制面。Mistral 的更新显示，厂商开始把工具级权限、服务账号、OAuth/MCP 调试、长任务依赖声明和开发者接口复用作为生产 Agent 的基础功能，而非附加集成。",
+          "whyRanked": "它直接回应企业 Agent 的落地痛点：谁能访问什么工具、代表哪个身份运行、失败时如何追踪。",
+          "topReason": "这是 Agent 平台从演示连接走向生产治理的官方功能信号。",
+          "detailWhyRanked": "本条入选是因为它把 Agent 外部系统接入的权限、身份、认证失败和长任务断连问题结构化，并列出工具级控制、服务账号和 Debugger 等具体功能；官方页面支持功能范围，但减少风险的实际效果仍需客户审计和事故数据验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方来源支持功能范围；安全效果、客户采用和运营收益需要外部审计或部署数据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方来源支持功能范围；安全效果、客户采用和运营收益需要外部审计或部署数据。"
+          },
+          "impact": "企业平台和安全团队需要把连接器当作 Agent 风险边界，而不是普通集成目录：权限、账号和调试链路都要进入上线检查。",
+          "whoShouldCare": "最该关注的是企业 AI 平台、安全工程、身份治理、开发者体验和业务自动化团队。",
+          "readerUse": "安全和平台团队可用它更新 Agent 连接器上线清单：工具级权限、服务账号、OAuth 调试、长任务依赖和审计日志。",
+          "nextCheck": "继续核对 Mistral 文档、客户侧审计材料、连接器权限日志、MCP 调试结果、事故率和第三方安全评估。",
+          "followUpQuestions": [
+            "工具级权限是否默认最小化，还是需要管理员逐项配置？",
+            "连接器 Debugger 和 Workflows 依赖声明能否减少生产 Agent 的认证失败和越权风险？"
+          ],
+          "evidenceThreshold": "需要客户部署案例、安全审计、权限日志、MCP 连接失败率和第三方评估，才能升级为已验证企业 Agent 治理改善。",
+          "claimBoundary": "Mistral 官方页面能证明功能发布和可用性状态；不能证明这些功能已经降低客户侧越权、认证失败或数据泄漏风险。",
+          "counterEvidence": "如果后续客户审计、权限日志、公开事故或第三方评估显示连接器仍易越权、身份混淆或长任务断连，应下调治理改善判断。",
+          "source": "Mistral AI News",
+          "sourceName": "Mistral AI News",
+          "sourceId": "mistral-news",
+          "sourceUrl": "https://mistral.ai/news/more-control-over-connectors/",
+          "originalUrl": "https://mistral.ai/news/more-control-over-connectors/",
+          "sourceRole": "厂商主张",
+          "provenance": "Mistral 官方页面可核对连接器治理功能、GA/Preview 状态和产品范围；安全改善和客户收益属于厂商主张，需客户侧证据。来源可信度：官方来源，高；效果结论待补证。",
+          "trustLevel": "来源层级：官方，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-24T00:00:00+09:00",
+          "time": "06/24"
+        },
+        {
+          "id": "openai-broadcom-jalapeno-inference-chip-2026-06-24",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI 与 Broadcom 发布 Jalapeno 推理芯片，AI 厂商继续下沉到硬件栈",
+          "body": "OpenAI 6 月 24 日宣布与 Broadcom 推出 Jalapeno 推理加速器，称这是其首个 Intelligence Processor，并计划作为多代推理计算平台的第一步。",
+          "summary": "OpenAI 把 Jalapeno 定位为面向 LLM 推理的自研加速器，样片已在实验室运行机器学习负载，目标是降低推理成本并减少供应约束。",
+          "whyItMatters": "当模型厂商开始自研推理芯片，AI 竞争会从模型能力扩展到单位成本、芯片供应、数据中心伙伴和部署时间表。",
+          "detailBody": "OpenAI 称 Jalapeno 是与 Broadcom、Celestica 合作的多代推理平台第一步，样片已在实验室以目标频率和功耗运行机器学习负载，包括 GPT-5.3-Codex-Spark；公告还把 Broadcom 网络、机架集成和 2026 年底部署目标纳入路线。",
+          "trend": "趋势判断：前沿模型公司正在把推理成本和可用性问题前移到芯片、网络、机架和数据中心协同设计。",
+          "detailTrend": "推理正在成为 AI 规模化的关键瓶颈。若模型厂商能把芯片、内核、网络、调度和产品体验放在同一优化目标下，可能改变对通用 GPU 的依赖；但成本优势必须靠独立基准、量产交付和真实服务价格验证。",
+          "whyRanked": "它把 OpenAI 的模型、产品和基础设施路线连成一条硬件链，是 AI 全栈竞争的强信号。",
+          "topReason": "这是模型厂商自研推理硬件从传闻/规划进入公开样片叙事的官方信号。",
+          "detailWhyRanked": "本条排首位，因为 OpenAI 官方把 Jalapeno、Broadcom 网络、Celestica 机架系统、样片负载和 2026 年部署目标放在同一公告里；这些事实足以更新全栈基础设施观察，但不足以确认性能领先。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方来源支持发布事实和路线；性能、成本和规模化交付仍需外部评测与伙伴文件。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方来源支持发布事实和路线；性能、成本和规模化交付仍需外部评测与伙伴文件。"
+          },
+          "impact": "基础设施、云成本和采购团队需要把 OpenAI 从模型供应商重新评估为可能控制推理硬件、网络和部署节奏的全栈平台。",
+          "whoShouldCare": "最该关注的是云基础设施、芯片采购、AI 平台、企业架构和竞争战略团队。",
+          "readerUse": "云和 AI 平台团队可用它更新供应商依赖表：自研 ASIC、Broadcom 网络、数据中心伙伴、部署时间表和单位推理成本。",
+          "nextCheck": "继续核对 OpenAI 后续技术报告、Broadcom 量产/客户材料、数据中心伙伴交付文件、第三方性能基准和云端价格变化。",
+          "followUpQuestions": [
+            "Jalapeno 的实际性能/瓦和延迟是否能在第三方基准中超过现有推理方案？",
+            "OpenAI 2026 年底部署计划会由哪些数据中心伙伴承接，是否影响 API 和 ChatGPT 成本？"
+          ],
+          "evidenceThreshold": "需要 OpenAI 技术报告、第三方基准、Broadcom 量产披露、数据中心交付文件和真实服务价格指标，才能升级为已验证推理成本优势。",
+          "claimBoundary": "官方公告能证明 OpenAI 发布了 Jalapeno 路线和样片状态；不能单独证明性能领先、成本下降或数据中心已按计划交付。",
+          "counterEvidence": "如果后续技术报告、第三方评测、伙伴交付文件或云价格显示性能/瓦不达预期、量产延期或成本未下降，应下调全栈优势判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+          "originalUrl": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方公告可核对 Jalapeno 发布、合作方、样片状态和部署叙事；性能、成本和规模化效果属于厂商主张，需外部材料验证。来源可信度：官方来源，高；效果结论待补证。",
+          "trustLevel": "来源层级：官方，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-24T00:00:00+09:00",
+          "time": "06/24"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-06-24",
       "date": "2026-06-24",
