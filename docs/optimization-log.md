@@ -1,4 +1,24 @@
 
+## 2026-06-24 18:01 JST
+
+- Focus: Completed Phase 5 Day 29 by updating the monthly optimization summary for the current 2026-06-20 to 2026-07-19 plan. The summary now names concrete improvements in edition framing, detail briefings, discovery paths, editorial safety, candidate workflow, and publishing resilience, then lists remaining weaknesses and Day 30 priorities for the next 30-day plan.
+- Changed files:
+  - `docs/monthly-optimization-summary.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/optimization-decision-index.md`; continued after Day 28 because it was already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, the current monthly summary, and the Day 30 decision-index handoff.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `3da3ce7` (`总结本轮优化弱点`). Push pending until network access to GitHub works.
+
 ## 2026-06-24 17:30 JST
 
 - Focus: Improved Phase 4 Day 28 editorial-validator maintainability by documenting intentional validator limits and false-positive review rules. Future runs now have a clear guide for deciding whether to edit content copy, expand narrow validator vocabulary, or keep a strict rule for freshness, duplicates, source concentration, vendor claims, promoted-item briefings, Chinese readability, mobile paragraph length, and source-reference labels.

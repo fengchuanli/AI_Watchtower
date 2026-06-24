@@ -735,14 +735,17 @@ if (
 if (
   !/docs\/monthly-optimization-summary\.md/.test(readme) ||
   !/月度优化总结/.test(monthlyOptimizationSummary) ||
-  !/2026-06-17 至 2026-07-16/.test(monthlyOptimizationSummary) ||
+  !/2026-06-20 至 2026-07-19/.test(monthlyOptimizationSummary) ||
   !/已改善的方向/.test(monthlyOptimizationSummary) ||
   !/仍然薄弱的地方/.test(monthlyOptimizationSummary) ||
   !/下一步优先级/.test(monthlyOptimizationSummary) ||
   !/今日 TOP3/.test(monthlyOptimizationSummary) ||
   !/GitHub Pages/.test(monthlyOptimizationSummary) ||
   !/人工事实判断/.test(monthlyOptimizationSummary) ||
-  !/避免重复劳动/.test(monthlyOptimizationSummary)
+  !/避免重复劳动/.test(monthlyOptimizationSummary) ||
+  !/Day 0 至 Day 29/.test(monthlyOptimizationSummary) ||
+  !/下一次有用任务是 Day 30/.test(monthlyOptimizationSummary) ||
+  !/中文读者理解成本/.test(monthlyOptimizationSummary)
 ) {
   errors.push("Monthly optimization summary must stay discoverable and cover improvements, weaknesses, and next priorities.");
 }
@@ -751,7 +754,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-06-20 through 2026-07-19/.test(optimizationDecisionIndex) ||
-  !/Phase 4, Editorial Safety And Validation/.test(optimizationDecisionIndex) ||
+  !/Phase 5, Rollover And Next Plan/.test(optimizationDecisionIndex) ||
   !/Day 15[\s\S]*9445425[\s\S]*Cross-edition trend notes/.test(optimizationDecisionIndex) ||
   !/Day 16[\s\S]*19403f2[\s\S]*Company tag pages/.test(optimizationDecisionIndex) ||
   !/Day 17[\s\S]*898216d[\s\S]*Topic sections/.test(optimizationDecisionIndex) ||
@@ -768,7 +771,8 @@ if (
   ) ||
   !/Day 27[\s\S]*[Vv]endor-claim next checks/.test(optimizationDecisionIndex) ||
   !/Day 28[\s\S]*Editorial validator limits/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 29/.test(optimizationDecisionIndex) ||
+  !/Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 30/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
