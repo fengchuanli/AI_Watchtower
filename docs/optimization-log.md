@@ -2,6 +2,26 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-24 15:02 JST
+
+- Focus: Improved Phase 4 Day 26 source-policy maintainability by adding concrete promote/hold/source-posture examples for AI-adjacent capital, compute, leadership, and infrastructure events. Future candidate selection now has clearer boundaries for funding, listings, acquisitions, compute commitments, data-center buildout, leadership changes, and vendor infrastructure claims without turning stock or personality noise into AI news.
+- Changed files:
+  - `docs/source-policy.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/source-policy.md`, `docs/editorial-checklist.md`, `docs/candidate-source-checklist.md`, and `docs/optimization-decision-index.md`; continued after Day 25 because it was already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the AI-adjacent source-policy examples guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `7b1087d` (`完善AI相邻事件来源示例`). Push pending until network access to GitHub works.
+
 ## 2026-06-24 14:06 JST
 
 - Focus: Improved Phase 4 Day 25 content-quality workflow by adding a pre-drafting duplicate-candidate report. Semi-automated candidate batches can now be checked for repeated source URLs and near-matching titles against the candidate batch, current news, and historical editions before any item is drafted or promoted.
