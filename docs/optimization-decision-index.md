@@ -26,7 +26,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 24 | Complete | `539ff62` | `docs/candidate-source-checklist.md` now gates semi-automated candidates by source identity, role, evidence, copyright/paywall safety, duplicates, and concentration before drafting. |
 | Day 25 | Complete | `2b7fe85` | `scripts/report-duplicate-candidates.mjs` now produces a pre-drafting report for repeated candidate URLs and near-matching titles against current and historical items. |
 | Day 26 | Complete | `7b1087d` | `docs/source-policy.md` now gives promote/hold/source-posture examples for AI-adjacent capital, compute, leadership, and infrastructure events. |
-| Day 27 | Complete | `85fb2f6` | Vendor-claim next checks now need to name independent evidence directly, so customer stories, benchmark pages, and vendor-written case studies point readers to the next external proof path. |
+| Day 27 | Complete | `7cf3f07` | Vendor-claim next checks now need to name independent evidence directly, so customer stories, benchmark pages, and vendor-written case studies point readers to the next external proof path. |
 
 ## Next Useful Task
 
