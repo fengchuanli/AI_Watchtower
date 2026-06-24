@@ -1,3 +1,13 @@
+
+## 2026-06-24 17:00 JST
+
+- Focus: 17:00 JST news intelligence update; shifted from the 08:00 official product/application feed to reliable-media signals about AI infrastructure, supply chain, and policy-money constraints.
+- Changed files: `data/news.json`, `data/news-history.json`, `data/sources.json`, `docs/optimization-log.md`.
+- Source posture: used WSJ, MarketWatch, and The Guardian as reliable-media background; preserved original URLs; kept all Microsoft, Micron/Anthropic, and AI PAC implications as reported signals pending official filings, contracts, FEC records, or customer-side data.
+- Verification: passed `node --check app.js`; syntax checks for `all-news.js`, `news-detail.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`; `node scripts/validate-data.mjs`; `node scripts/validate-site.mjs`; `node scripts/validate-pages.mjs`; JSON parsing for `data/news.json`, `data/news-history.json`, `data/sources.json`, and optional `package-lock.json`; Python HTML parsing for 6 HTML files; and `git diff --check`.
+- Commit note: 更新17点AI新闻情报.
+- Git note: `git pull --ff-only origin main` failed before editing due to GitHub DNS resolution in this environment; the local commit was created, but `git push origin main` failed three times with the same `ssh: Could not resolve hostname github.com: -65563` error.
+
 # AI Watchtower Optimization Log
 
 Use this file to record every automated or manual optimization. New entries go at the top.
