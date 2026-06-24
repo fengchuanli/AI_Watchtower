@@ -22,7 +22,7 @@ Use this file to record every automated or manual optimization. New entries go a
   - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
   - Ran `node scripts/report-duplicate-candidates.mjs` with a clean temporary candidate batch and confirmed no matches.
   - Ran `node scripts/report-duplicate-candidates.mjs` with a repeated OpenAI candidate URL/title and confirmed it reports the duplicate and exits non-zero.
-- Commit: Local implementation commit `2b7fe85` (`增加候选重复报告`).
+- Commit: Local implementation commit `2b7fe85` (`增加候选重复报告`); push failed because this environment could not resolve `github.com`.
 
 ## 2026-06-24 08:07 JST
 
