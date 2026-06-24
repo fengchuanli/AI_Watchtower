@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-20 through 2026-07-19
 - Current phase: Phase 4, Editorial Safety And Validation
-- Last indexed run: 2026-06-23 21:00 JST
+- Last indexed run: 2026-06-24 14:00 JST
 - Network status: GitHub DNS resolution failed in recent runs; local commits may be ahead of `origin/main`.
 
 ## Recent Plan-Day Decisions
@@ -24,12 +24,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 22 | Complete | `3fa91e1` | Stale current-feed items now need a source-specific `freshSourceFact` exception with a fresh source timestamp, URL, type, and concrete new source fact. |
 | Day 23 | Complete | `7d39ab9` | Current editions now validate and render source-owner concentration when one registered `sourceId` supplies most of the batch. |
 | Day 24 | Complete | `539ff62` | `docs/candidate-source-checklist.md` now gates semi-automated candidates by source identity, role, evidence, copyright/paywall safety, duplicates, and concentration before drafting. |
+| Day 25 | Complete | `785c5d3` | `scripts/report-duplicate-candidates.mjs` now produces a pre-drafting report for repeated candidate URLs and near-matching titles against current and historical items. |
 
 ## Next Useful Task
 
-- Continue with Day 25: add a duplicate-candidate report for URLs and near-matching titles before publication.
+- Continue with Day 26: improve source-policy examples for AI-adjacent capital, compute, leadership, and infrastructure events.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 25 first.
-- If Day 25 is already complete, move to Day 26 and improve source-policy examples for AI-adjacent capital, compute, leadership, and infrastructure events.
+- If Day 26 is already complete, move to Day 27 and add validation that vendor-claim items name the independent evidence needed next.
 
 ## Update Rules
 

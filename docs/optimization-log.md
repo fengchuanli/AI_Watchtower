@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-24 14:06 JST
+
+- Focus: Improved Phase 4 Day 25 content-quality workflow by adding a pre-drafting duplicate-candidate report. Semi-automated candidate batches can now be checked for repeated source URLs and near-matching titles against the candidate batch, current news, and historical editions before any item is drafted or promoted.
+- Changed files:
+  - `scripts/report-duplicate-candidates.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/candidate-source-checklist.md`
+  - `docs/editorial-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/candidate-source-checklist.md`, `docs/editorial-checklist.md`, and `docs/optimization-decision-index.md`; continued after Day 24 because it was already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the duplicate-candidate workflow guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Ran `node scripts/report-duplicate-candidates.mjs` with a clean temporary candidate batch and confirmed no matches.
+  - Ran `node scripts/report-duplicate-candidates.mjs` with a repeated OpenAI candidate URL/title and confirmed it reports the duplicate and exits non-zero.
+- Commit: `785c5d378e254912c430a4a8b013bff04787f50b` (`增加候选重复报告`).
+
 ## 2026-06-24 08:07 JST
 
 - Focus: Published the 2026-06-24 08:00 JST AI news intelligence update. This edition uses three non-duplicate June 23 official-source signals to explain AI moving into production workflows: Anthropic Claude Tag for Slack team Agent collaboration, Mistral OCR 4 for structured document intelligence, and OpenAI's GPT-5 immunology applied-AI case study.

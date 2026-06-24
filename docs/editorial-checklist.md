@@ -2,7 +2,7 @@
 
 这份清单用于人工编辑或自动化写入 `data/news.json` 前的内容审核。目标不是追求最快发布，而是让标题、摘要、来源和编辑判断都能被读者复核。
 
-编辑前先阅读 `docs/product-principles.md` 和 `docs/copyright-safety.md`。半自动采集或批量候选 URL 进入起草前，还要先使用 `docs/candidate-source-checklist.md`，把来源身份、来源角色、最小证据、版权/付费墙风险、重复 URL 和来源主体集中度筛掉。AI Watchtower 的内容目标是帮助不擅长英语和 AI 情报收集的中文读者轻松理解重要变化，因此每条内容都要优先解释清楚“发生了什么、为什么值得看、可信到什么程度、接下来该看哪里”。同时，本站不能成为原文的中文替代品；媒体来源只抽取最小必要事实，主要价值应来自本站自己的趋势判断、读者使用方法和核验边界。
+编辑前先阅读 `docs/product-principles.md` 和 `docs/copyright-safety.md`。半自动采集或批量候选 URL 进入起草前，还要先使用 `docs/candidate-source-checklist.md`，把来源身份、来源角色、最小证据、版权/付费墙风险、重复 URL、近似标题和来源主体集中度筛掉；批量候选应先跑 `node scripts/report-duplicate-candidates.mjs <candidate-file.json>`，再进入正式起草。AI Watchtower 的内容目标是帮助不擅长英语和 AI 情报收集的中文读者轻松理解重要变化，因此每条内容都要优先解释清楚“发生了什么、为什么值得看、可信到什么程度、接下来该看哪里”。同时，本站不能成为原文的中文替代品；媒体来源只抽取最小必要事实，主要价值应来自本站自己的趋势判断、读者使用方法和核验边界。
 
 ## 一、先确认内容状态
 

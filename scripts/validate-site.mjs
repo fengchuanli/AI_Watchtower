@@ -14,10 +14,12 @@ const tagsJs = readFileSync("tags.js", "utf8");
 const archiveJs = readFileSync("archive.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
+const duplicateCandidateReportJs = readFileSync("scripts/report-duplicate-candidates.mjs", "utf8");
 const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
 const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
+const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
@@ -616,6 +618,20 @@ if (
 }
 
 if (
+  !/report-duplicate-candidates\.mjs/.test(candidateSourceChecklist) ||
+  !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
+  !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
+  !/getTitleSimilarity/.test(duplicateCandidateReportJs) ||
+  !/data\/news-history\.json/.test(duplicateCandidateReportJs) ||
+  !/process\.exit\(report\.sourceMatches\.length \|\| report\.titleMatches\.length \? 1 : 0\)/.test(
+    duplicateCandidateReportJs,
+  ) ||
+  !/Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex)
+) {
+  errors.push("Candidate gathering must include a duplicate-candidate report for repeated URLs and near-matching titles before drafting.");
+}
+
+if (
   !/class="news-card-body"/.test(appJs) ||
   !/\.news-card\s*\{[^}]*display:\s*flex;[^}]*gap:\s*16px;/s.test(styles) ||
   !/\.news-card-body\s*\{[^}]*display:\s*grid;[^}]*gap:\s*12px;/s.test(styles) ||
@@ -745,7 +761,8 @@ if (
   !/Day 22[\s\S]*freshSourceFact/.test(optimizationDecisionIndex) ||
   !/Day 23[\s\S]*source-owner concentration/.test(optimizationDecisionIndex) ||
   !/Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
+  !/Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

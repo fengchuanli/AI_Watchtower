@@ -45,6 +45,7 @@ Skip candidates that are routine marketing, repeated coverage of an already arch
 
 - Check `data/news-history.json` for the normalized source URL before publishing.
 - Check for near-matching Chinese or English titles before treating a candidate as new.
+- For a batch of semi-automated candidates, write the discovered `title`, `sourceUrl`, and optional `publishedAt` values into a temporary JSON file and run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` before drafting. Treat any repeated URL or near-title match as a hold signal until the editor confirms a genuinely new source fact.
 - If one source owner supplies most of the batch, prepare a `sourceConcentration` caveat and name the independent owner or source type to check next.
 - Do not republish old archive items as current news unless a fresh source-specific fact changes the editorial value.
 
