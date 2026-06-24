@@ -73,6 +73,7 @@ When a source is mainly a company narrative, customer story, policy proposal, be
 - Do not treat vendor-written outcomes as independent proof of market adoption, ROI, safety, clinical effect, legal status, customer satisfaction, or regulatory acceptance.
 - Keep `verificationStatus: "已核验"` only when the central sentence is limited to "this vendor made this claim or proposal" and the page supports that sentence.
 - Require `provenance`, `claimBoundary`, `nextCheck`, and `evidenceThreshold` to name the missing external confirmation, such as customer-side metrics, paper replication, regulator text, contract filing, audit result, or independent benchmark.
+- Write `nextCheck` as the immediate independent-evidence path for readers: it should name the specific customer, third-party, paper, regulator, audit, filing, contract, original-data, or expert-review source to check next, not just say "继续观察" or repeat the vendor's own page.
 - Downgrade or skip the item if the narrative is vivid but the source cannot support a concrete event, timeline, tension, and next verification step.
 
 ## Automation Notes

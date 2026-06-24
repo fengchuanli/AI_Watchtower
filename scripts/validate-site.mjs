@@ -765,7 +765,8 @@ if (
   !/Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 27/.test(optimizationDecisionIndex) ||
+  !/Day 27[\s\S]*[Vv]endor-claim next checks/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 28/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1022,7 +1023,8 @@ if (
   !/Hold or skip when/.test(sourcePolicy) ||
   !/what AI capability or constraint changed/.test(sourcePolicy) ||
   !/Jensen Huang/.test(sourcePolicy) ||
-  !/Elon Musk\/xAI\/SpaceX/.test(sourcePolicy)
+  !/Elon Musk\/xAI\/SpaceX/.test(sourcePolicy) ||
+  !/immediate independent-evidence path/.test(sourcePolicy)
 ) {
   errors.push("Source policy must include concrete promote/hold examples for AI-adjacent capital, compute, leadership, and infrastructure events.");
 }

@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-20 through 2026-07-19
 - Current phase: Phase 4, Editorial Safety And Validation
-- Last indexed run: 2026-06-24 15:00 JST
+- Last indexed run: 2026-06-24 16:04 JST
 - Network status: GitHub DNS resolution failed in recent runs; local commits may be ahead of `origin/main`.
 
 ## Recent Plan-Day Decisions
@@ -26,12 +26,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 24 | Complete | `539ff62` | `docs/candidate-source-checklist.md` now gates semi-automated candidates by source identity, role, evidence, copyright/paywall safety, duplicates, and concentration before drafting. |
 | Day 25 | Complete | `2b7fe85` | `scripts/report-duplicate-candidates.mjs` now produces a pre-drafting report for repeated candidate URLs and near-matching titles against current and historical items. |
 | Day 26 | Complete | `7b1087d` | `docs/source-policy.md` now gives promote/hold/source-posture examples for AI-adjacent capital, compute, leadership, and infrastructure events. |
+| Day 27 | Complete | `85fb2f6` | Vendor-claim next checks now need to name independent evidence directly, so customer stories, benchmark pages, and vendor-written case studies point readers to the next external proof path. |
 
 ## Next Useful Task
 
-- Continue with Day 27: add validation that vendor-claim items name the independent evidence needed next.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 25 first.
-- If Day 27 is already complete, move to Day 28 and review editorial validators for false positives and intentional limits.
+- Continue with Day 28: review editorial validators for false positives and document intentional limits.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 28 first.
+- If Day 28 is already complete, move to Day 29 and summarize this cycle's improvements and remaining weaknesses.
 
 ## Update Rules
 

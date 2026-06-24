@@ -417,6 +417,8 @@ function validateVendorClaimBoundary(item, context) {
   const evidenceThreshold = String(item.evidenceThreshold || "");
   const counterEvidence = String(item.counterEvidence || "");
   const combinedVerificationText = [claimBoundary, nextCheck, evidenceThreshold, counterEvidence].join("\n");
+  const independentEvidencePattern =
+    /客户|用户|监管|立法|法律|论文|复现|审计|第三方|独立|基准|benchmark|合同|文件|数据|指标|原文|实验室|专家|评测|部署|上线|公告|报告/;
 
   if (!/主张|声称|提案|厂商|公司|官方/.test(provenance)) {
     errors.push(`${itemLabel} uses 厂商主张 and must frame provenance as a vendor claim or proposal.`);
@@ -426,7 +428,11 @@ function validateVendorClaimBoundary(item, context) {
     errors.push(`${itemLabel} uses 厂商主张 and must state what the vendor narrative does not prove.`);
   }
 
-  if (!/客户|用户|监管|立法|法律|论文|复现|审计|第三方|独立|基准|合同|文件|数据|原文/.test(combinedVerificationText)) {
+  if (!independentEvidencePattern.test(nextCheck)) {
+    errors.push(`${itemLabel} uses 厂商主张 and nextCheck must name the independent evidence needed next.`);
+  }
+
+  if (!independentEvidencePattern.test(combinedVerificationText)) {
     errors.push(`${itemLabel} uses 厂商主张 and must name the external proof needed before upgrading the claim.`);
   }
 }

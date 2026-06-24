@@ -2,6 +2,28 @@
 
 Use this file to record every automated or manual optimization. New entries go at the top.
 
+## 2026-06-24 16:04 JST
+
+- Focus: Improved Phase 4 Day 27 content-quality validation for vendor-claim items. Items marked `sourceRole: "厂商主张"` now need `nextCheck` itself to name the independent evidence readers should look for next, so vendor stories, benchmark pages, and case studies cannot rely on a vague follow-up path while hiding the proof requirement in longer fields.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/source-policy.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, and `docs/optimization-decision-index.md`; continued after Day 26 because it was already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 26 sources, including the stricter vendor-claim next-check rule.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, local references, static page link targets, source-policy guards, and the Day 27 decision-index guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `85fb2f6` (`校验厂商主张后续证据`). Push pending until network access to GitHub works.
+
 ## 2026-06-24 15:02 JST
 
 - Focus: Improved Phase 4 Day 26 source-policy maintainability by adding concrete promote/hold/source-posture examples for AI-adjacent capital, compute, leadership, and infrastructure events. Future candidate selection now has clearer boundaries for funding, listings, acquisitions, compute commitments, data-center buildout, leadership changes, and vendor infrastructure claims without turning stock or personality noise into AI news.
