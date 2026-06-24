@@ -20,7 +20,7 @@
   - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Pending.
+- Commit: Local implementation commit `e1700b1` (`制定候选采集记录规范`). Push pending until network access to GitHub works.
 
 ## 2026-06-24 18:01 JST
 

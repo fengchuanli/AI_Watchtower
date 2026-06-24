@@ -20,8 +20,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Previous Day 27 | Complete | `7cf3f07` | Vendor-claim next checks need to name independent evidence directly, so customer stories, benchmark pages, and vendor-written case studies point readers to the next external proof path. |
 | Previous Day 28 | Complete | `f186a87` | Editorial validator limits are documented so future runs can distinguish useful strictness from false positives before loosening data or site checks. |
 | Previous Day 29 | Complete | `254b175` | `docs/monthly-optimization-summary.md` summarizes the prior cycle's concrete improvements, remaining weaknesses, and next-plan priorities before rollover. |
-| Previous Day 30 | Complete | pending | `docs/optimization-plan.md` now covers 2026-06-24 through 2026-07-23 and shifts the cycle toward lower-friction, trustworthy daily news workflow. |
-| Day 0 | Complete | pending | `docs/candidate-intake-format.md` defines the pre-draft intake record: source-backed fact, AI relevance, proof boundary, next independent check, duplicate status, copyright posture, and draft/hold/reject decision. |
+| Previous Day 30 | Complete | `e1700b1` | `docs/optimization-plan.md` now covers 2026-06-24 through 2026-07-23 and shifts the cycle toward lower-friction, trustworthy daily news workflow. |
+| Day 0 | Complete | `e1700b1` | `docs/candidate-intake-format.md` defines the pre-draft intake record: source-backed fact, AI relevance, proof boundary, next independent check, duplicate status, copyright posture, and draft/hold/reject decision. |
 
 ## Next Useful Task
 
