@@ -27,6 +27,7 @@ npx serve .
 │   ├── candidate-source-checklist.md
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
+│   ├── editorial-validator-limits.md
 │   ├── github-pages-readiness.md
 │   ├── local-preview-qa.md
 │   ├── monthly-optimization-summary.md
@@ -57,6 +58,7 @@ npx serve .
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`
+- 编辑校验误报与限制：`docs/editorial-validator-limits.md`
 - 数据格式：`docs/news-data-format.md`
 - 本地视觉 QA：`docs/local-preview-qa.md`
 - GitHub Pages 发布兼容：`docs/github-pages-readiness.md`

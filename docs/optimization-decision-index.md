@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-20 through 2026-07-19
 - Current phase: Phase 4, Editorial Safety And Validation
-- Last indexed run: 2026-06-24 16:04 JST
+- Last indexed run: 2026-06-24 17:30 JST
 - Network status: GitHub DNS resolution failed in recent runs; local commits may be ahead of `origin/main`.
 
 ## Recent Plan-Day Decisions
@@ -27,12 +27,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 25 | Complete | `2b7fe85` | `scripts/report-duplicate-candidates.mjs` now produces a pre-drafting report for repeated candidate URLs and near-matching titles against current and historical items. |
 | Day 26 | Complete | `7b1087d` | `docs/source-policy.md` now gives promote/hold/source-posture examples for AI-adjacent capital, compute, leadership, and infrastructure events. |
 | Day 27 | Complete | `7cf3f07` | Vendor-claim next checks now need to name independent evidence directly, so customer stories, benchmark pages, and vendor-written case studies point readers to the next external proof path. |
+| Day 28 | Complete | `pending` | Editorial validator limits are now documented so future runs can distinguish useful strictness from false positives before loosening data or site checks. |
 
 ## Next Useful Task
 
-- Continue with Day 28: review editorial validators for false positives and document intentional limits.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 28 first.
-- If Day 28 is already complete, move to Day 29 and summarize this cycle's improvements and remaining weaknesses.
+- Continue with Day 29: summarize what improved during this 30-day cycle and list remaining weaknesses.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 29 first.
+- If Day 29 is already complete, move to Day 30 and write the next 30-day optimization plan.
 
 ## Update Rules
 

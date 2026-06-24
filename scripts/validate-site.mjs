@@ -20,6 +20,7 @@ const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
 const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
+const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
 const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
@@ -766,11 +767,34 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 27[\s\S]*[Vv]endor-claim next checks/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex) ||
+  !/Day 28[\s\S]*Editorial validator limits/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 29/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
   errors.push("Optimization decision index must stay discoverable and summarize recent completed plan days, commit anchors, and the next useful task.");
+}
+
+if (
+  !/docs\/editorial-validator-limits\.md/.test(readme) ||
+  !/Editorial Validator Limits/.test(editorialValidatorLimits) ||
+  !/False-Positive Review Rules/.test(editorialValidatorLimits) ||
+  !/Intentional Limits/.test(editorialValidatorLimits) ||
+  !/Freshness and duplicate checks/.test(editorialValidatorLimits) ||
+  !/Source concentration checks/.test(editorialValidatorLimits) ||
+  !/Vendor-claim checks/.test(editorialValidatorLimits) ||
+  !/Promoted-item briefing checks/.test(editorialValidatorLimits) ||
+  !/Chinese readability and mobile length checks/.test(editorialValidatorLimits) ||
+  !/Source-reference labels/.test(editorialValidatorLimits) ||
+  !/When To Change A Validator/.test(editorialValidatorLimits) ||
+  !/freshSourceFact/.test(editorialValidatorLimits) ||
+  !/sourceConcentration/.test(editorialValidatorLimits) ||
+  !/厂商主张/.test(editorialValidatorLimits) ||
+  !/180 Chinese characters/.test(editorialValidatorLimits) ||
+  !/docs\/source-policy\.md/.test(editorialValidatorLimits) ||
+  !/docs\/copyright-safety\.md/.test(editorialValidatorLimits)
+) {
+  errors.push("Editorial validator limits doc must stay discoverable and cover false positives, intentional limits, and when to change validators.");
 }
 
 if (
