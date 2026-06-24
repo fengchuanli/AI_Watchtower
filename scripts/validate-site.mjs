@@ -762,7 +762,10 @@ if (
   !/Day 23[\s\S]*source-owner concentration/.test(optimizationDecisionIndex) ||
   !/Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
+  !/Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 27/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1011,10 +1014,17 @@ if (
 if (
   !/Leadership and capital shock/.test(sourcePolicy) ||
   !/AI-adjacent business events/.test(sourcePolicy) ||
+  !/AI-adjacent Event Examples/.test(sourcePolicy) ||
+  !/Capital or financing/.test(sourcePolicy) ||
+  !/Compute and data-center buildout/.test(sourcePolicy) ||
+  !/Leadership and strategy/.test(sourcePolicy) ||
+  !/Infrastructure providers/.test(sourcePolicy) ||
+  !/Hold or skip when/.test(sourcePolicy) ||
+  !/what AI capability or constraint changed/.test(sourcePolicy) ||
   !/Jensen Huang/.test(sourcePolicy) ||
   !/Elon Musk\/xAI\/SpaceX/.test(sourcePolicy)
 ) {
-  errors.push("Source policy must include AI leader, capital, acquisition, and AI-adjacent strategic event selection logic.");
+  errors.push("Source policy must include concrete promote/hold examples for AI-adjacent capital, compute, leadership, and infrastructure events.");
 }
 
 if (

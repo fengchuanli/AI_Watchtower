@@ -33,6 +33,19 @@ Use this scoring before publishing:
 
 AI-adjacent business events should be considered when they have a direct AI consequence: compute capacity, model competition, AI talent, enterprise adoption, chip supply, cloud spending, data-center buildout, AI company valuation, acquisition, or regulatory exposure. Do not include celebrity or stock-market noise unless the story can be explained as an AI infrastructure, capital, governance, or product-shift signal.
 
+### AI-adjacent Event Examples
+
+Use these examples when deciding whether capital, compute, leadership, or infrastructure stories belong in the daily batch. They are not investment guidance; they are editorial filters for whether a business event helps a Chinese reader understand a material AI shift.
+
+| Event type | Promote when | Hold or skip when | Source posture |
+| --- | --- | --- | --- |
+| Capital or financing | A funding round, debt facility, IPO/listing plan, valuation reset, or acquisition changes AI model competition, compute access, enterprise distribution, or strategic control of an important AI company. | The only angle is stock price movement, celebrity wealth, investor gossip, routine fundraising, or speculative valuation without a concrete AI consequence. | Prefer company releases, filings, regulator disclosures, or deal participant statements; use reliable media as `媒体背景` and keep the source fact minimal. |
+| Compute and data-center buildout | A chip order, cloud commitment, power deal, sovereign compute plan, or data-center expansion materially changes training/inference capacity, chip supply, deployment geography, or AI cost structure. | The story is generic cloud expansion, real-estate development, or supply-chain commentary that does not name an AI workload, model provider, accelerator, region, or capacity constraint. | Check original cloud, chip, utility, government, or filing sources where possible; record whether numbers are committed capacity, planned capacity, or vendor projection. |
+| Leadership and strategy | A founder, CEO, lab lead, policy leader, or board-level change affects model roadmap, safety governance, capital allocation, product access, or enterprise trust. | It is only personality coverage, conference-stage commentary, social-media conflict, or a quote that does not change a verifiable product, governance, compute, or capital decision. | Treat interviews and media profiles as background; upgrade only with official statements, board filings, policy documents, product changes, or corroborated reporting. |
+| Infrastructure providers | A chipmaker, hyperscaler, networking vendor, observability platform, data provider, or orchestration vendor releases evidence that production AI capacity, reliability, evaluation, security, or cost control is changing. | It is a routine partnership, logo list, benchmark claim, or vendor customer story without deployment scope, independent evidence, or a next-check path. | Label vendor-written outcome claims as `厂商主张`; require customer-side metrics, independent benchmarks, filings, audits, or implementation evidence before stronger conclusions. |
+
+For every promoted AI-adjacent item, the draft should answer: what AI capability or constraint changed, who is affected, what the source proves, what remains unverified, and which independent source would upgrade or downgrade the signal.
+
 Low-priority items should be skipped or kept in source notes when they are routine marketing, small feature updates without a larger pattern, repeated coverage of an already captured source, or claims that cannot be verified.
 
 ## Publishing Rules
