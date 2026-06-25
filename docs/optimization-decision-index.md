@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 1, Candidate Intake And Editorial Triage
-- Last indexed run: 2026-06-24 20:00 JST
+- Last indexed run: 2026-06-25 20:00 JST
 - Network status: GitHub DNS resolution failed during the latest pull attempt; push may need retry when network access returns.
 
 ## Recent Plan-Day Decisions
@@ -22,12 +22,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Previous Day 29 | Complete | `254b175` | `docs/monthly-optimization-summary.md` summarizes the prior cycle's concrete improvements, remaining weaknesses, and next-plan priorities before rollover. |
 | Previous Day 30 | Complete | `e1700b1` | `docs/optimization-plan.md` now covers 2026-06-24 through 2026-07-23 and shifts the cycle toward lower-friction, trustworthy daily news workflow. |
 | Day 0 | Complete | `e1700b1` | `docs/candidate-intake-format.md` defines the pre-draft intake record: source-backed fact, AI relevance, proof boundary, next independent check, duplicate status, copyright posture, and draft/hold/reject decision. |
+| Day 1 | Complete | `pending` | `docs/candidate-priority-rubric.md` ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. |
 
 ## Next Useful Task
 
-- Continue with Day 1: add a candidate priority rubric that ranks candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 1 first.
-- If Day 1 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 2: add a hold/reject reason vocabulary for candidates that should not become current news, including stale, duplicated, paywalled, source-role unclear, AI relevance weak, and proof boundary missing.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 2 first.
+- If Day 2 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

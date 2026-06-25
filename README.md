@@ -25,6 +25,7 @@ npx serve .
 ├── docs/
 │   ├── contributing.md
 │   ├── candidate-intake-format.md
+│   ├── candidate-priority-rubric.md
 │   ├── candidate-source-checklist.md
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
@@ -57,6 +58,7 @@ npx serve .
 - 情报源列表：`data/sources.json`
 - 候选来源筛选清单：`docs/candidate-source-checklist.md`
 - 候选进入起草前记录：`docs/candidate-intake-format.md`
+- 候选优先级评分：`docs/candidate-priority-rubric.md`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`

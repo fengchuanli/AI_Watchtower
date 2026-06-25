@@ -20,6 +20,7 @@ const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
 const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
 const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
+const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -640,6 +641,24 @@ if (
 }
 
 if (
+  !/Candidate Priority Rubric/.test(candidatePriorityRubric) ||
+  !/Reader utility/.test(candidatePriorityRubric) ||
+  !/Evidence strength/.test(candidatePriorityRubric) ||
+  !/Novelty/.test(candidatePriorityRubric) ||
+  !/Source diversity/.test(candidatePriorityRubric) ||
+  !/Copyright safety/.test(candidatePriorityRubric) ||
+  !/priorityScore/.test(candidatePriorityRubric) ||
+  !/priorityDecision/.test(candidatePriorityRubric) ||
+  !/Batch Mix Check/.test(candidatePriorityRubric) ||
+  !/candidate-priority-rubric\.md/.test(candidateIntakeFormat) ||
+  !/candidate-priority-rubric\.md/.test(candidateSourceChecklist) ||
+  !/candidate-priority-rubric\.md/.test(readme) ||
+  !/Day 1[\s\S]*candidate-priority-rubric\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Candidate gathering must include a priority rubric for reader utility, evidence strength, novelty, source diversity, and copyright safety.");
+}
+
+if (
   !/report-duplicate-candidates\.mjs/.test(candidateSourceChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
   !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
@@ -788,7 +807,8 @@ if (
   !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 30[\s\S]*optimization-plan\.md/.test(optimizationDecisionIndex) ||
   !/Day 0[\s\S]*candidate-intake-format\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 1/.test(optimizationDecisionIndex) ||
+  !/Day 1[\s\S]*candidate-priority-rubric\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 2/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

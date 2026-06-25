@@ -2,11 +2,12 @@
 
 Use this lightweight record before turning a discovered URL into `data/news.json`. The goal is to preserve the editor's source judgment and drafting decision without copying source text or creating a long internal database.
 
-This format sits between `docs/candidate-source-checklist.md` and `docs/editorial-checklist.md`:
+This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-priority-rubric.md`, and `docs/editorial-checklist.md`:
 
 1. The candidate checklist decides whether a URL is allowed into intake.
 2. This intake record captures the minimum editorial judgment needed before drafting.
-3. The editorial checklist and validators review the finished `data/news.json` item.
+3. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
+4. The editorial checklist and validators review the finished `data/news.json` item.
 
 ## Required Intake Fields
 
@@ -24,6 +25,8 @@ Each candidate record should answer these fields in Chinese unless the value is 
 - `nextIndependentCheck`: The official, original, regulator, filing, paper, customer-side, audit, metric, replication, or independent source needed next.
 - `duplicateStatus`: Result of checking `data/news-history.json`, current `data/news.json`, and `node scripts/report-duplicate-candidates.mjs` when a batch file exists.
 - `copyrightPosture`: How the item will avoid becoming a source-article replacement, especially for media and paywalled sources.
+- `priorityScore`: Optional batch score from `docs/candidate-priority-rubric.md`, used after source safety is settled and before drafting order is chosen.
+- `priorityReason`: Optional one-sentence explanation of the score, especially when a lower-scoring item is held for source diversity or copyright safety.
 - `draftingDecision`: `draft`, `hold`, or `reject`.
 - `decisionReason`: Why the editor chose that decision.
 
@@ -51,6 +54,8 @@ Use `reject` when the candidate is paywall/body-dependent, login-only, repeated,
   "nextIndependentCheck": "下一步需要公司公告、合同文件、监管披露或客户侧指标。",
   "duplicateStatus": "未发现重复 URL；相似标题待人工确认。",
   "copyrightPosture": "只记录最小事实，完整采访、图表、细节和上下文请读原文。",
+  "priorityScore": 6,
+  "priorityReason": "读者效用清楚，但仍需要官方文件确认，且媒体来源必须保持最小事实。",
   "draftingDecision": "hold",
   "decisionReason": "需要找到官方文件后再决定是否进入当前批次。"
 }
@@ -65,5 +70,6 @@ Before drafting, convert the intake record into these `data/news.json` responsib
 - `proofBoundary` informs `claimBoundary`, `provenance`, and media-source `originalDependency`.
 - `nextIndependentCheck` informs `nextCheck`, `evidenceThreshold`, and `followUpQuestions`.
 - `duplicateStatus` and `copyrightPosture` should remain visible in the editor's decision, even when they do not become public copy.
+- `priorityScore` and `priorityReason` decide drafting order only; they should not be published as a false precision score for readers.
 
 Do not paste source paragraphs into intake records. If a field cannot be answered without copying source text, keep the candidate on hold and revisit the original source manually.
