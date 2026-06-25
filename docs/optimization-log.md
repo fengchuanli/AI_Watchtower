@@ -1,4 +1,27 @@
 
+## 2026-06-25 20:03 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 1 content-workflow task. Added a candidate priority rubric so safe candidates can be ranked before drafting by reader utility, evidence strength, novelty, source diversity, and copyright safety, with clear score bands, tie breakers, intake fields, and batch-mix checks.
+- Changed files:
+  - `docs/candidate-priority-rubric.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/candidate-intake-format.md`, `docs/candidate-source-checklist.md`, and `docs/optimization-decision-index.md`; continued with Day 1 because Day 0 was already complete and Day 1 had not been logged.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the candidate-priority rubric documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `e319df1` (`增加候选优先级评分`). Push pending until network access to GitHub works.
+
 ## 2026-06-25 17:03 JST
 
 - Focus: Published the 2026-06-25 17:00 JST AI news intelligence update. This edition uses three reliable-media background signals to explain AI competition moving into model capability protection, science-model tooling, and local election funding: FT on Anthropic's Alibaba/Claude distillation allegations, WSJ on Mirendil's science AI seed round, and Axios Denver on Colorado AI-regulation primary funding.
