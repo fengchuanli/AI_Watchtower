@@ -1,4 +1,27 @@
 
+## 2026-06-25 17:03 JST
+
+- Focus: Published the 2026-06-25 17:00 JST AI news intelligence update. This edition uses three reliable-media background signals to explain AI competition moving into model capability protection, science-model tooling, and local election funding: FT on Anthropic's Alibaba/Claude distillation allegations, WSJ on Mirendil's science AI seed round, and Axios Denver on Colorado AI-regulation primary funding.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read the automation memory, `data/sources.json`, `docs/source-policy.md`, and the existing 08:00 JST data before editing.
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Used existing source-list entries for Financial Times Technology, Wall Street Journal AI & Technology, and Axios AI / Technology; did not add new sources.
+  - Preserved original URLs and kept all three items as `媒体背景` / reported-or-alleged signals. Anthropic/Alibaba attribution, Mirendil product efficacy, and Colorado election impact all require original documents, official responses, disclosures, or independent data before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 更新17点AI新闻情报.
+- Git note: `git pull --ff-only origin main` failed before editing due to GitHub DNS resolution in this environment; a local commit was created, but `git push origin main` failed repeatedly with the same `ssh: Could not resolve hostname github.com: -65563` error.
+
 ## 2026-06-25 08:08 JST
 
 - Focus: Published the 2026-06-25 08:00 JST AI news intelligence update. This edition uses two official-source signals and one reliable-media follow-up to explain AI moving into external constraints: OpenAI/Broadcom Jalapeno inference hardware, Mistral connector governance for production agents, and Axios reporting on mixed primary results after AI political spending.

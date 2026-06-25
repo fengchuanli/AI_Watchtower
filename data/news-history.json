@@ -1,8 +1,298 @@
 {
   "version": 1,
   "updatedAt": "2026-06-25",
-  "totalItems": 54,
+  "totalItems": 57,
   "editions": [
+    {
+      "id": "news-1700-2026-06-25",
+      "date": "2026-06-25",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-06-25 17:00 JST 新闻情报快照。",
+      "operationalStatus": "已尝试拉取 origin/main 但 GitHub DNS 失败；已检查来源清单、来源政策、今日 08:00 版和历史重复 URL。",
+      "editorialInterpretation": "17:00 版聚焦模型能力保护、科学 AI 研发自动化和 AI 资金地方化三条媒体背景信号；本期没有把媒体报道升级为官方确认事实。",
+      "readerFrame": {
+        "headline": "阅读本期：把 AI 竞争从模型发布扩展到能力防护、科研工具和选举资金",
+        "whyItMatters": "三条信号共同说明，AI 竞争正在转向模型输出防护、科学研发自动化和地方政治许可：能力怎么被保护、谁能用 AI 造新模型、政策资金如何影响选区，都会改变落地路径。",
+        "useThisIssueFor": [
+          "模型平台和安全团队检查反蒸馏、账号异常、地区访问和 API 风控清单。",
+          "科研和投资团队跟踪 AI for science 是否从愿景走向可验证产品和客户案例。",
+          "政策团队把 AI 竞选资金从纽约扩展到 Colorado 等地方选区监测。"
+        ],
+        "notProvenYet": [
+          "不能证明 Alibaba 已被独立裁定实施了 Anthropic 指控的全部行为。",
+          "不能证明 Mirendil 已经交付可用科研模型或显著加速科学发现。",
+          "不能证明 AI 相关资金已经决定 Colorado 初选结果或代表公司官方立场。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增三条可靠媒体背景信号",
+        "freshFacts": [
+          "本期新增事实：FT 报道 Anthropic 在致美国参议院银行委员会信中指控 Alibaba 大规模违规访问 Claude。",
+          "本期新增事实：WSJ 报道 Mirendil 完成 2 亿美元种子轮，押注帮助科学家开发专用 AI 模型。",
+          "本期新增事实：Axios Denver 报道 Colorado 第 8 选区民主党初选出现 AI/科技相关资金集中押注。"
+        ],
+        "repeatedContext": [
+          "今日 08:00 的 OpenAI Jalapeno、Mistral 连接器治理和 Axios 纽约/犹他初选后续仍是背景，本期不重复其 URL。",
+          "昨日 17:00 的 Microsoft AI route、Micron/Anthropic 供应链和 Guardian AI PAC 报道仍是基础设施与政策背景。",
+          "延续来源政策中的社区信号限制：本期仍是不采用社区讨论、未具名爆料或搜索摘要作为确认事实。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "模型安全",
+          "count": 1,
+          "meaning": "用来检查前沿模型 API、账号风控、反蒸馏和出口管制边界。"
+        },
+        {
+          "label": "科学 AI",
+          "count": 1,
+          "meaning": "用来更新科研 AI 工具链观察表：产品发布、评测、客户案例和安全治理。"
+        },
+        {
+          "label": "政策资金",
+          "count": 1,
+          "meaning": "用来核对 AI 资金如何进入地方选区、候选人文件和州级监管路线。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 3,
+          "role": "用作媒体背景来建立观察框架，并逐条核对原始信件、公司公告、竞选披露和官方数据后再升级结论。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "全媒体背景，事实边界必须保守",
+        "note": "可靠媒体占 3/3，来源家族集中，结论需原始文件补证。",
+        "nextCheck": "核对信件原文、公司回应、投资公告、FEC和州级披露。"
+      },
+      "trendNotes": [
+        {
+          "topic": "model-capability-protection",
+          "label": "模型能力防护",
+          "note": "跨期看，AI 安全议题从 Agent 权限和模型安全漏洞，延续到 API 输出、账号集群和反蒸馏风控。",
+          "boundary": "仍需原始信件、平台日志、相关方回应和监管材料确认归因与规模。"
+        },
+        {
+          "topic": "ai-policy-localization",
+          "label": "AI 政策地方化",
+          "note": "跨期看，AI 政策资金从纽约初选继续延续到 Colorado 选区，地方选举正在成为监管路线观察点。",
+          "boundary": "仍需竞选财务披露和官方结果证明资金影响，不能把报道金额直接当作胜选因果。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 2,
+          "itemIds": [
+            "ft-anthropic-alibaba-claude-distillation-allegation-2026-06-25",
+            "axios-colorado-ai-regulation-primary-funding-2026-06-25"
+          ],
+          "meaning": "用来更新模型访问管制、反蒸馏立法和 AI 竞选资金监测。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 1,
+          "itemIds": [
+            "wsj-mirendil-science-ai-seed-round-2026-06-25"
+          ],
+          "meaning": "用来评估科研组织和企业研发团队是否需要更新领域模型工具链清单。"
+        }
+      ],
+      "itemCount": 3,
+      "sourceConcentration": {
+        "sourceId": "financial-times-tech",
+        "sourceName": "Financial Times Technology",
+        "count": 1,
+        "share": "1/3",
+        "note": "本期没有单一来源占多数；但全部为媒体来源，官方和原始文件验证优先级较高。",
+        "nextCheck": "找公司公告、监管文件、FEC披露和官方结果交叉验证。"
+      },
+      "items": [
+        {
+          "id": "ft-anthropic-alibaba-claude-distillation-allegation-2026-06-25",
+          "category": "policy",
+          "label": "政策",
+          "title": "FT 报道 Anthropic 指控 Alibaba 大规模违规访问 Claude，模型蒸馏进入政策风险区",
+          "body": "Financial Times 6 月 25 日报道，Anthropic 在致美国参议院银行委员会的信中指控 Alibaba 通过约 2.5 万个欺诈账号与 Claude 产生 2,880 万次以上交互，试图提取其能力。",
+          "summary": "这条信号把模型蒸馏从技术争议推进到出口管制、访问控制和国会立法议程。",
+          "whyItMatters": "如果报道所述属实，前沿模型供应商需要把反蒸馏、账号异常检测、地区访问限制和客户身份验证视为核心安全控制，而不只是服务条款问题。",
+          "detailBody": "FT 报道称，Anthropic 在 6 月 10 日致美国参议院银行委员会的信中指控 Alibaba 使用欺诈账号访问 Claude，并将目标能力描述为 Agent 推理、软件工程和长任务处理。报道还称该访问发生在模型服务不面向中国实体开放的背景下，Anthropic 因此把问题上升为国会立法和出口管制议题。",
+          "trend": "趋势判断：前沿模型竞争正在从训练数据、芯片和模型发布，扩展到“谁能防止自己的模型输出被工业化蒸馏”。",
+          "detailTrend": "过去的 AI 地缘政治焦点常在芯片出口和模型权重；这次报道把 API 输出、账号风控、服务条款执行和国会立法放在同一条链路上。它说明模型能力本身已经成为可被抽取、复制和监管的战略资产。",
+          "whyRanked": "它同时触及 Anthropic、Alibaba、Claude、模型蒸馏、美国国会和出口管制，影响面超过单一产品更新。",
+          "topReason": "这是今日最强的 AI 安全与地缘政策信号，但核心事实仍需原始信件、Alibaba 回应和监管文件补证。",
+          "detailWhyRanked": "本条入选是因为 FT 报道给出信件日期、参议院收件方、账号数量、交互规模和目标能力，WSJ 也报道了相近指控，便于读者建立交叉核查路径。\n相比普通网络安全传闻，它还连接了 Claude 访问限制、模型蒸馏、美国芯片政策和潜在立法诉求；但公开证据仍主要来自媒体取得的信件内容，不能把 Anthropic 的指控直接当作独立裁定。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "FT/WSJ 等可靠媒体报道支撑“Anthropic 提出指控”；是否发生、归因和规模仍需信件原文、Alibaba 回应、平台日志或监管材料验证。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "FT/WSJ 等可靠媒体报道支撑“Anthropic 提出指控”；是否发生、归因和规模仍需信件原文、Alibaba 回应、平台日志或监管材料验证。"
+          },
+          "impact": "AI 平台、安全、合规和政策团队需要把反蒸馏监控、异常账号检测、地区访问控制、客户身份校验和监管披露列入前沿模型风险清单。",
+          "whoShouldCare": "最该关注的是模型平台安全团队、API 风控、法务合规、出口管制团队、政策研究者和使用 Claude/Qwen 生态的企业。",
+          "readerUse": "模型平台、安全和合规团队可用它检查自家模型/API 是否有反蒸馏阈值、账号集群检测、输出限速、客户归因、可疑训练用途处置和监管响应流程。",
+          "nextCheck": "继续核对 Anthropic 致参议院银行委员会信件原文、Alibaba 官方回应、美国国会或监管机构文件、平台风控证据和任何独立取证材料。",
+          "followUpQuestions": [
+            "Anthropic 是否会公开信件原文、检测方法或可审计的账号归因依据？",
+            "美国国会会把模型蒸馏纳入芯片、云基础设施或 API 访问管制吗？"
+          ],
+          "evidenceThreshold": "需要原始信件、Alibaba 或监管方回应、可核验平台日志、账号归因方法和法律/监管文件，才能升级为已确认违规或政策变化。",
+          "claimBoundary": "FT 可支持“Anthropic 在信中提出了这些指控”的媒体事实；不能单独证明 Alibaba 实施了全部行为、规模数字完全准确或构成法律违规。",
+          "counterEvidence": "如果 Alibaba、监管机构、法院文件或独立审计否认归因、规模或违规性质，应下调为未证实争议并移出确认性政策判断。",
+          "source": "Financial Times Technology",
+          "sourceName": "Financial Times Technology",
+          "sourceId": "financial-times-tech",
+          "sourceUrl": "https://www.ft.com/content/8496c940-fdc7-4554-bc8d-7bcc93e7d75c",
+          "originalUrl": "https://www.ft.com/content/8496c940-fdc7-4554-bc8d-7bcc93e7d75c",
+          "sourceRole": "媒体背景",
+          "provenance": "FT 报道提供 Anthropic 信件、账号规模、交互数量和立法诉求的媒体背景；WSJ 另有相近报道可作交叉背景。来源可信度：可靠媒体，中高；核心归因仍待原始文件和相关方回应。",
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "alleged",
+          "publishedAt": "2026-06-25T06:36:50+09:00",
+          "time": "06/25"
+        },
+        {
+          "id": "wsj-mirendil-science-ai-seed-round-2026-06-25",
+          "category": "funding",
+          "label": "资金",
+          "title": "WSJ 报道 Anthropic 前员工创办 Mirendil，押注“给科学家造 AI 的 AI”",
+          "body": "Wall Street Journal 6 月 25 日报道，Mirendil 由 Behnam Neyshabur 和 Harsh Mehta 等 AI 研究人员创办，已完成 2 亿美元种子轮、估值约 10 亿美元。",
+          "summary": "Mirendil 的融资把“AI 辅助 AI 研究”从大实验室内部能力，推向独立科学团队和开源开发者市场。",
+          "whyItMatters": "如果这类工具成立，医学、材料和其他科学团队可能不再只购买通用模型，而是建立能迭代自家模型的研究工作流；但产品尚未发布，效果仍只是创始团队和投资人的主张。",
+          "detailBody": "WSJ 报道称，Mirendil 计划发布模型和产品，帮助科学家为医学、材料等领域开发专用 AI；投资方包括 Andreessen Horowitz、Kleiner Perkins 和 Nvidia。报道还把它放在前沿实验室限制客户用模型训练竞品、以及递归式自我改进安全争议的背景下，因此这不是单纯融资新闻。",
+          "trend": "趋势判断：AI for science 正从“用大模型辅助科研”升级为“用 AI 生成、评测和改进专用科研模型”。",
+          "detailTrend": "OpenAI、Anthropic 等大实验室已经把 AI 用于自身研发；Mirendil 的叙事是把这套能力外部化，让更多实验室构建领域模型。真正的分水岭不是融资额，而是它能否拿出可复现实验、模型发布和科学工作流收益。",
+          "whyRanked": "它把资本、科学 AI、开源竞争和前沿实验室使用限制连到一起，适合作为 AI 研发自动化的中期观察点。",
+          "topReason": "这是资本市场对“自我改进型科研 AI 工具链”的高强度早期押注。",
+          "detailWhyRanked": "本条入选是因为 WSJ 报道给出融资额、估值、创始团队背景、投资方和计划发布方向，能让读者跟踪“AI 辅助 AI 研究”是否外部化。\n它还把 Mirendil 放在前沿实验室限制竞品训练、开源模型追赶和递归式自我改进安全争议中；但公司尚未发布可检验产品，不能把愿景当作已实现的科研能力。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持融资和创始背景；科学效果、模型能力和安全监督机制尚未验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持融资和创始背景；科学效果、模型能力和安全监督机制尚未验证。"
+          },
+          "impact": "科研机构、AI for science 创业公司和企业研发团队应跟踪是否出现面向领域模型开发的工具链，而不是只比较通用聊天模型。",
+          "whoShouldCare": "最该关注的是科研平台、生命科学和材料团队、AI 基础模型创业者、开源模型维护者和技术投资团队。",
+          "readerUse": "科研平台、生命科学、材料研发和投资团队可用它更新观察清单：产品何时发布、是否支持领域数据、是否公开评测、能否复现实验收益、是否有防失控和防滥用机制。",
+          "nextCheck": "继续核对 Mirendil 产品发布、模型技术说明、客户或科研伙伴、公开基准、论文/代码、投资方公告和安全治理文件。",
+          "followUpQuestions": [
+            "Mirendil 的第一款产品是研究 Agent、模型训练工具，还是领域模型生成平台？",
+            "它如何证明“AI 加速 AI 研究”不会只复制大实验室内部流程和安全风险？"
+          ],
+          "evidenceThreshold": "需要官方发布、技术报告、可复现实验、独立客户案例和安全监督细节，才能升级为科学 AI 工作流突破。",
+          "claimBoundary": "WSJ 可支持融资、创始背景和计划描述；不能证明 Mirendil 已经交付可用科学模型或显著加速科研。",
+          "counterEvidence": "如果官方公告显示产品延期，或公开评测数据、客户声明、论文代码和安全说明长期缺失，应下调为高估值早期融资信号。",
+          "source": "Wall Street Journal AI & Technology",
+          "sourceName": "Wall Street Journal AI & Technology",
+          "sourceId": "wall-street-journal-ai",
+          "sourceUrl": "https://www.wsj.com/tech/ai/anthropic-veterans-startup-seeks-to-help-scientists-develop-their-own-ai-09e2f3e5",
+          "originalUrl": "https://www.wsj.com/tech/ai/anthropic-veterans-startup-seeks-to-help-scientists-develop-their-own-ai-09e2f3e5",
+          "sourceRole": "媒体背景",
+          "provenance": "WSJ 报道提供 Mirendil 融资、创始团队、投资方和产品计划的媒体背景；完整采访和上下文应读原文。来源可信度：可靠媒体，中高；产品效果待官方和独立验证。",
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-06-25T04:02:00+09:00",
+          "time": "06/25"
+        },
+        {
+          "id": "axios-colorado-ai-regulation-primary-funding-2026-06-25",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios 报道 Colorado 初选出现 AI 资金集中押注，地方监管立场成竞选变量",
+          "body": "Axios Denver 6 月 25 日报道，科技和 AI 相关资金正在支持 Colorado 第 8 国会选区民主党初选候选人 Manny Rutinel，并把焦点放在其 AI 监管立场上。",
+          "summary": "继纽约初选后，AI 资金和候选人监管立场继续进入地方选举，政策风险开始按选区扩散。",
+          "whyItMatters": "AI 公司和监管倡议者的政治支出不只影响华盛顿叙事，也会改变数据中心、州级 AI 法案和地方经济议题的竞选环境。",
+          "detailBody": "Axios 报道称，与科技行业有关的外部团体投入 550 万美元电视广告支持 Rutinel、攻击竞争对手 Shannon Bird；来自 Anthropic、Google、Meta 和 OpenAI 员工的直接捐款合计约 26.5 万美元。报道把资金与 Rutinel 支持 AI guardrails 的州议会投票联系起来。",
+          "trend": "趋势判断：AI 监管路线正在从联邦游说转为多个地方初选的资金、广告和候选人立场竞争。",
+          "detailTrend": "昨日纽约 AI PAC 结果已经提示资金不等于胜选；Colorado 信号说明资金仍在扩散到新选区。对企业而言，政策风险不再只是国会法案，还包括州法、地方候选人、数据中心许可和劳工议题的组合。",
+          "whyRanked": "它是 08:00 政策资金条目的同日延伸，显示 AI 选举资金不是孤立纽约事件。",
+          "topReason": "这是 AI 政策资金从单场争议扩展到更多地方选区的可跟踪信号。",
+          "detailWhyRanked": "本条入选是因为 Axios Denver 报道给出外部广告支出、直接捐款涉及的科技公司员工来源、候选人 AI 监管投票记录和对手表态，能与纽约初选形成跨地区对照。但报道不能证明资金将决定初选结果，也不能证明捐款代表公司官方立场。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持资金和竞选背景；金额、广告主结构和结果影响需 FEC、官方选举结果和竞选文件复核。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持资金和竞选背景；金额、广告主结构和结果影响需 FEC、官方选举结果和竞选文件复核。"
+          },
+          "impact": "政策、公共事务和数据中心团队需要按州和选区追踪 AI 资金、候选人投票记录、广告主题和地方产业争议。",
+          "whoShouldCare": "最该关注的是 AI 公司公共事务、政策团队、数据中心选址团队、州级监管观察者和竞选资金研究者。",
+          "readerUse": "AI 公司公共事务、政策和数据中心选址团队可用它更新 AI 选举监测表：选区、候选人 AI 立场、外部广告支出、员工捐款、公司官方立场、初选结果和后续州法。",
+          "nextCheck": "继续核对 FEC 和州级竞选财务披露、广告购买记录、官方初选结果、候选人政策文件和 Colorado AI 法案投票记录。",
+          "followUpQuestions": [
+            "科技行业外部支出是否集中在支持 AI guardrails 的候选人，还是因其他地方议题叠加？",
+            "Colorado 选区结果会不会改变州级 AI 法案和数据中心政策谈判？"
+          ],
+          "evidenceThreshold": "需要官方竞选财务披露、广告购买明细、投票结果、候选人文件和公司/员工捐款归因，才能升级为已验证政治影响。",
+          "claimBoundary": "Axios 可作为媒体背景说明报道的支出、捐款和候选人立场；不能单独证明 AI 公司官方控制支出或资金决定选举结果。",
+          "counterEvidence": "如果 FEC 文件、州级披露记录、广告购买数据或官方结果确认资金来源和影响不同，应下调“AI 资金扩散”的编辑判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/local/denver/2026/06/24/ai-leaders-pour-millions-into-8th-district-primary",
+          "originalUrl": "https://www.axios.com/local/denver/2026/06/24/ai-leaders-pour-millions-into-8th-district-primary",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios Denver 报道提供 Colorado 第 8 选区 AI 相关竞选资金和候选人立场的媒体背景；完整事实、引述和本地政治语境应读原文。来源可信度：可靠媒体，中高；金额和因果影响需官方披露验证。",
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-06-25T02:45:12+09:00",
+          "time": "06/25"
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-06-25",
       "date": "2026-06-25",
