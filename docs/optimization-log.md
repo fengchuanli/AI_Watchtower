@@ -1,3 +1,27 @@
+## 2026-06-30 08:09 JST
+
+- Focus: Published the 2026-06-30 08:00 JST AI news intelligence update. This edition adds three non-duplicated June 29 reliable-media background signals: The Verge on OpenAI/Work Louder Codex hardware preview, Business Insider on California-Anthropic Claude public-sector discount access, and Axios on US frontier-model access policy friction.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, and historical duplicate URLs before editing.
+  - Added `theverge-ai` and `businessinsider-ai` to the source registry as reliable-media sources; used existing `axios-ai`.
+  - Kept all three current items as `媒体背景` / reported signals with `originalDependency: must-read`; policy, procurement, and product-preview conclusions require official rules, contracts, filings, company pages, or product specs before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 29 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 更新08点AI新闻情报.
+- Git note: pull failed before editing due to `ssh: Could not resolve hostname github.com: -65563`; local commit was created, but `git push origin main` failed twice with the same DNS resolution error.
+
 ## 2026-06-29 20:05 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 2 content-workflow task. Added a shared hold/reject reason vocabulary so candidate intake can consistently explain stale, duplicated, paywalled, source-role unclear, AI-relevance weak, proof-boundary missing, routine-marketing, unverifiable, and copyright-substitute blockers before drafting news copy.
