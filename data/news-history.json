@@ -1,8 +1,310 @@
 {
   "version": 1,
   "updatedAt": "2026-06-29",
-  "totalItems": 60,
+  "totalItems": 63,
   "editions": [
+    {
+      "id": "news-1700-2026-06-29",
+      "date": "2026-06-29",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-06-29 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断导致 pull 失败；已检查来源清单、来源政策、历史重复 URL 和公开来源。",
+      "editorialInterpretation": "17:00 版从早间模型治理转向企业 Agent 落地、安全模型和规划可靠性；厂商与预印本结论均保留复核边界。",
+      "readerFrame": {
+        "headline": "阅读本期：把 AI 新闻从新模型拉到企业部署、对抗安全和长任务可靠性",
+        "whyItMatters": "三条信号共同说明，AI 的竞争重点正在进入生产系统：企业如何治理 Agent，安全模型如何面对对抗输入，长任务规划如何减少不可执行结果。",
+        "useThisIssueFor": [
+          "企业 CIO、平台团队和安全团队用来检查 Agent 从试点走向生产时需要哪些权限、评估和人工复核。",
+          "开发者和研究团队用来跟踪安全微调、对抗评测、符号校验和长期规划的技术方向。",
+          "普通读者用来理解 AI 进入真实工作后，为什么治理、可靠性和安全比单次回答更重要。"
+        ],
+        "notProvenYet": [
+          "不能把 OpenAI/HP 案例直接当成独立验证的企业 ROI 或全行业采用结论。",
+          "不能把 Yuvion LLM 的预印本结果视为已同行评审的安全基准结论。",
+          "不能证明符号反馈式规划框架已可稳定覆盖真实企业 Agent 工作流。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增三条未重复的官方/研究信号",
+        "freshFacts": [
+          "本期新增事实：OpenAI 6 月 28 日发布 HP Frontier 战略合作案例，描述 HP 从试点扩展到企业级 Agent 与工作流部署。",
+          "本期新增事实：arXiv 6 月 26 日发布 Yuvion LLM 论文，提出面向对抗内容安全和 Agent 场景的模型与评测集合。",
+          "本期新增事实：arXiv 6 月 26 日发布 LLM 长期规划论文，提出用符号验证反馈驱动自我修正。"
+        ],
+        "repeatedContext": [
+          "早间 GPT-5.6 受限预览、Codex 使用数据和 Raise Us 就业计划仍是背景，本期不重复其 URL。",
+          "延续过去多期关于 Agent、安全和企业采用的背景线索，但这些旧线索不作为本期新增事实。",
+          "延续版权和来源边界：原始 URL 用于核对，站内只保留最小事实、本站解读和复核路径。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "企业 Agent",
+          "count": 1,
+          "meaning": "用来检查企业从试点到生产时的权限、上下文、评估和治理清单。"
+        },
+        {
+          "label": "安全研究",
+          "count": 1,
+          "meaning": "用来更新安全团队的对抗输入、工具使用、多步推理和红队复现检查清单。"
+        },
+        {
+          "label": "规划可靠性",
+          "count": 1,
+          "meaning": "用来评估长任务 Agent 是否需要外部验证器、目标可达性检查和迭代修正。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "用作公司发布和案例事实入口；厂商效果数字仍需客户侧或第三方复核。"
+        },
+        {
+          "family": "research",
+          "label": "研究原文",
+          "count": 2,
+          "role": "用作论文与技术方向入口，读者应核对论文全文、代码数据、同行评审和独立复现后再升级结论。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "研究信号占比偏高，企业案例属厂商叙事",
+        "note": "2/3 为预印本研究，1/3 为 OpenAI 官方案例；本期适合做技术雷达，不适合作为最终效果证明。",
+        "nextCheck": "核对 HP 客户侧指标、论文 PDF、开源代码、基准复现和独立安全评测。"
+      },
+      "sourceConcentration": {
+        "sourceId": "arxiv-ai",
+        "sourceName": "arXiv cs.AI",
+        "count": 2,
+        "share": "2/3",
+        "note": "arXiv cs.AI 占本期三分之二，说明本期偏技术雷达而非成熟产业事实。",
+        "nextCheck": "找同行评审、代码仓库、独立复现实验、企业部署报告和第三方基准。"
+      },
+      "trendNotes": [
+        {
+          "topic": "enterprise-agent-governance",
+          "label": "企业 Agent 治理",
+          "note": "跨期看，Codex、Mistral 连接器和 OpenAI Frontier 信号都在把 Agent 从工具试用推向权限、上下文和评估系统。",
+          "boundary": "不证明所有企业都已规模化成功，仍需客户侧指标、审计报告、真实工单数据和独立案例。"
+        },
+        {
+          "topic": "agent-safety-reliability",
+          "label": "Agent 安全可靠性",
+          "note": "连续出现 AI Control、Yuvion 和规划校验研究，显示安全问题正从内容过滤扩展到工具调用、长期任务和行为监控。",
+          "boundary": "不证明这些方案已覆盖真实攻击和复杂业务流程，仍需红队评测、复现实验、事故数据和监管或标准引用。"
+        },
+        {
+          "topic": "research-to-production-gap",
+          "label": "研究到生产差距",
+          "note": "跨期看，官方案例和预印本反复并置，提醒读者持续区分“已经部署的组织流程”和“仍在验证的技术方法”。",
+          "boundary": "不能用论文摘要替代生产证据，也不能用厂商案例替代独立评估；下一步要看代码、数据、客户指标和第三方审核。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 1,
+          "itemIds": [
+            "openai-hp-frontier-enterprise-agent-operating-model-2026-06-28"
+          ],
+          "meaning": "用来更新企业 Agent 规模化、权限治理、上下文连接和评估流程清单。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 2,
+          "itemIds": [
+            "arxiv-yuvion-adversarial-ai-safety-2026-06-26",
+            "arxiv-symbolic-feedback-llm-planning-2026-06-26"
+          ],
+          "meaning": "用来检查 Agent 安全、工具使用、长任务规划和外部校验的技术方向。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "openai-hp-frontier-enterprise-agent-operating-model-2026-06-28",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 发布 HP Frontier 合作案例，企业 Agent 从试点进入可治理部署阶段",
+          "body": "OpenAI 6 月 28 日发布 HP Frontier 战略合作案例，称 HP 将把早期 AI 试点扩展为更广的企业工作流。",
+          "summary": "HP 与 OpenAI Frontier 的案例说明，企业 Agent 的关键问题正在从“能不能试”转向“如何统一权限、上下文、部署和评估”。",
+          "whyItMatters": "这给企业读者一个具体检查点：Agent 要进生产，必须先回答数据从哪来、能做什么、谁复核、如何评估。",
+          "detailBody": "OpenAI 官方页面称，HP 已将 Frontier 战略合作从 2026 年 2 月开始的试点扩展到更广部署方向，覆盖客户体验、伙伴门户、设备遥测、安全和软件开发。\n页面还把 Frontier 描述为连接访问、上下文、部署和评估的层，并列出伙伴门户、WXP 设备管理、漏洞修复、ChatGPT 与 Codex 等工作流。",
+          "trend": "趋势判断：企业 Agent 的竞争不只是模型能力，而是把访问、上下文、权限、评估和部署连接成运营层。",
+          "detailTrend": "如果 Frontier 类平台成为企业内部 Agent 的连接层，CIO 和安全团队会更关注治理接口，而不是只采购聊天入口。\n它把 Agent 从个人效率工具推向可审计、可评估、可分配权限的运营系统，也让企业采购开始比较部署方法而非单一模型分数。",
+          "whyRanked": "它是 08:00 版 Codex 工作变化之后的企业落地信号，展示 Agent 如何从个人工具进入组织级运营模型。",
+          "topReason": "这是今日最清晰的企业 Agent 落地信号：真实组织开始把试点经验制度化。",
+          "detailWhyRanked": "本条入选是因为 OpenAI 页面给出 HP、Frontier、试点时间、伙伴门户、设备遥测、安全和软件开发等范围，能帮助读者拆解企业 Agent 上线清单。\n页面还披露工程、安全和渠道场景的厂商叙事，足以构成企业部署信号；但它不能替代 HP 自有指标、审计或第三方评估。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方页面支持合作和案例事实；效率、容量和业务效果仍需客户侧指标或第三方复核。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方页面支持合作和案例事实；效率、容量和业务效果仍需客户侧指标或第三方复核。"
+          },
+          "impact": "企业平台、IT、安全、客服、伙伴运营和软件团队需要把 Agent 部署纳入权限、上下文、评估和可追责流程。",
+          "whoShouldCare": "最该关注的是企业 CIO、平台工程团队、安全负责人、客服运营、渠道负责人和正在推进内部 Agent 的产品团队。",
+          "readerUse": "团队可用它检查自己的 Agent 试点是否已经有统一上下文、权限边界、评估指标和人工复核责任。",
+          "nextCheck": "继续核对 HP 官方公告、客户侧部署指标、审计材料、安全事件记录、第三方案例和后续 Frontier 产品文档。",
+          "followUpQuestions": [
+            "HP 是否会公布 Frontier 部署后的客户满意度、工单处理、漏洞修复和开发效率指标？",
+            "OpenAI Frontier 的权限、评估和审计能力是否会成为企业 Agent 平台的标准模块？"
+          ],
+          "evidenceThreshold": "需要 HP 官方指标、客户侧案例、审计报告、产品文档和第三方评估，才能升级为已验证的企业 Agent 规模化部署案例。",
+          "claimBoundary": "OpenAI 页面可支持“OpenAI 发布 HP Frontier 合作案例和部署方向”；不能独立证明 ROI、生产稳定性或全行业可复制性。",
+          "counterEvidence": "如果 HP 后续没有扩大部署、客户侧指标不支持效率提升，或审计显示治理不足，应下调为厂商案例和早期试点信号。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/hp-frontier-partnership/",
+          "originalUrl": "https://openai.com/index/hp-frontier-partnership/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI 官方页面提供 HP Frontier 合作、发布时间、工作流范围和厂商案例叙事；效果数字、部署质量和业务影响仍需 HP 客户侧或第三方资料确认。来源可信度：官方来源；效果结论待补证。",
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-28T09:00:00+09:00",
+          "time": "06/28"
+        },
+        {
+          "id": "arxiv-symbolic-feedback-llm-planning-2026-06-26",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv 长期规划论文引入符号验证反馈，试图让 LLM 计划更可执行、更可靠",
+          "body": "arXiv 6 月 26 日发布 LLM 长期规划论文，提出用符号验证反馈改进计划可执行性。",
+          "summary": "这项研究把 LLM 规划失败拆成可验证约束、错误反馈和迭代修正，指向更可靠的长任务 Agent。",
+          "whyItMatters": "Agent 要承担长期任务，关键不是生成漂亮计划，而是计划是否满足约束、能否执行、出错后能否修正。",
+          "detailBody": "论文摘要称，该框架把逻辑符号映射为自然语言描述，用符号验证器识别计划错误并生成纠错指令。\n它还引入计划识别器判断目标可达性，以便在长周期任务中引导 LLM 迭代自我修正，并报告可行性与正确性改善。",
+          "trend": "趋势判断：长任务 Agent 需要外部校验和反馈循环，不能只依赖模型一次性写出的计划。",
+          "detailTrend": "如果符号验证与 LLM 结合变成常见架构，企业 Agent 会更像受控工作流系统，而不是自由聊天助手。\n它把长期任务拆成生成、检查、纠错和目标确认四个环节，也让开发者能定位计划失败来源。",
+          "whyRanked": "它补上了 Agent 落地中的基础问题：多步计划如何减少不可执行方案，并让错误能被机器检查出来。",
+          "topReason": "这是今日最实用的 Agent 可靠性信号：长任务需要验证器，不只是更强提示词。",
+          "detailWhyRanked": "本条入选是因为它提供了一个可解释的可靠性路径：约束表达、符号检查、纠错反馈和目标可达性识别，直接对应 Agent 长任务失败点。\n论文摘要明确把长期规划的 feasibility 和 correctness 作为目标；但它仍是预印本，实验环境与真实企业流程之间仍有距离。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "研究原文支持框架和实验主张；真实复杂任务、工具调用和跨领域稳健性仍需验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "研究原文支持框架和实验主张；真实复杂任务、工具调用和跨领域稳健性仍需验证。"
+          },
+          "impact": "开发者、Agent 平台、工作流自动化和企业治理团队需要把外部验证器、约束表达和失败恢复纳入架构设计。",
+          "whoShouldCare": "最该关注的是 Agent 平台开发者、自动化工程团队、企业架构师、运维团队和需要长任务自动化的产品负责人。",
+          "readerUse": "团队可用它检查自己的 Agent 是否有计划校验、约束检查、目标可达性判断和失败后重试机制。",
+          "nextCheck": "继续核对论文 PDF、实验任务、开源实现、与真实工具链结合的结果、跨领域复现和同行评审。",
+          "followUpQuestions": [
+            "符号验证器在开放式业务任务中如何获得完整约束，约束缺失时会怎样？",
+            "这种自我修正框架能否在真实工具调用、多人协作和动态环境中保持计划质量？"
+          ],
+          "evidenceThreshold": "需要开源实现、任务集说明、跨领域复现、真实工具链实验和同行评审，才能升级为已验证的 LLM 长期规划可靠性方案。",
+          "claimBoundary": "arXiv 页面可支持“作者提出符号反馈驱动的 LLM 规划框架”；不能证明该框架已适用于所有生产 Agent。",
+          "counterEvidence": "如果开源实现、跨领域复测数据或真实工具链日志显示约束难以形式化、验证器误报较高，或工具链实验失败，应下调为受控环境下的规划研究。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2606.27757",
+          "originalUrl": "https://arxiv.org/abs/2606.27757",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 页面提供论文题名、作者、提交日期和摘要；本站将其作为 LLM 规划可靠性的研究入口，方法细节和实验边界需看论文原文。来源可信度：研究原文；预印本仍需复核。",
+          "trustLevel": "来源层级：研究原文，高可信入口",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-26T15:24:33+09:00",
+          "time": "06/26"
+        },
+        {
+          "id": "arxiv-yuvion-adversarial-ai-safety-2026-06-26",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv 论文提出 Yuvion LLM，把内容安全、对抗鲁棒性和 Agent 能力放进同一训练目标",
+          "body": "arXiv 6 月 26 日发布 Yuvion LLM 论文，作者提出面向对抗内容安全和 Agent 场景的模型与评测集合。",
+          "summary": "Yuvion LLM 把安全问题从静态内容过滤扩展到对抗输入、Agent 工具使用和多步推理场景。",
+          "whyItMatters": "如果安全模型只在普通提示上表现好，真实部署中的越狱、规避和工具调用风险仍可能被低估。",
+          "detailBody": "论文摘要称，Yuvion LLM 使用对抗感知数据构建、知识增强继续预训练、安全后训练和面向工具使用的安全强化学习。\n作者还提出覆盖 93 个基准的 YLRE 评测集合，并声称 Yuvion-8B 在若干安全任务上优于更大基线。",
+          "trend": "趋势判断：AI 安全评测正在从“模型会不会说错话”转向“模型在对抗场景和 Agent 行动中是否稳”。",
+          "detailTrend": "对企业和监管团队来说，安全能力要覆盖策略规避、多步推理和工具使用；单一内容审核分数不足以说明可部署性。\n若这类评测成熟，安全模型会更接近 Agent 行为审计而非静态分类器，红队和基准也要跟着升级。",
+          "whyRanked": "它把安全模型、对抗鲁棒性、Agent 能力和评测集合放在同一篇研究中，适合作为安全技术雷达。",
+          "topReason": "这是今日最值得跟踪的安全研究信号：安全能力开始围绕 Agent 行为重新定义。",
+          "detailWhyRanked": "本条入选是因为论文明确把 adversarial robustness 与 agentic capability 作为目标，并给出评测集合入口。\n但它是预印本，且摘要中的模型优势需要论文全文、代码、数据和第三方复现支撑。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "研究原文支持论文存在和作者主张；模型效果、基准公平性和外部适用性仍需复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "研究原文支持论文存在和作者主张；模型效果、基准公平性和外部适用性仍需复现。"
+          },
+          "impact": "安全、红队、模型评测和平台治理团队需要关注对抗输入、工具调用和多步推理是否进入自己的评测清单。",
+          "whoShouldCare": "最该关注的是 AI 安全团队、红队评测团队、模型平台负责人、合规团队和需要部署 Agent 的企业工程团队。",
+          "readerUse": "读者可用它检查自己的安全评测是否只测普通提示，还是覆盖了对抗规避、工具使用和多步行为。",
+          "nextCheck": "继续核对论文 PDF、YLRE 基准定义、开源代码、训练数据说明、第三方复现和同行评审意见。",
+          "followUpQuestions": [
+            "YLRE 的 93 个基准是否公开，是否能被外部团队完整复现？",
+            "Yuvion-8B 的安全优势是否在独立红队、不同语言和真实工具环境中仍然成立？"
+          ],
+          "evidenceThreshold": "需要论文全文、基准细节、代码数据、第三方复现和同行评审，才能升级为已验证的对抗安全模型改进结论。",
+          "claimBoundary": "arXiv 页面可支持“作者提出 Yuvion LLM 与 YLRE 并报告优势”；不能证明该模型已在真实部署中更安全。",
+          "counterEvidence": "如果第三方复测数据无法重现主要结果，或论文附录确认基准存在训练数据泄漏、任务偏置、对照不公平，应下调为早期研究设想。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2606.27632",
+          "originalUrl": "https://arxiv.org/abs/2606.27632",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 页面提供论文题名、作者、提交日期和摘要；本站只将其作为研究入口，模型效果、基准细节和限制需要阅读论文并等待复现。来源可信度：研究原文；预印本仍需复核。",
+          "trustLevel": "来源层级：研究原文，高可信入口",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-26T10:12:02+09:00",
+          "time": "06/26"
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-06-29",
       "date": "2026-06-29",

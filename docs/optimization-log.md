@@ -1,3 +1,26 @@
+## 2026-06-29 17:07 JST
+
+- Focus: Published the 2026-06-29 17:00 JST AI news intelligence update. This edition adds three non-duplicated official/research signals: OpenAI's HP Frontier enterprise Agent partnership case, arXiv's Yuvion LLM adversarial AI safety paper, and arXiv's symbolic-feedback LLM planning reliability paper.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, and the 08:00 JST edition before editing; checked historical duplicate URLs before promoting candidates.
+  - Used existing source-list entries for OpenAI News and arXiv cs.AI; did not add new sources.
+  - Kept OpenAI/HP as an official company case with customer-side proof still required; kept both arXiv items as research originals/preprints requiring PDF review, code/data, replication, and peer review before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 更新17点AI新闻情报.
+- Git note: `git pull --ff-only origin main` failed before editing due to GitHub DNS resolution in this environment; local commit was created, but `git push origin main` failed with the same `ssh: Could not resolve hostname github.com: -65563` error.
+
 ## 2026-06-29 10:35 JST
 
 - Focus: 补跑 2026-06-29 08:00 JST AI 新闻情报更新。新增三条未重复信号：Guardian 报道 OpenAI/GPT-5.6 分阶段发布与美国政府预览要求，arXiv 论文分析 Codex 使用数据中的 Agentic AI 工作转向，Axios 报道 OpenAI Foundation 与 Anthropic 等参与 5 亿美元 AI 就业转型计划。
