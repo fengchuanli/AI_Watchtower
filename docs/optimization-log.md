@@ -1,3 +1,26 @@
+## 2026-06-29 20:05 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 2 content-workflow task. Added a shared hold/reject reason vocabulary so candidate intake can consistently explain stale, duplicated, paywalled, source-role unclear, AI-relevance weak, proof-boundary missing, routine-marketing, unverifiable, and copyright-substitute blockers before drafting news copy.
+- Changed files:
+  - `docs/candidate-hold-reject-reasons.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read the automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/candidate-intake-format.md`, `docs/candidate-priority-rubric.md`, `docs/candidate-source-checklist.md`, and `docs/optimization-decision-index.md`; continued with Day 2 because Day 0 and Day 1 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the hold/reject reason vocabulary documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Pending final hash before amend. Push pending until network access to GitHub works.
+
 ## 2026-06-29 17:07 JST
 
 - Focus: Published the 2026-06-29 17:00 JST AI news intelligence update. This edition adds three non-duplicated official/research signals: OpenAI's HP Frontier enterprise Agent partnership case, arXiv's Yuvion LLM adversarial AI safety paper, and arXiv's symbolic-feedback LLM planning reliability paper.

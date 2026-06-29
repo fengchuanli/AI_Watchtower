@@ -1,13 +1,13 @@
 # Candidate Source Checklist
 
-Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md`, the priority ranking in `docs/candidate-priority-rubric.md`, or `docs/editorial-checklist.md` after drafting.
+Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md`, the hold/reject vocabulary in `docs/candidate-hold-reject-reasons.md`, the priority ranking in `docs/candidate-priority-rubric.md`, or `docs/editorial-checklist.md` after drafting.
 
 ## 1. Candidate Identity
 
 - Record the candidate URL, source name, source owner, source type, publication time, and discovery route.
 - Match the source to `data/sources.json` before drafting. If it is not registered, add or skip the source deliberately instead of using a vague fallback.
 - Prefer the exact article, announcement, paper, filing, changelog, or policy page over a source homepage or search result.
-- Reject candidates that require paywall, login-wall, private channel, scraped screenshot, or unverifiable social repost access for the central fact.
+- Reject candidates that require paywall, login-wall, private channel, scraped screenshot, or unverifiable social repost access for the central fact. Use `reject-paywall-body-dependent` or `reject-unverifiable-or-community-only` from `docs/candidate-hold-reject-reasons.md` when recording the decision.
 
 ## 2. Source Role
 
@@ -19,7 +19,7 @@ Choose one source role before summarizing:
 - `社区发现`: the source only points to a possible lead and needs official, research, regulator, or reliable-media confirmation before promotion.
 - `厂商主张`: the source is vendor-authored narrative, customer story, benchmark framing, or policy proposal and needs independent proof before becoming a stronger conclusion.
 
-If the source role is unclear, hold the candidate as a research note and do not publish it as a current item.
+If the source role is unclear, hold the candidate as a research note with `hold-source-role-unclear` and do not publish it as a current item.
 
 ## 3. Minimum Evidence
 
@@ -31,7 +31,7 @@ Before promotion, confirm that the candidate has all of the following:
 - A source boundary explaining what this candidate does not prove.
 - A next-check target such as official documentation, customer-side metric, regulator text, filing, audit result, code release, dataset, replication, independent benchmark, or follow-up source owner.
 
-Skip candidates that are routine marketing, repeated coverage of an already archived URL, shallow commentary without a new source fact, or claims that cannot support a detail-page briefing.
+Skip candidates that are routine marketing, repeated coverage of an already archived URL, stale without a current hook, shallow commentary without a new source fact, or claims that cannot support a detail-page briefing. Record the specific blocker with `reject-routine-marketing`, `reject-repeated-source-fact`, `reject-stale-no-current-hook`, `hold-proof-boundary-missing`, or another matching code from `docs/candidate-hold-reject-reasons.md`.
 
 ## 4. Copyright And Paywall Safety
 
@@ -45,7 +45,7 @@ Skip candidates that are routine marketing, repeated coverage of an already arch
 
 - Check `data/news-history.json` for the normalized source URL before publishing.
 - Check for near-matching Chinese or English titles before treating a candidate as new.
-- For a batch of semi-automated candidates, write the discovered `title`, `sourceUrl`, and optional `publishedAt` values into a temporary JSON file and run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` before drafting. Treat any repeated URL or near-title match as a hold signal until the editor confirms a genuinely new source fact.
+- For a batch of semi-automated candidates, write the discovered `title`, `sourceUrl`, and optional `publishedAt` values into a temporary JSON file and run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` before drafting. Treat any repeated URL or near-title match as `hold-duplicate-review` until the editor confirms a genuinely new source fact. If no fresh fact exists, use `reject-repeated-source-fact`.
 - If one source owner supplies most of the batch, prepare a `sourceConcentration` caveat and name the independent owner or source type to check next.
 - Do not republish old archive items as current news unless a fresh source-specific fact changes the editorial value.
 
@@ -60,4 +60,4 @@ Only hand a candidate to drafting when it can answer these six prompts:
 5. What evidence would weaken or downgrade the claim?
 6. Which original source link should readers use for full context?
 
-Before drafting, capture those answers in `docs/candidate-intake-format.md` terms: `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, `draftingDecision`, and `decisionReason`. When a batch has more candidates than current-news slots, use `docs/candidate-priority-rubric.md` to rank safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. After drafting, run `docs/editorial-checklist.md` and `node scripts/validate-data.mjs` before committing.
+Before drafting, capture those answers in `docs/candidate-intake-format.md` terms: `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, `draftingDecision`, and `decisionReason`. When `draftingDecision` is `hold` or `reject`, start `decisionReason` with a code from `docs/candidate-hold-reject-reasons.md`. When a batch has more candidates than current-news slots, use `docs/candidate-priority-rubric.md` to rank safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. After drafting, run `docs/editorial-checklist.md` and `node scripts/validate-data.mjs` before committing.

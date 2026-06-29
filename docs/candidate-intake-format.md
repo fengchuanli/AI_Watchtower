@@ -2,12 +2,13 @@
 
 Use this lightweight record before turning a discovered URL into `data/news.json`. The goal is to preserve the editor's source judgment and drafting decision without copying source text or creating a long internal database.
 
-This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-priority-rubric.md`, and `docs/editorial-checklist.md`:
+This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, and `docs/editorial-checklist.md`:
 
 1. The candidate checklist decides whether a URL is allowed into intake.
 2. This intake record captures the minimum editorial judgment needed before drafting.
-3. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
-4. The editorial checklist and validators review the finished `data/news.json` item.
+3. The hold/reject vocabulary keeps non-draft decisions consistent and reviewable.
+4. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
+5. The editorial checklist and validators review the finished `data/news.json` item.
 
 ## Required Intake Fields
 
@@ -28,15 +29,15 @@ Each candidate record should answer these fields in Chinese unless the value is 
 - `priorityScore`: Optional batch score from `docs/candidate-priority-rubric.md`, used after source safety is settled and before drafting order is chosen.
 - `priorityReason`: Optional one-sentence explanation of the score, especially when a lower-scoring item is held for source diversity or copyright safety.
 - `draftingDecision`: `draft`, `hold`, or `reject`.
-- `decisionReason`: Why the editor chose that decision.
+- `decisionReason`: Why the editor chose that decision. For `hold` or `reject`, start with a reason code from `docs/candidate-hold-reject-reasons.md`, then add one short Chinese sentence naming the concrete blocker.
 
 ## Decision Rules
 
 Use `draft`, `hold`, or `reject` as the intake decision. Use `draft` only when the candidate has a source-backed fact, clear AI relevance, a named proof boundary, a next independent check, no unresolved duplicate, and a copyright-safe path to concise Chinese explanation.
 
-Use `hold` when the candidate may become useful but needs registration, a better original source, clearer date, duplicate review, independent confirmation, or a stronger AI consequence.
+Use `hold` when the candidate may become useful but needs registration, a better original source, clearer date, duplicate review, independent confirmation, a stated proof boundary, or a stronger AI consequence. Use the shared hold codes from `docs/candidate-hold-reject-reasons.md`.
 
-Use `reject` when the candidate is paywall/body-dependent, login-only, repeated, shallow commentary, routine marketing, weakly AI-related, unverifiable, or unable to support a detail-page briefing.
+Use `reject` when the candidate is paywall/body-dependent, login-only, repeated, stale, shallow commentary, routine marketing, weakly AI-related, unverifiable, copyright-substitute risk, or unable to support a detail-page briefing. Use the shared reject codes from `docs/candidate-hold-reject-reasons.md`.
 
 ## Minimal JSON Example
 
@@ -57,7 +58,7 @@ Use `reject` when the candidate is paywall/body-dependent, login-only, repeated,
   "priorityScore": 6,
   "priorityReason": "读者效用清楚，但仍需要官方文件确认，且媒体来源必须保持最小事实。",
   "draftingDecision": "hold",
-  "decisionReason": "需要找到官方文件后再决定是否进入当前批次。"
+  "decisionReason": "hold-original-source-needed: 需要找到官方文件后再决定是否进入当前批次。"
 }
 ```
 
@@ -71,5 +72,6 @@ Before drafting, convert the intake record into these `data/news.json` responsib
 - `nextIndependentCheck` informs `nextCheck`, `evidenceThreshold`, and `followUpQuestions`.
 - `duplicateStatus` and `copyrightPosture` should remain visible in the editor's decision, even when they do not become public copy.
 - `priorityScore` and `priorityReason` decide drafting order only; they should not be published as a false precision score for readers.
+- `decisionReason` should preserve the hold/reject reason code when the candidate does not move forward, so later runs can distinguish stale, duplicated, paywalled, unclear-role, weak-relevance, and missing-boundary blockers.
 
 Do not paste source paragraphs into intake records. If a field cannot be answered without copying source text, keep the candidate on hold and revisit the original source manually.

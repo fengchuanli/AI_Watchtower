@@ -20,6 +20,7 @@ const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
 const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
 const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
+const candidateHoldRejectReasons = readFileSync("docs/candidate-hold-reject-reasons.md", "utf8");
 const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
@@ -615,7 +616,8 @@ if (
   !/candidate-source-checklist\.md/.test(contributing) ||
   !/candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
   !/candidate-source-checklist\.md/.test(newsDataFormat) ||
-  !/candidate-source-checklist\.md/.test(copyrightSafety)
+  !/candidate-source-checklist\.md/.test(copyrightSafety) ||
+  !/candidate-hold-reject-reasons\.md/.test(candidateSourceChecklist)
 ) {
   errors.push("Semi-automated gathering must keep a maintained candidate-source checklist linked from source, contributor, data, copyright, and decision docs.");
 }
@@ -632,12 +634,36 @@ if (
   !/draftingDecision/.test(candidateIntakeFormat) ||
   !/`draft`[\s\S]*`hold`[\s\S]*`reject`/.test(candidateIntakeFormat) ||
   !/Do not paste source paragraphs/.test(candidateIntakeFormat) ||
+  !/candidate-hold-reject-reasons\.md/.test(candidateIntakeFormat) ||
   !/candidate-intake-format\.md/.test(candidateSourceChecklist) ||
   !/candidate-intake-format\.md/.test(readme) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
   errors.push("Candidate gathering must define a lightweight intake record before drafting news copy.");
+}
+
+if (
+  !/Candidate Hold And Reject Reasons/.test(candidateHoldRejectReasons) ||
+  !/Hold Reasons/.test(candidateHoldRejectReasons) ||
+  !/Reject Reasons/.test(candidateHoldRejectReasons) ||
+  !/hold-original-source-needed/.test(candidateHoldRejectReasons) ||
+  !/hold-source-role-unclear/.test(candidateHoldRejectReasons) ||
+  !/hold-duplicate-review/.test(candidateHoldRejectReasons) ||
+  !/hold-date-or-freshness-unclear/.test(candidateHoldRejectReasons) ||
+  !/hold-proof-boundary-missing/.test(candidateHoldRejectReasons) ||
+  !/hold-ai-relevance-weak/.test(candidateHoldRejectReasons) ||
+  !/reject-paywall-body-dependent/.test(candidateHoldRejectReasons) ||
+  !/reject-repeated-source-fact/.test(candidateHoldRejectReasons) ||
+  !/reject-stale-no-current-hook/.test(candidateHoldRejectReasons) ||
+  !/reject-copyright-substitute-risk/.test(candidateHoldRejectReasons) ||
+  !/decisionReason/.test(candidateHoldRejectReasons) ||
+  !/candidate-hold-reject-reasons\.md/.test(candidateIntakeFormat) ||
+  !/candidate-hold-reject-reasons\.md/.test(candidateSourceChecklist) ||
+  !/candidate-hold-reject-reasons\.md/.test(readme) ||
+  !/Day 2[\s\S]*candidate-hold-reject-reasons\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Candidate gathering must use a shared hold/reject reason vocabulary for stale, duplicated, paywalled, unclear-role, weak-relevance, and missing-boundary candidates.");
 }
 
 if (
@@ -808,7 +834,8 @@ if (
   !/Previous Day 30[\s\S]*optimization-plan\.md/.test(optimizationDecisionIndex) ||
   !/Day 0[\s\S]*candidate-intake-format\.md/.test(optimizationDecisionIndex) ||
   !/Day 1[\s\S]*candidate-priority-rubric\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 2/.test(optimizationDecisionIndex) ||
+  !/Day 2[\s\S]*candidate-hold-reject-reasons\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 3/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
