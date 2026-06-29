@@ -1,3 +1,24 @@
+## 2026-06-29 10:35 JST
+
+- Focus: 补跑 2026-06-29 08:00 JST AI 新闻情报更新。新增三条未重复信号：Guardian 报道 OpenAI/GPT-5.6 分阶段发布与美国政府预览要求，arXiv 论文分析 Codex 使用数据中的 Agentic AI 工作转向，Axios 报道 OpenAI Foundation 与 Anthropic 等参与 5 亿美元 AI 就业转型计划。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 已先同步 `origin/main`，并检查 `data/sources.json`、`docs/source-policy.md`、`docs/copyright-safety.md`、`docs/news-data-format.md` 和历史重复 URL。
+  - 使用现有来源清单中的 The Guardian Technology、arXiv cs.AI 和 Axios AI / Technology；未新增来源。
+  - 媒体来源仅保留最小事实并保持 `originalDependency: must-read`；研究来源保留预印本复核边界。
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 27 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 补跑08点AI新闻情报.
+
 
 ## 2026-06-25 20:03 JST
 
