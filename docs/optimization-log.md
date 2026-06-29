@@ -19,7 +19,7 @@
   - Parsed `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Pending final hash before amend. Push pending until network access to GitHub works.
+- Commit: Local implementation commit `f8f4569` (`增加候选暂缓拒绝词表`). Push pending until network access to GitHub works.
 
 ## 2026-06-29 17:07 JST
 
