@@ -2,13 +2,14 @@
 
 Use this lightweight record before turning a discovered URL into `data/news.json`. The goal is to preserve the editor's source judgment and drafting decision without copying source text or creating a long internal database.
 
-This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, and `docs/editorial-checklist.md`:
+This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, `docs/candidate-to-news-handoff.md`, and `docs/editorial-checklist.md`:
 
 1. The candidate checklist decides whether a URL is allowed into intake.
 2. This intake record captures the minimum editorial judgment needed before drafting.
 3. The hold/reject vocabulary keeps non-draft decisions consistent and reviewable.
 4. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
-5. The editorial checklist and validators review the finished `data/news.json` item.
+5. The candidate-to-news handoff maps intake fields into `data/news.json` fields without duplicating source article text.
+6. The editorial checklist and validators review the finished `data/news.json` item.
 
 ## Required Intake Fields
 
@@ -64,7 +65,7 @@ Use `reject` when the candidate is paywall/body-dependent, login-only, repeated,
 
 ## Drafting Handoff
 
-Before drafting, convert the intake record into these `data/news.json` responsibilities:
+Before drafting, use `docs/candidate-to-news-handoff.md` to convert the intake record into these `data/news.json` responsibilities:
 
 - `sourceBackedFact` becomes the basis for `body`, `summary`, and `detailBody`, kept short.
 - `aiRelevance` informs `whyItMatters`, `impact`, `readerUse`, and `whoShouldCare`.

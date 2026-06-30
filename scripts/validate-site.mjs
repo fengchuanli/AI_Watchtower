@@ -22,6 +22,7 @@ const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.m
 const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
 const candidateHoldRejectReasons = readFileSync("docs/candidate-hold-reject-reasons.md", "utf8");
 const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md", "utf8");
+const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -669,6 +670,30 @@ if (
 }
 
 if (
+  !/Candidate To News Handoff Checklist/.test(candidateToNewsHandoff) ||
+  !/Pre-Draft Gate/.test(candidateToNewsHandoff) ||
+  !/Field Mapping/.test(candidateToNewsHandoff) ||
+  !/Intake field/.test(candidateToNewsHandoff) ||
+  !/`data\/news\.json` field/.test(candidateToNewsHandoff) ||
+  !/sourceBackedFact/.test(candidateToNewsHandoff) ||
+  !/aiRelevance/.test(candidateToNewsHandoff) ||
+  !/proofBoundary/.test(candidateToNewsHandoff) ||
+  !/nextIndependentCheck/.test(candidateToNewsHandoff) ||
+  !/duplicateStatus/.test(candidateToNewsHandoff) ||
+  !/copyrightPosture/.test(candidateToNewsHandoff) ||
+  !/originalDependency/.test(candidateToNewsHandoff) ||
+  !/source article text/.test(candidateToNewsHandoff) ||
+  !/minimum source fact/.test(candidateToNewsHandoff) ||
+  !/Copyright Safety Checks/.test(candidateToNewsHandoff) ||
+  !/Stop Conditions/.test(candidateToNewsHandoff) ||
+  !/candidate-to-news-handoff\.md/.test(candidateIntakeFormat) ||
+  !/candidate-to-news-handoff\.md/.test(candidateSourceChecklist) ||
+  !/candidate-to-news-handoff\.md/.test(readme)
+) {
+  errors.push("Candidate gathering must include a candidate-to-news handoff checklist that maps intake fields to data/news.json without duplicating source article text.");
+}
+
+if (
   !/report-duplicate-candidates\.mjs/.test(candidateSourceChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
   !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
@@ -827,7 +852,8 @@ if (
   !/Day 0[\s\S]*candidate-intake-format\.md/.test(optimizationDecisionIndex) ||
   !/Day 1[\s\S]*candidate-priority-rubric\.md/.test(optimizationDecisionIndex) ||
   !/Day 2[\s\S]*candidate-hold-reject-reasons\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 3/.test(optimizationDecisionIndex) ||
+  !/Day 3[\s\S]*candidate-to-news-handoff\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 4/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
