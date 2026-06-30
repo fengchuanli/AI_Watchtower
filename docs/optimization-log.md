@@ -1,3 +1,24 @@
+## 2026-06-30 19:08 JST
+
+- Focus: 按用户反馈优化 AI Watchtower 新闻信息层级。以后新闻抓取任务以每批 10 条以上合格新闻为目标，首页今日 TOP3 改为当天所有期次综合评分选择，不再等同于当前批次前三条；详情页事件正文不再截断来源事实段，改成更通俗的文章式阅读结构。
+- Changed files:
+  - `app.js`
+  - `news-detail.js`
+  - `styles.css`
+  - `docs/source-policy.md`
+  - `docs/candidate-priority-rubric.md`
+  - `docs/news-data-format.md`
+  - `scripts/validate-site.mjs`
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 29 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 优化每日TOP3和详情页阅读.
+
 ## 2026-06-30 17:08 JST
 
 - Focus: Published the 2026-06-30 17:00 JST AI news intelligence update. This edition adds three non-duplicated reliable-media background signals: Axios on Commerce allowing limited Anthropic Mythos 5 restoration, Business Insider on Raise US worker-transition funding, and The Verge on OpenAI's Jalapeno inference chip.

@@ -6,7 +6,9 @@ The rubric does not replace editorial judgment. It makes that judgment explicit,
 
 ## Scoring Fields
 
-Score each field from 0 to 2. A normal daily batch should draft the highest total score first, then check whether the final mix still has enough source and topic diversity.
+Score each field from 0 to 2. A normal news-intelligence run should collect enough safe candidates to publish at least 10 current-news items, then draft the highest total score first and check whether the final mix still has enough source and topic diversity. If fewer than 10 candidates pass the hard safety gates, log the reason instead of padding with low-quality items.
+
+The first drafting decision is batch inclusion; the second decision is daily TOP3 promotion. Daily TOP3 should be selected from all editions captured on the same editorial date, not only from the latest run.
 
 | Field | 0 points | 1 point | 2 points |
 | --- | --- | --- | --- |

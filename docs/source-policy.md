@@ -78,7 +78,9 @@ When a source is mainly a company narrative, customer story, policy proposal, be
 
 ## Automation Notes
 
-News intelligence jobs run at 08:00 and 17:00 JST. They should start with sources where `hasRss` is `true`, then add official non-RSS pages with conservative fetching rules. The site should summarize and explain the news in Chinese, while keeping original URLs as references rather than forcing readers to leave the page.
+News intelligence jobs run at 08:00 and 17:00 JST. They should start with sources where `hasRss` is `true`, then add official non-RSS pages with conservative fetching rules. Each run should aim to publish at least 10 qualified current-news items after duplicate, paywall, source-role, and copyright checks. If fewer than 10 safe items are available, publish only the safe items and write the shortage reason in `edition.operationalStatus` and `docs/optimization-log.md`; do not pad the batch with weak, repeated, or unsafe stories. The site should summarize and explain the news in Chinese, while keeping original URLs as references rather than forcing readers to leave the page.
+
+Daily TOP3 is not the first three items of a single capture run. It is the best three items for the editorial date across all captured editions that day, ranked by reader utility, impact, evidence quality, narrative strength, and freshness. Later runs can replace the morning TOP3 if a stronger same-day signal appears.
 
 Each published item should have enough material for an in-site incident briefing: what happened, why it matters, trend meaning, timeline, source boundaries, and next checks. If an item cannot support that structure, do not promote it into the homepage feed.
 

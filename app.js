@@ -1,6 +1,7 @@
 let news = [];
 let newsCategories = [];
 let currentFilter = "all";
+let dailyTopStoryIds = new Set();
 
 const newsGrid = document.querySelector("#newsGrid");
 const filterButtons = document.querySelectorAll("[data-filter]");
@@ -138,13 +139,17 @@ async function loadNews() {
     validateNewsData(data);
     news = sortNewsItems(data.items);
     newsCategories = data.categories;
+    const history = await loadNewsHistory();
+    const dailyTopItems = getDailyTopStories(data, history);
+    dailyTopStoryIds = new Set(dailyTopItems.map((item) => item.id));
     updateTodayBriefing(data.briefing);
-    updateTopStories(news);
+    updateTopStories(dailyTopItems);
     updateDeepBriefing(data.deepBriefing);
     updateHeroStats(data);
     updateNewsMeta(data);
   } catch (error) {
     news = [];
+    dailyTopStoryIds = new Set();
     updateHeroStats();
     updateTopStories([]);
     updateNewsMeta({ statusLabel: "数据未加载", editorNote: "新闻数据暂时无法读取，请稍后重试。" });
@@ -156,6 +161,74 @@ async function loadNews() {
 
   setFiltersDisabled(false);
   renderNews(currentFilter);
+}
+
+async function loadNewsHistory() {
+  try {
+    const response = await fetch("./data/news-history.json", { cache: "no-store" });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    return response.json();
+  } catch {
+    return null;
+  }
+}
+
+function getScoreValue(item) {
+  const score = getEditorScore(item);
+  return Number.isInteger(score?.total) ? score.total : 0;
+}
+
+function getDailyTopStories(data, history) {
+  const targetDate = data.edition?.date || data.updatedAt;
+  const candidates = new Map();
+
+  for (const item of data.items || []) {
+    candidates.set(item.id, { ...item, detailEditionId: data.edition?.id });
+  }
+
+  for (const edition of history?.editions || []) {
+    if (edition.date !== targetDate) {
+      continue;
+    }
+
+    for (const item of edition.items || []) {
+      if (!candidates.has(item.id)) {
+        candidates.set(item.id, { ...item, detailEditionId: edition.id });
+      }
+    }
+  }
+
+  return [...candidates.values()]
+    .sort((a, b) => {
+      const scoreDiff = getScoreValue(b) - getScoreValue(a);
+
+      if (scoreDiff) {
+        return scoreDiff;
+      }
+
+      const dateDiff = Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
+
+      if (dateDiff) {
+        return dateDiff;
+      }
+
+      return String(a.title).localeCompare(String(b.title), "zh-CN");
+    })
+    .slice(0, 3);
+}
+
+function getDetailUrl(item) {
+  const params = new URLSearchParams({ id: item.id });
+
+  if (item.detailEditionId) {
+    params.set("edition", item.detailEditionId);
+  }
+
+  return `./news-detail.html?${params.toString()}`;
 }
 
 function validateNewsData(data) {
@@ -615,7 +688,7 @@ function updateTopStories(items) {
     return;
   }
 
-  const topItems = Array.isArray(items) ? items.slice(0, 3) : [];
+  const topItems = Array.isArray(items) ? items : [];
 
   if (!topItems.length) {
     topStories.innerHTML = '<p class="feed-state">暂无 TOP3，新闻数据加载后会自动生成。</p>';
@@ -624,7 +697,7 @@ function updateTopStories(items) {
 
   topStories.innerHTML = topItems
     .map((item, index) => {
-      const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}`;
+      const detailUrl = getDetailUrl(item);
       const sourceName = getSourceName(item);
       const sourceType = getSourceType(item);
       const claimStatus = getClaimStatus(item);
@@ -1057,9 +1130,8 @@ function renderFeedMessage(type, message, canRetry = false) {
 }
 
 function renderNews(filter = "all") {
-  const topStoryIds = new Set(news.slice(0, 3).map((item) => item.id));
   const scopedNews = filter === "all" ? news : news.filter((item) => item.category === filter);
-  const visibleNews = scopedNews.filter((item) => !topStoryIds.has(item.id));
+  const visibleNews = scopedNews.filter((item) => !dailyTopStoryIds.has(item.id));
   const initialLimit = 5;
   updateCategoryMeta(filter);
 
@@ -1070,8 +1142,8 @@ function renderNews(filter = "all") {
 
   if (!visibleNews.length) {
     const message = filter === "all"
-      ? "本批次 TOP3 已覆盖全部新闻流；下一批抓取更多 AI 新闻后，这里会展示 TOP3 之外的简短条目。"
-      : "这个分类目前只有 TOP3 条目；后续抓取更多 AI 新闻后会在这里单独显示。";
+      ? "当天 TOP3 已覆盖当前新闻流；下一批抓取 10 条以上 AI 新闻后，这里会展示 TOP3 之外的简短条目。"
+      : "这个分类目前只有当天 TOP3 条目；后续抓取更多 AI 新闻后会在这里单独显示。";
     renderFeedMessage("empty", message);
     return;
   }
@@ -1079,7 +1151,7 @@ function renderNews(filter = "all") {
   const cards = visibleNews
     .map(
       (item, index) => {
-        const detailUrl = `./news-detail.html?id=${encodeURIComponent(item.id)}`;
+        const detailUrl = getDetailUrl(item);
         const detailLabel = escapeHtml(`查看站内解读：${item.title}`);
         const isExtra = index >= initialLimit;
 

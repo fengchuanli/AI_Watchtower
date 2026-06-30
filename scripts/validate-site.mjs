@@ -318,7 +318,7 @@ if (!updatesSectionMatch) {
   }
 }
 
-if (!/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}`;/.test(appJs)) {
+if (!/function getDetailUrl\(item\)/.test(appJs) || !/const detailUrl = getDetailUrl\(item\);/.test(appJs)) {
   errors.push("Homepage news cards must link to the in-site news detail page.");
 }
 
@@ -536,32 +536,16 @@ if (
   !/incident-jump-nav/.test(detailJs) ||
   !/quick-summary/.test(detailJs) ||
   !/function getQuickSummary/.test(detailJs) ||
-  !/发生了什么/.test(detailJs) ||
-  !/本站解读/.test(detailJs) ||
-  !/趋势判断/.test(detailJs) ||
-  !/接下来关注什么/.test(detailJs) ||
+  !/事件简述/.test(detailJs) ||
+  !/这件事怎么理解/.test(detailJs) ||
+  !/可能带来的变化/.test(detailJs) ||
+  !/接下来要看哪里/.test(detailJs) ||
   !/来源与核验边界/.test(detailJs) ||
   !/查看原文/.test(detailJs) ||
   !/本站只做中文解读，完整事实/.test(detailJs)
 ) {
   errors.push("News detail page must render a simplified reader-first structure with source boundaries at the end.");
 }
-
-const incidentNextIndex = detailJs.indexOf('id="incident-next"');
-const incidentSourceIndex = detailJs.indexOf('id="incident-source"');
-if (
-  incidentNextIndex === -1 ||
-  incidentSourceIndex === -1 ||
-  incidentSourceIndex < incidentNextIndex ||
-  !/detail-primary-section/.test(detailJs) ||
-  !/detail-secondary-context/.test(detailJs) ||
-  !/\.detail-primary-section\s*\{[^}]*order:\s*1;/s.test(styles) ||
-  !/\.detail-secondary-context\s*\{[^}]*order:\s*2;/s.test(styles) ||
-  !/@media \(max-width: 620px\)\s*\{[\s\S]*?\.detail-secondary-context\s*\{[^}]*box-shadow:\s*none;/s.test(styles)
-) {
-  errors.push("News detail mobile order must keep source and editor context below the primary explanation.");
-}
-
 if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
   errors.push("News detail overview diagram must not render redundant small text labels inside each node.");
 }
@@ -569,15 +553,15 @@ if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
 if (
   !/function splitDetailProse/.test(detailJs) ||
   !/function renderDetailProse/.test(detailJs) ||
-  !/class="detail-prose"/.test(detailJs) ||
-  !/renderDetailProse\(limitDetailFact\(item\)\)/.test(detailJs) ||
+  !/function getDetailFactArticle/.test(detailJs) ||
+  !/class="detail-prose article-prose"/.test(detailJs) ||
+  !/renderDetailProse\(getDetailFactArticle\(item\)\)/.test(detailJs) ||
   !/renderDetailProse\(item\.detailTrend\)/.test(detailJs) ||
   !/renderDetailProse\(item\.detailWhyRanked\)/.test(detailJs) ||
   !/\.detail-prose\s*\{[^}]*display:\s*grid;[^}]*gap:\s*12px;/s.test(styles)
 ) {
-  errors.push("News detail narrative sections must split long prose into readable chunks.");
+  errors.push("News detail narrative sections must split long prose into readable chunks without truncating the fact article.");
 }
-
 if (
   !/class="feed-expand"/.test(appJs) ||
   !/feed-extra/.test(appJs) ||
@@ -718,6 +702,14 @@ if (
   errors.push("News detail pages must keep a simplified mobile-first hierarchy with source and editor details at the end.");
 }
 
+if (
+  !/at least 10 qualified current-news items/.test(sourcePolicy) ||
+  !/Daily TOP3 is not the first three items of a single capture run/.test(sourcePolicy) ||
+  !/at least 10 current-news items/.test(candidatePriorityRubric) ||
+  !/Homepage `今日 TOP3` is a daily ranking/.test(newsDataFormat)
+) {
+  errors.push("News gathering rules must target 10+ qualified items per run and define TOP3 as a same-day ranking, not the latest batch first three items.");
+}
 if (
   !/2026-06-24 through 2026-07-23/.test(optimizationPlan) ||
   !/Candidate Intake And Editorial Triage/.test(optimizationPlan) ||
@@ -1057,14 +1049,17 @@ if (!/function sortNewsItems/.test(appJs) || !/news = sortNewsItems\(data\.items
 }
 
 if (
-  !/const topStoryIds = new Set\(news\.slice\(0, 3\)\.map/.test(appJs) ||
+  !/let dailyTopStoryIds = new Set\(\);/.test(appJs) ||
+  !/async function loadNewsHistory/.test(appJs) ||
+  !/function getDailyTopStories/.test(appJs) ||
+  !/dailyTopStoryIds = new Set\(dailyTopItems\.map/.test(appJs) ||
+  !/visibleNews = scopedNews\.filter\(\(item\) => !dailyTopStoryIds\.has\(item\.id\)\)/.test(appJs) ||
   !/compact-feed-card/.test(appJs) ||
-  !/本批次 TOP3 已覆盖全部新闻流/.test(appJs) ||
+  !/当天 TOP3 已覆盖当前新闻流/.test(appJs) ||
   /<p class="rank-note"><strong>为什么值得看<\/strong>/.test(appJs)
 ) {
-  errors.push("Homepage feed must avoid duplicating TOP3 and keep non-TOP3 feed cards concise.");
+  errors.push("Homepage feed must use same-day TOP3 ranking, avoid duplicating daily TOP3, and keep non-TOP3 feed cards concise.");
 }
-
 if (!/function sortHistoryEditions/.test(allNewsJs) || !/function sortHistoryItems/.test(allNewsJs)) {
   errors.push("All-news page must sort editions and items newest first before rendering.");
 }

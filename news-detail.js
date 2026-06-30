@@ -373,38 +373,45 @@ function renderRiskCards(cards) {
 }
 
 function splitDetailProse(value) {
-  const sentences = String(value)
+  const sourceParagraphs = String(value)
     .trim()
-    .match(/[^。！？.!?]+[。！？.!?]?/g);
-
-  if (!sentences || sentences.length <= 1) {
-    return [String(value).trim()];
-  }
-
+    .split(/\n+/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
   const paragraphs = [];
-  let currentParagraph = "";
 
-  for (const sentence of sentences) {
-    const normalizedSentence = sentence.trim();
+  for (const sourceParagraph of sourceParagraphs) {
+    const sentences = sourceParagraph.match(/[^。！？.!?]+[。！？.!?]?/g);
 
-    if (!normalizedSentence) {
+    if (!sentences || sourceParagraph.length <= 140) {
+      paragraphs.push(sourceParagraph);
       continue;
     }
 
-    const nextParagraph = currentParagraph
-      ? `${currentParagraph}${normalizedSentence}`
-      : normalizedSentence;
+    let currentParagraph = "";
 
-    if (currentParagraph && nextParagraph.length > 120) {
-      paragraphs.push(currentParagraph);
-      currentParagraph = normalizedSentence;
-    } else {
-      currentParagraph = nextParagraph;
+    for (const sentence of sentences) {
+      const normalizedSentence = sentence.trim();
+
+      if (!normalizedSentence) {
+        continue;
+      }
+
+      const nextParagraph = currentParagraph
+        ? `${currentParagraph}${normalizedSentence}`
+        : normalizedSentence;
+
+      if (currentParagraph && nextParagraph.length > 140) {
+        paragraphs.push(currentParagraph);
+        currentParagraph = normalizedSentence;
+      } else {
+        currentParagraph = nextParagraph;
+      }
     }
-  }
 
-  if (currentParagraph) {
-    paragraphs.push(currentParagraph);
+    if (currentParagraph) {
+      paragraphs.push(currentParagraph);
+    }
   }
 
   return paragraphs.length ? paragraphs : [String(value).trim()];
@@ -457,39 +464,22 @@ function getDetailOriginalDependency(item) {
   return /media|媒体/.test(sourceType) ? "must-read" : "recommended";
 }
 
-function limitDetailFact(item) {
-  const sourceType = String(getDetailSourceType(item) || "").toLowerCase();
-  const isMediaSource = /media|媒体/.test(sourceType);
-  const limit = isMediaSource ? 180 : 320;
-  const factParts = [item.detailBody || item.body];
-
-  if (item.provenance) {
-    factParts.push(`来源边界：${item.provenance}`);
-  }
-
-  const text = factParts.join(" ").replace(/\s+/g, " ").trim();
-
-  if (text.length <= limit) {
-    return text;
-  }
-
-  const clipped = text.slice(0, limit);
-  const sentenceEnd = Math.max(clipped.lastIndexOf("。"), clipped.lastIndexOf("；"), clipped.lastIndexOf("，"));
-  return `${clipped.slice(0, sentenceEnd > 90 ? sentenceEnd + 1 : limit)}…`;
+function getDetailFactArticle(item) {
+  return item.detailBody || item.body;
 }
 
 function getQuickSummary(item) {
   return [
     {
-      label: "发生了什么",
+      label: "这件事是什么",
       body: getDetailSummary(item),
     },
     {
-      label: "为什么重要",
+      label: "为什么和你有关",
       body: getDetailWhyItMatters(item),
     },
     {
-      label: "下一步看什么",
+      label: "继续看哪里",
       body: item.nextCheck,
     },
   ];
@@ -571,16 +561,16 @@ function renderDetail(item, data) {
 
     <nav class="incident-jump-nav" aria-label="事件简报导航">
       <a href="#quick-summary">速览</a>
-      <a href="#incident-overview">发生了什么</a>
-      <a href="#incident-analysis">本站解读</a>
-      <a href="#incident-trend">趋势判断</a>
-      <a href="#incident-next">接下来关注</a>
+      <a href="#incident-overview">事件简述</a>
+      <a href="#incident-analysis">怎么理解</a>
+      <a href="#incident-trend">可能变化</a>
+      <a href="#incident-next">继续看哪里</a>
       <a href="#incident-source">来源与核验</a>
     </nav>
 
     <section class="quick-summary" id="quick-summary" aria-label="速览">
       <div>
-        <p class="eyebrow">30-second Summary</p>
+        <p class="eyebrow">30 秒速览</p>
         <h2>速览</h2>
       </div>
       <ol>
@@ -591,15 +581,15 @@ function renderDetail(item, data) {
     <section class="detail-grid simplified-detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
         <section class="detail-block incident-block detail-primary-section" id="incident-overview">
-          <span>01 · Fact</span>
-          <h2>发生了什么</h2>
-          <div class="detail-prose">
-            ${renderDetailProse(limitDetailFact(item))}
+          <span>01 · 事件简述</span>
+          <h2>事件简述</h2>
+          <div class="detail-prose article-prose">
+            ${renderDetailProse(getDetailFactArticle(item))}
           </div>
         </section>
         <section class="detail-block incident-block detail-primary-section" id="incident-analysis">
-          <span>02 · AI Watchtower</span>
-          <h2>本站解读</h2>
+          <span>02 · 怎么理解</span>
+          <h2>这件事怎么理解</h2>
           <div class="detail-prose">
             ${renderDetailProse(item.detailWhyRanked)}
           </div>
@@ -607,16 +597,16 @@ function renderDetail(item, data) {
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
         <section class="detail-block incident-block detail-primary-section" id="incident-trend">
-          <span>03 · Trend</span>
-          <h2>趋势判断</h2>
+          <span>03 · 可能变化</span>
+          <h2>可能带来的变化</h2>
           <div class="detail-prose">
             ${renderDetailProse(item.detailTrend)}
           </div>
           <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
         </section>
         <section class="detail-block incident-block detail-primary-section" id="incident-next">
-          <span>04 · Next Check</span>
-          <h2>接下来关注什么</h2>
+          <span>04 · 继续看哪里</span>
+          <h2>接下来要看哪里</h2>
           <p>${escapeHtml(item.nextCheck)}</p>
           <div class="detail-question-list">
             <strong>后续观察点</strong>
@@ -626,7 +616,7 @@ function renderDetail(item, data) {
           </div>
         </section>
         <section class="detail-block incident-block source-verification-block detail-secondary-context" id="incident-source">
-          <span>05 · Source Boundary</span>
+          <span>05 · 来源边界</span>
           <h2>来源与核验边界</h2>
           <dl class="source-verification-list">
             <div>
@@ -654,15 +644,13 @@ function renderDetail(item, data) {
           <p class="detail-so-what"><strong>尚不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
           <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
           <p class="detail-so-what"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
-          <p class="detail-so-what"><strong></strong></p>
           <details class="detail-editor-details">
             <summary>编辑评分与入选理由</summary>
             <p><strong>为什么入选</strong>${escapeHtml(getDetailTopReason(item))}</p>
             ${renderDetailSelectionScore(getDetailEditorScore(item))}
           </details>
           <p class="detail-source-reminder">本站只做中文解读，完整事实请查看原文。</p>
-          <p class="detail-so-what"><strong></strong></p>
-          <a class="text-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
+          <a class="button secondary source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
         </section>
       </div>
     </section>
