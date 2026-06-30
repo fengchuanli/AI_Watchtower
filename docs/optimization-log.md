@@ -1,3 +1,27 @@
+## 2026-07-01 08:07 JST
+
+- Focus: Published the 2026-07-01 08:00 JST AI news intelligence update. This edition adds three non-duplicated June 30 signals: Anthropic's official Claude Sonnet 5 release, Anthropic's official Claude Science beta workbench, and Axios background on Sonnet 5 in the context of Mythos/Fable access restrictions.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, the 2026-06-30 17:00 JST edition, and historical duplicate URLs before editing.
+  - Used existing source-list entries for Anthropic Newsroom and Axios AI / Technology; did not add new sources.
+  - Kept Sonnet 5 as `官方核对`, Claude Science as `厂商主张` for effect claims, and Axios as `媒体背景` / reported context with `originalDependency: must-read`; performance,科研成效, and model-access rules require independent benchmarks, user replication, government files, official announcements, and customer access data before upgrade.
+  - Published only three safe items because current official/RSS-guided checks did not surface 10 non-duplicate, sufficiently sourced signals; the shortage is recorded in edition framing rather than padded with weak items.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 29 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 更新08点AI新闻情报.
+- Git note: `git pull --ff-only origin main` failed before editing due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit, but the environment has repeatedly blocked GitHub DNS.
+
 ## 2026-06-30 20:03 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 3 content-workflow task. Added a candidate-to-news handoff checklist that maps approved intake records into `data/news.json` fields while keeping minimum source facts separate from AI Watchtower's original Chinese interpretation and copyright/source-boundary notes.
