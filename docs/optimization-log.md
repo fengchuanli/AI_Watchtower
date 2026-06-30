@@ -1,3 +1,26 @@
+## 2026-06-30 17:08 JST
+
+- Focus: Published the 2026-06-30 17:00 JST AI news intelligence update. This edition adds three non-duplicated reliable-media background signals: Axios on Commerce allowing limited Anthropic Mythos 5 restoration, Business Insider on Raise US worker-transition funding, and The Verge on OpenAI's Jalapeno inference chip.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, the 08:00 JST edition, and historical duplicate URLs before editing.
+  - Used existing source-list entries for Axios AI / Technology, Business Insider AI / Tech, and The Verge AI; did not add new sources.
+  - Kept all three current items as `媒体背景` / reported signals with `originalDependency: must-read`; policy, labor-transition, and chip-performance conclusions require official files, project materials, specs, customer evidence, or third-party benchmarks before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 29 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: 更新17点AI新闻情报.
+- Git note: pull failed before editing due to `ssh: Could not resolve hostname github.com: -65563`; local commit was created, but `git push origin main` failed with the same DNS resolution error.
+
 ## 2026-06-30 08:09 JST
 
 - Focus: Published the 2026-06-30 08:00 JST AI news intelligence update. This edition adds three non-duplicated June 29 reliable-media background signals: The Verge on OpenAI/Work Louder Codex hardware preview, Business Insider on California-Anthropic Claude public-sector discount access, and Axios on US frontier-model access policy friction.

@@ -1,8 +1,312 @@
 {
   "version": 1,
   "updatedAt": "2026-06-30",
-  "totalItems": 66,
+  "totalItems": 69,
   "editions": [
+    {
+      "id": "news-1700-2026-06-30",
+      "date": "2026-06-30",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-06-30 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断导致 pull 失败；已检查来源清单、来源政策、上午版和历史重复 URL。",
+      "editorialInterpretation": "17:00 版选择三条未重复可靠媒体信号，聚焦前沿模型准入后续、AI 劳动力治理融资和推理芯片基础设施。",
+      "readerFrame": {
+        "headline": "阅读本期：AI 竞争从模型发布延伸到许可、劳动力和推理芯片",
+        "whyItMatters": "三条信号共同说明，AI 的关键约束正在外移：政府许可决定模型能否开放，社会转型需要资金和项目承接，推理硬件决定长期成本与容量。",
+        "useThisIssueFor": [
+          "合规、采购和安全团队用来更新前沿模型可用性、客户资格和业务连续性清单。",
+          "政策、HR 和公共事务团队用来跟进 AI 劳动力转型资金是否进入可审计项目。",
+          "基础设施和平台团队用来观察 OpenAI 是否通过自研推理芯片降低供应链约束。"
+        ],
+        "notProvenYet": [
+          "不能把 Axios 报道直接等同于美国前沿模型监管框架已经稳定。",
+          "不能把 Raise US 报道直接当成 AI 岗位冲击已经被有效缓解。",
+          "不能把 Jalapeño 披露视为量产、性能领先或成本下降已经被第三方验证。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增三条未重复可靠媒体信号",
+        "freshFacts": [
+          "本期新增事实：Axios 6 月 27 日报道商务部允许 Anthropic Mythos 5 有限恢复访问。",
+          "本期新增事实：Business Insider 6 月 26 日报道 Raise US 获主要 AI 与云公司支持并计划筹集 10 亿美元。",
+          "本期新增事实：The Verge 6 月 24 日报道 OpenAI 与 Broadcom 合作披露 Jalapeño 推理芯片。"
+        ],
+        "repeatedContext": [
+          "上午版的前沿模型准入、California-Anthropic 公共部门合作和 Codex 硬件预告仍是背景，本期不重复其 URL。",
+          "6 月 29 日 08:00 版已收录 Codex 使用数据论文，本期跳过该重复研究 URL。",
+          "延续版权边界：媒体来源只保留最小事实、本站解读和补证路径；完整采访、引述和技术细节仍需读原文。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "模型准入后续",
+          "count": 1,
+          "meaning": "用来更新前沿模型客户资格、地域限制、许可条件和业务连续性清单。"
+        },
+        {
+          "label": "劳动力治理",
+          "count": 1,
+          "meaning": "用来检查 AI 再培训、工资保险、州级试点和资金承诺是否可审计。"
+        },
+        {
+          "label": "推理基础设施",
+          "count": 1,
+          "meaning": "用来调整推理芯片、单位成本、容量约束和 GPU 依赖的基础设施观察清单。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 3,
+          "role": "用作可靠媒体来源事实入口；读者应等待政府文件、官方公告、项目材料、芯片规格和第三方基准后再升级结论。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "本期全部为媒体背景",
+        "note": "本期三条全部来自可靠媒体来源家族，适合做雷达和待核对清单，不适合作为政策、项目成效或硬件性能的最终证明。",
+        "nextCheck": "核对商务部/Anthropic 文件、Raise US 与州政府材料、OpenAI/Broadcom 官方规格和独立基准。"
+      },
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 1,
+        "share": "1/3",
+        "note": "无单一来源 owner 集中；仅保留字段提示本期来源家族集中在可靠媒体。",
+        "nextCheck": "继续核对官方公告、监管文件、项目合同、技术规格和第三方评估。"
+      },
+      "trendNotes": [
+        {
+          "topic": "frontier-model-access",
+          "label": "前沿模型准入",
+          "note": "跨期看，GPT-5.6 限制、Anthropic Mythos 停用与有限恢复都显示前沿模型发布正在被安全审查和客户资格重塑。",
+          "boundary": "不证明统一制度已经完成，仍需商务部、OSTP、公司公告和客户可用性数据确认。"
+        },
+        {
+          "topic": "ai-workforce-transition",
+          "label": "劳动力转型",
+          "note": "跨期看，AI 公司一边推进 Agent 和模型能力，一边开始把岗位冲击放进基金、州级项目和公共政策叙事。",
+          "boundary": "不证明岗位替代规模或再培训效果，仍需项目预算、参与人数、就业指标和独立评估。"
+        },
+        {
+          "topic": "inference-infrastructure",
+          "label": "推理基础设施",
+          "note": "跨期看，模型公司正在从购买通用 GPU 扩展到自研或定制推理硬件，以争夺成本和容量控制权。",
+          "boundary": "不证明芯片已形成优势，仍需官方规格、量产进度、性能/瓦特基准和部署规模。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "axios-commerce-anthropic-mythos-limited-return-2026-06-27"
+          ],
+          "meaning": "用来更新前沿模型准入、客户许可和监管流程观察清单。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 1,
+          "itemIds": [
+            "businessinsider-raise-us-ai-worker-transition-2026-06-26"
+          ],
+          "meaning": "用来检查企业和州政府如何把 AI 劳动力风险转化为资金、项目和评估。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 1,
+          "itemIds": [
+            "theverge-openai-jalapeno-ai-processor-2026-06-24"
+          ],
+          "meaning": "用来调整推理成本、芯片供应和模型服务容量的跟踪重点。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "axios-commerce-anthropic-mythos-limited-return-2026-06-27",
+          "category": "policy",
+          "label": "政策",
+          "title": "美国商务部允许 Anthropic Mythos 有限恢复，前沿模型准入仍处临时规则期",
+          "body": "Axios 报道，美国商务部 6 月 26 日信函允许 Anthropic 在受限范围内恢复 Mythos 5 访问，但保留重新调整许可要求的空间。",
+          "summary": "Anthropic Mythos 5 获准有限恢复，显示美国前沿模型管制正从紧急停用转向条件式准入。",
+          "whyItMatters": "模型发布不再只是实验室决策，网络安全审查、客户资格和许可条件会直接影响企业可用性。",
+          "detailBody": "Axios 称，美国商务部向 Anthropic 发信，认可其与政府沟通取得进展，并允许一组获批提供方恢复 Mythos 5 访问。报道还写明，商务部保留在情况变化时重新调整许可要求的权利。\n这让 6 月中旬的模型停用事件出现有限缓和，但读者仍需要等待商务部公开文本、Anthropic 官方恢复范围和客户侧可用性证据。",
+          "trend": "趋势判断：前沿模型正在进入“先审查、再分批开放、持续可撤回”的准入模式。",
+          "detailTrend": "这条后续把 6 月中旬的停用事件推进到条件恢复阶段，说明 AI 安全审查会影响模型商业化节奏和客户准入。\n它也显示当前规则仍像临时许可，而不是稳定监管框架；企业不能只看模型能力，还要看访问是否可持续。",
+          "whyRanked": "它补上上午模型准入争议的关键后续：政府不是简单放行，而是在许可和网络安全风险之间保留控制权。",
+          "topReason": "这是本期最明确的政策后续信号，直接影响前沿模型客户访问和发布节奏。",
+          "detailWhyRanked": "入选原因是 Axios 提供了商务部信函、有限恢复、可重新调整许可和 Anthropic 回复的时间线。它帮助读者把停用、恢复和 8 月制度化期限连起来。\n相较上午版的准入争议，本条新增的是“限制后如何恢复”的后续事实，因此适合进入 17:00 版。",
+          "impact": "政策、合规、采购和安全团队应把模型可用性视为可变条件，而不是供应商单方面承诺。",
+          "whoShouldCare": "最该关注的是企业采购、法务合规、网络安全负责人、模型平台团队和依赖 Anthropic 高能力模型的客户。",
+          "readerUse": "采购与安全团队可用它更新模型准入、客户资格、数据地域和业务连续性检查表。",
+          "nextCheck": "继续核对商务部正式许可文本、Anthropic 官方恢复范围、获批客户名单和 8 月前沿模型网络安全评估流程。",
+          "followUpQuestions": [
+            "商务部后续规则会把哪些模型列为 covered frontier models？",
+            "Anthropic 恢复访问后，客户资格、地域限制和安全审计要求是否会公开？"
+          ],
+          "evidenceThreshold": "需要商务部公开许可文件、Anthropic 官方范围说明和客户侧可用性证据，才能升级为已确认的前沿模型准入制度变化。",
+          "claimBoundary": "当前只支持“Axios 报道商务部允许有限恢复并保留调整权”；不能证明所有客户已恢复访问或正式监管框架已完成。",
+          "counterEvidence": "如果正式文件未公开、恢复范围极窄，或后续许可再次收紧，应下调为临时媒体后续信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/06/27/commerce-anthropic-mythos-restrictions-lift",
+          "originalUrl": "https://www.axios.com/2026/06/27/commerce-anthropic-mythos-restrictions-lift",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 提供商务部信函内容、Anthropic 回复和有限恢复时间线的媒体背景；完整信函、引述和上下文仍需阅读原文并等待官方文件。来源可信度：可靠媒体；制度结论待政府与公司原文确认。",
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-06-27T00:44:14+00:00",
+          "time": "06/27",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道支撑有限恢复后续；政策制度化、客户范围和技术风险评估仍需官方文件。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道支撑有限恢复后续；政策制度化、客户范围和技术风险评估仍需官方文件。"
+          }
+        },
+        {
+          "id": "businessinsider-raise-us-ai-worker-transition-2026-06-26",
+          "category": "funding",
+          "label": "资金",
+          "title": "OpenAI、Anthropic 等支持 Raise US，AI 劳动力适应开始组织化融资",
+          "body": "Business Insider 报道，Raise US 获 OpenAI Foundation、Anthropic、Amazon、Microsoft 等支持，计划筹集 10 亿美元帮助美国工人适应 AI 冲击。",
+          "summary": "Raise US 把 AI 劳动力转型从企业口号推进到跨公司、跨州项目融资。",
+          "whyItMatters": "当 AI 影响岗位结构成为公共议题，实验室和云厂商开始把再培训、工资保险和州级试点放进治理叙事。",
+          "detailBody": "Business Insider 报道称，Raise US 已获得约 5 亿美元承诺，目标筹集 10 亿美元，并与多个州合作设计 AI 劳动力项目。支持方包括 OpenAI Foundation、Anthropic、Amazon 和 Microsoft 等。\n报道还提到职业导航、服务年扩展、工资保险和短时补偿等试点方向，但这些仍需项目文件和公开指标确认。",
+          "trend": "趋势判断：AI 公司正在把“岗位冲击”从公关话题转成有预算、有州政府伙伴的政策工程。",
+          "detailTrend": "这不是就业效果证明，而是治理结构信号：AI 采用的外部成本开始进入基金、州级项目和劳工组织参与的框架。\n如果资金、州级合作和独立评估落地，AI 公司会从单纯发布工具转向共同承担转型成本的公共叙事。",
+          "whyRanked": "它把模型竞争之外的社会影响纳入今日雷达：谁出资、谁执行、谁评估 AI 转型成本会变得重要。",
+          "topReason": "这是本期最具体的劳动力治理信号，显示 AI 影响开始被项目化和融资化。",
+          "detailWhyRanked": "入选原因是报道同时给出支持方、筹资目标、已承诺金额、州级伙伴和拟测试项目类型。它适合做后续核对清单，而不是就业效果结论。\n本条补足了模型与芯片之外的社会影响维度：AI 扩散后的劳动力成本由谁出钱、谁执行、谁评估。",
+          "impact": "政策、公共事务、人力资源和企业社会责任团队需要跟踪 AI 转型资金是否进入可审计项目。",
+          "whoShouldCare": "最该关注的是公共政策团队、HR 负责人、州政府数字化团队、劳工组织和企业社会责任团队。",
+          "readerUse": "HR 与政策团队可用它检查再培训、短时补偿、工资保险和州级合作是否有可验证指标。",
+          "nextCheck": "继续核对 Raise US 官方章程、捐赠承诺文件、州政府合作备忘录、项目预算和独立绩效评估。",
+          "followUpQuestions": [
+            "Raise US 的资金承诺是否会转化为公开合同、拨款和州级执行计划？",
+            "工资保险、短时补偿和职业导航试点会用哪些指标评估 AI 对岗位的真实影响？"
+          ],
+          "evidenceThreshold": "需要官方捐赠文件、州政府项目文本、预算拨付和第三方评估，才能升级为已验证的 AI 劳动力转型项目。",
+          "claimBoundary": "当前只支持媒体报道的组织、支持方、筹资目标和试点方向；不能证明项目效果或劳动力风险已被缓解。",
+          "counterEvidence": "如果官方文件显示资金未落实、州级项目未启动，或评估指标缺失，应下调为倡议和融资意向信号。",
+          "source": "Business Insider AI / Tech",
+          "sourceName": "Business Insider AI / Tech",
+          "sourceId": "businessinsider-ai",
+          "sourceUrl": "https://www.businessinsider.com/raise-us-ai-workers-supporters-openai-anthropic-2026-6",
+          "originalUrl": "https://www.businessinsider.com/raise-us-ai-workers-supporters-openai-anthropic-2026-6",
+          "sourceRole": "媒体背景",
+          "provenance": "Business Insider 提供 Raise US 支持方、筹资目标、已承诺金额和州级合作方向的媒体背景；完整采访、名单和上下文仍需阅读原文并等待官方材料。来源可信度：可靠媒体；执行效果待项目文件和评估确认。",
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-06-26T00:00:00+00:00",
+          "time": "06/26",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体报道支持组织和资金信号；实际拨款、项目效果和劳动力影响仍需官方与第三方材料。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体报道支持组织和资金信号；实际拨款、项目效果和劳动力影响仍需官方与第三方材料。"
+          }
+        },
+        {
+          "id": "theverge-openai-jalapeno-ai-processor-2026-06-24",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 披露首款 AI 推理芯片 Jalapeño，算力控制权继续上移",
+          "body": "The Verge 报道，OpenAI 与 Broadcom 合作披露名为 Jalapeño 的 AI 推理 ASIC，目标是在 2026 年底部署。",
+          "summary": "OpenAI 的 Jalapeño 芯片信号显示，前沿模型公司正把竞争延伸到推理硬件和能效控制。",
+          "whyItMatters": "如果模型公司掌握自研推理芯片，成本、供应链、延迟和产品节奏都会更少依赖单一 GPU 供应。",
+          "detailBody": "The Verge 报道称，OpenAI 与 Broadcom 合作开发 Jalapeño 推理芯片，用于 ChatGPT、Codex 等模型服务的推理负载，并计划 2026 年底部署。\n报道还引用了性能/瓦特和与现有 AI 处理器比较的说法，但这些主张仍需要官方规格、部署规模和第三方基准确认。",
+          "trend": "趋势判断：AI 竞争正在从模型参数、产品入口扩展到推理成本和专用硬件平台。",
+          "detailTrend": "这条信号重要在于基础设施控制权。若推理芯片能按期部署，OpenAI 可能更主动地管理成本、容量和产品响应速度。\n但硬件披露和量产优势之间有距离，真正的行业影响取决于良率、规模、软件栈和单位推理成本。",
+          "whyRanked": "它是基础设施层面的非例行信号，说明模型公司正在把芯片平台纳入长期竞争变量。",
+          "topReason": "这是本期最具体的 AI 基础设施信号，关系到推理成本、供应链和模型服务容量。",
+          "detailWhyRanked": "入选原因是报道给出合作方、芯片用途、部署时间和 Broadcom 性能表述。它能帮助读者跟踪 OpenAI 是否从 GPU 买方走向推理平台拥有者。\n本条虽不是当天发布，但仍在 7 天窗口内且未入库，用来补齐本期基础设施维度。",
+          "impact": "基础设施、采购、云成本和模型平台团队应关注推理芯片是否改变单位智能成本和容量瓶颈。",
+          "whoShouldCare": "最该关注的是 AI 基础设施团队、云采购负责人、芯片供应链分析师、模型平台团队和企业 AI 成本负责人。",
+          "readerUse": "基础设施团队可用它更新推理成本、GPU 依赖、供应链替代和 2026 年底容量观察清单。",
+          "nextCheck": "继续核对 OpenAI 与 Broadcom 官方发布、量产时间、部署规模、性能/瓦特指标和第三方基准。",
+          "followUpQuestions": [
+            "Jalapeño 是否会进入 OpenAI 自有推理集群，还是只用于有限工作负载？",
+            "实际性能、能效和供应规模是否能改变 OpenAI 对 Nvidia GPU 的依赖？"
+          ],
+          "evidenceThreshold": "需要官方芯片规格、量产部署证明、性能/瓦特基准和云成本影响数据，才能升级为已验证的推理基础设施变化。",
+          "claimBoundary": "当前只支持媒体报道的芯片披露、合作方和部署目标；不能证明量产成功、性能领先或成本下降。",
+          "counterEvidence": "如果 2026 年底未部署、性能指标未公开，或第三方基准不支持能效优势，应下调为基础设施规划信号。",
+          "source": "The Verge AI",
+          "sourceName": "The Verge AI",
+          "sourceId": "theverge-ai",
+          "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/955939/openai-reveals-its-first-ai-processor-jalapeno",
+          "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/955939/openai-reveals-its-first-ai-processor-jalapeno",
+          "sourceRole": "媒体背景",
+          "provenance": "The Verge 提供 OpenAI 芯片披露、Broadcom 合作、推理用途和部署目标的媒体背景；完整技术细节、性能主张和原始说明仍需阅读原文并等待官方规格。来源可信度：可靠媒体；性能结论待官方和第三方基准确认。",
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-06-24T14:36:47+00:00",
+          "time": "06/24",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道支持芯片披露和合作事实；性能、部署规模和成本影响仍需官方规格与第三方基准。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道支持芯片披露和合作事实；性能、部署规模和成本影响仍需官方规格与第三方基准。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-06-30",
       "date": "2026-06-30",
