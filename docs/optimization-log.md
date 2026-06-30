@@ -1,3 +1,27 @@
+## 2026-06-30 20:03 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 3 content-workflow task. Added a candidate-to-news handoff checklist that maps approved intake records into `data/news.json` fields while keeping minimum source facts separate from AI Watchtower's original Chinese interpretation and copyright/source-boundary notes.
+- Changed files:
+  - `docs/candidate-to-news-handoff.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing candidate workflow docs; continued with Day 3 because Day 0, Day 1, and Day 2 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 29 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the candidate-to-news handoff documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `b7134a1` (`增加候选转新闻交接清单`). Push pending until network access to GitHub works.
+- Git note: `git push origin main` failed because this environment could not resolve `github.com`; local commits remain ahead of the known remote.
+
 ## 2026-06-30 19:08 JST
 
 - Focus: 按用户反馈优化 AI Watchtower 新闻信息层级。以后新闻抓取任务以每批 10 条以上合格新闻为目标，首页今日 TOP3 改为当天所有期次综合评分选择，不再等同于当前批次前三条；详情页事件正文不再截断来源事实段，改成更通俗的文章式阅读结构。

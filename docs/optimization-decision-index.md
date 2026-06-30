@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 1, Candidate Intake And Editorial Triage
-- Last indexed run: 2026-06-29 20:00 JST
+- Last indexed run: 2026-06-30 20:00 JST
 - Network status: GitHub DNS resolution failed during the latest pull attempt; push may need retry when network access returns.
 
 ## Recent Plan-Day Decisions
@@ -24,12 +24,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 0 | Complete | `e1700b1` | `docs/candidate-intake-format.md` defines the pre-draft intake record: source-backed fact, AI relevance, proof boundary, next independent check, duplicate status, copyright posture, and draft/hold/reject decision. |
 | Day 1 | Complete | `e319df1` | `docs/candidate-priority-rubric.md` ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. |
 | Day 2 | Complete | `f8f4569` | `docs/candidate-hold-reject-reasons.md` standardizes why candidates are held or rejected, including stale, duplicated, paywalled, unclear-role, weak-relevance, missing-boundary, routine-marketing, and copyright-substitute blockers. |
+| Day 3 | Complete | `b7134a1` | `docs/candidate-to-news-handoff.md` maps intake fields into `data/news.json` responsibilities while separating minimum source facts from AI Watchtower's original Chinese interpretation. |
 
 ## Next Useful Task
 
-- Continue with Day 3: add a simple candidate-to-news handoff checklist that maps intake fields to `data/news.json` fields without duplicating source article text.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 3 first.
-- If Day 3 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 4: add guidance for when a media report should be replaced by an original official, filing, paper, or regulator source before publication.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 4 first.
+- If Day 4 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 
