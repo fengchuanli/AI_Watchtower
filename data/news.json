@@ -1,102 +1,93 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-01",
+  "updatedAt": "2026-07-02",
   "status": "published",
-  "statusLabel": "17:00 JST 实讯",
-  "sourceCount": 29,
-  "editorNote": "编辑复核于 2026-07-01 17:00 JST：三条均为官方来源；评测代表性、事故影响和准入恢复仍保留外部补证边界。",
+  "statusLabel": "08:00 JST 实讯",
+  "sourceCount": 30,
+  "editorNote": "编辑复核于 2026-07-02 08:00 JST：发布 2 条安全信号，未用重复或弱来源补齐数量。",
   "edition": {
-    "id": "news-1700-2026-07-01",
-    "date": "2026-07-01",
+    "id": "news-0800-2026-07-02",
+    "date": "2026-07-02",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "17:00 JST 发布",
-    "note": "本期为 2026-07-01 17:00 JST 新闻情报快照。",
-    "operationalStatus": "GitHub DNS 阻断导致 pull 失败；已检查来源清单、来源政策、OpenAI/Anthropic 官方页和历史重复 URL。",
-    "editorialInterpretation": "17:00 版选择三条未重复官方信号，聚焦科研 Agent 评测、AI 数据基础设施可靠性和前沿模型准入恢复。",
+    "archiveLabel": "08:00 JST 发布",
+    "note": "本期为 2026-07-02 08:00 JST 新闻情报快照。",
+    "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、RSS/媒体索引和历史 URL。",
+    "editorialInterpretation": "本期只发布两条可复核信号：官方产品更新与媒体补证政策边界。",
     "readerFrame": {
-      "headline": "阅读本期：科研 Agent、生产可靠性和模型准入同时进入验收清单",
-      "whyItMatters": "OpenAI 的 GeneBench-Pro 和 Rockset 复盘把模型能力与基础设施可靠性拆成可检查问题，Anthropic 的 Fable 5 重新部署则提醒前沿模型访问仍受治理条件影响。",
+      "headline": "阅读本期：桌面 Agent 扩权与前沿模型准入恢复同日进入清单",
+      "whyItMatters": "Google 把 Gemini Spark 推向本地桌面与连接器，Anthropic Fable 5 恢复访问则显示前沿模型上线可能受政府安全测试和出口控制影响。",
       "useThisIssueFor": [
-        "科研和评测团队用来更新生命科学 Agent 的基准、复现和第三方评测要求。",
-        "平台和 SRE 团队用来检查推理时检索、连接器、core dump 和底层依赖风险。",
-        "合规、采购和安全团队用来跟进前沿模型访问恢复、区域限制和合同保障。"
+        "IT、安全和产品团队用来更新桌面 Agent 的文件权限、连接器和 MCP 审计清单。",
+        "合规、采购和政策团队用来检查前沿模型跨境访问、客户资格和中断条款。"
       ],
       "notProvenYet": [
-        "不能把 OpenAI 自述的 GeneBench-Pro 结果视为第三方已复现实验。",
-        "不能把 OpenAI 的内部事故复盘推广为所有 AI 检索系统的通用故障率。",
-        "不能把 Anthropic 重新部署说明等同于政府规则稳定或所有客户已恢复访问。"
+        "不能把 Google 官方功能说明视为桌面 Agent 已经适合企业默认开放。",
+        "不能把 Guardian 报道等同于所有 Fable/Mythos 客户都无条件恢复访问。"
       ]
     },
     "changeSummary": {
-      "headline": "17:00 版新增三条 6 月 30 日官方来源信号",
+      "headline": "08:00 版新增两条 07 月 01 日前后可核对信号",
       "freshFacts": [
-        "本期新增事实：OpenAI 6 月 30 日发布 GeneBench-Pro，称其包含 129 个计算生物学任务。",
-        "本期新增事实：OpenAI 6 月 30 日发布 Rockset core dump 工程复盘，说明其对 ChatGPT 检索基础设施崩溃的归因。",
-        "本期新增事实：Anthropic 6 月 30 日发布 Redeploying Fable 5，说明 Fable 5 重新部署和访问条件线索。"
+        "本期新增事实：Google 6 月 30 日发布 Gemini Spark macOS beta、连接应用和自定义 MCP 更新。",
+        "本期新增事实：Guardian 7 月 1 日报道 Anthropic 称美国解除 Fable/Mythos 相关出口限制。"
       ],
       "repeatedContext": [
-        "07 月 01 日 08:00 版已收录 Sonnet 5、Claude Science 和 Axios 模型准入背景，本期不重复其 URL。",
-        "06 月 30 日 17:00 版已收录 Jalapeño 推理芯片和 Mythos 有限恢复媒体背景，本期只补官方未重复来源。",
-        "延续近期科研 AI 与前沿模型准入旧背景：本期仍把官方自述与独立验证边界分开。"
+        "延续 07 月 01 日 17:00 版 Fable 5 重新部署背景，本期只补可靠媒体中的政府解除限制细节。",
+        "仍是近期 Agent 从科研、企业和桌面场景扩展的旧趋势，本期不重复 OpenAI GeneBench-Pro 或 Rockset URL。"
       ]
     },
     "coverageMix": [
       {
-        "label": "科研 Agent 评测",
-        "count": 1,
-        "meaning": "用来更新生命科学 Agent 的基准、复现和第三方测试清单。"
-      },
-      {
-        "label": "生产 AI 可靠性",
-        "count": 1,
-        "meaning": "用来检查推理时检索系统、崩溃归因和底层依赖风险。"
-      },
-      {
         "label": "模型准入治理",
         "count": 1,
-        "meaning": "用来调整前沿模型访问中断、恢复条件和合同保障清单。"
+        "meaning": "用来更新前沿模型访问恢复、出口控制和采购合同清单。"
+      },
+      {
+        "label": "桌面 Agent 产品化",
+        "count": 1,
+        "meaning": "用来检查本地文件权限、连接器白名单和 MCP 审计要求。"
       }
     ],
     "sourceFamilies": [
       {
+        "family": "reliable_media",
+        "label": "可靠媒体",
+        "count": 1,
+        "role": "作为政策背景信号来源，帮助核对政府管制解除但仍需官方文件。"
+      },
+      {
         "family": "official",
         "label": "官方来源",
-        "count": 3,
-        "role": "直接核对公司发布、工程复盘和重新部署说明；性能、事故范围和准入效果仍需第三方或政府材料补证。"
+        "count": 1,
+        "role": "直接核对产品发布事实和可用条件，效果仍需用户侧信号。"
       }
     ],
     "sourceRisk": {
-      "label": "官方来源占比高",
-      "note": "全部为官方来源且 OpenAI 占比 2/3；适合确认公开动作，不证明外部效果。",
-      "nextCheck": "核对第三方基准、官方补丁、政府文件和客户记录。"
+      "label": "来源分散但样本少",
+      "note": "一条官方、一条媒体；适合雷达更新，不代表完整市场覆盖。",
+      "nextCheck": "继续核对官方文件、原文公告和独立测试。"
     },
     "sourceConcentration": {
-      "sourceId": "openai-news",
-      "sourceName": "OpenAI News",
-      "count": 2,
-      "share": "2/3",
-      "note": "OpenAI 官方来源占当前批次三分之二；本期对其公开动作可信，但对评测代表性和事故影响保留外部验证边界。",
-      "nextCheck": "继续核对 Artificial Analysis、开放任务复现、GNU libunwind 上游补丁、云服务方材料和客户侧可靠性指标。"
+      "sourceId": "mixed-sources",
+      "sourceName": "无单一来源占优",
+      "count": 1,
+      "share": "1/2",
+      "note": "本期无单一来源占三分之二以上；风险主要来自样本数量少。",
+      "nextCheck": "继续核对其他官方、监管、媒体和第三方原文。"
     },
     "trendNotes": [
       {
-        "topic": "science-ai-validation",
-        "label": "科研 AI 验收标准",
-        "note": "跨期看，Claude Science、OpenAI 生物科研案例和 GeneBench-Pro 都指向同一变化：科研 AI 正从演示走向可审计评测和工作台。",
-        "boundary": "不证明科研结论已经自动化可靠，仍需论文复现、第三方基准、实验室审计和外部专家评审。"
-      },
-      {
-        "topic": "agent-infrastructure-reliability",
-        "label": "Agent 基础设施可靠性",
-        "note": "跨期看，企业 Agent、连接器、检索系统和 OpenAI Rockset 复盘显示，生产 AI 的风险正在扩展到数据链路和运行库。",
-        "boundary": "不证明行业故障率上升，仍需事故指标、上游补丁、云服务方说明和客户侧可用性数据。"
-      },
-      {
         "topic": "frontier-model-access",
         "label": "前沿模型准入",
-        "note": "跨期看，Mythos/Fable 限制、Sonnet 5 上线和 Fable 5 重新部署显示模型发布节奏正被安全审查与分层访问共同塑形。",
-        "boundary": "不证明统一监管制度已经形成，仍需政府原文、公司后续规则、客户访问记录和合同条款确认。"
+        "note": "跨期看，Mythos/Fable 限制、Sonnet 5 上线、Fable 5 重新部署和 Guardian 补证都显示模型发布正在被安全审查塑形。",
+        "boundary": "不证明统一监管制度已经形成，仍需政府原文、公司公告、客户访问记录和合同数据。"
+      },
+      {
+        "topic": "desktop-agent-permissions",
+        "label": "桌面 Agent 权限",
+        "note": "跨期看，Codex 硬件预览、连接器治理和 Spark for macOS 连续指向 Agent 从云端聊天走向本地执行。",
+        "boundary": "不证明桌面 Agent 已可默认托管关键任务，仍需产品文档、权限日志、第三方测试和企业审计。"
       }
     ],
     "topicGroups": [
@@ -105,30 +96,21 @@
         "label": "政策",
         "count": 1,
         "itemIds": [
-          "anthropic-redeploying-fable-5-access-governance-2026-06-30"
+          "guardian-anthropic-fable-export-controls-lifted-2026-07-01"
         ],
-        "meaning": "用来更新前沿模型访问恢复、区域限制和采购合规清单。"
+        "meaning": "用来更新前沿模型访问恢复、出口控制和客户资格清单。"
       },
       {
         "id": "agent",
         "label": "Agent",
         "count": 1,
         "itemIds": [
-          "openai-genebench-pro-biology-agent-benchmark-2026-06-30"
+          "google-gemini-spark-macos-connected-apps-2026-06-30"
         ],
-        "meaning": "用来更新科研 Agent 的任务设计、判断能力和复现要求。"
-      },
-      {
-        "id": "infrastructure",
-        "label": "基础设施",
-        "count": 1,
-        "itemIds": [
-          "openai-rockset-core-dump-epidemiology-2026-06-30"
-        ],
-        "meaning": "用来检查检索基础设施、崩溃数据和底层依赖的生产风险。"
+        "meaning": "用来检查桌面 Agent 的本地文件权限、连接器和 MCP 接入策略。"
       }
     ],
-    "itemCount": 3
+    "itemCount": 2
   },
   "categories": [
     {
@@ -163,211 +145,144 @@
     }
   ],
   "briefing": {
-    "label": "17:00 JST 情报简报",
-    "headline": "今天下午 AI 圈的关键变化：科研评测、检索可靠性、模型准入恢复",
-    "summary": "本期三条均为官方来源。重点不是追逐新模型名，而是看科研 Agent 如何被更严格评测，生产 AI 如何暴露底层数据系统风险，以及前沿模型访问如何从暂停走向受控恢复。",
-    "cta": "查看今日 TOP3",
+    "label": "08:00 JST 情报简报",
+    "headline": "今天早晨 AI 圈的关键变化：Agent 进桌面，模型准入进管制流程",
+    "summary": "本期只发布两条足够支撑站内简报的信号。Google 的 Spark 更新说明桌面 Agent 正在连接本地文件和外部应用；Guardian 的 Anthropic 报道提醒最强模型访问恢复仍要看政府文件和客户可用性。",
+    "cta": "查看今日 TOP2",
     "watchPoints": [
       {
-        "title": "科研复现",
-        "body": "看 GeneBench-Pro 开放任务和第三方评测是否复现 OpenAI 自述结果。"
+        "title": "桌面权限",
+        "body": "看 Gemini Spark macOS beta 是否提供企业级权限、日志和撤销控制。"
       },
       {
-        "title": "可靠性修复",
-        "body": "看 libunwind 上游补丁、云主机异常处理和检索系统事故指标。"
+        "title": "准入文件",
+        "body": "看美国商务部、CAISI/NIST 或 Anthropic 是否发布完整解除限制文件。"
       },
       {
-        "title": "准入恢复",
-        "body": "看政府原文、Anthropic 后续规则和客户实际访问记录。"
+        "title": "样本不足",
+        "body": "继续检查官方/RSS 和可靠媒体，避免用重复 Fable 覆盖凑数。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "17:00 深度简报",
-    "title": "科研 Agent 需要评测，生产 Agent 需要可靠基础设施",
-    "subtitle": "OpenAI 的两个官方信号把 Agent 落地拆成评测和工程可靠性问题；Anthropic 的 Fable 5 重新部署提醒最强模型访问仍要经过治理和合同检查。",
-    "dateLabel": "2026-07-01 17:00 JST",
-    "status": "已发布；三条官方来源，等待第三方基准、上游补丁、政府文件和客户可用性补证",
-    "overview": "AI Watchtower 17:00 版选择三条 6 月 30 日未重复官方信号：OpenAI 发布 GeneBench-Pro，OpenAI 复盘 Rockset core dump 调查，Anthropic 说明 Fable 5 重新部署。",
+    "kicker": "08:00 深度简报",
+    "title": "Agent 扩权与模型准入恢复，都需要新的验收清单",
+    "subtitle": "Google 把 Gemini Spark 推向 Mac、本地文件和 MCP 连接器；Anthropic Fable 5 恢复访问的媒体补证则显示前沿模型上线会被政府安全测试和出口控制影响。",
+    "dateLabel": "2026-07-02 08:00 JST",
+    "status": "已发布；两条信号，等待官方文件、企业权限文档、第三方测试和客户访问记录补证",
+    "overview": "AI Watchtower 08:00 版只选择两条未重复、可核对信号：Google 官方 Spark 更新，以及 Guardian 对 Anthropic Fable/Mythos 出口限制解除的报道。少于 10 条是因为当前官方/RSS 和可靠媒体检查没有发现更多安全、非重复、足够支撑简报的条目。",
     "timeline": [
       {
         "label": "06/30",
-        "title": "GeneBench-Pro 发布",
-        "body": "OpenAI 把计算生物学 Agent 的模糊数据判断和分析路径选择做成基准问题。"
+        "title": "Google 发布 Spark 更新",
+        "body": "Gemini Spark for macOS beta、连接应用、自定义 MCP 和实时主题追踪进入官方发布说明。"
       },
       {
-        "label": "06/30",
-        "title": "Rockset 崩溃复盘",
-        "body": "OpenAI 说明 ChatGPT 检索基础设施中的崩溃调查，归因涉及硬件异常和 libunwind 竞态。"
+        "label": "07/01",
+        "title": "Fable 5 恢复访问被补证",
+        "body": "Guardian 报道 Anthropic 称美国解除出口控制，Fable 5 恢复客户访问。"
       },
       {
-        "label": "06/30",
-        "title": "Fable 5 重新部署",
-        "body": "Anthropic 发布官方说明，把前沿模型访问恢复放在政府协作和用户访问条件中。"
+        "label": "07/02",
+        "title": "08:00 版压缩发布",
+        "body": "本期不重复 17:00 官方 Fable 5 URL，也不把同一事件拆成多个弱条目。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "3",
-        "label": "本期 promoted 官方信号"
+        "value": "2",
+        "label": "本期 promoted 信号"
       },
       {
-        "value": "129",
-        "label": "GeneBench-Pro 问题数量"
+        "value": "1/2",
+        "label": "官方来源占比"
       },
       {
-        "value": "2/3",
-        "label": "OpenAI 官方来源占比"
+        "value": "1/2",
+        "label": "可靠媒体来源占比"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "科研",
-        "title": "评测开始检查判断力",
-        "body": "GeneBench-Pro 把脏数据、分析路径和下游决策纳入生命科学 Agent 评估。",
-        "soWhat": "科研团队要把第三方复现和专家审计放进试点验收。"
+        "label": "桌面",
+        "title": "Agent 开始接触本地文件",
+        "body": "Spark for macOS 把 Agent 从聊天窗口推向桌面文件、Workspace 和第三方服务。",
+        "soWhat": "IT 团队要把文件授权、连接器白名单和日志纳入试点验收。"
       },
       {
         "number": "02",
-        "label": "基础设施",
-        "title": "推理时检索需要底层可靠性",
-        "body": "Rockset 复盘说明连接器和搜索链路可能受到硬件、C++ 和开源运行库影响。",
-        "soWhat": "平台团队要检查崩溃采样、依赖补丁和云主机异常隔离。"
+        "label": "准入",
+        "title": "模型恢复仍有政策条件",
+        "body": "Fable 5 重新上线并不等于所有模型和客户都无条件恢复。",
+        "soWhat": "采购和合规团队要等待政府原文、客户记录和合同条款。"
       },
       {
         "number": "03",
-        "label": "准入",
-        "title": "前沿模型恢复仍需治理证据",
-        "body": "Fable 5 重新部署说明最强模型访问可能被安全审查、客户资格和计费条件共同约束。",
-        "soWhat": "采购和合规团队要保留访问中断条款、替代模型和区域限制清单。"
+        "label": "编辑",
+        "title": "少发比重复更重要",
+        "body": "当前没有 10 条安全非重复信号，本期只保留两条能支撑事件简报的条目。",
+        "soWhat": "读者应把本期视为雷达更新，而不是完整市场日报。"
       }
     ],
     "actions": [
-      "科研团队：用开放任务和第三方评测核对 GeneBench-Pro 是否适合内部基准。",
-      "平台团队：把推理时检索链路纳入 SRE 事故演练和依赖升级计划。",
-      "合规团队：跟踪 Fable 5/Mythos 5 的政府文件、访问规则和客户可用性。"
+      "IT 团队：测试 Spark 的文件授权、MCP 接入、第三方应用审批和任务日志。",
+      "合规团队：跟踪 Fable/Mythos 的政府文件、访问区域、客户资格和中断补救条款。"
     ],
     "coverageLimits": [
       {
         "label": "来源边界",
-        "body": "三条均为公司官方来源，可确认其发布和自述边界，不能替代第三方评测、上游补丁或政府原文。"
+        "body": "Google 条目来自官方博客，可核对发布事实；Guardian 条目是媒体背景，仍需官方文件确认细节。"
       },
       {
-        "label": "时间边界",
-        "body": "本期只处理 07 月 01 日 17:00 JST 前后可核对且未重复的信号，不覆盖所有 6 月 30 日媒体讨论。"
+        "label": "数量边界",
+        "body": "本期只处理 08:00 JST 前后可核对且未重复的信号，不覆盖所有 AI 新闻。"
       },
       {
         "label": "结论边界",
-        "body": "本期不判断任何模型已可靠替代科研专家，也不判断前沿模型准入规则已经稳定。"
+        "body": "本期不证明桌面 Agent 已适合默认开放，也不证明 Fable/Mythos 访问已完全稳定。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI 官方页支持 GeneBench-Pro 的发布日期、任务数量、领域范围和自述评测设计。",
-        "OpenAI 官方工程复盘支持 Rockset 在 ChatGPT 数据基础设施中的角色和其自述故障归因。",
-        "Anthropic 官方页支持 Fable 5 重新部署说明和其政府协作、用户访问表述。"
+        "Google 官方博客直接支持 Spark macOS beta、连接应用、自定义 MCP 和实时主题追踪的发布事实。",
+        "Guardian 报道直接支持 Anthropic 称美国解除出口控制、Fable 5 恢复客户访问的媒体背景事实。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 判断科研 Agent 正进入更严格的可审计评测阶段。",
-        "AI Watchtower 判断生产 Agent 的关键风险正在从模型能力扩展到检索和底层依赖。",
-        "AI Watchtower 判断前沿模型访问需要被纳入合规和采购风险管理。"
+        "AI Watchtower 判断桌面 Agent 的下一道门槛是权限、日志、撤销和误操作控制。",
+        "AI Watchtower 判断前沿模型准入正在从产品上线问题转为政策、安全测试和客户资格问题。"
       ],
       "unknowns": [
-        "GeneBench-Pro 的第三方复测结果和开放任务代表性仍未知。",
-        "Rockset 事故对用户侧成功率、延迟或可用性的具体影响仍未知。",
-        "Fable 5 与 Mythos 5 的政府原始指令、区域范围和客户实际可用性仍未知。"
+        "尚未看到 Spark for macOS 的完整企业管理文档、第三方安全测试或大规模用户可靠性数据。",
+        "尚未看到美国商务部或 CAISI/NIST 的完整公开文件来确认 Fable/Mythos 限制解除范围。"
       ]
     },
     "references": [
       {
-        "label": "OpenAI 发布 GeneBench-Pro 计算生物学 Agent 基准",
-        "url": "https://openai.com/index/introducing-genebench-pro/"
+        "label": "Google 官方发布 Spark macOS 与 MCP 更新",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/"
       },
       {
-        "label": "OpenAI 发布 Rockset core dump 故障研究",
-        "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/"
-      },
-      {
-        "label": "Anthropic 官方说明 Redeploying Fable 5",
-        "url": "https://www.anthropic.com/news/redeploying-fable-5"
+        "label": "Guardian 报道 Fable/Mythos 限制解除",
+        "url": "https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted"
       }
     ]
   },
   "items": [
     {
-      "id": "anthropic-redeploying-fable-5-access-governance-2026-06-30",
+      "id": "guardian-anthropic-fable-export-controls-lifted-2026-07-01",
       "category": "policy",
       "label": "政策",
-      "title": "Anthropic 官方说明 Fable 5 重新部署，前沿模型访问进入逐步恢复期",
-      "body": "Anthropic 说明 Fable 5 重新部署，前沿模型访问进入受控恢复期。",
-      "summary": "Anthropic 官方说明 Fable 5 重新部署，前沿模型访问从全面暂停转向更受控的恢复路径。",
-      "whyItMatters": "模型准入不再只是发布按钮问题，而是政府协作、安全评估、用户资格和企业计费共同决定的可用性风险。",
-      "detailBody": "Anthropic 6 月 30 日发布“Redeploying Fable 5”，称将深化政府协作，并感谢用户、研究人员和行业伙伴协助让 Fable 5 与 Mythos 5 再次可用。",
-      "trend": "前沿模型治理正在从暂停转向分层恢复。",
-      "detailTrend": "Fable 5 的重新部署说明，最强模型的可用性会被政策、安全协作、客户资格、区域限制和计费机制共同塑形，企业合同需要覆盖访问变化。",
-      "whyRanked": "它补上早间媒体背景的官方来源，更新模型访问治理线索。",
-      "topReason": "官方来源确认重新部署方向，适合更新前沿模型准入和采购风险清单。",
-      "detailWhyRanked": "早间版已记录 Axios 对模型准入限制的背景报道；这条官方页面提供 Anthropic 自身的重新部署说明、政府协作表述和访问条件脚注，能帮助合规与采购团队区分媒体背景和公司确认。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "官方动作可核对，但政府指令原文、恢复范围和客户实际可用性仍需独立来源。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "官方动作可核对，但政府指令原文、恢复范围和客户实际可用性仍需独立来源。"
-      },
-      "impact": "合规、采购和平台团队应把前沿模型访问中断、恢复条件和替代模型路径写进合同与运行手册。",
-      "whoShouldCare": "合规、采购、企业平台和安全团队应关注 Fable 5 恢复是否改变前沿模型访问风险。",
-      "readerUse": "合规和采购团队用于更新模型访问中断条款、用量信用配置、客户资格和替代模型计划。",
-      "nextCheck": "核对美国政府原始指令、Anthropic 后续访问规则、客户可用性记录和 Mythos 5/Fable 5 的区域限制。",
-      "followUpQuestions": [
-        "美国政府是否公开原始指令、适用范围或撤销/调整条件？",
-        "企业客户实际获得的 Fable 5 与 Mythos 5 访问是否与 Anthropic 页面描述一致？"
-      ],
-      "evidenceThreshold": "需要政府文件、访问规则、客户可用性记录或合同条款，才能从官方重新部署说明升级为已验证的准入恢复结论。",
-      "claimBoundary": "当前只证明 Anthropic 发布了重新部署说明，不证明政府准入规则已经稳定或所有客户都恢复访问。",
-      "counterEvidence": "若政府文件、客户访问日志或后续 Anthropic 公告显示恢复范围更窄或再次暂停，应下调可用性判断。",
-      "source": "Anthropic Newsroom",
-      "sourceName": "Anthropic Newsroom",
-      "sourceId": "anthropic-news",
-      "sourceUrl": "https://www.anthropic.com/news/redeploying-fable-5",
-      "originalUrl": "https://www.anthropic.com/news/redeploying-fable-5",
-      "sourceRole": "官方核对",
-      "provenance": "Anthropic 官方页面可核对其重新部署说明、政府协作表述和用户访问脚注；政府依据和客户侧可用性仍需独立来源。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-06-30T00:00:00-07:00",
-      "time": "06/30"
-    },
-    {
-      "id": "openai-genebench-pro-biology-agent-benchmark-2026-06-30",
-      "category": "research",
-      "label": "研究",
-      "title": "OpenAI 发布 GeneBench-Pro，专测生物学 Agent 的判断力",
-      "body": "OpenAI 发布 GeneBench-Pro，评估科研 Agent 判断力。",
-      "summary": "OpenAI 发布 GeneBench-Pro，用 129 个计算生物学任务评估科研 Agent 的判断型分析能力。",
-      "whyItMatters": "生命科学 Agent 的瓶颈正在从会不会调用工具，转向能否在脏数据和不确定因果路径中做出可审计判断。",
-      "detailBody": "OpenAI 6 月 30 日发布 GeneBench-Pro，称其包含 129 个问题，覆盖基因组学、定量生物学和转化医学，要求模型探索数据、选择分析路径并给出最终答案。",
-      "trend": "科研 AI 评测正在转向端到端研究判断。",
-      "detailTrend": "GeneBench-Pro 的信号是评测对象正在上移：模型不仅要跑代码，还要识别数据噪声、修改假设、选择因果路径，并判断结果何时足以支持下游决策。",
-      "whyRanked": "它是今天最强科研评测信号。",
-      "topReason": "官方研究发布且方法明确：它把科研 Agent 的可用性问题拆成可测的判断任务。",
-      "detailWhyRanked": "OpenAI 同时给出任务数量、领域范围、合成数据构造、专家评审、开放样例和第三方基准计划，能帮助科研与评测团队更新生命科学 Agent 的验收清单。",
+      "title": "Anthropic Fable 5 恢复访问后，出口管制进入模型发布流程",
+      "body": "Guardian 7 月 1 日报道称，Anthropic 表示美国已解除对 Fable/Mythos 相关访问限制，Fable 5 恢复客户访问。",
+      "summary": "Guardian 报道称，美国解除对 Anthropic Fable/Mythos 的出口限制后，Fable 5 恢复客户访问。",
+      "whyItMatters": "这把前沿模型发布从单纯产品节奏推向政府安全测试、客户准入和出口控制共同约束的流程。",
+      "detailBody": "Guardian 报道称，Anthropic 在两周多访问中断后恢复 Fable 5 客户访问，并称美国政府已解除相关出口控制；报道同时提到 Mythos 5 仍只面向部分可信网络安全组织，且 Anthropic 承诺继续与政府协作处理安全风险。",
+      "trend": "前沿模型准入正在变成政策与安全评测共同管理的问题。",
+      "detailTrend": "这一事件延续了 6 月以来 Mythos/Fable 访问限制、OpenAI GPT-5.6 分阶段发布和政府预览要求的同一脉络：模型越接近高风险能力，发布越可能带有地理、客户和用途条件。",
+      "whyRanked": "它把前沿模型发布的核心问题从“谁先上线”改成“谁能在政府安全条件下上线”。",
+      "topReason": "政策影响直接触达模型供应、采购和跨境访问。",
+      "detailWhyRanked": "本条不是重复 Anthropic 官方“重新部署”公告，而是补上 Guardian 报道的政府解除出口控制、CAISI 测试、商务部长信件和后续协作框架细节；这些细节决定企业是否能把模型恢复视为稳定准入，还是只能视为附条件恢复。",
       "selectionScore": {
         "impact": 5,
         "novelty": 4,
@@ -375,7 +290,7 @@
         "evidenceQuality": 4,
         "readerUtility": 5,
         "total": 22,
-        "note": "官方研究页面可核对基准设计和自述结果；模型表现仍需第三方复测。"
+        "note": "可靠媒体补足政府管制解除和安全协作背景，但仍缺少完整政府原文。"
       },
       "editorScore": {
         "impact": 5,
@@ -384,93 +299,93 @@
         "evidenceQuality": 4,
         "readerUtility": 5,
         "total": 22,
-        "note": "官方研究页面可核对基准设计和自述结果；模型表现仍需第三方复测。"
+        "note": "可靠媒体补足政府管制解除和安全协作背景，但仍缺少完整政府原文。"
       },
-      "impact": "科研、生命科学和模型评测团队应把数据质量、因果路径和决策就绪度纳入 Agent 试点评估。",
-      "whoShouldCare": "生命科学、科研平台、模型评测和药企研发团队应关注 GeneBench-Pro 是否改变科研 Agent 的验收标准。",
-      "readerUse": "科研和评测团队用于更新生物计算 Agent 的任务集、复现要求和第三方基准观察表。",
-      "nextCheck": "核对 OpenAI 论文、开放的 10 个代表任务、Artificial Analysis 的 50 题第三方评测和外部复现实验。",
+      "impact": "采购、合规和产品团队需要把前沿模型访问中断、恢复条件和替代模型写入供应商风险清单。",
+      "whoShouldCare": "合规、采购、政策和平台团队应关注这条信号，用来判断前沿模型访问是否会被政府审查和客户资格条件影响。",
+      "readerUse": "合规和采购团队用来更新前沿模型跨境访问、客户资格和中断补救条款。",
+      "nextCheck": "核对美国商务部、CAISI/NIST、Anthropic 后续公告和客户访问记录，确认限制解除范围。",
       "followUpQuestions": [
-        "Artificial Analysis 的第三方评测是否复现 OpenAI 对 GPT-5.6 Sol 的优势判断？",
-        "开放任务能否被非 OpenAI 模型、独立实验室和真实科研流程稳定复现？"
+        "美国商务部是否发布完整文件说明 Fable/Mythos 的解除范围和附加条件？",
+        "Anthropic 客户是否在不同地区、身份和企业计划中实际恢复了相同级别访问？"
       ],
-      "evidenceThreshold": "需要第三方基准、开放任务复现和外部实验室报告，才能从官方研究发布升级为已验证的科研 Agent 评测标准。",
-      "claimBoundary": "当前只证明 OpenAI 发布了基准、方法和自述结果，不证明 GPT 系列在真实科研生产中已可靠替代专家。",
-      "counterEvidence": "若第三方复测、开放任务复现或专家审计发现题目偏置、泄漏或模型结果不稳定，应下调其评测代表性。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/introducing-genebench-pro/",
-      "originalUrl": "https://openai.com/index/introducing-genebench-pro/",
-      "sourceRole": "官方核对",
-      "provenance": "OpenAI 官方页面可核对发布日期、基准目标、题目数量、领域范围、专家评审和其自述模型结果；结论仍需外部复测。",
-      "trustLevel": "official",
+      "evidenceThreshold": "至少需要美国商务部或 CAISI/NIST 原文、Anthropic 后续说明和客户访问记录，才能升级为已确认的稳定准入政策。",
+      "claimBoundary": "Guardian 报道可作为媒体背景，不证明所有地区、所有客户或 Mythos 5 都已无条件恢复访问。",
+      "counterEvidence": "如果政府文件、客户记录或 Anthropic 后续公告显示仍有区域和用途限制，应将判断下调为有限恢复。",
+      "source": "The Guardian Technology",
+      "sourceName": "The Guardian Technology",
+      "sourceId": "guardian-technology",
+      "sourceUrl": "https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted",
+      "originalUrl": "https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted",
+      "sourceRole": "媒体背景",
+      "provenance": "Guardian 文章是可靠媒体背景；完整事实、引语、政府信件和上下文仍需阅读原文并等待官方文件。",
+      "trustLevel": "reliable_media",
       "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
       "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-06-30T00:00:00-07:00",
-      "time": "06/30"
+      "claimStatus": "reported",
+      "publishedAt": "2026-07-01T20:07:00+10:00",
+      "time": "07/01 19:07 JST"
     },
     {
-      "id": "openai-rockset-core-dump-epidemiology-2026-06-30",
-      "category": "tool",
-      "label": "工具",
-      "title": "OpenAI 复盘 Rockset 崩溃，暴露 AI 数据基础设施的可靠性难题",
-      "body": "OpenAI 复盘 Rockset 崩溃，暴露 AI 检索基础设施的底层可靠性风险。",
-      "summary": "OpenAI 复盘 Rockset 崩溃，说明推理时搜索与连接器依赖的数据基础设施仍有底层可靠性风险。",
-      "whyItMatters": "Agent 和企业知识库越依赖推理时检索，底层 C++、云主机和开源运行库的小故障就越可能变成产品可靠性问题。",
-      "detailBody": "OpenAI 6 月 30 日发布工程复盘，称 Rockset 支撑 ChatGPT 数据插件和会话搜索；一次崩溃调查最终指向 Azure 主机硬件异常和 GNU libunwind 竞态。",
-      "trend": "AI 产品可靠性正在扩展到检索和低层数据系统。",
-      "detailTrend": "这篇复盘显示，Agent 稳定性不只取决于模型能力，还取决于推理时数据系统、云主机、C++ 运行环境和开源库能否被观测与快速归因。",
-      "whyRanked": "它揭示生产 AI 的底层可靠性风险。",
-      "topReason": "官方工程复盘且与 ChatGPT 检索基础设施相关，适合作为生产 AI 可靠性检查信号。",
-      "detailWhyRanked": "OpenAI 明确说明 Rockset 是 ChatGPT 数据插件和会话搜索的关键部分，并复盘如何用整体崩溃数据定位硬件与开源库问题，能帮助平台团队更新监控和依赖策略。",
+      "id": "google-gemini-spark-macos-connected-apps-2026-06-30",
+      "category": "product",
+      "label": "产品",
+      "title": "Google 把 Gemini Spark 推向 Mac、本地文件和 MCP 连接器",
+      "body": "Google 6 月 30 日宣布 Gemini Spark 更新：Mac beta、更多应用连接、自定义 MCP 和实时主题追踪。",
+      "summary": "Google 官方宣布 Gemini Spark 进入 macOS beta，并扩展连接应用、自定义 MCP 与实时主题追踪。",
+      "whyItMatters": "消费者级 Agent 正从聊天窗口进入桌面文件、应用连接器和定时任务，权限、审计和误操作风险随之上升。",
+      "detailBody": "Google 官方博客称，Gemini Spark for macOS 面向美国 18 岁以上 Google AI Ultra 用户 beta 开放，可在用户授权文件后处理桌面任务；同时新增 Tasks、Keep、Canva、Dropbox、Instacart、OpenTable、Zillow Rentals 和自定义 MCP 支持。",
+      "trend": "个人 Agent 正在吸收企业 Agent 的连接器和权限模型。",
+      "detailTrend": "Spark 的变化说明桌面 Agent 不再只是生成文本，而是在文件、日程、外部应用和实时监控之间编排动作；这让个人效率工具更接近自动化平台，也把权限授予、日志和回滚变成普通用户问题。",
+      "whyRanked": "它把 Agent 能力推进到本地桌面和第三方应用，直接影响个人与小团队工作流。",
+      "topReason": "官方来源确认桌面 Agent 与 MCP 连接器正在进入主流应用。",
+      "detailWhyRanked": "相比单点功能更新，Spark 同时覆盖 Mac、本地文件、第三方应用、自定义 MCP、远程任务和实时追踪，说明 Google 在把 Agent 从浏览器助手扩展为跨应用执行层；但 beta 范围、权限安全、任务可靠性和企业管理能力仍需用户侧验证。",
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 5,
         "readerUtility": 4,
         "total": 21,
-        "note": "官方工程复盘细节充分；外部只能确认其公开叙述，不能独立审计内部事故范围。"
+        "note": "官方来源清楚说明产品范围和可用条件，但实际可靠性、权限安全和用户采用仍待外部验证。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 5,
         "readerUtility": 4,
         "total": 21,
-        "note": "官方工程复盘细节充分；外部只能确认其公开叙述，不能独立审计内部事故范围。"
+        "note": "官方来源清楚说明产品范围和可用条件，但实际可靠性、权限安全和用户采用仍待外部验证。"
       },
-      "impact": "基础设施、SRE、Agent 平台和企业知识库团队应检查检索系统、崩溃采样、硬件异常和开源运行库风险。",
-      "whoShouldCare": "SRE、平台工程、企业知识库和 Agent 产品团队应关注推理时检索链路的底层可靠性。",
-      "readerUse": "平台团队用于更新故障分类、core dump 采样、云主机隔离和关键开源依赖升级清单。",
-      "nextCheck": "查看 Rockset/相关依赖的修复说明、GNU libunwind 上游补丁、云主机异常处理记录和后续事故指标。",
+      "impact": "产品、IT 和安全团队应检查桌面 Agent 的文件授权、第三方连接器、MCP 接入和远程任务审计。",
+      "whoShouldCare": "产品、IT、安全和个人效率工具团队应关注这条信号，用来评估桌面 Agent 是否进入员工日常工作流。",
+      "readerUse": "IT 和安全团队用来检查桌面 Agent 的文件权限、连接器白名单和任务日志策略。",
+      "nextCheck": "核对 macOS beta 实测、权限提示、企业管理控制、MCP 日志和用户侧误操作报告。",
       "followUpQuestions": [
-        "GNU libunwind 的竞态修复是否进入上游发行版和主流 Linux 发行渠道？",
-        "OpenAI 是否披露类似检索基础设施故障对用户侧成功率或延迟的影响指标？"
+        "Gemini Spark for macOS 的文件授权是否支持企业集中管理和可审计撤销？",
+        "自定义 MCP 与第三方应用连接是否会提供足够的日志、审批和最小权限控制？"
       ],
-      "evidenceThreshold": "需要上游补丁记录、发行版更新、事故指标或客户侧可靠性数据，才能从官方工程复盘升级为已验证的行业级可靠性改进。",
-      "claimBoundary": "当前只证明 OpenAI 公布了这次问题归因和修复叙事，不证明所有类似 AI 检索基础设施都存在同等风险。",
-      "counterEvidence": "若上游补丁记录、云服务方说明或后续事故数据不支持该归因，应收窄为 OpenAI 内部工程经验。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/",
-      "originalUrl": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/",
+      "evidenceThreshold": "至少需要产品文档、企业管理说明、权限日志资料和第三方实测报告，才能升级为已验证的桌面 Agent 部署能力。",
+      "claimBoundary": "Google 官方页能确认发布和可用条件，不证明 Spark 在真实桌面任务中稳定、安全或适合企业默认开放。",
+      "counterEvidence": "如果 beta 用户报告、产品文档或权限日志显示误操作率高或审计不足，应将部署判断下调为谨慎试点。",
+      "source": "Google Keyword AI",
+      "sourceName": "Google Keyword AI",
+      "sourceId": "google-keyword-ai",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/",
+      "originalUrl": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/",
       "sourceRole": "官方核对",
-      "provenance": "OpenAI 官方工程复盘可核对 Rockset 在其数据基础设施中的角色、崩溃表现和其自述的问题归因；事故范围需外部材料补证。",
+      "provenance": "Google 官方博客可核对 Spark 更新、可用条件和连接器范围；实际可靠性、安全性和采用效果仍需外部测试。",
       "trustLevel": "official",
       "verificationStatus": "已核验",
       "originalDependency": "recommended",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
-      "publishedAt": "2026-06-30T00:00:00-07:00",
-      "time": "06/30"
+      "publishedAt": "2026-06-30T09:00:00-07:00",
+      "time": "07/01 01:00 JST"
     }
   ]
 }

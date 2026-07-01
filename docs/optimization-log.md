@@ -1,3 +1,28 @@
+## 2026-07-02 08:06 JST
+
+- Focus: Published the 2026-07-02 08:00 JST AI news intelligence update with two non-duplicated, sufficiently sourced signals: Google official Gemini Spark macOS/connected-apps/MCP update, and Guardian media-background reporting on Anthropic Fable/Mythos export-control relief and Fable 5 restored access.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral, Google Keyword, The Verge, Guardian, Axios/search context, and historical duplicate URLs.
+  - Added `google-keyword-ai` as an official source for Google Keyword AI product/platform updates when Google Keyword is the original source rather than DeepMind.
+  - Published only two safe items because current checks did not surface 10 non-duplicate, sufficiently sourced signals; skipped duplicate Fable coverage and weak/community-only signals instead of padding the batch.
+  - Kept Google Spark as `官方核对` with product/effect boundaries, and Guardian as `媒体背景` / reported with `originalDependency: must-read`; both retain next-check paths for official files, enterprise documentation, third-party tests, and customer access records.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新08点AI新闻情报`; final hash recorded in automation memory because amending this log line changes the commit hash.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of `origin/main`.
+
 ## 2026-07-01 20:01 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 4 content-workflow task. Added guidance for when a media report should be replaced by an original official, filing, paper, regulator, customer-side, dataset, or benchmark source before drafting, while still allowing carefully bounded media-background items when no replacement exists.
