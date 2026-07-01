@@ -20,8 +20,8 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `93b671e` (`增加媒体原始来源替换指南`). Final log/index follow-up commit is recorded in automation memory because this line changes the final hash.
-- Git note: `git push origin main` will be attempted after this log update; prior pull failed because this environment could not resolve `github.com`.
+- Commit: Local implementation commit `93b671e` (`增加媒体原始来源替换指南`) and log/index follow-up commit `756699f` (`记录媒体原始来源指南哈希`). Final local HEAD is recorded in automation memory because updating this line changes the final hash.
+- Git note: `git push origin main` failed because this environment could not resolve `github.com`; local commits remain ahead of the known remote.
 
 ## 2026-07-01 17:06 JST
 
