@@ -1,3 +1,28 @@
+## 2026-07-01 20:01 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 4 content-workflow task. Added guidance for when a media report should be replaced by an original official, filing, paper, regulator, customer-side, dataset, or benchmark source before drafting, while still allowing carefully bounded media-background items when no replacement exists.
+- Changed files:
+  - `docs/original-source-replacement-guide.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing candidate workflow docs; continued with Day 4 because Day 0 through Day 3 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 29 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the original-source replacement documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `93b671e` (`增加媒体原始来源替换指南`). Final log/index follow-up commit is recorded in automation memory because this line changes the final hash.
+- Git note: `git push origin main` will be attempted after this log update; prior pull failed because this environment could not resolve `github.com`.
+
 ## 2026-07-01 17:06 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update with three non-duplicated official-source signals since the morning run: OpenAI GeneBench-Pro, OpenAI Rockset core dump engineering review, and Anthropic Redeploying Fable 5.

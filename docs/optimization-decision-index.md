@@ -25,7 +25,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 1 | Complete | `e319df1` | `docs/candidate-priority-rubric.md` ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. |
 | Day 2 | Complete | `f8f4569` | `docs/candidate-hold-reject-reasons.md` standardizes why candidates are held or rejected, including stale, duplicated, paywalled, unclear-role, weak-relevance, missing-boundary, routine-marketing, and copyright-substitute blockers. |
 | Day 3 | Complete | `b7134a1` | `docs/candidate-to-news-handoff.md` maps intake fields into `data/news.json` responsibilities while separating minimum source facts from AI Watchtower's original Chinese interpretation. |
-| Day 4 | Complete | `pending` | `docs/original-source-replacement-guide.md` decides when a media report must be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting. |
+| Day 4 | Complete | `93b671e` | `docs/original-source-replacement-guide.md` decides when a media report must be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting. |
 
 ## Next Useful Task
 
