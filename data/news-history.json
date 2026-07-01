@@ -1,8 +1,312 @@
 {
   "version": 1,
   "updatedAt": "2026-07-01",
-  "totalItems": 72,
+  "totalItems": 75,
   "editions": [
+    {
+      "id": "news-1700-2026-07-01",
+      "date": "2026-07-01",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-07-01 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断导致 pull 失败；已检查来源清单、来源政策、OpenAI/Anthropic 官方页和历史重复 URL。",
+      "editorialInterpretation": "17:00 版选择三条未重复官方信号，聚焦科研 Agent 评测、AI 数据基础设施可靠性和前沿模型准入恢复。",
+      "readerFrame": {
+        "headline": "阅读本期：科研 Agent、生产可靠性和模型准入同时进入验收清单",
+        "whyItMatters": "OpenAI 的 GeneBench-Pro 和 Rockset 复盘把模型能力与基础设施可靠性拆成可检查问题，Anthropic 的 Fable 5 重新部署则提醒前沿模型访问仍受治理条件影响。",
+        "useThisIssueFor": [
+          "科研和评测团队用来更新生命科学 Agent 的基准、复现和第三方评测要求。",
+          "平台和 SRE 团队用来检查推理时检索、连接器、core dump 和底层依赖风险。",
+          "合规、采购和安全团队用来跟进前沿模型访问恢复、区域限制和合同保障。"
+        ],
+        "notProvenYet": [
+          "不能把 OpenAI 自述的 GeneBench-Pro 结果视为第三方已复现实验。",
+          "不能把 OpenAI 的内部事故复盘推广为所有 AI 检索系统的通用故障率。",
+          "不能把 Anthropic 重新部署说明等同于政府规则稳定或所有客户已恢复访问。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增三条 6 月 30 日官方来源信号",
+        "freshFacts": [
+          "本期新增事实：OpenAI 6 月 30 日发布 GeneBench-Pro，称其包含 129 个计算生物学任务。",
+          "本期新增事实：OpenAI 6 月 30 日发布 Rockset core dump 工程复盘，说明其对 ChatGPT 检索基础设施崩溃的归因。",
+          "本期新增事实：Anthropic 6 月 30 日发布 Redeploying Fable 5，说明 Fable 5 重新部署和访问条件线索。"
+        ],
+        "repeatedContext": [
+          "07 月 01 日 08:00 版已收录 Sonnet 5、Claude Science 和 Axios 模型准入背景，本期不重复其 URL。",
+          "06 月 30 日 17:00 版已收录 Jalapeño 推理芯片和 Mythos 有限恢复媒体背景，本期只补官方未重复来源。",
+          "延续近期科研 AI 与前沿模型准入旧背景：本期仍把官方自述与独立验证边界分开。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "科研 Agent 评测",
+          "count": 1,
+          "meaning": "用来更新生命科学 Agent 的基准、复现和第三方测试清单。"
+        },
+        {
+          "label": "生产 AI 可靠性",
+          "count": 1,
+          "meaning": "用来检查推理时检索系统、崩溃归因和底层依赖风险。"
+        },
+        {
+          "label": "模型准入治理",
+          "count": 1,
+          "meaning": "用来调整前沿模型访问中断、恢复条件和合同保障清单。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 3,
+          "role": "直接核对公司发布、工程复盘和重新部署说明；性能、事故范围和准入效果仍需第三方或政府材料补证。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源占比高",
+        "note": "全部为官方来源且 OpenAI 占比 2/3；适合确认公开动作，不证明外部效果。",
+        "nextCheck": "核对第三方基准、官方补丁、政府文件和客户记录。"
+      },
+      "sourceConcentration": {
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "count": 2,
+        "share": "2/3",
+        "note": "OpenAI 官方来源占当前批次三分之二；本期对其公开动作可信，但对评测代表性和事故影响保留外部验证边界。",
+        "nextCheck": "继续核对 Artificial Analysis、开放任务复现、GNU libunwind 上游补丁、云服务方材料和客户侧可靠性指标。"
+      },
+      "trendNotes": [
+        {
+          "topic": "science-ai-validation",
+          "label": "科研 AI 验收标准",
+          "note": "跨期看，Claude Science、OpenAI 生物科研案例和 GeneBench-Pro 都指向同一变化：科研 AI 正从演示走向可审计评测和工作台。",
+          "boundary": "不证明科研结论已经自动化可靠，仍需论文复现、第三方基准、实验室审计和外部专家评审。"
+        },
+        {
+          "topic": "agent-infrastructure-reliability",
+          "label": "Agent 基础设施可靠性",
+          "note": "跨期看，企业 Agent、连接器、检索系统和 OpenAI Rockset 复盘显示，生产 AI 的风险正在扩展到数据链路和运行库。",
+          "boundary": "不证明行业故障率上升，仍需事故指标、上游补丁、云服务方说明和客户侧可用性数据。"
+        },
+        {
+          "topic": "frontier-model-access",
+          "label": "前沿模型准入",
+          "note": "跨期看，Mythos/Fable 限制、Sonnet 5 上线和 Fable 5 重新部署显示模型发布节奏正被安全审查与分层访问共同塑形。",
+          "boundary": "不证明统一监管制度已经形成，仍需政府原文、公司后续规则、客户访问记录和合同条款确认。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "anthropic-redeploying-fable-5-access-governance-2026-06-30"
+          ],
+          "meaning": "用来更新前沿模型访问恢复、区域限制和采购合规清单。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 1,
+          "itemIds": [
+            "openai-genebench-pro-biology-agent-benchmark-2026-06-30"
+          ],
+          "meaning": "用来更新科研 Agent 的任务设计、判断能力和复现要求。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 1,
+          "itemIds": [
+            "openai-rockset-core-dump-epidemiology-2026-06-30"
+          ],
+          "meaning": "用来检查检索基础设施、崩溃数据和底层依赖的生产风险。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "anthropic-redeploying-fable-5-access-governance-2026-06-30",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic 官方说明 Fable 5 重新部署，前沿模型访问进入逐步恢复期",
+          "body": "Anthropic 说明 Fable 5 重新部署，前沿模型访问进入受控恢复期。",
+          "summary": "Anthropic 官方说明 Fable 5 重新部署，前沿模型访问从全面暂停转向更受控的恢复路径。",
+          "whyItMatters": "模型准入不再只是发布按钮问题，而是政府协作、安全评估、用户资格和企业计费共同决定的可用性风险。",
+          "detailBody": "Anthropic 6 月 30 日发布“Redeploying Fable 5”，称将深化政府协作，并感谢用户、研究人员和行业伙伴协助让 Fable 5 与 Mythos 5 再次可用。",
+          "trend": "前沿模型治理正在从暂停转向分层恢复。",
+          "detailTrend": "Fable 5 的重新部署说明，最强模型的可用性会被政策、安全协作、客户资格、区域限制和计费机制共同塑形，企业合同需要覆盖访问变化。",
+          "whyRanked": "它补上早间媒体背景的官方来源，更新模型访问治理线索。",
+          "topReason": "官方来源确认重新部署方向，适合更新前沿模型准入和采购风险清单。",
+          "detailWhyRanked": "早间版已记录 Axios 对模型准入限制的背景报道；这条官方页面提供 Anthropic 自身的重新部署说明、政府协作表述和访问条件脚注，能帮助合规与采购团队区分媒体背景和公司确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方动作可核对，但政府指令原文、恢复范围和客户实际可用性仍需独立来源。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方动作可核对，但政府指令原文、恢复范围和客户实际可用性仍需独立来源。"
+          },
+          "impact": "合规、采购和平台团队应把前沿模型访问中断、恢复条件和替代模型路径写进合同与运行手册。",
+          "whoShouldCare": "合规、采购、企业平台和安全团队应关注 Fable 5 恢复是否改变前沿模型访问风险。",
+          "readerUse": "合规和采购团队用于更新模型访问中断条款、用量信用配置、客户资格和替代模型计划。",
+          "nextCheck": "核对美国政府原始指令、Anthropic 后续访问规则、客户可用性记录和 Mythos 5/Fable 5 的区域限制。",
+          "followUpQuestions": [
+            "美国政府是否公开原始指令、适用范围或撤销/调整条件？",
+            "企业客户实际获得的 Fable 5 与 Mythos 5 访问是否与 Anthropic 页面描述一致？"
+          ],
+          "evidenceThreshold": "需要政府文件、访问规则、客户可用性记录或合同条款，才能从官方重新部署说明升级为已验证的准入恢复结论。",
+          "claimBoundary": "当前只证明 Anthropic 发布了重新部署说明，不证明政府准入规则已经稳定或所有客户都恢复访问。",
+          "counterEvidence": "若政府文件、客户访问日志或后续 Anthropic 公告显示恢复范围更窄或再次暂停，应下调可用性判断。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/news/redeploying-fable-5",
+          "originalUrl": "https://www.anthropic.com/news/redeploying-fable-5",
+          "sourceRole": "官方核对",
+          "provenance": "Anthropic 官方页面可核对其重新部署说明、政府协作表述和用户访问脚注；政府依据和客户侧可用性仍需独立来源。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-30T00:00:00-07:00",
+          "time": "06/30"
+        },
+        {
+          "id": "openai-genebench-pro-biology-agent-benchmark-2026-06-30",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI 发布 GeneBench-Pro，专测生物学 Agent 的判断力",
+          "body": "OpenAI 发布 GeneBench-Pro，评估科研 Agent 判断力。",
+          "summary": "OpenAI 发布 GeneBench-Pro，用 129 个计算生物学任务评估科研 Agent 的判断型分析能力。",
+          "whyItMatters": "生命科学 Agent 的瓶颈正在从会不会调用工具，转向能否在脏数据和不确定因果路径中做出可审计判断。",
+          "detailBody": "OpenAI 6 月 30 日发布 GeneBench-Pro，称其包含 129 个问题，覆盖基因组学、定量生物学和转化医学，要求模型探索数据、选择分析路径并给出最终答案。",
+          "trend": "科研 AI 评测正在转向端到端研究判断。",
+          "detailTrend": "GeneBench-Pro 的信号是评测对象正在上移：模型不仅要跑代码，还要识别数据噪声、修改假设、选择因果路径，并判断结果何时足以支持下游决策。",
+          "whyRanked": "它是今天最强科研评测信号。",
+          "topReason": "官方研究发布且方法明确：它把科研 Agent 的可用性问题拆成可测的判断任务。",
+          "detailWhyRanked": "OpenAI 同时给出任务数量、领域范围、合成数据构造、专家评审、开放样例和第三方基准计划，能帮助科研与评测团队更新生命科学 Agent 的验收清单。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方研究页面可核对基准设计和自述结果；模型表现仍需第三方复测。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方研究页面可核对基准设计和自述结果；模型表现仍需第三方复测。"
+          },
+          "impact": "科研、生命科学和模型评测团队应把数据质量、因果路径和决策就绪度纳入 Agent 试点评估。",
+          "whoShouldCare": "生命科学、科研平台、模型评测和药企研发团队应关注 GeneBench-Pro 是否改变科研 Agent 的验收标准。",
+          "readerUse": "科研和评测团队用于更新生物计算 Agent 的任务集、复现要求和第三方基准观察表。",
+          "nextCheck": "核对 OpenAI 论文、开放的 10 个代表任务、Artificial Analysis 的 50 题第三方评测和外部复现实验。",
+          "followUpQuestions": [
+            "Artificial Analysis 的第三方评测是否复现 OpenAI 对 GPT-5.6 Sol 的优势判断？",
+            "开放任务能否被非 OpenAI 模型、独立实验室和真实科研流程稳定复现？"
+          ],
+          "evidenceThreshold": "需要第三方基准、开放任务复现和外部实验室报告，才能从官方研究发布升级为已验证的科研 Agent 评测标准。",
+          "claimBoundary": "当前只证明 OpenAI 发布了基准、方法和自述结果，不证明 GPT 系列在真实科研生产中已可靠替代专家。",
+          "counterEvidence": "若第三方复测、开放任务复现或专家审计发现题目偏置、泄漏或模型结果不稳定，应下调其评测代表性。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/introducing-genebench-pro/",
+          "originalUrl": "https://openai.com/index/introducing-genebench-pro/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI 官方页面可核对发布日期、基准目标、题目数量、领域范围、专家评审和其自述模型结果；结论仍需外部复测。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-30T00:00:00-07:00",
+          "time": "06/30"
+        },
+        {
+          "id": "openai-rockset-core-dump-epidemiology-2026-06-30",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI 复盘 Rockset 崩溃，暴露 AI 数据基础设施的可靠性难题",
+          "body": "OpenAI 复盘 Rockset 崩溃，暴露 AI 检索基础设施的底层可靠性风险。",
+          "summary": "OpenAI 复盘 Rockset 崩溃，说明推理时搜索与连接器依赖的数据基础设施仍有底层可靠性风险。",
+          "whyItMatters": "Agent 和企业知识库越依赖推理时检索，底层 C++、云主机和开源运行库的小故障就越可能变成产品可靠性问题。",
+          "detailBody": "OpenAI 6 月 30 日发布工程复盘，称 Rockset 支撑 ChatGPT 数据插件和会话搜索；一次崩溃调查最终指向 Azure 主机硬件异常和 GNU libunwind 竞态。",
+          "trend": "AI 产品可靠性正在扩展到检索和低层数据系统。",
+          "detailTrend": "这篇复盘显示，Agent 稳定性不只取决于模型能力，还取决于推理时数据系统、云主机、C++ 运行环境和开源库能否被观测与快速归因。",
+          "whyRanked": "它揭示生产 AI 的底层可靠性风险。",
+          "topReason": "官方工程复盘且与 ChatGPT 检索基础设施相关，适合作为生产 AI 可靠性检查信号。",
+          "detailWhyRanked": "OpenAI 明确说明 Rockset 是 ChatGPT 数据插件和会话搜索的关键部分，并复盘如何用整体崩溃数据定位硬件与开源库问题，能帮助平台团队更新监控和依赖策略。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方工程复盘细节充分；外部只能确认其公开叙述，不能独立审计内部事故范围。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方工程复盘细节充分；外部只能确认其公开叙述，不能独立审计内部事故范围。"
+          },
+          "impact": "基础设施、SRE、Agent 平台和企业知识库团队应检查检索系统、崩溃采样、硬件异常和开源运行库风险。",
+          "whoShouldCare": "SRE、平台工程、企业知识库和 Agent 产品团队应关注推理时检索链路的底层可靠性。",
+          "readerUse": "平台团队用于更新故障分类、core dump 采样、云主机隔离和关键开源依赖升级清单。",
+          "nextCheck": "查看 Rockset/相关依赖的修复说明、GNU libunwind 上游补丁、云主机异常处理记录和后续事故指标。",
+          "followUpQuestions": [
+            "GNU libunwind 的竞态修复是否进入上游发行版和主流 Linux 发行渠道？",
+            "OpenAI 是否披露类似检索基础设施故障对用户侧成功率或延迟的影响指标？"
+          ],
+          "evidenceThreshold": "需要上游补丁记录、发行版更新、事故指标或客户侧可靠性数据，才能从官方工程复盘升级为已验证的行业级可靠性改进。",
+          "claimBoundary": "当前只证明 OpenAI 公布了这次问题归因和修复叙事，不证明所有类似 AI 检索基础设施都存在同等风险。",
+          "counterEvidence": "若上游补丁记录、云服务方说明或后续事故数据不支持该归因，应收窄为 OpenAI 内部工程经验。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/",
+          "originalUrl": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI 官方工程复盘可核对 Rockset 在其数据基础设施中的角色、崩溃表现和其自述的问题归因；事故范围需外部材料补证。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-06-30T00:00:00-07:00",
+          "time": "06/30"
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-07-01",
       "date": "2026-07-01",

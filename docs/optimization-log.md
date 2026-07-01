@@ -1,3 +1,26 @@
+## 2026-07-01 17:06 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update with three non-duplicated official-source signals since the morning run: OpenAI GeneBench-Pro, OpenAI Rockset core dump engineering review, and Anthropic Redeploying Fable 5.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI and Anthropic pages plus historical duplicate URLs.
+  - Kept all three items as official-source signals with explicit boundaries: third-party benchmark/reproduction still needed for GeneBench-Pro, upstream patch/customer reliability evidence still needed for the Rockset reliability lesson, and government/customer access records still needed for Fable 5 recovery.
+  - Did not reuse the 08:00 JST Anthropic Sonnet 5, Claude Science, or Axios model-access URLs.
+- Verification:
+  - Ran syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 29 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新17点AI新闻情报`; final hash recorded in the automation memory because amending this log line changes the commit hash.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of `origin/main`.
+
 ## 2026-07-01 08:07 JST
 
 - Focus: Published the 2026-07-01 08:00 JST AI news intelligence update. This edition adds three non-duplicated June 30 signals: Anthropic's official Claude Sonnet 5 release, Anthropic's official Claude Science beta workbench, and Axios background on Sonnet 5 in the context of Mythos/Fable access restrictions.

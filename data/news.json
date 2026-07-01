@@ -2,136 +2,130 @@
   "version": 1,
   "updatedAt": "2026-07-01",
   "status": "published",
-  "statusLabel": "08:00 JST 实讯",
+  "statusLabel": "17:00 JST 实讯",
   "sourceCount": 29,
-  "editorNote": "编辑复核于 2026-07-01 08:00 JST：两条为 Anthropic 官方发布，一条为 Axios 媒体背景；性能、科研成效和准入规则保留补证边界。",
+  "editorNote": "编辑复核于 2026-07-01 17:00 JST：三条均为官方来源；评测代表性、事故影响和准入恢复仍保留外部补证边界。",
   "edition": {
-    "id": "news-0800-2026-07-01",
+    "id": "news-1700-2026-07-01",
     "date": "2026-07-01",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "08:00 JST 发布",
-    "note": "本期为 2026-07-01 08:00 JST 新闻情报快照。",
-    "operationalStatus": "GitHub DNS 阻断导致 pull 失败；已检查来源清单、来源政策、Anthropic 官方页、Axios 和历史重复 URL。",
-    "editorialInterpretation": "08:00 版选择两条 Anthropic 官方发布和一条 Axios 媒体背景，聚焦 Agent 模型下沉、科学工作台和模型准入治理。",
+    "archiveLabel": "17:00 JST 发布",
+    "note": "本期为 2026-07-01 17:00 JST 新闻情报快照。",
+    "operationalStatus": "GitHub DNS 阻断导致 pull 失败；已检查来源清单、来源政策、OpenAI/Anthropic 官方页和历史重复 URL。",
+    "editorialInterpretation": "17:00 版选择三条未重复官方信号，聚焦科研 Agent 评测、AI 数据基础设施可靠性和前沿模型准入恢复。",
     "readerFrame": {
-      "headline": "阅读本期：Agent 能力正在从顶级模型下沉到日常产品和科研工作台",
-      "whyItMatters": "Sonnet 5 和 Claude Science 显示 Anthropic 正把可代理工作流扩展到更低成本模型与科学场景，同时 Axios 提醒更强模型仍受政府准入边界影响。",
+      "headline": "阅读本期：科研 Agent、生产可靠性和模型准入同时进入验收清单",
+      "whyItMatters": "OpenAI 的 GeneBench-Pro 和 Rockset 复盘把模型能力与基础设施可靠性拆成可检查问题，Anthropic 的 Fable 5 重新部署则提醒前沿模型访问仍受治理条件影响。",
       "useThisIssueFor": [
-        "产品、工程和采购团队用来更新 Sonnet 级模型是否足以承接编码、浏览、规划和知识工作。",
-        "科研、生命科学和数据平台团队用来评估 Claude Science 的审计轨迹、数据驻留和计算接入要求。",
-        "合规和安全团队用来跟进模型发布、网络安全能力和政府准入限制之间的关系。"
+        "科研和评测团队用来更新生命科学 Agent 的基准、复现和第三方评测要求。",
+        "平台和 SRE 团队用来检查推理时检索、连接器、core dump 和底层依赖风险。",
+        "合规、采购和安全团队用来跟进前沿模型访问恢复、区域限制和合同保障。"
       ],
       "notProvenYet": [
-        "不能把 Anthropic 官方性能图直接视为第三方基准或客户 ROI 已经验证。",
-        "不能把 Claude Science 案例视为生物医学发现、临床效果或论文质量已经独立确认。",
-        "不能把 Axios 背景报道等同于美国前沿模型准入制度已经稳定。"
+        "不能把 OpenAI 自述的 GeneBench-Pro 结果视为第三方已复现实验。",
+        "不能把 OpenAI 的内部事故复盘推广为所有 AI 检索系统的通用故障率。",
+        "不能把 Anthropic 重新部署说明等同于政府规则稳定或所有客户已恢复访问。"
       ]
     },
     "changeSummary": {
-      "headline": "08:00 版新增三条 6 月 30 日未重复信号",
+      "headline": "17:00 版新增三条 6 月 30 日官方来源信号",
       "freshFacts": [
-        "本期新增事实：Anthropic 6 月 30 日发布 Claude Sonnet 5，并称其已面向 Free、Pro、Max、Team、Enterprise、Claude Code 和平台 API 开放。",
-        "本期新增事实：Anthropic 6 月 30 日发布 Claude Science beta，面向 Pro、Max、Team 和 Enterprise 科研用户。",
-        "本期新增事实：Axios 6 月 30 日报道 Sonnet 5 上线时，Anthropic 的 Mythos 和 Fable 仍处于政府准入相关限制背景中。"
+        "本期新增事实：OpenAI 6 月 30 日发布 GeneBench-Pro，称其包含 129 个计算生物学任务。",
+        "本期新增事实：OpenAI 6 月 30 日发布 Rockset core dump 工程复盘，说明其对 ChatGPT 检索基础设施崩溃的归因。",
+        "本期新增事实：Anthropic 6 月 30 日发布 Redeploying Fable 5，说明 Fable 5 重新部署和访问条件线索。"
       ],
       "repeatedContext": [
-        "6 月 30 日 17:00 版已收录 Mythos 有限恢复、Raise US 和 Jalapeño 推理芯片，本期不重复其 URL。",
-        "6 月 29 日以来的 GPT-5.6、Codex 使用数据和前沿模型准入争议仍是背景，本期只更新新来源事实。",
-        "延续上一批媒体来源边界：可靠媒体只作背景线索，政策和效果仍需官方或独立材料。"
+        "07 月 01 日 08:00 版已收录 Sonnet 5、Claude Science 和 Axios 模型准入背景，本期不重复其 URL。",
+        "06 月 30 日 17:00 版已收录 Jalapeño 推理芯片和 Mythos 有限恢复媒体背景，本期只补官方未重复来源。",
+        "延续近期科研 AI 与前沿模型准入旧背景：本期仍把官方自述与独立验证边界分开。"
       ]
     },
     "coverageMix": [
       {
-        "label": "Agent 模型下沉",
+        "label": "科研 Agent 评测",
         "count": 1,
-        "meaning": "用来评估 Sonnet 级模型是否能替代更贵模型承担日常代理、编码和工具调用任务。"
+        "meaning": "用来更新生命科学 Agent 的基准、复现和第三方测试清单。"
       },
       {
-        "label": "科学工作台",
+        "label": "生产 AI 可靠性",
         "count": 1,
-        "meaning": "用来检查科研 AI 工作流的审计、数据驻留、计算资源和复现实验要求。"
+        "meaning": "用来检查推理时检索系统、崩溃归因和底层依赖风险。"
       },
       {
-        "label": "模型准入背景",
+        "label": "模型准入治理",
         "count": 1,
-        "meaning": "用来更新前沿模型发布、网络安全风险和政府准入限制的观察清单。"
+        "meaning": "用来调整前沿模型访问中断、恢复条件和合同保障清单。"
       }
     ],
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方来源",
-        "count": 2,
-        "role": "直接核对产品发布、可用范围、价格、beta 状态和官方自称的安全/能力边界；性能和效果仍需外部验证。"
-      },
-      {
-        "family": "reliable_media",
-        "label": "可靠媒体",
-        "count": 1,
-        "role": "用来更新模型准入背景清单；读者应核对政府文件、公司公告和客户可用性数据后再调整采购判断。"
+        "count": 3,
+        "role": "直接核对公司发布、工程复盘和重新部署说明；性能、事故范围和准入效果仍需第三方或政府材料补证。"
       }
     ],
     "sourceRisk": {
-      "label": "Anthropic 来源占比偏高",
-      "note": "本期三条中两条来自 Anthropic 官方，适合确认其发布事实和自述边界，不适合单独证明性能、科研效果或市场采用。",
-      "nextCheck": "下一步核对独立基准、复现实验、政府文件和客户指标。"
+      "label": "官方来源占比高",
+      "note": "全部为官方来源且 OpenAI 占比 2/3；适合确认公开动作，不证明外部效果。",
+      "nextCheck": "核对第三方基准、官方补丁、政府文件和客户记录。"
     },
     "sourceConcentration": {
-      "sourceId": "anthropic-news",
-      "sourceName": "Anthropic Newsroom",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
       "count": 2,
       "share": "2/3",
-      "note": "Anthropic 官方来源占当前批次三分之二；本期对发布事实可信，但对效果类结论保留厂商主张边界。",
-      "nextCheck": "继续核对独立基准、科研用户复现实验、Claude Science 审计材料、政府准入文件和非 Anthropic 客户指标。"
+      "note": "OpenAI 官方来源占当前批次三分之二；本期对其公开动作可信，但对评测代表性和事故影响保留外部验证边界。",
+      "nextCheck": "继续核对 Artificial Analysis、开放任务复现、GNU libunwind 上游补丁、云服务方材料和客户侧可靠性指标。"
     },
     "trendNotes": [
       {
-        "topic": "agentic-model-cost-downshift",
-        "label": "Agent 成本下沉",
-        "note": "跨期看，Codex 使用数据、Sonnet 5 和企业 Agent 案例都指向同一趋势：代理能力正在从实验工具进入日常工作预算。",
-        "boundary": "不证明所有任务都能降本，仍需独立成本/质量基准、真实任务日志和客户续费数据确认。"
+        "topic": "science-ai-validation",
+        "label": "科研 AI 验收标准",
+        "note": "跨期看，Claude Science、OpenAI 生物科研案例和 GeneBench-Pro 都指向同一变化：科研 AI 正从演示走向可审计评测和工作台。",
+        "boundary": "不证明科研结论已经自动化可靠，仍需论文复现、第三方基准、实验室审计和外部专家评审。"
       },
       {
-        "topic": "science-ai-workbench",
-        "label": "科学 AI 工作台",
-        "note": "跨期看，OpenAI 生物免疫案例、Claude Science 和生命科学连接器都显示模型公司正把科研流程做成可审计产品。",
-        "boundary": "不证明科研结论正确或临床有效，仍需论文、实验复现、数据审计和外部专家评审。"
+        "topic": "agent-infrastructure-reliability",
+        "label": "Agent 基础设施可靠性",
+        "note": "跨期看，企业 Agent、连接器、检索系统和 OpenAI Rockset 复盘显示，生产 AI 的风险正在扩展到数据链路和运行库。",
+        "boundary": "不证明行业故障率上升，仍需事故指标、上游补丁、云服务方说明和客户侧可用性数据。"
       },
       {
         "topic": "frontier-model-access",
         "label": "前沿模型准入",
-        "note": "跨期看，GPT-5.6、Mythos/Fable 和 Sonnet 5 的差异化开放显示发布节奏正在被安全审查与产品分层共同塑形。",
-        "boundary": "不证明统一监管制度已经形成，仍需商务部、OSTP、公司公告和客户访问数据确认。"
+        "note": "跨期看，Mythos/Fable 限制、Sonnet 5 上线和 Fable 5 重新部署显示模型发布节奏正被安全审查与分层访问共同塑形。",
+        "boundary": "不证明统一监管制度已经形成，仍需政府原文、公司后续规则、客户访问记录和合同条款确认。"
       }
     ],
     "topicGroups": [
       {
-        "id": "model",
-        "label": "模型",
+        "id": "policy",
+        "label": "政策",
         "count": 1,
         "itemIds": [
-          "anthropic-claude-sonnet-5-agentic-release-2026-06-30"
+          "anthropic-redeploying-fable-5-access-governance-2026-06-30"
         ],
-        "meaning": "用来更新日常 Agent 模型、价格、可用范围和安全评估观察清单。"
+        "meaning": "用来更新前沿模型访问恢复、区域限制和采购合规清单。"
       },
       {
         "id": "agent",
         "label": "Agent",
         "count": 1,
         "itemIds": [
-          "anthropic-claude-science-workbench-beta-2026-06-30"
+          "openai-genebench-pro-biology-agent-benchmark-2026-06-30"
         ],
-        "meaning": "用来检查科研 Agent 工作台的审计、复现、数据驻留和计算权限清单。"
+        "meaning": "用来更新科研 Agent 的任务设计、判断能力和复现要求。"
       },
       {
-        "id": "policy",
-        "label": "政策",
+        "id": "infrastructure",
+        "label": "基础设施",
         "count": 1,
         "itemIds": [
-          "axios-anthropic-sonnet-5-model-access-context-2026-06-30"
+          "openai-rockset-core-dump-epidemiology-2026-06-30"
         ],
-        "meaning": "用来更新模型能力分层、政府准入限制和企业可用性风险清单。"
+        "meaning": "用来检查检索基础设施、崩溃数据和底层依赖的生产风险。"
       }
     ],
     "itemCount": 3
@@ -169,308 +163,313 @@
     }
   ],
   "briefing": {
-    "label": "08:00 JST 情报简报",
-    "headline": "今天早间 AI 圈的关键变化：Sonnet 5、Claude Science、模型准入分层",
-    "summary": "本期两条来自 Anthropic 官方，一条来自 Axios。重点不是简单追新模型，而是看 Agent 能力如何进入日常价位、科研工作台如何强调审计复现，以及更强模型为何仍需要准入补证。",
+    "label": "17:00 JST 情报简报",
+    "headline": "今天下午 AI 圈的关键变化：科研评测、检索可靠性、模型准入恢复",
+    "summary": "本期三条均为官方来源。重点不是追逐新模型名，而是看科研 Agent 如何被更严格评测，生产 AI 如何暴露底层数据系统风险，以及前沿模型访问如何从暂停走向受控恢复。",
     "cta": "查看今日 TOP3",
     "watchPoints": [
       {
-        "title": "Agent 成本",
-        "body": "看 Sonnet 5 在第三方编码、浏览器和长任务基准中是否支撑下迁。"
-      },
-      {
         "title": "科研复现",
-        "body": "看 Claude Science 用户是否公布可审计项目、复现实验和外部评审。"
+        "body": "看 GeneBench-Pro 开放任务和第三方评测是否复现 OpenAI 自述结果。"
       },
       {
-        "title": "准入规则",
-        "body": "看 Anthropic 与政府是否公开 Mythos/Fable 的恢复范围和许可条件。"
+        "title": "可靠性修复",
+        "body": "看 libunwind 上游补丁、云主机异常处理和检索系统事故指标。"
+      },
+      {
+        "title": "准入恢复",
+        "body": "看政府原文、Anthropic 后续规则和客户实际访问记录。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "08:00 深度简报",
-    "title": "Agent 能力下沉，但最强模型仍受准入边界牵引",
-    "subtitle": "本期用两条官方发布和一条媒体背景说明：Anthropic 正把代理能力做进更便宜的 Sonnet 级模型和科研工作台，同时前沿模型访问仍需要政策与安全补证。",
-    "dateLabel": "2026-07-01 08:00 JST",
-    "status": "已发布；两条官方来源、一条可靠媒体背景，等待独立基准、复现实验和政府文件补证",
-    "overview": "AI Watchtower 08:00 版选择三条 6 月 30 日信号。Anthropic 发布 Claude Sonnet 5 和 Claude Science beta；Axios 将 Sonnet 5 上线放在 Mythos/Fable 准入限制背景下解读。",
+    "kicker": "17:00 深度简报",
+    "title": "科研 Agent 需要评测，生产 Agent 需要可靠基础设施",
+    "subtitle": "OpenAI 的两个官方信号把 Agent 落地拆成评测和工程可靠性问题；Anthropic 的 Fable 5 重新部署提醒最强模型访问仍要经过治理和合同检查。",
+    "dateLabel": "2026-07-01 17:00 JST",
+    "status": "已发布；三条官方来源，等待第三方基准、上游补丁、政府文件和客户可用性补证",
+    "overview": "AI Watchtower 17:00 版选择三条 6 月 30 日未重复官方信号：OpenAI 发布 GeneBench-Pro，OpenAI 复盘 Rockset core dump 调查，Anthropic 说明 Fable 5 重新部署。",
     "timeline": [
       {
         "label": "06/30",
-        "title": "Claude Sonnet 5 发布",
-        "body": "Anthropic 称 Sonnet 5 面向代理式任务、编码、工具使用和知识工作，并在 Claude 与 API 上开放。"
+        "title": "GeneBench-Pro 发布",
+        "body": "OpenAI 把计算生物学 Agent 的模糊数据判断和分析路径选择做成基准问题。"
       },
       {
         "label": "06/30",
-        "title": "Claude Science beta 发布",
-        "body": "Anthropic 把科研工具、数据库、计算资源和 reviewer agent 放进 Claude Science 工作台。"
+        "title": "Rockset 崩溃复盘",
+        "body": "OpenAI 说明 ChatGPT 检索基础设施中的崩溃调查，归因涉及硬件异常和 libunwind 竞态。"
       },
       {
         "label": "06/30",
-        "title": "Axios 补充准入背景",
-        "body": "Axios 报道 Sonnet 5 上线时，更强的 Mythos/Fable 仍处于政府准入相关限制背景中。"
+        "title": "Fable 5 重新部署",
+        "body": "Anthropic 发布官方说明，把前沿模型访问恢复放在政府协作和用户访问条件中。"
       }
     ],
     "keyNumbers": [
       {
         "value": "3",
-        "label": "本期 promoted 信号"
+        "label": "本期 promoted 官方信号"
+      },
+      {
+        "value": "129",
+        "label": "GeneBench-Pro 问题数量"
       },
       {
         "value": "2/3",
-        "label": "Anthropic 官方来源"
-      },
-      {
-        "value": "08/31",
-        "label": "Sonnet 5 introductory pricing 观察节点"
+        "label": "OpenAI 官方来源占比"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "模型",
-        "title": "Sonnet 级模型承担更多 Agent 工作",
-        "body": "Sonnet 5 的发布说明 Anthropic 正把代理能力从更贵模型推向日常用户、开发者和企业平台。",
-        "soWhat": "采购和工程团队要重新评估任务成功率、成本、tokenizer 变化和迁移风险。"
+        "label": "科研",
+        "title": "评测开始检查判断力",
+        "body": "GeneBench-Pro 把脏数据、分析路径和下游决策纳入生命科学 Agent 评估。",
+        "soWhat": "科研团队要把第三方复现和专家审计放进试点验收。"
       },
       {
         "number": "02",
-        "label": "科研",
-        "title": "科学工作台强调审计与复现",
-        "body": "Claude Science 把文献、代码、图表、计算资源和 reviewer agent 组织成科研工作流。",
-        "soWhat": "科研团队要把数据驻留、审计日志、引用核查和复现实验作为试点前提。"
+        "label": "基础设施",
+        "title": "推理时检索需要底层可靠性",
+        "body": "Rockset 复盘说明连接器和搜索链路可能受到硬件、C++ 和开源运行库影响。",
+        "soWhat": "平台团队要检查崩溃采样、依赖补丁和云主机异常隔离。"
       },
       {
         "number": "03",
         "label": "准入",
-        "title": "模型可用性成为治理变量",
-        "body": "Axios 背景显示，较低风险模型可以扩散，但更强模型仍可能受政府和安全流程影响。",
-        "soWhat": "企业合同应覆盖访问中断、模型替代、客户资格和区域限制。"
+        "title": "前沿模型恢复仍需治理证据",
+        "body": "Fable 5 重新部署说明最强模型访问可能被安全审查、客户资格和计费条件共同约束。",
+        "soWhat": "采购和合规团队要保留访问中断条款、替代模型和区域限制清单。"
       }
     ],
     "actions": [
-      "工程团队：用真实任务比较 Sonnet 5、Opus 4.8 和现有模型的成功率与成本。",
-      "科研团队：要求 Claude Science 试点保留审计日志、复现实验和数据驻留记录。",
-      "合规团队：跟踪 Mythos/Fable 后续恢复范围、政府文件和客户访问条件。"
+      "科研团队：用开放任务和第三方评测核对 GeneBench-Pro 是否适合内部基准。",
+      "平台团队：把推理时检索链路纳入 SRE 事故演练和依赖升级计划。",
+      "合规团队：跟踪 Fable 5/Mythos 5 的政府文件、访问规则和客户可用性。"
     ],
     "coverageLimits": [
       {
         "label": "来源边界",
-        "body": "Anthropic 官方来源可确认发布事实和自述边界，但不能替代独立基准、用户复现实验或客户侧指标。"
+        "body": "三条均为公司官方来源，可确认其发布和自述边界，不能替代第三方评测、上游补丁或政府原文。"
       },
       {
-        "label": "媒体边界",
-        "body": "Axios 只作为准入背景与线索入口，不替代政府文件、公司公告或客户可用性数据。"
+        "label": "时间边界",
+        "body": "本期只处理 07 月 01 日 17:00 JST 前后可核对且未重复的信号，不覆盖所有 6 月 30 日媒体讨论。"
+      },
+      {
+        "label": "结论边界",
+        "body": "本期不判断任何模型已可靠替代科研专家，也不判断前沿模型准入规则已经稳定。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "Anthropic 官方页面支持 Sonnet 5 的发布日期、可用范围、价格窗口和自述安全评估。",
-        "Anthropic 官方页面支持 Claude Science beta 的可用计划、科研工作台功能和项目申请时间窗。",
-        "Axios 报道支持 Sonnet 5 与 Mythos/Fable 准入背景之间的媒体解读。"
+        "OpenAI 官方页支持 GeneBench-Pro 的发布日期、任务数量、领域范围和自述评测设计。",
+        "OpenAI 官方工程复盘支持 Rockset 在 ChatGPT 数据基础设施中的角色和其自述故障归因。",
+        "Anthropic 官方页支持 Fable 5 重新部署说明和其政府协作、用户访问表述。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 判断本期核心是 Agent 能力下沉到更可采购的成本层。",
-        "AI Watchtower 判断科研 AI 的下一步竞争会围绕审计、复现和基础设施权限展开。"
+        "AI Watchtower 判断科研 Agent 正进入更严格的可审计评测阶段。",
+        "AI Watchtower 判断生产 Agent 的关键风险正在从模型能力扩展到检索和底层依赖。",
+        "AI Watchtower 判断前沿模型访问需要被纳入合规和采购风险管理。"
       ],
       "unknowns": [
-        "Sonnet 5 在第三方真实任务中的性价比尚未被独立确认。",
-        "Claude Science 的科研成效、引用质量和数据安全边界需要用户复现和外部评审。",
-        "Mythos/Fable 的最终访问范围和政府规则仍需官方文件确认。"
+        "GeneBench-Pro 的第三方复测结果和开放任务代表性仍未知。",
+        "Rockset 事故对用户侧成功率、延迟或可用性的具体影响仍未知。",
+        "Fable 5 与 Mythos 5 的政府原始指令、区域范围和客户实际可用性仍未知。"
       ]
     },
     "references": [
       {
-        "label": "Anthropic 官方发布 Claude Sonnet 5 与可用范围",
-        "url": "https://www.anthropic.com/news/claude-sonnet-5"
+        "label": "OpenAI 发布 GeneBench-Pro 计算生物学 Agent 基准",
+        "url": "https://openai.com/index/introducing-genebench-pro/"
       },
       {
-        "label": "Anthropic 官方发布 Claude Science beta 工作台",
-        "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+        "label": "OpenAI 发布 Rockset core dump 故障研究",
+        "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/"
       },
       {
-        "label": "可靠媒体报道 Sonnet 5 与 Mythos/Fable 准入背景",
-        "url": "https://www.axios.com/2026/06/30/anthropic-sonnet-5-agents-mythos-fable"
+        "label": "Anthropic 官方说明 Redeploying Fable 5",
+        "url": "https://www.anthropic.com/news/redeploying-fable-5"
       }
     ]
   },
   "items": [
     {
-      "id": "anthropic-claude-sonnet-5-agentic-release-2026-06-30",
-      "category": "model",
-      "label": "模型",
-      "title": "Anthropic 发布 Claude Sonnet 5，把 Agent 能力推向日常价位",
-      "body": "Anthropic 发布 Claude Sonnet 5，称其面向代理式搜索、电脑使用、编码和知识工作，比 Sonnet 4.6 更强，并已进入 Claude 与 API。",
-      "summary": "Anthropic 发布 Claude Sonnet 5，主打更低成本的代理式工作、编码和工具调用。",
-      "whyItMatters": "如果外部基准确认，企业可能用 Sonnet 级模型承担更多原本需要 Opus 级模型的日常 Agent 工作。",
-      "detailBody": "Anthropic 6 月 30 日发布 Claude Sonnet 5，称其可制定计划、使用浏览器和终端等工具；该模型已成为 Claude Free/Pro 默认模型，并进入 Max、Team、Enterprise、Claude Code 与平台 API。",
-      "trend": "模型竞争正从“最强模型”转向“可承担日常代理工作的成本层”。",
-      "detailTrend": "Sonnet 5 的核心信号不是单点榜单，而是 Anthropic 正把 Agent 能力、价格、安全护栏和平台可用性组合成更可采购的产品层。",
-      "whyRanked": "它直接影响开发者、企业自动化和 Agent 成本结构，是本期最强官方发布。",
-      "topReason": "官方发布且影响面广：Sonnet 5 可能改变日常 Agent 任务的模型选择。",
-      "detailWhyRanked": "Sonnet 5 同时给出可用范围、临时价格、system card 入口、Claude Code/API 可用性和网络安全能力边界，且官方把它定位为更低成本的 Agent 层，足以让采购、工程和安全团队更新模型矩阵与迁移优先级。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方发布事实强，性能与客户效果仍需独立基准和真实任务验证。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方发布事实强，性能与客户效果仍需独立基准和真实任务验证。"
-      },
-      "impact": "工程和采购团队应重新评估 Sonnet 级模型在编码、浏览、规划和知识工作中的性价比。",
-      "whoShouldCare": "工程、产品、采购和安全团队应关注 Sonnet 5 是否改变日常 Agent 工作的默认模型选择。",
-      "readerUse": "工程、产品、采购和安全团队用于更新模型选型表、Agent 成本估算、安全评估和 API 迁移计划。",
-      "nextCheck": "查看 Sonnet 5 system card、第三方基准、真实工作流日志和客户侧成本/质量对比。",
-      "followUpQuestions": [
-        "Sonnet 5 在企业真实代码库和浏览器任务中的成功率是否接近 Anthropic 自述？",
-        "8 月 31 日后标准价格是否仍能支撑从 Opus 级模型下迁的商业理由？"
-      ],
-      "evidenceThreshold": "需要独立基准、客户任务日志和成本/质量对比，才能从官方发布升级为已验证的 Agent 成本下沉结论。",
-      "claimBoundary": "当前只证明 Anthropic 发布并自称能力、安全和价格边界，不证明性能领先或 ROI 已独立验证。",
-      "counterEvidence": "若第三方基准、客户工单日志或安全复测显示任务成功率、成本或拒答质量低于自述，应下调模型迁移判断。",
-      "source": "Anthropic Newsroom",
-      "sourceName": "Anthropic Newsroom",
-      "sourceId": "anthropic-news",
-      "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-5",
-      "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
-      "sourceRole": "官方核对",
-      "provenance": "Anthropic 官方页面可核对发布日期、可用范围、价格和其自述的能力/安全评估；效果结论仍需外部证据。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-06-30T00:00:00-07:00",
-      "time": "06/30"
-    },
-    {
-      "id": "anthropic-claude-science-workbench-beta-2026-06-30",
-      "category": "research",
-      "label": "研究",
-      "title": "Anthropic 推出 Claude Science，把科研 Agent 做成可审计工作台",
-      "body": "Anthropic 发布 Claude Science beta，称其整合科研工具、数据库、计算资源和审稿代理，面向科学研究工作流。",
-      "summary": "Claude Science beta 面向科研用户，把文献、代码、图表、计算和审计轨迹放进同一工作台。",
-      "whyItMatters": "科研 AI 的关键不只是生成答案，而是能否留下可复现、可审计、可在实验室基础设施上运行的证据链。",
-      "detailBody": "Anthropic 6 月 30 日发布 Claude Science beta，称其面向 Pro、Max、Team 和 Enterprise 用户，支持本地 macOS/Linux、SSH、HPC login node 与按需计算接入。",
-      "trend": "科学 AI 正从单次问答转向可追溯的多代理研究环境。",
-      "detailTrend": "Claude Science 把数据库、专业技能、计算资源、可复现图表和 reviewer agent 组合起来，说明模型公司正在争夺科研流程入口。",
-      "whyRanked": "它把生命科学、科研计算和审计复现放在同一产品叙事中，影响科研 AI 采购与治理。",
-      "topReason": "官方发布且场景明确：科学工作台可能成为科研 AI 落地的新形态。",
-      "detailWhyRanked": "该项连接科研工具、HPC、数据驻留、审计轨迹、reviewer agent、科研连接器和最多 50 个 AI for Science 项目支持，且官方给出 beta 可用范围，能帮助实验室判断试点治理、预算和复现前提。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "发布事实清楚，但科研成效和案例结果属于厂商叙事，需要独立复现。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "发布事实清楚，但科研成效和案例结果属于厂商叙事，需要独立复现。"
-      },
-      "impact": "科研和数据平台团队应关注审计轨迹、数据驻留、计算权限和结果复现是否能满足实验室治理。",
-      "whoShouldCare": "科研团队、生命科学平台、数据安全和采购团队应关注 Claude Science 的审计与基础设施边界。",
-      "readerUse": "科研团队、生命科学平台、数据安全和采购团队用于制定 AI 试点、数据驻留、复现流程和计算授权规则。",
-      "nextCheck": "检查用户复现实验、论文或项目输出、审计日志样例、HPC 管理策略和外部专家评审。",
-      "followUpQuestions": [
-        "Claude Science 生成的图表、引用和计算结果能否被独立实验室复现？",
-        "敏感科研数据在本地、HPC 和远程计算之间的权限边界是否足够透明？"
-      ],
-      "evidenceThreshold": "需要独立实验室复现、审计日志样例、论文/项目输出和安全评审，才能升级为已验证科研工作台成效。",
-      "claimBoundary": "当前只证明 Anthropic 发布 beta 并描述能力，不证明科研结论、药物发现或论文质量已经独立验证。",
-      "counterEvidence": "若复现实验、审计日志、引用核查或数据安全评审发现不可追溯错误，应下调科研落地判断。",
-      "source": "Anthropic Newsroom",
-      "sourceName": "Anthropic Newsroom",
-      "sourceId": "anthropic-news",
-      "sourceUrl": "https://www.anthropic.com/news/claude-science-ai-workbench",
-      "originalUrl": "https://www.anthropic.com/news/claude-science-ai-workbench",
-      "sourceRole": "厂商主张",
-      "provenance": "Anthropic 官方页面可核对产品发布、beta 范围和功能叙述；案例成效和科研效果仍是厂商主张。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-06-30T00:00:00-07:00",
-      "time": "06/30"
-    },
-    {
-      "id": "axios-anthropic-sonnet-5-model-access-context-2026-06-30",
+      "id": "anthropic-redeploying-fable-5-access-governance-2026-06-30",
       "category": "policy",
       "label": "政策",
-      "title": "Axios：Sonnet 5 上线凸显 Anthropic 的模型能力分层与准入压力",
-      "body": "Axios 报道 Sonnet 5 面向日常 Agent 任务上线，同时把它放在 Mythos、Fable 等更强模型仍受准入限制的背景下解读。",
-      "summary": "Axios 将 Sonnet 5 上线解读为 Anthropic 在监管限制下继续推进 Agent 产品分层。",
-      "whyItMatters": "企业不能只看“最新模型”，还要跟踪哪些能力层可用、哪些仍受政府或安全流程影响。",
-      "detailBody": "Axios 6 月 30 日报道，Sonnet 5 成为 Claude Free 和 Pro 默认模型，也面向 Max、Team 和 Enterprise；报道同时把它放在 Mythos 有限恢复、Fable 待恢复和政府准入限制背景中。",
-      "trend": "前沿模型发布正在形成“强模型受限、日常 Agent 模型下沉”的双轨节奏。",
-      "detailTrend": "该媒体背景把 Sonnet 5 与 Mythos、Fable 和 OpenAI 分阶段发布放在同一治理图景中，提示模型可用性、客户资格和可撤回访问会成为采购和业务连续性风险。",
-      "whyRanked": "它补足官方发布之外的政策背景，帮助读者理解为什么较低风险模型会被更快推向日常用户。",
-      "topReason": "媒体背景清晰：模型发布节奏正在被安全准入和产品分层共同塑造。",
-      "detailWhyRanked": "该项不是确认新监管制度，而是用 Axios 的报道把 Sonnet 5、Mythos、Fable 和 OpenAI 分阶段发布放在同一背景下，帮助企业把模型访问、客户资格、政府审查、替代模型和访问中断条款纳入供应商风险管理。",
+      "title": "Anthropic 官方说明 Fable 5 重新部署，前沿模型访问进入逐步恢复期",
+      "body": "Anthropic 说明 Fable 5 重新部署，前沿模型访问进入受控恢复期。",
+      "summary": "Anthropic 官方说明 Fable 5 重新部署，前沿模型访问从全面暂停转向更受控的恢复路径。",
+      "whyItMatters": "模型准入不再只是发布按钮问题，而是政府协作、安全评估、用户资格和企业计费共同决定的可用性风险。",
+      "detailBody": "Anthropic 6 月 30 日发布“Redeploying Fable 5”，称将深化政府协作，并感谢用户、研究人员和行业伙伴协助让 Fable 5 与 Mythos 5 再次可用。",
+      "trend": "前沿模型治理正在从暂停转向分层恢复。",
+      "detailTrend": "Fable 5 的重新部署说明，最强模型的可用性会被政策、安全协作、客户资格、区域限制和计费机制共同塑形，企业合同需要覆盖访问变化。",
+      "whyRanked": "它补上早间媒体背景的官方来源，更新模型访问治理线索。",
+      "topReason": "官方来源确认重新部署方向，适合更新前沿模型准入和采购风险清单。",
+      "detailWhyRanked": "早间版已记录 Axios 对模型准入限制的背景报道；这条官方页面提供 Anthropic 自身的重新部署说明、政府协作表述和访问条件脚注，能帮助合规与采购团队区分媒体背景和公司确认。",
       "selectionScore": {
         "impact": 4,
-        "novelty": 3,
+        "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "Axios 提供有用背景，但政策结论仍需官方文件和公司公告确认。"
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "官方动作可核对，但政府指令原文、恢复范围和客户实际可用性仍需独立来源。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 3,
+        "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "Axios 提供有用背景，但政策结论仍需官方文件和公司公告确认。"
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "官方动作可核对，但政府指令原文、恢复范围和客户实际可用性仍需独立来源。"
       },
-      "impact": "合规、采购和安全团队应把模型等级、访问资格和可能撤回的发布条件写入供应商审查。",
-      "whoShouldCare": "企业合规、采购、安全和业务连续性团队应关注模型访问限制对生产系统的影响。",
-      "readerUse": "企业合规、采购、安全和业务连续性团队用于更新模型可用性台账、客户资格审查、区域限制和替代模型预案。",
-      "nextCheck": "核对 Anthropic 官方公告、商务部/OSTP 文件、客户访问状态和后续许可条件。",
+      "impact": "合规、采购和平台团队应把前沿模型访问中断、恢复条件和替代模型路径写进合同与运行手册。",
+      "whoShouldCare": "合规、采购、企业平台和安全团队应关注 Fable 5 恢复是否改变前沿模型访问风险。",
+      "readerUse": "合规和采购团队用于更新模型访问中断条款、用量信用配置、客户资格和替代模型计划。",
+      "nextCheck": "核对美国政府原始指令、Anthropic 后续访问规则、客户可用性记录和 Mythos 5/Fable 5 的区域限制。",
       "followUpQuestions": [
-        "Mythos 和 Fable 的访问范围是否会通过官方文件或公司公告扩大？",
-        "企业合同是否会明确模型降级、替代模型和访问中断的责任边界？"
+        "美国政府是否公开原始指令、适用范围或撤销/调整条件？",
+        "企业客户实际获得的 Fable 5 与 Mythos 5 访问是否与 Anthropic 页面描述一致？"
       ],
-      "evidenceThreshold": "需要政府文件、Anthropic 公告和客户可用性数据，才能从媒体背景升级为已确认的模型准入规则变化。",
-      "claimBoundary": "当前只证明 Axios 对 Sonnet 5 与准入限制的报道，不证明政府规则已经公开、稳定或统一适用。",
-      "counterEvidence": "若后续官方文件显示限制范围不同，或客户访问数据与报道不符，应降级为单篇媒体背景并缩小政策解释。",
-      "source": "Axios AI / Technology",
-      "sourceName": "Axios AI / Technology",
-      "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/06/30/anthropic-sonnet-5-agents-mythos-fable",
-      "originalUrl": "https://www.axios.com/2026/06/30/anthropic-sonnet-5-agents-mythos-fable",
-      "sourceRole": "媒体背景",
-      "provenance": "Axios 可作为媒体背景和线索入口；完整采访、引述、上下文和未公开来源判断仍需阅读原文并等待官方补证。",
-      "trustLevel": "media",
+      "evidenceThreshold": "需要政府文件、访问规则、客户可用性记录或合同条款，才能从官方重新部署说明升级为已验证的准入恢复结论。",
+      "claimBoundary": "当前只证明 Anthropic 发布了重新部署说明，不证明政府准入规则已经稳定或所有客户都恢复访问。",
+      "counterEvidence": "若政府文件、客户访问日志或后续 Anthropic 公告显示恢复范围更窄或再次暂停，应下调可用性判断。",
+      "source": "Anthropic Newsroom",
+      "sourceName": "Anthropic Newsroom",
+      "sourceId": "anthropic-news",
+      "sourceUrl": "https://www.anthropic.com/news/redeploying-fable-5",
+      "originalUrl": "https://www.anthropic.com/news/redeploying-fable-5",
+      "sourceRole": "官方核对",
+      "provenance": "Anthropic 官方页面可核对其重新部署说明、政府协作表述和用户访问脚注；政府依据和客户侧可用性仍需独立来源。",
+      "trustLevel": "official",
       "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-06-30T00:00:00-04:00",
+      "originalDependency": "recommended",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "publishedAt": "2026-06-30T00:00:00-07:00",
+      "time": "06/30"
+    },
+    {
+      "id": "openai-genebench-pro-biology-agent-benchmark-2026-06-30",
+      "category": "research",
+      "label": "研究",
+      "title": "OpenAI 发布 GeneBench-Pro，专测生物学 Agent 的判断力",
+      "body": "OpenAI 发布 GeneBench-Pro，评估科研 Agent 判断力。",
+      "summary": "OpenAI 发布 GeneBench-Pro，用 129 个计算生物学任务评估科研 Agent 的判断型分析能力。",
+      "whyItMatters": "生命科学 Agent 的瓶颈正在从会不会调用工具，转向能否在脏数据和不确定因果路径中做出可审计判断。",
+      "detailBody": "OpenAI 6 月 30 日发布 GeneBench-Pro，称其包含 129 个问题，覆盖基因组学、定量生物学和转化医学，要求模型探索数据、选择分析路径并给出最终答案。",
+      "trend": "科研 AI 评测正在转向端到端研究判断。",
+      "detailTrend": "GeneBench-Pro 的信号是评测对象正在上移：模型不仅要跑代码，还要识别数据噪声、修改假设、选择因果路径，并判断结果何时足以支持下游决策。",
+      "whyRanked": "它是今天最强科研评测信号。",
+      "topReason": "官方研究发布且方法明确：它把科研 Agent 的可用性问题拆成可测的判断任务。",
+      "detailWhyRanked": "OpenAI 同时给出任务数量、领域范围、合成数据构造、专家评审、开放样例和第三方基准计划，能帮助科研与评测团队更新生命科学 Agent 的验收清单。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "官方研究页面可核对基准设计和自述结果；模型表现仍需第三方复测。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "官方研究页面可核对基准设计和自述结果；模型表现仍需第三方复测。"
+      },
+      "impact": "科研、生命科学和模型评测团队应把数据质量、因果路径和决策就绪度纳入 Agent 试点评估。",
+      "whoShouldCare": "生命科学、科研平台、模型评测和药企研发团队应关注 GeneBench-Pro 是否改变科研 Agent 的验收标准。",
+      "readerUse": "科研和评测团队用于更新生物计算 Agent 的任务集、复现要求和第三方基准观察表。",
+      "nextCheck": "核对 OpenAI 论文、开放的 10 个代表任务、Artificial Analysis 的 50 题第三方评测和外部复现实验。",
+      "followUpQuestions": [
+        "Artificial Analysis 的第三方评测是否复现 OpenAI 对 GPT-5.6 Sol 的优势判断？",
+        "开放任务能否被非 OpenAI 模型、独立实验室和真实科研流程稳定复现？"
+      ],
+      "evidenceThreshold": "需要第三方基准、开放任务复现和外部实验室报告，才能从官方研究发布升级为已验证的科研 Agent 评测标准。",
+      "claimBoundary": "当前只证明 OpenAI 发布了基准、方法和自述结果，不证明 GPT 系列在真实科研生产中已可靠替代专家。",
+      "counterEvidence": "若第三方复测、开放任务复现或专家审计发现题目偏置、泄漏或模型结果不稳定，应下调其评测代表性。",
+      "source": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "openai-news",
+      "sourceUrl": "https://openai.com/index/introducing-genebench-pro/",
+      "originalUrl": "https://openai.com/index/introducing-genebench-pro/",
+      "sourceRole": "官方核对",
+      "provenance": "OpenAI 官方页面可核对发布日期、基准目标、题目数量、领域范围、专家评审和其自述模型结果；结论仍需外部复测。",
+      "trustLevel": "official",
+      "verificationStatus": "已核验",
+      "originalDependency": "recommended",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "publishedAt": "2026-06-30T00:00:00-07:00",
+      "time": "06/30"
+    },
+    {
+      "id": "openai-rockset-core-dump-epidemiology-2026-06-30",
+      "category": "tool",
+      "label": "工具",
+      "title": "OpenAI 复盘 Rockset 崩溃，暴露 AI 数据基础设施的可靠性难题",
+      "body": "OpenAI 复盘 Rockset 崩溃，暴露 AI 检索基础设施的底层可靠性风险。",
+      "summary": "OpenAI 复盘 Rockset 崩溃，说明推理时搜索与连接器依赖的数据基础设施仍有底层可靠性风险。",
+      "whyItMatters": "Agent 和企业知识库越依赖推理时检索，底层 C++、云主机和开源运行库的小故障就越可能变成产品可靠性问题。",
+      "detailBody": "OpenAI 6 月 30 日发布工程复盘，称 Rockset 支撑 ChatGPT 数据插件和会话搜索；一次崩溃调查最终指向 Azure 主机硬件异常和 GNU libunwind 竞态。",
+      "trend": "AI 产品可靠性正在扩展到检索和低层数据系统。",
+      "detailTrend": "这篇复盘显示，Agent 稳定性不只取决于模型能力，还取决于推理时数据系统、云主机、C++ 运行环境和开源库能否被观测与快速归因。",
+      "whyRanked": "它揭示生产 AI 的底层可靠性风险。",
+      "topReason": "官方工程复盘且与 ChatGPT 检索基础设施相关，适合作为生产 AI 可靠性检查信号。",
+      "detailWhyRanked": "OpenAI 明确说明 Rockset 是 ChatGPT 数据插件和会话搜索的关键部分，并复盘如何用整体崩溃数据定位硬件与开源库问题，能帮助平台团队更新监控和依赖策略。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 21,
+        "note": "官方工程复盘细节充分；外部只能确认其公开叙述，不能独立审计内部事故范围。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 21,
+        "note": "官方工程复盘细节充分；外部只能确认其公开叙述，不能独立审计内部事故范围。"
+      },
+      "impact": "基础设施、SRE、Agent 平台和企业知识库团队应检查检索系统、崩溃采样、硬件异常和开源运行库风险。",
+      "whoShouldCare": "SRE、平台工程、企业知识库和 Agent 产品团队应关注推理时检索链路的底层可靠性。",
+      "readerUse": "平台团队用于更新故障分类、core dump 采样、云主机隔离和关键开源依赖升级清单。",
+      "nextCheck": "查看 Rockset/相关依赖的修复说明、GNU libunwind 上游补丁、云主机异常处理记录和后续事故指标。",
+      "followUpQuestions": [
+        "GNU libunwind 的竞态修复是否进入上游发行版和主流 Linux 发行渠道？",
+        "OpenAI 是否披露类似检索基础设施故障对用户侧成功率或延迟的影响指标？"
+      ],
+      "evidenceThreshold": "需要上游补丁记录、发行版更新、事故指标或客户侧可靠性数据，才能从官方工程复盘升级为已验证的行业级可靠性改进。",
+      "claimBoundary": "当前只证明 OpenAI 公布了这次问题归因和修复叙事，不证明所有类似 AI 检索基础设施都存在同等风险。",
+      "counterEvidence": "若上游补丁记录、云服务方说明或后续事故数据不支持该归因，应收窄为 OpenAI 内部工程经验。",
+      "source": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "openai-news",
+      "sourceUrl": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/",
+      "originalUrl": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/",
+      "sourceRole": "官方核对",
+      "provenance": "OpenAI 官方工程复盘可核对 Rockset 在其数据基础设施中的角色、崩溃表现和其自述的问题归因；事故范围需外部材料补证。",
+      "trustLevel": "official",
+      "verificationStatus": "已核验",
+      "originalDependency": "recommended",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "publishedAt": "2026-06-30T00:00:00-07:00",
       "time": "06/30"
     }
   ]
