@@ -1,6 +1,6 @@
 # Candidate To News Handoff Checklist
 
-Use this checklist after a candidate has passed `docs/candidate-source-checklist.md`, has a completed `docs/candidate-intake-format.md` record, and has been ranked with `docs/candidate-priority-rubric.md`. Its job is to turn one approved `draft` candidate into `data/news.json` without copying source article text or losing the editorial boundaries recorded during intake.
+Use this checklist after a candidate has passed `docs/candidate-source-checklist.md`, has a completed `docs/candidate-intake-format.md` record, has resolved any media-to-original-source decision with `docs/original-source-replacement-guide.md`, and has been ranked with `docs/candidate-priority-rubric.md`. Its job is to turn one approved `draft` candidate into `data/news.json` without copying source article text or losing the editorial boundaries recorded during intake.
 
 This is a drafting checklist, not a new content source. If the intake record cannot answer a row below, return the candidate to `hold` and update `decisionReason` with a code from `docs/candidate-hold-reject-reasons.md`.
 
@@ -11,6 +11,7 @@ Draft only when all of these are true:
 - `draftingDecision` is `draft`.
 - `sourceId` exists in `data/sources.json`.
 - `duplicateStatus` says the URL and central source fact are not already current or archived.
+- Media-started candidates either use the stronger original source as `candidateUrl` or explicitly remain `媒体背景` with `originalDependency: "must-read"`.
 - `copyrightPosture` explains how the draft avoids becoming a Chinese replacement for the source article.
 - `proofBoundary` and `nextIndependentCheck` are specific enough to become public reader guidance.
 - Media-sourced items can be useful with the minimum source fact plus AI Watchtower analysis; otherwise use `reject-copyright-substitute-risk`.

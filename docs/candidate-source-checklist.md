@@ -1,6 +1,6 @@
 # Candidate Source Checklist
 
-Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md`, the hold/reject vocabulary in `docs/candidate-hold-reject-reasons.md`, the priority ranking in `docs/candidate-priority-rubric.md`, the field-level handoff in `docs/candidate-to-news-handoff.md`, or `docs/editorial-checklist.md` after drafting.
+Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md`, the hold/reject vocabulary in `docs/candidate-hold-reject-reasons.md`, the priority ranking in `docs/candidate-priority-rubric.md`, the original-source replacement guide in `docs/original-source-replacement-guide.md`, the field-level handoff in `docs/candidate-to-news-handoff.md`, or `docs/editorial-checklist.md` after drafting.
 
 ## 1. Candidate Identity
 
@@ -20,6 +20,8 @@ Choose one source role before summarizing:
 - `厂商主张`: the source is vendor-authored narrative, customer story, benchmark framing, or policy proposal and needs independent proof before becoming a stronger conclusion.
 
 If the source role is unclear, hold the candidate as a research note with `hold-source-role-unclear` and do not publish it as a current item.
+
+When a media report names a fact that should have an official, filing, paper, regulator, customer-side, dataset, or benchmark original, use `docs/original-source-replacement-guide.md` before drafting. If the original source exists, prefer that original as `candidateUrl`; if it does not, keep the media role visible and the source fact minimal.
 
 ## 3. Minimum Evidence
 
@@ -60,4 +62,4 @@ Only hand a candidate to drafting when it can answer these six prompts:
 5. What evidence would weaken or downgrade the claim?
 6. Which original source link should readers use for full context?
 
-Before drafting, capture those answers in `docs/candidate-intake-format.md` terms: `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, `draftingDecision`, and `decisionReason`. When `draftingDecision` is `hold` or `reject`, start `decisionReason` with a code from `docs/candidate-hold-reject-reasons.md`. When a batch has more candidates than current-news slots, use `docs/candidate-priority-rubric.md` to rank safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. When a candidate is ready to become public copy, use `docs/candidate-to-news-handoff.md` to map intake fields into `data/news.json` fields while keeping source facts short and original analysis separate. After drafting, run `docs/editorial-checklist.md` and `node scripts/validate-data.mjs` before committing.
+Before drafting, capture those answers in `docs/candidate-intake-format.md` terms: `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, `draftingDecision`, and `decisionReason`. When `draftingDecision` is `hold` or `reject`, start `decisionReason` with a code from `docs/candidate-hold-reject-reasons.md`. When a media report may need a primary document, run `docs/original-source-replacement-guide.md` before deciding whether to draft, hold, or replace the source URL. When a batch has more candidates than current-news slots, use `docs/candidate-priority-rubric.md` to rank safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. When a candidate is ready to become public copy, use `docs/candidate-to-news-handoff.md` to map intake fields into `data/news.json` fields while keeping source facts short and original analysis separate. After drafting, run `docs/editorial-checklist.md` and `node scripts/validate-data.mjs` before committing.

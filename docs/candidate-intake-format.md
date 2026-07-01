@@ -2,14 +2,15 @@
 
 Use this lightweight record before turning a discovered URL into `data/news.json`. The goal is to preserve the editor's source judgment and drafting decision without copying source text or creating a long internal database.
 
-This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, `docs/candidate-to-news-handoff.md`, and `docs/editorial-checklist.md`:
+This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, `docs/original-source-replacement-guide.md`, `docs/candidate-to-news-handoff.md`, and `docs/editorial-checklist.md`:
 
 1. The candidate checklist decides whether a URL is allowed into intake.
 2. This intake record captures the minimum editorial judgment needed before drafting.
 3. The hold/reject vocabulary keeps non-draft decisions consistent and reviewable.
 4. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
-5. The candidate-to-news handoff maps intake fields into `data/news.json` fields without duplicating source article text.
-6. The editorial checklist and validators review the finished `data/news.json` item.
+5. The original-source replacement guide decides whether a media report should be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting.
+6. The candidate-to-news handoff maps intake fields into `data/news.json` fields without duplicating source article text.
+7. The editorial checklist and validators review the finished `data/news.json` item.
 
 ## Required Intake Fields
 
@@ -25,6 +26,7 @@ Each candidate record should answer these fields in Chinese unless the value is 
 - `aiRelevance`: One short sentence explaining why this matters to AI readers now.
 - `proofBoundary`: What this source does not prove.
 - `nextIndependentCheck`: The official, original, regulator, filing, paper, customer-side, audit, metric, replication, or independent source needed next.
+- `originalSourceSearch`: For media-started candidates, whether `docs/original-source-replacement-guide.md` found a stronger original source, found none, or intentionally kept the media report as a limited signal.
 - `duplicateStatus`: Result of checking `data/news-history.json`, current `data/news.json`, and `node scripts/report-duplicate-candidates.mjs` when a batch file exists.
 - `copyrightPosture`: How the item will avoid becoming a source-article replacement, especially for media and paywalled sources.
 - `priorityScore`: Optional batch score from `docs/candidate-priority-rubric.md`, used after source safety is settled and before drafting order is chosen.

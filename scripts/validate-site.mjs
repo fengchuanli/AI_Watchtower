@@ -22,6 +22,7 @@ const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.m
 const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
 const candidateHoldRejectReasons = readFileSync("docs/candidate-hold-reject-reasons.md", "utf8");
 const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md", "utf8");
+const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
@@ -694,6 +695,26 @@ if (
 }
 
 if (
+  !/Original Source Replacement Guide/.test(originalSourceReplacementGuide) ||
+  !/Replacement Rule/.test(originalSourceReplacementGuide) ||
+  !/Must Replace Before Drafting/.test(originalSourceReplacementGuide) ||
+  !/Media Can Remain Central/.test(originalSourceReplacementGuide) ||
+  !/Replacement Search Order/.test(originalSourceReplacementGuide) ||
+  !/hold-original-source-needed/.test(originalSourceReplacementGuide) ||
+  !/originalDependency: "must-read"/.test(originalSourceReplacementGuide) ||
+  !/official announcement, filing, paper, regulator text/.test(originalSourceReplacementGuide) ||
+  !/customer-side/.test(originalSourceReplacementGuide) ||
+  !/copyrightPosture/.test(originalSourceReplacementGuide) ||
+  !/original-source-replacement-guide\.md/.test(candidateSourceChecklist) ||
+  !/original-source-replacement-guide\.md/.test(candidateIntakeFormat) ||
+  !/original-source-replacement-guide\.md/.test(candidateToNewsHandoff) ||
+  !/original-source-replacement-guide\.md/.test(readme) ||
+  !/Day 4[\s\S]*original-source-replacement-guide\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Candidate gathering must include guidance for replacing media reports with official, filing, paper, regulator, or customer-side originals before drafting.");
+}
+
+if (
   !/report-duplicate-candidates\.mjs/.test(candidateSourceChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
   !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
@@ -853,7 +874,8 @@ if (
   !/Day 1[\s\S]*candidate-priority-rubric\.md/.test(optimizationDecisionIndex) ||
   !/Day 2[\s\S]*candidate-hold-reject-reasons\.md/.test(optimizationDecisionIndex) ||
   !/Day 3[\s\S]*candidate-to-news-handoff\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 4/.test(optimizationDecisionIndex) ||
+  !/Day 4[\s\S]*original-source-replacement-guide\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 5/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

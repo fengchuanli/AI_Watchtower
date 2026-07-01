@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 1, Candidate Intake And Editorial Triage
-- Last indexed run: 2026-06-30 20:00 JST
+- Last indexed run: 2026-07-01 20:00 JST
 - Network status: GitHub DNS resolution failed during the latest pull attempt; push may need retry when network access returns.
 
 ## Recent Plan-Day Decisions
@@ -25,12 +25,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 1 | Complete | `e319df1` | `docs/candidate-priority-rubric.md` ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety before drafting order is chosen. |
 | Day 2 | Complete | `f8f4569` | `docs/candidate-hold-reject-reasons.md` standardizes why candidates are held or rejected, including stale, duplicated, paywalled, unclear-role, weak-relevance, missing-boundary, routine-marketing, and copyright-substitute blockers. |
 | Day 3 | Complete | `b7134a1` | `docs/candidate-to-news-handoff.md` maps intake fields into `data/news.json` responsibilities while separating minimum source facts from AI Watchtower's original Chinese interpretation. |
+| Day 4 | Complete | `pending` | `docs/original-source-replacement-guide.md` decides when a media report must be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting. |
 
 ## Next Useful Task
 
-- Continue with Day 4: add guidance for when a media report should be replaced by an original official, filing, paper, or regulator source before publication.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 4 first.
-- If Day 4 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 5: add a source-diversity triage note for batches with too many candidates from one owner, one source family, or one narrative angle.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 5 first.
+- If Day 5 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 
