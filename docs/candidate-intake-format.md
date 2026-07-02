@@ -2,15 +2,16 @@
 
 Use this lightweight record before turning a discovered URL into `data/news.json`. The goal is to preserve the editor's source judgment and drafting decision without copying source text or creating a long internal database.
 
-This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, `docs/original-source-replacement-guide.md`, `docs/candidate-to-news-handoff.md`, and `docs/editorial-checklist.md`:
+This format sits between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, `docs/source-diversity-triage-note.md`, `docs/original-source-replacement-guide.md`, `docs/candidate-to-news-handoff.md`, and `docs/editorial-checklist.md`:
 
 1. The candidate checklist decides whether a URL is allowed into intake.
 2. This intake record captures the minimum editorial judgment needed before drafting.
 3. The hold/reject vocabulary keeps non-draft decisions consistent and reviewable.
 4. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
-5. The original-source replacement guide decides whether a media report should be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting.
-6. The candidate-to-news handoff maps intake fields into `data/news.json` fields without duplicating source article text.
-7. The editorial checklist and validators review the finished `data/news.json` item.
+5. The source-diversity triage note checks whether the draftable batch is too concentrated by owner, source family, evidence mode, company, geography, or narrative angle.
+6. The original-source replacement guide decides whether a media report should be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting.
+7. The candidate-to-news handoff maps intake fields into `data/news.json` fields without duplicating source article text.
+8. The editorial checklist and validators review the finished `data/news.json` item.
 
 ## Required Intake Fields
 
@@ -31,6 +32,7 @@ Each candidate record should answer these fields in Chinese unless the value is 
 - `copyrightPosture`: How the item will avoid becoming a source-article replacement, especially for media and paywalled sources.
 - `priorityScore`: Optional batch score from `docs/candidate-priority-rubric.md`, used after source safety is settled and before drafting order is chosen.
 - `priorityReason`: Optional one-sentence explanation of the score, especially when a lower-scoring item is held for source diversity or copyright safety.
+- `batchDiversityNote`: Optional note from `docs/source-diversity-triage-note.md` when safe candidates are concentrated by source owner, source family, evidence mode, company, geography, or narrative angle.
 - `draftingDecision`: `draft`, `hold`, or `reject`.
 - `decisionReason`: Why the editor chose that decision. For `hold` or `reject`, start with a reason code from `docs/candidate-hold-reject-reasons.md`, then add one short Chinese sentence naming the concrete blocker.
 
@@ -60,6 +62,7 @@ Use `reject` when the candidate is paywall/body-dependent, login-only, repeated,
   "copyrightPosture": "只记录最小事实，完整采访、图表、细节和上下文请读原文。",
   "priorityScore": 6,
   "priorityReason": "读者效用清楚，但仍需要官方文件确认，且媒体来源必须保持最小事实。",
+  "batchDiversityNote": "同批候选已有多条可靠媒体背景，若没有官方、研究或监管来源补位，应发布短批次并保留来源集中提示。",
   "draftingDecision": "hold",
   "decisionReason": "hold-original-source-needed: 需要找到官方文件后再决定是否进入当前批次。"
 }
@@ -75,6 +78,7 @@ Before drafting, use `docs/candidate-to-news-handoff.md` to convert the intake r
 - `nextIndependentCheck` informs `nextCheck`, `evidenceThreshold`, and `followUpQuestions`.
 - `duplicateStatus` and `copyrightPosture` should remain visible in the editor's decision, even when they do not become public copy.
 - `priorityScore` and `priorityReason` decide drafting order only; they should not be published as a false precision score for readers.
+- `batchDiversityNote` informs whether to publish normally, draft with a source-concentration caveat, hold a repetitive safe candidate with `hold-batch-balance`, or publish a shorter batch without padding.
 - `decisionReason` should preserve the hold/reject reason code when the candidate does not move forward, so later runs can distinguish stale, duplicated, paywalled, unclear-role, weak-relevance, and missing-boundary blockers.
 
 Do not paste source paragraphs into intake records. If a field cannot be answered without copying source text, keep the candidate on hold and revisit the original source manually.

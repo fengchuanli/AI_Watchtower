@@ -22,6 +22,7 @@ const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.m
 const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
 const candidateHoldRejectReasons = readFileSync("docs/candidate-hold-reject-reasons.md", "utf8");
 const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md", "utf8");
+const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-note.md", "utf8");
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
@@ -671,6 +672,29 @@ if (
 }
 
 if (
+  !/Source Diversity Triage Note/.test(sourceDiversityTriageNote) ||
+  !/When To Trigger The Note/.test(sourceDiversityTriageNote) ||
+  !/Triage Decision/.test(sourceDiversityTriageNote) ||
+  !/balance-draft/.test(sourceDiversityTriageNote) ||
+  !/draft-with-caveat/.test(sourceDiversityTriageNote) ||
+  !/hold-for-balance/.test(sourceDiversityTriageNote) ||
+  !/publish-short-batch/.test(sourceDiversityTriageNote) ||
+  !/hold-batch-balance/.test(sourceDiversityTriageNote) ||
+  !/batchDiversityNote/.test(sourceDiversityTriageNote) ||
+  !/source owner/.test(sourceDiversityTriageNote) ||
+  !/source family/.test(sourceDiversityTriageNote) ||
+  !/narrative angle/.test(sourceDiversityTriageNote) ||
+  !/source-diversity-triage-note\.md/.test(candidateSourceChecklist) ||
+  !/source-diversity-triage-note\.md/.test(candidateIntakeFormat) ||
+  !/source-diversity-triage-note\.md/.test(candidatePriorityRubric) ||
+  !/source-diversity-triage-note\.md/.test(candidateToNewsHandoff) ||
+  !/source-diversity-triage-note\.md/.test(readme) ||
+  !/Day 5[\s\S]*source-diversity-triage-note\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Candidate gathering must include batch-level source-diversity triage for over-concentrated owner, source-family, and narrative-angle candidate sets.");
+}
+
+if (
   !/Candidate To News Handoff Checklist/.test(candidateToNewsHandoff) ||
   !/Pre-Draft Gate/.test(candidateToNewsHandoff) ||
   !/Field Mapping/.test(candidateToNewsHandoff) ||
@@ -875,7 +899,8 @@ if (
   !/Day 2[\s\S]*candidate-hold-reject-reasons\.md/.test(optimizationDecisionIndex) ||
   !/Day 3[\s\S]*candidate-to-news-handoff\.md/.test(optimizationDecisionIndex) ||
   !/Day 4[\s\S]*original-source-replacement-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 5/.test(optimizationDecisionIndex) ||
+  !/Day 5[\s\S]*source-diversity-triage-note\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 6/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

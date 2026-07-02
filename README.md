@@ -30,6 +30,7 @@ npx serve .
 │   ├── candidate-source-checklist.md
 │   ├── candidate-to-news-handoff.md
 │   ├── original-source-replacement-guide.md
+│   ├── source-diversity-triage-note.md
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
 │   ├── editorial-validator-limits.md
@@ -63,6 +64,7 @@ npx serve .
 - 候选进入起草前记录：`docs/candidate-intake-format.md`
 - 候选暂缓/拒绝原因词表：`docs/candidate-hold-reject-reasons.md`
 - 候选优先级评分：`docs/candidate-priority-rubric.md`
+- 批次来源多样性判断：`docs/source-diversity-triage-note.md`
 - 媒体报道替换原始来源判断：`docs/original-source-replacement-guide.md`
 - 候选到新闻字段交接：`docs/candidate-to-news-handoff.md`
 - 新闻数据：`data/news.json`

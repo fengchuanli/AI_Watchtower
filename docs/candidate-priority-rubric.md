@@ -1,6 +1,6 @@
 # Candidate Priority Rubric
 
-Use this rubric after a candidate passes `docs/candidate-source-checklist.md` and has a lightweight intake record in `docs/candidate-intake-format.md`. Its job is to decide which safe candidates deserve the limited current-news slots first.
+Use this rubric after a candidate passes `docs/candidate-source-checklist.md` and has a lightweight intake record in `docs/candidate-intake-format.md`. Its job is to decide which safe candidates deserve the limited current-news slots first. If the top candidates are too concentrated, run `docs/source-diversity-triage-note.md` before drafting.
 
 The rubric does not replace editorial judgment. It makes that judgment explicit, so a batch does not promote the loudest vendor story, the newest headline, or the easiest source when another candidate is more useful to Chinese readers.
 
@@ -53,7 +53,7 @@ Use `priorityDecision` values `draft`, `hold`, or `reject`. The value should mat
 
 ## Batch Mix Check
 
-Before drafting the final current-news set, scan the top-scoring candidates together:
+Before drafting the final current-news set, scan the top-scoring candidates together. If any item below is true, use `docs/source-diversity-triage-note.md` to choose `balance-draft`, `draft-with-caveat`, `hold-for-balance`, or `publish-short-batch`:
 
 1. If all top candidates come from one source owner or source family, hold the weakest one and look for an independent source type.
 2. If all top candidates share the same proof mode, such as vendor claims or media reports, prepare a source caveat or choose a lower-scoring official/research/regulator item.

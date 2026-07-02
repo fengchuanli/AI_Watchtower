@@ -1,3 +1,29 @@
+## 2026-07-02 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 5 content-workflow task. Added a source-diversity triage note for safe candidate batches that are too concentrated by source owner, source family, evidence mode, company, geography, or narrative angle, so future runs can draft normally, draft with a caveat, hold repetitive items with `hold-batch-balance`, or publish a short batch without padding weak items.
+- Changed files:
+  - `docs/source-diversity-triage-note.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-priority-rubric.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing candidate workflow docs; continued with Day 5 because Day 0 through Day 4 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the source-diversity triage documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local commit will be created with message `增加批次来源多样性判断`; final hash recorded in automation memory because amending this log line changes the final hash.
+- Git note: `git push origin main` will be attempted after commit; this environment has repeatedly failed to resolve `github.com`.
+
 ## 2026-07-02 17:07 JST
 
 - Focus: Published the 2026-07-02 17:00 JST AI news intelligence update with two reliable-media background signals that add source-bounded context to the Fable access recovery event: WSJ on the Fable restore deal and guardrail-workaround remediation condition, and Business Insider on Anthropic chief compute officer Tom Brown's role in White House talks.
