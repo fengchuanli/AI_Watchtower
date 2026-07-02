@@ -1,8 +1,229 @@
 {
   "version": 1,
   "updatedAt": "2026-07-02",
-  "totalItems": 77,
+  "totalItems": 79,
   "editions": [
+    {
+      "id": "news-1700-2026-07-02",
+      "date": "2026-07-02",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-07-02 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、RSS/媒体索引和历史 URL。",
+      "editorialInterpretation": "本期没有发现更强官方新增发布，因此只发布两条可靠媒体补证信号。",
+      "readerFrame": {
+        "headline": "阅读本期：Fable 恢复不只是上线，而是准入流程样本",
+        "whyItMatters": "WSJ 和 Business Insider 都指向同一变化：高能力模型的恢复访问正在被安全修复、政府沟通、云伙伴和算力负责人共同塑形。",
+        "useThisIssueFor": [
+          "合规、采购和安全团队用来更新模型访问中断、恢复条件和防护修复验收清单。",
+          "战略、基础设施和投资研究团队用来观察算力负责人如何进入政策和市场准入议题。"
+        ],
+        "notProvenYet": [
+          "不能把媒体报道等同于美国政府的完整政策文件或正式监管制度。",
+          "不能据此证明 Anthropic 已经正式改变治理结构或所有客户均稳定恢复访问。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增两条 07 月 01 日可靠媒体补证",
+        "freshFacts": [
+          "本期新增事实：WSJ 报道美国政府与 Anthropic 的 Fable 恢复协议把处理防护绕过问题列为关键条件。",
+          "本期新增事实：Business Insider 报道 Anthropic 首席算力官 Tom Brown 参与 Fable/Mythos 白宫谈判。"
+        ],
+        "repeatedContext": [
+          "本期延续 07 月 01 日 17:00 和 07 月 02 日 08:00 的 Fable 访问恢复事件线，不把恢复本身当成新事实。",
+          "延续近期政府文件、公司公告、客户记录和第三方安全测试仍缺位的证据边界。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "模型准入治理",
+          "count": 1,
+          "meaning": "用来更新前沿模型恢复访问、安全修复和政府介入检查项。"
+        },
+        {
+          "label": "算力与领导层",
+          "count": 1,
+          "meaning": "用来检查模型供应商的算力负责人、政策沟通和关键人依赖风险。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "作为同一 Fable 事件的补证和组织背景来源，仍需官方文件升级结论。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体补证集中",
+        "note": "可靠媒体来源占 2/2，说明本期是媒体补证集中批次，不是官方政策或技术文件批次。",
+        "nextCheck": "继续核对美国商务部、CAISI/NIST、Anthropic、Amazon 和客户侧记录。"
+      },
+      "sourceConcentration": {
+        "sourceId": "mixed-sources",
+        "sourceName": "无单一来源占优",
+        "count": 1,
+        "share": "1/2",
+        "note": "本期无单一媒体占三分之二以上；风险来自同一事件线和媒体补证模式。",
+        "nextCheck": "继续寻找政府原文、公司公告、技术说明和客户访问记录。"
+      },
+      "trendNotes": [
+        {
+          "topic": "frontier-model-access",
+          "label": "前沿模型准入",
+          "note": "跨期看，Fable/Mythos 限制、Anthropic 重新部署、Guardian 补证和 WSJ 协议报道都显示模型上线正在被安全审查塑形。",
+          "boundary": "不证明统一监管制度已经形成，仍需政府原文、公司技术说明、客户访问记录和第三方安全测试。"
+        },
+        {
+          "topic": "compute-policy-leadership",
+          "label": "算力与政策领导层",
+          "note": "跨期看，算力、云合作和模型准入不再是分离议题，关键高层可能同时处理容量和政策关系。",
+          "boundary": "不证明 Anthropic 或其他模型公司已正式重组治理，仍需组织说明、合同文件和后续公开沟通。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "wsj-anthropic-fable-restore-deal-guardrails-2026-07-01"
+          ],
+          "meaning": "用来更新前沿模型恢复访问、安全修复和政府介入检查项。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 1,
+          "itemIds": [
+            "businessinsider-tom-brown-anthropic-policy-compute-2026-07-01"
+          ],
+          "meaning": "用来检查算力负责人、云伙伴和模型可用性是否进入同一风险清单。"
+        }
+      ],
+      "itemCount": 2,
+      "items": [
+        {
+          "id": "businessinsider-tom-brown-anthropic-policy-compute-2026-07-01",
+          "category": "funding",
+          "label": "资金",
+          "title": "Anthropic 算力负责人进入模型政策谈判前台",
+          "body": "Business Insider 7 月 1 日报道称，Anthropic 联合创始人、首席算力官 Tom Brown 参与推动白宫放宽 Fable/Mythos 限制。",
+          "summary": "Business Insider 报道称，Anthropic 首席算力官 Tom Brown 在 Fable/Mythos 白宫谈判中扮演关键角色。",
+          "whyItMatters": "这显示前沿 AI 公司的算力、外交和模型准入开始由同一批高层共同处理。",
+          "detailBody": "Business Insider 报道称，Tom Brown 在 Anthropic 与白宫围绕 Fable/Mythos 限制的谈判中发挥作用；文章同时把他的角色放在算力交易、Amazon/Nvidia/Google 等伙伴关系和政策协调的交叉处，因此它不是单纯履历信息。",
+          "trend": "AI 公司治理正在把算力负责人推向政策和市场准入一线。",
+          "detailTrend": "前沿模型公司不再只靠研究负责人解释能力边界；掌握芯片、云容量和伙伴关系的人，也会参与政府谈判、恢复访问和供应连续性安排。对客户来说，模型可用性正在变成算力治理与政策沟通的共同结果。",
+          "whyRanked": "它把 Fable 事件从单一政策冲突扩展为“算力负责人也要处理监管关系”的组织信号。",
+          "topReason": "领导层分工变化会影响模型准入、算力供应和企业信任。",
+          "detailWhyRanked": "Tom Brown 的报道不是简单人物稿；它把 Fable/Mythos 访问恢复与 Anthropic 的算力供应、云伙伴和白宫沟通放在同一张图里。若这一模式延续，企业评估模型供应商时要看政策团队之外的技术和基础设施负责人。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体提供组织画像和谈判背景，但具体谈判权责仍需官方或文件确认。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体提供组织画像和谈判背景，但具体谈判权责仍需官方或文件确认。"
+          },
+          "impact": "战略、采购和投资研究团队应把算力负责人、政策团队和云伙伴关系一起纳入供应商韧性评估。",
+          "whoShouldCare": "战略、采购、政策和基础设施团队应关注这条信号，用来判断模型供应商是否具备跨算力与监管的连续性能力。",
+          "readerUse": "战略和采购团队用来检查模型供应商的算力治理、政策沟通和关键人依赖风险。",
+          "nextCheck": "核对 Anthropic 官方组织说明、政府信件、云合作文件和后续客户沟通记录。",
+          "followUpQuestions": [
+            "Anthropic 是否公开 Tom Brown 或算力团队在模型准入谈判中的正式职责边界？",
+            "客户合同或公开沟通是否把算力、政府准入和模型可用性作为同一风险管理议题？"
+          ],
+          "evidenceThreshold": "至少需要 Anthropic 官方说明、政府信件、合同披露或客户沟通记录，才能升级为已确认的组织治理变化。",
+          "claimBoundary": "Business Insider 报道可作为领导层背景信号，不证明 Anthropic 已正式改变治理结构或所有谈判均由算力团队主导。",
+          "counterEvidence": "如果 Anthropic 官方说明或政府文件显示 Brown 只承担有限沟通角色，应下调为人物背景而非治理变化。",
+          "source": "Business Insider AI / Tech",
+          "sourceName": "Business Insider AI / Tech",
+          "sourceId": "businessinsider-ai",
+          "sourceUrl": "https://www.businessinsider.com/everything-we-know-about-tom-brown-anthropic-white-house-2026-7",
+          "originalUrl": "https://www.businessinsider.com/everything-we-know-about-tom-brown-anthropic-white-house-2026-7",
+          "sourceRole": "媒体背景",
+          "provenance": "Business Insider 文章是可靠媒体背景；完整采访、人物经历、估值和上下文仍需阅读原文并等待官方材料。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-01T16:31:52+00:00",
+          "time": "07/02 01:31 JST"
+        },
+        {
+          "id": "wsj-anthropic-fable-restore-deal-guardrails-2026-07-01",
+          "category": "policy",
+          "label": "政策",
+          "title": "Fable 恢复协议显示模型准入开始绑定安全修复",
+          "body": "WSJ 7 月 1 日报道称，特朗普政府与 Anthropic 达成协议，恢复 Fable 访问的条件包括处理 Amazon 研究人员发现的防护绕过问题。",
+          "summary": "WSJ 报道称，Anthropic 与美国政府达成 Fable 恢复协议，安全绕过修复成为访问恢复条件。",
+          "whyItMatters": "这把前沿模型上线从公司自测推进到政府、云伙伴和安全研究共同影响的准入流程。",
+          "detailBody": "WSJ 报道称，美国政府与 Anthropic 达成恢复 Fable 访问的协议；报道将关键条件指向处理 Amazon 研究人员用于绕过 Fable 防护的做法，并称白宫正在以安全担忧介入模型恢复。这个 source fact 比“恢复上线”更具体，适合跟踪未来安全测试门槛。",
+          "trend": "高能力模型发布正在从产品公告转向带条件的安全准入。",
+          "detailTrend": "这条报道延续 Fable/Mythos 访问中断、Anthropic 官方重新部署和 Guardian 补证的同一事件线，但新增重点是安全绕过修复如何成为恢复访问的前置条件。",
+          "whyRanked": "它把“模型能否重新上线”的问题落到具体安全修复和政府介入上。",
+          "topReason": "媒体补证让 Fable 事件的准入条件更清楚。",
+          "detailWhyRanked": "相比只知道 Fable 恢复访问，WSJ 报道补充了政府协议、安全绕过修复和 Amazon 研究发现这些角色；对企业采购而言，关键不是恢复本身，而是未来模型中断是否会随安全测试再次发生。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体补证同一事件的恢复条件；仍需政府原文和 Anthropic 技术说明。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体补证同一事件的恢复条件；仍需政府原文和 Anthropic 技术说明。"
+          },
+          "impact": "采购、合规、安全和平台团队应把模型恢复条件、临时下线权和安全绕过补丁纳入供应商审查。",
+          "whoShouldCare": "合规、采购、安全和模型平台团队应关注这条信号，用来评估前沿模型访问是否可能受政府安全流程影响。",
+          "readerUse": "合规和安全团队用来更新前沿模型访问中断、恢复条件和防护修复验收清单。",
+          "nextCheck": "核对美国商务部或 CAISI/NIST 原文、Anthropic 技术说明、Amazon 研究披露和客户访问恢复记录。",
+          "followUpQuestions": [
+            "美国政府是否公开 Fable 恢复协议的完整条件、测试方法和适用范围？",
+            "Anthropic 是否说明被绕过的防护类别、修复方式和客户侧验证记录？"
+          ],
+          "evidenceThreshold": "至少需要政府文件、Anthropic 技术说明、Amazon 研究披露或客户恢复记录，才能升级为已确认的模型安全准入流程。",
+          "claimBoundary": "WSJ 报道可作为媒体背景，不证明所有 Fable/Mythos 客户、地区和用途都已无条件恢复访问。",
+          "counterEvidence": "如果政府文件、客户访问记录或 Anthropic 后续说明显示恢复范围更窄，应下调为有限恢复协议。",
+          "source": "Wall Street Journal AI & Technology",
+          "sourceName": "Wall Street Journal AI & Technology",
+          "sourceId": "wall-street-journal-ai",
+          "sourceUrl": "https://www.wsj.com/tech/ai/anthropic-nears-deal-with-trump-administration-to-restore-access-to-fable-ai-model-6f4177f3",
+          "originalUrl": "https://www.wsj.com/tech/ai/anthropic-nears-deal-with-trump-administration-to-restore-access-to-fable-ai-model-6f4177f3",
+          "sourceRole": "媒体背景",
+          "provenance": "WSJ 文章是可靠媒体背景；完整事实、引语、政策细节和上下文仍需阅读原文并等待官方文件。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-01T09:00:00-04:00",
+          "time": "07/01 22:00 JST"
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-07-02",
       "date": "2026-07-02",

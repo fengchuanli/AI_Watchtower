@@ -1,3 +1,26 @@
+## 2026-07-02 17:07 JST
+
+- Focus: Published the 2026-07-02 17:00 JST AI news intelligence update with two reliable-media background signals that add source-bounded context to the Fable access recovery event: WSJ on the Fable restore deal and guardrail-workaround remediation condition, and Business Insider on Anthropic chief compute officer Tom Brown's role in White House talks.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI and Anthropic pages, official/RSS surfaces, reliable-media search results, and historical duplicate context.
+  - Did not find a stronger new official post after the 08:00 JST run, so this edition publishes only two safe media-background signals and records the shortage instead of padding with weak or community-only sources.
+  - Kept both current items as `媒体背景` / reported signals with `originalDependency: must-read`; Fable recovery conditions and Tom Brown's formal governance role still require government files, Anthropic technical/organization notes, Amazon research disclosure, customer records, contracts, or official correspondence before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新17点AI新闻情报`; final hash recorded in automation memory because amending this log line changes the commit hash.
+- Git note: `git pull --ff-only origin main` and repeated `git push origin main` attempts failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of `origin/main`.
+
 ## 2026-07-02 08:06 JST
 
 - Focus: Published the 2026-07-02 08:00 JST AI news intelligence update with two non-duplicated, sufficiently sourced signals: Google official Gemini Spark macOS/connected-apps/MCP update, and Guardian media-background reporting on Anthropic Fable/Mythos export-control relief and Fable 5 restored access.
