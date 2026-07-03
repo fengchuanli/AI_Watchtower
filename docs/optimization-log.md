@@ -1,3 +1,27 @@
+## 2026-07-03 20:04 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 6 content-workflow task. Added a plain-language Chinese candidate workflow guide so non-technical editors can answer six editorial questions before touching schema-heavy intake fields or `data/news.json`.
+- Changed files:
+  - `docs/candidate-workflow-plain-language-guide.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing candidate workflow docs; continued with Day 6 because Day 0 through Day 5 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `tags.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the plain-language candidate workflow documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `tags.html`, `archive.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `19dd9da` (`增加候选编辑通俗流程`). Final local HEAD is recorded in automation memory because updating this line changes the final hash.
+- Git note: `git push origin main` failed because this environment could not resolve `github.com`; local commits remain ahead of the known remote.
+
 ## 2026-07-03 17:05 JST
 
 - Focus: Published the 2026-07-03 17:00 JST AI news intelligence update with two sufficiently sourced signals: Anthropic's official Fable 5 cyber safeguards and CJS jailbreak-severity framework details, and Business Insider's media-background report on Meta's internal Watermelon benchmark claim.
