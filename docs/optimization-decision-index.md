@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 1, Candidate Intake And Editorial Triage
-- Last indexed run: 2026-07-02 20:00 JST
+- Last indexed run: 2026-07-03 20:00 JST
 - Network status: GitHub DNS resolution failed during the latest pull attempt; push may need retry when network access returns.
 
 ## Recent Plan-Day Decisions
@@ -27,12 +27,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 3 | Complete | `b7134a1` | `docs/candidate-to-news-handoff.md` maps intake fields into `data/news.json` responsibilities while separating minimum source facts from AI Watchtower's original Chinese interpretation. |
 | Day 4 | Complete | `93b671e` | `docs/original-source-replacement-guide.md` decides when a media report must be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting. |
 | Day 5 | Complete | `7417364` | `docs/source-diversity-triage-note.md` decides whether a safe candidate batch should draft normally, draft with a caveat, hold repetitive items with `hold-batch-balance`, or publish short without padding. |
+| Day 6 | Complete | `pending` | `docs/candidate-workflow-plain-language-guide.md` gives non-technical editors a six-question Chinese path before they touch schema fields or `data/news.json`. |
 
 ## Next Useful Task
 
-- Continue with Day 6: review the candidate workflow for Chinese readability so non-technical editors can apply it without learning internal schema jargon.
+- Continue with Day 7: add an update-run checklist that separates source discovery, candidate intake, duplicate reporting, drafting, validation, commit, and push status.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 6 first.
-- If Day 6 is already complete, continue with the next useful task from the current plan.
+- If Day 7 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

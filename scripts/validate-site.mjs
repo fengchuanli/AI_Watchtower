@@ -18,6 +18,10 @@ const duplicateCandidateReportJs = readFileSync("scripts/report-duplicate-candid
 const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
 const copyrightSafety = readFileSync("docs/copyright-safety.md", "utf8");
+const candidateWorkflowPlainLanguageGuide = readFileSync(
+  "docs/candidate-workflow-plain-language-guide.md",
+  "utf8",
+);
 const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
 const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
 const candidateHoldRejectReasons = readFileSync("docs/candidate-hold-reject-reasons.md", "utf8");
@@ -589,6 +593,25 @@ if (
 }
 
 if (
+  !/Candidate Workflow Plain-Language Guide/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/Six Editor Questions/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/What exactly happened/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/Why should a Chinese AI reader care today/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/What does the source prove, and what does it not prove/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/Is this the right source to use/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/Is it safe and fresh enough for this batch/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/What should happen next/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/Plain-Language Intake Note/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/Stop Before Writing Public Copy/.test(candidateWorkflowPlainLanguageGuide) ||
+  !/candidate-workflow-plain-language-guide\.md/.test(candidateSourceChecklist) ||
+  !/candidate-workflow-plain-language-guide\.md/.test(candidateIntakeFormat) ||
+  !/candidate-workflow-plain-language-guide\.md/.test(readme) ||
+  !/Day 6[\s\S]*candidate-workflow-plain-language-guide\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Candidate gathering must include a plain-language Chinese workflow path before schema-heavy intake fields.");
+}
+
+if (
   !/Candidate Source Checklist/.test(candidateSourceChecklist) ||
   !/Candidate Identity/.test(candidateSourceChecklist) ||
   !/Source Role/.test(candidateSourceChecklist) ||
@@ -900,7 +923,8 @@ if (
   !/Day 3[\s\S]*candidate-to-news-handoff\.md/.test(optimizationDecisionIndex) ||
   !/Day 4[\s\S]*original-source-replacement-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 5[\s\S]*source-diversity-triage-note\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 6/.test(optimizationDecisionIndex) ||
+  !/Day 6[\s\S]*candidate-workflow-plain-language-guide\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 7/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
