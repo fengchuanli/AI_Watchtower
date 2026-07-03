@@ -1,3 +1,27 @@
+## 2026-07-03 17:05 JST
+
+- Focus: Published the 2026-07-03 17:00 JST AI news intelligence update with two sufficiently sourced signals: Anthropic's official Fable 5 cyber safeguards and CJS jailbreak-severity framework details, and Business Insider's media-background report on Meta's internal Watermelon benchmark claim.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, RSS/source surfaces, reliable-media search results, and historical duplicate URLs.
+  - Promoted only two safe items because current checks did not surface 10 non-duplicate, sufficiently sourced post-morning signals; skipped repeated Fable restore recaps and community-only discussion rather than padding the batch.
+  - Kept Anthropic as `官方核对` for the mechanism/framework publication only; classifier effectiveness and CJS adoption still require third-party red-team reports, HackerOne handling records, Glasswing partner texts, audit data, or government adoption documents.
+  - Kept Business Insider as `媒体背景` / reported with `originalDependency: must-read`; Meta Watermelon capability claims still require an official model release, model card, public benchmark details, developer availability, and independent third-party evaluation before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新17点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git pull --ff-only origin main` and repeated `git push origin main` attempts failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of `origin/main`.
+
 ## 2026-07-03 08:04 JST
 
 - Focus: Published the 2026-07-03 08:00 JST AI news intelligence update with two reliable-media background signals: Axios on the Trump administration treating AI model access, chips, and infrastructure as alliance variables, and Guardian/FT on early OpenAI discussions about a possible 5% US government/public stake.

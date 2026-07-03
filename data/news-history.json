@@ -1,8 +1,235 @@
 {
   "version": 1,
   "updatedAt": "2026-07-03",
-  "totalItems": 81,
+  "totalItems": 83,
   "editions": [
+    {
+      "id": "news-1700-2026-07-03",
+      "date": "2026-07-03",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-07-03 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、RSS/媒体索引和历史 URL。",
+      "editorialInterpretation": "本期只发布两条安全信号：一条官方框架更新，一条模型竞争媒体背景；未用重复 Fable 复盘或未证实社区讨论补齐数量。",
+      "readerFrame": {
+        "headline": "阅读本期：前沿模型竞争进入安全分级和未发布模型预期双线",
+        "whyItMatters": "Anthropic 把 Fable 5 安全争议转化为分类器和 CJS 分级语言，BI 则提示 Meta 正尝试用新模型重回前沿竞争；一个是官方机制，一个是需等待公开验证的媒体信号。",
+        "useThisIssueFor": [
+          "安全、采购和政策团队用来更新前沿模型准入、越狱严重度和漏洞响应评估表。",
+          "模型、产品和战略团队用来跟踪 Meta 下一代模型是否会改变开发者和企业采购选择。"
+        ],
+        "notProvenYet": [
+          "不能据此证明 Anthropic 分类器已经在真实攻击中达到稳定拦截效果或 CJS 已成为行业标准。",
+          "不能把 Meta 内部 benchmark 说法等同于 Watermelon 已公开追上 GPT-5.5。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增两条 07 月 02 日至 03 日信号",
+        "freshFacts": [
+          "本期新增事实：Anthropic 官方发布 Fable 5 网络安全分类器说明、CJS 越狱严重度草案和 HackerOne 提交通道。",
+          "本期新增事实：Business Insider 报道 Meta 内部称 Watermelon 模型在部分基准上追上 GPT-5.5，但具体基准未公开。"
+        ],
+        "repeatedContext": [
+          "本期延续 Fable 5 恢复访问和模型准入争议，不重复发布已归档的恢复访问媒体报道。",
+          "延续前沿模型能力竞赛和算力投入背景，但不把未发布模型内部说法写成已验证排名。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "安全治理",
+          "count": 1,
+          "meaning": "用来更新模型准入、越狱分级、分类器边界和漏洞提交流程。"
+        },
+        {
+          "label": "模型竞争",
+          "count": 1,
+          "meaning": "用来检查 Meta 下一代模型是否会改变前沿模型和开发者生态竞争。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "官方来源用于核对公司原文事实和已发布机制；这只是高可信信号，防护效果仍需外部来源复测。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 1,
+          "role": "作为未发布模型竞争的背景信号，仍需官方发布和第三方评测升级结论。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方与媒体混合",
+        "note": "本期一半是官方机制、一半是媒体背景；读者应区分“已发布框架”和“内部能力说法”。",
+        "nextCheck": "继续核对第三方红队、HackerOne 记录、Glasswing 伙伴文本、Meta 模型卡和独立 benchmark。"
+      },
+      "sourceConcentration": {
+        "sourceId": "mixed-sources",
+        "sourceName": "无单一来源占优",
+        "count": 1,
+        "share": "1/2",
+        "note": "本期无单一注册来源占三分之二以上；风险来自两条信号都围绕前沿模型安全与能力竞争。",
+        "nextCheck": "用外部红队、伙伴标准、官方模型发布和第三方评测打散单一叙事风险。"
+      },
+      "trendNotes": [
+        {
+          "topic": "frontier-model-safety",
+          "label": "前沿模型安全",
+          "note": "跨期看，Fable 5 从限制、恢复到分类器细节，说明模型准入正在要求更清楚的安全证据语言。",
+          "boundary": "不证明安全机制已被外部验证，仍需第三方红队、审计、漏洞处置记录和政府采用文本。"
+        },
+        {
+          "topic": "model-competition",
+          "label": "模型竞争",
+          "note": "跨期看，OpenAI、Anthropic、Google 和 Meta 都在把模型能力、算力和 Agent 编码表现作为竞争焦点。",
+          "boundary": "不证明未发布模型已经改变排名，仍需公开模型卡、可复现实测和第三方 benchmark。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "anthropic-fable-cyber-safeguards-cjs-2026-07-02"
+          ],
+          "meaning": "用来更新模型安全准入、越狱分级和政府沟通观察清单。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 1,
+          "itemIds": [
+            "businessinsider-meta-watermelon-benchmark-claim-2026-07-02"
+          ],
+          "meaning": "用来检查 Meta 下一代模型是否会改变前沿模型竞争和采购选择。"
+        }
+      ],
+      "itemCount": 2,
+      "items": [
+        {
+          "id": "businessinsider-meta-watermelon-benchmark-claim-2026-07-02",
+          "category": "model",
+          "label": "模型",
+          "title": "BI：Meta 内部称下一代 Watermelon 模型追上 GPT-5.5",
+          "body": "Business Insider 报道称，Alexandr Wang 在内部会议中表示 Meta 下一代 Watermelon 模型在部分基准上追上 OpenAI GPT-5.5。",
+          "summary": "BI 报道 Meta 超级智能负责人在内部会上称 Watermelon 已在基准上追上 GPT-5.5，但具体基准未公开。",
+          "whyItMatters": "这会影响开源/闭源模型竞争预期，但目前只能作为未发布模型的媒体背景信号。",
+          "detailBody": "Business Insider 引述知情人士称，Alexandr Wang 在 Meta 内部会上表示 Watermelon 训练中，并在部分基准上追上 GPT-5.5；报道还称该模型使用比 Avocado/Muse Spark 高一个数量级的算力，但未披露具体基准，Meta 拒绝评论。",
+          "trend": "Meta 的人才、算力和模型路线正在重新进入前沿模型竞争叙事。",
+          "detailTrend": "如果 Watermelon 的公开评测接近 GPT-5.5，Meta 将更有机会用模型、硬件和开发者生态重新争夺 AI 平台入口。但内部说法不能替代公开模型卡。",
+          "whyRanked": "它是 17:00 窗口里新的竞争格局信号，且包含明确的未验证边界。",
+          "topReason": "Meta 可能缩小与 OpenAI 的模型差距，但证据仍停留在媒体报道和内部说法。",
+          "detailWhyRanked": "这条值得跟踪，因为报道同时连接 Meta 新组织、算力投入、Watermelon 训练、Muse Spark 后续路线和编码/Agent 能力预期；但没有公开基准、模型卡或第三方评测，不能升级为能力事实。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体给出内部说法和公司拒评边界；缺公开基准和模型发布。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体给出内部说法和公司拒评边界；缺公开基准和模型发布。"
+          },
+          "impact": "模型、产品、开发者生态和投资团队应把它作为 Meta 追赶节奏信号，而不是已验证能力排名。",
+          "whoShouldCare": "模型、产品、开发者生态和投资团队应关注这条媒体信号，用来调整 Meta 前沿模型发布监控。",
+          "readerUse": "产品和战略团队用来更新 Meta 模型路线、编码能力和 Agent 能力发布观察清单。",
+          "nextCheck": "核对 Meta 官方模型发布、模型卡、公开基准细项、第三方评测和开发者可用性。",
+          "followUpQuestions": [
+            "Meta 是否公开 Watermelon 的模型卡、训练规模、基准细项和可用时间表？",
+            "第三方评测是否能确认 Watermelon 在编码、Agent 和通用推理任务上接近 GPT-5.5？"
+          ],
+          "evidenceThreshold": "至少需要 Meta 官方发布、完整模型卡、公开基准数据和独立第三方评测，才能升级为已验证的模型竞争格局变化。",
+          "claimBoundary": "BI 报道只支持 Meta 内部称 Watermelon 追上 GPT-5.5 的媒体信号，不证明模型已经公开可用或真实性能已被外部验证。",
+          "counterEvidence": "如果公开模型卡缺少可比基准、第三方评测显著落后或发布延期，应下调为内部士气和融资叙事信号。",
+          "source": "Business Insider AI / Tech",
+          "sourceName": "Business Insider AI / Tech",
+          "sourceId": "businessinsider-ai",
+          "sourceUrl": "https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7",
+          "originalUrl": "https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7",
+          "sourceRole": "媒体背景",
+          "provenance": "Business Insider 是可靠媒体背景；完整信源、内部会议语境、公司拒评和竞争描述仍需阅读原文并等待 Meta 官方材料。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-02T23:52:04+00:00",
+          "time": "07/03 08:52 JST"
+        },
+        {
+          "id": "anthropic-fable-cyber-safeguards-cjs-2026-07-02",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic 公布 Fable 5 网络安全分类器和越狱严重度框架",
+          "body": "Anthropic 7 月 2 日说明 Fable 5 的网络安全分类器边界，并提出 CJS 网络越狱严重度分级草案。",
+          "summary": "Anthropic 把 Fable 5 重新上线后的安全争议落到两套机制：网络安全分类器和 CJS 越狱严重度分级。",
+          "whyItMatters": "这给模型准入争议提供了可讨论的风险语言，但仍需外部测试证明分类器效果。",
+          "detailBody": "Anthropic 官方说明 Fable 5 已全球恢复，并把网络安全请求分成禁止、高风险双用途、低风险双用途和良性使用；文章还公开 CJS-0 到 CJS-4 越狱严重度草案、四个评分轴和 HackerOne 提交通道。",
+          "trend": "前沿模型安全正在从抽象原则转向可审计的分类器、分级和漏洞提交流程。",
+          "detailTrend": "Fable 5 事件显示，前沿模型安全不再只靠总括性承诺。分类器边界、漏洞悬赏、伙伴反馈和越狱严重度刻度，正在成为政府、实验室、客户和安全研究者沟通模型准入的共同材料。",
+          "whyRanked": "它是 Fable 5 恢复访问后最直接的官方技术补充，能解释此前媒体报道缺少的安全机制。",
+          "topReason": "官方把 Fable 5 风险控制从恢复访问推进到可讨论的安全分类框架。",
+          "detailWhyRanked": "这条不是重复“Fable 5 已恢复”，而是新增官方原文机制：四类分类器边界、HackerOne 提交通道、CJS 四个评分轴、示例分级、伙伴反馈路径和安全研究者入口。它帮助读者判断下一轮监管、采购和红队复测该问什么。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源清楚说明机制和草案；实际拦截效果仍需外部红队、审计和误拦率数据。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源清楚说明机制和草案；实际拦截效果仍需外部红队、审计和误拦率数据。"
+          },
+          "impact": "安全、政策、采购和红队团队应把 CJS 分级、分类器边界和漏洞提交路径加入模型准入评估。",
+          "whoShouldCare": "安全、政策、采购和红队团队应关注这条官方信号，用来更新前沿模型安全评估和供应商问卷。",
+          "readerUse": "安全和采购团队用来检查供应商是否能解释高风险双用途任务、误拦率和漏洞响应流程。",
+          "nextCheck": "核对第三方红队报告、HackerOne 公开处置记录、Glasswing 伙伴反馈和政府采用文本。",
+          "followUpQuestions": [
+            "外部红队是否能复现 Anthropic 对禁止、高风险双用途和低风险双用途任务的分类边界？",
+            "Amazon、Microsoft、Google 或政府伙伴是否正式采用或修改 CJS 越狱严重度分级？"
+          ],
+          "evidenceThreshold": "至少需要独立红队报告、HackerOne 处置统计、伙伴共同标准文本或政府采用文件，才能升级为已验证的前沿模型网络安全治理框架。",
+          "claimBoundary": "官方文章证明 Anthropic 发布了机制和草案，不证明分类器已在真实攻击中达到稳定拦截效果或行业已经接受 CJS。",
+          "counterEvidence": "如果公开第三方红队复测报告显示高严重度越狱可稳定绕过分类器，或 Glasswing 伙伴标准文件拒绝采用 CJS，应下调为单厂商安全方案。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+          "originalUrl": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+          "sourceRole": "官方核对",
+          "provenance": "Anthropic 官方文章可支持其发布 Fable 5 网络安全分类器说明、CJS 草案和 HackerOne 提交通道；效果结论仍需外部验证。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-02T12:00:00+00:00",
+          "time": "07/02 21:00 JST"
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-07-03",
       "date": "2026-07-03",
