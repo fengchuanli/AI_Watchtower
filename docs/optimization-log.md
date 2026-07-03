@@ -1,3 +1,26 @@
+## 2026-07-04 08:08 JST
+
+- Focus: Published the 2026-07-04 08:00 JST AI news intelligence update with two sufficiently sourced reliable-media background signals: Axios on the Anthropic Fable/Mythos model-restoration process and missing transparent approval framework, and The Verge on Anthropic's Claude Science drug-development ambition and evidence boundary.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Google Keyword/RSS, Mistral, Microsoft, Meta, reliable-media surfaces, and historical duplicate URLs.
+  - Published only two safe items because current checks did not surface 10 non-duplicate, sufficiently sourced post-17:00 JST official/RSS signals; skipped repeated Fable restore/classifier recaps, old official posts, and community-only discussion rather than padding the batch.
+  - Kept both items as `媒体背景` / reported with `originalDependency: must-read`; model approval process claims still need government files, formal testing standards, company confirmations, and cross-lab cases, while AI-drug claims need company technical plans, wet-lab data, collaboration records, clinical filings, or regulator material before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新08点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git pull --ff-only origin main` and three `git push origin main` attempts failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of the known remote.
+
 ## 2026-07-03 20:04 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 6 content-workflow task. Added a plain-language Chinese candidate workflow guide so non-technical editors can answer six editorial questions before touching schema-heavy intake fields or `data/news.json`.
