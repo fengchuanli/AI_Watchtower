@@ -1,3 +1,26 @@
+## 2026-07-04 17:04 JST
+
+- Focus: Published the 2026-07-04 17:00 JST AI news intelligence update with three research-original signals on Agent safety testing, coding-agent oversight, and deployment-time LLM safety monitoring.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral, Meta, reliable-media/search surfaces, arXiv recent pages, and historical duplicate URLs.
+  - Official and reliable-media checks did not surface a stronger non-duplicate post-08:00 JST item suitable for promotion, so this edition uses three current arXiv research originals rather than repeating the morning Axios/The Verge media signals or padding with community discussion.
+  - Kept all three items as `研究原文` / reported preprint signals; Vera, coding-agent constraint oversight, and online LLM safety monitoring still require code, benchmark data, third-party replication, enterprise red-team reports, production traffic tests, and peer review before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新17点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git pull --ff-only origin main` and three `git push origin main` attempts failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of the known remote.
+
 ## 2026-07-04 08:08 JST
 
 - Focus: Published the 2026-07-04 08:00 JST AI news intelligence update with two sufficiently sourced reliable-media background signals: Axios on the Anthropic Fable/Mythos model-restoration process and missing transparent approval framework, and The Verge on Anthropic's Claude Science drug-development ambition and evidence boundary.

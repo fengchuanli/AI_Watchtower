@@ -1,8 +1,295 @@
 {
   "version": 1,
   "updatedAt": "2026-07-04",
-  "totalItems": 85,
+  "totalItems": 88,
   "editions": [
+    {
+      "id": "news-1700-2026-07-04",
+      "date": "2026-07-04",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-07-04 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、RSS/媒体索引、arXiv recent 和历史 URL。",
+      "editorialInterpretation": "本期未发现强于早间版的全新官方发布；改用三条非重复研究原文，聚焦 Agent 安全测试、编码 Agent 监督和部署期监控。",
+      "readerFrame": {
+        "headline": "阅读本期：Agent 安全从叙事走向可执行验证",
+        "whyItMatters": "三篇 arXiv 预印本都把 LLM/Agent 安全落到可测试对象：安全用例、工程约束和在线告警；它们是研究信号，不是生产结论。",
+        "useThisIssueFor": [
+          "安全、平台和采购团队用来更新 Agent 上线前测试、权限约束和验收清单。",
+          "工程管理和合规团队用来评估编码 Agent、输出监控和告警阈值的证据需求。"
+        ],
+        "notProvenYet": [
+          "不能据此证明这些方法已经成为行业标准或可直接用于生产准入。",
+          "不能把预印本实验数字等同于真实企业环境、真实权限边界或真实流量下的效果。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增三条 Agent 安全研究原文",
+        "freshFacts": [
+          "本期新增事实：arXiv 收录 Vera 预印本，提出用风险分类、沙箱执行和证据验证测试 LLM Agent。",
+          "本期新增事实：arXiv 收录编码 Agent 约束监督预印本，报告小模型审查后门召回率提升实验。",
+          "本期新增事实：arXiv 收录 LLM 在线安全监控预印本，研究用外部验证器和风险阈值触发告警。"
+        ],
+        "repeatedContext": [
+          "本期不重复早间 Axios/The Verge 对 Anthropic 模型治理和 AI 制药边界的媒体复盘。",
+          "本期延续前几日 Agent、模型安全和治理线索，但不把研究摘要写成生产部署证明。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "Agent 安全测试",
+          "count": 1,
+          "meaning": "用来检查 Agent 风险是否能转成可执行测试和证据化验收。"
+        },
+        {
+          "label": "编码 Agent 监督",
+          "count": 1,
+          "meaning": "用来调整编码 Agent 的权限、网络策略、规范和审查工具清单。"
+        },
+        {
+          "label": "部署期监控",
+          "count": 1,
+          "meaning": "用来评估 LLM 输出监控、告警阈值和运行审计的设计需求。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "research",
+          "label": "研究原文",
+          "count": 3,
+          "role": "研究来源用于发现技术方向、方法原型和实验假设；本期所有条目仍需代码、数据、复现和生产复验。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "预印本集中",
+        "note": "本期三条都来自 research 来源家族且全部为 arXiv 预印本，适合作为技术雷达和复验清单，不应当被读成成熟产品、监管事实或生产效果证明。",
+        "nextCheck": "继续核对论文全文、公开代码、基准数据、第三方复现、企业红队报告和生产流量测试。"
+      },
+      "sourceConcentration": {
+        "sourceId": "arxiv-ai",
+        "sourceName": "arXiv cs.AI",
+        "count": 3,
+        "share": "3/3",
+        "note": "本期由同一研究源提供全部条目；优势是原文可核对，风险是缺同行评审、独立复验和产业侧证据。",
+        "nextCheck": "用 GitHub 代码、OpenReview/会议评审、第三方复现实验和企业安全团队报告打散单源风险。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent-safety-evaluation",
+          "label": "Agent 安全评测",
+          "note": "跨期看，模型安全讨论正从 Fable/Mythos 的发布治理延伸到 Agent 执行、工具调用和证据化测试。",
+          "boundary": "不证明某个测试框架已被行业采用，仍需公开代码、复现报告、生产案例和采购准入标准。"
+        },
+        {
+          "topic": "coding-agent-governance",
+          "label": "编码 Agent 治理",
+          "note": "跨期看，Codex、Claude Code 和其他编码 Agent 的风险正在逼近传统软件工程控制面：权限、网络、规范、审查和审计。",
+          "boundary": "不证明约束式监督一定优于大模型审查，仍需多仓库、多语言、多人协作和真实任务完成率数据。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 2,
+          "itemIds": [
+            "arxiv-online-safety-monitoring-llm-2026-07-02",
+            "arxiv-vera-agent-safety-testing-2026-07-02"
+          ],
+          "meaning": "用来更新 Agent 安全测试、输出监控和证据化验收清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 1,
+          "itemIds": [
+            "arxiv-coding-agent-constraint-oversight-2026-07-02"
+          ],
+          "meaning": "用来检查编码 Agent 的权限、约束、审查和工程治理设置。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "arxiv-online-safety-monitoring-llm-2026-07-02",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv：在线安全监控把 LLM 输出风险转成告警阈值",
+          "body": "一篇 ICML 工作坊预印本研究用外部验证器信号和风险控制阈值做 LLM 实时安全告警。",
+          "summary": "arXiv 预印本提出简单在线安全监控：把外部验证器信号转成风险控制阈值下的告警决策。",
+          "whyItMatters": "它把部署期安全问题写成可校准告警，而不是只依赖训练前对齐。",
+          "detailBody": "论文研究一个实时监控器：将外部模型产生的验证器信号输入风险控制校准阈值，再决定是否触发告警；摘要称实验覆盖数学推理、红队数据集，并与顺序假设检验等更复杂监控方法比较，定位为部署期基线。",
+          "trend": "LLM 安全正在从训练期对齐扩展到部署期监控。",
+          "detailTrend": "企业使用 LLM 时不能假定一次对齐训练永久有效；如果在线监控能给出可解释告警阈值、误报漏报范围和运行证据，安全团队就能把输出审查接入指标、审计和事件响应。",
+          "whyRanked": "它提供了部署期安全监控的轻量化方向。",
+          "topReason": "在线监控是把 LLM 安全接入生产运行的关键环节，这篇预印本给出可校准基线。",
+          "detailWhyRanked": "这条适合跟踪，因为摘要把外部验证器、风险控制、阈值、告警决策、数学推理数据、红队数据和复杂监控方法比较串起来；但仍缺生产流量、延迟、误报成本和验证器漂移证据。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "研究原文支持方法和实验范围；缺生产流量、延迟、误报成本和第三方复验。"
+          },
+          "impact": "安全、平台和合规团队可把它作为部署期 LLM 监控基线候选，但不能直接替代生产风控。",
+          "whoShouldCare": "安全、平台和合规团队应关注这条研究信号，用来评估 LLM 输出监控和告警阈值设计。",
+          "readerUse": "平台团队用来检查是否需要把外部验证器、风险阈值和告警审计纳入 LLM 运行面。",
+          "nextCheck": "核对论文实验细节、验证器选择、误报漏报成本、生产延迟数据和第三方复现实验。",
+          "followUpQuestions": [
+            "该监控器在真实客服、代码、医疗或金融场景中误报率和漏报率如何变化？",
+            "外部验证器本身失效、被攻击或漂移时，告警阈值是否仍可校准？"
+          ],
+          "evidenceThreshold": "至少需要公开代码、完整实验配置、真实流量测试报告、误报漏报成本分析和第三方复现记录，才能升级为已验证的部署期安全监控方案。",
+          "claimBoundary": "arXiv 页面支持论文提交和摘要主张，不证明该监控器已在生产系统中有效或优于所有复杂方法。",
+          "counterEvidence": "如果真实流量测试报告、延迟指标、误报漏报统计或验证器攻击复验显示不可控，应下调为研究基线。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.02510",
+          "originalUrl": "https://arxiv.org/abs/2607.02510",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 是研究原文和预印本来源；摘要、提交时间和工作坊信息可核对，部署效果仍需论文全文和复现。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-02T17:59:43+00:00",
+          "time": "07/03 02:59 JST",
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "研究原文支持方法和实验范围；缺生产流量、延迟、误报成本和第三方复验。"
+          }
+        },
+        {
+          "id": "arxiv-coding-agent-constraint-oversight-2026-07-02",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv：约束式底座可能降低编码 Agent 监督成本",
+          "body": "一篇 ICML 工作坊预印本主张，用访问控制、网络策略和编码约束监督编码 Agent。",
+          "summary": "arXiv 预印本提出用工程约束监督编码 Agent，并报告小模型审查后门的召回率提升。",
+          "whyItMatters": "它把编码 Agent 治理焦点从更大审查模型转向权限、约束和工具底座。",
+          "detailBody": "论文主张把访问控制、网络策略、编码规范和小型工具用于编码 Agent 监督；作者报告在含 11 个后门的 Python 代码库中，小模型审查召回率从 54.5% 升至 90.9%。",
+          "trend": "编码 Agent 监督正在回到传统软件工程控制面。",
+          "detailTrend": "如果 Agent 能大规模改代码，单靠事后人工审查会变贵；把访问控制、网络策略、强制编码规范和轻量工具变成运行底座，可能比继续堆提示和更大审查模型更容易审计。",
+          "whyRanked": "它给出可操作的监督方向和实验数字。",
+          "topReason": "这条把编码 Agent 风险具体落到工程权限和审查召回率，适合开发平台团队跟踪。",
+          "detailWhyRanked": "研究价值在于摘要给出受控实验：Python 代码库、11 个插入后门、小模型 Gemma 4 e4b 审查、约束底座、约 200 行 docs CLI 和召回率变化；但边界必须保留。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "研究原文支持方法和小实验数字；样本、任务和作者范围有限，需多语言和真实仓库复验。"
+          },
+          "impact": "开发平台、安全和工程管理团队可用它评估编码 Agent 权限边界和审查工具，而非直接采信实验数字。",
+          "whoShouldCare": "开发平台、安全和工程管理团队应关注这条研究信号，用来更新编码 Agent 权限和审查策略。",
+          "readerUse": "工程平台团队用来检查编码 Agent 是否需要默认最小权限、网络策略和强制规范。",
+          "nextCheck": "核对论文 PDF、实验代码、多语言复验、真实仓库后门样本和第三方安全团队评测。",
+          "followUpQuestions": [
+            "约束底座在大型真实仓库、多人协作和非 Python 语言中是否仍能提升审查召回？",
+            "权限控制和编码规范会不会显著降低编码 Agent 的任务完成率或开发速度？"
+          ],
+          "evidenceThreshold": "至少需要公开实验代码、真实仓库复现实验报告、多语言样本和独立安全评测记录，才能升级为已验证的编码 Agent 监督实践。",
+          "claimBoundary": "arXiv 页面支持论文提交、摘要和单项实验主张，不证明该方法已适用于所有编码 Agent 或生产仓库。",
+          "counterEvidence": "如果多仓库复测数据、误报指标记录或任务完成率评测数据显示收益消失或成本过高，应下调为小样本研究假设。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.02389",
+          "originalUrl": "https://arxiv.org/abs/2607.02389",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 是研究原文和预印本来源；摘要、工作坊状态和实验主张可核对，仍需代码、数据和独立复现。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-02T16:24:47+00:00",
+          "time": "07/03 01:24 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "研究原文支持方法和小实验数字；样本、任务和作者范围有限，需多语言和真实仓库复验。"
+          }
+        },
+        {
+          "id": "arxiv-vera-agent-safety-testing-2026-07-02",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv：Vera 把 Agent 安全测试做成可执行用例库",
+          "body": "一篇 arXiv 预印本提出 Vera，用风险分类、沙箱执行和证据验证测试 LLM Agent 安全。",
+          "summary": "arXiv 预印本提出 Vera，将 Agent 风险发现、可执行安全用例和证据化验证连成自动测试流水线。",
+          "whyItMatters": "它把 Agent 安全从人工红队叙事推进到可复跑、可扩展的工程测试问题。",
+          "detailBody": "论文称 Vera 先从文献持续抽取风险分类，再组合生成可执行安全用例，并在隔离沙箱中用环境状态、工具调用和验证谓词判断结果；摘要还写明覆盖 OpenClaw、Hermes、Codex、Claude Code 四个框架。",
+          "trend": "Agent 安全评估正在从提示测试转向工程化测试。",
+          "detailTrend": "随着 Agent 调用工具和修改环境，安全评测需要观察文件、状态和工具调用证据，而不能只看模型自报；这类框架可能成为企业准入测试的候选形态。",
+          "whyRanked": "它给出可执行测试资产和具体风险分类。",
+          "topReason": "Agent 安全评测需要从案例叙事走向可复跑证据，Vera 提供了一个清晰研究原型。",
+          "detailWhyRanked": "这条值得关注，因为摘要同时给出风险分类、测试用例生成、沙箱执行、证据验证、四个被测框架、1600 个用例、124 类风险和公开代码入口；这些都是后续复验入口。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "研究原文直接支持框架和实验主张；仍缺第三方复现、代码审计和真实企业环境测试。"
+          },
+          "impact": "安全、平台和采购团队可把它作为 Agent 上线前测试框架候选，而不是已验证行业标准。",
+          "whoShouldCare": "安全、平台和采购团队应关注这条研究信号，用来更新 Agent 准入测试和红队复验清单。",
+          "readerUse": "安全团队用来检查是否需要把 Agent 风险转成可执行测试用例和证据化验收。",
+          "nextCheck": "核对公开代码、Vera-Bench 数据、第三方复跑结果、被测框架版本和企业红队复验报告。",
+          "followUpQuestions": [
+            "Vera 的公开代码和 1600 个安全用例是否能被第三方完整复跑？",
+            "在企业真实工具链、权限隔离和审计环境中，攻击成功率是否仍接近论文报告？"
+          ],
+          "evidenceThreshold": "至少需要代码可运行、基准数据公开、第三方复现和真实 Agent 框架版本记录，才能升级为已验证的 Agent 安全测试方法。",
+          "claimBoundary": "arXiv 页面支持论文提交、摘要和作者实验主张，不证明 Vera 已成为行业标准或所有 Agent 框架都存在同等风险。",
+          "counterEvidence": "如果公开代码运行日志、Vera-Bench 样本审计、第三方复现报告或企业红队测试显示结果不可复现，应下调为方法探索。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.01793",
+          "originalUrl": "https://arxiv.org/abs/2607.01793",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 是研究原文和预印本来源；摘要、提交时间、作者实验主张和代码链接可核对，但结论仍需同行评审和复现。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-02T07:08:26+00:00",
+          "time": "07/02 16:08 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "研究原文直接支持框架和实验主张；仍缺第三方复现、代码审计和真实企业环境测试。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-07-04",
       "date": "2026-07-04",
