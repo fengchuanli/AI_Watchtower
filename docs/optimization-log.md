@@ -19,7 +19,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Local implementation commit pending at log write time; final local hash is recorded in automation memory because updating this line changes the final hash.
+- Commit: Local implementation commit `bf0ee88` (`增加新闻更新运行清单`). Final local HEAD is recorded in automation memory because updating this line changes the final hash.
 - Git note: `git push origin main` will be attempted after commit; GitHub DNS failure may still block the remote update.
 
 ## 2026-07-04 17:04 JST
