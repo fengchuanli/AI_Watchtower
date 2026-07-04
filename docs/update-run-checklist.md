@@ -1,0 +1,62 @@
+# Update Run Checklist
+
+Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, which validators passed, and whether GitHub sync succeeded.
+
+This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, publish a short batch with a clear reason instead of padding the homepage with weak, repeated, or copyright-risk items.
+
+## Run Header
+
+Record these fields at the top of the editor note for the run:
+
+- `runTimeJst`: Planned update time, such as `2026-07-04 17:00 JST`.
+- `runType`: `morning-news` or `evening-news`.
+- `remoteSyncBefore`: `pulled`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, or `not-attempted-with-reason`.
+- `sourceWindow`: The previous edition time and the current cutoff used to decide freshness.
+- `targetReaderQuestion`: One short Chinese question the batch should help readers answer today.
+- `shortBatchReason`: Required when fewer than 10 safe current-news items are published.
+
+## Status Checklist
+
+Use these status values for each step: `done`, `partial`, `blocked`, or `not-needed`. A `partial` or `blocked` step needs one short Chinese note naming the concrete gap.
+
+| Step | Required status note |
+| --- | --- |
+| Source discovery | Name which official, research, regulator, reliable-media, and registered source surfaces were checked. Do not just write "searched the web." |
+| Candidate intake | Confirm that draftable URLs have `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, and `draftingDecision`. |
+| Original-source search | For media-started candidates, say whether an official, filing, paper, regulator, customer-side, dataset, or benchmark original replaced the media report. |
+| Duplicate reporting | Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists, or record the manual current/history duplicate check when no file exists. |
+| Priority and mix | Note whether `docs/candidate-priority-rubric.md` and `docs/source-diversity-triage-note.md` changed the drafting order or caused a held candidate. |
+| Drafting | Confirm the public copy came from minimum source facts plus AI Watchtower interpretation, not copied or expanded source paragraphs. |
+| Editorial review | Confirm `docs/editorial-checklist.md`, `docs/source-policy.md`, and `docs/copyright-safety.md` were applied to the final items. |
+| Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
+| Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
+| Commit | Record the local commit message and whether the log can include the final hash without amending itself. |
+| Push | Record `pushed`, `blocked-dns`, `blocked-auth`, `blocked-non-fast-forward`, or `not-attempted-with-reason`. |
+
+## Minimum Editor Note
+
+When time is short, leave this compact note before drafting or committing:
+
+```text
+Run: 2026-07-04 17:00 JST, evening-news
+Remote before: blocked-dns
+Source discovery: done - checked official AI labs, registered media/research surfaces, and current-history duplicate URLs.
+Candidate intake: done - 3 draft, 4 hold, 2 reject; holds mainly need original-source confirmation.
+Duplicate reporting: done - no repeated URL or near-title match, or manual current/history check completed.
+Drafting: done - public copy uses minimum source facts and original Chinese interpretation.
+Validation: done - validate-data, validate-site, validate-pages, HTML parse, JSON parse, diff check.
+Push: blocked-dns
+Short batch reason: only three reliable non-duplicate research originals passed the source and copyright gates.
+```
+
+## Stop Conditions
+
+Do not publish the batch until the relevant step is resolved when:
+
+- Source discovery found only community discussion, scraped screenshots, reposts, or login/paywall body text.
+- Candidate intake cannot state the proof boundary or next independent check in Chinese.
+- Duplicate reporting finds the same URL or a near-matching title and the editor cannot name a fresh source fact.
+- Media candidates would require article structure, interviews, figures, charts, or paywalled body text to be useful.
+- Validation fails on current data, static links, archive/detail pages, or repeated current-vs-history coverage.
+
+Do publish a shorter batch when the safe candidates are few but clear, current, non-duplicated, and useful to Chinese readers. In that case, record `shortBatchReason` in the edition/log so later runs know this was a quality decision rather than an incomplete run.

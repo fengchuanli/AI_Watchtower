@@ -1,3 +1,27 @@
+## 2026-07-04 20:03 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 7 update-workflow task. Added a news update run checklist so each 08:00/17:00 intelligence run can separately record source discovery, candidate intake, original-source search, duplicate reporting, drafting, editorial review, validation, commit, and push status before or while updating `data/news.json`.
+- Changed files:
+  - `docs/update-run-checklist.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing candidate workflow docs; continued with Day 7 because Day 0 through Day 6 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the update-run checklist documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit pending at log write time; final local hash is recorded in automation memory because updating this line changes the final hash.
+- Git note: `git push origin main` will be attempted after commit; GitHub DNS failure may still block the remote update.
+
 ## 2026-07-04 17:04 JST
 
 - Focus: Published the 2026-07-04 17:00 JST AI news intelligence update with three research-original signals on Agent safety testing, coding-agent oversight, and deployment-time LLM safety monitoring.

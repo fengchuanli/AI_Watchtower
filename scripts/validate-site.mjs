@@ -29,6 +29,7 @@ const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md"
 const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-note.md", "utf8");
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
+const updateRunChecklist = readFileSync("docs/update-run-checklist.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -742,6 +743,34 @@ if (
 }
 
 if (
+  !/Update Run Checklist/.test(updateRunChecklist) ||
+  !/Run Header/.test(updateRunChecklist) ||
+  !/Status Checklist/.test(updateRunChecklist) ||
+  !/Source discovery/.test(updateRunChecklist) ||
+  !/Candidate intake/.test(updateRunChecklist) ||
+  !/Original-source search/.test(updateRunChecklist) ||
+  !/Duplicate reporting/.test(updateRunChecklist) ||
+  !/Priority and mix/.test(updateRunChecklist) ||
+  !/Drafting/.test(updateRunChecklist) ||
+  !/Data validation/.test(updateRunChecklist) ||
+  !/Site validation/.test(updateRunChecklist) ||
+  !/Commit/.test(updateRunChecklist) ||
+  !/Push/.test(updateRunChecklist) ||
+  !/shortBatchReason/.test(updateRunChecklist) ||
+  !/report-duplicate-candidates\.mjs/.test(updateRunChecklist) ||
+  !/validate-data\.mjs/.test(updateRunChecklist) ||
+  !/validate-site\.mjs/.test(updateRunChecklist) ||
+  !/validate-pages\.mjs/.test(updateRunChecklist) ||
+  !/blocked-dns/.test(updateRunChecklist) ||
+  !/update-run-checklist\.md/.test(candidateIntakeFormat) ||
+  !/update-run-checklist\.md/.test(candidateToNewsHandoff) ||
+  !/update-run-checklist\.md/.test(readme) ||
+  !/Day 7[\s\S]*update-run-checklist\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("News update workflow must include an update-run checklist for discovery, intake, duplicate reporting, drafting, validation, commit, and push status.");
+}
+
+if (
   !/Original Source Replacement Guide/.test(originalSourceReplacementGuide) ||
   !/Replacement Rule/.test(originalSourceReplacementGuide) ||
   !/Must Replace Before Drafting/.test(originalSourceReplacementGuide) ||
@@ -907,7 +936,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-06-24 through 2026-07-23/.test(optimizationDecisionIndex) ||
-  !/Phase 1, Candidate Intake And Editorial Triage/.test(optimizationDecisionIndex) ||
+  !/Phase 2, Update Workflow And Archive Reliability/.test(optimizationDecisionIndex) ||
   !/Previous Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
   !/Previous Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
@@ -924,7 +953,8 @@ if (
   !/Day 4[\s\S]*original-source-replacement-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 5[\s\S]*source-diversity-triage-note\.md/.test(optimizationDecisionIndex) ||
   !/Day 6[\s\S]*candidate-workflow-plain-language-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 7/.test(optimizationDecisionIndex) ||
+  !/Day 7[\s\S]*update-run-checklist\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 8/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

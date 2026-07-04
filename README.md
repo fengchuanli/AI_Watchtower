@@ -32,6 +32,7 @@ npx serve .
 │   ├── candidate-to-news-handoff.md
 │   ├── original-source-replacement-guide.md
 │   ├── source-diversity-triage-note.md
+│   ├── update-run-checklist.md
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
 │   ├── editorial-validator-limits.md
@@ -69,6 +70,7 @@ npx serve .
 - 批次来源多样性判断：`docs/source-diversity-triage-note.md`
 - 媒体报道替换原始来源判断：`docs/original-source-replacement-guide.md`
 - 候选到新闻字段交接：`docs/candidate-to-news-handoff.md`
+- 新闻更新运行清单：`docs/update-run-checklist.md`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`
