@@ -1,3 +1,26 @@
+## 2026-07-05 08:08 JST
+
+- Focus: Published the 2026-07-05 08:00 JST AI news intelligence update with four non-duplicate signals: three arXiv research originals on persistent-state coding-agent attacks, dual-channel multi-agent divergence, and bounded-memory long-horizon Agent testing, plus one Axios media-background item on enterprise pushback against US frontier AI labs.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral, RSS/media surfaces, arXiv recent pages, Axios, and historical duplicate URLs.
+  - Official pages did not show a stronger post-17:00 JST release suitable for promotion, so the edition uses non-duplicate arXiv research signals plus one reliable-media enterprise-adoption background item rather than padding with repeated Fable/Mythos coverage or community discussion.
+  - Kept all arXiv items as `研究原文` / reported preprint signals; kept Axios as `媒体背景` with `originalDependency: must-read`. Research items still require code, data, third-party replication, real repository tests, production traces, or enterprise red-team evidence before upgrade; the Axios item still requires procurement data, customer cases, official model-access rules, and vendor statements before a stronger market conclusion.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 4 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新08点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git push origin main` failed three times due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of the known remote.
+
 ## 2026-07-04 20:03 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 7 update-workflow task. Added a news update run checklist so each 08:00/17:00 intelligence run can separately record source discovery, candidate intake, original-source search, duplicate reporting, drafting, editorial review, validation, commit, and push status before or while updating `data/news.json`.
