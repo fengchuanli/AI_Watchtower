@@ -1,3 +1,26 @@
+## 2026-07-05 17:08 JST
+
+- Focus: Published the 2026-07-05 17:00 JST AI news intelligence update with two non-duplicate reliable-media background signals: The Verge on AO3 community use of Claude paste-artifact detection and its false-positive/governance risks, and The Verge on Midjourney's ultrasound scanner video with unresolved scientific, clinical, and regulatory evidence gaps.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral pages, reliable-media/search surfaces, RSS availability, and historical duplicate URLs.
+  - Official pages did not show a stronger post-08:00 JST release suitable for promotion; Anthropic Claude Science URLs were already captured in history, so the edition uses only two safe non-duplicate The Verge media-background signals rather than padding with repeated official posts, community-only discussion, or weak search snippets.
+  - Kept both current items as `媒体背景` / reported with `originalDependency: must-read`; AO3 detection still requires platform rules, model-side technical confirmation, independent false-positive testing, and appeal data, while Midjourney scanner claims still require official technical materials, independent imaging tests, clinical records, regulator files, and external medical review before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新17点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of the known remote until DNS/network access is available.
+
 ## 2026-07-05 08:08 JST
 
 - Focus: Published the 2026-07-05 08:00 JST AI news intelligence update with four non-duplicate signals: three arXiv research originals on persistent-state coding-agent attacks, dual-channel multi-agent divergence, and bounded-memory long-horizon Agent testing, plus one Axios media-background item on enterprise pushback against US frontier AI labs.

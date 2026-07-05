@@ -1,8 +1,229 @@
 {
   "version": 1,
   "updatedAt": "2026-07-05",
-  "totalItems": 92,
+  "totalItems": 94,
   "editions": [
+    {
+      "id": "news-1700-2026-07-05",
+      "date": "2026-07-05",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-07-05 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、可靠媒体、RSS/搜索结果和历史 URL，未找到足够 08:00 后强官方新项。",
+      "editorialInterpretation": "官方页未出现强于早间版的全新发布；本期只发布两条非重复可靠媒体背景，聚焦 AI 内容检测争议和健康硬件证据边界。",
+      "readerFrame": {
+        "headline": "阅读本期：AI 从模型能力扩展到内容信任和健康硬件边界",
+        "whyItMatters": "两条信号都不是单纯新品发布，而是在提醒读者：AI 工具进入创作社区和健康场景后，证据、误伤和监管边界会变成核心问题。",
+        "useThisIssueFor": [
+          "内容平台、社区治理和版权团队用来更新 AI 生成内容检测、申诉和披露机制。",
+          "健康、硬件和产品团队用来检查 AI 公司跨入医疗/健康设备时需要的科学、监管和临床证据。"
+        ],
+        "notProvenYet": [
+          "不能把 AO3 Claude 代码痕迹检测读成通用 AI 文本检测方案。",
+          "不能把 Midjourney 展示的扫描器读成已验证医学成像产品或获批诊断设备。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增两条可靠媒体背景，未重复早间研究项",
+        "freshFacts": [
+          "本期新增事实：The Verge 报道 AO3 社区出现利用 Claude 粘贴代码痕迹的检测皮肤，并提示其适用范围有限。",
+          "本期新增事实：The Verge 报道 Midjourney 展示超声扫描器幕后视频，但仍缺少充分成像物理和临床可行性证据。"
+        ],
+        "repeatedContext": [
+          "本期不重复 08:00 版已收录的三条 arXiv Agent 研究和 Axios 企业采购摩擦报道。",
+          "本期不重复 7 月 4 日历史版已收录的 Anthropic Claude Science 药物开发/科学工作台信号。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "内容溯源与误伤",
+          "count": 1,
+          "meaning": "用来检查 AI 文本检测、社区执法和创作者申诉机制。"
+        },
+        {
+          "label": "健康硬件证据边界",
+          "count": 1,
+          "meaning": "用来检查 AI 公司健康设备叙事、监管路径和科学证据清单。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "可靠媒体用于捕捉 AI 产品进入社区和健康场景后的外部质疑；读者仍需原文、官方技术材料、监管文件和第三方验证。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体源集中",
+        "note": "本期全部来自 The Verge，适合作为风险雷达和问题清单，不应视作官方确认或科学验证。",
+        "nextCheck": "继续核对平台方说明、AI 公司官方材料、监管文件、独立专家评测和第三方复现实验。"
+      },
+      "sourceConcentration": {
+        "sourceId": "theverge-ai",
+        "sourceName": "The Verge AI",
+        "count": 2,
+        "share": "2/2",
+        "note": "同一来源提供本期全部信号；优势是有外部采访和测试背景，风险是缺官方、监管和第三方技术验证。",
+        "nextCheck": "用其他可靠媒体、官方公告、监管文件、论文原文和第三方测试打散单一来源风险。"
+      },
+      "trendNotes": [
+        {
+          "topic": "ai-content-provenance",
+          "label": "AI 内容溯源进入社区治理",
+          "note": "跨期看，AI 生成内容争议正在从模型水印扩展到平台痕迹、社区执法和披露激励。",
+          "boundary": "不证明存在通用文本检测方案，仍需平台日志、模型方说明、误报率测试、申诉数据和独立复验。"
+        },
+        {
+          "topic": "ai-health-product-boundary",
+          "label": "AI 健康产品需要更硬证据",
+          "note": "跨期看，AI 公司正把科学、健康和硬件叙事推到更接近监管场景的位置。",
+          "boundary": "不证明设备具备临床效用，仍需物理原理说明、临床试验、FDA/监管文件和外部医学评审。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "theverge-ao3-claude-artifact-detector-2026-07-04"
+          ],
+          "meaning": "用来更新 AI 内容检测、社区治理、误伤申诉和披露政策清单。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 1,
+          "itemIds": [
+            "theverge-midjourney-ultrasound-scanner-evidence-gap-2026-07-03"
+          ],
+          "meaning": "用来检查 AI 公司跨行业产品、健康合规和科学验证路线。"
+        }
+      ],
+      "itemCount": 2,
+      "items": [
+        {
+          "id": "theverge-ao3-claude-artifact-detector-2026-07-04",
+          "category": "policy",
+          "label": "政策",
+          "title": "The Verge：AO3 社区用 Claude 粘贴痕迹检测 AI 文本，引发误伤风险",
+          "body": "AO3 社区出现用 Claude 粘贴痕迹标红作品的检测皮肤。",
+          "summary": "The Verge 报道 AO3 社区用 Claude 粘贴痕迹检测 AI 文本；媒体测试显示可命中特定直贴样例，但范围有限。",
+          "whyItMatters": "它把 AI 文本检测从抽象水印问题拉到社区执法、创作者误伤和披露激励的实际治理场景。",
+          "detailBody": "报道记录 AO3 社区使用皮肤识别 Claude 直贴时留下的代码痕迹；The Verge 自测称直贴样例会触发标红。报道同时说明，文本若经编辑器、文档工具或其他模型路径转移，检测就可能失效。",
+          "trend": "AI 内容治理进入社区执法场景。",
+          "detailTrend": "当社区用技术痕迹判断作品是否含 AI 参与，治理重点会从“有没有 AI”转向“证据能证明什么”。检测结果若直接触发点名或羞辱，平台还要承担误报、申诉、披露激励和创作者信任成本。",
+          "whyRanked": "它揭示 AI 文本检测的误伤风险。",
+          "topReason": "这条能提醒内容平台：AI 检测工具必须和申诉、披露、误伤控制一起设计。",
+          "detailWhyRanked": "报道给出工具形态、直贴测试、绕过路径和社区后果，足以形成平台治理清单；但它没有 AO3 官方规则、Anthropic 技术确认或大规模误报率数据，因此只能作为媒体背景信号。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道和测试支持局部工具事实；通用检测效果、误报率和平台处置仍未验证。"
+          },
+          "impact": "内容平台、社区管理员和版权团队可用它审视 AI 检测工具是否需要申诉、标注和误伤缓冲。",
+          "whoShouldCare": "内容平台、社区治理、版权和信任安全团队应关注这条信号，用来更新 AI 生成内容处置规则。",
+          "readerUse": "平台团队用来检查检测工具上线前是否有误报率、申诉流程和披露激励设计。",
+          "nextCheck": "核对 AO3 官方规则、Anthropic 技术说明、样本误报率测试和社区申诉记录。",
+          "followUpQuestions": [
+            "AO3 或同类平台是否会发布正式 AI 生成内容检测与申诉规则？",
+            "Claude 粘贴痕迹在不同浏览器、编辑器和转贴路径下的误报率是多少？"
+          ],
+          "evidenceThreshold": "至少需要平台方规则、模型方技术说明、独立样本测试和申诉数据，才能升级为已验证的 AI 文本检测治理案例。",
+          "claimBoundary": "The Verge 支持该社区工具和局部测试事实，不证明它能可靠识别所有 AI 文本或所有 Claude 使用。",
+          "counterEvidence": "如果平台日志、独立测试或模型方说明显示痕迹易被误植或大规模漏检，应下调为社区实验信号。",
+          "source": "The Verge AI",
+          "sourceName": "The Verge AI",
+          "sourceId": "theverge-ai",
+          "sourceUrl": "https://www.theverge.com/tech/960854/ai-fanfiction-ao3-claude-detector",
+          "originalUrl": "https://www.theverge.com/tech/960854/ai-fanfiction-ao3-claude-detector",
+          "sourceRole": "媒体背景",
+          "provenance": "The Verge 是可靠媒体背景来源；可支持其报道、测试和采访事实，完整案例、引述和上下文仍需读原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-04T08:00:00-04:00",
+          "time": "07/04 21:00 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道和测试支持局部工具事实；通用检测效果、误报率和平台处置仍未验证。"
+          }
+        },
+        {
+          "id": "theverge-midjourney-ultrasound-scanner-evidence-gap-2026-07-03",
+          "category": "product",
+          "label": "产品",
+          "title": "The Verge：Midjourney 医疗扫描器公开视频，但关键可行性证据仍不足",
+          "body": "Midjourney 展示超声扫描器幕后视频，但证据缺口仍大。",
+          "summary": "The Verge 报道 Midjourney 展示超声扫描器幕后视频；媒体称硬件细节增加，但核心可行性证据仍不足。",
+          "whyItMatters": "它显示生成式 AI 公司跨入健康硬件时，叙事吸引力必须接受医学证据、监管分类和专家复核检验。",
+          "detailBody": "报道称 Midjourney 视频展示类水槽超声扫描器、探头布置和工程搭建。报道还写到，公司把早期方向描述为身体组成等 wellness 场景，这不同于已获批的医学诊断设备。",
+          "trend": "AI 公司跨界健康硬件需要更硬证据。",
+          "detailTrend": "健康硬件不能只靠 AI 品牌、原型视频和工程热情建立信任。越接近医疗场景，读者越需要看到物理原理、成像质量、临床适应症、监管分类和第三方医学评审。",
+          "whyRanked": "它提示健康硬件证据门槛。",
+          "topReason": "这条适合作为健康 AI 产品边界提醒：原型展示不是医学有效性或监管可用性的证明。",
+          "detailWhyRanked": "报道提供视频线索、公司口径和专家质疑，能帮助读者把问题拆成技术、临床和监管清单；但目前缺官方技术白皮书、临床数据、监管文件、独立复测和外部医学专家评审。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道支持展示事实和证据缺口；设备效能、医学用途和监管路径仍待官方与第三方资料。"
+          },
+          "impact": "健康 AI、硬件、合规和投资团队可用它检查产品叙事是否有足够科学与监管证据支撑。",
+          "whoShouldCare": "健康 AI、医疗硬件、合规和战略团队应关注这条信号，用来区分原型叙事与可验证产品。",
+          "readerUse": "产品和合规团队用来建立健康硬件证据清单：原理、数据、临床、监管和第三方评审。",
+          "nextCheck": "核对 Midjourney 官方技术材料、专家独立评测、临床试验记录和 FDA/监管文件。",
+          "followUpQuestions": [
+            "Midjourney 是否会公开成像物理、分辨率、误差范围和适用人群数据？",
+            "该设备若从 wellness 走向医疗诊断，需要哪些监管提交和临床证据？"
+          ],
+          "evidenceThreshold": "至少需要技术白皮书、独立成像评测、临床试验或监管文件，才能升级为已验证的健康 AI 硬件进展。",
+          "claimBoundary": "The Verge 支持视频展示和专家质疑事实，不证明扫描器具备临床诊断能力或已获监管认可。",
+          "counterEvidence": "如果官方资料、独立成像测试或监管文件无法证明可行性，应下调为高不确定性的原型展示。",
+          "source": "The Verge AI",
+          "sourceName": "The Verge AI",
+          "sourceId": "theverge-ai",
+          "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/961265/midjourney-medical-ultrasound-scanner-behind-the-scenes-video",
+          "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/961265/midjourney-medical-ultrasound-scanner-behind-the-scenes-video",
+          "sourceRole": "媒体背景",
+          "provenance": "The Verge 是可靠媒体背景来源；可支持其报道的视频内容、公司说法和专家质疑，完整事实仍需读原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-03T07:49:10-04:00",
+          "time": "07/03 20:49 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道支持展示事实和证据缺口；设备效能、医学用途和监管路径仍待官方与第三方资料。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-07-05",
       "date": "2026-07-05",
