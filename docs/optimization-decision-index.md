@@ -29,7 +29,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 5 | Complete | `7417364` | `docs/source-diversity-triage-note.md` decides whether a safe candidate batch should draft normally, draft with a caveat, hold repetitive items with `hold-batch-balance`, or publish short without padding. |
 | Day 6 | Complete | `19dd9da` | `docs/candidate-workflow-plain-language-guide.md` gives non-technical editors a six-question Chinese path before they touch schema fields or `data/news.json`. |
 | Day 7 | Complete | `bf0ee88` | `docs/update-run-checklist.md` separates each 08:00/17:00 news update into source discovery, candidate intake, original-source search, duplicate reporting, drafting, validation, commit, and push status. |
-| Day 8 | Complete | `pending` | `docs/current-to-history-publication-checklist.md` keeps the newest `data/news-history.json` edition aligned with `data/news.json` for edition metadata, reader/source framing, item count, and item order before publication. |
+| Day 8 | Complete | `09fc440` | `docs/current-to-history-publication-checklist.md` keeps the newest `data/news-history.json` edition aligned with `data/news.json` for edition metadata, reader/source framing, item count, and item order before publication. |
 
 ## Next Useful Task
 

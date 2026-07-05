@@ -1,3 +1,28 @@
+## 2026-07-05 20:02 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 8 archive-reliability task. Added a current-to-history publication checklist so each 08:00/17:00 news update explicitly verifies that the newest `data/news-history.json` edition mirrors the current `data/news.json` homepage edition for metadata, reader/source framing, item count, and item order before committing.
+- Changed files:
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `docs/news-data-format.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing update/archive workflow docs; continued with Day 8 because Day 0 through Day 7 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the current-to-history publication checklist documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `09fc440` (`增加当前归档发布核对`). Final local HEAD is recorded in automation memory because updating this line changes the final hash.
+- Git note: `git push origin main` will be attempted after the log commit; GitHub DNS failure may still block the remote update.
+
 ## 2026-07-05 17:08 JST
 
 - Focus: Published the 2026-07-05 17:00 JST AI news intelligence update with two non-duplicate reliable-media background signals: The Verge on AO3 community use of Claude paste-artifact detection and its false-positive/governance risks, and The Verge on Midjourney's ultrasound scanner video with unresolved scientific, clinical, and regulatory evidence gaps.
