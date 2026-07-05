@@ -30,6 +30,7 @@ npx serve .
 │   ├── candidate-priority-rubric.md
 │   ├── candidate-source-checklist.md
 │   ├── candidate-to-news-handoff.md
+│   ├── current-to-history-publication-checklist.md
 │   ├── original-source-replacement-guide.md
 │   ├── source-diversity-triage-note.md
 │   ├── update-run-checklist.md
@@ -71,6 +72,7 @@ npx serve .
 - 媒体报道替换原始来源判断：`docs/original-source-replacement-guide.md`
 - 候选到新闻字段交接：`docs/candidate-to-news-handoff.md`
 - 新闻更新运行清单：`docs/update-run-checklist.md`
+- 当前版归档发布核对：`docs/current-to-history-publication-checklist.md`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`

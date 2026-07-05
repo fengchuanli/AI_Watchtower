@@ -30,6 +30,10 @@ const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-not
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const updateRunChecklist = readFileSync("docs/update-run-checklist.md", "utf8");
+const currentToHistoryPublicationChecklist = readFileSync(
+  "docs/current-to-history-publication-checklist.md",
+  "utf8",
+);
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -771,6 +775,32 @@ if (
 }
 
 if (
+  !/Current To History Publication Checklist/.test(currentToHistoryPublicationChecklist) ||
+  !/Mirror Fields/.test(currentToHistoryPublicationChecklist) ||
+  !/Publication Steps/.test(currentToHistoryPublicationChecklist) ||
+  !/Stop Conditions/.test(currentToHistoryPublicationChecklist) ||
+  !/Compact Log Note/.test(currentToHistoryPublicationChecklist) ||
+  !/data\/news\.json/.test(currentToHistoryPublicationChecklist) ||
+  !/data\/news-history\.json/.test(currentToHistoryPublicationChecklist) ||
+  !/edition\.id/.test(currentToHistoryPublicationChecklist) ||
+  !/readerFrame/.test(currentToHistoryPublicationChecklist) ||
+  !/changeSummary/.test(currentToHistoryPublicationChecklist) ||
+  !/sourceConcentration/.test(currentToHistoryPublicationChecklist) ||
+  !/trendNotes/.test(currentToHistoryPublicationChecklist) ||
+  !/topicGroups/.test(currentToHistoryPublicationChecklist) ||
+  !/item count/.test(currentToHistoryPublicationChecklist) ||
+  !/item order/.test(currentToHistoryPublicationChecklist) ||
+  !/validate-data\.mjs/.test(currentToHistoryPublicationChecklist) ||
+  !/current-to-history-publication-checklist\.md/.test(updateRunChecklist) ||
+  !/current-to-history-publication-checklist\.md/.test(candidateToNewsHandoff) ||
+  !/current-to-history-publication-checklist\.md/.test(newsDataFormat) ||
+  !/current-to-history-publication-checklist\.md/.test(readme) ||
+  !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("News publication workflow must include a current-to-history checklist so the newest archive edition cannot drift from the homepage edition.");
+}
+
+if (
   !/Original Source Replacement Guide/.test(originalSourceReplacementGuide) ||
   !/Replacement Rule/.test(originalSourceReplacementGuide) ||
   !/Must Replace Before Drafting/.test(originalSourceReplacementGuide) ||
@@ -954,7 +984,8 @@ if (
   !/Day 5[\s\S]*source-diversity-triage-note\.md/.test(optimizationDecisionIndex) ||
   !/Day 6[\s\S]*candidate-workflow-plain-language-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 7[\s\S]*update-run-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 8/.test(optimizationDecisionIndex) ||
+  !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 9/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

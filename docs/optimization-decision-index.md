@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 2, Update Workflow And Archive Reliability
-- Last indexed run: 2026-07-04 20:00 JST
+- Last indexed run: 2026-07-05 20:00 JST
 - Network status: GitHub DNS resolution failed during the latest pull attempt; push may need retry when network access returns.
 
 ## Recent Plan-Day Decisions
@@ -29,12 +29,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 5 | Complete | `7417364` | `docs/source-diversity-triage-note.md` decides whether a safe candidate batch should draft normally, draft with a caveat, hold repetitive items with `hold-batch-balance`, or publish short without padding. |
 | Day 6 | Complete | `19dd9da` | `docs/candidate-workflow-plain-language-guide.md` gives non-technical editors a six-question Chinese path before they touch schema fields or `data/news.json`. |
 | Day 7 | Complete | `bf0ee88` | `docs/update-run-checklist.md` separates each 08:00/17:00 news update into source discovery, candidate intake, original-source search, duplicate reporting, drafting, validation, commit, and push status. |
+| Day 8 | Complete | `pending` | `docs/current-to-history-publication-checklist.md` keeps the newest `data/news-history.json` edition aligned with `data/news.json` for edition metadata, reader/source framing, item count, and item order before publication. |
 
 ## Next Useful Task
 
-- Continue with Day 8: add a current-to-history publication checklist so the latest archived edition cannot drift from the homepage edition.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 7 first.
-- If Day 8 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 9: add a rollback note for bad data updates, naming which files to inspect and which validators to rerun before re-publishing.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 8 first.
+- If Day 9 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

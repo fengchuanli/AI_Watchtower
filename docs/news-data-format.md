@@ -4,6 +4,8 @@ Homepage news items live in `data/news.json`. 首页优先读取 `summary` and `
 
 Each future news-intelligence run should aim for at least 10 qualified `items` so the homepage news flow has enough non-TOP3 stories to scan. This is a target, not permission to lower quality: duplicate, paywall/login-wall, unclear-source, weak-proof, or copyright-risk candidates must still be skipped. If a run publishes fewer than 10 safe items, record the reason in the edition metadata and optimization log.
 
+Before committing a news publication, use `docs/current-to-history-publication-checklist.md` to mirror the current homepage edition into the newest `data/news-history.json` edition. The latest archive entry is part of the publication surface, not an optional backup copy.
+
 Homepage `今日 TOP3` is a daily ranking. The page may combine the current `data/news.json` edition with same-date editions in `data/news-history.json`, then rank the best three by editorial score, reader utility, impact, evidence quality, narrative strength, and freshness. The current feed itself should stay sorted newest-first for the news flow; TOP3 selection should not be confused with current-batch order.
 
 All item fields must follow `docs/copyright-safety.md`. The data model should help readers understand the news, but it must not turn source articles into full Chinese replacements. Use source fields for minimum necessary facts, and use editorial fields for AI Watchtower's own interpretation, trend reading, reader use, and verification boundary.
