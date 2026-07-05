@@ -1,3 +1,26 @@
+## 2026-07-06 08:08 JST
+
+- Focus: Published the 2026-07-06 08:00 JST AI news intelligence update with four non-duplicate signals: Guardian on UK foreign secretary Yvette Cooper framing AI as a global-rules/foreign-policy risk, Axios on the UN/ITU AI for Good Global Commission first-meeting setup, and two arXiv research originals on open-source multi-agent framework ecosystem health and AI Agent guard-rail validation for autonomous telecom networks.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral, RSS/source surfaces, reliable-media search results, arXiv signals, and historical duplicate URLs.
+  - Official pages did not show a stronger post-17:00 JST release suitable for promotion, so this edition uses one fresh morning-policy media signal, one still-current governance-meeting background signal, and two research-original Agent/infrastructure signals rather than padding with repeated Anthropic/Fable, OpenAI stake, or community-only coverage.
+  - Kept Guardian and Axios as `媒体背景` / reported with `originalDependency: must-read`; policy and commission claims still require government, UN/ITU, meeting, or formal action documents before upgrade. Kept both arXiv items as `研究原文`; their engineering conclusions still require public code/data, third-party replication, standards records, and real deployment evidence.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 4 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit will use message `更新08点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may hit the same DNS limit.
+
 ## 2026-07-05 20:02 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 8 archive-reliability task. Added a current-to-history publication checklist so each 08:00/17:00 news update explicitly verifies that the newest `data/news-history.json` edition mirrors the current `data/news.json` homepage edition for metadata, reader/source framing, item count, and item order before committing.
