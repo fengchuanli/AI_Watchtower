@@ -21,7 +21,7 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
 - Commit: Local implementation commit `09fc440` (`增加当前归档发布核对`). Final local HEAD is recorded in automation memory because updating this line changes the final hash.
-- Git note: `git push origin main` will be attempted after the log commit; GitHub DNS failure may still block the remote update.
+- Git note: `git push origin main` failed because this environment could not resolve `github.com`; local commits remain ahead of the known remote.
 
 ## 2026-07-05 17:08 JST
 
