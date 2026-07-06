@@ -20,8 +20,8 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit note: Local commit will use message `增加错误数据回滚说明`; final hash is recorded in automation memory because updating this line changes the final hash.
-- Git note: `git push origin main` will be attempted after commit; GitHub DNS failure may still block the remote update.
+- Commit: Local implementation commit `b2c883c` (`增加错误数据回滚说明`). Final local HEAD is recorded in automation memory because updating this line changes the final hash.
+- Git note: `git push origin main` failed because this environment could not resolve `github.com`; local commits remain ahead of the known remote.
 
 ## 2026-07-06 17:07 JST
 
