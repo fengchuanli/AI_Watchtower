@@ -1,3 +1,27 @@
+## 2026-07-07 08:07 JST
+
+- Focus: Published the 2026-07-07 08:00 JST AI news intelligence update with three non-duplicate signals: MarketWatch on TeraWulf saying Anthropic signed a 20-year AI infrastructure lease for a Kentucky campus, Anthropic's Alberta government Claude Code cybersecurity case study, and Axios on Anthropic's Claude J-Space interpretability claim with an explicit no-consciousness boundary.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral, RSS/source surfaces, reliable-media search results, arXiv recent availability, and historical duplicate URLs.
+  - OpenAI, DeepMind, and Mistral official pages did not show a stronger post-17:00 JST release suitable for promotion, so this edition publishes only three safe signals rather than padding with community discussion, repeated July 6 items, or weak search-result coverage.
+  - Kept the TeraWulf/Anthropic lease and J-Space items as `媒体背景` / reported with `originalDependency: must-read`; both require company filings, original research materials, third-party replication, or independent confirmation before upgrade. Kept the Alberta item as `厂商主张`; it requires Alberta government white papers, remediation logs, approvals, production metrics, and third-party audit material before upgrade.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新08点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of the known remote until DNS/network access is available.
+
 ## 2026-07-06 20:03 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 9 archive-reliability task. Added a bad-data rollback note so future 08:00/17:00 news updates know which files to inspect, which rollback shape to choose, which validators to rerun, and what to log before republishing after a bad current/history data update.
