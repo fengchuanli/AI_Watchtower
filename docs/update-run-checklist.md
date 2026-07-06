@@ -1,6 +1,6 @@
 # Update Run Checklist
 
-Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, which validators passed, and whether GitHub sync succeeded.
+Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, which validators passed, and whether GitHub sync succeeded. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
 
 This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, publish a short batch with a clear reason instead of padding the homepage with weak, repeated, or copyright-risk items.
 
@@ -29,6 +29,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Drafting | Confirm the public copy came from minimum source facts plus AI Watchtower interpretation, not copied or expanded source paragraphs. |
 | Editorial review | Confirm `docs/editorial-checklist.md`, `docs/source-policy.md`, and `docs/copyright-safety.md` were applied to the final items. |
 | Archive mirror | Confirm `docs/current-to-history-publication-checklist.md` was applied after drafting, and say whether the latest history edition was mirrored, corrected, not needed, or blocked. |
+| Rollback check | If bad data was detected, confirm `docs/bad-data-rollback-note.md` was applied and say whether rollback was corrected, not needed, or blocked. |
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
 | Commit | Record the local commit message and whether the log can include the final hash without amending itself. |
@@ -59,5 +60,6 @@ Do not publish the batch until the relevant step is resolved when:
 - Duplicate reporting finds the same URL or a near-matching title and the editor cannot name a fresh source fact.
 - Media candidates would require article structure, interviews, figures, charts, or paywalled body text to be useful.
 - Validation fails on current data, static links, archive/detail pages, or repeated current-vs-history coverage.
+- A bad item has already reached `data/news.json`, `data/news-history.json`, a local commit, or a visible push and the rollback note has not been applied.
 
 Do publish a shorter batch when the safe candidates are few but clear, current, non-duplicated, and useful to Chinese readers. In that case, record `shortBatchReason` in the edition/log so later runs know this was a quality decision rather than an incomplete run.

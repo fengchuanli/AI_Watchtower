@@ -34,6 +34,7 @@ const currentToHistoryPublicationChecklist = readFileSync(
   "docs/current-to-history-publication-checklist.md",
   "utf8",
 );
+const badDataRollbackNote = readFileSync("docs/bad-data-rollback-note.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -801,6 +802,31 @@ if (
 }
 
 if (
+  !/Bad Data Rollback Note/.test(badDataRollbackNote) ||
+  !/When To Roll Back/.test(badDataRollbackNote) ||
+  !/Files To Inspect/.test(badDataRollbackNote) ||
+  !/Rollback Shapes/.test(badDataRollbackNote) ||
+  !/Restore Steps/.test(badDataRollbackNote) ||
+  !/Validators To Rerun/.test(badDataRollbackNote) ||
+  !/Compact Log Note/.test(badDataRollbackNote) ||
+  !/Stop Conditions/.test(badDataRollbackNote) ||
+  !/data\/news\.json/.test(badDataRollbackNote) ||
+  !/data\/news-history\.json/.test(badDataRollbackNote) ||
+  !/data\/sources\.json/.test(badDataRollbackNote) ||
+  !/validate-data\.mjs/.test(badDataRollbackNote) ||
+  !/validate-site\.mjs/.test(badDataRollbackNote) ||
+  !/validate-pages\.mjs/.test(badDataRollbackNote) ||
+  !/git diff --check/.test(badDataRollbackNote) ||
+  !/bad-data-rollback-note\.md/.test(updateRunChecklist) ||
+  !/bad-data-rollback-note\.md/.test(currentToHistoryPublicationChecklist) ||
+  !/bad-data-rollback-note\.md/.test(newsDataFormat) ||
+  !/bad-data-rollback-note\.md/.test(readme) ||
+  !/Day 9[\s\S]*bad-data-rollback-note\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("News update workflow must include a bad-data rollback note naming files to inspect and validators to rerun before republishing.");
+}
+
+if (
   !/Original Source Replacement Guide/.test(originalSourceReplacementGuide) ||
   !/Replacement Rule/.test(originalSourceReplacementGuide) ||
   !/Must Replace Before Drafting/.test(originalSourceReplacementGuide) ||
@@ -985,7 +1011,8 @@ if (
   !/Day 6[\s\S]*candidate-workflow-plain-language-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 7[\s\S]*update-run-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 9/.test(optimizationDecisionIndex) ||
+  !/Day 9[\s\S]*bad-data-rollback-note\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 10/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

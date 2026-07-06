@@ -1,3 +1,28 @@
+## 2026-07-06 20:03 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 9 archive-reliability task. Added a bad-data rollback note so future 08:00/17:00 news updates know which files to inspect, which rollback shape to choose, which validators to rerun, and what to log before republishing after a bad current/history data update.
+- Changed files:
+  - `docs/bad-data-rollback-note.md`
+  - `docs/update-run-checklist.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/news-data-format.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing update/archive workflow docs; continued with Day 9 because Day 0 through Day 8 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the bad-data rollback note documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit will use message `增加错误数据回滚说明`; final hash is recorded in automation memory because updating this line changes the final hash.
+- Git note: `git push origin main` will be attempted after commit; GitHub DNS failure may still block the remote update.
+
 ## 2026-07-06 17:07 JST
 
 - Focus: Published the 2026-07-06 17:00 JST AI news intelligence update with two non-duplicate reliable-media background signals: FT on OpenAI/Anthropic potential IPO narratives facing public-market cash-flow, compute-cost, and profitability scrutiny, and WSJ on tech CEOs' public AI jobs narrative shifting from job-wipeout warnings toward productivity and workforce-reorganization framing.

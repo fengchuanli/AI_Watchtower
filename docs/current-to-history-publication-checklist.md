@@ -12,7 +12,7 @@ Run this checklist whenever any of these files changes:
 - `data/news-history.json`
 - `docs/optimization-log.md` for a news intelligence update
 
-Also run it when a validator reports archive readiness drift, repeated current-vs-history coverage, stale current items, mismatched item counts, or a missing latest history edition.
+Also run it when a validator reports archive readiness drift, repeated current-vs-history coverage, stale current items, mismatched item counts, or a missing latest history edition. If the drift comes from bad current data rather than a simple mirror omission, use `docs/bad-data-rollback-note.md` before republishing.
 
 ## Mirror Fields
 
@@ -47,6 +47,7 @@ The newest `data/news-history.json` edition should match the current `data/news.
 5. Run `node scripts/validate-data.mjs` and treat any archive-readiness mismatch as a publication blocker.
 6. Open or parse `archive.html`, `all-news.html`, and `news-detail.html` when page behavior changed or when an archived detail link was affected.
 7. Record in `docs/optimization-log.md` whether the latest history edition was mirrored, created, corrected, or intentionally left unchanged with a reason.
+8. If a correction removes or demotes a bad current item, also record the rollback shape from `docs/bad-data-rollback-note.md` so future runs know whether the issue reached draft, commit, or push.
 
 ## Stop Conditions
 

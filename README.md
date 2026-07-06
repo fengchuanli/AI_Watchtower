@@ -31,6 +31,7 @@ npx serve .
 │   ├── candidate-source-checklist.md
 │   ├── candidate-to-news-handoff.md
 │   ├── current-to-history-publication-checklist.md
+│   ├── bad-data-rollback-note.md
 │   ├── original-source-replacement-guide.md
 │   ├── source-diversity-triage-note.md
 │   ├── update-run-checklist.md
@@ -73,6 +74,7 @@ npx serve .
 - 候选到新闻字段交接：`docs/candidate-to-news-handoff.md`
 - 新闻更新运行清单：`docs/update-run-checklist.md`
 - 当前版归档发布核对：`docs/current-to-history-publication-checklist.md`
+- 错误数据回滚说明：`docs/bad-data-rollback-note.md`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`
