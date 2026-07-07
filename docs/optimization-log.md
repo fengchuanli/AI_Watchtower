@@ -11,7 +11,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved.
-  - After commit: pending - push will be attempted after the local commit; if DNS remains blocked, local `main` will stay ahead of the known remote.
+  - After commit: pending - local implementation commit `742dad3` was created; push will be attempted after the log/index follow-up commit, and if DNS remains blocked local `main` will stay ahead of the known remote.
 - Verification:
   - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing update/archive/rollback workflow docs; continued with Day 10 because Day 0 through Day 9 were already complete.
   - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
@@ -21,7 +21,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit note: Local commit will use message `统一远程同步日志约定`; final hash will be recorded after commit if it can be done without rewriting history.
+- Commit: Local implementation commit `742dad3` (`统一远程同步日志约定`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
 - Git note: Push may fail because the pre-edit pull could not resolve `github.com`.
 
 ## 2026-07-07 17:07 JST

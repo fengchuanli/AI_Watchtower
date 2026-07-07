@@ -31,7 +31,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 7 | Complete | `bf0ee88` | `docs/update-run-checklist.md` separates each 08:00/17:00 news update into source discovery, candidate intake, original-source search, duplicate reporting, drafting, validation, commit, and push status. |
 | Day 8 | Complete | `09fc440` | `docs/current-to-history-publication-checklist.md` keeps the newest `data/news-history.json` edition aligned with `data/news.json` for edition metadata, reader/source framing, item count, and item order before publication. |
 | Day 9 | Complete | `b2c883c` | `docs/bad-data-rollback-note.md` names the files, rollback shapes, restore steps, validators, and log wording needed before republishing after a bad data update. |
-| Day 10 | Complete | `pending` | `docs/remote-sync-log-convention.md` standardizes pull/push log wording for `pulled`, `pushed`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, `blocked-non-fast-forward`, and `not-attempted-with-reason` states. |
+| Day 10 | Complete | `742dad3` | `docs/remote-sync-log-convention.md` standardizes pull/push log wording for `pulled`, `pushed`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, `blocked-non-fast-forward`, and `not-attempted-with-reason` states. |
 
 ## Next Useful Task
 
