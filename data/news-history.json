@@ -1,8 +1,229 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-07",
-  "totalItems": 105,
+  "updatedAt": "2026-07-08",
+  "totalItems": 107,
   "editions": [
+    {
+      "id": "news-0800-2026-07-08",
+      "date": "2026-07-08",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "08:00 JST 发布",
+      "note": "本期为 2026-07-08 08:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、RSS/搜索结果、可靠媒体和历史 URL，仅发布 2 条非重复且可解释信号。",
+      "editorialInterpretation": "本期判断：隔夜没有足够强的新官方发布可补满 10 条；保留一条安全承诺指数媒体信号和一条企业多模型架构媒体信号，均需原始报告、官方材料或客户指标补强。",
+      "readerFrame": {
+        "headline": "阅读本期：安全承诺和企业模型路由都进入可审计阶段",
+        "whyItMatters": "两条信号分别指向治理与落地：前沿模型安全承诺需要外部证据，生产代理则需要多模型、成本和供应商治理。",
+        "useThisIssueFor": [
+          "政策、法务和采购团队用来更新前沿模型安全承诺、暂停条件和外部审计核对表。",
+          "平台、架构和财务运营团队用来检查多模型路由、网关、成本监控和供应商替换方案。"
+        ],
+        "notProvenYet": [
+          "不能把 Axios 报道读成所有头部 AI 公司安全水平已经被独立判定下降。",
+          "不能把 Vercel CEO 的观点读成多数企业已经完成多模型生产迁移。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "08:00 版新增安全指数与企业多模型信号",
+        "freshFacts": [
+          "本期新增事实：Axios 7 月 7 日报道 FLI 最新 AI Safety Index 称多家头部 AI 公司削弱早期安全承诺。",
+          "本期新增事实：Business Insider 7 月 7 日报道 Vercel CEO 认为企业不再只选择单一 AI 实验室伙伴。"
+        ],
+        "repeatedContext": [
+          "本期不重复 7 月 7 日 17:00 版联合国自主武器禁令呼吁和 Mistral Leanstral 1.5 信号。",
+          "本期不重复 7 月 7 日 08:00 版 Anthropic 基建、Alberta Claude Code 和 J-Space 信号。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "安全治理指数",
+          "count": 1,
+          "meaning": "用来更新前沿模型安全承诺、暂停条件、风险报告和外部审计核对表。"
+        },
+        {
+          "label": "企业多模型架构",
+          "count": 1,
+          "meaning": "用来检查模型网关、按任务路由、成本治理和供应商退出计划。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "可靠媒体用于跟踪安全指数和企业架构观点；读者应转向原始报告、官方产品材料、客户指标和第三方评测核对。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体背景主导",
+        "note": "本期 2/2 项目都来自可靠媒体来源族，适合作为治理和企业架构雷达；来源族集中意味着不能替代官方结论、原始报告或已验证市场趋势。",
+        "nextCheck": "核对 FLI 原始指数、公司回应、Vercel 官方材料、客户侧生产指标、第三方评测和监管文件。"
+      },
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 1,
+        "share": "1/2",
+        "note": "本期没有单一来源占多数；两个项目都来自媒体背景，证据模式仍集中在报道而非原始文件。",
+        "nextCheck": "用 FLI 原始报告、公司正式回应、Vercel 产品材料、客户指标和第三方评测交叉核对。"
+      },
+      "trendNotes": [
+        {
+          "topic": "auditable-frontier-ai-safety",
+          "label": "前沿 AI 安全承诺可审计化",
+          "note": "跨期看，模型访问、军用边界、安全指数和公司承诺正在持续汇合，外部监督会要求更清晰的版本、红线和证据。",
+          "boundary": "这不证明所有安全框架已经失效；需要原始指数、公司政策版本、风险报告、审计材料、监管文件和第三方评估。"
+        },
+        {
+          "topic": "multi-model-production-routing",
+          "label": "生产代理转向多模型路由",
+          "note": "跨期看，企业从原型代理进入成本、任务成功率和供应商依赖治理，多模型网关正在成为可观察的架构方向。",
+          "boundary": "这不证明多模型路由已经成为多数企业标准；需要客户部署数据、平台日志、采购案例、成本指标和第三方评测。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "axios-fli-ai-safety-pledges-2026-07-07"
+          ],
+          "meaning": "用来更新前沿模型安全承诺和外部审计观察清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发者工具",
+          "count": 1,
+          "itemIds": [
+            "businessinsider-vercel-multi-model-ai-stack-2026-07-07"
+          ],
+          "meaning": "用来检查模型网关、生产代理路由和成本治理工具链。"
+        }
+      ],
+      "itemCount": 2,
+      "items": [
+        {
+          "id": "axios-fli-ai-safety-pledges-2026-07-07",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：FLI 指数称头部 AI 公司安全承诺正在退坡",
+          "body": "Axios 报道，Future of Life Institute 最新 AI Safety Index 指出多家头部 AI 公司削弱早期安全承诺。",
+          "summary": "Axios 报道称，FLI 最新 AI Safety Index 认为 Anthropic、OpenAI、Google DeepMind 和 Meta 等公司削弱了部分安全承诺。",
+          "whyItMatters": "如果自愿安全框架在能力上升时退坡，企业采购、政策制定和模型发布审查都需要更依赖外部证据。",
+          "detailBody": "Axios 7 月 7 日报道，Future of Life Institute 最新 AI Safety Index 评估多家 AI 公司，称部分公司弱化或取消过往在高风险能力附近暂停开发的承诺；报道还提到 Anthropic 总评 C+、OpenAI 和 Google DeepMind 为 C。",
+          "trend": "前沿 AI 治理正在从“公司自愿承诺”转向“承诺是否可审计”的问题。",
+          "detailTrend": "这条信号的重点不是某家公司单次得分，而是自愿安全制度的可信度：Axios 报道称 FLI 关注暂停开发承诺、存在风险安全和军事用途扩张，这些都要求企业把安全声明转成可审计文件。",
+          "whyRanked": "它把安全承诺、能力增长和监管缺口放在同一核查表里，适合政策、法务和采购团队跟进。",
+          "topReason": "AI 安全承诺退坡会直接影响企业信任、监管节奏和模型发布门槛。",
+          "detailWhyRanked": "本期把它列为 08:00 重点，是因为 Axios 报道给出具体评估对象、评分和承诺退坡方向，并把 FLI 指数放在日内瓦 AI 安全讨论背景下；但它仍是媒体转述的指数信号，不能替代 FLI 原始报告、评分细则、公司回应或监管文件。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "Axios 支持 FLI 最新安全指数的报道事实和评分摘要；原始报告、评审表、公司回应和监管文件仍需核对。"
+          },
+          "impact": "政策、采购、模型治理和安全团队应把安全承诺从品牌表述改为可核查的发布门槛、红线和审计材料。",
+          "whoShouldCare": "政策、法务、企业采购和模型风险团队应关注这条信号，用来更新前沿模型供应商安全尽调清单。",
+          "readerUse": "采购和治理团队用它检查供应商是否保留暂停条件、风险报告、外部评审和军事用途边界。",
+          "nextCheck": "核对 FLI 原始 AI Safety Index、评分方法、逐家公司指标、公司正式回应、风险报告和监管机构文件。",
+          "followUpQuestions": [
+            "FLI 是否公开完整评分表、评审人说明和逐家公司证据链接？",
+            "被评估公司是否发布正式回应、更新安全政策或提交监管材料？"
+          ],
+          "evidenceThreshold": "需要 FLI 原始报告、评分方法、公司正式回应和可引用的安全政策版本差异，才能升级为已确认的行业安全承诺变化结论。",
+          "claimBoundary": "Axios 支持“该媒体报道 FLI 指数及其评分摘要”的事实，不证明所有被点名公司实际安全水平下降，也不证明监管已经采取行动。",
+          "counterEvidence": "如果 FLI 原始材料不支持报道中的承诺退坡表述，或公司政策版本、风险报告、外部审计显示红线仍然有效，应下调为单一指数争议。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/07/07/report-ai-safety-pledges",
+          "originalUrl": "https://www.axios.com/2026/07/07/report-ai-safety-pledges",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 是可靠媒体背景来源；可支持其对 FLI 最新指数、评分摘要和行业安全承诺退坡说法的报道，完整方法、证据链和公司回应仍需读原文及 FLI 材料。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-07T13:00:05Z",
+          "time": "07/07 22:00 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "Axios 支持 FLI 最新安全指数的报道事实和评分摘要；原始报告、评审表、公司回应和监管文件仍需核对。"
+          }
+        },
+        {
+          "id": "businessinsider-vercel-multi-model-ai-stack-2026-07-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "Business Insider：Vercel CEO 称企业不再只押注单一 AI 实验室",
+          "body": "Business Insider 报道，Vercel CEO Guillermo Rauch 认为企业 AI 栈正在走向多模型、网关和路由组合。",
+          "summary": "Business Insider 报道称，Vercel CEO 认为企业从单一 OpenAI/Anthropic 伙伴转向可插拔模型、数据平台、沙箱和网关。",
+          "whyItMatters": "企业 AI 采购重点正在从“选一个最强模型”转向“按任务、成本和风险路由多个模型”。",
+          "detailBody": "Business Insider 7 月 7 日报道，Vercel CEO Guillermo Rauch 在采访中称，企业已不再把所有 AI 工作绑定给单一实验室，而是把模型、数据平台、沙箱和网关视为可插拔组件，并关注生产代理的成本与实用性。",
+          "trend": "企业 AI 架构正在从模型品牌竞争转向多模型路由和成本治理。",
+          "detailTrend": "这条信号说明，2026 年企业代理部署的难点从原型演示转到生产成本、任务路由和供应商依赖控制；Business Insider 报道中的模型、沙箱、数据平台和网关拆分，意味着评测与可观测性会比单一模型榜单更重要。",
+          "whyRanked": "它给开发平台、企业架构和采购团队一个直接信号：多模型策略正在成为生产代理的默认讨论框架。",
+          "topReason": "多模型路由会改变企业如何采购、评测和治理 AI 代理。",
+          "detailWhyRanked": "本期把它作为工具链信号，而不是把高管观点当作市场事实。它值得关注，因为 Business Insider 报道把模型选择、代理生产化、成本效率、中国模型替代选项和类似多云的供应商策略连在一起；下一步要看客户部署数据和平台指标。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "Business Insider 支持 Vercel CEO 对企业多模型策略的报道；实际采用规模、成本节省和生产效果仍需客户指标或平台数据核验。"
+          },
+          "impact": "开发平台、企业架构和采购团队应检查模型网关、评测、成本上限和供应商退出方案是否已进入 AI 平台设计。",
+          "whoShouldCare": "开发者平台、企业架构、采购和财务运营团队应关注这条信号，用来更新多模型路由和成本治理方案。",
+          "readerUse": "平台团队用它检查是否需要模型网关、按任务路由、成本监控、供应商替换测试和安全策略分层。",
+          "nextCheck": "核对 Vercel 官方产品材料、AI Gateway/SDK 数据、客户案例、生产代理成本指标和第三方平台评测。",
+          "followUpQuestions": [
+            "Vercel 是否公开多模型网关、路由规则、客户采用或成本控制相关指标？",
+            "企业客户是否用公开案例证明多模型路由降低成本或提升任务成功率？"
+          ],
+          "evidenceThreshold": "需要 Vercel 官方产品数据、客户侧生产指标、成本对比、第三方评测或采购案例，才能升级为已验证的企业多模型架构趋势。",
+          "claimBoundary": "Business Insider 支持高管观点和采访报道，不证明多数企业已经完成多模型迁移，也不证明中国模型或 Gemini 的采用效果优于其他方案。",
+          "counterEvidence": "如果客户指标、平台日志或采购数据仍显示企业主要绑定单一模型供应商，或路由成本高于收益，应下调为供应商观点而非市场趋势。",
+          "source": "Business Insider AI / Tech",
+          "sourceName": "Business Insider AI / Tech",
+          "sourceId": "businessinsider-ai",
+          "sourceUrl": "https://www.businessinsider.com/vercel-ceo-guillermo-rauch-ai-lab-partner-outdated-2026-7",
+          "originalUrl": "https://www.businessinsider.com/vercel-ceo-guillermo-rauch-ai-lab-partner-outdated-2026-7",
+          "sourceRole": "媒体背景",
+          "provenance": "Business Insider 是可靠媒体背景来源；可支持其对 Vercel CEO 采访和企业多模型策略观点的报道，完整语境、引述和例子仍需读原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-07T07:05:46Z",
+          "time": "07/07 16:05 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "Business Insider 支持 Vercel CEO 对企业多模型策略的报道；实际采用规模、成本节省和生产效果仍需客户指标或平台数据核验。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-07-07",
       "date": "2026-07-07",

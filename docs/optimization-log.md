@@ -1,3 +1,27 @@
+## 2026-07-08 08:07 JST
+
+- Focus: Published the 2026-07-08 08:00 JST AI news intelligence update with two non-duplicate reliable-media background signals: Axios on Future of Life Institute's latest AI Safety Index saying major AI companies have weakened some earlier safety commitments, and Business Insider on Vercel CEO Guillermo Rauch saying enterprises are moving from single-lab AI partnerships toward multi-model, gateway-based production stacks.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official/source-guided surfaces, reliable-media search results, arXiv/research candidates, and historical duplicate URLs.
+  - Official pages did not show enough stronger post-17:00 JST releases suitable for promotion, so this edition publishes only two safe signals rather than padding with repeated July 7 items, weak search snippets, or community discussion.
+  - Kept both current items as `媒体背景` / reported with `originalDependency: must-read`; the Axios/FLI signal still requires the FLI original index, scoring method, company responses, risk reports, audits, or regulator files before upgrade, and the Business Insider/Vercel signal still requires official product data, customer-side production metrics, cost comparisons, third-party evaluation, or procurement cases before upgrade.
+- Verification:
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+  - Ran `git diff --check`.
+- Commit note: Local commit created as `1649953` with message `更新08点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of the known remote until DNS/network access is available.
+
 ## 2026-07-07 20:03 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 10 archive-reliability task. Added a remote-sync log convention so future optimization and news update runs use consistent pull/push status wording when GitHub sync succeeds, fails on DNS, fails on auth, hits fast-forward conflicts, or is intentionally skipped.
