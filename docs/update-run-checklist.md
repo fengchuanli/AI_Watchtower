@@ -1,6 +1,6 @@
 # Update Run Checklist
 
-Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, which validators passed, and whether GitHub sync succeeded. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
+Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
 
 This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, publish a short batch with a clear reason instead of padding the homepage with weak, repeated, or copyright-risk items.
 
@@ -10,7 +10,7 @@ Record these fields at the top of the editor note for the run:
 
 - `runTimeJst`: Planned update time, such as `2026-07-04 17:00 JST`.
 - `runType`: `morning-news` or `evening-news`.
-- `remoteSyncBefore`: `pulled`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, or `not-attempted-with-reason`.
+- `remoteSyncBefore`: `pulled`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, or `not-attempted-with-reason`; follow `docs/remote-sync-log-convention.md`.
 - `sourceWindow`: The previous edition time and the current cutoff used to decide freshness.
 - `targetReaderQuestion`: One short Chinese question the batch should help readers answer today.
 - `shortBatchReason`: Required when fewer than 10 safe current-news items are published.
@@ -33,7 +33,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
 | Commit | Record the local commit message and whether the log can include the final hash without amending itself. |
-| Push | Record `pushed`, `blocked-dns`, `blocked-auth`, `blocked-non-fast-forward`, or `not-attempted-with-reason`. |
+| Push | Record `pushed`, `blocked-dns`, `blocked-auth`, `blocked-non-fast-forward`, or `not-attempted-with-reason` using `docs/remote-sync-log-convention.md`. |
 
 ## Minimum Editor Note
 

@@ -35,6 +35,7 @@ const currentToHistoryPublicationChecklist = readFileSync(
   "utf8",
 );
 const badDataRollbackNote = readFileSync("docs/bad-data-rollback-note.md", "utf8");
+const remoteSyncLogConvention = readFileSync("docs/remote-sync-log-convention.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -827,6 +828,29 @@ if (
 }
 
 if (
+  !/Remote Sync Log Convention/.test(remoteSyncLogConvention) ||
+  !/Status Values/.test(remoteSyncLogConvention) ||
+  !/Log Placement/.test(remoteSyncLogConvention) ||
+  !/Pull Notes/.test(remoteSyncLogConvention) ||
+  !/Push Notes/.test(remoteSyncLogConvention) ||
+  !/Stop Conditions/.test(remoteSyncLogConvention) ||
+  !/Minimum Log Wording/.test(remoteSyncLogConvention) ||
+  !/blocked-dns/.test(remoteSyncLogConvention) ||
+  !/blocked-auth/.test(remoteSyncLogConvention) ||
+  !/blocked-conflict/.test(remoteSyncLogConvention) ||
+  !/blocked-non-fast-forward/.test(remoteSyncLogConvention) ||
+  !/not-attempted-with-reason/.test(remoteSyncLogConvention) ||
+  !/git pull --ff-only origin main/.test(remoteSyncLogConvention) ||
+  !/git push origin main/.test(remoteSyncLogConvention) ||
+  !/remote-sync-log-convention\.md/.test(updateRunChecklist) ||
+  !/remote-sync-log-convention\.md/.test(badDataRollbackNote) ||
+  !/remote-sync-log-convention\.md/.test(readme) ||
+  !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Remote sync failures must use a shared optimization-log convention for pull and push status.");
+}
+
+if (
   !/Original Source Replacement Guide/.test(originalSourceReplacementGuide) ||
   !/Replacement Rule/.test(originalSourceReplacementGuide) ||
   !/Must Replace Before Drafting/.test(originalSourceReplacementGuide) ||
@@ -1012,7 +1036,8 @@ if (
   !/Day 7[\s\S]*update-run-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Day 9[\s\S]*bad-data-rollback-note\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 10/.test(optimizationDecisionIndex) ||
+  !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 11/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

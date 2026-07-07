@@ -51,7 +51,7 @@ Choose the smallest shape that makes the current public data trustworthy:
 4. Recheck source posture against `data/sources.json`, `docs/source-policy.md`, `docs/candidate-source-checklist.md`, and `docs/editorial-checklist.md`.
 5. Update `docs/optimization-log.md` with the rollback reason, changed files, validators rerun, whether the bad data was pushed, and the new commit status.
 6. Commit with a corrective Chinese message, for example `回滚错误新闻数据` or `修正新闻来源状态`.
-7. Push when network access works. If push fails, record the exact blocker in the log and memory.
+7. Push when network access works. If push fails, record the exact blocker in the log and memory using `docs/remote-sync-log-convention.md`.
 
 ## Validators To Rerun
 

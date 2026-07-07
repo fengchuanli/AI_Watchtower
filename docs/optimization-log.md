@@ -1,3 +1,29 @@
+## 2026-07-07 20:03 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 10 archive-reliability task. Added a remote-sync log convention so future optimization and news update runs use consistent pull/push status wording when GitHub sync succeeds, fails on DNS, fails on auth, hits fast-forward conflicts, or is intentionally skipped.
+- Changed files:
+  - `docs/remote-sync-log-convention.md`
+  - `docs/update-run-checklist.md`
+  - `docs/bad-data-rollback-note.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved.
+  - After commit: pending - push will be attempted after the local commit; if DNS remains blocked, local `main` will stay ahead of the known remote.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing update/archive/rollback workflow docs; continued with Day 10 because Day 0 through Day 9 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the remote-sync convention documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit note: Local commit will use message `统一远程同步日志约定`; final hash will be recorded after commit if it can be done without rewriting history.
+- Git note: Push may fail because the pre-edit pull could not resolve `github.com`.
+
 ## 2026-07-07 17:07 JST
 
 - Focus: Published the 2026-07-07 17:00 JST AI news intelligence update with two non-duplicate signals: WSJ on the UN Secretary-General calling for an international-law ban on lethal autonomous weapons, and Mistral's official index entry for Leanstral 1.5 as a verifiable-reasoning research update.
