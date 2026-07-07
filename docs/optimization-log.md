@@ -11,7 +11,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved.
-  - After commit: pending - local implementation commit `742dad3` was created; push will be attempted after the log/index follow-up commit, and if DNS remains blocked local `main` will stay ahead of the known remote.
+  - After commit: blocked-dns - local implementation commit `742dad3` and log/index follow-up commit `9975476` were created, but `git push origin main` failed because `github.com` could not be resolved; local `main` remains ahead of the known remote.
 - Verification:
   - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing update/archive/rollback workflow docs; continued with Day 10 because Day 0 through Day 9 were already complete.
   - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
@@ -22,7 +22,7 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
 - Commit: Local implementation commit `742dad3` (`统一远程同步日志约定`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
-- Git note: Push may fail because the pre-edit pull could not resolve `github.com`.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-07 17:07 JST
 
