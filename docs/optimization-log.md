@@ -1,3 +1,27 @@
+## 2026-07-07 17:07 JST
+
+- Focus: Published the 2026-07-07 17:00 JST AI news intelligence update with two non-duplicate signals: WSJ on the UN Secretary-General calling for an international-law ban on lethal autonomous weapons, and Mistral's official index entry for Leanstral 1.5 as a verifiable-reasoning research update.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral, Meta, RSS/source surfaces, reliable-media search results, and historical duplicate URLs.
+  - Official pages did not show a stronger post-08:00 JST release suitable for promotion, so this edition publishes only two safe signals rather than padding with stale official posts, repeated morning stories, weak search results, or community discussion.
+  - Kept the WSJ item as `媒体背景` / reported with `originalDependency: must-read`; it requires UN official text, CCW/GGE records, member-state files, military AI policy text, or company contract changes before upgrade. Kept the Mistral item as `官方核对` only for the publication/index fact; it requires a technical report, model access, benchmarks, code/data, and third-party replication before treating Leanstral 1.5 as validated capability progress.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 2 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+  - Ran `git diff --check`.
+- Commit note: Local commit will use message `更新17点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may hit the same DNS limit.
+
 ## 2026-07-07 08:07 JST
 
 - Focus: Published the 2026-07-07 08:00 JST AI news intelligence update with three non-duplicate signals: MarketWatch on TeraWulf saying Anthropic signed a 20-year AI infrastructure lease for a Kentucky campus, Anthropic's Alberta government Claude Code cybersecurity case study, and Axios on Anthropic's Claude J-Space interpretability claim with an explicit no-consciousness boundary.

@@ -1,8 +1,235 @@
 {
   "version": 1,
   "updatedAt": "2026-07-07",
-  "totalItems": 103,
+  "totalItems": 105,
   "editions": [
+    {
+      "id": "news-1700-2026-07-07",
+      "date": "2026-07-07",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-07-07 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、可靠媒体、RSS/搜索结果和历史 URL，仅发布 2 条非重复且可解释信号。",
+      "editorialInterpretation": "本期判断：午后没有足够强的新官方发布可补满 10 条；保留一条军用 AI 国际治理媒体信号和一条 Mistral 可验证推理官方研究信号，均需原始文件、技术材料或第三方复现补强。",
+      "readerFrame": {
+        "headline": "阅读本期：军用 AI 边界与可验证推理进入同一核查表",
+        "whyItMatters": "两条信号分别指向外部治理和内部能力证据：自主武器需要国际法与人类控制边界，形式化推理需要论文、代码和复现。",
+        "useThisIssueFor": [
+          "政策、法务和公共部门采购团队用来更新军用 AI 用例、人类控制和合同限制核对表。",
+          "开发者工具、研究和企业架构团队用来检查可验证推理是否需要进入编码代理评测。"
+        ],
+        "notProvenYet": [
+          "不能把 WSJ 报道读成国际禁令已形成或成员国已达成共识。",
+          "不能把 Mistral 官方索引读成 Leanstral 1.5 的形式化证明能力已经被第三方验证。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增政策治理与可验证推理信号",
+        "freshFacts": [
+          "本期新增事实：WSJ 今日报道联合国秘书长在 AI 治理语境中呼吁国际法禁止致命自主武器。",
+          "本期新增事实：Mistral 官方新闻索引列出 7 月 2 日 Leanstral 1.5: Proof Abundance for All 研究更新。"
+        ],
+        "repeatedContext": [
+          "本期不重复 7 月 7 日 08:00 版 TeraWulf/Anthropic、Alberta Claude Code 和 J-Space 信号。",
+          "本期不重复 7 月 6 日 17:00 版 OpenAI/Anthropic 上市压力和 AI 就业叙事。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "军用 AI 政策",
+          "count": 1,
+          "meaning": "用来更新自主武器、人类控制、公共部门采购和模型使用条款核对表。"
+        },
+        {
+          "label": "可验证推理研究",
+          "count": 1,
+          "meaning": "用来检查形式化证明、编码代理可靠性和第三方复现实验优先级。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "官方来源用于确认 Mistral 发布研究更新；读者应继续寻找论文、代码、评测和复现材料。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 1,
+          "role": "可靠媒体用于跟踪联合国 AI 治理表态；读者应转向正式文本、会议记录和成员国文件核对。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "来源分散但证据模式不同",
+        "note": "本期一条媒体背景、一条官方研究索引；适合作为政策与研究雷达，不等同于条约进展或能力验证。",
+        "nextCheck": "核对联合国正式文本、CCW/GGE 文件、Mistral 技术报告、公开代码、基准数据和第三方复现。"
+      },
+      "sourceConcentration": {
+        "sourceId": "wall-street-journal-ai",
+        "sourceName": "Wall Street Journal AI",
+        "count": 1,
+        "share": "1/2",
+        "note": "本期没有单一来源占多数；两个项目分别来自可靠媒体和官方索引，不能互相替代证据。",
+        "nextCheck": "用联合国/成员国正式文件和 Mistral 技术材料、第三方复现实验交叉核对。"
+      },
+      "trendNotes": [
+        {
+          "topic": "military-ai-governance-boundary",
+          "label": "军用 AI 治理边界",
+          "note": "跨期看，AI 模型访问、政府用途和自主武器讨论持续汇合，企业使用政策会被国际安全议程牵引。",
+          "boundary": "这不证明约束性条约已经形成；需要联合国正式文本、CCW/GGE 会议记录、成员国立场文件、军方政策和公司合同变化。"
+        },
+        {
+          "topic": "verifiable-reasoning-for-agents",
+          "label": "代理可靠性转向可证明推理",
+          "note": "跨期看，编码代理和长任务自动化越来越需要可复核的推理、证明和审计证据，而不只是自然语言表现。",
+          "boundary": "这不证明任何模型已能稳定处理高风险证明任务；需要公开基准、代码、第三方复现和生产指标。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 1,
+          "itemIds": [
+            "wsj-un-killer-robots-ban-call-2026-07-07"
+          ],
+          "meaning": "用来更新军用 AI、人类控制和国际治理观察清单。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 1,
+          "itemIds": [
+            "mistral-leanstral-1-5-proof-abundance-2026-07-02"
+          ],
+          "meaning": "用来检查模型可验证推理和形式化证明评测路线。"
+        }
+      ],
+      "itemCount": 2,
+      "items": [
+        {
+          "id": "wsj-un-killer-robots-ban-call-2026-07-07",
+          "category": "policy",
+          "label": "政策",
+          "title": "WSJ：联合国秘书长再度呼吁国际法禁止致命自主武器",
+          "body": "WSJ 报道，联合国秘书长在 AI 治理语境中呼吁以国际法禁止致命自主武器。",
+          "summary": "WSJ 今日报道，联合国秘书长呼吁国际法禁止致命自主武器，让军用 AI 的人类控制边界重新进入高优先级议程。",
+          "whyItMatters": "这把前沿模型、芯片和战场系统的治理问题从公司使用条款推向国际法与国家安全协调。",
+          "detailBody": "WSJ 7 月 6 日报道，联合国秘书长古特雷斯在日内瓦 AI 治理语境中呼吁国际法禁止致命自主武器；报道还把这一呼吁放在 AI 系统进入战场、军事总部和模型公司军用边界争议的背景下。",
+          "trend": "军用 AI 治理正在从企业使用政策升级为国际规则竞争。",
+          "detailTrend": "这条信号连接了模型访问、战场自动化、国际人道法和公司使用条款；如果联合国或成员国进入文本谈判，模型供应商的军用客户政策会受到更明确的外部约束。",
+          "whyRanked": "它给政策、安全和企业合规团队提供了一个清晰观察点：自主武器边界是否会从伦理表态变成可执行规则。",
+          "topReason": "军用 AI 是本周政策风险的高压线，企业客户和模型供应商都需要跟踪国际法进展。",
+          "detailWhyRanked": "WSJ 报道把联合国呼吁、AI 公司军用边界和致命自主武器讨论放到同一时间线，并指向 Anthropic/Pentagon 争议这一背景。它不证明条约即将达成，但足以让政策、合规和公共部门采购团队把人类控制、用途限制和审计证据列入下一轮核查。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持联合国秘书长呼吁和军用 AI 治理语境；正式法律文本、会议记录和成员国立场仍需官方文件核对。"
+          },
+          "impact": "政策、国防和企业合规团队应把军用 AI、模型访问条款和人类控制要求纳入同一风险清单。",
+          "whoShouldCare": "政策、国防采购、法务和模型安全团队应关注这条信号，用来更新军用 AI 用例和人类控制边界。",
+          "readerUse": "合规团队用它检查合同、可接受使用政策和公共部门项目是否明确排除无人类控制的致命决策。",
+          "nextCheck": "核对联合国正式演讲文本、CCW/GGE 会议记录、成员国提交文件、美国和盟友军用 AI 政策文本。",
+          "followUpQuestions": [
+            "联合国是否发布可引用的正式演讲稿、会议记录或后续谈判日程？",
+            "美国、欧盟、北约成员或主要 AI 公司是否调整军用 AI 使用政策和合同条款？"
+          ],
+          "evidenceThreshold": "需要联合国正式文本、CCW/GGE 谈判文件、成员国立场文件或可执行政策草案，才能升级为已确认的国际规则推进信号。",
+          "claimBoundary": "WSJ 支持“秘书长作出呼吁”的媒体事实，不证明国际法禁令已经形成、各国已达成共识或公司合同已经改变。",
+          "counterEvidence": "如果联合国正式记录缺少后续议程，或成员国文件显示主要军事强国反对约束性文本，应下调为政策倡议而非规则推进。",
+          "source": "Wall Street Journal AI",
+          "sourceName": "Wall Street Journal AI",
+          "sourceId": "wall-street-journal-ai",
+          "sourceUrl": "https://www.wsj.com/tech/ai/killer-robots-must-be-banned-u-n-secretary-general-says-00603020",
+          "originalUrl": "https://www.wsj.com/tech/ai/killer-robots-must-be-banned-u-n-secretary-general-says-00603020",
+          "sourceRole": "媒体背景",
+          "provenance": "WSJ 是可靠媒体背景来源；可支持其对联合国秘书长呼吁、日内瓦 AI 治理语境和军用 AI 争议的报道，完整引述、背景和采访仍需读原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-06T17:00:00Z",
+          "time": "07/07 02:00 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持联合国秘书长呼吁和军用 AI 治理语境；正式法律文本、会议记录和成员国立场仍需官方文件核对。"
+          }
+        },
+        {
+          "id": "mistral-leanstral-1-5-proof-abundance-2026-07-02",
+          "category": "research",
+          "label": "研究",
+          "title": "Mistral：Leanstral 1.5 进入形式化证明与推理更新清单",
+          "body": "Mistral 官方新闻索引列出 7 月 2 日 Leanstral 1.5 研究更新。",
+          "summary": "Mistral 官方索引显示 Leanstral 1.5 作为研究更新发布，重点信号是模型厂商继续把形式化证明和可验证推理前置。",
+          "whyItMatters": "可验证推理是编码代理、数学工具和企业自动化能否进入高风险流程的关键证据层。",
+          "detailBody": "Mistral 官方新闻索引列出 2026 年 7 月 2 日研究更新 Leanstral 1.5: Proof Abundance for All，并将其归入研究栏目；当前可确认的是发布事实、标题和研究分类，具体能力仍需技术材料核验。",
+          "trend": "模型竞争继续从通用聊天能力转向可证明、可审计的推理能力。",
+          "detailTrend": "Leanstral 1.5 的新闻位置说明，欧洲模型厂商正在把形式化证明、数学推理和开发者可信性作为差异化方向；真正价值仍取决于开放材料和复现结果。",
+          "whyRanked": "它不是大规模产品发布，但对关注代码代理可靠性、数学推理和企业审计的读者有明确跟踪价值。",
+          "topReason": "在缺少更强 post-08:00 官方发布时，这条非重复官方研究信号可补充“可验证推理”雷达。",
+          "detailWhyRanked": "本期不把 Mistral 官方标题读成能力已经验证，只把它作为非重复官方研究发布事实。它值得进入 17:00 版，是因为形式化证明能力正在影响编码代理、自动化审计和高风险工作流能否被采购方接受；下一步必须看论文、模型访问、基准和复现。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 16,
+            "note": "官方索引支持 Mistral 发布 Leanstral 1.5 研究更新；能力、开放性和应用效果仍需论文、代码、基准和第三方复现。"
+          },
+          "impact": "开发者工具、企业架构和研究团队可用它跟踪可验证推理是否从论文方向转为可用评测与产品能力。",
+          "whoShouldCare": "开发者工具、企业架构、研究和采购团队应关注这条信号，用来更新可验证推理和形式化证明评测表。",
+          "readerUse": "工程团队用它检查编码代理和数学推理评测是否需要加入证明通过率、错误定位和复现实验。",
+          "nextCheck": "核对 Mistral 论文或技术说明、模型访问方式、基准数据、开源代码、第三方复现和企业试用反馈。",
+          "followUpQuestions": [
+            "Mistral 是否公开 Leanstral 1.5 的论文、模型权重、评测脚本或证明任务数据集？",
+            "第三方能否在 Lean、Coq、Isabelle 或代码验证任务上复现其可靠性改进？"
+          ],
+          "evidenceThreshold": "需要官方技术报告、可运行模型或 API、公开基准、代码/数据和第三方复现实验，才能升级为已验证的可证明推理能力进展。",
+          "claimBoundary": "官方索引支持发布事实和研究主题，不证明 Leanstral 1.5 在生产环境、复杂定理或企业代码验证中已经可靠。",
+          "counterEvidence": "如果官方技术报告、模型访问记录或第三方复现实验报告缺失，或公开基准显示证明任务提升不稳定，应下调为厂商研究方向信号。",
+          "source": "Mistral AI News",
+          "sourceName": "Mistral AI News",
+          "sourceId": "mistral-news",
+          "sourceUrl": "https://mistral.ai/news/",
+          "originalUrl": "https://mistral.ai/news/",
+          "sourceRole": "官方核对",
+          "provenance": "Mistral 官方新闻索引可支持其发布 Leanstral 1.5 研究更新的事实；能力、开放范围、评测数字和应用效果仍需技术材料与第三方核验。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-02T00:00:00+02:00",
+          "time": "07/02",
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 16,
+            "note": "官方索引支持 Mistral 发布 Leanstral 1.5 研究更新；能力、开放性和应用效果仍需论文、代码、基准和第三方复现。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-07-07",
       "date": "2026-07-07",
