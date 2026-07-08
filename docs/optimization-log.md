@@ -12,7 +12,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on validated local `main`.
-  - After commit: pending - push will be attempted after this log entry is committed.
+  - After commit: blocked-dns - local implementation commit `6bbe8bc` was created, but `git push origin main` failed because `github.com` could not be resolved; local `main` remains ahead of the known remote.
 - Verification:
   - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing update/archive workflow docs; continued with Day 11 because Day 0 through Day 10 were already complete.
   - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
@@ -22,8 +22,8 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Local implementation commit will use message `增加早晚归档差异摘要`.
-- Git note: `git push origin main` will be attempted after commit and may hit the same DNS limit.
+- Commit: Local implementation commit `6bbe8bc` (`增加早晚归档差异摘要`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-08 17:07 JST
 

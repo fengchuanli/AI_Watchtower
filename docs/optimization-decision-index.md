@@ -32,7 +32,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 8 | Complete | `09fc440` | `docs/current-to-history-publication-checklist.md` keeps the newest `data/news-history.json` edition aligned with `data/news.json` for edition metadata, reader/source framing, item count, and item order before publication. |
 | Day 9 | Complete | `b2c883c` | `docs/bad-data-rollback-note.md` names the files, rollback shapes, restore steps, validators, and log wording needed before republishing after a bad data update. |
 | Day 10 | Complete | `742dad3` | `docs/remote-sync-log-convention.md` standardizes pull/push log wording for `pulled`, `pushed`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, `blocked-non-fast-forward`, and `not-attempted-with-reason` states. |
-| Day 11 | Complete | `pending` | `docs/archive-diff-summary-format.md` gives 17:00 JST runs a compact morning/evening archive comparison for new signals, source posture, reader takeaway, and proof-boundary change. |
+| Day 11 | Complete | `6bbe8bc` | `docs/archive-diff-summary-format.md` gives 17:00 JST runs a compact morning/evening archive comparison for new signals, source posture, reader takeaway, and proof-boundary change. |
 
 ## Next Useful Task
 
