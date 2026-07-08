@@ -1,6 +1,6 @@
 # Current To History Publication Checklist
 
-Use this checklist during every 08:00 JST and 17:00 JST news publication after `data/news.json` has been drafted and before the run is committed. Its purpose is to keep the latest archived edition in `data/news-history.json` aligned with the homepage edition, so archive readers do not see stale framing, missing caveats, or a different item order from the current homepage.
+Use this checklist during every 08:00 JST and 17:00 JST news publication after `data/news.json` has been drafted and before the run is committed. Its purpose is to keep the latest archived edition in `data/news-history.json` aligned with the homepage edition, so archive readers do not see stale framing, missing caveats, or a different item order from the current homepage. After a clean 17:00 JST mirror, use `docs/archive-diff-summary-format.md` when a same-day morning edition exists so the archive can explain what changed without duplicating both batches.
 
 This is a publication check, not a license to republish old material as new. If the current homepage intentionally advances to a new edition, create or update the newest history edition for that same batch. If the current batch is only a correction, keep the same edition ID and record what changed in the optimization log.
 
@@ -46,8 +46,9 @@ The newest `data/news-history.json` edition should match the current `data/news.
 4. Check that no older history edition repeats a current `sourceUrl` or near-duplicate title unless the current item has a valid `freshSourceFact`.
 5. Run `node scripts/validate-data.mjs` and treat any archive-readiness mismatch as a publication blocker.
 6. Open or parse `archive.html`, `all-news.html`, and `news-detail.html` when page behavior changed or when an archived detail link was affected.
-7. Record in `docs/optimization-log.md` whether the latest history edition was mirrored, created, corrected, or intentionally left unchanged with a reason.
-8. If a correction removes or demotes a bad current item, also record the rollback shape from `docs/bad-data-rollback-note.md` so future runs know whether the issue reached draft, commit, or push.
+7. For 17:00 JST editions, check whether `docs/archive-diff-summary-format.md` should produce a morning/evening comparison or a skipped reason.
+8. Record in `docs/optimization-log.md` whether the latest history edition was mirrored, created, corrected, or intentionally left unchanged with a reason.
+9. If a correction removes or demotes a bad current item, also record the rollback shape from `docs/bad-data-rollback-note.md` so future runs know whether the issue reached draft, commit, or push.
 
 ## Stop Conditions
 

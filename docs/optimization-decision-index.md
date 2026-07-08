@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 2, Update Workflow And Archive Reliability
-- Last indexed run: 2026-07-07 20:00 JST
+- Last indexed run: 2026-07-08 20:00 JST
 - Network status: GitHub DNS resolution failed during the latest pull attempt; push may need retry when network access returns.
 
 ## Recent Plan-Day Decisions
@@ -32,12 +32,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 8 | Complete | `09fc440` | `docs/current-to-history-publication-checklist.md` keeps the newest `data/news-history.json` edition aligned with `data/news.json` for edition metadata, reader/source framing, item count, and item order before publication. |
 | Day 9 | Complete | `b2c883c` | `docs/bad-data-rollback-note.md` names the files, rollback shapes, restore steps, validators, and log wording needed before republishing after a bad data update. |
 | Day 10 | Complete | `742dad3` | `docs/remote-sync-log-convention.md` standardizes pull/push log wording for `pulled`, `pushed`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, `blocked-non-fast-forward`, and `not-attempted-with-reason` states. |
+| Day 11 | Complete | `pending` | `docs/archive-diff-summary-format.md` gives 17:00 JST runs a compact morning/evening archive comparison for new signals, source posture, reader takeaway, and proof-boundary change. |
 
 ## Next Useful Task
 
-- Continue with Day 11: add a compact archive-diff summary format for what changed between morning and evening editions.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 10 first.
-- If Day 11 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 12: add guidance for handling partial news batches when only one or two reliable candidates pass the intake gate.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 11 first.
+- If Day 12 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

@@ -1,6 +1,6 @@
 # Update Run Checklist
 
-Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
+Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, whether `docs/archive-diff-summary-format.md` should summarize the same-day morning/evening change, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
 
 This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, publish a short batch with a clear reason instead of padding the homepage with weak, repeated, or copyright-risk items.
 
@@ -29,6 +29,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Drafting | Confirm the public copy came from minimum source facts plus AI Watchtower interpretation, not copied or expanded source paragraphs. |
 | Editorial review | Confirm `docs/editorial-checklist.md`, `docs/source-policy.md`, and `docs/copyright-safety.md` were applied to the final items. |
 | Archive mirror | Confirm `docs/current-to-history-publication-checklist.md` was applied after drafting, and say whether the latest history edition was mirrored, corrected, not needed, or blocked. |
+| Archive diff | For 17:00 JST runs, confirm `docs/archive-diff-summary-format.md` was applied and say whether the morning/evening comparison was done, skipped because only one same-day edition exists, skipped because the update was correction-only, or blocked by archive drift. |
 | Rollback check | If bad data was detected, confirm `docs/bad-data-rollback-note.md` was applied and say whether rollback was corrected, not needed, or blocked. |
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
@@ -47,6 +48,7 @@ Candidate intake: done - 3 draft, 4 hold, 2 reject; holds mainly need original-s
 Duplicate reporting: done - no repeated URL or near-title match, or manual current/history check completed.
 Drafting: done - public copy uses minimum source facts and original Chinese interpretation.
 Validation: done - validate-data, validate-site, validate-pages, HTML parse, JSON parse, diff check.
+Archive diff: done - morning/evening editions compared for source posture and proof-boundary change.
 Push: blocked-dns
 Short batch reason: only three reliable non-duplicate research originals passed the source and copyright gates.
 ```

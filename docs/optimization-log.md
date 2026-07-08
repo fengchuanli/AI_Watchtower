@@ -1,3 +1,30 @@
+## 2026-07-08 20:03 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 11 archive-reliability task. Added a compact archive-diff summary format so 17:00 JST runs can explain what changed between same-day morning and evening editions without adding new claims or turning source articles into replacement summaries.
+- Changed files:
+  - `docs/archive-diff-summary-format.md`
+  - `docs/update-run-checklist.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/news-data-format.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on validated local `main`.
+  - After commit: pending - push will be attempted after this log entry is committed.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and the existing update/archive workflow docs; continued with Day 11 because Day 0 through Day 10 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the archive-diff summary format documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit will use message `增加早晚归档差异摘要`.
+- Git note: `git push origin main` will be attempted after commit and may hit the same DNS limit.
+
 ## 2026-07-08 17:07 JST
 
 - Focus: Published the 2026-07-08 17:00 JST AI news intelligence update with three non-duplicate arXiv research-original signals: an early-abort cascade for LLM Agent episodes, PolyWorkBench for multilingual long-horizon agent workflows, and SearchEyes for reproducible multimodal deep-search agent training.

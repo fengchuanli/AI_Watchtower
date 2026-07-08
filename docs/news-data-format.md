@@ -4,7 +4,7 @@ Homepage news items live in `data/news.json`. 首页优先读取 `summary` and `
 
 Each future news-intelligence run should aim for at least 10 qualified `items` so the homepage news flow has enough non-TOP3 stories to scan. This is a target, not permission to lower quality: duplicate, paywall/login-wall, unclear-source, weak-proof, or copyright-risk candidates must still be skipped. If a run publishes fewer than 10 safe items, record the reason in the edition metadata and optimization log.
 
-Before committing a news publication, use `docs/current-to-history-publication-checklist.md` to mirror the current homepage edition into the newest `data/news-history.json` edition. The latest archive entry is part of the publication surface, not an optional backup copy. If validation or source review shows that current or history data is wrong, use `docs/bad-data-rollback-note.md` to restore trustworthy data before republishing.
+Before committing a news publication, use `docs/current-to-history-publication-checklist.md` to mirror the current homepage edition into the newest `data/news-history.json` edition. The latest archive entry is part of the publication surface, not an optional backup copy. For 17:00 JST runs with a same-day morning edition, use `docs/archive-diff-summary-format.md` to summarize what changed between the two batches without adding new claims. If validation or source review shows that current or history data is wrong, use `docs/bad-data-rollback-note.md` to restore trustworthy data before republishing.
 
 Homepage `今日 TOP3` is a daily ranking. The page may combine the current `data/news.json` edition with same-date editions in `data/news-history.json`, then rank the best three by editorial score, reader utility, impact, evidence quality, narrative strength, and freshness. The current feed itself should stay sorted newest-first for the news flow; TOP3 selection should not be confused with current-batch order.
 
@@ -99,6 +99,8 @@ The top-level `categories` array defines the editorial boundary of every homepag
 - `editions[].items`: Full item objects using the same required fields as the current feed.
 
 The latest history edition is the archive-ready copy of the current homepage edition. Before publication, keep the newest `data/news-history.json` edition aligned with `data/news.json` for the edition ID, date, timezone, archive status, archive label, note, operational status, editorial interpretation, reader frame, change summary, coverage mix, source families, source risk, source concentration, trend notes, topic groups, item count, and item order. If any of those fields differ, update the history snapshot or advance the homepage edition deliberately; do not let archive readers see a stale framing of the current batch.
+
+When both 08:00 JST and 17:00 JST editions exist for the same date, the archive-diff summary should compare adjacent same-day editions only. Keep the comparison to new signals, source posture, topic movement, and proof-boundary change already present in the structured data. Do not use the diff to introduce fresh facts, long source summaries, or broader trend claims beyond the two editions.
 
 The all-news history page derives its category filters from historical item `category` and `label` values, then lets readers switch between newest-first and oldest-first batch order. Keep historical categories stable and labels readable so older coverage remains discoverable without using original source links as the primary reading path.
 

@@ -34,6 +34,7 @@ const currentToHistoryPublicationChecklist = readFileSync(
   "docs/current-to-history-publication-checklist.md",
   "utf8",
 );
+const archiveDiffSummaryFormat = readFileSync("docs/archive-diff-summary-format.md", "utf8");
 const badDataRollbackNote = readFileSync("docs/bad-data-rollback-note.md", "utf8");
 const remoteSyncLogConvention = readFileSync("docs/remote-sync-log-convention.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
@@ -803,6 +804,28 @@ if (
 }
 
 if (
+  !/Archive Diff Summary Format/.test(archiveDiffSummaryFormat) ||
+  !/When To Write It/.test(archiveDiffSummaryFormat) ||
+  !/Comparison Scope/.test(archiveDiffSummaryFormat) ||
+  !/Compact Shape/.test(archiveDiffSummaryFormat) ||
+  !/Publication Steps/.test(archiveDiffSummaryFormat) ||
+  !/Stop Conditions/.test(archiveDiffSummaryFormat) ||
+  !/Compact Log Note/.test(archiveDiffSummaryFormat) ||
+  !/08:00 -> 17:00 JST/.test(archiveDiffSummaryFormat) ||
+  !/New signals/.test(archiveDiffSummaryFormat) ||
+  !/Source posture/.test(archiveDiffSummaryFormat) ||
+  !/Reader takeaway/.test(archiveDiffSummaryFormat) ||
+  !/archive-diff: done/.test(archiveDiffSummaryFormat) ||
+  !/data\/news-history\.json/.test(archiveDiffSummaryFormat) ||
+  !/archive-diff-summary-format\.md/.test(updateRunChecklist) ||
+  !/archive-diff-summary-format\.md/.test(currentToHistoryPublicationChecklist) ||
+  !/archive-diff-summary-format\.md/.test(newsDataFormat) ||
+  !/archive-diff-summary-format\.md/.test(readme)
+) {
+  errors.push("Archive workflow must include a compact same-day morning/evening diff format linked from publication, update, data, and README docs.");
+}
+
+if (
   !/Bad Data Rollback Note/.test(badDataRollbackNote) ||
   !/When To Roll Back/.test(badDataRollbackNote) ||
   !/Files To Inspect/.test(badDataRollbackNote) ||
@@ -1037,7 +1060,8 @@ if (
   !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Day 9[\s\S]*bad-data-rollback-note\.md/.test(optimizationDecisionIndex) ||
   !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 11/.test(optimizationDecisionIndex) ||
+  !/Day 11[\s\S]*archive-diff-summary-format\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 12/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
