@@ -1,8 +1,295 @@
 {
   "version": 1,
   "updatedAt": "2026-07-08",
-  "totalItems": 107,
+  "totalItems": 110,
   "editions": [
+    {
+      "id": "news-1700-2026-07-08",
+      "date": "2026-07-08",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期为 2026-07-08 17:00 JST 新闻情报快照。",
+      "operationalStatus": "GitHub DNS 阻断 pull；已检查来源清单、官方页、RSS/搜索结果、可靠媒体、arXiv recent 和历史 URL，仅发布 3 条非重复研究原文信号。",
+      "editorialInterpretation": "本期判断：日内没有足够强的新官方发布可补满 10 条；保留三条代理运行成本、多语种长任务评测和多模态深度搜索研究信号，均按预印本处理，等待代码、数据、复现和第三方评测补强。",
+      "readerFrame": {
+        "headline": "阅读本期：代理系统从能力展示转向运行治理",
+        "whyItMatters": "三条研究信号共同指向一个生产问题：长任务代理不仅要能完成任务，还要可提前止损、跨语言评测，并在可复现搜索环境中训练。",
+        "useThisIssueFor": [
+          "平台、评测和财务运营团队用来更新代理任务的中止阈值、成本预算和失败预测实验清单。",
+          "全球化产品、企业应用和数据团队用来检查多语种长任务代理评测与多模态搜索训练数据路径。"
+        ],
+        "notProvenYet": [
+          "不能把三篇 arXiv 预印本读成已验证的生产代理成本节省或可靠性结论。",
+          "不能把论文基准结果直接外推到闭源模型、真实企业流程或医疗/合规场景。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "17:00 版新增三条代理基础设施研究信号",
+        "freshFacts": [
+          "本期新增事实：arXiv 7 月 8 日 recent 收录 LLM Agent 早期中止级联论文，作者称隐藏状态探针可提前预测失败并节省推理计算。",
+          "本期新增事实：arXiv 7 月 8 日 recent 收录 PolyWorkBench，多语种长任务代理基准覆盖 67 个工作流任务。",
+          "本期新增事实：arXiv 7 月 8 日 recent 收录 SearchEyes，提出用 typed knowledge graph 构造可复现多模态搜索世界。"
+        ],
+        "repeatedContext": [
+          "本期不重复 08:00 版 FLI 安全指数和 Vercel 多模型企业架构媒体信号。",
+          "本期不重复 7 月 7 日 17:00 版联合国自主武器禁令呼吁和 Mistral Leanstral 1.5 信号。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "代理运行成本",
+          "count": 1,
+          "meaning": "用来检查长任务代理是否需要失败预测、提前中止和计算预算保护。"
+        },
+        {
+          "label": "代理评测覆盖",
+          "count": 1,
+          "meaning": "用来更新多语种、长周期、工具调用工作流的评测集和验收标准。"
+        },
+        {
+          "label": "多模态搜索训练",
+          "count": 1,
+          "meaning": "用来评估搜索代理训练是否需要可复现环境、分步奖励和知识图谱锚点。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "research",
+          "label": "研究原文",
+          "count": 3,
+          "role": "研究原文用于捕捉代理评测和训练方向；读者应等待代码、数据、复现实验、同行评审和真实部署指标后再升级结论。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "研究预印本主导",
+        "note": "本期 3/3 项目同属 arXiv cs.AI 研究来源族，来源和证据模式高度集中；适合作为技术雷达，不适合作为生产效果、临床效果或行业采用率证明。",
+        "nextCheck": "核对论文 PDF、代码仓库、数据集、复现实验、第三方基准、同行评审和真实企业任务日志。"
+      },
+      "sourceConcentration": {
+        "sourceId": "arxiv-ai",
+        "sourceName": "arXiv cs.AI",
+        "count": 3,
+        "share": "3/3",
+        "note": "本期全部项目来自同一研究来源和同一证据模式，说明日内官方/可靠媒体强信号不足；该批次应被读作研究候选清单。",
+        "nextCheck": "用作者代码、独立复现、真实代理日志、企业评测报告和同行评审结果交叉核对。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent-operational-governance",
+          "label": "代理运行治理成为研究焦点",
+          "note": "跨期看，代理系统的议题正在从单次任务成功率扩展到失败提前识别、成本控制、长程任务评测和多模型路由。",
+          "boundary": "这不证明生产代理已经具备稳定自治能力；需要真实任务日志、成本指标、人工接管记录、复现实验和第三方审计。"
+        },
+        {
+          "topic": "evaluation-before-deployment",
+          "label": "部署前评测维度继续扩张",
+          "note": "连续多期研究信号显示，评测正在覆盖语言、工具、搜索环境、记忆和安全边界，而不仅是单轮问答分数。",
+          "boundary": "这不证明新基准已成为行业标准；需要公开数据许可、基准采用记录、模型榜单、复现报告和同行评审。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "代理",
+          "count": 2,
+          "itemIds": [
+            "arxiv-agent-early-abort-cascade-2026-07-08",
+            "arxiv-polyworkbench-multilingual-agents-2026-07-08"
+          ],
+          "meaning": "用来更新长任务代理的失败预测、多语种工作流和生产验收清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发者工具",
+          "count": 1,
+          "itemIds": [
+            "arxiv-searcheyes-multimodal-search-2026-07-08"
+          ],
+          "meaning": "用来检查多模态搜索代理训练环境、分步奖励和开源复现路径。"
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "arxiv-agent-early-abort-cascade-2026-07-08",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv：隐藏状态探针尝试提前终止注定失败的 LLM Agent 任务",
+          "body": "arXiv 论文提出用隐藏状态探针提前识别可能失败的 LLM Agent 任务。",
+          "summary": "arXiv 论文称，轻量探针可在早期轮次预测 LLM Agent 任务失败，并在 90% recall 目标下节省约 37%-47% 推理计算。",
+          "whyItMatters": "如果可复现，代理平台可以把失败预测变成成本控制和人工接管机制，而不是等任务耗尽预算后才发现失败。",
+          "detailBody": "论文 7 月 7 日提交，研究者在 TextCraft 上测试 Qwen-2.5-7B 和 Llama-3.2-3B 代理，称隐藏状态探针可在早期轮次预判最终失败，并用多轮级联门控控制成功任务被误中止的累计风险。",
+          "trend": "代理工程正在从“让模型继续尝试”转向“何时应停止、换路由或交给人”。",
+          "detailTrend": "这类方法把推理预算、失败概率和召回承诺放进同一控制面，说明代理平台下一步需要像管理延迟和错误率一样管理任务轨迹。它适合进入模型网关和评测系统，但仍是特定环境预印本实验。",
+          "whyRanked": "它直接对应生产代理的成本浪费和失败治理。",
+          "topReason": "提前中止机制可能成为长任务代理的成本和可靠性保护层。",
+          "detailWhyRanked": "本期将它列为第一项，因为 arXiv 摘要给出清晰任务、两类模型、90%-97% recall 目标和 37%-47% 计算节省主张；但代码尚待发布，TextCraft 外泛化、闭源模型适配和真实工作流成本收益仍未核验。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "预印本支持方法与实验主张；代码未发布，TextCraft 外泛化、闭源模型适配和真实成本节省仍需验证。"
+          },
+          "impact": "代理平台、财务运营和 SRE 团队可把它作为失败早停、预算保护和人工接管策略的研究候选。",
+          "whoShouldCare": "代理平台、模型网关、财务运营和可靠性团队应关注这条信号，用来设计长任务代理的中止阈值实验。",
+          "readerUse": "工程团队用它检查是否需要记录隐藏状态探针、失败标签、召回目标和误中止成本。",
+          "nextCheck": "核对作者代码、TextCraft 设置、跨模型复现实验、真实代理日志、误中止案例和成本指标。",
+          "followUpQuestions": [
+            "代码发布后，级联门控能否在真实浏览器、编码和企业流程代理上保持召回承诺？",
+            "隐藏状态探针需要哪些模型访问权限，闭源 API 场景是否只能采用行为特征替代？"
+          ],
+          "evidenceThreshold": "需要公开代码、数据、跨任务复现和真实代理成本日志，才能升级为可采用的代理早停工程模式。",
+          "claimBoundary": "论文支持特定实验中的早期失败预测主张，不证明所有 LLM Agent 都能安全提前中止，也不证明生产环境必然节省同等成本。",
+          "counterEvidence": "如果公开代码、复现实验报告或真实代理日志显示无法达到召回目标，或误中止成功任务的业务损失高于节省成本，应降级为特定基准技巧。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.06503",
+          "originalUrl": "https://arxiv.org/abs/2607.06503",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 是研究原文来源；可支持论文题名、提交时间、作者摘要、实验主张和预印本边界，不等于同行评审、生产部署或第三方复现。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-08T02:03:55+09:00",
+          "time": "07/08 02:03 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "预印本支持方法与实验主张；代码未发布，TextCraft 外泛化、闭源模型适配和真实成本节省仍需验证。"
+          }
+        },
+        {
+          "id": "arxiv-polyworkbench-multilingual-agents-2026-07-08",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv：PolyWorkBench 把长任务代理评测扩展到多语种工作流",
+          "body": "PolyWorkBench 提出 67 个多语种长任务工作流来测试 LLM Agent。",
+          "summary": "arXiv 论文发布 PolyWorkBench，覆盖商业、知识工作、法律分析、本地化和制造等 67 个多语种长任务。",
+          "whyItMatters": "全球企业不能只用英语单语基准验收代理；语言切换会叠加影响推理、工具调用和结构化输出。",
+          "detailBody": "论文 7 月 7 日提交，称现有代理基准多假设单语流程；PolyWorkBench 设计 67 个任务，覆盖商业、知识工作、法律分析、本地化和制造，要求代理同时处理多语输入、工具调用和结构化输出。",
+          "trend": "代理评测正在从单语能力榜单转向真实企业工作流的语言、工具和过程一致性。",
+          "detailTrend": "多语种工作流会把翻译、法律语境、结构化输出和工具调用错误叠加放大，暴露单语榜单看不到的部署风险。企业采购代理时，应要求供应商提供跨语言流程评测而非只给通用分数。",
+          "whyRanked": "它提醒全球化团队单语代理评测不够用。",
+          "topReason": "多语种长任务会暴露单语代理评测看不到的生产风险。",
+          "detailWhyRanked": "本期将它列为重点，因为 arXiv 摘要明确给出任务数量、五个领域和混合评分框架，并报告多语设置下性能退化；但完整数据、评分脚本、模型覆盖和第三方采用仍需确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "论文摘要支持基准范围和性能退化方向；数据许可、评分一致性、模型覆盖和独立复现仍需核对。"
+          },
+          "impact": "全球化产品、法务、运营和企业 AI 团队应把多语种长任务纳入代理上线前验收。",
+          "whoShouldCare": "跨境产品、企业应用、法务和本地化团队应关注这条信号，用来补充多语种代理评测用例。",
+          "readerUse": "评测团队用它检查任务语言、工具调用、结构化输出和语义一致性是否被一起评分。",
+          "nextCheck": "核对数据集开放情况、评分器实现、任务许可、被测模型清单、第三方复现和企业真实工作流对照。",
+          "followUpQuestions": [
+            "PolyWorkBench 是否公开完整任务、评分脚本和语言覆盖细节？",
+            "闭源和开源代理在多语种流程中的失败类型是否能被企业日志复现？"
+          ],
+          "evidenceThreshold": "需要公开数据、评分脚本、模型复测和企业工作流对照，才能升级为可推荐的多语种代理验收基准。",
+          "claimBoundary": "论文支持该基准设计和作者实验观察，不证明所有多语种企业代理都会出现同等幅度退化。",
+          "counterEvidence": "如果公开任务过窄、评分不稳定，或第三方模型复测不显示多语种显著退化，应下调为早期评测提案。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.06008",
+          "originalUrl": "https://arxiv.org/abs/2607.06008",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 是研究原文来源；可支持论文题名、提交时间、作者摘要、实验主张和预印本边界，不等于同行评审、生产部署或第三方复现。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-07T17:50:09+09:00",
+          "time": "07/07 17:50 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "论文摘要支持基准范围和性能退化方向；数据许可、评分一致性、模型覆盖和独立复现仍需核对。"
+          }
+        },
+        {
+          "id": "arxiv-searcheyes-multimodal-search-2026-07-08",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv：SearchEyes 用模拟搜索世界训练多模态深度搜索代理",
+          "body": "SearchEyes 提出用知识图谱构造可复现的多模态搜索训练世界。",
+          "summary": "arXiv 论文称 SearchEyes 通过知识图谱构造可复现搜索世界，并在六个多模态知识密集基准上提升开源搜索代理表现。",
+          "whyItMatters": "深度搜索代理若依赖不可复现外部搜索引擎，训练和评测会难以审计；模拟环境可能让分步奖励更可控。",
+          "detailBody": "论文 7 月 7 日提交，提出 Perception-Knowledge Chains 和 Hop-Anchored Policy Optimization，把 Wikidata5M 视觉-知识多跳路径、搜索环境和分步奖励锚点连在一起训练多模态搜索代理。",
+          "trend": "多模态搜索代理正在把“会搜”拆成训练数据、环境可复现性和分步信用分配问题。",
+          "detailTrend": "对企业知识库和研发搜索来说，关键不只是模型能否回答，而是搜索路径能否被记录、回放和审计。SearchEyes 把训练数据、环境和奖励统一建模，说明深度搜索代理竞争会落到基础设施可复现性。",
+          "whyRanked": "它把深度搜索代理训练变成基础设施问题。",
+          "topReason": "可复现搜索环境可能成为训练深度搜索代理的关键工程层。",
+          "detailWhyRanked": "本期将它作为工具链研究信号，因为 arXiv 摘要直接回应训练数据、搜索环境和奖励信号分离的问题，并给出开源基准提升主张；下一步要看项目代码、数据许可和独立复现。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "论文支持方法和基准主张，并标注项目页；真实搜索引擎迁移、数据许可、开源代码质量和复现结果仍需核对。"
+          },
+          "impact": "搜索、知识库和多模态代理团队可用它评估是否需要自建可复现搜索环境和分步奖励记录。",
+          "whoShouldCare": "搜索产品、知识库平台、多模态代理和开发者工具团队应关注这条信号，用来评估深度搜索训练基础设施。",
+          "readerUse": "工程团队用它检查搜索代理训练是否具备知识图谱锚点、环境复现、分步奖励和基准回放能力。",
+          "nextCheck": "核对项目代码、数据来源许可、六个基准设置、SearchEyes-27B 权重或日志、第三方复现和真实搜索任务迁移结果。",
+          "followUpQuestions": [
+            "SearchEyes 项目页是否公开代码、数据构造流程、模型权重或足够复现日志？",
+            "模拟搜索世界中的提升能否迁移到企业知识库、网页搜索和动态多模态资料？"
+          ],
+          "evidenceThreshold": "需要公开代码、数据许可、模型/日志、第三方基准复现和真实搜索迁移实验，才能升级为可信的多模态搜索代理训练路线。",
+          "claimBoundary": "论文支持作者在特定多模态知识基准上的实验主张，不证明真实网页或企业搜索环境会获得同等提升。",
+          "counterEvidence": "如果项目页缺少关键复现材料，或独立复测显示提升来自数据泄漏、基准过拟合或不可迁移环境，应下调为早期方法探索。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.05943",
+          "originalUrl": "https://arxiv.org/abs/2607.05943",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 是研究原文来源；可支持论文题名、提交时间、作者摘要、实验主张和预印本边界，不等于同行评审、生产部署或第三方复现。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-07T16:43:04+09:00",
+          "time": "07/07 16:43 JST",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "论文支持方法和基准主张，并标注项目页；真实搜索引擎迁移、数据许可、开源代码质量和复现结果仍需核对。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-07-08",
       "date": "2026-07-08",

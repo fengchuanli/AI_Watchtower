@@ -1,3 +1,27 @@
+## 2026-07-08 17:07 JST
+
+- Focus: Published the 2026-07-08 17:00 JST AI news intelligence update with three non-duplicate arXiv research-original signals: an early-abort cascade for LLM Agent episodes, PolyWorkBench for multilingual long-horizon agent workflows, and SearchEyes for reproducible multimodal deep-search agent training.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed in this environment.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide; checked official OpenAI, Anthropic, Google DeepMind, Mistral, RSS/source surfaces, reliable-media search results, arXiv recent entries, and historical duplicate URLs.
+  - Official and reliable-media surfaces did not show enough stronger post-08:00 JST releases suitable for promotion, so this edition publishes only three safe research-original signals rather than padding with repeated morning stories, weak search results, or community discussion.
+  - Kept all three current items as `研究原文` / reported preprints; they require public code, data, scoring scripts, logs, third-party replication, real workflow tests, and peer review before being upgraded to validated engineering guidance.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 30 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+  - Ran `git diff --check`.
+- Commit note: Local commit created with message `更新17点AI新闻情报`; final hash is recorded in automation memory because amending this log line changes the final commit hash.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; local `main` remains ahead of the known remote until DNS/network access is available.
+
 ## 2026-07-08 08:07 JST
 
 - Focus: Published the 2026-07-08 08:00 JST AI news intelligence update with two non-duplicate reliable-media background signals: Axios on Future of Life Institute's latest AI Safety Index saying major AI companies have weakened some earlier safety commitments, and Business Insider on Vercel CEO Guillermo Rauch saying enterprises are moving from single-lab AI partnerships toward multi-model, gateway-based production stacks.
