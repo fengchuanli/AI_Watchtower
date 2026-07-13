@@ -1,8 +1,495 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-08",
-  "totalItems": 110,
+  "updatedAt": "2026-07-13",
+  "totalItems": 116,
   "editions": [
+    {
+      "id": "news-0800-2026-07-13",
+      "date": "2026-07-13",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "08:00 JST 发布",
+      "note": "本期为 2026-07-13 08:00 JST 补跑新闻情报快照。",
+      "operationalStatus": "已同步 origin/main；检查来源清单、版权规则、历史重复 URL。本期安全合格来源不足 10 条，发布 6 条。",
+      "editorialInterpretation": "本期判断：08:00 补跑版聚焦模型发布、计费、输出版权、AI 使用习惯、商业化和安全评测；6条均为媒体信号，需官方文件和价格页补证。",
+      "readerFrame": {
+        "headline": "阅读本期：AI 新闻从模型能力转向使用权、价格、成本和安全评估",
+        "whyItMatters": "这 6 条信号共同说明，AI 时代的关键问题不只是模型更强：谁能用、怎么收费、输出能不能再训练、企业能否回本、网络安全怎么评估，都会影响普通用户和企业决策。",
+        "useThisIssueFor": [
+          "普通读者用来判断 AI 工具以后会不会更贵、限制更多、使用更需要管理。",
+          "开发者和企业团队用来检查模型访问、API 成本、输出复用和安全测试清单。",
+          "政策和合规团队用来跟踪政府预发布评估、版权边界和网络安全基准。"
+        ],
+        "notProvenYet": [
+          "不能证明所有前沿模型都会进入固定政府审批流程。",
+          "尚未证明高端模型按量收费会成为所有消费者 AI 的统一模式。",
+          "不证明 Meta 的 AI 投入已经形成可持续利润闭环。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "08:00 补跑版新增 6 条公开来源信号，低于 10 条目标但未硬凑",
+        "freshFacts": [
+          "本期新增事实：Business Insider 报道 AI 巨头围绕模型输出蒸馏和数据抓取出现新的利益冲突。",
+          "本期新增事实：WIRED 报道 Anthropic 准备对 Claude Fable 5 引入额外按量计费。",
+          "本期新增事实：The Verge 报道 Anthropic 推出 Claude reflect 使用复盘功能。",
+          "本期新增事实：Guardian 报道 OpenAI ChatGPT 5.6 在政府安全评估后扩大发布。",
+          "本期新增事实：MarketWatch 报道 Meta 以 Muse Spark 1.1、Iris 芯片和数据中心叙事回应 AI 投入回报问题。",
+          "本期新增事实：Axios 报道 AI 网络攻击能力正在逼迫政府和产业更新评测方法。"
+        ],
+        "repeatedContext": [
+          "7 月 8 日的 AI 安全承诺退坡、Codex/Agent 研究和归档优化仍是背景，本期不重复其 URL。",
+          "延续版权安全规则：媒体来源只保留最小事实，完整采访、图表、报价和上下文请读原文。",
+          "延续 10 条目标规则：本期未用旧闻、弱来源或社区讨论填充数量。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "模型治理",
+          "count": 3,
+          "meaning": "用来更新模型发布审批、输出复用、网络安全评估和政策核对清单。"
+        },
+        {
+          "label": "产品与价格",
+          "count": 2,
+          "meaning": "用来检查 Claude 计费、reflect 使用复盘和个人 AI 使用边界。"
+        },
+        {
+          "label": "商业化与基础设施",
+          "count": 1,
+          "meaning": "用来评估 Meta 模型变现、自研芯片和数据中心回报路径。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 6,
+          "role": "全部作为媒体背景信号使用，需核对官方公告、价格页面、政策文件、财报和第三方评测。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "全媒体背景，官方证据待补",
+        "note": "6/6 为可靠媒体，来源家族集中。",
+        "nextCheck": "核对官方公告、政策文件、价格页、财报和评测报告。"
+      },
+      "sourceConcentration": {
+        "sourceId": "businessinsider-ai",
+        "sourceName": "Business Insider AI / Tech",
+        "count": 1,
+        "share": "1/6",
+        "note": "没有单一来源占多数；但全部为媒体来源，仍需原文和官方补证。",
+        "nextCheck": "找官方公告、政策文件、价格页、财报和第三方评测。"
+      },
+      "trendNotes": [
+        {
+          "topic": "model-access-governance",
+          "label": "模型访问受控",
+          "note": "跨期看，OpenAI、Anthropic 和政府评估信号连续出现，模型发布正在走向分层访问。",
+          "boundary": "不能证明固定审批制度已形成，仍需官方公告、政府文件和后续开放数据。"
+        },
+        {
+          "topic": "ai-cost-and-billing",
+          "label": "AI 成本显性化",
+          "note": "连续出现 Fable 5 收费、Meta 变现和芯片降本信号，说明算力成本正在回到用户和企业账单。",
+          "boundary": "不证明所有服务都会涨价，仍需官方价格页、账单数据和财报指标。"
+        },
+        {
+          "topic": "ai-safety-evaluation",
+          "label": "安全评测升级",
+          "note": "历史上 Agent 安全、模型承诺和网络能力评测信号持续累积，说明安全评估正在从承诺转向测试流程。",
+          "boundary": "尚未证明新基准有效，仍需政府文件、第三方复核和真实演练数据。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 3,
+          "itemIds": [
+            "businessinsider-ai-output-distillation-backlash-2026-07-13",
+            "guardian-openai-chatgpt56-release-after-review-2026-07-09",
+            "axios-ai-cyber-benchmarks-outgrown-2026-07-08"
+          ],
+          "meaning": "用来更新输出复用、模型发布评估和网络安全基准的核对清单。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 2,
+          "itemIds": [
+            "wired-anthropic-fable5-usage-pricing-2026-07-10",
+            "marketwatch-meta-muse-spark-iris-chips-2026-07-10"
+          ],
+          "meaning": "用来评估 AI 成本、采购预算、模型 API 商业化和基础设施回报。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 1,
+          "itemIds": [
+            "theverge-anthropic-claude-reflect-wrapped-2026-07-10"
+          ],
+          "meaning": "用来检查个人 AI 使用复盘、记忆设置、工作边界和休息提醒。"
+        }
+      ],
+      "itemCount": 6,
+      "items": [
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "媒体报道能说明行业争议正在升温；法律和商业后果仍需合同、诉讼与平台政策确认。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "businessinsider-ai-output-distillation-backlash-2026-07-13",
+          "category": "policy",
+          "label": "政策",
+          "title": "Business Insider：AI 巨头开始反感“自己的输出被别人拿去训练”",
+          "body": "Business Insider 报道，Anthropic、OpenAI、Google 等公司一边依赖网络数据训练模型，一边担心竞争者蒸馏和复用自家模型输出。",
+          "summary": "AI 公司正在从“抓网页训练模型”走到“防别人抓我的模型输出”，数据公平使用争议进入新阶段。",
+          "whyItMatters": "这会影响模型 API 条款、反蒸馏检测、内容版权谈判和普通开发者能否自由使用模型输出。",
+          "detailBody": "Business Insider 报道，AI 巨头正面对一个反讽局面：它们过去强调抓取网络内容的合理性，如今又担心自家模型输出被竞争者拿去蒸馏。\n这条新闻不是单一官司，而是围绕模型输出、网站内容、训练数据和商业回报的边界冲突。完整采访和行业细节仍需读原文。",
+          "trend": "趋势判断：AI 竞争正从“谁有数据”扩展到“谁能控制模型输出的再利用”。",
+          "detailTrend": "如果模型输出也被视为可保护资产，AI 公司会更重视 API 用途审查、异常调用检测和合同限制。\n对普通读者来说，这意味着未来 AI 工具可能出现更多使用边界：能不能批量调用、能不能再训练、能不能商用，都可能变复杂。",
+          "whyRanked": "它把版权、蒸馏、模型护城河和互联网内容生态放进同一个冲突里。",
+          "topReason": "这条最适合解释 AI 行业的长期矛盾：训练时想要开放数据，竞争时又想保护输出。",
+          "detailWhyRanked": "本条入选是因为它不是单一产品消息，而是解释 AI 行业正在形成的新利益冲突：网页内容、模型输出、API 调用和训练数据开始互相牵制。\n但它仍是媒体分析，不能证明某家公司已经违法或某种使用必然侵权；需要合同条款、法院文件、平台政策和官方回应继续确认。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "媒体报道能说明行业争议正在升温；法律和商业后果仍需合同、诉讼与平台政策确认。"
+          },
+          "impact": "开发者、创业团队和内容创作者都需要重新理解：模型输出不一定永远是低摩擦、可自由再利用的原材料。",
+          "whoShouldCare": "最该关注的是开发者团队、内容平台、AI 创业者、法务合规团队和依赖模型输出做产品的普通读者。",
+          "readerUse": "开发者和产品团队可用它检查服务条款、批量调用、模型蒸馏、输出再训练和客户数据使用边界。",
+          "nextCheck": "继续核对各大模型 API 条款、反蒸馏政策、版权诉讼文件、平台抓取规则和公司官方回应。",
+          "followUpQuestions": [
+            "模型输出是否会像网页内容一样进入长期版权和合同争议？",
+            "开发者用模型输出训练小模型时，哪些来源和合同边界最需要先确认？"
+          ],
+          "evidenceThreshold": "需要平台政策文本、合同文件、诉讼材料、官方声明和执法结果，才能升级为已确认的模型输出再利用规则变化。",
+          "claimBoundary": "该报道可支持行业争议和公司态度变化的媒体背景；不能证明所有蒸馏行为违法，也不能替代具体合同和法律判断。",
+          "counterEvidence": "如果法院文件、平台政策或公司公告明确允许更宽松的输出再利用，应下调为阶段性行业摩擦信号。",
+          "source": "Business Insider AI / Tech",
+          "sourceName": "Business Insider AI / Tech",
+          "sourceId": "businessinsider-ai",
+          "sourceUrl": "https://www.businessinsider.com/ai-giants-learn-hard-truth-modern-internet-anthropic-openai-google-2026-7",
+          "originalUrl": "https://www.businessinsider.com/ai-giants-learn-hard-truth-modern-internet-anthropic-openai-google-2026-7",
+          "sourceRole": "媒体背景",
+          "provenance": "Business Insider 提供 AI 公司围绕数据抓取、模型输出和蒸馏争议的媒体背景；完整行业采访和上下文请读原文。",
+          "publishedAt": "2026-07-13T08:00:00+09:00",
+          "time": "07/13"
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体报道能支持计费方向；最终价格、套餐和实际账单需要官方页面与用户侧证据确认。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "wired-anthropic-fable5-usage-pricing-2026-07-10",
+          "category": "product",
+          "label": "产品",
+          "title": "WIRED：Anthropic 准备对 Claude Fable 5 额外按量收费",
+          "body": "WIRED 报道，Anthropic 将对 Claude Fable 5 访问引入额外使用费，订阅用户也可能按输入和输出 token 付费。",
+          "summary": "顶级模型不再只是订阅套餐的一部分，Anthropic 正把最强能力推向更明确的按量计费。",
+          "whyItMatters": "这提示消费者 AI 可能进入“基础订阅 + 高端模型用量费”的阶段，重度用户和企业成本会更难估算。",
+          "detailBody": "WIRED 报道称，Anthropic 计划对 Claude Fable 5 收取额外用量费，价格逻辑接近开发者 API 的 token 计费。\n报道把这一变化放在高端模型算力紧张、需求过热和订阅补贴难持续的背景中；完整定价细节仍需读原文和 Anthropic 官方页面。",
+          "trend": "趋势判断：高端 AI 能力正在从“包月无限感”回到“按算力成本计价”。",
+          "detailTrend": "如果最强模型改为按量付费，普通用户会更明显地区分日常模型和高端模型。\n企业采购也会从“买几个账号”转向“估算任务量、token 成本、峰值使用和预算上限”。这会影响 AI 工具的真实可用性。",
+          "whyRanked": "它直接关系到普通用户和企业以后用最强模型要花多少钱。",
+          "topReason": "这条把 AI 能力进步和用户钱包联系起来，比单纯模型发布更贴近真实使用。",
+          "detailWhyRanked": "本条入选是因为它说明 AI 订阅制可能进入新阶段：基础访问仍在，但最强模型的成本开始被单独标价。\n但报道不能证明最终价格、适用地区和套餐细节一定不变；需要 Anthropic 官方计费页、用户账单和企业合同条款继续核对。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体报道能支持计费方向；最终价格、套餐和实际账单需要官方页面与用户侧证据确认。"
+          },
+          "impact": "普通读者、自由职业者和企业团队需要准备把“模型能力选择”纳入预算，而不是只看月费。",
+          "whoShouldCare": "最该关注的是 Claude 重度用户、企业采购团队、开发者团队、财务负责人和用 AI 做日常工作的普通读者。",
+          "readerUse": "用户和采购团队可用它列出高端模型预算、任务优先级、用量上限、团队权限和替代模型方案。",
+          "nextCheck": "继续核对 Anthropic 官方计费页面、产品公告、用户账单截图、企业合同条款和竞争对手价格变化。",
+          "followUpQuestions": [
+            "Fable 5 按量收费会只影响个人用户，还是也会进入 Team 与 Enterprise 合同？",
+            "OpenAI、Google 和 Meta 是否会跟进类似的高端模型单独计费？"
+          ],
+          "evidenceThreshold": "需要 Anthropic 官方价格文本、账单记录、套餐说明和企业合同资料，才能升级为已确认的消费者 AI 计费结构变化。",
+          "claimBoundary": "WIRED 可支持“Anthropic 计划收费”的媒体事实；不能证明所有用户都会被同样收费，也不能替代官方账单条款。",
+          "counterEvidence": "如果 Anthropic 公告、价格页面或用户账单显示免费期延长或收费范围收窄，应下调为未最终落地的计费信号。",
+          "source": "WIRED AI",
+          "sourceName": "WIRED AI",
+          "sourceId": "wired-ai",
+          "sourceUrl": "https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable-5",
+          "originalUrl": "https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable-5",
+          "sourceRole": "媒体背景",
+          "provenance": "WIRED 提供 Anthropic Fable 5 计费变化的媒体背景；价格细节、例外条款和后续变化请读原文并核对官方页面。",
+          "publishedAt": "2026-07-10T22:00:00+09:00",
+          "time": "07/10"
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道支持功能发布和基本能力；隐私边界、使用效果和企业落地仍需官方说明与用户反馈。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "theverge-anthropic-claude-reflect-wrapped-2026-07-10",
+          "category": "product",
+          "label": "产品",
+          "title": "The Verge：Anthropic 推出 Claude reflect，让用户回看自己怎么使用 AI",
+          "body": "The Verge 报道，Anthropic 推出 Claude reflect 测试版，帮助用户查看过去一段时间与 Claude 的互动主题、任务类型和使用节奏。",
+          "summary": "Claude 开始把“你如何使用 AI”做成可回看的仪表盘，AI 工具正在加入自我管理功能。",
+          "whyItMatters": "这让用户不仅关注 AI 能做什么，也开始反思自己把哪些任务交给 AI、是否过度依赖、何时需要休息。",
+          "detailBody": "The Verge 报道称，Claude reflect 可显示用户过去一个月、三个月、六个月或一年的互动主题、任务类型和活跃时间，并支持安静时段和休息提醒。\n该功能目前是测试版，面向开启 memory 的用户；它不会读取连接工具或隐身聊天内容，完整隐私边界请看原文和官方说明。",
+          "trend": "趋势判断：AI 助手开始从“替你做事”转向“帮你理解自己怎么用 AI”。",
+          "detailTrend": "当 AI 使用越来越频繁，用户需要的不只是更强模型，也需要使用反馈、习惯边界和心理负担提醒。\n这类功能可能成为个人 AI 的新标准：既提供生产力，也提示什么时候不该把一切都交给机器。",
+          "whyRanked": "它把 AI 产品从能力竞争带到用户习惯、记忆和自我管理。",
+          "topReason": "这条适合普通读者理解 AI 不是越用越多就一定越好，使用方式也需要被看见。",
+          "detailWhyRanked": "本条入选是因为 reflect 不是单纯聊天功能，而是把 AI 使用记录、记忆设置和用户自我反思放在同一个界面里。\n但它仍处于测试阶段，不能证明用户一定会更健康地使用 AI；需要隐私说明、实际界面、用户反馈和企业版本落地来验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道支持功能发布和基本能力；隐私边界、使用效果和企业落地仍需官方说明与用户反馈。"
+          },
+          "impact": "个人用户和企业团队需要开始管理 AI 使用习惯，包括哪些任务交给 AI、何时休息、哪些内容不应进入记忆。",
+          "whoShouldCare": "最该关注的是 Claude 用户、知识工作者、企业管理团队、隐私负责人和担心 AI 依赖的普通读者。",
+          "readerUse": "用户和企业团队可用它检查 AI 使用复盘、记忆开关、隐私提示、休息提醒和工作边界设置。",
+          "nextCheck": "继续核对 Anthropic 官方说明、reflect 可用地区、隐私政策、企业版 Claude Cowork 版本和用户实际反馈。",
+          "followUpQuestions": [
+            "Claude reflect 会不会默认影响用户对 memory 功能的信任？",
+            "企业版使用复盘会如何处理员工隐私和管理者可见范围？"
+          ],
+          "evidenceThreshold": "需要官方产品说明、隐私政策文本、界面记录、用户反馈和企业版发布资料，才能升级为已确认的 AI 使用管理趋势。",
+          "claimBoundary": "The Verge 可支持 reflect 测试版功能描述；不能证明该功能会改善用户习惯，也不能替代官方隐私说明。",
+          "counterEvidence": "如果官方说明限制功能范围、隐私争议扩大或用户反馈显示价值有限，应下调为小范围产品实验。",
+          "source": "The Verge AI",
+          "sourceName": "The Verge AI",
+          "sourceId": "theverge-ai",
+          "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage",
+          "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage",
+          "sourceRole": "媒体背景",
+          "provenance": "The Verge 提供 Claude reflect 功能、可用条件和产品定位的媒体背景；隐私细节和长期效果仍需官方资料和用户反馈。",
+          "publishedAt": "2026-07-10T21:00:00+09:00",
+          "time": "07/10"
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道支持 Meta 商业化和芯片信号；真实回报需要官方财务、交付和客户使用数据确认。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "marketwatch-meta-muse-spark-iris-chips-2026-07-10",
+          "category": "funding",
+          "label": "资金",
+          "title": "MarketWatch：Meta 用付费编码模型和 Iris 芯片缓解 AI 投入焦虑",
+          "body": "MarketWatch 报道，Meta 发布 Muse Spark 1.1 付费编码模型，并传出 Iris 自研芯片进入量产准备，市场因此重新评估其 AI 投入回报。",
+          "summary": "Meta 正尝试把 AI 从烧钱叙事变成收入和成本控制叙事：一边卖模型，一边做自研芯片。",
+          "whyItMatters": "这说明大厂 AI 竞争不只看模型能力，也看能不能把模型变现、降低推理成本并控制数据中心压力。",
+          "detailBody": "MarketWatch 报道称，Meta 的 Muse Spark 1.1 通过 Meta Model API 提供付费使用，同时市场关注 Iris 自研芯片量产和数据中心容量计划。\n报道还把股价反弹、分析师观点和 Meta AI 投资回报放在一起；完整市场数据和评论请读原文。",
+          "trend": "趋势判断：AI 大厂正在从“证明自己有模型”转向“证明模型能赚钱、算力能降本”。",
+          "detailTrend": "如果 Meta 能用付费模型 API 带来收入，再用自研芯片降低成本，它就能把 AI 支出解释为基础设施生意。\n这会给其他大厂压力：不仅要发布模型，还要说明商业模式、算力供应和单位经济账。",
+          "whyRanked": "它把模型商业化、芯片自研、数据中心和资本市场信心连接起来。",
+          "topReason": "这条能帮助读者理解 AI 泡沫讨论背后的关键问题：谁能把高投入变成可持续业务。",
+          "detailWhyRanked": "本条入选是因为它同时出现三个信号：付费编码模型、Iris 芯片和数据中心容量，说明 Meta 正试图给 AI 投资找商业闭环。\n但它仍是市场报道和分析师解读，不能证明 Meta AI 已经盈利；需要官方收入、芯片交付、客户使用和成本数据验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道支持 Meta 商业化和芯片信号；真实回报需要官方财务、交付和客户使用数据确认。"
+          },
+          "impact": "投资观察者、企业采购和开发者团队需要看 AI 平台是否能同时交付模型、API、芯片和稳定成本。",
+          "whoShouldCare": "最该关注的是企业采购团队、开发者团队、投资观察者、云基础设施团队和关注 Meta AI 路线的读者。",
+          "readerUse": "企业和投资团队可用它核对 Meta Model API、编码模型定价、Iris 芯片交付、数据中心容量和客户采用证据。",
+          "nextCheck": "继续核对 Meta 官方发布、Model API 文档、Iris 芯片量产文件、客户案例、财报和第三方性能评测。",
+          "followUpQuestions": [
+            "Muse Spark 1.1 的付费 API 会带来真实开发者使用，还是只是一项市场信号？",
+            "Iris 芯片能否在 2027 年明显降低 Meta 推理或推荐系统成本？"
+          ],
+          "evidenceThreshold": "需要 Meta 财报、官方 API 数据、芯片量产公告、客户指标和成本下降数据，才能升级为已确认的 AI 商业闭环。",
+          "claimBoundary": "MarketWatch 可支持市场和产品背景；不能证明 Meta AI 投入已经产生足够回报或芯片计划一定按期交付。",
+          "counterEvidence": "如果官方数据、芯片交付记录或客户指标显示使用不足和成本未降，应下调为资本市场短期乐观信号。",
+          "source": "MarketWatch Technology",
+          "sourceName": "MarketWatch Technology",
+          "sourceId": "marketwatch-technology",
+          "sourceUrl": "https://www.marketwatch.com/story/metas-stock-rebounds-as-agentic-ai-coding-and-custom-chips-ease-spending-fears-16d1cb24",
+          "originalUrl": "https://www.marketwatch.com/story/metas-stock-rebounds-as-agentic-ai-coding-and-custom-chips-ease-spending-fears-16d1cb24",
+          "sourceRole": "媒体背景",
+          "provenance": "MarketWatch 提供 Meta 产品、芯片、股价和分析师观点的媒体背景；真实回报和交付情况需看官方财务、客户与硬件数据。",
+          "publishedAt": "2026-07-10T05:58:00+09:00",
+          "time": "07/10"
+        },
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "可靠媒体支持发布和评估背景；是否形成长期制度仍需官方文件、访问规则和后续案例。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "guardian-openai-chatgpt56-release-after-review-2026-07-09",
+          "category": "policy",
+          "label": "政策",
+          "title": "Guardian：OpenAI 在政府安全评估后扩大 ChatGPT 5.6 发布",
+          "body": "Guardian 报道，OpenAI 的 ChatGPT 5.6 在美国政府网络安全顾虑导致延迟后，经过评估获得更广泛发布。",
+          "summary": "前沿模型发布正在出现“先评估、再扩大”的节奏，OpenAI 5.6 成为一个清晰案例。",
+          "whyItMatters": "用户看到新模型发布时，不能只问能力多强，还要问谁批准、谁先用、哪些地区和行业会被限制。",
+          "detailBody": "Guardian 报道称，ChatGPT 5.6 曾因美国政府网络安全顾虑而延迟，OpenAI 先做受限访问和政府简报，之后获得更广泛发布。\n这与前沿模型预发布评估、国家安全和国际访问限制有关；完整政府过程和 OpenAI 表述请读原文。",
+          "trend": "趋势判断：前沿模型发布越来越像高风险基础设施上线，而不是普通软件版本更新。",
+          "detailTrend": "当政府评估进入模型发布流程，AI 公司会更难按纯产品节奏上线。\n企业和开发者也要准备面对模型可用性差异：某些客户先用，某些地区后用，某些能力需要额外审批或安全证明。",
+          "whyRanked": "它延续前沿模型政府预览主线，并给出“延迟后扩大发布”的新状态。",
+          "topReason": "这条说明 AI 模型发布权正在被安全评估重塑，是当天最重要的治理信号之一。",
+          "detailWhyRanked": "本条入选是因为它不是单纯发布新闻，而是把新模型、政府网络安全顾虑、受限访问和扩大发布连成一条流程。\n但它仍需 OpenAI 官方公告、政府文件和后续可用性记录交叉确认；不能把媒体报道直接当作固定监管制度。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "可靠媒体支持发布和评估背景；是否形成长期制度仍需官方文件、访问规则和后续案例。"
+          },
+          "impact": "企业采购、开发者和政策团队需要把模型发布风险加入路线图：最强模型可能先受限、再分批开放。",
+          "whoShouldCare": "最该关注的是企业采购团队、开发者、政策合规团队、安全负责人和想第一时间使用新模型的普通读者。",
+          "readerUse": "团队可用它检查模型路线图、地区可用性、审批依赖、替代模型和客户交付承诺。",
+          "nextCheck": "继续核对 OpenAI 官方发布说明、政府评估文件、可用地区、企业访问名单和第三方安全评测。",
+          "followUpQuestions": [
+            "ChatGPT 5.6 的扩大发布是否会在地区、行业或功能上继续分层？",
+            "美国政府评估会不会成为其他前沿模型上线前的默认流程？"
+          ],
+          "evidenceThreshold": "需要 OpenAI 官方公告、政府文件、访问规则、可用性记录和安全评估报告，才能升级为已确认的模型发布流程变化。",
+          "claimBoundary": "Guardian 可支持“延迟后发布”的媒体事实；不能证明所有前沿模型都会按同一政府流程上线。",
+          "counterEvidence": "如果 OpenAI 或政府文件显示该评估只是一次性安排，应下调为单次发布事件而非制度变化。",
+          "source": "The Guardian Technology",
+          "sourceName": "The Guardian Technology",
+          "sourceId": "guardian-technology",
+          "sourceUrl": "https://www.theguardian.com/technology/2026/jul/09/trump-administration-openai-chatgpt-cybersecurity",
+          "originalUrl": "https://www.theguardian.com/technology/2026/jul/09/trump-administration-openai-chatgpt-cybersecurity",
+          "sourceRole": "媒体背景",
+          "provenance": "Guardian 提供 ChatGPT 5.6 延迟、政府安全顾虑和扩大发布的媒体背景；完整官方措辞与审查过程请读原文。",
+          "publishedAt": "2026-07-09T20:00:00+09:00",
+          "time": "07/09"
+        },
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道支持评测压力和政府期限背景；具体能力等级仍需评估文件、测试报告和复核数据。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "axios-ai-cyber-benchmarks-outgrown-2026-07-08",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：AI 黑客能力正在跑赢现有网络安全测试",
+          "body": "Axios 报道，前沿 AI 的网络攻击能力增长正在让旧式公开基准失效，美国政府和产业界都在寻找新的评估方法。",
+          "summary": "AI 网络安全评测不再只是跑几个公开题库，真实环境、沙箱逃逸和分类评估变得更重要。",
+          "whyItMatters": "这关系到企业敢不敢部署强模型，也关系到政府如何判断模型是否具备高风险网络能力。",
+          "detailBody": "Axios 报道称，AI 模型的黑客能力正在超出现有公开基准，美国联邦机构需要建立新的前沿模型网络能力评估流程。\n报道还提到静态测试难以反映真实环境表现，部分 AI Agent 已能快速超过公开网络安全基准；完整专家观点请读原文。",
+          "trend": "趋势判断：AI 安全评估正在从静态考试转向真实环境中的持续压力测试。",
+          "detailTrend": "如果 AI Agent 能在更真实的环境中发现漏洞、尝试逃出沙箱或组合工具执行任务，旧基准就不足以判断风险。\n企业安全团队需要的不只是模型分数，而是隔离环境、权限控制、日志、演练和事故响应。",
+          "whyRanked": "它直接关系到前沿模型能否安全部署，也是政府预发布评估的核心问题。",
+          "topReason": "这条解释了为什么政府和企业会越来越重视模型发布前的网络安全测试。",
+          "detailWhyRanked": "本条入选是因为它把 AI 黑客能力、政府评估期限、公开基准失效和企业部署风险连在一起。\n但报道不能证明某个具体模型已经造成真实攻击；需要分类评估流程、测试报告、事故记录和第三方复核来验证。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道支持评测压力和政府期限背景；具体能力等级仍需评估文件、测试报告和复核数据。"
+          },
+          "impact": "安全团队、企业采购和政策观察者需要把 AI 模型网络能力当作部署前的硬性评估项。",
+          "whoShouldCare": "最该关注的是企业安全团队、模型平台、政策团队、云基础设施负责人和使用 Agent 工具的开发者。",
+          "readerUse": "安全和平台团队可用它检查模型沙箱、权限、红队测试、日志审计、事故响应和政府评估要求。",
+          "nextCheck": "继续核对美国政府评估流程、分类基准文件、第三方红队报告、模型实验记录和企业安全事故数据。",
+          "followUpQuestions": [
+            "新的政府网络能力测试会看模型知识、工具调用，还是看真实环境行动结果？",
+            "企业使用强 Agent 时，哪些隔离和日志要求会成为采购前置条件？"
+          ],
+          "evidenceThreshold": "需要政府评估文件、分类测试报告、第三方复测数据、真实环境演练记录和事故日志，才能升级为已确认的部署安全标准变化。",
+          "claimBoundary": "Axios 可支持“评估方法压力上升”的媒体事实；不能证明某个模型已经突破生产系统或所有旧基准无效。",
+          "counterEvidence": "如果政府文件或第三方测试显示现有基准仍能预测高风险能力，应下调为评测更新讨论而非基准失效结论。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/07/07/ai-hacking-benchmarking-tests",
+          "originalUrl": "https://www.axios.com/2026/07/07/ai-hacking-benchmarking-tests",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 提供 AI 网络能力评测和政府评估压力的媒体背景；完整专家说法、时间表和技术细节请读原文。",
+          "publishedAt": "2026-07-08T01:50:03+09:00",
+          "time": "07/08"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-07-08",
       "date": "2026-07-08",

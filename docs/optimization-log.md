@@ -1,3 +1,25 @@
+## 2026-07-13 10:40 JST
+
+- Focus: 补跑 2026-07-13 08:00 JST AI 新闻情报更新，发布 6 条非重复、可公开核验的媒体来源信号；低于“每次尽量 10 条以上”的目标，但没有用旧闻、弱来源或社区传言硬凑数量。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 补跑前已同步 `origin/main`，本地代码与远程一致。
+  - 新增 `WIRED AI` 为可靠媒体来源；本期 6 条均按 `reliable_media` / `媒体背景` / `originalDependency: must-read` 处理。
+  - 本期覆盖模型输出复用争议、Claude 高端模型计费、Claude 使用复盘、Meta AI 商业化、OpenAI 模型发布评估、AI 网络安全基准六个方向。
+  - 继续遵守版权安全规则：不抓取付费墙或登录墙正文，不复制全文，不把媒体报道改写成原文替代品，详情页保留原文阅读入口。
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 current news items against 31 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+
 ## 2026-07-08 20:03 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 11 archive-reliability task. Added a compact archive-diff summary format so 17:00 JST runs can explain what changed between same-day morning and evening editions without adding new claims or turning source articles into replacement summaries.
