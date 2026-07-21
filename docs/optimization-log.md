@@ -1,3 +1,28 @@
+## 2026-07-22 08:09 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-22`，发布 10 条 7 月 21 日后安全、Agent 与基础设施信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json`、`docs/source-policy.md`、新闻数据格式、候选来源检查表和版权安全规则；未使用付费墙或登录墙正文，未把媒体报道改写成原文替代品。
+  - 新增 `arxiv-cr` 与 `arxiv-se` 两个研究来源，使安全与软件工程 Agent 论文可用注册来源表达。
+  - 本期来源为 6 条官方来源与 4 条研究原文：OpenAI/Hugging Face 评测安全事故、Google DeepMind Gemini 3.5 Flash Cyber、NVIDIA Vera/Rubin/MoE/Agent profile 技术信号，以及 arXiv 多 Agent 注入、确定性重放、Agent Skills 长上下文失败和无人机 Agent 控制研究。
+  - NVIDIA 技术博客占 4/10，已写入 `sourceConcentration`；厂商性能主张和 arXiv 预印本均保留第三方基准、客户数据、代码、复现、事故取证或安全评估的下一步核验边界。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `about.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: 本轮将使用 `更新17点AI新闻情报`；最终提交哈希记录在自动化记忆中。
+
 ## 2026-07-21 23:04 JST
 
 - Focus: 复核 08:00 JST AI 新闻情报补跑版，追加 1 条未重复、可公开核验的官方基础设施信号：Microsoft 7 月 20 日宣布 Azure 扩展 AMD AI 与 HPC 基础设施。

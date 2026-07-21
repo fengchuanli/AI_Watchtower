@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-02",
+  "updatedAt": "2026-07-22",
   "policy": {
     "primaryRule": "Prefer official sources and RSS feeds. Use media reports for context. Treat community posts as trend signals until confirmed by official sources or reliable reporting.",
     "language": "Summaries for the site should be written in Chinese, with source links preserved.",
@@ -502,6 +502,35 @@
       "hasRss": false,
       "language": "en",
       "notes": "Use for AI product, platform, culture, policy, and company coverage. Keep media facts minimal and preserve original links for full context."
+    },
+    {
+      "id": "arxiv-cr",
+      "name": "arXiv cs.CR",
+      "url": "https://arxiv.org/list/cs.CR/recent",
+      "feedUrl": "https://export.arxiv.org/rss/cs.CR",
+      "category": [
+        "research",
+        "security"
+      ],
+      "trustLevel": "research",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for AI security, agent security, cryptography, and security-system preprints. Summaries should avoid overstating unreviewed claims."
+    },
+    {
+      "id": "arxiv-se",
+      "name": "arXiv cs.SE",
+      "url": "https://arxiv.org/list/cs.SE/recent",
+      "feedUrl": "https://export.arxiv.org/rss/cs.SE",
+      "category": [
+        "research",
+        "developer",
+        "software_engineering"
+      ],
+      "trustLevel": "research",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for software engineering, coding-agent, testing-agent, and developer-workflow preprints. Summaries should avoid overstating unreviewed claims."
     }
   ]
 }
