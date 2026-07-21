@@ -1,3 +1,24 @@
+## 2026-07-21 23:04 JST
+
+- Focus: 复核 08:00 JST AI 新闻情报补跑版，追加 1 条未重复、可公开核验的官方基础设施信号：Microsoft 7 月 20 日宣布 Azure 扩展 AMD AI 与 HPC 基础设施。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 本轮开始前尝试 `git pull --ff-only origin main`，但本机仍因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main` 复核。
+  - 使用 `data/sources.json` 和 `docs/source-policy.md`；新增项来自 Microsoft 官方博客，标为 `官方核对` / `official` / `confirmed`。
+  - 保留原始来源 URL，不复制全文，不使用付费墙或登录墙正文；性能、价格、可用区与采用规模仍需 Azure 文档、价格表、客户案例和第三方基准补证。
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 31 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, and `tags.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: 本轮将使用 `更新08点AI新闻情报`；最终提交哈希记录在自动化记忆中。
+
 ## 2026-07-21 11:20 JST
 
 - Focus: 补跑因定时任务过期漏掉的 AI Watchtower 更新，并完成一轮稳定性优化。根因是 08:00 新闻、17:00 新闻和 20:00 优化任务虽然显示 `ACTIVE`，但 RRULE 里带有 `UNTIL=20260708T145900`，导致 2026-07-08 之后不再触发。

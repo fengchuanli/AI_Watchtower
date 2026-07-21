@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-07-21",
-  "totalItems": 127,
+  "totalItems": 128,
   "editions": [
     {
       "id": "news-catchup-2026-07-21",
@@ -10,11 +10,11 @@
       "archiveStatus": "published",
       "archiveLabel": "08:00 JST 补跑发布",
       "note": "本期补回 2026-07-15 至 2026-07-21 漏跑重点信号。",
-      "operationalStatus": "已拉取 origin/main；检查来源、版权规则和历史重复 URL。本期发布 11 条补跑信号。",
-      "editorialInterpretation": "本期判断：官方信号占多数，主线是长任务安全、企业ROI、教育场景和监管边界；媒体项需复核。",
+      "operationalStatus": "本次复核尝试拉取 origin/main，但 GitHub DNS 解析失败；已检查来源、版权规则和历史重复 URL。本期发布 12 条补跑信号。",
+      "editorialInterpretation": "本期判断：官方信号占多数，主线是长任务安全、企业ROI、异构算力、教育场景和监管边界；媒体项需复核。",
       "readerFrame": {
         "headline": "阅读本期：AI 从“更强模型”进入“更长任务、更强监管、更会算账”",
-        "whyItMatters": "这 11 条补跑信号说明，AI 竞争正在同时围绕 Agent 安全、企业回报、物理 AI 基础设施、教育监管和模型平台展开。普通读者可以先看 TOP3，再按企业、政策或基础设施方向继续读。",
+        "whyItMatters": "这 12 条补跑信号说明，AI 竞争正在同时围绕 Agent 安全、企业回报、异构算力、物理 AI 基础设施、教育监管和模型平台展开。普通读者可以先看 TOP3，再按企业、政策或基础设施方向继续读。",
         "useThisIssueFor": [
           "普通读者用来快速补上 7 月中旬以后 AI 圈最值得理解的变化。",
           "企业、开发者和基础设施团队用来检查 Agent 权限、预算、评测、模型选择和算力清单。",
@@ -27,10 +27,11 @@
         ]
       },
       "changeSummary": {
-        "headline": "7 月 21 日补跑版一次性补入 11 条 7 月中旬后的重要 AI 信号",
+        "headline": "7 月 21 日补跑版一次性补入 12 条 7 月中旬后的重要 AI 信号",
         "freshFacts": [
           "新增 OpenAI 长时间自主模型安全复盘、AI 价值计分框架、青少年安全 AI、GPT-Red 和州级监管观点。",
           "新增 NVIDIA Agent Toolkit、BMS AI 工厂、Vera Rubin 后训练和日本国家 AI 基础设施四个官方信号。",
+          "新增 Microsoft Azure/AMD AI 与 HPC 基础设施官方信号。",
           "新增 Google Gemini 延迟和头部 AI 领导人监管趋同两个可靠媒体背景。"
         ],
         "repeatedContext": [
@@ -47,8 +48,8 @@
         },
         {
           "label": "企业与基础设施",
-          "count": 4,
-          "meaning": "用来评估 AI 预算、ROI、行业 AI 工厂和国家算力设施的下一步证据。"
+          "count": 5,
+          "meaning": "用来评估 AI 预算、ROI、行业 AI 工厂、异构算力和国家算力设施的下一步证据。"
         },
         {
           "label": "模型与平台",
@@ -60,8 +61,8 @@
         {
           "family": "official",
           "label": "官方来源",
-          "count": 9,
-          "role": "用于确认发布时间、产品或政策主张；效果和采用仍需外部事实核对。"
+          "count": 10,
+          "role": "用于确认发布时间、产品或政策主张；效果、供给和采用仍需外部事实核对。"
         },
         {
           "family": "reliable_media",
@@ -72,14 +73,14 @@
       ],
       "sourceRisk": {
         "label": "官方来源为主，媒体补充市场和政策背景",
-        "note": "9/11 为官方来源，偏向厂商官方；需第三方评测、客户数据和法律文件补证。",
-        "nextCheck": "核对系统卡、产品文档、监管文件、客户指标和第三方评测。"
+        "note": "10/12 为官方来源，偏向厂商官方；需第三方评测、客户数据、价格表和法律文件补证。",
+        "nextCheck": "核对系统卡、产品文档、监管文件、客户指标、价格表和第三方评测。"
       },
       "sourceConcentration": {
         "sourceId": "openai-news",
         "sourceName": "OpenAI News",
         "count": 5,
-        "share": "5/11",
+        "share": "5/12",
         "note": "OpenAI 来源占比最高但未过三分之二；本期仍需补其他来源视角。",
         "nextCheck": "找 Google、Anthropic、Meta 官方公告、第三方评测和监管文件。"
       },
@@ -93,8 +94,8 @@
         {
           "topic": "enterprise-ai-roi",
           "label": "企业 AI 回报",
-          "note": "连续几版都出现计费、预算、ROI 和模型平台信号，说明企业会更关注完成工作、总成本和可治理流程。",
-          "boundary": "不证明企业投入必然回本，仍需客户侧 ROI、财务数据和审计记录。"
+          "note": "连续几版都出现计费、预算、ROI、异构算力和模型平台信号，说明企业会更关注完成工作、总成本和可治理流程。",
+          "boundary": "不证明企业投入必然回本，仍需客户侧 ROI、价格表、财务数据和审计记录。"
         },
         {
           "topic": "frontier-model-governance",
@@ -120,25 +121,27 @@
         {
           "id": "infrastructure",
           "label": "基础设施",
-          "count": 4,
+          "count": 5,
           "itemIds": [
             "nvidia-agent-toolkit-omniverse-libraries-2026-07-20",
             "nvidia-bms-vera-rubin-ai-factory-2026-07-20",
             "nvidia-vera-rubin-post-training-2026-07-17",
-            "nvidia-japan-national-ai-infrastructure-2026-07-16"
+            "nvidia-japan-national-ai-infrastructure-2026-07-16",
+            "microsoft-azure-amd-ai-hpc-infrastructure-2026-07-20"
           ],
-          "meaning": "用来核对物理 AI、后训练算力、行业 AI 工厂和国家 AI 基础设施清单。"
+          "meaning": "用来核对物理 AI、后训练、异构云算力、行业 AI 工厂和国家 AI 基础设施清单。"
         },
         {
           "id": "enterprise",
           "label": "企业",
-          "count": 3,
+          "count": 4,
           "itemIds": [
             "openai-ai-age-scorecard-2026-07-17",
             "nvidia-bms-vera-rubin-ai-factory-2026-07-20",
-            "marketwatch-google-gemini-delay-2026-07-17"
+            "marketwatch-google-gemini-delay-2026-07-17",
+            "microsoft-azure-amd-ai-hpc-infrastructure-2026-07-20"
           ],
-          "meaning": "用来评估 AI 投入回报、垂直行业应用和模型路线图风险。"
+          "meaning": "用来评估 AI 投入回报、垂直行业应用、云算力选型和模型路线图风险。"
         },
         {
           "id": "agent",
@@ -152,7 +155,7 @@
           "meaning": "用来检查长任务 Agent 的安全、红队、工具调用和仿真准备流程。"
         }
       ],
-      "itemCount": 11,
+      "itemCount": 12,
       "items": [
         {
           "editorScore": {
@@ -270,6 +273,65 @@
           "sourceRole": "官方核对",
           "provenance": "NVIDIA 官方博客提供部署背景和合作叙事；成果仍需客户侧指标、论文和第三方报告核对。",
           "publishedAt": "2026-07-20T08:00:00+09:00",
+          "time": "07/20"
+        },
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方发布明确，直接影响 Azure AI 推理、Agent 数据系统和芯片设计负载；性能与供给仍需客户侧验证。"
+          },
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "id": "microsoft-azure-amd-ai-hpc-infrastructure-2026-07-20",
+          "category": "funding",
+          "label": "资金",
+          "title": "Microsoft：Azure 扩展 AMD AI 与 HPC 基础设施，押注多元算力供给",
+          "body": "Microsoft 宣布把 AMD Helios AI 平台和新一代 EPYC 数据中心处理器纳入 Azure，规划 HDv2、HXv2 和 ND MI455X v7 三类新虚拟机。",
+          "summary": "Azure 正把 AI 推理、Agent 数据系统和芯片设计负载拆成更专门的 AMD 计算选项。",
+          "whyItMatters": "这说明云厂商不只追逐单一 GPU 路线，也在为推理、数据准备、EDA 和 Agent 协调准备异构算力。",
+          "detailBody": "Microsoft 官方博客称，Azure 将引入 AMD Helios AI 平台和第 6 代 EPYC 处理器，规划 HDv2、HXv2 与 ND MI455X v7 三类新 VM。\n这条信号说明，AI 基础设施正在按推理、数据处理、芯片设计和 Agent 协调拆分，而不是只用通用训练集群承接所有负载。",
+          "trend": "趋势判断：AI 云基础设施会从“单一加速器叙事”转向异构、按工作负载优化。",
+          "detailTrend": "随着推理、搜索、强化学习和 Agent 协调负载增长，CPU、网络、本地存储和专用加速器会一起决定成本。\nAzure 与 AMD 的组合表明，云平台会把不同 AI 环节拆成可单独采购和优化的计算形态。",
+          "whyRanked": "它把 AI 推理、Agent 协调、数据系统和芯片设计放进同一条云基础设施路线。",
+          "topReason": "这条帮助读者理解：AI 竞争正在进入异构算力和云供给清单，而不只是模型参数竞赛。",
+          "detailWhyRanked": "本条入选是因为 Microsoft 把 AMD 新平台用于 Azure AI/HPC 组合，直接影响企业选择推理和 Agent 基础设施。\n但官方发布不能证明实际可用区覆盖、价格优势或客户迁移规模；仍需 Azure 文档和客户负载数据补证。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方发布明确，直接影响 Azure AI 推理、Agent 数据系统和芯片设计负载；性能与供给仍需客户侧验证。"
+          },
+          "impact": "云采购、平台工程和 AI 基础设施团队需要重新比较推理、数据准备、EDA 和 Agent 协调负载的计算选型。",
+          "whoShouldCare": "最该关注的是云采购团队、平台工程团队、AI 推理服务团队、芯片设计公司和基础设施投资观察者。",
+          "readerUse": "团队可以用它检查 Azure 备选实例、AMD 路线、推理成本模型、Agent 数据系统瓶颈和区域供给计划。",
+          "nextCheck": "继续核对 Azure VM 上线文档、区域可用性、价格、第三方基准、客户迁移案例和 AMD 供货节奏。",
+          "followUpQuestions": [
+            "HDv2、HXv2 和 ND MI455X v7 何时进入可采购状态？",
+            "企业推理和 Agent 负载是否会因 AMD 选项获得可量化成本下降？"
+          ],
+          "evidenceThreshold": "需要 Azure 产品文档、公开价格表、第三方基准、客户迁移案例和可用区记录，才能升级为已确认的 AI 云供给结构变化。",
+          "counterEvidence": "如果缺少可用区记录、价格数据、客户公告或第三方评测报告，应下调为 Microsoft 与 AMD 的路线图信号。",
+          "claimBoundary": "Microsoft 官方博客能证明 Azure 基础设施路线和计划中的 VM 类型；不证明性能、价格或供给规模已经独立验证。",
+          "source": "Microsoft AI Blog",
+          "sourceName": "Microsoft AI Blog",
+          "sourceId": "microsoft-ai-blog",
+          "sourceUrl": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+          "originalUrl": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+          "sourceRole": "官方核对",
+          "provenance": "Microsoft 官方博客提供发布日期、Azure/AMD 基础设施范围和 VM 方向；实际上线、性能与客户采用仍需外部材料核对。",
+          "publishedAt": "2026-07-20T00:00:00+09:00",
           "time": "07/20"
         },
         {
