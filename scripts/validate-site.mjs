@@ -36,6 +36,7 @@ const currentToHistoryPublicationChecklist = readFileSync(
 );
 const archiveDiffSummaryFormat = readFileSync("docs/archive-diff-summary-format.md", "utf8");
 const badDataRollbackNote = readFileSync("docs/bad-data-rollback-note.md", "utf8");
+const partialBatchPublicationGuide = readFileSync("docs/partial-batch-publication-guide.md", "utf8");
 const remoteSyncLogConvention = readFileSync("docs/remote-sync-log-convention.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
@@ -778,6 +779,28 @@ if (
 }
 
 if (
+  !/Partial Batch Publication Guide/.test(partialBatchPublicationGuide) ||
+  !/When To Use It/.test(partialBatchPublicationGuide) ||
+  !/Publish, Hold, Or Continue Searching/.test(partialBatchPublicationGuide) ||
+  !/Minimum Publication Bar/.test(partialBatchPublicationGuide) ||
+  !/Short Batch Reason/.test(partialBatchPublicationGuide) ||
+  !/Compact Log Note/.test(partialBatchPublicationGuide) ||
+  !/Stop Conditions/.test(partialBatchPublicationGuide) ||
+  !/publish-partial-batch/.test(partialBatchPublicationGuide) ||
+  !/continue-searching/.test(partialBatchPublicationGuide) ||
+  !/hold-no-safe-batch/.test(partialBatchPublicationGuide) ||
+  !/source, duplicate, proof-boundary, and copyright gates/i.test(partialBatchPublicationGuide) ||
+  !/one or two reliable, non-duplicate, copyright-safe candidates/.test(partialBatchPublicationGuide) ||
+  !/partial-batch-publication-guide\.md/.test(updateRunChecklist) ||
+  !/partial-batch-publication-guide\.md/.test(candidateToNewsHandoff) ||
+  !/partial-batch-publication-guide\.md/.test(newsDataFormat) ||
+  !/partial-batch-publication-guide\.md/.test(readme) ||
+  !/Day 12[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("News update workflow must include partial-batch guidance for publishing or holding one- or two-item safe batches without padding.");
+}
+
+if (
   !/Current To History Publication Checklist/.test(currentToHistoryPublicationChecklist) ||
   !/Mirror Fields/.test(currentToHistoryPublicationChecklist) ||
   !/Publication Steps/.test(currentToHistoryPublicationChecklist) ||
@@ -1061,7 +1084,8 @@ if (
   !/Day 9[\s\S]*bad-data-rollback-note\.md/.test(optimizationDecisionIndex) ||
   !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex) ||
   !/Day 11[\s\S]*archive-diff-summary-format\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 12/.test(optimizationDecisionIndex) ||
+  !/Day 12[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 13/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

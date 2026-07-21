@@ -33,6 +33,7 @@ npx serve .
 │   ├── current-to-history-publication-checklist.md
 │   ├── archive-diff-summary-format.md
 │   ├── bad-data-rollback-note.md
+│   ├── partial-batch-publication-guide.md
 │   ├── remote-sync-log-convention.md
 │   ├── original-source-replacement-guide.md
 │   ├── source-diversity-triage-note.md
@@ -75,6 +76,7 @@ npx serve .
 - 媒体报道替换原始来源判断：`docs/original-source-replacement-guide.md`
 - 候选到新闻字段交接：`docs/candidate-to-news-handoff.md`
 - 新闻更新运行清单：`docs/update-run-checklist.md`
+- 短批次发布判断：`docs/partial-batch-publication-guide.md`
 - 当前版归档发布核对：`docs/current-to-history-publication-checklist.md`
 - 早晚归档差异摘要：`docs/archive-diff-summary-format.md`
 - 错误数据回滚说明：`docs/bad-data-rollback-note.md`

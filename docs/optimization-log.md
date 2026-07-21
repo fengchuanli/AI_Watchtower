@@ -1,3 +1,30 @@
+## 2026-07-21 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 12 update-workflow task. Added partial-batch publication guidance so 08:00/17:00 JST runs can decide when one or two reliable candidates may publish, when to keep searching, and when to hold instead of padding the homepage with weak, repeated, stale, community-only, or media-body-dependent items.
+- Changed files:
+  - `docs/partial-batch-publication-guide.md`
+  - `docs/update-run-checklist.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `docs/news-data-format.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After commit: pending - push will be attempted after commit creation.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and existing update/intake/handoff/data workflow docs; continued with Day 12 because Day 0 through Day 11 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 current news items against 31 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the partial-batch guidance documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit pending; final local HEAD will be recorded after the log/index follow-up commit.
+- Git note: Initial `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push status will be recorded after the commit attempt.
+
 ## 2026-07-13 10:40 JST
 
 - Focus: 补跑 2026-07-13 08:00 JST AI 新闻情报更新，发布 6 条非重复、可公开核验的媒体来源信号；低于“每次尽量 10 条以上”的目标，但没有用旧闻、弱来源或社区传言硬凑数量。

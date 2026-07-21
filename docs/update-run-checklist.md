@@ -1,8 +1,8 @@
 # Update Run Checklist
 
-Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, whether `docs/archive-diff-summary-format.md` should summarize the same-day morning/evening change, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
+Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether `docs/partial-batch-publication-guide.md` was needed for a one- or two-item safe batch, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, whether `docs/archive-diff-summary-format.md` should summarize the same-day morning/evening change, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
 
-This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, publish a short batch with a clear reason instead of padding the homepage with weak, repeated, or copyright-risk items.
+This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, use `docs/partial-batch-publication-guide.md` to decide whether to publish a short batch with a clear reason, continue searching, or hold the update instead of padding the homepage with weak, repeated, or copyright-risk items.
 
 ## Run Header
 
@@ -26,6 +26,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Original-source search | For media-started candidates, say whether an official, filing, paper, regulator, customer-side, dataset, or benchmark original replaced the media report. |
 | Duplicate reporting | Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists, or record the manual current/history duplicate check when no file exists. |
 | Priority and mix | Note whether `docs/candidate-priority-rubric.md` and `docs/source-diversity-triage-note.md` changed the drafting order or caused a held candidate. |
+| Partial batch | Required when fewer than 10 safe candidates remain, and especially when only one or two remain. Record `publish-partial-batch`, `continue-searching`, `hold-no-safe-batch`, or `not-needed` from `docs/partial-batch-publication-guide.md`. |
 | Drafting | Confirm the public copy came from minimum source facts plus AI Watchtower interpretation, not copied or expanded source paragraphs. |
 | Editorial review | Confirm `docs/editorial-checklist.md`, `docs/source-policy.md`, and `docs/copyright-safety.md` were applied to the final items. |
 | Archive mirror | Confirm `docs/current-to-history-publication-checklist.md` was applied after drafting, and say whether the latest history edition was mirrored, corrected, not needed, or blocked. |
@@ -51,6 +52,7 @@ Validation: done - validate-data, validate-site, validate-pages, HTML parse, JSO
 Archive diff: done - morning/evening editions compared for source posture and proof-boundary change.
 Push: blocked-dns
 Short batch reason: only three reliable non-duplicate research originals passed the source and copyright gates.
+Partial batch: publish-partial-batch - the shortage came from source, duplicate, proof-boundary, and copyright gates, not from padding avoidance alone.
 ```
 
 ## Stop Conditions
