@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 2, Update Workflow And Archive Reliability
-- Last indexed run: 2026-07-21 20:00 JST
-- Network status: GitHub DNS resolution failed during the latest pull attempt; push may need retry when network access returns.
+- Last indexed run: 2026-07-21 11:20 JST
+- Network status: GitHub pull succeeded during the latest manual catch-up run; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
 

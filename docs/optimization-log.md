@@ -1,3 +1,40 @@
+## 2026-07-21 11:20 JST
+
+- Focus: 补跑因定时任务过期漏掉的 AI Watchtower 更新，并完成一轮稳定性优化。根因是 08:00 新闻、17:00 新闻和 20:00 优化任务虽然显示 `ACTIVE`，但 RRULE 里带有 `UNTIL=20260708T145900`，导致 2026-07-08 之后不再触发。
+- Automation fix:
+  - 已移除 08:00 JST 新闻任务的过期 `UNTIL`，恢复每天执行。
+  - 已移除 17:00 JST 新闻任务的过期 `UNTIL`，恢复每天执行。
+  - 已移除 20:00 JST 内容优化任务的过期 `UNTIL`，恢复每天执行。
+  - 旧的 14:00、15:00、16:00、17:30、18:00、19:00、21:00 任务继续保持暂停，符合当前低 token 运行节奏。
+- News catch-up:
+  - 发布 2026-07-21 08:00 JST 补跑追赶版，覆盖 2026-07-15 至 2026-07-21 的 11 条安全合格信号。
+  - 本期没有伪造过去每天 08:00/17:00 的历史快照，而是诚实发布一次追赶版。
+  - 当前首页使用 9 条官方来源和 2 条可靠媒体背景；媒体来源继续保留 `originalDependency: must-read`。
+- Optimization:
+  - 新增 `docs/automation-health-check.md`，记录定时任务过期自检、恢复后的 08:00/17:00/20:00 节奏，以及漏跑后的补跑原则。
+  - 更新 `README.md`，把自动优化说明从旧的每天 8 次改为当前真实的 20:00 一次。
+  - 更新 `docs/update-run-checklist.md` 和 `docs/optimization-decision-index.md`，让后续运行先检查任务是否过期。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/automation-health-check.md`
+  - `docs/update-run-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+  - `README.md`
+- Source posture:
+  - 补跑前 `git pull --ff-only origin main` 成功，本地与远程一致。
+  - 使用 OpenAI、NVIDIA 官方来源作为主要事实入口，并用 Axios、MarketWatch 作为可靠媒体背景。
+  - 遵守版权安全规则：不复制全文，不抓取付费墙或登录墙正文，不把媒体报道改写成原文替代品。
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 31 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+
 ## 2026-07-21 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 12 update-workflow task. Added partial-batch publication guidance so 08:00/17:00 JST runs can decide when one or two reliable candidates may publish, when to keep searching, and when to hold instead of padding the homepage with weak, repeated, stale, community-only, or media-body-dependent items.

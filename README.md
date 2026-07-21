@@ -32,6 +32,7 @@ npx serve .
 │   ├── candidate-to-news-handoff.md
 │   ├── current-to-history-publication-checklist.md
 │   ├── archive-diff-summary-format.md
+│   ├── automation-health-check.md
 │   ├── bad-data-rollback-note.md
 │   ├── partial-batch-publication-guide.md
 │   ├── remote-sync-log-convention.md
@@ -80,6 +81,7 @@ npx serve .
 - 当前版归档发布核对：`docs/current-to-history-publication-checklist.md`
 - 早晚归档差异摘要：`docs/archive-diff-summary-format.md`
 - 错误数据回滚说明：`docs/bad-data-rollback-note.md`
+- 定时任务健康检查：`docs/automation-health-check.md`
 - 远程同步日志约定：`docs/remote-sync-log-convention.md`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
@@ -114,9 +116,9 @@ node scripts/validate-site.mjs
 - 最近决策索引：`docs/optimization-decision-index.md`
 - 优化履历：`docs/optimization-log.md`
 - 新闻情报更新：每天 08:00 和 17:00 JST 各一次
-- 页面与内容优化：每天 14:00、15:00、16:00、17:30、18:00、19:00、20:00、21:00 JST 各一次
+- 页面与内容优化：每天 20:00 JST 一次
 
-每次优化都应该留下清楚的履历，并推送到 GitHub。
+每次抓取或优化都应该留下清楚的履历，并推送到 GitHub。定时任务异常时先检查 `docs/automation-health-check.md`，尤其确认 `ACTIVE` 任务没有过期的 `UNTIL` 日期。
 
 所有优化都应优先服务一个核心目标：让不擅长英语和 AI 情报收集的中文读者，可以轻松、愉悦、可信地跟上 AI 时代的重要变化。
 
