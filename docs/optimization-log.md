@@ -12,7 +12,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After commit: pending - push will be attempted after commit creation.
+  - After commit: blocked-dns - local implementation commit `be0e2cf` was created, but `git push origin main` failed because `github.com` could not be resolved; local `main` remains ahead of the known remote.
 - Verification:
   - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, and existing update/intake/handoff/data workflow docs; continued with Day 12 because Day 0 through Day 11 were already complete.
   - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
@@ -22,8 +22,8 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Ran `git diff --check`.
-- Commit: Local implementation commit pending; final local HEAD will be recorded after the log/index follow-up commit.
-- Git note: Initial `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push status will be recorded after the commit attempt.
+- Commit: Local implementation commit `be0e2cf` (`增加短批次发布判断`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-13 10:40 JST
 

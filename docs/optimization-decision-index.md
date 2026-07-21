@@ -33,7 +33,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 9 | Complete | `b2c883c` | `docs/bad-data-rollback-note.md` names the files, rollback shapes, restore steps, validators, and log wording needed before republishing after a bad data update. |
 | Day 10 | Complete | `742dad3` | `docs/remote-sync-log-convention.md` standardizes pull/push log wording for `pulled`, `pushed`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, `blocked-non-fast-forward`, and `not-attempted-with-reason` states. |
 | Day 11 | Complete | `6bbe8bc` | `docs/archive-diff-summary-format.md` gives 17:00 JST runs a compact morning/evening archive comparison for new signals, source posture, reader takeaway, and proof-boundary change. |
-| Day 12 | Complete | `pending` | `docs/partial-batch-publication-guide.md` decides when one or two safe candidates may publish as a short batch, when to continue searching, and when to hold instead of padding. |
+| Day 12 | Complete | `be0e2cf` | `docs/partial-batch-publication-guide.md` decides when one or two safe candidates may publish as a short batch, when to continue searching, and when to hold instead of padding. |
 
 ## Next Useful Task
 
