@@ -46,6 +46,7 @@ npx serve .
 │   ├── local-preview-qa.md
 │   ├── monthly-optimization-summary.md
 │   ├── optimization-decision-index.md
+│   ├── optimization-log-archive-guide.md
 │   ├── optimization-log.md
 │   ├── optimization-plan.md
 │   ├── product-principles.md
@@ -92,6 +93,7 @@ npx serve .
 - GitHub Pages 发布兼容：`docs/github-pages-readiness.md`
 - 月度优化总结：`docs/monthly-optimization-summary.md`
 - 最近优化决策索引：`docs/optimization-decision-index.md`
+- 优化履历季度归档规则：`docs/optimization-log-archive-guide.md`
 - 贡献与发布流程：`docs/contributing.md`
 
 提交内容更新前可以运行：

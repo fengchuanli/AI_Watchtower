@@ -46,6 +46,7 @@ const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
 const githubPagesReadiness = readFileSync("docs/github-pages-readiness.md", "utf8");
 const monthlyOptimizationSummary = readFileSync("docs/monthly-optimization-summary.md", "utf8");
 const optimizationDecisionIndex = readFileSync("docs/optimization-decision-index.md", "utf8");
+const optimizationLogArchiveGuide = readFileSync("docs/optimization-log-archive-guide.md", "utf8");
 const contributing = readFileSync("docs/contributing.md", "utf8");
 const readme = readFileSync("README.md", "utf8");
 const errors = [];
@@ -1059,10 +1060,28 @@ if (
 }
 
 if (
+  !/docs\/optimization-log-archive-guide\.md/.test(readme) ||
+  !/Optimization Log Archive Guide/.test(optimizationLogArchiveGuide) ||
+  !/Archive Decision/.test(optimizationLogArchiveGuide) ||
+  !/Archive File Shape/.test(optimizationLogArchiveGuide) ||
+  !/Live Log After Archiving/.test(optimizationLogArchiveGuide) ||
+  !/Archive Steps/.test(optimizationLogArchiveGuide) ||
+  !/Stop Conditions/.test(optimizationLogArchiveGuide) ||
+  !/Compact Log Note/.test(optimizationLogArchiveGuide) ||
+  !/calendar quarter/.test(optimizationLogArchiveGuide) ||
+  !/120 recent run entries/.test(optimizationLogArchiveGuide) ||
+  !/docs\/optimization-decision-index\.md/.test(optimizationLogArchiveGuide) ||
+  !/Optimization-log archive: rule-added/.test(optimizationLogArchiveGuide) ||
+  !/Day 13[\s\S]*optimization-log-archive-guide\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Optimization log growth must have a quarterly archive decision guide linked from README and the decision index.");
+}
+
+if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-06-24 through 2026-07-23/.test(optimizationDecisionIndex) ||
-  !/Phase 2, Update Workflow And Archive Reliability/.test(optimizationDecisionIndex) ||
+  !/Phase 3, Reader-First Homepage Content/.test(optimizationDecisionIndex) ||
   !/Previous Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
   !/Previous Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
@@ -1085,7 +1104,8 @@ if (
   !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex) ||
   !/Day 11[\s\S]*archive-diff-summary-format\.md/.test(optimizationDecisionIndex) ||
   !/Day 12[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 13/.test(optimizationDecisionIndex) ||
+  !/Day 13[\s\S]*optimization-log-archive-guide\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 14/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
