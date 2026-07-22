@@ -1,3 +1,26 @@
+## 2026-07-23 17:00 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-23`，发布 11 条 7 月 20 日至 7 月 22 日官方与可靠媒体信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；优先采用 OpenAI、Google、Hugging Face 官方页面，并用 TechCrunch 作为可靠媒体背景。
+  - 本期覆盖 OpenAI Project Camellia、OpenAI/Google Genesis Mission 支持、Gemini Flash 与 Galaxy 整合、Cosmos 3 Edge、OpenAI/Hugging Face 事故后续、OpenAI 基础设施支出、Atoms 机器人融资、Glow 端点安全融资和 Substack AI 写作披露工具。
+  - 媒体条目均标为 `媒体背景` / `reported` / `originalDependency: must-read`；未复制全文，未使用付费墙或登录墙正文，资金、估值、支出和专家分析均保留原始文件或官方材料核验边界。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: 本轮将使用 `更新17点AI新闻情报`；最终提交哈希记录在自动化记忆中。
+
 ## 2026-07-22 23:06 JST
 
 - Focus: 运行 08:00 JST AI Watchtower 新闻情报更新；本地首页已是 `news-1700-2026-07-22`，因此未回退到早间版，而是在当前最新快照中补入 2 条 7 月 22 日未入库官方信号。

@@ -1,8 +1,999 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-22",
-  "totalItems": 140,
+  "updatedAt": "2026-07-23",
+  "totalItems": 151,
   "editions": [
+    {
+      "id": "news-1700-2026-07-23",
+      "date": "2026-07-23",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦 7 月 22 日后 AI 基础设施、科学、模型、平台与安全。",
+      "operationalStatus": "GitHub DNS 解析失败；已核对来源注册表、历史 URL、官方页面和可靠媒体索引。",
+      "editorialInterpretation": "本期判断：AI 主线从模型能力扩展到数据中心供电、国家科研任务、低成本 Agent 模型、平台安全事件和物理 AI 资本；媒体数字均保留原文依赖。",
+      "readerFrame": {
+        "headline": "阅读本期：AI 从模型发布进入基础设施、科研和安全账本",
+        "whyItMatters": "这 11 条信号说明，前沿 AI 的竞争正同时受电力、地方许可、科研额度、移动分发、Agent 安全、物理 AI 和资本开支约束。",
+        "useThisIssueFor": [
+          "基础设施和政策团队用来检查数据中心供电、社区承诺、审计和监管文件。",
+          "科研和平台团队用来比较 OpenAI、Google 与 Genesis Mission 的工具和额度承诺。",
+          "安全、移动和机器人团队用来更新 Agent 防御、跨设备入口和物理 AI 部署清单。"
+        ],
+        "notProvenYet": [
+          "不能证明 OpenAI、Google 或 NVIDIA 的资源承诺已经产生科研、训练或机器人交付效果。",
+          "不能证明媒体报道中的资金、估值或资本开支数字已由原始文件确认。",
+          "不能证明 Gemini 新模型、Substack 检测或 Glow 安全产品在真实环境中已经达到稳定效果。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "从 7 月 22 日 17:00 版推进到基础设施、科研和平台安全后续",
+        "freshFacts": [
+          "新增 OpenAI Project Camellia 官方页面，聚焦 3.2GW 电力、社区收益、Codex 学生额度和年度审计。",
+          "新增 OpenAI 与 Google 对 DOE Genesis Mission 的 AI 科学支持承诺，补足多厂商科研基础设施视角。",
+          "新增 Google Gemini Flash 系列和 Galaxy Unpacked 整合信号，覆盖低成本 Agent 模型与移动端分发。",
+          "新增 Hugging Face 一手安全事故披露和 TechCrunch 媒体背景，补充 Agent 安全、资本和平台治理线索。"
+        ],
+        "repeatedContext": [
+          "延续背景：上一版已记录 OpenAI/Hugging Face 事故初步复盘，本期只补入 Hugging Face 一手披露和媒体后续角度。",
+          "延续背景：上一版已记录 Microsoft Genesis Mission/SPARK，本期不重复该 URL，只比较 OpenAI 与 Google 新承诺。",
+          "延续背景：AI 工厂、Agent 安全和 AI 科学仍是历史主线，本期只发布新增来源事实。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "基础设施与资本",
+          "count": 4,
+          "meaning": "用来更新数据中心供电、资本开支、物理 AI 融资和安全创业估值观察表。"
+        },
+        {
+          "label": "科研与模型",
+          "count": 3,
+          "meaning": "用来检查 Genesis Mission 多厂商承诺、Gemini Flash 模型路由和 Cosmos 3 Edge 实测路径。"
+        },
+        {
+          "label": "安全与平台治理",
+          "count": 2,
+          "meaning": "用来更新 Agent 入侵复盘、端点防御、AI 内容披露和平台信任机制。"
+        },
+        {
+          "label": "消费与移动 Agent",
+          "count": 2,
+          "meaning": "用来检查 Galaxy 设备 Gemini 整合和 Substack 前台 AI 披露的用户影响。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 6,
+          "role": "读者应使用官方来源确认发布、承诺和产品范围，并等待合同、审计、模型卡、实验室文件或实测数据验证效果。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 5,
+          "role": "读者应把媒体来源作为市场背景和线索入口，完整事实、引述、数字和上下文仍需原文及原始文件。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方与媒体接近平衡，资本和安全后续需降噪",
+        "note": "6/11 来自官方页面，5/11 来自 TechCrunch；官方承诺不等于交付，媒体数字和专家分析不等于最终结论。",
+        "nextCheck": "核对监管文件、DOE awardee 名单、模型卡、客户指标、融资文件、公司公告、第三方基准和安全取证报告。"
+      },
+      "trendNotes": [
+        {
+          "topic": "ai-infrastructure-governance",
+          "label": "AI 基础设施治理",
+          "note": "跨期看，OpenAI、Microsoft、Google 与 NVIDIA 信号连续出现，AI 竞争正在进入电力、云额度、地方承诺和审计账本。",
+          "boundary": "不证明容量或科研效果已经交付，仍需合同、监管文件、审计、云账单、客户数据和项目成果。"
+        },
+        {
+          "topic": "agent-security-incident-response",
+          "label": "Agent 安全响应",
+          "note": "OpenAI 与 Hugging Face 事件在连续版本中形成安全主线，评测沙箱、数据流水线和 AI 取证需要统一审视。",
+          "boundary": "不证明攻击模型来源或行业普遍风险等级，仍需第三方外部取证报告、IOC、补丁记录和客户通知。"
+        },
+        {
+          "topic": "agent-distribution-layer",
+          "label": "Agent 分发层",
+          "note": "跨期看，Gemini Flash、Galaxy 整合和 Substack 披露工具连续显示，Agent 与 AI 内容能力正在进入模型路由、设备入口和平台 UI。",
+          "boundary": "不证明用户采用和检测准确率，仍需模型卡、地区清单、使用指标、隐私文档和误判数据。"
+        },
+        {
+          "topic": "physical-ai-capital",
+          "label": "物理 AI 资本化",
+          "note": "跨期看，Cosmos 3 Edge 与 Atoms 融资背景连接了早前机器人和世界模型信号，物理 AI 正被同时推动为开放模型路线和工业资本故事。",
+          "boundary": "不证明真实机器人控制稳定，仍需模型许可、机器人任务日志、客户合同、第三方评测和安全认证。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 5,
+          "itemIds": [
+            "openai-camellia-effingham-ai-infrastructure-2026-07-22",
+            "openai-national-science-genesis-codex-api-2026-07-22",
+            "google-cloud-genesis-mission-40m-ai-credits-2026-07-22",
+            "techcrunch-openai-750b-ai-infrastructure-spending-2026-07-22",
+            "techcrunch-atoms-robotics-17b-a16z-funding-2026-07-22"
+          ],
+          "meaning": "用来检查 AI 数据中心、电力、国家科研云、资本开支和物理 AI 供应链。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 2,
+          "itemIds": [
+            "google-gemini-36-flash-flash-lite-cyber-2026-07-21",
+            "huggingface-nvidia-cosmos3-edge-physical-ai-2026-07-20"
+          ],
+          "meaning": "用来更新低成本 Agent 模型、Cyber 受限模型和边缘世界模型评估表。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 3,
+          "itemIds": [
+            "openai-camellia-effingham-ai-infrastructure-2026-07-22",
+            "openai-national-science-genesis-codex-api-2026-07-22",
+            "techcrunch-openai-huggingface-human-sandbox-mistake-2026-07-22"
+          ],
+          "meaning": "用来检查地方数据中心治理、国家科研访问和 Agent 安全事件响应。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 3,
+          "itemIds": [
+            "google-samsung-galaxy-unpacked-gemini-integrations-2026-07-22",
+            "techcrunch-glow-endpoint-security-ai-era-valuation-2026-07-22",
+            "techcrunch-substack-ai-writing-disclosure-tool-2026-07-22"
+          ],
+          "meaning": "用来检查移动端 Gemini 分发、安全采购和内容平台 AI 披露机制。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 6,
+          "itemIds": [
+            "openai-camellia-effingham-ai-infrastructure-2026-07-22",
+            "openai-national-science-genesis-codex-api-2026-07-22",
+            "google-gemini-36-flash-flash-lite-cyber-2026-07-21",
+            "google-samsung-galaxy-unpacked-gemini-integrations-2026-07-22",
+            "techcrunch-openai-huggingface-human-sandbox-mistake-2026-07-22",
+            "huggingface-nvidia-cosmos3-edge-physical-ai-2026-07-20"
+          ],
+          "meaning": "用来更新 Agent 从编码、移动、科学、网络安全到物理世界的部署边界。"
+        }
+      ],
+      "itemCount": 11,
+      "status": "published",
+      "statusLabel": "17:00 JST 发布",
+      "sourceCount": 33,
+      "editorNote": "编辑复核于 2026-07-23 17:00 JST：发布 11 条 7 月 22 日后官方与可靠媒体信号，未使用付费墙或登录墙正文。",
+      "briefing": {
+        "label": "17:00 JST 简报",
+        "headline": "今天重点：AI 的瓶颈从模型能力转向电力、科研、平台安全和分发",
+        "summary": "本期 11 条信号集中在四条线：OpenAI 与 Google 把 AI 科学和数据中心承诺推向可核验清单；Google 发布新的 Flash 效率模型并扩大 Galaxy 分发；Hugging Face 一手披露 Agent 入侵细节；TechCrunch 提供资本、物理 AI、安全创业和内容透明度媒体背景。",
+        "cta": "查看今日 TOP3",
+        "watchPoints": [
+          {
+            "title": "电力与审计",
+            "body": "看数据中心项目是否公开合同、监管批文、地方审计和社区承诺兑现。"
+          },
+          {
+            "title": "科研额度",
+            "body": "看 Genesis Mission 是否公布 awardee、实验室项目、论文、数据和安全评估。"
+          },
+          {
+            "title": "Agent 安全",
+            "body": "看平台是否准备数据流水线隔离、凭据轮换、AI 取证和本地模型应急能力。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "label": "深度简报",
+        "kicker": "17:00 JST 深度简报",
+        "title": "AI 进入基础设施账本：电力、科研额度、Agent 安全和移动分发同日排队",
+        "subtitle": "7 月 23 日版把新增信号整理成一条主线：AI 竞争不再只看模型榜单，而要看谁能获得电力、交付科研资源、控制平台风险并进入用户设备。",
+        "dek": "本期不把厂商承诺、媒体数字和模型指标当作最终事实，而是把它们放进可追踪的验证路径。",
+        "dateLabel": "2026-07-23 17:00 JST",
+        "status": "已发布，官方来源为主，媒体资金与估值信号保留原文依赖",
+        "overview": "本期发布 11 条新闻。OpenAI 的 Project Camellia 和国家科学承诺把数据中心、电力、Codex、API 与国家实验室连接起来；Google 用 Genesis 额度、Gemini Flash 模型和 Galaxy 分发补足科学与消费端路线；Hugging Face 安全披露提醒 Agent 攻击已经触及平台基础设施；TechCrunch 则提供资本和平台治理背景。",
+        "timeline": [
+          {
+            "label": "7 月 20 日",
+            "title": "Cosmos 3 Edge 在 Hugging Face 发布",
+            "body": "NVIDIA 通过 Hugging Face 发布 4B 边缘世界模型，面向机器人和视觉 AI Agent。"
+          },
+          {
+            "label": "7 月 21 日",
+            "title": "Google 发布 Gemini Flash 更新",
+            "body": "3.6 Flash、3.5 Flash-Lite 和 Cyber 组合把效率、低延迟和安全试点放到同一产品线。"
+          },
+          {
+            "label": "7 月 22 日",
+            "title": "OpenAI 与 Google 扩展 Genesis 和数据中心叙事",
+            "body": "OpenAI 披露 Project Camellia 与国家科学支持，Google 承诺 4000 万美元 Genesis 资源。"
+          },
+          {
+            "label": "同日",
+            "title": "媒体补充资本与平台治理背景",
+            "body": "TechCrunch 报道 OpenAI 支出、物理 AI 融资、安全创业和 Substack AI 披露工具。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "11",
+            "label": "当前版安全非重复信号"
+          },
+          {
+            "value": "7/11",
+            "label": "官方来源占比"
+          },
+          {
+            "value": "3.2GW",
+            "label": "OpenAI Camellia 计划分阶段电力规模"
+          },
+          {
+            "value": "4000万美元",
+            "label": "Google Genesis Mission AI tokens 与云额度承诺"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "基础设施",
+            "title": "AI 数据中心进入地方电力和审计议题",
+            "body": "OpenAI Project Camellia 把 3.2GW 电力、社区收益、Codex 额度和公开审计写入同一项目说明。",
+            "soWhat": "基础设施团队应从电力合同、监管批文、社区审计和施工里程碑验证，而不是只看厂商承诺。"
+          },
+          {
+            "number": "02",
+            "label": "AI 科学",
+            "title": "Genesis Mission 变成多厂商资源竞争",
+            "body": "OpenAI 与 Google 都把 AI 工具、API、tokens 和云额度投向 DOE Genesis Mission。",
+            "soWhat": "科研团队应比较 DOE awardee、实验室项目、论文成果和安全评估，而不是只比较额度金额。"
+          },
+          {
+            "number": "03",
+            "label": "Agent 安全",
+            "title": "平台事件要求防御侧也准备 AI 工具",
+            "body": "Hugging Face 披露 Agent 驱动入侵，并说明防御分析需要本地可运行模型避免托管护栏阻断取证。",
+            "soWhat": "安全团队应准备数据流水线隔离、凭据轮换、日志取证、应急模型和外部取证流程。"
+          },
+          {
+            "number": "04",
+            "label": "分发与物理 AI",
+            "title": "模型进入设备、边缘和产业资本",
+            "body": "Gemini Flash 与 Galaxy 整合推动移动 Agent，Cosmos 3 Edge 与 Atoms 融资背景推动物理 AI。",
+            "soWhat": "产品和机器人团队应以设备可用性、模型卡、机器人日志、客户合同和第三方基准验证。"
+          }
+        ],
+        "actions": [
+          "基础设施团队：跟踪 Georgia Power、地方监管、Project Camellia 审计和施工许可。",
+          "科研团队：建立 Genesis Mission 多厂商额度、模型访问、项目成果和安全评测对照表。",
+          "安全团队：检查数据集处理代码执行、凭据轮换、AI 取证和本地模型应急能力。",
+          "产品团队：核对 Gemini 设备入口、Substack AI 披露、Cosmos 3 Edge 许可和真实任务实测。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期覆盖 7 月 20 日至 7 月 22 日公开、未在历史中重复的来源事实，并按 7 月 23 日 17:00 JST 发布。"
+          },
+          {
+            "label": "来源边界",
+            "body": "7 条来自官方页面，4 条来自 TechCrunch；媒体条目只保留最小事实和 AI Watchtower 判断，不替代原文。"
+          },
+          {
+            "label": "结论边界",
+            "body": "厂商承诺、媒体数字、模型指标、融资估值和产品定位都需要外部文件、实测或客户材料后才能升级。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI 官方页面支持 Project Camellia、Codex 额度、Genesis 支持和国家科学承诺。",
+            "Google 官方页面支持 Gemini Flash 发布、Galaxy 整合和 Genesis Mission 4000 万美元资源承诺。",
+            "Hugging Face 官方博客支持原始安全披露背景；TechCrunch 支持当天专家分析、资本和平台治理媒体线索。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 判断本期主线是 AI 的基础设施化：电力、科研额度、安全响应、移动分发和物理世界同时进入验证清单。",
+            "AI Watchtower 把资金、估值和性能数字视为观察线索，而不是独立确认结论。"
+          ],
+          "unknowns": [
+            "Project Camellia 电力合同、地方审计、DOE awardee、实验室成果和 Genesis 额度规则尚未补齐。",
+            "Hugging Face 外部取证、Gemini 真实成本、Cosmos 3 Edge 机器人实测和 TechCrunch 报道数字仍需原始材料。"
+          ]
+        },
+        "references": [
+          {
+            "label": "OpenAI 官方披露 Project Camellia 数据中心与社区承诺",
+            "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/"
+          },
+          {
+            "label": "OpenAI 官方说明 Genesis Mission Codex 与 API 支持",
+            "url": "https://openai.com/index/advancing-the-next-era-of-national-science/"
+          },
+          {
+            "label": "Google Cloud 官方宣布 Genesis Mission 4000 万美元承诺",
+            "url": "https://cloud.google.com/blog/topics/public-sector/accelerating-frontiers-of-scientific-discovery-40-million-dollar-commitment-genesis-mission"
+          },
+          {
+            "label": "Google 官方发布 Gemini 3.6 Flash 与 3.5 Flash-Lite",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+          },
+          {
+            "label": "TechCrunch 报道 OpenAI/Hugging Face 事故沙箱配置后续",
+            "url": "https://techcrunch.com/2026/07/22/how-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
+          },
+          {
+            "label": "TechCrunch 报道 OpenAI 基础设施支出媒体背景",
+            "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/"
+          }
+        ]
+      },
+      "items": [
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "一手安全披露强；完整影响仍需外部取证。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中等可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "techcrunch-openai-huggingface-human-sandbox-mistake-2026-07-22",
+          "category": "policy",
+          "label": "政策",
+          "title": "TechCrunch 追问 OpenAI/Hugging Face 事故中的沙箱配置问题",
+          "body": "TechCrunch 采访安全专家，指出 OpenAI 评测环境的网络隔离和第三方包代理配置可能是事故关键。",
+          "summary": "OpenAI/Hugging Face 事故的后续焦点转向沙箱工程和人类配置错误。",
+          "whyItMatters": "Agent 安全不只是模型行为问题，也取决于网络隔离、包安装代理和评测环境设计。",
+          "detailBody": "TechCrunch 后续报道称，多名安全专家把事故焦点放在 OpenAI 所称高度隔离环境的网络连接和第三方包代理配置上。\n报道还引用 OpenAI 初步披露中的包安装代理漏洞背景，并把问题解释为沙箱工程、出网控制和第三方组件边界。",
+          "trend": "趋势判断：Agent 安全事故正在从“模型逃逸”叙事回到更可操作的沙箱工程、出网控制和供应链隔离。",
+          "detailTrend": "这条媒体后续的价值是把事故复盘转化为工程核查问题：评测环境是否真的隔离，包安装系统是否可被链式利用。\n它也提醒安全团队，前沿模型事故常常不是单纯模型问题，而是工具、凭据、网络和供应链共同失效。完整事实仍需官方复盘和外部取证。",
+          "whyRanked": "它把上一版安全事故推进到可执行的工程控制清单。",
+          "topReason": "沙箱配置被公开追问，说明前沿模型评测必须接受基础安全工程审查。",
+          "detailWhyRanked": "TechCrunch 报道提供安全专家观点、OpenAI 披露背景和 Hugging Face 事件语境。\n这些来源事实帮助读者把事故从抽象模型风险拆成出网、代理、凭据、第三方组件和补丁记录等核验项。",
+          "impact": "安全、模型评测和平台团队应复核沙箱出网、包代理、凭据、第三方组件和事故通报流程。",
+          "whoShouldCare": "最该关注的是模型评测、安全工程、平台安全、红队和企业 AI 风险治理团队。",
+          "readerUse": "安全团队可以用它更新评测沙箱、出网代理、第三方包安装和供应链隔离核查表。",
+          "nextCheck": "等待 OpenAI、Hugging Face、第三方取证报告、补丁记录、IOC、客户通知和安全架构复盘。",
+          "followUpQuestions": [
+            "OpenAI 是否公开包安装代理漏洞的补丁和评测环境隔离改造？",
+            "Hugging Face 外部取证是否确认攻击链、凭据影响和客户通知范围？"
+          ],
+          "evidenceThreshold": "需要 OpenAI 技术复盘、Hugging Face 外部取证报告、补丁记录、IOC 和客户通知，才能升级为完整确认的沙箱失效结论。",
+          "counterEvidence": "如果第三方取证报告、官方技术复盘、补丁记录或网络访问日志显示隔离配置不是关键路径，应收窄为媒体专家分析信号。",
+          "claimBoundary": "TechCrunch 报道能支持专家质疑和媒体背景；不证明最终根因、责任归属或完整影响范围。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/22/how-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/",
+          "originalUrl": "https://techcrunch.com/2026/07/22/how-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道用于最低限度记录专家分析和事故背景；完整引述、技术细节和上下文仍需阅读原文及官方复盘。",
+          "publishedAt": "2026-07-22T19:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "一手安全披露强；完整影响仍需外部取证。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "安全市场信号清楚；能力仍需客户和第三方测试。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中等可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "techcrunch-glow-endpoint-security-ai-era-valuation-2026-07-22",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch 报道 Glow 以 12 亿美元估值切入 AI 时代端点安全",
+          "body": "TechCrunch 报道安全创业公司 Glow 以 12 亿美元估值从隐身中亮相，定位为应对 AI 时代端点安全挑战。",
+          "summary": "端点安全创业融资开始把 AI Agent 和自动化攻击作为核心叙事。",
+          "whyItMatters": "OpenAI/Hugging Face 事件之后，安全市场会更关注终端、凭据、浏览器和 Agent 自动化带来的新攻击面。",
+          "detailBody": "TechCrunch 报道称 Glow 从隐身中亮相，估值 12 亿美元，试图挑战 AI 时代的端点安全市场。报道将 Glow 的隐身亮相和 12 亿美元估值放在 AI 时代端点安全背景下；AI Watchtower 只记录融资定位线索。",
+          "trend": "趋势判断：安全创业公司正在把自主 Agent、速度差和终端可见性包装成下一代防御机会。",
+          "detailTrend": "融资估值不能证明产品有效，但它反映资本市场对 AI 自动化攻击和端点防御缺口的关注。真正证据来自客户部署。Agent 安全事故增加了端点、浏览器、脚本和凭据可见性的市场压力。估值不能替代检测率、误报率和客户部署证据。",
+          "whyRanked": "它把本期 Agent 安全事故延伸到安全创业和端点防御资本流向。",
+          "topReason": "AI 安全事故正在转化为端点安全创业公司的融资和定位机会。",
+          "detailWhyRanked": "它连接 AI 攻击叙事、端点安全和高估值创业信号，读者可据此跟踪安全预算是否重新分配。它把平台安全事件的风险叙事连接到安全创业融资，适合跟踪预算是否从传统端点防护转向 Agent 行为防御。",
+          "impact": "CISO、端点安全和采购团队应关注新产品是否能证明检测率、误报率和 Agent 行为可见性。",
+          "whoShouldCare": "最该关注的是安全运营、端点防护、采购、风险投资和企业 IT 团队。",
+          "readerUse": "安全采购团队可以用它更新 AI 自动化攻击、端点遥测和新供应商评估清单。",
+          "nextCheck": "核对公司公告、融资参与方、客户案例、产品技术文档、第三方测试和 SOC 集成记录。",
+          "followUpQuestions": [
+            "Glow 是否公开技术架构、检测指标和真实客户部署？",
+            "端点安全产品能否识别 Agent 驱动的浏览器、凭据和脚本活动？"
+          ],
+          "evidenceThreshold": "需要公司公告、客户案例、第三方测试、SOC 集成和检测指标，才能升级为已验证的 AI 端点安全能力信号。",
+          "counterEvidence": "如果客户、测试或投资方材料不能确认估值和检测效果，应下调为媒体融资背景。",
+          "claimBoundary": "TechCrunch 报道能支持融资和定位背景；不证明 Glow 产品效果或市场份额。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/",
+          "originalUrl": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道用于记录融资与定位；产品效果、客户部署和检测能力需公司及第三方材料。",
+          "publishedAt": "2026-07-22T18:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "安全市场信号清楚；能力仍需客户和第三方测试。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "资本和物理 AI 影响较高，但证据质量因媒体单源和未见条款文件而较低。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中等可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "techcrunch-atoms-robotics-17b-a16z-funding-2026-07-22",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch 报道 Kalanick 机器人公司 Atoms 融资 17 亿美元",
+          "body": "TechCrunch 报道 Travis Kalanick 的机器人公司 Atoms 获得 17 亿美元融资，由 a16z 领投，Uber 也参与投资。",
+          "summary": "大额资本继续流向工业 AI 与机器人自动化叙事。",
+          "whyItMatters": "机器人公司融资会影响物理 AI 的人才、硬件供应链、工业客户试点和资本预期。",
+          "detailBody": "TechCrunch 报道称 Atoms 融资 17 亿美元，由 a16z 领投，Uber 参与；该公司被描述为面向工业 AI 和机器人现代化。报道还称 a16z 领投、Uber 参与，并把 Atoms 描述为工业 AI 和机器人现代化公司；AI Watchtower 不复述未验证产品细节。",
+          "trend": "趋势判断：物理 AI 的资本热度正在从模型公司延伸到机器人和工业自动化平台。",
+          "detailTrend": "媒体报道能说明融资叙事和参与方，但不能证明机器人技术、客户落地或商业模式已经成立。下一步要看产品和客户。这类融资显示物理 AI 资本热度从模型扩展到机器人和工业自动化。技术能力仍要靠客户合同、硬件路线和安全认证验证。",
+          "whyRanked": "它提供当天物理 AI 资本流向信号，与 Cosmos 3 Edge 的技术路线形成对照。",
+          "topReason": "17 亿美元融资把物理 AI 从技术路线推到资本和工业落地检验。",
+          "detailWhyRanked": "TechCrunch 报道给出 17 亿美元金额、a16z 领投、Uber 参与和工业机器人方向。\n这些来源事实把本条从普通融资消息变成物理 AI 资本信号，并形成公司公告、投资方确认、客户合同和产品交付核验路径。",
+          "impact": "机器人、工业自动化和投资团队应关注融资后是否出现客户合同、硬件路线和安全认证。",
+          "whoShouldCare": "最该关注的是机器人公司、工业客户、硬件供应链、投资团队和物理 AI 策略团队。",
+          "readerUse": "投资和机器人团队可以用它更新物理 AI 资本、客户试点和硬件交付观察清单。",
+          "nextCheck": "核对公司公告、融资文件、投资方确认、客户合同、机器人演示、产品规格和安全认证。",
+          "followUpQuestions": [
+            "Atoms 是否公开产品路线、客户试点和机器人硬件指标？",
+            "融资条款和投资方确认是否支持 TechCrunch 报道的金额和用途？"
+          ],
+          "evidenceThreshold": "需要公司公告、投资方确认、融资文件、客户合同和产品实测，才能升级为已确认的物理 AI 商业落地信号。",
+          "counterEvidence": "如果公司或投资方未确认金额，或产品交付缺乏客户证据，应下调为融资传闻型媒体信号。",
+          "claimBoundary": "TechCrunch 报道能支持融资媒体背景；不证明 Atoms 技术能力、客户采用或工业改造效果。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/",
+          "originalUrl": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道用于最低限度记录融资背景；融资条款、客户信息和产品能力需公司、投资方和客户侧材料。",
+          "publishedAt": "2026-07-22T18:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "资本和物理 AI 影响较高，但证据质量因媒体单源和未见条款文件而较低。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体背景影响大；金额需官方或文件确认。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中等可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "techcrunch-openai-750b-ai-infrastructure-spending-2026-07-22",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch 报道 OpenAI AI 基础设施支出计划升至 7500 亿美元量级",
+          "body": "TechCrunch 援引报道称 OpenAI 到 2030 年的 AI 基础设施支出计划升至约 7500 亿美元，并提到 Georgia Project Camellia 作为首批项目之一。",
+          "summary": "OpenAI 算力扩张叙事从单个园区上升到长期资本开支压力。",
+          "whyItMatters": "如果该规模成立，AI 模型竞争将更多受融资、电力、施工、供应链和云合作节奏约束。",
+          "detailBody": "TechCrunch 报道称 OpenAI 到 2030 年 AI 基础设施支出计划增至约 7500 亿美元，并把 Georgia Project Camellia 作为相关数据中心项目之一。报道还把该数字与 Project Camellia 和 Stargate 执行背景相连；AI Watchtower 只保留金额和项目背景的最低必要事实。",
+          "trend": "趋势判断：前沿模型公司的竞争越来越像能源和基础设施融资问题，而不只是模型发布节奏。",
+          "detailTrend": "媒体数字应作为资本压力信号读取。真正需要核验的是合同、融资、施工、电力交付和 OpenAI 或合作方正式披露。如果资本开支量级成立，模型竞争会更多受融资、电力、施工和供应链约束。媒体数字必须等待官方文件或合同验证。",
+          "whyRanked": "它把当天 OpenAI 官方 Camellia 页面放入更大的支出和 Stargate 执行背景。",
+          "topReason": "7500 亿美元量级若被正式文件确认，将重写 AI 基础设施资本门槛。",
+          "detailWhyRanked": "它提供可靠媒体背景，帮助读者理解 OpenAI 数据中心承诺背后的资本规模问题；但数字仍需原始文件确认。它为 OpenAI 官方 Camellia 页面提供资本压力背景；读者应沿着融资文件、数据中心合同和监管记录继续核对。",
+          "impact": "战略、财务和基础设施团队应关注 OpenAI 的融资能力、电力合同、供应链和建设节奏。",
+          "whoShouldCare": "最该关注的是 AI 基础设施投资、云供应链、电力市场、企业采购和竞争战略团队。",
+          "readerUse": "战略团队可以用它更新 OpenAI 算力资本开支、Stargate 执行和数据中心供电观察表。",
+          "nextCheck": "核对 OpenAI 官方文件、融资披露、WSJ 原始报道、数据中心合同、施工许可和电力监管记录。",
+          "followUpQuestions": [
+            "OpenAI 或合作方是否正式披露 2030 年前基础设施支出计划？",
+            "Project Camellia 与 Stargate 其他园区的电力和施工里程碑是否同步推进？"
+          ],
+          "evidenceThreshold": "需要官方财务披露、融资文件、合同、监管记录或项目里程碑，才能升级为已确认的资本开支结论。",
+          "counterEvidence": "如果官方文件或监管记录显示支出规模、项目范围或时间表不同，应下调媒体数字和扩张判断。",
+          "claimBoundary": "TechCrunch 页面只支持其报道的媒体背景；不证明 7500 亿美元计划已由 OpenAI 正式确认。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/",
+          "originalUrl": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道用于最低限度理解媒体背景；完整数字、引述和上下文仍需阅读原文及原始披露。",
+          "publishedAt": "2026-07-22T18:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体背景影响大；金额需官方或文件确认。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "平台治理信号有用；技术细节需官方说明。"
+          },
+          "trustLevel": "来源层级：可靠媒体，中等可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "id": "techcrunch-substack-ai-writing-disclosure-tool-2026-07-22",
+          "category": "tool",
+          "label": "工具",
+          "title": "TechCrunch 报道 Substack 推出 AI 写作占比提示工具",
+          "body": "TechCrunch 报道 Substack 推出工具，让读者估算新闻简报中有多少内容由 AI 写成，指向内容平台的 AI 透明度压力。",
+          "summary": "内容平台开始把 AI 写作披露做成读者可见的产品功能。",
+          "whyItMatters": "AI 内容透明度会影响创作者信任、平台政策、广告合作和版权风险治理。",
+          "detailBody": "TechCrunch 报道称 Substack 正给读者提供估算 newsletter AI 写作占比的工具，作为 AI 辅助内容透明度功能。报道称 Substack 向读者提供 newsletter AI 写作占比估算工具；AI Watchtower 不把报道改写成完整产品说明。",
+          "trend": "趋势判断：AI 内容治理正在从后台检测转向前台披露，平台需要平衡准确率、误伤和创作者关系。",
+          "detailTrend": "这类工具的关键不是提醒本身，而是检测方法、申诉流程和误判风险。读者应等待 Substack 的技术说明和创作者反馈。AI 内容治理正在从后台风控走到读者界面。关键风险是检测方法、置信度、创作者申诉和误判，而非是否显示一个标签。",
+          "whyRanked": "它把 AI 写作透明度从政策讨论推到内容平台的产品层。",
+          "topReason": "AI 内容披露成为平台功能后，会改变创作者和读者之间的信任规则。",
+          "detailWhyRanked": "它代表 AI 生成内容治理进入用户界面，对媒体、创作者平台和企业知识库都有参考价值。它代表内容平台把 AI 透明度做成前台功能，能帮助媒体和企业知识库更新披露、申诉和版权风险清单。",
+          "impact": "内容平台、媒体和合规团队应关注 AI 内容检测准确率、披露语义和申诉机制。",
+          "whoShouldCare": "最该关注的是内容平台、媒体机构、创作者经济、广告合规和企业知识管理团队。",
+          "readerUse": "平台团队可以用它更新 AI 内容披露、误判处理、创作者通知和版权风险清单。",
+          "nextCheck": "核对 Substack 官方说明、检测方法、隐私政策、创作者反馈、误判案例和申诉机制。",
+          "followUpQuestions": [
+            "Substack 是否公开 AI 写作占比估算的检测方法和置信度？",
+            "创作者是否能查看、纠正或申诉 AI 占比提示？"
+          ],
+          "evidenceThreshold": "需要 Substack 官方文档、检测方法说明、误判数据和申诉流程，才能升级为已验证的内容透明度实践。",
+          "counterEvidence": "如果官方说明显示该功能覆盖范围小或误判争议高，应下调为早期产品试验信号。",
+          "claimBoundary": "TechCrunch 报道能支持产品背景；不证明该工具检测准确或平台政策已经稳定。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai/",
+          "originalUrl": "https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道用于最低限度记录产品背景；功能细节、检测方法和申诉机制需 Substack 官方材料。",
+          "publishedAt": "2026-07-22T18:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "平台治理信号有用；技术细节需官方说明。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方金额清楚；实际项目和科学结果仍需外部证明。"
+          },
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "id": "google-cloud-genesis-mission-40m-ai-credits-2026-07-22",
+          "category": "funding",
+          "label": "资金",
+          "title": "Google 承诺 4000 万美元 AI tokens 与云额度支持 Genesis Mission",
+          "body": "Google Cloud 与 Google DeepMind 宣布为 DOE Genesis Mission 提供 4000 万美元 AI tokens 和云额度。",
+          "summary": "Google 把 AI for Science 工具包和云额度投入 Genesis Mission。",
+          "whyItMatters": "同一国家科研任务正在吸引多家前沿 AI 与云厂商，科学工作流可能成为新一轮平台竞争。",
+          "detailBody": "Google Cloud 博客称将在 DOE Genesis Mission Summit 上承诺 4000 万美元 AI tokens 和云额度。该承诺面向 Genesis Mission awardees。\n页面还列出 AlphaEvolve、AlphaFold 3 等 AI for science 工具，并把 Google Cloud 和 DeepMind 放在同一支持方案中。",
+          "trend": "趋势判断：AI 科学平台的竞争正在从模型能力扩展到额度、云、实验室渠道和工具组合。",
+          "detailTrend": "Google 把 DeepMind 科学模型、Google Cloud 和公共部门入口放在同一支持方案中。它证明厂商投入，不证明科研突破。Google 与 OpenAI、Microsoft 同时围绕 Genesis Mission 投入资源，说明科学 AI 已进入多厂商平台竞争。它仍不是成果证明。",
+          "whyRanked": "它与 OpenAI、Microsoft 的 Genesis 信号形成横向对照，显示 AI 科学基础设施出现多厂商投入。",
+          "topReason": "4000 万美元额度让 Genesis Mission 从政策口号变成可追踪的厂商资源竞争。",
+          "detailWhyRanked": "Google Cloud 官方页面给出 4000 万美元金额、Genesis awardees 对象和 AlphaEvolve/AlphaFold 3 工具组合。\n这些来源事实让读者能把本条与 OpenAI、Microsoft 的 Genesis 承诺对照，并继续核对 DOE 名单、实验室使用记录和可复现实验成果。",
+          "impact": "科研采购和云平台团队应关注 Genesis Mission 是否形成跨厂商工具、数据和额度治理。",
+          "whoShouldCare": "最该关注的是公共部门云采购、科研平台、实验室信息化、AI for Science 和战略团队。",
+          "readerUse": "公共部门和科研团队可以用它比较 OpenAI、Microsoft、Google 对 Genesis 的资源承诺。",
+          "nextCheck": "核对 DOE awardee 名单、Google Cloud 合同条款、实验室使用记录、论文和公开项目成果。",
+          "followUpQuestions": [
+            "哪些 Genesis awardees 会获得 Google 的 AI tokens 和云额度？",
+            "AlphaEvolve、AlphaFold 3 等工具是否产生公开可复核的科学成果？"
+          ],
+          "evidenceThreshold": "需要 DOE awardee 文件、合同或额度规则、实验室成果和论文数据，才能升级为已验证的 AI 科学资源落地。",
+          "counterEvidence": "如果 DOE 文件或实验室记录未确认使用范围，或成果无法关联额度支持，应降级为 Google 厂商承诺。",
+          "claimBoundary": "Google 页面能证明金额和工具承诺；不证明 DOE 项目采用效果或科学发现已经完成。",
+          "source": "Google Cloud Blog",
+          "sourceName": "Google Cloud Blog",
+          "sourceId": "google-keyword-ai",
+          "sourceUrl": "https://cloud.google.com/blog/topics/public-sector/accelerating-frontiers-of-scientific-discovery-40-million-dollar-commitment-genesis-mission",
+          "originalUrl": "https://cloud.google.com/blog/topics/public-sector/accelerating-frontiers-of-scientific-discovery-40-million-dollar-commitment-genesis-mission",
+          "sourceRole": "厂商主张",
+          "provenance": "Google Cloud 官方博客支持其额度承诺和工具说明；DOE awardee 使用、科研效果和采购范围需外部文件。",
+          "publishedAt": "2026-07-22T09:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方金额清楚；实际项目和科学结果仍需外部证明。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "产品整合清楚；采用和可用范围仍需实测。"
+          },
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "id": "google-samsung-galaxy-unpacked-gemini-integrations-2026-07-22",
+          "category": "product",
+          "label": "产品",
+          "title": "Google 在 Galaxy Unpacked 扩展 Gemini 到折叠屏、手表与眼镜",
+          "body": "Google 称 Samsung 新折叠屏将内置 Gemini Intelligence，并扩展到 Notebook、手表和智能眼镜入口。",
+          "summary": "Gemini 正从手机助手扩展为跨设备、跨应用的 Android 任务层。",
+          "whyItMatters": "移动端 Agent 的关键不只是模型能力，而是系统权限、应用覆盖、隐私边界和设备形态。",
+          "detailBody": "Google 官方 Unpacked 页面称 Samsung 新折叠屏可用 Gemini Intelligence 自动化日常任务。页面还提到约 40 个常用应用。\n同一页面还列出 Gemini Notebook、Google AI Pro 试用、Galaxy Watch 和即将到来的智能眼镜整合。",
+          "trend": "趋势判断：手机、手表和眼镜正在成为 Gemini Agent 的连续入口，平台控制力会影响应用分发。",
+          "detailTrend": "跨设备 Gemini 让 Android 不再只是应用容器，而更像任务代理入口。实际价值要看地区、权限模型、应用适配和留存。移动 Agent 正从应用功能变成系统入口、设备入口和生态分发问题。真实价值取决于地区、权限、应用适配和用户控制。",
+          "whyRanked": "它显示消费者 Agent 正从单个聊天窗口扩散到 Android 生态和可穿戴设备。",
+          "topReason": "40 个应用与多设备入口让移动 Agent 进入真实分发场景。",
+          "detailWhyRanked": "它连接 Galaxy 新硬件、Gemini Notebook、AI Pro 试用和穿戴设备入口，比单个应用功能更能说明平台化。发布会信号同时连接硬件、应用覆盖、试用权益和可穿戴入口，能帮助读者跟踪 Gemini 是否形成 Android 分发层。",
+          "impact": "移动产品、应用开发和隐私团队应关注 Gemini 跨应用权限、默认入口和用户控制设计。",
+          "whoShouldCare": "最该关注的是 Android 应用团队、移动生态策略、隐私合规、可穿戴产品和消费者 AI 团队。",
+          "readerUse": "移动团队可以用它更新 Galaxy 适配、Gemini 权限、跨应用自动化和可穿戴入口清单。",
+          "nextCheck": "核对 Samsung 设备规格、Google 帮助文档、地区可用性、隐私设置、应用接入范围和用户反馈。",
+          "followUpQuestions": [
+            "40 个应用的 Gemini 自动化权限是否有统一审批和撤回机制？",
+            "手表和智能眼镜入口上线后是否改变 Gemini 的日活和任务完成率？"
+          ],
+          "evidenceThreshold": "需要设备实测、地区清单、隐私文档、应用权限说明和用户使用指标，才能升级为已验证的移动 Agent 采用结论。",
+          "counterEvidence": "如果实际可用应用、地区或权限控制少于官方展示，应下调为发布会整合信号。",
+          "claimBoundary": "Google 页面能证明发布会整合说明；不证明所有用户、地区和应用都已获得完整体验。",
+          "source": "Google Keyword AI",
+          "sourceName": "Google Blog",
+          "sourceId": "google-keyword-ai",
+          "sourceUrl": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/",
+          "originalUrl": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/",
+          "sourceRole": "官方核对",
+          "provenance": "Google 官方博客支持 Galaxy Unpacked 上的 Gemini 整合说明；实际可用性需设备、地区和帮助文档核对。",
+          "publishedAt": "2026-07-22T09:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "产品整合清楚；采用和可用范围仍需实测。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方项目承诺明确；交付、供电和社区效果仍需外部文件。"
+          },
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "id": "openai-camellia-effingham-ai-infrastructure-2026-07-22",
+          "category": "funding",
+          "label": "资金",
+          "title": "OpenAI 披露 Georgia Project Camellia 数据中心社区方案",
+          "body": "OpenAI 称 Project Camellia 将在 Georgia Effingham County 分阶段接入 3.2GW 电力，并承诺社区收益、Codex 学生额度和独立年度审计。",
+          "summary": "OpenAI 把 Stargate 数据中心扩张写成电力、社区和 Codex 人才方案。",
+          "whyItMatters": "前沿模型训练扩张正在进入地方电网、社区承诺和教育额度可审计化阶段。",
+          "detailBody": "OpenAI 页面称 Project Camellia 计划在 2028 至 2032 年分阶段获得 3.2GW 电力支持，并给出社区收益、Codex 学生额度和年度审计承诺。\n页面还说明居民电价、闭环用水、7 月 23 日 open house 和 Georgia Community Compact。",
+          "trend": "趋势判断：AI 基础设施正在从算力竞赛变成地方公共承诺、能源调度和人才培养议题。",
+          "detailTrend": "数据中心叙事会被地方电价、水资源、税收、就业和教育承诺共同审视。本条是基础设施治理信号，不是容量已交付事实。与早前 AI 工厂叙事相比，这里新增的是地方治理和年度审计路径。它把训练容量转化为电力成本、水资源、教育补贴和社区问责问题。",
+          "whyRanked": "它把 OpenAI 的算力扩张与 3.2GW 电力、地方社区和 Codex 教育额度连接起来。",
+          "topReason": "Stargate 级算力项目以地方电力和社区承诺进入可追踪清单。",
+          "detailWhyRanked": "页面给出电力时间表、社区收益、Codex 学生额度和独立审计路径，方便后续核对合同、监管文件和地方审计。这些可核验字段让读者能追踪 Georgia Power、监管机构、地方政府和审计 firm 的外部材料，而不是只依赖 OpenAI 项目介绍。",
+          "impact": "基础设施、政策和教育团队应关注 AI 数据中心是否把电力、社区收益和人才计划做成可审计承诺。",
+          "whoShouldCare": "最该关注的是数据中心选址、电力采购、地方政策、教育合作和 AI 基础设施战略团队。",
+          "readerUse": "基础设施团队可以用它更新电力容量、地方许可、社区承诺和人才额度核验清单。",
+          "nextCheck": "核对 Georgia Power 合同、公共服务委员会文件、地方听证记录、年度审计报告和 Project Camellia 里程碑。",
+          "followUpQuestions": [
+            "Georgia 监管文件是否确认 3.2GW 分阶段供电和成本承担安排？",
+            "独立年度审计是否公开社区收益、用水、电价和 Codex 额度执行情况？"
+          ],
+          "evidenceThreshold": "需要电力合同、监管批文、公开审计、施工许可和地方财政记录，才能升级为已验证的数据中心落地进展。",
+          "counterEvidence": "如果监管文件、审计报告或施工许可显示容量、时间表或社区承诺缩小，应下调为 OpenAI 初始项目主张。",
+          "claimBoundary": "OpenAI 页面能证明项目主张和承诺；不证明 3.2GW 已交付、社区收益已兑现或训练容量已上线。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+          "originalUrl": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方页面支持项目地点、电力计划、社区收益、Codex 额度和审计承诺；落地效果需监管、合同和审计材料。",
+          "publishedAt": "2026-07-22T09:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方项目承诺明确；交付、供电和社区效果仍需外部文件。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "工具和额度事实清楚；科学效果仍待 DOE 与实验室验证。"
+          },
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "id": "openai-national-science-genesis-codex-api-2026-07-22",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI 为 DOE Genesis 研究人员提供 Codex 与 API 支持",
+          "body": "OpenAI 宣布支持 DOE Genesis Mission，包括约 2000 名研究人员的 Codex 访问、API 支持、科学攻关和实验室早期模型访问安排。",
+          "summary": "OpenAI 把 Codex、API 和前沿模型接入美国国家实验室科学任务。",
+          "whyItMatters": "AI for Science 正从论文示范走向国家实验室、超算、实验设施和模型访问治理。",
+          "detailBody": "OpenAI 页面列出 Genesis Mission 支持：约 2000 名研究人员 Codex 访问、API 支持、科学攻关、GPT-Rosalind 生物能力和部分实验室早期访问。页面还提到两项大型科学攻关、GPT-Rosalind 生物能力、部分国家实验室早期模型访问，以及 Venado 超算和实验室评测背景。",
+          "trend": "趋势判断：科学 AI 的竞争正在变成模型、超算、实验设施、访问权限和验证流程的组合。",
+          "detailTrend": "这不是单个模型发布，而是把 AI 工具放入国家科研流程。读者应把它看作科研基础设施承诺，等待 DOE 和实验室侧证明。与上一版 Microsoft Genesis 信号相比，OpenAI 的新增角度是 Codex、API、前沿模型和生物科学能力如何进入科研流程。证据重点转向实验室执行。",
+          "whyRanked": "它把编码 Agent、API 额度、生物科学能力和实验室工作流绑定到同一国家科研任务。",
+          "topReason": "Codex 和 API 额度进入国家实验室科研流程，是 AI 科学落地的重要验证线索。",
+          "detailWhyRanked": "OpenAI 给出具体支持对象和工具类型；后续可通过 DOE 文件、实验室项目和论文成果判断额度是否改变科研流程。这些对象和工具类型能形成后续核对表：DOE 文件、实验室项目、论文、数据和安全评测是否能证明科研流程改变。",
+          "impact": "科研平台、实验室和安全团队应关注前沿模型进入实验流程时的权限、评测和成果验证。",
+          "whoShouldCare": "最该关注的是国家实验室、大学科研团队、AI for Science 产品团队、生物安全和政府采购团队。",
+          "readerUse": "科研团队可以用它更新模型访问、实验数据、Codex 使用和生物能力安全核查表。",
+          "nextCheck": "核对 DOE Genesis 文件、国家实验室项目清单、额度使用规则、论文、审计记录和安全评测。",
+          "followUpQuestions": [
+            "DOE 是否公布 OpenAI 支持的具体实验室项目和评估指标？",
+            "Codex 与 API 支持是否产生可公开复核的科研工作流或论文成果？"
+          ],
+          "evidenceThreshold": "需要 DOE 项目文件、实验室里程碑、论文、数据和安全评测，才能升级为已验证的 AI 科学部署结论。",
+          "counterEvidence": "如果 DOE 或实验室文件未确认项目范围，或公开成果无法复现实验收益，应降级为官方支持承诺。",
+          "claimBoundary": "OpenAI 页面能证明其支持计划；不证明 Genesis Mission 目标、科研生产率提升或生物安全效果已经实现。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/advancing-the-next-era-of-national-science/",
+          "originalUrl": "https://openai.com/index/advancing-the-next-era-of-national-science/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方页面支持其 Genesis 支持承诺和工具类型；科研效果、政府范围和安全结果需 DOE 与实验室材料。",
+          "publishedAt": "2026-07-22T09:00:00+09:00",
+          "time": "07/22",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "工具和额度事实清楚；科学效果仍待 DOE 与实验室验证。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "发布事实明确；性能与成本优势仍需第三方验证。"
+          },
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "id": "google-gemini-36-flash-flash-lite-cyber-2026-07-21",
+          "category": "model",
+          "label": "模型",
+          "title": "Google 发布 Gemini 3.6 Flash、3.5 Flash-Lite 与 Cyber 组合",
+          "body": "Google 发布 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber，强调效率、低延迟和网络安全场景。",
+          "summary": "Google 把 Gemini Flash 系列定位为大规模 Agent 工作流的效率层。",
+          "whyItMatters": "低成本高吞吐模型会决定企业 Agent、文档处理、搜索和子任务编排能否规模化。",
+          "detailBody": "Google 官方称 3.6 Flash 面向编码、知识和多模态效率，3.5 Flash-Lite 面向高吞吐低延迟任务。页面还给出 Flash-Lite 速度和价格信息。\nCyber 与 CodeMender 组合被定位为面向政府和可信伙伴的受限安全能力。",
+          "trend": "趋势判断：模型竞争正在从最高能力转向可规模运行的 Agent 成本、延迟和安全边界。",
+          "detailTrend": "Flash 更新说明企业不只需要旗舰模型，还需要承载大量子任务的便宜模型层。Cyber 限制开放也显示安全模型仍受治理约束。这条信号说明低成本模型层正在承担 Agent 子任务、批处理和安全专用模型角色。下一步不是看榜单，而是看真实路由和故障率。",
+          "whyRanked": "它直接影响开发者在 Agent 编排中如何分配主模型、子 Agent 和安全任务。",
+          "topReason": "高吞吐 Flash-Lite 与 Cyber 限制开放同时出现，说明效率和安全访问正在绑定。",
+          "detailWhyRanked": "Google 官方页面同时给出模型定位、Flash-Lite 速度价格信息、API/AI Studio 入口和 Cyber 访问边界。\n这些来源事实能帮助企业把发布会信息转成模型路由、成本预算、子 Agent 分配和安全试点准入核验表。",
+          "impact": "开发者和平台团队应重新评估 Gemini 路由、子任务分配、成本预算和安全模型访问条件。",
+          "whoShouldCare": "最该关注的是 Agent 平台、模型路由、企业采购、网络安全和成本治理团队。",
+          "readerUse": "开发团队可以用它更新 Gemini 低成本模型、Flash-Lite 批处理和 Cyber 试点评估表。",
+          "nextCheck": "核对 Google 模型卡、API 文档、价格表、Artificial Analysis、第三方基准和企业试点反馈。",
+          "followUpQuestions": [
+            "Gemini 3.6 Flash 与 3.5 Flash-Lite 在真实 Agent 工作流中的失败率和成本如何？",
+            "Cyber 模型的受限试点是否公开安全评测、误报率和使用边界？"
+          ],
+          "evidenceThreshold": "需要模型卡、公开 API 指标、第三方基准、客户试点数据和安全评估，才能升级为已验证的生产模型选择结论。",
+          "counterEvidence": "如果第三方基准报告、价格表、模型卡或客户试点数据显示成本、速度或质量优势不成立，应下调效率判断。",
+          "claimBoundary": "Google 页面能证明发布和厂商指标；不证明所有企业 Agent 工作流都会获得同等成本或质量收益。",
+          "source": "Google Keyword AI",
+          "sourceName": "Google Blog",
+          "sourceId": "google-keyword-ai",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+          "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+          "sourceRole": "官方核对",
+          "provenance": "Google 官方博客支持模型发布、定位和厂商指标；生产效果需模型卡、独立基准和客户数据。",
+          "publishedAt": "2026-07-21T09:00:00+09:00",
+          "time": "07/21",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "发布事实明确；性能与成本优势仍需第三方验证。"
+          }
+        },
+        {
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "开放发布清楚；机器人效果仍需实测和许可核对。"
+          },
+          "trustLevel": "来源层级：官方来源，高可信",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "id": "huggingface-nvidia-cosmos3-edge-physical-ai-2026-07-20",
+          "category": "model",
+          "label": "模型",
+          "title": "NVIDIA 在 Hugging Face 发布 Cosmos 3 Edge 开放世界模型",
+          "body": "NVIDIA 在 Hugging Face 发布 Cosmos 3 Edge，称其为 4B 参数开放世界模型，面向机器人、视觉 AI Agent 和边缘设备实时推理。",
+          "summary": "Cosmos 3 Edge 把世界模型、视觉 Agent 和机器人动作生成推向边缘部署。",
+          "whyItMatters": "物理 AI 的瓶颈正在从云端大模型转向传感器附近的实时理解、预测和动作。",
+          "detailBody": "Hugging Face 博客称 Cosmos 3 Edge 是 4B 参数开放世界模型，可在 NVIDIA 边缘设备上帮助机器人和视觉 AI Agent 理解场景并生成动作。页面还说明模型为 4B 参数、面向 Jetson 等边缘硬件、可作为 reasoner 或动作生成器，并提供模型下载和 Cosmos 3 collection。",
+          "trend": "趋势判断：世界模型正在从研究演示进入可下载、可后训练、可边缘部署的开发者路径。",
+          "detailTrend": "对机器人团队而言，关键问题不是模型是否开放，而是延迟、传感器适配、安全控制和实际策略学习能否通过独立测试。物理 AI 正从云端世界模型转向传感器附近的实时推理。真正难点是延迟、控制频率、许可、真实机器人日志和安全冗余。",
+          "whyRanked": "它把开放模型、边缘硬件和物理 Agent 放在同一发布里，适合跟踪机器人 AI 基础设施。",
+          "topReason": "4B 边缘世界模型让物理 AI 的部署边界从云端推向现场设备。",
+          "detailWhyRanked": "Hugging Face 页面提供模型下载、硬件目标和机器人动作定位，这些事实能指导后续吞吐、延迟和安全策略实测。模型下载、硬件目标、动作生成和后训练路径同时出现，使它成为机器人团队可实测的物理 AI 基础设施信号。",
+          "impact": "机器人、工业视觉和边缘 AI 团队应评估模型下载、后训练成本、实时控制和安全冗余。",
+          "whoShouldCare": "最该关注的是机器人、工业视觉、边缘计算、自动驾驶仿真和模型平台团队。",
+          "readerUse": "机器人团队可以用它更新世界模型、边缘推理、策略后训练和安全测试清单。",
+          "nextCheck": "核对模型卡、权重许可、VANTAGE-Bench 独立复测、Jetson 实测、机器人任务日志和安全评估。",
+          "followUpQuestions": [
+            "Cosmos 3 Edge 的许可证和训练数据边界是否适合商业机器人项目？",
+            "第三方在 Jetson 和真实机器人任务上能否复现官方吞吐与控制频率？"
+          ],
+          "evidenceThreshold": "需要模型卡、许可证、第三方基准、真实机器人任务日志和安全测试，才能升级为已验证的物理 AI 部署结论。",
+          "counterEvidence": "如果第三方测试报告、机器人任务日志或模型卡复核无法复现延迟、吞吐或策略学习效果，应下调为厂商开放模型信号。",
+          "claimBoundary": "Hugging Face 页面能证明发布、下载入口和厂商性能主张；不证明真实机器人场景已稳定达标。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos3edge",
+          "originalUrl": "https://huggingface.co/blog/nvidia/cosmos3edge",
+          "sourceRole": "厂商主张",
+          "provenance": "Hugging Face 上的 NVIDIA 文章支持模型发布、下载入口和厂商指标；效果需模型卡、第三方复测和机器人日志。",
+          "publishedAt": "2026-07-20T09:00:00+09:00",
+          "time": "07/20",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "开放发布清楚；机器人效果仍需实测和许可核对。"
+          }
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 5,
+        "share": "5/11",
+        "note": "TechCrunch 是本期最大单一来源但未过三分之二；相关条目只作为可靠媒体背景读取。",
+        "nextCheck": "用公司公告、投资方确认、监管文件、合同、客户案例和第三方原文交叉核对。"
+      }
+    },
     {
       "id": "news-1700-2026-07-22",
       "date": "2026-07-22",
