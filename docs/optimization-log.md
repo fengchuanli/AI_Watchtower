@@ -1,3 +1,26 @@
+## 2026-07-22 23:06 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报更新；本地首页已是 `news-1700-2026-07-22`，因此未回退到早间版，而是在当前最新快照中补入 2 条 7 月 22 日未入库官方信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；通过官方/可靠来源核对 OpenAI、Microsoft、Google DeepMind、Anthropic、Mistral、NVIDIA、Meta 等公开页面与历史 URL。
+  - 新增 OpenAI Presence 官方发布信号和 Microsoft Genesis Mission/SPARK 官方投入信号；均保留原始 URL，未复制全文，未使用付费墙或登录墙正文。
+  - OpenAI Presence 与 Microsoft Genesis 的生产效果、客户指标、DOE/实验室落地结果仍按厂商主张处理，等待客户侧指标、政府文件、实验室项目记录、审计或论文数据补证。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新08点AI新闻情报`; push is blocked by GitHub DNS resolution failure and needs retry when network access returns.
+
 ## 2026-07-22 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 13 archive-reliability task. Reviewed the growing optimization log and added a quarterly archive decision guide so older entries can move out of the live log only when recent plan context, unresolved blockers, source posture, verification, and commit/push status remain auditable.
