@@ -1,3 +1,29 @@
+## 2026-07-22 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 13 archive-reliability task. Reviewed the growing optimization log and added a quarterly archive decision guide so older entries can move out of the live log only when recent plan context, unresolved blockers, source posture, verification, and commit/push status remain auditable.
+- Changed files:
+  - `docs/optimization-log-archive-guide.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on validated local `main`.
+  - After commit: blocked-dns - implementation commit `3ebf46d` and a log/index follow-up commit were created locally, but `git push origin main` failed because `github.com` could not be resolved; local `main` remains ahead of the known remote.
+- Archive decision:
+  - Optimization-log archive: rule-added - quarterly archive criteria are documented; no entries moved because the current plan window should remain visible until the 2026-06-24 to 2026-07-23 plan closes or the live log crosses the next quarter boundary.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, the top of `docs/optimization-log.md`, `docs/monthly-optimization-summary.md`, and existing workflow/log docs; continued with Day 13 because Day 0 through Day 12 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the optimization-log archive guide documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `3ebf46d` (`增加优化日志归档规则`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-22 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-22`，发布 10 条 7 月 21 日后安全、Agent 与基础设施信号。
