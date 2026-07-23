@@ -1,3 +1,26 @@
+## 2026-07-23 23:06 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报自动化补充核对；当前首页已是 `news-1700-2026-07-23`，因此未回退为早间版，而是在当前最新版中补入 2 条未重复 OpenAI 官方信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核官方页面、历史 URL 和可靠媒体索引，未使用付费墙或登录墙正文。
+  - 新增 OpenAI 7 月 22 日新闻机构 AI 工作流案例和 7 月 21 日 David Vélez / Robin Vince 董事任命；当前版从 11 条补充至 13 条。
+  - 新闻机构案例按 `厂商主张` 处理，需机构侧编辑政策、产品指标、读者披露和独立审计补证；董事任命按 `官方核对` 处理，治理影响仍需章程、委员会、备案和利益冲突披露补证。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新08点AI新闻情报`; `git push origin main` failed because `github.com` DNS resolution was unavailable, so push still needs retry when network access returns.
+
 ## 2026-07-23 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 14 reader-first homepage task. Tightened the current homepage briefing and reader-frame language so it tells readers which checklist to update first, then states the source caveat for official promises, media numbers, product effects, and independent evidence.
