@@ -9,7 +9,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After commit: pending at log-write time - implementation commit `9315c17` was created locally; push status is finalized in automation memory because this log update creates a follow-up commit.
+  - After commit: blocked-dns - implementation commit `9315c17` and log/index follow-up commit `0075fa7` were created locally, but `git push origin main` failed because `github.com` could not be resolved; local `main` remains ahead of the known remote.
 - Archive mirror: done - newest `data/news-history.json` edition mirrors the current `data/news.json` briefing, reader frame, and editorial interpretation.
 - Verification:
   - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, `docs/news-data-format.md`, and recent `docs/optimization-log.md` entries; continued with Day 14 because Day 0 through Day 13 were already complete.
@@ -20,8 +20,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `9315c17` (`优化首页简报读者决策`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns if the final push attempt is also blocked.
+- Commit: Local implementation commit `9315c17` (`优化首页简报读者决策`) and log/index follow-up commit `0075fa7` (`记录首页简报优化`). Final local HEAD is recorded in automation memory because updating this push-status line creates a follow-up commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-23 17:00 JST
 
