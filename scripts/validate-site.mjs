@@ -1105,7 +1105,8 @@ if (
   !/Day 11[\s\S]*archive-diff-summary-format\.md/.test(optimizationDecisionIndex) ||
   !/Day 12[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 13[\s\S]*optimization-log-archive-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 14/.test(optimizationDecisionIndex) ||
+  !/Day 14[\s\S]*homepage briefing[\s\S]*reader frame/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 15/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

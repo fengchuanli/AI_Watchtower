@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 3, Reader-First Homepage Content
-- Last indexed run: 2026-07-22 20:00 JST
-- Network status: Latest 20:00 run was blocked by GitHub DNS for pull/push; local `main` remains ahead of the known remote until sync succeeds.
+- Last indexed run: 2026-07-23 20:00 JST
+- Network status: Latest 20:00 run was blocked by GitHub DNS for pull; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
 
@@ -35,10 +35,11 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 11 | Complete | `6bbe8bc` | `docs/archive-diff-summary-format.md` gives 17:00 JST runs a compact morning/evening archive comparison for new signals, source posture, reader takeaway, and proof-boundary change. |
 | Day 12 | Complete | `be0e2cf` | `docs/partial-batch-publication-guide.md` decides when one or two safe candidates may publish as a short batch, when to continue searching, and when to hold instead of padding. |
 | Day 13 | Complete | `3ebf46d` | `docs/optimization-log-archive-guide.md` decides when older optimization-log entries should move to quarterly archive files and what must remain in the live log and decision index. |
+| Day 14 | Complete | `9315c17` | Current homepage briefing and reader frame now name the reader checklist first, then place official-delivery and media-number caveats second. |
 
 ## Next Useful Task
 
-- Continue with Day 14: tighten homepage briefing language so it names the reader decision first and source caveat second.
+- Continue with Day 15: add a shorter mobile-oriented variant for edition reader frames when the current Chinese copy becomes dense.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 14 first.
 - If Day 14 is already complete, continue with the next useful task from the current plan.
 
