@@ -1,3 +1,25 @@
+## 2026-07-24 23:09 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充更新；当前本地首页已是 `news-1700-2026-07-24`，因此未回退为早间版，而是在当前最新版补入 7 条 7 月 23-24 日可核验信号，当前版从 11 条增至 18 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Google 官方 ATLAS 页面、Axios AI/Technology 索引和可靠媒体上下文，未使用付费墙或登录墙正文。
+  - 新增 Axios 对白宫中国 AI 政策边界、前沿 AI 安全评测承压、AMD/Cerebras 推理合作、Yelp/ChatGPT 本地数据授权、NVIDIA 黄仁勋政策表态、Substack/Pangram AI 文本检测的报道；新增 Google 官方 ATLAS v1.0。
+  - Axios 条目均标为 `媒体背景` / `reported` / `originalDependency: must-read`；Google ATLAS 标为 `厂商主张`，需外部学术复核、跨平台数据、企业工具日志或第三方研究补证。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 18 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新08点AI新闻情报`; `git push origin main` failed twice because `github.com` DNS resolution was unavailable, so push needs retry when network access returns. Final local HEAD is recorded in automation memory because updating this log line changes the commit hash.
+
 ## 2026-07-24 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 15 reader-first homepage task. Added a compact mobile-oriented reader-frame variant so dense editions give phone readers a short path: what to check first, which reader teams should use the batch, and which proof boundary still applies before opening full source context.
