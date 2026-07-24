@@ -451,6 +451,8 @@ function validateReaderFrame(frame, context) {
     errors.push(`${context} readerFrame.whyItMatters must explain why this batch matters.`);
   }
 
+  validateMobileReaderFrame(frame.mobile, context);
+
   if (!Array.isArray(frame.useThisIssueFor) || frame.useThisIssueFor.length < 2) {
     errors.push(`${context} readerFrame.useThisIssueFor must include at least two reader uses.`);
   }
@@ -469,6 +471,40 @@ function validateReaderFrame(frame, context) {
     if (typeof item !== "string" || !/不能|尚未|不证明|仍需|缺少/.test(item)) {
       errors.push(`${context} readerFrame.notProvenYet[${index}] must state an unresolved proof boundary.`);
     }
+  }
+}
+
+function validateMobileReaderFrame(mobileFrame, context) {
+  if (!mobileFrame || typeof mobileFrame !== "object" || Array.isArray(mobileFrame)) {
+    errors.push(`${context} readerFrame.mobile must give phone readers a shorter scan path.`);
+    return;
+  }
+
+  if (typeof mobileFrame.headline !== "string" || mobileFrame.headline.trim().length < 6 || mobileFrame.headline.length > 18) {
+    errors.push(`${context} readerFrame.mobile.headline must be a short Chinese mobile headline.`);
+  }
+
+  if (typeof mobileFrame.summary !== "string" || mobileFrame.summary.trim().length < 20 || mobileFrame.summary.length > 45) {
+    errors.push(`${context} readerFrame.mobile.summary must fit a short phone scan.`);
+  }
+
+  if (!Array.isArray(mobileFrame.primaryUses) || mobileFrame.primaryUses.length < 2 || mobileFrame.primaryUses.length > 3) {
+    errors.push(`${context} readerFrame.mobile.primaryUses must include two or three compact reader actions.`);
+  }
+
+  for (const [index, item] of (mobileFrame.primaryUses || []).entries()) {
+    if (typeof item !== "string" || item.length > 24 || !/团队|读者|用户|编辑/.test(item)) {
+      errors.push(`${context} readerFrame.mobile.primaryUses[${index}] must name a concrete reader or team in compact Chinese.`);
+    }
+  }
+
+  if (
+    typeof mobileFrame.proofBoundary !== "string" ||
+    mobileFrame.proofBoundary.trim().length < 18 ||
+    mobileFrame.proofBoundary.length > 42 ||
+    !/不能|尚未|不证明|仍需|缺少/.test(mobileFrame.proofBoundary)
+  ) {
+    errors.push(`${context} readerFrame.mobile.proofBoundary must state one compact unresolved proof boundary.`);
   }
 }
 

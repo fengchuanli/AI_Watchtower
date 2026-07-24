@@ -26,7 +26,7 @@ The newest `data/news-history.json` edition should match the current `data/news.
 | `edition.note` | `editions[0].note` | Same short scope note, without extra operational prose. |
 | `edition.operationalStatus` | `editions[0].operationalStatus` | Same pull, source-check, or retrieval status. |
 | `edition.editorialInterpretation` | `editions[0].editorialInterpretation` | Same Chinese editorial reading and proof boundary. |
-| `edition.readerFrame` | `editions[0].readerFrame` | Same reader use case and not-proven-yet notes. |
+| `edition.readerFrame` | `editions[0].readerFrame` | Same reader use case, mobile scan variant, and not-proven-yet notes. |
 | `edition.changeSummary` | `editions[0].changeSummary` | Same fresh-facts and repeated-background framing. |
 | `edition.coverageMix` | `editions[0].coverageMix` | Same count and meaning by signal group. |
 | `edition.sourceFamilies` | `editions[0].sourceFamilies` | Same source-tier counts and roles. |

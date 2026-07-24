@@ -466,6 +466,20 @@ function validateReaderFrame(frame) {
     throw new Error("News edition must include a reader frame.");
   }
 
+  if (frame.mobile) {
+    const mobileUses = frame.mobile.primaryUses || [];
+
+    if (
+      !frame.mobile.headline ||
+      !frame.mobile.summary ||
+      !Array.isArray(mobileUses) ||
+      mobileUses.length < 2 ||
+      !frame.mobile.proofBoundary
+    ) {
+      throw new Error("News edition reader frame mobile variant must include a short headline, summary, reader uses, and proof boundary.");
+    }
+  }
+
   if (!Array.isArray(frame.useThisIssueFor) || frame.useThisIssueFor.length < 2) {
     throw new Error("News edition reader frame must include reader uses.");
   }
@@ -1009,6 +1023,10 @@ function renderReaderFrame(frame) {
     return "";
   }
 
+  const mobileFrame = frame.mobile;
+  const mobileUses = Array.isArray(mobileFrame?.primaryUses)
+    ? mobileFrame.primaryUses.map((item) => `<li>${escapeHtml(item)}</li>`).join("")
+    : "";
   const readerUses = frame.useThisIssueFor
     .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join("");
@@ -1021,6 +1039,18 @@ function renderReaderFrame(frame) {
       <span>本期读者使用框架</span>
       <h3>${escapeHtml(frame.headline)}</h3>
       <p>${escapeHtml(frame.whyItMatters)}</p>
+      ${
+        mobileFrame
+          ? `
+            <div class="mobile-reader-frame">
+              <strong>${escapeHtml(mobileFrame.headline)}</strong>
+              <p>${escapeHtml(mobileFrame.summary)}</p>
+              <ul>${mobileUses}</ul>
+              <em>${escapeHtml(mobileFrame.proofBoundary)}</em>
+            </div>
+          `
+          : ""
+      }
       <div>
         <strong>可以用来</strong>
         <ul>${readerUses}</ul>

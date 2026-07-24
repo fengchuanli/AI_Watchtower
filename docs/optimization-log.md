@@ -1,3 +1,33 @@
+## 2026-07-24 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 15 reader-first homepage task. Added a compact mobile-oriented reader-frame variant so dense editions give phone readers a short path: what to check first, which reader teams should use the batch, and which proof boundary still applies before opening full source context.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After commit: pending - commit will be created after this log entry; push status will be recorded after the push attempt.
+- Archive mirror: done - newest `data/news-history.json` edition mirrors the current `data/news.json` `readerFrame.mobile` scan variant.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, `docs/news-data-format.md`, and recent `docs/optimization-log.md` entries; continued with Day 15 because Day 0 through Day 14 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources, including the new mobile reader-frame contract and archive mirror.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, the mobile reader-frame render/documentation guard, and the Day 15 to Day 16 decision-index guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Pending until this log entry is committed; final local hash will be recorded in automation memory if a follow-up log commit is needed.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-24 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-24`，发布 11 条 7 月 21 日后官方与可靠媒体信号。

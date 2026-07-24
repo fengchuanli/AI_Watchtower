@@ -1106,7 +1106,8 @@ if (
   !/Day 12[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 13[\s\S]*optimization-log-archive-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 14[\s\S]*homepage briefing[\s\S]*reader frame/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 15/.test(optimizationDecisionIndex) ||
+  !/Day 15[\s\S]*mobile[\s\S]*scan variant/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 16/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1149,7 +1150,10 @@ if (
   !/const readerFrame = document\.querySelector\("#readerFrame"\);/.test(appJs) ||
   !/function renderReaderFrame/.test(appJs) ||
   !/edition\.readerFrame/.test(appJs) ||
+  !/mobile-reader-frame/.test(appJs) ||
   !/\.reader-frame/.test(styles) ||
+  !/readerFrame\.mobile/.test(validateDataJs) ||
+  !/readerFrame.*mobile/.test(newsDataFormat) ||
   !/readerFrame/.test(validateDataJs) ||
   !/readerFrame/.test(newsDataFormat)
 ) {
