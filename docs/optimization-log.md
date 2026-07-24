@@ -1,3 +1,26 @@
+## 2026-07-25 08:11 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-25`，发布 10 条 7 月 23-24 日官方与可靠媒体信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、官方发布页、TechCrunch/Axios 索引和可访问正文，未使用付费墙或登录墙正文。
+  - 本期覆盖 Anthropic Opus 5、OpenAI Health in ChatGPT、Meta AI 行动能力、Microsoft 开放权重政策信、Prentis 计算机使用模型融资洽谈、Cognition/Poke 收购、Anduril 防务 AI 融资、AI 网络安全护栏、AMD Helios 和 Claude 语音模式更新。
+  - 官方条目只确认发布、公开立场和厂商主张；TechCrunch 条目均标为 `媒体背景` / `reported` / `originalDependency: must-read`，交易、融资、性能、客户节省和部署效果需原始文件或第三方证据补强。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新17点AI新闻情报`; `git push origin main` failed because `github.com` DNS resolution was unavailable, so push needs retry when network access returns.
+
 ## 2026-07-24 23:09 JST
 
 - Focus: 运行 08:00 JST AI Watchtower 新闻情报补充更新；当前本地首页已是 `news-1700-2026-07-24`，因此未回退为早间版，而是在当前最新版补入 7 条 7 月 23-24 日可核验信号，当前版从 11 条增至 18 条。
