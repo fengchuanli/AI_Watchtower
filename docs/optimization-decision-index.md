@@ -37,7 +37,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 13 | Complete | `3ebf46d` | `docs/optimization-log-archive-guide.md` decides when older optimization-log entries should move to quarterly archive files and what must remain in the live log and decision index. |
 | Day 14 | Complete | `9315c17` | Current homepage briefing and reader frame now name the reader checklist first, then place official-delivery and media-number caveats second. |
 | Day 15 | Complete | `2def4b8` | Current homepage and latest archive reader frame now include a compact `mobile` scan variant, and validators require future dense editions to give phone readers a short action/proof-boundary path. |
-| Day 16 | Complete | pending | Current homepage and latest archive coverage-mix labels now read as check-now cues, and validators reject passive topic-only coverage labels. |
+| Day 16 | Complete | `9d5fba5` | Current homepage and latest archive coverage-mix labels now read as check-now cues, and validators reject passive topic-only coverage labels. |
 
 ## Next Useful Task
 
