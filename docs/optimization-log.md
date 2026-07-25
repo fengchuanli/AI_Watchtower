@@ -1,3 +1,25 @@
+## 2026-07-25 23:08 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充更新；当前本地首页已是 `news-1700-2026-07-25` 17:00 版，因此未回退为早间版，而是在当前最新版中追加 5 条可核验补充信号，当前版从 10 条增至 15 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、TechCrunch Latest/AI 可访问正文、Axios AI/Technology 和 Hugging Face 官方安全披露，未使用付费墙或登录墙正文。
+  - 新增 TechCrunch 对 OpenAI Micro、OpenAI 桌面 Voice、MCP 会话更新、Google Frozen v2 芯片计划的报道；新增 Axios 对 Hugging Face AI Agent 入侵披露的报道。
+  - 新增条目均按 `媒体背景` / `reported` / `originalDependency: must-read` 处理；硬件效率、语音权限、MCP 采用、芯片性能、攻击模型、客户影响和修复效果需官方文档、审计、生产指标或第三方复测补强。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 15 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json` and `data/news-history.json` as JSON.
+- Commit: pending - commit and push will be attempted after final HTML parsing and diff checks.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push may need retry when DNS/network access returns.
+
 ## 2026-07-25 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 16 reader-first homepage task. Rewrote the current edition's coverage-mix labels as check-now cues so readers see what to inspect first instead of only seeing broad topic buckets.
