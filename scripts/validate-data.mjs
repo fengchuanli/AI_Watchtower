@@ -349,6 +349,10 @@ function isActionOrientedSignalUse(value) {
   return /用来(更新|检查|调整|核对|评估|复查|列出)/.test(String(value || ""));
 }
 
+function isActionOrientedCoverageLabel(value) {
+  return /^(查|核对|验证|更新|观察|复查|评估)/.test(String(value || "").trim());
+}
+
 function validateIncidentBriefingReadiness(item, context) {
   for (const [field, label, minLength] of incidentBriefingSections) {
     if (typeof item[field] !== "string" || item[field].trim().length < minLength) {
@@ -1056,6 +1060,12 @@ if (!newsFeed.edition) {
     for (const [index, entry] of newsFeed.edition.coverageMix.entries()) {
       if (!entry.label || !Number.isInteger(entry.count) || entry.count < 1 || !entry.meaning) {
         errors.push(`data/news.json edition coverageMix[${index}] must include label, positive count, and meaning.`);
+      }
+
+      if (entry.label && !isActionOrientedCoverageLabel(entry.label)) {
+        errors.push(
+          `data/news.json edition coverageMix[${index}] label must answer what readers should check now, not only name a topic.`,
+        );
       }
 
       if (entry.meaning && !isActionOrientedSignalUse(entry.meaning)) {

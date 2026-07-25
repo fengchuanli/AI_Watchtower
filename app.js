@@ -292,6 +292,10 @@ function isActionOrientedSignalUse(text) {
   return /用来(更新|检查|调整|核对|评估|复查|列出)/.test(String(text || ""));
 }
 
+function isActionOrientedCoverageLabel(text) {
+  return /^(查|核对|验证|更新|观察|复查|评估)/.test(String(text || "").trim());
+}
+
 function renderSelectionScore(score) {
   if (!isValidSelectionScore(score)) {
     return "";
@@ -362,6 +366,7 @@ function validateEdition(edition, updatedAt, items = []) {
   const invalidCoverage = edition.coverageMix.find(
     (item) =>
       !item.label ||
+      !isActionOrientedCoverageLabel(item.label) ||
       !Number.isInteger(item.count) ||
       item.count < 1 ||
       !item.meaning ||
@@ -369,7 +374,7 @@ function validateEdition(edition, updatedAt, items = []) {
   );
 
   if (invalidCoverage) {
-    throw new Error("Each edition coverage mix item must include label, count, and an action-oriented meaning.");
+    throw new Error("Each edition coverage mix item must include action-oriented label, count, and meaning.");
   }
 
   if (!Array.isArray(edition.sourceFamilies) || !edition.sourceFamilies.length) {

@@ -1107,7 +1107,8 @@ if (
   !/Day 13[\s\S]*optimization-log-archive-guide\.md/.test(optimizationDecisionIndex) ||
   !/Day 14[\s\S]*homepage briefing[\s\S]*reader frame/.test(optimizationDecisionIndex) ||
   !/Day 15[\s\S]*mobile[\s\S]*scan variant/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 16/.test(optimizationDecisionIndex) ||
+  !/Day 16[\s\S]*coverage-mix labels/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 17/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1263,7 +1264,9 @@ if (
   !/\.topic-groups span\.empty-topic/.test(styles) ||
   !/\.topic-groups span em/.test(styles) ||
   !/planned-topic why-now summaries and omission boundaries/.test(newsDataFormat) ||
-  !/action-oriented coverage and topic meanings/.test(newsDataFormat)
+  !/action-oriented coverage labels and topic meanings/.test(newsDataFormat) ||
+  !/function isActionOrientedCoverageLabel/.test(appJs) ||
+  !/function isActionOrientedCoverageLabel/.test(validateDataJs)
 ) {
   errors.push("Homepage feed metadata must render action-oriented edition topic grouping, why-now summaries, and omission boundaries for the planned topic vocabulary.");
 }
