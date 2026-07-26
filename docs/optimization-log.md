@@ -10,7 +10,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After commit: pending - push will be attempted after the local commit is created.
+  - After commit: pending - implementation commit `465ad79` was created locally; push will be attempted after this log/index follow-up commit.
 - Content posture:
   - Added explicit `无新来源事实` omission status for each planned homepage topic.
   - Added a separate "不要误读为" boundary so omitted topics say the theme remains important but lacks a fresh promotable source fact in the current batch.
@@ -24,7 +24,7 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: Implementation commit pending; final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Commit: Local implementation commit `465ad79` (`优化遗漏主题说明`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
 - Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-26 08:09 JST

@@ -38,7 +38,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 14 | Complete | `9315c17` | Current homepage briefing and reader frame now name the reader checklist first, then place official-delivery and media-number caveats second. |
 | Day 15 | Complete | `2def4b8` | Current homepage and latest archive reader frame now include a compact `mobile` scan variant, and validators require future dense editions to give phone readers a short action/proof-boundary path. |
 | Day 16 | Complete | `9d5fba5` | Current homepage and latest archive coverage-mix labels now read as check-now cues, and validators reject passive topic-only coverage labels. |
-| Day 17 | Complete | `pending` | Homepage omitted-topic explanations now label omissions as `无新来源事实` and explicitly say the topic remains important but lacks a fresh promotable source fact this batch. |
+| Day 17 | Complete | `465ad79` | Homepage omitted-topic explanations now label omissions as `无新来源事实` and explicitly say the topic remains important but lacks a fresh promotable source fact this batch. |
 
 ## Next Useful Task
 
