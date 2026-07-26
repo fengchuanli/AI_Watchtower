@@ -20,8 +20,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: Pending at log-write time; will commit with message `更新08点AI新闻情报` and attempt push. If push is blocked, final local HEAD will be recorded in automation memory.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push may need retry when DNS/network access returns.
+- Commit: Local commit `8afba23` (`更新08点AI新闻情报`) created; `git push origin main` failed because `github.com` DNS resolution was unavailable, so push needs retry when network access returns.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
 
 ## 2026-07-26 20:00 JST
 
