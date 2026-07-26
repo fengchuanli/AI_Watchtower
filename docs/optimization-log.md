@@ -1,3 +1,28 @@
+## 2026-07-26 23:09 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充更新；当前本地首页已是 `news-1700-2026-07-26` 17:00 版，因此未回退为早间版，而是在当前最新版中追加 1 条可核验补充信号，当前版从 10 条增至 11 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Google DeepMind 官方索引、Axios AI/Technology 与 TechCrunch 可访问内容，未使用付费墙或登录墙正文。
+  - 新增 TechCrunch 对 Monday.com 加入 AI 相关裁员清单的媒体背景信号，用来观察 AI-first 组织重构、重组费用、招聘方向和就业净效应证据。
+  - 跳过 Google DeepMind/Isomorphic Labs 生物韧性旧页，因为其发布时间早于当前数据格式允许的 7 天新鲜度窗口；跳过 Anthropic Opus 5、Google Gemini 3.6/3.5 Flash Cyber 和 Microsoft 开放权重信号，因为历史中已有对应 URL 或近重复事实。
+  - 新增条目按 `媒体背景` / `reported` / `originalDependency: must-read` 处理；AI 裁员因果、岗位净效应和同业可比性需 SEC 文件、公司公告、招聘数据和后续财报补强。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Pending at log-write time; will commit with message `更新08点AI新闻情报` and attempt push. If push is blocked, final local HEAD will be recorded in automation memory.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push may need retry when DNS/network access returns.
+
 ## 2026-07-26 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 17 reader-first homepage task. Improved omitted-topic explanations so the homepage distinguishes "no fresh source fact this batch" from "the topic is not important."
