@@ -1,3 +1,27 @@
+## 2026-07-27 08:11 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-27`，发布 10 条 Agent 安全、开放权重、职场 AI、可穿戴隐私和推理基础设施信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Axios、TechCrunch、Reuters 转载内容和 Business Insider 可访问内容，未使用付费墙或登录墙正文。
+  - 本期覆盖 OpenAI/Hugging Face Agent 事故后续、Hugging Face traces 要求、Altman 白宫模型叙事、工会 AI 合约保护、AI 选举资金、Apple 智能眼镜隐私、Kimi/开放权重政策、Reuters 开放模型公开信和 Infinity 推理软件融资。
+  - 全部条目按 `媒体背景` / `reported` / `originalDependency: must-read` 处理；事故全貌、政策结果、合同适用范围、产品规格和生产性能需官方报告、公开信原文、FEC/州备案、合同文本、隐私白皮书、日志记录或第三方 benchmark 补强。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Pending local commit with message `更新17点AI新闻情报`; push will be attempted after commit, but GitHub DNS has failed in this environment before.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+
 ## 2026-07-26 23:09 JST
 
 - Focus: 运行 08:00 JST AI Watchtower 新闻情报补充更新；当前本地首页已是 `news-1700-2026-07-26` 17:00 版，因此未回退为早间版，而是在当前最新版中追加 1 条可核验补充信号，当前版从 10 条增至 11 条。
