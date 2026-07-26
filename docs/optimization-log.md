@@ -1,3 +1,32 @@
+## 2026-07-26 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 17 reader-first homepage task. Improved omitted-topic explanations so the homepage distinguishes "no fresh source fact this batch" from "the topic is not important."
+- Changed files:
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After commit: pending - push will be attempted after the local commit is created.
+- Content posture:
+  - Added explicit `无新来源事实` omission status for each planned homepage topic.
+  - Added a separate "不要误读为" boundary so omitted topics say the theme remains important but lacks a fresh promotable source fact in the current batch.
+  - Kept current news facts, item selection, source links, and source claims unchanged.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, `docs/news-data-format.md`, and recent `docs/optimization-log.md` entries; continued with Day 17 because Day 0 through Day 16 were already complete.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the omitted-topic status/documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Implementation commit pending; final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-26 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-26`，发布 10 条 7 月 20-25 日未在历史中重复的可靠媒体背景信号。

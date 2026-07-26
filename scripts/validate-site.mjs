@@ -1108,7 +1108,8 @@ if (
   !/Day 14[\s\S]*homepage briefing[\s\S]*reader frame/.test(optimizationDecisionIndex) ||
   !/Day 15[\s\S]*mobile[\s\S]*scan variant/.test(optimizationDecisionIndex) ||
   !/Day 16[\s\S]*coverage-mix labels/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 17/.test(optimizationDecisionIndex) ||
+  !/Day 17[\s\S]*omitted-topic explanations/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 18/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1252,18 +1253,23 @@ if (
   !/id: "developer-tooling"/.test(appJs) ||
   !/本期未捕捉/.test(appJs) ||
   !/whyNow/.test(appJs) ||
+  !/omissionType/.test(appJs) ||
   !/emptyReason/.test(appJs) ||
+  !/omissionBoundary/.test(appJs) ||
   !/promotionThreshold/.test(appJs) ||
   !/fallback/.test(appJs) ||
   !/为什么现在看/.test(appJs) ||
+  !/无新来源事实/.test(appJs) ||
   !/未入选原因/.test(appJs) ||
+  !/不要误读为/.test(appJs) ||
   !/入选门槛/.test(appJs) ||
   !/替代阅读/.test(appJs) ||
   !/class="empty-topic"/.test(appJs) ||
   !/\.topic-groups/.test(styles) ||
+  !/\.topic-groups span b/.test(styles) ||
   !/\.topic-groups span\.empty-topic/.test(styles) ||
   !/\.topic-groups span em/.test(styles) ||
-  !/planned-topic why-now summaries and omission boundaries/.test(newsDataFormat) ||
+  !/explicit omission status/.test(newsDataFormat) ||
   !/action-oriented coverage labels and topic meanings/.test(newsDataFormat) ||
   !/function isActionOrientedCoverageLabel/.test(appJs) ||
   !/function isActionOrientedCoverageLabel/.test(validateDataJs)
