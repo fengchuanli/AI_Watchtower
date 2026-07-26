@@ -10,7 +10,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After commit: pending - implementation commit `465ad79` was created locally; push will be attempted after this log/index follow-up commit.
+  - After commit: blocked-dns - implementation commit `465ad79` and log/index follow-up commit `5825467` were created locally, but `git push origin main` failed because `github.com` could not be resolved.
 - Content posture:
   - Added explicit `无新来源事实` omission status for each planned homepage topic.
   - Added a separate "不要误读为" boundary so omitted topics say the theme remains important but lacks a fresh promotable source fact in the current batch.
