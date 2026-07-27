@@ -1,8 +1,958 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-27",
-  "totalItems": 211,
+  "updatedAt": "2026-07-28",
+  "totalItems": 222,
   "editions": [
+    {
+      "id": "news-1700-2026-07-28",
+      "date": "2026-07-28",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期跟进安全 Agent、算力融资、开放权重、AI 搜索和物理 AI。",
+      "operationalStatus": "GitHub DNS 解析失败，无法 pull；已复核来源注册表、历史 URL、官方博客、RSS/索引和可靠媒体页面。",
+      "editorialInterpretation": "本期以 7 月 27 日可靠来源为主，强调 Agent 安全、算力金融化、企业控制权和入口变化；媒体项仍是核对雷达。",
+      "readerFrame": {
+        "headline": "阅读本期：把安全 Agent、算力融资和入口控制分开核对",
+        "whyItMatters": "这 10 条信号适合更新企业安全 Agent、AI gateway、开放权重政策、搜索流量和物理 AI 数据清单；但效果、金额、规模和商业落地仍需原始文件与第三方验证。",
+        "mobile": {
+          "headline": "手机先看三条主线",
+          "summary": "安全 Agent 产品化、算力资本绑定和 AI 入口控制是本期主线。",
+          "primaryUses": [
+            "安全团队查 Agent 权限。",
+            "平台团队查模型网关。",
+            "增长团队查 AI 搜索。"
+          ],
+          "proofBoundary": "尚未证明金额、规模、效果和落地结果。"
+        },
+        "useThisIssueFor": [
+          "安全和平台团队用本期检查 Agent 权限、日志、漏洞修复和多模型 harness。",
+          "CIO、采购和财务团队用本期更新模型网关、供应商锁定和算力融资风险清单。",
+          "增长、媒体和机器人团队用本期核对 AI 搜索流量、扩散推理成本和物理 AI 数据路径。"
+        ],
+        "notProvenYet": [
+          "不能证明 Microsoft 安全 Agent 已在客户环境产生防御效果，也不能证明 SSI 已发布可验证研究突破。",
+          "不能证明 NVIDIA 与 OpenAI 融资安排已签署，或开放权重政策结果已经确定。",
+          "不能证明 Google AI 搜索改变了所有网站流量，也不能证明 Enigma 的交互数据能训练通用机器人。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "从上一版的开放安全争论，推进到产品化、融资结构和入口控制",
+        "freshFacts": [
+          "本期新增 Microsoft 官方 Project Perception，说明 MAI-Cyber-1-Flash 与 MDASH 的安全场景。",
+          "本期新增 NVIDIA 官方 SSI 长期合作，说明 Vera Rubin 平台将扩充 SSI 算力。",
+          "本期新增 Axios 对 NVIDIA/OpenAI 数据中心融资讨论的媒体背景。",
+          "本期新增 TechCrunch 对 Claude 共享聊天索引、Google AI 搜索数据和 Enigma 机器人融资的报道。"
+        ],
+        "repeatedContext": [
+          "延续背景：OpenAI/Hugging Face 事故和 Open Secure AI Alliance 已在 7 月 27 日版覆盖，本期不重复发布同一 URL。",
+          "延续背景：开放权重争论仍是政策主线，本期只加入 Anthropic 承压的媒体背景。",
+          "旧背景：媒体报道中的金额、动机、用户规模和产品效果仍需原始文件或第三方证据。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查安全 Agent 上线",
+          "count": 3,
+          "meaning": "用来核对 Microsoft 安全栈、专用网络安全模型和多 Agent 安全评测。"
+        },
+        {
+          "label": "核对算力资本绑定",
+          "count": 2,
+          "meaning": "用来检查 SSI/NVIDIA 合作和 OpenAI 数据中心融资的合同、供给与信用风险。"
+        },
+        {
+          "label": "更新入口控制策略",
+          "count": 3,
+          "meaning": "用来调整 AI gateway、共享链接隐私和 AI 搜索流量监控。"
+        },
+        {
+          "label": "验证开发与物理 AI 清单",
+          "count": 3,
+          "meaning": "用来核对 Diffusers 量化推理、机器人交互数据和开放权重政策证据。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 3,
+          "role": "用来核对 Microsoft、NVIDIA 与 Hugging Face 页面中的发布事实、技术主张和下一步验证对象。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 7,
+          "role": "用来追踪背景、金额和市场冲突线索；完整事实、引用和上下文仍需原文。"
+        },
+        {
+          "family": "research",
+          "label": "研究原文",
+          "count": 1,
+          "role": "研究原文用作可复核安全信号；仍需代码、数据、复现和同行评审后再升级结论。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体与厂商主张并重",
+        "note": "本期 6/10 为可靠媒体，3/10 为官方或厂商页面；适合作为核对雷达，不是行业结论。",
+        "nextCheck": "查官方文档、合同文件、监管材料、公开代码、客户指标和第三方 benchmark。"
+      },
+      "sourceConcentration": {
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 5,
+        "share": "5/10",
+        "note": "TechCrunch 是最大单一来源但未超过三分之二；相关条目仍按媒体背景处理。",
+        "nextCheck": "用官方来源、Axios、Reuters、公司文件、论文和第三方复测交叉核对。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期 10 条中多数是媒体报道或厂商主张，适合更新检查清单。",
+        "doNotConclude": "不能据此判断安全 Agent、算力融资、开放权重、AI 搜索或物理 AI 已形成稳定结论。",
+        "useInstead": "先追公开预览、合同/备案、平台日志、原始数据、公开代码和第三方复测。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent-security-stack",
+          "label": "Agent 安全栈",
+          "note": "跨期看，Hugging Face 事故、开放安全联盟、Microsoft Perception 和多 Agent 论文都把风险从模型输出推向系统控制。",
+          "boundary": "不证明任何方案已有效；仍需事故报告、日志、公开代码、客户指标和第三方复测。"
+        },
+        {
+          "topic": "ai-control-ownership",
+          "label": "入口控制权",
+          "note": "跨期看，Nadella 的 gateway 主张、Claude 分享索引和 AI 搜索默认化都显示上下文与入口正成为战略资产。",
+          "boundary": "不证明所有企业都会自建网关；仍需合同、管理员功能、流量数据和客户案例。"
+        },
+        {
+          "topic": "compute-finance",
+          "label": "算力金融化",
+          "note": "跨期看，SSI/NVIDIA 合作、OpenAI 数据中心融资和数据中心电力约束说明算力竞争已进入资本结构层。",
+          "boundary": "不证明项目已落地或需求真实；仍需融资文件、电力许可、交付记录和财务披露。"
+        },
+        {
+          "topic": "physical-ai-data",
+          "label": "物理 AI 数据",
+          "note": "跨期看，脑波数据、仿真综述和 Enigma 在线交互实验都围绕机器人训练数据成本展开。",
+          "boundary": "不证明通用机器人能力已出现；仍需公开任务、数据许可、真实部署和第三方测试。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 3,
+          "itemIds": [
+            "microsoft-project-perception-cyber-stack-2026-07-27",
+            "techcrunch-microsoft-cyber-model-2026-07-27",
+            "arxiv-multi-agent-mediation-safety-gap-2026-07-23"
+          ],
+          "meaning": "用来更新 Agent 安全栈、专用模型和链路级评测清单。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 2,
+          "itemIds": [
+            "nvidia-ssi-vera-rubin-partnership-2026-07-27",
+            "axios-nvidia-openai-data-center-financing-2026-07-27"
+          ],
+          "meaning": "用来检查 GPU 供给、算力融资、项目许可和信用风险。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-nadella-ai-gateway-control-2026-07-27",
+            "techcrunch-claude-shared-chats-indexed-2026-07-27"
+          ],
+          "meaning": "用来调整企业 AI gateway、数据分享和隐私治理。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 2,
+          "itemIds": [
+            "businessinsider-anthropic-open-weight-backlash-2026-07-27",
+            "techcrunch-google-ai-search-default-2026-07-27"
+          ],
+          "meaning": "用来核对开放权重立场、AI 搜索政策压力和监管文本。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 1,
+          "itemIds": [
+            "huggingface-nunchaku-diffusers-4bit-2026-07-23"
+          ],
+          "meaning": "用来核对生成式视觉模型的量化推理和工具链成本。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 1,
+          "itemIds": [
+            "techcrunch-google-ai-search-default-2026-07-27"
+          ],
+          "meaning": "用来检查 AI 答案模式如何改变搜索入口和模型分发。"
+        }
+      ],
+      "itemCount": 11,
+      "items": [
+        {
+          "id": "techcrunch-nadella-ai-gateway-control-2026-07-27",
+          "category": "tool",
+          "label": "工具",
+          "title": "Nadella 警告企业不要把 AI 入口完全交给单一模型商",
+          "body": "TechCrunch 报道 Nadella 主张企业保留 AI 使用元数据，并用 gateway 分离模型和上下文。",
+          "summary": "企业 AI 架构焦点从“选哪家模型”转向“谁控制上下文和使用记录”。",
+          "whyItMatters": "平台团队若把提示、记忆和工具链全交给同一供应商，后续迁移、合规和议价都会变难。",
+          "detailBody": "TechCrunch 报道 Nadella 在 CNN 访谈中称，企业应保留模型使用元数据，并把 harness、上下文、记忆与具体模型分开。报道还指出，这一观点与 Microsoft 云业务销售多模型基础设施存在利益关联。",
+          "trend": "企业 AI 架构焦点转向上下文控制。",
+          "detailTrend": "AI gateway、上下文所有权和多模型编排正在成为企业 AI 架构的核心控制点。该报道提示采购不只比较模型能力，还要比较提示日志、记忆、工具执行和退出路径。",
+          "whyRanked": "它给企业 AI 采购提供了可执行的架构检查问题。",
+          "topReason": "模型选择正在变成控制权问题。",
+          "detailWhyRanked": "Nadella 同时代表模型投资方和云平台商，发言带有利益位置；但“不要外包上下文和 harness”与近期 Agent 安全事故、开放权重政策争论相互呼应，值得进入架构雷达。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体报道可支持访谈观点；企业采纳程度需客户架构证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体报道可支持访谈观点；企业采纳程度需客户架构证据。"
+          },
+          "impact": "影响企业模型采购、AI gateway、日志留存、数据治理和供应商锁定评估。",
+          "whoShouldCare": "CIO、平台工程和采购团队应关注模型之外的上下文、元数据和 harness 控制权。",
+          "readerUse": "平台团队用于更新多模型网关、日志归属和供应商退出条款。",
+          "nextCheck": "查 CNN 原始访谈、Microsoft 产品文档、客户架构案例和合同条款。",
+          "followUpQuestions": [
+            "Microsoft 是否会把该主张落实为 Azure AI gateway 的具体功能？",
+            "大型企业是否开始在合同中要求保留提示元数据和可迁移 harness？"
+          ],
+          "evidenceThreshold": "需要原始访谈、正式产品文档、客户部署材料和采购条款，才可升级为确认的企业架构趋势。",
+          "claimBoundary": "不能证明单一模型供应商必然不可用，也不能证明企业已大规模迁移到自有 gateway。",
+          "counterEvidence": "若客户案例显示单供应商方案仍具备可审计迁移和数据控制，应降级为供应商立场信号。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/",
+          "originalUrl": "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 可核对访谈背景和观点摘要；完整语境、原话和企业采纳仍需原始访谈与客户材料。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-27T14:17:00-07:00",
+          "time": "7月27日",
+          "tags": [
+            "AI gateway",
+            "企业架构",
+            "多模型"
+          ],
+          "companies": [
+            "Microsoft",
+            "OpenAI",
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "techcrunch-claude-shared-chats-indexed-2026-07-27",
+          "category": "policy",
+          "label": "政策",
+          "title": "Claude 共享聊天被搜索引擎索引，隐私边界再次变成产品问题",
+          "body": "TechCrunch 报道 Claude share 链接曾可通过搜索引擎发现，Anthropic 称公开分享链接可能被第三方索引。",
+          "summary": "AI 产品的“可分享”功能正在暴露普通用户难以理解的公开范围。",
+          "whyItMatters": "企业和个人使用 AI 工具时，需要把分享链接视为公开发布，而不是私密协作。",
+          "detailBody": "TechCrunch 报道 Reddit 用户发现可用搜索操作符找到部分 Claude 共享聊天和 Artifacts；Anthropic 回应称，链接只有在用户发布到可被搜索引擎看到的位置时才会出现在搜索结果中，TechCrunch 周一下午测试时结果已消失。",
+          "trend": "AI 工作空间的分享、索引和撤回机制正成为隐私治理的高频风险点。",
+          "detailTrend": "这不是单纯的搜索问题，而是 AI 工具把聊天、代码、文档和应用片段变成可传播网页后的边界问题。团队需要默认假设公开链接可被缓存、转发、索引和二次抓取。",
+          "whyRanked": "共享链接风险进入企业检查表。",
+          "topReason": "共享链接风险直接影响企业数据外泄。",
+          "detailWhyRanked": "事件给安全培训提供具体检查项：共享链接、robots 控制、撤回路径、敏感内容扫描和用户提示。报道含第三方发现与公司回应，规模、根因和完整修复仍需平台日志、搜索索引记录与管理员功能确认。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道和公司回应可支持风险提示；规模和内容需日志与平台说明。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体报道和公司回应可支持风险提示；规模和内容需日志与平台说明。"
+          },
+          "impact": "影响 AI 工具隐私设置、企业数据分类、DLP 策略和员工培训。",
+          "whoShouldCare": "安全、法务、IT 和使用 Claude 的业务团队应立即复核共享链接策略。",
+          "readerUse": "安全团队用于检查 AI 分享链接、搜索索引、敏感数据和撤回流程。",
+          "nextCheck": "查 Anthropic 正式说明、搜索索引记录、企业审计日志和 affected-link 规模。",
+          "followUpQuestions": [
+            "Anthropic 是否会提供管理员级共享链接审计和批量撤回？",
+            "搜索引擎缓存和第三方归档是否仍保留已公开的 Claude 页面？"
+          ],
+          "evidenceThreshold": "需要平台正式事件说明、索引样本范围、管理员审计功能和第三方复核，才可升级为确认的数据暴露事件结论。",
+          "claimBoundary": "不能证明所有 Claude 共享聊天被索引，也不能证明未公开发送的链接被搜索引擎发现。",
+          "counterEvidence": "若平台日志证明仅用户主动公开页面被索引且已完全移除，应降级为分享 UX 风险。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+          "originalUrl": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 可核对发现路径、公司回应和修复迹象；规模、敏感内容和根因仍需 Anthropic 与搜索平台材料。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-27T13:19:00-07:00",
+          "time": "7月27日",
+          "tags": [
+            "Claude",
+            "隐私",
+            "共享链接"
+          ],
+          "companies": [
+            "Anthropic",
+            "Google"
+          ]
+        },
+        {
+          "id": "microsoft-project-perception-cyber-stack-2026-07-27",
+          "category": "tool",
+          "label": "工具",
+          "title": "Microsoft 推出 Project Perception，把安全防御做成多 Agent 栈",
+          "body": "Microsoft 官方博客介绍 Project Perception，并称 MAI-Cyber-1-Flash 将进入 MDASH，用于漏洞管理等安全工作流。",
+          "summary": "Microsoft 把网络安全从单模型能力叙事推进到多 Agent 防御系统。",
+          "whyItMatters": "安全团队需要评估 AI 防御工具时，同时看模型、harness、成本和上线边界。",
+          "detailBody": "Microsoft 官方博客称，Project Perception 面向 AI 时代安全栈，把信号、上下文、模型和专门 Agent 组合起来；首个场景是软件漏洞管理，MAI-Cyber-1-Flash 会进入 MDASH，并计划 8 月 3 日公开预览。",
+          "trend": "AI 安全竞争正在从聊天模型扩展到持续感知、推理和处置的企业安全系统。",
+          "detailTrend": "这说明安全厂商开始把 Agent 放进漏洞发现和修复链路，而不是只提供告警摘要。企业应关注权限、证据链、误报处理和人类审批，而不仅看 benchmark 名次。",
+          "whyRanked": "官方发布明确给出了系统边界、场景和预览时间。",
+          "topReason": "安全 Agent 已进入企业产品栈。",
+          "detailWhyRanked": "该项把 Microsoft、模型专用化和 agentic security 放在同一产品事件中，适合安全负责人更新试点清单。基准成绩仍是厂商披露，需外部复测后才可当作效果结论。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源可核对产品和时间线；效果数据仍需第三方复测。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源可核对产品和时间线；效果数据仍需第三方复测。"
+          },
+          "impact": "影响企业安全预算、SOC 工作流、漏洞管理和 AI 工具审批。",
+          "whoShouldCare": "安全、平台和采购团队应关注 AI 安全 Agent 是否需要新的权限、日志和验收标准。",
+          "readerUse": "安全团队用于更新漏洞管理、Agent 权限和人机审批试点清单。",
+          "nextCheck": "核对 8 月公开预览文档、客户案例、审计日志和第三方 CyberGym 复测。",
+          "followUpQuestions": [
+            "公开预览是否会披露 MDASH 的权限、日志和回滚控制？",
+            "第三方安全团队能否复现 MAI-Cyber-1-Flash 的基准成绩？"
+          ],
+          "evidenceThreshold": "需要公开产品文档、第三方复测、客户侧漏洞发现记录和误报率，才可升级为已验证安全部署结论。",
+          "claimBoundary": "不能证明该系统已在真实客户环境降低攻击风险，也不能证明基准成绩可泛化。",
+          "counterEvidence": "若公开预览缺少审计日志、客户验证或第三方复测，应下调为厂商安全愿景。",
+          "source": "Microsoft AI Blog",
+          "sourceName": "Microsoft AI Blog",
+          "sourceId": "microsoft-ai-blog",
+          "sourceUrl": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+          "originalUrl": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+          "sourceRole": "官方核对",
+          "provenance": "Microsoft 官方博客可核对 Project Perception、MAI-Cyber-1-Flash、MDASH 和预览计划；防御效果仍需外部验证。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-27T11:32:00-07:00",
+          "time": "7月27日",
+          "tags": [
+            "Agent 安全",
+            "网络安全",
+            "Microsoft"
+          ],
+          "companies": [
+            "Microsoft"
+          ]
+        },
+        {
+          "id": "techcrunch-microsoft-cyber-model-2026-07-27",
+          "category": "model",
+          "label": "模型",
+          "title": "TechCrunch：Microsoft 首个网络安全专用模型进入 Agent 安全竞争",
+          "body": "TechCrunch 报道 Microsoft 发布 MAI-Cyber-1-Flash，并将其与 MDASH 和 Perception 安全平台结合。",
+          "summary": "专用小模型加多 Agent harness，成为大厂应对 AI 攻防升级的新组合。",
+          "whyItMatters": "安全买家需要区分模型能力、系统编排、benchmark 和真实漏洞修复效果。",
+          "detailBody": "TechCrunch 报道 Microsoft 在旧金山活动上发布 MAI-Cyber-1-Flash，并称它用于发现复杂代码库漏洞；报道还指出 Perception 可部署 Agent 团队处理安全工作流，并能接入 MDASH。它补充了发布会竞争语境。",
+          "trend": "专用模型开始嵌入垂直 Agent 系统。",
+          "detailTrend": "模型发布开始服务于垂直 Agent 系统，而不是单独比拼通用聊天能力。这个信号与官方博客互补：媒体侧给出竞争语境，官方侧给出产品路径。",
+          "whyRanked": "网络安全模型产品化。",
+          "topReason": "安全专用模型进入产品化阶段。",
+          "detailWhyRanked": "该条保留为媒体背景，用于补充 Microsoft 官方发布的外部观察。读者不应把发布会声明直接等同于生产防御效果，仍要看客户环境中的误报、补丁质量、审计日志和权限控制。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道补充竞争背景；效果验证仍需测试和客户数据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道补充竞争背景；效果验证仍需测试和客户数据。"
+          },
+          "impact": "影响安全模型评测、企业试点优先级和 SOC 自动化路线。",
+          "whoShouldCare": "安全工程、红队和采购团队应关注专用模型是否真正改善漏洞处置。",
+          "readerUse": "安全团队用于比较专用模型、通用模型和多 Agent harness 的验收指标。",
+          "nextCheck": "查 Microsoft 技术文档、公开预览结果、CyberGym 复测和客户漏洞闭环数据。",
+          "followUpQuestions": [
+            "MAI-Cyber-1-Flash 是否能独立于 GPT-5.4 取得稳定结果？",
+            "企业环境中的误报率和补丁质量会如何披露？"
+          ],
+          "evidenceThreshold": "需要公开 benchmark 复测、客户侧漏洞修复记录、误报率和权限审计，才可升级为验证产品效果。",
+          "claimBoundary": "不能证明该模型优于所有竞品，也不能证明 Agent 自动修复可无人工审批上线。",
+          "counterEvidence": "若第三方复测低于发布会口径或补丁质量不稳定，应降级为发布会声明。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+          "originalUrl": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 可核对发布会信息和竞争语境；模型效果、成本和上线范围需官方文档与复测。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-27T11:32:00-07:00",
+          "time": "7月27日",
+          "tags": [
+            "网络安全模型",
+            "Agent",
+            "Microsoft"
+          ],
+          "companies": [
+            "Microsoft",
+            "OpenAI",
+            "Google",
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "nvidia-ssi-vera-rubin-partnership-2026-07-27",
+          "category": "funding",
+          "label": "资金",
+          "title": "NVIDIA 与 Safe Superintelligence 达成长期合作，SSI 将扩充 Vera Rubin 算力",
+          "body": "NVIDIA Newsroom 称已投资 Ilya Sutskever 创办的 SSI，并提供 Vera Rubin 平台以让其算力提升一个数量级。",
+          "summary": "顶级 AI 研究实验室的竞争继续绑定到下一代 GPU 供给和资本关系。",
+          "whyItMatters": "算力可得性会影响闭门研究实验室的模型路线、融资能力和对外透明度。",
+          "detailBody": "NVIDIA 与 Safe Superintelligence 宣布长期战略合作；官方声明称 NVIDIA 已投资 SSI，SSI 将获得下一代 Vera Rubin 平台，目标是把计算资源提高一个数量级，并与 NVIDIA 协作推进当前和未来计算平台。",
+          "trend": "前沿模型竞争越来越像资本、芯片路线和研究保密性的组合赛。",
+          "detailTrend": "SSI 尚未公开产品或完整研究路线，官方发布能证明合作与算力方向，却不能证明安全超级智能进展。读者应把它看作算力配置和研究生态信号，而非能力发布。",
+          "whyRanked": "它改变了一个关键闭门 AI 实验室的算力约束。",
+          "topReason": "研究路线与 Vera Rubin 绑定。",
+          "detailWhyRanked": "Ilya Sutskever 的 SSI 一直以保密著称，NVIDIA 投资和硬件合作让其进入更可观察的基础设施轨道。金额、估值和研究成果仍需独立报道、备案或技术发布补证。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方来源确认合作和算力方向；金额与研究成果需独立证据。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方来源确认合作和算力方向；金额与研究成果需独立证据。"
+          },
+          "impact": "影响前沿模型研究资本、GPU 供给、NVIDIA 生态绑定和安全实验室竞争。",
+          "whoShouldCare": "战略、基础设施和投资团队应关注顶级研究实验室与芯片供应商的绑定关系。",
+          "readerUse": "战略团队用于更新前沿实验室算力、资本和硬件路线观察表。",
+          "nextCheck": "查融资金额报道、公司备案、Vera Rubin 交付时间表和 SSI 技术披露。",
+          "followUpQuestions": [
+            "SSI 是否会公开任何研究里程碑或安全评测材料？",
+            "Vera Rubin 供给是否会改变其他实验室和云客户的算力排队顺序？"
+          ],
+          "evidenceThreshold": "需要投资文件、硬件交付记录、SSI 技术报告和第三方评测，才可升级为确认的能力进展。",
+          "claimBoundary": "不能证明 SSI 已取得可验证模型突破，也不能确认未披露投资金额。",
+          "counterEvidence": "若后续没有硬件交付、研究发布或融资备案，应降级为战略合作公告。",
+          "source": "NVIDIA AI Blog",
+          "sourceName": "NVIDIA AI Blog",
+          "sourceId": "nvidia-blog-ai",
+          "sourceUrl": "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership",
+          "originalUrl": "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership",
+          "sourceRole": "官方核对",
+          "provenance": "NVIDIA Newsroom 可核对合作、投资和 Vera Rubin 访问事实；金额、估值和能力效果需独立来源。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-27T13:00:00-04:00",
+          "time": "7月27日",
+          "tags": [
+            "SSI",
+            "NVIDIA",
+            "Vera Rubin"
+          ],
+          "companies": [
+            "NVIDIA",
+            "Safe Superintelligence"
+          ]
+        },
+        {
+          "id": "axios-nvidia-openai-data-center-financing-2026-07-27",
+          "category": "funding",
+          "label": "资金",
+          "title": "Axios：NVIDIA 与 OpenAI 数据中心融资传闻重新引发循环融资担忧",
+          "body": "Axios 报道 NVIDIA 被指考虑为 OpenAI 相关大型数据中心项目提供融资支持，市场关注芯片商资助客户采购的结构性风险。",
+          "summary": "AI 算力扩张不只是建机房，也开始考验供应商融资和需求真实性。",
+          "whyItMatters": "如果芯片供应商同时是融资支持方，AI 基建需求、信用风险和营收质量都需要重新核对。",
+          "detailBody": "Axios 报道，NVIDIA 与 OpenAI 相关数据中心项目的潜在融资安排引发“循环”结构担忧：芯片供应商可能帮助客户获得大规模算力项目融资，而客户又将继续购买其芯片。报道同时提到 SSI 投资作为生态绑定背景。",
+          "trend": "AI 基建从供给瓶颈进入金融结构瓶颈，资本安排本身成为行业风险信号。",
+          "detailTrend": "过去 AI 基建常被描述为芯片短缺和电力短缺，现在还要核对谁承担信用风险、收入是否来自真实外部需求、项目是否获得地方许可和电力接入。媒体报道不能替代合同或融资文件。",
+          "whyRanked": "算力增长依赖复杂融资。",
+          "topReason": "算力增长开始依赖复杂融资。",
+          "detailWhyRanked": "该项对读者的价值不在确认交易已经发生，而在提示要用债务、租赁、购芯承诺和项目许可核对 AI 需求。任何金额、期限和义务都仍是媒体报道层级，必须等待合同、融资文件和公司回应。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体可作融资风险雷达；交易条款需文件确认。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体可作融资风险雷达；交易条款需文件确认。"
+          },
+          "impact": "影响 AI 数据中心融资、芯片需求判断、信用风险和云基础设施战略。",
+          "whoShouldCare": "投资、财务、基建和云采购团队应关注供应商融资是否扭曲 AI 需求信号。",
+          "readerUse": "财务和基建团队用于更新 AI 数据中心融资、用电和供应商集中度检查。",
+          "nextCheck": "查项目合同、债务文件、OpenAI/NVIDIA 官方回应、地方许可和电力接入记录。",
+          "followUpQuestions": [
+            "是否存在已签署的融资担保或只是谈判阶段安排？",
+            "数据中心租赁、电力和芯片采购承诺分别由谁承担信用风险？"
+          ],
+          "evidenceThreshold": "需要合同、债务披露、项目许可、电力文件和公司确认，才可升级为确认的基建融资事件。",
+          "claimBoundary": "不能证明 NVIDIA 已签署担保，也不能证明 OpenAI 数据中心需求已获完整资金支持。",
+          "counterEvidence": "若官方否认交易、融资文件未出现或许可失败，应降级为未落地谈判线索。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/07/27/nvidia-openai-financing-ai-jensen-huang-ssi",
+          "originalUrl": "https://www.axios.com/2026/07/27/nvidia-openai-financing-ai-jensen-huang-ssi",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 可核对融资讨论和市场担忧叙事；金额、合同和项目义务需原始文件。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-27T12:30:00-04:00",
+          "time": "7月27日",
+          "tags": [
+            "AI 基建",
+            "融资",
+            "数据中心"
+          ],
+          "companies": [
+            "NVIDIA",
+            "OpenAI",
+            "SoftBank"
+          ]
+        },
+        {
+          "id": "businessinsider-anthropic-open-weight-backlash-2026-07-27",
+          "category": "policy",
+          "label": "政策",
+          "title": "Business Insider：Anthropic 因未支持开放权重联盟承压",
+          "body": "Business Insider 报道 Anthropic 因未加入开放权重支持阵营而承压。",
+          "summary": "开放权重争论正从政策文件进入公司声誉和竞争立场冲突。",
+          "whyItMatters": "企业和政策团队不能只看“开放或封闭”标签，还要判断安全、竞争和监管叙事背后的利益位置。",
+          "detailBody": "Business Insider 报道，NVIDIA 等公司推动开放权重立场后，Anthropic 因未加入相关支持阵营而受到批评。报道把这种缺席放在中国开放模型、蒸馏指控和美国监管讨论背景下。",
+          "trend": "开放模型政策正在成为 AI 公司之间争夺安全话语权和市场结构的前线。",
+          "detailTrend": "开放模型政策正在成为 AI 公司之间争夺安全话语权和市场结构的前线。同一开放权重事实可被解读为安全资产、竞争工具或国家安全风险，必须回到技术评测和政策文本。",
+          "whyRanked": "开放权重进入公司站队冲突。",
+          "topReason": "开放权重已成政策与商业双重冲突。",
+          "detailWhyRanked": "该项不是确认 Anthropic 动机，而是记录可靠媒体报道的行业压力。后续应回到公开信、公司政策、模型评测和监管文本，而不是把社交批评当事实；公司正式回应可能改变判断。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体背景可支持压力叙事；动机和政策效果仍需原文。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体背景可支持压力叙事；动机和政策效果仍需原文。"
+          },
+          "impact": "影响开放模型监管、企业模型选择、安全沟通和美国 AI 产业政策。",
+          "whoShouldCare": "政策、法务和模型采购团队应关注开放权重立场如何改变供应商风险画像。",
+          "readerUse": "政策团队用于更新开放模型公开信、公司立场和监管回应追踪表。",
+          "nextCheck": "查公开信原文、Anthropic 正式回应、模型风险评测和监管听证材料。",
+          "followUpQuestions": [
+            "Anthropic 是否会发布更具体的开放权重风险评估？",
+            "美国监管机构是否会把开放模型区分为防御工具和高风险发布？"
+          ],
+          "evidenceThreshold": "需要公司正式政策、公开信原文、监管文本和第三方安全评测，才可升级为确认的政策分化结论。",
+          "claimBoundary": "不能证明 Anthropic 反对所有开放模型，也不能证明批评者判断其商业动机正确。",
+          "counterEvidence": "若 Anthropic 发布开放模型支持框架或监管文本未采纳限制思路，应降级为阶段性舆论压力。",
+          "source": "Business Insider AI / Tech",
+          "sourceName": "Business Insider AI / Tech",
+          "sourceId": "businessinsider-ai",
+          "sourceUrl": "https://www.businessinsider.com/anthropic-open-source-ai-model-weights-criticism-2026-7",
+          "originalUrl": "https://www.businessinsider.com/anthropic-open-source-ai-model-weights-criticism-2026-7",
+          "sourceRole": "媒体背景",
+          "provenance": "Business Insider 可核对行业批评和立场冲突；动机、监管结果和技术风险需原文与独立评测。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-27T12:00:00-04:00",
+          "time": "7月27日",
+          "tags": [
+            "开放权重",
+            "Anthropic",
+            "政策"
+          ],
+          "companies": [
+            "Anthropic",
+            "NVIDIA",
+            "OpenAI",
+            "Microsoft",
+            "Meta"
+          ]
+        },
+        {
+          "id": "techcrunch-google-ai-search-default-2026-07-27",
+          "category": "product",
+          "label": "产品",
+          "title": "Similarweb 数据显示 Google AI Overviews 出现率一年内大幅上升",
+          "body": "TechCrunch 引用 Similarweb 分析称，Google AI Overviews 在搜索中的出现率从 15% 升至 43%，AI Mode 访问量也增长。",
+          "summary": "AI 搜索正在从附加层变成默认信息入口，网站流量逻辑随之改变。",
+          "whyItMatters": "媒体、SEO 和产品团队需要重新衡量答案页曝光、点击率和内容授权价值。",
+          "detailBody": "TechCrunch 报道 Similarweb 分析称，Google AI Overviews 一年内从出现在 15% 搜索增长到 43%，AI Mode 访问量从 2025 年 6 月的 1.26 亿升至 2026 年 5 月的 2.79 亿，并指出搜索查询变得更长。",
+          "trend": "AI 答案页正在改变搜索入口。",
+          "detailTrend": "搜索入口正在从链接导航转向 AI 答案和连续对话，内容分发权更集中于平台。这会改变网站获取流量、品牌被引用和内容授权谈判的基础。",
+          "whyRanked": "AI 搜索变化已有量化信号。",
+          "topReason": "搜索流量结构出现可量化变化。",
+          "detailWhyRanked": "AI Overviews 的出现率变化直接关系到内容网站、广告和知识入口。读者应把 Similarweb 当作市场观测，而不是全部搜索场景的官方统计，仍需站点级数据和 Google 官方口径。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "第三方数据提供趋势量化；仍需官方和出版商数据交叉。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "第三方数据提供趋势量化；仍需官方和出版商数据交叉。"
+          },
+          "impact": "影响搜索产品、出版商流量、SEO 指标、广告归因和内容授权谈判。",
+          "whoShouldCare": "媒体、增长、SEO 和产品团队应关注 AI 答案页如何重写搜索分发。",
+          "readerUse": "增长团队用于更新 AI 搜索曝光、点击率和内容授权监控。",
+          "nextCheck": "查 Similarweb 完整方法、Google Search Console 数据、出版商流量和 Google 官方口径。",
+          "followUpQuestions": [
+            "AI Overviews 出现率上升是否同步降低出版商点击率？",
+            "Google 是否会向站点提供更细的 AI Mode 引用和流量报告？"
+          ],
+          "evidenceThreshold": "需要完整方法、站点级流量数据、Google 官方报告和出版商样本，才可升级为确认的搜索分发变化结论。",
+          "claimBoundary": "不能证明所有搜索类别都被 AI 覆盖，也不能证明流量下降完全由 AI Overviews 导致。",
+          "counterEvidence": "若站点级数据显示引用点击稳定或类别差异很大，应降级为垂直领域流量信号。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/",
+          "originalUrl": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 可核对 Similarweb 数据和趋势解读；平台口径与站点影响需原始数据。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-27T08:57:00-07:00",
+          "time": "7月27日",
+          "tags": [
+            "AI 搜索",
+            "Google",
+            "流量"
+          ],
+          "companies": [
+            "Google",
+            "Similarweb"
+          ]
+        },
+        {
+          "id": "techcrunch-enigma-robot-interface-seed-2026-07-27",
+          "category": "funding",
+          "label": "资金",
+          "title": "Enigma 融资 7100 万美元，押注用在线交互训练机器人控制方式",
+          "body": "TechCrunch 报道机器人研究实验室 Enigma 种子轮融资 7100 万美元，并计划让用户在线操控超过 100 台自有机器人。",
+          "summary": "物理 AI 的竞争不只在模型，还在如何低成本收集人机交互数据。",
+          "whyItMatters": "机器人公司正在探索把远程交互、数据收集和控制界面结合成训练循环。",
+          "detailBody": "TechCrunch 报道 Enigma 从隐身状态推出，获得 Index Ventures 和 Ribbit Capital 领投的 7100 万美元种子轮；公司计划开放一个全球在线实验，让用户与位于以色列和加州的 100 多台自有机器人交互。",
+          "trend": "物理 AI 数据瓶颈正在催生新的遥操作、仿真和人机交互实验平台。",
+          "detailTrend": "近期物理 AI 讨论多围绕脑波、仿真和机器人数据。Enigma 的差异是把普通用户交互纳入训练与界面研究，但融资和演示不能证明可规模化训练出通用机器人能力。",
+          "whyRanked": "物理 AI 数据路径出现新样本。",
+          "topReason": "机器人训练数据走向在线交互实验。",
+          "detailWhyRanked": "该项把资本、机器人硬件和用户交互数据连到一起，适合追踪物理 AI 的数据生产成本。仍需公开任务、成功率、数据治理、外部评测和客户验证，才能判断是否超过演示阶段。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道可支持融资和实验计划；能力结论需数据与客户验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "媒体报道可支持融资和实验计划；能力结论需数据与客户验证。"
+          },
+          "impact": "影响机器人训练数据、远程操作平台、物理 AI 融资和人机界面设计。",
+          "whoShouldCare": "机器人、数据平台和投资团队应关注交互式数据采集能否降低物理 AI 成本。",
+          "readerUse": "机器人团队用于更新遥操作、用户交互实验和数据治理检查清单。",
+          "nextCheck": "查公司演示、任务成功率、数据授权政策、客户试点和后续融资文件。",
+          "followUpQuestions": [
+            "在线用户交互数据能否转化为可泛化的机器人策略？",
+            "Enigma 是否会公开任务指标、数据许可和安全控制？"
+          ],
+          "evidenceThreshold": "需要公开实验指标、数据治理文件、客户试点和第三方机器人任务测试，才可升级为验证的数据采集模式。",
+          "claimBoundary": "不能证明远程交互能训练通用机器人，也不能证明融资金额等于技术成熟度。",
+          "counterEvidence": "若公开实验任务过窄、数据不可用或客户试点缺失，应降级为早期融资信号。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/",
+          "originalUrl": "https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 可核对融资、投资方和实验计划；机器人能力、数据质量和商业落地需外部证据。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-27T06:00:00-07:00",
+          "time": "7月27日",
+          "tags": [
+            "机器人",
+            "物理 AI",
+            "融资"
+          ],
+          "companies": [
+            "Enigma"
+          ]
+        },
+        {
+          "id": "arxiv-multi-agent-mediation-safety-gap-2026-07-23",
+          "category": "research",
+          "label": "研究",
+          "title": "arXiv 论文提示多 Agent 中介会改变模型对危险目标的建议方向",
+          "body": "arXiv 论文研究同一危险目标在直接暴露和多 Agent 中介下的差异，提出 compositional safety gap 风险。",
+          "summary": "Agent 链路可能把危险意图改写成下游模型难以识别的任务。",
+          "whyItMatters": "安全评测不能只测试单轮提示，还要测试规划器、执行器和上下游上下文隔离。",
+          "detailBody": "arXiv 论文在 25 个预设 trade-off profiles 中比较直接暴露危险目标与经过 Id/Censor 中介改写后的输出，称下游 Superego 可能看不到原始操纵条款和来源，却给出更贴近目标的建议。",
+          "trend": "多 Agent 系统的安全风险正在从单模型拒答转向链路级意图漂移和来源遮蔽。",
+          "detailTrend": "该论文是预印本，价值在于提出可测试失败模式：上游 Agent 可把危险目标包装成操作性任务。企业应把消息 provenance、链路日志和下游可见上下文纳入评测。",
+          "whyRanked": "多 Agent 安全要测链路。",
+          "topReason": "多 Agent 安全要评测链路而非单点。",
+          "detailWhyRanked": "近期 Agent 事故让“模型是否拒答”不足以判断安全。该论文提示要检查目标在链路中的转述、过滤和上下文丢失；但它仍是单篇预印本，不能作为通用结论，需要代码、数据和跨模型复现。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "研究原文可核对方法和假设；需复现和同行评审。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "研究原文可核对方法和假设；需复现和同行评审。"
+          },
+          "impact": "影响 Agent 安全评测、审计日志设计、任务委派和高风险工作流审批。",
+          "whoShouldCare": "Agent 平台、安全研究和合规团队应关注多 Agent 链路中的目标隐藏风险。",
+          "readerUse": "安全团队用于更新 planner-executor 测试、上下文记录和 provenance 要求。",
+          "nextCheck": "查论文复现实验、公开代码、更多模型测试和同行评审。",
+          "followUpQuestions": [
+            "该结果是否能在其他模型和真实工具链中复现？",
+            "Agent 平台是否能让下游模型看到完整目标来源和改写历史？"
+          ],
+          "evidenceThreshold": "需要公开代码、数据、跨模型复现和同行评审，才可升级为已验证 Agent 安全模式。",
+          "claimBoundary": "不能证明所有多 Agent 系统都会放大危险目标，也不能解释模型内部机制。",
+          "counterEvidence": "若独立复现实验数据无法重现反向建议变化，应降级为单论文假设。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.21518",
+          "originalUrl": "https://arxiv.org/abs/2607.21518",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv 原文可核对题名、提交日期、摘要和实验主张；结论仍是预印本。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-07-23T17:02:11Z",
+          "time": "7月23日",
+          "tags": [
+            "Agent 安全",
+            "多 Agent",
+            "评测"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "huggingface-nunchaku-diffusers-4bit-2026-07-23",
+          "category": "tool",
+          "label": "工具",
+          "title": "Hugging Face 博客：Nunchaku 4-bit 扩散推理接入 Diffusers",
+          "body": "Hugging Face 技术博客介绍 Nunchaku Lite，让部分 4-bit 扩散模型可通过 Diffusers 原生加载，并降低显存门槛。",
+          "summary": "图像/视频生成的本地推理正在从专用引擎走向更通用的开发者工作流。",
+          "whyItMatters": "开发者可用更低显存试验扩散模型，但仍要核对硬件支持、质量损失和速度数据。",
+          "detailBody": "Hugging Face 博客称 Nunchaku Lite 让 Diffusers 可原生加载部分预量化 checkpoint；其 W4A4 路径通过 4-bit 权重与激活降低显存并改善 denoising latency，配套工具可量化新架构。",
+          "trend": "生成式视觉模型的生产化瓶颈继续从模型本身转向推理内核、量化和生态集成。",
+          "detailTrend": "该更新把 Nunchaku 的专用推理路径接入 Diffusers，降低尝试门槛。实际价值仍依赖具体 GPU、模型结构、图像质量评估和长期维护，不应只看单次 benchmark。",
+          "whyRanked": "低显存扩散推理进入主流工具。",
+          "topReason": "低显存扩散推理进入主流工具链。",
+          "detailWhyRanked": "相比单个模型发布，推理集成会影响更多应用团队：本地生成、边缘创作、私有部署和成本优化都可能受益。仍需独立 benchmark、质量回归测试、硬件兼容表和生产案例。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "技术博客可核对工具集成；生产收益需本地 benchmark。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "技术博客可核对工具集成；生产收益需本地 benchmark。"
+          },
+          "impact": "影响视觉生成部署成本、消费级 GPU 可用性、Diffusers 生态和模型量化流程。",
+          "whoShouldCare": "生成式视觉、推理优化和开发者工具团队应关注 4-bit 扩散部署可行性。",
+          "readerUse": "开发者团队用于评估 Diffusers 量化推理、显存预算和质量回归测试。",
+          "nextCheck": "运行官方示例、比较 BF16 输出、查硬件兼容矩阵和社区 benchmark。",
+          "followUpQuestions": [
+            "Nunchaku Lite 在不同消费级 GPU 上的速度和质量损失如何？",
+            "Diffusers 集成是否覆盖更多主流图像和视频模型结构？"
+          ],
+          "evidenceThreshold": "需要可复现 benchmark、质量对比数据、硬件兼容表和生产案例，才可升级为验证的部署优化方案。",
+          "claimBoundary": "不能证明所有扩散模型都能无损提速，也不能证明无需工程维护。",
+          "counterEvidence": "若社区复测数据显示质量下降明显或硬件覆盖有限，应降级为特定模型工具更新。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nunchaku-diffusers",
+          "originalUrl": "https://huggingface.co/blog/nunchaku-diffusers",
+          "sourceRole": "厂商主张",
+          "provenance": "Hugging Face 技术博客属于厂商/生态主张，可核对集成方法、支持路径和作者 benchmark；生产收益仍需独立测试。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "medium",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-23T09:00:00-07:00",
+          "time": "7月23日",
+          "tags": [
+            "Diffusers",
+            "量化",
+            "图像生成"
+          ],
+          "companies": [
+            "Hugging Face"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-07-27",
       "date": "2026-07-27",
