@@ -1,3 +1,26 @@
+## 2026-07-27 23:08 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充更新；当前本地首页已是 `news-1700-2026-07-27`，因此未回退为早间版，而是在当前最新版中补入 4 条更强的新信号，当前版从 10 条增至 14 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 先读取自动化记忆、`data/sources.json`、`docs/source-policy.md`、新闻数据格式和候选源检查要求。
+  - `git pull --ff-only origin main` 因 GitHub DNS 解析失败未能完成；按本地最新状态继续，且在 operationalStatus 中记录。
+  - 新增 OpenAI 官方 Work at the Frontier 任务跨界研究、NVIDIA 官方 Open Secure AI Alliance、Axios 离网 AI 数据中心约束、TechCrunch 物理 AI 训练数据试验。
+  - 跳过已在当前版或历史中覆盖的 OpenAI/Hugging Face 事故、Kimi/开放权重后续和旧 Anthropic/DeepMind 信号；媒体条目保持 `must-read`，不复制全文。
+- Verification:
+  - Ran `node --check app.js && node --check all-news.js && node --check news-detail.js && node --check archive.js && node --check tags.js && node --check scripts/validate-data.mjs && node --check scripts/validate-site.mjs && node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, and `tags.html` with Python `HTMLParser`.
+  - Validated `data/news.json`, `data/news-history.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `git diff --check`.
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- Commit: Local commit created; final hash recorded in the automation run summary.
+
 ## 2026-07-27 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 18 reader-first homepage task. Added an edition-level "do not overread this batch" note for the current all-media-background edition so readers treat it as a radar/checklist, not a full-market conclusion.
