@@ -14,7 +14,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After commit: pending - implementation commit `b4c4cd4` was created locally; push will be attempted after this log update.
+  - After commit: blocked-dns - implementation commit `b4c4cd4` and log/index follow-up commit `d56c5a1` were created locally, but `git push origin main` failed because `github.com` could not be resolved.
 - Content posture:
   - Added `edition.overreadBoundary` to the current homepage data and latest archive snapshot for the 10/10 reliable-media batch.
   - Rendered the boundary as its own homepage metadata block: what not to conclude, and how to use the batch instead.
@@ -31,7 +31,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: Local implementation commit `b4c4cd4` (`增加批次过度解读提示`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
-- Git note: push will be attempted after the log/index follow-up commit; if GitHub DNS remains unavailable, retry when network access returns.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-27 08:11 JST
 
