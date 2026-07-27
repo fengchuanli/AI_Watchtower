@@ -19,8 +19,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: pending.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit.
+- Commit: Local commit `cf441a5` (`更新17点AI新闻情报`) created; `git push origin main` failed because `github.com` DNS resolution was unavailable.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
 
 ## 2026-07-27 23:08 JST
 
