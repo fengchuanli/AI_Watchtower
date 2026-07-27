@@ -8,6 +8,7 @@ const tagsHtml = readFileSync("tags.html", "utf8");
 const archiveHtml = readFileSync("archive.html", "utf8");
 const notFoundHtml = readFileSync("404.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
+const newsJson = readFileSync("data/news.json", "utf8");
 const detailJs = readFileSync("news-detail.js", "utf8");
 const allNewsJs = readFileSync("all-news.js", "utf8");
 const tagsJs = readFileSync("tags.js", "utf8");
@@ -1109,7 +1110,8 @@ if (
   !/Day 15[\s\S]*mobile[\s\S]*scan variant/.test(optimizationDecisionIndex) ||
   !/Day 16[\s\S]*coverage-mix labels/.test(optimizationDecisionIndex) ||
   !/Day 17[\s\S]*omitted-topic explanations/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 18/.test(optimizationDecisionIndex) ||
+  !/Day 18[\s\S]*overreadBoundary/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 19/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1174,6 +1176,20 @@ if (
   !/changeSummary/.test(newsDataFormat)
 ) {
   errors.push("Homepage feed metadata must render and validate what changed since the last batch.");
+}
+
+if (
+  !/id="overreadBoundary"/.test(html) ||
+  !/const overreadBoundary = document\.querySelector\("#overreadBoundary"\);/.test(appJs) ||
+  !/function renderOverreadBoundary/.test(appJs) ||
+  !/function validateOverreadBoundary/.test(appJs) ||
+  !/edition\.overreadBoundary/.test(appJs) ||
+  !/overreadBoundary/.test(validateDataJs) ||
+  !/overread boundary/.test(newsDataFormat) ||
+  !/不要把本期读成全市场结论/.test(newsJson) ||
+  !/\.overread-boundary/.test(styles)
+) {
+  errors.push("Homepage feed metadata must render and validate an edition-level do-not-overread note when one evidence mode dominates.");
 }
 
 if (

@@ -543,6 +543,41 @@ function validateEditionChangeSummary(changeSummary, context) {
   }
 }
 
+function validateOverreadBoundary(boundary, sourceFamilies = [], items = [], context) {
+  const dominantFamily = (sourceFamilies || []).find(
+    (family) => Number.isInteger(family.count) && family.count >= Math.ceil((items || []).length * 0.67),
+  );
+
+  if (!dominantFamily) {
+    return;
+  }
+
+  if (!boundary || typeof boundary !== "object" || Array.isArray(boundary)) {
+    errors.push(`${context} must include overreadBoundary when one evidence mode dominates.`);
+    return;
+  }
+
+  const requiredFields = ["label", "body", "doNotConclude", "useInstead"];
+
+  for (const field of requiredFields) {
+    if (typeof boundary[field] !== "string" || !boundary[field].trim()) {
+      errors.push(`${context} overreadBoundary.${field} must be non-empty Chinese copy.`);
+    }
+  }
+
+  if (!/不要|过度|误读/.test(`${boundary.label || ""}${boundary.body || ""}`)) {
+    errors.push(`${context} overreadBoundary must explicitly warn readers not to overread the batch.`);
+  }
+
+  if (!/不能|不证明|不代表|尚未/.test(boundary.doNotConclude || "")) {
+    errors.push(`${context} overreadBoundary.doNotConclude must state the conclusion readers cannot draw.`);
+  }
+
+  if (!/官方|原文|公告|文件|备案|合同|数据|指标|benchmark|第三方|复核/.test(boundary.useInstead || "")) {
+    errors.push(`${context} overreadBoundary.useInstead must name the next evidence source or proof type.`);
+  }
+}
+
 function validateTrendNotes(notes, context) {
   if (!Array.isArray(notes) || notes.length < 2) {
     errors.push(`${context} must include at least two cross-edition trend notes.`);
@@ -624,6 +659,7 @@ function assertLatestHistoryMatchesCurrent(currentEdition, latestHistoryEdition,
   const structuredFields = [
     "readerFrame",
     "changeSummary",
+    "overreadBoundary",
     "coverageMix",
     "sourceFamilies",
     "sourceRisk",
@@ -1042,6 +1078,12 @@ if (!newsFeed.edition) {
 
   validateReaderFrame(newsFeed.edition.readerFrame, "data/news.json edition");
   validateEditionChangeSummary(newsFeed.edition.changeSummary, "data/news.json edition");
+  validateOverreadBoundary(
+    newsFeed.edition.overreadBoundary,
+    newsFeed.edition.sourceFamilies,
+    newsFeed.items || [],
+    "data/news.json edition",
+  );
   validateTrendNotes(newsFeed.edition.trendNotes, "data/news.json edition");
   validateSourceConcentration(newsFeed.edition.sourceConcentration, newsFeed.items || [], "data/news.json edition");
   validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);

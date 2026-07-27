@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 3, Reader-First Homepage Content
-- Last indexed run: 2026-07-26 20:00 JST
+- Last indexed run: 2026-07-27 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -39,12 +39,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 15 | Complete | `2def4b8` | Current homepage and latest archive reader frame now include a compact `mobile` scan variant, and validators require future dense editions to give phone readers a short action/proof-boundary path. |
 | Day 16 | Complete | `9d5fba5` | Current homepage and latest archive coverage-mix labels now read as check-now cues, and validators reject passive topic-only coverage labels. |
 | Day 17 | Complete | `465ad79` | Homepage omitted-topic explanations now label omissions as `无新来源事实` and explicitly say the topic remains important but lacks a fresh promotable source fact this batch. |
+| Day 18 | Complete | `pending` | Current homepage and latest archive now include an `overreadBoundary` when one evidence mode dominates, so all-media batches are framed as radar/checklists rather than full-market conclusions. |
 
 ## Next Useful Task
 
-- Continue with Day 18: add an edition-level "do not overread this batch" note when all current items share the same evidence mode.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 18 first.
-- If Day 18 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 19: review category labels and descriptions against the current item set, removing stale or overly broad wording.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 19 first.
+- If Day 19 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

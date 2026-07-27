@@ -9,6 +9,7 @@ const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
 const readerFrame = document.querySelector("#readerFrame");
 const editionChange = document.querySelector("#editionChange");
+const overreadBoundary = document.querySelector("#overreadBoundary");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceRisk = document.querySelector("#sourceRisk");
 const trendNotes = document.querySelector("#trendNotes");
@@ -372,6 +373,7 @@ function validateEdition(edition, updatedAt, items = []) {
 
   validateReaderFrame(edition.readerFrame);
   validateEditionChange(edition.changeSummary);
+  validateOverreadBoundary(edition.overreadBoundary, edition.sourceFamilies, items);
   validateTrendNotes(edition.trendNotes);
   validateSourceConcentration(edition.sourceConcentration, items);
 
@@ -523,6 +525,29 @@ function validateEditionChange(changeSummary) {
 
   if (!Array.isArray(changeSummary.repeatedContext) || changeSummary.repeatedContext.length < 2) {
     throw new Error("News edition change summary must separate repeated context.");
+  }
+}
+
+function validateOverreadBoundary(boundary, sourceFamilies = [], items = []) {
+  const dominantFamily = sourceFamilies.find(
+    (family) => Number.isInteger(family.count) && family.count >= Math.ceil(items.length * 0.67),
+  );
+
+  if (!dominantFamily) {
+    return;
+  }
+
+  if (
+    !boundary ||
+    !boundary.label ||
+    !boundary.body ||
+    !boundary.doNotConclude ||
+    !boundary.useInstead ||
+    !/不要|过度|误读/.test(`${boundary.label}${boundary.body}`) ||
+    !/不能|不证明|不代表|尚未/.test(boundary.doNotConclude) ||
+    !/用来|适合|先把|应该/.test(boundary.useInstead)
+  ) {
+    throw new Error("News edition must include a do-not-overread boundary when one evidence mode dominates.");
   }
 }
 
@@ -886,6 +911,10 @@ function updateNewsMeta(data) {
     editionChange.innerHTML = renderFeedMetaDetails("本期相对上一批次的变化", renderEditionChange(data.edition?.changeSummary));
   }
 
+  if (overreadBoundary) {
+    overreadBoundary.innerHTML = renderFeedMetaDetails("本期不要过度解读", renderOverreadBoundary(data.edition?.overreadBoundary));
+  }
+
   if (coverageMix) {
     const mixItems = data.edition?.coverageMix || [];
     const coverageBody = mixItems
@@ -969,6 +998,23 @@ function updateNewsMeta(data) {
     ].join("");
     topicGroups.innerHTML = renderFeedMetaDetails("本期主题分组", topicBody);
   }
+}
+
+function renderOverreadBoundary(boundary) {
+  if (!boundary) {
+    return "";
+  }
+
+  return `
+    <span>
+      <strong>${escapeHtml(boundary.label)}</strong>
+      ${escapeHtml(boundary.body)}
+      <em>不要得出</em>
+      ${escapeHtml(boundary.doNotConclude)}
+      <em>本期更适合</em>
+      ${escapeHtml(boundary.useInstead)}
+    </span>
+  `;
 }
 
 function renderSourceRisk(risk, concentration) {

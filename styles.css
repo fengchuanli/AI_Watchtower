@@ -295,6 +295,7 @@ h3 {
 
 .reader-frame,
 .edition-change,
+.overread-boundary,
 .coverage-mix,
 .source-risk,
 .trend-notes,
@@ -309,6 +310,7 @@ h3 {
 
 .source-families,
 .trend-notes,
+.overread-boundary,
 .topic-groups {
   margin-top: 8px;
 }
@@ -420,6 +422,7 @@ h3 {
 }
 
 .coverage-mix span,
+.overread-boundary span,
 .source-risk span,
 .trend-notes span,
 .source-families span,
@@ -431,6 +434,20 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   font-size: 13px;
+}
+
+.overread-boundary span {
+  max-width: 500px;
+  background: #f5fbf7;
+  border-color: rgb(42 94 65 / 20%);
+}
+
+.overread-boundary em {
+  display: block;
+  margin: 7px 0 2px;
+  color: #2a5e41;
+  font-style: normal;
+  font-weight: 800;
 }
 
 .source-risk span {
@@ -495,6 +512,7 @@ h3 {
 }
 
 .coverage-mix strong,
+.overread-boundary strong,
 .trend-notes strong,
 .source-families strong,
 .topic-groups strong {
@@ -2791,6 +2809,7 @@ h3 {
 
 .reader-frame,
 .edition-change,
+.overread-boundary,
 .coverage-mix,
 .source-risk,
 .trend-notes,
@@ -2846,6 +2865,7 @@ h3 {
   }
 
   .coverage-mix span,
+  .overread-boundary span,
   .source-risk span,
   .trend-notes span,
   .source-families span,
