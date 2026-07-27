@@ -1,3 +1,38 @@
+## 2026-07-27 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 18 reader-first homepage task. Added an edition-level "do not overread this batch" note for the current all-media-background edition so readers treat it as a radar/checklist, not a full-market conclusion.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After commit: pending - implementation commit `b4c4cd4` was created locally; push will be attempted after this log update.
+- Content posture:
+  - Added `edition.overreadBoundary` to the current homepage data and latest archive snapshot for the 10/10 reliable-media batch.
+  - Rendered the boundary as its own homepage metadata block: what not to conclude, and how to use the batch instead.
+  - Added runtime/data/site guards so future editions with one dominant evidence mode keep this edition-level warning.
+  - Kept current news item facts, source URLs, rankings, categories, and source claims unchanged.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, `docs/news-data-format.md`, and recent `docs/optimization-log.md` entries; continued with Day 18 because Day 0 through Day 17 were already complete.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 33 sources, including the new overread-boundary guard.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the homepage overread-boundary render/documentation guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `b4c4cd4` (`增加批次过度解读提示`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: push will be attempted after the log/index follow-up commit; if GitHub DNS remains unavailable, retry when network access returns.
+
 ## 2026-07-27 08:11 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-27`，发布 10 条 Agent 安全、开放权重、职场 AI、可穿戴隐私和推理基础设施信号。
