@@ -1,3 +1,27 @@
+## 2026-07-29 08:13 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-29`，发布 11 条 Agent 治理、算力经济、开放权重、安全风险和数据中心能源信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Axios/TechCrunch/VentureBeat 索引、MIT 原始风险研究页和可靠媒体搜索结果，未使用付费墙或登录墙正文。
+  - 本期覆盖 Axios 对 AI Agent 专利、AI 进口/GDP、MIT 风险研究、NVIDIA/Commerce 对华芯片审查、数据中心可再生能源压力、Anthropic/OpenAI 收入预测的报道，以及 VentureBeat 对 Agent 治理、安全身份、AI 计算成本、Kimi K3 权重和 MCP 更新的报道。
+  - 因 11/11 条来自可靠媒体来源，版面写入 `overreadBoundary` 和来源集中提示；所有条目保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求官方文件、原始报告、仓库、许可证、财报、客户指标、安全审计或第三方复测再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新17点AI新闻情报`; final local HEAD is recorded in automation memory because this log line was amended into the same commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push attempted after commit.
+
 ## 2026-07-28 23:07 JST
 
 - Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-07-28`，因此未回退为早间版，而是在当前最新版补入 3 条不重复的安全来源信号，当前版从 11 条增至 14 条。
