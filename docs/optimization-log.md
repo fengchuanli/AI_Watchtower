@@ -1,3 +1,27 @@
+## 2026-07-28 23:07 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-07-28`，因此未回退为早间版，而是在当前最新版补入 3 条不重复的安全来源信号，当前版从 11 条增至 14 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、官方 Anthropic 与 Microsoft 页面、Reuters/Investing.com 转载页面和可靠媒体搜索结果，未使用付费墙或登录墙正文。
+  - 本次新增 Anthropic 官方开放权重立场、Microsoft Security Blog EXTRA 外部红队联盟、Reuters 对 AI 支出回报与中国竞争担忧引发亚洲芯片股抛售的市场背景。
+  - 跳过已在当前版或历史中覆盖的 Microsoft Project Perception、NVIDIA/SSI、Open Secure AI Alliance、Axios NVIDIA/OpenAI 融资讨论和 OpenAI Presence 等重复 URL；媒体条目保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `补充08点AI新闻情报`; final local HEAD is recorded in automation memory because this log line was amended into the same commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-28 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 19 reader-first homepage task. Reviewed current homepage category labels and descriptions against the 11-item batch, replacing generic scope copy with current-batch reader-use and proof-boundary descriptions.
