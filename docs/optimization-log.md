@@ -20,7 +20,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
 - Commit: Local commit created with message `更新17点AI新闻情报`; final local HEAD is recorded in automation memory because this log line was amended into the same commit.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push attempted after commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-28 23:07 JST
 
