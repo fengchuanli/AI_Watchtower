@@ -1022,6 +1022,20 @@ if (!Array.isArray(newsFeed.categories) || !newsFeed.categories.length) {
       }
     }
 
+    if (category.description) {
+      if (!/(筛选|用来|用于|核对|检查|更新)/.test(category.description)) {
+        errors.push(`data/news.json categories[${index}] description must explain the reader use of this category.`);
+      }
+
+      if (!/(本期|当前|这批|今日)/.test(category.description)) {
+        errors.push(`data/news.json categories[${index}] description must be reviewed against the current item set.`);
+      }
+
+      if (!/(需|仍|边界|不直接|等待|确认|验证|复现)/.test(category.description)) {
+        errors.push(`data/news.json categories[${index}] description must include an evidence or proof-boundary caveat.`);
+      }
+    }
+
     if (category.id && categoryIds.has(category.id)) {
       errors.push(`data/news.json has duplicate category id ${category.id}.`);
     }

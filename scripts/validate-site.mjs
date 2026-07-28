@@ -1111,7 +1111,8 @@ if (
   !/Day 16[\s\S]*coverage-mix labels/.test(optimizationDecisionIndex) ||
   !/Day 17[\s\S]*omitted-topic explanations/.test(optimizationDecisionIndex) ||
   !/Day 18[\s\S]*overreadBoundary/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 19/.test(optimizationDecisionIndex) ||
+  !/Day 19[\s\S]*categories[\s\S]*proof boundaries/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 20/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

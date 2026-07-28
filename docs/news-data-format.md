@@ -77,7 +77,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 
 - `id`: Stable category code matching item `category` and the homepage filter.
 - `label`: Chinese label shared by the filter and every item in that category.
-- `description`: Concise Chinese scope note covering what belongs in the category and any important evidence caveat.
+- `description`: Concise Chinese scope note covering what belongs in the category and any important evidence caveat. Review these descriptions against the current item set during content-quality passes: each one should explain the reader use of the filter, name a current-batch angle with words such as `本期` or `当前`, and include a proof-boundary cue such as `需验证`, `仍需确认`, `不直接证明`, or `等待复现`.
 
 ## History Fields
 
