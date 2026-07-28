@@ -11,7 +11,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After local commits: blocked-dns - implementation commit `b95de25` and log/index follow-up commit `782b073` were created locally, but `git push origin main` failed because `github.com` could not be resolved.
+  - After local commits: blocked-dns - implementation commit `b95de25`, log/index follow-up commit `782b073`, and push-blocker correction commit `b35046e` were created locally, but `git push origin main` failed because `github.com` could not be resolved.
 - Content posture:
   - Updated the six homepage filter descriptions so model, product, research, tool, funding, and policy categories name what the current batch helps readers check.
   - Kept category labels and item assignments stable, but removed stale generic wording that did not mention this batch's Agent security, AI gateway, AI search, compute financing, open-weight, physical AI, and inference-tool angles.
@@ -27,7 +27,7 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `b95de25` (`优化首页分类说明`). Log/index follow-up commit `782b073` (`记录分类说明优化`) created; final local HEAD is `782b073`.
+- Commit: Local implementation commit `b95de25` (`优化首页分类说明`). Log/index follow-up commit `782b073` (`记录分类说明优化`) and push-blocker correction commit `b35046e` (`记录分类说明推送阻塞`) created; final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
 - Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-28 08:11 JST
