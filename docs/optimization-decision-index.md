@@ -40,7 +40,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 16 | Complete | `9d5fba5` | Current homepage and latest archive coverage-mix labels now read as check-now cues, and validators reject passive topic-only coverage labels. |
 | Day 17 | Complete | `465ad79` | Homepage omitted-topic explanations now label omissions as `无新来源事实` and explicitly say the topic remains important but lacks a fresh promotable source fact this batch. |
 | Day 18 | Complete | `b4c4cd4` | Current homepage and latest archive now include an `overreadBoundary` when one evidence mode dominates, so all-media batches are framed as radar/checklists rather than full-market conclusions. |
-| Day 19 | Complete | `pending` | Current homepage categories now use current-batch descriptions tied to reader use and proof boundaries, and data validation rejects stale generic category descriptions. |
+| Day 19 | Complete | `b95de25` | Current homepage categories now use current-batch descriptions tied to reader use and proof boundaries, and data validation rejects stale generic category descriptions. |
 
 ## Next Useful Task
 

@@ -1,3 +1,35 @@
+## 2026-07-28 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 19 reader-first homepage task. Reviewed current homepage category labels and descriptions against the 11-item batch, replacing generic scope copy with current-batch reader-use and proof-boundary descriptions.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After implementation commit: pending at log time - push will be attempted after this log follow-up commit.
+- Content posture:
+  - Updated the six homepage filter descriptions so model, product, research, tool, funding, and policy categories name what the current batch helps readers check.
+  - Kept category labels and item assignments stable, but removed stale generic wording that did not mention this batch's Agent security, AI gateway, AI search, compute financing, open-weight, physical AI, and inference-tool angles.
+  - Corrected current/latest archive framing counts from 10-item copy to the actual 11-item batch, including source-family and TechCrunch share text.
+  - Added data validation and format documentation so future category descriptions include reader use, current-batch framing, and a proof-boundary cue.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, `docs/news-data-format.md`, and recent `docs/optimization-log.md` entries; continued with Day 19 because Day 0 through Day 18 were already complete.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources, including the new category-description guard.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the Day 19 to Day 20 decision-index guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `b95de25` (`优化首页分类说明`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-28 08:11 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-28`，发布 11 条安全 Agent、算力融资、开放权重、AI 搜索、开发工具和物理 AI 信号。
