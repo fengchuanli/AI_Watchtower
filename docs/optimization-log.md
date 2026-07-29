@@ -9,7 +9,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After local commit: pending until commit hash is available; push will be attempted after committing.
+  - After local commit: blocked-dns - local commit `6389ba4` was created, but `git push origin main` failed because `github.com` could not be resolved.
 - Content posture:
   - Added normalized sentence-level validation for caveat copy in `readerFrame.whyItMatters`, mobile proof boundary, `readerFrame.notProvenYet`, `sourceRisk.note`, `sourceRisk.nextCheck`, and each `trendNotes` note/boundary.
   - Applied the audit to both `data/news.json` and the latest `data/news-history.json` edition so archive-ready homepage framing cannot preserve pasted caveats.
@@ -25,8 +25,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Pending local commit with message `增加首页提示重复审计`; final hash will be recorded after commit.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit.
+- Commit: Local commit `6389ba4` (`增加首页提示重复审计`).
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-29 08:13 JST
 
