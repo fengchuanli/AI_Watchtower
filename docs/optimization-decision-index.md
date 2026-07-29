@@ -6,8 +6,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
-- Current phase: Phase 3, Reader-First Homepage Content
-- Last indexed run: 2026-07-28 20:00 JST
+- Current phase: Phase 4, Detail Briefing And Continuity
+- Last indexed run: 2026-07-29 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -41,12 +41,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 17 | Complete | `465ad79` | Homepage omitted-topic explanations now label omissions as `无新来源事实` and explicitly say the topic remains important but lacks a fresh promotable source fact this batch. |
 | Day 18 | Complete | `b4c4cd4` | Current homepage and latest archive now include an `overreadBoundary` when one evidence mode dominates, so all-media batches are framed as radar/checklists rather than full-market conclusions. |
 | Day 19 | Complete | `b95de25` | Current homepage categories now use current-batch descriptions tied to reader use and proof boundaries, and data validation rejects stale generic category descriptions. |
+| Day 20 | Complete | `pending` | `scripts/validate-data.mjs` now audits repeated caveat sentences across `readerFrame`, `sourceRisk`, and `trendNotes`, keeping reader orientation, source-risk warning, and trend boundaries distinct. |
 
 ## Next Useful Task
 
-- Continue with Day 20: add a homepage copy audit that catches repeated caveat sentences across reader frame, source risk, and trend notes.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 20 first.
-- If Day 20 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 21: add a detail-page review guide for converting technical claims into fact, impact, boundary, and next-check blocks.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 21 first.
+- If Day 21 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

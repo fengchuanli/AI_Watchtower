@@ -1,3 +1,33 @@
+## 2026-07-29 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 20 reader-first homepage task. Added a homepage copy audit that catches repeated caveat sentences across reader frame, source risk, and trend notes so these sections keep distinct editorial jobs.
+- Changed files:
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After local commit: pending until commit hash is available; push will be attempted after committing.
+- Content posture:
+  - Added normalized sentence-level validation for caveat copy in `readerFrame.whyItMatters`, mobile proof boundary, `readerFrame.notProvenYet`, `sourceRisk.note`, `sourceRisk.nextCheck`, and each `trendNotes` note/boundary.
+  - Applied the audit to both `data/news.json` and the latest `data/news-history.json` edition so archive-ready homepage framing cannot preserve pasted caveats.
+  - Documented that reader orientation, source-risk warning, and cross-edition proof boundaries must add distinct value rather than repeat the same caution.
+  - Advanced the decision index to Day 21: detail-page review guidance for converting technical claims into fact, impact, boundary, and next-check blocks.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, `docs/news-data-format.md`, and recent `docs/optimization-log.md` entries; continued with Day 20 because Day 0 through Day 19 were already complete.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources, including the new homepage caveat-copy audit.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the Day 20 to Day 21 decision-index guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending local commit with message `增加首页提示重复审计`; final hash will be recorded after commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit.
+
 ## 2026-07-29 08:13 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-29`，发布 11 条 Agent 治理、算力经济、开放权重、安全风险和数据中心能源信号。

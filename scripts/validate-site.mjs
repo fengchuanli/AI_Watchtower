@@ -1082,7 +1082,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-06-24 through 2026-07-23/.test(optimizationDecisionIndex) ||
-  !/Phase 3, Reader-First Homepage Content/.test(optimizationDecisionIndex) ||
+  !/Phase 4, Detail Briefing And Continuity/.test(optimizationDecisionIndex) ||
   !/Previous Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
   !/Previous Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
@@ -1112,7 +1112,10 @@ if (
   !/Day 17[\s\S]*omitted-topic explanations/.test(optimizationDecisionIndex) ||
   !/Day 18[\s\S]*overreadBoundary/.test(optimizationDecisionIndex) ||
   !/Day 19[\s\S]*categories[\s\S]*proof boundaries/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 20/.test(optimizationDecisionIndex) ||
+  !/Day 20[\s\S]*audits repeated caveat sentences[\s\S]*readerFrame[\s\S]*sourceRisk[\s\S]*trendNotes/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1211,6 +1214,9 @@ if (
     appJs,
   ) ||
   !/validateEditionMetadataReadability/.test(validateDataJs) ||
+  !/validateHomepageCaveatCopyAudit/.test(validateDataJs) ||
+  !/readerFrame[\s\S]*sourceRisk[\s\S]*trendNotes/.test(validateDataJs) ||
+  !/homepage caveat-copy duplication/.test(newsDataFormat) ||
   !/keep each metadata field responsible for one job/.test(validateDataJs) ||
   !/operationalStatus/.test(validateDataJs) ||
   !/editorialInterpretation/.test(validateDataJs) ||

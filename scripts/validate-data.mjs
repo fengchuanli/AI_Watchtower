@@ -626,6 +626,64 @@ function validateTrendNotes(notes, context) {
   }
 }
 
+function splitCopySentences(value) {
+  return String(value || "")
+    .split(/[。！？!?；;]/)
+    .map((sentence) => sentence.trim())
+    .filter((sentence) => sentence.length >= 14);
+}
+
+function normalizeAuditSentence(value) {
+  return String(value || "")
+    .replace(/\s+/g, "")
+    .replace(/[，。、：；,.!?:;·"“”‘’（）()《》<>【】[\]]/g, "");
+}
+
+function collectHomepageCaveatSentences(edition) {
+  const caveatFields = [
+    ["readerFrame.whyItMatters", edition?.readerFrame?.whyItMatters],
+    ["readerFrame.mobile.proofBoundary", edition?.readerFrame?.mobile?.proofBoundary],
+    ...(edition?.readerFrame?.notProvenYet || []).map((value, index) => [
+      `readerFrame.notProvenYet[${index}]`,
+      value,
+    ]),
+    ["sourceRisk.note", edition?.sourceRisk?.note],
+    ["sourceRisk.nextCheck", edition?.sourceRisk?.nextCheck],
+    ...(edition?.trendNotes || []).flatMap((note, index) => [
+      [`trendNotes[${index}].note`, note?.note],
+      [`trendNotes[${index}].boundary`, note?.boundary],
+    ]),
+  ];
+
+  return caveatFields.flatMap(([field, value]) => {
+    return splitCopySentences(value).map((sentence) => ({
+      field,
+      sentence,
+      normalized: normalizeAuditSentence(sentence),
+    }));
+  });
+}
+
+function validateHomepageCaveatCopyAudit(edition, context) {
+  const seenSentences = new Map();
+
+  for (const record of collectHomepageCaveatSentences(edition)) {
+    if (record.normalized.length < 12) {
+      continue;
+    }
+
+    const previous = seenSentences.get(record.normalized);
+
+    if (previous && previous.field !== record.field) {
+      errors.push(
+        `${context} repeats a caveat sentence across ${previous.field} and ${record.field}: "${record.sentence}". Keep reader frame, source risk, and trend notes distinct.`,
+      );
+    }
+
+    seenSentences.set(record.normalized, record);
+  }
+}
+
 function stableStringify(value) {
   if (Array.isArray(value)) {
     return `[${value.map((item) => stableStringify(item)).join(",")}]`;
@@ -1101,6 +1159,7 @@ if (!newsFeed.edition) {
   validateTrendNotes(newsFeed.edition.trendNotes, "data/news.json edition");
   validateSourceConcentration(newsFeed.edition.sourceConcentration, newsFeed.items || [], "data/news.json edition");
   validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);
+  validateHomepageCaveatCopyAudit(newsFeed.edition, "data/news.json edition");
 
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
     errors.push("data/news.json edition must include at least two coverageMix entries.");
@@ -1431,6 +1490,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
   validateEditionChangeSummary(latestHistoryEdition.changeSummary, "data/news-history.json latest edition");
   validateTrendNotes(latestHistoryEdition.trendNotes, "data/news-history.json latest edition");
+  validateHomepageCaveatCopyAudit(latestHistoryEdition, "data/news-history.json latest edition");
   validateSourceConcentration(
     latestHistoryEdition.sourceConcentration,
     latestHistoryEdition.items || [],
