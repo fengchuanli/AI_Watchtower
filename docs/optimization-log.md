@@ -1,3 +1,27 @@
+## 2026-07-29 23:06 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-07-29` 17:00 版，因此未回退为早间版，而是在当前最新版中补入 3 条 7 月 29 日可靠来源信号，当前版从 11 条增至 14 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Axios、The Verge、Pacing the Frontier 公开声明页、TechCrunch/OpenAI 索引和既有 MIT 原始研究引用，未使用付费墙或登录墙正文。
+  - 本次新增 Axios 对 OpenAI Agent/CyberGym 评测资产新细节的报道、The Verge 对 Pacing the Frontier 自动化 AI 研发节奏联名信的报道，以及 Axios 对 Anthropic 开放权重政策位置的报道。
+  - 因 14/14 条来自可靠媒体来源，版面继续保留 `overreadBoundary` 和来源集中提示；所有新增条目保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求事件日志、声明原文、监管文件、公司回应或第三方取证再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `补充08点AI新闻情报`; final local HEAD is recorded in automation memory because this log line was amended into the same commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-29 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 20 reader-first homepage task. Added a homepage copy audit that catches repeated caveat sentences across reader frame, source risk, and trend notes so these sections keep distinct editorial jobs.
