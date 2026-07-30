@@ -42,7 +42,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 18 | Complete | `b4c4cd4` | Current homepage and latest archive now include an `overreadBoundary` when one evidence mode dominates, so all-media batches are framed as radar/checklists rather than full-market conclusions. |
 | Day 19 | Complete | `b95de25` | Current homepage categories now use current-batch descriptions tied to reader use and proof boundaries, and data validation rejects stale generic category descriptions. |
 | Day 20 | Complete | `6389ba4` | `scripts/validate-data.mjs` now audits repeated caveat sentences across `readerFrame`, `sourceRisk`, and `trendNotes`, keeping reader orientation, source-risk warning, and trend boundaries distinct. |
-| Day 21 | Complete | `pending` | `docs/detail-page-review-guide.md` now tells editors to convert detail-page technical claims into fact, impact, boundary, and next-check blocks before publication. |
+| Day 21 | Complete | `a62adbf` | `docs/detail-page-review-guide.md` now tells editors to convert detail-page technical claims into fact, impact, boundary, and next-check blocks before publication. |
 
 ## Next Useful Task
 

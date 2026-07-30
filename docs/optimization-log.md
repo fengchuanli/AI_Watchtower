@@ -1,3 +1,33 @@
+## 2026-07-30 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 21 detail-briefing task. Added a detail-page review guide that converts technical claims into fact, impact, boundary, and next-check blocks before publication.
+- Changed files:
+  - `docs/detail-page-review-guide.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `docs/editorial-checklist.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After local commits: pending - implementation commit `a62adbf` was created locally; push will be attempted after this log/index follow-up commit.
+- Content posture:
+  - Added `docs/detail-page-review-guide.md` with four-block review rules for detail-page fact, impact, boundary, and next-check copy.
+  - Covered technical claim conversion, source-type adjustments, mobile readability, and stop conditions so vendor, research, policy, benchmark, funding, adoption, and media claims keep proof boundaries visible.
+  - Linked the guide from the candidate handoff, editorial checklist, and README so it is part of the routine publication workflow.
+  - Updated `scripts/validate-site.mjs` so the new guide and the Day 21 to Day 22 decision-index handoff remain discoverable.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/editorial-checklist.md`, `docs/candidate-to-news-handoff.md`, `README.md`, and relevant site-validation guards; continued with Day 21 because Day 0 through Day 20 were already complete.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new detail-page review guide guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `a62adbf` (`增加详情页主张审稿指南`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: push will be attempted after the log/index follow-up commit; if GitHub DNS remains unavailable, push needs retry when network access returns.
+
 ## 2026-07-30 08:10 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-30`，发布 12 条科研访问、AI 支出、Agent 控制面、内容检测、算力合同、无人系统和数据中心电网约束信号。
