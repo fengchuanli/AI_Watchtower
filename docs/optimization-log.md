@@ -11,7 +11,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After local commits: pending - implementation commit `a62adbf` was created locally; push will be attempted after this log/index follow-up commit.
+  - After local commits: blocked-dns - implementation commit `a62adbf` and log/index follow-up commit `c797ab9` were created locally, but `git push origin main` failed because `github.com` could not be resolved.
 - Content posture:
   - Added `docs/detail-page-review-guide.md` with four-block review rules for detail-page fact, impact, boundary, and next-check copy.
   - Covered technical claim conversion, source-type adjustments, mobile readability, and stop conditions so vendor, research, policy, benchmark, funding, adoption, and media claims keep proof boundaries visible.
@@ -25,8 +25,8 @@
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new detail-page review guide guard.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `a62adbf` (`增加详情页主张审稿指南`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
-- Git note: push will be attempted after the log/index follow-up commit; if GitHub DNS remains unavailable, push needs retry when network access returns.
+- Commit: Local implementation commit `a62adbf` (`增加详情页主张审稿指南`) and log/index follow-up commit `c797ab9` (`记录详情页审稿指南优化`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-07-30 08:10 JST
 
