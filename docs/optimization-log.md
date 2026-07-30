@@ -1,3 +1,27 @@
+## 2026-07-31 08:16 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-31`，发布 13 条 AI 云财报、模型价格、版权诉讼、机器人、平台治理、身份安全、基础设施整合和安全工程信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰未跟踪的 `rag/` 目录。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Axios/TechCrunch 最新 AI 索引、Google 官方博客和 Hugging Face 官方博客，未使用付费墙、登录墙正文、社区传言或随机抓取页面。
+  - 本期覆盖 Axios 对 Amazon 财报 AI 云焦点、OpenAI GPT-5.6 价格、Anthropic 作者版权案、Google Gemini Robotics 2、Scale AI CEO 任命和 AI 科技股仓位变化的报道；TechCrunch 对 Chrome AI 修复、LinkedIn AI 内容举报、Okta/Permiso、Anyscale/Nscale 与 FDE 人才竞争的报道；以及 Hugging Face、Google 官方技术材料。
+  - 因 11/13 条来自可靠媒体来源，版面保留 `overreadBoundary`、`sourceRisk` 和 `sourceConcentration`；媒体条目保持 `媒体背景` / `reported` / `originalDependency: must-read`，官方条目限定为发布者自身流程或时间线事实。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `更新17点AI新闻情报`; final local HEAD is recorded in automation memory after this log line is amended into the same commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-30 23:13 JST
 
 - Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-07-30` 17:00 版，因此未回退为早间版，而是在当前最新版补入 9 条不重复的安全来源信号，当前版从 12 条增至 21 条。
