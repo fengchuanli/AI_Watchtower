@@ -30,6 +30,7 @@ const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md"
 const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-note.md", "utf8");
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
+const detailPageReviewGuide = readFileSync("docs/detail-page-review-guide.md", "utf8");
 const updateRunChecklist = readFileSync("docs/update-run-checklist.md", "utf8");
 const currentToHistoryPublicationChecklist = readFileSync(
   "docs/current-to-history-publication-checklist.md",
@@ -753,6 +754,35 @@ if (
 }
 
 if (
+  !/Detail Page Review Guide/.test(detailPageReviewGuide) ||
+  !/When To Use It/.test(detailPageReviewGuide) ||
+  !/Four-Block Review/.test(detailPageReviewGuide) ||
+  !/Technical Claim Conversion/.test(detailPageReviewGuide) ||
+  !/Source-Type Adjustments/.test(detailPageReviewGuide) ||
+  !/Mobile Readability Pass/.test(detailPageReviewGuide) ||
+  !/Stop Conditions/.test(detailPageReviewGuide) ||
+  !/fact, impact, boundary, and next check/.test(detailPageReviewGuide) ||
+  !/`detailBody`/.test(detailPageReviewGuide) ||
+  !/`detailTrend`/.test(detailPageReviewGuide) ||
+  !/`sourceFacts`/.test(detailPageReviewGuide) ||
+  !/`claimBoundary`/.test(detailPageReviewGuide) ||
+  !/`nextCheck`/.test(detailPageReviewGuide) ||
+  !/`evidenceThreshold`/.test(detailPageReviewGuide) ||
+  !/`counterEvidence`/.test(detailPageReviewGuide) ||
+  !/`followUpQuestions`/.test(detailPageReviewGuide) ||
+  !/`sourceReferences`/.test(detailPageReviewGuide) ||
+  !/official file, customer metric, audit, benchmark, dataset, replication, contract, filing, regulator text, logs, deployment status, or third-party test/.test(
+    detailPageReviewGuide,
+  ) ||
+  !/detail-page-review-guide\.md/.test(candidateToNewsHandoff) ||
+  !/detail-page-review-guide\.md/.test(editorialChecklist) ||
+  !/detail-page-review-guide\.md/.test(readme) ||
+  !/Day 21[\s\S]*detail-page-review-guide\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Detail-page review must convert technical claims into fact, impact, boundary, and next-check blocks before publication.");
+}
+
+if (
   !/Update Run Checklist/.test(updateRunChecklist) ||
   !/Run Header/.test(updateRunChecklist) ||
   !/Status Checklist/.test(updateRunChecklist) ||
@@ -1115,7 +1145,7 @@ if (
   !/Day 20[\s\S]*audits repeated caveat sentences[\s\S]*readerFrame[\s\S]*sourceRisk[\s\S]*trendNotes/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
