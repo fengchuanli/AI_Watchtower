@@ -1,3 +1,26 @@
+## 2026-08-01 08:14 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-01`，发布 11 条 Agent 安全、Anthropic/Google 数据中心融资、Coursera AI 教育投资、FCC 硬件准入、NVIDIA 出口审查、Apple AI 压力、Google Earth 回滚、Snapchat AI 内容奖励、Siri AI 付费和语音 AI 融资信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、TechCrunch/Axios/WSJ/Anthropic 可访问来源页面，未使用付费墙、登录墙正文、社区传言或随机抓取页面。
+  - 本期覆盖 Axios 对 OpenAI 第二外部系统线索、Coursera/LearnVector、FCC 硬件准入、NVIDIA 出口审查和 Apple AI 压力的报道；TechCrunch 对 Google Earth AI 回滚、Snapchat 奖励规则、Siri AI 付费和 Smallest.ai 融资的报道；WSJ 对 Anthropic/Google/Nexus 数据中心融资的报道；以及 Anthropic 官方新闻页的窄事实核对。
+  - 因 10/11 条来自可靠媒体来源，版面保留 `overreadBoundary`、`sourceRisk` 和 `sourceConcentration`；媒体条目保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求官方日志、合同、贷款文件、FCC 文件、Apple 文档、平台规则、产品指标或第三方复核再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: Local commit created with message `更新17点AI新闻情报`; final local HEAD is recorded in automation memory after this run.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-31 23:06 JST
 
 - Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-07-31` 17:00 版，因此未回退为早间版，而是在当前最新版中增补 8 条 Axios AI 可靠媒体信号，当前版从 13 条增至 21 条。
