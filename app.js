@@ -13,6 +13,7 @@ const overreadBoundary = document.querySelector("#overreadBoundary");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceRisk = document.querySelector("#sourceRisk");
 const trendNotes = document.querySelector("#trendNotes");
+const companyContinuity = document.querySelector("#companyContinuity");
 const sourceFamilies = document.querySelector("#sourceFamilies");
 const topicGroups = document.querySelector("#topicGroups");
 const categoryMeta = document.querySelector("#categoryMeta");
@@ -375,6 +376,7 @@ function validateEdition(edition, updatedAt, items = []) {
   validateEditionChange(edition.changeSummary);
   validateOverreadBoundary(edition.overreadBoundary, edition.sourceFamilies, items);
   validateTrendNotes(edition.trendNotes);
+  validateCompanyContinuity(edition.companyContinuity, items);
   validateSourceConcentration(edition.sourceConcentration, items);
 
   const invalidCoverage = edition.coverageMix.find(
@@ -568,6 +570,30 @@ function validateTrendNotes(notes) {
 
   if (invalidNote) {
     throw new Error("Each cross-edition trend note must name the repeated signal and its proof boundary.");
+  }
+}
+
+function validateCompanyContinuity(notes, items = []) {
+  if (!Array.isArray(notes) || notes.length < 2) {
+    throw new Error("News edition must include recurring company continuity notes.");
+  }
+
+  const currentCompanies = new Set(items.flatMap((item) => (Array.isArray(item.companies) ? item.companies : [])));
+  const invalidNote = notes.find(
+    (note) =>
+      !note.company ||
+      !currentCompanies.has(note.company) ||
+      !note.label ||
+      !note.lastMention ||
+      !note.whatChanged ||
+      !note.stillUnproven ||
+      !/上次|此前|上一|历史|归档|连续/.test(note.lastMention) ||
+      !/本期|这次|新增|转向|推进|变成|从/.test(note.whatChanged) ||
+      !/不证明|不能|仍未|尚未|仍需/.test(note.stillUnproven),
+  );
+
+  if (invalidNote) {
+    throw new Error("Each recurring company note must say what changed and what remains unproven.");
   }
 }
 
@@ -941,6 +967,13 @@ function updateNewsMeta(data) {
     trendNotes.innerHTML = renderFeedMetaDetails("跨期趋势提示", renderTrendNotes(data.edition?.trendNotes));
   }
 
+  if (companyContinuity) {
+    companyContinuity.innerHTML = renderFeedMetaDetails(
+      "公司连续观察",
+      renderCompanyContinuity(data.edition?.companyContinuity),
+    );
+  }
+
   if (sourceFamilies) {
     const families = data.edition?.sourceFamilies || [];
     const familyBody = families
@@ -1056,6 +1089,27 @@ function renderTrendNotes(notes) {
           <strong>${escapeHtml(note.label)}</strong>
           ${escapeHtml(note.note)}
           <em>${escapeHtml(note.boundary)}</em>
+        </span>
+      `,
+    )
+    .join("");
+}
+
+function renderCompanyContinuity(notes) {
+  if (!Array.isArray(notes) || !notes.length) {
+    return "";
+  }
+
+  return notes
+    .map(
+      (note) => `
+        <span>
+          <strong>${escapeHtml(note.company)} · ${escapeHtml(note.label)}</strong>
+          ${escapeHtml(note.lastMention)}
+          <em>本期变化</em>
+          ${escapeHtml(note.whatChanged)}
+          <em>仍未证实</em>
+          ${escapeHtml(note.stillUnproven)}
         </span>
       `,
     )

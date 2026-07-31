@@ -33,6 +33,7 @@ The newest `data/news-history.json` edition should match the current `data/news.
 | `edition.sourceRisk` | `editions[0].sourceRisk` | Same source-family caveat and next check. |
 | `edition.sourceConcentration` | `editions[0].sourceConcentration` | Same dominant source-owner caveat when required. |
 | `edition.trendNotes` | `editions[0].trendNotes` | Same cross-edition trend wording and boundary. |
+| `edition.companyContinuity` | `editions[0].companyContinuity` | Same recurring-company change notes and still-unproven boundaries. |
 | `edition.topicGroups` | `editions[0].topicGroups` | Same topic grouping, item IDs, and action-oriented meanings. |
 | `items.length` | `editions[0].itemCount`, `editions[0].items.length` | Same item count. Short batches need a log reason, not a silent mismatch. |
 | `items[].id` order | `editions[0].items[].id` order | Same newest-first item order unless the homepage was deliberately re-ranked. |

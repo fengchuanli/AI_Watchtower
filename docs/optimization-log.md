@@ -1,3 +1,39 @@
+## 2026-07-31 11:09 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 22 continuity task. Added homepage company continuity notes for recurring companies that say what changed in the current edition and what remains unproven.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After local commit: pending until commit hash is recorded; push will be attempted after commit.
+- Content posture:
+  - Added `edition.companyContinuity` to the current and latest archived `news-1700-2026-07-31` edition for OpenAI, Google, and Anthropic.
+  - Each continuity note names the previous local context, the current-edition change, and the official/original proof still needed before upgrading the signal.
+  - Rendered the block on the homepage as `公司连续观察` and documented the field so it remains a continuity aid rather than a place for new unverified source facts.
+  - Added data/runtime/site guards and archive-mirror checks so current and latest archive company continuity cannot drift.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, `docs/news-data-format.md`, recent `docs/optimization-log.md` entries, current news data, and relevant homepage/validator code; continued with Day 22 because Day 21 was complete.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 33 sources, including current/latest archive `companyContinuity` notes.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the homepage company-continuity guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending final hash; this entry will be amended after commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit.
+
 ## 2026-07-31 08:16 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-07-31`，发布 13 条 AI 云财报、模型价格、版权诉讼、机器人、平台治理、身份安全、基础设施整合和安全工程信号。

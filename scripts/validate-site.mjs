@@ -1145,7 +1145,8 @@ if (
   !/Day 20[\s\S]*audits repeated caveat sentences[\s\S]*readerFrame[\s\S]*sourceRisk[\s\S]*trendNotes/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
+  !/Day 22[\s\S]*companyContinuity[\s\S]*what remains unproven/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1280,6 +1281,20 @@ if (
   !/跨期趋势提示/.test(html)
 ) {
   errors.push("Homepage feed metadata must render and validate cross-edition trend notes.");
+}
+
+if (
+  !/id="companyContinuity"/.test(html) ||
+  !/const companyContinuity = document\.querySelector\("#companyContinuity"\);/.test(appJs) ||
+  !/function renderCompanyContinuity/.test(appJs) ||
+  !/edition\.companyContinuity/.test(appJs) ||
+  !/function validateCompanyContinuity/.test(validateDataJs) ||
+  !/\.company-continuity/.test(styles) ||
+  !/companyContinuity/.test(newsDataFormat) ||
+  !/公司连续观察/.test(html) ||
+  !/companyContinuity/.test(newsJson)
+) {
+  errors.push("Homepage feed metadata must render and validate recurring company continuity notes.");
 }
 
 if (

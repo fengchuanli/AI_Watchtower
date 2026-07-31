@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 4, Detail Briefing And Continuity
-- Last indexed run: 2026-07-30 20:00 JST
+- Last indexed run: 2026-07-31 11:09 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -43,12 +43,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 19 | Complete | `b95de25` | Current homepage categories now use current-batch descriptions tied to reader use and proof boundaries, and data validation rejects stale generic category descriptions. |
 | Day 20 | Complete | `6389ba4` | `scripts/validate-data.mjs` now audits repeated caveat sentences across `readerFrame`, `sourceRisk`, and `trendNotes`, keeping reader orientation, source-risk warning, and trend boundaries distinct. |
 | Day 21 | Complete | `a62adbf` | `docs/detail-page-review-guide.md` now tells editors to convert detail-page technical claims into fact, impact, boundary, and next-check blocks before publication. |
+| Day 22 | Complete | `TBD` | Current and latest archived editions now include `companyContinuity` notes for recurring companies, with each note naming prior context, the current-edition change, and what remains unproven. |
 
 ## Next Useful Task
 
-- Continue with Day 22: add continuity notes for recurring companies that say what changed since the last mention and what stayed unproven.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 21 first.
-- If Day 22 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 23: add continuity notes for recurring topics that say whether the signal is stronger, weaker, or merely repeated.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 22 first.
+- If Day 23 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

@@ -626,6 +626,63 @@ function validateTrendNotes(notes, context) {
   }
 }
 
+function validateCompanyContinuity(notes, currentItems, context) {
+  if (!Array.isArray(notes) || notes.length < 2) {
+    errors.push(`${context} must include at least two companyContinuity notes for recurring companies.`);
+    return;
+  }
+
+  const currentCompanies = new Set(
+    (currentItems || []).flatMap((item) => (Array.isArray(item.companies) ? item.companies : [])).map(String),
+  );
+  const seenCompanies = new Set();
+
+  for (const [index, note] of notes.entries()) {
+    if (!note || typeof note !== "object" || Array.isArray(note)) {
+      errors.push(`${context} companyContinuity[${index}] must be an object.`);
+      continue;
+    }
+
+    const requiredFields = ["company", "label", "lastMention", "whatChanged", "stillUnproven"];
+
+    for (const field of requiredFields) {
+      if (typeof note[field] !== "string" || !note[field].trim()) {
+        errors.push(`${context} companyContinuity[${index}].${field} must be non-empty Chinese copy.`);
+      }
+    }
+
+    if (seenCompanies.has(note.company)) {
+      errors.push(`${context} companyContinuity repeats company ${note.company}.`);
+    }
+
+    if (note.company && !currentCompanies.has(note.company)) {
+      errors.push(`${context} companyContinuity[${index}].company must match a current item companies entry.`);
+    }
+
+    if (note.label && (note.label.trim().length < 4 || note.label.trim().length > 18)) {
+      errors.push(`${context} companyContinuity[${index}].label should be a compact Chinese label.`);
+    }
+
+    if (!/上次|此前|上一|历史|归档|连续/.test(note.lastMention || "")) {
+      errors.push(`${context} companyContinuity[${index}].lastMention must name the prior mention or continuity context.`);
+    }
+
+    if (!/本期|这次|新增|转向|推进|变成|从/.test(note.whatChanged || "")) {
+      errors.push(`${context} companyContinuity[${index}].whatChanged must state what changed in this edition.`);
+    }
+
+    if (!/不证明|不能|仍未|尚未|仍需/.test(note.stillUnproven || "")) {
+      errors.push(`${context} companyContinuity[${index}].stillUnproven must state what remains unproven.`);
+    }
+
+    if (!/官方|原文|公告|文件|财报|案卷|合同|日志|审计|指标|第三方|监管|数据/.test(note.stillUnproven || "")) {
+      errors.push(`${context} companyContinuity[${index}].stillUnproven must name the next evidence source or proof type.`);
+    }
+
+    seenCompanies.add(note.company);
+  }
+}
+
 function splitCopySentences(value) {
   return String(value || "")
     .split(/[。！？!?；;]/)
@@ -723,6 +780,7 @@ function assertLatestHistoryMatchesCurrent(currentEdition, latestHistoryEdition,
     "sourceRisk",
     "sourceConcentration",
     "trendNotes",
+    "companyContinuity",
     "topicGroups",
   ];
 
@@ -1157,6 +1215,7 @@ if (!newsFeed.edition) {
     "data/news.json edition",
   );
   validateTrendNotes(newsFeed.edition.trendNotes, "data/news.json edition");
+  validateCompanyContinuity(newsFeed.edition.companyContinuity, newsFeed.items || [], "data/news.json edition");
   validateSourceConcentration(newsFeed.edition.sourceConcentration, newsFeed.items || [], "data/news.json edition");
   validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);
   validateHomepageCaveatCopyAudit(newsFeed.edition, "data/news.json edition");
@@ -1490,6 +1549,11 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
   validateEditionChangeSummary(latestHistoryEdition.changeSummary, "data/news-history.json latest edition");
   validateTrendNotes(latestHistoryEdition.trendNotes, "data/news-history.json latest edition");
+  validateCompanyContinuity(
+    latestHistoryEdition.companyContinuity,
+    latestHistoryEdition.items || [],
+    "data/news-history.json latest edition",
+  );
   validateHomepageCaveatCopyAudit(latestHistoryEdition, "data/news-history.json latest edition");
   validateSourceConcentration(
     latestHistoryEdition.sourceConcentration,
