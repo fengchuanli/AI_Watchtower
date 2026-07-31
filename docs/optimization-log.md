@@ -1,3 +1,27 @@
+## 2026-07-31 23:06 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-07-31` 17:00 版，因此未回退为早间版，而是在当前最新版中增补 8 条 Axios AI 可靠媒体信号，当前版从 13 条增至 21 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Axios AI 最新索引、TechCrunch/官方索引和可访问来源摘要，未使用付费墙、登录墙正文、社区传言或随机抓取页面。
+  - 本次新增 Axios AI 对 AI 数据中心外溢到工业供应链、Apollo AI 工资压力白皮书、Microsoft/Azure 市值反应、数据中心污染政治、电网高温压力、欧美 AI 安全规则比较、Anthropic 网络安全评测触达真实系统、Anthropic 政府供应链风险争议听证的报道。
+  - 因 19/21 条来自可靠媒体、其中 14/21 条来自 Axios AI，版面保留 `overreadBoundary`、`sourceRisk` 和 `sourceConcentration`；新增条目保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求原始财报、法院案卷、政策文本、电网报告、白皮书原文、测试日志、合同、监管材料或第三方复核再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 21 current news items against 33 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `补充08点AI新闻情报`; final local HEAD is recorded in automation memory after this run.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-07-31 11:09 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 22 continuity task. Added homepage company continuity notes for recurring companies that say what changed in the current edition and what remains unproven.
