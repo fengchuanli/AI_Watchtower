@@ -15,7 +15,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After local commit: pending until commit hash is recorded; push will be attempted after commit.
+  - After local commit: implementation commit `3567a13` was created locally; push will be attempted after this log/index follow-up commit.
 - Content posture:
   - Added `edition.companyContinuity` to the current and latest archived `news-1700-2026-07-31` edition for OpenAI, Google, and Anthropic.
   - Each continuity note names the previous local context, the current-edition change, and the official/original proof still needed before upgrading the signal.
@@ -31,8 +31,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Pending final hash; this entry will be amended after commit.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit.
+- Commit: Local implementation commit `3567a13` (`增加公司连续观察提示`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after the follow-up commit.
 
 ## 2026-07-31 08:16 JST
 
