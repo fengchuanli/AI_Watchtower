@@ -683,6 +683,70 @@ function validateCompanyContinuity(notes, currentItems, context) {
   }
 }
 
+function validateTopicContinuity(notes, topicGroups = [], context) {
+  if (!Array.isArray(notes) || notes.length < 2) {
+    errors.push(`${context} must include at least two topicContinuity notes for recurring topics.`);
+    return;
+  }
+
+  const currentTopics = new Set((topicGroups || []).map((topic) => topic.id).map(String));
+  const seenTopics = new Set();
+  const allowedStatuses = new Set(["stronger", "weaker", "repeated"]);
+
+  for (const [index, note] of notes.entries()) {
+    if (!note || typeof note !== "object" || Array.isArray(note)) {
+      errors.push(`${context} topicContinuity[${index}] must be an object.`);
+      continue;
+    }
+
+    const requiredFields = ["topic", "label", "status", "previousPattern", "currentSignal", "signalDirection", "stillUnproven"];
+
+    for (const field of requiredFields) {
+      if (typeof note[field] !== "string" || !note[field].trim()) {
+        errors.push(`${context} topicContinuity[${index}].${field} must be non-empty copy.`);
+      }
+    }
+
+    if (seenTopics.has(note.topic)) {
+      errors.push(`${context} topicContinuity repeats topic ${note.topic}.`);
+    }
+
+    if (note.topic && !currentTopics.has(note.topic)) {
+      errors.push(`${context} topicContinuity[${index}].topic must match a current topicGroups id.`);
+    }
+
+    if (note.status && !allowedStatuses.has(note.status)) {
+      errors.push(`${context} topicContinuity[${index}].status must be stronger, weaker, or repeated.`);
+    }
+
+    if (note.label && (note.label.trim().length < 4 || note.label.trim().length > 18)) {
+      errors.push(`${context} topicContinuity[${index}].label should be a compact Chinese label.`);
+    }
+
+    if (!/上次|此前|上一|历史|归档|连续/.test(note.previousPattern || "")) {
+      errors.push(`${context} topicContinuity[${index}].previousPattern must name the prior topic pattern.`);
+    }
+
+    if (!/本期|这次|新增|继续|再次|延续/.test(note.currentSignal || "")) {
+      errors.push(`${context} topicContinuity[${index}].currentSignal must state what this edition adds or repeats.`);
+    }
+
+    if (!/增强|减弱|重复/.test(note.signalDirection || "")) {
+      errors.push(`${context} topicContinuity[${index}].signalDirection must say whether the signal is stronger, weaker, or repeated.`);
+    }
+
+    if (!/不证明|不能|仍未|尚未|仍需/.test(note.stillUnproven || "")) {
+      errors.push(`${context} topicContinuity[${index}].stillUnproven must state what remains unproven.`);
+    }
+
+    if (!/官方|原文|公告|文件|财报|合同|日志|审计|指标|第三方|监管|数据|报告/.test(note.stillUnproven || "")) {
+      errors.push(`${context} topicContinuity[${index}].stillUnproven must name the next evidence source or proof type.`);
+    }
+
+    seenTopics.add(note.topic);
+  }
+}
+
 function splitCopySentences(value) {
   return String(value || "")
     .split(/[。！？!?；;]/)
@@ -780,6 +844,7 @@ function assertLatestHistoryMatchesCurrent(currentEdition, latestHistoryEdition,
     "sourceRisk",
     "sourceConcentration",
     "trendNotes",
+    "topicContinuity",
     "companyContinuity",
     "topicGroups",
   ];
@@ -1215,6 +1280,7 @@ if (!newsFeed.edition) {
     "data/news.json edition",
   );
   validateTrendNotes(newsFeed.edition.trendNotes, "data/news.json edition");
+  validateTopicContinuity(newsFeed.edition.topicContinuity, newsFeed.edition.topicGroups, "data/news.json edition");
   validateCompanyContinuity(newsFeed.edition.companyContinuity, newsFeed.items || [], "data/news.json edition");
   validateSourceConcentration(newsFeed.edition.sourceConcentration, newsFeed.items || [], "data/news.json edition");
   validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);
@@ -1549,6 +1615,11 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
   validateReaderFrame(latestHistoryEdition.readerFrame, "data/news-history.json latest edition");
   validateEditionChangeSummary(latestHistoryEdition.changeSummary, "data/news-history.json latest edition");
   validateTrendNotes(latestHistoryEdition.trendNotes, "data/news-history.json latest edition");
+  validateTopicContinuity(
+    latestHistoryEdition.topicContinuity,
+    latestHistoryEdition.topicGroups,
+    "data/news-history.json latest edition",
+  );
   validateCompanyContinuity(
     latestHistoryEdition.companyContinuity,
     latestHistoryEdition.items || [],

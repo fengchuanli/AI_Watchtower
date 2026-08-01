@@ -13,6 +13,7 @@ const overreadBoundary = document.querySelector("#overreadBoundary");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceRisk = document.querySelector("#sourceRisk");
 const trendNotes = document.querySelector("#trendNotes");
+const topicContinuity = document.querySelector("#topicContinuity");
 const companyContinuity = document.querySelector("#companyContinuity");
 const sourceFamilies = document.querySelector("#sourceFamilies");
 const topicGroups = document.querySelector("#topicGroups");
@@ -376,6 +377,7 @@ function validateEdition(edition, updatedAt, items = []) {
   validateEditionChange(edition.changeSummary);
   validateOverreadBoundary(edition.overreadBoundary, edition.sourceFamilies, items);
   validateTrendNotes(edition.trendNotes);
+  validateTopicContinuity(edition.topicContinuity, edition.topicGroups);
   validateCompanyContinuity(edition.companyContinuity, items);
   validateSourceConcentration(edition.sourceConcentration, items);
 
@@ -594,6 +596,34 @@ function validateCompanyContinuity(notes, items = []) {
 
   if (invalidNote) {
     throw new Error("Each recurring company note must say what changed and what remains unproven.");
+  }
+}
+
+function validateTopicContinuity(notes, topicGroups = []) {
+  if (!Array.isArray(notes) || notes.length < 2) {
+    throw new Error("News edition must include recurring topic continuity notes.");
+  }
+
+  const currentTopics = new Set(topicGroups.map((topic) => topic.id));
+  const allowedStatuses = new Set(["stronger", "weaker", "repeated"]);
+  const invalidNote = notes.find(
+    (note) =>
+      !note.topic ||
+      !currentTopics.has(note.topic) ||
+      !note.label ||
+      !allowedStatuses.has(note.status) ||
+      !note.previousPattern ||
+      !note.currentSignal ||
+      !note.signalDirection ||
+      !note.stillUnproven ||
+      !/上次|此前|上一|历史|归档|连续/.test(note.previousPattern) ||
+      !/本期|这次|新增|继续|再次|延续/.test(note.currentSignal) ||
+      !/增强|减弱|重复/.test(note.signalDirection) ||
+      !/不证明|不能|仍未|尚未|仍需/.test(note.stillUnproven),
+  );
+
+  if (invalidNote) {
+    throw new Error("Each recurring topic note must say whether the signal is stronger, weaker, or repeated and what remains unproven.");
   }
 }
 
@@ -967,6 +997,13 @@ function updateNewsMeta(data) {
     trendNotes.innerHTML = renderFeedMetaDetails("跨期趋势提示", renderTrendNotes(data.edition?.trendNotes));
   }
 
+  if (topicContinuity) {
+    topicContinuity.innerHTML = renderFeedMetaDetails(
+      "主题连续观察",
+      renderTopicContinuity(data.edition?.topicContinuity),
+    );
+  }
+
   if (companyContinuity) {
     companyContinuity.innerHTML = renderFeedMetaDetails(
       "公司连续观察",
@@ -1108,6 +1145,35 @@ function renderCompanyContinuity(notes) {
           ${escapeHtml(note.lastMention)}
           <em>本期变化</em>
           ${escapeHtml(note.whatChanged)}
+          <em>仍未证实</em>
+          ${escapeHtml(note.stillUnproven)}
+        </span>
+      `,
+    )
+    .join("");
+}
+
+function renderTopicContinuity(notes) {
+  if (!Array.isArray(notes) || !notes.length) {
+    return "";
+  }
+
+  const statusLabels = {
+    stronger: "信号增强",
+    weaker: "信号减弱",
+    repeated: "仅是重复",
+  };
+
+  return notes
+    .map(
+      (note) => `
+        <span>
+          <strong>${escapeHtml(note.label)} · ${escapeHtml(statusLabels[note.status] || note.status)}</strong>
+          ${escapeHtml(note.previousPattern)}
+          <em>本期主题变化</em>
+          ${escapeHtml(note.currentSignal)}
+          <em>强弱判断</em>
+          ${escapeHtml(note.signalDirection)}
           <em>仍未证实</em>
           ${escapeHtml(note.stillUnproven)}
         </span>

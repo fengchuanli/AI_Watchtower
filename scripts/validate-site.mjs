@@ -845,6 +845,7 @@ if (
   !/changeSummary/.test(currentToHistoryPublicationChecklist) ||
   !/sourceConcentration/.test(currentToHistoryPublicationChecklist) ||
   !/trendNotes/.test(currentToHistoryPublicationChecklist) ||
+  !/topicContinuity/.test(currentToHistoryPublicationChecklist) ||
   !/topicGroups/.test(currentToHistoryPublicationChecklist) ||
   !/item count/.test(currentToHistoryPublicationChecklist) ||
   !/item order/.test(currentToHistoryPublicationChecklist) ||
@@ -1146,7 +1147,8 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 22[\s\S]*companyContinuity[\s\S]*what remains unproven/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
+  !/Day 23[\s\S]*topicContinuity[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1295,6 +1297,20 @@ if (
   !/companyContinuity/.test(newsJson)
 ) {
   errors.push("Homepage feed metadata must render and validate recurring company continuity notes.");
+}
+
+if (
+  !/id="topicContinuity"/.test(html) ||
+  !/const topicContinuity = document\.querySelector\("#topicContinuity"\);/.test(appJs) ||
+  !/function renderTopicContinuity/.test(appJs) ||
+  !/edition\.topicContinuity/.test(appJs) ||
+  !/function validateTopicContinuity/.test(validateDataJs) ||
+  !/\.topic-continuity/.test(styles) ||
+  !/topicContinuity/.test(newsDataFormat) ||
+  !/主题连续观察/.test(html) ||
+  !/topicContinuity/.test(newsJson)
+) {
+  errors.push("Homepage feed metadata must render and validate recurring topic continuity notes.");
 }
 
 if (
