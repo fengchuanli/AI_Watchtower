@@ -1,3 +1,39 @@
+## 2026-08-01 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 23 continuity task. Added homepage recurring-topic continuity notes that say whether each topic signal is stronger, weaker, or repeated.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After local implementation commit: push will be attempted after this log update; if DNS remains blocked, retry is needed when network access returns.
+- Content posture:
+  - Added `edition.topicContinuity` to the current and latest archived `news-1700-2026-08-01` edition for Agent, infrastructure, and policy topics.
+  - Marked Agent safety and infrastructure signals as `stronger`, and platform/policy rules as `repeated`, with each note naming prior context, this-edition movement, direction, and the proof still needed.
+  - Rendered the block on the homepage as `主题连续观察` and documented the field so it remains topic-strength framing rather than a place for new unverified source facts.
+  - Added data/runtime/site guards and archive-mirror checks so current and latest archive topic continuity cannot drift.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, current news data, and relevant homepage/validator code; continued with Day 23 because Day 22 was complete and Day 23 was not logged as complete.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 33 sources, including current/latest archive `topicContinuity` notes.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the homepage topic-continuity guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json` and `data/news-history.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `f95e99b` (`增加主题连续观察提示`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
+- Git note: Push status will be recorded after the final push attempt for this run.
+
 ## 2026-08-01 08:14 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-01`，发布 11 条 Agent 安全、Anthropic/Google 数据中心融资、Coursera AI 教育投资、FCC 硬件准入、NVIDIA 出口审查、Apple AI 压力、Google Earth 回滚、Snapchat AI 内容奖励、Siri AI 付费和语音 AI 融资信号。

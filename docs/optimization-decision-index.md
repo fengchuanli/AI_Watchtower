@@ -44,7 +44,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 20 | Complete | `6389ba4` | `scripts/validate-data.mjs` now audits repeated caveat sentences across `readerFrame`, `sourceRisk`, and `trendNotes`, keeping reader orientation, source-risk warning, and trend boundaries distinct. |
 | Day 21 | Complete | `a62adbf` | `docs/detail-page-review-guide.md` now tells editors to convert detail-page technical claims into fact, impact, boundary, and next-check blocks before publication. |
 | Day 22 | Complete | `3567a13` | Current and latest archived editions now include `companyContinuity` notes for recurring companies, with each note naming prior context, the current-edition change, and what remains unproven. |
-| Day 23 | Complete | `pending` | Current and latest archived editions now include `topicContinuity` notes for recurring topics, with each note marking the signal as stronger, weaker, or repeated and naming what still needs proof. |
+| Day 23 | Complete | `f95e99b` | Current and latest archived editions now include `topicContinuity` notes for recurring topics, with each note marking the signal as stronger, weaker, or repeated and naming what still needs proof. |
 
 ## Next Useful Task
 
