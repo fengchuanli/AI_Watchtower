@@ -15,7 +15,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
-  - After local implementation commit: push will be attempted after this log update; if DNS remains blocked, retry is needed when network access returns.
+  - After local commits: blocked-dns - implementation commit `f95e99b` and log/index follow-up commit `960e1b1` were created locally, but `git push origin main` failed because `github.com` could not be resolved.
 - Content posture:
   - Added `edition.topicContinuity` to the current and latest archived `news-1700-2026-08-01` edition for Agent, infrastructure, and policy topics.
   - Marked Agent safety and infrastructure signals as `stronger`, and platform/policy rules as `repeated`, with each note naming prior context, this-edition movement, direction, and the proof still needed.
@@ -31,8 +31,8 @@
   - Parsed `data/news.json` and `data/news-history.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `f95e99b` (`增加主题连续观察提示`). Final local HEAD is recorded in automation memory because updating this log line creates a follow-up commit.
-- Git note: Push status will be recorded after the final push attempt for this run.
+- Commit: Local implementation commit `f95e99b` (`增加主题连续观察提示`) and log/index follow-up commit `960e1b1` (`记录主题连续观察优化`). Final local HEAD is recorded in automation memory because updating this push-blocker line creates a final follow-up commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-01 08:14 JST
 
