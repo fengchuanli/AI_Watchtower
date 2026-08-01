@@ -19,8 +19,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Pending local commit with message `补充08点AI新闻情报`; final local HEAD will be recorded in automation memory after commit.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may need retry when DNS/network access returns.
+- Commit: Local commit created as `01a8ff2` with message `补充08点AI新闻情报`; this log follow-up records the push blocker.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-01 20:00 JST
 
