@@ -1,3 +1,27 @@
+## 2026-08-02 23:07 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-08-02` 17:00 版，因此未回退为早间版，而是在当前最新版中增补 2 条 Axios 可靠媒体信号，当前版从 10 条增至 12 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核历史 URL、Axios AI/Technology、TechCrunch AI 索引和官方可访问页面，未使用付费墙、登录墙正文、社区传言或随机抓取页面。
+  - 本次新增 Axios 对 open-weight/闭源安全/前沿测试政策宣言战的报道，以及 Axios 对 Alpha Schools 计划在 2026 学年扩至约 50 个 AI 校园的报道。
+  - 因 11/12 条来自可靠媒体来源，版面保留 `overreadBoundary`、`sourceRisk` 和 `sourceConcentration`；新增条目保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求政府框架、NIST 流程、公司正式政策、校区评估、监管材料、合同或第三方复测再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 34 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local commit created with message `补充08点AI新闻情报`; final local HEAD is recorded in automation memory because this push-blocker note was amended into the commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-08-02 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 24 detail-source task. Improved detail-page source reminders for media-sourced items so complete facts remain assigned to the original article.
