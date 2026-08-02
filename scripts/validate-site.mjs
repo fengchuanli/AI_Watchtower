@@ -1158,9 +1158,11 @@ if (
   !/Day 20[\s\S]*audits repeated caveat sentences[\s\S]*readerFrame[\s\S]*sourceRisk[\s\S]*trendNotes/.test(
     optimizationDecisionIndex,
   ) ||
+  !/Day 21[\s\S]*detail-page technical claims[\s\S]*fact, impact, boundary/.test(optimizationDecisionIndex) ||
   !/Day 22[\s\S]*companyContinuity[\s\S]*what remains unproven/.test(optimizationDecisionIndex) ||
   !/Day 23[\s\S]*topicContinuity[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
+  !/Day 24[\s\S]*media-specific source reminders[\s\S]*original article/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

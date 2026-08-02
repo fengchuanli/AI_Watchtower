@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 4, Detail Briefing And Continuity
-- Last indexed run: 2026-08-01 20:00 JST
+- Last indexed run: 2026-08-02 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -45,12 +45,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 21 | Complete | `a62adbf` | `docs/detail-page-review-guide.md` now tells editors to convert detail-page technical claims into fact, impact, boundary, and next-check blocks before publication. |
 | Day 22 | Complete | `3567a13` | Current and latest archived editions now include `companyContinuity` notes for recurring companies, with each note naming prior context, the current-edition change, and what remains unproven. |
 | Day 23 | Complete | `f95e99b` | Current and latest archived editions now include `topicContinuity` notes for recurring topics, with each note marking the signal as stronger, weaker, or repeated and naming what still needs proof. |
+| Day 24 | Complete | `54400ea` | Detail pages now render media-specific source reminders that name the original article as the home for complete facts, and validation guards current/latest media items against weakening that boundary. |
 
 ## Next Useful Task
 
-- Continue with Day 24: improve detail-page source reminders for media-sourced items so complete facts remain clearly assigned to the original article.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 22 first.
-- If Day 24 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 25: add guidance for when `counterEvidence` should mention a concrete observable outcome rather than another document.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 25 first.
+- If Day 25 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

@@ -1,3 +1,32 @@
+## 2026-08-02 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 24 detail-source task. Improved detail-page source reminders for media-sourced items so complete facts remain assigned to the original article.
+- Changed files:
+  - `news-detail.js`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added a media-specific detail-page reminder that says AI Watchtower keeps only the minimum fact and Chinese interpretation, while complete facts, quotes, interviews, charts, data, and context remain in the named original article.
+  - Kept official/non-media reminders more general, pointing readers back to the original source for full facts, method, data, and context.
+  - Added current/latest archive data validation so media-sourced items keep `sourceRole: "媒体背景"`, `claimStatus: "reported"`, `originalDependency: "must-read"`, and provenance that assigns complete facts to the original article.
+  - Documented the source-reminder contract in the news data format and updated the decision index so Day 25 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, current news data, detail renderer code, and relevant validators; continued with Day 24 because Day 23 was complete.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 34 sources, including media-source reminder boundaries for current/latest archived media items.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the media-specific detail reminder guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `54400ea` (`强化媒体来源详情提醒`). This log/index follow-up records the completed Day 24 handoff; final push status is recorded below if network access allows.
+
 ## 2026-08-02 17:00 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-02`，发布 10 条家庭 AI、州法治理、创作者透明度、企业采用、模型越狱评测、AI 音乐规则、政府采购和资本分化信号。
