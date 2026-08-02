@@ -464,6 +464,28 @@ function getDetailOriginalDependency(item) {
   return /media|媒体/.test(sourceType) ? "must-read" : "recommended";
 }
 
+function isMediaSourcedItem(item) {
+  const sourceType = String(item.sourceType || "").toLowerCase();
+  const sourceRole = String(item.sourceRole || "");
+  const originalDependency = getDetailOriginalDependency(item);
+
+  return (
+    ["reliable_media", "media_report"].includes(sourceType) ||
+    /媒体/.test(sourceRole) ||
+    originalDependency === "must-read"
+  );
+}
+
+function getDetailSourceReminder(item) {
+  const sourceName = getDetailSourceName(item);
+
+  if (isMediaSourcedItem(item)) {
+    return `这条是媒体背景：AI Watchtower 只保留最小事实并提供中文解读，完整事实、引述、采访、图表、数据与上下文仍归 ${sourceName} 原文。`;
+  }
+
+  return "本站只做中文解读，完整事实、方法、数据和上下文请查看原文。";
+}
+
 function getDetailFactArticle(item) {
   return item.detailBody || item.body;
 }
@@ -549,6 +571,7 @@ function renderDetail(item, data) {
   const sourceType = getDetailSourceType(item);
   const claimStatus = getDetailClaimStatus(item);
   const originalDependency = getDetailOriginalDependency(item);
+  const sourceReminder = getDetailSourceReminder(item);
 
   detailShell.innerHTML = `
     <div class="incident-hero simplified-detail-hero">
@@ -556,7 +579,7 @@ function renderDetail(item, data) {
       <p class="detail-date">${escapeHtml(data.edition.date)} · ${escapeHtml(data.edition.archiveLabel)} · ${escapeHtml(claimStatus)}</p>
       <h1>${escapeHtml(item.title)}</h1>
       <p class="detail-lede">${escapeHtml(getDetailSummary(item))}</p>
-      <p class="detail-source-reminder">本站只做中文解读，完整事实、采访细节和上下文请查看原文。</p>
+      <p class="detail-source-reminder">${escapeHtml(sourceReminder)}</p>
     </div>
 
     <nav class="incident-jump-nav" aria-label="事件简报导航">
@@ -649,7 +672,7 @@ function renderDetail(item, data) {
             <p><strong>为什么入选</strong>${escapeHtml(getDetailTopReason(item))}</p>
             ${renderDetailSelectionScore(getDetailEditorScore(item))}
           </details>
-          <p class="detail-source-reminder">本站只做中文解读，完整事实请查看原文。</p>
+          <p class="detail-source-reminder">${escapeHtml(sourceReminder)}</p>
           <a class="button secondary source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
         </section>
       </div>

@@ -441,6 +441,41 @@ function validateVendorClaimBoundary(item, context) {
   }
 }
 
+function validateMediaSourceReminder(item, context) {
+  const sourceType = String(item.sourceType || "").trim();
+  const sourceRole = String(item.sourceRole || "").trim();
+  const claimStatus = String(item.claimStatus || "").trim();
+
+  if (!["reliable_media", "media_report"].includes(sourceType) && sourceRole !== "媒体背景") {
+    return;
+  }
+
+  const itemLabel = `${context} ${item.id || "unknown item"}`;
+  const provenance = String(item.provenance || "");
+  const detailBoundaryText = [item.provenance, item.claimBoundary, item.nextCheck, item.evidenceThreshold].join("\n");
+  const originalArticleFactsPattern = /完整事实|原文|采访|访谈|引述|图表|数据|上下文|案卷|报告|filings|文件/;
+
+  if (item.originalDependency !== "must-read") {
+    errors.push(`${itemLabel} media-sourced items must keep originalDependency as must-read.`);
+  }
+
+  if (sourceRole !== "媒体背景") {
+    errors.push(`${itemLabel} media-sourced items must use sourceRole 媒体背景.`);
+  }
+
+  if (claimStatus !== "reported") {
+    errors.push(`${itemLabel} media-sourced items must keep claimStatus as reported.`);
+  }
+
+  if (!/完整事实/.test(provenance) || !/原文/.test(provenance)) {
+    errors.push(`${itemLabel} media provenance must assign complete facts to the original article.`);
+  }
+
+  if (!originalArticleFactsPattern.test(detailBoundaryText)) {
+    errors.push(`${itemLabel} media detail boundary must name what remains in the original article or original materials.`);
+  }
+}
+
 function validateReaderFrame(frame, context) {
   if (!frame || typeof frame !== "object" || Array.isArray(frame)) {
     errors.push(`${context} must include a readerFrame object.`);
@@ -1588,6 +1623,7 @@ for (const item of newsFeed.items || []) {
   validateDetailParagraphLength(item, "data/news.json item");
 
   validateVendorClaimBoundary(item, "data/news.json item");
+  validateMediaSourceReminder(item, "data/news.json item");
   validateSelectionScore(item.selectionScore, item.id, "data/news.json item");
 }
 
@@ -1706,6 +1742,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         validateEvidenceThresholdSpecificity(item, "data/news-history.json latest promoted item");
         validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
         validateDetailParagraphLength(item, "data/news-history.json latest promoted item");
+        validateMediaSourceReminder(item, "data/news-history.json latest item");
       }
 
       validateVendorClaimBoundary(item, "data/news-history.json item");

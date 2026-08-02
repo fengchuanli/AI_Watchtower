@@ -555,15 +555,18 @@ if (
   !/incident-jump-nav/.test(detailJs) ||
   !/quick-summary/.test(detailJs) ||
   !/function getQuickSummary/.test(detailJs) ||
+  !/function getDetailSourceReminder\(item\)/.test(detailJs) ||
+  !/这条是媒体背景/.test(detailJs) ||
+  !/完整事实、引述、采访、图表、数据与上下文仍归/.test(detailJs) ||
   !/事件简述/.test(detailJs) ||
   !/这件事怎么理解/.test(detailJs) ||
   !/可能带来的变化/.test(detailJs) ||
   !/接下来要看哪里/.test(detailJs) ||
   !/来源与核验边界/.test(detailJs) ||
   !/查看原文/.test(detailJs) ||
-  !/本站只做中文解读，完整事实/.test(detailJs)
+  !/sourceReminder/.test(detailJs)
 ) {
-  errors.push("News detail page must render a simplified reader-first structure with source boundaries at the end.");
+  errors.push("News detail page must render a simplified reader-first structure with media-specific source reminders and source boundaries at the end.");
 }
 if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
   errors.push("News detail overview diagram must not render redundant small text labels inside each node.");
@@ -602,6 +605,15 @@ if (
   !/same feed or owner/.test(newsDataFormat)
 ) {
   errors.push("Current editions must validate and render repeated source-owner concentration separately from source-family risk.");
+}
+
+if (
+  !/function validateMediaSourceReminder\(item, context\)/.test(validateDataJs) ||
+  !/media provenance must assign complete facts to the original article/.test(validateDataJs) ||
+  !/media-sourced detail pages/.test(newsDataFormat) ||
+  !/complete facts to the original article/.test(newsDataFormat)
+) {
+  errors.push("Media-sourced detail pages must keep original-article ownership explicit in data validation and documentation.");
 }
 
 if (
