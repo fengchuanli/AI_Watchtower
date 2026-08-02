@@ -10,6 +10,7 @@
   - `docs/optimization-log.md`
 - Remote sync:
   - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+  - After local commits: blocked-dns - implementation commit `54400ea` and log/index follow-up commit `47bd21d` were created locally, but `git push origin main` failed because `github.com` could not be resolved.
 - Content posture:
   - Added a media-specific detail-page reminder that says AI Watchtower keeps only the minimum fact and Chinese interpretation, while complete facts, quotes, interviews, charts, data, and context remain in the named original article.
   - Kept official/non-media reminders more general, pointing readers back to the original source for full facts, method, data, and context.
@@ -25,7 +26,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `54400ea` (`强化媒体来源详情提醒`). This log/index follow-up records the completed Day 24 handoff; final push status is recorded below if network access allows.
+- Commit: Local implementation commit `54400ea` (`强化媒体来源详情提醒`) and log/index follow-up commit `47bd21d` (`记录媒体来源提醒优化`). Final local HEAD is recorded in automation memory because updating this push-blocker line creates a final follow-up commit.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-02 17:00 JST
 
