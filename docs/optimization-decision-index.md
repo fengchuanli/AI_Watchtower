@@ -46,7 +46,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 22 | Complete | `3567a13` | Current and latest archived editions now include `companyContinuity` notes for recurring companies, with each note naming prior context, the current-edition change, and what remains unproven. |
 | Day 23 | Complete | `f95e99b` | Current and latest archived editions now include `topicContinuity` notes for recurring topics, with each note marking the signal as stronger, weaker, or repeated and naming what still needs proof. |
 | Day 24 | Complete | `54400ea` | Detail pages now render media-specific source reminders that name the original article as the home for complete facts, and validation guards current/latest media items against weakening that boundary. |
-| Day 25 | Complete | `pending` | `docs/counter-evidence-observable-guide.md` now tells editors when `counterEvidence` should name a concrete observable outcome instead of another document, especially for adoption, deployment, safety, performance, cost, and policy-effect claims. |
+| Day 25 | Complete | `08401c4` | `docs/counter-evidence-observable-guide.md` now tells editors when `counterEvidence` should name a concrete observable outcome instead of another document, especially for adoption, deployment, safety, performance, cost, and policy-effect claims. |
 
 ## Next Useful Task
 

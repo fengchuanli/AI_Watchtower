@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the counter-evidence guide guard.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Ran `git diff --check`.
-- Commit: Pending; final local hash will be recorded after commit.
+- Commit: Local implementation commit `08401c4` (`增加反向证据结果指南`); this follow-up records the commit hash before push.
 - Git note: Push not yet attempted for this run.
 
 ## 2026-08-03 08:12 JST
