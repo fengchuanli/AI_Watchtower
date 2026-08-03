@@ -1,8 +1,1071 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03",
-  "totalItems": 321,
+  "updatedAt": "2026-08-04",
+  "totalItems": 331,
   "editions": [
+    {
+      "id": "news-1700-2026-08-04",
+      "date": "2026-08-04",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期混合官方 AI 系统更新与 Agent 评测、安全研究雷达。",
+      "operationalStatus": "GitHub DNS 解析失败，无法 pull；已复核来源政策、来源清单、OpenAI/Anthropic 官方页、arXiv recent 和历史 URL。",
+      "editorialInterpretation": "本期编辑判断：前沿 AI 的主线从单一模型发布转向实时语音入口、单位经济性、科研供给、评测安全和工具授权。",
+      "readerFrame": {
+        "headline": "阅读本期：把官方系统更新和 Agent 安全研究放在一张核查表",
+        "whyItMatters": "这 10 条适合更新实时语音 Agent、模型成本、科研访问、评测环境隔离、企业文档抽取和工具授权安全清单。",
+        "mobile": {
+          "headline": "手机先看语音、成本和安全",
+          "summary": "官方更新加 arXiv 雷达，先查语音、成本和安全。",
+          "primaryUses": [
+            "平台团队查语音。",
+            "成本治理团队查成本。",
+            "安全团队查工具。"
+          ],
+          "proofBoundary": "官方页证明发布事实，研究预印本仍需代码、数据、复现和审计。"
+        },
+        "useThisIssueFor": [
+          "语音和 Agent 平台团队用本期检查实时媒体路径、异步委托、长会话状态和工具调用。",
+          "AI 平台、采购和成本治理团队用本期更新 GPT-5.6 成本、缓存、重试和任务成功率核算。",
+          "安全、治理和评测团队用本期核对第三方 eval 隔离、工具 schema、授权 gate 和轨迹级验证。"
+        ],
+        "notProvenYet": [
+          "不能证明官方系统主张已在所有客户场景稳定，也不能证明价格下降等于真实任务总成本下降。",
+          "不能证明 arXiv 方法已经适合生产，仍需公开代码、数据、真实日志、第三方复测和同行评审。",
+          "不能用本期替代监管文件、客户指标、事故复盘或正式安全审计。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "相较上一版，本期从研究雷达转向官方系统更新加 Agent 安全验证",
+        "freshFacts": [
+          "本期新增来源事实：OpenAI 于 2026-08-03 发布 GPT-Live 实时语音系统工程说明。",
+          "本期新增来源事实：Anthropic 于 2026-07-30 披露 Claude 网络安全评测中的三起真实系统事件。",
+          "本期新增来源事实：arXiv recent 在 2026-08-03 JST 可见 ExtractBench、AgentHPOBench、CAGE 等 Agent 评测和安全研究。"
+        ],
+        "repeatedContext": [
+          "延续背景：8 月 3 日版已集中覆盖 computer-use Agent、记忆注入和多 Agent 审计预算。",
+          "延续背景：7 月下旬多次出现 OpenAI/Hugging Face、FAR.AI 和 open-weight 政策争议。",
+          "旧背景：官方博客只能证明发布者自己的主张，预印本只能作为研究原文雷达。"
+        ]
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期提供官方系统更新与研究核查对象，适合更新工程、成本和安全清单。",
+        "doNotConclude": "不能断言 GPT-Live 已在所有场景领先、GPT-5.6 已真实降本、科研项目已提高发现质量或研究方法已可部署。",
+        "useInstead": "应该用第三方测试、真实账单、客户日志、审计报告、公开代码、数据和复现实验确认。"
+      },
+      "coverageMix": [
+        {
+          "label": "核对实时系统入口",
+          "count": 1,
+          "meaning": "用来检查语音 Agent 的低延迟媒体路径、状态迁移和工具委托。"
+        },
+        {
+          "label": "核对模型成本",
+          "count": 2,
+          "meaning": "用来更新 GPT-5.6 价格、推理优化、缓存和任务级成本测算。"
+        },
+        {
+          "label": "更新科研与企业评测",
+          "count": 3,
+          "meaning": "用来检查科研访问治理、企业文档抽取和连续实验 Agent benchmark。"
+        },
+        {
+          "label": "核对 Agent 边界",
+          "count": 4,
+          "meaning": "用来核对第三方 eval、轨迹验证、工具 schema 和授权 gate。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 5,
+          "role": "官方来源用于核对 OpenAI 和 Anthropic 对产品、工程、价格、科研项目和安全事件的公开主张；外部效果仍需独立证据。"
+        },
+        {
+          "family": "research",
+          "label": "研究原文",
+          "count": 5,
+          "role": "研究原文用于捕捉 Agent 评测、文档抽取、工具安全和授权控制方向；结论仍需代码、数据、复现、真实日志和同行评审。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方与研究各半",
+        "note": "本期没有使用社区信号或登录墙正文；官方页证明发布事实，arXiv 条目只作为研究雷达。",
+        "nextCheck": "查官方 API 价格页、论文原文代码数据、第三方延迟测试、METR/Irregular 复审。"
+      },
+      "sourceConcentration": {
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "count": 4,
+        "share": "4/10",
+        "note": "本期最大单一来源是 OpenAI 官方页，用于核对发布事实；其余由 Anthropic 官方页和 arXiv 研究分散补充。",
+        "nextCheck": "下一步应查 API 文档、价格页、第三方延迟测试、客户账单、论文代码数据和外部安全审计。"
+      },
+      "trendNotes": [
+        {
+          "topic": "realtime-agent-interface",
+          "label": "语音成为 Agent 入口",
+          "note": "跨期看，GPT-Live、Claude voice 和桌面 Agent 都在把语音从聊天功能推向工具协调入口。",
+          "boundary": "不证明语音会替代图形界面；仍需用户留存、延迟、错误率、隐私审计和可访问性数据。"
+        },
+        {
+          "topic": "agent-evaluation-safety",
+          "label": "评测环境正在生产化",
+          "note": "跨期看，OpenAI/Hugging Face 事故、Anthropic 披露和本期验证综述都把 eval harness 变成治理对象。",
+          "boundary": "不证明所有 eval 都高危；仍需评测日志、隔离配置、第三方审计和事故复盘。"
+        },
+        {
+          "topic": "agent-tool-governance",
+          "label": "工具层成为安全边界",
+          "note": "跨期看，工具 schema、授权 gate 和权限接入开始成为 Agent 安全与合规的共同问题。",
+          "boundary": "不证明单一防护足够；仍需真实工具红队、权限日志、误拒率和策略审计。"
+        },
+        {
+          "topic": "ai-unit-economics",
+          "label": "单位经济性进入模型叙事中心",
+          "note": "跨期看，价格、推理优化、部署平台和企业采用都在把 AI 价值转成每个成功结果的成本。",
+          "boundary": "不证明客户账单已下降；仍需真实任务、重试率、人工审核成本和业务验收指标。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "Agent 验证更强",
+          "status": "stronger",
+          "previousPattern": "上一版 agent 主题集中在 CUA benchmark、记忆注入、防御和审计预算。",
+          "currentSignal": "本期新增第三方 eval 事件、轨迹级验证、工具 schema 风险和授权认证研究。",
+          "signalDirection": "增强：从评测题目扩展到评测环境、工具定义和权限 gate。",
+          "stillUnproven": "不证明生产安全；仍需评测日志、代码、权限记录、第三方审计和真实事故数据。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "工具链证据增强",
+          "status": "stronger",
+          "previousPattern": "此前 developer-tooling 主题已有 MCP、Agent 安全工具和 CUA 训练环境。",
+          "currentSignal": "本期新增 GPT-Live 实时系统、GPT-5.6 harness 优化、SafeKeep 和 CAGE。",
+          "signalDirection": "增强：工具链从接口扩展到低延迟、缓存、schema 安全和授权认证。",
+          "stillUnproven": "不证明工具链成熟；仍需 API 文档、真实延迟、运行日志、开源代码和第三方评测。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "企业评测边界更清楚",
+          "status": "stronger",
+          "previousPattern": "上一版企业主题强调部署层、技术债、人才留任和供应商稳定性。",
+          "currentSignal": "本期新增 ExtractBench 和 GPT-5.6 成本/效率信号，强调文档抽取、溯源和单位成本。",
+          "signalDirection": "增强：企业 AI 从部署叙事进入可计量抽取、成本和溯源指标。",
+          "stillUnproven": "不证明企业 ROI；仍需客户侧账单、部署日志、审计指标和业务验收数据。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "系统栈与价格",
+          "lastMention": "此前版本已覆盖 OpenAI agent 安全事故、开放权重争议、人才战和企业部署背景。",
+          "whatChanged": "本期 OpenAI 官方页新增 GPT-Live、GPT-5.6 价格、科研访问和效率栈四个核查对象。",
+          "stillUnproven": "不证明外部效果；仍需第三方延迟测试、真实账单、API 文档、客户指标和安全审计。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "评测安全披露",
+          "lastMention": "此前版本已覆盖 Anthropic open-weight 立场、模型发布、人才战和 Claude Code 背景。",
+          "whatChanged": "本期 Anthropic 官方披露 Claude 网络安全评测中接触真实系统的事件与响应。",
+          "stillUnproven": "不证明完整事件范围；仍需 Irregular/METR 复审、受影响组织确认、评测日志和修复记录。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 6,
+          "itemIds": [
+            "openai-gpt-live-realtime-system-2026-08-04",
+            "anthropic-cyber-eval-incidents-2026-08-04",
+            "arxiv-agenthpobench-sequential-hpo-2026-08-04",
+            "arxiv-agentic-system-validation-2026-08-04",
+            "arxiv-tool-spec-safety-risks-2026-08-04",
+            "arxiv-cage-certified-authorization-2026-08-04"
+          ],
+          "meaning": "用来检查语音入口、连续实验、评测环境、工具 schema、轨迹验证和授权控制。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 5,
+          "itemIds": [
+            "openai-gpt-live-realtime-system-2026-08-04",
+            "openai-gpt56-efficiency-stack-2026-08-04",
+            "arxiv-agenthpobench-sequential-hpo-2026-08-04",
+            "arxiv-tool-spec-safety-risks-2026-08-04",
+            "arxiv-cage-certified-authorization-2026-08-04"
+          ],
+          "meaning": "用来更新推理栈、harness、实验 Agent、工具安全和权限 gate。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 2,
+          "itemIds": [
+            "openai-gpt56-price-performance-2026-08-04",
+            "openai-gpt56-efficiency-stack-2026-08-04"
+          ],
+          "meaning": "供平台和成本治理团队用来核对模型价格、效率和任务级路由策略。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 3,
+          "itemIds": [
+            "openai-gpt56-price-performance-2026-08-04",
+            "arxiv-extractbench-enterprise-doc-extraction-2026-08-04",
+            "arxiv-cage-certified-authorization-2026-08-04"
+          ],
+          "meaning": "用来检查文档抽取、单位成本、授权控制和可审计部署。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 3,
+          "itemIds": [
+            "anthropic-cyber-eval-incidents-2026-08-04",
+            "openai-academic-researchers-program-2026-08-04",
+            "arxiv-agentic-system-validation-2026-08-04"
+          ],
+          "meaning": "用来更新评测事件披露、科研访问治理和监管可读性。"
+        }
+      ],
+      "briefing": {
+        "label": "17:00 情报简报",
+        "headline": "官方系统更新和 Agent 安全研究同时升温",
+        "summary": "本期用 OpenAI 与 Anthropic 官方页面核对实时语音、价格、科研访问、效率栈和评测事件，再用 arXiv 补企业文档抽取、连续实验、轨迹验证、工具 schema 与授权研究。官方主张和预印本研究都不能直接替代外部测试、客户日志或审计。",
+        "cta": "查看本期信号",
+        "watchPoints": [
+          {
+            "title": "语音入口",
+            "body": "GPT-Live 把实时语音做成可委托工具和前沿模型的系统入口，下一步看 API、延迟和安全边界。"
+          },
+          {
+            "title": "评测安全",
+            "body": "Anthropic 披露说明 eval harness、外部评测商和网络隔离已经是模型发布前风险。"
+          },
+          {
+            "title": "工具治理",
+            "body": "arXiv 研究把工具 schema、轨迹验证和授权 gate 放到 Agent 安全中心。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "17:00 深挖",
+        "title": "AI 系统竞争从模型能力转向实时入口、成本曲线和可审计 Agent",
+        "subtitle": "2026 年 8 月 4 日 17:00 JST 版把官方系统更新与研究雷达合并阅读：模型供应商在讲效率和访问，研究社区在补评测、工具和授权边界。",
+        "dateLabel": "2026 年 8 月 4 日 17:00 JST",
+        "status": "已发布，官方项按发布事实核对，研究项保持预印本边界",
+        "overview": "本期不靠社区讨论或传言补量。OpenAI 的 GPT-Live、GPT-5.6 价格/效率和科研访问页面显示供应商正在围绕入口、单位成本和外部科研反馈组织产品；Anthropic 的网络安全评测披露提醒评测环境本身需要生产级隔离；arXiv 研究则把企业文档、连续实验、轨迹验证、工具 schema 和授权 gate 变成下一轮核查对象。",
+        "timeline": [
+          {
+            "label": "7 月 29-30 日",
+            "title": "OpenAI 推出价格、科研和效率叙事",
+            "body": "GPT-5.6 价格、科研访问和效率栈页面给出官方可核对的发布事实。"
+          },
+          {
+            "label": "7 月 30 日",
+            "title": "Anthropic 披露评测事件",
+            "body": "Claude 网络安全评测触及真实系统，使 eval harness 与第三方评测环境成为安全对象。"
+          },
+          {
+            "label": "8 月 3 日",
+            "title": "GPT-Live 工程说明与 arXiv recent 更新",
+            "body": "OpenAI 发布实时语音系统说明，arXiv recent 出现多条 Agent 评测和安全研究。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期当前信号"
+          },
+          {
+            "value": "5/10",
+            "label": "官方来源"
+          },
+          {
+            "value": "5/10",
+            "label": "研究原文"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "入口",
+            "title": "实时语音不再只是音频模型",
+            "body": "GPT-Live 的重点是媒体快路径、状态化推理、异步委托和协议优化。",
+            "soWhat": "语音 Agent 评测要看端到端延迟、工具委托、长会话和安全日志。"
+          },
+          {
+            "number": "02",
+            "label": "成本",
+            "title": "价格和效率开始合并成任务级经济性",
+            "body": "GPT-5.6 降价和效率栈说明都指向每个成功结果的成本，而不是单次 token 标价。",
+            "soWhat": "企业要同时测账单、重试、人工审核、缓存命中和任务成功率。"
+          },
+          {
+            "number": "03",
+            "label": "评测",
+            "title": "Agent 评测环境也需要被评测",
+            "body": "Anthropic 事件和验证综述共同说明，评测 harness、网络隔离、运行证据和轨迹审计是上线前条件。",
+            "soWhat": "采购第三方 eval 时要审查隔离、日志、凭证、通知和事故响应。"
+          },
+          {
+            "number": "04",
+            "label": "工具",
+            "title": "工具 schema 和授权 gate 成为新控制面",
+            "body": "SafeKeep 和 CAGE 分别提示工具说明会影响拒答，工具返回的不确定性会影响授权。",
+            "soWhat": "Agent runtime 应加入 schema 审计、观察注入测试、绑定错误测试和 policy-as-code 复核。"
+          }
+        ],
+        "actions": [
+          "把 GPT-Live、GPT-5.6 价格和效率栈加入平台成本与延迟复测队列。",
+          "把第三方模型评测环境纳入生产级网络隔离、日志留存和事故通知要求。",
+          "把工具 schema、typed returns、授权 gate 和轨迹证据加入 Agent 上线清单。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "官方边界",
+            "body": "OpenAI 与 Anthropic 页面证明发布者自己的主张，不证明外部客户效果或完整事故范围。"
+          },
+          {
+            "label": "研究边界",
+            "body": "arXiv 条目是预印本雷达，仍需代码、数据、第三方复现、真实日志和同行评审。"
+          },
+          {
+            "label": "时间边界",
+            "body": "本期聚焦 2026-07-29 至 2026-08-03 可核对来源，不补旧闻和社区传言。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI 官方页面支持 GPT-Live、GPT-5.6 价格、科研访问和效率栈的发布事实。",
+            "Anthropic 官方页面支持 Claude 网络安全评测事件、回溯范围和响应措施的披露事实。",
+            "arXiv 页面支持本期 5 条 Agent 评测、安全和授权研究的题名、提交时间和摘要主张。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 判断 8 月 4 日版的核心不是单点模型领先，而是系统入口、成本曲线和可审计 Agent 的组合变化。",
+            "本期把官方主张和研究原文并列，是为了给读者提供核查路线，而不是把预印本或厂商页升级成事实结论。"
+          ],
+          "unknowns": [
+            "未知 GPT-Live 和 GPT-5.6 效率在外部客户环境中的真实延迟、账单和稳定性。",
+            "未知 Anthropic 事件的完整第三方审计结论，也未知 arXiv 方法能否被广泛复现。"
+          ]
+        },
+        "references": [
+          {
+            "label": "OpenAI 发布 GPT-Live 全双工语音架构",
+            "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live/"
+          },
+          {
+            "label": "arXiv 发布 ExtractBench 多指标抽取评测",
+            "url": "https://arxiv.org/abs/2607.29677"
+          },
+          {
+            "label": "arXiv 发布 AgentHPOBench 连续实验评测",
+            "url": "https://arxiv.org/abs/2607.29626"
+          },
+          {
+            "label": "arXiv 发布 Agent 轨迹验证综述",
+            "url": "https://arxiv.org/abs/2607.29405"
+          },
+          {
+            "label": "arXiv 发布工具 schema 安全退化研究",
+            "url": "https://arxiv.org/abs/2607.29254"
+          },
+          {
+            "label": "arXiv 发布 CAGE typed-return 授权认证",
+            "url": "https://arxiv.org/abs/2607.29190"
+          },
+          {
+            "label": "Anthropic 披露 Claude eval 接触真实系统",
+            "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+          },
+          {
+            "label": "OpenAI 发布 GPT-5.6 Luna/Terra 价格说明",
+            "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+          },
+          {
+            "label": "OpenAI 说明 GPT-5.6 推理栈效率",
+            "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/"
+          },
+          {
+            "label": "OpenAI 发布 10 万名研究者访问计划",
+            "url": "https://openai.com/index/chatgpt-for-academic-researchers/"
+          }
+        ]
+      },
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "openai-gpt-live-realtime-system-2026-08-04",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 公开 GPT-Live 实时语音系统架构",
+          "body": "OpenAI 8 月 3 日公开 GPT-Live 实时语音系统，强调全双工语音、异步委托和低延迟媒体路径。",
+          "summary": "OpenAI 8 月 3 日公开 GPT-Live 实时语音系统，强调全双工语音、异步委托和低延迟媒体路径。",
+          "whyItMatters": "语音 AI 的竞争正在从“会说话”转向能否在不中断对话的情况下调用工具、委托前沿模型并保持低延迟。",
+          "detailBody": "OpenAI 称 GPT-Live 移除传统 turn detector，让语音模型同时听和说，并把更深推理或工具调用放到异步路径；页面还描述 WebRTC、状态迁移、上下文压缩、生产静默测试和 GPT-Live API 基础。",
+          "trend": "实时语音正在成为 Agent 入口，关键指标从模型口音和语气扩展到会话状态、工具委托、网络路径和生产观测。",
+          "detailTrend": "这条信号说明语音 Agent 的基础设施开始像实时系统而不只是聊天界面：媒体路径、前沿模型委托、日志切分、协议握手和回滚控制都会影响体验与安全。官方文章能证明架构主张，不能证明所有用户场景已稳定。",
+          "whyRanked": "它把语音 AI 的工程瓶颈从模型能力落到实时系统设计。",
+          "topReason": "语音 Agent 进入低延迟系统竞争。",
+          "detailWhyRanked": "OpenAI 把 GPT-Live 的核心设计公开到状态化推理、异步委托和协议优化层面，适合产品和平台团队更新语音 Agent 架构清单；体验效果仍需外部延迟、可用性和安全数据。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方工程说明可核对架构和发布事实；外部体验仍需独立测试。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方工程说明可核对架构和发布事实；外部体验仍需独立测试。"
+          },
+          "impact": "语音产品、Agent 平台和实时通信团队应检查媒体快路径、工具慢路径隔离、长会话状态迁移和生产观测。",
+          "whoShouldCare": "语音 AI、桌面 Agent、实时通信和平台可靠性团队应关注 GPT-Live 把语音交互变成持续在线系统。",
+          "readerUse": "产品和工程团队用它更新实时语音 Agent 的延迟、状态、委托和观测指标。",
+          "nextCheck": "查 GPT-Live API 文档、外部延迟测试、可用性指标、隐私说明、安全评测和开发者反馈。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要 GPT-Live API 文档、第三方延迟测试报告、可用性日志、隐私/安全文档和开发者实测，才可升级为已验证的实时语音 Agent 平台进展。",
+          "claimBoundary": "不证明 GPT-Live 在所有网络、语言、设备和工具场景下都稳定，也不证明它优于竞品语音系统。",
+          "counterEvidence": "若第三方延迟测试报告、可用性日志或安全评测显示端到端延迟、断连恢复、工具委托或长会话稳定性不达标，应降级为官方工程主张。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/continuous-voice-interaction-with-gpt-live/",
+          "originalUrl": "https://openai.com/index/continuous-voice-interaction-with-gpt-live/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI News 可核对发布者、日期和页面内公开主张；外部效果、采用规模和竞争结论仍需独立材料。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-03T22:00:00+09:00",
+          "time": "22:00",
+          "tags": [
+            "GPT-Live",
+            "语音 AI",
+            "实时系统"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "arxiv-extractbench-enterprise-doc-extraction-2026-08-04",
+          "category": "research",
+          "label": "研究",
+          "title": "ExtractBench 把企业文档抽取评测扩展到准确率、完整性、溯源和成本",
+          "body": "ExtractBench 提出企业文档抽取的准确率、完整性、溯源和成本评测。",
+          "summary": "ExtractBench 提出企业文档抽取的准确率、完整性、溯源和成本评测。",
+          "whyItMatters": "企业 Agent 若要处理合同、表单和业务文档，不能只看抽取值是否正确，还要看记录是否完整、证据是否可追溯、成本是否可接受。",
+          "detailBody": "论文称 ExtractBench 覆盖 370 份企业文档、4,869 页、8 个业务领域和 67 类文档，并同时评分 value accuracy、record completeness、word/page grounding 和 measured cost，用来比较 VLM 与 coding agent。",
+          "trend": "企业文档 Agent 的评测正在从 demo 抽取走向任务级成本、长文档截断和证据定位。",
+          "detailTrend": "这条研究信号适合数据平台和采购团队关注：VLM 与 coding agent 可能在短文档、长列表和成本上表现不同。预印本支持评测设计主张，但需要公开数据、代码和第三方复测。",
+          "whyRanked": "它把企业文档抽取的关键失败模式结构化。",
+          "topReason": "企业文档 Agent 需要可溯源评测。",
+          "detailWhyRanked": "ExtractBench 给出页数、领域、文档类型、多指标评价和代码/数据入口，能帮助团队避免只看单一 F1；但 benchmark 是否覆盖企业真实文档仍需外部实测。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "impact": "企业文档自动化、审计、法务和数据团队应要求抽取系统报告证据页、字段完整性和每份文档成本。",
+          "whoShouldCare": "企业数据、法务运营、采购和文档 Agent 团队应关注抽取准确率之外的完整性与溯源。",
+          "readerUse": "评测团队用它更新文档 Agent benchmark，加入 record completeness、grounding 和成本指标。",
+          "nextCheck": "查 Hugging Face 数据集、GitHub 代码、评测脚本、许可证和第三方复测结果。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要公开数据、代码、评测脚本、许可说明和第三方复现，才可升级为可采用的企业文档评测基准。",
+          "claimBoundary": "不证明任何单一产品已适合企业生产文档抽取，也不证明 benchmark 覆盖所有行业格式。",
+          "counterEvidence": "若第三方复测发现数据泄漏、标注不稳或真实文档表现不一致，应降低其评测基准价值。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.29677",
+          "originalUrl": "https://arxiv.org/abs/2607.29677",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv cs.AI 可核对论文题名、提交日期、摘要、实验主张和作者披露；结论仍是预印本研究信号。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-03T02:55:58+09:00",
+          "time": "02:55",
+          "tags": [
+            "文档抽取",
+            "企业 AI",
+            "评测"
+          ],
+          "companies": []
+        },
+        {
+          "id": "arxiv-agenthpobench-sequential-hpo-2026-08-04",
+          "category": "research",
+          "label": "研究",
+          "title": "AgentHPOBench 测试 LLM Agent 是否能连续调参做实验",
+          "body": "AgentHPOBench 测试 LLM Agent 是否能连续调参并利用实验日志。",
+          "summary": "AgentHPOBench 测试 LLM Agent 是否能连续调参并利用实验日志。",
+          "whyItMatters": "科学和 ML Agent 的核心不是一次生成代码，而是能否读懂失败日志、持续改进配置并接近参考表现。",
+          "detailBody": "论文称 benchmark 覆盖 7 类研究任务和 30 个可执行 ML 任务，要求 Agent 在每步观察配置、指标和日志后提出下一次有效干预，并比较 12 个常用 Agent 与传统 HPO baseline。",
+          "trend": "研究 Agent 评测正在从静态答案转向多轮实验决策、日志诊断和持续优化。",
+          "detailTrend": "如果 Agent 要承担实验助理角色，评测必须覆盖“下一步实验怎么选”。AgentHPOBench 给出方向，但结果仍受任务集合、baseline、日志质量和执行预算影响。",
+          "whyRanked": "它把科研 Agent 能力落到连续实验闭环。",
+          "topReason": "科研 Agent 需要多轮实验评测。",
+          "detailWhyRanked": "arXiv 原文说明任务数量、研究类别、12 个 Agent 对比和传统 HPO baseline，提醒团队不要只测代码生成，还要测日志诊断、连续干预和参考表现逼近能力；迁移到真实实验室仍需公开环境和复测。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "impact": "ML 平台、AutoML、科研自动化和模型评测团队应加入连续实验、日志解释和预算使用指标。",
+          "whoShouldCare": "AutoML、科研 Agent 和模型评测团队应关注多轮实验优化是否真的持续进步。",
+          "readerUse": "评测团队用它设计 sequential intervention 测试，核对 Agent 是否能从日志和指标中学习下一步。",
+          "nextCheck": "查任务代码、baseline 设置、日志样本、随机种子、执行预算和第三方复测。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要公开环境、任务脚本、baseline 配置、运行日志和第三方复现，才可升级为可信科研 Agent benchmark。",
+          "claimBoundary": "不证明当前 Agent 已能独立完成真实科研，也不证明 HPO 能代表所有实验设计能力。",
+          "counterEvidence": "若复测显示结果依赖特定任务、提示或预算，且多轮改进不稳定，应降低 benchmark 泛化价值。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.29626",
+          "originalUrl": "https://arxiv.org/abs/2607.29626",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv cs.AI 可核对论文题名、提交日期、摘要、实验主张和作者披露；结论仍是预印本研究信号。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-03T01:58:00+09:00",
+          "time": "01:58",
+          "tags": [
+            "科研 Agent",
+            "AutoML",
+            "HPO"
+          ],
+          "companies": []
+        },
+        {
+          "id": "arxiv-agentic-system-validation-2026-08-04",
+          "category": "research",
+          "label": "研究",
+          "title": "Agentic AI 验证研究要求从组件测试转向轨迹测试",
+          "body": "Agentic AI 验证综述主张从组件测试转向轨迹级验证。",
+          "summary": "Agentic AI 验证综述主张从组件测试转向轨迹级验证。",
+          "whyItMatters": "Agent 的风险来自多步轨迹、环境变化、记忆和工具交互，单次输入输出测试不足以支持生产或监管判断。",
+          "detailBody": "论文提出五维 taxonomy，并指出 temporal validity、runtime evidence maintenance、regulatory legibility 和 open-ended multi-agent assurance 仍较薄弱。",
+          "trend": "Agent 治理正在从模型卡和组件评测扩展到生命周期证据、运行监控和可审计轨迹。",
+          "detailTrend": "这条研究适合做治理框架输入：系统行为要在上下文中验证，而不是只验证模型组件。它把医疗、工业和智能交通案例放在同一套生命周期问题中，但作为综述，仍不能替代具体行业审计标准。",
+          "whyRanked": "它把 Agent 安全评测与监管可读性连接起来。",
+          "topReason": "Agent 部署需要轨迹级验证。",
+          "detailWhyRanked": "综述覆盖 agent evaluation、software assurance、cyber-physical systems、runtime monitoring 和监管指导，能帮助团队设计跨域验证清单；但实际标准还需行业监管和真实事故数据确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "impact": "企业治理、安全、医疗、工业和交通场景团队应把轨迹、运行证据和审计结构放入上线门槛。",
+          "whoShouldCare": "合规、安全、行业应用和 Agent 平台团队应关注组件测试之外的轨迹级 assurance。",
+          "readerUse": "治理团队用它更新 Agent 上线 清单，加入运行证据、时序有效性和监管可读性。",
+          "nextCheck": "查综述引用表、行业监管文件、案例数据、运行监控工具和第三方审计方法。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要行业案例、监管采纳、运行监控数据和第三方审计方法，才可升级为可执行部署标准。",
+          "claimBoundary": "不证明某一验证框架已经被监管采用，也不证明所有 Agent 场景都适合同一 taxonomy。",
+          "counterEvidence": "若行业审计报告、事故复盘或监管文件显示五维 taxonomy 无法覆盖关键失败模式，应降级为综述框架而非部署标准。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.29405",
+          "originalUrl": "https://arxiv.org/abs/2607.29405",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv cs.AI 可核对论文题名、提交日期、摘要、实验主张和作者披露；结论仍是预印本研究信号。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-02T22:24:34+09:00",
+          "time": "22:24",
+          "tags": [
+            "Agent 验证",
+            "治理",
+            "审计"
+          ],
+          "companies": []
+        },
+        {
+          "id": "arxiv-tool-spec-safety-risks-2026-08-04",
+          "category": "research",
+          "label": "研究",
+          "title": "Tool Specifications Matter 指向工具 schema 本身的安全风险",
+          "body": "Tool Specifications Matter 研究工具 schema 如何影响 Agent 安全拒答。",
+          "summary": "Tool Specifications Matter 研究工具 schema 如何影响 Agent 安全拒答。",
+          "whyItMatters": "Agent 安全不只取决于用户提示，工具说明、schema 结构和执行接口也可能改变模型的拒绝行为。",
+          "detailBody": "论文通过表示分析把 schema-formatted tool specifications 识别为安全退化来源之一，并称 SafeKeep 在两个 benchmark 和四个 LLM 上降低 harmful tool execution 与 observation-level prompt injection 成功率。",
+          "trend": "工具调用安全正在从“过滤用户输入”走向“审计工具定义如何改变模型内部安全信号”。",
+          "detailTrend": "这条研究给 MCP、插件和企业工具层一个具体检查点：工具 schema 不是中性文本，它可能改变拒答表征和执行路径。论文报告的拒答率和攻击成功率改善需要代码、数据、更多模型复测和真实工具红队确认。",
+          "whyRanked": "它把 Agent 工具安全风险定位到 schema 设计层。",
+          "topReason": "工具定义也会影响拒答。",
+          "detailWhyRanked": "arXiv 原文给出 schema-formatted tool specifications、SafeKeep、拒答率和攻击成功率指标，提供可转化的工程控制思路；部署效果还要看真实工具、权限、业务误拒率和绕过测试。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "impact": "MCP、插件、企业自动化和安全平台团队应审计工具 schema、权限描述、观察注入和拒答退化。",
+          "whoShouldCare": "Agent 工具平台、MCP 集成、安全评测和企业自动化团队应关注工具说明是否放大风险。",
+          "readerUse": "安全团队用它检查工具 schema、观察输入和执行权限是否需要独立安全判定层。",
+          "nextCheck": "查论文代码、数据、benchmark、更多模型复测、业务误拒率和真实工具注入测试。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要公开代码数据、第三方复现、真实工具链红队和误拒率评估，才可升级为可采用的 Agent 工具防护方法。",
+          "claimBoundary": "不证明 SafeKeep 能覆盖所有工具风险，也不证明 schema 是 Agent 不安全的唯一来源。",
+          "counterEvidence": "若真实工具链红队数据、误拒率记录或第三方复测显示误拒过高、攻击绕过或不同模型无效，应降级为实验室防护假设。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.29254",
+          "originalUrl": "https://arxiv.org/abs/2607.29254",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv cs.AI 可核对论文题名、提交日期、摘要、实验主张和作者披露；结论仍是预印本研究信号。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-02T19:25:04+09:00",
+          "time": "19:25",
+          "tags": [
+            "工具调用",
+            "Agent 安全",
+            "Prompt injection"
+          ],
+          "companies": []
+        },
+        {
+          "id": "arxiv-cage-certified-authorization-2026-08-04",
+          "category": "research",
+          "label": "研究",
+          "title": "CAGE 试图给工具 Agent 的授权决策做扰动认证",
+          "body": "CAGE 研究工具返回值不确定性下的 Agent 授权认证。",
+          "summary": "CAGE 研究工具返回值不确定性下的 Agent 授权认证。",
+          "whyItMatters": "当 Agent 根据工具返回值付款、审批或执行操作时，微小来源绑定错误可能把看似合规的行动变成越权。",
+          "detailBody": "论文称 CAGE 在 synthetic、policy-as-code、regulatory 和 real-transaction 设置中减少 pointwise gate 允许的 false allows，同时保留一部分自主决策，并区分可执行政策和学习 gate 的认证方式。",
+          "trend": "Agent 权限控制正在从静态 allow/deny 走向对工具返回不确定性的形式化鲁棒性检查。",
+          "detailTrend": "这条研究适合金融、采购和审批流团队关注：授权判断要考虑返回值来源、类别字段、数值误差和策略执行的联合扰动，而不是只看单点工具返回。论文有代码链接，但真实业务落地仍需策略实现、性能成本、审计日志和交易记录验证。",
+          "whyRanked": "它把工具 Agent 的权限边界做成可认证问题。",
+          "topReason": "授权 gate 需要抗绑定错误。",
+          "detailWhyRanked": "CAGE 给出一个可执行的权限鲁棒性方向，尤其适合有 typed returns、policy-as-code 和交易记录的场景；但复杂业务规则下的成本、覆盖率和误拒仍未验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
+          },
+          "impact": "金融、采购、审批、合规和 Agent runtime 团队应检查工具返回值绑定、数值漂移和政策执行是否一起认证。",
+          "whoShouldCare": "合规工程、金融科技、采购自动化和 Agent runtime 团队应关注工具返回不确定性下的越权风险。",
+          "readerUse": "工程团队用它更新授权 gate 测试，把来源绑定错误、数值漂移和可执行政策一起纳入。",
+          "nextCheck": "查代码仓库、policy-as-code 样例、真实交易测试、审计日志和性能开销。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要公开代码、真实政策样例、交易日志复测、审计报告和性能成本，才可升级为可部署授权控制方法。",
+          "claimBoundary": "不证明 CAGE 能覆盖所有权限系统，也不证明认证开销适合高吞吐生产流量。",
+          "counterEvidence": "若真实政策测试显示 false allow 未减少、false deny 过高或开销不可接受，应降级为研究原型。",
+          "source": "arXiv cs.AI",
+          "sourceName": "arXiv cs.AI",
+          "sourceId": "arxiv-ai",
+          "sourceUrl": "https://arxiv.org/abs/2607.29190",
+          "originalUrl": "https://arxiv.org/abs/2607.29190",
+          "sourceRole": "研究原文",
+          "provenance": "arXiv cs.AI 可核对论文题名、提交日期、摘要、实验主张和作者披露；结论仍是预印本研究信号。",
+          "trustLevel": "research",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-02T18:11:56+09:00",
+          "time": "18:11",
+          "tags": [
+            "授权",
+            "工具 Agent",
+            "合规"
+          ],
+          "companies": []
+        },
+        {
+          "id": "anthropic-cyber-eval-incidents-2026-08-04",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic 披露 Claude 网络安全评测中的三起真实系统事件",
+          "body": "Anthropic 披露 Claude 网络安全评测曾因环境误配置接触真实系统。",
+          "summary": "Anthropic 披露 Claude 网络安全评测曾因环境误配置接触真实系统。",
+          "whyItMatters": "前沿模型评测本身正在成为高风险基础设施，测试环境隔离、外部评测商控制和日志审计都需要上升到发布前安全标准。",
+          "detailBody": "Anthropic 称三起事件与评测环境误配置和互联网访问路径有关，涉及 Opus 4.7、Mythos 5 和内部测试模型；公司已暂停相关评测、通知评测伙伴和受影响组织，并计划改进监控、保障和供应商流程。",
+          "trend": "模型安全的焦点从“模型是否拒答”扩展到评测 harness、供应商环境、权限边界和真实互联网接触面。",
+          "detailTrend": "这不是常规漏洞通报，而是前沿 Agent 评测流程的治理样本：越真实的评测环境越能测能力，也越可能把模型行为带入真实系统。官方披露可证明事件和响应，仍需 Irregular、METR 与受影响组织确认细节。",
+          "whyRanked": "它直接改变 AI 实验室如何设计网络安全评测和第三方 eval。",
+          "topReason": "评测环境自身成为安全边界。",
+          "detailWhyRanked": "Anthropic 官方披露给出时间线、模型、评测伙伴、误配置、141,006 次回溯范围、通知动作和缓解方向，给安全团队提供可执行检查项；但受影响组织、完整日志和第三方审计尚未完全公开。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方披露细节充分且有明确下一步审计路径；外部确认仍未完整公开。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方披露细节充分且有明确下一步审计路径；外部确认仍未完整公开。"
+          },
+          "impact": "安全、法务、模型评测和供应商管理团队应把外部 eval 环境纳入生产级隔离、监控、凭证和事故响应流程。",
+          "whoShouldCare": "AI 安全、红队、合规和第三方评测采购团队应关注评测环境是否具备生产级隔离与审计。",
+          "readerUse": "安全团队用它更新模型评测供应商问卷、网络隔离测试、日志留存和事故通知流程。",
+          "nextCheck": "查 Irregular 后续调查、METR 第三方复审、红acted transcript、受影响组织确认和修复记录。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要第三方审计报告、评测日志样本、受影响组织确认和修复记录，才可升级为已验证的评测安全事件结论。",
+          "claimBoundary": "不证明 Claude 已有自主逃逸意图，也不证明所有网络安全评测都会造成真实入侵。",
+          "counterEvidence": "若 Irregular/METR 复审报告、受影响组织确认或评测日志显示事件范围、模型行为或隔离失败原因与官方披露不一致，应降级为待修正事件判断。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+          "originalUrl": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+          "sourceRole": "官方核对",
+          "provenance": "Anthropic Newsroom 可核对发布者、日期和页面内公开主张；外部效果、采用规模和竞争结论仍需独立材料。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-30T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "网络安全评测",
+            "Claude",
+            "评测隔离"
+          ],
+          "companies": [
+            "Anthropic",
+            "Irregular"
+          ]
+        },
+        {
+          "id": "openai-gpt56-price-performance-2026-08-04",
+          "category": "model",
+          "label": "模型",
+          "title": "OpenAI 下调 GPT-5.6 Luna 与 Terra 的使用成本",
+          "body": "OpenAI 下调 GPT-5.6 Luna 与 Terra 价格，并推出 Sol Fast mode。",
+          "summary": "OpenAI 下调 GPT-5.6 Luna 与 Terra 价格，并推出 Sol Fast mode。",
+          "whyItMatters": "高频 Agent 工作流的约束正在从“能不能做”转向“每个成功结果花多少钱、延迟多少、需要多少监督”。",
+          "detailBody": "OpenAI 称 Luna 价格降低 80%、Terra 降低 20%，并把 Sol 的 Priority Processing 替换为 Fast mode；相关变化会反映到 API、Codex、ChatGPT Work 和部分订阅用量计算中。",
+          "trend": "前沿模型竞争继续向价格性能曲线移动，企业需要按任务风险、延迟和失败成本组合不同模型。",
+          "detailTrend": "这条信号适合更新 AI 成本模型：Agent 可能用高能力模型规划，用低成本模型执行可限定步骤，再用缓存和路由降低重复成本。官方价格页能证明标价变化，实际节省取决于任务、缓存、重试和监督。",
+          "whyRanked": "它直接影响企业 Agent 与开发者自动化的单位经济性。",
+          "topReason": "模型价格成为 Agent 规模化变量。",
+          "detailWhyRanked": "OpenAI 官方页同时给出 Luna/Terra 标价、Sol Fast mode、API 可用性和客户工作流叙事，说明模型供应商正在用效率而非单纯能力争夺企业负载；采购判断仍需实际账单和任务成功率。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方可核对价格和可用性；效果需客户账单和任务指标验证。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方可核对价格和可用性；效果需客户账单和任务指标验证。"
+          },
+          "impact": "企业平台、成本治理 和开发者工具团队应重新测算高频 Agent 任务的模型路由、缓存、重试和质量阈值。",
+          "whoShouldCare": "AI 平台、采购、成本治理 和开发者自动化团队应关注 GPT-5.6 成本变化是否改变模型路由策略。",
+          "readerUse": "平台团队用它更新模型选择矩阵，把任务价值、错误成本、延迟和每次成功结果成本放在一起评估。",
+          "nextCheck": "查 OpenAI API 价格页、AWS rollout、真实账单、任务成功率、延迟和重试率。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要企业实际账单、任务级成功率、延迟和重试数据，才可升级为已验证的成本效率改善。",
+          "claimBoundary": "不证明所有任务都会降本，也不证明低价模型能替代更高能力模型处理高风险工作。",
+          "counterEvidence": "若客户账单、任务成功率、重试日志或人工审核记录显示修复成本抵消标价下降，应降级为价格表变化而非单位经济性改善。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+          "originalUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI News 可核对发布者、日期和页面内公开主张；外部效果、采用规模和竞争结论仍需独立材料。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-30T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "GPT-5.6",
+            "价格",
+            "模型路由"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "openai-gpt56-efficiency-stack-2026-08-04",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI 把 GPT-5.6 效率解释到推理栈和 Agent harness",
+          "body": "OpenAI 解释 GPT-5.6 的推理栈、kernel 和 Agent harness 效率改进。",
+          "summary": "OpenAI 解释 GPT-5.6 的推理栈、kernel 和 Agent harness 效率改进。",
+          "whyItMatters": "模型效率不再只是模型权重问题，推理调度、缓存、工具定义和上下文管理会决定 Agent 成本与速度。",
+          "detailBody": "OpenAI 称 GPT-5.6 Sol 帮助重写和优化生产 kernel，使端到端服务成本降低 20%，并通过实验提升 token 生成效率；页面还解释 Codex 与 ChatGPT Work 的 harness 如何减少重复上下文和保持 prompt cache。",
+          "trend": "AI 系统正在形成“模型改进基础设施、基础设施再降低模型使用成本”的闭环。",
+          "detailTrend": "这条信号值得开发者关注，因为 Agent 成本可能来自工具循环、上下文膨胀、缓存破坏、调度和 kernel 开销，而不是单次模型调用。官方工程主张需要开源工具记录、可复现实验和外部成本曲线来验证。",
+          "whyRanked": "它把 Agent 降本路径具体化到 kernel、缓存和工具循环。",
+          "topReason": "效率竞争进入系统栈。",
+          "detailWhyRanked": "OpenAI 公开了模型、推理和 harness 三层效率路径，包括 kernel、speculative decoding、context bloat 和 prompt cache，适合平台团队检查自己的上下文、缓存和调度设计；但节省幅度仍是官方内部口径。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方工程细节多；外部可复现性和客户侧成本仍需验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方工程细节多；外部可复现性和客户侧成本仍需验证。"
+          },
+          "impact": "AI 基础设施、开发工具和平台团队应审查 prompt cache、上下文追加、工具顺序和推理配置是否可观测。",
+          "whoShouldCare": "AI infra、开发者工具和 Agent 平台团队应关注效率瓶颈是否在模型之外。",
+          "readerUse": "工程团队用它更新推理栈优化清单，核查缓存命中、上下文膨胀、工具调用次数和 kernel 验证。",
+          "nextCheck": "查 Triton/Gluon/FpSan 资料、外部复测、成本曲线、缓存命中率和真实 Agent 任务日志。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要开源工具记录、第三方基准、真实工作流成本和可用性数据，才可升级为已验证的系统级效率提升。",
+          "claimBoundary": "不证明同样优化可迁移到所有模型或企业栈，也不证明官方成本降幅等于客户账单降幅。",
+          "counterEvidence": "若外部复测或客户账单显示延迟、缓存命中或单位任务成本没有改善，应降级为内部工程经验。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/",
+          "originalUrl": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI News 可核对发布者、日期和页面内公开主张；外部效果、采用规模和竞争结论仍需独立材料。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-29T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "推理优化",
+            "Codex",
+            "Agent harness"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "openai-academic-researchers-program-2026-08-04",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI 推出面向 10 万名学术研究者的 ChatGPT 计划",
+          "body": "OpenAI 推出面向学术研究者的 ChatGPT 免费访问计划。",
+          "summary": "OpenAI 推出面向学术研究者的 ChatGPT 免费访问计划。",
+          "whyItMatters": "科学 AI 的采用正在从单个实验室案例转向制度化供给，问题变成研究数据、隐私、 reproducibility 和模型反馈如何治理。",
+          "detailBody": "OpenAI 称项目先从 1 万名研究者开始，面向选定学术机构，提供 GPT-5.6、Codex、深度研究、更高限额、连接器和研究支持，并默认不把工作区数据用于训练。",
+          "trend": "模型公司正在把科研用户变成长期反馈循环，同时用免费访问扩大科学工作流入口。",
+          "detailTrend": "这条信号把科学 AI 从营销案例推进到规模化项目：研究者获得工具，模型公司获得真实问题反馈，高校需要治理数据、成果披露和复现。官方页面支持项目范围和条件，但不证明研究质量或生产率已提升。",
+          "whyRanked": "它影响科研机构如何采购、治理和评估前沿模型。",
+          "topReason": "科学 AI 进入机构化访问阶段。",
+          "detailWhyRanked": "OpenAI 官方页给出 10 万名研究者目标、首批 1 万名、隐私默认、工具组合、机构资格和 2027 年扩展计划，值得科研管理者核查；真正影响要看论文、数据、审计和机构治理结果。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方项目范围清楚；科研效果仍需机构和论文侧证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方项目范围清楚；科研效果仍需机构和论文侧证据。"
+          },
+          "impact": "高校、实验室、科研资助方和数据治理团队应准备使用政策、成果标注、隐私审查和可复现实验要求。",
+          "whoShouldCare": "科研机构、PI、资助方和学术 IT 团队应关注免费前沿模型访问带来的治理与复现压力。",
+          "readerUse": "科研机构团队、PI、学术 IT 和资助方用它更新 AI 工具准入、数据使用、成果署名、复现和研究诚信清单。",
+          "nextCheck": "查参与机构名单、ChatGPT Edu 协议、研究者使用政策、论文披露规范和独立生产率评估。",
+          "followUpQuestions": [
+            "哪些独立记录可以把这条信号升级为已验证判断？",
+            "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+          ],
+          "evidenceThreshold": "需要机构协议、使用日志、论文披露、复现材料和独立研究评估，才可升级为已验证的科研生产率变化。",
+          "claimBoundary": "不证明免费访问会自动提高科学发现质量，也不证明所有学科都适合使用同一工具链。",
+          "counterEvidence": "若机构使用日志、论文披露、复现材料或研究诚信审查显示隐私限制、复现失败、误用或争议上升，应降级为访问项目而非科研生产率提升。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/chatgpt-for-academic-researchers/",
+          "originalUrl": "https://openai.com/index/chatgpt-for-academic-researchers/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI News 可核对发布者、日期和页面内公开主张；外部效果、采用规模和竞争结论仍需独立材料。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-07-29T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "科学 AI",
+            "高校",
+            "ChatGPT"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-03",
       "date": "2026-08-03",
