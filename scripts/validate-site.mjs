@@ -53,6 +53,7 @@ const optimizationLogArchiveGuide = readFileSync("docs/optimization-log-archive-
 const contributing = readFileSync("docs/contributing.md", "utf8");
 const readme = readFileSync("README.md", "utf8");
 const errors = [];
+const currentNewsData = JSON.parse(newsJson);
 const repositoryRoot = process.cwd();
 const htmlPages = new Map([
   ["index.html", html],
@@ -63,6 +64,14 @@ const htmlPages = new Map([
   ["404.html", notFoundHtml],
 ]);
 
+const currentDominantSourceFamily = (currentNewsData.edition?.sourceFamilies || []).find((family) => Number.isInteger(family.count) && family.count >= Math.ceil((currentNewsData.items || []).length * 0.67));
+
+if (
+  currentDominantSourceFamily &&
+  !/用来|适合|先把|应该/.test(currentNewsData.edition?.overreadBoundary?.useInstead || "")
+) {
+  errors.push("Homepage runtime overread boundary wording must pass app.js validation so feed modules render.");
+}
 const requiredMetaTags = [
   ["name", "description"],
   ["name", "application-name"],

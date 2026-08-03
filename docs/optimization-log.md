@@ -1,3 +1,27 @@
+## 2026-08-03 23:12 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-08-03` 17:00 版，因此未回退早间版，而是在当前最新版中增补 2 条可靠媒体背景信号，当前版从 10 条增至 12 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 TechCrunch AI、Axios AI/Technology、官方/可靠来源索引和历史 URL，未使用付费墙、登录墙正文、社区传言或随机抓取页面。
+  - 本次新增 TechCrunch 对 June 企业 AI 部署平台和 2000 万美元融资的报道，以及 Axios 对 OpenAI、Anthropic、Meta、Google 等 AI 实验室人才留任难题的报道。
+  - 新增条目保持 `媒体背景` / `reported` / `originalDependency: must-read`；June 需要客户侧部署日志、合同、安全审计和第三方评测，人才战需要官方任免、论文署名、路线图、招聘数据或融资文件后再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 34 sources.
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local commit `f4dfc3d` with message `补充08点AI新闻情报`; this log note records the final amended local hash.
+- Git note: `git pull --ff-only origin main` and two `git push origin main` attempts failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-08-03 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 25 task. Added guidance for when `counterEvidence` should mention a concrete observable outcome rather than another document.
@@ -30,6 +54,25 @@
   - Ran `git diff --check`.
 - Commit: Local implementation commit `08401c4` (`增加反向证据结果指南`) and hash-record follow-up commit `afc794a` (`记录反向证据指南哈希`); this push-blocker note creates the final local follow-up commit recorded in automation memory.
 - Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
+## 2026-08-03 11:10 JST
+
+- Focus: 修复首页模块偶发不显示的问题。根因是 `app.js` 对 `edition.overreadBoundary.useInstead` 的运行时文案要求比数据校验更严格，当前文案缺少 `用来`、`适合`、`先把` 或 `应该` 这类动作词，导致浏览器端 `validateNewsData` 抛错并中断今日 TOP3、来源等级、核对清单和新闻流渲染。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Fix:
+  - 将当前版和最新归档版的 `overreadBoundary.useInstead` 改成浏览器端可接受的动作提示写法。
+  - 在 `scripts/validate-data.mjs` 增加同款文案校验，避免数据通过校验但首页运行失败。
+  - 在 `scripts/validate-site.mjs` 增加首页运行时边界守护，自动优化时会提前挡住这类会让模块不显示的问题。
+- Verification:
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 34 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the homepage runtime overread-boundary guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Simulated homepage loading with local structured data; confirmed 今日 TOP3, 更多新闻流, 来源等级, 主题分组 and 今日深挖 render without warnings.
 
 ## 2026-08-03 08:12 JST
 

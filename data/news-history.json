@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-08-03",
-  "totalItems": 319,
+  "totalItems": 321,
   "editions": [
     {
       "id": "news-1700-2026-08-03",
@@ -9,26 +9,26 @@
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
       "archiveLabel": "17:00 JST 发布",
-      "note": "本期以 Agent 评测、安全、系统提示审计和 GUI Agent 研究雷达为主。",
-      "operationalStatus": "GitHub DNS 解析失败，无法 pull；已复核来源政策、来源清单、arXiv recent、可靠媒体索引和历史 URL。",
-      "editorialInterpretation": "本期编辑判断：Agent 工程的焦点从模型能力转向评测可信度、记忆安全、审计预算和可复现环境。",
+      "note": "本期以 Agent 研究雷达为主，并补充企业部署与人才战媒体背景。",
+      "operationalStatus": "GitHub DNS 解析失败，无法 pull；已复核来源政策、来源清单、TechCrunch/Axios 索引、arXiv recent 和历史 URL。",
+      "editorialInterpretation": "本期编辑判断：Agent 工程的焦点仍在评测可信度、记忆安全和审计预算，同时企业部署层与人才留任开始成为新的落地约束。",
       "readerFrame": {
-        "headline": "阅读本期：把 Agent 研究当成评测和治理清单",
-        "whyItMatters": "这 10 条适合更新 Agent benchmark、系统提示审计、记忆注入防御、信息行动安全、GUI Agent 和人类监督预算。",
+        "headline": "阅读本期：把 Agent 研究、部署层和人才战放进同一张核查表",
+        "whyItMatters": "这 12 条适合更新 Agent benchmark、系统提示审计、记忆注入防御、企业部署路线图、人才留任和组织风险清单。",
         "mobile": {
           "headline": "手机先看 Agent 评测和安全",
-          "summary": "本期是 arXiv 研究雷达，重点在 CUA 和治理。",
+          "summary": "本期以 arXiv 研究雷达为主，补充企业部署和人才战媒体背景。",
           "primaryUses": [
             "安全团队查记忆注入。",
             "评测团队查 CUA 裁判。",
-            "治理团队查审计预算。"
+            "战略团队查部署和人才。"
           ],
           "proofBoundary": "研究仍需公开代码、数据、复现、真实日志和同行评审。"
         },
         "useThisIssueFor": [
           "Agent 平台和评测团队用本期核对 CUA benchmark、VLM 裁判、失败轨迹和训练环境。",
           "安全和治理团队用本期更新系统提示审计、记忆注入、信息行动场景和 Agent fleet 审计预算。",
-          "产品和企业自动化团队用本期观察 GUI Agent、长期记忆和平台交易 Agent 的部署前提。"
+          "企业 AI、采购和战略团队用本期检查 Agent 部署层、技术债、人才留任和供应商稳定性。"
         ],
         "notProvenYet": [
           "不能证明这些预印本方法已经适合生产，也不能证明某个模型或框架稳定领先。",
@@ -37,11 +37,11 @@
         ]
       },
       "changeSummary": {
-        "headline": "相较上一版，本期从媒体政策争议切到 Agent 研究证据",
+        "headline": "相较上一版，本期从纯研究雷达补入企业部署与人才战背景",
         "freshFacts": [
-          "本期新增来源事实：arXiv recent 在 2026-07-31 JST 收录 AISPA、OSReward、InfoOps Bench 等 Agent 治理和评测论文。",
-          "本期新增来源事实：多篇论文同时指向 computer-use Agent 的裁判、基准误判、训练环境和推理时计算边界。",
-          "本期新增来源事实：记忆注入、防信息行动和 Agent fleet 审计预算成为可单独测试的安全问题。"
+          "本期新增来源事实：TechCrunch 报道 June 于 2026-08-03 推出企业 AI 部署平台并融资 2000 万美元。",
+          "本期新增来源事实：Axios 于 2026-08-03 报道 OpenAI、Anthropic、Meta、Google 等 AI 实验室面临人才留任难题。",
+          "延续新增来源事实：arXiv recent 在 2026-07-31 JST 收录 AISPA、OSReward、InfoOps Bench 等 Agent 治理和评测论文。"
         ],
         "repeatedContext": [
           "延续背景：8 月 2 日版已覆盖 open-weight 政策争议、Pacing 声明和 FAR.AI 越狱测试。",
@@ -64,6 +64,11 @@
           "label": "核对平台监督机制",
           "count": 2,
           "meaning": "用来评估 Agent 商业诚实激励和一人审多 Agent 的预算分配。"
+        },
+        {
+          "label": "验证企业与组织约束",
+          "count": 2,
+          "meaning": "用来检查企业 Agent 部署、技术债、人才留任和供应商稳定性。"
         }
       ],
       "sourceFamilies": [
@@ -72,26 +77,32 @@
           "label": "研究原文",
           "count": 10,
           "role": "研究原文用于捕捉 Agent 评测、安全、训练和治理方向；结论仍需公开代码、数据、第三方复现、真实日志和同行评审。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "可靠媒体用于补充企业部署、人才战和市场背景；完整事实、引用、访谈、图表和上下文仍需回到原文。"
         }
       ],
       "sourceRisk": {
-        "label": "研究来源家族集中",
-        "note": "10/10 条来自 arXiv research，来源家族单一；本期只能作为研究雷达。",
-        "nextCheck": "独立复核应查论文原文配套代码、数据集、benchmark 脚本、第三方复测、真实部署日志和同行评审版本。"
+        "label": "研究来源仍占主导",
+        "note": "10/12 条来自 arXiv research，同一来源家族和同一 sourceId 仍占主导；本期主要是研究雷达，并用 2 条可靠媒体补企业约束背景。",
+        "nextCheck": "独立复核应查论文代码、数据集、benchmark 脚本、第三方复测、客户侧部署日志、官方人事公告和融资文件。"
       },
       "sourceConcentration": {
         "sourceId": "arxiv-ai",
         "sourceName": "arXiv cs.AI",
         "count": 10,
-        "share": "10/10",
-        "note": "同一来源集中是有意选择：本期在缺少足够非重复可靠媒体新信号时，改用 arXiv recent 做研究雷达。",
-        "nextCheck": "下一版应补充官方产品页、代码仓库、论文项目页、独立评测机构和可靠媒体跟进。"
+        "share": "10/12",
+        "note": "同一来源仍然集中：本期主体是 arXiv recent 研究雷达，新增媒体项只补企业落地和组织风险。",
+        "nextCheck": "下一版应补充官方产品页、代码仓库、论文项目页、独立评测机构、客户案例和可靠媒体跟进。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
-        "body": "本期主要提供 Agent 评测、训练、安全和治理的下一步核查对象。",
-        "doNotConclude": "不能据此断言这些方法已被产品采用、指标稳定领先、监管会采纳或企业应立即迁移。",
-        "useInstead": "用公开代码、数据、复现实验、真实部署日志、客户指标、审计报告和同行评审确认。"
+        "body": "本期主要提供 Agent 评测、训练、安全、治理、企业部署和人才风险的下一步核查对象。",
+        "doNotConclude": "不能据此断言这些方法已被产品采用、企业部署瓶颈已被解决、人才流动已改变公司竞争格局或监管会采纳。",
+        "useInstead": "应该用公开代码、数据、复现实验、真实部署日志、客户指标、审计报告和同行评审确认。"
       },
       "trendNotes": [
         {
@@ -111,6 +122,12 @@
           "label": "规模化 Agent 需要人类监督预算",
           "note": "跨期看，企业采用、Agent fleet 和 CUA 训练环境都指向从单 Agent demo 到多 Agent 运营的问题。",
           "boundary": "不证明企业已准备好规模化；仍需客户指标、权限日志、事故数据和内控报告。"
+        },
+        {
+          "topic": "enterprise-deployment",
+          "label": "企业 Agent 难点转向部署层",
+          "note": "跨期看，企业采用、FDE 需求和本期 June 报道都说明 Agent 价值需要先穿过旧系统、权限和数据治理。",
+          "boundary": "不证明部署平台已成熟；仍需客户日志、合同范围、上线指标、安全审计和第三方评测。"
         }
       ],
       "topicContinuity": [
@@ -156,6 +173,13 @@
           "lastMention": "此前归档已多次出现中国开放模型和 Qwen/Kimi 相关竞争背景。",
           "whatChanged": "本期 Qwen-UI-Agent 报告把移动、网页、桌面和 CLI 统一到 GUI Agent 路线。",
           "stillUnproven": "不证明真实企业流程稳定领先；仍需模型权重、运行时、benchmark 脚本和第三方 leaderboard。"
+        },
+        {
+          "company": "OpenAI",
+          "label": "人才战背景",
+          "lastMention": "此前版本已覆盖 OpenAI agent 安全事故、开放权重争议和工作流采用。",
+          "whatChanged": "本期 Axios 把 OpenAI 放入顶尖 AI 人才留任难题背景中。",
+          "stillUnproven": "不证明 OpenAI 关键团队不稳定；仍需官方人事公告、论文署名变化、产品路线和招聘数据。"
         }
       ],
       "topicGroups": [
@@ -208,35 +232,54 @@
             "arxiv-qwen-ui-agent-report-2026-08-03"
           ],
           "meaning": "用来检查 GUI Agent 和自验证推理等模型能力路线。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-june-ai-deployment-platform-2026-08-03",
+            "axios-ai-talent-loyalty-problem-2026-08-03"
+          ],
+          "meaning": "用来检查企业 Agent 部署、遗留系统连接、人才留任和供应商稳定性。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 1,
+          "itemIds": [
+            "techcrunch-june-ai-deployment-platform-2026-08-03"
+          ],
+          "meaning": "用来检查企业 Agent 部署层、流程扫描和组织能力这些非模型基础设施。"
         }
       ],
       "briefing": {
-        "label": "17:00 研究雷达",
-        "headline": "Agent 工程的短板正在转向评测、记忆和监督",
-        "summary": "本期没有强行补媒体重复信号，而是选取 10 条 arXiv 原始研究。它们共同指向一个判断：Agent 能否落地，越来越取决于裁判是否可信、记忆是否安全、环境是否可复现，以及人类监督是否足够。",
-        "cta": "查看本期 10 条研究信号",
+        "label": "08:00 补充雷达",
+        "headline": "Agent 研究之外，部署层和人才战也开始变成约束",
+        "summary": "本期保留 10 条 arXiv Agent 研究雷达，并补入 TechCrunch 与 Axios 的企业部署和人才战背景。阅读重点不是把媒体报道当成结论，而是把部署日志、客户指标、官方人事公告和第三方评测列入下一轮核查。",
+        "cta": "查看本期 12 条信号",
         "watchPoints": [
           {
             "title": "先查评测管线",
             "body": "CUA 成功率需要配合轨迹、评分器和失败类型阅读。"
           },
           {
-            "title": "再查记忆安全",
-            "body": "长期记忆会放大跨轮攻击，需要写入和检索审计。"
+            "title": "再查部署证据",
+            "body": "企业 Agent 要看旧系统映射、权限、日志和客户侧指标。"
           },
           {
-            "title": "最后查监督预算",
-            "body": "多 Agent 运营不能盲信自报 confidence。"
+            "title": "最后查组织稳定",
+            "body": "人才流动需要用官方任免、论文署名和路线图验证。"
           }
         ]
       },
       "deepBriefing": {
-        "kicker": "研究情报",
-        "title": "Agent 从 demo 走向系统，第一批硬问题是评测和治理",
-        "subtitle": "2026-08-03 17:00 JST 版聚焦 arXiv recent：本期不是发布会摘要，而是把 Agent 研究中的可验证问题拆成产品、评测、安全和治理清单。",
+        "kicker": "08:00 补充情报",
+        "title": "Agent 落地的约束从评测扩展到部署层和组织稳定",
+        "subtitle": "本期以 10 条 arXiv 研究为主体，新增 2 条可靠媒体背景，用来把企业部署和人才留任放进同一套核查框架。",
         "dateLabel": "2026 年 8 月 3 日 17:00 JST",
-        "status": "已发布，研究原文待复现",
-        "overview": "本期 10 条研究原文显示，computer-use Agent 的瓶颈正在从“模型会不会操作界面”转向“谁判断它做对了、训练环境是否可靠、长期记忆是否会被污染、一个人如何监督多个 Agent”。这些信号适合进入技术雷达，但不应直接当作生产结论。",
+        "status": "已发布，媒体项保持背景信号",
+        "overview": "当前版仍是 Agent 研究雷达：系统提示审计、CUA 裁判、记忆注入和审计预算提供技术核查对象。新增 TechCrunch 与 Axios 后，读者还应检查企业部署工具是否能真正减少集成成本，以及人才流动是否会影响模型供应商稳定性。",
         "timeline": [
           {
             "label": "7 月 30 日 UTC",
@@ -256,20 +299,16 @@
         ],
         "keyNumbers": [
           {
-            "value": "10",
-            "label": "本期研究原文条目"
+            "value": "12",
+            "label": "本期当前信号"
           },
           {
-            "value": "88",
-            "label": "AISPA 论文审计的商业 AI 产品数"
+            "value": "10/12",
+            "label": "来自 arXiv 研究原文"
           },
           {
-            "value": "17",
-            "label": "InfoOps Bench 测试的模型数"
-          },
-          {
-            "value": "15.3%",
-            "label": "CUA 失败轨迹审计中的误判比例"
+            "value": "2/12",
+            "label": "来自可靠媒体背景"
           }
         ],
         "sections": [
@@ -290,9 +329,9 @@
           {
             "number": "03",
             "label": "训练",
-            "title": "可复位环境比更多网页样本更关键",
-            "body": "Echoverse 和本地 CUA 推理扩展研究都说明，训练环境、verifier 和选择性计算会影响长程任务表现。",
-            "soWhat": "企业应建设可复位业务沙箱，而不是直接让 Agent 在真实系统中试错。"
+            "title": "企业和组织约束进入同一张表",
+            "body": "June 报道提示企业 Agent 需要先解决旧系统、数据重复和流程债；Axios 人才战报道提示模型竞争还取决于核心研究员稳定性。",
+            "soWhat": "采购和战略团队应把客户日志、部署合同、官方人事变动、论文署名和产品路线图作为下一步证据。"
           },
           {
             "number": "04",
@@ -303,35 +342,48 @@
           }
         ],
         "actions": [
-          "为 Agent 评测保存截图、轨迹、评分器版本和人工复标记录。",
-          "把系统提示、长期记忆、检索来源和工具调用写入审计日志。",
-          "对所有论文方法等待代码、数据、复现和同行评审后再升格为工程规范。"
+          "把 CUA benchmark、reward model、记忆注入和系统提示审计加入 Agent 评测清单。",
+          "把企业 Agent 试点拆成旧系统映射、数据清理、权限、部署日志和客户指标。",
+          "把 AI 人才流动作为供应商稳定性观察项，但只用官方任免、论文署名和路线变化升级判断。"
         ],
         "coverageLimits": [
           {
-            "label": "时间边界",
-            "body": "本期集中在 2026-07-31 JST 可见的 arXiv recent 研究，不覆盖所有 8 月 3 日商业新闻。"
+            "label": "研究集中",
+            "body": "10/12 条来自 arXiv，适合做研究雷达，不适合直接做采购或监管结论。"
           },
           {
-            "label": "来源边界",
-            "body": "10 条均为预印本研究原文，不能替代官方产品发布、监管文件或生产案例。"
+            "label": "媒体边界",
+            "body": "TechCrunch 和 Axios 条目只保留最小事实；完整事实、引用、访谈、图表和上下文仍在原文。"
+          },
+          {
+            "label": "部署未证",
+            "body": "June 和人才战信号仍需客户指标、合同、官方人事公告、论文产出和第三方评测。"
           }
         ],
         "sourceFrame": {
           "sourceFacts": [
-            "arXiv 页面直接支持题名、提交日期、作者、摘要和论文自述实验主张。",
-            "本期引用的数字来自论文摘要或 arXiv 元数据。"
+            "arXiv 原文支持本期 10 条 Agent 评测、安全、训练和治理研究信号。",
+            "TechCrunch 支持 June 于 2026-08-03 被报道为企业 AI 部署平台并融资 2000 万美元。",
+            "Axios 支持 AI 顶尖人才战出现留任难题这一媒体背景。"
           ],
           "editorialJudgment": [
-            "AI Watchtower 将这些论文解读为 Agent 评测与治理雷达。",
-            "本期排序优先考虑能形成工程检查项的研究，而不是单纯指标最高的论文。"
+            "AI Watchtower 判断 Agent 落地约束正在从模型能力扩展到评测、部署、权限和组织稳定。",
+            "媒体项提高了企业可用性，但不能把报道直接升级为产品效果或公司竞争结论。"
           ],
           "unknowns": [
-            "多数方法尚未通过独立复现、同行评审或生产日志验证。",
-            "论文实验能否迁移到真实企业系统仍未知。"
+            "未知这些研究方法是否能被第三方复现、进入产品或通过同行评审。",
+            "未知 June 是否能稳定减少部署周期，也未知人才流动是否已改变模型发布节奏。"
           ]
         },
         "references": [
+          {
+            "label": "TechCrunch 报道 June 企业 AI 部署平台与 2000 万美元融资",
+            "url": "https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/"
+          },
+          {
+            "label": "媒体报道 AI 人才留任难题",
+            "url": "https://www.axios.com/2026/08/03/ai-talent-wars-openai-google-meta-anthropic"
+          },
           {
             "label": "arXiv 发布系统提示研究",
             "url": "https://arxiv.org/abs/2607.28617"
@@ -374,8 +426,146 @@
           }
         ]
       },
-      "itemCount": 10,
+      "itemCount": 12,
       "items": [
+        {
+          "id": "techcrunch-june-ai-deployment-platform-2026-08-03",
+          "category": "product",
+          "label": "产品",
+          "title": "June 把企业 Agent 落地难题包装成部署路线图产品",
+          "body": "TechCrunch 报道，Marc Benioff 支持的 June 从隐身状态推出，融资 2000 万美元，目标是扫描企业系统并生成 Agent 部署步骤。",
+          "summary": "June 推出企业 AI 部署平台，试图把数据重复、流程债和系统连接问题变成可执行的 Agent 落地路线图。",
+          "whyItMatters": "企业 AI 的瓶颈正在从能否写出 Agent，转向能否在 Salesforce、ServiceNow、Databricks、Workday 等既有系统里可靠接入。",
+          "detailBody": "TechCrunch 报道 June 于 2026-08-03 从隐身状态推出，融资 2000 万美元，并把产品定位为扫描企业既有系统、识别流程瓶颈、生成 Agent 部署任务的工具。AI Watchtower 只保留最小事实，完整访谈、客户细节、人物背景和上下文仍需阅读原文。",
+          "trend": "Agent 商业化正在把 forward-deployed engineer 的服务经验产品化，核心竞争点变成流程发现、数据清理和权限接入。",
+          "detailTrend": "这不是单纯模型能力新闻，而是企业 AI 落地层的信号：客户需要先处理遗留系统、重复字段、权限和技术债，Agent 才可能稳定创造价值。媒体报道不能证明产品效果，后续要看客户侧部署日志、上线周期、权限事故率、集成成本、业务验收结果和第三方评测。",
+          "whyRanked": "它把企业 Agent 的失败原因落到系统集成和流程债。",
+          "topReason": "企业 Agent 落地瓶颈从模型转向部署层。",
+          "detailWhyRanked": "June 的故事说明企业不只缺模型，也缺把模型接入旧系统的路线图。TechCrunch 报道提供融资、发布时间、产品定位和客户说法，适合产品、IT 和采购团队更新部署清单；效果判断仍需客户侧指标。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体可核对融资、发布时间和产品定位；部署效果仍需客户侧数据。评分降低证据分，保留企业落地价值。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体可核对融资、发布时间和产品定位；部署效果仍需客户侧数据。评分降低证据分，保留企业落地价值。"
+          },
+          "impact": "企业 AI、IT、采购和数据平台团队应把 Agent 项目预算拆成流程发现、数据清理、权限接入和上线验收。",
+          "whoShouldCare": "企业 AI 平台、IT 架构、采购和咨询团队应关注部署层工具是否降低 FDE 依赖。",
+          "readerUse": "企业 AI、IT 架构和采购团队用它更新 Agent 试点清单，先核对遗留系统映射、重复字段、权限和客户侧验收指标。",
+          "nextCheck": "查 June 官方产品文档、客户案例指标、试点合同、SOC2/安全审计、部署日志和第三方评测。",
+          "followUpQuestions": [
+            "June 的平台是否能在客户侧减少部署时间和顾问依赖？",
+            "哪些合同、日志、客户指标或第三方评测会改变这条判断？"
+          ],
+          "evidenceThreshold": "需要客户侧部署日志、合同范围、上线指标、安全审计和第三方评测，才可升级为已验证的企业 Agent 部署产品信号。",
+          "claimBoundary": "不证明 June 已能替代 FDE 或咨询团队，也不证明 Agent 部署难题已经被自动化解决。",
+          "counterEvidence": "若客户侧部署日志、上线周期、权限事故记录或第三方评测显示仍需大量手工集成、权限事故增加或部署周期未缩短，应降级为早期产品叙事。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/",
+          "originalUrl": "https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 可核对发布时间、融资额、产品定位和受访者说法；完整事实、访谈、客户背景和上下文仍属于原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-03T19:00:00+09:00",
+          "time": "19:00",
+          "tags": [
+            "企业 Agent",
+            "部署平台",
+            "融资"
+          ],
+          "companies": [
+            "June",
+            "Salesforce"
+          ]
+        },
+        {
+          "id": "axios-ai-talent-loyalty-problem-2026-08-03",
+          "category": "funding",
+          "label": "资金",
+          "title": "Axios：AI 人才战进入留任难题阶段",
+          "body": "Axios 报道，OpenAI、Anthropic、Meta、Google 等顶尖 AI 实验室在高薪竞争下仍难维持研究人员长期忠诚。",
+          "summary": "Axios 将 AI 人才战的新焦点写成留任问题：高薪、股权、使命感和团队文化都不足以完全锁住核心研究人员。",
+          "whyItMatters": "前沿模型竞争不只靠算力和资本，也靠能判断研究方向、组织实验和带动团队的少数核心人才。",
+          "detailBody": "Axios 报道称 AI 顶尖人才在 OpenAI、Anthropic、Meta、Google 等组织间频繁流动，高薪并不自动换来长期忠诚。AI Watchtower 只保留最小事实，完整人物、公司背景和上下文仍需读原文。",
+          "trend": "AI 资本战正在外溢为组织稳定性问题：研究路线、招聘链条和股权预期会影响模型公司节奏。",
+          "detailTrend": "AI 资本战正在外溢为组织稳定性问题：研究路线、招聘链条、股权预期和使命叙事都会影响模型公司节奏。Axios 报道只能作为行业背景，不能证明某家公司能力下降；更强证据应来自官方任免、团队变动、产品延迟或论文产出变化。",
+          "whyRanked": "它解释了为什么 AI 竞争的稀缺资源不只是 GPU。",
+          "topReason": "AI 人才流动成为模型竞争的组织风险。",
+          "detailWhyRanked": "人才战会影响模型路线、实验判断和招聘网络，是资本与产品新闻之外的关键变量。Axios 报道提供行业框架、涉及公司范围和留任问题背景，适合战略、招聘和采购团队跟踪；但它不应被读成单家公司输赢结论，仍需官方任免、论文署名和路线图验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体可作为人才流动背景；公司影响仍需官方任命、离职公告、论文和产品节奏验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体可作为人才流动背景；公司影响仍需官方任命、离职公告、论文和产品节奏验证。"
+          },
+          "impact": "战略、招聘、投资和采购团队应把核心研究员流动列入模型供应商稳定性观察项。",
+          "whoShouldCare": "AI 战略、招聘、投资和企业采购团队应关注人才流动如何影响供应商路线稳定。",
+          "readerUse": "用它更新 AI 公司组织风险清单，跟踪关键团队变动、论文产出、模型延迟和薪酬结构。",
+          "nextCheck": "查公司官方任命或离职公告、LinkedIn/人员页更新、论文署名变化、模型路线变更和融资或股权文件。",
+          "followUpQuestions": [
+            "顶尖研究员流动是否已经影响模型发布时间、论文产出或团队稳定？",
+            "哪些官方人事公告、论文署名、路线图变化或融资文件会验证这条信号？"
+          ],
+          "evidenceThreshold": "需要官方人事公告、论文署名变化、产品路线延迟、融资文件或招聘数据，才可升级为已确认的组织竞争风险。",
+          "claimBoundary": "不证明某家公司人才流失已经失控，也不证明高薪策略失效。",
+          "counterEvidence": "若相关公司继续按期发布模型、关键团队稳定且论文产出未受影响，应降级为行业背景噪声。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/03/ai-talent-wars-openai-google-meta-anthropic",
+          "originalUrl": "https://www.axios.com/2026/08/03/ai-talent-wars-openai-google-meta-anthropic",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 可核对报道日期、涉及公司和人才战框架；完整事实、人物背景、引用和上下文仍属于原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-03T18:00:00+09:00",
+          "time": "18:00",
+          "tags": [
+            "AI 人才",
+            "组织风险",
+            "资本竞争"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Meta",
+            "Google"
+          ]
+        },
         {
           "id": "arxiv-aispa-system-prompt-audit-2026-08-03",
           "category": "policy",
@@ -1029,6 +1219,38 @@
           "companies": [
             "Microsoft"
           ]
+        }
+      ],
+      "categories": [
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "用来检查本期 GUI Agent 和自验证推理路线，仍需第三方复测。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "用来检查本期企业 Agent 部署平台和产品化落地信号，仍需客户指标、合同、安全审计和第三方评测。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "用来跟踪本期 Agent 评测、训练和治理，预印本仍需复现和同行评审。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "用来检查本期记忆注入防御，仍需代码、日志和红队验证。"
+        },
+        {
+          "id": "funding",
+          "label": "资金",
+          "description": "用来检查本期 AI 人才、融资和组织竞争信号；资本与人才判断仍需 filings、官方公告、招聘数据或论文产出验证。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "用来检查本期系统提示审计、信息行动和监督预算，仍需监管文本或平台披露。"
         }
       ]
     },

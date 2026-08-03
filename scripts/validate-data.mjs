@@ -611,6 +611,10 @@ function validateOverreadBoundary(boundary, sourceFamilies = [], items = [], con
   if (!/官方|原文|公告|文件|备案|合同|数据|指标|benchmark|第三方|复核/.test(boundary.useInstead || "")) {
     errors.push(`${context} overreadBoundary.useInstead must name the next evidence source or proof type.`);
   }
+
+  if (!/用来|适合|先把|应该/.test(boundary.useInstead || "")) {
+    errors.push(`${context} overreadBoundary.useInstead must use homepage-safe action wording such as 用来, 适合, 先把, or 应该.`);
+  }
 }
 
 function validateTrendNotes(notes, context) {
