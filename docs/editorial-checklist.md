@@ -2,7 +2,7 @@
 
 这份清单用于人工编辑或自动化写入 `data/news.json` 前的内容审核。目标不是追求最快发布，而是让标题、摘要、来源和编辑判断都能被读者复核。
 
-编辑前先阅读 `docs/product-principles.md` 和 `docs/copyright-safety.md`。半自动采集或批量候选 URL 进入起草前，还要先使用 `docs/candidate-source-checklist.md`，把来源身份、来源角色、最小证据、版权/付费墙风险、重复 URL、近似标题和来源主体集中度筛掉；批量候选应先跑 `node scripts/report-duplicate-candidates.mjs <candidate-file.json>`，再进入正式起草。候选进入 `data/news.json` 后，使用 `docs/detail-page-review-guide.md` 把详情页技术主张逐项拆成事实、影响、边界和下一步核对。AI Watchtower 的内容目标是帮助不擅长英语和 AI 情报收集的中文读者轻松理解重要变化，因此每条内容都要优先解释清楚“发生了什么、为什么值得看、可信到什么程度、接下来该看哪里”。同时，本站不能成为原文的中文替代品；媒体来源只抽取最小必要事实，主要价值应来自本站自己的趋势判断、读者使用方法和核验边界。
+编辑前先阅读 `docs/product-principles.md` 和 `docs/copyright-safety.md`。半自动采集或批量候选 URL 进入起草前，还要先使用 `docs/candidate-source-checklist.md`，把来源身份、来源角色、最小证据、版权/付费墙风险、重复 URL、近似标题和来源主体集中度筛掉；批量候选应先跑 `node scripts/report-duplicate-candidates.mjs <candidate-file.json>`，再进入正式起草。候选进入 `data/news.json` 后，使用 `docs/detail-page-review-guide.md` 把详情页技术主张逐项拆成事实、影响、边界和下一步核对，并用 `docs/counter-evidence-observable-guide.md` 判断 `counterEvidence` 应该写来源文件还是可观察结果。AI Watchtower 的内容目标是帮助不擅长英语和 AI 情报收集的中文读者轻松理解重要变化，因此每条内容都要优先解释清楚“发生了什么、为什么值得看、可信到什么程度、接下来该看哪里”。同时，本站不能成为原文的中文替代品；媒体来源只抽取最小必要事实，主要价值应来自本站自己的趋势判断、读者使用方法和核验边界。
 
 ## 一、先确认内容状态
 
@@ -49,7 +49,7 @@
 - `impact` 说明可能影响谁、影响什么，并避免投资、法律或医疗结论。
 - `nextCheck` 必须给出下一步可执行的核对对象，例如官方文档、客户案例、法规原文或实验基线。
 - `evidenceThreshold` 必须说明从当前信号升级到已确认结论需要哪些具体材料，并写清升级后的状态，例如从媒体信号升级为事实结论、组织变化、已落地政策或经验证部署。
-- `counterEvidence` 必须说明哪些后续证据会削弱或降级当前判断，并点名可执行的核对材料或结果，例如政策文本、官方公告、访问日志、审批记录、采用指标、角色确认、第三方复测或产品交付状态，避免只记录支持性信号。
+- `counterEvidence` 必须说明哪些后续证据会削弱或降级当前判断，并点名可执行的核对材料或结果。若判断涉及采用、部署、安全、性能、成本或政策执行，优先写可观察结果，例如访问日志、审批记录、采用指标、第三方复测、产品交付状态、客户任务记录、错误率、延迟/成本记录、审计发现或监管执行；若判断只是在确认事实是否存在，可写政策文本、官方公告、合同、filing、论文附录、模型卡或角色确认。避免只记录支持性信号。
 
 ### 6. 来源展示
 

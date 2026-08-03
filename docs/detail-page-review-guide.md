@@ -1,6 +1,6 @@
 # Detail Page Review Guide
 
-Use this guide after a drafted item has passed `docs/candidate-to-news-handoff.md` and before publishing `data/news.json`. Its job is to make each detail page useful for Chinese readers without turning the source article, vendor post, paper, or media report into a translated substitute.
+Use this guide after a drafted item has passed `docs/candidate-to-news-handoff.md` and before publishing `data/news.json`. Its job is to make each detail page useful for Chinese readers without turning the source article, vendor post, paper, or media report into a translated substitute. When the review reaches `counterEvidence`, use `docs/counter-evidence-observable-guide.md` to decide whether the downgrade signal should name a source artifact or a concrete observable outcome.
 
 Review technical claims by converting them into four visible blocks: fact, impact, boundary, and next check. If any block cannot be written in plain Chinese from the available source material, hold the item or downgrade the claim before publication.
 
@@ -35,7 +35,7 @@ Use this sequence when rewriting a dense technical sentence.
 2. Remove adjectives the source cannot independently prove, such as "全面", "领先", "革命性", "已经解决", or "行业标准".
 3. Translate the technical relevance into a reader decision: procurement, governance, safety review, model choice, workflow design, research tracking, policy monitoring, or budget planning.
 4. Write the proof boundary in negative form: "这不能证明..." or "这仍需...".
-5. Name the next evidence object, not just the next news source.
+5. Name the next evidence object, not just the next news source. For `counterEvidence`, prefer an observable outcome when the claim is about adoption, deployment, safety, performance, cost, or policy effect.
 
 Example shape:
 

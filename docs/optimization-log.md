@@ -1,3 +1,36 @@
+## 2026-08-03 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 25 task. Added guidance for when `counterEvidence` should mention a concrete observable outcome rather than another document.
+- Changed files:
+  - `docs/counter-evidence-observable-guide.md`
+  - `docs/news-data-format.md`
+  - `docs/editorial-checklist.md`
+  - `docs/detail-page-review-guide.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `docs/counter-evidence-observable-guide.md` so editors distinguish downgrade signals based on observable outcomes from downgrade signals based on source artifacts.
+  - Clarified that adoption, deployment, safety, performance, cost, and policy-effect claims should usually name measurable outcomes such as logs, metrics, retests, delivery state, audit findings, or enforcement records.
+  - Kept document-based downgrade signals for existence or scope questions such as official announcements, policy text, filings, contracts, papers, model cards, system cards, and role confirmations.
+  - Linked the guide from the data format, editorial checklist, detail-page review guide, candidate handoff, and README; added a site validation guard and advanced the decision index to Day 26.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `counterEvidence` usage, and relevant editorial/validator docs.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 34 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the counter-evidence guide guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `git diff --check`.
+- Commit: Pending; final local hash will be recorded after commit.
+- Git note: Push not yet attempted for this run.
+
 ## 2026-08-03 08:12 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-03`，发布 10 条 arXiv 原始研究雷达，重点是 computer-use Agent 评测、系统提示审计、信息行动安全、记忆注入防御、GUI Agent 和多 Agent 审计预算。

@@ -30,6 +30,7 @@ const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md"
 const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-note.md", "utf8");
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
+const counterEvidenceObservableGuide = readFileSync("docs/counter-evidence-observable-guide.md", "utf8");
 const detailPageReviewGuide = readFileSync("docs/detail-page-review-guide.md", "utf8");
 const updateRunChecklist = readFileSync("docs/update-run-checklist.md", "utf8");
 const currentToHistoryPublicationChecklist = readFileSync(
@@ -766,6 +767,31 @@ if (
 }
 
 if (
+  !/Counter-Evidence Observable Outcome Guide/.test(counterEvidenceObservableGuide) ||
+  !/When To Name An Observable Outcome/.test(counterEvidenceObservableGuide) ||
+  !/When A Document Is Enough/.test(counterEvidenceObservableGuide) ||
+  !/Mixed Claims/.test(counterEvidenceObservableGuide) ||
+  !/Bad Shapes/.test(counterEvidenceObservableGuide) ||
+  !/Stop Conditions/.test(counterEvidenceObservableGuide) ||
+  !/adoption, deployment, safety, performance, cost, or policy implementation/.test(counterEvidenceObservableGuide) ||
+  !/访问日志/.test(counterEvidenceObservableGuide) ||
+  !/审批/.test(counterEvidenceObservableGuide) ||
+  !/采用指标/.test(counterEvidenceObservableGuide) ||
+  !/第三方复测/.test(counterEvidenceObservableGuide) ||
+  !/交付/.test(counterEvidenceObservableGuide) ||
+  !/政策文本/.test(counterEvidenceObservableGuide) ||
+  !/filing/.test(counterEvidenceObservableGuide) ||
+  !/docs\/counter-evidence-observable-guide\.md/.test(readme) ||
+  !/docs\/counter-evidence-observable-guide\.md/.test(newsDataFormat) ||
+  !/docs\/counter-evidence-observable-guide\.md/.test(editorialChecklist) ||
+  !/docs\/counter-evidence-observable-guide\.md/.test(detailPageReviewGuide) ||
+  !/docs\/counter-evidence-observable-guide\.md/.test(candidateToNewsHandoff) ||
+  !/Day 25[\s\S]*counterEvidence[\s\S]*observable outcome/.test(optimizationDecisionIndex)
+) {
+  errors.push("Counter-evidence guidance must tell editors when downgrade signals need observable outcomes instead of another document.");
+}
+
+if (
   !/Detail Page Review Guide/.test(detailPageReviewGuide) ||
   !/When To Use It/.test(detailPageReviewGuide) ||
   !/Four-Block Review/.test(detailPageReviewGuide) ||
@@ -1162,7 +1188,8 @@ if (
   !/Day 22[\s\S]*companyContinuity[\s\S]*what remains unproven/.test(optimizationDecisionIndex) ||
   !/Day 23[\s\S]*topicContinuity[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(optimizationDecisionIndex) ||
   !/Day 24[\s\S]*media-specific source reminders[\s\S]*original article/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
+  !/Day 25[\s\S]*counterEvidence[\s\S]*observable outcome/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
