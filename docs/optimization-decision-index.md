@@ -8,7 +8,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 4, Detail Briefing And Continuity
 - Last indexed run: 2026-08-03 20:00 JST
-- Network status: Latest 20:00 run was blocked by GitHub DNS for pull; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
+- Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
 
