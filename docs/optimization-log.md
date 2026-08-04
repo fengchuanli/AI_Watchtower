@@ -1,4 +1,4 @@
-## 2026-08-04 11:05 JST
+## 2026-08-04 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 26 task. Reviewed current and latest archived item `whoShouldCare` copy so promoted/visible news names concrete Chinese reader groups and the work setting that makes each signal useful, rather than generic observer labels.
 - Changed files:
@@ -26,8 +26,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `2c1cb12` (`细化关心读者场景`); this follow-up log/index note records the implementation hash before push.
-- Git note: Push not attempted yet for this follow-up; if `git push origin main` is still DNS-blocked, a final log note will record it.
+- Commit: Local implementation commit `2c1cb12` (`细化关心读者场景`) and hash-record follow-up commit `e3fb33d` (`记录关心读者场景哈希`); this push-blocker note creates the final local follow-up commit recorded in automation memory.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-04 08:13 JST
 
