@@ -1,3 +1,25 @@
+## 2026-08-04 23:07 JST
+
+- Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-08-04` 17:00 版，因此未回退早间版，而是在当前最新版中增补 3 条可靠媒体背景信号，当前版从 10 条增至 13 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有非任务文件。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核官方/可靠来源、历史 URL 和当前版重复风险，未使用付费墙或登录墙正文、社区传言或随机抓取页面。
+  - 本次新增 Axios 对白宫高级模型自愿评估框架的媒体背景、Business Insider 对州检察长要求 OpenAI 保存 Hugging Face 事件材料的媒体背景，以及 MarketWatch 对 AMD Helios 成为财报前 AI 基础设施焦点的媒体背景。
+  - 新增条目均保持 `媒体背景` / `reported` / `originalDependency: must-read`；分别要求白宫/ONCD/NIST/CAISI 文件、州检察长原始文件、法院记录、OpenAI/Hugging Face 回应、AMD 财报/filing、客户确认、供应链记录或第三方审计再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 34 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: planned message `补充08点AI新闻情报`; push will be retried after commit.
+
 ## 2026-08-04 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 26 task. Reviewed current and latest archived item `whoShouldCare` copy so promoted/visible news names concrete Chinese reader groups and the work setting that makes each signal useful, rather than generic observer labels.

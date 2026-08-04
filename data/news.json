@@ -4,38 +4,38 @@
   "status": "published",
   "statusLabel": "已更新",
   "sourceCount": 34,
-  "editorNote": "2026-08-04 17:00 JST 自动化更新：发布 10 条官方系统更新与 Agent 评测安全研究信号。",
+  "editorNote": "2026-08-04 08:00 JST 自动化补充：在当前 17:00 JST 版上增加 3 条可靠媒体背景信号，保留官方/研究/媒体证据边界。",
   "edition": {
     "id": "news-1700-2026-08-04",
     "date": "2026-08-04",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
     "archiveLabel": "17:00 JST 发布",
-    "note": "本期混合官方 AI 系统更新与 Agent 评测、安全研究雷达。",
-    "operationalStatus": "GitHub DNS 解析失败，无法 pull；已复核来源政策、来源清单、OpenAI/Anthropic 官方页、arXiv recent 和历史 URL。",
-    "editorialInterpretation": "本期编辑判断：前沿 AI 的主线从单一模型发布转向实时语音入口、单位经济性、科研供给、评测安全和工具授权。",
+    "note": "本期混合官方 AI 系统更新、Agent 评测安全研究雷达与政策/基础设施媒体背景。",
+    "operationalStatus": "GitHub DNS 解析失败，无法 pull；已复核来源政策、来源清单、RSS/官方/可靠媒体和历史 URL。",
+    "editorialInterpretation": "本期编辑判断：前沿 AI 的主线从单一模型发布转向实时语音入口、单位经济性、科研供给、评测安全、政府评估框架、法律证据保全和 AI 基础设施交付验证。",
     "readerFrame": {
       "headline": "阅读本期：把官方系统更新和 Agent 安全研究放在一张核查表",
-      "whyItMatters": "这 10 条适合更新实时语音 Agent、模型成本、科研访问、评测环境隔离、企业文档抽取和工具授权安全清单。",
+      "whyItMatters": "这 13 条适合更新实时语音 Agent、模型成本、科研访问、评测环境隔离、企业文档抽取、工具授权、安全政策和 AI 基础设施财报核查清单。",
       "mobile": {
         "headline": "手机先看语音、成本和安全",
-        "summary": "官方更新加 arXiv 雷达，先查语音、成本和安全。",
+        "summary": "官方、研究和媒体背景并列，先查语音、成本、安全和政策。",
         "primaryUses": [
           "平台团队查语音。",
-          "成本治理团队查成本。",
-          "安全团队查工具。"
+          "法务团队查评测。",
+          "采购团队查算力。"
         ],
-        "proofBoundary": "官方页证明发布事实，研究预印本仍需代码、数据、复现和审计。"
+        "proofBoundary": "媒体与研究不证明结论，仍需文件和审计。"
       },
       "useThisIssueFor": [
         "语音和 Agent 平台团队用本期检查实时媒体路径、异步委托、长会话状态和工具调用。",
-        "AI 平台、采购和成本治理团队用本期更新 GPT-5.6 成本、缓存、重试和任务成功率核算。",
-        "安全、治理和评测团队用本期核对第三方 eval 隔离、工具 schema、授权 gate 和轨迹级验证。"
+        "AI 平台、采购和成本治理团队用本期更新 GPT-5.6 成本、缓存、重试、算力交付和任务成功率核算。",
+        "安全、治理、法务和评测团队用本期核对第三方 eval 隔离、工具 schema、授权 gate、证据保全和发布前政府评估。"
       ],
       "notProvenYet": [
         "不能证明官方系统主张已在所有客户场景稳定，也不能证明价格下降等于真实任务总成本下降。",
         "不能证明 arXiv 方法已经适合生产，仍需公开代码、数据、真实日志、第三方复测和同行评审。",
-        "不能用本期替代监管文件、客户指标、事故复盘或正式安全审计。"
+        "不能把媒体背景读成正式政策、法律结论或 AI 基础设施交付事实，仍需原始文件、filing、客户确认和审计。"
       ]
     },
     "changeSummary": {
@@ -43,6 +43,7 @@
       "freshFacts": [
         "本期新增来源事实：OpenAI 于 2026-08-03 发布 GPT-Live 实时语音系统工程说明。",
         "本期新增来源事实：Anthropic 于 2026-07-30 披露 Claude 网络安全评测中的三起真实系统事件。",
+        "本期新增来源事实：Axios、Business Insider 和 MarketWatch 在 2026-08-04 JST 可见 AI 政策、证据保全和基础设施财报背景。",
         "本期新增来源事实：arXiv recent 在 2026-08-03 JST 可见 ExtractBench、AgentHPOBench、CAGE 等 Agent 评测和安全研究。"
       ],
       "repeatedContext": [
@@ -71,6 +72,11 @@
         "label": "核对 Agent 边界",
         "count": 4,
         "meaning": "用来核对第三方 eval、轨迹验证、工具 schema 和授权 gate。"
+      },
+      {
+        "label": "核对政策与算力背景",
+        "count": 3,
+        "meaning": "用来核对高级模型政府评估、事件证据保全和 AI rack-scale 交付验证清单。"
       }
     ],
     "sourceFamilies": [
@@ -85,18 +91,24 @@
         "label": "研究原文",
         "count": 5,
         "role": "研究原文用于捕捉 Agent 评测、文档抽取、工具安全和授权控制方向；结论仍需代码、数据、复现、真实日志和同行评审。"
+      },
+      {
+        "family": "reliable_media",
+        "label": "可靠媒体",
+        "count": 3,
+        "role": "可靠媒体来源用于补充政策、法律和市场事实信号；正式结论仍需政府文件、原始信件、filing、客户确认或审计。"
       }
     ],
     "sourceRisk": {
-      "label": "官方与研究各半",
-      "note": "本期没有使用社区信号或登录墙正文；官方页证明发布事实，arXiv 条目只作为研究雷达。",
-      "nextCheck": "查官方 API 价格页、论文原文代码数据、第三方延迟测试、METR/Irregular 复审。"
+      "label": "官方、研究与媒体背景混合",
+      "note": "本期没有使用社区信号、付费墙正文或登录墙正文；官方页证明发布事实，arXiv 是研究雷达，媒体条目只作背景。",
+      "nextCheck": "查官方 API 价格页、论文代码数据、白宫/ONCD/NIST 文件、州检察长信件、AMD filing、客户确认和第三方审计。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期提供官方系统更新与研究核查对象，适合更新工程、成本和安全清单。",
-      "doNotConclude": "不能断言 GPT-Live 已在所有场景领先、GPT-5.6 已真实降本、科研项目已提高发现质量或研究方法已可部署。",
-      "useInstead": "应该用第三方测试、真实账单、客户日志、审计报告、公开代码、数据和复现实验确认。"
+      "body": "本期提供官方系统更新、研究核查对象和媒体背景，适合更新工程、成本、安全、政策和算力清单。",
+      "doNotConclude": "不能断言 GPT-Live 已在所有场景领先、GPT-5.6 已真实降本、政府框架已执行、OpenAI 已违法或 Helios 已规模交付。",
+      "useInstead": "应该用第三方测试、真实账单、客户日志、审计报告、公开代码、政府文件、法律原件、filing、客户确认和复现实验确认。"
     },
     "trendNotes": [
       {
@@ -122,6 +134,18 @@
         "label": "单位经济性进入模型叙事中心",
         "note": "跨期看，价格、推理优化、部署平台和企业采用都在把 AI 价值转成每个成功结果的成本。",
         "boundary": "不证明客户账单已下降；仍需真实任务、重试率、人工审核成本和业务验收指标。"
+      },
+      {
+        "topic": "frontier-ai-governance",
+        "label": "发布前评估进入政策流程",
+        "note": "跨期看，OpenAI/Anthropic 事件、AI 员工公开信和 Axios 政策报道都把高级模型评估推向政府接口。",
+        "boundary": "不证明框架已经执行；仍需官方文本、会议记录、公司回应和实施细则。"
+      },
+      {
+        "topic": "ai-infrastructure-finance",
+        "label": "算力叙事进入交付验证",
+        "note": "跨期看，数据中心、电力、GPU rack 和客户名单开始被财报、filing 和交付节奏检验。",
+        "boundary": "不证明需求已兑现；仍需财报、客户确认、供应链数据和真实性能/成本测试。"
       }
     ],
     "topicContinuity": [
@@ -130,8 +154,8 @@
         "label": "Agent 验证更强",
         "status": "stronger",
         "previousPattern": "上一版 agent 主题集中在 CUA benchmark、记忆注入、防御和审计预算。",
-        "currentSignal": "本期新增第三方 eval 事件、轨迹级验证、工具 schema 风险和授权认证研究。",
-        "signalDirection": "增强：从评测题目扩展到评测环境、工具定义和权限 gate。",
+        "currentSignal": "本期新增第三方 eval 事件、轨迹级验证、工具 schema 风险、授权认证研究和高级模型政府评估背景。",
+        "signalDirection": "增强：从评测题目扩展到评测环境、工具定义、权限 gate 和政策接口。",
         "stillUnproven": "不证明生产安全；仍需评测日志、代码、权限记录、第三方审计和真实事故数据。"
       },
       {
@@ -148,8 +172,8 @@
         "label": "企业评测边界更清楚",
         "status": "stronger",
         "previousPattern": "上一版企业主题强调部署层、技术债、人才留任和供应商稳定性。",
-        "currentSignal": "本期新增 ExtractBench 和 GPT-5.6 成本/效率信号，强调文档抽取、溯源和单位成本。",
-        "signalDirection": "增强：企业 AI 从部署叙事进入可计量抽取、成本和溯源指标。",
+        "currentSignal": "本期新增 ExtractBench、GPT-5.6 成本/效率信号和 AMD Helios 财报前基础设施背景，强调文档抽取、溯源、单位成本和算力交付。",
+        "signalDirection": "增强：企业 AI 从部署叙事进入可计量抽取、成本、溯源和机柜级容量验证。",
         "stillUnproven": "不证明企业 ROI；仍需客户侧账单、部署日志、审计指标和业务验收数据。"
       }
     ],
@@ -167,22 +191,30 @@
         "lastMention": "此前版本已覆盖 Anthropic open-weight 立场、模型发布、人才战和 Claude Code 背景。",
         "whatChanged": "本期 Anthropic 官方披露 Claude 网络安全评测中接触真实系统的事件与响应。",
         "stillUnproven": "不证明完整事件范围；仍需 Irregular/METR 复审、受影响组织确认、评测日志和修复记录。"
+      },
+      {
+        "company": "AMD",
+        "label": "AI rack-scale 交付",
+        "lastMention": "此前版本已覆盖 AMD/Cerebras 推理分工和 AI 芯片市场波动背景。",
+        "whatChanged": "本期 MarketWatch 把 Helios rack-scale AI 系统列为 AMD 财报前关注项。",
+        "stillUnproven": "不证明规模交付或客户验收；仍需 AMD 财报、filings、客户确认和真实性能/成本测试。"
       }
     ],
     "topicGroups": [
       {
         "id": "agent",
         "label": "Agent",
-        "count": 6,
+        "count": 7,
         "itemIds": [
           "openai-gpt-live-realtime-system-2026-08-04",
           "anthropic-cyber-eval-incidents-2026-08-04",
+          "axios-white-house-ai-eval-framework-2026-08-04",
           "arxiv-agenthpobench-sequential-hpo-2026-08-04",
           "arxiv-agentic-system-validation-2026-08-04",
           "arxiv-tool-spec-safety-risks-2026-08-04",
           "arxiv-cage-certified-authorization-2026-08-04"
         ],
-        "meaning": "用来检查语音入口、连续实验、评测环境、工具 schema、轨迹验证和授权控制。"
+        "meaning": "用来检查语音入口、连续实验、评测环境、政策接口、工具 schema、轨迹验证和授权控制。"
       },
       {
         "id": "developer-tooling",
@@ -200,43 +232,47 @@
       {
         "id": "model",
         "label": "模型",
-        "count": 2,
+        "count": 3,
         "itemIds": [
           "openai-gpt56-price-performance-2026-08-04",
-          "openai-gpt56-efficiency-stack-2026-08-04"
+          "openai-gpt56-efficiency-stack-2026-08-04",
+          "axios-white-house-ai-eval-framework-2026-08-04"
         ],
-        "meaning": "供平台和成本治理团队用来核对模型价格、效率和任务级路由策略。"
+        "meaning": "供平台、政策和成本治理团队用来核对模型价格、效率、发布前评估和任务级路由策略。"
       },
       {
         "id": "enterprise",
         "label": "企业",
-        "count": 3,
+        "count": 4,
         "itemIds": [
           "openai-gpt56-price-performance-2026-08-04",
           "arxiv-extractbench-enterprise-doc-extraction-2026-08-04",
-          "arxiv-cage-certified-authorization-2026-08-04"
+          "arxiv-cage-certified-authorization-2026-08-04",
+          "marketwatch-amd-helios-ai-infra-earnings-watch-2026-08-04"
         ],
-        "meaning": "用来检查文档抽取、单位成本、授权控制和可审计部署。"
+        "meaning": "用来检查文档抽取、单位成本、授权控制、算力采购和可审计部署。"
       },
       {
         "id": "policy",
         "label": "政策",
-        "count": 3,
+        "count": 5,
         "itemIds": [
           "anthropic-cyber-eval-incidents-2026-08-04",
+          "axios-white-house-ai-eval-framework-2026-08-04",
+          "businessinsider-openai-huggingface-preservation-demand-2026-08-04",
           "openai-academic-researchers-program-2026-08-04",
           "arxiv-agentic-system-validation-2026-08-04"
         ],
-        "meaning": "用来更新评测事件披露、科研访问治理和监管可读性。"
+        "meaning": "用来更新评测事件披露、发布前政府评估、证据保全、科研访问治理和监管可读性。"
       }
     ],
     "sourceConcentration": {
       "sourceId": "openai-news",
       "sourceName": "OpenAI News",
       "count": 4,
-      "share": "4/10",
-      "note": "本期最大单一来源是 OpenAI 官方页，用于核对发布事实；其余由 Anthropic 官方页和 arXiv 研究分散补充。",
-      "nextCheck": "下一步应查 API 文档、价格页、第三方延迟测试、客户账单、论文代码数据和外部安全审计。"
+      "share": "4/13",
+      "note": "本期最大单一来源仍是 OpenAI 官方页，用于核对发布事实；其余由 Anthropic 官方页、arXiv 研究和三家可靠媒体分散补充。",
+      "nextCheck": "下一步应查 API 文档、价格页、第三方延迟测试、客户账单、论文代码数据、政府/法律原件、AMD filing 和外部安全审计。"
     }
   },
   "categories": [
@@ -263,18 +299,18 @@
     {
       "id": "funding",
       "label": "资金",
-      "description": "供战略和资本观察团队用来核对融资、估值与资源配置；本期无新融资条目，需 filings 或可靠媒体新事实再纳入。"
+      "description": "供战略、资本和基础设施采购团队用来核对融资、估值、算力交付与资源配置；本期新增 AMD Helios 财报前背景，需 filings、客户确认和交付数据再升级。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "供安全、法务和合规团队用来检查治理、评测事件与机构规则；本期覆盖 Anthropic eval 事件和科研治理，仍需审计或监管文件确认。"
+      "description": "供安全、法务和合规团队用来检查治理、评测事件、政府评估和证据保全；本期仍需官方文件、原始信件、审计或监管材料确认。"
     }
   ],
   "briefing": {
     "label": "17:00 情报简报",
-    "headline": "官方系统更新和 Agent 安全研究同时升温",
-    "summary": "本期用 OpenAI 与 Anthropic 官方页面核对实时语音、价格、科研访问、效率栈和评测事件，再用 arXiv 补企业文档抽取、连续实验、轨迹验证、工具 schema 与授权研究。官方主张和预印本研究都不能直接替代外部测试、客户日志或审计。",
+    "headline": "官方系统更新、Agent 安全研究与政策背景同时升温",
+    "summary": "本期用 OpenAI 与 Anthropic 官方页面核对实时语音、价格、科研访问、效率栈和评测事件，用 arXiv 补企业文档抽取、连续实验、轨迹验证、工具 schema 与授权研究，并加入 Axios、Business Insider、MarketWatch 对政策、证据保全和 AI 基础设施的媒体背景。",
     "cta": "查看本期信号",
     "watchPoints": [
       {
@@ -283,21 +319,21 @@
       },
       {
         "title": "评测安全",
-        "body": "Anthropic 披露说明 eval harness、外部评测商和网络隔离已经是模型发布前风险。"
+        "body": "Anthropic 披露与 Business Insider 后续报道说明 eval harness、证据保全和外部评测商已经是模型发布前风险。"
       },
       {
-        "title": "工具治理",
-        "body": "arXiv 研究把工具 schema、轨迹验证和授权 gate 放到 Agent 安全中心。"
+        "title": "政策算力",
+        "body": "Axios 与 MarketWatch 信号提示政府评估框架和 rack-scale 交付会同时影响模型发布与算力采购。"
       }
     ]
   },
   "deepBriefing": {
     "kicker": "17:00 深挖",
-    "title": "AI 系统竞争从模型能力转向实时入口、成本曲线和可审计 Agent",
-    "subtitle": "2026 年 8 月 4 日 17:00 JST 版把官方系统更新与研究雷达合并阅读：模型供应商在讲效率和访问，研究社区在补评测、工具和授权边界。",
+    "title": "AI 系统竞争从模型能力转向实时入口、成本曲线、可审计 Agent 与政策算力接口",
+    "subtitle": "2026 年 8 月 4 日 17:00 JST 版补充 08:00 自动化核查：官方系统更新、研究雷达和可靠媒体背景共同指向评测、证据、政策与基础设施验证。",
     "dateLabel": "2026 年 8 月 4 日 17:00 JST",
     "status": "已发布，官方项按发布事实核对，研究项保持预印本边界",
-    "overview": "本期不靠社区讨论或传言补量。OpenAI 的 GPT-Live、GPT-5.6 价格/效率和科研访问页面显示供应商正在围绕入口、单位成本和外部科研反馈组织产品；Anthropic 的网络安全评测披露提醒评测环境本身需要生产级隔离；arXiv 研究则把企业文档、连续实验、轨迹验证、工具 schema 和授权 gate 变成下一轮核查对象。",
+    "overview": "本期不靠社区讨论或传言补量。OpenAI 的 GPT-Live、GPT-5.6 价格/效率和科研访问页面显示供应商正在围绕入口、单位成本和外部科研反馈组织产品；Anthropic 的网络安全评测披露提醒评测环境本身需要生产级隔离；arXiv 研究把企业文档、连续实验、轨迹验证、工具 schema 和授权 gate 变成下一轮核查对象；Axios、Business Insider 和 MarketWatch 则补出政府评估、证据保全与 AI rack-scale 交付验证三条外部压力线。",
     "timeline": [
       {
         "label": "7 月 29-30 日",
@@ -313,20 +349,29 @@
         "label": "8 月 3 日",
         "title": "GPT-Live 工程说明与 arXiv recent 更新",
         "body": "OpenAI 发布实时语音系统说明，arXiv recent 出现多条 Agent 评测和安全研究。"
+      },
+      {
+        "label": "8 月 4 日",
+        "title": "政策、证据保全和 Helios 财报背景补入",
+        "body": "Axios、Business Insider 和 MarketWatch 提供高级模型评估、Hugging Face 事件材料保全和 AMD Helios 交付核查线索。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "10",
+        "value": "13",
         "label": "本期当前信号"
       },
       {
-        "value": "5/10",
+        "value": "5/13",
         "label": "官方来源"
       },
       {
-        "value": "5/10",
+        "value": "5/13",
         "label": "研究原文"
+      },
+      {
+        "value": "3/13",
+        "label": "可靠媒体背景"
       }
     ],
     "sections": [
@@ -357,12 +402,27 @@
         "title": "工具 schema 和授权 gate 成为新控制面",
         "body": "SafeKeep 和 CAGE 分别提示工具说明会影响拒答，工具返回的不确定性会影响授权。",
         "soWhat": "Agent runtime 应加入 schema 审计、观察注入测试、绑定错误测试和 policy-as-code 复核。"
+      },
+      {
+        "number": "05",
+        "label": "政策",
+        "title": "高级模型评估框架进入公开核查窗口",
+        "body": "Axios 报道把白宫自愿评估框架、分类 cyber benchmark 和公司会议放到同一条线。",
+        "soWhat": "政策团队应等待官方文本，同时准备模型阈值、提交流程、保密边界和客户披露问题。"
+      },
+      {
+        "number": "06",
+        "label": "算力",
+        "title": "AI rack-scale 发布开始接受财报验证",
+        "body": "MarketWatch 把 AMD Helios 放入财报前瞻，提示机柜级 AI 系统将由客户、交付和收入确认验证。",
+        "soWhat": "基础设施采购应同时看性能、软件栈、客户确认、filing、电力和机房交付。"
       }
     ],
     "actions": [
       "把 GPT-Live、GPT-5.6 价格和效率栈加入平台成本与延迟复测队列。",
-      "把第三方模型评测环境纳入生产级网络隔离、日志留存和事故通知要求。",
-      "把工具 schema、typed returns、授权 gate 和轨迹证据加入 Agent 上线清单。"
+      "把第三方模型评测环境纳入生产级网络隔离、日志留存、证据保全和事故通知要求。",
+      "把工具 schema、typed returns、授权 gate 和轨迹证据加入 Agent 上线清单。",
+      "把白宫/ONCD/NIST 文件、州检察长信件和 AMD 财报/filing 设为下一轮独立核查源。"
     ],
     "coverageLimits": [
       {
@@ -374,23 +434,25 @@
         "body": "arXiv 条目是预印本雷达，仍需代码、数据、第三方复现、真实日志和同行评审。"
       },
       {
-        "label": "时间边界",
-        "body": "本期聚焦 2026-07-29 至 2026-08-03 可核对来源，不补旧闻和社区传言。"
+        "label": "媒体边界",
+        "body": "Axios、Business Insider 和 MarketWatch 只作背景；政策、法律和交付结论仍需官方文件、原始信件、filing、客户确认和审计。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
         "OpenAI 官方页面支持 GPT-Live、GPT-5.6 价格、科研访问和效率栈的发布事实。",
         "Anthropic 官方页面支持 Claude 网络安全评测事件、回溯范围和响应措施的披露事实。",
-        "arXiv 页面支持本期 5 条 Agent 评测、安全和授权研究的题名、提交时间和摘要主张。"
+        "arXiv 页面支持本期 5 条 Agent 评测、安全和授权研究的题名、提交时间和摘要主张。",
+        "Axios、Business Insider 和 MarketWatch 提供政策、法律和市场背景线索，不替代原始文件。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 判断 8 月 4 日版的核心不是单点模型领先，而是系统入口、成本曲线和可审计 Agent 的组合变化。",
-        "本期把官方主张和研究原文并列，是为了给读者提供核查路线，而不是把预印本或厂商页升级成事实结论。"
+        "AI Watchtower 判断 8 月 4 日版的核心不是单点模型领先，而是系统入口、成本曲线、可审计 Agent、政策接口和基础设施交付验证的组合变化。",
+        "本期把官方主张、研究原文和媒体背景并列，是为了给读者提供核查路线，而不是把预印本或媒体报道升级成事实结论。"
       ],
       "unknowns": [
         "未知 GPT-Live 和 GPT-5.6 效率在外部客户环境中的真实延迟、账单和稳定性。",
-        "未知 Anthropic 事件的完整第三方审计结论，也未知 arXiv 方法能否被广泛复现。"
+        "未知 Anthropic/OpenAI 事件的完整第三方审计结论，也未知 arXiv 方法能否被广泛复现。",
+        "未知白宫评估框架的正式文本、州检察长信件范围和 AMD Helios 客户交付进度。"
       ]
     },
     "references": [
@@ -433,10 +495,235 @@
       {
         "label": "OpenAI 发布 10 万名研究者访问计划",
         "url": "https://openai.com/index/chatgpt-for-academic-researchers/"
+      },
+      {
+        "label": "媒体原文报道白宫高级模型评估框架",
+        "url": "https://www.axios.com/2026/08/03/white-house-finalizes-ai-framework-behind-closed-doors"
+      },
+      {
+        "label": "Business Insider 原文报道 OpenAI 证据保全要求",
+        "url": "https://www.businessinsider.com/openai-attorney-general-preserve-hugging-face-evidence-2026-8"
+      },
+      {
+        "label": "MarketWatch 原文报道 AMD Helios 财报关注点",
+        "url": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/here-s-a-question-investors-have-going-into-the-second-half-of-the-year-4vbMD4LHh1XtxWJwxnpC"
       }
     ]
   },
   "items": [
+    {
+      "id": "axios-white-house-ai-eval-framework-2026-08-04",
+      "category": "policy",
+      "label": "政策",
+      "title": "Axios 称白宫已完成高级 AI 模型自愿评估框架",
+      "body": "Axios 报道称白宫已完成高级 AI 模型自愿评估框架，但内容、参与方和实施时间线仍未公开。",
+      "summary": "Axios 报道称白宫已完成高级 AI 模型自愿评估框架，但内容、参与方和实施时间线仍未公开。",
+      "whyItMatters": "如果美国把网络安全能力纳入高级模型发布前评估，OpenAI、Anthropic、Google、Meta 等实验室的发布节奏、外部测试和政府沟通都会被重新组织。",
+      "detailBody": "Axios 8 月 3 日报道称，白宫已按近期行政命令期限完成一个面向 advanced AI models 的自愿评估框架，重点可能包括政府如何判断模型是否进入 oversight 范围、网络安全能力如何通过分类 benchmark 评估，以及周二与公司举行 staff-level meeting。",
+      "trend": "前沿 AI 治理正在从抽象安全倡议进入发布前测试流程、分类 benchmark 和公司-政府接口。",
+      "detailTrend": "这条媒体信号与 OpenAI、Anthropic 近期安全披露放在一起看，说明监管焦点开始落在“模型发布前谁测、测什么、结果如何影响访问”上。报道能提示政策方向，但框架正文和执行规则尚未公开，不能把它当作正式监管事实。",
+      "whyRanked": "它把 AI 安全事件后的政策响应推进到具体评估流程。",
+      "topReason": "高级模型发布前评估进入政策窗口。",
+      "detailWhyRanked": "Axios 给出框架完成、分类 cyber benchmark、stakeholder 透明度不足和周二会议等可核查线索，适合合规与政策团队设置下一轮检查；但必须等白宫、ONCD、NIST/CAISI 或公司正式文件确认。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "可靠媒体可提示政策进展；框架正文、参与方和执行规则仍待官方确认。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "可靠媒体可提示政策进展；框架正文、参与方和执行规则仍待官方确认。"
+      },
+      "impact": "AI 实验室、模型评测供应商、云平台和企业合规团队应准备发布前 cyber eval、政府沟通、证据留存和客户披露清单。",
+      "whoShouldCare": "最该关注的是负责模型发布审批、政府事务、第三方安全评测和企业采购合规的法务/安全/政策团队。",
+      "readerUse": "政策团队用它建立监测项：框架正文、适用模型阈值、benchmark 方法、提交流程、保密边界和申诉机制。",
+      "nextCheck": "查白宫或 ONCD 公告、NIST/CAISI 文件、会议纪要、公司回应和最终框架正文。",
+      "followUpQuestions": [
+        "哪些独立记录可以把这条信号升级为已验证判断？",
+        "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+      ],
+      "evidenceThreshold": "需要白宫/ONCD/NIST/CAISI 正式文件、框架正文、实施时间线和公司确认，才可升级为已确认政策变化。",
+      "claimBoundary": "不证明框架已经开始执行，也不证明任何公司模型已被要求延迟、限制或通过政府评估。",
+      "counterEvidence": "若官方文件未发布、会议未确认、框架范围不同或执行机制被推迟，应降级为媒体报道的政策预期。",
+      "source": "Axios AI / Technology",
+      "sourceName": "Axios AI / Technology",
+      "sourceId": "axios-ai",
+      "sourceUrl": "https://www.axios.com/2026/08/03/white-house-finalizes-ai-framework-behind-closed-doors",
+      "originalUrl": "https://www.axios.com/2026/08/03/white-house-finalizes-ai-framework-behind-closed-doors",
+      "sourceRole": "媒体背景",
+      "provenance": "Axios 原文可作为政策进展媒体背景；完整事实、采访上下文、引述和后续更新仍在原文，本条只采用最小事实，正式监管状态需白宫、ONCD、NIST/CAISI 或公司文件确认。",
+      "trustLevel": "reliable_media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "可靠媒体背景，需官方文件升级",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-04T07:00:00+09:00",
+      "time": "08月04日",
+      "tags": [
+        "policy",
+        "safety",
+        "cybersecurity",
+        "frontier-models"
+      ],
+      "companies": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Meta"
+      ]
+    },
+    {
+      "id": "businessinsider-openai-huggingface-preservation-demand-2026-08-04",
+      "category": "policy",
+      "label": "政策",
+      "title": "Business Insider 称 15 名州检察长要求 OpenAI 保存 Hugging Face 事件材料",
+      "body": "Business Insider 报道称 15 名美国州检察长要求 OpenAI 保存与 Hugging Face 事件相关的材料。",
+      "summary": "Business Insider 报道称 15 名美国州检察长要求 OpenAI 保存与 Hugging Face 事件相关的材料。",
+      "whyItMatters": "模型安全事件一旦进入证据保全和州级执法视野，AI 实验室需要把 eval 日志、sandbox 配置、第三方通信和事故复盘当作法律证据管理。",
+      "detailBody": "Business Insider 8 月 4 日报道称，15 名州检察长要求 OpenAI 保存与 7 月 Hugging Face 事件相关的文件和证据，关注点包括测试环境隔离、安全实践、消费者保护和数据隐私；报道还提到 OpenAI 正配合内部安全治理并计划发布技术报告。",
+      "trend": "AI 安全披露正在从公司博客和行业争议进入证据保全、州检察长和潜在诉讼程序。",
+      "detailTrend": "这条信号的重点不是重复事件细节，而是法律 posture 变化：监管者可能要求实验室解释模型测试环境、访问路径、日志和外部影响。媒体报道不能替代州检察长信件或法院材料，但足以提示法务团队提前保全证据。",
+      "whyRanked": "它把模型 eval 事故从安全议题推向法律证据管理。",
+      "topReason": "模型安全事故进入证据保全阶段。",
+      "detailWhyRanked": "Business Insider 原文报道给出州检察长数量、保全对象和法律关注点，用于帮助安全与法务团队把技术事故复盘转成 legal hold 清单；核心事实仍需原始信件、官方回应或法院案卷确认。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "可靠媒体可提示执法关注；需州检察长信件、OpenAI 正式回应或法院材料确认。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "可靠媒体可提示执法关注；需州检察长信件、OpenAI 正式回应或法院材料确认。"
+      },
+      "impact": "AI 实验室、第三方评测商、平台安全和企业法务团队应检查事故响应中的 legal hold、日志留存、供应商通信和客户通知流程。",
+      "whoShouldCare": "最该关注的是处理 AI 安全事件、外部评测合同、州级监管问询和证据保全的法务/安全响应团队。",
+      "readerUse": "法务和安全团队用它更新事件保全清单，把 prompt、sandbox、凭证、网络日志、第三方沟通和模型输出纳入证据范围。",
+      "nextCheck": "查州检察长原始信件、OpenAI 技术报告、Hugging Face 回应、法院 docket 和监管后续。",
+      "followUpQuestions": [
+        "哪些独立记录可以把这条信号升级为已验证判断？",
+        "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+      ],
+      "evidenceThreshold": "需要州检察长信件、OpenAI/Hugging Face 正式回应、技术报告或法院/监管文件，才可升级为已确认执法行动。",
+      "claimBoundary": "不证明 OpenAI 已违法，也不证明事件完整范围、损害或责任归属已经确定。",
+      "counterEvidence": "若州检察长原始文件、法院记录、OpenAI 技术报告或 Hugging Face 确认显示数量、请求范围或事件事实不同，应降级为待核媒体报道。",
+      "source": "Business Insider AI / Tech",
+      "sourceName": "Business Insider AI / Tech",
+      "sourceId": "businessinsider-ai",
+      "sourceUrl": "https://www.businessinsider.com/openai-attorney-general-preserve-hugging-face-evidence-2026-8",
+      "originalUrl": "https://www.businessinsider.com/openai-attorney-general-preserve-hugging-face-evidence-2026-8",
+      "sourceRole": "媒体背景",
+      "provenance": "Business Insider 原文可作为执法关注媒体背景；完整事实、采访上下文、引述和后续更新仍在原文，本条只保留证据保全报道事实，法律结论需原始信件、官方回应或法院案卷。",
+      "trustLevel": "reliable_media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "可靠媒体背景，需原始法律文件升级",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-04T06:30:00+09:00",
+      "time": "08月04日",
+      "tags": [
+        "policy",
+        "safety",
+        "legal",
+        "cybersecurity"
+      ],
+      "companies": [
+        "OpenAI",
+        "Hugging Face"
+      ]
+    },
+    {
+      "id": "marketwatch-amd-helios-ai-infra-earnings-watch-2026-08-04",
+      "category": "funding",
+      "label": "资金",
+      "title": "MarketWatch 将 AMD Helios 列为 AI 基础设施财报焦点",
+      "body": "MarketWatch 在 AMD 财报前瞻中把 Helios rack-scale AI 系统列为下半年投资者重点关注项。",
+      "summary": "MarketWatch 在 AMD 财报前瞻中把 Helios rack-scale AI 系统列为下半年投资者重点关注项。",
+      "whyItMatters": "AI 基础设施竞争正在从单颗 GPU 指标扩展到整机柜系统、客户交付、数据中心容量和 2026-2027 年收入兑现。",
+      "detailBody": "MarketWatch 8 月 4 日的财报前瞻称，投资者会关注 AMD Helios rack-scale AI 系统的发货节奏和客户进展；报道把 Helios 与 AMD 服务器 CPU、数据中心收入、AI accelerator 需求和 Nvidia 竞争放在一起讨论。",
+      "trend": "AI 算力叙事正在被财报和交付节奏校验，供应商需要证明 rack-scale 系统能从发布会走到客户机房和收入确认。",
+      "detailTrend": "这条媒体背景适合把 AMD、Nvidia 和 hyperscaler 的 AI 基础设施竞争放到同一张表：关键不是峰值参数，而是 HBM 供应、网络互连、软件栈、客户验收和电力/机房交付。财报前瞻不能证明需求兑现。",
+      "whyRanked": "它用于把 AI 芯片竞争从发布指标推到发货、客户和财务验证。",
+      "topReason": "AI rack-scale 竞争进入财报验证。",
+      "detailWhyRanked": "MarketWatch 原文给出 Helios、EPYC、数据中心收入和客户发货预期等检查线索，用于基础设施和资本配置团队跟踪；但必须等 AMD 财报、10-Q、客户确认和供应链数据验证。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "可靠市场媒体可提示财报关注点；交付和收入需官方财报、filing 与客户确认。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "可靠市场媒体可提示财报关注点；交付和收入需官方财报、filing 与客户确认。"
+      },
+      "impact": "云平台、AI 实验室、芯片采购和数据中心团队应跟踪 Helios 发货、MI450/MI455X 供应、ROCm 软件成熟度、客户验收和功耗约束。",
+      "whoShouldCare": "最该关注的是做 AI 集群采购、机柜级容量规划、GPU 供应链和基础设施资本预算的平台/采购团队。",
+      "readerUse": "基础设施团队用它建立财报核对表：发货时间、客户名单、收入确认、毛利影响、软件栈成熟度和电力容量。",
+      "nextCheck": "查 AMD 财报电话会、10-Q/8-K、官方 Helios 材料、Microsoft/OpenAI/Meta/Anthropic 客户确认和供应链交付记录。",
+      "followUpQuestions": [
+        "哪些独立记录可以把这条信号升级为已验证判断？",
+        "下一轮应优先检查哪项官方、日志、代码或第三方证据？"
+      ],
+      "evidenceThreshold": "需要 AMD 财报、filings、客户部署确认、供应链交付记录和真实性能/成本测试，才可升级为已验证 AI 基础设施进展。",
+      "claimBoundary": "不证明 Helios 已规模部署，也不证明 AMD 已实质缩小与 Nvidia 的生产环境差距。",
+      "counterEvidence": "若 AMD 财报、客户披露或供应链记录显示发货推迟、客户未确认、性能/软件栈不足或收入兑现不及预期，应降级为市场预期。",
+      "source": "MarketWatch Technology",
+      "sourceName": "MarketWatch Technology",
+      "sourceId": "marketwatch-technology",
+      "sourceUrl": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/here-s-a-question-investors-have-going-into-the-second-half-of-the-year-4vbMD4LHh1XtxWJwxnpC",
+      "originalUrl": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/here-s-a-question-investors-have-going-into-the-second-half-of-the-year-4vbMD4LHh1XtxWJwxnpC",
+      "sourceRole": "媒体背景",
+      "provenance": "MarketWatch 原文可作为财报前市场背景；完整事实、图表、数据、采访上下文和后续更新仍在原文，本条只保留 Helios 被列为财报关注点的事实，交付与收入结论需 AMD filing 和客户确认。",
+      "trustLevel": "reliable_media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "可靠市场媒体背景，需财报和客户确认升级",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-04T05:30:00+09:00",
+      "time": "08月04日",
+      "tags": [
+        "infrastructure",
+        "chips",
+        "data-center",
+        "funding"
+      ],
+      "companies": [
+        "AMD",
+        "Nvidia",
+        "Microsoft",
+        "OpenAI",
+        "Meta",
+        "Anthropic"
+      ]
+    },
     {
       "id": "openai-gpt-live-realtime-system-2026-08-04",
       "category": "product",
