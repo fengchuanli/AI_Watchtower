@@ -682,6 +682,437 @@ Built a citation-aware context builder that formats retrieved chunks with source
 検索結果をそのまま LLM に渡すのではなく、各 chunk に citation 番号、source、title、chunk_index を付与し、回答の根拠を追跡できる形に整形しました。
 ```
 
+## Day 8: Grounded Answering
+
+### 今天学什么
+
+基于检索到的 context 生成保守的、带 citation 的回答草稿。
+
+### 为什么学
+
+RAG 的回答生成不是自由聊天。回答必须受到检索结果约束：
+
+```text
+只能基于 context 回答。
+资料不足时要说明不足。
+回答中要带 citation，例如 [1] [2]。
+```
+
+企业场景中，回答看起来合理还不够，必须能追踪依据。
+
+### 已实现内容
+
+新增脚本：
+
+```text
+rag/answer_demo.py
+```
+
+功能：
+
+- 接收用户问题
+- 调用 `build_context.py` 的检索/context 逻辑
+- 根据 top chunks 生成保守回答草稿
+- 在回答中插入 citation 编号
+- 输出 Sources 列表
+- 当检索结果不足或分数过低时，明确说明无法给出可靠回答
+
+运行示例：
+
+```bash
+python3 rag/answer_demo.py "Kimi K3 权重发布有什么风险" --top-k 3 --mode vector
+python3 rag/answer_demo.py "AI Watchtower 预测 2030 年哪家公司会赢" --top-k 3 --mode vector --min-score 0.5
+```
+
+正常回答示例结构：
+
+```text
+Question:
+Kimi K3 权重发布有什么风险
+
+Answer:
+根据检索到的资料，可以先做一个保守回答：
+
+- 为什么重要: 开放模型不只比能力，也比许可可用性、部署门槛和数据合规。 [1]
+- 需原始仓库、许可证和复测。 [2]
+
+Sources:
+[1] 最新新闻: ...
+    source: data/news.json#...
+    document_id: ...
+    chunk_index: 0
+    score: 0.2441
+```
+
+资料不足时的回答策略：
+
+```text
+根据当前检索到的资料，无法给出可靠回答。
+可用资料不足，或者检索结果相关性过低；需要补充更直接的来源后再判断。
+```
+
+### 关键理解
+
+Grounded Answering 的核心：
+
+```text
+回答必须被检索到的资料约束。
+没有依据时，正确行为是拒绝下结论，而不是编造。
+```
+
+`answer_demo.py` 目前不调用真实 LLM。它是 answer generation 的本地 prototype，用来验证输出结构和安全策略。
+
+### 完成标准
+
+- 能运行 `rag/answer_demo.py`
+- 能调用检索/context 逻辑
+- 能生成带 `[1] [2]` 的回答草稿
+- 能输出 Sources
+- 资料不足时不编造
+
+### 作品集写法
+
+```text
+Implemented a grounded answer prototype that generates citation-aware responses and explicitly handles insufficient evidence instead of fabricating unsupported answers.
+```
+
+### 日文面试表达
+
+```text
+検索された context の範囲だけを使って回答し、根拠が不足している場合は推測で答えず、不明点として明示する設計にしました。
+```
+
+## Day 9: RAG Evaluation 入门
+
+### 今天学什么
+
+用测试问题检查 RAG 检索结果是否命中 expected sources，并检查回答是否包含 citation。
+
+### 为什么学
+
+RAG 不是能回答就结束。需要持续评估：
+
+```text
+哪些问题能找到正确来源？
+哪些问题失败？
+失败是 retrieval 问题、chunking 问题，还是测试问题设计问题？
+```
+
+Evaluation 能把 demo 项目提升为更接近企业落地的工程项目。
+
+### 已实现内容
+
+新增测试问题集：
+
+```text
+rag/eval_questions.json
+```
+
+新增评估脚本：
+
+```text
+rag/evaluate_demo.py
+```
+
+评估逻辑：
+
+```text
+question
+→ retriever top k chunks
+→ retrieved sources
+→ expected_sources 是否命中
+→ answer 是否包含 citation
+→ PASS / FAIL
+```
+
+资料不足问题单独处理：
+
+```text
+expected_sources = []
+```
+
+这类问题通过条件：
+
+- top score 低于阈值
+- 回答不带 citation
+- 明确说明资料不足
+
+### 运行命令
+
+```bash
+python3 rag/evaluate_demo.py --mode vector --top-k 5
+python3 rag/evaluate_demo.py --mode keyword --top-k 5
+```
+
+### 当前 vector 模式结果
+
+```text
+Total: 5
+Passed: 3
+Failed: 2
+Evaluation pass rate: 60.0%
+Source hit rate: 50.0%
+Insufficient-evidence cases passed: 1/1
+```
+
+失败案例：
+
+```text
+source-policy
+news-format
+```
+
+失败原因：
+
+```text
+当前本地模拟向量检索对 docs 类问题表现弱，容易被新闻历史数据中的相似词干扰。
+```
+
+这不是坏结果。Day 9 的目标是建立评估机制，不是立刻优化检索。
+
+### 完成标准
+
+- 有 `rag/eval_questions.json`
+- 有 `rag/evaluate_demo.py`
+- 能输出每个问题的 PASS / FAIL
+- 能输出 source hit rate
+- 能列出 failed cases
+- 能说明 evaluation 是为了发现失败，而不是掩盖失败
+
+### 作品集写法
+
+```text
+Created a lightweight RAG evaluation dataset and source-hit evaluation script to measure retrieval quality, citation coverage, and insufficient-evidence handling.
+```
+
+### 日文面试表达
+
+```text
+RAG の品質を確認するために、テスト質問と期待される参照元を用意し、検索結果が正しい source を含んでいるかを評価しました。
+```
+
+## Day 10: Evaluation Report
+
+### 今天学什么
+
+把 RAG Evaluation 的结果整理成可读报告，记录通过率、失败案例、失败原因和下一步改进方向。
+
+### 为什么学
+
+评估脚本只能输出结果。作品集和面试需要你能解释：
+
+```text
+当前系统哪里能工作？
+哪里失败了？
+为什么失败？
+下一步怎么改？
+```
+
+这比只展示成功 demo 更有工程价值。
+
+### 已实现内容
+
+新增报告：
+
+```text
+rag/eval_report.md
+```
+
+报告语言：
+
+```text
+日语
+```
+
+报告包含：
+
+- Summary
+- Test Setup
+- 評価方針
+- Passed Cases
+- Failed Cases
+- 全体分析
+- Next Improvements
+- Portfolio Summary
+- 面接用説明
+
+### 当前报告结论
+
+```text
+ニュース関連の質問は比較的うまく検索できた。
+docs にあるルール文書や schema 文書に関する質問は失敗した。
+```
+
+主要失败原因：
+
+```text
+当前 local vector demo 不是真正的 semantic embedding。
+news-history 里有很多相似词，容易干扰 docs 类问题。
+docs/news-data-format.md 这种 schema 文档较长，普通 chunking 容易分散上下文。
+```
+
+下一步改进方向：
+
+- Azure OpenAI Embedding
+- Azure AI Search vector index
+- heading-aware chunking
+- `source_type` metadata
+- docs/news retrieval filter
+- reranking
+- evaluation question set 扩展
+
+### 完成标准
+
+- 有 `rag/eval_report.md`
+- 能理解 Summary
+- 能理解 Passed / Failed cases
+- 能解释失败原因
+- 能说明下一步改进方向
+
+### 作品集写法
+
+```text
+Documented RAG evaluation results with source hit rate, failed query analysis, and concrete improvement actions for retrieval quality.
+```
+
+### 日文面试表达
+
+```text
+評価結果は単なるスコアだけでなく、失敗した質問の原因分析と改善方針までドキュメント化しました。
+```
+
+## Day 11: RAG Pipeline 架构整理
+
+### 今天学什么
+
+把当前已完成的 RAG 处理流程整理成完整 pipeline 架构。
+
+### 为什么学
+
+到 Day 10 为止，项目已经有多个脚本和输出文件。如果不整理架构，后续很难说明：
+
+```text
+每一步负责什么？
+每一步输入输出是什么？
+哪些是当前 prototype？
+哪些以后会被 Azure 替换？
+```
+
+架构文档是作品集和面试中说明项目整体性的关键材料。
+
+### 已实现内容
+
+新增架构文档：
+
+```text
+rag/architecture.md
+```
+
+文档包含：
+
+- Current Pipeline
+- Pipeline Steps
+- Data Sources
+- Core Data Formats
+- Component Responsibilities
+- Current Limitations
+- Azure Roadmap
+- Current Project Status
+- 面接用説明
+- Portfolio Summary
+
+### 当前 pipeline
+
+```text
+docs/*.md
+data/news.json
+data/news-history.json
+        ↓
+rag/ingest_docs.py
+        ↓
+rag/corpus.jsonl
+        ↓
+rag/chunk_docs.py
+        ↓
+rag/chunks.jsonl
+        ↓
+rag/search_chunks.py
+rag/vector_search_demo.py
+        ↓
+Top K Chunks
+        ↓
+rag/build_context.py
+        ↓
+Citation-aware Context
+        ↓
+rag/answer_demo.py
+        ↓
+Grounded Answer Draft
+        ↓
+rag/evaluate_demo.py
+        ↓
+rag/eval_report.md
+```
+
+### 关键理解
+
+当前 RAG pipeline 可以分成 6 个核心组件：
+
+```text
+DocumentLoader
+Chunker
+Retriever
+ContextBuilder
+AnswerGenerator
+Evaluator
+```
+
+职责区分：
+
+```text
+Retriever 负责找资料。
+ContextBuilder 负责把资料整理成带 citation 的 context。
+AnswerGenerator 负责基于 context 生成保守回答。
+Evaluator 负责检查检索和回答是否可靠。
+```
+
+### 当前限制
+
+- 还没有真实 semantic embedding
+- docs 和 news 现在混在同一个检索范围里
+- chunking 还是固定长度，不是 heading-aware
+- answer demo 还不是 LLM 回答
+- Azure OpenAI / Azure AI Search 还没有接入
+
+### Azure 化方向
+
+- Azure OpenAI Embedding
+- Azure AI Search vector index
+- Azure Functions API
+- Application Insights
+- Key Vault / Managed Identity
+- citation validation
+
+### 完成标准
+
+- 有 `rag/architecture.md`
+- 能说明完整 RAG pipeline
+- 能说明每一步输入输出
+- 能说明每个组件职责
+- 能说明当前限制和 Azure 化方向
+
+### 作品集写法
+
+```text
+Documented the end-to-end RAG pipeline architecture, including document ingestion, chunking, retrieval, citation-aware context building, grounded answering, and evaluation.
+```
+
+### 日文面试表达
+
+```text
+RAG の処理全体を、ドキュメント読み込み、chunking、検索、citation 付き context 作成、回答生成、評価という pipeline として整理しました。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -693,6 +1124,10 @@ Built a citation-aware context builder that formats retrieved chunks with source
 - Day 5: Embedding 概念和数据结构设计
 - Day 6: 本地模拟 Vector Search
 - Day 7: Context Building + Citation
+- Day 8: Grounded Answering
+- Day 9: RAG Evaluation 入门
+- Day 10: Evaluation Report
+- Day 11: RAG Pipeline 架构整理
 
 ### 当前已生成或新增的文件
 
@@ -704,6 +1139,11 @@ rag/chunks.jsonl
 rag/search_chunks.py
 rag/vector_search_demo.py
 rag/build_context.py
+rag/answer_demo.py
+rag/eval_questions.json
+rag/evaluate_demo.py
+rag/eval_report.md
+rag/architecture.md
 rag/learning-notes.md
 ```
 
@@ -713,18 +1153,22 @@ rag/learning-notes.md
 AI Watchtower RAG Assistant 目前可以读取 docs 和 data 中的知识库内容，
 把长文档切成 chunks，并通过本地关键词检索或本地模拟向量检索返回相关资料。
 检索结果可以被整理成带 citation 编号、source、title 和 chunk_index 的上下文。
+系统可以基于这些上下文生成保守的带引用回答草稿，并在资料不足时拒绝下结论。
+系统现在可以用测试问题评估 source hit rate、citation 覆盖和资料不足处理。
+评估结果已经整理成日语报告，包含失败原因和下一步改进方向。
+当前 RAG pipeline 已整理成架构文档，覆盖输入输出、组件职责、限制和 Azure 化路线。
 ```
 
 ### 下一步
 
-Day 8 建议进入：
+Day 12 建议进入：
 
 ```text
-生成带引用的回答草稿。
+准备 Azure 化前的接口边界。
 ```
 
 目标是理解：
 
 ```text
-回答生成必须基于检索到的 context；资料不足时不能编造。
+先定义组件职责和替换边界，再逐步把本地实现替换为 Azure OpenAI / Azure AI Search。
 ```
