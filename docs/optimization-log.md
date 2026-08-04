@@ -1,3 +1,29 @@
+## 2026-08-05 08:14 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-05`，发布 10 条政策透明度、评测安全、AI 工具滥用、企业采用、用工执法和 AI 基础设施财务核查信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Axios AI/Technology、DOJ 官方新闻稿、MarketWatch 可访问 live cards、Business Insider AI/Tech、历史 URL 和当前重复风险，未使用付费墙正文、登录墙正文、社区传言或随机页面。
+  - 新增登记来源 `us-doj-news`，用于核对 DOJ 对 OpenAI/Statsig 用工歧视和解的官方执法事实。
+  - 本期选择 1 条官方执法来源和 9 条可靠媒体背景信号：白宫高级 AI 评估框架不公开、Cisco Talos 暴露的攻击者 AI 工具会话、OpenAI/Statsig DOJ 和解、AMD-Anthropic GPU 收入预期、陆军 NGC2 平台安全、eval 沙箱人因缺口、Palantir 企业 AI 软件收入、AI 利润会计口径、AMD Helios ramp，以及 Hugging Face CEO 开放权重观点。
+  - 官方条目保持 `官方核对` / `confirmed`；媒体条目保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求白宫/ONCD/NIST 文件、Cisco Talos 原始报告、军方材料、DOJ 协议、AMD/Palantir filings、客户确认、现金流、审计、日志或第三方测试后再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 35 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending local commit with message `更新17点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit.
+
 ## 2026-08-04 23:07 JST
 
 - Focus: 运行 08:00 JST AI Watchtower 新闻情报补充核查；当前本地首页已是 `news-1700-2026-08-04` 17:00 版，因此未回退早间版，而是在当前最新版中增补 3 条可靠媒体背景信号，当前版从 10 条增至 13 条。

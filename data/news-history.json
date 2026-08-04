@@ -1,8 +1,1145 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-04",
-  "totalItems": 334,
+  "updatedAt": "2026-08-05",
+  "totalItems": 344,
   "editions": [
+    {
+      "id": "news-1700-2026-08-05",
+      "date": "2026-08-05",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦 AI 政策透明度、评测安全、企业采用、用工执法和基础设施财务核查。",
+      "operationalStatus": "GitHub DNS 解析失败，无法 pull；已复核来源清单、来源政策、Axios/DOJ/MarketWatch/Business Insider 可访问来源和历史 URL。",
+      "editorialInterpretation": "本期编辑判断：前沿 AI 的压力点从模型能力发布转向政府评估透明度、测试环境工程、安全日志、企业收入质量、用工合规和 rack-scale 算力交付。",
+      "readerFrame": {
+        "headline": "阅读本期：把政策、沙箱和算力收入放在同一张核查表",
+        "whyItMatters": "这 10 条适合更新前沿模型发布审查、AI 工具滥用、企业 AI 收入、招聘合规、开放权重和 AI 机柜交付的验证清单。",
+        "mobile": {
+          "headline": "手机先看政策与安全",
+          "summary": "媒体背景为主，官方执法补强；先查政策、沙箱、日志和算力。",
+          "primaryUses": [
+            "法务团队查框架。",
+            "安全团队查日志。",
+            "采购团队查交付。"
+          ],
+          "proofBoundary": "仍需官方文本、日志和filing证明。"
+        },
+        "useThisIssueFor": [
+          "法务、政策和模型发布团队用本期检查白宫评估框架、开放权重边界、DOJ 和解和客户披露口径。",
+          "安全、红队和平台工程团队用本期核对 eval 沙箱、AI 编码工具会话、API token、日志留存和异常外联。",
+          "基础设施、采购和财务团队用本期拆解 AMD/Anthropic、Helios、Palantir 收入和 AI 利润会计口径。"
+        ],
+        "notProvenYet": [
+          "不能证明白宫框架已经执行或任何模型已被正式通过/限制，仍需官方文本、会议记录和公司回应。",
+          "不能证明所有 AI 工具或 eval 环境都有同类风险，仍需原始日志、样本、复盘和第三方审计。",
+          "不能把收入、分析师估计或市场反应读成真实 ROI，仍需 filings、现金流、客户验收和性能数据。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "相较 8 月 4 日版，本期从模型/研究更新转向治理与交付验证",
+        "freshFacts": [
+          "本期新增来源事实：Axios 于 8 月 4 日报道白宫不计划公开高级 AI 评估框架。",
+          "本期新增来源事实：DOJ 于 8 月 4 日宣布 OpenAI/Statsig 3.2 百万美元用工歧视和解。",
+          "本期新增来源事实：Axios 报道 Cisco Talos 看到攻击者暴露的 AI 编码工具会话痕迹。",
+          "本期新增来源事实：MarketWatch 在 AMD 财报窗口报道 Anthropic 合作和 Helios 出货爬坡预期。"
+        ],
+        "repeatedContext": [
+          "延续背景：8 月 4 日版已覆盖 OpenAI/Hugging Face 和 Anthropic cyber eval 事件。",
+          "延续背景：7 月下旬多次出现 open-weight、政府评估和 AI 基础设施融资争议。",
+          "旧背景：媒体来源只能提供背景线索，政策、财务和安全结论仍需原始文件。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对政策与执法",
+          "count": 3,
+          "meaning": "用来更新白宫评估、DOJ 和解和开放权重政策监测。"
+        },
+        {
+          "label": "复查安全日志与沙箱",
+          "count": 3,
+          "meaning": "用来检查 AI 编码工具滥用、eval 环境隔离和高风险平台安全准入。"
+        },
+        {
+          "label": "验证收入与算力交付",
+          "count": 4,
+          "meaning": "用来核对 Palantir 收入、AI 利润质量、AMD/Anthropic 合作和 Helios 出货。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "官方来源用于核对 DOJ 对 OpenAI/Statsig 和解的公开执法事实；执行效果仍需协议全文和监测报告。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 9,
+          "role": "可靠媒体用于提示政策、安全、财务和基础设施背景；完整事实、采访、图表和上下文仍在原文，结论需原始文件升级。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "可靠媒体占主导",
+        "note": "可靠媒体来源家族占比 9/10，Axios 单一来源占比 6/10；本期适合做雷达，不适合当作官方结论。",
+        "nextCheck": "查白宫/ONCD/NIST 文件、Cisco Talos 报告、AMD/Palantir filings、客户确认、DOJ 协议和公司回应。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期主要是政策、安全和财务背景雷达，帮助读者列出下一步证据清单。",
+        "doNotConclude": "不能断言白宫框架已执行、AI 工具已普遍失控、企业 AI ROI 已确认或 AMD Helios 已规模交付。",
+        "useInstead": "应该用官方文本、原始报告、filing、合同、客户日志、审计和第三方性能测试来确认。"
+      },
+      "trendNotes": [
+        {
+          "topic": "frontier-ai-governance",
+          "label": "政策流程转向封闭评估",
+          "note": "跨期看，白宫框架、OpenAI/Hugging Face 事件和开放权重争论都把高级模型评估推向政府接口。",
+          "boundary": "不证明政策已落地；仍需官方文本、会议记录、公司回应和实施细则。"
+        },
+        {
+          "topic": "agent-security-operations",
+          "label": "Agent 安全进入日志化阶段",
+          "note": "跨期看，eval 沙箱事故和黑客 AI 会话都要求企业记录工具调用、账号、token 和出站行为。",
+          "boundary": "不证明所有工具危险；仍需样本、检测规则、厂商补丁和第三方复测。"
+        },
+        {
+          "topic": "ai-infrastructure-finance",
+          "label": "算力叙事进入财务质量核查",
+          "note": "跨期看，AMD、Palantir、Amazon、Alphabet 和 Anthropic 线索都把 AI 从发布叙事带到收入、capex 和交付表。",
+          "boundary": "不证明 ROI 已兑现；仍需 filings、现金流、客户验收和真实性能/成本指标。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "政策边界更强",
+          "status": "stronger",
+          "previousPattern": "上一版政策主题已有白宫评估框架、证据保全和 Anthropic 评测事件。",
+          "currentSignal": "本期新增框架不公开、DOJ 和解、开放权重观点和 eval 安全解释。",
+          "signalDirection": "增强：从是否有框架推进到透明度、执法和开放模型分歧。",
+          "stillUnproven": "不证明政策执行；仍需官方文本、监管记录、公司回应和审计材料。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "交付验证更强",
+          "status": "stronger",
+          "previousPattern": "上一版基础设施主题强调 AMD Helios 财报前问题和 AI rack-scale 交付验证。",
+          "currentSignal": "本期新增 AMD/Anthropic 收入估计、Helios ramp 和 AI 利润会计口径。",
+          "signalDirection": "增强：从关注点转向收入模型、出货窗口和会计质量。",
+          "stillUnproven": "不证明产能兑现；仍需 AMD/客户 filings、出货记录、客户验收报告和性能/成本测试。"
+        },
+        {
+          "topic": "agent",
+          "label": "安全运行重复",
+          "status": "repeated",
+          "previousPattern": "上一版 agent 主题已有第三方 eval、工具 schema 和授权 gate。",
+          "currentSignal": "本期新增 AI 工具滥用日志、沙箱人因缺口和高风险平台隔离。",
+          "signalDirection": "重复并扩展：关注点继续落在权限、日志、隔离和可审计运行。",
+          "stillUnproven": "不证明系统性失控；仍需原始日志、审计、复盘和厂商补丁记录。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "政策与组织治理",
+          "lastMention": "上一版已覆盖 OpenAI GPT-Live、GPT-5.6、科研访问、Hugging Face 事件证据保全和白宫框架背景。",
+          "whatChanged": "本期新增 DOJ 和解、白宫评估透明度和 AI 工具被滥用背景。",
+          "stillUnproven": "不证明模型或组织全面风险；仍需 DOJ 协议、公司回应、安全复盘和审计记录。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "安全与算力",
+          "lastMention": "上一版已覆盖 Anthropic cyber eval 事件和 Claude 评测安全披露。",
+          "whatChanged": "本期新增 AMD 合作财务预期、eval 沙箱解释和开放权重争论背景。",
+          "stillUnproven": "不证明合作交付或事件根因；仍需客户确认、AMD filing、评测日志和第三方审计。"
+        },
+        {
+          "company": "AMD",
+          "label": "Helios 交付",
+          "lastMention": "上一版已把 Helios 列为 AMD 财报前 AI 基础设施关注项。",
+          "whatChanged": "本期新增 MarketWatch 对 Anthropic 合作收入估计和 Helios ramp 的财报窗口背景。",
+          "stillUnproven": "不证明规模交付；仍需 AMD filing、出货记录、客户验收和第三方 benchmark。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 5,
+          "itemIds": [
+            "axios-white-house-ai-framework-private-2026-08-05",
+            "doj-openai-worker-discrimination-settlement-2026-08-05",
+            "axios-ai-eval-sandbox-human-error-2026-08-05",
+            "axios-hacker-ai-chat-logs-cisco-2026-08-05",
+            "businessinsider-huggingface-open-weight-china-silos-2026-08-05"
+          ],
+          "meaning": "用来检查政府评估、执法、开放权重、安全披露和企业合规边界。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 3,
+          "itemIds": [
+            "axios-hacker-ai-chat-logs-cisco-2026-08-05",
+            "axios-army-ngc2-ai-battlefield-security-2026-08-05",
+            "axios-ai-eval-sandbox-human-error-2026-08-05"
+          ],
+          "meaning": "用来检查 AI 工具会话、eval 沙箱、权限、日志和高风险平台运行。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 5,
+          "itemIds": [
+            "doj-openai-worker-discrimination-settlement-2026-08-05",
+            "axios-palantir-ai-commercial-sales-2026-08-05",
+            "axios-ai-profit-accounting-caveats-2026-08-05",
+            "marketwatch-amd-anthropic-gpu-revenue-watch-2026-08-05",
+            "businessinsider-huggingface-open-weight-china-silos-2026-08-05"
+          ],
+          "meaning": "用来更新招聘合规、企业 AI 收入、财务质量、模型选型和供应商控制权。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 4,
+          "itemIds": [
+            "marketwatch-amd-anthropic-gpu-revenue-watch-2026-08-05",
+            "marketwatch-amd-helios-ramp-2026-08-05",
+            "axios-ai-profit-accounting-caveats-2026-08-05",
+            "axios-army-ngc2-ai-battlefield-security-2026-08-05"
+          ],
+          "meaning": "用来核对 GPU 机柜、capex、客户验收、系统交付和高风险平台韧性。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 2,
+          "itemIds": [
+            "axios-hacker-ai-chat-logs-cisco-2026-08-05",
+            "axios-ai-eval-sandbox-human-error-2026-08-05"
+          ],
+          "meaning": "用来检查 AI 编码工具、日志留存、API token 和沙箱工程。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 2,
+          "itemIds": [
+            "axios-white-house-ai-framework-private-2026-08-05",
+            "businessinsider-huggingface-open-weight-china-silos-2026-08-05"
+          ],
+          "meaning": "用来更新高级模型评估、开放权重政策和模型发布前治理清单。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 6,
+        "share": "6/10",
+        "note": "本期最大单一来源是 Axios，用于政策、安全和企业背景雷达；未达到三分之二，但仍需避免把媒体背景当作官方结论。",
+        "nextCheck": "下一步用白宫/ONCD/NIST 文件、Cisco Talos 原始报告、军方材料、Palantir filing 和公司回应交叉确认。"
+      },
+      "briefing": {
+        "label": "17:00 JST 情报简报",
+        "headline": "AI 从发布竞赛转向政策、日志和交付证明",
+        "summary": "本期 10 条以可靠媒体背景为主，辅以 DOJ 官方执法事实。重点不是新增大模型，而是高级模型评估是否透明、AI 工具滥用如何取证、企业 AI 收入是否可持续、AMD/Anthropic 算力承诺如何交付。",
+        "cta": "查看本期 10 条信号",
+        "watchPoints": [
+          {
+            "title": "政策透明度",
+            "body": "白宫框架若只给参与公司，企业客户需要另建可披露的风险说明和采购问卷。"
+          },
+          {
+            "title": "安全取证",
+            "body": "AI 编码工具、eval 沙箱和高风险平台都需要日志、token、隔离和异常外联监控。"
+          },
+          {
+            "title": "交付与现金流",
+            "body": "AI 收入和算力订单需要用 filing、客户验收、现金流和性能数据拆开验证。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "今日深挖",
+        "title": "前沿 AI 的下一轮核查对象：规则、日志和机柜",
+        "subtitle": "8 月 5 日 17:00 JST 版显示，AI 新闻的重心暂时从模型发布转向治理流程、安全运行和基础设施财务质量。",
+        "dateLabel": "2026-08-05 17:00 JST",
+        "status": "已发布，媒体背景为主",
+        "overview": "本期没有把观点报道写成事实结论。AI Watchtower 将 Axios、MarketWatch、Business Insider 和 DOJ 的可访问材料整理成一张核查表：政策团队查白宫框架和 DOJ 和解，安全团队查 AI 工具会话和 eval 沙箱，财务/采购团队查 Palantir 收入、AI 利润口径和 AMD Helios 交付。",
+        "timeline": [
+          {
+            "label": "政策",
+            "title": "白宫评估框架进入不公开争议",
+            "body": "Axios 报道称框架不会公开，意味着外部公司、研究者和客户可能只能通过参与方披露间接理解规则。"
+          },
+          {
+            "label": "安全",
+            "title": "AI 工具会话和沙箱缺口成为证据",
+            "body": "Cisco Talos 线索和 eval 事故解释都把关注点推向日志、凭据、出站网络和测试环境设计。"
+          },
+          {
+            "label": "财务",
+            "title": "算力和企业 AI 收入进入质量核查",
+            "body": "AMD、Palantir、Amazon、Alphabet 等线索要求读者区分订单、收入确认、未实现收益和真实客户结果。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期当前信号"
+          },
+          {
+            "value": "9/10",
+            "label": "可靠媒体背景"
+          },
+          {
+            "value": "1/10",
+            "label": "官方执法来源"
+          },
+          {
+            "value": "6/10",
+            "label": "Axios 单一来源占比"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "政策核查",
+            "title": "框架不公开会改变企业合规工作",
+            "body": "如果高级模型评估规则只对参与公司开放，企业采购和模型发布团队需要自己记录适用阈值、披露范围和客户问答。",
+            "soWhat": "下一步不要等摘要，要找官方文本、会议记录和公司可披露说明。"
+          },
+          {
+            "number": "02",
+            "label": "安全运行",
+            "title": "Agent 风险需要日志和隔离来回答",
+            "body": "本期安全线索都指向同一问题：模型输出之外，账号、token、IDE 会话、沙箱网络和异常外联才是取证对象。",
+            "soWhat": "安全团队应把 AI 工具纳入 SOC 和红队剧本，而不是只审 prompt。"
+          },
+          {
+            "number": "03",
+            "label": "财务验证",
+            "title": "AI 繁荣要拆成收入、capex 和交付",
+            "body": "Palantir、AMD 和大型科技公司利润信号说明 AI 已进入财报表，但不同会计口径会制造强弱不一的结论。",
+            "soWhat": "采购和财务团队应核对现金流、客户验收、出货和任务级成本。"
+          }
+        ],
+        "actions": [
+          "更新白宫评估框架和开放权重政策监测表。",
+          "为 AI 编码工具、eval 沙箱和 Agent 外联建立日志留存要求。",
+          "把 AMD/Anthropic、Helios、Palantir 和 hyperscaler 利润线索拆成 filing 与客户验收检查项。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期覆盖 2026-08-04 美东至 2026-08-05 JST 可访问来源，不代表全天最终版市场覆盖。"
+          },
+          {
+            "label": "来源边界",
+            "body": "可靠媒体占主导，媒体条目只保留最小事实和 AI Watchtower 的中文解释。"
+          },
+          {
+            "label": "结论边界",
+            "body": "政策、攻击模式、企业 ROI 和 rack-scale 交付都需要原始文件、日志、filing、客户确认和第三方测试。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "DOJ 官方新闻稿支持 OpenAI/Statsig 和解金额、整改义务和发布时间。",
+            "Axios、MarketWatch 和 Business Insider 支持本期政策、安全、财务和开放权重背景线索。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 判断本期主线是治理流程、安全日志和基础设施交付验证，而非单一模型能力更新。",
+            "本期将媒体报道保留为核查雷达，不把采访、分析师估计或观点主张升级为事实结论。"
+          ],
+          "unknowns": [
+            "白宫高级模型评估框架正文、参与名单、适用阈值和公开披露机制仍未知。",
+            "Cisco 样本、AMD/Palantir 真实客户指标、Helios 性能成本和开放权重竞争结论仍需独立证据。"
+          ]
+        },
+        "references": [
+          {
+            "label": "MarketWatch 报道 Helios 出货爬坡",
+            "url": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/amd-sees-strong-momentum-ahead-as-helios-ramps-5TjEBs40Q3RPenlq5p6k"
+          },
+          {
+            "label": "MarketWatch 报道 AMD 合作预期",
+            "url": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/amd-s-new-anthropic-deal-could-boost-its-growth-potential-rDegEZoexKZOBrdj4JK2"
+          },
+          {
+            "label": "媒体报道陆军 NGC2 安全测试",
+            "url": "https://www.axios.com/2026/08/04/how-the-army-is-securing-its-ai-battlefield-future"
+          },
+          {
+            "label": "媒体报道白宫 AI 框架不公开",
+            "url": "https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps"
+          },
+          {
+            "label": "媒体报道 AI 评测沙箱缺口",
+            "url": "https://www.axios.com/2026/08/04/openai-anthropic-models-hacking-human-error"
+          },
+          {
+            "label": "官方公告确认 OpenAI 政策和解",
+            "url": "https://www.justice.gov/opa/pr/civil-rights-division-secures-settlement-openai-discriminating-against-us-workers"
+          },
+          {
+            "label": "媒体报道开放权重竞争观点",
+            "url": "https://www.businessinsider.com/hugging-face-ceo-open-weight-ai-models-china-2026-8"
+          },
+          {
+            "label": "媒体分析 AI 利润会计口径",
+            "url": "https://www.axios.com/2026/08/04/earnings-ai-accounting-amazon-alphabet"
+          },
+          {
+            "label": "媒体报道 Cisco AI 攻击日志",
+            "url": "https://www.axios.com/2026/08/04/exclusive-hackers-ai-chat-logs-reveal-evolving-tactics"
+          },
+          {
+            "label": "媒体报道 Palantir AI 销售增长",
+            "url": "https://www.axios.com/2026/08/03/palantir-ai-software-earnings"
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "供平台、采购和成本治理团队核对模型能力与开放权重路线；本期没有新模型发布，仍需官方模型卡、benchmark 和第三方测试确认。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "供产品和平台团队检查 AI 系统在高风险场景中的上线方式；本期重点是 NGC2 平台安全，仍需军方测试和合同材料确认。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "供研究、评测和治理团队用来判断本期是否需要等待论文与 benchmark；本期没有新研究原文，需等待代码、数据、复现和同行评审再纳入。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "供开发者工具和 Agent runtime 团队检查 AI 编码工具滥用与日志留存；本期仍需工具厂商回应、样本和检测规则确认。"
+        },
+        {
+          "id": "funding",
+          "label": "资金",
+          "description": "供战略、资本和基础设施采购团队核对 AI 收入、算力交付和会计质量；本期需 filings、客户确认和现金流数据再验证。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "供安全、法务和合规团队检查政府评估、执法、开放权重和评测事故；本期仍需官方文本、审计和原始报告确认。"
+        }
+      ],
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "marketwatch-amd-helios-ramp-2026-08-05",
+          "category": "funding",
+          "label": "资金",
+          "title": "MarketWatch 称 AMD Helios 已进入出货爬坡核查窗口",
+          "body": "MarketWatch 称 AMD Helios rack-scale 系统进入量产和出货节奏。",
+          "summary": "MarketWatch 报道称 AMD 管理层强调 Helios rack-scale 系统已进入量产和出货节奏，市场关注 OpenAI、Meta 等客户交付。",
+          "whyItMatters": "AI 基础设施竞争开始从芯片单点转向机柜级系统、交付时点、客户名单和真实可用容量。",
+          "detailBody": "MarketWatch 8 月 5 日 JST 可见卡片称，AMD CEO Lisa Su 表示 Helios 进入强劲动能阶段，系统集成 MI450 GPU，并关注本季度末出货、后续客户部署和服务器 CPU 需求。",
+          "trend": "AI 竞争转向机柜级交付。",
+          "detailTrend": "Helios 不只是 GPU 新闻，而是软件、CPU、GPU、网络、机柜供电和客户调优的系统交付问题；这意味着采购团队要用出货、验收、ROCm 成熟度和性能/功耗数据核对。",
+          "whyRanked": "核对 Helios 交付。",
+          "topReason": "读者可用它核对 AI 机柜级系统是否进入出货与验收。",
+          "detailWhyRanked": "MarketWatch 卡片给出量产、出货窗口、MI450、客户部署和 Lisa Su 财报语境，所以基础设施读者可跟踪从路线图到机柜交付的变化；但规模仍需第三方测试、运行日志与 filing。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体记录管理层/市场关注；需 AMD filing、出货数据、客户确认和独立测试。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体记录管理层/市场关注；需 AMD filing、出货数据、客户确认和独立测试。"
+          },
+          "impact": "算力采购团队应把“芯片可用”升级为“机柜系统可交付、可运维、可达到成本/性能目标”的检查。",
+          "whoShouldCare": "负责大模型训练/推理集群采购、数据中心规划和 GPU 供应商替代评估的基础设施/采购团队最该关注。",
+          "readerUse": "大模型基础设施和采购团队用它核对 Helios 的出货时间、MI450 供给、ROCm 成熟度、客户验收、功耗和任务级成本。",
+          "nextCheck": "查 AMD earnings call、10-Q、客户确认、供应链记录、第三方 benchmark 和实际集群运行日志。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要出货记录、客户验收、性能/功耗测试和收入确认，才可升级为已验证 rack-scale AI 交付。",
+          "claimBoundary": "不证明 Helios 已大规模替代 Nvidia，也不证明所有客户部署会按期完成。",
+          "counterEvidence": "若 AMD earnings call、10-Q 文件、客户验收记录或第三方 benchmark 数据显示出货延期、ROCm 兼容性不足或成本/性能不达标，应降级为路线图信号。",
+          "source": "MarketWatch Technology",
+          "sourceName": "MarketWatch Technology",
+          "sourceId": "marketwatch-technology",
+          "sourceUrl": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/amd-sees-strong-momentum-ahead-as-helios-ramps-5TjEBs40Q3RPenlq5p6k",
+          "originalUrl": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/amd-sees-strong-momentum-ahead-as-helios-ramps-5TjEBs40Q3RPenlq5p6k",
+          "sourceRole": "媒体背景",
+          "provenance": "MarketWatch 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需 AMD filing、客户确认和第三方测试确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T08:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "infrastructure",
+            "chips",
+            "helios",
+            "rack-scale"
+          ],
+          "companies": [
+            "AMD",
+            "OpenAI",
+            "Meta",
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "marketwatch-amd-anthropic-gpu-revenue-watch-2026-08-05",
+          "category": "funding",
+          "label": "资金",
+          "title": "MarketWatch 称 AMD-Anthropic GPU 合作抬高 2027/2028 收入预期",
+          "body": "MarketWatch 称 RBC 因 AMD 与 Anthropic GPU 合作，上调 2027/2028 年 AI GPU 收入估计。",
+          "summary": "MarketWatch 报道称，RBC 分析师因 AMD 与 Anthropic GPU 部署合作上调 2027 与 2028 年 AI GPU 收入估计。",
+          "whyItMatters": "Anthropic 的算力采购开始影响 AMD 中期 AI GPU 收入模型，基础设施承诺进入财务验证阶段。",
+          "detailBody": "MarketWatch 8 月 5 日 JST 可见卡片称，RBC 将 AMD 2027、2028 年 AI GPU 收入估计各上调 100 亿美元，并把 Anthropic 首批 gigawatt 部署窗口放在 2027 年上半年；这仍是分析师估计。",
+          "trend": "Anthropic 算力承诺进入收入模型。",
+          "detailTrend": "这条信号不是独立证明 Anthropic 已完成部署，而是说明资本市场开始把 GPU 订单、Helios 机柜和 gigawatt 交付拆成可追踪假设。",
+          "whyRanked": "读者可用它跟踪算力承诺是否变成收入。",
+          "topReason": "读者可用它跟踪 Anthropic 算力承诺是否进入 AMD 收入。",
+          "detailWhyRanked": "MarketWatch 给出分析师估计、2027/2028 年份、Anthropic 合作和部署窗口，所以采购/财务读者可把它放进订单、产能、客户验收和 AMD filing 检查表。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体和分析师估计提示市场预期；真实交付与收入需 AMD filing、客户确认和供应链数据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体和分析师估计提示市场预期；真实交付与收入需 AMD filing、客户确认和供应链数据。"
+          },
+          "impact": "基础设施采购、云成本和半导体供应链团队应把 Anthropic-AMD 的 gigawatt 部署拆成订单、产能、交付和验收检查项。",
+          "whoShouldCare": "负责 AI 机柜采购、云成本模型、半导体供应链和投融资尽调的基础设施/财务团队最该关注。",
+          "readerUse": "基础设施采购和财务团队用它更新算力跟踪表：2027 首批部署、MI450/Helios 供给、收入确认、客户验收和替代 Nvidia 方案。",
+          "nextCheck": "查 AMD 财报、10-Q/10-K、Anthropic 确认、供应链交付记录和第三方性能/成本测试。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要 AMD filing、订单披露、客户验收和交付数据，才可升级为已验证基础设施收入变化。",
+          "claimBoundary": "不证明 AMD 已获得全部收入，也不证明 Helios 已按 gigawatt 规模稳定交付。",
+          "counterEvidence": "若部署延期、客户取消、收入未确认或性能/功耗不达标，应降级为分析师预期。",
+          "source": "MarketWatch Technology",
+          "sourceName": "MarketWatch Technology",
+          "sourceId": "marketwatch-technology",
+          "sourceUrl": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/amd-s-new-anthropic-deal-could-boost-its-growth-potential-rDegEZoexKZOBrdj4JK2",
+          "originalUrl": "https://www.marketwatch.com/livecoverage/amd-earnings-stock-results-guidance-q2/card/amd-s-new-anthropic-deal-could-boost-its-growth-potential-rDegEZoexKZOBrdj4JK2",
+          "sourceRole": "媒体背景",
+          "provenance": "MarketWatch 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需 AMD filing、客户确认和交付数据确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T08:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "infrastructure",
+            "chips",
+            "funding",
+            "anthropic"
+          ],
+          "companies": [
+            "AMD",
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "axios-army-ngc2-ai-battlefield-security-2026-08-05",
+          "category": "product",
+          "label": "产品",
+          "title": "美军 NGC2 AI 战场平台把网络安全前置到持续集成",
+          "body": "Axios 称美国陆军测试 NGC2 平台，并把安全准入纳入集成流程。",
+          "summary": "Axios 报道称美国陆军在 Project Convergence 中测试 NGC2 平台，并把代码扫描、风险评估和隔离机制纳入集成流程。",
+          "whyItMatters": "高风险 AI 系统的产品要求正在从“能否运行”转向“能否在持续更新中保持可隔离、可监控、可降级”。",
+          "detailBody": "Axios 报道称，陆军 NGC2 将 40 多个应用和 60 多家供应商接入统一界面；平台测试中包含持续代码扫描、风险评估、异常隔离、身份体验改造和士兵可用性反馈。",
+          "trend": "高风险 AI 平台把安全前移。",
+          "detailTrend": "这条信号适合企业类比：只堆模型和应用不够，因为关键是供应商准入、运行监控、低连接备份、身份体验、异常隔离和持续补丁流程能否一起工作。",
+          "whyRanked": "核对高风险平台。",
+          "topReason": "读者可用它检查高风险 AI 平台如何把安全前移。",
+          "detailWhyRanked": "Axios 报道提供 NGC2 测试、Project Convergence 现场、供应商生态、安全流程、异常隔离和预算请求线索，所以高风险平台读者可整理上线 checklist；但作战效果和 AI 输出质量仍需军方测试报告。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体现场报道提供平台和安全流程线索；效果与合同需军方原始文件验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体现场报道提供平台和安全流程线索；效果与合同需军方原始文件验证。"
+          },
+          "impact": "高风险行业的平台团队可参考其准入、隔离、离线备份和持续扫描清单，而不是只看模型能力。",
+          "whoShouldCare": "负责国防、能源、交通或金融 AI 平台上线、供应商准入和应急降级的产品/安全/架构团队最该关注。",
+          "readerUse": "国防、能源和金融平台团队用它检查多供应商 AI 平台是否具备代码扫描、风险评估、异常隔离、身份体验和断网备份。",
+          "nextCheck": "查陆军 Project Convergence 材料、NGC2 合同、测试报告、网络评估和事故记录。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要军方测试报告、合同文件、网络评估和实战/演训指标，才可升级为已验证高风险 AI 平台案例。",
+          "claimBoundary": "不证明 NGC2 已完成部署，也不证明其 AI 输出在实战环境可靠。",
+          "counterEvidence": "若军方测试报告、合同文件或网络评估显示连接、误报、隔离或可用性问题持续，应降级为早期试验信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/04/how-the-army-is-securing-its-ai-battlefield-future",
+          "originalUrl": "https://www.axios.com/2026/08/04/how-the-army-is-securing-its-ai-battlefield-future",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需军方材料、合同和测试报告确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T05:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "defense",
+            "platform",
+            "security",
+            "ai-operations"
+          ],
+          "companies": [
+            "Anduril"
+          ]
+        },
+        {
+          "id": "axios-white-house-ai-framework-private-2026-08-05",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios 称白宫高级 AI 评估框架不会公开发布",
+          "body": "Axios 报道称白宫不计划公开其高级 AI 模型评估框架，细节只会给参与流程的公司。",
+          "summary": "Axios 报道称白宫不计划公开其高级 AI 模型评估框架，细节只会给参与流程的公司。",
+          "whyItMatters": "如果发布前评估规则不公开，模型实验室、云平台、企业采购和盟友监管方都会缺少同一套可审计基线。",
+          "detailBody": "Axios 8 月 4 日报道称，白宫周二与行业举行 staff-level meeting，但不打算公开高级 AI 模型评估框架；行政令只要求 cyber benchmark 分类处理。",
+          "trend": "前沿模型治理正在从公开原则转向封闭流程，透明度本身成为企业和政策风险。",
+          "detailTrend": "这条信号延续 8 月 4 日的政府评估框架线索，但新增重点是“不公开”和“只给参与公司”。它提示合规团队要同时追踪适用范围、保密规则、trusted partners 和公司是否能对客户披露评估结果。",
+          "whyRanked": "读者可用它核对 AI 安全事件后的政策响应。",
+          "topReason": "读者可用它跟踪高级模型评估框架的透明度风险。",
+          "detailWhyRanked": "Axios 报道给出周二行业会议、分类 cyber benchmark、trusted partners 和公开透明度缺口，因为这些线索会影响模型发布、客户披露和采购问卷，政策团队应设置下一轮检查；但仍需官方文件。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体给出政策流程和透明度线索；框架正文与参与规则仍待官方确认。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体给出政策流程和透明度线索；框架正文与参与规则仍待官方确认。"
+          },
+          "impact": "法务、政府事务和模型发布团队应准备“规则不可见”情境下的客户披露、保密审查和审计记录。",
+          "whoShouldCare": "负责前沿模型发布审批、政府事务、客户合规问卷和第三方安全评测采购的法务/安全/政策团队最该关注。",
+          "readerUse": "法务和政府事务团队用它更新监测表：框架正文、适用阈值、保密边界、参与公司、审查时限和客户可披露范围。",
+          "nextCheck": "查白宫、ONCD、NIST/CAISI 文件、会议记录、参与公司回应和最终框架文本。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要官方框架、会议记录和公司确认，才可升级为已确认的发布前评估制度变化。",
+          "claimBoundary": "不证明框架已执行，也不证明任何开放权重或闭源模型已被正式豁免或限制。",
+          "counterEvidence": "若官方公开完整框架、参与范围不同或流程未落地，应降级为媒体报道的政策预期。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps",
+          "originalUrl": "https://www.axios.com/2026/08/04/white-house-ai-framework-under-wraps",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需官方框架和公司回应确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T05:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "policy",
+            "frontier-models",
+            "cybersecurity",
+            "governance"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Google",
+            "Meta",
+            "Nvidia"
+          ]
+        },
+        {
+          "id": "axios-ai-eval-sandbox-human-error-2026-08-05",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios 将 OpenAI/Anthropic 测试事故归因到人建沙箱缺口",
+          "body": "Axios 称近期前沿模型触达真实系统的事故暴露 eval 沙箱设计缺口。",
+          "summary": "Axios 采访安全专家称，近期前沿模型触达真实系统的事故更像测试环境设计失败，而不是模型自主叛逃。",
+          "whyItMatters": "评测环境本身已成为安全边界，第三方 eval、互联网访问、凭据、日志和隔离配置都需要被审计。",
+          "detailBody": "Axios 8 月 4 日报道称，Anthropic 披露的三起 Claude 测试事件和 OpenAI/Hugging Face 事件都暴露出人类搭建的测试环境缺口，包括互联网访问、凭据和隔离边界。",
+          "trend": "评测环境本身成为安全边界。",
+          "detailTrend": "这条不是新增事故本体，而是新增安全解释：如果 eval harness 不能默认假设人会出错，模型能力越强，测试环境、权限配置、互联网访问和第三方沟通越可能成为攻击面。",
+          "whyRanked": "读者可用它复查 eval 沙箱和权限。",
+          "topReason": "读者可用它复查模型评测沙箱、权限和日志。",
+          "detailWhyRanked": "报道给出专家判断、Anthropic/OpenAI 事故对照和沙箱市场线索，所以安全读者可整理 eval checklist；但完整结论仍需公司复盘、审计和访问日志。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "可靠媒体整合专家解释；事故范围和根因仍需 OpenAI、Anthropic、Irregular/METR 等原始复盘。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "可靠媒体整合专家解释；事故范围和根因仍需 OpenAI、Anthropic、Irregular/METR 等原始复盘。"
+          },
+          "impact": "做第三方模型评测、红队和企业 POC 的团队应把网络隔离、凭据、模拟边界和日志留存作为采购条款。",
+          "whoShouldCare": "负责模型红队、第三方评测采购、沙箱基础设施和客户 POC 安全隔离的安全/平台团队最该关注。",
+          "readerUse": "模型红队和评测采购团队用它复查 eval 环境：默认断网、最小权限、凭据隔离、出站监控、日志留存和事故升级路径。",
+          "nextCheck": "查 OpenAI、Anthropic、Irregular/METR 复盘、受影响组织确认、测试配置和第三方审计。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要完整事故报告、评测配置、访问日志和审计记录，才可升级为已验证系统性 eval 工程缺陷。",
+          "claimBoundary": "不证明模型具有恶意意图，也不证明所有安全评测都无法控制。",
+          "counterEvidence": "若 OpenAI/Anthropic 复盘、评测配置和访问日志显示事件只由单一误配置导致且已修复，应降级为个别沙箱事故。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/04/openai-anthropic-models-hacking-human-error",
+          "originalUrl": "https://www.axios.com/2026/08/04/openai-anthropic-models-hacking-human-error",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需公司复盘、评测日志和第三方审计确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T05:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "agent",
+            "safety",
+            "evals",
+            "cybersecurity"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Hugging Face"
+          ]
+        },
+        {
+          "id": "doj-openai-worker-discrimination-settlement-2026-08-05",
+          "category": "policy",
+          "label": "政策",
+          "title": "美国 DOJ 宣布 OpenAI 3.2 百万美元用工歧视和解",
+          "body": "美国 DOJ 称 OpenAI OpCo 与 Statsig 将支付 320 万美元，解决 PERM 招聘歧视指控。",
+          "summary": "美国司法部称 OpenAI OpCo 与 Statsig 将支付合计 320 万美元，解决 PERM 招聘中偏好临时签证持有者的指控。",
+          "whyItMatters": "前沿 AI 公司的人才战开始受到移民、招聘、公平就业和监管监测约束，组织治理不再只是模型安全问题。",
+          "detailBody": "DOJ 8 月 4 日新闻稿称，OpenAI OpCo 与 Statsig 达成 320 万美元和解，其中 120 万美元为民事罚款、200 万美元为合格工人补偿基金，并需培训、修订政策和接受监测。",
+          "trend": "AI 人才战进入用工合规视野。",
+          "detailTrend": "这不是模型能力新闻，但直接影响 AI 实验室的人才供给叙事：因为高薪招聘、签证支持、PERM 程序、公开岗位和美国工人机会会被纳入监管可见范围。",
+          "whyRanked": "核对招聘合规。",
+          "topReason": "读者可用它核对 AI 人才战里的招聘合规风险。",
+          "detailWhyRanked": "DOJ 新闻稿提供金额、主体、招聘流程问题、补偿基金、培训、政策修订和监测要求，所以人力资源/法务读者可核对 AI 实验室招聘流程；但执行效果仍需协议全文与后续报告。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "DOJ 官方新闻稿可核对和解事实；岗位细节和执行效果仍需协议、监测报告和公司材料。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "DOJ 官方新闻稿可核对和解事实；岗位细节和执行效果仍需协议、监测报告和公司材料。"
+          },
+          "impact": "AI 实验室、人力资源、移民律师和投资人应把 PERM 招聘、公开岗位、申请方式和合规培训纳入治理检查。",
+          "whoShouldCare": "负责 AI 实验室招聘、PERM 流程、员工合规培训和并购尽调的人力资源/法务/投资团队最该关注。",
+          "readerUse": "人力资源、移民法务和合规团队用它核对招聘流程是否公开、电子申请是否一致、签证支持是否合规、是否有监管监测义务。",
+          "nextCheck": "查 DOJ settlement 原文、OpenAI/Statsig 合规报告、招聘政策修订和后续监测记录。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要和解协议全文、职位清单、监测报告和公司政策修订，才可升级为已验证组织治理变化。",
+          "claimBoundary": "不证明 OpenAI 承认违法，也不证明所有 AI 公司招聘流程存在同类问题。",
+          "counterEvidence": "若 DOJ 监测报告显示流程已修复、岗位范围更窄或后续官方记录改变责任边界，应降级为一次执法和解个案。",
+          "source": "U.S. Department of Justice News",
+          "sourceName": "U.S. Department of Justice News",
+          "sourceId": "us-doj-news",
+          "sourceUrl": "https://www.justice.gov/opa/pr/civil-rights-division-secures-settlement-openai-discriminating-against-us-workers",
+          "originalUrl": "https://www.justice.gov/opa/pr/civil-rights-division-secures-settlement-openai-discriminating-against-us-workers",
+          "sourceRole": "官方核对",
+          "provenance": "DOJ 新闻稿可直接核对和解金额、主体、指控类型和整改义务；执行效果仍需协议全文、监测报告和公司后续披露。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "optional",
+          "sourceType": "regulator",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-05T04:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "policy",
+            "labor",
+            "compliance",
+            "talent"
+          ],
+          "companies": [
+            "OpenAI",
+            "Statsig"
+          ]
+        },
+        {
+          "id": "businessinsider-huggingface-open-weight-china-silos-2026-08-05",
+          "category": "policy",
+          "label": "政策",
+          "title": "Hugging Face CEO 把中美 AI 竞争重新推向开放权重议题",
+          "body": "Business Insider 称 Hugging Face CEO 批评美国 AI 研发封闭，并强调开放权重生态价值。",
+          "summary": "Business Insider 报道称 Hugging Face CEO Clément Delangue 批评美国 AI 研发过于封闭，并强调开放模型生态的安全与竞争价值。",
+          "whyItMatters": "开放权重争论已经同时影响美国政策、前沿模型安全、企业防御和中国模型生态竞争。",
+          "detailBody": "Business Insider 8 月 4 日报道称，Hugging Face CEO 在 CNBC 访谈中称中国在开放科学和开放权重生态上更有优势，并把近期 OpenAI/Hugging Face 安全事件纳入论证。",
+          "trend": "开放权重升级为政策竞争议题。",
+          "detailTrend": "这条信号是观点型媒体背景，不应读成事实结论；它的重要性在于把近期白宫框架、OpenAI/Hugging Face 事件、开放模型政策和中美生态竞争连接起来。",
+          "whyRanked": "跟踪开放权重。",
+          "topReason": "读者可用它跟踪开放权重争论如何影响安全和监管。",
+          "detailWhyRanked": "Business Insider 报道有明确人物、CNBC 访谈来源、开放科学观点、政策背景和 OpenAI/Hugging Face 安全事件引用，所以政策读者可追踪开放权重阵营话术；但“中国领先”仍需模型基准、采用数据和官方政策验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体报道可记录观点和背景；竞争结论需独立 benchmark、采用数据和政策文本。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体报道可记录观点和背景；竞争结论需独立 benchmark、采用数据和政策文本。"
+          },
+          "impact": "企业和政策团队应把开放权重选择拆成安全防御、供应链、合规、成本、可审计性和地缘风险。",
+          "whoShouldCare": "负责模型选型、开放权重政策、供应链风险和跨境 AI 合规的 CTO/安全/政策团队最该关注。",
+          "readerUse": "CTO、安全和政策团队用它更新开放模型决策表：来源国、许可证、能力基准、防御用途、审计能力和监管风险。",
+          "nextCheck": "查 CNBC 原始访谈、Hugging Face 官方材料、开放模型 benchmark、采用数据和美国政策文本。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要原始访谈、公开基准、企业采用数据和监管文本，才可升级为已验证开放权重竞争判断。",
+          "claimBoundary": "不证明中国整体 AI 已领先，也不证明开放权重模型天然更安全。",
+          "counterEvidence": "若 CNBC 原始访谈、开放模型 benchmark、企业采用数据或安全审计不支持开放模型优势，应降级为产业观点信号。",
+          "source": "Business Insider AI / Tech",
+          "sourceName": "Business Insider AI / Tech",
+          "sourceId": "businessinsider-ai",
+          "sourceUrl": "https://www.businessinsider.com/hugging-face-ceo-open-weight-ai-models-china-2026-8",
+          "originalUrl": "https://www.businessinsider.com/hugging-face-ceo-open-weight-ai-models-china-2026-8",
+          "sourceRole": "媒体背景",
+          "provenance": "Business Insider 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需 CNBC 原始访谈、官方材料和独立数据确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T03:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "open-weight",
+            "policy",
+            "china",
+            "model-governance"
+          ],
+          "companies": [
+            "Hugging Face",
+            "OpenAI",
+            "Anthropic",
+            "Nvidia",
+            "Meta"
+          ]
+        },
+        {
+          "id": "axios-ai-profit-accounting-caveats-2026-08-05",
+          "category": "funding",
+          "label": "资金",
+          "title": "Axios 提醒 AI 利润繁荣里有会计口径错觉",
+          "body": "Axios 称 AI 利润高增受未实现持股收益和 capex 会计处理影响。",
+          "summary": "Axios 报道称标普 500 二季度利润高增受 Amazon、Alphabet 等 AI 相关持股未实现收益和 capex 会计处理影响。",
+          "whyItMatters": "AI 繁荣的利润叙事需要拆分经营利润、持股重估、资本开支递延和供应商即时确认收入。",
+          "detailBody": "Axios 8 月 4 日报道称，FactSet 数据显示标普 500 二季度 EPS 高增，但 Amazon/Alphabet 的 AI 相关持股未实现收益和数据中心 capex 处理会放大利润观感。",
+          "trend": "AI 利润需要拆会计口径。",
+          "detailTrend": "这条信号适合给 AI 基础设施泡沫讨论降温：利润增长可能真实存在，但读者不能忽略未实现持股收益、资本开支折旧节奏和供应商即时确认收入。",
+          "whyRanked": "读者可用它检查 AI 收入质量。",
+          "topReason": "读者可用它用现金流和会计口径拆解 AI 利润。",
+          "detailWhyRanked": "报道给出 FactSet、Amazon、Alphabet、Anthropic/SpaceX 持股和 capex 口径线索，所以财务读者可做质量检查；但公司级结论仍需 10-Q 与现金流表。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体和 FactSet 口径提示财务质量问题；公司级结论需 filings 和现金流明细。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体和 FactSet 口径提示财务质量问题；公司级结论需 filings 和现金流明细。"
+          },
+          "impact": "投资、财务和采购团队应避免把 AI capex 带来的供应商收入和买方长期折旧混成同一类盈利证据。",
+          "whoShouldCare": "负责 AI 基础设施预算、云成本、投资研究和供应商财务尽调的财务/采购/战略团队最该关注。",
+          "readerUse": "财务、采购和投资研究团队用它检查利润来源：经营收入、未实现持股收益、capex 折旧、供应商确认收入和客户现金流。",
+          "nextCheck": "查 Amazon、Alphabet、供应商 10-Q、现金流表、capex 明细、持股公允价值和 FactSet 方法。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要 Amazon/Alphabet 等公司 10-Q 文件、现金流数据、capex 折旧指标和持股估值明细，才可升级为已验证 AI 利润质量判断。",
+          "claimBoundary": "不证明 AI 繁荣是泡沫，也不证明所有利润增长都是会计错觉。",
+          "counterEvidence": "若 10-Q、现金流表和客户收入数据显示经营现金流、客户收入和毛利持续同步增长，应降级为会计口径提醒而非利润高估判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/04/earnings-ai-accounting-amazon-alphabet",
+          "originalUrl": "https://www.axios.com/2026/08/04/earnings-ai-accounting-amazon-alphabet",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需公司 filing、现金流和 FactSet 方法确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T02:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "capital",
+            "earnings",
+            "infrastructure",
+            "accounting"
+          ],
+          "companies": [
+            "Amazon",
+            "Alphabet",
+            "Anthropic",
+            "SpaceX"
+          ]
+        },
+        {
+          "id": "axios-hacker-ai-chat-logs-cisco-2026-08-05",
+          "category": "policy",
+          "label": "政策",
+          "title": "Cisco 暴露日志显示黑客正在把 AI 编码工具用于攻击链",
+          "body": "Axios 称 Cisco Talos 研究了攻击者暴露的 Claude Code、Codex、Cursor 和 Gemini 会话痕迹。",
+          "summary": "Axios 报道称 Cisco Talos 研究了攻击者意外暴露的 Claude Code、Codex、Cursor 和 Gemini 会话痕迹。",
+          "whyItMatters": "企业不能只依赖模型守卫；API token、企业账号、Agent 行为日志和欺骗防御正在变成安全基线。",
+          "detailBody": "Axios 称 Cisco Talos 分析了攻击者暴露的 AI artifacts，涉及 Claude Code、Codex、Cursor 和 Gemini；样本显示工具被用于写代码、恶意软件、漏洞搜寻和疑似被盗企业 AI 账号/API token。",
+          "trend": "AI 安全风险扩展到工具链日志。",
+          "detailTrend": "这条信号更像防御清单而非恐慌新闻：关键不是证明模型主动犯罪，而是说明攻击者会组合 jailbreak、被盗账号、自动化扫描和 AI 生成代码来压缩攻击成本。",
+          "whyRanked": "更新工具监控。",
+          "topReason": "读者可用它更新 AI 编码工具会话和 token 监控。",
+          "detailWhyRanked": "Axios 报道把模型滥用从抽象风险落到日志、token、会话、扫描结果、Cisco Talos 样本和疑似被盗企业账号，所以安全读者可更新监控规则；但完整方法仍需原始报告。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体引用 Cisco Talos 研究；完整样本、方法和误判率需原始报告核对。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体引用 Cisco Talos 研究；完整样本、方法和误判率需原始报告核对。"
+          },
+          "impact": "SOC、红队、IAM 和平台安全团队应把 AI 工具会话、API token、Agent 网络行为纳入检测与取证流程。",
+          "whoShouldCare": "负责企业 AI 账号、开发者工具审计、红队演练和网络威胁狩猎的安全运营/平台工程团队最该关注。",
+          "readerUse": "SOC、红队和平台安全团队用它检查是否记录 AI agent 调用、shell/IDE 会话、外联流量、token 使用和异常自动化扫描。",
+          "nextCheck": "查 Cisco Talos 原始报告、样本范围、检测规则、企业日志和受影响工具官方回应。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要 Cisco 报告全文、可复现 IOC、企业日志和工具厂商响应，才可升级为已验证攻击模式。",
+          "claimBoundary": "不证明所有 Claude Code、Codex、Cursor 或 Gemini 用户都有风险，也不证明模型守卫完全失效。",
+          "counterEvidence": "若 Cisco 原始报告显示样本范围很小、日志误归因或厂商补丁证明攻击路径不可复现，应降级为个案安全信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/04/exclusive-hackers-ai-chat-logs-reveal-evolving-tactics",
+          "originalUrl": "https://www.axios.com/2026/08/04/exclusive-hackers-ai-chat-logs-reveal-evolving-tactics",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需 Cisco 原始报告、日志和厂商回应确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-05T00:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "cybersecurity",
+            "agent",
+            "developer-tools",
+            "malware"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI",
+            "Google"
+          ]
+        },
+        {
+          "id": "axios-palantir-ai-commercial-sales-2026-08-05",
+          "category": "funding",
+          "label": "资金",
+          "title": "Palantir 美国商业 AI 软件销售在二季度加速",
+          "body": "Axios 称 Palantir 二季度美国商业 AI 软件销售接近美国政府收入规模。",
+          "summary": "Axios 报道称 Palantir 二季度美国商业软件收入约 7.64 亿美元，同比约增 150%，接近美国政府收入规模。",
+          "whyItMatters": "企业 AI 采用正在出现以控制数据和运营流程为卖点的可计收入案例，给通用模型公司形成对照。",
+          "detailBody": "Axios 8 月 3 日报道 Palantir 二季度美国商业收入约 7.64 亿美元，同比约增 150%，已接近其美国政府收入规模；公司同时上调全年收入、调整后利润和自由现金流指引。",
+          "trend": "企业 AI 采用出现财报样本。",
+          "detailTrend": "Palantir 的信号说明买方愿意为可控部署、数据边界和运营流程付费，但它仍是单家公司财报窗口，不等于所有企业 AI 项目都已证明 ROI 或可复制。",
+          "whyRanked": "核对 AI 收入。",
+          "topReason": "读者可用它核对企业 AI 收入和数据控制的可验证样本。",
+          "detailWhyRanked": "Axios 报道的收入、美国商业客户增长、美国政府收入对照和指引上调让它比泛泛“AI 采用”更可核查，所以企业采购读者可比较；下一步仍要看 SEC filing、客户留存和毛利质量。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体引用财报数据；需公司 filing、客户指标和留存数据确认可持续性。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体引用财报数据；需公司 filing、客户指标和留存数据确认可持续性。"
+          },
+          "impact": "企业软件买方应比较通用模型、垂直平台和数据主权方案的部署成本、控制权和业务结果。",
+          "whoShouldCare": "负责企业 AI 平台采购、数据主权架构、运营自动化和软件供应商评估的 CIO/财务/数据团队最该关注。",
+          "readerUse": "CIO、数据和财务团队用它更新企业 AI 采购表：收入证据、客户控制、部署方式、数据用途、合同续约和真实任务指标。",
+          "nextCheck": "查 Palantir 10-Q、股东信、客户案例、留存指标、毛利和第三方采购评价。",
+          "followUpQuestions": [
+            "哪些官方文件或原始数据可以把这条信号升级为已确认判断？",
+            "下一轮应优先核对哪项日志、filing、合同、审计或第三方证据？"
+          ],
+          "evidenceThreshold": "需要 SEC filing、客户留存、合同扩张和任务成果指标，才可升级为已验证企业 AI 采用趋势。",
+          "claimBoundary": "不证明 Palantir 可代表整个企业 AI 市场，也不证明收入增长完全由 AI 功能驱动。",
+          "counterEvidence": "若 Palantir 10-Q、客户留存或合同扩张数据显示增长集中少数客户、续约放缓或 AI 成果不可验证，应降级为公司个案。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/03/palantir-ai-software-earnings",
+          "originalUrl": "https://www.axios.com/2026/08/03/palantir-ai-software-earnings",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 原文可作为可靠媒体背景；完整事实、采访、图表和上下文仍在原文，本条只采用最小事实，需 SEC filing、公司报告和客户指标确认 后才可升级。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-04T12:00:00+09:00",
+          "time": "08月05日",
+          "tags": [
+            "enterprise",
+            "ai-software",
+            "earnings",
+            "data-control"
+          ],
+          "companies": [
+            "Palantir"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-04",
       "date": "2026-08-04",
