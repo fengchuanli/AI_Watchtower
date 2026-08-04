@@ -470,7 +470,7 @@
         "note": "官方工程说明可核对架构和发布事实；外部体验仍需独立测试。"
       },
       "impact": "语音产品、Agent 平台和实时通信团队应检查媒体快路径、工具慢路径隔离、长会话状态迁移和生产观测。",
-      "whoShouldCare": "语音 AI、桌面 Agent、实时通信和平台可靠性团队应关注 GPT-Live 把语音交互变成持续在线系统。",
+      "whoShouldCare": "最该关注的是做语音助手、桌面 Agent、实时会议协作和平台可靠性排障的产品/工程团队。",
       "readerUse": "产品和工程团队用它更新实时语音 Agent 的延迟、状态、委托和观测指标。",
       "nextCheck": "查 GPT-Live API 文档、外部延迟测试、可用性指标、隐私说明、安全评测和开发者反馈。",
       "followUpQuestions": [
@@ -537,7 +537,7 @@
         "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
       },
       "impact": "企业文档自动化、审计、法务和数据团队应要求抽取系统报告证据页、字段完整性和每份文档成本。",
-      "whoShouldCare": "企业数据、法务运营、采购和文档 Agent 团队应关注抽取准确率之外的完整性与溯源。",
+      "whoShouldCare": "最该关注的是要把合同、表单、票据和业务档案交给 Agent 处理的数据、法务、审计和采购团队。",
       "readerUse": "评测团队用它更新文档 Agent benchmark，加入 record completeness、grounding 和成本指标。",
       "nextCheck": "查 Hugging Face 数据集、GitHub 代码、评测脚本、许可证和第三方复测结果。",
       "followUpQuestions": [
@@ -602,7 +602,7 @@
         "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
       },
       "impact": "ML 平台、AutoML、科研自动化和模型评测团队应加入连续实验、日志解释和预算使用指标。",
-      "whoShouldCare": "AutoML、科研 Agent 和模型评测团队应关注多轮实验优化是否真的持续进步。",
+      "whoShouldCare": "最该关注的是正在评估 AutoML 助手、科研实验 Agent 和模型调参流程能否进入真实工作台的研发/评测团队。",
       "readerUse": "评测团队用它设计 sequential intervention 测试，核对 Agent 是否能从日志和指标中学习下一步。",
       "nextCheck": "查任务代码、baseline 设置、日志样本、随机种子、执行预算和第三方复测。",
       "followUpQuestions": [
@@ -667,7 +667,7 @@
         "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
       },
       "impact": "企业治理、安全、医疗、工业和交通场景团队应把轨迹、运行证据和审计结构放入上线门槛。",
-      "whoShouldCare": "合规、安全、行业应用和 Agent 平台团队应关注组件测试之外的轨迹级 assurance。",
+      "whoShouldCare": "最该关注的是正在把 Agent 接入医疗、工业、交通或企业流程的合规、安全和平台治理团队。",
       "readerUse": "治理团队用它更新 Agent 上线 清单，加入运行证据、时序有效性和监管可读性。",
       "nextCheck": "查综述引用表、行业监管文件、案例数据、运行监控工具和第三方审计方法。",
       "followUpQuestions": [
@@ -732,7 +732,7 @@
         "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
       },
       "impact": "MCP、插件、企业自动化和安全平台团队应审计工具 schema、权限描述、观察注入和拒答退化。",
-      "whoShouldCare": "Agent 工具平台、MCP 集成、安全评测和企业自动化团队应关注工具说明是否放大风险。",
+      "whoShouldCare": "最该关注的是负责 MCP 连接器、企业工具权限、自动化插件和安全评测用例的工程/安全团队。",
       "readerUse": "安全团队用它检查工具 schema、观察输入和执行权限是否需要独立安全判定层。",
       "nextCheck": "查论文代码、数据、benchmark、更多模型复测、业务误拒率和真实工具注入测试。",
       "followUpQuestions": [
@@ -797,7 +797,7 @@
         "note": "来源可核对核心发布事实；结论仍需独立证据、运行数据或复现。"
       },
       "impact": "金融、采购、审批、合规和 Agent runtime 团队应检查工具返回值绑定、数值漂移和政策执行是否一起认证。",
-      "whoShouldCare": "合规工程、金融科技、采购自动化和 Agent runtime 团队应关注工具返回不确定性下的越权风险。",
+      "whoShouldCare": "最该关注的是正在让 Agent 处理转账、审批、采购和敏感账户操作的合规工程、金融科技和 runtime 团队。",
       "readerUse": "工程团队用它更新授权 gate 测试，把来源绑定错误、数值漂移和可执行政策一起纳入。",
       "nextCheck": "查代码仓库、policy-as-code 样例、真实交易测试、审计日志和性能开销。",
       "followUpQuestions": [
@@ -862,7 +862,7 @@
         "note": "官方披露细节充分且有明确下一步审计路径；外部确认仍未完整公开。"
       },
       "impact": "安全、法务、模型评测和供应商管理团队应把外部 eval 环境纳入生产级隔离、监控、凭证和事故响应流程。",
-      "whoShouldCare": "AI 安全、红队、合规和第三方评测采购团队应关注评测环境是否具备生产级隔离与审计。",
+      "whoShouldCare": "最该关注的是正在采购第三方模型评测、组织红队演练或开放测试沙箱的安全、合规和法务团队。",
       "readerUse": "安全团队用它更新模型评测供应商问卷、网络隔离测试、日志留存和事故通知流程。",
       "nextCheck": "查 Irregular 后续调查、METR 第三方复审、红acted transcript、受影响组织确认和修复记录。",
       "followUpQuestions": [
@@ -930,7 +930,7 @@
         "note": "官方可核对价格和可用性；效果需客户账单和任务指标验证。"
       },
       "impact": "企业平台、成本治理 和开发者工具团队应重新测算高频 Agent 任务的模型路由、缓存、重试和质量阈值。",
-      "whoShouldCare": "AI 平台、采购、成本治理 和开发者自动化团队应关注 GPT-5.6 成本变化是否改变模型路由策略。",
+      "whoShouldCare": "最该关注的是正在重算 GPT-5.6 调用预算、模型路由、缓存策略和开发者自动化成本的 AI 平台/采购团队。",
       "readerUse": "平台团队用它更新模型选择矩阵，把任务价值、错误成本、延迟和每次成功结果成本放在一起评估。",
       "nextCheck": "查 OpenAI API 价格页、AWS rollout、真实账单、任务成功率、延迟和重试率。",
       "followUpQuestions": [
@@ -997,7 +997,7 @@
         "note": "官方工程细节多；外部可复现性和客户侧成本仍需验证。"
       },
       "impact": "AI 基础设施、开发工具和平台团队应审查 prompt cache、上下文追加、工具顺序和推理配置是否可观测。",
-      "whoShouldCare": "AI infra、开发者工具和 Agent 平台团队应关注效率瓶颈是否在模型之外。",
+      "whoShouldCare": "最该关注的是负责推理服务、Agent harness、开发者工具链和任务成功率排障的基础设施/平台团队。",
       "readerUse": "工程团队用它更新推理栈优化清单，核查缓存命中、上下文膨胀、工具调用次数和 kernel 验证。",
       "nextCheck": "查 Triton/Gluon/FpSan 资料、外部复测、成本曲线、缓存命中率和真实 Agent 任务日志。",
       "followUpQuestions": [
@@ -1064,7 +1064,7 @@
         "note": "官方项目范围清楚；科研效果仍需机构和论文侧证据。"
       },
       "impact": "高校、实验室、科研资助方和数据治理团队应准备使用政策、成果标注、隐私审查和可复现实验要求。",
-      "whoShouldCare": "科研机构、PI、资助方和学术 IT 团队应关注免费前沿模型访问带来的治理与复现压力。",
+      "whoShouldCare": "最该关注的是正在申请前沿模型资源、管理实验室账号或制定科研数据治理规则的 PI、资助方和学术 IT 团队。",
       "readerUse": "科研机构团队、PI、学术 IT 和资助方用它更新 AI 工具准入、数据使用、成果署名、复现和研究诚信清单。",
       "nextCheck": "查参与机构名单、ChatGPT Edu 协议、研究者使用政策、论文披露规范和独立生产率评估。",
       "followUpQuestions": [

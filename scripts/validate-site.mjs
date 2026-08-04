@@ -1198,7 +1198,8 @@ if (
   !/Day 23[\s\S]*topicContinuity[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(optimizationDecisionIndex) ||
   !/Day 24[\s\S]*media-specific source reminders[\s\S]*original article/.test(optimizationDecisionIndex) ||
   !/Day 25[\s\S]*counterEvidence[\s\S]*observable outcome/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
+  !/Day 26[\s\S]*whoShouldCare[\s\S]*concrete Chinese reader/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 27/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

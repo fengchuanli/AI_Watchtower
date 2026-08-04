@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 4, Detail Briefing And Continuity
-- Last indexed run: 2026-08-03 20:00 JST
+- Last indexed run: 2026-08-04 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -47,12 +47,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 23 | Complete | `f95e99b` | Current and latest archived editions now include `topicContinuity` notes for recurring topics, with each note marking the signal as stronger, weaker, or repeated and naming what still needs proof. |
 | Day 24 | Complete | `54400ea` | Detail pages now render media-specific source reminders that name the original article as the home for complete facts, and validation guards current/latest media items against weakening that boundary. |
 | Day 25 | Complete | `08401c4` | `docs/counter-evidence-observable-guide.md` now tells editors when `counterEvidence` should name a concrete observable outcome instead of another document, especially for adoption, deployment, safety, performance, cost, and policy-effect claims. |
+| Day 26 | Complete | pending | Current and latest archived `whoShouldCare` copy now names concrete Chinese reader/work contexts, and validation rejects generic observer/practitioner labels or audience lists without a scenario. |
 
 ## Next Useful Task
 
-- Continue with Day 26: review promoted-item `whoShouldCare` copy for concrete Chinese reader groups rather than generic "industry observers."
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 25 first.
-- If Day 26 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 27: add an editorial rule for not promoting vivid vendor narratives unless independent proof is named in the first-screen card copy.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 26 first.
+- If Day 27 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

@@ -996,8 +996,21 @@ function validateWhoShouldCare(item, context) {
     return;
   }
 
-  if (item.whoShouldCare.length < 24 || !/团队|读者|用户|负责人|投资|采购|法务|合规|政策|业务/.test(item.whoShouldCare)) {
-    errors.push(`${context} ${item.id} whoShouldCare must name a concrete audience.`);
+  const audienceCopy = String(item.whoShouldCare);
+
+  if (
+    audienceCopy.length < 32 ||
+    !/团队|读者|用户|负责人|投资|采购|法务|合规|政策|业务|工程|产品|审计|安全|研发/.test(audienceCopy)
+  ) {
+    errors.push(`${context} ${item.id} whoShouldCare must name concrete Chinese reader groups.`);
+  }
+
+  if (/industry observers|行业观察者|相关团队|相关从业者|AI 从业者|技术人员|业内人士/i.test(audienceCopy)) {
+    errors.push(`${context} ${item.id} whoShouldCare must avoid generic observer or practitioner labels.`);
+  }
+
+  if (!/负责|正在|要把|需要|使用|部署|采购|评估|审计|运营|排障|治理|规划|上线|接入|处理/.test(audienceCopy)) {
+    errors.push(`${context} ${item.id} whoShouldCare must include the concrete work setting that makes the audience relevant.`);
   }
 
   if (item.readerUse && normalizedCopy(item.whoShouldCare) === normalizedCopy(item.readerUse)) {
