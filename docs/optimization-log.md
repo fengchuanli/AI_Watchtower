@@ -18,7 +18,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
-- Commit: planned message `补充08点AI新闻情报`; push will be retried after commit.
+- Commit: Local content commit `c48a2a8` with message `补充08点AI新闻情报`; this follow-up log note records the push blocker.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-04 20:00 JST
 
