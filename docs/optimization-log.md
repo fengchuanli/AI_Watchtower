@@ -26,8 +26,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Pending local implementation commit; follow-up log entry will record the final hash after commit.
-- Git note: Push not attempted yet for this implementation; if `git push origin main` is still DNS-blocked, a follow-up log note will record it.
+- Commit: Local implementation commit `2c1cb12` (`细化关心读者场景`); this follow-up log/index note records the implementation hash before push.
+- Git note: Push not attempted yet for this follow-up; if `git push origin main` is still DNS-blocked, a final log note will record it.
 
 ## 2026-08-04 08:13 JST
 

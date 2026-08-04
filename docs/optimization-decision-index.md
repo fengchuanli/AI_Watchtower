@@ -47,7 +47,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 23 | Complete | `f95e99b` | Current and latest archived editions now include `topicContinuity` notes for recurring topics, with each note marking the signal as stronger, weaker, or repeated and naming what still needs proof. |
 | Day 24 | Complete | `54400ea` | Detail pages now render media-specific source reminders that name the original article as the home for complete facts, and validation guards current/latest media items against weakening that boundary. |
 | Day 25 | Complete | `08401c4` | `docs/counter-evidence-observable-guide.md` now tells editors when `counterEvidence` should name a concrete observable outcome instead of another document, especially for adoption, deployment, safety, performance, cost, and policy-effect claims. |
-| Day 26 | Complete | pending | Current and latest archived `whoShouldCare` copy now names concrete Chinese reader/work contexts, and validation rejects generic observer/practitioner labels or audience lists without a scenario. |
+| Day 26 | Complete | `2c1cb12` | Current and latest archived `whoShouldCare` copy now names concrete Chinese reader/work contexts, and validation rejects generic observer/practitioner labels or audience lists without a scenario. |
 
 ## Next Useful Task
 
