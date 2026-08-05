@@ -74,6 +74,7 @@ When a source is mainly a company narrative, customer story, policy proposal, be
 - Keep `verificationStatus: "已核验"` only when the central sentence is limited to "this vendor made this claim or proposal" and the page supports that sentence.
 - Require `provenance`, `claimBoundary`, `nextCheck`, and `evidenceThreshold` to name the missing external confirmation, such as customer-side metrics, paper replication, regulator text, contract filing, audit result, or independent benchmark.
 - Write `nextCheck` as the immediate independent-evidence path for readers: it should name the specific customer, third-party, paper, regulator, audit, filing, contract, original-data, or expert-review source to check next, not just say "继续观察" or repeat the vendor's own page.
+- Before promoting one of these items into TOP3, apply `docs/vendor-narrative-promotion-rule.md`; the homepage card's first-screen reason fields must name the independent proof path instead of relying on narrative appeal.
 - Downgrade or skip the item if the narrative is vivid but the source cannot support a concrete event, timeline, tension, and next verification step.
 
 ## Automation Notes

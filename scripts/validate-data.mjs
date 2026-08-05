@@ -441,6 +441,36 @@ function validateVendorClaimBoundary(item, context) {
   }
 }
 
+function hasIndependentEvidencePath(value) {
+  return /客户|用户|监管|立法|法律|论文|复现|审计|第三方|独立|基准|benchmark|合同|文件|数据|指标|原文|实验室|专家|评测|部署|上线|公告|报告|filing|10-Q|10-K|采购|日志|记录|复核/.test(
+    String(value || ""),
+  );
+}
+
+function validatePromotedVendorNarrativeCard(item, context) {
+  if (item.sourceRole !== "厂商主张") {
+    return;
+  }
+
+  const itemLabel = `${context} ${item.id || "unknown item"}`;
+  const firstScreenText = [item.summary, item.whyItMatters, item.whyRanked, item.topReason, item.readerUse, item.nextCheck].join(
+    "\n",
+  );
+  const visibleReasonText = [item.whyItMatters, item.whyRanked, item.topReason, item.readerUse].join("\n");
+
+  if (!hasIndependentEvidencePath(firstScreenText)) {
+    errors.push(
+      `${itemLabel} is a promoted vendor narrative and must name independent proof in first-screen card copy such as summary, whyItMatters, whyRanked, topReason, readerUse, or nextCheck.`,
+    );
+  }
+
+  if (!hasIndependentEvidencePath(visibleReasonText)) {
+    errors.push(
+      `${itemLabel} must put the vendor-claim proof path in at least one visible reason field, not only in hidden verification sections.`,
+    );
+  }
+}
+
 function validateMediaSourceReminder(item, context) {
   const sourceType = String(item.sourceType || "").trim();
   const sourceRole = String(item.sourceRole || "").trim();
@@ -1236,6 +1266,7 @@ if (!Array.isArray(newsFeed.items)) {
     validateWhoShouldCare(item, "data/news.json promoted item");
     validateIncidentBriefingReadiness(item, "data/news.json promoted item");
     validateEvidenceThresholdSpecificity(item, "data/news.json promoted item");
+    validatePromotedVendorNarrativeCard(item, "data/news.json promoted item");
   }
 }
 
@@ -1760,6 +1791,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
         validateDetailParagraphLength(item, "data/news-history.json latest promoted item");
         validateMediaSourceReminder(item, "data/news-history.json latest item");
+        validatePromotedVendorNarrativeCard(item, "data/news-history.json latest promoted item");
       }
 
       validateVendorClaimBoundary(item, "data/news-history.json item");

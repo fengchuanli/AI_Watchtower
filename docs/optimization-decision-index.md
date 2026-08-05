@@ -6,8 +6,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
-- Current phase: Phase 4, Detail Briefing And Continuity
-- Last indexed run: 2026-08-04 20:00 JST
+- Current phase: Phase 5, Validation, QA, And Next Cycle
+- Last indexed run: 2026-08-05 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -48,12 +48,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 24 | Complete | `54400ea` | Detail pages now render media-specific source reminders that name the original article as the home for complete facts, and validation guards current/latest media items against weakening that boundary. |
 | Day 25 | Complete | `08401c4` | `docs/counter-evidence-observable-guide.md` now tells editors when `counterEvidence` should name a concrete observable outcome instead of another document, especially for adoption, deployment, safety, performance, cost, and policy-effect claims. |
 | Day 26 | Complete | `2c1cb12` | Current and latest archived `whoShouldCare` copy now names concrete Chinese reader/work contexts, and validation rejects generic observer/practitioner labels or audience lists without a scenario. |
+| Day 27 | Complete | `pending` | `docs/vendor-narrative-promotion-rule.md` now blocks vivid vendor narratives from TOP3 unless first-screen card copy names the independent proof path; validation checks promoted vendor items across current and latest archive data. |
 
 ## Next Useful Task
 
-- Continue with Day 27: add an editorial rule for not promoting vivid vendor narratives unless independent proof is named in the first-screen card copy.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 26 first.
-- If Day 27 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 28: add or refine a lightweight validation guard for whichever new workflow document became most important during this cycle.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 27 first.
+- If Day 28 is already complete, continue with the next useful task from the current plan.
 
 ## Update Rules
 

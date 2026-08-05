@@ -32,6 +32,7 @@ const originalSourceReplacementGuide = readFileSync("docs/original-source-replac
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const counterEvidenceObservableGuide = readFileSync("docs/counter-evidence-observable-guide.md", "utf8");
 const detailPageReviewGuide = readFileSync("docs/detail-page-review-guide.md", "utf8");
+const vendorNarrativePromotionRule = readFileSync("docs/vendor-narrative-promotion-rule.md", "utf8");
 const updateRunChecklist = readFileSync("docs/update-run-checklist.md", "utf8");
 const currentToHistoryPublicationChecklist = readFileSync(
   "docs/current-to-history-publication-checklist.md",
@@ -801,6 +802,30 @@ if (
 }
 
 if (
+  !/Vendor Narrative Promotion Rule/.test(vendorNarrativePromotionRule) ||
+  !/Promotion Gate/.test(vendorNarrativePromotionRule) ||
+  !/Required First-Screen Shape/.test(vendorNarrativePromotionRule) ||
+  !/first-screen card copy/.test(vendorNarrativePromotionRule) ||
+  !/summary/.test(vendorNarrativePromotionRule) ||
+  !/whyItMatters/.test(vendorNarrativePromotionRule) ||
+  !/whyRanked/.test(vendorNarrativePromotionRule) ||
+  !/topReason/.test(vendorNarrativePromotionRule) ||
+  !/nextCheck/.test(vendorNarrativePromotionRule) ||
+  !/customer-side metric/.test(vendorNarrativePromotionRule) ||
+  !/third-party benchmark/.test(vendorNarrativePromotionRule) ||
+  !/vendor-narrative-promotion-rule\.md/.test(readme) ||
+  !/vendor-narrative-promotion-rule\.md/.test(newsDataFormat) ||
+  !/vendor-narrative-promotion-rule\.md/.test(editorialChecklist) ||
+  !/vendor-narrative-promotion-rule\.md/.test(sourcePolicy) ||
+  !/validatePromotedVendorNarrativeCard/.test(validateDataJs) ||
+  !/promoted vendor narrative/.test(validateDataJs) ||
+  !/first-screen card copy/.test(validateDataJs) ||
+  !/Day 27[\s\S]*vendor-narrative-promotion-rule\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Promoted vendor narratives must name independent proof in first-screen card copy and keep the rule linked from editorial docs.");
+}
+
+if (
   !/Detail Page Review Guide/.test(detailPageReviewGuide) ||
   !/When To Use It/.test(detailPageReviewGuide) ||
   !/Four-Block Review/.test(detailPageReviewGuide) ||
@@ -1160,7 +1185,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-06-24 through 2026-07-23/.test(optimizationDecisionIndex) ||
-  !/Phase 4, Detail Briefing And Continuity/.test(optimizationDecisionIndex) ||
+  !/Phase 5, Validation, QA, And Next Cycle/.test(optimizationDecisionIndex) ||
   !/Previous Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
   !/Previous Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
@@ -1199,7 +1224,8 @@ if (
   !/Day 24[\s\S]*media-specific source reminders[\s\S]*original article/.test(optimizationDecisionIndex) ||
   !/Day 25[\s\S]*counterEvidence[\s\S]*observable outcome/.test(optimizationDecisionIndex) ||
   !/Day 26[\s\S]*whoShouldCare[\s\S]*concrete Chinese reader/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 27/.test(optimizationDecisionIndex) ||
+  !/Day 27[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*first-screen card copy/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 28/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

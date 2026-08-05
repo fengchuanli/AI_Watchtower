@@ -1,3 +1,37 @@
+## 2026-08-05 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 27 task. Added an editorial rule for not promoting vivid vendor narratives unless independent proof is named in first-screen card copy.
+- Changed files:
+  - `docs/vendor-narrative-promotion-rule.md`
+  - `README.md`
+  - `docs/news-data-format.md`
+  - `docs/editorial-checklist.md`
+  - `docs/source-policy.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `docs/vendor-narrative-promotion-rule.md` so editors must check vendor-authored customer stories, benchmark pages, policy proposals, and outcome narratives before TOP3 promotion.
+  - Clarified that first-screen card copy means `summary`, `whyItMatters`, `whyRanked`, `topReason`, `readerUse`, and `nextCheck`, and that at least one visible reason field should name independent proof such as customer-side metrics, third-party benchmarks, filings, audits, regulator text, deployment logs, original data, or expert review.
+  - Linked the rule from README, source policy, editorial checklist, and news data format; advanced the decision index so Day 28 is the next useful task.
+  - Added data validation for promoted `sourceRole: "厂商主张"` items in the current feed and latest archive snapshot so narrative appeal cannot hide the independent-proof path in deeper verification fields only.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, source-policy/editorial/data-format docs, homepage TOP3 rendering fields, and validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 35 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending local commit with message `增加厂商叙事提升规则`; hash will be recorded after commit.
+- Git note: Push pending; retry `git push origin main` after committing and when GitHub DNS/network access returns.
+
 ## 2026-08-05 08:14 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-05`，发布 10 条政策透明度、评测安全、AI 工具滥用、企业采用、用工执法和 AI 基础设施财务核查信号。
