@@ -29,8 +29,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `c5778cc` (`增加厂商叙事提升规则`); this follow-up log/index note records the implementation hash.
-- Git note: Push pending; retry `git push origin main` after committing and when GitHub DNS/network access returns.
+- Commit: Local implementation commit `c5778cc` (`增加厂商叙事提升规则`) and hash-record follow-up commit `66727f0` (`记录厂商叙事规则哈希`); this push-blocker note creates the final local follow-up commit recorded in automation memory.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-05 08:14 JST
 
