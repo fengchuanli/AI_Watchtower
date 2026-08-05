@@ -48,7 +48,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 24 | Complete | `54400ea` | Detail pages now render media-specific source reminders that name the original article as the home for complete facts, and validation guards current/latest media items against weakening that boundary. |
 | Day 25 | Complete | `08401c4` | `docs/counter-evidence-observable-guide.md` now tells editors when `counterEvidence` should name a concrete observable outcome instead of another document, especially for adoption, deployment, safety, performance, cost, and policy-effect claims. |
 | Day 26 | Complete | `2c1cb12` | Current and latest archived `whoShouldCare` copy now names concrete Chinese reader/work contexts, and validation rejects generic observer/practitioner labels or audience lists without a scenario. |
-| Day 27 | Complete | `pending` | `docs/vendor-narrative-promotion-rule.md` now blocks vivid vendor narratives from TOP3 unless first-screen card copy names the independent proof path; validation checks promoted vendor items across current and latest archive data. |
+| Day 27 | Complete | `c5778cc` | `docs/vendor-narrative-promotion-rule.md` now blocks vivid vendor narratives from TOP3 unless first-screen card copy names the independent proof path; validation checks promoted vendor items across current and latest archive data. |
 
 ## Next Useful Task
 
