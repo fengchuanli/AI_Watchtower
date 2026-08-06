@@ -23,7 +23,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
 - Commit: Local implementation commit `e701b59` (`强化厂商叙事文档校验`); this follow-up log note records the implementation hash.
-- Git note: Push pending; network status will be recorded after the push attempt.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns. Final local follow-up commit records this blocker.
 
 ## 2026-08-06 08:12 JST
 
