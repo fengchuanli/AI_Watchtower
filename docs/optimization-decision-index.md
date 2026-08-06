@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-06-24 through 2026-07-23
 - Current phase: Phase 5, Validation, QA, And Next Cycle
-- Last indexed run: 2026-08-05 20:00 JST
+- Last indexed run: 2026-08-06 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -49,12 +49,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 25 | Complete | `08401c4` | `docs/counter-evidence-observable-guide.md` now tells editors when `counterEvidence` should name a concrete observable outcome instead of another document, especially for adoption, deployment, safety, performance, cost, and policy-effect claims. |
 | Day 26 | Complete | `2c1cb12` | Current and latest archived `whoShouldCare` copy now names concrete Chinese reader/work contexts, and validation rejects generic observer/practitioner labels or audience lists without a scenario. |
 | Day 27 | Complete | `c5778cc` | `docs/vendor-narrative-promotion-rule.md` now blocks vivid vendor narratives from TOP3 unless first-screen card copy names the independent proof path; validation checks promoted vendor items across current and latest archive data. |
+| Day 28 | Complete | `pending` | `scripts/validate-site.mjs` now guards the vendor-narrative workflow document itself, including source-role, first-screen field list, evidence-quality floor, stop conditions, and independent proof examples. |
 
 ## Next Useful Task
 
-- Continue with Day 28: add or refine a lightweight validation guard for whichever new workflow document became most important during this cycle.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 27 first.
-- If Day 28 is already complete, continue with the next useful task from the current plan.
+- Continue with Day 29: summarize what improved during this 30-day cycle and list remaining weaknesses.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 28 first.
+- If Day 29 is already complete, continue with Day 30 and write the next 30-day plan.
 
 ## Update Rules
 

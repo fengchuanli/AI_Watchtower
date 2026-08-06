@@ -810,9 +810,17 @@ if (
   !/whyItMatters/.test(vendorNarrativePromotionRule) ||
   !/whyRanked/.test(vendorNarrativePromotionRule) ||
   !/topReason/.test(vendorNarrativePromotionRule) ||
+  !/readerUse/.test(vendorNarrativePromotionRule) ||
   !/nextCheck/.test(vendorNarrativePromotionRule) ||
+  !/sourceRole` is `厂商主张`/.test(vendorNarrativePromotionRule) ||
+  !/evidenceQuality` is lower than 3/.test(vendorNarrativePromotionRule) ||
+  !/nextCheck`, `evidenceThreshold`, `claimBoundary`, and `counterEvidence`/.test(vendorNarrativePromotionRule) ||
+  !/Stop Conditions/.test(vendorNarrativePromotionRule) ||
   !/customer-side metric/.test(vendorNarrativePromotionRule) ||
   !/third-party benchmark/.test(vendorNarrativePromotionRule) ||
+  !/customer-side deployment metrics|客户侧部署指标/.test(vendorNarrativePromotionRule) ||
+  !/filing/.test(vendorNarrativePromotionRule) ||
+  !/audit|审计/.test(vendorNarrativePromotionRule) ||
   !/vendor-narrative-promotion-rule\.md/.test(readme) ||
   !/vendor-narrative-promotion-rule\.md/.test(newsDataFormat) ||
   !/vendor-narrative-promotion-rule\.md/.test(editorialChecklist) ||
@@ -1225,7 +1233,8 @@ if (
   !/Day 25[\s\S]*counterEvidence[\s\S]*observable outcome/.test(optimizationDecisionIndex) ||
   !/Day 26[\s\S]*whoShouldCare[\s\S]*concrete Chinese reader/.test(optimizationDecisionIndex) ||
   !/Day 27[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*first-screen card copy/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex) ||
+  !/Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 29/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

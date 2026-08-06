@@ -1,3 +1,23 @@
+## 2026-08-06 20:00 JST
+
+- Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 28 task. Refined the lightweight site validation guard for the vendor narrative promotion workflow document, because it is the latest high-risk content-quality rule affecting homepage TOP3 framing.
+- Changed files:
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Strengthened the `docs/vendor-narrative-promotion-rule.md` validation coverage without changing news facts or source claims.
+  - The site validator now keeps the workflow document from losing the `readerUse` first-screen field, `sourceRole: "厂商主张"` posture, evidence-quality floor, aligned `nextCheck` / `evidenceThreshold` / `claimBoundary` / `counterEvidence` boundary, stop conditions, and concrete independent-proof examples.
+  - Advanced the decision index so Day 29 is the next useful task: summarize this cycle's improvements and remaining weaknesses.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/vendor-narrative-promotion-rule.md`, and relevant validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Pending: lightweight checks will be recorded after this entry is committed.
+- Commit: Pending.
+- Git note: Push pending; network status will be recorded after the push attempt.
+
 ## 2026-08-06 08:12 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-06`，发布 10 条政策分层、Google AI 组织调整、开发者 Agent、芯片算力、端侧推理和 AI 天气商业化信号。
