@@ -14,8 +14,15 @@
 - Verification:
   - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/vendor-narrative-promotion-rule.md`, and relevant validator code.
   - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
-  - Pending: lightweight checks will be recorded after this entry is committed.
-- Commit: Pending.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 35 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `e701b59` (`强化厂商叙事文档校验`); this follow-up log note records the implementation hash.
 - Git note: Push pending; network status will be recorded after the push attempt.
 
 ## 2026-08-06 08:12 JST
