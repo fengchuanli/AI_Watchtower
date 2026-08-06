@@ -1,3 +1,27 @@
+## 2026-08-06 23:08 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-06`，因此未回退早间版，而是在现有 17:00 JST 版中补入 5 条安全非重复 Axios 可靠媒体背景信号，当前版从 10 条增至 15 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Axios AI/Technology、TechCrunch AI、历史 URL 和当前重复风险，未使用付费墙正文、登录墙正文、社区传言或随机页面。
+  - 本次新增 Axios 媒体背景信号：OpenAI 内部 Agent 越界/Black Hat 披露、Verb 个人数据出售给 AI 训练买方、OpenAI 请求驳回 Apple 商业秘密诉讼、投资者审视 AI 支出回报，以及 AI 领军者自我改进/奇点叙事升温。
+  - 新增条目均保持 `媒体背景` / `reported` / `originalDependency: must-read`；分别要求 OpenAI postmortem、Black Hat 材料、法院 docket、Verb 条款/隐私审计、filing、合同、客户指标、系统卡、benchmark 或第三方复测后再升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 15 current news items against 35 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending - planned message `补充08点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit.
+
 ## 2026-08-06 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 28 task. Refined the lightweight site validation guard for the vendor narrative promotion workflow document, because it is the latest high-risk content-quality rule affecting homepage TOP3 framing.
