@@ -1,3 +1,29 @@
+## 2026-08-09 08:13 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-09`，发布 8 条可靠媒体 AI 新闻情报，聚焦模型/Agent 越界、安全评测供应链、白宫测试框架、选举 deepfake、AI 创作披露和浏览器 Agent 权限风险。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/news-data-format.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Axios AI/Technology、TechCrunch AI、AP Technology、The Verge AI、WIRED Security、历史 URL 和重复风险，未使用付费墙正文、登录墙正文、社区传言或随机页面。
+  - 本轮没有足够多的安全非重复官方发布可凑满 10 条，因此只发布 8 条可靠媒体背景信号；全部保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 新增登记来源 `ap-technology` 与 `wired-security`；本期要求官方复盘、AISI 报告、研究 PoC、沙箱配置审计、测试日志、州法文本、法院 docket、合同、制作记录、厂商修复和第三方复测后再升级结论。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 39 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local content commit uses message `更新17点AI新闻情报`; this log note records the push blocker.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
+
 ## 2026-08-07 08:13 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-07`，发布 10 条 ChatGPT 入口、生物安全、AI 账号攻击面、AI 音乐治理、数据中心政治、Nvidia 安全组织、劳动分配和长对话风险信号。

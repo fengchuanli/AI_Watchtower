@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-09",
   "policy": {
     "primaryRule": "Prefer official sources and RSS feeds. Use media reports for context. Treat community posts as trend signals until confirmed by official sources or reliable reporting.",
     "language": "Summaries for the site should be written in Chinese, with source links preserved.",
@@ -592,6 +592,38 @@
       "hasRss": false,
       "language": "en",
       "notes": "Use for CrowdStrike threat-intelligence, AI security, agent security, and incident-response updates; treat vendor telemetry and product outcome claims as vendor claims until independently corroborated."
+    },
+    {
+      "id": "ap-technology",
+      "name": "Associated Press Technology",
+      "url": "https://apnews.com/hub/technology",
+      "feedUrl": null,
+      "category": [
+        "technology",
+        "policy",
+        "company",
+        "safety"
+      ],
+      "trustLevel": "reliable_media",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Use for wire-service technology coverage and company/regulatory AI context; keep full AP reporting in the original source."
+    },
+    {
+      "id": "wired-security",
+      "name": "WIRED Security",
+      "url": "https://www.wired.com/category/security/",
+      "feedUrl": "https://www.wired.com/feed/category/security/latest/rss",
+      "category": [
+        "security",
+        "policy",
+        "tool",
+        "infrastructure"
+      ],
+      "trustLevel": "reliable_media",
+      "hasRss": true,
+      "language": "en",
+      "notes": "Use for security reporting that intersects AI systems, privacy, surveillance, and infrastructure risk; retain original context in WIRED."
     }
   ]
 }
