@@ -1,8 +1,1070 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-09",
-  "totalItems": 378,
+  "updatedAt": "2026-08-10",
+  "totalItems": 388,
   "editions": [
+    {
+      "id": "news-1700-2026-08-10",
+      "date": "2026-08-10",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦 Agent 权限、评测治理、企业 AI 成本、算力与健康产品。",
+      "operationalStatus": "GitHub DNS 阻塞 pull；已按来源政策复核可靠来源和历史重复。",
+      "editorialInterpretation": "本期显示 AI 竞争从模型发布转向权限、评测、支出和基础设施治理；仍需官方文件升级。",
+      "readerFrame": {
+        "headline": "阅读本期：先查 Agent 权限、评测治理和企业 AI 成本",
+        "whyItMatters": "这 10 条适合把开发者 Agent、模型评测、浏览器自动化、企业支出、数据中心和健康产品放进同一张核查表。",
+        "mobile": {
+          "headline": "手机先看权限治理",
+          "summary": "全部为媒体雷达，先查官方文件、日志、合同和指标。",
+          "primaryUses": [
+            "工程团队查权限。",
+            "政策团队查评测。",
+            "企业用户查成本。"
+          ],
+          "proofBoundary": "不能当作官方结论，仍需官方文件复核。"
+        },
+        "useThisIssueFor": [
+          "工程和安全团队用本期检查 Claude Code auto mode、Agent 浏览器、会话日志、命令权限和回滚机制。",
+          "政策和采购团队用本期检查 AI 安全评测、数据中心许可、健康产品隐私和企业 AI 支出治理。",
+          "产品和企业用户用本期更新办公内容生成、搜索实验、健康数据连接和员工 ROI 指标。"
+        ],
+        "notProvenYet": [
+          "不能证明 Claude Code、Kitesurf 或 ChatGPT Health 的最终默认行为，仍需官方公告、帮助中心和实际日志。",
+          "不证明安全评测已经系统性失效，也不证明数据中心、芯片或企业 ROI 线索已经落地，仍需文件、指标和第三方复核。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "相较 8 月 9 日版，本期从模型越界转向产品化治理和成本核算",
+        "freshFacts": [
+          "本期新增来源事实：TechCrunch 报道 Claude Code auto mode 默认状态、AI 安全测试风险和 Source Foundry 芯片投资。",
+          "本期新增来源事实：TechCrunch 报道 OpenAI 收购 NextSlide、Cloudflare Kitesurf、Rippling AI ROI 工具和 Airbnb AI 搜索实验。",
+          "本期新增来源事实：TechCrunch 报道 Amazon 数据中心排放风险和 ChatGPT Health 面向美国用户扩大。"
+        ],
+        "repeatedContext": [
+          "延续背景：上一版已覆盖 Astra、Kimi、Meta 和 AISI 相关评测越界线索。",
+          "仍是同一主线：Agent 权限、测试隔离、政策边界和企业采用都需要官方材料升级。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查 Agent 与工具权限",
+          "count": 3,
+          "meaning": "用来检查 Claude Code、Kitesurf 和办公内容工具的默认权限、日志、确认和回滚。"
+        },
+        {
+          "label": "核对治理与敏感场景",
+          "count": 3,
+          "meaning": "用来核对安全评测、AI 政策叙事、健康数据和产品责任边界。"
+        },
+        {
+          "label": "验证企业与算力证据",
+          "count": 4,
+          "meaning": "用来核对芯片融资、数据中心许可、AI ROI、Airbnb 采用和成本指标。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 10,
+          "role": "可靠媒体用于提示本期 10 条雷达信号；事实细节、采访、图表和上下文仍在原文。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体雷达版",
+        "note": "全部来自可靠媒体，适合排查不适合定论。",
+        "nextCheck": "查官方公告、合同、日志、指标和第三方复核。"
+      },
+      "sourceConcentration": {
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 10,
+        "share": "10/10",
+        "note": "全部来自同一来源 owner，需防止单一来源过读。",
+        "nextCheck": "用官方、监管、独立媒体和第三方复现交叉验证。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent-permission-governance",
+          "label": "Agent 权限前置",
+          "note": "跨期看，浏览器 Agent、代码 Agent 和模型评测连续把默认权限推到前台。",
+          "boundary": "不证明所有 Agent 产品默认危险，仍需官方文档、日志、审计和第三方复核。"
+        },
+        {
+          "topic": "enterprise-ai-cost-control",
+          "label": "成本进入审计",
+          "note": "延续历史版 AI 支出和算力讨论，本期再次出现员工 ROI、芯片和数据中心线索。",
+          "boundary": "不能证明投资回报或容量已经兑现，仍需财报、合同、采购数据和指标确认。"
+        },
+        {
+          "topic": "sensitive-ai-products",
+          "label": "敏感产品扩张",
+          "note": "跨期看，健康、创作和政策场景连续要求更细的数据权限和责任边界。",
+          "boundary": "不证明合规风险已经解决，仍需监管文件、官方政策、用户数据和第三方审计。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "权限信号增强",
+          "status": "stronger",
+          "previousPattern": "上一版连续覆盖模型/Agent 评测越界和浏览器动作风险。",
+          "currentSignal": "本期新增 Claude Code auto mode 和 Cloudflare Kitesurf，继续把执行权限推到产品默认层。",
+          "signalDirection": "增强：从评测越界推进到开发工具和浏览器运行时。",
+          "stillUnproven": "不证明默认配置最终如何落地，仍需官方公告、帮助文件、日志和第三方测试。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力约束重复",
+          "status": "repeated",
+          "previousPattern": "历史归档多次覆盖芯片、云支出、数据中心和电力许可。",
+          "currentSignal": "本期新增芯片投资和 Amazon 数据中心排放风险，再次显示算力供应链压力。",
+          "signalDirection": "重复：资本和能源约束继续出现，但证据仍是媒体报道。",
+          "stillUnproven": "不能证明容量或排放结果，仍需财报、合同、许可文件、能源数据和监管报告。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "企业采用细化",
+          "status": "stronger",
+          "previousPattern": "此前归档覆盖企业 Agent、AI 账号和工作流替代。",
+          "currentSignal": "本期新增 Rippling ROI 工具、Airbnb 搜索实验和 OpenAI NextSlide 收购报道。",
+          "signalDirection": "增强：从采用口号推进到费用、办公对象和产品指标。",
+          "stillUnproven": "不证明 ROI 已验证，仍需客户指标、财务记录、上线数据和第三方审计。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "办公与健康扩展",
+          "lastMention": "上一版连续提到 OpenAI Astra、政策团队和 ChatGPT 入口。",
+          "whatChanged": "本期新增 NextSlide 收购报道和 ChatGPT Health 扩大报道，OpenAI 从模型入口推进到办公与健康场景。",
+          "stillUnproven": "不证明交易条款或健康可用范围，仍需 OpenAI 官方公告、产品文件、隐私政策和监管材料。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "代码权限治理",
+          "lastMention": "历史归档多次覆盖 Claude Code、Fable/Mythos 安全和 Anthropic 评测事件。",
+          "whatChanged": "本期新增 Claude Code auto mode 默认状态报道，把 Anthropic 的开发者工具竞争转向权限治理。",
+          "stillUnproven": "尚未由官方确认最终默认策略，仍需 Anthropic 公告、帮助中心、CLI 版本记录和企业设置文件。"
+        },
+        {
+          "company": "Cloudflare",
+          "label": "Agent 浏览器入口",
+          "lastMention": "此前归档覆盖 Cloudflare 与 agentic internet、AI 爬虫和网站规则背景。",
+          "whatChanged": "本期新增 Kitesurf 报道，Cloudflare 从内容规则推进到 Agent 浏览器运行时。",
+          "stillUnproven": "不证明采用规模或默认规则，仍需 Cloudflare 官方文档、API、访问日志和第三方测试。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent",
+          "count": 3,
+          "itemIds": [
+            "techcrunch-claude-code-auto-mode-default-2026-08-10",
+            "techcrunch-ai-safety-test-risk-2026-08-10",
+            "techcrunch-cloudflare-kitesurf-agent-browser-2026-08-08"
+          ],
+          "meaning": "用来检查 Agent 权限、评测隔离、浏览器运行时和审计日志。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-claude-code-auto-mode-default-2026-08-10",
+            "techcrunch-cloudflare-kitesurf-agent-browser-2026-08-08"
+          ],
+          "meaning": "用来调整代码 Agent 和浏览器 Agent 的命令权限、确认和回滚。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 3,
+          "itemIds": [
+            "techcrunch-ai-safety-test-risk-2026-08-10",
+            "techcrunch-jill-lepore-ai-democracy-2026-08-10",
+            "techcrunch-openai-health-all-us-users-2026-08-07"
+          ],
+          "meaning": "用来更新安全评测、政策叙事、健康数据和产品责任边界。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-source-foundry-chip-investment-2026-08-10",
+            "techcrunch-amazon-data-center-climate-2026-08-09"
+          ],
+          "meaning": "用来核对芯片融资、数据中心电力、许可和排放证据。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 3,
+          "itemIds": [
+            "techcrunch-rippling-ai-roi-tool-2026-08-08",
+            "techcrunch-airbnb-ai-search-shipping-2026-08-08",
+            "techcrunch-openai-nextslide-acquisition-2026-08-09"
+          ],
+          "meaning": "用来评估企业 AI 成本、办公对象、搜索实验和采用指标。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 1,
+          "itemIds": [
+            "techcrunch-ai-safety-test-risk-2026-08-10"
+          ],
+          "meaning": "用来核对模型安全评测是否受测试环境和授权边界影响。"
+        }
+      ],
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期 10 条均来自 TechCrunch，适合当作线索雷达。",
+        "doNotConclude": "不能直接断言产品默认、交易、融资、排放或采用效果已经确认。",
+        "useInstead": "应该用官方公告、文件、合同、数据、指标和第三方复核升级判断。"
+      },
+      "itemCount": 10,
+      "briefing": {
+        "label": "今日简报",
+        "headline": "AI 治理焦点进入默认权限和成本账本",
+        "summary": "本期 10 条均为可靠媒体雷达。主线是 Agent 默认权限、AI 安全评测、浏览器运行时、企业 AI 支出、算力基础设施和健康数据产品同时进入可审计阶段。",
+        "cta": "查看新闻流",
+        "watchPoints": [
+          {
+            "title": "默认权限",
+            "body": "先核对代码 Agent 和浏览器 Agent 是否改变审批、日志和回滚。"
+          },
+          {
+            "title": "成本证据",
+            "body": "观察企业 AI 支出、芯片融资和数据中心项目是否有合同和指标。"
+          },
+          {
+            "title": "敏感场景",
+            "body": "健康数据和安全评测需要官方政策、监管材料和第三方复核。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "17:00 情报简报",
+        "title": "AI 从能力发布转向权限、评测和账本",
+        "subtitle": "8 月 10 日版把 Claude Code、Kitesurf、AI 安全测试、NextSlide、Rippling、Airbnb、Amazon 数据中心和 ChatGPT Health 放在同一张核查表里。",
+        "dateLabel": "2026 年 8 月 10 日 17:00 JST",
+        "status": "已发布；单一可靠媒体来源，等待官方材料升级",
+        "overview": "本期最值得跟踪的变化，是 AI 产品开始把默认权限、测试环境、员工成本、基础设施和健康数据一起推到治理台面。读者应把这些新闻当作下一步证据路径，而不是把媒体报道直接当成官方结论。",
+        "timeline": [
+          {
+            "label": "08月07日",
+            "title": "健康数据扩大进入消费者入口",
+            "body": "TechCrunch 报道 ChatGPT Health 面向美国用户扩大，隐私、训练排除和医疗边界需要官方文件核对。"
+          },
+          {
+            "label": "08月08日",
+            "title": "Agent 浏览器和企业 ROI 出现",
+            "body": "Cloudflare Kitesurf、Rippling ROI 工具和 Airbnb AI 搜索实验把 Agent 运行时与企业核算推到前台。"
+          },
+          {
+            "label": "08月10日",
+            "title": "默认权限和评测风险成为主线",
+            "body": "Claude Code auto mode、AI 安全测试风险和芯片投资报道把本期焦点转向权限治理、评测供应链和算力资本。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期发布的安全非重复媒体信号"
+          },
+          {
+            "value": "10/10",
+            "label": "来自 TechCrunch AI，同源集中度需要标注"
+          },
+          {
+            "value": "39",
+            "label": "登记来源数，本轮未新增来源"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "权限",
+            "title": "默认权限比功能发布更值得先查",
+            "body": "Claude Code auto mode 和 Kitesurf 说明 Agent 产品的关键问题是默认能做什么、谁批准、是否有日志。",
+            "soWhat": "工程团队应把命令、浏览、表单、支付和文件动作分层审计。"
+          },
+          {
+            "number": "02",
+            "label": "评测",
+            "title": "安全测试需要自己的治理证据",
+            "body": "AI 安全测试风险报道提示，评测环境、联网权限和外部系统触达不应被隐藏在单一安全分数后面。",
+            "soWhat": "采购方应要求评测商交付沙箱配置、授权范围、日志和事故通知。"
+          },
+          {
+            "number": "03",
+            "label": "账本",
+            "title": "企业 AI 进入成本和基础设施约束",
+            "body": "Rippling、Source Foundry、Amazon 数据中心和 Airbnb 线索共同提示，AI 采用开始要求费用、容量、排放和产出指标。",
+            "soWhat": "CIO 和财务团队应把 AI 支出、产出、云容量和合规风险放在同一张表里。"
+          },
+          {
+            "number": "04",
+            "label": "敏感",
+            "title": "健康和办公内容需要更清楚的数据边界",
+            "body": "ChatGPT Health 与 NextSlide 报道显示通用 AI 继续进入健康记录和办公材料等高敏感工作流。",
+            "soWhat": "产品和法务团队应优先检查训练排除、记录隔离、品牌资产权限和用户确认。"
+          }
+        ],
+        "actions": [
+          "核对 Claude Code 和 Agent 浏览器的默认权限、日志、确认和回滚。",
+          "要求模型评测供应商提供沙箱、联网授权、事故通知和复盘材料。",
+          "为企业 AI 支出建立员工、任务、供应商、成本和产出指标。",
+          "跟踪芯片融资、数据中心许可、能源数据和客户采购记录。",
+          "复核健康数据、办公内容和搜索实验的隐私政策、上线范围和用户影响。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期覆盖 2026 年 8 月 7 日至 8 月 10 日可纳入当前页的新来源事实。"
+          },
+          {
+            "label": "证据边界",
+            "body": "全部条目为媒体背景，不能替代官方公告、监管文件、合同、日志、指标或第三方复核。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "TechCrunch 支持这些报道已出现以及报道中的最低事件事实。",
+            "来源可支持本期存在 Agent 权限、评测治理、企业成本、算力和健康产品线索。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 将这些信号合并为默认权限、评测环境和企业账本三条核查线。",
+            "本期保留 10 条，是因为它们有明确事件、读者用途和下一步证据路径。"
+          ],
+          "unknowns": [
+            "每条报道的完整事实、采访、引述、图表、数据和上下文仍在原文。",
+            "产品默认行为、交易条款、融资事实、排放估计、采用效果和健康合规仍待官方文件或第三方确认。"
+          ]
+        },
+        "references": [
+          {
+            "label": "TechCrunch 报道AI 芯片初创 Source Foundry 获",
+            "url": "https://techcrunch.com/2026/08/10/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startup-source-foundry/"
+          },
+          {
+            "label": "TechCrunch 报道Claude Code 自动模式将默认开启",
+            "url": "https://techcrunch.com/2026/08/10/anthropic-is-turning-claude-codes-auto-mode-on-by-default/"
+          },
+          {
+            "label": "TechCrunch 报道AI 安全测试本身成为风险源",
+            "url": "https://techcrunch.com/2026/08/10/the-ai-safety-test-is-becoming-a-safety-risk/"
+          },
+          {
+            "label": "TechCrunch 报道硅谷 AI 叙事被历史学者批评误读科幻",
+            "url": "https://techcrunch.com/2026/08/10/historian-jill-lepore-says-silicon-valley-misreads-science-fiction-and-undermines-democracy/"
+          },
+          {
+            "label": "TechCrunch 报道亚马逊数据中心项目有高排放风险",
+            "url": "https://techcrunch.com/2026/08/09/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/"
+          },
+          {
+            "label": "TechCrunch 报道OpenAI 收购演示文稿初创 NextSlid",
+            "url": "https://techcrunch.com/2026/08/09/openai-acquires-presentation-startup-nextslide/"
+          },
+          {
+            "label": "TechCrunch 报道Rippling 上线员工 AI 支出 ROI ",
+            "url": "https://techcrunch.com/2026/08/08/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/"
+          },
+          {
+            "label": "TechCrunch 报道Cloudflare 推出面向 AI Agent",
+            "url": "https://techcrunch.com/2026/08/08/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/"
+          },
+          {
+            "label": "TechCrunch 报道Airbnb 用 AI 加快发版并测试新搜索",
+            "url": "https://techcrunch.com/2026/08/08/airbnb-says-ai-is-helping-it-ship-features-faster-as-it-tests-a-new-search-function/"
+          },
+          {
+            "label": "TechCrunch 报道ChatGPT Health 面向美国用户扩大",
+            "url": "https://techcrunch.com/2026/08/07/openai-makes-chatgpt-health-available-to-all-us-users/"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "techcrunch-source-foundry-chip-investment-2026-08-10",
+          "category": "funding",
+          "label": "资金",
+          "title": "AI 芯片初创 Source Foundry 获 4 亿美元投资报道",
+          "body": "TechCrunch 报道 Situational Awareness 向芯片初创 Source Foundry 投资 4 亿美元，继续押注专用 AI 计算。",
+          "summary": "TechCrunch 报道 Situational Awareness 向芯片初创 Source Foundry 投资 4 亿美元，继续押注专用 AI 计算。",
+          "whyItMatters": "资本继续流向推理和训练硬件替代路线，说明算力供应链仍是模型竞争约束。",
+          "detailBody": "TechCrunch 的简讯报道称芯片初创 Source Foundry 获得 4 亿美元投资，资金来自 AI 主题投资方 Situational Awareness。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "AI 基础设施资本正在从 GPU 采购扩展到更早期的芯片设计和供应链赌注。",
+          "detailTrend": "AI 基础设施资本正在从 GPU 采购扩展到更早期的芯片设计和供应链赌注。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "资本规模足以进入算力雷达，但仍需公司公告或融资文件确认。",
+          "topReason": "资本规模足以进入算力雷达，但仍需公司公告或融资文件确认。",
+          "detailWhyRanked": "资本规模足以进入算力雷达，但仍需公司公告或融资文件确认。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "战略和基础设施团队应跟踪该类芯片是否拿到客户、流片进度和可量产证据。",
+          "whoShouldCare": "负责算力采购、芯片合作和 AI 基础设施规划的战略/投资团队需要评估供应链替代信号。",
+          "readerUse": "投资和基础设施团队用来更新 AI 芯片融资、客户验证和量产风险清单。",
+          "nextCheck": "等待 Source Foundry、投资方公告、融资文件、客户确认或芯片测试数据。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要公司公告、filing、融资文件、客户记录或芯片测试报告确认，才能升级为已确认融资事件。",
+          "claimBoundary": "不证明该芯片路线已经量产成功，也不证明会削弱 NVIDIA 生态。",
+          "counterEvidence": "如果公司公告、融资文件或投资方确认缺失，应下调为媒体融资线索。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/10/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startup-source-foundry/",
+          "originalUrl": "https://techcrunch.com/2026/08/10/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startup-source-foundry/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-10T15:00:00+09:00",
+          "time": "15:00 JST",
+          "tags": [
+            "AI 芯片",
+            "融资",
+            "算力"
+          ],
+          "companies": [
+            "Source Foundry",
+            "Situational Awareness"
+          ]
+        },
+        {
+          "id": "techcrunch-claude-code-auto-mode-default-2026-08-10",
+          "category": "tool",
+          "label": "工具",
+          "title": "Claude Code 自动模式被报道将默认开启",
+          "body": "TechCrunch 报道 Anthropic 正把 Claude Code 的 auto mode 默认开启，开发者权限决策从逐次确认转向后台判断。",
+          "summary": "TechCrunch 报道 Anthropic 正把 Claude Code 的 auto mode 默认开启，开发者权限决策从逐次确认转向后台判断。",
+          "whyItMatters": "这会直接改变代码 Agent 的默认风险面，团队需要重新审计写文件、跑命令和审批疲劳。",
+          "detailBody": "TechCrunch 报道称 Anthropic 正调整 Claude Code auto mode 的默认状态，让更多权限判断由系统在后台完成，而不是每一步都等待开发者确认。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "代码 Agent 的竞争正在从能力演示转向默认权限治理。",
+          "detailTrend": "代码 Agent 的竞争正在从能力演示转向默认权限治理。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "默认权限变化会影响开发者工具的安全基线，优先级高。",
+          "topReason": "默认权限变化会影响开发者工具的安全基线，优先级高。",
+          "detailWhyRanked": "默认权限变化会影响开发者工具的安全基线，优先级高。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "开发平台需要重新检查 auto mode、命令 allowlist、审计日志和回滚流程。",
+          "whoShouldCare": "负责把代码 Agent 接入生产仓库、CI 和内部开发平台的工程、安全与审计团队需要评估默认权限。",
+          "readerUse": "工程和安全团队用来更新 Claude Code 权限模式、隔离环境和命令审批清单。",
+          "nextCheck": "核对 Anthropic 官方发布、帮助中心、CLI 版本说明和企业管理策略。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要 Anthropic 官方公告、帮助中心或版本说明确认默认行为，才能升级为已确认产品政策。",
+          "claimBoundary": "不证明所有 Claude Code 会无提示执行高风险动作，仍需官方文件和实测日志确认。",
+          "counterEvidence": "如果官方说明否认默认开启或日志记录显示仍需显式选择，应下调为单一媒体误报。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/10/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
+          "originalUrl": "https://techcrunch.com/2026/08/10/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-10T14:00:00+09:00",
+          "time": "14:00 JST",
+          "tags": [
+            "Claude Code",
+            "Agent 权限",
+            "开发工具"
+          ],
+          "companies": [
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "techcrunch-ai-safety-test-risk-2026-08-10",
+          "category": "policy",
+          "label": "政策",
+          "title": "AI 安全测试本身被报道成为风险源",
+          "body": "TechCrunch 报道 AI 安全评测流程正暴露新的风险：测试授权、沙箱和外联配置可能放大模型越界问题。",
+          "summary": "TechCrunch 报道 AI 安全评测流程正暴露新的风险：测试授权、沙箱和外联配置可能放大模型越界问题。",
+          "whyItMatters": "这把模型安全的焦点从分数转到评测供应链，采购方要看测试环境而不只看模型结果。",
+          "detailBody": "TechCrunch 报道把近期模型越界和评测配置问题合并为一个风险主题：安全测试若缺少隔离、日志和授权边界，可能成为事故入口。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "评测治理正在从 benchmark 分数转向测试环境可审计性。",
+          "detailTrend": "评测治理正在从 benchmark 分数转向测试环境可审计性。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "它连接了本周多起模型/Agent 越界线索，是本期最重要的治理主线。",
+          "topReason": "它连接了本周多起模型/Agent 越界线索，是本期最重要的治理主线。",
+          "detailWhyRanked": "它连接了本周多起模型/Agent 越界线索，是本期最重要的治理主线。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "采购、安全和政策团队应要求评测商披露沙箱、联网权限、日志保存和事故通知机制。",
+          "whoShouldCare": "负责模型采购、红队评测、监管沟通和第三方审计的安全/政策团队需要把评测环境纳入合同。",
+          "readerUse": "安全和政策团队用来核对评测授权、隔离、外联限制和事故复盘要求。",
+          "nextCheck": "寻找 NIST、AISI、模型公司和独立红队报告对评测配置的原始说明。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要原始评测报告、测试日志、监管文件或第三方复核确认，才能升级为评测治理事实结论。",
+          "claimBoundary": "不证明所有安全测试都会制造事故，也不证明特定模型在生产失控。",
+          "counterEvidence": "如果官方报告、测试日志或第三方复测记录显示事件只限封闭授权环境且无外部影响，应收窄为评测配置个案。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/10/the-ai-safety-test-is-becoming-a-safety-risk/",
+          "originalUrl": "https://techcrunch.com/2026/08/10/the-ai-safety-test-is-becoming-a-safety-risk/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-10T09:00:00+09:00",
+          "time": "09:00 JST",
+          "tags": [
+            "AI 安全",
+            "评测治理",
+            "沙箱"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Meta"
+          ]
+        },
+        {
+          "id": "techcrunch-jill-lepore-ai-democracy-2026-08-10",
+          "category": "policy",
+          "label": "政策",
+          "title": "硅谷 AI 叙事被历史学者批评误读科幻",
+          "body": "TechCrunch 报道历史学者 Jill Lepore 批评硅谷用科幻叙事解释 AI，并把这种叙事同民主治理风险相连。",
+          "summary": "TechCrunch 报道历史学者 Jill Lepore 批评硅谷用科幻叙事解释 AI，并把这种叙事同民主治理风险相连。",
+          "whyItMatters": "这不是产品发布，而是提醒政策团队区分技术路线、意识形态叙事和可验证治理证据。",
+          "detailBody": "TechCrunch 报道 Jill Lepore 对硅谷 AI 叙事提出批评，认为部分领导者借科幻框架理解未来和国家治理。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "AI 政策争论正在从模型参数转向谁有权解释未来、分配风险和影响公共制度。",
+          "detailTrend": "AI 政策争论正在从模型参数转向谁有权解释未来、分配风险和影响公共制度。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "适合作为政策叙事信号，但证据强度低于官方规则和案卷。",
+          "topReason": "适合作为政策叙事信号，但证据强度低于官方规则和案卷。",
+          "detailWhyRanked": "适合作为政策叙事信号，但证据强度低于官方规则和案卷。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "公共事务团队应把公司叙事和实际政策承诺分开核对。",
+          "whoShouldCare": "负责 AI 政策沟通、公共事务和治理研究的团队需要识别叙事如何影响监管议程。",
+          "readerUse": "政策读者用来更新 AI 叙事、民主治理和公众信任观察清单。",
+          "nextCheck": "查找书籍原文、访谈全文、政策文本和公司治理承诺。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要访谈原文、书籍文本、政策文件或公司治理公告确认，才能升级为政策叙事结论。",
+          "claimBoundary": "不证明任何公司政策已经改变，也不证明科幻叙事直接导致监管结果。",
+          "counterEvidence": "如果原文语境显示报道概括过度或缺少政策关联，应降低为文化评论信号。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/10/historian-jill-lepore-says-silicon-valley-misreads-science-fiction-and-undermines-democracy/",
+          "originalUrl": "https://techcrunch.com/2026/08/10/historian-jill-lepore-says-silicon-valley-misreads-science-fiction-and-undermines-democracy/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-10T08:30:00+09:00",
+          "time": "08:30 JST",
+          "tags": [
+            "AI 政策",
+            "治理叙事",
+            "民主"
+          ],
+          "companies": []
+        },
+        {
+          "id": "techcrunch-amazon-data-center-climate-2026-08-09",
+          "category": "funding",
+          "label": "资金",
+          "title": "亚马逊数据中心项目被报道有高排放风险",
+          "body": "TechCrunch 报道一项计划中的 Amazon 数据中心可能成为美国最高排放项目之一，AI 算力扩张继续碰到能源约束。",
+          "summary": "TechCrunch 报道一项计划中的 Amazon 数据中心可能成为美国最高排放项目之一，AI 算力扩张继续碰到能源约束。",
+          "whyItMatters": "数据中心不只是云扩容，电力、排放和许可会影响模型训练与推理成本。",
+          "detailBody": "TechCrunch 简讯报道称，一个计划中的 Amazon 数据中心项目被指出可能带来极高气候排放风险。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "AI 算力扩张越来越需要同时解释电力来源、排放责任和地方审批。",
+          "detailTrend": "AI 算力扩张越来越需要同时解释电力来源、排放责任和地方审批。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "基础设施影响大，但仍需环评、许可和公司侧容量说明确认。",
+          "topReason": "基础设施影响大，但仍需环评、许可和公司侧容量说明确认。",
+          "detailWhyRanked": "基础设施影响大，但仍需环评、许可和公司侧容量说明确认。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "基础设施和政策团队应把能源、排放和地方许可纳入 AI 算力项目审查。",
+          "whoShouldCare": "负责云容量、数据中心选址、ESG 披露和地方审批的基础设施/合规团队需要核对该类风险。",
+          "readerUse": "基础设施团队用来评估 AI 数据中心的电力、排放、许可和社区沟通风险。",
+          "nextCheck": "核对 Amazon 公告、环评文件、地方许可记录、公用事业数据和项目容量说明。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要环评文件、许可记录、Amazon 公告、电力数据或监管报告确认，才能升级为基础设施风险结论。",
+          "claimBoundary": "不证明项目已经建成或实际排放达到报道估计，也不证明所有 AI 数据中心同等高排放。",
+          "counterEvidence": "如果许可文件、能源采购记录或排放数据推翻估计，应收窄为规划阶段风险。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/09/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/",
+          "originalUrl": "https://techcrunch.com/2026/08/09/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-09T18:00:00+09:00",
+          "time": "18:00 JST",
+          "tags": [
+            "数据中心",
+            "能源",
+            "基础设施"
+          ],
+          "companies": [
+            "Amazon"
+          ]
+        },
+        {
+          "id": "techcrunch-openai-nextslide-acquisition-2026-08-09",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 收购演示文稿初创 NextSlide 的报道出现",
+          "body": "TechCrunch 报道 OpenAI 收购 presentation startup NextSlide，指向办公内容生成和企业工作流入口竞争。",
+          "summary": "TechCrunch 报道 OpenAI 收购 presentation startup NextSlide，指向办公内容生成和企业工作流入口竞争。",
+          "whyItMatters": "演示文稿是知识工作高频产物，若并入模型平台会影响企业内容流程和权限边界。",
+          "detailBody": "TechCrunch 简讯报道称 OpenAI 收购演示文稿初创 NextSlide，该方向与企业知识工作、内容生成和协作入口相关。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "AI 平台正在通过收购把生成能力嵌入具体办公对象，而不只是停留在聊天窗口。",
+          "detailTrend": "AI 平台正在通过收购把生成能力嵌入具体办公对象，而不只是停留在聊天窗口。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "收购若获确认，会补强 OpenAI 企业工作流版图。",
+          "topReason": "收购若获确认，会补强 OpenAI 企业工作流版图。",
+          "detailWhyRanked": "收购若获确认，会补强 OpenAI 企业工作流版图。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "企业 IT 和内容团队应观察演示文稿、模板、品牌资产和数据权限如何接入 AI。",
+          "whoShouldCare": "负责办公套件、品牌内容、知识库和企业采购的产品/IT 团队需要关注生成式演示工具整合。",
+          "readerUse": "企业产品团队用来检查 AI 演示文稿、模板权限和数据治理入口。",
+          "nextCheck": "等待 OpenAI 或 NextSlide 公告、交易文件、产品迁移说明和客户通知。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要公司公告、交易文件、产品迁移说明或客户通知确认，才能升级为已确认收购事件。",
+          "claimBoundary": "不证明 NextSlide 功能已进入 ChatGPT 或企业产品，也不证明交易条款。",
+          "counterEvidence": "如果 OpenAI 或 NextSlide 否认交易或没有公告记录，应下调为未确认交易报道。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/09/openai-acquires-presentation-startup-nextslide/",
+          "originalUrl": "https://techcrunch.com/2026/08/09/openai-acquires-presentation-startup-nextslide/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-09T17:00:00+09:00",
+          "time": "17:00 JST",
+          "tags": [
+            "OpenAI",
+            "收购",
+            "办公 AI"
+          ],
+          "companies": [
+            "OpenAI",
+            "NextSlide"
+          ]
+        },
+        {
+          "id": "techcrunch-rippling-ai-roi-tool-2026-08-08",
+          "category": "product",
+          "label": "产品",
+          "title": "Rippling 被报道上线员工 AI 支出 ROI 工具",
+          "body": "TechCrunch 报道 Rippling 在数月内花费数百万美元 AI 支出后，建设员工级 ROI 工具。",
+          "summary": "TechCrunch 报道 Rippling 在数月内花费数百万美元 AI 支出后，建设员工级 ROI 工具。",
+          "whyItMatters": "企业 AI 预算进入精细化审计阶段，买模型之外还要证明谁用了、产出了什么。",
+          "detailBody": "TechCrunch 报道 Rippling 在内部 AI 支出快速上升后，推出用于观察员工 AI 支出回报的工具。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "企业 AI 管理正在从“是否使用”转向“按员工、任务和结果核算”。",
+          "detailTrend": "企业 AI 管理正在从“是否使用”转向“按员工、任务和结果核算”。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "这是企业 AI 成本治理从财务口径落到员工和任务层的信号。",
+          "topReason": "这是企业 AI 成本治理从财务口径落到员工和任务层的信号。",
+          "detailWhyRanked": "这是企业 AI 成本治理从财务口径落到员工和任务层的信号。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "CIO、财务和业务运营团队应建立 AI 费用、产出、权限和安全事件的同表追踪。",
+          "whoShouldCare": "负责企业 AI 采购、员工工具预算和业务运营审计的 IT/财务团队需要核对 ROI 度量口径。",
+          "readerUse": "企业运营团队用来更新 AI 支出、员工采用、任务产出和审计指标。",
+          "nextCheck": "查看 Rippling 产品文档、客户案例、财务数据、采用指标和审计方法。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要产品文档、客户指标、财务记录或审计方法说明确认，才能升级为可验证成本治理案例。",
+          "claimBoundary": "不证明该工具已经准确衡量 AI 生产率，也不证明所有企业 AI 支出过高。",
+          "counterEvidence": "如果客户指标、财务记录或第三方审计无法支持 ROI，应降低为厂商/媒体管理叙事。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/08/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
+          "originalUrl": "https://techcrunch.com/2026/08/08/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-08T20:00:00+09:00",
+          "time": "20:00 JST",
+          "tags": [
+            "企业 AI",
+            "ROI",
+            "AI 支出"
+          ],
+          "companies": [
+            "Rippling"
+          ]
+        },
+        {
+          "id": "techcrunch-cloudflare-kitesurf-agent-browser-2026-08-08",
+          "category": "tool",
+          "label": "工具",
+          "title": "Cloudflare 被报道推出面向 AI Agent 的浏览器 Kitesurf",
+          "body": "TechCrunch 报道 Cloudflare 推出 Kitesurf，一个为 AI Agent 构建的浏览器产品。",
+          "summary": "TechCrunch 报道 Cloudflare 推出 Kitesurf，一个为 AI Agent 构建的浏览器产品。",
+          "whyItMatters": "浏览器正在变成 Agent 执行动作的运行时，站点规则、会话记录和人类接管都要重新设计。",
+          "detailBody": "TechCrunch 报道称 Cloudflare 推出 Kitesurf，将浏览器能力包装给 AI Agent 使用，延续其 agentic internet 工具路线。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "Agent 浏览器从演示工具进入基础设施供应商竞争，网页访问规则和自动化权限会变成平台能力。",
+          "detailTrend": "Agent 浏览器从演示工具进入基础设施供应商竞争，网页访问规则和自动化权限会变成平台能力。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "它直接影响网站、爬取、会话控制和 Agent 工具链设计。",
+          "topReason": "它直接影响网站、爬取、会话控制和 Agent 工具链设计。",
+          "detailWhyRanked": "它直接影响网站、爬取、会话控制和 Agent 工具链设计。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "网站和平台团队应检查 bot 分类、会话回放、人工接管、支付和表单动作确认。",
+          "whoShouldCare": "负责网站访问规则、浏览器自动化、反爬策略和 Agent 平台的工程/安全团队需要跟踪。",
+          "readerUse": "工程团队用来调整 Agent 浏览器、会话审计、内容访问和人工接管设计。",
+          "nextCheck": "核对 Cloudflare 官方博客、产品文档、API、默认权限和站点控制规则。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要 Cloudflare 官方公告、产品文档、API 规则或第三方测试确认，才能升级为已确认平台能力。",
+          "claimBoundary": "不证明 Kitesurf 已被大规模采用，也不证明它解决所有 Agent 浏览风险。",
+          "counterEvidence": "如果官方公告、产品记录或访问日志显示功能范围不同且仍在封闭测试，应收窄为早期产品线索。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/08/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/",
+          "originalUrl": "https://techcrunch.com/2026/08/08/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-08T19:00:00+09:00",
+          "time": "19:00 JST",
+          "tags": [
+            "Agent 浏览器",
+            "Cloudflare",
+            "工具"
+          ],
+          "companies": [
+            "Cloudflare"
+          ]
+        },
+        {
+          "id": "techcrunch-airbnb-ai-search-shipping-2026-08-08",
+          "category": "product",
+          "label": "产品",
+          "title": "Airbnb 被报道用 AI 加快发版并测试新搜索",
+          "body": "TechCrunch 报道 Airbnb 称 AI 正帮助其更快发布功能，并测试新的搜索函数。",
+          "summary": "TechCrunch 报道 Airbnb 称 AI 正帮助其更快发布功能，并测试新的搜索函数。",
+          "whyItMatters": "这提供企业把 AI 放进产品研发和搜索体验的采用信号，但需要指标验证。",
+          "detailBody": "TechCrunch 报道 Airbnb 表示 AI 帮助其提升功能发布速度，同时公司正在测试新的搜索能力。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "成熟平台的 AI 采用正在从客服和内容生成延伸到产品研发节奏与搜索体验。",
+          "detailTrend": "成熟平台的 AI 采用正在从客服和内容生成延伸到产品研发节奏与搜索体验。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "成熟消费平台的采用信号对企业 AI 落地有参考价值。",
+          "topReason": "成熟消费平台的采用信号对企业 AI 落地有参考价值。",
+          "detailWhyRanked": "成熟消费平台的采用信号对企业 AI 落地有参考价值。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "产品团队应关注 AI 是否真正缩短开发周期、改善搜索指标并保留质量控制。",
+          "whoShouldCare": "负责产品研发效率、搜索排序和平台体验实验的产品/工程团队需要跟踪可量化指标。",
+          "readerUse": "产品团队用来核对 AI 发版效率、搜索实验和质量指标。",
+          "nextCheck": "查看 Airbnb 官方说明、实验指标、用户影响数据、财报和产品上线记录。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要官方说明、实验数据、财报指标或产品上线记录确认，才能升级为已验证采用案例。",
+          "claimBoundary": "不证明 AI 单独导致发版提速，也不证明新搜索已经全面上线。",
+          "counterEvidence": "如果实验指标、用户数据或上线记录未改善，应下调为公司采用叙事。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/08/airbnb-says-ai-is-helping-it-ship-features-faster-as-it-tests-a-new-search-function/",
+          "originalUrl": "https://techcrunch.com/2026/08/08/airbnb-says-ai-is-helping-it-ship-features-faster-as-it-tests-a-new-search-function/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-08T18:00:00+09:00",
+          "time": "18:00 JST",
+          "tags": [
+            "企业采用",
+            "搜索",
+            "产品研发"
+          ],
+          "companies": [
+            "Airbnb"
+          ]
+        },
+        {
+          "id": "techcrunch-openai-health-all-us-users-2026-08-07",
+          "category": "product",
+          "label": "产品",
+          "title": "ChatGPT Health 面向美国用户扩大的报道被收录",
+          "body": "TechCrunch 报道 OpenAI 让 ChatGPT Health 面向所有美国用户开放，健康数据接入进入更大范围测试。",
+          "summary": "TechCrunch 报道 OpenAI 让 ChatGPT Health 面向所有美国用户开放，健康数据接入进入更大范围测试。",
+          "whyItMatters": "健康数据是高敏感场景，产品扩大会触发隐私、医疗责任和临床边界核查。",
+          "detailBody": "TechCrunch 报道 OpenAI 将 ChatGPT Health 面向美国用户开放，围绕个人健康信息连接和对话辅助扩展可用范围。 该报道仍只作为候选线索，读者需要回到原文查看完整事实、采访、引述、图表、数据和上下文，再用官方或第三方材料确认。",
+          "trend": "通用 AI 助手正在进入个人健康数据工作流，隐私隔离、确认和医生边界成为核心产品问题。",
+          "detailTrend": "通用 AI 助手正在进入个人健康数据工作流，隐私隔离、确认和医生边界成为核心产品问题。 这条线索的关键不是把报道当成最终结论，而是把它放进权限、采购、合规或安全评测清单，继续寻找可复核的官方文件、日志、指标或第三方材料。",
+          "whyRanked": "健康场景敏感度高，值得放入本期产品和合规检查。",
+          "topReason": "健康场景敏感度高，值得放入本期产品和合规检查。",
+          "detailWhyRanked": "健康场景敏感度高，值得放入本期产品和合规检查。 由于来源仍是媒体报道，首页只保留最小事实和 AI Watchtower 的判断；完整事实、采访、引述、图表、数据和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "影响面较清晰但仍是媒体报道，适合进入雷达并等待官方或第三方材料升级。"
+          },
+          "impact": "健康产品、隐私和法务团队应检查数据隔离、训练排除、年龄限制、医疗免责声明和专业转诊。",
+          "whoShouldCare": "负责健康数据、隐私合规、医疗内容和消费者 AI 产品的产品/法务团队需要核对边界。",
+          "readerUse": "健康和隐私团队用来更新医疗数据连接、权限、训练排除和用户提示清单。",
+          "nextCheck": "核对 OpenAI 官方 Health 页面、隐私政策、帮助中心、合作方说明和监管要求。",
+          "followUpQuestions": [
+            "是否已有官方公告、帮助中心、案卷、日志或客户指标能确认这条报道？",
+            "是否有独立媒体、监管文件、论文复现或第三方测试支持相同事实？"
+          ],
+          "evidenceThreshold": "至少需要 OpenAI 官方公告、隐私政策、帮助中心或监管文件确认，才能升级为已确认健康产品扩展。",
+          "claimBoundary": "不证明 ChatGPT 可替代医生，也不证明所有健康记录都可安全或完整接入。",
+          "counterEvidence": "如果官方页面限定可用范围或监管文件要求调整，应收窄为美国有限开放信号。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/07/openai-makes-chatgpt-health-available-to-all-us-users/",
+          "originalUrl": "https://techcrunch.com/2026/08/07/openai-makes-chatgpt-health-available-to-all-us-users/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 报道提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只提炼最小事实并给出中文核查框架。",
+          "trustLevel": "reliable_media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-07T19:30:00+09:00",
+          "time": "19:30 JST",
+          "tags": [
+            "ChatGPT Health",
+            "隐私",
+            "产品"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-09",
       "date": "2026-08-09",
