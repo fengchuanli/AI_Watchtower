@@ -50,7 +50,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 26 | Complete | `2c1cb12` | Current and latest archived `whoShouldCare` copy now names concrete Chinese reader/work contexts, and validation rejects generic observer/practitioner labels or audience lists without a scenario. |
 | Day 27 | Complete | `c5778cc` | `docs/vendor-narrative-promotion-rule.md` now blocks vivid vendor narratives from TOP3 unless first-screen card copy names the independent proof path; validation checks promoted vendor items across current and latest archive data. |
 | Day 28 | Complete | `e701b59` | `scripts/validate-site.mjs` now guards the vendor-narrative workflow document itself, including source-role, first-screen field list, evidence-quality floor, stop conditions, and independent proof examples. |
-| Day 29 | Complete | `pending` | `docs/monthly-optimization-summary.md` summarizes this 2026-06-24 to 2026-07-23 cycle's workflow, homepage, continuity, detail-source, and validation improvements, plus the remaining weaknesses before rollover. |
+| Day 29 | Complete | `a1947c6` | `docs/monthly-optimization-summary.md` summarizes this 2026-06-24 to 2026-07-23 cycle's workflow, homepage, continuity, detail-source, and validation improvements, plus the remaining weaknesses before rollover. |
 
 ## Next Useful Task
 
