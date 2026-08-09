@@ -1,3 +1,29 @@
+## 2026-08-09 23:06 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-09`，因此未回退早间版，而是在现有 17:00 JST 版中补入 1 条安全非重复 Business Insider 可靠媒体背景信号，当前版从 8 条增至 9 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI/Anthropic/Google/Hugging Face/VentureBeat/TechCrunch/Axios/AP/WIRED/Business Insider 等来源入口、历史 URL、重复风险和日期稳定性，未使用付费墙正文、登录墙正文、社区传言或随机页面。
+  - 本轮新增 Business Insider 媒体背景信号：Dean Ball 入职 OpenAI 并负责 strategic futures 团队，用于提示前沿实验室把政策辩论、安全审计、政府关系和开放模型立场前置为内部战略能力。
+  - 新增条目保持 `媒体背景` / `reported` / `originalDependency: must-read`；需要 OpenAI 官方组织说明、政策文件、审计框架、监管材料或可核验职责后再升级结论。其余候选要么已被当前版覆盖，要么日期/索引不稳定，要么证据不足，因此未为凑满 10 条补入弱项。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 9 current news items against 39 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local content commit uses message `补充08点AI新闻情报`; this log note records the push blocker if remote sync remains unavailable.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit, but may hit the same DNS/network blocker.
+
 ## 2026-08-09 20:00 JST
 
 - Focus: Completed the current 2026-06-24 to 2026-07-23 plan's Day 29 task. Updated the monthly optimization summary so the next run can see what this cycle improved and which content-quality weaknesses should shape Day 30's next 30-day plan.
