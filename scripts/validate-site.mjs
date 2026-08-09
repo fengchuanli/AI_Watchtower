@@ -1156,17 +1156,20 @@ if (
 if (
   !/docs\/monthly-optimization-summary\.md/.test(readme) ||
   !/月度优化总结/.test(monthlyOptimizationSummary) ||
-  !/2026-06-20 至 2026-07-19/.test(monthlyOptimizationSummary) ||
+  !/2026-06-24 至 2026-07-23/.test(monthlyOptimizationSummary) ||
   !/已改善的方向/.test(monthlyOptimizationSummary) ||
   !/仍然薄弱的地方/.test(monthlyOptimizationSummary) ||
   !/下一步优先级/.test(monthlyOptimizationSummary) ||
   !/今日 TOP3/.test(monthlyOptimizationSummary) ||
-  !/GitHub Pages/.test(monthlyOptimizationSummary) ||
+  !/blocked-dns/.test(monthlyOptimizationSummary) ||
   !/人工事实判断/.test(monthlyOptimizationSummary) ||
   !/避免重复劳动/.test(monthlyOptimizationSummary) ||
   !/Day 0 至 Day 29/.test(monthlyOptimizationSummary) ||
   !/下一次有用任务是 Day 30/.test(monthlyOptimizationSummary) ||
-  !/中文读者理解成本/.test(monthlyOptimizationSummary)
+  !/中文读者理解成本/.test(monthlyOptimizationSummary) ||
+  !/vendor-narrative-promotion-rule\.md/.test(monthlyOptimizationSummary) ||
+  !/stronger、weaker 还是 repeated/.test(monthlyOptimizationSummary) ||
+  !/媒体 must-read/.test(monthlyOptimizationSummary)
 ) {
   errors.push("Monthly optimization summary must stay discoverable and cover improvements, weaknesses, and next priorities.");
 }
@@ -1234,7 +1237,8 @@ if (
   !/Day 26[\s\S]*whoShouldCare[\s\S]*concrete Chinese reader/.test(optimizationDecisionIndex) ||
   !/Day 27[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*first-screen card copy/.test(optimizationDecisionIndex) ||
   !/Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 29/.test(optimizationDecisionIndex) ||
+  !/Day 29[\s\S]*monthly-optimization-summary\.md[\s\S]*remaining weaknesses/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 30/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
