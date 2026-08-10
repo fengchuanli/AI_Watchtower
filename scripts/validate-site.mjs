@@ -32,6 +32,7 @@ const originalSourceReplacementGuide = readFileSync("docs/original-source-replac
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const counterEvidenceObservableGuide = readFileSync("docs/counter-evidence-observable-guide.md", "utf8");
 const detailPageReviewGuide = readFileSync("docs/detail-page-review-guide.md", "utf8");
+const homepageEditionPreflight = readFileSync("docs/homepage-edition-preflight.md", "utf8");
 const vendorNarrativePromotionRule = readFileSync("docs/vendor-narrative-promotion-rule.md", "utf8");
 const updateRunChecklist = readFileSync("docs/update-run-checklist.md", "utf8");
 const currentToHistoryPublicationChecklist = readFileSync(
@@ -1072,8 +1073,11 @@ if (
   errors.push("News gathering rules must target 10+ qualified items per run and define TOP3 as a same-day ranking, not the latest batch first three items.");
 }
 if (
-  !/2026-06-24 through 2026-07-23/.test(optimizationPlan) ||
-  !/Candidate Intake And Editorial Triage/.test(optimizationPlan) ||
+  !/2026-08-10 through 2026-09-08/.test(optimizationPlan) ||
+  !/Homepage Edition Quality/.test(optimizationPlan) ||
+  !/Source And Candidate Workflow Friction/.test(optimizationPlan) ||
+  !/Detail Pages And Proof Boundaries/.test(optimizationPlan) ||
+  !/Continuity And Archive Usefulness/.test(optimizationPlan) ||
   !/create the next 30-day plan/.test(optimizationPlan) ||
   !/Do not stop daily optimization/.test(optimizationPlan)
 ) {
@@ -1118,6 +1122,27 @@ if (
   !/candidate workflow, or future optimization plans/.test(optimizationPlan)
 ) {
   errors.push("Optimization plan must prioritize copyright safety before further content expansion.");
+}
+
+if (
+  !/docs\/homepage-edition-preflight\.md/.test(readme) ||
+  !/Homepage Edition Preflight/.test(homepageEditionPreflight) ||
+  !/targetReaderQuestion/.test(homepageEditionPreflight) ||
+  !/top3ReaderUse/.test(homepageEditionPreflight) ||
+  !/sourceMixBoundary/.test(homepageEditionPreflight) ||
+  !/mobileScanPath/.test(homepageEditionPreflight) ||
+  !/proofBoundary/.test(homepageEditionPreflight) ||
+  !/archiveMirror/.test(homepageEditionPreflight) ||
+  !/1 to 3 minutes/.test(homepageEditionPreflight) ||
+  !/sourceRisk/.test(homepageEditionPreflight) ||
+  !/overreadBoundary/.test(homepageEditionPreflight) ||
+  !/sourceConcentration/.test(homepageEditionPreflight) ||
+  !/docs\/homepage-edition-preflight\.md/.test(editorialChecklist) ||
+  !/docs\/homepage-edition-preflight\.md/.test(updateRunChecklist) ||
+  !/docs\/homepage-edition-preflight\.md/.test(candidateToNewsHandoff) ||
+  !/Day 0[\s\S]*homepage-edition-preflight\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Homepage edition preflight must stay linked and preserve reader question, TOP3 use, source-boundary, mobile scan, proof-boundary, and archive-mirror checks.");
 }
 
 if (
@@ -1195,50 +1220,14 @@ if (
 if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
-  !/2026-06-24 through 2026-07-23/.test(optimizationDecisionIndex) ||
-  !/Phase 5, Validation, QA, And Next Cycle/.test(optimizationDecisionIndex) ||
-  !/Previous Day 24[\s\S]*candidate-source-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Previous Day 25[\s\S]*report-duplicate-candidates\.mjs/.test(optimizationDecisionIndex) ||
-  !/Previous Day 26[\s\S]*source-policy\.md[\s\S]*capital, compute, leadership, and infrastructure/.test(
-    optimizationDecisionIndex,
-  ) ||
-  !/Previous Day 27[\s\S]*Vendor-claim next checks/.test(optimizationDecisionIndex) ||
-  !/Previous Day 28[\s\S]*Editorial validator limits/.test(optimizationDecisionIndex) ||
+  !/2026-08-10 through 2026-09-08/.test(optimizationDecisionIndex) ||
+  !/Phase 1, Homepage Edition Quality/.test(optimizationDecisionIndex) ||
+  !/Previous Day 27[\s\S]*vendor-narrative-promotion-rule\.md/.test(optimizationDecisionIndex) ||
+  !/Previous Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
   !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 30[\s\S]*optimization-plan\.md/.test(optimizationDecisionIndex) ||
-  !/Day 0[\s\S]*candidate-intake-format\.md/.test(optimizationDecisionIndex) ||
-  !/Day 1[\s\S]*candidate-priority-rubric\.md/.test(optimizationDecisionIndex) ||
-  !/Day 2[\s\S]*candidate-hold-reject-reasons\.md/.test(optimizationDecisionIndex) ||
-  !/Day 3[\s\S]*candidate-to-news-handoff\.md/.test(optimizationDecisionIndex) ||
-  !/Day 4[\s\S]*original-source-replacement-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Day 5[\s\S]*source-diversity-triage-note\.md/.test(optimizationDecisionIndex) ||
-  !/Day 6[\s\S]*candidate-workflow-plain-language-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Day 7[\s\S]*update-run-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Day 9[\s\S]*bad-data-rollback-note\.md/.test(optimizationDecisionIndex) ||
-  !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex) ||
-  !/Day 11[\s\S]*archive-diff-summary-format\.md/.test(optimizationDecisionIndex) ||
-  !/Day 12[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Day 13[\s\S]*optimization-log-archive-guide\.md/.test(optimizationDecisionIndex) ||
-  !/Day 14[\s\S]*homepage briefing[\s\S]*reader frame/.test(optimizationDecisionIndex) ||
-  !/Day 15[\s\S]*mobile[\s\S]*scan variant/.test(optimizationDecisionIndex) ||
-  !/Day 16[\s\S]*coverage-mix labels/.test(optimizationDecisionIndex) ||
-  !/Day 17[\s\S]*omitted-topic explanations/.test(optimizationDecisionIndex) ||
-  !/Day 18[\s\S]*overreadBoundary/.test(optimizationDecisionIndex) ||
-  !/Day 19[\s\S]*categories[\s\S]*proof boundaries/.test(optimizationDecisionIndex) ||
-  !/Day 20[\s\S]*audits repeated caveat sentences[\s\S]*readerFrame[\s\S]*sourceRisk[\s\S]*trendNotes/.test(
-    optimizationDecisionIndex,
-  ) ||
-  !/Day 21[\s\S]*detail-page technical claims[\s\S]*fact, impact, boundary/.test(optimizationDecisionIndex) ||
-  !/Day 22[\s\S]*companyContinuity[\s\S]*what remains unproven/.test(optimizationDecisionIndex) ||
-  !/Day 23[\s\S]*topicContinuity[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(optimizationDecisionIndex) ||
-  !/Day 24[\s\S]*media-specific source reminders[\s\S]*original article/.test(optimizationDecisionIndex) ||
-  !/Day 25[\s\S]*counterEvidence[\s\S]*observable outcome/.test(optimizationDecisionIndex) ||
-  !/Day 26[\s\S]*whoShouldCare[\s\S]*concrete Chinese reader/.test(optimizationDecisionIndex) ||
-  !/Day 27[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*first-screen card copy/.test(optimizationDecisionIndex) ||
-  !/Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
-  !/Day 29[\s\S]*monthly-optimization-summary\.md[\s\S]*remaining weaknesses/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 30/.test(optimizationDecisionIndex) ||
+  !/Day 0[\s\S]*homepage-edition-preflight\.md/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 1/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

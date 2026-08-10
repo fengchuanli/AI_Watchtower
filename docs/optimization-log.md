@@ -1,3 +1,37 @@
+## 2026-08-10 20:00 JST
+
+- Focus: Completed the old plan rollover and the new 2026-08-10 to 2026-09-08 plan's Day 0 task. Wrote the next 30-day optimization plan, then added a homepage edition preflight so future news updates check reader question, TOP3 use, source mix boundary, mobile scan path, proof boundary, and archive mirror before publication.
+- Changed files:
+  - `docs/optimization-plan.md`
+  - `docs/homepage-edition-preflight.md`
+  - `README.md`
+  - `docs/editorial-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Replaced the completed 2026-06-24 to 2026-07-23 plan with a new cycle focused on lower-friction real news updates, lighter mobile homepage reading, clearer detail-page proof boundaries, and cross-edition continuity.
+  - Added `docs/homepage-edition-preflight.md` as the first new-cycle task, positioned between candidate handoff and current-to-history publication checks.
+  - Linked the preflight from README, the editorial checklist, the update-run checklist, and the candidate-to-news handoff so it becomes part of normal content workflow rather than an isolated document.
+  - Updated `scripts/validate-site.mjs` so the new plan window, current decision index, and homepage preflight fields stay discoverable.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/monthly-optimization-summary.md`, README, update/candidate/editorial workflow docs, and relevant validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 39 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending local commit with message `增加首页版次预检`.
+- Git note: Push will be attempted after commit; if DNS remains blocked, this entry will be followed by a push-blocker note.
+
 ## 2026-08-10 08:08 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-10`，发布 10 条 AI 新闻情报，聚焦 Claude Code 默认权限、AI 安全评测风险、Agent 浏览器、企业 AI 成本、AI 芯片/数据中心、办公内容和 ChatGPT Health。

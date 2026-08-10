@@ -1,0 +1,47 @@
+# Homepage Edition Preflight
+
+Use this note before finalizing the homepage edition in `data/news.json` and before mirroring it into `data/news-history.json`. Its job is to make the current batch easier for Chinese readers to use, especially on mobile, without turning source articles into substitute Chinese reports.
+
+This preflight sits after candidate intake, priority scoring, source-diversity triage, and `docs/candidate-to-news-handoff.md`, and before `docs/current-to-history-publication-checklist.md`. It does not add new facts. It checks whether the homepage framing already tells readers what to do with the batch.
+
+## Preflight Questions
+
+Answer these in Chinese before publication:
+
+1. `targetReaderQuestion`: What one question should this edition help a Chinese reader answer today?
+2. `top3ReaderUse`: Does each TOP3 item explain why it matters now and which reader decision or checklist it supports?
+3. `sourceMixBoundary`: Is the batch dominated by one source family, source owner, vendor, country, or evidence mode, and does the homepage say what not to conclude?
+4. `mobileScanPath`: Can a phone reader understand the edition from `readerFrame.mobile`, TOP3 titles, summaries, and source labels in 1 to 3 minutes?
+5. `proofBoundary`: Do `sourceRisk`, `overreadBoundary`, `trendNotes`, `topicContinuity`, and promoted cards name the official, filing, audit, metric, benchmark, regulator, customer-side, or third-party evidence needed next?
+6. `archiveMirror`: Will the newest history edition preserve the same reader frame, source boundary, item count, item order, and archive label?
+
+## Compact Note Shape
+
+Use this shape in an editor note or optimization log when the update changed content framing:
+
+```text
+Homepage preflight: done
+Reader question: 今天读者要先判断哪些 AI 变化值得继续核对？
+TOP3 use: done - 每条都说明读者用途、选择理由和下一步核验。
+Source mix boundary: done - 单一来源/证据模式已标注，不把雷达版写成全市场结论。
+Mobile scan path: done - readerFrame.mobile、TOP3 摘要和来源标签可在 1 到 3 分钟内扫完。
+Proof boundary: done - 下一步证据指向官方、filing、审计、指标、benchmark、监管、客户侧或第三方材料。
+Archive mirror: done - 最新历史版与首页版次 framing 和 item order 对齐。
+```
+
+## Stop Conditions
+
+Do not publish the edition as-is when:
+
+- The reader question is only a topic label, such as "AI news", rather than a decision or watch point.
+- TOP3 copy explains why a story is interesting but not who should act on it or what to verify next.
+- A concentrated media, vendor, or research batch lacks `sourceRisk`, `sourceConcentration`, or `overreadBoundary` framing.
+- The mobile scan path requires reading the long `deepBriefing` before the reader can tell what changed.
+- Proof-boundary copy repeats the same vague sentence across several fields instead of naming a concrete next evidence type.
+- The latest archive snapshot would keep an older reader frame, item order, or source caveat after the homepage changes.
+
+## Relationship To Existing Checks
+
+- Use `docs/update-run-checklist.md` for the full run state: discovery, intake, duplicate reporting, validation, commit, and push.
+- Use `docs/editorial-checklist.md` for item-level facts, copyright safety, source roles, and field quality.
+- Use this preflight for edition-level reader value: what the homepage says first, what it warns against, and whether mobile readers can scan it quickly.
