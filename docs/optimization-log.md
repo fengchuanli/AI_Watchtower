@@ -29,8 +29,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `68eebfc` with message `增加首页版次预检`; this follow-up log/index note records the implementation hash.
-- Git note: Push will be attempted after the hash-record commit; if DNS remains blocked, this entry will be followed by a push-blocker note.
+- Commit: Local implementation commit `68eebfc` (`增加首页版次预检`) and hash-record follow-up commit `d20c4e9` (`记录首页预检哈希`); this push-blocker note records the final local status.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-10 08:08 JST
 
