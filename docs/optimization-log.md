@@ -1,3 +1,28 @@
+## 2026-08-10 23:10 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-10`，因此未回退早间版，而是在现有 17:00 JST 版中补入 2 条安全非重复可靠媒体背景信号，当前版从 10 条增至 12 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI/Anthropic/Google/Hugging Face/TechCrunch/Axios/MarketWatch/Reuters/AP/The Verge/VentureBeat 等来源入口、历史 URL、重复风险和日期稳定性，未使用付费墙正文、登录墙正文、社区传言或随机页面。
+  - 本轮新增 Axios 媒体背景信号：OpenAI Astra 部分开发暂停报道，用于提示 frontier 模型发布门禁、评测隔离、事故披露和商业激励冲突。
+  - 本轮新增 MarketWatch 媒体背景信号：SpaceX AI 计算容量扩张计划与 Microsoft/OpenAI 需求关系报道，用于提示算力客户合同、融资、电力许可和投产记录核查。
+  - 两条新增项保持 `媒体背景` / `reported` / `originalDependency: must-read`；需要 OpenAI/SpaceX/Microsoft/OpenAI/NVIDIA 官方公告、系统卡、事故复盘、filing、合同、许可、投产数据或第三方评测后再升级结论。FT 的 Meta 开放模型报道因付费墙正文风险未落库。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 39 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local content commit will be created after this log entry; final hash recorded in the automation memory.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may need retry when DNS/network access returns.
+
 ## 2026-08-10 20:00 JST
 
 - Focus: Completed the old plan rollover and the new 2026-08-10 to 2026-09-08 plan's Day 0 task. Wrote the next 30-day optimization plan, then added a homepage edition preflight so future news updates check reader question, TOP3 use, source mix boundary, mobile scan path, proof boundary, and archive mirror before publication.
