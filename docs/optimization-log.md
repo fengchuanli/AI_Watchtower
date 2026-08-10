@@ -29,8 +29,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Pending local commit with message `增加首页版次预检`.
-- Git note: Push will be attempted after commit; if DNS remains blocked, this entry will be followed by a push-blocker note.
+- Commit: Local implementation commit `68eebfc` with message `增加首页版次预检`; this follow-up log/index note records the implementation hash.
+- Git note: Push will be attempted after the hash-record commit; if DNS remains blocked, this entry will be followed by a push-blocker note.
 
 ## 2026-08-10 08:08 JST
 

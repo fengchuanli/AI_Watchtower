@@ -17,8 +17,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Previous Day 27 | Complete | `c5778cc` | `docs/vendor-narrative-promotion-rule.md` blocks vivid vendor narratives from TOP3 unless first-screen card copy names the independent proof path. |
 | Previous Day 28 | Complete | `e701b59` | `docs/vendor-narrative-promotion-rule.md` now has a validator guard in `scripts/validate-site.mjs`, including source-role, first-screen field list, evidence-quality floor, stop conditions, and independent proof examples. |
 | Previous Day 29 | Complete | `a1947c6` | `docs/monthly-optimization-summary.md` summarizes the 2026-06-24 to 2026-07-23 cycle's workflow, homepage, continuity, detail-source, and validation improvements, plus remaining weaknesses. |
-| Previous Day 30 | Complete | `pending` | `docs/optimization-plan.md` now covers 2026-08-10 through 2026-09-08 and shifts the cycle toward lower-friction real news updates, lighter mobile homepage reading, and clearer cross-edition continuity. |
-| Day 0 | Complete | `pending` | `docs/homepage-edition-preflight.md` checks each edition's reader question, TOP3 reader use, source mix boundary, mobile scan path, proof boundary, and archive mirror before publication. |
+| Previous Day 30 | Complete | `68eebfc` | `docs/optimization-plan.md` now covers 2026-08-10 through 2026-09-08 and shifts the cycle toward lower-friction real news updates, lighter mobile homepage reading, and clearer cross-edition continuity. |
+| Day 0 | Complete | `68eebfc` | `docs/homepage-edition-preflight.md` checks each edition's reader question, TOP3 reader use, source mix boundary, mobile scan path, proof boundary, and archive mirror before publication. |
 
 ## Historical Guard Anchors
 
