@@ -20,7 +20,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
 - Commit: Local content commit uses message `更新17点AI新闻情报`; this log note records the expected push blocker if remote sync remains unavailable.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit and may hit the same DNS/network blocker.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-10 23:10 JST
 
