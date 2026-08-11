@@ -1,3 +1,28 @@
+## 2026-08-12 08:11 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-12`，发布 10 条安全非重复 AI 情报，聚焦 ChatGPT 广告/企业席位、OpenAI Daybreak cyber 分发、Claude 数学研究、Suno 下载/条款治理、SAFE Agent 事故报告、OpenAI 高管流动、AI 内存成本和媒体 AI 聊天产品。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI News、Anthropic Newsroom、Suno Blog、Axios AI/Technology、TechCrunch 和历史 URL，跳过重复、弱来源、付费墙正文、登录墙正文和社区讨论。
+  - 本期官方来源占 6/10：OpenAI 官方支持 ChatGPT Ads 地区扩展、Daybreak on AWS、Daybreak Cyber Partner Program 和 ChatGPT Business Premium seats；Anthropic 官方支持 Claude 数学研究材料；Suno 官方支持下载限制和 ToS 更新时间表。
+  - Axios 作为可靠媒体补充 4/10 雷达信号：SAFE AI Agent 事故报告框架、OpenAI 高管 Brad Lightcap 离职、AI 内存成本压力和 New York Post Hamilton AI 聊天产品；均保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未重复已归档的 GPT-5.6 Luna 免费层 URL；对官方来源也保留外部验证边界，要求帮助中心、AWS 文档、客户合同、审计日志、正式 ToS、BLS/FRED 数据、同行评审和第三方实测升级判断。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 40 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending local commit with message `更新17点AI新闻情报`; push will be attempted after final verification.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-11 23:09 JST
 
 - Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-11`，因此未回退早间版，而是在现有 17:00 JST 版中补入 3 条安全非重复可靠媒体背景信号，当前版从 7 条增至 10 条。
