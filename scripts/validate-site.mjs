@@ -1227,7 +1227,8 @@ if (
   !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 30[\s\S]*optimization-plan\.md/.test(optimizationDecisionIndex) ||
   !/Day 0[\s\S]*homepage-edition-preflight\.md/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 1/.test(optimizationDecisionIndex) ||
+  !/Day 1[\s\S]*readerFrame\.mobile/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 2/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
