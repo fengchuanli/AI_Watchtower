@@ -1,3 +1,30 @@
+## 2026-08-11 23:09 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-11`，因此未回退早间版，而是在现有 17:00 JST 版中补入 3 条安全非重复可靠媒体背景信号，当前版从 7 条增至 10 条。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Axios、WSJ、Barron's、TechCrunch、Guardian 和历史重复项，未使用付费墙正文、登录墙正文、社区传言或随机页面。
+  - 新增 Axios 媒体背景信号：NVIDIA 与 Goldman Sachs、BlackRock 等华尔街机构讨论约 5000 亿美元级 AI 基础设施融资方案，用于提示芯片客户融资、项目债务、电力许可和投产记录核查。
+  - 新增 WSJ 媒体背景信号：NVIDIA 被报道推出 Nemotron 3.5 Lightning 和 NeMo Switchyard，用于提示模型卡、许可证、路由策略、benchmark 和第三方复测核查。
+  - 新增 Barron's 媒体背景信号：Riot Platforms 与 Anthropic 被报道达成 20 年、约 91 亿美元 AI 计算容量协议，用于提示合同/filing、电力协议、建设许可和 Anthropic 实际使用核查。
+  - 为 Riot/Anthropic 候选新增 `barrons-technology` 来源登记；三条新增项均保持 `媒体背景` / `reported` / `originalDependency: must-read`，不把媒体报道升级为合同、模型能力或投产事实。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 40 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending local content commit with message `补充08点AI新闻情报`; push will be retried after commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync remains dependent on DNS/network recovery.
+
 ## 2026-08-11 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 1 homepage edition quality task. Reviewed the current `edition.readerFrame.mobile` copy against the 2026-08-11 17:00 JST homepage and shortened the mobile scan path so phone readers first judge Agent overreach risk, then policy pressure, then infrastructure evidence.
