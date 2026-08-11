@@ -25,8 +25,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `cbcf78d` (`优化手机读者框架`); this log note records the implementation hash and expected push blocker if remote sync remains unavailable.
-- Git note: Push still needs retry after this log commit; previous pull attempt failed due to `ssh: Could not resolve hostname github.com: -65563`.
+- Commit: Local implementation commit `cbcf78d` (`优化手机读者框架`) and log/index follow-up commit `ef923e0` (`记录手机读者框架优化`); this push-blocker note records the latest local status.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-11 08:09 JST
 
