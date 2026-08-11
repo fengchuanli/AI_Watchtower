@@ -19,7 +19,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Previous Day 29 | Complete | `a1947c6` | `docs/monthly-optimization-summary.md` summarizes the 2026-06-24 to 2026-07-23 cycle's workflow, homepage, continuity, detail-source, and validation improvements, plus remaining weaknesses. |
 | Previous Day 30 | Complete | `68eebfc` | `docs/optimization-plan.md` now covers 2026-08-10 through 2026-09-08 and shifts the cycle toward lower-friction real news updates, lighter mobile homepage reading, and clearer cross-edition continuity. |
 | Day 0 | Complete | `68eebfc` | `docs/homepage-edition-preflight.md` checks each edition's reader question, TOP3 reader use, source mix boundary, mobile scan path, proof boundary, and archive mirror before publication. |
-| Day 1 | Complete | pending | The current `readerFrame.mobile` copy now gives phone readers a shorter scan path: judge Agent overreach, then policy pressure, then infrastructure evidence. |
+| Day 1 | Complete | `cbcf78d` | The current `readerFrame.mobile` copy now gives phone readers a shorter scan path: judge Agent overreach, then policy pressure, then infrastructure evidence. |
 
 ## Historical Guard Anchors
 

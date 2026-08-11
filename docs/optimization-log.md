@@ -1,3 +1,33 @@
+## 2026-08-11 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 1 homepage edition quality task. Reviewed the current `edition.readerFrame.mobile` copy against the 2026-08-11 17:00 JST homepage and shortened the mobile scan path so phone readers first judge Agent overreach risk, then policy pressure, then infrastructure evidence.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Rewrote the latest current edition's mobile reader frame from repeated "查权限/查暂停/查基础设施" labels into a tighter phone-first sequence: Agent 越权后果、暂停压力、材料与集群。
+  - Mirrored the same `readerFrame.mobile` copy into the newest `data/news-history.json` edition so archive readers see the same mobile guidance after the homepage advances.
+  - Advanced `docs/optimization-decision-index.md` so Day 2 is the next useful task: review `briefing.summary` and `deepBriefing.overview`.
+  - Updated `scripts/validate-site.mjs` so the decision-index guard now expects the completed Day 1 mobile reader-frame anchor and the Day 2 next task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, current `data/news.json`, latest `data/news-history.json`, and relevant validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 7 current news items against 39 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `cbcf78d` (`优化手机读者框架`); this log note records the implementation hash and expected push blocker if remote sync remains unavailable.
+- Git note: Push still needs retry after this log commit; previous pull attempt failed due to `ssh: Could not resolve hostname github.com: -65563`.
+
 ## 2026-08-11 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-11`，发布 7 条 AI 新闻情报，聚焦 Meta Glimmer 本地 Agent、Claude/OpenClaw 真实服务越权、Sanders AI 暂停信、澳大利亚地方 AI 审查、AI 材料发现和伦敦 King’s Cross AI 集群。
