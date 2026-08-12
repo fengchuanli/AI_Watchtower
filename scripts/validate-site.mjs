@@ -1228,7 +1228,8 @@ if (
   !/Previous Day 30[\s\S]*optimization-plan\.md/.test(optimizationDecisionIndex) ||
   !/Day 0[\s\S]*homepage-edition-preflight\.md/.test(optimizationDecisionIndex) ||
   !/Day 1[\s\S]*readerFrame\.mobile/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 2/.test(optimizationDecisionIndex) ||
+  !/Day 2[\s\S]*briefing\.summary[\s\S]*deepBriefing\.overview/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 3/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
