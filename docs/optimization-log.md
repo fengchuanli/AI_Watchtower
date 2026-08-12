@@ -21,8 +21,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: pending - expected message `补充08点AI新闻情报`.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit but is expected to need DNS/network recovery if the blocker persists.
+- Commit: Local content commit `fd242d4` with message `补充08点AI新闻情报`; this follow-up log note records the expected push blocker if remote sync remains unavailable.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried but is expected to need DNS/network recovery if the blocker persists.
 
 ## 2026-08-12 20:00 JST
 
