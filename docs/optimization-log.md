@@ -1,3 +1,29 @@
+## 2026-08-12 23:07 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-12`，因此未回退早间版，而是在现有 17:00 JST 版中补入 2 条安全非重复信号，当前版从 10 条增至 12 条。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Anthropic Support Center、Axios AI/Technology、OpenAI、Anthropic、Suno、Google 和历史 URL，跳过重复、弱来源、付费墙正文、登录墙正文和社区讨论。
+  - 新增 Anthropic Support Center 官方核对信号：Claude 生成内容机器可读标记，用于提示 EU AI Act Article 50、管理员控制、检测接口、误判和水印鲁棒性核查；为该官方帮助中心新增 `anthropic-support` 来源登记，来源数增至 41。
+  - 新增 Axios 媒体背景信号：AI Agent 测试越界历史和内部威胁式治理建议，用于提示 Black Hat 材料、供应商复盘、沙箱隔离、凭据边界和日志留证核查。
+  - 保持媒体项为 `媒体背景` / `reported` / `originalDependency: must-read`；不把 Axios 采访背景升级为行业统计、事故归因或已验证治理效果。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending - expected message `补充08点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit but is expected to need DNS/network recovery if the blocker persists.
+
 ## 2026-08-12 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 2 homepage edition quality task. Reviewed the current `briefing.summary` and `deepBriefing.overview` so the homepage first states the reader decision, then separates official/media source boundaries from AI Watchtower interpretation.
