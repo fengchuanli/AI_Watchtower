@@ -1,3 +1,28 @@
+## 2026-08-13 08:09 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-13`，发布 10 条安全非重复 AI 情报，聚焦 OpenAI 企业 Agent 采用报告、Cognition/Lovable/Thrive 企业与开发工具资本信号、Google/Gemini 端侧入口、Twitch 训练数据默认设置、Fermi AI 供电项目和开放模型治理。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI News、TechCrunch 最新页、TechCrunch AI/设备/平台报道和历史 URL，跳过与上一版 Claude 水印官方项过近的重复报道、弱来源、付费墙正文、登录墙正文和社区讨论。
+  - 本期官方来源 1/10：OpenAI 官方支持企业 AI 从辅助转向执行的报告发布事实和指标口径；不把 OpenAI 客户样本升级为全市场 ROI 结论。
+  - 本期可靠媒体 9/10：TechCrunch 提供 Cognition、Lovable、Thrive、Made by Google、Pixel 11、Pixel Watch 5、Twitch、Fermi 和 Ai4 开放模型雷达；全部保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 单一来源集中度为 `techcrunch-ai` 9/10，已在 `sourceConcentration` 和 `overreadBoundary` 中提示需用官方公告、融资文件、客户合同、政策文本、许可记录、真机实测和第三方研究交叉验证。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending local commit with message `更新17点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may remain blocked by the same DNS issue.
+
 ## 2026-08-12 23:07 JST
 
 - Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-12`，因此未回退早间版，而是在现有 17:00 JST 版中补入 2 条安全非重复信号，当前版从 10 条增至 12 条。

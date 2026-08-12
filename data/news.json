@@ -1,1280 +1,1105 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-13",
   "status": "published",
   "statusLabel": "已更新",
   "sourceCount": 41,
-  "editorNote": "2026-08-12 23:20 JST：08:00 JST 补充核查未回退当前 17:00 版；新增 2 条安全非重复 AI 情报，当前版共 12 条。",
+  "editorNote": "2026-08-13 17:00 JST：发布 10 条安全非重复 AI 情报，远端同步仍受 GitHub DNS 阻塞。",
   "edition": {
-    "id": "news-1700-2026-08-12",
-    "date": "2026-08-12",
+    "id": "news-1700-2026-08-13",
+    "date": "2026-08-13",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
     "archiveLabel": "17:00 JST 发布",
-    "note": "本期聚焦 ChatGPT 商业化、cyber 模型、AI 数学、Agent 事故治理和 AI 内容标记。",
-    "operationalStatus": "GitHub DNS 阻塞 pull；已检查官方/可靠媒体来源并补入 2 条非重复信号。",
-    "editorialInterpretation": "官方来源占 7 条，媒体雷达占 5 条；效果、成本和治理仍需外部验证。",
+    "note": "本期聚焦企业 Agent、端侧 Gemini、训练数据、AI 编程和算力能源。",
+    "operationalStatus": "GitHub DNS 阻塞 pull；已核查官方索引、TechCrunch 最新页和历史重复 URL。",
+    "editorialInterpretation": "本期以可靠媒体雷达为主，OpenAI 官方报告提供企业采用证据；资本、端侧功能和治理效果仍需独立核查。",
     "readerFrame": {
-      "headline": "阅读本期：先看官方产品变化，再查 Agent 留证和 AI 标记",
-      "whyItMatters": "这 12 条把 ChatGPT 广告/企业席位、OpenAI Daybreak、Claude 数学、Claude 内容标记、Suno 条款、SAFE 事故报告、Agent 沙箱越界、OpenAI 高管流动、内存成本和媒体 AI 产品放进同一张核查表。",
+      "headline": "阅读本期：先看企业 Agent，再查端侧 Gemini 和训练数据授权",
+      "whyItMatters": "这 10 条把 OpenAI 企业采用报告、Cognition/Lovable/Thrive 融资、Google/Gemini 设备功能、Twitch 训练数据默认设置、Fermi AI 供电项目和开放模型治理放在同一张核查表。",
       "mobile": {
-        "headline": "手机先看官方变更",
-        "summary": "先看 OpenAI/Claude 官方变化，再看 Agent 安全和成本。",
+        "headline": "手机先看权限和执行",
+        "summary": "先查 Agent 落地指标，再看 Gemini 端侧入口和训练数据默认设置。",
         "primaryUses": [
-          "产品团队看 ChatGPT 商业化。",
-          "安全团队看 Daybreak、SAFE 和沙箱。",
-          "合规团队看 Claude 标记。"
+          "企业团队查 Agent ROI。",
+          "移动团队查 Gemini 权限。",
+          "法务团队查训练数据。"
         ],
-        "proofBoundary": "仍需外部审计、客户指标、评审和实测。"
+        "proofBoundary": "仍需官方文件、合同、政策文本和实测。"
       },
       "useThisIssueFor": [
-        "产品和增长团队用本期检查 ChatGPT 广告、免费层、企业席位、媒体 AI 聊天和 AI 音乐下载规则。",
-        "安全和平台团队用本期检查 Daybreak 访问层、伙伴服务、SAFE 事故报告、Agent 沙箱、轨迹和证据留存。",
-        "研究、采购、合规和战略团队用本期检查 Claude 数学证明、Claude 内容标记、OpenAI 组织变化、内存成本和供应链压力。"
+        "企业 CIO、财务和审计团队用本期检查 Agent 工作流、Plugins/skills、Codex 采用指标和 ROI 证据。",
+        "移动产品、健康和应用生态团队用本期检查 Gemini 在 Pixel、手表、相机、语音和连接应用中的权限与日志。",
+        "法务、内容平台和基础设施团队用本期检查 Twitch 训练数据默认设置、开放模型政策、AI 数据中心供电和客户租约。"
       ],
       "notProvenYet": [
-        "不证明 ChatGPT 广告不会影响用户信任，也不证明免费层不限量文本在所有地区都没有实际限制。",
-        "不证明 Daybreak 客户效果、Claude 数学结论、Claude 水印可靠性、Suno 治理措施、SAFE 框架或内存成本传导已经被独立验证。"
+        "不证明媒体报道的融资讨论、估值、客户租约或社区反应已经被公司文件完全确认。",
+        "不证明 Gemini 设备功能、AI 健康监测、Agent 执行、训练数据退出机制或企业 AI ROI 已被独立验证。"
       ]
     },
     "changeSummary": {
-      "headline": "相较 8 月 11 日版，本期从媒体雷达转向官方产品、安全发布和合规标记",
+      "headline": "相较 8 月 12 日版，本期从官方发布扩展到企业落地、端侧 Agent 和数据授权",
       "freshFacts": [
-        "本期新增来源事实：OpenAI 官方发布 ChatGPT Ads 地区扩展、Daybreak on AWS、Daybreak Cyber Partner Program 和 ChatGPT Business Premium seats。",
-        "本期新增来源事实：Anthropic 官方发布 Claude 数学能力研究材料，Anthropic Support Center 说明 Claude 生成内容标记机制，Suno 官方发布下载限制和 ToS 更新时间表。",
-        "本期新增来源事实：Axios 报道 SAFE Agent 事故报告框架、AI Agent 测试越界背景、OpenAI 高管离职、AI 内存成本压力和 New York Post Hamilton AI 聊天产品。"
+        "本期新增来源事实：OpenAI 官方发布企业 AI 采用报告和工作论文，讨论从辅助到执行的组织差距。",
+        "本期新增来源事实：TechCrunch 报道 Cognition、Lovable、Thrive Holdings 的 AI 编程/企业落地资本信号。",
+        "本期新增来源事实：TechCrunch 报道 Made by Google 的 Gemini 设备功能、Twitch 默认训练数据设置、Fermi AI 供电项目 CEO 任命和开放模型会议立场。"
       ],
       "repeatedContext": [
-        "延续背景：上一版已覆盖 Agent 越权、AI cyber 能力、算力金融化和政策压力。",
-        "仍是同一主线：官方发布证明“发布方做了什么”，但效果、采用率、安全性和成本传导仍需外部证据。"
+        "延续背景：上一版已覆盖 Claude 水印、ChatGPT 商业化、Daybreak cyber 访问和 Agent 事故治理。",
+        "仍是同一主线：发布和融资证明“市场在推进”，但效果、权限、合同、监管和实测仍需外部证据。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对 ChatGPT 商业化入口",
-        "count": 3,
-        "meaning": "用来检查广告、免费层模型、企业席位、用户控制和真实限制。"
-      },
-      {
-        "label": "验证 cyber 与 Agent 治理",
+        "label": "核对企业 Agent 落地",
         "count": 4,
-        "meaning": "用来检查 Daybreak 访问、伙伴责任、SAFE 报告、沙箱边界、日志和事故留证。"
+        "meaning": "用来检查 OpenAI 企业采用指标、Thrive 部署模式、Cognition/Lovable 开发工具牵引和真实 ROI。"
       },
       {
-        "label": "查研究、合规与成本证据",
-        "count": 5,
-        "meaning": "用来检查 Claude 数学证明、Claude 内容标记、Suno 条款、AI 内存成本和媒体 AI 产品授权。"
+        "label": "核对端侧 Gemini 权限",
+        "count": 3,
+        "meaning": "用来检查 Pixel、Pixel Watch、移动 Agent、健康提醒、连接应用和用户接管机制。"
+      },
+      {
+        "label": "验证数据、开放与供电边界",
+        "count": 3,
+        "meaning": "用来检查 Twitch 训练数据授权、开放模型治理、AI 数据中心电力租约和监管许可。"
       }
     ],
     "sourceRisk": {
-      "label": "官方占优但仍需外部验证",
-      "note": "7 条官方来源确认发布事实；5 条 Axios 只作媒体雷达。",
-      "nextCheck": "核对官方文档、EU 指南、审计日志、原始数据和第三方测试。"
+      "label": "可靠媒体集中，官方证据有限",
+      "note": "9/10 来自同一可靠媒体来源 TechCrunch，本期应作为雷达批次阅读。",
+      "nextCheck": "用公司公告、官方帮助中心、融资文件、客户合同、许可记录、真机实测和第三方研究交叉验证。"
+    },
+    "sourceConcentration": {
+      "sourceId": "techcrunch-ai",
+      "sourceName": "TechCrunch AI",
+      "count": 9,
+      "share": "9/10",
+      "note": "TechCrunch 是本期最大单一来源；这些条目提供媒体雷达和从业者背景，不代表融资、功能、合同或政策效果已被独立证明。",
+      "nextCheck": "核对各公司官方公告、合同/filing、政策文本、许可记录和第三方测试。"
+    },
+    "overreadBoundary": {
+      "label": "不要把本期读成全市场结论",
+      "body": "本期主要依赖可靠媒体最新页，适合发现企业 Agent、端侧 AI、训练数据和基础设施风险。",
+      "doNotConclude": "不能直接断言融资已经完成、估值合理、Gemini 功能全面可用、训练数据政策合规或 AI 供电项目可按期交付。",
+      "useInstead": "应该用官方公告、融资文件、客户合同、产品文档、隐私政策、监管许可、真机测试和第三方研究升级判断。"
     },
     "trendNotes": [
       {
-        "topic": "ai-commercialization",
-        "label": "AI 助手商业化加速",
-        "note": "跨期看，模型访问、广告、企业席位和媒体聊天入口正在把 AI 助手推向更明确的商业层。",
-        "boundary": "不证明用户信任和单位经济模型已经稳定，仍需留存、转化、广告反馈、隐私审计和成本数据。"
+        "topic": "agent-enterprise-adoption",
+        "label": "企业 Agent 进入可计量阶段",
+        "note": "跨期看，Codex、Devin、Lovable 和 Thrive 都在把 AI 从个人辅助推向任务执行、流程改造和收入指标。",
+        "boundary": "不证明 ROI 稳定，仍需客户侧任务完成率、留存、审计、成本和人工复核数据。"
       },
       {
-        "topic": "cyber-agent-governance",
-        "label": "Agent 安全进入留证阶段",
-        "note": "跨期看，Astra/Agent 越界、Daybreak 分发、SAFE 框架和沙箱经验把安全问题从能力阈值推进到报告、日志、权限和责任分工。",
-        "boundary": "不证明治理框架已生效，仍需草案采纳、客户审计、事故复盘、演讲材料和监管或法律保护。"
+        "topic": "device-agent-distribution",
+        "label": "端侧入口成为 Agent 分发层",
+        "note": "跨期看，Gemini 正进入手机、手表、相机、语音和连接应用，AI 入口从网页聊天转到系统层。",
+        "boundary": "不证明功能全面上线，仍需官方地区清单、权限文档、隐私说明和真机实测。"
       },
       {
-        "topic": "ai-content-provenance",
-        "label": "AI 内容标记进入文本层",
-        "note": "跨期看，监管要求正在把 AI 生成内容标识从图片/音频扩展到文本、水印、文件元数据和平台检测。",
-        "boundary": "不证明水印足够鲁棒，仍需误判率、重写鲁棒性、管理员日志和监管认可。"
+        "topic": "ai-inputs-governance",
+        "label": "AI 输入资源治理升温",
+        "note": "跨期看，训练数据、开放模型、电力和云容量都在成为 AI 竞争的前置资源。",
+        "boundary": "不证明资源可持续或合规，仍需平台政策、许可证、能源合同、监管许可和第三方审计。"
       }
     ],
     "topicContinuity": [
       {
         "topic": "agent",
-        "label": "事故治理更具体",
+        "label": "从事故留证转向企业执行",
         "status": "stronger",
-        "previousPattern": "上一版覆盖 Claude/OpenClaw 越权和 Agent 权限下沉。",
-        "currentSignal": "本期新增 SAFE 事故报告框架、Daybreak cyber 访问层和 Agent 沙箱越界背景。",
-        "signalDirection": "增强：从个案风险进入报告格式、日志证据、企业访问治理和运行环境隔离。",
-        "stillUnproven": "仍需 SAFE 草案采纳、成员承诺、日志样例、客户审计、Black Hat 材料和事故复盘。"
+        "previousPattern": "上一版覆盖 Daybreak、SAFE 报告和 Agent 沙箱越界。",
+        "currentSignal": "本期新增 OpenAI 企业采用报告、Cognition/Thrive/Lovable 落地资本和 Pixel 11 移动 Agent。",
+        "signalDirection": "增强：Agent 主题从安全边界扩展到企业流程、移动执行和供应商商业化。",
+        "stillUnproven": "仍需客户侧任务日志、ROI 指标、融资文件、权限审计、应用接入文档和第三方复测。"
       },
       {
         "topic": "model",
-        "label": "访问与能力同时调整",
+        "label": "模型入口下沉到设备和工作流",
         "status": "stronger",
-        "previousPattern": "上一版覆盖模型路由、开放权重和本地 Agent。",
-        "currentSignal": "本期新增 ChatGPT Business Premium seats、Daybreak AWS 访问层、Claude 数学材料和 Claude 生成内容标记。",
-        "signalDirection": "增强：模型议题从发布扩展到企业访问、云分发、质量评测、可验证研究和合规标记。",
-        "stillUnproven": "仍需帮助中心限制、服务数据、第三方测试、同行评审、形式化复核和水印鲁棒性测试。"
+        "previousPattern": "上一版覆盖 Claude 水印、Daybreak AWS 和 Claude 数学材料。",
+        "currentSignal": "本期新增 Gemini 端侧功能、Pixel Watch 健康助手和 OpenAI 企业采用指标。",
+        "signalDirection": "增强：模型议题从能力发布转向设备入口、组织指标和日常任务。",
+        "stillUnproven": "仍需 Google 官方规格、地区可用性、隐私说明、健康验证、OpenAI 样本方法和第三方研究。"
       },
       {
         "topic": "infrastructure",
-        "label": "成本压力重复",
+        "label": "算力约束继续外溢",
         "status": "repeated",
-        "previousPattern": "上一版覆盖 NVIDIA 融资、Riot/Anthropic 算力合同和材料散热。",
-        "currentSignal": "本期新增内存芯片价格与长期供应协议媒体背景。",
-        "signalDirection": "重复：算力约束继续外溢到内存、云成本和终端设备。",
-        "stillUnproven": "仍需 BLS/FRED 原始数据、供应商财报、云价格、采购合同和产能记录。"
+        "previousPattern": "上一版覆盖 Daybreak 云入口和内存成本压力。",
+        "currentSignal": "本期新增 Fermi AI 供电项目 CEO 任命和 Thrive/Lovable 云与部署扩张背景。",
+        "signalDirection": "重复：AI 扩张继续依赖电力、云容量、项目融资和建设执行。",
+        "stillUnproven": "仍需客户租约、许可记录、并网进度、云合同、融资文件和投产数据。"
       }
     ],
     "companyContinuity": [
       {
         "company": "OpenAI",
-        "label": "商业化与 cyber 分发同日推进",
-        "lastMention": "上一版覆盖 OpenAI 政策压力、Astra 安全和算力需求背景。",
-        "whatChanged": "本期新增 ChatGPT Ads 地区扩展、Daybreak AWS/伙伴分发、ChatGPT Business Premium seats、Agent 沙箱风险背景和 Brad Lightcap 离职报道。",
-        "stillUnproven": "仍需帮助中心、客户合同、审计日志、组织公告、服务指标和独立隐私/安全评估。"
+        "label": "从产品发布转向企业执行指标",
+        "lastMention": "上一版覆盖 ChatGPT 广告、Business Premium seats 和 Daybreak cyber 分发。",
+        "whatChanged": "本期新增 OpenAI 官方企业 AI 采用报告，并通过 Thrive Holdings 报道延续企业落地生态背景。",
+        "stillUnproven": "仍需工作论文方法、客户侧 KPI、审计样例、Thrive 合同和第三方 ROI 研究。"
       },
       {
-        "company": "Anthropic",
-        "label": "研究能力与内容标记并行",
-        "lastMention": "上一版覆盖 Claude/OpenClaw 越权和 Anthropic 外部算力背景。",
-        "whatChanged": "本期新增 Claude 对黎曼 zeta 相关下界的官方研究材料、Claude 生成内容标记说明和 Agent 沙箱越界媒体背景。",
-        "stillUnproven": "仍需独立数学家评审、Lean 仓库复核、论文审稿、勘误、管理员文档和第三方水印测试。"
+        "company": "Google",
+        "label": "Gemini 进入设备和健康入口",
+        "lastMention": "历史版多次覆盖 Google/Gemini 产品、云和搜索入口。",
+        "whatChanged": "本期新增 Made by Google、Pixel 11 和 Pixel Watch 5 中的 Gemini 端侧、连接应用和健康功能媒体报道。",
+        "stillUnproven": "仍需 Google 官方规格、地区清单、隐私说明、健康验证、合作应用文档和真机实测。"
       },
       {
-        "company": "Suno",
-        "label": "音乐生成治理进入下载和条款层",
-        "lastMention": "历史版覆盖 Suno 泄露和音乐版权/水印压力。",
-        "whatChanged": "本期新增 Suno 官方下载限制和 ToS 更新日期。",
-        "stillUnproven": "仍需正式条款、产品流程、执行数据、平台合作和权利人回应。"
-      },
-      {
-        "company": "Google Cloud",
-        "label": "媒体 AI 基础设施曝光",
-        "lastMention": "历史版多次覆盖 Google/Gemini 企业和产品入口。",
-        "whatChanged": "本期 Axios 报道 New York Post Hamilton 使用 Google Cloud/Gemini 支撑媒体 AI 聊天体验。",
-        "stillUnproven": "仍需 New York Post/Google Cloud 官方公告、产品实测、隐私政策和训练授权说明。"
+        "company": "Amazon",
+        "label": "训练数据边界进入 Twitch",
+        "lastMention": "历史版覆盖 Amazon/Anthropic 算力与 AI 云背景。",
+        "whatChanged": "本期新增 Twitch 默认允许内容用于 Amazon 生成式 AI 训练的媒体报道。",
+        "stillUnproven": "仍需 Twitch/Amazon 正式政策、帮助中心、地区条款、历史内容处理记录和监管反馈。"
       }
     ],
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方来源",
-        "count": 7,
-        "role": "官方来源确认发布方事实、日期、功能、计划、合规说明和研究材料，但不独立证明效果。"
+        "count": 1,
+        "role": "OpenAI 官方来源确认研究发布、报告主题和指标口径，但不独立证明全市场 ROI。"
       },
       {
         "family": "reliable_media",
         "label": "可靠媒体",
-        "count": 5,
-        "role": "Axios 提供组织、成本、Agent 治理、沙箱风险和媒体产品雷达；完整采访和上下文仍在原文。"
+        "count": 9,
+        "role": "TechCrunch 提供融资、端侧产品、平台政策和基础设施雷达；完整采访、上下文和细节仍在原文。"
       }
     ],
     "topicGroups": [
       {
         "id": "agent",
         "label": "Agent",
-        "count": 3,
+        "count": 5,
         "itemIds": [
-          "axios-safe-ai-agent-reporting-framework-2026-08-12",
-          "axios-ai-agent-sandbox-escape-history-2026-08-12",
-          "openai-daybreak-cyber-partner-program-2026-08-12"
+          "openai-enterprise-agentic-ai-reports-2026-08-12",
+          "techcrunch-cognition-devin-valuation-2026-08-13",
+          "techcrunch-thrive-holdings-ai-enterprise-2b-2026-08-13",
+          "techcrunch-pixel-11-gemini-agentic-tasks-2026-08-12",
+          "techcrunch-lovable-series-c-vibe-coding-2026-08-13"
         ],
-        "meaning": "用来检查 Agent/cyber 任务授权、工具调用、沙箱边界、报告和事故留证。"
+        "meaning": "用来检查 Agent 任务执行、企业流程、开发工具、移动代办和可审查 ROI。"
       },
       {
         "id": "model",
         "label": "模型",
         "count": 4,
         "itemIds": [
-          "openai-premium-seats-chatgpt-business-2026-08-12",
-          "anthropic-claude-watermark-eu-ai-act-2026-08-12",
-          "anthropic-claude-riemann-zeta-bound-2026-08-12",
-          "openai-daybreak-aws-bedrock-2026-08-12"
+          "openai-enterprise-agentic-ai-reports-2026-08-12",
+          "techcrunch-made-by-google-gemini-device-features-2026-08-12",
+          "techcrunch-pixel-11-gemini-agentic-tasks-2026-08-12",
+          "techcrunch-pixel-watch-5-gemini-health-guardian-2026-08-12"
         ],
-        "meaning": "用来核对模型访问、能力评测、生成内容标记、形式化证明和第三方测试。"
+        "meaning": "用来核对 Gemini/OpenAI 模型入口、端侧能力、组织采用指标和健康场景边界。"
       },
       {
         "id": "enterprise",
         "label": "企业",
-        "count": 3,
+        "count": 4,
         "itemIds": [
-          "openai-daybreak-aws-bedrock-2026-08-12",
-          "openai-daybreak-cyber-partner-program-2026-08-12",
-          "axios-new-york-post-hamilton-ai-chatbot-2026-08-12"
+          "openai-enterprise-agentic-ai-reports-2026-08-12",
+          "techcrunch-thrive-holdings-ai-enterprise-2b-2026-08-13",
+          "techcrunch-cognition-devin-valuation-2026-08-13",
+          "techcrunch-lovable-series-c-vibe-coding-2026-08-13"
         ],
-        "meaning": "用来检查企业席位、云分发、伙伴服务、媒体 AI 产品和采购责任。"
+        "meaning": "用来检查企业 AI 采购、部署公司、开发 Agent、低代码平台和供应商尽调。"
       },
       {
         "id": "policy",
         "label": "政策",
-        "count": 5,
+        "count": 3,
         "itemIds": [
-          "anthropic-claude-watermark-eu-ai-act-2026-08-12",
-          "openai-chatgpt-ads-japan-korea-2026-08-12",
-          "suno-download-limits-tos-2026-08-12",
-          "axios-safe-ai-agent-reporting-framework-2026-08-12",
-          "axios-ai-agent-sandbox-escape-history-2026-08-12"
+          "techcrunch-twitch-amazon-ai-training-opt-out-2026-08-13",
+          "techcrunch-ai-pioneers-open-models-ai4-2026-08-13",
+          "techcrunch-pixel-watch-5-gemini-health-guardian-2026-08-12"
         ],
-        "meaning": "用来更新广告隐私、内容权利、AI 生成标记、事故披露和平台治理清单。"
+        "meaning": "用来更新训练数据授权、开放模型治理、健康 AI 声明和地区监管清单。"
       },
       {
         "id": "infrastructure",
         "label": "基础设施",
-        "count": 2,
+        "count": 3,
         "itemIds": [
-          "axios-chipflation-ai-memory-prices-2026-08-12",
-          "openai-daybreak-aws-bedrock-2026-08-12"
+          "techcrunch-fermi-ai-nuclear-ceo-2026-08-13",
+          "techcrunch-thrive-holdings-ai-enterprise-2b-2026-08-13",
+          "techcrunch-lovable-series-c-vibe-coding-2026-08-13"
         ],
-        "meaning": "用来检查云入口、内存价格、供应协议和 AI 成本模型。"
+        "meaning": "用来检查电力项目、云合同、部署团队、融资和 AI 平台扩容能力。"
       },
       {
         "id": "developer-tooling",
         "label": "开发工具",
         "count": 3,
         "itemIds": [
-          "axios-ai-agent-sandbox-escape-history-2026-08-12",
-          "openai-daybreak-aws-bedrock-2026-08-12",
-          "openai-premium-seats-chatgpt-business-2026-08-12"
+          "techcrunch-cognition-devin-valuation-2026-08-13",
+          "techcrunch-lovable-series-c-vibe-coding-2026-08-13",
+          "openai-enterprise-agentic-ai-reports-2026-08-12"
         ],
-        "meaning": "用来调整 API/云模型入口、安全开发任务、Agent 沙箱和实际使用限制。"
+        "meaning": "用来调整代码 Agent、vibe-coding、Codex、插件/skills 和工程治理指标。"
       }
     ],
-    "itemCount": 12,
-    "sourceConcentration": {
-      "sourceId": "axios-ai",
-      "sourceName": "Axios AI / Technology",
-      "count": 5,
-      "share": "5/12",
-      "note": "Axios 是本期最大单一来源；这些条目提供媒体雷达和从业者背景，不代表外部效果或行业统计。",
-      "nextCheck": "用官方文档、AWS 文档、帮助中心、客户合同、审计日志、演讲材料、隐私评估、服务状态和第三方测试交叉验证。"
-    },
-    "overreadBoundary": {
-      "label": "不要把本期读成全市场结论",
-      "body": "本期 7 条来自官方来源，能确认发布事实、访问路径、研究材料和合规说明。",
-      "doNotConclude": "不能直接断言广告信任、Daybreak 防御收益、Claude 数学结论、Claude 水印可靠性、Suno 反滥用效果或 Agent 沙箱治理已经被外部验证。",
-      "useInstead": "应该用帮助中心、AWS 文档、客户合同、审计日志、正式 ToS、EU AI Act 指南、同行评审、BLS/FRED 数据和第三方实测升级判断。"
-    }
+    "itemCount": 10
   },
   "categories": [
     {
       "id": "model",
       "label": "模型",
-      "description": "供平台和安全团队核对模型能力、端侧运行、模型路由和发布边界；本期需模型卡、权重页和复测确认。"
+      "description": "供平台和安全团队核对模型入口、端侧能力和组织采用指标；本期 Gemini/OpenAI 信号仍需官方规格、样本方法和实测确认。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "供产品团队检查个人 Agent、消费级服务和用户权限；本期需上线记录、日志和用户控制项确认。"
+      "description": "供产品团队检查 AI 功能、设备入口和用户控制；本期 Pixel/Gemini 功能不直接证明全量上线，需地区清单和真机验证。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "供研究团队核对材料发现、评测方法和科学验证；本期需实验数据、benchmark 和复现确认。"
+      "description": "供研究和战略团队核对报告、论文和方法口径；本期 OpenAI 企业采用报告仍需第三方研究和客户侧指标复核。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "供开发者工具团队检查 Agent 外壳、模型路由、API 授权和撤销机制；本期需日志、配置和第三方测试确认。"
+      "description": "供开发和运营团队检查工具链、插件和工作流；当前开发工具信号需验证任务完成率、审查成本和安全边界。"
     },
     {
       "id": "funding",
-      "label": "资金",
-      "description": "供投资和基础设施团队检查材料、城市集群、AI 算力融资、长期合同和人才；本期不直接证明商业落地，需原始数据确认。"
+      "label": "融资",
+      "description": "用于战略、财务、采购和基础设施团队筛选资本、估值和扩张计划；本期融资与 AI 供电信号仍需公告、filing、合同和交付数据确认。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "供政策团队用来跟踪暂停开发、地方审查和开放模型叙事；本期需官方信件、法案、委员会文件和公司回应确认。"
+      "description": "供法务、合规和治理团队核对训练数据、开放模型和健康 AI 边界；本期不直接证明政策效果，等待正式文本、监管和审计材料。"
     }
   ],
   "briefing": {
-    "label": "今日简报",
-    "headline": "官方发布主导：ChatGPT 商业化、cyber 分发、AI 标记和 Agent 留证",
-    "summary": "今天先判断一件事：AI 产品是否已经进入需要同时核对商业化、安全留证、内容标记和外部验证的阶段。7 条官方来源只证明 OpenAI、Anthropic 和 Suno 发布了相关变化；5 条 Axios 只作媒体雷达。AI Watchtower 的解读是：下一步重点查广告反馈、Daybreak 审计、Claude 评审与水印测试、Suno 执行、Agent 沙箱日志和内存成本原始数据。",
-    "cta": "查看本期情报",
+    "label": "17:00 JST 情报简报",
+    "headline": "企业 Agent、端侧 Gemini 和训练数据授权同时进入核查窗口",
+    "summary": "本期的读者决策是：是否把 AI 采用从“买工具”升级为“审计任务执行、权限、数据输入和基础设施交付”。OpenAI 官方报告给出企业采用框架，TechCrunch 雷达显示资本、端侧设备、训练数据和 AI 供电项目都在加速，但多数结论还需要官方文件、合同、许可、实测和第三方研究。",
+    "cta": "查看 10 条情报",
     "watchPoints": [
       {
-        "title": "ChatGPT 商业化",
-        "body": "核对广告、免费层、企业席位、隐私和真实限制。"
+        "title": "企业执行",
+        "body": "检查 Agent 是否有任务日志、人工复核、权限边界和可审计 ROI。"
       },
       {
-        "title": "Cyber 与 Agent 留证",
-        "body": "跟踪 Daybreak 访问、伙伴服务、SAFE 草案、沙箱边界和日志责任。"
+        "title": "端侧入口",
+        "body": "核对 Gemini 在手机、手表、相机和连接应用里的默认权限与可用地区。"
       },
       {
-        "title": "研究、标记与成本验证",
-        "body": "等待 Claude 数学评审、水印实测、Suno 条款执行和内存价格原始数据。"
+        "title": "输入资源",
+        "body": "跟踪训练数据授权、开放模型治理、电力项目和云扩容是否有原始文件。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "17:00 JST 情报",
-    "title": "AI 产品开始收费分层，Agent 安全和内容标记开始要求留证",
-    "subtitle": "本期用官方发布为主线：ChatGPT 进入广告和免费层扩张，Daybreak 进入 AWS 与伙伴服务，Claude 数学能力与生成内容标记给出可复核材料；Axios 媒体雷达补充 Agent 事故报告、沙箱越界、组织和成本压力。",
-    "dateLabel": "2026 年 8 月 12 日 17:00 JST",
-    "status": "已发布，官方来源占优",
-    "overview": "读者可以先把本期当成一张生产化核查表：ChatGPT 商业化要看用户反馈和真实限制，Daybreak/SAFE/Agent 沙箱要看授权、隔离、日志与事故留证，Claude/Suno/内存成本要看评审、标记鲁棒性、执行和原始数据。来源边界是：官方页证明发布方做了什么，Axios 只提供媒体背景。AI Watchtower 的判断是，这些信号共同指向 AI 产品进入收费、分发、治理、内容标记和验证并行推进的阶段。",
+    "kicker": "17:00 JST 深度简报",
+    "title": "AI 从模型能力竞争转向执行、入口和资源治理",
+    "subtitle": "本期不是单一模型发布，而是企业 Agent、端侧 Gemini、训练数据和 AI 基础设施共同推进的核查表。",
+    "dateLabel": "2026 年 8 月 13 日 17:00 JST",
+    "status": "已发布，远端同步受 GitHub DNS 阻塞",
+    "overview": "本期显示 AI 竞争的焦点继续下沉：企业要把 Agent 接到工具和工作流，Google 把 Gemini 放进设备与健康入口，平台把训练数据授权写入默认设置，基础设施公司把 AI 数据中心推进到电力和建设管理。可靠媒体提供了大量雷达信号，但 AI Watchtower 只把它们作为待验证线索；能确认的官方事实主要是 OpenAI 发布了企业 AI 采用报告。",
     "timeline": [
       {
-        "label": "商业化",
-        "title": "ChatGPT Ads 与企业席位分层",
-        "body": "广告市场扩展和 Business Premium seats 改变用户入口、收入结构与企业采购。"
+        "label": "企业层",
+        "title": "OpenAI 发布企业采用材料",
+        "body": "官方材料把企业 AI 从辅助转向执行，并强调工具连接、权限、治理和可复用流程。"
       },
       {
-        "label": "安全",
-        "title": "Daybreak 进入 AWS 与伙伴网络",
-        "body": "OpenAI 把 cyber 模型放进云入口和安全服务商渠道。"
+        "label": "设备层",
+        "title": "Gemini 进入 Pixel 与手表入口",
+        "body": "TechCrunch 报道 Google 发布多项 Gemini 设备功能，移动 Agent 和健康 AI 需要更多权限与实测核查。"
       },
       {
-        "label": "研究",
-        "title": "Claude 数学结果发布材料",
-        "body": "Anthropic 给出论文、说明和 Lean 形式化，等待外部数学社区验证。"
-      },
-      {
-        "label": "治理",
-        "title": "SAFE 与 Suno 条款",
-        "body": "Agent 事故报告和 AI 音乐下载限制把平台规则变成可检查对象。"
+        "label": "资源层",
+        "title": "训练数据与供电成为前置约束",
+        "body": "Twitch 训练数据设置和 Fermi AI 供电项目说明，AI 竞争越来越依赖内容授权和能源交付。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "12",
-        "label": "本期安全非重复条目"
+        "value": "10",
+        "label": "本期安全非重复信号"
       },
       {
-        "value": "7/12",
-        "label": "官方来源占比"
+        "value": "9/10",
+        "label": "来自 TechCrunch 的媒体雷达"
       },
       {
-        "value": "5",
-        "label": "Axios 媒体雷达"
+        "value": "1",
+        "label": "OpenAI 官方企业采用报告"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "产品",
-        "title": "ChatGPT 从访问扩展到商业治理",
-        "body": "广告、免费层和企业席位显示 ChatGPT 正在同时调整收入、成本和使用层级。",
-        "soWhat": "产品团队要把隐私、限制、付费升级和真实服务质量放在同一张表里。"
+        "label": "企业执行",
+        "title": "Agent 采用要用任务和审计衡量",
+        "body": "OpenAI 报告、Cognition、Lovable 和 Thrive 都指向同一个变化：AI 工具不再只回答问题，而是被用于完成代码迁移、流程改造和业务执行。",
+        "soWhat": "企业应把采用指标改成任务完成率、复核成本、权限覆盖、异常处理和流程复用。"
       },
       {
         "number": "02",
-        "label": "安全",
-        "title": "Cyber 模型进入生产分发",
-        "body": "Daybreak 通过 AWS 和伙伴服务进入企业流程，SAFE 则提出 Agent 事故留证和报告框架。",
-        "soWhat": "安全团队要明确授权、日志、工具调用、凭据和补救责任。"
+        "label": "端侧入口",
+        "title": "Gemini 正在进入系统层操作",
+        "body": "Pixel 11 和 Pixel Watch 5 把 Gemini 放进相机、语音、连接应用、健康提醒和后台任务，移动产品需要重新设计确认与接管。",
+        "soWhat": "应用方要准备 Agent 调用策略、日志留存、用户授权、地区限制和敏感操作确认。"
       },
       {
         "number": "03",
-        "label": "验证",
-        "title": "AI 研究和内容治理都要外部证据",
-        "body": "Claude 数学、Suno 条款和内存成本都需要正式评审、执行数据或原始价格数据。",
-        "soWhat": "读者应把官方发布当成起点，而不是最终结论。"
+        "label": "资源治理",
+        "title": "训练数据和电力正在决定 AI 可持续性",
+        "body": "Twitch 默认训练设置和 Fermi AI 供电项目显示，模型能力之外的输入资源、许可、合同和电力交付正在变成核心风险。",
+        "soWhat": "法务和基础设施团队要把平台政策、创作者授权、客户租约、并网许可和监管文件列为同级证据。"
       }
     ],
     "actions": [
-      "检查 ChatGPT 广告、免费层和企业席位的实际限制。",
-      "为 Daybreak/SAFE 建立授权、日志、事故报告和客户通知流程。",
-      "跟踪 Claude 数学评审、Suno ToS 执行和内存成本原始数据。"
+      "把本期媒体项全部标记为待官方/文件复核，不直接写入战略结论。",
+      "为企业 Agent 建立任务日志、人工复核、权限和 ROI 四项最小检查。",
+      "为端侧 Gemini 和训练数据设置建立地区、默认值、退出权和审计路径清单。"
     ],
     "coverageLimits": [
       {
         "label": "时间边界",
-        "body": "本期主要覆盖 8 月 10 日晚至 8 月 12 日 17:00 JST 前可核验信号，少量 8 月 6 日官方产品更新因未重复且仍在上线窗口内纳入。"
+        "body": "本期主要覆盖 2026-08-12 至 2026-08-13 JST 可核对的新信号。"
       },
       {
         "label": "来源边界",
-        "body": "官方来源证明发布方事实；Axios 只作为媒体背景，不替代原文采访、图表和上下文。"
-      },
-      {
-        "label": "升级边界",
-        "body": "商业效果、安全成效、研究正确性、治理措施和成本传导都需要外部证据。"
+        "body": "TechCrunch 集中度高，适合作为新闻雷达；融资、功能和政策效果必须等待原始文件和第三方证据。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI、Anthropic 和 Suno 官方来源确认发布方事实、访问路径、条款、合规说明或研究材料。",
-        "Axios 提供组织、成本、Agent 治理、沙箱越界和媒体产品雷达，完整事实仍在原文。"
+        "OpenAI 官方页面直接支持其发布企业 AI 采用报告和工作论文。",
+        "TechCrunch 页面直接支持其报道 Cognition、Lovable、Thrive、Google Pixel/Gemini、Twitch、Fermi 和开放模型会议相关线索。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 将这些信号解释为 AI 产品进入收费、分发、治理、内容标记和验证并行推进阶段。",
-        "本期不把官方发布等同于效果验证，也不把媒体背景升级为合同、审计、统计或监管事实。"
+        "AI Watchtower 判断本期核心不是单一发布，而是 AI 执行能力进入企业、设备和资源治理。",
+        "AI Watchtower 将媒体项保留为雷达，要求用公告、合同、许可、政策、实测和第三方研究升级。"
       ],
       "unknowns": [
-        "仍缺少广告反馈、Daybreak 客户审计、Claude 数学同行评审和水印鲁棒性测试。",
-        "仍缺少 SAFE 采纳记录、Agent 沙箱可复现实验、Suno 执行数据和内存成本原始数据。"
+        "多数融资、估值、客户租约和平台政策细节尚未由原始文件完整确认。",
+        "Gemini 端侧功能、健康模型、训练数据退出和企业 Agent ROI 尚未获得充分独立验证。"
       ]
     },
     "references": [
       {
-        "label": "Anthropic 官方说明 Claude 内容标记",
-        "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+        "label": "TechCrunch 报道 Fermi CEO 任命与 AI campus",
+        "url": "https://techcrunch.com/2026/08/12/ai-nuclear-power-firm-fermi-finally-has-a-new-ceo/"
       },
       {
-        "label": "媒体报道 Claude 水印监管背景",
-        "url": "https://www.axios.com/2026/08/12/anthropic-claude-watermarks-ai-detection"
+        "label": "TechCrunch 报道 Twitch 默认 AI 训练设置",
+        "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/"
       },
       {
-        "label": "媒体报道 AI Agent 沙箱越界",
-        "url": "https://www.axios.com/2026/08/11/ai-agent-sandbox-cybersecurity-testing"
+        "label": "TechCrunch 报道 Cognition 融资讨论",
+        "url": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
       },
       {
-        "label": "媒体报道 SAFE 事故框架",
-        "url": "https://www.axios.com/2026/08/11/open-source-security-ai-agent-reporting"
+        "label": "TechCrunch 报道 Ai4 开放模型观点",
+        "url": "https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/"
       },
       {
-        "label": "媒体报道 OpenAI 高管离职",
-        "url": "https://www.axios.com/2026/08/11/openai-executive-brad-lightcap-is-leaving"
+        "label": "TechCrunch 报道 Thrive Holdings 融资",
+        "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
       },
       {
-        "label": "媒体报道 Hamilton AI 聊天",
-        "url": "https://www.axios.com/2026/08/11/new-york-post-hamilton-ai-chatbot"
+        "label": "TechCrunch 报道 Lovable Series C",
+        "url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/"
       },
       {
-        "label": "媒体报道 AI 内存成本上涨",
-        "url": "https://www.axios.com/2026/08/11/chips-memory-inflation-ai"
+        "label": "TechCrunch 报道 Made by Google 发布 Gemini",
+        "url": "https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/"
       },
       {
-        "label": "OpenAI 发布 ChatGPT 广告扩区",
-        "url": "https://openai.com/index/testing-ads-in-chatgpt/"
+        "label": "TechCrunch 报道 Pixel 11 Gemini 任务",
+        "url": "https://techcrunch.com/2026/08/12/pixel-11-has-few-hardware-changes-and-more-gemini/"
       },
       {
-        "label": "OpenAI 发布 Daybreak AWS 访问",
-        "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws/"
+        "label": "TechCrunch 报道 Pixel Watch 5 健康 AI",
+        "url": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/"
       },
       {
-        "label": "OpenAI 发布 Daybreak 伙伴计划",
-        "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/"
-      },
-      {
-        "label": "OpenAI 发布 Business 高用量席位",
-        "url": "https://openai.com/index/premium-seats-chatgpt-business/"
-      },
-      {
-        "label": "Anthropic 发布 Claude 数学研究",
-        "url": "https://www.anthropic.com/research/riemann-zeta"
-      },
-      {
-        "label": "Suno 公告下载限制和条款",
-        "url": "https://suno.com/blog/suno-updates-tos"
+        "label": "OpenAI 发布企业 AI 采用报告",
+        "url": "https://openai.com/index/how-enterprises-put-ai-to-work/"
       }
     ]
   },
   "items": [
     {
-      "id": "anthropic-claude-watermark-eu-ai-act-2026-08-12",
-      "category": "policy",
-      "label": "政策",
-      "title": "Anthropic 为 Claude 生成内容加入机器可读标记",
-      "body": "Anthropic 帮助中心和 Axios 报道显示，Claude 将为生成文本与文件增加机器可读标记，以配合欧盟 AI Act 透明度要求。",
-      "summary": "Anthropic 帮助中心和 Axios 报道显示，Claude 将为生成文本与文件增加机器可读标记，以配合欧盟 AI Act 透明度要求。",
-      "whyItMatters": "内容来源识别从图片/音频扩展到文本和文件元数据，企业沟通、合规和内容审核需要重新定义“AI 辅助”和“AI 生成”的边界。",
-      "detailBody": "Anthropic 官方帮助中心说明 Claude 生成内容标记机制；Axios 补充报道称，新模型会在文本和文件中加入机器可读水印，并指出重写、混合文本和过短内容会影响检测。该条可确认 Anthropic 的合规动作，但不能证明检测可靠性。",
-      "trend": "AI 内容治理正在从自愿披露走向模型层标记、平台检测和法规驱动的可审计流程。",
-      "detailTrend": "欧盟透明度义务正在迫使模型提供商把生成内容标记做进产品与文件流。对企业用户来说，风险不是只有“是否披露 AI”，还包括润色、翻译、排版这类低改写场景是否会被误判为 AI 生成。",
-      "whyRanked": "它把 AI 合规从政策文本推进到模型输出层，直接影响内容团队、法务和平台治理。",
-      "topReason": "它把 AI 合规从政策文本推进到模型输出层，直接影响内容团队、法务和平台治理。",
-      "detailWhyRanked": "Anthropic 官方帮助中心能确认 Claude 生成内容标记的产品说明，Axios 补充了 EU AI Act 透明度语境和检测限制；因为这会直接影响企业内容发布、误判申诉、供应商合规和审计记录，AI Watchtower 将其列为合规核查重点，但要求用监管指南和第三方鲁棒性测试再升级。",
+      "id": "techcrunch-fermi-ai-nuclear-ceo-2026-08-13",
+      "category": "funding",
+      "label": "融资",
+      "title": "TechCrunch 报道 AI 核电园区公司 Fermi 任命新 CEO",
+      "body": "TechCrunch 报道，Fermi 任命 Lee McIntire 为 CEO，并把 Project Matador 的 AI 数据中心供电叙事推进到建设执行阶段。",
+      "summary": "TechCrunch 报道，Fermi 任命 Lee McIntire 为 CEO，并把 Project Matador 的 AI 数据中心供电叙事推进到建设执行阶段。",
+      "whyItMatters": "AI 基础设施竞争正在把电力、核能、租约和施工治理放到同一张风险表，算力采购不能只看 GPU 供应。",
+      "detailBody": "TechCrunch 报道 Fermi 任命 Lee McIntire 为 CEO，并称该公司正在推进 Texas Amarillo 的 Project Matador AI campus；报道还提到其首个绑定客户租约背景。该条是媒体背景，不证明项目已按期投产。",
+      "trend": "AI 数据中心正在从云合同竞争延伸到电力资产、监管许可和现场交付能力竞争。",
+      "detailTrend": "算力约束让企业开始关注数据中心背后的电源、土地、许可和施工团队。Fermi 这类项目把 AI 基础设施叙事从芯片订单推进到“能否安全、准时交付电力和机房”的执行问题。",
+      "whyRanked": "它把 AI 算力瓶颈具体化为能源项目治理，适合基础设施和采购团队优先核对。",
+      "topReason": "它把 AI 算力瓶颈具体化为能源项目治理，适合基础设施和采购团队优先核对。",
+      "detailWhyRanked": "本条不是模型发布，而是 AI 供电项目的组织变化。若 Project Matador 这类项目能签约并交付，AI 数据中心采购会更依赖电力开发商、核能监管和本地社区审批；目前仍需合同、许可和投产记录验证。",
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "官方帮助中心可确认产品标记方向，检测效果仍需独立评估。"
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "媒体报道可确认任命和项目背景，交付能力仍需合同、许可和现场进度。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "媒体报道可确认任命和项目背景，交付能力仍需合同、许可和现场进度。"
+      },
+      "impact": "云、算力采购和能源团队应把数据中心供电合同、施工节点、监管许可和客户租约纳入 AI 容量判断。",
+      "whoShouldCare": "正在规划大模型训练、推理集群或长期云容量的数据中心采购、能源战略、法务和风险团队。",
+      "readerUse": "采购和基础设施团队用它更新 AI 数据中心供电、核能许可、客户租约和建设进度核查表。",
+      "nextCheck": "核对 Fermi 公告、客户租约、当地许可文件、核能监管材料、施工进度和并网记录。",
+      "followUpQuestions": [
+        "Project Matador 的绑定租约是否披露容量、期限和退出条款？",
+        "当地监管和社区审批是否支持其核能和数据中心时间表？"
+      ],
+      "evidenceThreshold": "至少需要公司公告、客户合同或 filing、许可记录、并网进度和施工审计，才能升级为已验证 AI 供电能力。",
+      "claimBoundary": "不证明 Fermi 已经交付 AI 数据中心电力，也不证明核能方案能按期落地。",
+      "counterEvidence": "如果后续合同/filing 显示租约未生效，许可记录或并网进度显示延期，施工审计发现重大缺口，应降级为高不确定性基础设施计划。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/ai-nuclear-power-firm-fermi-finally-has-a-new-ceo/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/ai-nuclear-power-firm-fermi-finally-has-a-new-ceo/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-13T07:24:00+09:00",
+      "time": "07:24 JST",
+      "tags": [
+        "AI 数据中心",
+        "核能",
+        "Fermi"
+      ],
+      "companies": [
+        "Fermi"
+      ]
+    },
+    {
+      "id": "techcrunch-twitch-amazon-ai-training-opt-out-2026-08-13",
+      "category": "policy",
+      "label": "政策",
+      "title": "TechCrunch 报道 Twitch 默认允许 Amazon 用创作者内容训练 AI",
+      "body": "TechCrunch 报道，Twitch 新增退出设置，但创作者内容默认可用于 Amazon 生成式 AI 训练，引发社区反弹。",
+      "summary": "TechCrunch 报道，Twitch 新增退出设置，但创作者内容默认可用于 Amazon 生成式 AI 训练，引发社区反弹。",
+      "whyItMatters": "训练数据授权正在进入平台默认设置层，创作者、品牌和法务需要检查“默认同意”和退出机制是否足够清楚。",
+      "detailBody": "TechCrunch 报道 Twitch 将以默认开启、可手动退出的方式允许 Amazon 使用频道内容训练生成式 AI。报道引用 Twitch 公开沟通和用户反应；本站不把社区情绪当作事实，只记录平台设置与治理风险。",
+      "trend": "AI 训练数据争议从网络抓取转向平台内内容许可、默认选项和创作者告知义务。",
+      "detailTrend": "当平台把用户内容变成模型训练资产，关键问题不只是能否退出，还包括通知是否充分、历史内容是否已使用、不同地区权利是否一致、商业创作者能否审计训练范围，以及平台是否允许删除或撤回训练授权。",
+      "whyRanked": "它直接影响创作者数据权利和平台 AI 训练合规，是本期最可操作的政策项之一。",
+      "topReason": "它直接影响创作者数据权利和平台 AI 训练合规，是本期最可操作的政策项之一。",
+      "detailWhyRanked": "Twitch 是高频音视频内容平台，默认训练设置会影响大量创作者语音、形象和直播素材。该报道可作为政策雷达，但需要 Twitch/Amazon 正式政策文本、设置截图、区域条款和执行记录进一步确认。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "媒体报道支持设置变化和争议背景，历史训练范围仍待平台披露。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "媒体报道支持设置变化和争议背景，历史训练范围仍待平台披露。"
+      },
+      "impact": "内容平台、创作者管理和品牌安全团队应立即检查训练数据默认设置、退出路径、历史内容范围和地区合规差异。",
+      "whoShouldCare": "管理直播、短视频、播客、UGC 社区或创作者合同的平台运营、法务、品牌安全和数据治理团队。",
+      "readerUse": "平台和创作者团队用它更新 AI 训练授权、默认设置、通知文案、退出流程和合同条款清单。",
+      "nextCheck": "核对 Twitch/Amazon 正式政策、帮助中心、区域条款、设置界面、历史内容处理说明和监管问询。",
+      "followUpQuestions": [
+        "Twitch 是否说明历史直播内容已被或将被用于 Amazon 模型训练？",
+        "不同国家和地区的创作者是否获得相同退出权和通知方式？"
+      ],
+      "evidenceThreshold": "至少需要 Twitch/Amazon 正式政策、帮助中心更新、设置证据、区域条款和执行日志，才能升级为已确认平台训练数据政策。",
+      "claimBoundary": "不证明 Amazon 已经使用所有 Twitch 历史内容训练模型，也不证明退出设置足以满足所有地区法规。",
+      "counterEvidence": "如果 Twitch/Amazon 正式政策显示默认训练未覆盖历史内容、监管要求改为显性同意，或平台提供可审计删除记录，应降级为可控训练授权变更。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-13T05:10:00+09:00",
+      "time": "05:10 JST",
+      "tags": [
+        "Twitch",
+        "Amazon",
+        "训练数据"
+      ],
+      "companies": [
+        "Amazon",
+        "Twitch"
+      ]
+    },
+    {
+      "id": "techcrunch-cognition-devin-valuation-2026-08-13",
+      "category": "funding",
+      "label": "融资",
+      "title": "TechCrunch 报道 Cognition 讨论 400 亿美元估值融资",
+      "body": "TechCrunch 报道，AI 编程 Agent 公司 Cognition 在 5 月融资后又被称正讨论更高估值的新一轮融资。",
+      "summary": "TechCrunch 报道，AI 编程 Agent 公司 Cognition 在 5 月融资后又被称正讨论更高估值的新一轮融资。",
+      "whyItMatters": "AI 编程 Agent 的资本预期正在被收入增速、企业采用和“替代琐碎迁移工作”的叙事共同推高。",
+      "detailBody": "TechCrunch 报道 Cognition 正与投资者讨论新一轮融资，估值可能较 5 月大幅上升，并把背景放在 Devin 企业收入和使用增长上。该条依赖媒体与 Bloomberg 来源，不确认融资已完成。",
+      "trend": "AI 编程工具竞争从模型能力转向企业采购、存量代码迁移和可计量收入。",
+      "detailTrend": "Devin 这类 Agent 的商业叙事正在从演示变成收入倍数和企业使用率。真正可验证的不是估值本身，而是客户是否持续把长尾维护、迁移和测试任务交给 Agent。",
+      "whyRanked": "它是 AI 编程 Agent 商业化热度的资金信号，但必须用收入和客户留存验证。",
+      "topReason": "它是 AI 编程 Agent 商业化热度的资金信号，但必须用收入和客户留存验证。",
+      "detailWhyRanked": "TechCrunch 把 Cognition 新估值讨论与 5 月融资、ARR 背景和 Devin 企业使用增长联系起来，说明 AI 编程 Agent 仍能吸引资本。AI Watchtower 关注的是融资是否完成、ARR 口径是否稳健、客户是否持续把迁移和维护任务交给 Devin。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "融资讨论具市场信号价值，但未完成交易和收入口径需验证。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "融资讨论具市场信号价值，但未完成交易和收入口径需验证。"
+      },
+      "impact": "开发平台、采购和 CTO 团队应把 AI 编程 Agent 的估值热度与实际迁移任务完成率、审查成本和安全责任分开看。",
+      "whoShouldCare": "正在评估 Devin、代码迁移 Agent 或自动化维护平台的软件工程领导、采购、财务和安全审查团队。",
+      "readerUse": "工程和采购团队用它更新 AI 编程 Agent 供应商风险、ARR 可信度、客户依赖和任务验收指标。",
+      "nextCheck": "核对 Cognition 官方融资公告、投资文件、ARR 定义、客户案例、续费数据和安全审计材料。",
+      "followUpQuestions": [
+        "Cognition 新一轮融资是否正式完成，投资条款是否披露？",
+        "Devin 的收入增长来自新增客户、扩容还是一次性迁移项目？"
+      ],
+      "evidenceThreshold": "至少需要官方融资公告、投资文件、经审计收入口径、客户续费和任务验收数据，才能升级为已确认商业牵引。",
+      "claimBoundary": "不证明 Cognition 已完成该轮融资，也不证明 Devin 能普遍替代软件工程岗位。",
+      "counterEvidence": "如果官方融资公告缺席、投资文件显示估值下调、客户续费数据走弱、任务验收报告显示失败率上升或人工复核成本过高，应降级为估值预期信号。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-13T03:19:00+09:00",
+      "time": "03:19 JST",
+      "tags": [
+        "Cognition",
+        "Devin",
+        "AI 编程"
+      ],
+      "companies": [
+        "Cognition"
+      ]
+    },
+    {
+      "id": "techcrunch-ai-pioneers-open-models-ai4-2026-08-13",
+      "category": "policy",
+      "label": "政策",
+      "title": "TechCrunch 报道 Hinton、李飞飞和 Andrew Ng 为开放 AI 辩护",
+      "body": "TechCrunch 报道，三位 AI 研究与产业人物在 Ai4 会议上反对少数大公司控制 AI 访问节奏。",
+      "summary": "TechCrunch 报道，三位 AI 研究与产业人物在 Ai4 会议上反对少数大公司控制 AI 访问节奏。",
+      "whyItMatters": "开放权重和集中控制的争论正在从实验室政策转向产业治理，影响开发者访问、监管设计和安全责任分配。",
+      "detailBody": "TechCrunch 报道 Geoffrey Hinton、李飞飞和 Andrew Ng 在 Ai4 会议上讨论开放 AI 的必要性，并把它放在安全担忧上升、少数大公司可能控制访问的背景下。该条是会议报道，不等同于政策共识。",
+      "trend": "AI 治理正在形成“安全收紧”和“开放访问”两条竞争叙事。",
+      "detailTrend": "当模型能力更接近高风险用途，监管者倾向收紧访问；但学界和开发者担心过度集中会压制创新和审计。未来关键在于开放模型的责任边界、评测门槛和滥用追责机制。",
+      "whyRanked": "它把开放模型争论从公司声明推进到顶级研究者公共论证，适合政策和开发生态跟踪。",
+      "topReason": "它把开放模型争论从公司声明推进到顶级研究者公共论证，适合政策和开发生态跟踪。",
+      "detailWhyRanked": "TechCrunch 报道的价值在于把 Hinton、李飞飞和 Andrew Ng 的公开立场放进开放模型争论，而不是提供新法律文本。AI Watchtower 关注演讲实录、书面提案、开放许可证和监管草案是否能把“保持开放”转化为可执行治理。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "会议报道能确认公开立场，具体政策路径仍需原始材料。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "会议报道能确认公开立场，具体政策路径仍需原始材料。"
+      },
+      "impact": "政策、开源生态和企业模型采购团队应区分开放访问、开放权重、开放评测和可追责部署这几种不同治理选项。",
+      "whoShouldCare": "需要选择闭源 API、开放权重模型或混合部署策略的政策研究、开发者平台、安全和企业架构团队。",
+      "readerUse": "政策和平台团队用它更新开放模型风险收益、访问控制、评测门槛和治理话术清单。",
+      "nextCheck": "核对 Ai4 演讲实录、研究者书面材料、监管草案、开放模型许可证和第三方安全评测。",
+      "followUpQuestions": [
+        "三位发言人是否提出可执行的开放模型安全门槛？",
+        "监管机构是否会把开放权重与闭源 API 分开设定责任规则？"
+      ],
+      "evidenceThreshold": "至少需要演讲实录、书面政策建议、模型许可证、监管草案和安全评测结果，才能升级为明确治理方案。",
+      "claimBoundary": "不证明开放模型一定更安全或更危险，也不证明研究者之间已经形成统一政策方案。",
+      "counterEvidence": "如果 Ai4 演讲实录文件显示立场被报道简化，后续安全事故报告数据削弱开放论据，或监管政策草案明确要求更强访问限制，应降级为会议观点信号。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-13T02:51:00+09:00",
+      "time": "02:51 JST",
+      "tags": [
+        "开放模型",
+        "AI 安全",
+        "Ai4"
+      ],
+      "companies": []
+    },
+    {
+      "id": "techcrunch-thrive-holdings-ai-enterprise-2b-2026-08-13",
+      "category": "funding",
+      "label": "融资",
+      "title": "TechCrunch 报道 OpenAI 相关 Thrive Holdings 融资 20 亿美元",
+      "body": "TechCrunch 报道，Thrive Holdings 以 AI 改造传统企业流程为目标，完成 20 亿美元融资并扩展企业落地模式。",
+      "summary": "TechCrunch 报道，Thrive Holdings 以 AI 改造传统企业流程为目标，完成 20 亿美元融资并扩展企业落地模式。",
+      "whyItMatters": "AI 企业落地正在从卖席位转向嵌入式改造公司，投资人押注“把工程团队带进旧业务”的服务化路径。",
+      "detailBody": "TechCrunch 报道 Thrive Holdings 获得 20 亿美元融资，并描述其购买传统企业、导入 AI 工作流以及与 OpenAI 的关系；报道还提到该模式与其他 AI 部署公司竞争。该条可作为企业落地资本信号，交易细节、客户收益和 OpenAI 参与边界仍需官方和文件验证。",
+      "trend": "企业 AI 进入部署公司和嵌入式改造团队竞争阶段，价值不只在模型 API。",
+      "detailTrend": "当企业难以自行重构流程，资本开始押注“收购或深度进入旧业务，再用 AI 改造流程”的模式。这个方向能否成立，取决于真实 ROI、客户侧效率、数据治理和人员责任边界。",
+      "whyRanked": "它显示 AI 采用已经变成企业运营改造资产，而不只是软件工具销售。",
+      "topReason": "它显示 AI 采用已经变成企业运营改造资产，而不只是软件工具销售。",
+      "detailWhyRanked": "Thrive Holdings 的融资把 AI 落地服务、私募式控股和 OpenAI 生态连接起来。AI Watchtower 关注的是这种模式是否能复制到会计、IT 和实体资产，而非融资金额本身。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "融资规模和模式值得关注，但估值和改造成效仍需文件与客户指标。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "融资规模和模式值得关注，但估值和改造成效仍需文件与客户指标。"
+      },
+      "impact": "企业战略、私募、咨询和 AI 转型团队应评估嵌入式工程改造是否比采购单点工具更有效。",
+      "whoShouldCare": "准备把 AI 放进会计、IT、运营或实体资产流程的企业转型负责人、投资团队、CIO 和流程治理团队。",
+      "readerUse": "企业和投资团队用它核对 AI 部署公司、流程改造 KPI、数据权限、人工复核和收益分配模型。",
+      "nextCheck": "核对 Thrive 官方公告、融资文件、被投企业名单、客户侧 ROI、OpenAI 合作条款和员工嵌入范围。",
+      "followUpQuestions": [
+        "Thrive 的 AI 改造收入来自控股企业经营改善还是外部服务收费？",
+        "OpenAI 员工嵌入企业时如何处理数据访问、责任和审计？"
+      ],
+      "evidenceThreshold": "至少需要官方融资公告、投资文件、客户侧经营指标、数据治理文件和合作条款，才能升级为已验证企业 AI 部署模式。",
+      "claimBoundary": "不证明 Thrive 模式已产生可复制 ROI，也不证明 OpenAI 相关资源能无缝进入所有传统企业。",
+      "counterEvidence": "如果客户指标未改善、整合成本过高、数据权限受限或融资文件不支持报道口径，应降级为资本叙事。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-13T02:41:00+09:00",
+      "time": "02:41 JST",
+      "tags": [
+        "企业 AI",
+        "OpenAI",
+        "Thrive Holdings"
+      ],
+      "companies": [
+        "OpenAI",
+        "Thrive Holdings"
+      ]
+    },
+    {
+      "id": "techcrunch-lovable-series-c-vibe-coding-2026-08-13",
+      "category": "funding",
+      "label": "融资",
+      "title": "TechCrunch 报道 Lovable 完成 4 亿美元融资",
+      "body": "TechCrunch 报道，vibe-coding 初创公司 Lovable 确认 133 亿美元估值和 4 亿美元 Series C 融资。",
+      "summary": "TechCrunch 报道，vibe-coding 初创公司 Lovable 确认 133 亿美元估值和 4 亿美元 Series C 融资。",
+      "whyItMatters": "自然语言建站和应用生成工具正在获得大规模资本支持，开发者平台竞争开始围绕项目托管、模型选择和后端能力展开。",
+      "detailBody": "TechCrunch 报道 Lovable 完成 4 亿美元 Series C，并称公司披露项目量、访问量、自研模型和 Google Cloud 合作背景；报道同时说明 TechCrunch 所属投资方参与了该轮融资。该条含公司披露和媒体报道，仍需融资公告、客户指标、云合同和独立使用数据验证。",
+      "trend": "vibe-coding 工具正从个人原型工具变成承载流量、模型路由和云合同的平台业务。",
+      "detailTrend": "Lovable 的融资说明低代码/自然语言开发仍是资本关注焦点。真正重要的是这些工具能否处理生产级后端、权限、成本、测试、安全扫描和长期维护，而不只是快速生成界面或演示项目。",
+      "whyRanked": "它体现 AI 开发工具从演示热度进入平台规模和云消耗竞争。",
+      "topReason": "它体现 AI 开发工具从演示热度进入平台规模和云消耗竞争。",
+      "detailWhyRanked": "本条将融资、ARR、项目托管和云合作放在一起，显示 vibe-coding 正在尝试成为开发平台入口。AI Watchtower 仍要求融资文件、产品指标和生产级案例确认其商业质量。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "公司披露和媒体报道有信号价值，生产级留存和成本结构仍需验证。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "公司披露和媒体报道有信号价值，生产级留存和成本结构仍需验证。"
+      },
+      "impact": "开发者工具、云平台和创业团队应核对自然语言开发工具的生产可用性、云锁定、模型成本和安全边界。",
+      "whoShouldCare": "正在选型 AI 建站、内部工具生成、低代码平台或云开发环境的创业者、工程负责人和平台采购团队。",
+      "readerUse": "开发平台团队用它更新 vibe-coding 供应商、项目托管规模、云依赖、自研模型和生产治理清单。",
+      "nextCheck": "核对 Lovable 官方融资公告、投资文件、ARR 口径、项目活跃度、Google Cloud 合同和生产级客户案例。",
+      "followUpQuestions": [
+        "Lovable 的 900 million monthly visitors 是否来自真实生产应用还是展示页流量？",
+        "自研模型和 frontier model 选项如何影响成本、隐私和输出质量？"
+      ],
+      "evidenceThreshold": "至少需要官方融资公告、经确认 ARR、活跃项目留存、云合同和生产客户案例，才能升级为已验证开发平台牵引。",
+      "claimBoundary": "不证明 vibe-coding 已能替代完整软件工程流程，也不证明估值反映可持续利润。",
+      "counterEvidence": "如果官方融资文件显示估值条款弱化，活跃项目留存数据低，安全报告显示生成应用漏洞增多，或云成本记录显示单位经济失控，应降级为高热度融资信号。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-13T01:04:00+09:00",
+      "time": "01:04 JST",
+      "tags": [
+        "Lovable",
+        "vibe-coding",
+        "开发工具"
+      ],
+      "companies": [
+        "Lovable",
+        "Google"
+      ]
+    },
+    {
+      "id": "techcrunch-made-by-google-gemini-device-features-2026-08-12",
+      "category": "product",
+      "label": "产品",
+      "title": "TechCrunch 汇总 Made by Google 的 Gemini 设备功能",
+      "body": "TechCrunch 汇总 Google 在 Made by Google 2026 发布 Pixel 11、Pixel Watch 5、Pixel Tag 和多项 Gemini 设备功能。",
+      "summary": "TechCrunch 汇总 Google 在 Made by Google 2026 发布 Pixel 11、Pixel Watch 5、Pixel Tag 和多项 Gemini 设备功能。",
+      "whyItMatters": "Gemini 正从聊天入口扩展到相机、转写、设备搜索和日常任务，手机硬件发布变成 AI Agent 分发窗口。",
+      "detailBody": "TechCrunch 报道 Google 在 Made by Google 2026 展示 Pixel 11 系列、Pixel Watch 5、Pixel Tag 和多项 Gemini 功能，包括 Live Transcribe、Rambler、Circle to Search 相机入口等。该条需以 Google 官方页面和实测确认可用范围。",
+      "trend": "端侧 AI 正把相机、语音、搜索和辅助功能组合成常驻助手入口。",
+      "detailTrend": "Google 的设备发布显示，AI 功能不再只是 app 更新，而是嵌入硬件首屏、相机和系统服务。企业和消费者都需要关注隐私、地区可用性、默认权限和离线能力。",
+      "whyRanked": "它把 Gemini 分发路径从云模型推进到消费设备系统层，影响用户习惯和开发入口。",
+      "topReason": "它把 Gemini 分发路径从云模型推进到消费设备系统层，影响用户习惯和开发入口。",
+      "detailWhyRanked": "TechCrunch 的 Made by Google 汇总把 Pixel 11、Pixel Watch 5、Pixel Tag 与 Gemini 功能放在同一发布窗口，能帮助读者理解 Google 的设备分发策略。AI Watchtower 仍需 Google 官方规格、地区清单、隐私说明和真机验证后再判断可用性。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "媒体汇总能确认发布方向，功能范围和地区限制需官方规格和实测。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "媒体汇总能确认发布方向，功能范围和地区限制需官方规格和实测。"
+      },
+      "impact": "移动产品、无障碍、搜索和隐私团队应检查 Gemini 在系统层的触发方式、数据流和用户控制。",
+      "whoShouldCare": "负责手机应用、移动搜索、无障碍功能、端侧 AI 和消费者隐私体验的产品、设计和合规团队。",
+      "readerUse": "移动团队用它更新 Gemini 端侧入口、相机搜索、语音输入、无障碍和系统权限检查表。",
+      "nextCheck": "核对 Google 官方 Made by Google 页面、Pixel 规格、地区可用性、隐私说明、开发者文档和真机实测。",
+      "followUpQuestions": [
+        "哪些 Gemini 功能在发布当天可用，哪些只是未来几周上线？",
+        "相机、语音和连接应用功能的数据是否留在设备或发送到云端？"
+      ],
+      "evidenceThreshold": "至少需要 Google 官方规格、帮助文档、地区清单、隐私说明和真机测试，才能升级为已确认端侧功能。",
+      "claimBoundary": "不证明所有 Pixel 用户都能立即使用这些 Gemini 功能，也不证明端侧处理覆盖全部数据。",
+      "counterEvidence": "如果官方地区清单收窄、功能延期、隐私说明限制更多或实测不可用，应降级为发布会方向信号。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-12T23:20:00+09:00",
+      "time": "23:20 JST",
+      "tags": [
+        "Google",
+        "Gemini",
+        "Pixel"
+      ],
+      "companies": [
+        "Google"
+      ]
+    },
+    {
+      "id": "techcrunch-pixel-11-gemini-agentic-tasks-2026-08-12",
+      "category": "product",
+      "label": "产品",
+      "title": "TechCrunch 报道 Pixel 11 更强调 Gemini 后台任务",
+      "body": "TechCrunch 报道，Pixel 11 硬件变化较少，但新增更多 Gemini 后台任务、实时翻译和连接应用能力。",
+      "summary": "TechCrunch 报道，Pixel 11 硬件变化较少，但新增更多 Gemini 后台任务、实时翻译和连接应用能力。",
+      "whyItMatters": "手机 AI 正从问答助手走向代办执行，应用生态需要适配权限、确认、日志和用户接管机制。",
+      "detailBody": "TechCrunch 报道 Pixel 11 系列更强调 Gemini 任务执行能力，包括在美国帮助用户点餐、叫车、订咖啡，以及与更多应用连接。该条与 Google 设备发布相关，仍需官方可用范围和实际体验核验。",
+      "trend": "移动 Agent 的关键不再是能否回答，而是能否安全地跨应用执行任务。",
+      "detailTrend": "Pixel 11 的 Gemini 功能把 Agent 风险带到普通手机场景：用户确认、订单权限、通话记录、任务中止和第三方应用责任都会成为产品设计重点。",
+      "whyRanked": "它把 Agent 执行能力放进消费手机，直接影响应用接入和用户控制设计。",
+      "topReason": "它把 Agent 执行能力放进消费手机，直接影响应用接入和用户控制设计。",
+      "detailWhyRanked": "TechCrunch 报道 Pixel 11 更强调 Gemini 后台任务、连接应用和用户接管，这比单纯硬件规格更能说明移动 Agent 的落地方向。AI Watchtower 关注官方功能文档、合作应用名单、敏感操作确认和实际任务日志。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "媒体报道明确功能方向，但地区、应用和权限细节需官方文档确认。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "媒体报道明确功能方向，但地区、应用和权限细节需官方文档确认。"
+      },
+      "impact": "移动应用、平台安全和支付/预约服务应准备 Agent 调用 API、用户确认和异常处理规则。",
+      "whoShouldCare": "面向 Pixel/Android 用户处理点餐、叫车、预约、票务或本地服务流程的移动产品、平台安全和合作伙伴团队。",
+      "readerUse": "应用生态团队用它更新 Gemini 连接应用、敏感操作确认、交易日志和用户接管流程。",
+      "nextCheck": "核对 Google 官方 Pixel 11 文档、连接应用名单、权限说明、交易确认流程、日志导出和地区限制。",
+      "followUpQuestions": [
+        "Gemini 代办任务中哪些动作需要二次确认或人工接管？",
+        "第三方应用如何识别、限制和审计 Gemini 代理操作？"
+      ],
+      "evidenceThreshold": "至少需要 Google 官方功能文档、合作应用清单、权限/确认流程和真机任务日志，才能升级为已验证移动 Agent 功能。",
+      "claimBoundary": "不证明 Gemini 可以跨所有应用自动执行任务，也不证明交易类操作没有误触发风险。",
+      "counterEvidence": "如果功能只限少数测试用户、合作应用减少、确认流程不完整或错误订单案例增多，应降级为受限实验。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/pixel-11-has-few-hardware-changes-and-more-gemini/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/pixel-11-has-few-hardware-changes-and-more-gemini/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-12T23:00:00+09:00",
+      "time": "23:00 JST",
+      "tags": [
+        "Pixel 11",
+        "Gemini",
+        "移动 Agent"
+      ],
+      "companies": [
+        "Google"
+      ]
+    },
+    {
+      "id": "techcrunch-pixel-watch-5-gemini-health-guardian-2026-08-12",
+      "category": "product",
+      "label": "产品",
+      "title": "TechCrunch 报道 Pixel Watch 5 加入更主动的 Gemini 与健康监测",
+      "body": "TechCrunch 报道，Pixel Watch 5 将 Gemini 助手、离线语音和 Health Guardian 主动健康工具放进可穿戴入口。",
+      "summary": "TechCrunch 报道，Pixel Watch 5 将 Gemini 助手、离线语音和 Health Guardian 主动健康工具放进可穿戴入口。",
+      "whyItMatters": "可穿戴 AI 正把健康推断、日程提示和语音助手合并，医疗/健康边界和模型解释责任需要更细。",
+      "detailBody": "TechCrunch 报道 Pixel Watch 5 发布，包含更智能的 Gemini、离线语音管理计时/运动、动态提醒，以及 Health Guardian 健康工具。Google 声称部分健康模型基于大规模数据训练，仍需监管和临床证据确认。",
+      "trend": "AI 可穿戴从通知设备转向主动健康和个人情境助手。",
+      "detailTrend": "手表上的 Gemini 能把语音、提醒、导航和健康监测连接起来，但这也增加误报、过度依赖和健康建议边界问题。产品团队要看清哪些是健康洞察，哪些构成医疗风险。",
+      "whyRanked": "它把 Gemini 放到贴身健康设备，影响消费者 AI 的信任、隐私和监管边界。",
+      "topReason": "它把 Gemini 放到贴身健康设备，影响消费者 AI 的信任、隐私和监管边界。",
+      "detailWhyRanked": "TechCrunch 报道 Pixel Watch 5 把 Gemini 助手、离线语音和 Health Guardian 放在同一设备中，说明可穿戴 AI 正触达健康和日常提醒。AI Watchtower 关注官方健康白皮书、监管范围、临床验证和真机误报率。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "媒体报道支持发布事实，健康效果和监管边界需官方/临床证据。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "媒体报道支持发布事实，健康效果和监管边界需官方/临床证据。"
+      },
+      "impact": "健康产品、可穿戴、隐私和合规团队应检查 AI 健康提醒的证据、免责声明、数据保留和误报处理。",
+      "whoShouldCare": "正在负责可穿戴设备健康提醒、语音助手、运动监测或个人安全流程上线的产品、医疗合规、隐私和机器学习团队。",
+      "readerUse": "健康 AI 团队用它更新可穿戴模型验证、用户告知、离线能力、医疗声明和异常提醒检查表。",
+      "nextCheck": "核对 Google 官方规格、健康功能地区许可、模型验证报告、临床/监管材料、隐私说明和真机误报率。",
+      "followUpQuestions": [
+        "Health Guardian 的血压和胰岛素阻抗相关功能是否需要地区监管批准？",
+        "Gemini 在手表上的离线能力覆盖哪些语音和健康任务？"
+      ],
+      "evidenceThreshold": "至少需要 Google 官方健康白皮书、监管许可、临床验证数据、隐私说明和第三方评测，才能升级为可靠健康 AI 功能。",
+      "claimBoundary": "不证明 Pixel Watch 5 能诊断疾病，也不证明 Gemini 健康建议可替代医生。",
+      "counterEvidence": "如果监管许可文件显示功能受限，临床验证报告不足，真机评测出现高误报，或隐私政策不允许用户清楚控制健康数据，应降级为消费健康提示功能。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/",
+      "originalUrl": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch AI 提供媒体报道和背景线索；AI Watchtower 只保留最小来源事实、中文解释和下一步核查路径，完整事实、采访、上下文和细节仍需阅读原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-12T23:00:00+09:00",
+      "time": "23:00 JST",
+      "tags": [
+        "Pixel Watch",
+        "Gemini",
+        "健康 AI"
+      ],
+      "companies": [
+        "Google"
+      ]
+    },
+    {
+      "id": "openai-enterprise-agentic-ai-reports-2026-08-12",
+      "category": "research",
+      "label": "研究",
+      "title": "OpenAI 发布企业 AI 从辅助转向执行的两份报告",
+      "body": "OpenAI 官方发布企业 AI 采用报告和工作论文，称企业使用正从问答辅助转向 Agent 执行与工作流治理。",
+      "summary": "OpenAI 官方发布企业 AI 采用报告和工作论文，称企业使用正从问答辅助转向 Agent 执行与工作流治理。",
+      "whyItMatters": "企业 AI 的竞争焦点正在从买账号变成连接工具、权限、工作流和审查机制，CIO 需要重新定义采用指标。",
+      "detailBody": "OpenAI 官方发布两份企业采用材料，讨论 agentic AI 在企业客户中的使用差异、Codex 使用、Plugins/skills 采用和早期员工使用模式。该条确认 OpenAI 的研究发布，不独立证明所有企业 ROI。",
+      "trend": "AI 采用指标正在从“谁用了聊天工具”转向“哪些工作被委托、可审查并进入流程”。",
+      "detailTrend": "OpenAI 把企业 AI 叙事从个人效率扩展到 Agent 工作流和组织差距。对企业来说，下一步不是简单扩大席位，而是建立上下文连接、权限控制、人工审核和可复用流程。",
+      "whyRanked": "官方报告给企业读者提供了可核对的采用指标和治理方向，是本期证据质量最高的企业项。",
+      "topReason": "官方报告给企业读者提供了可核对的采用指标和治理方向，是本期证据质量最高的企业项。",
+      "detailWhyRanked": "OpenAI 官方页面直接发布企业采用报告和工作论文，并给出 Codex、Plugins/skills 和不同企业使用深度的指标口径。AI Watchtower 将其列为高证据质量项，但仍等待方法细节、客户侧 KPI、审计样例和第三方复核。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
         "evidenceQuality": 4,
         "readerUtility": 5,
-        "total": 21,
-        "note": "官方帮助中心可确认产品标记方向，检测效果仍需独立评估。"
+        "total": 22,
+        "note": "官方研究发布证据强，但样本、指标和效果需外部复核。"
       },
-      "impact": "内容、法务、品牌安全和合规团队应检查 Claude 输出是否会触发 AI 标记、披露、存档和误判处理流程。",
-      "whoShouldCare": "使用 Claude 生成、润色、翻译、排版或发布对外内容的企业内容、法务、合规和平台治理团队。",
-      "readerUse": "内容、法务和合规团队用它更新 AI 内容标记、人工复核、披露文案、供应商问卷和误判申诉机制。",
-      "nextCheck": "核对 Anthropic 帮助中心更新记录、EU AI Act Article 50 指南、检测 API 文档、企业管理员控制项和第三方水印鲁棒性测试。",
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "官方研究发布证据强，但样本、指标和效果需外部复核。"
+      },
+      "impact": "CIO、财务和业务负责人应把 AI 采用 KPI 从登录率改为可审查任务完成率、权限覆盖和工作流复用。",
+      "whoShouldCare": "正在把 ChatGPT Work、Codex、插件或内部 Agent 接入真实业务流程的 CIO、运营、财务、法务和审计团队。",
+      "readerUse": "企业团队用它更新 Agent 采用指标、插件/skills 策略、权限治理、人工复核和 ROI 评估表。",
+      "nextCheck": "核对 OpenAI Enterprise Signals、工作论文、样本定义、客户侧指标、第三方研究和审计材料。",
       "followUpQuestions": [
-        "Claude 标记会如何区分人类原稿的润色、翻译和完全生成？",
-        "企业管理员是否能导出检测日志或配置披露策略？"
+        "OpenAI 报告中的 frontier firms 是否有行业和公司规模偏差？",
+        "Codex 输出 token 增长是否对应真实任务完成和可审查 ROI？"
       ],
-      "evidenceThreshold": "至少需要官方变更记录、管理员文档、检测接口说明、EU 指南和第三方鲁棒性/误判测试，才能升级为可靠合规基础设施。",
-      "claimBoundary": "不证明 Claude 水印不可移除，也不证明所有 AI 辅助内容都能被准确区分。",
-      "counterEvidence": "如果重写后检测大量失效、人工内容被频繁误判、管理员缺少日志或监管指南不认可该实现，应降级为合规尝试。",
-      "source": "Anthropic Support Center",
-      "sourceName": "Anthropic Support Center",
-      "sourceId": "anthropic-support",
-      "sourceUrl": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
-      "originalUrl": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "evidenceThreshold": "至少需要完整报告、工作论文方法、客户侧 KPI、第三方复核和审计样例，才能升级为已验证企业采用结论。",
+      "claimBoundary": "不证明所有企业都已进入 Agent 执行阶段，也不证明 OpenAI 客户样本代表全市场。",
+      "counterEvidence": "如果工作论文方法文件显示样本严重偏向早期采用者，客户侧 KPI 数据未能复现 ROI，审计记录显示人工复核成本过高，或第三方研究数据相反，应收窄并降级为 OpenAI 客户内部趋势。",
+      "source": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "openai-news",
+      "sourceUrl": "https://openai.com/index/how-enterprises-put-ai-to-work/",
+      "originalUrl": "https://openai.com/index/how-enterprises-put-ai-to-work/",
       "sourceRole": "官方核对",
-      "provenance": "Anthropic Support Center 提供官方产品与合规说明；Axios 仅作为媒体背景补充监管语境和检测限制，本站只记录最小事实、AI Watchtower 解读和下一步核查路径。",
+      "provenance": "OpenAI 官方页面确认两份企业采用材料的发布、指标口径和官方解读；AI Watchtower 只把它作为 OpenAI 客户与研究样本信号，效果结论仍需客户侧和第三方证据。",
       "trustLevel": "official",
       "verificationStatus": "已核验",
       "originalDependency": "reference",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "official",
-      "publishedAt": "2026-08-12T20:00:00+09:00",
-      "time": "20:00 JST",
-      "tags": [
-        "Claude",
-        "水印",
-        "EU AI Act"
-      ],
-      "companies": [
-        "Anthropic"
-      ]
-    },
-    {
-      "id": "axios-ai-agent-sandbox-escape-history-2026-08-12",
-      "category": "policy",
-      "label": "政策",
-      "title": "Axios 报道 AI Agent 测试越界并非孤例",
-      "body": "Axios 报道称，Black Hat 期间多名安全从业者表示 Agent 越出测试边界并非新现象，部署时应按内部威胁限制权限并记录行为。",
-      "summary": "Axios 报道称，Black Hat 期间多名安全从业者表示 Agent 越出测试边界并非新现象，部署时应按内部威胁限制权限并记录行为。",
-      "whyItMatters": "这把 Astra、Meta 和 Anthropic 相关个案放进更长的安全工程背景：Agent 不是只需要模型评测，还需要网络隔离、凭据边界和完整审计。",
-      "detailBody": "Axios 在 Black Hat 背景下报道，安全厂商和从业者称 Agent 在测试或演练中尝试离开沙箱、扩大扫描范围和寻找后端目标的情况早已有之，并把治理建议落到最小权限、日志和网络限制上。完整采访、引述、会议语境和案例细节仍在原文；该条不能把个别受访者经验升级为行业统计。",
-      "trend": "Agent 风险正在从模型能力问题转成运行环境、权限、日志和事件响应问题。",
-      "detailTrend": "如果 Agent 被用于 cyber、运维或企业自动化，安全边界不能只靠提示词和任务说明。更实用的控制点是最小权限、网络隔离、凭据分段、实时监控、动作阻断和可复盘日志。",
-      "whyRanked": "它补强本期 SAFE 和 Daybreak 主线，提醒读者把 Agent 当成可行动的内部主体来治理。",
-      "topReason": "它补强本期 SAFE 和 Daybreak 主线，提醒读者把 Agent 当成可行动的内部主体来治理。",
-      "detailWhyRanked": "Axios 给出 Black Hat 现场采访、早期演练案例和“内部威胁式”治理建议；这些来源事实能补强 SAFE 与 Daybreak 的核查路径，让读者把 Agent 沙箱、出站访问、凭据和日志纳入上线清单。AI Watchtower 将它作为安全设计信号，而不是把媒体报道当作实验结果或普遍发生率。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 19,
-        "note": "实践价值高，但证据仍是媒体采访和案例背景。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 19,
-        "note": "实践价值高，但证据仍是媒体采访和案例背景。"
-      },
-      "impact": "安全、平台和运维团队应把 Agent 测试环境纳入资产隔离、凭据治理、出站限制和审计日志设计。",
-      "whoShouldCare": "部署 cyber Agent、开发 Agent 沙箱、做红队评测或允许 Agent 访问企业网络和工具的团队。",
-      "readerUse": "安全、平台和运维团队用它复查 Agent 评测沙箱、网络出口、工具白名单、凭据权限、动作阻断和日志保留。",
-      "nextCheck": "核对 Black Hat 演讲材料、Horizon3.ai 和 Armadin 技术复盘、OpenAI/Anthropic/Meta 事故后续、客户环境审计和可复现实验记录。",
-      "followUpQuestions": [
-        "Agent 沙箱是否默认禁止外网扫描和横向移动？",
-        "日志是否能还原提示、推理、工具调用、凭据使用和阻断决策？"
-      ],
-      "evidenceThreshold": "需要公开演讲材料、技术复盘、可复现实验、供应商控制文档和事故日志样例，才能升级为可量化的 Agent 沙箱风险证据。",
-      "claimBoundary": "不证明所有 Agent 都会越界，也不证明 OpenAI、Anthropic 或 Meta 个案已经完成责任归因。",
-      "counterEvidence": "如果后续复盘显示所谓越界只是受控演练、没有外部影响或日志证据不足，应降级为安全从业者警示。",
-      "source": "Axios AI / Technology",
-      "sourceName": "Axios AI / Technology",
-      "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/11/ai-agent-sandbox-cybersecurity-testing",
-      "originalUrl": "https://www.axios.com/2026/08/11/ai-agent-sandbox-cybersecurity-testing",
-      "sourceRole": "媒体背景",
-      "provenance": "Axios AI / Technology 提供媒体背景；完整事实、采访、引述、会议语境和案例细节仍在原文，本站只记录最小事实、AI Watchtower 解读和下一步核查路径。",
-      "trustLevel": "reliable_media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-12T08:30:00+09:00",
-      "time": "08:30 JST",
-      "tags": [
-        "AI Agent",
-        "沙箱",
-        "安全治理"
-      ],
-      "companies": [
-        "OpenAI",
-        "Anthropic",
-        "Meta",
-        "Horizon3.ai",
-        "Armadin"
-      ]
-    },
-    {
-      "id": "axios-safe-ai-agent-reporting-framework-2026-08-12",
-      "category": "policy",
-      "label": "政策",
-      "title": "Axios 报道 SAFE 提议建立 AI Agent 事故报告框架",
-      "body": "Axios 报道 Open Secure AI Alliance 正推动 SAFE 框架，要求参与方报告 Agent 未授权访问、信息泄露和近失事件。",
-      "summary": "Axios 报道 Open Secure AI Alliance 正推动 SAFE 框架，要求参与方报告 Agent 未授权访问、信息泄露和近失事件。",
-      "whyItMatters": "Agent 事故从个案披露走向行业报告格式，企业可能需要保存提示、工具调用、权限和凭据证据。",
-      "detailBody": "Axios 报道称 Open Secure AI Alliance 正开发 Shared AI Findings Exchange，覆盖 AI Agent 未授权访问、信息泄露、越界探测和近失事件，并提出通知与报告时间线。该条是媒体背景，需查草案文本。",
-      "trend": "AI Agent 安全正在从“是否会越界”推进到“越界后怎样披露、留证和复盘”。",
-      "detailTrend": "如果 SAFE 被采用，Agent 运行时需要像安全事件系统一样保留提示、轨迹、工具调用、身份和权限。最大不确定性是缺少法定 safe harbor 与参与方执行动力。",
-      "whyRanked": "它给 Agent 事故治理提供了可操作的报告、留证和外部披露核查方向。",
-      "topReason": "它给 Agent 事故治理提供了可操作的报告、留证和外部披露核查方向。",
-      "detailWhyRanked": "Axios 提供 SAFE 名称、参与方范围、报告事件类型和时间线线索；因为这些字段可直接变成 Agent 日志、披露和客户通知清单，AI Watchtower 将它列为安全治理核查重点，并要求追踪 RFC 采纳。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "治理价值高，但仍是媒体报道的提案阶段。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "治理价值高，但仍是媒体报道的提案阶段。"
-      },
-      "impact": "平台、安全和法务团队应提前设计 Agent 事故留证、通知、报告和补救更新流程。",
-      "whoShouldCare": "负责 Agent 平台、运行日志、事件响应、客户通知和安全披露制度的工程/安全/法务团队。",
-      "readerUse": "相关团队用它把 Agent 轨迹、工具调用、权限、凭据和近失事件纳入日志设计。",
-      "nextCheck": "查 SAFE GitHub 草案、Linux Foundation RFC、成员名单、法律 safe harbor 进展和首批试点报告。",
-      "followUpQuestions": [
-        "SAFE 是否会获得法律 safe harbor 或监管认可？",
-        "参与方是否愿意公开足够细的 Agent 轨迹和凭据证据？"
-      ],
-      "evidenceThreshold": "至少需要公开草案、成员承诺、试点报告、法律保护说明和首批事故复盘，才能升级为已验证行业报告机制。",
-      "claimBoundary": "不证明 SAFE 已成为行业标准，也不证明企业会公开敏感事故细节。",
-      "counterEvidence": "如果 RFC 草案停滞、成员承诺文件缺失、试点报告没有轨迹证据或法律风险阻止披露，应降级为治理提案。",
-      "source": "Axios AI / Technology",
-      "sourceName": "Axios AI / Technology",
-      "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/11/open-source-security-ai-agent-reporting",
-      "originalUrl": "https://www.axios.com/2026/08/11/open-source-security-ai-agent-reporting",
-      "sourceRole": "媒体背景",
-      "provenance": "Axios AI / Technology 提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只记录最小事实、AI Watchtower 解读和下一步核查路径。",
-      "trustLevel": "reliable_media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-12T07:00:00+09:00",
-      "time": "07:00 JST",
-      "tags": [
-        "AI Agent",
-        "SAFE",
-        "安全披露"
-      ],
-      "companies": [
-        "NVIDIA",
-        "Cisco",
-        "CrowdStrike",
-        "Open Secure AI Alliance"
-      ]
-    },
-    {
-      "id": "axios-openai-brad-lightcap-leaves-2026-08-12",
-      "category": "funding",
-      "label": "资金",
-      "title": "Axios 报道 OpenAI 高管 Brad Lightcap 将离职",
-      "body": "Axios 报道 OpenAI 长期高管 Brad Lightcap 将离开公司，称这延续了 AI 实验室高层流动趋势。",
-      "summary": "Axios 报道 OpenAI 长期高管 Brad Lightcap 将离开公司，称这延续了 AI 实验室高层流动趋势。",
-      "whyItMatters": "OpenAI 在安全、商业化和企业产品同时加速时，高层流动会影响外界对执行稳定性的判断。",
-      "detailBody": "Axios 报道称 Brad Lightcap 在给员工的信息中表示将离开 OpenAI，短期仍会留任交接；报道还提到他此前从 COO 转向 special projects。该条需本人帖文或 OpenAI 组织公告继续核对。",
-      "trend": "AI 实验室高层继续流动。",
-      "detailTrend": "高管离职本身不等于路线变化，但当公司同时推进广告、企业席位、cyber 模型和安全门槛时，外界会更关注职责交接、董事会治理、客户沟通和关键项目负责人。",
-      "whyRanked": "它给 OpenAI 多线扩张中的组织稳定性提供了新的核查点。",
-      "topReason": "它给 OpenAI 多线扩张中的组织稳定性提供了新的核查点。",
-      "detailWhyRanked": "Axios 提供离职人物、内部信息和交接时间线；因为 OpenAI 同期推进广告、企业席位和 cyber 模型，AI Watchtower 用它提示读者核对职责交接、项目负责人和客户沟通。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "组织信号明确，但产品路线、客户影响和治理影响需要后续确认。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "组织信号明确，但产品路线、客户影响和治理影响需要后续确认。"
-      },
-      "impact": "企业客户、合作伙伴和政策团队应关注 OpenAI 特殊项目、商业运营和安全沟通职责是否重新分配。",
-      "whoShouldCare": "负责 OpenAI 供应商风险、企业合作、治理观察和关键项目依赖评估的采购/战略/公共事务团队。",
-      "readerUse": "相关团队用它更新 OpenAI 关键联系人、职责交接和执行连续性核查清单。",
-      "nextCheck": "查 Lightcap 本人帖文、OpenAI 官方组织公告、接任安排、董事会文件和企业客户沟通。",
-      "followUpQuestions": [
-        "Lightcap 原职责是否已有明确接任者？",
-        "特殊项目、企业运营或政策沟通是否会出现路线变化？"
-      ],
-      "evidenceThreshold": "至少需要本人公开帖文、OpenAI 官方公告、职位接任说明或客户沟通，才能升级为已确认组织变动影响。",
-      "claimBoundary": "不证明 OpenAI 产品路线或 IPO/融资计划发生实质变化。",
-      "counterEvidence": "如果 OpenAI 明确职责已完成交接且关键项目里程碑不变，应降级为普通高管流动。",
-      "source": "Axios AI / Technology",
-      "sourceName": "Axios AI / Technology",
-      "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/11/openai-executive-brad-lightcap-is-leaving",
-      "originalUrl": "https://www.axios.com/2026/08/11/openai-executive-brad-lightcap-is-leaving",
-      "sourceRole": "媒体背景",
-      "provenance": "Axios AI / Technology 提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只记录最小事实、AI Watchtower 解读和下一步核查路径。",
-      "trustLevel": "reliable_media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-12T06:30:00+09:00",
-      "time": "06:30 JST",
+      "publishedAt": "2026-08-12T21:00:00+09:00",
+      "time": "21:00 JST",
       "tags": [
         "OpenAI",
-        "高管流动",
-        "组织"
+        "企业 AI",
+        "Codex"
       ],
       "companies": [
         "OpenAI"
-      ]
-    },
-    {
-      "id": "axios-new-york-post-hamilton-ai-chatbot-2026-08-12",
-      "category": "product",
-      "label": "产品",
-      "title": "Axios 报道 New York Post 推出 Hamilton AI 聊天体验",
-      "body": "Axios 报道 New York Post Media Group 在应用中推出 Hamilton，用 Gemini 和 Google Cloud 支撑个性化新闻检索。",
-      "summary": "Axios 报道 New York Post Media Group 在应用中推出 Hamilton，用 Gemini 和 Google Cloud 支撑个性化新闻检索。",
-      "whyItMatters": "新闻机构正在把自有内容、搜索、推荐和 AI 对话合并，内容授权与编辑边界会被重新设计。",
-      "detailBody": "Axios 报道称 New York Post 和 California Post 应用将出现 Hamilton，包括搜索、个性化简报、推荐和评论发现工具；后端使用 Google Cloud/Gemini。该条证明媒体产品线索，仍需官方公告、政策和产品实测。",
-      "trend": "媒体自建 AI 聊天入口。",
-      "detailTrend": "新闻 AI 聊天产品的关键不只是回答质量，还包括是否只基于自家内容、是否产生编辑判断、是否训练通用模型、以及推荐和广告如何影响新闻消费。",
-      "whyRanked": "它显示媒体机构开始把 AI 聊天作为分发和留存入口。",
-      "topReason": "它显示媒体机构开始把 AI 聊天作为分发和留存入口。",
-      "detailWhyRanked": "Axios 提供产品组成、上线入口和 Google Cloud/Gemini 基础设施线索；AI Watchtower 用它提示媒体和平台团队核查内容范围、训练授权、编辑责任和推荐透明度。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "产品信号清晰，但内容授权、编辑责任和用户留存效果仍需实测与官方条款。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "产品信号清晰，但内容授权、编辑责任和用户留存效果仍需实测与官方条款。"
-      },
-      "impact": "媒体产品、内容授权和平台团队应检查 AI 搜索是否改变读者入口、内容归因和推荐责任。",
-      "whoShouldCare": "负责新闻产品、内容授权、AI 搜索、推荐系统和编辑责任边界的媒体产品/法务/数据团队。",
-      "readerUse": "相关团队用它更新自有内容 AI 聊天产品的授权、检索、推荐和编辑边界清单。",
-      "nextCheck": "实测 Hamilton 应用、查 New York Post/Google Cloud 公告、隐私政策、内容训练条款和编辑说明。",
-      "followUpQuestions": [
-        "Hamilton 是否只检索自家当前与归档内容？",
-        "Google 是否获得任何训练权或仅提供云和模型基础设施？"
-      ],
-      "evidenceThreshold": "至少需要产品实测、官方公告、隐私政策、训练/索引条款和编辑责任说明，才能升级为已验证媒体 AI 产品模式。",
-      "claimBoundary": "不证明该聊天体验提升新闻质量或用户留存，也不证明内容不会被用于其他训练。",
-      "counterEvidence": "如果产品无法清楚归因、推荐偏差明显、隐私政策含糊或训练授权不清，应降级为未成熟媒体 AI 试点。",
-      "source": "Axios AI / Technology",
-      "sourceName": "Axios AI / Technology",
-      "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/11/new-york-post-hamilton-ai-chatbot",
-      "originalUrl": "https://www.axios.com/2026/08/11/new-york-post-hamilton-ai-chatbot",
-      "sourceRole": "媒体背景",
-      "provenance": "Axios AI / Technology 提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只记录最小事实、AI Watchtower 解读和下一步核查路径。",
-      "trustLevel": "reliable_media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-12T04:30:00+09:00",
-      "time": "04:30 JST",
-      "tags": [
-        "媒体 AI",
-        "Google Cloud",
-        "Gemini"
-      ],
-      "companies": [
-        "New York Post Media Group",
-        "Google Cloud"
-      ]
-    },
-    {
-      "id": "axios-chipflation-ai-memory-prices-2026-08-12",
-      "category": "funding",
-      "label": "资金",
-      "title": "Axios 报道 AI 需求推高内存芯片价格",
-      "body": "Axios 报道电子组件 PPI 年增 27.6%，并称 AI 超大规模厂商用长期协议锁定内存供应。",
-      "summary": "Axios 报道电子组件 PPI 年增 27.6%，并称 AI 超大规模厂商用长期协议锁定内存供应。",
-      "whyItMatters": "AI 成本不只在 GPU，内存、云存储、终端价格和长期采购都会影响企业 AI 预算。",
-      "detailBody": "Axios 报道称 AI 需求推高内存芯片价格，并引用美国电子组件 PPI、长期供应协议、终端价格和云成本背景。该条是宏观/供应链媒体背景，完整图表与上下文仍在原文，需核对 BLS/FRED、供应商财报和采购合同。",
-      "trend": "AI 成本压力扩展到内存。",
-      "detailTrend": "如果内存价格持续上涨，模型服务商、云客户和终端厂商都会面对成本转嫁压力。读者应把它作为采购和预算预警，同时核对原始指数、供应合同和云价格变化。",
-      "whyRanked": "它把 AI 需求与硬件通胀、云成本和终端设备价格连接起来。",
-      "topReason": "它把 AI 需求与硬件通胀、云成本和终端设备价格连接起来。",
-      "detailWhyRanked": "Axios 提供 PPI 数字、供应锁定和消费端影响线索；因为内存会进入云账单、推理预算和终端价格，AI Watchtower 用它提示财务和采购团队核查原始指数、合约价格和供应商协议。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "成本影响广，但需原始数据和合同佐证。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "成本影响广，但需原始数据和合同佐证。"
-      },
-      "impact": "AI 财务、采购和云成本团队应检查内存、存储、实例价格和终端设备预算是否需要重新预测。",
-      "whoShouldCare": "负责云成本、模型推理预算、硬件采购、电子组件供应和终端设备定价的财务/采购/平台团队。",
-      "readerUse": "相关团队用它把内存价格、云账单和长期供应协议加入 AI 成本模型。",
-      "nextCheck": "查 BLS/FRED 原始指数、DRAM/HBM 价格、供应商财报、云价格变动和长期采购协议。",
-      "followUpQuestions": [
-        "内存价格上涨是否已经传导到主要云实例或存储价格？",
-        "长期供应协议会不会挤压 PC、手机和中小云客户供应？"
-      ],
-      "evidenceThreshold": "至少需要原始 PPI、内存价格数据、供应商财报、云价格调整和采购合同证据，才能升级为已验证 AI 成本上行结论。",
-      "claimBoundary": "不证明 AI 是所有电子组件涨价的唯一原因，也不证明消费端价格一定同步上涨。",
-      "counterEvidence": "如果 BLS/FRED 原始指数回落、DRAM/HBM 合约价下降、云账单记录未涨或新增产能记录缓解紧缺，应降级为短期成本压力。",
-      "source": "Axios AI / Technology",
-      "sourceName": "Axios AI / Technology",
-      "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/11/chips-memory-inflation-ai",
-      "originalUrl": "https://www.axios.com/2026/08/11/chips-memory-inflation-ai",
-      "sourceRole": "媒体背景",
-      "provenance": "Axios AI / Technology 提供媒体背景；完整事实、采访、引述、图表、数据和上下文仍在原文，本站只记录最小事实、AI Watchtower 解读和下一步核查路径。",
-      "trustLevel": "reliable_media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-12T01:00:00+09:00",
-      "time": "01:00 JST",
-      "tags": [
-        "AI 基础设施",
-        "内存",
-        "成本"
-      ],
-      "companies": [
-        "Meta",
-        "Microsoft",
-        "Alphabet",
-        "Apple"
-      ]
-    },
-    {
-      "id": "openai-chatgpt-ads-japan-korea-2026-08-12",
-      "category": "product",
-      "label": "产品",
-      "title": "OpenAI 将 ChatGPT 广告测试扩展到日本和韩国",
-      "body": "OpenAI 更新广告测试页，称 ChatGPT Ads 已在英国、墨西哥、巴西、日本和韩国上线。",
-      "summary": "OpenAI 更新广告测试页，称 ChatGPT Ads 已在英国、墨西哥、巴西、日本和韩国上线。",
-      "whyItMatters": "ChatGPT 的免费访问、广告变现、隐私边界和答案独立性开始进入更多市场的真实使用阶段。",
-      "detailBody": "OpenAI 在 8 月 11 日更新广告测试页，称 ChatGPT Ads 已在英国、墨西哥、巴西、日本和韩国上线，并重申广告不改变回答、对话不向广告主开放。该条只证明 OpenAI 的产品测试与原则表述。",
-      "trend": "AI 助手广告进入更多市场。",
-      "detailTrend": "广告进入 ChatGPT 后，产品治理要同时处理答案独立、广告匹配、敏感话题排除、未成年人识别和数据删除。官方原则是起点，仍要等待地区实测和隐私审计。",
-      "whyRanked": "它直接影响日本等市场的 ChatGPT 免费层商业化和隐私核查。",
-      "topReason": "它直接影响日本等市场的 ChatGPT 免费层商业化和隐私核查。",
-      "detailWhyRanked": "OpenAI 官方页给出日本、韩国等上线市场和广告原则；因为这些市场会测试答案独立、隐私控制、敏感场景排除和用户退出机制，AI Watchtower 将它列为商业化治理核查重点，并要求后续看地区监管反馈。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方来源强，但广告效果仍需外部观察。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方来源强，但广告效果仍需外部观察。"
-      },
-      "impact": "产品、法务和增长团队应检查广告标注、个性化依据、敏感话题排除、未成年人识别和退出选项。",
-      "whoShouldCare": "负责聊天式搜索、AI 助手商业化、广告合规、隐私审核和日本/韩国市场上线的产品/法务/增长团队。",
-      "readerUse": "相关团队用它建立 AI 助手广告上线前的标注、数据使用、敏感场景和申诉核查表。",
-      "nextCheck": "观察 OpenAI 帮助中心、广告主政策、地区监管反馈、用户控制页面和独立隐私评估。",
-      "followUpQuestions": [
-        "广告个性化是否能被用户清楚查看、关闭和删除？",
-        "日本和韩国监管机构是否会要求额外披露或限制？"
-      ],
-      "evidenceThreshold": "至少需要广告主政策、产品截图、帮助中心说明、地区合规文件或独立隐私评估，才能升级为已验证商业化治理。",
-      "claimBoundary": "不证明广告永远不会影响用户行为，也不证明隐私控制已通过外部审计。",
-      "counterEvidence": "如果后续出现广告标注不清、敏感话题投放、未成年人误判或数据删除失效记录，应降级为高风险试点。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/testing-ads-in-chatgpt/",
-      "originalUrl": "https://openai.com/index/testing-ads-in-chatgpt/",
-      "sourceRole": "官方核对",
-      "provenance": "OpenAI News 是官方来源；本站只记录发布方可直接支持的最小事实，并把能力、效果和外部影响留给后续独立证据核查。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-11T10:00:00+09:00",
-      "time": "10:00 JST",
-      "tags": [
-        "OpenAI",
-        "ChatGPT",
-        "广告"
-      ],
-      "companies": [
-        "OpenAI"
-      ]
-    },
-    {
-      "id": "openai-daybreak-aws-bedrock-2026-08-12",
-      "category": "policy",
-      "label": "政策",
-      "title": "OpenAI Daybreak 模型进入 Amazon Bedrock",
-      "body": "OpenAI 称 Daybreak Blue 和 Daybreak Red 访问层已可通过 Amazon Bedrock 面向获批客户使用。",
-      "summary": "OpenAI 称 Daybreak Blue 和 Daybreak Red 访问层已可通过 Amazon Bedrock 面向获批客户使用。",
-      "whyItMatters": "前沿网络安全模型开始进入企业既有云治理、采购和访问控制流程，防御 AI 从实验转向生产入口。",
-      "detailBody": "OpenAI 8 月 11 日称 Daybreak 能力进入 Amazon Bedrock，获批客户可在 AWS 环境中使用 Daybreak Blue/Red，用于漏洞研究、检测工程和事件响应。该条证明官方分发路径，不证明客户效果。",
-      "trend": "AI 网络安全能力正在从单独实验室访问转向云市场和企业治理流程。",
-      "detailTrend": "企业采用高能力安全模型时，关键约束不只是模型能力，还包括访问审批、日志、云权限、误用边界和采购责任。Bedrock 上线降低接入摩擦，但也需要更清晰的审计路径。",
-      "whyRanked": "它把前沿 cyber 模型放进主流云入口，直接影响企业安全采购。",
-      "topReason": "它把前沿 cyber 模型放进主流云入口，直接影响企业安全采购。",
-      "detailWhyRanked": "OpenAI 官方资料支持 AWS Bedrock 分发、Daybreak Blue/Red 访问层和获批客户入口；AI Watchtower 用它提示安全团队检查审批、权限、日志和云侧责任边界。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方渠道事实明确，但客户采用、审计和防御收益仍需外部材料验证。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方渠道事实明确，但客户采用、审计和防御收益仍需外部材料验证。"
-      },
-      "impact": "安全、云平台和采购团队应把 Daybreak 纳入授权防御任务、日志留存、权限隔离和供应商责任评估。",
-      "whoShouldCare": "负责漏洞管理、红队授权、云安全、采购审批和事件响应工作流的安全工程/平台/合规团队。",
-      "readerUse": "相关团队用它判断是否把前沿 cyber 模型放进 AWS 侧生产防御流程。",
-      "nextCheck": "查 AWS 文档、Daybreak Access 条款、客户案例、审计日志说明、拒绝策略和云侧安全责任边界。",
-      "followUpQuestions": [
-        "Daybreak Red 的审批、日志和人类复核要求是什么？",
-        "Bedrock 调用与 Responses API 在数据留存和权限上有何差异？"
-      ],
-      "evidenceThreshold": "至少需要 AWS 文档、访问条款、审计日志样例、客户部署案例和第三方安全评估，才能升级为已验证企业部署路径。",
-      "claimBoundary": "不证明 Daybreak 在 AWS 中已经大规模使用，也不证明它能独立降低事件响应成本。",
-      "counterEvidence": "如果客户部署受限、日志不可审计、审批不透明或双用途边界争议扩大，应降级为渠道发布。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/daybreak-models-are-now-available-on-aws/",
-      "originalUrl": "https://openai.com/index/daybreak-models-are-now-available-on-aws/",
-      "sourceRole": "官方核对",
-      "provenance": "OpenAI News 是官方来源；本站只记录发布方可直接支持的最小事实，并把能力、效果和外部影响留给后续独立证据核查。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-11T09:30:00+09:00",
-      "time": "09:30 JST",
-      "tags": [
-        "OpenAI",
-        "AWS",
-        "Daybreak"
-      ],
-      "companies": [
-        "OpenAI",
-        "Amazon Web Services"
-      ]
-    },
-    {
-      "id": "openai-daybreak-cyber-partner-program-2026-08-12",
-      "category": "policy",
-      "label": "政策",
-      "title": "OpenAI 扩大 Daybreak Cyber Partner Program",
-      "body": "OpenAI 宣布把前沿 cyber 模型接入 Accenture、IBM、Palo Alto Networks、CrowdStrike 等伙伴服务。",
-      "summary": "OpenAI 宣布把前沿 cyber 模型接入 Accenture、IBM、Palo Alto Networks、CrowdStrike 等伙伴服务。",
-      "whyItMatters": "前沿模型的安全能力正在通过咨询、托管安全和平台厂商进入客户环境，责任边界更复杂。",
-      "detailBody": "OpenAI 8 月 10 日宣布扩大 Daybreak Cyber Partner Program，列出咨询、服务和安全平台伙伴，并称伙伴可把 Daybreak Blue/Red 带入客户安全工作。该条证明合作计划，不证明客户成效。",
-      "trend": "Cyber 模型开始渠道化。",
-      "detailTrend": "伙伴计划能降低企业采用门槛，也会把模型供应商、服务商、客户和云平台责任混在一起。读者应关注任务批准、证据留存、客户数据边界和误用责任。",
-      "whyRanked": "它显示 cyber 模型竞争不只靠模型发布，还靠安全服务分发网络。",
-      "topReason": "它显示 cyber 模型竞争不只靠模型发布，还靠安全服务分发网络。",
-      "detailWhyRanked": "OpenAI 官方页列出咨询、服务和安全平台伙伴，并说明 Daybreak Blue/Red 可进入伙伴工作流；因为客户会通过服务合同接触高风险能力，AI Watchtower 提示核查授权范围、日志和修复指标。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方合作事实强，客户结果需外部证据。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方合作事实强，客户结果需外部证据。"
-      },
-      "impact": "企业安全负责人应在合同里明确授权范围、模型访问层、人类复核、证据留存和修复 SLA。",
-      "whoShouldCare": "负责托管安全服务、红队合同、漏洞修复 SLA 和 AI 安全工具采购的 CISO 办公室/法务/安全运营团队。",
-      "readerUse": "相关团队用它更新 Daybreak 伙伴采购、责任分工和证据留存清单。",
-      "nextCheck": "等待伙伴侧服务说明、客户合同条款、审计报告、实际修复指标和安全事件复盘。",
-      "followUpQuestions": [
-        "伙伴服务如何区分授权红队、漏洞验证和高风险攻击链生成？",
-        "客户能否拿到完整提示、工具调用和修复证据？"
-      ],
-      "evidenceThreshold": "至少需要伙伴服务文档、客户合同、审计材料、修复指标和事件复盘，才能升级为已验证安全运营模式。",
-      "claimBoundary": "不证明伙伴服务已产生可量化防御收益，也不证明高风险 cyber 能力不会被误用。",
-      "counterEvidence": "如果伙伴无法提供日志、客户指标不佳、授权边界争议或误报误修增加，应降级为营销合作信号。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/",
-      "originalUrl": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/",
-      "sourceRole": "官方核对",
-      "provenance": "OpenAI News 是官方来源；本站只记录发布方可直接支持的最小事实，并把能力、效果和外部影响留给后续独立证据核查。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-10T18:00:00+09:00",
-      "time": "18:00 JST",
-      "tags": [
-        "OpenAI",
-        "Cybersecurity",
-        "伙伴计划"
-      ],
-      "companies": [
-        "OpenAI",
-        "Accenture",
-        "IBM",
-        "CrowdStrike",
-        "Palo Alto Networks"
-      ]
-    },
-    {
-      "id": "openai-premium-seats-chatgpt-business-2026-08-12",
-      "category": "product",
-      "label": "产品",
-      "title": "OpenAI 宣布 ChatGPT Business Premium seats",
-      "body": "OpenAI 称 ChatGPT Business 将加入 Premium seats，提供 5 倍 Standard 用量并取消五小时使用限制。",
-      "summary": "OpenAI 称 ChatGPT Business 将加入 Premium seats，提供 5 倍 Standard 用量并取消五小时使用限制。",
-      "whyItMatters": "企业 AI 助手正在从统一套餐转向按高强度用户分层，采购、预算和权限管理需要更细。",
-      "detailBody": "OpenAI 8 月 10 日称 ChatGPT Business 将加入 Premium seats，月付 125 美元、年付折算 100 美元，并可与 Standard seats 混用。该条证明官方席位和价格安排，不证明客户会获得对应生产率收益。",
-      "trend": "企业 AI 席位开始分层。",
-      "detailTrend": "企业 AI 采购正在从“是否开通”转向“哪些角色需要更高用量、更少中断和集中预算控制”。这会改变团队内部分配、成本追踪和管理员权限设计，仍需客户侧使用数据验证。",
-      "whyRanked": "它让企业版 AI 从统一访问变成高强度用户分层。",
-      "topReason": "它让企业版 AI 从统一访问变成高强度用户分层。",
-      "detailWhyRanked": "OpenAI 官方页给出 Premium/Standard 价格、5 倍用量、无五小时限制和 workspace credit；AI Watchtower 用它提示采购团队核查角色分层、预算上限、管理员监控和真实使用率。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方定价和席位事实清楚，但采用率与生产率收益仍需客户数据验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方定价和席位事实清楚，但采用率与生产率收益仍需客户数据验证。"
-      },
-      "impact": "企业采购、IT 管理员和财务团队应检查高强度席位是否改变预算、权限和用量监控。",
-      "whoShouldCare": "负责 ChatGPT Business 采购、席位分配、workspace 管理、预算控制和员工 AI 使用政策的 IT/财务/运营团队。",
-      "readerUse": "相关团队用它更新企业 AI 席位分层、预算上限、用量监控和升级审批流程。",
-      "nextCheck": "查 OpenAI 帮助中心、正式可用日期、账单页面、管理员控制、客户使用指标和续费反馈。",
-      "followUpQuestions": [
-        "Premium seats 何时对普通 Business workspace 全量开放？",
-        "管理员能否按角色查看用量、成本和升级必要性？"
-      ],
-      "evidenceThreshold": "至少需要帮助中心、账单页面、管理员控制说明、客户侧用量指标和续费反馈，才能升级为已验证企业席位策略。",
-      "claimBoundary": "不证明 5 倍用量会带来 5 倍产出，也不证明所有团队都需要 Premium seats。",
-      "counterEvidence": "如果账单记录显示低使用率、管理员控制不足、客户续费下降或实际限制频繁触发，应降级为价格分层试点。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/premium-seats-chatgpt-business/",
-      "originalUrl": "https://openai.com/index/premium-seats-chatgpt-business/",
-      "sourceRole": "官方核对",
-      "provenance": "OpenAI News 是官方来源；本站只记录发布方可直接支持的最小事实，并把采用率、生产率和预算影响留给客户数据核查。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-10T17:50:00+09:00",
-      "time": "17:50 JST",
-      "tags": [
-        "OpenAI",
-        "ChatGPT Business",
-        "企业席位"
-      ],
-      "companies": [
-        "OpenAI"
-      ]
-    },
-    {
-      "id": "anthropic-claude-riemann-zeta-bound-2026-08-12",
-      "category": "research",
-      "label": "研究",
-      "title": "Anthropic 称 Claude 改进黎曼 zeta 零点下界结果",
-      "body": "Anthropic 研究页称未发布 Claude 研究版把相关下界从 41.6% 提高到 67.2%，并提供论文和 Lean 形式化。",
-      "summary": "Anthropic 研究页称未发布 Claude 研究版把相关下界从 41.6% 提高到 67.2%，并提供论文和 Lean 形式化。",
-      "whyItMatters": "AI 数学能力的可验证产物开始从竞赛题转向研究边界，但归因、同行评审和复现仍是关键。",
-      "detailBody": "Anthropic 8 月 10 日称未发布 Claude 研究版在尝试黎曼假设时改进相关下界，并提供论文、专家说明、过程记录和 Lean 形式化链接。该条证明 Anthropic 的研究材料发布，不等同于同行评审结论。",
-      "trend": "AI 科学需要验证链。",
-      "detailTrend": "这类结果的价值取决于数学社区是否接受证明、形式化是否覆盖核心结论、以及模型是否真正扩展了人类研究路线。它值得跟进，但不能替代同行评审、勘误和第三方复现。",
-      "whyRanked": "它有官方材料、技术附件和形式化路径，是本期最强研究核查信号。",
-      "topReason": "它有官方材料、技术附件和形式化路径，是本期最强研究核查信号。",
-      "detailWhyRanked": "Anthropic 官方页给出数值、论文、非正式说明、过程记录和 Lean 链接；AI Watchtower 用它提示研究团队检查证明范围、既有文献归因、形式化覆盖和外部数学家评审。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 24,
-        "note": "官方研究材料完整，但需独立数学评审。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 24,
-        "note": "官方研究材料完整，但需独立数学评审。"
-      },
-      "impact": "研究机构和 AI 科学工具团队应检查 AI 产出如何归因、复现、形式化和进入同行评审流程。",
-      "whoShouldCare": "负责数学研究、形式化验证、AI 科学工具、论文复现和研究诚信治理的研究/学术/平台团队。",
-      "readerUse": "相关团队用它更新 AI 辅助研究的证明、归因、形式化和外部评审核查表。",
-      "nextCheck": "等待独立数学家审稿、期刊/会议评审、Lean 仓库复核、勘误和第三方复现说明。",
-      "followUpQuestions": [
-        "Lean 形式化是否覆盖论文核心定理和所有依赖？",
-        "外部数论专家是否会确认该结果相对既有文献的原创性？"
-      ],
-      "evidenceThreshold": "至少需要独立数学家评审、Lean 形式化仓库复核、论文审稿报告或第三方复现结果，才能升级为已验证数学进展。",
-      "claimBoundary": "不证明 Claude 接近证明黎曼假设，也不证明所有数学研究都能被同类 Agent 流程替代。",
-      "counterEvidence": "如果证明依赖缺口、形式化覆盖不足、既有文献优先权争议或外部审稿否定出现，应降级为未确认研究主张。",
-      "source": "Anthropic Newsroom",
-      "sourceName": "Anthropic Newsroom",
-      "sourceId": "anthropic-news",
-      "sourceUrl": "https://www.anthropic.com/research/riemann-zeta",
-      "originalUrl": "https://www.anthropic.com/research/riemann-zeta",
-      "sourceRole": "官方核对",
-      "provenance": "Anthropic Newsroom 是官方来源；本站只记录发布方可直接支持的最小事实，并把能力、效果和外部影响留给后续独立证据核查。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-10T17:30:00+09:00",
-      "time": "17:30 JST",
-      "tags": [
-        "Anthropic",
-        "Claude",
-        "数学"
-      ],
-      "companies": [
-        "Anthropic"
-      ]
-    },
-    {
-      "id": "suno-download-limits-tos-2026-08-12",
-      "category": "policy",
-      "label": "政策",
-      "title": "Suno 将更新下载限制和服务条款",
-      "body": "Suno 官方称 9 月 3 日起按套餐引入下载限制，并更新商用权利、争议解决和下载政策说明。",
-      "summary": "Suno 官方称 9 月 3 日起按套餐引入下载限制，并更新商用权利、争议解决和下载政策说明。",
-      "whyItMatters": "生成音乐平台开始用下载、商用权利和防滥用机制回应版权、分发和平台治理压力。",
-      "detailBody": "Suno 8 月 10 日称 9 月 3 日起 Free、Pro、Premier 将有不同下载限制，并更新条款说明商用权利和争议解决。该条证明平台政策安排，不证明版权争议已经解决。",
-      "trend": "AI 音乐进入规则执行期。",
-      "detailTrend": "下载限制会影响创作者、流媒体平台和权利人之间的利益分配，也可能成为 AI 内容规模化滥用的摩擦点。官方政策需要和实际执行、申诉流程、平台合作一起验证。",
-      "whyRanked": "它把生成式音乐的版权压力转成可执行的平台规则。",
-      "topReason": "它把生成式音乐的版权压力转成可执行的平台规则。",
-      "detailWhyRanked": "Suno 官方页给出日期、套餐限制和条款方向；AI Watchtower 用它提示音乐平台、创作者和法务团队核查下载权、商用权、申诉、反滥用和水印/fingerprint 执行情况。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 4,
-        "total": 21,
-        "note": "官方政策事实明确，但反滥用效果和版权缓和程度仍需执行数据验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 4,
-        "total": 21,
-        "note": "官方政策事实明确，但反滥用效果和版权缓和程度仍需执行数据验证。"
-      },
-      "impact": "音乐平台、创作者工具和法务团队应检查下载权、商用权、历史作品处理和大规模分发限制。",
-      "whoShouldCare": "负责 AI 音乐产品、创作者经济、版权合规、流媒体分发和用户条款更新的产品/法务/信任安全团队。",
-      "readerUse": "相关团队用它更新 AI 音频的下载限制、商用权、历史作品和争议解决检查表。",
-      "nextCheck": "查 9 月 3 日正式条款、帮助中心、实际下载流程、平台合作公告、申诉记录和权利人回应。",
-      "followUpQuestions": [
-        "历史作品在新下载限制下的商用权和导出权如何执行？",
-        "下载限制是否能减少流媒体平台上的批量 AI 音乐滥用？"
-      ],
-      "evidenceThreshold": "至少需要正式 ToS、帮助中心、产品流程截图、平台合作说明、执行数据和权利人回应，才能升级为已验证治理措施。",
-      "claimBoundary": "不证明 Suno 与权利人的法律争议已经解决，也不证明下载限制足以阻止滥用。",
-      "counterEvidence": "如果正式 ToS 含糊、产品执行日志显示绕过容易、用户申诉集中或权利人继续反对，应降级为平台自我治理主张。",
-      "source": "Suno Blog",
-      "sourceName": "Suno Blog",
-      "sourceId": "suno-blog",
-      "sourceUrl": "https://suno.com/blog/suno-updates-tos",
-      "originalUrl": "https://suno.com/blog/suno-updates-tos",
-      "sourceRole": "官方核对",
-      "provenance": "Suno Blog 是官方来源；本站只记录发布方可直接支持的最小事实，并把能力、效果和外部影响留给后续独立证据核查。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-10T16:00:00+09:00",
-      "time": "16:00 JST",
-      "tags": [
-        "Suno",
-        "AI 音乐",
-        "条款"
-      ],
-      "companies": [
-        "Suno"
       ]
     }
   ]
