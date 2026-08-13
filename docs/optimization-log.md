@@ -26,7 +26,7 @@
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
-- Commit: Pending local commit.
+- Commit: Local implementation commit `262ed6b` (`增加覆盖结构合并规则`); this follow-up note records the implementation hash before remote sync.
 - Git note: Push not attempted yet for this run.
 
 ## 2026-08-13 08:09 JST

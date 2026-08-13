@@ -21,7 +21,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 0 | Complete | `68eebfc` | `docs/homepage-edition-preflight.md` checks each edition's reader question, TOP3 reader use, source mix boundary, mobile scan path, proof boundary, and archive mirror before publication. |
 | Day 1 | Complete | `cbcf78d` | The current `readerFrame.mobile` copy now gives phone readers a shorter scan path: judge Agent overreach, then policy pressure, then infrastructure evidence. |
 | Day 2 | Complete | `ea18f83` | The current `briefing.summary` and `deepBriefing.overview` now start with the reader decision, then separate official/media source boundaries from AI Watchtower interpretation. |
-| Day 3 | Complete | `pending` | `coverageMix` now has a tiny-bucket merge rule: keep at most one single-item bucket and no more than four scan cues, with validation and homepage preflight coverage. |
+| Day 3 | Complete | `262ed6b` | `coverageMix` now has a tiny-bucket merge rule: keep at most one single-item bucket and no more than four scan cues, with validation and homepage preflight coverage. |
 
 ## Historical Guard Anchors
 
