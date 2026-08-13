@@ -1,3 +1,29 @@
+## 2026-08-14 08:09 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-14`，发布 12 条安全非重复 AI 情报，聚焦企业 AI 成本、OpenAI/IBM 企业分发、Anthropic 多 Agent 安全、Copilot 功能收缩、NVIDIA/Databricks 融资、Apple 新闻授权、Blacksmith 代码验证、Gemini 规模和 ChatGPT Linux 入口。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 TechCrunch 当前 AI 页、OpenAI/IBM/NVIDIA/Microsoft 可核对原始入口、Microsoft 官方支持页和历史重复 URL，跳过弱来源、付费墙正文、登录墙正文、社区讨论、明显重复和传闻式条目。
+  - 本期官方来源 1/12：Microsoft 支持页确认消费版 Copilot Deep Research 将于 2026-08-18 退役，并指向 Researcher 替代路径。
+  - 本期可靠媒体 11/12：TechCrunch 提供 Writer Palmyra X6、OpenAI Ultrafast、IBM/OpenAI 合作、Anthropic 多 Agent 研究、OpenAI CRO、NVIDIA AI 数据中心融资、Apple/Siri 新闻授权、Databricks、Blacksmith、Gemini 月活和 ChatGPT Linux 雷达；全部保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 单一来源集中度为 `techcrunch-ai` 11/12，已在 `sourceRisk`、`sourceConcentration`、`overreadBoundary`、`briefing` 和 `deepBriefing` 中提示需用官方公告、产品文档、论文、合同/filing、生产日志、客户指标、审计材料和第三方测试交叉验证。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references, and item order.
+- Archive diff: skipped-one-edition - only one same-day archive edition exists for 2026-08-14, so no morning/evening comparison was written.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after validation and may hit the same DNS blocker.
+
 ## 2026-08-13 23:04 JST
 
 - Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-13`，因此未回退早间版，而是在现有 17:00 JST 版中补入 1 条安全非重复 Axios 媒体背景信号，当前版从 10 条增至 11 条。
