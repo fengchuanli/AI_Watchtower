@@ -1,3 +1,28 @@
+## 2026-08-13 23:04 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-13`，因此未回退早间版，而是在现有 17:00 JST 版中补入 1 条安全非重复 Axios 媒体背景信号，当前版从 10 条增至 11 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI News、TechCrunch AI、Axios AM 和历史重复 URL，跳过重复、弱来源、付费墙正文、登录墙正文、社区讨论和过旧芯片背景。
+  - 新增 Axios AM 媒体背景信号：Musk 与 Zuckerberg 的 AI 追赶背景，把 SpaceX/xAI 的 Grok 4.6 与 Meta 的 Muse Glimmer 放入前沿模型价格、开放权重和纵向整合竞争观察。
+  - 该新增项保持 `媒体背景` / `reported` / `originalDependency: must-read`；不把 Axios 背景升级为模型排名、价格优势、开放权重治理或 SpaceX/xAI/Meta 整合效果的已验证事实。
+  - 本期仍有来源集中风险：可靠媒体来源家族占 10/11，TechCrunch 单一来源占 9/11；已在 `sourceRisk`、`sourceConcentration`、`overreadBoundary`、`briefing` 和 `deepBriefing` 中提示用官方模型卡、价格页、权重许可、交易文件、第三方 benchmark、客户合同、许可记录和实测升级判断。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references, and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Expected local content commit message `补充08点AI新闻情报`; remote sync likely depends on DNS/network recovery.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit.
+
 ## 2026-08-13 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 3 homepage edition quality task. Added a compact rule for when `coverageMix` should merge tiny buckets instead of showing too many one-item labels.
