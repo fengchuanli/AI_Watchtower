@@ -353,6 +353,18 @@ function isActionOrientedCoverageLabel(value) {
   return /^(查|核对|验证|更新|观察|复查|评估)/.test(String(value || "").trim());
 }
 
+function validateCoverageMixShape(coverageMix, context) {
+  const singleItemBucketCount = coverageMix.filter((entry) => entry.count === 1).length;
+
+  if (coverageMix.length > 4) {
+    errors.push(`${context} coverageMix should merge tiny buckets instead of showing more than four scan cues.`);
+  }
+
+  if (singleItemBucketCount > 1) {
+    errors.push(`${context} coverageMix should merge tiny buckets; keep at most one single-item bucket.`);
+  }
+}
+
 function validateIncidentBriefingReadiness(item, context) {
   for (const [field, label, minLength] of incidentBriefingSections) {
     if (typeof item[field] !== "string" || item[field].trim().length < minLength) {
@@ -1372,6 +1384,8 @@ if (!newsFeed.edition) {
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
     errors.push("data/news.json edition must include at least two coverageMix entries.");
   } else {
+    validateCoverageMixShape(newsFeed.edition.coverageMix, "data/news.json edition");
+
     const coverageCount = newsFeed.edition.coverageMix.reduce((count, entry) => {
       return count + (Number.isInteger(entry.count) ? entry.count : 0);
     }, 0);

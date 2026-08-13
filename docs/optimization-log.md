@@ -1,3 +1,34 @@
+## 2026-08-13 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 3 homepage edition quality task. Added a compact rule for when `coverageMix` should merge tiny buckets instead of showing too many one-item labels.
+- Changed files:
+  - `docs/news-data-format.md`
+  - `docs/homepage-edition-preflight.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Documented that `coverageMix` should keep at most one single-item bucket and no more than four total scan cues.
+  - Added `coverageMixShape` to the homepage edition preflight so future news updates check the homepage scan map before publication.
+  - Added `validateCoverageMixShape` to `scripts/validate-data.mjs` so current homepage data rejects cluttered coverage mixes.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 3 is tracked and Day 4 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, current `data/news.json`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and relevant validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: Pending local commit.
+- Git note: Push not attempted yet for this run.
+
 ## 2026-08-13 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-13`，发布 10 条安全非重复 AI 情报，聚焦 OpenAI 企业 Agent 采用报告、Cognition/Lovable/Thrive 企业与开发工具资本信号、Google/Gemini 端侧入口、Twitch 训练数据默认设置、Fermi AI 供电项目和开放模型治理。

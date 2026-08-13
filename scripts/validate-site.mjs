@@ -1229,7 +1229,8 @@ if (
   !/Day 0[\s\S]*homepage-edition-preflight\.md/.test(optimizationDecisionIndex) ||
   !/Day 1[\s\S]*readerFrame\.mobile/.test(optimizationDecisionIndex) ||
   !/Day 2[\s\S]*briefing\.summary[\s\S]*deepBriefing\.overview/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 3/.test(optimizationDecisionIndex) ||
+  !/Day 3[\s\S]*coverageMix/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 4/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1436,8 +1437,11 @@ if (
   !/\.topic-groups span em/.test(styles) ||
   !/explicit omission status/.test(newsDataFormat) ||
   !/action-oriented coverage labels and topic meanings/.test(newsDataFormat) ||
+  !/coverageMix tiny-bucket merging/.test(newsDataFormat) ||
+  !/coverageMixShape/.test(homepageEditionPreflight) ||
   !/function isActionOrientedCoverageLabel/.test(appJs) ||
-  !/function isActionOrientedCoverageLabel/.test(validateDataJs)
+  !/function isActionOrientedCoverageLabel/.test(validateDataJs) ||
+  !/function validateCoverageMixShape/.test(validateDataJs)
 ) {
   errors.push("Homepage feed metadata must render action-oriented edition topic grouping, why-now summaries, and omission boundaries for the planned topic vocabulary.");
 }

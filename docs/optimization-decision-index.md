@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 1, Homepage Edition Quality
-- Last indexed run: 2026-08-12 20:00 JST
+- Last indexed run: 2026-08-13 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull; push status is recorded in `docs/optimization-log.md`; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -21,6 +21,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 0 | Complete | `68eebfc` | `docs/homepage-edition-preflight.md` checks each edition's reader question, TOP3 reader use, source mix boundary, mobile scan path, proof boundary, and archive mirror before publication. |
 | Day 1 | Complete | `cbcf78d` | The current `readerFrame.mobile` copy now gives phone readers a shorter scan path: judge Agent overreach, then policy pressure, then infrastructure evidence. |
 | Day 2 | Complete | `ea18f83` | The current `briefing.summary` and `deepBriefing.overview` now start with the reader decision, then separate official/media source boundaries from AI Watchtower interpretation. |
+| Day 3 | Complete | `pending` | `coverageMix` now has a tiny-bucket merge rule: keep at most one single-item bucket and no more than four scan cues, with validation and homepage preflight coverage. |
 
 ## Historical Guard Anchors
 
@@ -45,9 +46,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 3: add a small rule for when `coverageMix` should merge tiny buckets instead of showing too many labels with one item each.
+- Continue with Day 4: review current `categories[].description` after the latest news update and remove stale "本期" angles that no longer match visible items.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 3 first.
-- If Day 3 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 4 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 
