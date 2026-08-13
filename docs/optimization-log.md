@@ -26,8 +26,8 @@
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
-- Commit: Local implementation commit `262ed6b` (`增加覆盖结构合并规则`); this follow-up note records the implementation hash before remote sync.
-- Git note: Push not attempted yet for this run.
+- Commit: Local implementation commit `262ed6b` (`增加覆盖结构合并规则`) and log/index follow-up commit `8637537` (`记录覆盖结构规则哈希`); this push-blocker note records the latest local status.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-13 08:09 JST
 
