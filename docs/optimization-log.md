@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: pending; final local commit hash will be recorded after commit.
+- Commit: Local implementation commit `f2defb8` (`优化首页分类说明`); this follow-up log note records the implementation hash before push.
 - Git note: push not attempted yet for this run; remote sync depends on DNS/network recovery.
 
 ## 2026-08-14 08:09 JST
