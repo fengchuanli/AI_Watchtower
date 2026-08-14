@@ -79,7 +79,7 @@ The top-level `categories` array defines the editorial boundary of every homepag
 
 - `id`: Stable category code matching item `category` and the homepage filter.
 - `label`: Chinese label shared by the filter and every item in that category.
-- `description`: Concise Chinese scope note covering what belongs in the category and any important evidence caveat. Review these descriptions against the current item set during content-quality passes: each one should explain the reader use of the filter, name a current-batch angle with words such as `本期` or `当前`, and include a proof-boundary cue such as `需验证`, `仍需确认`, `不直接证明`, or `等待复现`.
+- `description`: Concise Chinese scope note covering what belongs in the category and any important evidence caveat. Review these descriptions against the current item set during content-quality passes: each one should explain the reader use of the filter, name a current-batch angle with words such as `本期` or `当前`, include at least one company, product, model, or source anchor that appears in that category's visible items, and include a proof-boundary cue such as `需验证`, `仍需确认`, `不直接证明`, or `等待复现`. Do not leave stale anchors from another category after a news update; for example, a model description should not keep Anthropic or OpenAI if the only visible model item is Writer Palmyra X6.
 
 ## History Fields
 

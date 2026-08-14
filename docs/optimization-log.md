@@ -1,3 +1,36 @@
+## 2026-08-14 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 4 homepage edition quality task. Reviewed current `categories[].description` after the latest 2026-08-14 17:00 JST news update and removed stale cross-category "本期" angles.
+- Changed files:
+  - `data/news.json`
+  - `docs/news-data-format.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Rewrote the six current homepage category descriptions so each filter names only visible anchors from its own category: Writer Palmyra X6, OpenAI/IBM/Copilot/Gemini, Anthropic, Blacksmith/ChatGPT Linux, Databricks/NVIDIA/OpenAI CRO, and Apple.
+  - Kept proof-boundary wording in every category description, using official documents, price pages, production retests, region availability, user data, code/reproduction, logs, audits, filings, contracts, financial disclosure, and product documents as next-check paths.
+  - Documented that category descriptions must name a current visible anchor from that category and must not retain stale anchors from another current category after a news update.
+  - Added `validateCategoryDescriptionAnchors` to `scripts/validate-data.mjs` so future current homepage data rejects category descriptions that lack an in-category visible anchor or name an anchor only present under another category.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 4 is tracked and Day 5 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, current `data/news.json`, `docs/news-data-format.md`, and relevant validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending; final local commit hash will be recorded after commit.
+- Git note: push not attempted yet for this run; remote sync depends on DNS/network recovery.
+
 ## 2026-08-14 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-14`，发布 12 条安全非重复 AI 情报，聚焦企业 AI 成本、OpenAI/IBM 企业分发、Anthropic 多 Agent 安全、Copilot 功能收缩、NVIDIA/Databricks 融资、Apple 新闻授权、Blacksmith 代码验证、Gemini 规模和 ChatGPT Linux 入口。

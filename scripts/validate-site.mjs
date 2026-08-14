@@ -1230,7 +1230,8 @@ if (
   !/Day 1[\s\S]*readerFrame\.mobile/.test(optimizationDecisionIndex) ||
   !/Day 2[\s\S]*briefing\.summary[\s\S]*deepBriefing\.overview/.test(optimizationDecisionIndex) ||
   !/Day 3[\s\S]*coverageMix/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 4/.test(optimizationDecisionIndex) ||
+  !/Day 4[\s\S]*categories\[\]\.description/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 5/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1439,6 +1440,8 @@ if (
   !/action-oriented coverage labels and topic meanings/.test(newsDataFormat) ||
   !/coverageMix tiny-bucket merging/.test(newsDataFormat) ||
   !/coverageMixShape/.test(homepageEditionPreflight) ||
+  !/category's visible items/.test(newsDataFormat) ||
+  !/stale anchors from another category/.test(newsDataFormat) ||
   !/function isActionOrientedCoverageLabel/.test(appJs) ||
   !/function isActionOrientedCoverageLabel/.test(validateDataJs) ||
   !/function validateCoverageMixShape/.test(validateDataJs)

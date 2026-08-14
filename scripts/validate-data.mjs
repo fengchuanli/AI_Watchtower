@@ -179,6 +179,72 @@ function validateSimilarTitles(items, context) {
   }
 }
 
+function extractCategoryAnchorTokens(value) {
+  const normalized = String(value || "").normalize("NFKC");
+  const latinTokens = normalized.match(/[A-Za-z][A-Za-z0-9.-]{2,}/g) || [];
+  return new Set(
+    latinTokens
+      .map((token) => token.replace(/[.'’]s$/i, "").toLowerCase())
+      .filter((token) => !["the", "and", "for", "with", "from", "into", "current"].includes(token)),
+  );
+}
+
+function validateCategoryDescriptionAnchors(categories, items) {
+  const anchorsByCategory = new Map();
+  const categoryByAnchor = new Map();
+
+  for (const item of items) {
+    if (!item.category) {
+      continue;
+    }
+
+    if (!anchorsByCategory.has(item.category)) {
+      anchorsByCategory.set(item.category, new Set());
+    }
+
+    const itemText = [item.title, item.source, item.sourceId].filter(Boolean).join(" ");
+    const itemAnchors = extractCategoryAnchorTokens(itemText);
+
+    for (const anchor of itemAnchors) {
+      anchorsByCategory.get(item.category).add(anchor);
+
+      if (!categoryByAnchor.has(anchor)) {
+        categoryByAnchor.set(anchor, new Set());
+      }
+
+      categoryByAnchor.get(anchor).add(item.category);
+    }
+  }
+
+  for (const [index, category] of categories.entries()) {
+    const categoryAnchors = anchorsByCategory.get(category.id) || new Set();
+
+    if (!categoryAnchors.size || !category.description) {
+      continue;
+    }
+
+    const descriptionAnchors = extractCategoryAnchorTokens(category.description);
+    const matchedCurrentAnchors = [...descriptionAnchors].filter((anchor) => categoryAnchors.has(anchor));
+
+    if (!matchedCurrentAnchors.length) {
+      errors.push(
+        `data/news.json categories[${index}] description must name at least one current visible anchor from its own items.`,
+      );
+    }
+
+    const staleAnchors = [...descriptionAnchors].filter((anchor) => {
+      const anchorCategories = categoryByAnchor.get(anchor);
+      return anchorCategories && !anchorCategories.has(category.id);
+    });
+
+    if (staleAnchors.length) {
+      errors.push(
+        `data/news.json categories[${index}] description names anchors outside its current items: ${staleAnchors.join(", ")}.`,
+      );
+    }
+  }
+}
+
 function getEditionDateEnd(editionDate) {
   const parsedDate = Date.parse(`${editionDate}T23:59:59+09:00`);
 
@@ -1290,6 +1356,7 @@ if (!Array.isArray(newsFeed.categories) || !newsFeed.categories.length) {
   errors.push("data/news.json must include category definitions.");
 } else {
   const categoryIds = new Set();
+  validateCategoryDescriptionAnchors(newsFeed.categories, Array.isArray(newsFeed.items) ? newsFeed.items : []);
 
   for (const [index, category] of newsFeed.categories.entries()) {
     for (const field of requiredCategoryFields) {
