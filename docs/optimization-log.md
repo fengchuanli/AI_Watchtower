@@ -1,3 +1,28 @@
+## 2026-08-15 08:09 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-15`，发布 8 条安全非重复 AI 情报，聚焦 Anthropic Model 2 外发边界、开放模型政府审查、AI 数据中心地方政治、巨头 AI ROIC、Google 水印、Kog GPU 推理优化和天然气供电成本。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Axios AI 当前索引、TechCrunch AI 当前页、TechCrunch Google/Kog/天然气条目、历史 URL 和当前 `data/news.json`。
+  - 本期只发布 8 条，因为没有足够安全、非重复、无付费/登录正文依赖的新来源支撑 10 条以上；跳过旧稿、播客、重复事件、弱来源和社区讨论。
+  - 本期 8/8 为可靠媒体雷达：Axios 5 条，TechCrunch 3 条；全部保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求官方报告、政策文本、财报、合同、许可文件、产品文档、客户日志和第三方测试升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references and item order.
+- Archive diff: skipped-one-edition - only one same-day archive edition exists for 2026-08-15, so no morning/evening comparison was written.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: local content commit message `更新17点AI新闻情报`; push attempted after commit.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-14 23:07 JST
 
 - Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-14`，因此未回退早间版，也未用弱来源补量。本次将已收录的 OpenAI CRO 条目从 TechCrunch 媒体背景升级为 OpenAI 官方公告核对。

@@ -1,8 +1,772 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-14",
-  "totalItems": 435,
+  "updatedAt": "2026-08-15",
+  "totalItems": 443,
   "editions": [
+    {
+      "id": "news-1700-2026-08-15",
+      "date": "2026-08-15",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦模型外发边界、开放模型政策、AI 数据中心政治、资本效率、水印和推理成本。",
+      "operationalStatus": "已核查来源清单、source policy、Axios AI 当前索引、TechCrunch AI 当前页和历史 URL；GitHub pull 受 DNS 阻塞。",
+      "editorialInterpretation": "本期安全非重复信号只有 8 条，可靠媒体占全部；未用旧稿、播客、付费墙正文或社区讨论补量。",
+      "readerFrame": {
+        "headline": "阅读本期：把前沿模型外发、开放模型监管和数据中心成本放进同一张风险表",
+        "whyItMatters": "这 8 条把 Anthropic Model 2、开放模型政府审查、AI 政治联盟、数据中心地方反弹、巨头 ROIC、Google 水印、Kog 推理优化和天然气供电成本放在一起；全部仍需官方报告、政策文本、财报、合同、产品文档和第三方测试补强。",
+        "mobile": {
+          "headline": "手机先看三条风险线",
+          "summary": "模型暂缓外发、开放模型审查和数据中心成本是本期主线。",
+          "primaryUses": [
+            "安全团队查模型发布。",
+            "政策团队查开放模型。",
+            "财务团队查算力成本。"
+          ],
+          "proofBoundary": "尚未证明，仍需官方报告和政策文本材料。"
+        },
+        "useThisIssueFor": [
+          "模型安全、法务和政府事务团队用本期检查前沿模型外发门槛、开放模型审查和 AI 内容标识责任。",
+          "基础设施、财务和能源团队用本期检查数据中心地方阻力、天然气供电成本和 hyperscaler AI 投资回报。",
+          "工程平台团队用本期检查 GPU 推理优化是否能缓解延迟、成本和新芯片依赖。"
+        ],
+        "notProvenYet": [
+          "不证明 Anthropic 已全面放慢研发、开放模型必然纳入新监管、或 AI 已成为所有地方选举主导议题。",
+          "不证明 ROIC 足以覆盖未来 AI 投资，也不证明 Google 水印、Kog 推理优化或燃气成本风险已在生产环境完整验证。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "相较 8 月 14 日 17:00 版，本期从企业 AI 成本扩展到发布治理、政策和能源约束",
+        "freshFacts": [
+          "本期新增来源事实：Axios 报道 Anthropic Model 2 暂无外部发布计划，并称风险评级从很低上调到低。",
+          "本期新增来源事实：Axios 报道开放模型可能面临政府使用和评测审查，AI 数据中心进入地方政治和能源成本争议。",
+          "本期新增来源事实：TechCrunch 报道 Google 可关闭部分 AI 生成内容可见水印，同时保留 SynthID/C2PA；Kog 正推动 GPU 推理优化。",
+          "本期新增来源事实：Axios 用 ROIC 观察巨头 AI capex，TechCrunch 报道天然气成本预测可能影响 hyperscaler 数据中心。"
+        ],
+        "repeatedContext": [
+          "延续背景：上一版已覆盖 OpenAI/IBM 分发、Copilot 收缩、NVIDIA/Databricks 融资和 Apple 新闻授权。",
+          "仍是同一主线：AI 竞争从模型和融资转向发布边界、政策许可、基础设施成本和验证材料。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对模型发布与开放政策",
+          "count": 3,
+          "meaning": "用来检查 Anthropic Model 2、开放模型政府审查和 AI 政治联盟是否改变安全与政策清单。"
+        },
+        {
+          "label": "验证算力资本与能源约束",
+          "count": 3,
+          "meaning": "用来核对 ROIC、数据中心地方反弹和天然气供电成本对 AI 基础设施的影响。"
+        },
+        {
+          "label": "核对水印与推理工程",
+          "count": 2,
+          "meaning": "用来更新生成内容标识、C2PA/SynthID、GPU 推理优化和第三方测试路径。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "可靠媒体雷达集中",
+        "note": "单一来源家族可靠媒体占 8/8，Axios 5 条、TechCrunch 3 条；适合做核查清单，不适合直接当作已完成证明。",
+        "nextCheck": "优先补 Anthropic 官方报告、白宫/机构政策文本、公司财报、许可文件、产品文档、合同、客户日志和第三方 benchmark。"
+      },
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 5,
+        "share": "5/8",
+        "note": "Axios 是本期单一最大来源，但未超过三分之二；来源家族层面仍由可靠媒体完全主导。",
+        "nextCheck": "下一步核对 Anthropic 官方报告、白宫/机构政策文本、公司财报、项目许可和第三方测试。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期主要依赖 Axios 与 TechCrunch 的当前报道，覆盖模型外发、政策、基础设施和工具工程，适合发现需要跟进的风险点。",
+        "doNotConclude": "不能直接断言前沿模型已停摆、开放模型将被统一监管、AI capex 已盈利、数据中心会放缓或推理优化已生产复现。",
+        "useInstead": "应该用官方报告、政策文本、公司财报、许可文件、PPA、产品设置页、客户日志和第三方测试升级判断。"
+      },
+      "trendNotes": [
+        {
+          "topic": "frontier-release-governance",
+          "label": "前沿模型发布边界更显性",
+          "note": "跨期看，OpenAI/Anthropic 安全事件和本期 Model 2 信号都把内部能力与外部发布区分开。",
+          "boundary": "不证明研发放慢，仍需官方系统卡、风险报告、政府文件和客户可用性记录。"
+        },
+        {
+          "topic": "ai-infrastructure-politics",
+          "label": "AI 基础设施进入地方政治",
+          "note": "跨期看，数据中心融资、供电和地方反弹共同显示，算力扩张越来越受许可和社区关系约束。",
+          "boundary": "不证明项目普遍延误，仍需许可、诉讼、PPA、用水合同和投产数据。"
+        },
+        {
+          "topic": "content-provenance-shift",
+          "label": "内容标识转向机器可验证",
+          "note": "跨期看，Claude 水印和 Google 可见水印开关共同把 AI 内容治理推向元数据、检测工具和地区合规。",
+          "boundary": "不证明检测稳定，仍需产品文档、C2PA/SynthID 实测和监管解释。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "model",
+          "label": "模型主题从速度转向发布门槛",
+          "status": "stronger",
+          "previousPattern": "上一版覆盖 Writer、OpenAI Ultrafast 和 Anthropic 多 Agent 安全。",
+          "currentSignal": "本期新增 Anthropic Model 2 暂无外发计划和风险评级上调报道。",
+          "signalDirection": "增强：模型主题从性能和成本延伸到内部能力、风险报告和外部发布边界。",
+          "stillUnproven": "仍需 Anthropic 官方报告、系统卡、客户通知、政府文件和第三方安全评估。"
+        },
+        {
+          "topic": "policy",
+          "label": "政策边界扩展",
+          "status": "stronger",
+          "previousPattern": "上一版覆盖 Apple 新闻授权和 Microsoft Copilot 功能退役。",
+          "currentSignal": "本期新增开放模型政府审查、Google 水印开关和 AI 地方政治报道。",
+          "signalDirection": "增强：政策主题覆盖模型准入、内容标识、地方许可和选举议题。",
+          "stillUnproven": "仍需政策文本、产品文档、听证记录、法案、监管解释和平台检测数据。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "基础设施约束重复出现",
+          "status": "repeated",
+          "previousPattern": "上一版覆盖 NVIDIA/Databricks 融资和云承诺压力。",
+          "currentSignal": "本期新增 ROIC、数据中心地方反弹、天然气成本和 Kog 推理优化。",
+          "signalDirection": "重复：算力扩张继续受资本效率、能源成本、地方许可和推理工程影响。",
+          "stillUnproven": "仍需财报、合同、PPA、许可文件、客户日志、benchmark 和投产数据。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Anthropic",
+          "label": "从 Agent 安全延伸到外发门槛",
+          "lastMention": "上一版覆盖 Anthropic 多 Agent 冲突研究。",
+          "whatChanged": "本期新增 Model 2 暂无外发计划和风险评级上调的 Axios 报道。",
+          "stillUnproven": "仍需 Anthropic 官方风险报告、系统卡、产品路线和客户通知。"
+        },
+        {
+          "company": "Google",
+          "label": "转向内容标识",
+          "lastMention": "上一版覆盖 Gemini app 月活和 Google 入口规模。",
+          "whatChanged": "本期新增 Google 可关闭可见水印但保留 SynthID/C2PA 的报道。",
+          "stillUnproven": "仍需 Google 官方文档、设置页、地区规则和第三方元数据检测。"
+        },
+        {
+          "company": "OpenAI",
+          "label": "从分发和销售执行转向政策与资本背景",
+          "lastMention": "上一版覆盖 OpenAI/IBM、CRO 和 Ultrafast。",
+          "whatChanged": "本期在开放模型审查、AI 政治和数据中心成本背景中继续出现 OpenAI。",
+          "stillUnproven": "仍需官方政策回应、客户合同、模型文档、数据中心协议和财务披露。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 8,
+          "role": "Axios 与 TechCrunch 提供当前雷达，完整事实、数据、采访、图表和上下文仍需回到原文与后续原始文件。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "model",
+          "label": "模型",
+          "count": 1,
+          "itemIds": [
+            "axios-anthropic-model-2-risk-report-2026-08-15"
+          ],
+          "meaning": "用来核对前沿模型内部能力、风险评级和外部发布门槛。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 4,
+          "itemIds": [
+            "axios-open-source-ai-government-scrutiny-2026-08-15",
+            "axios-ai-political-map-data-centers-2026-08-15",
+            "techcrunch-google-visible-watermark-toggle-2026-08-15",
+            "axios-anthropic-model-2-risk-report-2026-08-15"
+          ],
+          "meaning": "用来更新开放模型、内容标识、地方政治和模型发布治理清单。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 4,
+          "itemIds": [
+            "axios-ai-data-center-backlash-fossil-politics-2026-08-15",
+            "axios-big-tech-ai-roic-2026-08-15",
+            "techcrunch-hyperscaler-natural-gas-forecast-2026-08-15",
+            "techcrunch-kog-gpu-inference-engine-2026-08-15"
+          ],
+          "meaning": "用来核对 AI 数据中心资本效率、能源成本、地方许可和推理优化。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 1,
+          "itemIds": [
+            "techcrunch-kog-gpu-inference-engine-2026-08-15"
+          ],
+          "meaning": "用来检查 GPU 推理优化、benchmark 和服务成本控制。"
+        }
+      ],
+      "itemCount": 8,
+      "items": [
+        {
+          "id": "axios-anthropic-model-2-risk-report-2026-08-15",
+          "category": "model",
+          "label": "模型",
+          "title": "Axios 报道 Anthropic 暂无计划外发更强内部 Model 2",
+          "body": "Axios 称 Anthropic 最新风险报告提到内部 Model 2，但公司目前没有外部发布计划。",
+          "summary": "Axios 称 Anthropic 最新风险报告提到内部 Model 2，但公司目前没有外部发布计划。",
+          "whyItMatters": "前沿模型竞争正在从谁先发布，转向谁能解释内部能力、风险评级和外发边界。",
+          "detailBody": "Axios 报道 Anthropic 最新风险报告描述了更强内部 Model 2、风险评级上调和暂不外发计划；AI Watchtower 仅采用这些报道事实。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "模型安全治理进入“内部进展公开、外部发布收紧”的阶段，采购方需要区分研发能力和可用产品。",
+          "detailTrend": "如果 Anthropic 后续把风险报告、系统卡和政府沟通流程常态化，企业采购会更重视发布门槛和内部模型使用边界。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它把本期最强模型信号放在发布约束上，而不是单纯性能竞争。",
+          "topReason": "它把本期最强模型信号放在发布约束上，而不是单纯性能竞争。",
+          "detailWhyRanked": "本条进入本期，是因为 Axios 把 Model 2、风险评级和暂不发布放在同一条核查线上；升级仍需 Anthropic 报告原文和系统卡。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "模型采购和安全团队应把未发布内部模型、风险报告和外发门槛纳入供应商审查。",
+          "whoShouldCare": "负责前沿模型采购、安全评估、政府事务和高风险业务上线的企业平台、法务和合规团队。",
+          "readerUse": "负责前沿模型采购、安全评估、政府事务和高风险业务上线的企业平台、法务和合规团队。可用它更新模型准入清单，要求供应商说明内部模型、外发模型和风险报告的对应关系。",
+          "nextCheck": "核对 Anthropic 风险报告 PDF、系统卡、后续官方声明和第三方安全评估。",
+          "followUpQuestions": [
+            "Model 2 的不外发决定是否写入正式产品路线或只是当前研发选择？",
+            "风险评级上调是否改变企业客户的可用模型、权限或合同条款？"
+          ],
+          "evidenceThreshold": "需要 Anthropic 官方报告、系统卡、客户通知和第三方安全评估，才能升级为已确认发布治理变化。",
+          "claimBoundary": "不证明 Anthropic 暂停整体研发，也不证明 Model 2 已达到可部署或不可部署的明确门槛。",
+          "counterEvidence": "如果后续官方报告未提到暂不外发、或产品实际开放 Model 2，应下调该判断。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk",
+          "originalUrl": "https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-15T03:00:00+09:00",
+          "time": "03:00 JST",
+          "tags": [
+            "模型发布",
+            "安全报告",
+            "Anthropic"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "axios-big-tech-ai-roic-2026-08-15",
+          "category": "funding",
+          "label": "融资",
+          "title": "Axios 用 ROIC 追踪巨头 AI 投资是否拖累回报",
+          "body": "Axios 指出巨头数据中心开支暂未明显压低核心投资回报，但表外义务仍是盲区。",
+          "summary": "Axios 指出巨头数据中心开支暂未明显压低核心投资回报，但表外义务仍是盲区。",
+          "whyItMatters": "AI 资本开支能否被云、广告和企业业务吸收，是判断算力扩张可持续性的关键问题。",
+          "detailBody": "Axios 使用 ROIC 观察 Apple、Meta、Microsoft、Amazon、Alphabet 和 Oracle 的 AI 投资回报压力，并提示表外义务可能低估成本。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "AI 投资叙事正在从营收增长转向资本效率，读者需要同时看利润率、投资回报和表外承诺。",
+          "detailTrend": "如果 ROIC 开始下滑，市场会更严厉地区分有现金流支撑的 AI 扩张和依赖未来需求的资本承诺。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它给财务读者一个比单看 capex 更有用的 AI 投资观察指标。",
+          "topReason": "它给财务读者一个比单看 capex 更有用的 AI 投资观察指标。",
+          "detailWhyRanked": "本条进入本期，是因为 Axios 将 AI 数据中心开支转化为可追踪财务指标；升级需看公司 10-Q、表外承诺和现金流。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 18,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 18,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "战略和财务团队应把 ROIC、表外承诺、云收入和数据中心折旧放进同一张 AI 投资仪表盘。",
+          "whoShouldCare": "评估 hyperscaler AI 支出、云采购、数据中心租约和长期预算的财务、战略和采购团队。",
+          "readerUse": "评估 hyperscaler AI 支出、云采购、数据中心租约和长期预算的财务、战略和采购团队。可用它更新 AI capex 观察表，区分会计利润、现金投入和长期承诺。",
+          "nextCheck": "核对最新 10-Q/10-K、FactSet 指标、租约披露、云收入和资本承诺注释。",
+          "followUpQuestions": [
+            "Meta、Oracle 或其他公司 ROIC 下滑是否与 AI 数据中心直接相关？",
+            "表外承诺纳入后，巨头 AI 投资回报是否仍然稳定？"
+          ],
+          "evidenceThreshold": "需要 10-Q/10-K 财报文件、表外承诺披露、现金流数据和第三方财务模型，才能升级为已验证投资回报判断。",
+          "claimBoundary": "不证明 AI 投资已经赚钱，也不证明当前 ROIC 能覆盖未来全部算力承诺。",
+          "counterEvidence": "如果后续财报显示 ROIC、现金流或云利润明显恶化，应下调该乐观边界。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/14/ai-spending-tech-capital",
+          "originalUrl": "https://www.axios.com/2026/08/14/ai-spending-tech-capital",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-15T02:00:00+09:00",
+          "time": "02:00 JST",
+          "tags": [
+            "资本开支",
+            "ROIC",
+            "Hyperscaler"
+          ],
+          "companies": [
+            "Apple",
+            "Meta",
+            "Microsoft",
+            "Amazon",
+            "Alphabet",
+            "Oracle"
+          ]
+        },
+        {
+          "id": "techcrunch-google-visible-watermark-toggle-2026-08-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "Google 允许部分 AI 生成内容关闭可见水印",
+          "body": "TechCrunch 报道 Google 将允许用户移除可见水印，但保留 SynthID 和 C2PA 元数据。",
+          "summary": "TechCrunch 报道 Google 将允许用户移除可见水印，但保留 SynthID 和 C2PA 元数据。",
+          "whyItMatters": "AI 内容标识正在从肉眼可见标签转向机器可验凭证，创作便利和透明责任会继续拉扯。",
+          "detailBody": "TechCrunch 报道 Google 将在 Gemini、Flow 等入口提供可见水印开关，同时保留不可见 SynthID 和 C2PA 元数据。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "生成媒体治理会更依赖验证工具、元数据和平台检测，而不是单一可见标记。",
+          "detailTrend": "如果可见水印可选成为常态，企业发布流程需要检查 C2PA 元数据、检测工具和地区合规要求。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它把水印争议从 Claude 文本扩展到 Google 图像、视频和音乐生成入口。",
+          "topReason": "它把水印争议从 Claude 文本扩展到 Google 图像、视频和音乐生成入口。",
+          "detailWhyRanked": "本条进入本期，是因为 Google 入口变化直接影响创作者、平台和合规团队；升级需核对 Google 官方公告和产品开关。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "内容、法务和平台信任团队应重新检查 AI 生成媒体的标识、验证和地区合规流程。",
+          "whoShouldCare": "负责生成式媒体发布、品牌素材审核、平台信任与安全、版权和 EU AI Act 合规的产品/法务团队。",
+          "readerUse": "负责生成式媒体发布、品牌素材审核、平台信任与安全、版权和 EU AI Act 合规的产品/法务团队。可用它核对可见水印、SynthID、C2PA 和地区合规设置是否一致。",
+          "nextCheck": "核对 Google 官方产品公告、Gemini/Flow 设置页、Credentio 文档和地区合规说明。",
+          "followUpQuestions": [
+            "可见水印关闭后，平台是否仍能稳定检测 Gemini 生成内容？",
+            "哪些地区会因为法规要求保留可见水印？"
+          ],
+          "evidenceThreshold": "需要 Google 官方文档、产品截图、C2PA/SynthID 验证结果和地区政策，才能升级为已确认产品治理变化。",
+          "claimBoundary": "不证明所有 Google AI 内容都能关闭可见水印，也不证明不可见水印不会被移除或失效。",
+          "counterEvidence": "如果产品上线范围受限或元数据在常见平台上传后丢失，应下调实用性判断。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
+          "originalUrl": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-15T01:13:00+09:00",
+          "time": "01:13 JST",
+          "tags": [
+            "水印",
+            "SynthID",
+            "C2PA"
+          ],
+          "companies": [
+            "Google",
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "axios-ai-political-map-data-centers-2026-08-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios 报道 AI 正重组美国中期选举前的政策联盟",
+          "body": "Axios 将数据中心、监控和地方反弹列为 AI 政治议题跨党派重组的核心线索。",
+          "summary": "Axios 将数据中心、监控和地方反弹列为 AI 政治议题跨党派重组的核心线索。",
+          "whyItMatters": "AI 政策不再只在华盛顿和实验室之间拉扯，地方数据中心和监控议题正在进入选举叙事。",
+          "detailBody": "Axios 报道 AI 正改变候选人和立法者的联盟组合，数据中心、基层反弹和监控成为跨党派议题。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "AI 基础设施和治理会越来越像能源、土地和隐私政治，而不是单纯科技产业政策。",
+          "detailTrend": "如果地方选举把数据中心和监控放进核心议程，AI 公司需要更早处理社区许可、用水、电力和透明度。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它解释为什么 AI 基础设施争议可能直接影响州级和地方审批。",
+          "topReason": "它解释为什么 AI 基础设施争议可能直接影响州级和地方审批。",
+          "detailWhyRanked": "本条进入本期，是因为 Axios 提供了政策联盟变化的当前报道；升级需看法案、行政令和选举投票结果。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "数据中心开发商和企业 AI 基础设施团队应把地方政治风险纳入选址与合规计划。",
+          "whoShouldCare": "负责 AI 数据中心选址、社区沟通、公共政策和基础设施投资的运营、法务和政府事务团队。",
+          "readerUse": "负责 AI 数据中心选址、社区沟通、公共政策和基础设施投资的运营、法务和政府事务团队。可用它更新地方审批风险表，跟踪数据中心、监控和选举议题是否绑定。",
+          "nextCheck": "核对州级法案、行政令、地方听证记录、投票数据和候选人政策文本。",
+          "followUpQuestions": [
+            "数据中心议题是否会影响关键州的审批节奏？",
+            "监控与隐私联盟是否会推动新的 AI 使用限制？"
+          ],
+          "evidenceThreshold": "需要法案文本、行政令、听证记录和选举结果，才能升级为已确认政策趋势。",
+          "claimBoundary": "不证明 AI 已成为所有选区的主导议题，也不证明跨党派联盟会持续。",
+          "counterEvidence": "如果后续投票、听证或立法未延续这些议题，应下调政治影响判断。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/14/ai-scrambles-political-map",
+          "originalUrl": "https://www.axios.com/2026/08/14/ai-scrambles-political-map",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-15T01:00:00+09:00",
+          "time": "01:00 JST",
+          "tags": [
+            "数据中心",
+            "选举",
+            "AI 政策"
+          ],
+          "companies": [
+            "OpenAI",
+            "Meta",
+            "Google"
+          ]
+        },
+        {
+          "id": "axios-open-source-ai-government-scrutiny-2026-08-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios 报道开源 AI 可能进入美国政府更细审查",
+          "body": "Axios 称开放模型虽避开现有框架限制，但更强能力可能引发国家安全与采购评估。",
+          "summary": "Axios 称开放模型虽避开现有框架限制，但更强能力可能引发国家安全与采购评估。",
+          "whyItMatters": "开放权重模型的政策风险正在从是否允许发布，转向政府系统如何测试、采购和设定风险基线。",
+          "detailBody": "Axios 报道美国政策讨论仍可能覆盖更强开放模型，尤其是国家安全系统中的测试、采购和风险管理标准。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "开放模型不再只是开发者生态议题，也进入政府采购、国家安全和前沿能力评估的交叉区。",
+          "detailTrend": "如果 9 月和 10 月的政府实施文件落地，开放模型供应商和企业用户都需要准备评测、出处和使用边界材料。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它直接影响开放模型能否进入敏感行业和政府采购流程。",
+          "topReason": "它直接影响开放模型能否进入敏感行业和政府采购流程。",
+          "detailWhyRanked": "本条进入本期，是因为 Axios 把开放模型、政府框架和即将到来的实施期限连在一起；升级需看白宫或机构正式文件。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "开放模型团队和政府承包商应提前准备模型评测、许可证、红队和供应链材料。",
+          "whoShouldCare": "使用开放权重模型做政务、国防、金融和企业私有化部署的平台、安全和政策团队。",
+          "readerUse": "使用开放权重模型做政务、国防、金融和企业私有化部署的平台、安全和政策团队。可用它检查开放模型采购清单，补上测试方法、风险基线和使用审批流程。",
+          "nextCheck": "核对白宫备忘录、9 月国家安全 AI 使用政策、10 月测试评估标准和机构采购指南。",
+          "followUpQuestions": [
+            "后续政策是否会把开放模型纳入预发布或采购前安全评估？",
+            "企业私有化部署是否需要保存更完整的模型来源和评测记录？"
+          ],
+          "evidenceThreshold": "需要正式政策文本、机构采购指南和测试标准，才能升级为已确认监管或采购要求。",
+          "claimBoundary": "不证明美国已经限制开放模型发布，也不证明所有开源模型都会被同一规则覆盖。",
+          "counterEvidence": "如果正式政策继续排除开放模型或只约束政府内部使用，应缩小该信号范围。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/14/open-source-ai-government-scrutiny",
+          "originalUrl": "https://www.axios.com/2026/08/14/open-source-ai-government-scrutiny",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-15T01:00:00+09:00",
+          "time": "01:00 JST",
+          "tags": [
+            "开放模型",
+            "政策",
+            "国家安全"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Booz Allen"
+          ]
+        },
+        {
+          "id": "axios-ai-data-center-backlash-fossil-politics-2026-08-15",
+          "category": "funding",
+          "label": "融资",
+          "title": "Axios 报道数据中心反弹开始像化石能源政治",
+          "body": "Axios 将数据中心水、电、噪音和地方反对，与过去化石能源基础设施争议作类比。",
+          "summary": "Axios 将数据中心水、电、噪音和地方反对，与过去化石能源基础设施争议作类比。",
+          "whyItMatters": "AI 算力扩张的约束正在从芯片供应延伸到社区许可、能源成本和地方政治。",
+          "detailBody": "Axios 报道美国数据中心反弹正在围绕用水、噪音、光污染和地方审批发酵，科技行业可能需要更快回应。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "AI 基础设施建设会更依赖公共许可和环境沟通，单靠资本和芯片订单无法保证投产。",
+          "detailTrend": "如果地方反弹扩散，数据中心项目的真实瓶颈会表现为许可、用水、电网和社区补偿，而不是模型需求不足。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它把算力扩张的风险从财务模型拉回地方治理和投产周期。",
+          "topReason": "它把算力扩张的风险从财务模型拉回地方治理和投产周期。",
+          "detailWhyRanked": "本条进入本期，是因为 Axios 给出数据中心政治化的当前信号；升级需看项目许可、诉讼、暂停令和电力协议。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "算力、能源和财务团队应把地方阻力写入数据中心投产和融资风险模型。",
+          "whoShouldCare": "负责 AI 数据中心融资、能源采购、选址审批和社区沟通的基础设施、财务和法务团队。",
+          "readerUse": "负责 AI 数据中心融资、能源采购、选址审批和社区沟通的基础设施、财务和法务团队。可用它核对项目是否有用水、噪音、电网、税收优惠和地方听证风险。",
+          "nextCheck": "核对地方许可文件、项目暂停令、诉讼、用水协议、电力合同和社区听证记录。",
+          "followUpQuestions": [
+            "哪些州或县会先把数据中心审批规则写入硬性限制？",
+            "地方反弹是否会改变 AI 数据中心融资成本或投产时间表？"
+          ],
+          "evidenceThreshold": "需要许可文件、法院记录、项目延期公告和电力/用水合同，才能升级为已确认基础设施约束。",
+          "claimBoundary": "不证明数据中心建设会全面放缓，也不证明所有反对都由 AI 需求直接引发。",
+          "counterEvidence": "如果项目按期获批投产且地方限制没有扩大，应降低该风险判断。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/14/data-center-backlash-fossil-fuel-protests",
+          "originalUrl": "https://www.axios.com/2026/08/14/data-center-backlash-fossil-fuel-protests",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-15T01:00:00+09:00",
+          "time": "01:00 JST",
+          "tags": [
+            "数据中心",
+            "能源",
+            "地方审批"
+          ],
+          "companies": [
+            "OpenAI",
+            "Oracle",
+            "Meta"
+          ]
+        },
+        {
+          "id": "techcrunch-kog-gpu-inference-engine-2026-08-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "Kog 试图用软件优化榨出更多 GPU 推理性能",
+          "body": "TechCrunch 报道法国 Kog 正推动 Kog Inference Engine，在现有数据中心 GPU 上加速推理。",
+          "summary": "TechCrunch 报道法国 Kog 正推动 Kog Inference Engine，在现有数据中心 GPU 上加速推理。",
+          "whyItMatters": "如果推理瓶颈能靠软件优化缓解，企业不一定只能通过购买新芯片解决延迟和成本。",
+          "detailBody": "TechCrunch 报道 Kog 以现有 AMD MI300X、Nvidia H200 等数据中心 GPU 为目标，主张用更深层软件优化提升单请求解码速度。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "AI 基础设施竞争正在从芯片规格延伸到编译、内核、路由和推理工程。",
+          "detailTrend": "如果 Kog 能在大型 LLM 上复现速度提升，GPU 采购会更重视软件栈和芯片可移植性。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它给本期算力压力提供了一个非采购新芯片的工程解法。",
+          "topReason": "它给本期算力压力提供了一个非采购新芯片的工程解法。",
+          "detailWhyRanked": "本条进入本期，是因为 Kog 把推理降本指向已有 GPU 的底层优化；升级需看大型模型 benchmark 和客户结果。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "工程平台团队应把推理引擎、编译栈、芯片支持和真实 TPS/延迟纳入模型服务评估。",
+          "whoShouldCare": "负责 LLM 推理服务、GPU 利用率、延迟预算和私有化部署的工程、平台和基础设施团队。",
+          "readerUse": "负责 LLM 推理服务、GPU 利用率、延迟预算和私有化部署的工程、平台和基础设施团队。可用它更新推理优化清单，要求供应商提供同模型、同硬件、同负载 benchmark。",
+          "nextCheck": "核对 Kog 官方技术预览、开源模型、客户测试、第三方 benchmark 和大模型上线结果。",
+          "followUpQuestions": [
+            "Kog 的小模型 demo 是否能扩展到主流大型 LLM？",
+            "软件优化是否会牺牲稳定性、模型质量或多租户隔离？"
+          ],
+          "evidenceThreshold": "需要第三方 benchmark、客户侧延迟/成本日志和大型 LLM 复测，才能升级为已验证推理优化方案。",
+          "claimBoundary": "不证明 Kog 已在生产大型模型中达到 30x，也不证明 GPU 推理瓶颈已被普遍解决。",
+          "counterEvidence": "如果大型模型测试无法复现速度提升或稳定性下降，应下调该工程信号。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/",
+          "originalUrl": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-14T23:50:00+09:00",
+          "time": "23:50 JST",
+          "tags": [
+            "推理优化",
+            "GPU",
+            "欧洲 AI"
+          ],
+          "companies": [
+            "Kog",
+            "AMD",
+            "NVIDIA",
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "techcrunch-hyperscaler-natural-gas-forecast-2026-08-15",
+          "category": "funding",
+          "label": "融资",
+          "title": "TechCrunch 报道天然气成本预测给 hyperscaler 数据中心带来风险",
+          "body": "TechCrunch 报道新的天然气成本预测可能削弱 hyperscaler 依赖燃气供电的 AI 数据中心规划。",
+          "summary": "TechCrunch 报道新的天然气成本预测可能削弱 hyperscaler 依赖燃气供电的 AI 数据中心规划。",
+          "whyItMatters": "AI 数据中心的电力路径会影响算力成本、投产时间和地方审批。",
+          "detailBody": "TechCrunch 报道，若天然气发电成本继续上行，依赖燃气的 hyperscaler 数据中心可能面临更高建设和运行压力。 该条仍保留为媒体背景，只说明来源报道了什么、读者应查什么，不替代原文的完整事实和上下文。",
+          "trend": "算力竞争正在被能源市场重新定价，AI 公司需要同时管理 GPU、融资和电力价格。",
+          "detailTrend": "如果燃气路线成本恶化，数据中心项目可能转向更长周期的电网、可再生、电池或混合供能方案。 这一趋势判断需要后续官方文件、客户侧指标或第三方复测来确认，当前只适合作为核查方向。",
+          "whyRanked": "它补上本期数据中心讨论中的能源成本变量。",
+          "topReason": "它补上本期数据中心讨论中的能源成本变量。",
+          "detailWhyRanked": "本条进入本期，是因为它把 AI 数据中心扩张与天然气成本预测相连；升级需看项目级电力合同和能源市场数据。 该来源页面提供了本期新增报道事实和时间线，当前证据足以进入本期雷达，但不足以升级为确认结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "可靠媒体支持事件线索，但关键效果、合同、指标和部署结果仍需原始或第三方证据。"
+          },
+          "impact": "基础设施和财务团队应在 AI 数据中心模型里加入燃气价格、并网周期和备用电源成本。",
+          "whoShouldCare": "负责 AI 数据中心供电、云成本、项目融资和可持续性披露的基础设施、财务和 ESG 团队。",
+          "readerUse": "负责 AI 数据中心供电、云成本、项目融资和可持续性披露的基础设施、财务和 ESG 团队。可用它核对数据中心项目是否过度依赖单一燃气成本假设。",
+          "nextCheck": "核对天然气价格预测、购电协议、项目 EIS、并网文件和实际运行成本。",
+          "followUpQuestions": [
+            "燃气价格上行是否会改变 hyperscaler 的数据中心选址？",
+            "项目级购电协议是否已经锁定足够长期的能源成本？"
+          ],
+          "evidenceThreshold": "需要能源价格数据、PPA、项目许可、并网文件和公司财务披露，才能升级为已确认成本约束。",
+          "claimBoundary": "不证明所有燃气供电数据中心都会亏损，也不证明替代能源路线已经更快更便宜。",
+          "counterEvidence": "如果长期气价、PPA 或并网方案降低成本，应下调该风险判断。 具体应查看官方文件、合同/许可记录、客户日志、财报指标或第三方测试，并据此下调、缩小或撤回本期判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/",
+          "originalUrl": "https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/",
+          "sourceRole": "媒体背景",
+          "provenance": "该媒体来源只支持最小事件事实和报道背景；AI Watchtower 提供中文解释与核查路径，完整事实、采访、引述、图表、数据和上下文仍在原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-14T22:30:00+09:00",
+          "time": "22:30 JST",
+          "tags": [
+            "数据中心",
+            "能源",
+            "Hyperscaler"
+          ],
+          "companies": [
+            "Microsoft",
+            "Amazon",
+            "Google",
+            "Meta"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-14",
       "date": "2026-08-14",
