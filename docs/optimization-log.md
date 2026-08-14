@@ -1,3 +1,28 @@
+## 2026-08-14 23:07 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-14`，因此未回退早间版，也未用弱来源补量。本次将已收录的 OpenAI CRO 条目从 TechCrunch 媒体背景升级为 OpenAI 官方公告核对。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 TechCrunch AI/Security 当前页、OpenAI 官方新闻页、Anthropic Newsroom、Google AI 页、Hugging Face Blog、The Verge/WIRED 搜索结果和历史 URL。
+  - 未发现足够安全、非重复、强证据的新 10 条信号；跳过重复、过旧、播客/评论型、付费墙正文、社区讨论和只靠二手摘要的候选。
+  - OpenAI 官方公告确认 Dali Rajic 出任 CRO、Denise Dresser 过渡期后离任、全球营收组织职责、RPT Partners 支持和公司自述用户/企业覆盖；商业成效仍需客户合同、收入披露、留存数据、组织文件和 IPO/filing 材料。
+  - 本期官方来源从 1/12 调整为 2/12，TechCrunch 单一来源集中度从 11/12 降为 10/12；同步更新 `sourceRisk`、`sourceConcentration`、`sourceFamilies`、`readerFrame`、`changeSummary` 和 `overreadBoundary`。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for updated edition framing, source posture, item order and item source fields.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: 使用提交信息 `补充08点AI新闻核查`.
+- Git note: pull/push may remain blocked until GitHub DNS/network access returns.
+
 ## 2026-08-14 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 4 homepage edition quality task. Reviewed current `categories[].description` after the latest 2026-08-14 17:00 JST news update and removed stale cross-category "本期" angles.
