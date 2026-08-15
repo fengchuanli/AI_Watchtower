@@ -1,3 +1,28 @@
+## 2026-08-16 17:00 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-16`，发布 9 条安全非重复 AI 情报，聚焦 Gemini 3.7 Flash、Claude 文本水印、Cursor 并入 SpaceX、Grok 4.6、Gemini 连接应用、AMIE、手语 AI、WeatherNext 和 Grok 相关安全诉讼。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Google/DeepMind、Anthropic、Cursor、xAI、TechCrunch 当前 AI 页和历史 URL。
+  - 新增 `xai-news` 与 `cursor-blog` 两个官方来源；本期 8/9 为官方或厂商来源，1/9 为 TechCrunch 媒体背景。
+  - 本期发布 9 条而非强行补到 10 条，因为未使用付费墙正文、旧稿、播客、社区讨论、重复报道或证据不足项补量。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 9 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: planned message `更新17点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit.
+
 ## 2026-08-15 23:03 JST
 
 - Focus: 补充 AI Watchtower 08:00 JST 自动化新闻情报到当前 `news-1700-2026-08-15` 版；在不降级当前版的前提下，从 8 条扩展到 11 条安全非重复信号。
