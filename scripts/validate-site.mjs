@@ -1231,7 +1231,8 @@ if (
   !/Day 2[\s\S]*briefing\.summary[\s\S]*deepBriefing\.overview/.test(optimizationDecisionIndex) ||
   !/Day 3[\s\S]*coverageMix/.test(optimizationDecisionIndex) ||
   !/Day 4[\s\S]*categories\[\]\.description/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 5/.test(optimizationDecisionIndex) ||
+  !/Day 5[\s\S]*editorialInterpretation/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 6/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1331,8 +1332,11 @@ if (
   ) ||
   !/validateEditionMetadataReadability/.test(validateDataJs) ||
   !/validateHomepageCaveatCopyAudit/.test(validateDataJs) ||
+  !/validateShortBatchEditorialNote/.test(validateDataJs) ||
   !/readerFrame[\s\S]*sourceRisk[\s\S]*trendNotes/.test(validateDataJs) ||
   !/homepage caveat-copy duplication/.test(newsDataFormat) ||
+  !/short-batch note/.test(newsDataFormat) ||
+  !/少于 10 条是质量门槛结果/.test(newsDataFormat) ||
   !/keep each metadata field responsible for one job/.test(validateDataJs) ||
   !/operationalStatus/.test(validateDataJs) ||
   !/editorialInterpretation/.test(validateDataJs) ||

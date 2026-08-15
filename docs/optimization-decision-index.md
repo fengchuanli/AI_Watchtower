@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 1, Homepage Edition Quality
-- Last indexed run: 2026-08-14 20:00 JST
+- Last indexed run: 2026-08-15 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -23,6 +23,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 2 | Complete | `ea18f83` | The current `briefing.summary` and `deepBriefing.overview` now start with the reader decision, then separate official/media source boundaries from AI Watchtower interpretation. |
 | Day 3 | Complete | `262ed6b` | `coverageMix` now has a tiny-bucket merge rule: keep at most one single-item bucket and no more than four scan cues, with validation and homepage preflight coverage. |
 | Day 4 | Complete | `f2defb8` | Current `categories[].description` copy now names only visible category anchors, and data validation rejects stale anchors from another current category. |
+| Day 5 | Complete | `pending` | Short batches now use compact `editorialInterpretation` copy that states the published safe-signal count, frames fewer than 10 items as a quality-gate result, and names unsafe padding that was not used. |
 
 ## Historical Guard Anchors
 
@@ -47,9 +48,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 5: add a compact editorial note format for explaining why the current batch has fewer than 10 safe items without sounding incomplete or apologetic.
+- Continue with Day 6: review omitted-topic copy so each omitted planned topic tells readers where to look next without introducing unsupported fresh facts.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 4 first.
-- If Day 4 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 5 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

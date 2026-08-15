@@ -431,6 +431,32 @@ function validateCoverageMixShape(coverageMix, context) {
   }
 }
 
+function validateShortBatchEditorialNote(edition, items, context) {
+  const itemCount = Array.isArray(items) ? items.length : 0;
+
+  if (itemCount >= 10) {
+    return;
+  }
+
+  const note = String(edition?.editorialInterpretation || "");
+
+  if (!new RegExp(`本期发布\\s*${itemCount}\\s*条安全非重复信号`).test(note)) {
+    errors.push(`${context} editorialInterpretation must state 本期发布 ${itemCount} 条安全非重复信号 for short batches.`);
+  }
+
+  if (!/少于\s*10\s*条是质量门槛结果/.test(note)) {
+    errors.push(`${context} editorialInterpretation must frame fewer than 10 items as a quality-gate result.`);
+  }
+
+  if (!/未用|没有用/.test(note) || !/旧稿|播客|付费墙|登录墙|社区讨论|重复|弱证据|营销/.test(note)) {
+    errors.push(`${context} editorialInterpretation must name the unsafe padding types that were not used.`);
+  }
+
+  if (/只发布|不足|遗憾|来不及|未完成|没凑够|凑不够|抱歉/.test(note)) {
+    errors.push(`${context} editorialInterpretation must not make a short safe batch sound incomplete or apologetic.`);
+  }
+}
+
 function validateIncidentBriefingReadiness(item, context) {
   for (const [field, label, minLength] of incidentBriefingSections) {
     if (typeof item[field] !== "string" || item[field].trim().length < minLength) {
@@ -1447,6 +1473,7 @@ if (!newsFeed.edition) {
   validateSourceConcentration(newsFeed.edition.sourceConcentration, newsFeed.items || [], "data/news.json edition");
   validateEditionMetadataReadability(newsFeed.edition, "data/news.json edition", newsFeed.editorNote);
   validateHomepageCaveatCopyAudit(newsFeed.edition, "data/news.json edition");
+  validateShortBatchEditorialNote(newsFeed.edition, newsFeed.items || [], "data/news.json edition");
 
   if (!Array.isArray(newsFeed.edition.coverageMix) || newsFeed.edition.coverageMix.length < 2) {
     errors.push("data/news.json edition must include at least two coverageMix entries.");
@@ -1791,6 +1818,11 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
     "data/news-history.json latest edition",
   );
   validateHomepageCaveatCopyAudit(latestHistoryEdition, "data/news-history.json latest edition");
+  validateShortBatchEditorialNote(
+    latestHistoryEdition,
+    latestHistoryEdition.items || [],
+    "data/news-history.json latest edition",
+  );
   validateSourceConcentration(
     latestHistoryEdition.sourceConcentration,
     latestHistoryEdition.items || [],
