@@ -23,7 +23,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 2 | Complete | `ea18f83` | The current `briefing.summary` and `deepBriefing.overview` now start with the reader decision, then separate official/media source boundaries from AI Watchtower interpretation. |
 | Day 3 | Complete | `262ed6b` | `coverageMix` now has a tiny-bucket merge rule: keep at most one single-item bucket and no more than four scan cues, with validation and homepage preflight coverage. |
 | Day 4 | Complete | `f2defb8` | Current `categories[].description` copy now names only visible category anchors, and data validation rejects stale anchors from another current category. |
-| Day 5 | Complete | `pending` | Short batches now use compact `editorialInterpretation` copy that states the published safe-signal count, frames fewer than 10 items as a quality-gate result, and names unsafe padding that was not used. |
+| Day 5 | Complete | `4483450` | Short batches now use compact `editorialInterpretation` copy that states the published safe-signal count, frames fewer than 10 items as a quality-gate result, and names unsafe padding that was not used. |
 
 ## Historical Guard Anchors
 

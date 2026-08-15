@@ -1,3 +1,37 @@
+## 2026-08-15 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 5 homepage edition quality task. Added a compact editorial note format for batches with fewer than 10 safe current-news items, using the current 8-item edition as the live wording case.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/news-data-format.md`
+  - `docs/homepage-edition-preflight.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Rewrote the current and latest archived `edition.editorialInterpretation` line from "只有 8 条" wording to "本期发布 8 条安全非重复信号，少于 10 条是质量门槛结果", so the short batch reads as an editorial quality gate rather than an incomplete run.
+  - Documented the reusable short-batch shape in `docs/news-data-format.md`: name the safe-signal count, state the fewer-than-10 quality reason, name unsafe padding types not used, and avoid apologetic or incomplete-sounding wording.
+  - Added `shortBatchNote` to the homepage edition preflight and a `validateShortBatchEditorialNote` guard for current and latest archived editions with fewer than 10 items.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 5 is tracked and Day 6 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, current `data/news.json`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and relevant validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 41 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `4483450` (`规范短批次说明`); this follow-up note records the implementation hash before remote sync.
+- Git note: Push not yet attempted for this run at the time of this log note; remote sync still depends on GitHub DNS/network recovery.
+
 ## 2026-08-15 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-15`，发布 8 条安全非重复 AI 情报，聚焦 Anthropic Model 2 外发边界、开放模型政府审查、AI 数据中心地方政治、巨头 AI ROIC、Google 水印、Kog GPU 推理优化和天然气供电成本。
