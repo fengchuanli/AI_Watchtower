@@ -1,3 +1,27 @@
+## 2026-08-15 23:03 JST
+
+- Focus: 补充 AI Watchtower 08:00 JST 自动化新闻情报到当前 `news-1700-2026-08-15` 版；在不降级当前版的前提下，从 8 条扩展到 11 条安全非重复信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 TechCrunch AI 当前页、Runway 官方发布、Etched 官方进展页、Sequoia 背景页、AegisAI 发布稿、历史 URL 和当前 `data/news.json`。
+  - 新增 3 条补充信号：Runway Media Router、Etched 3 亿美元融资/推理集群制造进展、AegisAI 3600 万美元 A 轮融资与 AI 钓鱼防御。
+  - 新增 `runway-news` 与 `etched-progress` 两个官方/厂商来源；Runway 与 Etched 保持 `厂商主张`，AegisAI 保持 TechCrunch `媒体背景`，都要求客户日志、第三方测试、审计、合同、交付或 benchmark 才能升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 43 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: pending - expected commit note `补充08点AI新闻情报` after final diff check.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit but may need DNS/network recovery.
+
 ## 2026-08-15 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 5 homepage edition quality task. Added a compact editorial note format for batches with fewer than 10 safe current-news items, using the current 8-item edition as the live wording case.
