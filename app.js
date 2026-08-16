@@ -48,7 +48,7 @@ const plannedTopicGroups = [
     emptyReason: "本期未捕捉到足够清楚的 Agent 工作流信号；概念演示不足以单独进入 TOP3。",
     omissionBoundary: "这不是说 Agent 不重要，而是本期缺少新的上线、客户使用或安全事件来源事实。",
     promotionThreshold: "需要可核对的上线、客户使用、安全事件或工程变更，且能说明对读者的实际影响。",
-    fallback: "可先查看历史 Agent 与开发者工具条目，作为背景而非本期新事实。",
+    fallback: "可先看归档或标签页里的 Agent、开发者工具条目，只作背景脉络，不当成本期新增事实。",
   },
   {
     id: "model",
@@ -58,7 +58,7 @@ const plannedTopicGroups = [
     emptyReason: "本期没有新的模型路线入选；历史模型消息不重复当作今日新增。",
     omissionBoundary: "这不是说模型路线不重要，而是本期没有新的官方发布、研究原文或可复核评测事实。",
     promotionThreshold: "需要官方发布、研究原文或可复核评测支持新的能力、价格、上下文或部署边界。",
-    fallback: "可从归档中回看上一轮模型发布和评测信号，避免把旧背景当作新变化。",
+    fallback: "可先看归档或标签页里的模型发布、评测条目，用来补背景，避免把旧信号当作新变化。",
   },
   {
     id: "enterprise",
@@ -68,7 +68,7 @@ const plannedTopicGroups = [
     emptyReason: "本期没有新的企业工作流信号达到站内解读门槛。",
     omissionBoundary: "这不是说企业工作流不重要，而是本期缺少新的客户部署、范围、权限或治理控制来源事实。",
     promotionThreshold: "需要明确客户、工作流、部署范围或治理控制，而不是泛化的厂商案例叙事。",
-    fallback: "可结合本期市场份额和开发者入口信号，更新企业采购观察清单。",
+    fallback: "可先看本期已入选的企业、产品或开发者工具条目，再到归档核对采购、权限和治理背景。",
   },
   {
     id: "policy",
@@ -78,7 +78,7 @@ const plannedTopicGroups = [
     emptyReason: "本期未捕捉到可核对的正式政策变化；媒体场景不等同于新规则落地。",
     omissionBoundary: "这不是说政策监管不重要，而是本期缺少正式文件、监管公告或公司承诺来支撑政策更新。",
     promotionThreshold: "需要政府文件、监管公告、正式会议公报或公司官方承诺来支撑政策判断。",
-    fallback: "本期可把 G7 媒体信号当作后续核对入口，暂不当作政策更新。",
+    fallback: "可先看归档或标签页里的政策监管条目，并等待正式文件、监管公告或公司回应再升级判断。",
   },
   {
     id: "infrastructure",
@@ -88,7 +88,7 @@ const plannedTopicGroups = [
     emptyReason: "本期没有新的算力、部署或基础设施信号入选。",
     omissionBoundary: "这不是说基础设施不重要，而是本期缺少新的芯片、数据中心、电力、云区域或部署事实。",
     promotionThreshold: "需要芯片、数据中心、电力、云区域或部署能力的可核对变化，而非单纯远期愿景。",
-    fallback: "可回看归档中的 AI 工厂、电力并网和欧洲基础设施条目作为背景。",
+    fallback: "可先看归档或标签页里的 AI 工厂、电力并网和云区域条目，只作基础设施背景。",
   },
   {
     id: "developer-tooling",
@@ -98,7 +98,7 @@ const plannedTopicGroups = [
     emptyReason: "本期没有新的可试用工具发布入选；并购报道已作为资本信号处理。",
     omissionBoundary: "这不是说开发者工具不重要，而是本期缺少新的产品发布、仓库、迁移文档或安全公告。",
     promotionThreshold: "需要产品发布、开源仓库、迁移文档、安全公告或开发者可验证的能力变化。",
-    fallback: "本期可先阅读 Cursor 交易报道的站内解读，关注开发者入口控制权。",
+    fallback: "可先看本期已入选的工具条目，或到归档和标签页核对开发者入口、迁移和安全背景。",
   },
 ];
 const requiredCardFields = [
@@ -307,6 +307,15 @@ function isActionOrientedSignalUse(text) {
   return /用来(更新|检查|调整|核对|评估|复查|列出)/.test(String(text || ""));
 }
 
+function isUsefulOmittedTopicFallback(text) {
+  const fallback = String(text || "");
+  return (
+    /归档|标签页|本期已入选|历史/.test(fallback) &&
+    /背景|脉络|核对|等待|不当作|避免/.test(fallback) &&
+    !/新增来源事实|本期新增|已经证明|确认落地|全市场/.test(fallback)
+  );
+}
+
 function isActionOrientedCoverageLabel(text) {
   return /^(查|核对|验证|更新|观察|复查|评估)/.test(String(text || "").trim());
 }
@@ -429,12 +438,13 @@ function validateEdition(edition, updatedAt, items = []) {
       !topic.emptyReason ||
       !topic.omissionBoundary ||
       !topic.promotionThreshold ||
-      !topic.fallback,
+      !topic.fallback ||
+      !isUsefulOmittedTopicFallback(topic.fallback),
   );
 
   if (invalidPlannedTopic) {
     throw new Error(
-      "Each planned topic must explain why it matters now, whether omission means no fresh source fact, why it was omitted, what would promote it, and where to read instead.",
+      "Each planned topic must explain why it matters now, whether omission means no fresh source fact, why it was omitted, what would promote it, and where to read next without adding unsupported fresh facts.",
     );
   }
 

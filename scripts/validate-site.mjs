@@ -1232,7 +1232,8 @@ if (
   !/Day 3[\s\S]*coverageMix/.test(optimizationDecisionIndex) ||
   !/Day 4[\s\S]*categories\[\]\.description/.test(optimizationDecisionIndex) ||
   !/Day 5[\s\S]*editorialInterpretation/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 6/.test(optimizationDecisionIndex) ||
+  !/Day 6[\s\S]*Omitted planned topics/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 7/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1429,6 +1430,9 @@ if (
   !/omissionBoundary/.test(appJs) ||
   !/promotionThreshold/.test(appJs) ||
   !/fallback/.test(appJs) ||
+  !/function isUsefulOmittedTopicFallback/.test(appJs) ||
+  !/where to read next without adding unsupported fresh facts/.test(appJs) ||
+  !/归档或标签页/.test(appJs) ||
   !/为什么现在看/.test(appJs) ||
   !/无新来源事实/.test(appJs) ||
   !/未入选原因/.test(appJs) ||
@@ -1441,6 +1445,8 @@ if (
   !/\.topic-groups span\.empty-topic/.test(styles) ||
   !/\.topic-groups span em/.test(styles) ||
   !/explicit omission status/.test(newsDataFormat) ||
+  !/Omitted-topic `fallback` copy should point readers to the archive, tag page, historical context, or current already-selected related topics as background only/.test(newsDataFormat) ||
+  !/omittedTopicFallback/.test(homepageEditionPreflight) ||
   !/action-oriented coverage labels and topic meanings/.test(newsDataFormat) ||
   !/coverageMix tiny-bucket merging/.test(newsDataFormat) ||
   !/coverageMixShape/.test(homepageEditionPreflight) ||

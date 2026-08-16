@@ -13,9 +13,10 @@ Answer these in Chinese before publication:
 3. `sourceMixBoundary`: Is the batch dominated by one source family, source owner, vendor, country, or evidence mode, and does the homepage say what not to conclude?
 4. `coverageMixShape`: Does `coverageMix` merge tiny buckets so there is no more than one single-item bucket and no more than four total scan cues?
 5. `shortBatchNote`: If fewer than 10 safe items are published, does `editorialInterpretation` say this is a quality-gate result and name what was not used for padding?
-6. `mobileScanPath`: Can a phone reader understand the edition from `readerFrame.mobile`, TOP3 titles, summaries, and source labels in 1 to 3 minutes?
-7. `proofBoundary`: Do `sourceRisk`, `overreadBoundary`, `trendNotes`, `topicContinuity`, and promoted cards name the official, filing, audit, metric, benchmark, regulator, customer-side, or third-party evidence needed next?
-8. `archiveMirror`: Will the newest history edition preserve the same reader frame, source boundary, item count, item order, and archive label?
+6. `omittedTopicFallback`: For each planned topic omitted from `edition.topicGroups`, does the fallback tell readers whether to use archive, tag-page, historical, or already-selected related items as background without adding a new claim?
+7. `mobileScanPath`: Can a phone reader understand the edition from `readerFrame.mobile`, TOP3 titles, summaries, and source labels in 1 to 3 minutes?
+8. `proofBoundary`: Do `sourceRisk`, `overreadBoundary`, `trendNotes`, `topicContinuity`, and promoted cards name the official, filing, audit, metric, benchmark, regulator, customer-side, or third-party evidence needed next?
+9. `archiveMirror`: Will the newest history edition preserve the same reader frame, source boundary, item count, item order, and archive label?
 
 ## Compact Note Shape
 
@@ -28,6 +29,7 @@ TOP3 use: done - 每条都说明读者用途、选择理由和下一步核验。
 Source mix boundary: done - 单一来源/证据模式已标注，不把雷达版写成全市场结论。
 Coverage mix shape: done - 单条小桶已合并为更宽的读者行动标签。
 Short batch note: done - 少于 10 条时说明这是质量门槛结果，并列出未用于补量的来源类型。
+Omitted topic fallback: done - 未入选主题只指向归档、标签或本期相关背景，不补写新事实。
 Mobile scan path: done - readerFrame.mobile、TOP3 摘要和来源标签可在 1 到 3 分钟内扫完。
 Proof boundary: done - 下一步证据指向官方、filing、审计、指标、benchmark、监管、客户侧或第三方材料。
 Archive mirror: done - 最新历史版与首页版次 framing 和 item order 对齐。
@@ -42,6 +44,7 @@ Do not publish the edition as-is when:
 - A concentrated media, vendor, or research batch lacks `sourceRisk`, `sourceConcentration`, or `overreadBoundary` framing.
 - `coverageMix` reads like a topic inventory, has more than one single-item bucket, or needs more than four labels to explain the current batch.
 - A short batch says "only", "not enough", or "unfinished" instead of explaining that duplicates, weak evidence, old items, paywall/login-wall body text, community discussion, or routine marketing were not used for padding.
+- An omitted planned topic tells readers a new event happened, implies confirmation or rollout, or gives no archive, tag-page, historical, or already-selected related reading path.
 - The mobile scan path requires reading the long `deepBriefing` before the reader can tell what changed.
 - Proof-boundary copy repeats the same vague sentence across several fields instead of naming a concrete next evidence type.
 - The latest archive snapshot would keep an older reader frame, item order, or source caveat after the homepage changes.
