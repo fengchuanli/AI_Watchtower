@@ -1,8 +1,613 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-16",
-  "totalItems": 456,
+  "updatedAt": "2026-08-17",
+  "totalItems": 460,
   "editions": [
+    {
+      "id": "news-1700-2026-08-17",
+      "date": "2026-08-17",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦模型网关并购、前沿实验室信任叙事与 Meta 个人 Agent 路线。",
+      "operationalStatus": "已查来源清单、source policy、TechCrunch 当前 AI 索引、Meta 官方长文、Business Insider 与历史 URL。",
+      "editorialInterpretation": "本期发布 4 条安全非重复信号，少于 10 条是质量门槛结果；未用旧稿、播客、付费墙正文、社区讨论、重复报道或弱证明候选补量。",
+      "readerFrame": {
+        "headline": "阅读本期：把 AI 入口并购、公众信任和个人 Agent 愿景分开核验",
+        "whyItMatters": "这 4 条把 OpenRouter 并购传闻、Anthropic 信任回应、Meta 官方个人超级智能愿景和外部质疑放在一起；它们更像治理和入口雷达，不是已完成的产品或交易结论。",
+        "mobile": {
+          "headline": "手机先看三条线索",
+          "summary": "模型网关、实验室信任和个人 Agent 是本期重点。",
+          "primaryUses": [
+            "平台团队查模型网关并购。",
+            "政策团队查前沿实验室信任叙事。",
+            "产品团队查 Meta 个人 Agent 边界。"
+          ],
+          "proofBoundary": "尚未证明交易完成、公众信任改善或个人 Agent 可规模落地。"
+        },
+        "useThisIssueFor": [
+          "平台、财务和法务团队用本期更新多模型网关、支付入口和并购确认清单。",
+          "政策、公关和采购团队用本期跟踪 Anthropic 如何把风险、监管和公共收益放进信任叙事。",
+          "消费产品、隐私和安全团队用本期核对 Meta 个人 Agent 的权限、硬件、成本和外部质疑。"
+        ],
+        "notProvenYet": [
+          "不证明 Stripe/OpenRouter 交易已经完成，也不证明 OpenRouter 客户条款会立即变化。",
+          "不证明 Anthropic 或 Meta 的叙事已经赢得公众信任，也不证明个人超级智能已可审计落地。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "相较 8 月 16 日版，本期从模型发布和 Agent 安全转向入口控制、公众信任和个人 Agent 叙事",
+        "freshFacts": [
+          "本期新增来源事实：TechCrunch 援引 Bloomberg 报道 Stripe 将以 70 亿美元以上收购 OpenRouter，Stripe 不予置评。",
+          "本期新增来源事实：TechCrunch 报道 Anthropic CEO 回应 AI 负面舆论，称核心是公众对机构的信任危机。",
+          "本期新增来源事实：Meta 官方发布个人超级智能愿景长文，强调个人 Agent、创作、学习、科研和广泛访问。",
+          "本期新增来源事实：TechCrunch 对 Meta 愿景提出外部可信度和可达性追问。"
+        ],
+        "repeatedContext": [
+          "延续背景：上一版已覆盖 Claude 水印、Cursor/SpaceX、Grok 安全诉讼和 Agent 越界综述。",
+          "仍是同一主线：AI 竞争继续从模型能力扩展到入口所有权、平台信任、隐私安全和监管叙事。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对模型入口交易",
+          "count": 1,
+          "meaning": "用来检查 OpenRouter 是否成为支付平台控制多模型路由、账单和采购治理的关键资产。"
+        },
+        {
+          "label": "核对信任与个人 Agent 边界",
+          "count": 3,
+          "meaning": "用来更新 Anthropic 信任叙事、Meta 官方愿景和外部质疑的政策、产品、隐私与安全核查清单。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方与厂商来源",
+          "count": 1,
+          "role": "用作官方来源事实核对：确认 Meta 已发布个人超级智能愿景和自述承诺；不要用它独立证明效果、隐私、安全或采用。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 3,
+          "role": "用来建立并购、政策回应和外部质疑雷达；完整事实仍需原文、原始报道、公司公告和独立证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "TechCrunch 来源集中",
+        "note": "TechCrunch 贡献 3/4，本期是同一可靠媒体来源主导的雷达信号；Meta 官方页只证明公司自述，不能替代独立验证。",
+        "nextCheck": "查公司公告、监管申报、产品文档、价格页、隐私白皮书、第三方测试和用户采用数据。"
+      },
+      "sourceConcentration": {
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 3,
+        "share": "3/4",
+        "note": "单一来源 owner 集中：TechCrunch 当前 AI 索引贡献 3/4，本期不能当作完整市场覆盖。",
+        "nextCheck": "用 Bloomberg/WSJ 原始交易报道、公司公告、监管文件、Meta 产品文档和第三方测试补强。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期来源集中在可靠媒体和一个公司长文，适合建立后续核查队列。",
+        "doNotConclude": "不能直接断言并购已完成、公众态度已转向、Meta 个人 Agent 已落地，或前沿实验室监管路线已经被采纳。",
+        "useInstead": "应该用公司公告、监管申报、客户通知、隐私/安全文档、产品实测、第三方评测和用户研究升级判断。"
+      },
+      "trendNotes": [
+        {
+          "topic": "model-gateway-control",
+          "label": "模型入口成为资本控制点",
+          "note": "跨期看，Runway 路由、Kog 推理优化、Cursor 收购和 OpenRouter 报道都指向模型调用入口的商业价值上升。",
+          "boundary": "不证明所有入口都会被并购，仍需交易文件、客户迁移、价格页和调用数据。"
+        },
+        {
+          "topic": "trust-as-product-risk",
+          "label": "信任成为模型竞争变量",
+          "note": "跨期看，Claude 水印、Agent 越界、Anthropic 回应和 Meta 愿景都把 AI 信任从抽象伦理推向产品和政策边界。",
+          "boundary": "不证明公众信任改善，仍需民调、监管记录、产品审计和采用指标。"
+        },
+        {
+          "topic": "personal-agent-distribution",
+          "label": "个人 Agent 进入平台叙事战",
+          "note": "跨期看，Gemini 连接应用、Grok/Cursor、Meta 个人超级智能都在争夺个人和企业工作流入口。",
+          "boundary": "不证明 Agent 能稳定替人行动，仍需权限日志、事故披露、用户研究、安全评测和第三方审计报告。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "developer-tooling",
+          "label": "开发入口从代码工具扩展到模型网关",
+          "status": "stronger",
+          "previousPattern": "上一版覆盖 Cursor 并入 SpaceX 与 Grok 接入 Cursor。",
+          "currentSignal": "本期新增 Stripe/OpenRouter 并购报道。",
+          "signalDirection": "增强：开发者入口从代码 Agent 延伸到多模型路由和支付计费层。",
+          "stillUnproven": "仍需公司公告、交易文件、客户迁移记录和价格页。"
+        },
+        {
+          "topic": "policy",
+          "label": "治理焦点转向信任和社会许可",
+          "status": "stronger",
+          "previousPattern": "上一版覆盖 Claude 水印、Grok 诉讼和 Agent 越界安全综述。",
+          "currentSignal": "本期新增 Anthropic CEO 信任回应与 Meta 个人超级智能外部质疑。",
+          "signalDirection": "增强：政策主题从具体安全机制扩展到公众信任、开放权重和平台权力。",
+          "stillUnproven": "仍需正式政策文本、监管记录、独立测试、用户研究和产品审计。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "企业采购关注入口锁定",
+          "status": "stronger",
+          "previousPattern": "上一版覆盖 Gemini 连接应用和高风险应用验证。",
+          "currentSignal": "本期新增 OpenRouter 模型路由交易信号。",
+          "signalDirection": "增强：企业 AI 采购从单模型试用扩展到网关、账单、治理和供应商风险。",
+          "stillUnproven": "仍需采购合同、客户通知、用量数据、审计日志和服务条款。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Meta",
+          "label": "从开放模型转向个人超级智能叙事",
+          "lastMention": "历史版已覆盖 Meta Muse/Glimmer 和开放模型讨论。",
+          "whatChanged": "本期新增 Meta 官方个人超级智能长文及 TechCrunch 的外部质疑。",
+          "stillUnproven": "仍需产品文档、隐私审计、硬件门槛、价格页、用户研究和安全评测。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "从水印机制延伸到信任危机回应",
+          "lastMention": "上一版覆盖 Claude 文本水印和 Model 2 外发边界。",
+          "whatChanged": "本期新增 Dario Amodei 对 AI 反感、监管和开放权重的公开回应报道。",
+          "stillUnproven": "仍需正式政策文本、第三方测试制度、监管材料和客户治理要求。"
+        },
+        {
+          "company": "Stripe",
+          "label": "支付平台进入 AI 模型网关叙事",
+          "lastMention": "此前未在当前版中出现。",
+          "whatChanged": "本期新增 Stripe/OpenRouter 交易报道。",
+          "stillUnproven": "仍需公司公告、交易文件、监管申报、客户通知和条款变化。"
+        },
+        {
+          "company": "OpenRouter",
+          "label": "多模型路由成为并购对象",
+          "lastMention": "此前未在当前版中出现。",
+          "whatChanged": "本期新增其作为 AI 模型网关被报道纳入 Stripe 交易。",
+          "stillUnproven": "仍需双方确认、用户规模审计、价格页、模型接入清单和迁移记录。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 1,
+          "itemIds": [
+            "techcrunch-stripe-openrouter-acquisition-2026-08-17"
+          ],
+          "meaning": "用来检查多模型网关、计费入口和供应商锁定风险。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-anthropic-ai-trust-backlash-2026-08-17",
+            "techcrunch-meta-ai-future-backlash-2026-08-17"
+          ],
+          "meaning": "用来核对前沿实验室信任、监管叙事、公众反应和平台治理压力。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业",
+          "count": 1,
+          "itemIds": [
+            "meta-personal-superintelligence-manifesto-2026-08-17"
+          ],
+          "meaning": "用来检查个人 Agent 进入工作、学习、创作和科研场景前的权限与审计需求。"
+        }
+      ],
+      "briefing": {
+        "label": "17:00 JST 情报简报",
+        "headline": "AI 竞争从模型发布转向入口所有权和公众信任",
+        "summary": "本期不是大规模发布潮，而是一个高信号短批次：模型网关可能被支付平台吸收，前沿实验室继续解释监管与开放边界，Meta 把个人 Agent 叙事推到台前。所有结论仍需公司公告、产品文档、独立测试和监管材料补强。",
+        "cta": "查看本期情报",
+        "watchPoints": [
+          {
+            "title": "OpenRouter 交易确认",
+            "body": "关注 Stripe、OpenRouter、Bloomberg/WSJ 后续、监管申报和客户通知。"
+          },
+          {
+            "title": "Anthropic 政策落地",
+            "body": "关注信任叙事是否进入正式透明度、第三方测试或开放权重政策。"
+          },
+          {
+            "title": "Meta 个人 Agent 证据",
+            "body": "关注权限、隐私、硬件门槛、价格和独立安全评测。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "17:00 JST 深读",
+        "title": "从模型入口到个人 Agent：AI 公司正在争夺控制权和信任权",
+        "subtitle": "本期 4 条短批次信号显示，AI 战场不只在模型能力，也在路由入口、支付关系、公众信任和个人 Agent 分发。",
+        "dateLabel": "2026 年 8 月 17 日 17:00 JST",
+        "status": "已发布；短批次，可靠媒体与官方长文混合核查",
+        "overview": "上一版的重点是模型、内容标识和 Agent 安全；本期转向谁控制模型调用入口、前沿实验室如何回应公众信任，以及 Meta 如何包装个人超级智能。由于安全非重复来源不足 10 条，本期保持 4 条，不使用旧稿、播客或重复事件补量。",
+        "timeline": [
+          {
+            "label": "01:53",
+            "title": "Anthropic 回应信任问题",
+            "body": "TechCrunch 报道 Dario Amodei 将 AI 负面态度归因于公众对机构的信任危机。"
+          },
+          {
+            "label": "05:32",
+            "title": "Meta 愿景与质疑并行",
+            "body": "Meta 官方个人超级智能长文被 TechCrunch 放入平台信任和可达性讨论。"
+          },
+          {
+            "label": "05:57",
+            "title": "模型网关进入并购雷达",
+            "body": "TechCrunch 援引 Bloomberg 称 Stripe 将以 70 亿美元以上收购 OpenRouter。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "4",
+            "label": "本期安全非重复信号"
+          },
+          {
+            "value": "3/4",
+            "label": "来自 TechCrunch 的可靠媒体雷达"
+          },
+          {
+            "value": "70 亿美元+",
+            "label": "OpenRouter 被报道交易价格"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "入口",
+            "title": "模型网关可能变成支付平台资产",
+            "body": "OpenRouter 报道把多模型路由、计费和采购治理推到资本层面。若交易确认，企业使用 AI 的入口可能更靠近支付基础设施。",
+            "soWhat": "平台团队要检查网关、账单、数据和模型切换是否会形成新的供应商锁定。"
+          },
+          {
+            "number": "02",
+            "label": "信任",
+            "title": "前沿实验室需要证明公共收益",
+            "body": "Anthropic 的回应显示，风险警告和技术承诺都不足以解决公众反感；外部核验、监管设计和可见收益会变得更重要。",
+            "soWhat": "采购和政策团队应把第三方测试、透明度和公共收益证据列入模型评估。"
+          },
+          {
+            "number": "03",
+            "label": "分发",
+            "title": "Meta 把个人 Agent 作为反集中化叙事",
+            "body": "Meta 官方强调个人超级智能和广泛分发，TechCrunch 则追问信任、硬件可达性和平台历史。两者合起来才是完整核查框架。",
+            "soWhat": "消费 AI 团队要同时看官方功能、隐私承诺、设备门槛和外部用户信任。"
+          }
+        ],
+        "actions": [
+          "把 OpenRouter 加入模型网关与 AI 账单供应商观察表。",
+          "把 Anthropic 信任回应映射到正式政策文本和第三方测试待查项。",
+          "把 Meta 个人 Agent 愿景拆成权限、隐私、价格、硬件和独立评测五项。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "短批次边界",
+            "body": "本期只有 4 条安全非重复信号，少于 10 条是质量门槛结果。"
+          },
+          {
+            "label": "来源边界",
+            "body": "媒体项不替代原文，官方项不等于独立验证；需后续原始文件和第三方证据。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "TechCrunch 报道 Stripe/OpenRouter、Anthropic CEO 回应和 Meta 愿景外部质疑。",
+            "Meta 官方页面发布个人超级智能愿景和公司自述承诺。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 将本期解读为入口控制和社会信任信号，而非完成交易或产品落地结论。",
+            "媒体与官方来源互补：一个提供外部追问，一个提供公司原始叙事。"
+          ],
+          "unknowns": [
+            "Stripe/OpenRouter 交易是否正式完成、价格和客户条款是否改变仍未知。",
+            "Anthropic 与 Meta 的信任叙事是否转化为政策、产品和独立审计仍未知。"
+          ]
+        },
+        "references": [
+          {
+            "label": "TechCrunch 报道 Stripe/OpenRouter 并购信号",
+            "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/"
+          },
+          {
+            "label": "TechCrunch 报道 Anthropic CEO 信任回应",
+            "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
+          },
+          {
+            "label": "Meta 官方长文证明个人超级智能愿景已发布",
+            "url": "https://www.meta.com/thefutureisforeveryone/"
+          },
+          {
+            "label": "TechCrunch 报道个人 Agent 愿景可达性争议",
+            "url": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/"
+          }
+        ]
+      },
+      "itemCount": 4,
+      "items": [
+        {
+          "id": "techcrunch-stripe-openrouter-acquisition-2026-08-17",
+          "category": "funding",
+          "label": "融资",
+          "title": "Stripe 据报将以 70 亿美元以上收购 OpenRouter",
+          "body": "Stripe/OpenRouter 被报道进入并购确认队列。",
+          "summary": "Stripe 据报将以 70 亿美元以上收购 OpenRouter。",
+          "whyItMatters": "AI 模型路由和统一计费入口正在变成支付/开发者平台资产，但交易事实仍需公司公告或监管文件确认。",
+          "detailBody": "TechCrunch 在 In Brief 中称 Bloomberg 报道 Stripe 已敲定 OpenRouter 交易，价格超过 70 亿美元；同文说明 OpenRouter 提供多模型统一入口，Stripe 未确认，完整交易背景仍需原文和后续文件。",
+          "trend": "模型网关正在变成 AI 入口资产。",
+          "detailTrend": "模型网关从开发者便利层上升为支付和企业采购入口，意味着多模型时代的控制点可能转向路由、账单、合规、模型切换和锁定风险管理。",
+          "whyRanked": "模型入口并购影响采购和锁定风险。",
+          "topReason": "需要用公司公告、交易文件或监管申报确认 70 亿美元以上价格。",
+          "detailWhyRanked": "OpenRouter 是模型入口层，Stripe 是支付与商户网络；如果报道被交易文件确认，企业 AI 的采购、计费、审计和治理边界都会受影响，读者应优先核对公告和客户通知。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "高影响资本信号，但目前依赖媒体报道与被报道方不置评。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "高影响资本信号，但目前依赖媒体报道与被报道方不置评。"
+          },
+          "impact": "企业平台团队应检查模型网关是否会成为采购、计费和合规控制点。",
+          "whoShouldCare": "负责多模型网关、AI 账单、采购审批和供应商锁定风险的平台/财务/法务团队。",
+          "readerUse": "平台、财务和法务团队用来更新模型路由供应商清单，并标出并购确认、客户迁移和价格变化待查。",
+          "nextCheck": "查 Stripe/OpenRouter 官方公告、并购文件、监管申报、客户通知和价格/服务条款变化。",
+          "followUpQuestions": [
+            "Stripe 或 OpenRouter 是否发布正式交易确认？",
+            "企业客户的模型路由、账单和数据条款是否发生变化？"
+          ],
+          "evidenceThreshold": "还需要公司公告、监管申报或双方客户通知，才能从媒体信号升级为已确认并购事件。",
+          "claimBoundary": "不证明交易已经完成，也不证明 OpenRouter 用户、价格或模型接入会立即改变。",
+          "counterEvidence": "若双方否认、交易文件未出现或客户条款无变化，应降级为并购传闻背景。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+          "originalUrl": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 提供被报道交易、估值、OpenRouter 定位和 Stripe 不置评；完整事实、引用、交易背景和上下文仍属于 TechCrunch 原文及其引用的原始报道。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-17T05:57:00+09:00",
+          "freshSourceFact": null,
+          "time": "05:57 JST",
+          "tags": [
+            "模型网关",
+            "并购",
+            "开发者平台"
+          ],
+          "companies": [
+            "Stripe",
+            "OpenRouter"
+          ]
+        },
+        {
+          "id": "meta-personal-superintelligence-manifesto-2026-08-17",
+          "category": "product",
+          "label": "产品",
+          "title": "Meta 发布个人超级智能愿景长文",
+          "body": "Meta 发布个人超级智能愿景。",
+          "summary": "Meta 官方长文提出个人超级智能路线。",
+          "whyItMatters": "这是 Meta 为个人 Agent 和开放分发争取叙事位置的官方表态，但隐私、安全、硬件可达性和成本都还要独立验证。",
+          "detailBody": "Meta 长文主张把超级智能广泛分发给个人，并描述 24/7 个人 Agent、创作工具、学习助手、科研用途、低价访问和社区基础设施承诺；这些仍是公司自述。",
+          "trend": "Meta 正在争夺个人 Agent 分发叙事。",
+          "detailTrend": "前沿竞争不只比模型分数，也在争夺“谁应拥有 Agent 权力”的价值叙事；Meta 把个人 Agent、开放模型、数据中心社区承诺和国家竞争放在同一论证里，意味着读者要核对承诺是否产品化。",
+          "whyRanked": "官方原文可作为个人 Agent 核查起点。",
+          "topReason": "官方愿景因为涉及隐私、价格和安全评测而需要优先核对。",
+          "detailWhyRanked": "个人 Agent 若进入 Meta 社交、眼镜和本地设备，意味着消费级 AI 的默认入口和数据边界会被重写；当前原文只证明公司愿景，所以读者应核对产品、隐私和审计材料。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方原文证据强，但只证明 Meta 发表愿景，不证明落地效果。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方原文证据强，但只证明 Meta 发表愿景，不证明落地效果。"
+          },
+          "impact": "产品和隐私团队应跟踪 Meta 是否把这些承诺写入可审计的设置、价格和安全材料。",
+          "whoShouldCare": "负责消费级 Agent、可穿戴设备、隐私审查和 AI 产品叙事的产品/法务/安全团队。",
+          "readerUse": "消费 AI、隐私和安全团队用来建立 Meta 个人 Agent 的权限、隐私、成本、硬件和安全核查清单。",
+          "nextCheck": "查 Meta 产品文档、隐私白皮书、模型卡、硬件要求、价格页和第三方安全评测。",
+          "followUpQuestions": [
+            "Meta 是否公布个人 Agent 的权限和本地/云端数据边界？",
+            "免费或低价访问是否有明确地区、算力和功能限制？"
+          ],
+          "evidenceThreshold": "还需要可测试产品、隐私说明、价格页和第三方评测，才能从愿景主张升级为产品路线判断。",
+          "claimBoundary": "不证明 Meta 已交付可规模使用的个人超级智能，也不证明隐私和安全承诺已经可审计。",
+          "counterEvidence": "若产品延期、隐私审计报告缺失、硬件门槛过高或安全事故记录出现，应降低愿景可信度。",
+          "source": "Meta AI Blog",
+          "sourceName": "Meta AI Blog",
+          "sourceId": "meta-ai-blog",
+          "sourceUrl": "https://www.meta.com/thefutureisforeveryone/",
+          "originalUrl": "https://www.meta.com/thefutureisforeveryone/",
+          "sourceRole": "厂商主张",
+          "provenance": "Meta 官方页面能证明公司发布了个人超级智能愿景和自述承诺；不能独立证明效果、采用或安全。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-17T05:32:00+09:00",
+          "freshSourceFact": null,
+          "time": "05:32 JST",
+          "tags": [
+            "个人Agent",
+            "开放模型",
+            "消费AI"
+          ],
+          "companies": [
+            "Meta"
+          ]
+        },
+        {
+          "id": "techcrunch-meta-ai-future-backlash-2026-08-17",
+          "category": "policy",
+          "label": "政策",
+          "title": "TechCrunch 质疑 Zuckerberg 的“AI 为人人”叙事",
+          "body": "TechCrunch 质疑 Meta 个人 Agent 叙事。",
+          "summary": "TechCrunch 追问 Meta 个人 AI 愿景的可信度。",
+          "whyItMatters": "同一官方愿景已经触发媒体信任和治理追问，说明个人 Agent 的推广会先遇到历史信任、隐私和社会成本考验。",
+          "detailBody": "TechCrunch 将 Zuckerberg 长文与 Anthropic 风险叙事作对照，强调 Meta 需要证明个人 Agent 的隐私、可达性和用户价值，而不是只给愿景；完整论证仍在原文。",
+          "trend": "消费级 AI 进入社会许可竞争。",
+          "detailTrend": "媒体反应把 Meta 的个人 Agent 路线放入平台信任史中，提醒读者同时核对数据控制、硬件门槛、社会成本和独立用户价值。",
+          "whyRanked": "媒体质疑补足官方愿景的反证路径。",
+          "topReason": "个人 Agent 推广能否过关，取决于隐私、安全、硬件门槛和真实用户价值证据。",
+          "detailWhyRanked": "当 Meta 把 AI 入口绑定社交、眼镜和设备，外部质疑本身就是产品落地风险；这条补足官方长文没有提供的反证路径和用户信任检查，读者应等待独立测试、审计材料和真实留存数据。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "媒体解释力较强，但与 Meta 官方愿景相关，需避免过度重复。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "媒体解释力较强，但与 Meta 官方愿景相关，需避免过度重复。"
+          },
+          "impact": "消费产品团队应把公众信任和平台历史纳入个人 Agent 发布前风险评审。",
+          "whoShouldCare": "负责个人 Agent、社交平台、AI 可穿戴和用户信任研究的产品/设计/政策团队。",
+          "readerUse": "个人 Agent、社交平台和 AI 可穿戴产品团队用来给 Meta 官方愿景补上可达性、隐私、成本、硬件和滥用治理追问。",
+          "nextCheck": "查 Meta 后续产品实测、隐私设置、用户研究、监管反馈和独立评论。",
+          "followUpQuestions": [
+            "Meta 是否给出可审计的个人 Agent 隐私与安全设置？",
+            "普通设备用户能否实际使用 Glimmer 或相关能力？"
+          ],
+          "evidenceThreshold": "还需要独立产品测试、隐私审计报告和用户采用数据，才能升级为个人 Agent 落地评估。",
+          "claimBoundary": "不证明 Meta 愿景失败，也不证明公众反应已经形成可量化趋势。",
+          "counterEvidence": "若后续独立产品测试报告、隐私审计报告和用户留存数据同时显示低门槛、清晰控制和高留存，应把当前信任风险判断降级为早期媒体疑虑。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+          "originalUrl": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 提供对 Meta 愿景和公众疑虑的媒体评论；完整事实、引用、论证和上下文仍属于 TechCrunch 原文。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-17T05:32:00+09:00",
+          "freshSourceFact": null,
+          "time": "05:32 JST",
+          "tags": [
+            "个人Agent",
+            "平台信任",
+            "消费AI"
+          ],
+          "companies": [
+            "Meta"
+          ]
+        },
+        {
+          "id": "techcrunch-anthropic-ai-trust-backlash-2026-08-17",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic CEO 将 AI 反感归因于信任危机",
+          "body": "Anthropic CEO 回应 AI 信任危机。",
+          "summary": "Anthropic CEO 将 AI 反感归因于公众信任危机。",
+          "whyItMatters": "前沿实验室的监管叙事正在从“风险警告”转向“如何证明公共利益”，会影响透明度、开放权重和政策设计讨论。",
+          "detailBody": "TechCrunch 汇总 Amodei 对 AI 负面舆论、监管、开放权重和科学收益的回应，并指出这些说法来自公开发帖和媒体整理；完整引用与上下文仍需阅读原文。",
+          "trend": "前沿实验室把信任变成治理议题。",
+          "detailTrend": "AI 公司开始把公众接受度当成产品和监管问题处理，这意味着单靠能力叙事不够，必须用可见收益、约束权力和外部核验解释社会许可。",
+          "whyRanked": "Anthropic 回应影响监管和采购判断。",
+          "topReason": "它提示监管讨论的下一步可能是第三方测试、透明度和公共收益证明。",
+          "detailWhyRanked": "Anthropic 处在安全、监管和闭源争论中心；当数据中心、就业和开放权重争议升温，CEO 回应会影响政策制定者和企业买家的信任判断，读者应核对正式政策文本、听证记录和第三方测试制度。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "政策叙事强、影响面广，但事实仍主要是媒体整理公开发帖。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "政策叙事强、影响面广，但事实仍主要是媒体整理公开发帖。"
+          },
+          "impact": "政策和企业采购团队应把“公共收益如何被证明”加入实验室评估表。",
+          "whoShouldCare": "负责 AI 治理、模型采购、公共事务和监管沟通的企业/政策团队。",
+          "readerUse": "政策、公关和企业采购团队用来追踪 Anthropic 的监管论证是否进入法案、模型卡、第三方测试或采购条款。",
+          "nextCheck": "查 Anthropic 正式政策文本、第三方测试方案、监管听证记录和客户治理要求。",
+          "followUpQuestions": [
+            "Anthropic 是否把这些观点写入正式政策提案？",
+            "监管者是否要求前沿模型提交独立测试或透明度材料？"
+          ],
+          "evidenceThreshold": "还需要正式政策文件、听证记录或独立测试制度，才能升级为可核验政策变化。",
+          "claimBoundary": "不证明公众态度已经改变，也不证明 Anthropic 的监管方案会被采纳。",
+          "counterEvidence": "若后续政策文本没有透明度要求，或第三方测试未落地，应降级为高管舆论回应。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+          "originalUrl": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+          "sourceRole": "媒体背景",
+          "provenance": "TechCrunch 提供 Amodei 公开回应的媒体整理；完整事实、原始引用、外部反应和上下文仍属于 TechCrunch 原文与原始发帖。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-17T01:53:00+09:00",
+          "freshSourceFact": null,
+          "time": "01:53 JST",
+          "tags": [
+            "AI治理",
+            "监管",
+            "公众信任"
+          ],
+          "companies": [
+            "Anthropic"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-16",
       "date": "2026-08-16",

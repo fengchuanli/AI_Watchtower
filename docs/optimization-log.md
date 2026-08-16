@@ -1,3 +1,27 @@
+## 2026-08-17 08:11 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-17`，发布 4 条安全非重复短批次信号，聚焦 Stripe/OpenRouter 并购报道、Anthropic 信任危机回应、Meta 个人超级智能官方愿景和个人 Agent 可达性外部质疑。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 TechCrunch 当前 AI 索引、Meta 官方长文、Business Insider、The Verge 搜索结果和历史 URL。
+  - 本期发布 4 条而非强行补到 10 条，因为未使用 7 月旧稿、播客/视频、付费墙正文、社区讨论、重复报道或证据不足项补量。
+  - 3/4 为 TechCrunch `媒体背景` / `reported` / `originalDependency: must-read`；Meta 官方长文保持 `厂商主张`，要求产品文档、隐私/安全审计、价格页、客户通知、交易文件、监管申报和第三方测试升级。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 4 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending at log update time.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may need retry when DNS/network access returns.
+
 ## 2026-08-16 23:05 JST
 
 - Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-16`，因此未回退早间版，而是在当前最新版上补入 1 条同日安全非重复可靠媒体综述信号。

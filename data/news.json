@@ -1,524 +1,386 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-17",
   "status": "published",
   "statusLabel": "已更新",
   "sourceCount": 45,
-  "editorNote": "2026-08-16 23:00 JST：08:00 自动化补充核查当前最新版，新增 1 条 The Verge Agent 安全综述；pull 仍受 GitHub DNS 阻塞。",
+  "editorNote": "2026-08-17 17:00 JST：发布 4 条安全非重复短批次，聚焦 OpenRouter 并购报道、Anthropic 信任回应与 Meta 个人 Agent 路线；pull 仍受 GitHub DNS 阻塞。",
   "edition": {
-    "id": "news-1700-2026-08-16",
-    "date": "2026-08-16",
+    "id": "news-1700-2026-08-17",
+    "date": "2026-08-17",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
     "archiveLabel": "17:00 JST 发布",
-    "note": "本期聚焦模型入口、内容标识、代码 Agent、消费/高风险应用与 Agent 安全治理。",
-    "operationalStatus": "已查来源清单、source policy、Google/DeepMind、Anthropic、Cursor、xAI、TechCrunch、The Verge 与历史 URL。",
-    "editorialInterpretation": "本期当前为 10 条安全非重复信号；08:00 自动化补充核查只新增同日可靠媒体综述，未用付费墙正文、旧稿、播客、社区讨论或重复报道补量。",
+    "note": "本期聚焦模型网关并购、前沿实验室信任叙事与 Meta 个人 Agent 路线。",
+    "operationalStatus": "已查来源清单、source policy、TechCrunch 当前 AI 索引、Meta 官方长文、Business Insider 与历史 URL。",
+    "editorialInterpretation": "本期发布 4 条安全非重复信号，少于 10 条是质量门槛结果；未用旧稿、播客、付费墙正文、社区讨论、重复报道或弱证明候选补量。",
     "readerFrame": {
-      "headline": "阅读本期：把模型成本、内容溯源、编码 Agent 所有权、高风险应用和 Agent 安全放进一张核查表",
-      "whyItMatters": "这 10 条把 Gemini 3.7 Flash、Claude 水印、Cursor/SpaceX、Grok 4.6、Gemini 连接应用、AMIE、手语 AI、WeatherNext、Grok 滥用诉讼和 Agent 越界综述放在一起；多数有官方来源，但效果、安全和责任仍需独立验证。",
+      "headline": "阅读本期：把 AI 入口并购、公众信任和个人 Agent 愿景分开核验",
+      "whyItMatters": "这 4 条把 OpenRouter 并购传闻、Anthropic 信任回应、Meta 官方个人超级智能愿景和外部质疑放在一起；它们更像治理和入口雷达，不是已完成的产品或交易结论。",
       "mobile": {
-        "headline": "手机先看三条主线",
-        "summary": "模型升级、Agent 入口、内容/安全责任是本期重点。",
+        "headline": "手机先看三条线索",
+        "summary": "模型网关、实验室信任和个人 Agent 是本期重点。",
         "primaryUses": [
-          "工程团队查模型和代码 Agent。",
-          "法务团队查水印和生成图像风险。",
-          "安全团队查 Agent 沙箱和披露边界。"
+          "平台团队查模型网关并购。",
+          "政策团队查前沿实验室信任叙事。",
+          "产品团队查 Meta 个人 Agent 边界。"
         ],
-        "proofBoundary": "尚未证明生产效果、临床可用性、安全充分性或法律责任。"
+        "proofBoundary": "尚未证明交易完成、公众信任改善或个人 Agent 可规模落地。"
       },
       "useThisIssueFor": [
-        "工程平台和采购团队用本期更新 Gemini、Grok、Cursor 的模型/工具试点和供应商风险清单。",
-        "法务、教育和内容平台团队用本期核对 Claude 水印、C2PA、AI 内容披露和生成图像滥用责任。",
-        "安全、医疗、无障碍、气象和公共部门团队用本期区分 Agent 安全综述、研究演示、产品上线和真实世界验证。"
+        "平台、财务和法务团队用本期更新多模型网关、支付入口和并购确认清单。",
+        "政策、公关和采购团队用本期跟踪 Anthropic 如何把风险、监管和公共收益放进信任叙事。",
+        "消费产品、隐私和安全团队用本期核对 Meta 个人 Agent 的权限、硬件、成本和外部质疑。"
       ],
       "notProvenYet": [
-        "不证明 Gemini 3.7 Flash、Grok 4.6、AMIE、SL2T 或 WeatherNext 已在生产环境独立验证。",
-        "不证明 Cursor 收购一定改变客户数据条款，也不证明 Grok 相关诉讼或 Agent 越界综述中的所有责任已经成立。"
+        "不证明 Stripe/OpenRouter 交易已经完成，也不证明 OpenRouter 客户条款会立即变化。",
+        "不证明 Anthropic 或 Meta 的叙事已经赢得公众信任，也不证明个人超级智能已可审计落地。"
       ]
     },
     "changeSummary": {
-      "headline": "相较 8 月 15 日 17:00 版，本期从基础设施成本转向模型入口、内容标识、高风险应用和 Agent 安全治理",
+      "headline": "相较 8 月 16 日版，本期从模型发布和 Agent 安全转向入口控制、公众信任和个人 Agent 叙事",
       "freshFacts": [
-        "本期新增来源事实：Google 官方发布 Gemini 3.7 Flash，并披露面向编码、Agent 和介绍价的产品定位。",
-        "本期新增来源事实：Anthropic 官方解释 Claude 文本水印、检测 API 计划和 C2PA 文件凭据。",
-        "本期新增来源事实：Cursor 官方确认已并入 SpaceX，xAI 官方发布 Grok 4.6 并强调长程 Agent 与开发者入口。",
-        "本期新增来源事实：Google/DeepMind 官方补充 Gemini 连接应用、AMIE 视频问诊、手语转文字和 WeatherNext 气旋预测方向；TechCrunch 报道 Grok 相关滥用诉讼升级。",
-        "08:00 自动化补充核查新增来源事实：The Verge 于 8 月 16 日发布 Agent 越界事件安全综述，适合作为原始披露核查清单。"
+        "本期新增来源事实：TechCrunch 援引 Bloomberg 报道 Stripe 将以 70 亿美元以上收购 OpenRouter，Stripe 不予置评。",
+        "本期新增来源事实：TechCrunch 报道 Anthropic CEO 回应 AI 负面舆论，称核心是公众对机构的信任危机。",
+        "本期新增来源事实：Meta 官方发布个人超级智能愿景长文，强调个人 Agent、创作、学习、科研和广泛访问。",
+        "本期新增来源事实：TechCrunch 对 Meta 愿景提出外部可信度和可达性追问。"
       ],
       "repeatedContext": [
-        "延续背景：上一版已覆盖 Google 可见水印、Runway 路由、Etched 推理硬件和 AI 数据中心成本。",
-        "仍是同一主线：AI 竞争继续从模型能力扩展到工具所有权、合规标识、真实服务连接和高风险应用验证。"
+        "延续背景：上一版已覆盖 Claude 水印、Cursor/SpaceX、Grok 安全诉讼和 Agent 越界综述。",
+        "仍是同一主线：AI 竞争继续从模型能力扩展到入口所有权、平台信任、隐私安全和监管叙事。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对模型与编码 Agent",
-        "count": 3,
-        "meaning": "用来更新 Gemini 3.7 Flash、Grok 4.6 和 Cursor/SpaceX 的模型、成本、供应商和数据边界清单。"
+        "label": "核对模型入口交易",
+        "count": 1,
+        "meaning": "用来检查 OpenRouter 是否成为支付平台控制多模型路由、账单和采购治理的关键资产。"
       },
       {
-        "label": "核对内容标识与安全责任",
+        "label": "核对信任与个人 Agent 边界",
         "count": 3,
-        "meaning": "用来检查 Claude 水印、C2PA、Grok 图像滥用诉讼和 Agent 越界综述对内容治理、法律和安全流程的影响。"
-      },
-      {
-        "label": "验证消费与高风险应用",
-        "count": 4,
-        "meaning": "用来更新 Gemini 连接应用、AMIE、手语 AI 和 WeatherNext 的真实世界证据检查表。"
+        "meaning": "用来更新 Anthropic 信任叙事、Meta 官方愿景和外部质疑的政策、产品、隐私与安全核查清单。"
       }
     ],
     "sourceRisk": {
-      "label": "官方来源仍占主导",
-      "note": "官方/厂商来源占比 8/10，媒体来源 2/10；官方页能确认发布事实，媒体综述适合建立核查清单，但都不能替代独立效果和安全证据。",
-      "nextCheck": "查模型卡、论文、API 文档、法院文件、事故日志、第三方 benchmark、监管材料和公司回应。"
+      "label": "TechCrunch 来源集中",
+      "note": "TechCrunch 贡献 3/4，本期是同一可靠媒体来源主导的雷达信号；Meta 官方页只证明公司自述，不能替代独立验证。",
+      "nextCheck": "查公司公告、监管申报、产品文档、价格页、隐私白皮书、第三方测试和用户采用数据。"
     },
     "sourceConcentration": {
-      "sourceId": "google-keyword-ai",
-      "sourceName": "Google Keyword AI",
+      "sourceId": "techcrunch-ai",
+      "sourceName": "TechCrunch AI",
       "count": 3,
-      "share": "3/10",
-      "note": "Google Keyword AI 为 3/10，未过半；其余来源分散。",
-      "nextCheck": "用第三方 benchmark、论文、客户指标、法院文件、事故披露和产品文档补强。"
+      "share": "3/4",
+      "note": "单一来源 owner 集中：TechCrunch 当前 AI 索引贡献 3/4，本期不能当作完整市场覆盖。",
+      "nextCheck": "用 Bloomberg/WSJ 原始交易报道、公司公告、监管文件、Meta 产品文档和第三方测试补强。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期以官方发布、一个媒体法律信号和一个媒体安全综述为主，适合建立验证清单。",
-      "doNotConclude": "不能直接断言新模型已胜出、Agent 已可靠替人完成交易、医疗/气象/无障碍 AI 已可规模部署、Grok 诉讼已有法律定论，或 Agent 越界已形成完整行业事实图。",
-      "useInstead": "应该用模型卡、论文、API 文档、生产日志、客户指标、法院文件、事故披露、监管解释和第三方评测升级判断。"
+      "body": "本期来源集中在可靠媒体和一个公司长文，适合建立后续核查队列。",
+      "doNotConclude": "不能直接断言并购已完成、公众态度已转向、Meta 个人 Agent 已落地，或前沿实验室监管路线已经被采纳。",
+      "useInstead": "应该用公司公告、监管申报、客户通知、隐私/安全文档、产品实测、第三方评测和用户研究升级判断。"
     },
     "trendNotes": [
       {
-        "topic": "agent-model-stack",
-        "label": "模型与 Agent 工具继续合并",
-        "note": "跨期看，Runway 路由、Gemini Flash、Grok 4.6、Cursor 收购和 The Verge Agent 安全综述都显示模型、工具、算力与治理正在绑定。",
-        "boundary": "不证明绑定一定改善客户效果或安全性，仍需价格页、日志、合同、事故披露和迁移数据。"
+        "topic": "model-gateway-control",
+        "label": "模型入口成为资本控制点",
+        "note": "跨期看，Runway 路由、Kog 推理优化、Cursor 收购和 OpenRouter 报道都指向模型调用入口的商业价值上升。",
+        "boundary": "不证明所有入口都会被并购，仍需交易文件、客户迁移、价格页和调用数据。"
       },
       {
-        "topic": "content-provenance-and-abuse",
-        "label": "内容治理从标识走向责任",
-        "note": "跨期看，Google 水印、Claude 水印和 Grok 滥用诉讼共同把 AI 内容从可见标记推向检测、元数据和法律责任。",
-        "boundary": "不证明检测可靠或责任成立，仍需 API 测试、C2PA 审计、法院文件和公司回应。"
+        "topic": "trust-as-product-risk",
+        "label": "信任成为模型竞争变量",
+        "note": "跨期看，Claude 水印、Agent 越界、Anthropic 回应和 Meta 愿景都把 AI 信任从抽象伦理推向产品和政策边界。",
+        "boundary": "不证明公众信任改善，仍需民调、监管记录、产品审计和采用指标。"
       },
       {
-        "topic": "high-risk-ai-validation",
-        "label": "高风险 AI 需要更强验证",
-        "note": "跨期看，AMIE、SL2T、WeatherNext 和 Agent 越界综述显示 AI 正进入医疗、无障碍、气象和安全决策链。",
-        "boundary": "不证明可部署，仍需论文、真实用户研究、机构复现、监管、事故日志和安全审计。"
+        "topic": "personal-agent-distribution",
+        "label": "个人 Agent 进入平台叙事战",
+        "note": "跨期看，Gemini 连接应用、Grok/Cursor、Meta 个人超级智能都在争夺个人和企业工作流入口。",
+        "boundary": "不证明 Agent 能稳定替人行动，仍需权限日志、事故披露、用户研究、安全评测和第三方审计报告。"
       }
     ],
     "topicContinuity": [
       {
-        "topic": "model",
-        "label": "模型主题转向工作马与长程 Agent",
+        "topic": "developer-tooling",
+        "label": "开发入口从代码工具扩展到模型网关",
         "status": "stronger",
-        "previousPattern": "上一版覆盖 Anthropic Model 2 外发边界和 Kog 推理优化。",
-        "currentSignal": "本期新增 Gemini 3.7 Flash 与 Grok 4.6 官方发布。",
-        "signalDirection": "增强：模型主题同时覆盖价格、编码、长程 Agent 和安全评估。",
-        "stillUnproven": "仍需模型卡、第三方 benchmark、生产任务日志和成本对账。"
+        "previousPattern": "上一版覆盖 Cursor 并入 SpaceX 与 Grok 接入 Cursor。",
+        "currentSignal": "本期新增 Stripe/OpenRouter 并购报道。",
+        "signalDirection": "增强：开发者入口从代码 Agent 延伸到多模型路由和支付计费层。",
+        "stillUnproven": "仍需公司公告、交易文件、客户迁移记录和价格页。"
       },
       {
         "topic": "policy",
-        "label": "政策扩展到 Agent 安全",
+        "label": "治理焦点转向信任和社会许可",
         "status": "stronger",
-        "previousPattern": "上一版覆盖 Google 可见水印和开放模型政策审查。",
-        "currentSignal": "本期新增 Claude 文本水印、Grok 图像滥用诉讼报道和 The Verge Agent 越界安全综述。",
-        "signalDirection": "增强：内容治理进入检测 API、C2PA、未成年人保护、法律责任和自治 Agent 沙箱边界。",
-        "stillUnproven": "仍需监管解释、检测 API 测试、法院文件、事故日志、公司回应和第三方复盘。"
-      },
-      {
-        "topic": "developer-tooling",
-        "label": "开发工具所有权变化",
-        "status": "stronger",
-        "previousPattern": "上一版覆盖 Runway Media Router 和 Kog 推理优化。",
-        "currentSignal": "本期新增 Cursor 并入 SpaceX 与 Grok 4.6 接入 Cursor。",
-        "signalDirection": "增强：开发工具主题从路由/优化扩展到算力、模型和工具所有权整合。",
-        "stillUnproven": "仍需交易文件、企业条款、价格页、客户留存和迁移数据。"
+        "previousPattern": "上一版覆盖 Claude 水印、Grok 诉讼和 Agent 越界安全综述。",
+        "currentSignal": "本期新增 Anthropic CEO 信任回应与 Meta 个人超级智能外部质疑。",
+        "signalDirection": "增强：政策主题从具体安全机制扩展到公众信任、开放权重和平台权力。",
+        "stillUnproven": "仍需正式政策文本、监管记录、独立测试、用户研究和产品审计。"
       },
       {
         "topic": "enterprise",
-        "label": "企业应用更接近真实服务",
+        "label": "企业采购关注入口锁定",
         "status": "stronger",
-        "previousPattern": "上一版覆盖企业 AI 成本和基础设施边界。",
-        "currentSignal": "本期新增 Gemini 连接应用、AMIE、SL2T 和 WeatherNext。",
-        "signalDirection": "增强：企业和公共部门应用从文本助手转向交易、医疗、无障碍和灾害预测。",
-        "stillUnproven": "仍需产品上线证据、真实用户研究、临床/机构验证、监管和审计材料。"
+        "previousPattern": "上一版覆盖 Gemini 连接应用和高风险应用验证。",
+        "currentSignal": "本期新增 OpenRouter 模型路由交易信号。",
+        "signalDirection": "增强：企业 AI 采购从单模型试用扩展到网关、账单、治理和供应商风险。",
+        "stillUnproven": "仍需采购合同、客户通知、用量数据、审计日志和服务条款。"
       }
     ],
     "companyContinuity": [
       {
-        "company": "Google",
-        "label": "从水印和基础设施转向模型与应用入口",
-        "lastMention": "上一版覆盖 Google 水印和 Gemini 入口规模。",
-        "whatChanged": "本期新增 Gemini 3.7 Flash、连接应用、AMIE、SL2T 和 WeatherNext。",
-        "stillUnproven": "仍需模型卡、API 实测、用户研究、论文、监管和第三方评测。"
+        "company": "Meta",
+        "label": "从开放模型转向个人超级智能叙事",
+        "lastMention": "历史版已覆盖 Meta Muse/Glimmer 和开放模型讨论。",
+        "whatChanged": "本期新增 Meta 官方个人超级智能长文及 TechCrunch 的外部质疑。",
+        "stillUnproven": "仍需产品文档、隐私审计、硬件门槛、价格页、用户研究和安全评测。"
       },
       {
         "company": "Anthropic",
-        "label": "从模型外发门槛转向内容标识机制",
-        "lastMention": "上一版覆盖 Anthropic Model 2 外发边界。",
-        "whatChanged": "本期新增 Claude 文本水印和 C2PA 官方说明。",
-        "stillUnproven": "仍需检测 API、误报/漏报测试、EU 监管解释和企业审计。"
+        "label": "从水印机制延伸到信任危机回应",
+        "lastMention": "上一版覆盖 Claude 文本水印和 Model 2 外发边界。",
+        "whatChanged": "本期新增 Dario Amodei 对 AI 反感、监管和开放权重的公开回应报道。",
+        "stillUnproven": "仍需正式政策文本、第三方测试制度、监管材料和客户治理要求。"
       },
       {
-        "company": "xAI",
-        "label": "从模型发布延伸到安全诉讼",
-        "lastMention": "此前在 Axios AI 竞争背景中出现。",
-        "whatChanged": "本期新增 Grok 4.6 官方发布和 TechCrunch 报道的 Grok 相关诉讼。",
-        "stillUnproven": "仍需模型卡、独立评测、法院文件、公司回应和安全日志。"
-      },
-      {
-        "company": "Cursor",
-        "label": "代码 Agent 并入算力平台",
+        "company": "Stripe",
+        "label": "支付平台进入 AI 模型网关叙事",
         "lastMention": "此前未在当前版中出现。",
-        "whatChanged": "本期新增 Cursor 官方确认已被 SpaceX 收购。",
-        "stillUnproven": "仍需交易文件、企业条款、价格页、数据政策和客户迁移记录。"
+        "whatChanged": "本期新增 Stripe/OpenRouter 交易报道。",
+        "stillUnproven": "仍需公司公告、交易文件、监管申报、客户通知和条款变化。"
       },
       {
-        "company": "Hugging Face",
-        "label": "Agent 治理参照点",
-        "lastMention": "历史版已覆盖 Hugging Face AI 驱动入侵披露和技术时间线。",
-        "whatChanged": "本期 The Verge 把 Hugging Face 事件放入更宽的 Agent 越界综述中。",
-        "stillUnproven": "仍需原始日志、影响评估、修复记录、第三方复盘和监管材料。"
+        "company": "OpenRouter",
+        "label": "多模型路由成为并购对象",
+        "lastMention": "此前未在当前版中出现。",
+        "whatChanged": "本期新增其作为 AI 模型网关被报道纳入 Stripe 交易。",
+        "stillUnproven": "仍需双方确认、用户规模审计、价格页、模型接入清单和迁移记录。"
       }
     ],
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方与厂商来源",
-        "count": 8,
-        "role": "Google、DeepMind、Anthropic、Cursor 和 xAI 可确认发布事实和自述边界，但效果、性能、采用和责任仍需外部验证。"
+        "count": 1,
+        "role": "用作官方来源事实核对：确认 Meta 已发布个人超级智能愿景和自述承诺；不要用它独立证明效果、隐私、安全或采用。"
       },
       {
         "family": "reliable_media",
         "label": "可靠媒体",
-        "count": 2,
-        "role": "TechCrunch 和 The Verge 提供诉讼与 Agent 安全雷达，完整事实仍需法院文件、原始披露、公司回应和第三方复盘。"
+        "count": 3,
+        "role": "用来建立并购、政策回应和外部质疑雷达；完整事实仍需原文、原始报道、公司公告和独立证据。"
       }
     ],
     "topicGroups": [
       {
-        "id": "model",
-        "label": "模型",
-        "count": 2,
+        "id": "developer-tooling",
+        "label": "开发工具",
+        "count": 1,
         "itemIds": [
-          "google-gemini-37-flash-agents-2026-08-16",
-          "xai-grok-46-agent-coding-2026-08-16"
+          "techcrunch-stripe-openrouter-acquisition-2026-08-17"
         ],
-        "meaning": "用来更新模型试点、价格、代码能力和长程 Agent 评测。"
+        "meaning": "用来检查多模型网关、计费入口和供应商锁定风险。"
       },
       {
         "id": "policy",
         "label": "政策",
-        "count": 3,
+        "count": 2,
         "itemIds": [
-          "theverge-rogue-ai-safety-review-2026-08-16",
-          "anthropic-claude-text-watermark-2026-08-16",
-          "techcrunch-grok-abuse-lawsuit-2026-08-16"
+          "techcrunch-anthropic-ai-trust-backlash-2026-08-17",
+          "techcrunch-meta-ai-future-backlash-2026-08-17"
         ],
-        "meaning": "用来核对内容标识、检测 API、未成年人保护、诉讼证据和 Agent 沙箱/披露边界。"
-      },
-      {
-        "id": "developer-tooling",
-        "label": "开发者工具",
-        "count": 1,
-        "itemIds": [
-          "cursor-spacex-acquisition-closed-2026-08-16"
-        ],
-        "meaning": "用来检查代码 Agent 供应商、数据条款和模型绑定风险。"
+        "meaning": "用来核对前沿实验室信任、监管叙事、公众反应和平台治理压力。"
       },
       {
         "id": "enterprise",
-        "label": "企业应用",
-        "count": 4,
+        "label": "企业",
+        "count": 1,
         "itemIds": [
-          "google-gemini-connected-apps-2026-08-16",
-          "google-amie-video-consultations-2026-08-16",
-          "deepmind-sign-language-sl2t-2026-08-16",
-          "deepmind-weathernext-cyclones-2026-08-16"
+          "meta-personal-superintelligence-manifesto-2026-08-17"
         ],
-        "meaning": "用来更新消费服务、医疗、无障碍和气象应用的真实世界证据检查表。"
+        "meaning": "用来检查个人 Agent 进入工作、学习、创作和科研场景前的权限与审计需求。"
       }
-    ],
-    "itemCount": 10
+    ]
   },
   "categories": [
     {
       "id": "model",
       "label": "模型",
-      "description": "本期模型项聚焦 Gemini 3.7 Flash 与 Grok 4.6，适合核对编码、Agent、价格和安全评估；仍需第三方 benchmark、模型卡和生产日志验证。"
+      "description": "本期模型分类用于确认没有新的安全非重复模型发布进入当前批次；这不代表模型线不重要，需等待官方模型卡、价格页、benchmark 或可靠媒体补充。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期产品项聚焦 Gemini 连接应用，适合核对第三方服务、权限和交易确认；仍需上线地区、授权记录和隐私条款确认。"
+      "description": "本期产品项聚焦 Meta 个人超级智能愿景，供产品和隐私团队核对个人 Agent 权限、硬件和隐私边界；仍需产品文档、价格页和第三方测试确认。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期研究项聚焦 AMIE、SL2T 与 WeatherNext，适合研究和公共部门团队更新医疗、无障碍和气象 AI 观察表；不直接证明可部署，需论文、用户研究和机构复现。"
+      "description": "本期研究分类用于确认没有新的安全非重复研究项进入当前批次；读者应等待论文、数据集、复现材料或机构报告再升级判断。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期工具项聚焦 Cursor 并入 SpaceX，适合核对代码 Agent 供应商风险；仍需交易文件、企业条款、价格页和客户迁移证据。"
+      "description": "本期工具项转向 OpenRouter 模型网关并购报道，供开发平台团队核对多模型路由和供应商锁定风险；仍需公司公告、交易文件和客户通知验证。"
     },
     {
       "id": "funding",
       "label": "融资",
-      "description": "本期没有新的安全非重复融资项；读者可把该分类用于检查资本与算力证据是否缺席，这不代表资本线不重要，需等待官方公告、filing、合同或可靠媒体补充。"
+      "description": "本期融资项聚焦 Stripe/OpenRouter 被报道交易，适合核对 AI 入口估值和并购链条；仍需监管申报、交易公告或可靠原始报道确认。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期政策项聚焦 Claude 水印、Grok 滥用诉讼和 The Verge Agent 安全综述，适合核对内容披露、法律责任和沙箱治理；仍需监管解释、法院文件、事故日志和第三方复盘。"
+      "description": "本期政策项聚焦 Anthropic 信任回应和平台外部质疑，适合核对监管叙事和平台信任；仍需正式政策文本、审计和用户研究。"
     }
   ],
   "briefing": {
-    "label": "23:00 JST 补充核查",
-    "headline": "模型入口、内容标识、高风险应用和 Agent 安全成为今天的核查重点",
-    "summary": "本期以官方来源为主，并补入同日可靠媒体 Agent 安全综述；AI Watchtower 的判断保持在验证清单层面，不把厂商 benchmark、研究演示、未决诉讼或安全综述读成生产结论。",
-    "cta": "查看全部信号",
+    "label": "17:00 JST 情报简报",
+    "headline": "AI 竞争从模型发布转向入口所有权和公众信任",
+    "summary": "本期不是大规模发布潮，而是一个高信号短批次：模型网关可能被支付平台吸收，前沿实验室继续解释监管与开放边界，Meta 把个人 Agent 叙事推到台前。所有结论仍需公司公告、产品文档、独立测试和监管材料补强。",
+    "cta": "查看本期情报",
     "watchPoints": [
       {
-        "title": "模型成本",
-        "body": "Gemini 3.7 Flash 与 Grok 4.6 都需要用第三方 benchmark、日志和账单复核。"
+        "title": "OpenRouter 交易确认",
+        "body": "关注 Stripe、OpenRouter、Bloomberg/WSJ 后续、监管申报和客户通知。"
       },
       {
-        "title": "内容责任",
-        "body": "Claude 水印和 Grok 诉讼把透明度、检测和平台防护推到同一张合规表。"
+        "title": "Anthropic 政策落地",
+        "body": "关注信任叙事是否进入正式透明度、第三方测试或开放权重政策。"
       },
       {
-        "title": "Agent 安全",
-        "body": "The Verge 综述提示沙箱、同伴影响、披露和外部监督需要同表核查。"
+        "title": "Meta 个人 Agent 证据",
+        "body": "关注权限、隐私、硬件门槛、价格和独立安全评测。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "深度简报",
-    "title": "今天的 AI 信号从“能做什么”转向“谁负责、谁验证”",
-    "subtitle": "本期把模型速度、内容标识、代码 Agent 所有权、高风险应用和 Agent 安全综述放在一起，重点不是宣布胜负，而是列出下一轮可验证证据。",
-    "dateLabel": "2026-08-16 17:00 JST",
-    "status": "已发布，保守核验",
-    "overview": "2026-08-16 的当前版以官方发布为主，确认模型、工具和研究方向，同时补入 The Verge 对 Agent 越界事件的同日安全综述。读者应把它当作核查表：哪些是厂商已发布的功能，哪些只是媒体报道或研究演示，哪些还需要法院文件、事故日志、第三方评测、论文和监管材料才能升级。",
+    "kicker": "17:00 JST 深读",
+    "title": "从模型入口到个人 Agent：AI 公司正在争夺控制权和信任权",
+    "subtitle": "本期 4 条短批次信号显示，AI 战场不只在模型能力，也在路由入口、支付关系、公众信任和个人 Agent 分发。",
+    "dateLabel": "2026 年 8 月 17 日 17:00 JST",
+    "status": "已发布；短批次，可靠媒体与官方长文混合核查",
+    "overview": "上一版的重点是模型、内容标识和 Agent 安全；本期转向谁控制模型调用入口、前沿实验室如何回应公众信任，以及 Meta 如何包装个人超级智能。由于安全非重复来源不足 10 条，本期保持 4 条，不使用旧稿、播客或重复事件补量。",
     "timeline": [
       {
-        "label": "08/12-08/13",
-        "title": "模型与应用入口更新",
-        "body": "Google 发布 Gemini 3.7 Flash，并扩展 Gemini 连接应用；xAI 发布 Grok 4.6。"
+        "label": "01:53",
+        "title": "Anthropic 回应信任问题",
+        "body": "TechCrunch 报道 Dario Amodei 将 AI 负面态度归因于公众对机构的信任危机。"
       },
       {
-        "label": "08/14",
-        "title": "治理与所有权变化",
-        "body": "Anthropic 解释 Claude 文本水印，Cursor 官方确认已并入 SpaceX。"
+        "label": "05:32",
+        "title": "Meta 愿景与质疑并行",
+        "body": "Meta 官方个人超级智能长文被 TechCrunch 放入平台信任和可达性讨论。"
       },
       {
-        "label": "08/15-08/16 JST",
-        "title": "安全和高风险应用进入核查",
-        "body": "TechCrunch 报道 Grok 相关诉讼，DeepMind/Google 的医疗、无障碍和气象研究进入观察表。"
+        "label": "05:57",
+        "title": "模型网关进入并购雷达",
+        "body": "TechCrunch 援引 Bloomberg 称 Stripe 将以 70 亿美元以上收购 OpenRouter。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "10",
-        "label": "条当前安全非重复信号"
+        "value": "4",
+        "label": "本期安全非重复信号"
       },
       {
-        "value": "8/9",
-        "label": "官方或厂商来源占比"
+        "value": "3/4",
+        "label": "来自 TechCrunch 的可靠媒体雷达"
       },
       {
-        "value": "3",
-        "label": "Google Keyword AI 当前项"
+        "value": "70 亿美元+",
+        "label": "OpenRouter 被报道交易价格"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "模型",
-        "title": "工作马模型争夺 Agent 队列",
-        "body": "Gemini 3.7 Flash 和 Grok 4.6 都把编码、长程任务和成本放在发布叙事中。",
-        "soWhat": "试点不能只看发布稿，应比较第三方评测、失败率、账单和安全边界。"
+        "label": "入口",
+        "title": "模型网关可能变成支付平台资产",
+        "body": "OpenRouter 报道把多模型路由、计费和采购治理推到资本层面。若交易确认，企业使用 AI 的入口可能更靠近支付基础设施。",
+        "soWhat": "平台团队要检查网关、账单、数据和模型切换是否会形成新的供应商锁定。"
       },
       {
         "number": "02",
-        "label": "治理",
-        "title": "水印和诉讼把内容责任具体化",
-        "body": "Claude 水印说明提供了机制边界，Grok 诉讼报道提醒图像生成的法律风险。",
-        "soWhat": "平台需要检测、申诉、日志保全和未成年人保护流程。"
+        "label": "信任",
+        "title": "前沿实验室需要证明公共收益",
+        "body": "Anthropic 的回应显示，风险警告和技术承诺都不足以解决公众反感；外部核验、监管设计和可见收益会变得更重要。",
+        "soWhat": "采购和政策团队应把第三方测试、透明度和公共收益证据列入模型评估。"
       },
       {
         "number": "03",
-        "label": "应用",
-        "title": "高风险场景需要真实世界证据",
-        "body": "AMIE、SL2T、WeatherNext 和 Gemini 连接应用都指向更真实的用户任务。",
-        "soWhat": "医疗、无障碍、气象和交易场景应等待论文、用户研究、机构复现和合规材料。"
+        "label": "分发",
+        "title": "Meta 把个人 Agent 作为反集中化叙事",
+        "body": "Meta 官方强调个人超级智能和广泛分发，TechCrunch 则追问信任、硬件可达性和平台历史。两者合起来才是完整核查框架。",
+        "soWhat": "消费 AI 团队要同时看官方功能、隐私承诺、设备门槛和外部用户信任。"
       }
     ],
     "actions": [
-      "更新模型试点评测表，把价格、工具调用、失败率和安全说明放在同一页。",
-      "检查 AI 内容标识、C2PA、检测 API、上传图片限制和未成年人保护流程。",
-      "把医疗、无障碍和气象 AI 标为研究/验证中，避免当成已部署能力。"
+      "把 OpenRouter 加入模型网关与 AI 账单供应商观察表。",
+      "把 Anthropic 信任回应映射到正式政策文本和第三方测试待查项。",
+      "把 Meta 个人 Agent 愿景拆成权限、隐私、价格、硬件和独立评测五项。"
     ],
     "coverageLimits": [
       {
-        "label": "时间边界",
-        "body": "本期覆盖 8 月 11 日至 8 月 16 日可核对的新来源；旧稿和重复报道未用于补量。"
+        "label": "短批次边界",
+        "body": "本期只有 4 条安全非重复信号，少于 10 条是质量门槛结果。"
       },
       {
-        "label": "证据边界",
-        "body": "官方来源确认发布事实，媒体来源提供诉讼雷达；效果、责任和生产价值仍需外部证据。"
+        "label": "来源边界",
+        "body": "媒体项不替代原文，官方项不等于独立验证；需后续原始文件和第三方证据。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "Google、DeepMind、Anthropic、Cursor 和 xAI 官方来源支持本期大多数发布事实。",
-        "TechCrunch 支持 Grok 相关诉讼的最低报道线索，The Verge 支持 Agent 越界事件的同日安全综述线索。"
+        "TechCrunch 报道 Stripe/OpenRouter、Anthropic CEO 回应和 Meta 愿景外部质疑。",
+        "Meta 官方页面发布个人超级智能愿景和公司自述承诺。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 将本期读作模型入口、内容责任、高风险应用和 Agent 安全治理的同日核查表。",
-        "媒体来源不被写成中文替代稿，只保留最低事实、趋势解释和下一步证据路径。"
+        "AI Watchtower 将本期解读为入口控制和社会信任信号，而非完成交易或产品落地结论。",
+        "媒体与官方来源互补：一个提供外部追问，一个提供公司原始叙事。"
       ],
       "unknowns": [
-        "模型性能、临床/气象/无障碍效果、诉讼责任和 Agent 安全事件范围仍需独立证据。",
-        "下一轮应查模型卡、论文、API 文档、法院文件、事故日志、监管材料和第三方复盘。"
+        "Stripe/OpenRouter 交易是否正式完成、价格和客户条款是否改变仍未知。",
+        "Anthropic 与 Meta 的信任叙事是否转化为政策、产品和独立审计仍未知。"
       ]
     },
     "references": [
       {
-        "label": "The Verge 发布 Agent 越界安全综述",
-        "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai"
+        "label": "TechCrunch 报道 Stripe/OpenRouter 并购信号",
+        "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/"
       },
       {
-        "label": "TechCrunch 报道 Grok 诉讼升级",
-        "url": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/"
+        "label": "TechCrunch 报道 Anthropic CEO 信任回应",
+        "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
       },
       {
-        "label": "Anthropic 说明 Claude 水印机制",
-        "url": "https://www.anthropic.com/news/claude-text-watermark"
+        "label": "Meta 官方长文证明个人超级智能愿景已发布",
+        "url": "https://www.meta.com/thefutureisforeveryone/"
       },
       {
-        "label": "Cursor 官方博客确认收购完成",
-        "url": "https://cursor.com/blog/joining-spacex"
-      },
-      {
-        "label": "Google 发布 Gemini 3.7 Flash 模型",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
-      },
-      {
-        "label": "DeepMind 介绍 WeatherNext 研究",
-        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
-      },
-      {
-        "label": "Google 发布 Gemini 连接应用",
-        "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/"
-      },
-      {
-        "label": "DeepMind 介绍 SL2T 模型",
-        "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
-      },
-      {
-        "label": "xAI 官方发布 Grok 4.6 模型",
-        "url": "https://x.ai/news/grok-4-6"
-      },
-      {
-        "label": "Google Research 说明 AMIE 研究",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/"
+        "label": "TechCrunch 报道个人 Agent 愿景可达性争议",
+        "url": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/"
       }
     ]
   },
   "items": [
     {
-      "id": "theverge-rogue-ai-safety-review-2026-08-16",
-      "category": "policy",
-      "label": "政策",
-      "title": "The Verge 梳理 Agent 越界事件，AI 安全从单点事故转向系统治理",
-      "body": "The Verge 把近期多起 Agent 越界、沙箱逃逸和欺骗测试归入同一条安全治理主线。",
-      "summary": "The Verge 将多起 Agent 越界和欺骗测试放在同一条安全治理主线中。",
-      "whyItMatters": "这提醒企业不能只测单个 Agent，还要检查多 Agent 协作、沙箱、披露和外部监督机制。",
-      "detailBody": "The Verge 8 月 16 日专栏把 OpenAI、Anthropic、Meta、Moonshot 和英国 AISI 相关 Agent 越界、沙箱逃逸、外部攻击和欺骗测试作为同一组安全综述线索。AI Watchtower 只保留最低事实和核查路径；完整事实、采访、引述、链接和上下文仍应回到 The Verge 原文与其指向的原始披露。",
-      "trend": "Agent 安全正在从“模型是否会越界”升级为“组织如何测试、披露和约束自治系统”。",
-      "detailTrend": "跨期看，Hugging Face 事件、Anthropic 多 Agent 研究和英国 AISI 测试都把安全问题推向系统层：共享环境、同伴影响、沙箱权限和披露节奏都可能改变风险。 这不是新事故定论，而是把已有事故拉成治理清单。",
-      "whyRanked": "它把零散 Agent 安全事件合并成企业可执行的治理问题。",
-      "topReason": "它把零散 Agent 安全事件合并成企业可执行的治理问题。",
-      "detailWhyRanked": "本期采用该条，是因为它把分散在公司披露、研究测试和媒体报道中的 Agent 风险整理成同日核查入口。读者应把它用于追踪原始披露、测试报告、监管材料和公司回应，而不是当作事故责任定论。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "可靠媒体综述支持安全议题聚合；事实升级仍需原始披露、测试报告和监管文件。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "可靠媒体综述支持安全议题聚合；事实升级仍需原始披露、测试报告和监管文件。"
-      },
-      "impact": "负责 Agent、沙箱、红队和事故披露的安全/平台团队应把同伴交互、权限边界和公开披露流程纳入测试计划。",
-      "whoShouldCare": "让自治 Agent 访问代码库、网络、内部工具或外部服务的安全、平台、法务和治理团队。",
-      "readerUse": "让自治 Agent 访问代码库、网络、内部工具或外部服务的团队可用它检查沙箱和披露清单。",
-      "nextCheck": "核对 OpenAI、Anthropic、Meta、Moonshot、Hugging Face、英国 AISI 的原始披露、测试报告、日志、监管回应和第三方复盘。",
-      "followUpQuestions": [
-        "哪些越界事件有可公开核对的日志、测试设置和第三方复盘？",
-        "企业 Agent 试点是否已经把多 Agent 互相影响和外部网络权限纳入上线门槛？"
-      ],
-      "evidenceThreshold": "需要原始事故披露、测试日志、模型系统卡、监管材料和第三方复盘，才能升级为已确认的行业级 Agent 安全基准变化。",
-      "claimBoundary": "不证明所有被提到的事件细节都已独立确认，也不证明现有监管框架已经能约束 Agent 风险。",
-      "counterEvidence": "如果原始披露、测试日志或监管材料显示事件范围被夸大，应降级为媒体安全综述而非系统性事故信号。",
-      "source": "The Verge AI",
-      "sourceName": "The Verge AI",
-      "sourceId": "theverge-ai",
-      "sourceUrl": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
-      "originalUrl": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
-      "sourceRole": "媒体背景",
-      "provenance": "The Verge 提供同日安全综述和原始链接集合；完整事实、采访、引述、专家观点、源链接和上下文仍应回到 The Verge 原文及其指向的原始披露。",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-16T21:00:00+09:00",
-      "freshSourceFact": {
-        "sourceType": "reliable_media",
-        "sourceUrl": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
-        "publishedAt": "2026-08-16T21:00:00+09:00",
-        "fact": "The Verge 在 2026-08-16 发布同日安全综述，把近期 Agent 越界、沙箱逃逸和欺骗测试归入同一治理问题。"
-      },
-      "time": "21:00 JST",
-      "tags": [
-        "Agent 安全",
-        "沙箱",
-        "AI 治理"
-      ],
-      "companies": [
-        "OpenAI",
-        "Anthropic",
-        "Meta",
-        "Moonshot AI",
-        "Hugging Face"
-      ]
-    },
-    {
-      "id": "techcrunch-grok-abuse-lawsuit-2026-08-16",
-      "category": "policy",
-      "label": "政策",
-      "title": "TechCrunch 报道 Grok 相关滥用诉讼升级，生成图像安全压力升高",
-      "body": "TechCrunch 报道一名女性加入针对 xAI 的诉讼，指称 Grok 被用于生成儿童时期照片的露骨图像。",
-      "summary": "TechCrunch 报道一名女性加入针对 xAI 的诉讼，指称 Grok 被用于生成儿童时期照片的露骨图像。",
-      "whyItMatters": "图像生成安全从平台规则问题进入法律证据、未成年人保护和产品防护责任。",
-      "detailBody": "TechCrunch 报道一名化名女性加入针对 xAI 的诉讼，报道称核心指控涉及 Grok 图像滥用。AI Watchtower 只保留诉讼报道的最低事实；完整事实、文件、回应、证据和上下文仍在 TechCrunch 原文、法院材料和公司回应中。",
-      "trend": "生成式图像滥用正在成为模型发布、平台分发和法律责任的交叉风险。",
-      "detailTrend": "生成式图像安全正在从平台政策走向法律证据和未成年人保护责任。产品团队需要把真人图像限制、上传审核、日志保全、执法协作和受害者申诉放进同一流程。 对 AI Watchtower 来说，这不是事实定论，而是提醒产品上线前必须具备可审计的防滥用控制和证据留存。",
-      "whyRanked": "它是高风险生成图像产品必须面对的安全和法律信号。",
-      "topReason": "它是高风险生成图像产品必须面对的安全和法律信号。",
-      "detailWhyRanked": "它是高风险生成图像产品必须面对的安全和法律信号。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要法院文件、公司回应、产品日志、防护更新和司法结果，才可升级为已确认产品责任事件。。",
+      "id": "techcrunch-stripe-openrouter-acquisition-2026-08-17",
+      "category": "funding",
+      "label": "融资",
+      "title": "Stripe 据报将以 70 亿美元以上收购 OpenRouter",
+      "body": "Stripe/OpenRouter 被报道进入并购确认队列。",
+      "summary": "Stripe 据报将以 70 亿美元以上收购 OpenRouter。",
+      "whyItMatters": "AI 模型路由和统一计费入口正在变成支付/开发者平台资产，但交易事实仍需公司公告或监管文件确认。",
+      "detailBody": "TechCrunch 在 In Brief 中称 Bloomberg 报道 Stripe 已敲定 OpenRouter 交易，价格超过 70 亿美元；同文说明 OpenRouter 提供多模型统一入口，Stripe 未确认，完整交易背景仍需原文和后续文件。",
+      "trend": "模型网关正在变成 AI 入口资产。",
+      "detailTrend": "模型网关从开发者便利层上升为支付和企业采购入口，意味着多模型时代的控制点可能转向路由、账单、合规、模型切换和锁定风险管理。",
+      "whyRanked": "模型入口并购影响采购和锁定风险。",
+      "topReason": "需要用公司公告、交易文件或监管申报确认 70 亿美元以上价格。",
+      "detailWhyRanked": "OpenRouter 是模型入口层，Stripe 是支付与商户网络；如果报道被交易文件确认，企业 AI 的采购、计费、审计和治理边界都会受影响，读者应优先核对公告和客户通知。",
       "selectionScore": {
         "impact": 5,
         "novelty": 4,
@@ -526,7 +388,7 @@
         "evidenceQuality": 3,
         "readerUtility": 5,
         "total": 21,
-        "note": "可靠媒体支持报道线索；完整事实、证据材料和上下文仍需回到原文与原始文件。"
+        "note": "高影响资本信号，但目前依赖媒体报道与被报道方不置评。"
       },
       "editorScore": {
         "impact": 5,
@@ -535,582 +397,247 @@
         "evidenceQuality": 3,
         "readerUtility": 5,
         "total": 21,
-        "note": "可靠媒体支持报道线索；完整事实、证据材料和上下文仍需回到原文与原始文件。"
+        "note": "高影响资本信号，但目前依赖媒体报道与被报道方不置评。"
       },
-      "impact": "安全、信任与安全、法务团队应检查真人图像生成限制、未成年人保护和日志保全流程。",
-      "whoShouldCare": "运营图像生成、社交平台、未成年人安全和合规调查流程的安全、法务和信任与安全团队。",
-      "readerUse": "运营图像生成、社交平台、未成年人安全和合规调查流程的安全、法务和信任与安全团队可用它更新风控清单。",
-      "nextCheck": "核对法院文件、xAI 回应、平台政策、执法记录、产品防护更新和独立安全测试。",
+      "impact": "企业平台团队应检查模型网关是否会成为采购、计费和合规控制点。",
+      "whoShouldCare": "负责多模型网关、AI 账单、采购审批和供应商锁定风险的平台/财务/法务团队。",
+      "readerUse": "平台、财务和法务团队用来更新模型路由供应商清单，并标出并购确认、客户迁移和价格变化待查。",
+      "nextCheck": "查 Stripe/OpenRouter 官方公告、并购文件、监管申报、客户通知和价格/服务条款变化。",
       "followUpQuestions": [
-        "法院文件是否披露具体产品路径、账号记录和防护缺口？",
-        "xAI 是否发布新的图像生成限制、检测或执法协作说明？"
+        "Stripe 或 OpenRouter 是否发布正式交易确认？",
+        "企业客户的模型路由、账单和数据条款是否发生变化？"
       ],
-      "evidenceThreshold": "需要法院文件、公司回应、产品日志、防护更新和司法结果，才能升级为已确认产品责任事件。",
-      "claimBoundary": "不证明法院已认定 xAI 责任，也不证明 Grok 当前防护状态或所有事实细节。",
-      "counterEvidence": "如果法院文件、执法记录或产品日志否定关键指控，应下调为未决诉讼信号。",
+      "evidenceThreshold": "还需要公司公告、监管申报或双方客户通知，才能从媒体信号升级为已确认并购事件。",
+      "claimBoundary": "不证明交易已经完成，也不证明 OpenRouter 用户、价格或模型接入会立即改变。",
+      "counterEvidence": "若双方否认、交易文件未出现或客户条款无变化，应降级为并购传闻背景。",
       "source": "TechCrunch AI",
       "sourceName": "TechCrunch AI",
       "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/",
-      "originalUrl": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/",
+      "sourceUrl": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+      "originalUrl": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
       "sourceRole": "媒体背景",
-      "provenance": "TechCrunch 提供最低限度的诉讼报道线索；完整事实、证据、引述、采访、文件、公司回应和上下文仍应回到 TechCrunch 原文、法院材料和后续原始文件。",
+      "provenance": "TechCrunch 提供被报道交易、估值、OpenRouter 定位和 Stripe 不置评；完整事实、引用、交易背景和上下文仍属于 TechCrunch 原文及其引用的原始报道。",
       "trustLevel": "media",
       "verificationStatus": "已核验",
       "originalDependency": "must-read",
       "sourceType": "reliable_media",
       "sourceReliability": "medium",
       "claimStatus": "reported",
-      "publishedAt": "2026-08-16T06:29:00+09:00",
-      "time": "06:29 JST",
+      "publishedAt": "2026-08-17T05:57:00+09:00",
+      "freshSourceFact": null,
+      "time": "05:57 JST",
       "tags": [
-        "Grok",
-        "图像安全",
-        "诉讼"
+        "模型网关",
+        "并购",
+        "开发者平台"
       ],
       "companies": [
-        "xAI",
-        "SpaceX"
+        "Stripe",
+        "OpenRouter"
       ]
     },
     {
-      "id": "anthropic-claude-text-watermark-2026-08-16",
-      "category": "policy",
-      "label": "政策",
-      "title": "Anthropic 解释 Claude 文本水印：全球上线以应对 EU AI Act",
-      "body": "Anthropic 官方说明 Claude 未来文本水印的工作方式、限制、检测 API 计划和文件 C2PA 凭据。",
-      "summary": "Anthropic 官方说明 Claude 未来文本水印的工作方式、限制、检测 API 计划和文件 C2PA 凭据。",
-      "whyItMatters": "内容溯源从可见标识转向概率检测和元数据，企业要重新区分“生成、编辑、证明责任”。",
-      "detailBody": "Anthropic 说明未来 Claude 文本会带水印，方法基于 SynthID-Text；它还计划检测 API，并称文件输出会附 C2PA 凭据。该条确认机制说明和合规动机，不把检测准确率、法律责任或用户权益变化当成已验证事实。",
-      "trend": "AI 内容治理正在从肉眼标记转向平台密钥、检测 API 和合规审计。",
-      "detailTrend": "内容溯源正在从可见标签转向概率检测、平台密钥和元数据。水印能帮助判断 Claude 参与过文本生成，但对轻编辑、短文本、翻译、代码和所有权争议仍有边界，需要政策和流程配套。",
-      "whyRanked": "它把 EU AI Act 的透明度要求落到模型输出机制。",
-      "topReason": "它把 EU AI Act 的透明度要求落到模型输出机制。",
-      "detailWhyRanked": "它把 EU AI Act 的透明度要求落到模型输出机制。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要检测 API 文档、误报/漏报测试、EU 监管解释和企业审计案例，才可升级为已验证合规控制。。",
+      "id": "meta-personal-superintelligence-manifesto-2026-08-17",
+      "category": "product",
+      "label": "产品",
+      "title": "Meta 发布个人超级智能愿景长文",
+      "body": "Meta 发布个人超级智能愿景。",
+      "summary": "Meta 官方长文提出个人超级智能路线。",
+      "whyItMatters": "这是 Meta 为个人 Agent 和开放分发争取叙事位置的官方表态，但隐私、安全、硬件可达性和成本都还要独立验证。",
+      "detailBody": "Meta 长文主张把超级智能广泛分发给个人，并描述 24/7 个人 Agent、创作工具、学习助手、科研用途、低价访问和社区基础设施承诺；这些仍是公司自述。",
+      "trend": "Meta 正在争夺个人 Agent 分发叙事。",
+      "detailTrend": "前沿竞争不只比模型分数，也在争夺“谁应拥有 Agent 权力”的价值叙事；Meta 把个人 Agent、开放模型、数据中心社区承诺和国家竞争放在同一论证里，意味着读者要核对承诺是否产品化。",
+      "whyRanked": "官方原文可作为个人 Agent 核查起点。",
+      "topReason": "官方愿景因为涉及隐私、价格和安全评测而需要优先核对。",
+      "detailWhyRanked": "个人 Agent 若进入 Meta 社交、眼镜和本地设备，意味着消费级 AI 的默认入口和数据边界会被重写；当前原文只证明公司愿景，所以读者应核对产品、隐私和审计材料。",
       "selectionScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 24,
-        "note": "官方来源直接解释机制和限制，是本期证据最强的治理信号。"
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 20,
+        "note": "官方原文证据强，但只证明 Meta 发表愿景，不证明落地效果。"
       },
       "editorScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 24,
-        "note": "官方来源直接解释机制和限制，是本期证据最强的治理信号。"
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 20,
+        "note": "官方原文证据强，但只证明 Meta 发表愿景，不证明落地效果。"
       },
-      "impact": "法务、教育、内容平台和开发团队应更新 AI 输出披露、检测流程和争议处理规则。",
-      "whoShouldCare": "负责学校作业审核、媒体稿件发布、代码仓库提交、合同审阅和营销内容审批中 Claude 输出披露责任的法务、合规、教育和平台团队。",
-      "readerUse": "负责学校作业审核、媒体稿件发布、代码仓库提交、合同审阅和营销内容审批中 Claude 输出披露责任的法务、合规、教育和平台团队可用它更新政策。",
-      "nextCheck": "核对 Anthropic 检测 API 文档、EU Code of Practice、C2PA 工具可读性和跨模型水印互操作性。",
+      "impact": "产品和隐私团队应跟踪 Meta 是否把这些承诺写入可审计的设置、价格和安全材料。",
+      "whoShouldCare": "负责消费级 Agent、可穿戴设备、隐私审查和 AI 产品叙事的产品/法务/安全团队。",
+      "readerUse": "消费 AI、隐私和安全团队用来建立 Meta 个人 Agent 的权限、隐私、成本、硬件和安全核查清单。",
+      "nextCheck": "查 Meta 产品文档、隐私白皮书、模型卡、硬件要求、价格页和第三方安全评测。",
       "followUpQuestions": [
-        "Claude 检测 API 会给出怎样的置信度和申诉机制？",
-        "企业应如何处理 Claude 轻编辑的人类文本和代码注释？"
+        "Meta 是否公布个人 Agent 的权限和本地/云端数据边界？",
+        "免费或低价访问是否有明确地区、算力和功能限制？"
       ],
-      "evidenceThreshold": "需要 Anthropic 检测 API 文档、误报/漏报测试报告、EU 监管解释和企业审计案例，才能升级为已验证合规控制。",
-      "claimBoundary": "不证明水印不可规避，也不证明检测结果能独立判定作者身份、责任归属或所有权。",
-      "counterEvidence": "如果检测 API 误报/漏报测试数据、EU 监管说明或企业审计记录显示短文本、翻译、重写和代码场景无法可靠识别，应下调为合规探索信号。",
-      "source": "Anthropic Newsroom",
-      "sourceName": "Anthropic Newsroom",
-      "sourceId": "anthropic-news",
-      "sourceUrl": "https://www.anthropic.com/news/claude-text-watermark",
-      "originalUrl": "https://www.anthropic.com/news/claude-text-watermark",
-      "sourceRole": "官方核对",
-      "provenance": "Anthropic 官方页面可核对水印机制、适用边界和检测计划；合规效果和准确率仍需测试。",
+      "evidenceThreshold": "还需要可测试产品、隐私说明、价格页和第三方评测，才能从愿景主张升级为产品路线判断。",
+      "claimBoundary": "不证明 Meta 已交付可规模使用的个人超级智能，也不证明隐私和安全承诺已经可审计。",
+      "counterEvidence": "若产品延期、隐私审计报告缺失、硬件门槛过高或安全事故记录出现，应降低愿景可信度。",
+      "source": "Meta AI Blog",
+      "sourceName": "Meta AI Blog",
+      "sourceId": "meta-ai-blog",
+      "sourceUrl": "https://www.meta.com/thefutureisforeveryone/",
+      "originalUrl": "https://www.meta.com/thefutureisforeveryone/",
+      "sourceRole": "厂商主张",
+      "provenance": "Meta 官方页面能证明公司发布了个人超级智能愿景和自述承诺；不能独立证明效果、采用或安全。",
       "trustLevel": "official",
       "verificationStatus": "已核验",
-      "originalDependency": "reference",
+      "originalDependency": "recommended",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
-      "publishedAt": "2026-08-14T09:00:00+09:00",
-      "time": "08/14",
+      "publishedAt": "2026-08-17T05:32:00+09:00",
+      "freshSourceFact": null,
+      "time": "05:32 JST",
       "tags": [
-        "Claude",
-        "水印",
-        "EU AI Act"
+        "个人Agent",
+        "开放模型",
+        "消费AI"
+      ],
+      "companies": [
+        "Meta"
+      ]
+    },
+    {
+      "id": "techcrunch-meta-ai-future-backlash-2026-08-17",
+      "category": "policy",
+      "label": "政策",
+      "title": "TechCrunch 质疑 Zuckerberg 的“AI 为人人”叙事",
+      "body": "TechCrunch 质疑 Meta 个人 Agent 叙事。",
+      "summary": "TechCrunch 追问 Meta 个人 AI 愿景的可信度。",
+      "whyItMatters": "同一官方愿景已经触发媒体信任和治理追问，说明个人 Agent 的推广会先遇到历史信任、隐私和社会成本考验。",
+      "detailBody": "TechCrunch 将 Zuckerberg 长文与 Anthropic 风险叙事作对照，强调 Meta 需要证明个人 Agent 的隐私、可达性和用户价值，而不是只给愿景；完整论证仍在原文。",
+      "trend": "消费级 AI 进入社会许可竞争。",
+      "detailTrend": "媒体反应把 Meta 的个人 Agent 路线放入平台信任史中，提醒读者同时核对数据控制、硬件门槛、社会成本和独立用户价值。",
+      "whyRanked": "媒体质疑补足官方愿景的反证路径。",
+      "topReason": "个人 Agent 推广能否过关，取决于隐私、安全、硬件门槛和真实用户价值证据。",
+      "detailWhyRanked": "当 Meta 把 AI 入口绑定社交、眼镜和设备，外部质疑本身就是产品落地风险；这条补足官方长文没有提供的反证路径和用户信任检查，读者应等待独立测试、审计材料和真实留存数据。",
+      "selectionScore": {
+        "impact": 3,
+        "novelty": 3,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 17,
+        "note": "媒体解释力较强，但与 Meta 官方愿景相关，需避免过度重复。"
+      },
+      "editorScore": {
+        "impact": 3,
+        "novelty": 3,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 17,
+        "note": "媒体解释力较强，但与 Meta 官方愿景相关，需避免过度重复。"
+      },
+      "impact": "消费产品团队应把公众信任和平台历史纳入个人 Agent 发布前风险评审。",
+      "whoShouldCare": "负责个人 Agent、社交平台、AI 可穿戴和用户信任研究的产品/设计/政策团队。",
+      "readerUse": "个人 Agent、社交平台和 AI 可穿戴产品团队用来给 Meta 官方愿景补上可达性、隐私、成本、硬件和滥用治理追问。",
+      "nextCheck": "查 Meta 后续产品实测、隐私设置、用户研究、监管反馈和独立评论。",
+      "followUpQuestions": [
+        "Meta 是否给出可审计的个人 Agent 隐私与安全设置？",
+        "普通设备用户能否实际使用 Glimmer 或相关能力？"
+      ],
+      "evidenceThreshold": "还需要独立产品测试、隐私审计报告和用户采用数据，才能升级为个人 Agent 落地评估。",
+      "claimBoundary": "不证明 Meta 愿景失败，也不证明公众反应已经形成可量化趋势。",
+      "counterEvidence": "若后续独立产品测试报告、隐私审计报告和用户留存数据同时显示低门槛、清晰控制和高留存，应把当前信任风险判断降级为早期媒体疑虑。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+      "originalUrl": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch 提供对 Meta 愿景和公众疑虑的媒体评论；完整事实、引用、论证和上下文仍属于 TechCrunch 原文。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-17T05:32:00+09:00",
+      "freshSourceFact": null,
+      "time": "05:32 JST",
+      "tags": [
+        "个人Agent",
+        "平台信任",
+        "消费AI"
+      ],
+      "companies": [
+        "Meta"
+      ]
+    },
+    {
+      "id": "techcrunch-anthropic-ai-trust-backlash-2026-08-17",
+      "category": "policy",
+      "label": "政策",
+      "title": "Anthropic CEO 将 AI 反感归因于信任危机",
+      "body": "Anthropic CEO 回应 AI 信任危机。",
+      "summary": "Anthropic CEO 将 AI 反感归因于公众信任危机。",
+      "whyItMatters": "前沿实验室的监管叙事正在从“风险警告”转向“如何证明公共利益”，会影响透明度、开放权重和政策设计讨论。",
+      "detailBody": "TechCrunch 汇总 Amodei 对 AI 负面舆论、监管、开放权重和科学收益的回应，并指出这些说法来自公开发帖和媒体整理；完整引用与上下文仍需阅读原文。",
+      "trend": "前沿实验室把信任变成治理议题。",
+      "detailTrend": "AI 公司开始把公众接受度当成产品和监管问题处理，这意味着单靠能力叙事不够，必须用可见收益、约束权力和外部核验解释社会许可。",
+      "whyRanked": "Anthropic 回应影响监管和采购判断。",
+      "topReason": "它提示监管讨论的下一步可能是第三方测试、透明度和公共收益证明。",
+      "detailWhyRanked": "Anthropic 处在安全、监管和闭源争论中心；当数据中心、就业和开放权重争议升温，CEO 回应会影响政策制定者和企业买家的信任判断，读者应核对正式政策文本、听证记录和第三方测试制度。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "政策叙事强、影响面广，但事实仍主要是媒体整理公开发帖。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "政策叙事强、影响面广，但事实仍主要是媒体整理公开发帖。"
+      },
+      "impact": "政策和企业采购团队应把“公共收益如何被证明”加入实验室评估表。",
+      "whoShouldCare": "负责 AI 治理、模型采购、公共事务和监管沟通的企业/政策团队。",
+      "readerUse": "政策、公关和企业采购团队用来追踪 Anthropic 的监管论证是否进入法案、模型卡、第三方测试或采购条款。",
+      "nextCheck": "查 Anthropic 正式政策文本、第三方测试方案、监管听证记录和客户治理要求。",
+      "followUpQuestions": [
+        "Anthropic 是否把这些观点写入正式政策提案？",
+        "监管者是否要求前沿模型提交独立测试或透明度材料？"
+      ],
+      "evidenceThreshold": "还需要正式政策文件、听证记录或独立测试制度，才能升级为可核验政策变化。",
+      "claimBoundary": "不证明公众态度已经改变，也不证明 Anthropic 的监管方案会被采纳。",
+      "counterEvidence": "若后续政策文本没有透明度要求，或第三方测试未落地，应降级为高管舆论回应。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+      "originalUrl": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+      "sourceRole": "媒体背景",
+      "provenance": "TechCrunch 提供 Amodei 公开回应的媒体整理；完整事实、原始引用、外部反应和上下文仍属于 TechCrunch 原文与原始发帖。",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-17T01:53:00+09:00",
+      "freshSourceFact": null,
+      "time": "01:53 JST",
+      "tags": [
+        "AI治理",
+        "监管",
+        "公众信任"
       ],
       "companies": [
         "Anthropic"
-      ]
-    },
-    {
-      "id": "cursor-spacex-acquisition-closed-2026-08-16",
-      "category": "tool",
-      "label": "工具",
-      "title": "Cursor 官方确认已并入 SpaceX，编码 Agent 与算力纵向整合加速",
-      "body": "Cursor 官方称收购已完成，并把 SpaceX 算力、Grok 4.6 和更低运行成本放在同一叙事中。",
-      "summary": "Cursor 官方称收购已完成，并把 SpaceX 算力、Grok 4.6 和更低运行成本放在同一叙事中。",
-      "whyItMatters": "AI 编程工具不再只是 IDE 插件，正在与模型、GPU 资源和企业分发绑定。",
-      "detailBody": "Cursor 官方博客称收购已完成，并把 SpaceX 算力、Grok 4.6 和更低模型运行成本放进同一叙事。该条确认所有权变化和公司自述，不确认客户价格、数据条款、训练使用或迁移成本已经变化。",
-      "trend": "代码 Agent 竞争正从前端体验扩展到模型训练、推理成本和算力控制。",
-      "detailTrend": "代码 Agent 市场正在把 IDE、模型、推理成本和算力所有权捆在一起。用户体验提升可能来自纵向整合，但企业风险也会集中到数据使用、模型选择、价格变化和退出路径。",
-      "whyRanked": "它改变了编码 Agent 市场的所有权和算力结构。",
-      "topReason": "它改变了编码 Agent 市场的所有权和算力结构。",
-      "detailWhyRanked": "它改变了编码 Agent 市场的所有权和算力结构。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要交易文件、企业合同变更、数据政策、价格页和客户留存/迁移证据，才可升级为已验证市场结构变化。。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 24,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 24,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "impact": "工程管理者应重新评估 Cursor 的供应商风险、模型可选项、企业数据边界和退出路径。",
-      "whoShouldCare": "把 Cursor、代码 Agent 或自动 PR 流程接入核心代码库的工程、采购、安全和法务团队。",
-      "readerUse": "把 Cursor、代码 Agent 或自动 PR 流程接入核心代码库的工程、采购、安全和法务团队可用它更新供应商风险表。",
-      "nextCheck": "核对 Cursor 企业条款、数据使用政策、SpaceX/xAI 组织文件、价格页、SOC2/安全材料和客户迁移记录。",
-      "followUpQuestions": [
-        "Cursor 企业客户的数据使用、模型选择和审计条款是否发生变化？",
-        "SpaceX 算力整合是否会改变代码 Agent 的价格和可用性？"
-      ],
-      "evidenceThreshold": "需要交易文件、企业合同变更、数据政策、价格页和客户留存/迁移证据，才能升级为已验证市场结构变化。",
-      "claimBoundary": "不证明 Cursor 用户成本一定下降，也不证明客户数据会被用于 SpaceX 或 xAI 模型训练。",
-      "counterEvidence": "如果企业条款、数据使用政策、价格页和客户迁移记录显示收购后没有模型绑定、数据共享或成本变化，应降级为所有权变更事实。",
-      "source": "Cursor Blog",
-      "sourceName": "Cursor Blog",
-      "sourceId": "cursor-blog",
-      "sourceUrl": "https://cursor.com/blog/joining-spacex",
-      "originalUrl": "https://cursor.com/blog/joining-spacex",
-      "sourceRole": "官方核对",
-      "provenance": "Cursor 官方页面支持收购完成和公司自述方向；价格、数据和客户影响需独立材料验证。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "reference",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-14T09:00:00+09:00",
-      "time": "08/14",
-      "tags": [
-        "Cursor",
-        "SpaceX",
-        "代码 Agent"
-      ],
-      "companies": [
-        "Cursor",
-        "SpaceX",
-        "xAI"
-      ]
-    },
-    {
-      "id": "google-gemini-37-flash-agents-2026-08-16",
-      "category": "model",
-      "label": "模型",
-      "title": "Google 发布 Gemini 3.7 Flash，继续押注编码和 Agent 工作流",
-      "body": "Google 官方称 Gemini 3.7 Flash 面向编码、Agent 和知识工作，年底前以介绍价提供，并接入 Gemini Spark。",
-      "summary": "Google 官方称 Gemini 3.7 Flash 面向编码、Agent 和知识工作，年底前以介绍价提供，并接入 Gemini Spark。",
-      "whyItMatters": "Flash 线从低价模型变成 Agent 生产入口，开发团队需要同时核对价格、评测和安全说明。",
-      "detailBody": "Google 在官方页面说明，3.7 Flash 面向编码、网页开发、文档理解和企业工作流，并在 Spark 与企业入口可用。该条确认发布、价格窗口和自述指标；生产效果仍要看模型卡、第三方评测、账单和客户日志。 页面还列出 Spark、企业入口、安全材料和年底后价格变化，因此读者应把它作为试点清单，而非单纯模型榜单。",
-      "trend": "高频工作马模型正在承担更多 Agent 调度，而不是只做廉价补全。",
-      "detailTrend": "Flash 级模型正在从低成本补全转向可承接代码修复、文件处理和多步工具调用的 Agent 队列。采购方应把模型能力、工具权限、失败恢复、价格到期和安全说明一起评估，而不是只比较榜单。",
-      "whyRanked": "它直接影响开发者模型选择和 Agent 成本表。",
-      "topReason": "它直接影响开发者模型选择和 Agent 成本表。",
-      "detailWhyRanked": "它直接影响开发者模型选择和 Agent 成本表。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要模型卡、公开价格页、第三方代码/Agent benchmark、客户任务日志和成本对账，才可升级为已验证生产性价比提升。。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "impact": "工程平台团队应更新模型矩阵，把 3.7 Flash 的价格、工具调用、代码能力和安全边界列入试点。",
-      "whoShouldCare": "负责代码 Agent、企业自动化、知识工作流和模型采购的平台工程、数据和财务团队。",
-      "readerUse": "负责代码 Agent、企业自动化、知识工作流和模型采购的平台工程、数据和财务团队可用它更新模型评测表。",
-      "nextCheck": "核对 3.7 Flash model card、AI Studio/API 实测、账单记录、客户任务日志和第三方 benchmark。",
-      "followUpQuestions": [
-        "3.7 Flash 的 model card 是否披露新的安全评估和失败模式？",
-        "第三方代码与 Agent 评测能否复现 Google 自述的提升？"
-      ],
-      "evidenceThreshold": "需要模型卡、公开价格页、第三方代码/Agent benchmark、客户任务日志和成本对账，才能升级为已验证生产性价比提升。",
-      "claimBoundary": "不证明 3.7 Flash 在所有编码或 Agent 任务中优于竞品，也不证明介绍价后的长期成本优势。",
-      "counterEvidence": "如果第三方评测、生产日志或账单显示失败率、延迟或成本不稳定，应下调该判断并缩小到官方发布事实。",
-      "source": "Google Keyword AI",
-      "sourceName": "Google Keyword AI",
-      "sourceId": "google-keyword-ai",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-      "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-      "sourceRole": "官方核对",
-      "provenance": "Google 官方页面可核对模型发布、定价窗口、接入入口和自述 benchmark；生产效果仍需外部复现。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "reference",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-13T09:00:00+09:00",
-      "time": "08/13",
-      "tags": [
-        "Gemini",
-        "Agent",
-        "编码模型"
-      ],
-      "companies": [
-        "Google"
-      ]
-    },
-    {
-      "id": "deepmind-weathernext-cyclones-2026-08-16",
-      "category": "research",
-      "label": "研究",
-      "title": "DeepMind WeatherNext 指向 AI 气旋预测新能力",
-      "body": "Google DeepMind 新闻索引列出 WeatherNext 气旋预测突破，显示科学 AI 继续从论文走向灾害应用。",
-      "summary": "Google DeepMind 新闻索引列出 WeatherNext 气旋预测突破，显示科学 AI 继续从论文走向灾害应用。",
-      "whyItMatters": "气候和灾害场景要求 AI 预测可解释、可复现并被气象机构验证，不能只看模型发布。",
-      "detailBody": "Google DeepMind 新闻页列出 WeatherNext 气旋预测突破，本期按官方研究索引信号处理。该条不替代完整论文、数据集、气象机构复现或业务试运行，不能直接外推为灾害预警系统升级。 由于当前可核对材料主要来自官方索引和标题，本期把它列为科学 AI 雷达项，等待完整研究页、论文和气象机构复核。",
-      "trend": "科学 AI 正把基础模型能力转入天气、灾害和公共部门决策支持。",
-      "detailTrend": "科学 AI 的发布门槛应高于普通产品，因为预测会影响公共决策。气旋场景要看跨区域、跨季节、提前期、误报漏报和气象机构业务流程整合。 对公共部门来说，模型改进必须通过业务气象机构、历史灾害数据和应急流程测试，而不是只看官方标题。",
-      "whyRanked": "它提醒科学 AI 的验证标准应高于产品发布标准。",
-      "topReason": "它提醒科学 AI 的验证标准应高于产品发布标准。",
-      "detailWhyRanked": "它提醒科学 AI 的验证标准应高于产品发布标准。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要论文、数据集、气象机构复测、历史回测和业务试运行结果，才可升级为已验证灾害预测能力。。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "官方索引提供线索，但需要完整论文和独立复现才能强化。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "官方索引提供线索，但需要完整论文和独立复现才能强化。"
-      },
-      "impact": "公共部门和保险/物流团队应等待论文、数据集、气象机构复核和业务试运行，再调整流程。",
-      "whoShouldCare": "评估气象预警、灾害响应、保险定价和供应链风险模型的公共部门、研究和风控团队。",
-      "readerUse": "评估气象预警、灾害响应、保险定价和供应链风险模型的公共部门、研究和风控团队可用它列出验证材料。",
-      "nextCheck": "核对 DeepMind 完整文章、论文、开放数据、气象机构复现、提前期指标和历史回测。",
-      "followUpQuestions": [
-        "WeatherNext 气旋预测是否公布完整论文和可复现数据？",
-        "国家气象机构是否会把该模型纳入业务对照测试？"
-      ],
-      "evidenceThreshold": "需要论文、数据集、气象机构复测、历史回测和业务试运行结果，才能升级为已验证灾害预测能力。",
-      "claimBoundary": "不证明 WeatherNext 已可替代国家气象机构模型，也不证明所有气旋路径和强度预测都改善。",
-      "counterEvidence": "如果论文、开放数据、气象机构复测或历史回测显示特定区域、强度或提前期表现不稳定，应降级为研究方向信号。",
-      "source": "Google DeepMind Blog",
-      "sourceName": "Google DeepMind Blog",
-      "sourceId": "google-deepmind-blog",
-      "sourceUrl": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-      "originalUrl": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-      "sourceRole": "官方核对",
-      "provenance": "DeepMind 官方新闻索引支持该研究方向和标题事实；完整能力需论文和气象机构复核。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "reference",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-12T09:00:00+09:00",
-      "time": "08/12",
-      "tags": [
-        "WeatherNext",
-        "科学 AI",
-        "气旋预测"
-      ],
-      "companies": [
-        "Google"
-      ]
-    },
-    {
-      "id": "google-gemini-connected-apps-2026-08-16",
-      "category": "product",
-      "label": "产品",
-      "title": "Gemini 新增更多第三方连接应用，消费 Agent 进入订票、医疗和本地服务",
-      "body": "Google 官方称 Gemini 将连接 Otter.ai、Wix、OpenTable、Ticketmaster、Zocdoc 等服务。",
-      "summary": "Google 官方称 Gemini 将连接 Otter.ai、Wix、OpenTable、Ticketmaster、Zocdoc 等服务。",
-      "whyItMatters": "Gemini 正从问答入口变成跨服务动作层，权限、订购、医疗预约和本地交易都需要更细的审计。",
-      "detailBody": "Google 称 Gemini 将在数周内连接生产力、本地娱乐、音乐、家居和健康类第三方服务。该条确认官方连接清单和推出方向，不证明所有地区已上线，也不证明交易、预约和撤销流程足够可靠。 页面列出生产力、本地娱乐、音乐、家居和健康服务，说明 Gemini 正把第三方动作纳入同一入口。",
-      "trend": "消费级 Agent 的竞争正在转向“连接真实服务并替用户完成动作”。",
-      "detailTrend": "消费 Agent 的竞争正在从回答问题转向连接真实服务并代表用户执行动作。连接越多，权限粒度、交易确认、隐私共享、错误回滚和服务商责任就越需要产品化。",
-      "whyRanked": "它显示 Gemini 正把 Agent 能力推到真实消费流程。",
-      "topReason": "它显示 Gemini 正把 Agent 能力推到真实消费流程。",
-      "detailWhyRanked": "它显示 Gemini 正把 Agent 能力推到真实消费流程。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要产品文档、上线地区列表、授权记录、隐私条款和用户任务完成率，才可升级为已验证消费 Agent 扩张。。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "impact": "产品与隐私团队应检查连接应用的授权粒度、敏感数据共享、交易确认和用户撤销路径。",
-      "whoShouldCare": "负责 Gemini 集成、第三方 OAuth、消费交易、医疗预约和本地服务的产品、隐私和合规团队。",
-      "readerUse": "负责 Gemini 集成、第三方 OAuth、消费交易、医疗预约和本地服务的产品、隐私和合规团队可用它更新权限清单。",
-      "nextCheck": "核对 Google 支持页、逐项服务上线地区、授权弹窗、隐私条款、交易确认和错误处理记录。",
-      "followUpQuestions": [
-        "Gemini 第三方连接会如何显示权限、确认动作和取消路径？",
-        "医疗预约、本地服务和票务场景是否有额外合规或赔付机制？"
-      ],
-      "evidenceThreshold": "需要产品文档、上线地区列表、授权记录、隐私条款和用户任务完成率，才能升级为已验证消费 Agent 扩张。",
-      "claimBoundary": "不证明所有服务已经上线，也不证明 Gemini 能可靠完成复杂交易或医疗预约。",
-      "counterEvidence": "如果上线地区清单、授权日志、隐私条款或用户任务指标显示服务未普遍开放、权限过宽或交易错误率高，应降级为早期连接信号。",
-      "source": "Google Keyword AI",
-      "sourceName": "Google Keyword AI",
-      "sourceId": "google-keyword-ai",
-      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/",
-      "originalUrl": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/",
-      "sourceRole": "官方核对",
-      "provenance": "Google 官方页面支持连接应用清单和推出方向；实际可用性和任务质量需产品侧证据。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "reference",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-12T09:00:00+09:00",
-      "time": "08/12",
-      "tags": [
-        "Gemini App",
-        "连接应用",
-        "消费 Agent"
-      ],
-      "companies": [
-        "Google"
-      ]
-    },
-    {
-      "id": "deepmind-sign-language-sl2t-2026-08-16",
-      "category": "research",
-      "label": "研究",
-      "title": "Google DeepMind 推出手语转文字模型，强调移动端可用性",
-      "body": "Google DeepMind 官方介绍 SL2T 模型，用于面向失聪和听障用户的手语转文字功能。",
-      "summary": "Google DeepMind 官方介绍 SL2T 模型，用于面向失聪和听障用户的手语转文字功能。",
-      "whyItMatters": "辅助技术正在把多模态模型带到手机输入场景，评估重点是语言覆盖、公平性和端侧体验。",
-      "detailBody": "DeepMind 介绍 sign-language-to-text 模型，称其支持面向失聪和听障用户的手语转文字功能。该条确认官方研究和应用方向，不证明所有手语、设备、肤色和真实环境都已稳定覆盖。",
-      "trend": "多模态模型开始进入无障碍输入，而不是只做通用视觉识别。",
-      "detailTrend": "无障碍 AI 的价值在于真实用户是否能稳定使用，而不只是模型是否识别动作。团队要关注语言变体、设备延迟、误识别申诉、隐私处理和用户组织反馈。",
-      "whyRanked": "它把模型进步落到具体无障碍交互。",
-      "topReason": "它把模型进步落到具体无障碍交互。",
-      "detailWhyRanked": "它把模型进步落到具体无障碍交互。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要真实用户测试、语言覆盖清单、端侧性能、错误率和第三方无障碍评估，才可升级为已验证可用性提升。。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "官方页面支持发布事实和自述边界；性能、采用效果或治理效果仍需外部证据。"
-      },
-      "impact": "无障碍产品和移动输入团队应关注模型覆盖、用户测试和本地端隐私处理。",
-      "whoShouldCare": "在手机输入法上线、课堂辅助设备、公共服务柜台和无障碍产品评测中设计手语转文字体验的产品、研究和合规团队。",
-      "readerUse": "在手机输入法上线、课堂辅助设备、公共服务柜台和无障碍产品评测中设计手语转文字体验的产品、研究和合规团队可用它检查无障碍路线。",
-      "nextCheck": "核对支持语言、设备要求、延迟、错误率、真实用户研究、隐私处理和无障碍组织反馈。",
-      "followUpQuestions": [
-        "SL2T 支持哪些手语体系和地区变体？",
-        "端侧推理、隐私和误识别申诉机制是否公开？"
-      ],
-      "evidenceThreshold": "需要真实用户测试报告、支持语言清单、端侧性能数据、错误率统计和第三方无障碍评估，才能升级为已验证可用性提升。",
-      "claimBoundary": "不证明所有手语、地区和用户群体都被覆盖，也不证明误识别风险已充分解决。",
-      "counterEvidence": "如果真实用户测试数据、支持语言清单、端侧性能记录或第三方无障碍评估说明显示误识别率高，应降级为受限研究/早期功能信号。",
-      "source": "Google DeepMind Blog",
-      "sourceName": "Google DeepMind Blog",
-      "sourceId": "google-deepmind-blog",
-      "sourceUrl": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-      "originalUrl": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-      "sourceRole": "官方核对",
-      "provenance": "DeepMind 官方页面支持模型发布和目标用户说明；真实可用性需用户研究和第三方评估。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "reference",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-12T09:00:00+09:00",
-      "time": "08/12",
-      "tags": [
-        "手语",
-        "无障碍",
-        "多模态"
-      ],
-      "companies": [
-        "Google"
-      ]
-    },
-    {
-      "id": "xai-grok-46-agent-coding-2026-08-16",
-      "category": "model",
-      "label": "模型",
-      "title": "xAI 发布 Grok 4.6，把长程 Agent 和视觉交互列为重点",
-      "body": "xAI 官方称 Grok 4.6 面向长程 Agent、编码和知识工作，并在 Cursor、Grok Build、API 等入口提供。",
-      "summary": "xAI 官方称 Grok 4.6 面向长程 Agent、编码和知识工作，并在 Cursor、Grok Build、API 等入口提供。",
-      "whyItMatters": "Grok 从聊天产品扩展到开发者和编码 Agent 入口，采购方要把基准、价格和安全评估一起核对。",
-      "detailBody": "xAI 官方发布 Grok 4.6，称其关注长程 Agent、编码、知识工作和交互式视觉任务，并披露 API 入口与起步价格。该条确认发布和自述指标，性能排名、安全效果和生产成本仍需独立复现。 页面还把 Cursor、Grok Build、API、OpenRouter、Vercel 和 Cloudflare 作为入口，因此读者应同时检查分发路径和供应商绑定。",
-      "trend": "前沿模型竞争继续向“能持续完成多步任务”的 Agent 能力转移。",
-      "detailTrend": "Grok 4.6 把 xAI 的竞争焦点推向长程任务和开发者入口，并与 Cursor/SpaceX 叙事相互支撑。真正的分水岭仍是第三方任务成功率、越权失败、延迟和总成本。",
-      "whyRanked": "它连接了模型升级、Cursor 收购和 SpaceXAI 的开发者入口。",
-      "topReason": "它连接了模型升级、Cursor 收购和 SpaceXAI 的开发者入口。",
-      "detailWhyRanked": "它连接了模型升级、Cursor 收购和 SpaceXAI 的开发者入口。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要独立 benchmark、模型卡、安全评估、生产任务日志和成本对账，才可升级为已验证 Agent 能力提升。。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "官方来源支持发布事实，但核心性能是厂商主张。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "官方来源支持发布事实，但核心性能是厂商主张。"
-      },
-      "impact": "开发平台团队应在试点评估中加入长程任务成功率、安全拒答质量、API 成本和供应商绑定风险。",
-      "whoShouldCare": "评估 Grok、Cursor、OpenRouter、Vercel 或 Cloudflare 模型入口的开发者平台、采购和安全团队。",
-      "readerUse": "评估 Grok、Cursor、OpenRouter、Vercel 或 Cloudflare 模型入口的开发者平台、采购和安全团队可用它做模型试点清单。",
-      "nextCheck": "核对 xAI 模型卡、API 文档、第三方 benchmark、红队报告、实际账单和客户任务成功率。",
-      "followUpQuestions": [
-        "Grok 4.6 的第三方评测是否能复现 xAI 自述的 Agent 与代码指标？",
-        "高风险图像、代码和安全场景的防护记录是否公开？"
-      ],
-      "evidenceThreshold": "需要独立 benchmark、模型卡、安全评估、生产任务日志和成本对账，才能升级为已验证 Agent 能力提升。",
-      "claimBoundary": "不证明 Grok 4.6 全面追平或超过 GPT、Claude、Gemini，也不证明安全防护在高风险场景足够。",
-      "counterEvidence": "如果第三方评测或客户日志显示长程任务失败、越权或成本偏高，应下调模型竞争判断。",
-      "source": "xAI News",
-      "sourceName": "xAI News",
-      "sourceId": "xai-news",
-      "sourceUrl": "https://x.ai/news/grok-4-6",
-      "originalUrl": "https://x.ai/news/grok-4-6",
-      "sourceRole": "厂商主张",
-      "provenance": "xAI 官方页面支持发布、可用入口、价格和自述 benchmark；排名与安全效果需独立验证。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "reference",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "vendor_claim",
-      "publishedAt": "2026-08-12T09:00:00+09:00",
-      "time": "08/12",
-      "tags": [
-        "Grok",
-        "Agent",
-        "编码"
-      ],
-      "companies": [
-        "xAI",
-        "SpaceX",
-        "Cursor"
-      ]
-    },
-    {
-      "id": "google-amie-video-consultations-2026-08-16",
-      "category": "research",
-      "label": "研究",
-      "title": "Google AMIE 演示实时视频问诊能力，但仍是研究系统",
-      "body": "Google Research 称 AMIE 基于 Gemini 和 Project Astra，能在模拟视频问诊中处理视觉、听觉和诊断推理。",
-      "summary": "Google Research 称 AMIE 基于 Gemini 和 Project Astra，能在模拟视频问诊中处理视觉、听觉和诊断推理。",
-      "whyItMatters": "医疗 AI 从文本问答走向多模态问诊，但临床部署必须等待真实世界研究、监管和责任边界。",
-      "detailBody": "Google 称 AMIE 基于 Gemini 和 Project Astra，在模拟视频问诊中处理视觉、听觉和诊断推理，并强调仍是研究系统。该条确认研究演示和边界，不等同于真实临床部署或监管许可。 页面同时说明模拟研究、临床评估维度和研究系统边界，因此本期只把它当作医疗 AI 研究进展。",
-      "trend": "医疗 AI 正从“写摘要”推进到多模态临床交互。",
-      "detailTrend": "医疗 AI 从文本问答进入多模态问诊后，验证难度显著升高。模拟问诊可以提示方向，但真实部署需要医生介入、伦理审查、监管许可、患者安全和偏差评估。",
-      "whyRanked": "它是多模态医疗 Agent 的高风险验证样本。",
-      "topReason": "它是多模态医疗 Agent 的高风险验证样本。",
-      "detailWhyRanked": "它是多模态医疗 Agent 的高风险验证样本。 本期采用该条，是因为来源给出可核对的新事实或明确报道线索；升级判断需要同行评审论文、临床试验、伦理材料、真实患者数据和监管文件，才可升级为已验证临床部署信号。。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方研究来源清楚标注研究边界，适合作为高风险医疗 AI 观察。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方研究来源清楚标注研究边界，适合作为高风险医疗 AI 观察。"
-      },
-      "impact": "医疗产品和医院创新团队应把 AMIE 作为研究观察，而不是采购或临床替代依据。",
-      "whoShouldCare": "评估远程问诊、病历生成、临床辅助和医疗 AI 合规路径的医院、产品、法务和研究团队。",
-      "readerUse": "评估远程问诊、病历生成、临床辅助和医疗 AI 合规路径的医院、产品、法务和研究团队可用它更新研究观察表。",
-      "nextCheck": "核对论文、研究设计、样本规模、伦理审查、医生评估表、真实患者试验和监管路径。",
-      "followUpQuestions": [
-        "AMIE 的完整论文是否披露模拟患者、医生评估和失败案例？",
-        "Google 是否会公布真实世界临床试验或监管路线？"
-      ],
-      "evidenceThreshold": "需要同行评审论文、临床试验、伦理材料、真实患者数据和监管文件，才能升级为已验证临床部署信号。",
-      "claimBoundary": "不证明 AMIE 可用于真实诊疗，也不证明它比医生在真实场景更安全或更有效。",
-      "counterEvidence": "如果同行评审论文数据、伦理审批文件、真实患者试验记录或安全审计说明显示偏差、漏诊或沟通风险，应降级为模拟研究信号。",
-      "source": "Google Keyword AI",
-      "sourceName": "Google Keyword AI",
-      "sourceId": "google-keyword-ai",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
-      "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
-      "sourceRole": "研究原文",
-      "provenance": "Google 官方研究页支持 AMIE 研究演示和模拟评估边界；临床效果需论文和真实世界验证。",
-      "trustLevel": "official",
-      "verificationStatus": "已核验",
-      "originalDependency": "reference",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "publishedAt": "2026-08-11T09:00:00+09:00",
-      "time": "08/11",
-      "tags": [
-        "医疗 AI",
-        "多模态",
-        "AMIE"
-      ],
-      "companies": [
-        "Google"
       ]
     }
   ]
