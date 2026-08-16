@@ -24,7 +24,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 3 | Complete | `262ed6b` | `coverageMix` now has a tiny-bucket merge rule: keep at most one single-item bucket and no more than four scan cues, with validation and homepage preflight coverage. |
 | Day 4 | Complete | `f2defb8` | Current `categories[].description` copy now names only visible category anchors, and data validation rejects stale anchors from another current category. |
 | Day 5 | Complete | `4483450` | Short batches now use compact `editorialInterpretation` copy that states the published safe-signal count, frames fewer than 10 items as a quality-gate result, and names unsafe padding that was not used. |
-| Day 6 | Complete | `pending` | Omitted planned topics now point readers to archive, tag-page, historical, or already-selected related background only, with a runtime validator and homepage preflight check that blocks unsupported fresh claims. |
+| Day 6 | Complete | `2d2832e` | Omitted planned topics now point readers to archive, tag-page, historical, or already-selected related background only, with a runtime validator and homepage preflight check that blocks unsupported fresh claims. |
 
 ## Historical Guard Anchors
 

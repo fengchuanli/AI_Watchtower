@@ -1,3 +1,33 @@
+## 2026-08-16 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 6 homepage edition quality task. Reviewed omitted planned-topic copy so each skipped topic tells readers where to look next without introducing unsupported fresh facts.
+- Changed files:
+  - `app.js`
+  - `docs/news-data-format.md`
+  - `docs/homepage-edition-preflight.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Rewrote planned-topic `fallback` copy so omitted Agent, model, enterprise, policy, infrastructure, and developer-tooling topics point to archive, tag-page, historical, or already-selected related background only.
+  - Added `isUsefulOmittedTopicFallback` in `app.js` so homepage data validation rejects omitted-topic fallback copy that lacks a next reading path or implies unsupported fresh confirmation.
+  - Documented the omitted-topic fallback rule in `docs/news-data-format.md` and added `omittedTopicFallback` to `docs/homepage-edition-preflight.md`.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 6 is tracked and Day 7 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, current `data/news.json`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and relevant runtime/validator code.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 9 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `2d2832e` (`完善省略主题阅读指引`); this follow-up note records the run and push blocker.
+- Git note: push not yet attempted after the log follow-up; remote sync still depends on GitHub DNS/network recovery.
+
 ## 2026-08-16 17:00 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-16`，发布 9 条安全非重复 AI 情报，聚焦 Gemini 3.7 Flash、Claude 文本水印、Cursor 并入 SpaceX、Grok 4.6、Gemini 连接应用、AMIE、手语 AI、WeatherNext 和 Grok 相关安全诉讼。
