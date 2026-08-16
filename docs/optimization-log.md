@@ -1,3 +1,26 @@
+## 2026-08-16 23:05 JST
+
+- Focus: 运行 AI Watchtower 08:00 JST 新闻情报补充核查；当前本地首页已是更晚的 `news-1700-2026-08-16`，因此未回退早间版，而是在当前最新版上补入 1 条同日安全非重复可靠媒体综述信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI、Anthropic、Google/DeepMind、Mistral、Hugging Face、TechCrunch、Axios、The Verge 和历史 URL。
+  - 跳过已在历史中收录的 OpenAI Ultrafast、Anthropic 多 Agent、ChatGPT Ads、Daybreak、旧芯片和旧开放模型候选，避免重复 URL 或重发旧事实。
+  - 新增 The Verge 8 月 16 日 Agent 越界安全综述，作为 `媒体背景` / `reported` / `originalDependency: must-read`；要求原始披露、测试日志、模型系统卡、监管材料和第三方复盘才能升级为行业级 Agent 安全基准变化。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: pending - expected commit note `补充08点AI新闻安全综述`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit and may depend on DNS/network recovery.
+
 ## 2026-08-16 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 6 homepage edition quality task. Reviewed omitted planned-topic copy so each skipped topic tells readers where to look next without introducing unsupported fresh facts.
