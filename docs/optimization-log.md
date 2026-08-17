@@ -5698,6 +5698,28 @@ Use this file to record every automated or manual optimization. New entries go a
   - Attempted `git push origin main`, but GitHub DNS resolution failed in this environment.
 - Commit: `更新17点AI新闻情报`
 
+## 2026-08-17 23:03 JST
+
+- Focus: Supplemented the current 17:00 JST AI news snapshot for the 08:00 automation run without downgrading the edition.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Attempted `git pull --ff-only origin main` before editing, but GitHub DNS resolution failed (`ssh: Could not resolve hostname github.com: -65563`).
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide.
+  - Checked TechCrunch AI current index and specific Wispr/Meta/Anthropic/OpenRouter URLs through the browser, plus official/RSS candidate paths where reachable.
+  - Added only 1 safe non-duplicate signal: TechCrunch on Wispr's reported $280M Series B, $2B valuation, Canto model, and move beyond dictation into meeting/workflow tools.
+  - Kept the item as `媒体背景` / `reported` / `originalDependency: must-read`; requires official announcement, investor statement, customer metrics, privacy/security docs, and independent accuracy tests before upgrading.
+  - Did not use old items, podcast/community discussion, random pages, paywalled/login-walled body text, or duplicate Meta/Anthropic/OpenRouter coverage to pad the issue toward 10 items.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-site.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, and `tags.html` with Python's HTML parser.
+- Commit: `补充08点AI新闻情报`
+
 ## 2026-06-09 14:03 JST
 
 - Focus: Improved product accessibility and keyboard behavior for the homepage news filter controls.
