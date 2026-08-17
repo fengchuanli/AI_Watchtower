@@ -671,6 +671,15 @@ if (
 if (
   !/Candidate Intake Format/.test(candidateIntakeFormat) ||
   !/candidateUrl/.test(candidateIntakeFormat) ||
+  !/Intake Scratch Template/.test(candidateIntakeFormat) ||
+  !/During 08:00 and 17:00 JST news runs/.test(candidateIntakeFormat) ||
+  !/originalSourceSearch: media-started \/ replaced-with-original \/ no-original-found \/ not-needed/.test(
+    candidateIntakeFormat,
+  ) ||
+  !/duplicateStatus: repeated-url \/ near-title-review \/ fresh-source-fact \/ manual-clear/.test(
+    candidateIntakeFormat,
+  ) ||
+  !/priorityScore \/ priorityReason/.test(candidateIntakeFormat) ||
   !/sourceBackedFact/.test(candidateIntakeFormat) ||
   !/aiRelevance/.test(candidateIntakeFormat) ||
   !/proofBoundary/.test(candidateIntakeFormat) ||
@@ -878,6 +887,9 @@ if (
   !/Commit/.test(updateRunChecklist) ||
   !/Push/.test(updateRunChecklist) ||
   !/shortBatchReason/.test(updateRunChecklist) ||
+  !/scratch template/.test(updateRunChecklist) ||
+  !/originalSourceSearch/.test(updateRunChecklist) ||
+  !/priorityReason/.test(updateRunChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(updateRunChecklist) ||
   !/validate-data\.mjs/.test(updateRunChecklist) ||
   !/validate-site\.mjs/.test(updateRunChecklist) ||
@@ -886,9 +898,9 @@ if (
   !/update-run-checklist\.md/.test(candidateIntakeFormat) ||
   !/update-run-checklist\.md/.test(candidateToNewsHandoff) ||
   !/update-run-checklist\.md/.test(readme) ||
-  !/Day 7[\s\S]*update-run-checklist\.md/.test(optimizationDecisionIndex)
+  !/Day 7[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex)
 ) {
-  errors.push("News update workflow must include an update-run checklist for discovery, intake, duplicate reporting, drafting, validation, commit, and push status.");
+  errors.push("News update workflow must include an intake scratch template plus an update-run checklist for discovery, intake, duplicate reporting, drafting, validation, commit, and push status.");
 }
 
 if (

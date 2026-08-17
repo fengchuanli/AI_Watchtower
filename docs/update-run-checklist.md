@@ -26,7 +26,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Step | Required status note |
 | --- | --- |
 | Source discovery | Name which official, research, regulator, reliable-media, and registered source surfaces were checked. Do not just write "searched the web." |
-| Candidate intake | Confirm that draftable URLs have `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, and `draftingDecision`. |
+| Candidate intake | Confirm that draftable URLs used the `docs/candidate-intake-format.md` scratch template and have `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `originalSourceSearch`, `duplicateStatus`, `copyrightPosture`, `priorityReason`, and `draftingDecision`. |
 | Original-source search | For media-started candidates, say whether an official, filing, paper, regulator, customer-side, dataset, or benchmark original replaced the media report. |
 | Duplicate reporting | Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists, or record the manual current/history duplicate check when no file exists. |
 | Priority and mix | Note whether `docs/candidate-priority-rubric.md` and `docs/source-diversity-triage-note.md` changed the drafting order or caused a held candidate. |

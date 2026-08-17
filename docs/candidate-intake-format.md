@@ -38,6 +38,30 @@ Each candidate record should answer these fields in Chinese unless the value is 
 - `draftingDecision`: `draft`, `hold`, or `reject`.
 - `decisionReason`: Why the editor chose that decision. For `hold` or `reject`, start with a reason code from `docs/candidate-hold-reject-reasons.md`, then add one short Chinese sentence naming the concrete blocker.
 
+## Intake Scratch Template
+
+During 08:00 and 17:00 JST news runs, paste this short block into the run note before drafting. It is a scratch template, not a public article and not a place to paste source paragraphs. Fill one block per candidate, then convert only `draft` items through `docs/candidate-to-news-handoff.md`.
+
+```text
+Candidate:
+- candidateUrl:
+- sourceId / sourceName / sourceRole:
+- publishedAt / discoveryRoute:
+- sourceBackedFact: 一句话，只写来源直接支持的最小事实。
+- aiRelevance: 一句话，写这件事今天帮中文 AI 读者判断什么。
+- proofBoundary: 一句话，写该来源不能证明什么。
+- nextIndependentCheck: 写下一步应看官方文件、监管文本、客户指标、审计、benchmark、论文复现、filing、合同或第三方测试中的哪一种。
+- originalSourceSearch: media-started / replaced-with-original / no-original-found / not-needed，并写一句结果。
+- duplicateStatus: repeated-url / near-title-review / fresh-source-fact / manual-clear，并写当前与历史核查结果。
+- copyrightPosture: 写如何只用最小事实和本站解读，避免替代原文。
+- priorityScore / priorityReason:
+- batchDiversityNote:
+- draftingDecision: draft / hold / reject
+- decisionReason: draft 写一句入选理由；hold 或 reject 用 docs/candidate-hold-reject-reasons.md 的代码开头。
+```
+
+Keep scratch notes brief. If the editor needs long source detail to make the candidate useful, hold or reject it instead of drafting from copied article structure.
+
 ## Decision Rules
 
 Use `draft`, `hold`, or `reject` as the intake decision. Use `draft` only when the candidate has a source-backed fact, clear AI relevance, a named proof boundary, a next independent check, no unresolved duplicate, and a copyright-safe path to concise Chinese explanation.
