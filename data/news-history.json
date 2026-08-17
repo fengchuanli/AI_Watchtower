@@ -1,8 +1,798 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17",
-  "totalItems": 461,
+  "updatedAt": "2026-08-18",
+  "totalItems": 469,
   "editions": [
+    {
+      "id": "news-1700-2026-08-18",
+      "date": "2026-08-18",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦 AI 基础设施、Agent 标准、网络安全防守、模型公司商业化与数据治理。",
+      "operationalStatus": "已查 source policy、OpenAI/NVIDIA 官方页、Axios 技术索引与历史 URL；git pull 受 GitHub DNS 阻塞。",
+      "editorialInterpretation": "本期发布 8 条安全非重复信号，少于 10 条是质量门槛结果；未用旧稿、播客、付费墙、登录墙、社区讨论、重复报道或弱证据补量。",
+      "readerFrame": {
+        "headline": "阅读本期：把 AI 基础设施、Agent 标准、商业化和数据治理分开核验",
+        "whyItMatters": "这 8 条把 OpenAI/NVIDIA 的算力园区、OpenAI 安全和政策资助、A2A 标准、Anthropic 收入、Google 数据资产和 OpenRouter 交易进展放在一起；它们是基础设施与治理雷达，不是所有项目已落地的证明。",
+        "mobile": {
+          "headline": "手机先看四条线",
+          "summary": "算力、电力、Agent 协议、收入和数据资产是本期重点。",
+          "primaryUses": [
+            "基础设施团队查算力园区。",
+            "安全团队查防守 Agent。",
+            "平台团队查 A2A 和 OpenRouter。"
+          ],
+          "proofBoundary": "尚未证明容量建成、标准成为事实标准、收入已审计或数据使用边界已解决。"
+        },
+        "useThisIssueFor": [
+          "基础设施、采购和法务团队用本期更新数据中心容量、电力、租约、担保和社区承诺清单。",
+          "安全和工程平台团队用本期检查 AI Agent 进入代码、配置、告警和修复流程的权限边界。",
+          "开发平台团队用本期跟踪 A2A、MCP、OpenRouter 和模型网关的互操作与供应商锁定风险。",
+          "政策、隐私和数据治理团队用本期核对 AI 经济政策资助、破产数据资产和训练数据使用边界。"
+        ],
+        "notProvenYet": [
+          "不证明 PORTS-Pike 8 IT-GW 已建成、融资和许可无风险，或 NVIDIA 担保没有残值风险。",
+          "不证明 A2A 已成为事实标准、OpenRouter 交易已关闭，或 Anthropic 收入数字已审计。",
+          "不证明 Google 获得的 Spirit 数据都会用于模型训练，也不证明 OpenAI 资助项目会形成正式政策。"
+        ]
+      },
+      "changeSummary": {
+        "headline": "相较 8 月 17 日版，本期从个人 Agent 叙事转向算力园区、标准治理、商业化和数据资产",
+        "freshFacts": [
+          "本期新增来源事实：OpenAI 官方宣布加入 PORTS-Pike，并披露约 8 IT-GW 容量、社区基金、学生 Codex credits 和报告承诺。",
+          "本期新增来源事实：NVIDIA 官方解释其将为 PORTS-Pike 锁定 land, power and shell，并投资 SB Energy。",
+          "本期新增来源事实：OpenAI 发布 Defender’s Window 和 14 个政策资助项目。",
+          "本期新增来源事实：Axios 报道 A2A 转入 Agentic AI Foundation、Anthropic 收入运行率和 Google/Spirit 数据资产。",
+          "本期新增来源事实：Axios 给出 Stripe/OpenRouter 交易的新增金额与已达成报道口径。"
+        ],
+        "repeatedContext": [
+          "延续背景：上一版已覆盖 OpenRouter 并购传闻、Anthropic 信任回应、Meta 个人超级智能和 Wispr 语音工作流。",
+          "仍是同一主线：AI 竞争继续从模型能力扩展到算力、资本、协议、数据和治理。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对算力与融资结构",
+          "count": 3,
+          "meaning": "用来检查 AI 园区容量、电力、担保、租约、收入运行率和资本市场叙事。"
+        },
+        {
+          "label": "核对安全与政策边界",
+          "count": 2,
+          "meaning": "用来更新防守 Agent、政策资助、公共研究和社会韧性观察清单。"
+        },
+        {
+          "label": "核对 Agent 与数据入口",
+          "count": 3,
+          "meaning": "用来检查 A2A 互操作、OpenRouter 供应商风险和企业数据资产 AI 使用边界。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方与 Axios 双来源集中",
+        "note": "本期 3/8 来自 OpenAI 官方、4/8 来自 Axios，适合做基础设施和治理雷达，不等同完整市场覆盖。",
+        "nextCheck": "查 SEC/法院/许可文件、项目公告、技术规范、客户通知、审计报告和监管记录。"
+      },
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 4,
+        "share": "4/8",
+        "note": "Axios 当前技术索引贡献 4/8，适合做媒体雷达，不等同官方确认或完整市场覆盖。",
+        "nextCheck": "用公司公告、法院文件、SEC 文件、协议规范、客户通知和监管记录补强。"
+      },
+      "trendNotes": [
+        {
+          "topic": "compute-as-industrial-policy",
+          "label": "算力变成产业政策对象",
+          "note": "跨期看，数据中心、电力、NVIDIA 融资平台和 PORTS-Pike 连续把 AI 竞争推向能源与区域发展。",
+          "boundary": "不证明所有项目都会按期交付，仍需许可文件、并网协议、融资文件、建设进度报告和社区年度报告。"
+        },
+        {
+          "topic": "agent-protocol-stack",
+          "label": "Agent 入口进入协议化阶段",
+          "note": "跨期看，Gemini 连接应用、Cursor/Grok、OpenRouter 和 A2A 都在把 Agent 从单点产品推向可组合平台。",
+          "boundary": "不证明协议已统一市场，仍需官方规范版本、兼容测试套件、SDK 采用数据和生产案例。"
+        },
+        {
+          "topic": "ai-security-operating-model",
+          "label": "安全运营开始被 AI 重写",
+          "note": "跨期看，Hugging Face 事件、Claude 水印、Agent 越界和 Defender’s Window 都把安全从原则讨论推向流程改造。",
+          "boundary": "不证明自动化防守一定有效，仍需第三方评估、事故复盘、日志指标和审计材料。"
+        },
+        {
+          "topic": "data-and-commercialization",
+          "label": "数据与收入成为模型公司硬指标",
+          "note": "跨期看，Anthropic 收入、OpenAI 基础设施、Spirit 数据资产和 OpenRouter 交易都在强化商业化与数据来源核查。",
+          "boundary": "不证明收入已审计、数据使用合法完整或交易已关闭，仍需公司文件、法院文件和监管材料。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "infrastructure",
+          "label": "AI 基础设施证据增强",
+          "status": "stronger",
+          "previousPattern": "此前多期覆盖天然气、电网、NVIDIA 融资平台和数据中心成本。",
+          "currentSignal": "本期新增 OpenAI/NVIDIA/SB Energy PORTS-Pike 官方来源。",
+          "signalDirection": "增强：从媒体与市场讨论进入具体园区、租约、容量和担保结构。",
+          "stillUnproven": "仍需许可、融资文件、并网协议、SEC 文件和年度进度报告。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "模型入口与 Agent 协议继续升温",
+          "status": "stronger",
+          "previousPattern": "上一版覆盖 OpenRouter 并购报道和个人 Agent 叙事。",
+          "currentSignal": "本期新增 Axios 对 OpenRouter 的交叉报道和 A2A 治理迁移。",
+          "signalDirection": "增强：开发入口从模型网关扩展到跨 Agent 标准。",
+          "stillUnproven": "仍需交易文件、客户通知、协议版本、兼容测试和生产集成数据。"
+        },
+        {
+          "topic": "policy",
+          "label": "治理从信任扩展到经济和安全流程",
+          "status": "stronger",
+          "previousPattern": "上一版覆盖 Anthropic 信任回应与 Meta 个人 Agent 外部质疑。",
+          "currentSignal": "本期新增 OpenAI 安全防守文章、政策资助和 Google 数据资产报道。",
+          "signalDirection": "增强：政策主题进入安全运营、经济韧性和数据资产使用。",
+          "stillUnproven": "仍需第三方评估、研究报告、法院文件、监管记录和数据使用政策。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "从产品叙事转向基础设施和安全治理",
+          "lastMention": "历史版覆盖 GPT-5.6、Health、Daybreak、Hugging Face 事件和企业采用。",
+          "whatChanged": "本期新增 PORTS-Pike、Defender’s Window 和政策资助三条官方来源。",
+          "stillUnproven": "仍需许可文件、技术报告、第三方评估、项目成果和年度披露。"
+        },
+        {
+          "company": "NVIDIA",
+          "label": "AI 工厂融资角色",
+          "lastMention": "历史版覆盖 NVIDIA AI compute financing、SSI 合作和开放安全联盟。",
+          "whatChanged": "本期新增 PORTS-Pike 担保、LPS 叙事和 SB Energy 投资。",
+          "stillUnproven": "仍需 SEC 文件、担保合同、交付容量、利用率和转租数据。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "商业化指标进入 IPO 雷达",
+          "lastMention": "上一版覆盖 Anthropic 信任回应和 Claude 水印。",
+          "whatChanged": "本期新增 Axios 对年化收入运行率超过 650 亿美元的报道。",
+          "stillUnproven": "仍需公司披露、审计收入、IPO 文件、客户分布和毛利率数据。"
+        },
+        {
+          "company": "Google",
+          "label": "标准与数据治理",
+          "lastMention": "历史版覆盖 Gemini 模型、连接应用和 DeepMind 研究。",
+          "whatChanged": "本期新增 A2A 迁移报道和 Spirit 破产数据资产报道。",
+          "stillUnproven": "仍需官方项目公告、规范版本、法院文件、数据使用政策和监管回应。"
+        },
+        {
+          "company": "Stripe",
+          "label": "支付平台继续进入模型网关叙事",
+          "lastMention": "上一版覆盖 Stripe/OpenRouter 并购传闻。",
+          "whatChanged": "本期新增 Axios 对交易达成和金额口径的交叉报道。",
+          "stillUnproven": "仍需双方公告、监管申报、交易文件、客户通知和价格页。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方与厂商来源",
+          "count": 4,
+          "role": "用作官方来源事实核对：确认 OpenAI/NVIDIA 已发布项目、政策和安全主张；不要用它独立证明建设交付、经济效果或防守收益。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 4,
+          "role": "用来建立 A2A、Anthropic 收入、Google 数据资产和 OpenRouter 交易进展雷达；完整事实仍需原文、公司文件、法院文件和官方公告。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 3,
+          "itemIds": [
+            "openai-ports-pike-ohio-ai-campus-2026-08-18",
+            "axios-anthropic-revenue-run-rate-2026-08-18",
+            "nvidia-ports-pike-lps-ai-factory-2026-08-18"
+          ],
+          "meaning": "用来检查算力容量、电力、融资、收入质量和长期供给风险。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "count": 3,
+          "itemIds": [
+            "openai-defenders-window-cybersecurity-2026-08-18",
+            "openai-policy-grants-intelligence-age-2026-08-18",
+            "axios-google-spirit-airlines-data-ai-2026-08-18"
+          ],
+          "meaning": "用来更新安全治理、经济韧性、数据资产和隐私合规核查清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发工具",
+          "count": 2,
+          "itemIds": [
+            "axios-a2a-agentic-ai-foundation-2026-08-18",
+            "axios-stripe-openrouter-deal-progress-2026-08-18"
+          ],
+          "meaning": "用来检查 Agent 互操作、模型网关、计费入口和供应商锁定风险。"
+        }
+      ],
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期由 OpenAI/NVIDIA 官方主张和 Axios 可靠媒体报道共同构成，适合建立核查队列。",
+        "doNotConclude": "不能直接断言算力园区已建成、担保风险已消失、A2A 已成事实标准、Anthropic 收入已审计、Spirit 数据使用已无争议或 OpenRouter 交易已关闭。",
+        "useInstead": "应该用许可文件、SEC 文件、法院案卷、公司公告、协议规范、兼容测试、审计报告、客户通知和监管记录升级判断。"
+      },
+      "itemCount": 8,
+      "items": [
+        {
+          "id": "openai-ports-pike-ohio-ai-campus-2026-08-18",
+          "category": "funding",
+          "label": "融资",
+          "title": "OpenAI 锁定俄亥俄 8GW AI 园区容量",
+          "body": "OpenAI 把长期算力需求绑定到 PORTS-Pike 园区和 NVIDIA 基础设施。",
+          "summary": "OpenAI 官方称已与 SB Energy、NVIDIA 和美国能源部推进 PORTS-Pike 项目，目标取得约 8 IT-GW 容量。",
+          "whyItMatters": "这把模型竞争从云租赁推进到土地、电力、机房和社区承诺；但容量、许可、融资和电力建设仍需逐年核验。",
+          "detailBody": "OpenAI 称将作为 PORTS-Pike 的 20 年租户取得约 8 IT-GW 容量，首批 800MW 预计 2028 年可用，并承诺社区基金、学生 Codex credits、用水和年度报告。",
+          "trend": "前沿模型公司的护城河正在具体化为电力、机房和长期租约。",
+          "detailTrend": "如果这个项目按计划推进，AI 竞争会更依赖能源、输电、建设许可和资本结构，而不只是模型榜单；采购和政策团队需要把算力来源纳入供应链和社区影响审查。",
+          "whyRanked": "它是本期最清晰的 AI 基础设施约束信号。",
+          "topReason": "官方确认的容量、租约和社区承诺需要用许可、融资和进度报告继续核验。",
+          "detailWhyRanked": "OpenAI 原文给出约 8 IT-GW、20 年租户角色、2028 首批容量、社区基金、学生 Codex credits 和年度报告承诺；这些源事实让项目足以进入首页，因为它把模型竞争转成可核查的能源、租约和社区责任清单，但还不是建设完成证明。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方来源确认项目框架，但大量执行风险仍依赖未来许可、融资和建设进度。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方来源确认项目框架，但大量执行风险仍依赖未来许可、融资和建设进度。"
+          },
+          "impact": "负责算力采购、政策风险、数据中心选址和供应链的团队应把能源与社区承诺纳入 AI 路线图。",
+          "whoShouldCare": "负责大模型算力采购、数据中心选址、能源合规、公共事务和长期云成本规划的基础设施/法务/政策团队。",
+          "readerUse": "基础设施和采购团队用来更新长期容量、能源、社区承诺、租约和供应商集中度清单。",
+          "nextCheck": "查 AEP/DOE 许可、环境评审、SB Energy 融资文件、年度用水/用电报告和 NVIDIA 技术白皮书。",
+          "followUpQuestions": [
+            "首批 800MW 是否按 2028 年节点取得许可和并网条件？",
+            "OpenAI、SB Energy 和 NVIDIA 是否披露更多租约、担保和融资文件？",
+            "年度报告会如何量化用水、用电、当地雇佣和社区基金支出？"
+          ],
+          "evidenceThreshold": "还需要许可文件、融资文件、并网协议和年度进度报告，才能升级为已验证的长期 AI 算力交付项目。",
+          "claimBoundary": "不证明 8 IT-GW 已全部建成，也不证明电力、用水、社区和融资风险已经消失。",
+          "counterEvidence": "若许可文件显示延迟、融资文件收紧、并网协议变更、年度报告缺失或实际容量交付推迟，应降级为长期意向项目。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/openai-joins-ports-pike-project/",
+          "originalUrl": "https://openai.com/index/openai-joins-ports-pike-project/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI 官方页可核对其项目参与、容量目标、租户角色、社区承诺和披露计划；建设进度、融资和外部影响仍需独立文件。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-18T17:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "17:00 JST",
+          "tags": [
+            "AI 基础设施",
+            "数据中心",
+            "算力"
+          ],
+          "companies": [
+            "OpenAI",
+            "SB Energy",
+            "NVIDIA"
+          ]
+        },
+        {
+          "id": "openai-defenders-window-cybersecurity-2026-08-18",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI 要求防守方加速采用 AI 安全 Agent",
+          "body": "OpenAI 把 Hugging Face 事件后的网络安全窗口定义为需要立即行动。",
+          "summary": "OpenAI 安全文章称模型正能自动化部分真实攻击路径，并建议组织用 Agent 检查代码、配置、告警和漏洞积压。",
+          "whyItMatters": "这把 AI 安全从模型发布后的解释，推进到企业防守流程重构；但具体效果仍需事故报告、审计和客户侧指标验证。",
+          "detailBody": "OpenAI 的 Greg Brockman 以 Hugging Face 事件为背景，提出让安全团队用 Agent 做代码审查、配置检查、漏洞分流、修复建议和取证准备，同时保留高影响决策的人类责任。",
+          "trend": "AI 安全正在从“限制模型”转向“用模型防守模型”。",
+          "detailTrend": "当攻击者和防守者都使用更强模型时，安全差距会转化为流程速度差距；企业需要先从只读评估、CI 审查和漏洞积压分流开始，而不是直接自动化高风险处置。",
+          "whyRanked": "它给企业安全团队一个可执行的 Agent 风险检查表。",
+          "topReason": "官方建议需要用真实告警、修复时延和事故复盘验证。",
+          "detailWhyRanked": "OpenAI 原文以 Hugging Face 事件为背景，列出代码审查、告警分流、漏洞积压、受控修复和取证准备步骤；这些源事实可用于安全团队建立试点路线，因为它把抽象 AI 风险变成流程改造清单，但仍需第三方效果评估。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方安全建议清晰，读者可操作性强，但仍需外部效果数据。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方安全建议清晰，读者可操作性强，但仍需外部效果数据。"
+          },
+          "impact": "安全负责人应重新评估 Agent 可访问的代码、日志、云配置和修复权限。",
+          "whoShouldCare": "负责 SOC、应用安全、云安全、CI 审查、漏洞管理和 AI 工具准入的安全/工程平台团队。",
+          "readerUse": "安全团队用来制定从只读扫描到受控自动修复的分阶段 Agent 安全路线。",
+          "nextCheck": "查 OpenAI 后续技术报告、METR/Redwood 评估、企业试点数据、审计日志和事故复盘。",
+          "followUpQuestions": [
+            "OpenAI 是否发布 Hugging Face 事件完整技术报告？",
+            "第三方评估会如何界定模型能力、失败模式和防守收益？",
+            "企业把 Agent 接入 CI 和告警系统后，误报、漏报和修复时延是否改善？"
+          ],
+          "evidenceThreshold": "还需要第三方评估、企业试点指标和事故后复盘，才能升级为已验证的 AI 安全运营改进路径。",
+          "claimBoundary": "不证明安全 Agent 可无人值守处理高风险事件，也不证明 OpenAI 的方案适合所有组织。",
+          "counterEvidence": "若第三方评估报告显示误报升高、审计日志出现权限越界、修复回归测试失败或事故复盘不支持防守收益，应收窄判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/the-defenders-window/",
+          "originalUrl": "https://openai.com/index/the-defenders-window/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方文章可证明其安全主张、建议步骤和自述实践；效果、通用性和风险控制需要第三方审计或客户数据。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-18T16:55:00+09:00",
+          "freshSourceFact": null,
+          "time": "16:55 JST",
+          "tags": [
+            "AI 安全",
+            "安全 Agent",
+            "网络防御"
+          ],
+          "companies": [
+            "OpenAI",
+            "Hugging Face"
+          ]
+        },
+        {
+          "id": "openai-policy-grants-intelligence-age-2026-08-18",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI 资助 14 个 AI 经济韧性政策项目",
+          "body": "OpenAI 把 AI 政策叙事延伸到就业、税收、能源、医疗和研究机构韧性。",
+          "summary": "OpenAI 官方宣布向 14 个独立项目提供 100 万美元资金和最高 100 万美元 API credits，用于研究 AI 经济机会与社会韧性。",
+          "whyItMatters": "前沿实验室正在把政策影响力从模型安全扩展到经济分配和公共服务议题；但项目成果仍需公开报告和独立评审。",
+          "detailBody": "OpenAI 称超过 400 个个人和组织提交申请，入选项目覆盖美国、欧盟、巴西、新加坡和韩国，主题包括劳动力场景、AI 红利分配、能源充足、税收、公共医院和科研基础设施。",
+          "trend": "AI 公司开始资助围绕“智能时代”制度设计的外部议程。",
+          "detailTrend": "这类资助会影响政策问题清单：从模型测试转向就业、能源、税制、公共医疗和科研能力。读者应区分官方资助事实、研究产出、政策采纳和社会效果四层证据。",
+          "whyRanked": "它显示 AI 治理正在进入经济政策和公共基础设施层。",
+          "topReason": "需要等待项目报告和政府采纳证据，而不能把资助当成政策结论。",
+          "detailWhyRanked": "OpenAI 原文列出 14 个项目、100 万美元资金、最高 100 万美元 API credits、覆盖地区和项目主题；这些源事实显示其政策议程正在外扩，因为经济韧性、能源、医疗和税收都进入资助范围，但项目结论尚未发布。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方资助事实清楚，政策影响需要后续成果验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方资助事实清楚，政策影响需要后续成果验证。"
+          },
+          "impact": "政策、公共事务和研究团队应跟踪这些项目是否形成可引用的就业、能源、医疗和税收政策框架。",
+          "whoShouldCare": "负责 AI 公共政策、劳动影响评估、能源政策、公共医疗数字化和研究资助合作的政策/研究团队。",
+          "readerUse": "政策团队用来建立后续报告、数据集、原型和政府采纳观察表。",
+          "nextCheck": "查 14 个项目的公开报告、数据集、原型、同行评审、政府引用和利益冲突披露。",
+          "followUpQuestions": [
+            "入选项目何时发布可审查的报告、数据或原型？",
+            "这些研究是否披露 OpenAI 资助边界和独立性安排？",
+            "是否有政府部门、大学或公共医院把成果转为正式试点？"
+          ],
+          "evidenceThreshold": "还需要项目成果、方法披露、独立评审和政策试点记录，才能升级为已验证的 AI 经济政策影响信号。",
+          "claimBoundary": "不证明这些政策方案有效，也不证明资助项目代表政府立场。",
+          "counterEvidence": "若项目不公开方法、未交付成果、被独立评审否定或未获公共机构采用，应降级为企业政策倡议。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age/",
+          "originalUrl": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age/",
+          "sourceRole": "厂商主张",
+          "provenance": "OpenAI 官方页可核对资助金额、项目数量、地区和主题；研究质量、独立性和政策效果需要外部材料。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-18T16:50:00+09:00",
+          "freshSourceFact": null,
+          "time": "16:50 JST",
+          "tags": [
+            "AI 政策",
+            "经济影响",
+            "公共研究"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "axios-a2a-agentic-ai-foundation-2026-08-18",
+          "category": "tool",
+          "label": "工具",
+          "title": "Google 支持的 A2A 协议转入 Agentic AI Foundation",
+          "body": "Axios 报道 A2A 的治理归属更贴近 Agent 标准生态。",
+          "summary": "Axios 报道，Google 创建的 Agent2Agent 协议正转入 Agentic AI Foundation，以推动跨平台 Agent 通信标准。",
+          "whyItMatters": "Agent 工具链正在从单厂商功能走向协议和治理竞争；但企业可用性仍需规范版本、兼容测试和实际集成案例。",
+          "detailBody": "Axios 称 A2A 是让 AI Agent 彼此通信的开放标准，新归属将与 MCP 等工具连接标准形成互补，目标是减少跨平台 Agent 集成的定制成本。",
+          "trend": "Agent 生态的关键战场正在变成协议互操作。",
+          "detailTrend": "当企业同时使用多个模型、工具和 Agent 平台时，A2A/MCP 这类标准会影响身份、权限、上下文传递和审计边界；标准治理比单个演示更值得跟踪。",
+          "whyRanked": "它直接影响开发者如何组合不同厂商的 Agent。",
+          "topReason": "需要用官方项目治理、规范版本和兼容测试升级。",
+          "detailWhyRanked": "Axios 报道把 A2A 的治理移动、Google 创建背景、Agentic AI Foundation 和与 MCP 的互补关系放在一起；这些源事实可提示架构团队跟踪标准治理，因为多 Agent 集成需要身份、权限和兼容测试，但不能证明生产采用。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体报道的标准治理信号，官方规范和兼容性仍需核验。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体报道的标准治理信号，官方规范和兼容性仍需核验。"
+          },
+          "impact": "平台团队应把 A2A 与 MCP、身份、审计和权限模型一起评估。",
+          "whoShouldCare": "负责企业 Agent 平台、模型路由、工具连接、权限治理和跨厂商集成的开发平台/架构团队。",
+          "readerUse": "架构团队用来更新 Agent 标准观察表，尤其是 A2A 与 MCP 的边界和兼容性。",
+          "nextCheck": "查 Agentic AI Foundation 公告、A2A 规范版本、GitHub 兼容测试、主要云厂商 SDK 和企业案例。",
+          "followUpQuestions": [
+            "Agentic AI Foundation 是否发布 A2A 迁移或治理公告？",
+            "A2A 规范是否给出版本、测试套件和兼容声明？",
+            "主要云厂商和企业 Agent 平台是否在生产环境支持 A2A？"
+          ],
+          "evidenceThreshold": "还需要官方治理公告、规范版本、兼容测试套件和生产集成案例，才能升级为已验证的 Agent 互操作基础设施变化。",
+          "claimBoundary": "不证明 A2A 已成为事实标准，也不证明跨厂商 Agent 集成立刻变简单。",
+          "counterEvidence": "若官方项目没有迁移说明、SDK 分裂、兼容测试缺失或主要平台不跟进，应降级为标准生态观察。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards",
+          "originalUrl": "https://www.axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 提供 A2A 归属变化和互操作背景；完整事实、采访、引述和项目治理细节仍需原文及官方项目材料。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-18T16:45:00+09:00",
+          "freshSourceFact": null,
+          "time": "16:45 JST",
+          "tags": [
+            "Agent",
+            "A2A",
+            "开放标准"
+          ],
+          "companies": [
+            "Google",
+            "Agentic AI Foundation",
+            "Linux Foundation"
+          ]
+        },
+        {
+          "id": "axios-anthropic-revenue-run-rate-2026-08-18",
+          "category": "funding",
+          "label": "融资",
+          "title": "Axios：Anthropic 年化收入运行率据报超过 650 亿美元",
+          "body": "Anthropic 的商业化速度被报道推高到 IPO 前关键指标。",
+          "summary": "Axios 援引 Bloomberg 数据称 Anthropic 年化收入运行率已超过 650 亿美元，并高于报道中的 OpenAI 400 亿美元。",
+          "whyItMatters": "模型竞争正在被收入、毛利、推理成本和 IPO 预期重新定价；但数字仍需公司文件或审计材料确认。",
+          "detailBody": "Axios 报道称 Anthropic 第二季度收入同比大幅增长，年化运行率超过 650 亿美元，并把这一指标与 OpenAI 报道中的 400 亿美元运行率对比。",
+          "trend": "前沿实验室竞争正从参数和榜单转向收入质量与资本市场叙事。",
+          "detailTrend": "如果这些数字获得确认，企业模型市场的估值逻辑会更看重付费使用、推理效率和客户留存；读者需要把媒体数字与未来招股书、审计收入和成本结构分开。",
+          "whyRanked": "运行率数字影响模型公司商业化比较。",
+          "topReason": "需要公司披露、审计报表或 IPO 文件确认运行率和收入质量。",
+          "detailWhyRanked": "Axios 报道给出超过 650 亿美元年化运行率、第二季度增长、IPO 前背景和与 OpenAI 报道口径的对比；这些源事实影响商业化判断，因为模型公司估值会转向收入质量、推理成本、客户留存和上市披露，但仍不是公司审计披露。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "商业影响大，但证据仍是媒体转述和未审计运行率。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "商业影响大，但证据仍是媒体转述和未审计运行率。"
+          },
+          "impact": "采购、财务和战略团队应关注模型供应商收入质量、价格稳定性和上市披露。",
+          "whoShouldCare": "负责模型采购、供应商风险、IPO 观察、企业 AI 预算和前沿实验室竞争分析的财务/战略团队。",
+          "readerUse": "战略团队用来更新 Anthropic 商业化和 IPO 观察表，但不能把运行率当作审计收入。",
+          "nextCheck": "查 Anthropic 官方披露、IPO 文件、审计报表、客户分布、毛利率和推理成本数据。",
+          "followUpQuestions": [
+            "Anthropic 是否公开确认运行率、季度收入或 IPO 时间表？",
+            "收入增长来自 API、Claude 订阅、企业合同还是政府/云合作？",
+            "毛利率、推理成本和客户留存是否支撑当前估值叙事？"
+          ],
+          "evidenceThreshold": "还需要公司披露、审计报表或 IPO 文件，才能升级为已确认的 Anthropic 商业化领先信号。",
+          "claimBoundary": "不证明 Anthropic 已长期超过 OpenAI，也不证明运行率等同实际年度收入或盈利能力。",
+          "counterEvidence": "若公司文件修正数字、收入集中度过高、毛利承压或 IPO 推迟，应降级为媒体商业化传闻。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/17/anthropic-revenue-run-rate-ipo-openai",
+          "originalUrl": "https://www.axios.com/2026/08/17/anthropic-revenue-run-rate-ipo-openai",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 提供报道数字和竞争对比；完整事实、数据来源、采访和上下文仍属于 Axios/Bloomberg 原文及后续公司文件。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-18T16:40:00+09:00",
+          "freshSourceFact": null,
+          "time": "16:40 JST",
+          "tags": [
+            "Anthropic",
+            "收入",
+            "IPO"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "axios-google-spirit-airlines-data-ai-2026-08-18",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：Google 购入 Spirit 破产数据并计划用于 AI",
+          "body": "破产资产中的邮件、聊天和文档被报道进入大型平台的数据与 AI 训练链条。",
+          "summary": "Axios 报道，Google 在 Spirit Airlines 破产拍卖中购得邮件、日历、聊天、文档和表格等业务数据，并将用于改进产品和 AI 模型。",
+          "whyItMatters": "企业数据资产处置正在成为 AI 训练和产品改进问题；但数据范围、许可、隐私保护和法院文件仍需核验。",
+          "detailBody": "Axios 根据破产法院文件报道，Google 获得 Spirit Airlines 的邮件、日历、聊天、文档、表格和其他业务数据，并称这些数据将用于改进产品和 AI 模型。",
+          "trend": "AI 数据来源正在从公开网页扩展到破产、并购和企业资产交易。",
+          "detailTrend": "当企业关闭、出售或重组时，内部通信和业务文档可能变成 AI 资产；法务、隐私和采购团队需要把数据去向、训练授权、产品改进用途和通知义务纳入破产与并购尽调。",
+          "whyRanked": "它把 AI 训练数据问题放进法院文件和企业资产处置场景。",
+          "topReason": "需要法院文件、数据清单、隐私通知和 Google 政策确认。",
+          "detailWhyRanked": "Axios 技术页把 Spirit 破产资产、邮件/日历/聊天/文档/表格等数据类型和 Google AI 用途放在一起；这些源事实让它成为数据治理信号，因为企业资产处置可能改变训练数据来源，但仍要查法院案卷和政策说明。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体和法院文件线索强，但仍需原始文件和数据政策确认。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体和法院文件线索强，但仍需原始文件和数据政策确认。"
+          },
+          "impact": "法务和隐私团队应审查破产、并购和数据采购合同中的 AI 使用条款。",
+          "whoShouldCare": "负责企业数据治理、隐私合规、并购尽调、破产资产处置和 AI 训练数据政策的法务/安全/数据团队。",
+          "readerUse": "法务和数据团队用来更新企业数据出售、授权和模型训练限制条款。",
+          "nextCheck": "查破产法院原始文件、资产购买协议、Google 数据使用政策、用户/员工通知和监管回应。",
+          "followUpQuestions": [
+            "法院文件是否明确列出数据范围、排除项和使用限制？",
+            "Google 是否说明这些数据会如何进入产品改进或模型训练流程？",
+            "用户、员工、企业客户和监管机构是否获得通知或反对渠道？"
+          ],
+          "evidenceThreshold": "还需要法院文件、资产协议、Google 政策说明和监管/通知记录，才能升级为已验证的数据资产进入 AI 训练链条案例。",
+          "claimBoundary": "不证明所有 Spirit 数据都会用于训练，也不证明相关隐私和合同问题已经解决。",
+          "counterEvidence": "若法院文件限制 AI 使用、Google 澄清不用于训练、监管介入或数据范围被大幅缩小，应收窄判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/technology",
+          "originalUrl": "https://www.axios.com/technology",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 技术页提供破产数据资产和 AI 使用的报道入口；完整事实、法院文件和数据使用细节需查原文及案卷。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-18T16:35:00+09:00",
+          "freshSourceFact": null,
+          "time": "16:35 JST",
+          "tags": [
+            "数据治理",
+            "AI 训练数据",
+            "隐私"
+          ],
+          "companies": [
+            "Google",
+            "Spirit Airlines"
+          ]
+        },
+        {
+          "id": "axios-stripe-openrouter-deal-progress-2026-08-18",
+          "category": "funding",
+          "label": "融资",
+          "title": "Axios 把 Stripe/OpenRouter 交易推进为已达成报道",
+          "body": "OpenRouter 交易从前一版传闻进入新的可靠媒体交叉核验。",
+          "summary": "Axios 报道 Stripe 已同意以超过 80 亿美元现金加股票收购 OpenRouter，补强前一版的 TechCrunch/Bloomberg 报道链。",
+          "whyItMatters": "多模型网关可能被支付平台吸收的信号变强，但交易完成、客户条款和监管审查仍需双方公告或文件确认。",
+          "detailBody": "Axios 称 Stripe 已同意收购 AI 模型市场 OpenRouter，金额超过 80 亿美元，交易结构包括现金和股票；这与前一版“将收购”的报道相比，是新的可靠媒体交叉信号。",
+          "trend": "模型路由、计费和支付入口正在靠拢。",
+          "detailTrend": "如果交易最终确认，OpenRouter 不只是开发者工具，而可能成为支付、计费和模型分发的一层基础设施；开发团队应预先检查价格、数据、模型接入和退出方案。",
+          "whyRanked": "新增媒体交叉信号影响模型网关供应商风险判断。",
+          "topReason": "新的 Axios 口径用于核对交易状态，仍需双方公告和监管文件。",
+          "detailWhyRanked": "Axios 报道给出超过 80 亿美元、现金加股票和已同意收购的新增口径；这些源事实相对前一版 TechCrunch/Bloomberg 报道构成交叉核验，因为模型网关可能进入支付计费层，但交易关闭和条款变化仍需官方文件。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "与前一版同一事件相关，但新来源给出更强交易状态和金额口径。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "与前一版同一事件相关，但新来源给出更强交易状态和金额口径。"
+          },
+          "impact": "开发平台和采购团队应准备多模型网关供应商变更、条款变化和迁移预案。",
+          "whoShouldCare": "负责多模型路由、API 采购、支付计费、供应商锁定和开发者平台治理的工程/采购/法务团队。",
+          "readerUse": "平台团队用来把 OpenRouter 从单一媒体报道升级为交叉媒体跟踪项。",
+          "nextCheck": "查 Stripe/OpenRouter 公告、交易文件、监管申报、客户通知、价格页和模型接入清单。",
+          "followUpQuestions": [
+            "Stripe 和 OpenRouter 是否发布正式交易公告？",
+            "交易结构、金额和关闭条件是否出现在申报或客户通知中？",
+            "OpenRouter 的价格、模型接入、数据处理和结算条款是否变化？"
+          ],
+          "evidenceThreshold": "还需要双方公告、监管文件或客户通知，才能升级为已确认的 AI 模型网关并购。",
+          "claimBoundary": "不证明交易已经完成，也不证明 OpenRouter 的服务、价格或数据政策已经改变。",
+          "counterEvidence": "若双方否认、交易金额修正、监管受阻或客户条款无变化，应降级为并购报道背景。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/17/stripe-openrouter-paypal",
+          "originalUrl": "https://www.axios.com/2026/08/17/stripe-openrouter-paypal",
+          "sourceRole": "媒体背景",
+          "provenance": "Axios 提供交易状态和金额口径的新增报道；完整事实、采访、文件和上下文仍属于 Axios 原文及后续官方材料。",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-18T16:30:00+09:00",
+          "freshSourceFact": null,
+          "time": "16:30 JST",
+          "tags": [
+            "OpenRouter",
+            "Stripe",
+            "模型网关"
+          ],
+          "companies": [
+            "Stripe",
+            "OpenRouter"
+          ]
+        },
+        {
+          "id": "nvidia-ports-pike-lps-ai-factory-2026-08-18",
+          "category": "funding",
+          "label": "融资",
+          "title": "NVIDIA 解释 AI 工厂的新约束：土地、电力和机房",
+          "body": "NVIDIA 把 PORTS-Pike 担保解释为锁定 AI 工厂基础输入。",
+          "summary": "NVIDIA 博客称，AI 工厂需要芯片、网络之外的 land, power and shell，并以 PORTS-Pike 作为为 OpenAI 锁定长期站点的案例。",
+          "whyItMatters": "芯片供应商正在把自己推向 AI 基础设施融资和站点保障角色；但收入机会、担保风险和可转租能力仍是厂商主张。",
+          "detailBody": "NVIDIA 称前沿实验室增长受算力可得性约束，PORTS-Pike 首期约 4.25GW AI factory capacity 可承载多代 NVIDIA 系统，并强调其担保限于部分租约/电力付款和剩余价值承诺。",
+          "trend": "AI 芯片竞争正在延伸到“可融资、可租赁、可升级”的 AI 工厂资产。",
+          "detailTrend": "NVIDIA 不只是卖 GPU，也在设计让算力站点可融资的资产叙事；投资者和采购方需要同时评估技术路线、租约义务、残值风险、客户集中度以及 SEC 文件里的真实约束。",
+          "whyRanked": "NVIDIA 解释芯片商为何进入 AI 工厂融资与站点保障。",
+          "topReason": "NVIDIA 厂商主张需要 SEC 文件、担保合同和利用率数据验证。",
+          "detailWhyRanked": "NVIDIA 博客给出 LPS、4.25GW 首期容量、部分付款/残值承诺、多代 GPU 升级和 2030 年机会口径；这些源事实解释芯片商为何进入站点保障，因为算力瓶颈已扩展到可融资资产，但收益仍是厂商前瞻判断。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "厂商解释信息量高，但担保风险和收入机会属于前瞻性主张。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "厂商解释信息量高，但担保风险和收入机会属于前瞻性主张。"
+          },
+          "impact": "投资、采购和基础设施团队应把 AI 工厂视为包含硬件、能源、租约和残值风险的组合资产。",
+          "whoShouldCare": "负责 AI 基础设施融资、GPU 采购、数据中心租约、资本开支风控和供应商集中度评估的财务/采购/基础设施团队。",
+          "readerUse": "财务和采购团队用来更新 NVIDIA 供应商风险、LPS 约束和 AI 工厂融资假设。",
+          "nextCheck": "查 NVIDIA SEC 文件、担保协议、SB Energy 融资文件、租约条款、实际交付容量和利用率。",
+          "followUpQuestions": [
+            "NVIDIA 的担保义务在 SEC 文件中如何定义？",
+            "PORTS-Pike 的每阶段容量、租约和电力付款何时生效？",
+            "若 OpenAI 需求变化，站点是否真的能按 NVIDIA 口径转租给其他客户？"
+          ],
+          "evidenceThreshold": "还需要 SEC 文件、担保合同、融资文件和利用率数据，才能升级为已验证的 AI 工厂融资模式变化。",
+          "claimBoundary": "不证明 NVIDIA 的收入机会会实现，也不证明担保风险已经被完全隔离。",
+          "counterEvidence": "若文件显示义务更重、融资延迟、客户需求下降或转租困难，应降级为厂商经济叙事。",
+          "source": "NVIDIA AI Blog",
+          "sourceName": "NVIDIA AI Blog",
+          "sourceId": "nvidia-blog-ai",
+          "sourceUrl": "https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence/",
+          "originalUrl": "https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence/",
+          "sourceRole": "厂商主张",
+          "provenance": "NVIDIA 厂商博客可证明其对 LPS、担保边界和 AI 工厂经济性的主张；财务风险、收入机会和可转租性需要 SEC 文件和市场数据。",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "recommended",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-18T16:25:00+09:00",
+          "freshSourceFact": null,
+          "time": "16:25 JST",
+          "tags": [
+            "NVIDIA",
+            "AI 工厂",
+            "融资结构"
+          ],
+          "companies": [
+            "NVIDIA",
+            "OpenAI",
+            "SB Energy"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-17",
       "date": "2026-08-17",

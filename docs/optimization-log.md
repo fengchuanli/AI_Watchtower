@@ -1,3 +1,27 @@
+## 2026-08-18 08:09 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-18`，发布 8 条安全非重复信号，聚焦 OpenAI/NVIDIA PORTS-Pike AI 基础设施、OpenAI 安全防守与政策资助、A2A 标准治理、Anthropic 商业化、Google/Spirit 数据资产和 Stripe/OpenRouter 交易进展。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI 官方 News、NVIDIA 官方 Newsroom/Blog、Axios Technology 索引、TechCrunch 当前 AI 索引、WIRED AI 索引和历史 URL。
+  - 本期发布 8 条而非强行补到 10 条，因为未使用旧稿、播客、付费墙正文、登录墙正文、社区讨论、重复 Meta/Anthropic 叙事或弱证据项补量。
+  - 官方/厂商来源 4/8，可靠媒体 4/8；OpenAI/NVIDIA 条目保留为 `官方核对` 或 `厂商主张`，Axios 条目保留为 `媒体背景` / `reported` / `originalDependency: must-read`。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran JavaScript syntax checks for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` as JSON.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending at log-writing time; planned message `更新17点AI新闻情报`.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit and may hit the same DNS blocker.
+
 ## 2026-08-17 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 7 source/candidate workflow task. Added a one-section candidate intake scratch template that mirrors the fields editors actually fill during 08:00 and 17:00 JST news runs.
