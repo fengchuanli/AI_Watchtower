@@ -24,8 +24,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `02cd2b2` (`增加候选速记模板`); this log/index follow-up records the validation and next-task state.
-- Git note: Push still needs retry after this log commit; prior pull was blocked by `github.com` DNS resolution failure.
+- Commit: Local implementation commit `02cd2b2` (`增加候选速记模板`) and log/index follow-up commit `b6e5b7c` (`记录候选速记模板优化`); this push-blocker note records the latest local status.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-17 08:11 JST
 
