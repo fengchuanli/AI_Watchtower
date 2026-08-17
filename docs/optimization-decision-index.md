@@ -6,8 +6,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
-- Current phase: Phase 1, Homepage Edition Quality
-- Last indexed run: 2026-08-16 20:00 JST
+- Current phase: Phase 2, Source And Candidate Workflow Friction
+- Last indexed run: 2026-08-17 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -25,6 +25,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 4 | Complete | `f2defb8` | Current `categories[].description` copy now names only visible category anchors, and data validation rejects stale anchors from another current category. |
 | Day 5 | Complete | `4483450` | Short batches now use compact `editorialInterpretation` copy that states the published safe-signal count, frames fewer than 10 items as a quality-gate result, and names unsafe padding that was not used. |
 | Day 6 | Complete | `2d2832e` | Omitted planned topics now point readers to archive, tag-page, historical, or already-selected related background only, with a runtime validator and homepage preflight check that blocks unsupported fresh claims. |
+| Day 7 | Complete | `02cd2b2` | `docs/candidate-intake-format.md` now has an Intake Scratch Template for 08:00 and 17:00 JST runs, mirrored in `docs/update-run-checklist.md` and guarded by `scripts/validate-site.mjs`. |
 
 ## Historical Guard Anchors
 
@@ -49,9 +50,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 7: add a one-command or one-section intake scratch template that mirrors the candidate fields editors actually fill during 08:00 and 17:00 runs.
+- Continue with Day 8: make duplicate-candidate reporting easier to interpret by documenting the difference between repeated URL, near-title match, and fresh source fact.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 7 first.
-- If Day 6 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 7 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

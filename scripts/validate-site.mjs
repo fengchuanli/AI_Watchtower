@@ -1233,7 +1233,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-08-10 through 2026-09-08/.test(optimizationDecisionIndex) ||
-  !/Phase 1, Homepage Edition Quality/.test(optimizationDecisionIndex) ||
+  !/Phase 2, Source And Candidate Workflow Friction/.test(optimizationDecisionIndex) ||
   !/Previous Day 27[\s\S]*vendor-narrative-promotion-rule\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
   !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
@@ -1245,7 +1245,8 @@ if (
   !/Day 4[\s\S]*categories\[\]\.description/.test(optimizationDecisionIndex) ||
   !/Day 5[\s\S]*editorialInterpretation/.test(optimizationDecisionIndex) ||
   !/Day 6[\s\S]*Omitted planned topics/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 7/.test(optimizationDecisionIndex) ||
+  !/Day 7[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 8/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

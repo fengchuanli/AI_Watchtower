@@ -1,3 +1,32 @@
+## 2026-08-17 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 7 source/candidate workflow task. Added a one-section candidate intake scratch template that mirrors the fields editors actually fill during 08:00 and 17:00 JST news runs.
+- Changed files:
+  - `docs/candidate-intake-format.md`
+  - `docs/update-run-checklist.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added an `Intake Scratch Template` to `docs/candidate-intake-format.md` so editors can paste one compact block per candidate before drafting, with fields for source-backed fact, AI relevance, proof boundary, independent check, original-source search, duplicate status, copyright posture, priority, diversity note, and draft/hold/reject decision.
+  - Updated `docs/update-run-checklist.md` so 08:00 and 17:00 runs explicitly confirm draftable URLs used the scratch template before public copy is written.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 7 is tracked and Day 8 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/candidate-intake-format.md`, `docs/update-run-checklist.md`, `docs/candidate-to-news-handoff.md`, `README.md`, and relevant site-validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 4 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `02cd2b2` (`增加候选速记模板`); this log/index follow-up records the validation and next-task state.
+- Git note: Push still needs retry after this log commit; prior pull was blocked by `github.com` DNS resolution failure.
+
 ## 2026-08-17 08:11 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-17`，发布 4 条安全非重复短批次信号，聚焦 Stripe/OpenRouter 并购报道、Anthropic 信任危机回应、Meta 个人超级智能官方愿景和个人 Agent 可达性外部质疑。
