@@ -1,3 +1,24 @@
+## 2026-08-18 23:25 JST
+
+- Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前首页仍保持 `news-1700-2026-08-18`，从 8 条扩展到 10 条安全非重复信号，补入 Google Blue Skies 航迹云 AI 试验和 NVIDIA/Indosat/UGM 印尼大学 AI 技术中心。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 Google Keyword AI 官方页、NVIDIA AI Blog 官方页、Mistral News、Hugging Face Blog、Axios/TechCrunch/The Verge 等可靠来源候选和历史重复 URL。
+  - 采用 2 条官方/厂商来源事实；未使用随机网页、社区讨论、播客、付费墙或登录墙正文，也未把厂商结果主张升级为独立成效证明。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, local references, and static page link targets.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: planned local commit `补充08点AI新闻情报`.
+- Git note: pull failed before editing because `github.com` DNS could not be resolved; push will be retried after commit.
+
 ## 2026-08-18 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 8 source/candidate workflow task. Made duplicate-candidate reporting easier to interpret by documenting the difference between repeated URL, near-title review, fresh source fact, and manual clear states.
