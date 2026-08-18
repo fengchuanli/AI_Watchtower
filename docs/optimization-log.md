@@ -16,8 +16,8 @@
   - Ran `node scripts/validate-site.mjs` and validated site metadata, local references, and static page link targets.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: planned local commit `补充08点AI新闻情报`.
-- Git note: pull failed before editing because `github.com` DNS could not be resolved; push will be retried after commit.
+- Commit: Local content commit `81f65f2` (`补充08点AI新闻情报`); push-blocker log commit pending.
+- Git note: `git push origin main` failed because `github.com` DNS could not be resolved; push needs retry when DNS/network access returns.
 
 ## 2026-08-18 20:00 JST
 
