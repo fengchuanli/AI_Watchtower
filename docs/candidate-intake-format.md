@@ -38,6 +38,19 @@ Each candidate record should answer these fields in Chinese unless the value is 
 - `draftingDecision`: `draft`, `hold`, or `reject`.
 - `decisionReason`: Why the editor chose that decision. For `hold` or `reject`, start with a reason code from `docs/candidate-hold-reject-reasons.md`, then add one short Chinese sentence naming the concrete blocker.
 
+## Duplicate Status Interpretation
+
+Use `duplicateStatus` to explain what the duplicate check means, not only whether the script found a match. The field should help the next editor decide whether the candidate is blocked, needs review, or can still be drafted because it contains a genuinely new source fact.
+
+| Status | Meaning | Drafting decision |
+| --- | --- | --- |
+| `repeated-url` | The candidate uses the same normalized source URL as a current or archived item, or another candidate in the same batch. | Usually `reject-repeated-source-fact`; use `hold-duplicate-review` only if the page itself was materially updated and the new fact can be named. |
+| `near-title-review` | The title resembles a current, archived, or same-batch candidate, but the URL may be different. | Hold until the editor compares the exact source-backed fact; similar wording alone is not proof of duplication. |
+| `fresh-source-fact` | A repeated topic or similar title has a new source-specific action, such as a new official announcement, filing, audit result, model card, customer metric, regulator text, paper revision, or independent benchmark. | Draft only if `sourceBackedFact` names that new action and `proofBoundary` says what remains unproven. |
+| `manual-clear` | No repeated URL or near-title match appeared in the script report, or no batch file existed and the editor manually checked current and history URLs/titles. | Drafting can continue if the other source, proof-boundary, copyright, and batch-mix gates also pass. |
+
+Do not mark a candidate as fresh only because a media outlet rewrote the same event, a company repeated a marketing claim, or the title uses different Chinese wording. Freshness needs a new source-backed fact visible in `sourceBackedFact`; otherwise keep the item on hold or reject it as repeated.
+
 ## Intake Scratch Template
 
 During 08:00 and 17:00 JST news runs, paste this short block into the run note before drafting. It is a scratch template, not a public article and not a place to paste source paragraphs. Fill one block per candidate, then convert only `draft` items through `docs/candidate-to-news-handoff.md`.
@@ -60,7 +73,7 @@ Candidate:
 - decisionReason: draft 写一句入选理由；hold 或 reject 用 docs/candidate-hold-reject-reasons.md 的代码开头。
 ```
 
-Keep scratch notes brief. If the editor needs long source detail to make the candidate useful, hold or reject it instead of drafting from copied article structure.
+Keep scratch notes brief. If `duplicateStatus` is `fresh-source-fact`, the `sourceBackedFact` line must name the new source action; if the editor needs long source detail to prove novelty, hold or reject it instead of drafting from copied article structure.
 
 ## Decision Rules
 

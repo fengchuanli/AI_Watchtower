@@ -28,7 +28,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Source discovery | Name which official, research, regulator, reliable-media, and registered source surfaces were checked. Do not just write "searched the web." |
 | Candidate intake | Confirm that draftable URLs used the `docs/candidate-intake-format.md` scratch template and have `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `originalSourceSearch`, `duplicateStatus`, `copyrightPosture`, `priorityReason`, and `draftingDecision`. |
 | Original-source search | For media-started candidates, say whether an official, filing, paper, regulator, customer-side, dataset, or benchmark original replaced the media report. |
-| Duplicate reporting | Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists, or record the manual current/history duplicate check when no file exists. |
+| Duplicate reporting | Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists, or record the manual current/history duplicate check when no file exists. Interpret results as `repeated-url`, `near-title-review`, `fresh-source-fact`, or `manual-clear`, and name the new source action before clearing any near-title or repeated-topic item. |
 | Priority and mix | Note whether `docs/candidate-priority-rubric.md` and `docs/source-diversity-triage-note.md` changed the drafting order or caused a held candidate. |
 | Partial batch | Required when fewer than 10 safe candidates remain, and especially when only one or two remain. Record `publish-partial-batch`, `continue-searching`, `hold-no-safe-batch`, or `not-needed` from `docs/partial-batch-publication-guide.md`. |
 | Drafting | Confirm the public copy came from minimum source facts plus AI Watchtower interpretation, not copied or expanded source paragraphs. |
@@ -51,7 +51,7 @@ Run: 2026-07-04 17:00 JST, evening-news
 Remote before: blocked-dns
 Source discovery: done - checked official AI labs, registered media/research surfaces, and current-history duplicate URLs.
 Candidate intake: done - 3 draft, 4 hold, 2 reject; holds mainly need original-source confirmation.
-Duplicate reporting: done - no repeated URL or near-title match, or manual current/history check completed.
+Duplicate reporting: done - manual-clear for 3 drafts; one near-title-review held until a new source action is named.
 Drafting: done - public copy uses minimum source facts and original Chinese interpretation.
 Validation: done - validate-data, validate-site, validate-pages, HTML parse, JSON parse, diff check.
 Archive diff: done - morning/evening editions compared for source posture and proof-boundary change.

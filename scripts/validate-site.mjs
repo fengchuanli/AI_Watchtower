@@ -679,6 +679,11 @@ if (
   !/duplicateStatus: repeated-url \/ near-title-review \/ fresh-source-fact \/ manual-clear/.test(
     candidateIntakeFormat,
   ) ||
+  !/Duplicate Status Interpretation/.test(candidateIntakeFormat) ||
+  !/`repeated-url`[\s\S]*`near-title-review`[\s\S]*`fresh-source-fact`[\s\S]*`manual-clear`/.test(
+    candidateIntakeFormat,
+  ) ||
+  !/Freshness needs a new source-backed fact visible in `sourceBackedFact`/.test(candidateIntakeFormat) ||
   !/priorityScore \/ priorityReason/.test(candidateIntakeFormat) ||
   !/sourceBackedFact/.test(candidateIntakeFormat) ||
   !/aiRelevance/.test(candidateIntakeFormat) ||
@@ -880,6 +885,10 @@ if (
   !/Candidate intake/.test(updateRunChecklist) ||
   !/Original-source search/.test(updateRunChecklist) ||
   !/Duplicate reporting/.test(updateRunChecklist) ||
+  !/repeated-url/.test(updateRunChecklist) ||
+  !/near-title-review/.test(updateRunChecklist) ||
+  !/fresh-source-fact/.test(updateRunChecklist) ||
+  !/manual-clear/.test(updateRunChecklist) ||
   !/Priority and mix/.test(updateRunChecklist) ||
   !/Drafting/.test(updateRunChecklist) ||
   !/Data validation/.test(updateRunChecklist) ||
@@ -1044,6 +1053,10 @@ if (
 
 if (
   !/report-duplicate-candidates\.mjs/.test(candidateSourceChecklist) ||
+  !/repeated-url/.test(candidateSourceChecklist) ||
+  !/near-title-review/.test(candidateSourceChecklist) ||
+  !/fresh-source-fact/.test(candidateSourceChecklist) ||
+  !/manual-clear/.test(candidateSourceChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
   !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
   !/getTitleSimilarity/.test(duplicateCandidateReportJs) ||
@@ -1246,7 +1259,8 @@ if (
   !/Day 5[\s\S]*editorialInterpretation/.test(optimizationDecisionIndex) ||
   !/Day 6[\s\S]*Omitted planned topics/.test(optimizationDecisionIndex) ||
   !/Day 7[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 8/.test(optimizationDecisionIndex) ||
+  !/Day 8[\s\S]*repeated-url[\s\S]*near-title-review[\s\S]*fresh-source-fact/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 9/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
