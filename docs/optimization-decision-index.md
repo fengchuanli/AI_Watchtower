@@ -26,7 +26,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 5 | Complete | `4483450` | Short batches now use compact `editorialInterpretation` copy that states the published safe-signal count, frames fewer than 10 items as a quality-gate result, and names unsafe padding that was not used. |
 | Day 6 | Complete | `2d2832e` | Omitted planned topics now point readers to archive, tag-page, historical, or already-selected related background only, with a runtime validator and homepage preflight check that blocks unsupported fresh claims. |
 | Day 7 | Complete | `02cd2b2` | `docs/candidate-intake-format.md` now has an Intake Scratch Template for 08:00 and 17:00 JST runs, mirrored in `docs/update-run-checklist.md` and guarded by `scripts/validate-site.mjs`. |
-| Day 8 | Complete | pending | Duplicate reporting now distinguishes `repeated-url`, `near-title-review`, `fresh-source-fact`, and `manual-clear`, so editors know when to reject, hold, or draft based on a new source-backed action. |
+| Day 8 | Complete | `e113ec8` | Duplicate reporting now distinguishes `repeated-url`, `near-title-review`, `fresh-source-fact`, and `manual-clear`, so editors know when to reject, hold, or draft based on a new source-backed action. |
 
 ## Historical Guard Anchors
 

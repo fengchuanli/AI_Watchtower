@@ -1,3 +1,33 @@
+## 2026-08-18 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 8 source/candidate workflow task. Made duplicate-candidate reporting easier to interpret by documenting the difference between repeated URL, near-title review, fresh source fact, and manual clear states.
+- Changed files:
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `Duplicate Status Interpretation` to `docs/candidate-intake-format.md`, defining `repeated-url`, `near-title-review`, `fresh-source-fact`, and `manual-clear` with draft/hold/reject guidance.
+  - Updated `docs/candidate-source-checklist.md` and `docs/update-run-checklist.md` so duplicate reports must name a new source action before clearing near-title or repeated-topic candidates.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 8 is tracked and Day 9 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `scripts/report-duplicate-candidates.mjs`, `docs/candidate-intake-format.md`, `docs/candidate-source-checklist.md`, `docs/update-run-checklist.md`, and relevant site-validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/report-duplicate-candidates.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `e113ec8` (`厘清候选重复状态`); this log/index follow-up records the implementation hash.
+- Git note: Push has not been attempted yet after this log entry; final push status will be recorded after the push attempt.
+
 ## 2026-08-18 08:09 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-18`，发布 8 条安全非重复信号，聚焦 OpenAI/NVIDIA PORTS-Pike AI 基础设施、OpenAI 安全防守与政策资助、A2A 标准治理、Anthropic 商业化、Google/Spirit 数据资产和 Stripe/OpenRouter 交易进展。
