@@ -1,3 +1,27 @@
+## 2026-08-19 08:12 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-19`，发布 12 条安全非重复信号，聚焦 OpenAI 前沿训练安全放缓、ChatGPT for Teens、CodeAI 青少年 AI 素养、FDA 医疗 GenAI 审评讨论、核电 AI、金融 AI onboarding、Cursor Origin、Warp Factories、Etched 推理融资、Perplexity 印度增长和 Groq neocloud 转型。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI 官方 News、Axios AI/Technology、TechCrunch AI、历史 URL 和同日重复风险。
+  - 本期 3/12 为 OpenAI 官方来源，9/12 为可靠媒体雷达；媒体项保持 `媒体背景` / `reported` / `originalDependency: must-read`，并把完整事实、采访、图表、数据和上下文留给原文。
+  - 跳过 TechCrunch 对 NVIDIA/SB Energy/PORTS-Pike 的跟进，因为它与 2026-08-18 版已收录主线高度重复；未用旧稿、播客、付费墙、登录墙、社区讨论或弱证据补量。
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local content commit `更新17点AI新闻情报`; this amended log records the final push blocker.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-18 23:25 JST
 
 - Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前首页仍保持 `news-1700-2026-08-18`，从 8 条扩展到 10 条安全非重复信号，补入 Google Blue Skies 航迹云 AI 试验和 NVIDIA/Indosat/UGM 印尼大学 AI 技术中心。
