@@ -1,3 +1,32 @@
+## 2026-08-19 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 9 source/candidate workflow task. Added guidance for choosing the source of record when official, media, filing, regulator, research, vendor, and customer-side pages all cover the same event.
+- Changed files:
+  - `docs/original-source-replacement-guide.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added a source-of-record decision table to `docs/original-source-replacement-guide.md`: official pages own product, model, pricing, policy, documentation, safety-system, and platform-rule facts; filings or regulator records own accountable business, legal, contract, government, and disclosure facts; research artifacts own capability, benchmark, dataset, safety-result, evaluation, and replication claims; customer-side or independent evidence owns adoption, deployment, ROI, reliability, cost, and operational-outcome claims.
+  - Updated candidate and run checklists so media-started candidates must name which page owns the source-of-record fact and which pages remain only background when several pages discuss the same event.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 9 is tracked and Day 10 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/source-policy.md`, `docs/candidate-source-checklist.md`, `docs/candidate-intake-format.md`, `docs/update-run-checklist.md`, `docs/original-source-replacement-guide.md`, and relevant site-validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending.
+- Git note: Push not yet attempted for this run.
+
 ## 2026-08-19 08:12 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-19`，发布 12 条安全非重复信号，聚焦 OpenAI 前沿训练安全放缓、ChatGPT for Teens、CodeAI 青少年 AI 素养、FDA 医疗 GenAI 审评讨论、核电 AI、金融 AI onboarding、Cursor Origin、Warp Factories、Etched 推理融资、Perplexity 印度增长和 Groq neocloud 转型。

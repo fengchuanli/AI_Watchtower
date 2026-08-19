@@ -21,7 +21,7 @@ Choose one source role before summarizing:
 
 If the source role is unclear, hold the candidate as a research note with `hold-source-role-unclear` and do not publish it as a current item.
 
-When a media report names a fact that should have an official, filing, paper, regulator, customer-side, dataset, or benchmark original, use `docs/original-source-replacement-guide.md` before drafting. If the original source exists, prefer that original as `candidateUrl`; if it does not, keep the media role visible and the source fact minimal.
+When a media report names a fact that should have an official, filing, paper, regulator, customer-side, dataset, or benchmark original, use `docs/original-source-replacement-guide.md` before drafting. If several pages cover the same event, choose the source of record that directly owns the central fact: official pages for product/policy changes, filings or regulator records for accountable business/legal facts, research artifacts for capability claims, and customer-side or independent evidence for deployment outcomes. If the original source exists, prefer that original as `candidateUrl`; if it does not, keep the media role visible and the source fact minimal.
 
 ## 3. Minimum Evidence
 

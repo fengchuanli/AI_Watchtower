@@ -1037,6 +1037,14 @@ if (
   !/Must Replace Before Drafting/.test(originalSourceReplacementGuide) ||
   !/Media Can Remain Central/.test(originalSourceReplacementGuide) ||
   !/Replacement Search Order/.test(originalSourceReplacementGuide) ||
+  !/Source-Of-Record Decision/.test(originalSourceReplacementGuide) ||
+  !/Product launch, model access, pricing, policy/.test(originalSourceReplacementGuide) ||
+  !/Funding, acquisition, listing, board change/.test(originalSourceReplacementGuide) ||
+  !/Capability, benchmark, dataset, safety result/.test(originalSourceReplacementGuide) ||
+  !/Adoption, deployment, ROI, customer outcome/.test(originalSourceReplacementGuide) ||
+  !/chosen source of record adds a new accountable fact/.test(originalSourceReplacementGuide) ||
+  !/official pages for product\/policy changes/.test(candidateSourceChecklist) ||
+  !/source-of-record fact/.test(updateRunChecklist) ||
   !/hold-original-source-needed/.test(originalSourceReplacementGuide) ||
   !/originalDependency: "must-read"/.test(originalSourceReplacementGuide) ||
   !/official announcement, filing, paper, regulator text/.test(originalSourceReplacementGuide) ||
@@ -1260,7 +1268,10 @@ if (
   !/Day 6[\s\S]*Omitted planned topics/.test(optimizationDecisionIndex) ||
   !/Day 7[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex) ||
   !/Day 8[\s\S]*repeated-url[\s\S]*near-title-review[\s\S]*fresh-source-fact/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 9/.test(optimizationDecisionIndex) ||
+  !/Day 9[\s\S]*source-of-record[\s\S]*official pages[\s\S]*filings or regulator records[\s\S]*research artifacts/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 10/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

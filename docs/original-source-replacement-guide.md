@@ -45,6 +45,21 @@ Search in this order before drafting:
 
 Record the search result in `nextIndependentCheck` or the intake note. If the original exists, use that original URL as `candidateUrl` and keep the media report as background only when it adds safe reader context.
 
+## Source-Of-Record Decision
+
+When official, media, filing, and research pages all exist for the same event, choose the page that directly owns the central fact as the source of record. Do not pick the most readable article if another source carries the legal, technical, product, or disclosure responsibility for the claim. The source-of-record choice decides `candidateUrl`, `sourceRole`, and the first sentence of `sourceBackedFact`; other pages can stay in `sourceReferences` only when they add safe context without changing the evidence posture.
+
+| Central fact type | Best source of record | How to use the other pages |
+| --- | --- | --- |
+| Product launch, model access, pricing, policy, documentation, safety-system change, or platform rule | Official announcement, product docs, changelog, system card, model card, status page, or policy page from the responsible organization | Media can explain market reaction only as `媒体背景`; filings or research pages should support only the facts they directly contain. |
+| Funding, acquisition, listing, board change, legal exposure, public-company number, government contract, or export/control obligation | Filing, investor relation page, regulator/court/government record, contract notice, procurement page, or legally accountable disclosure | Official blogs can explain company framing; media remains background unless no public filing or disclosure exists. |
+| Capability, benchmark, dataset, safety result, research method, model evaluation, or replication claim | Paper, benchmark page, dataset, code repository, model/system card, evaluation report, or independent replication page | Vendor posts can introduce the claim but should not become independent proof; media should not replace the research artifact. |
+| Adoption, deployment, ROI, customer outcome, medical/legal/finance effect, reliability, cost, or operational metric | Customer-side page, audit, implementation record, public metric, regulator result, independent benchmark, or contract/performance evidence | Vendor case studies stay `厂商主张` until external evidence appears; media can remain a limited reported signal if no stronger public source exists. |
+
+If two source types support different parts of the story, split the claim instead of forcing one page to prove everything. Use the accountable source for the headline fact, then name the weaker page's boundary in `proofBoundary`, `nextIndependentCheck`, or `sourceReferences`.
+
+Do not upgrade a candidate just because several pages discuss the same event. Upgrade only when the chosen source of record adds a new accountable fact, such as an official release, filing, regulator text, paper artifact, customer-side metric, audit, contract, dataset, or independent benchmark.
+
 ## Intake Wording
 
 When replacement is needed, write:
