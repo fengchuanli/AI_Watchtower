@@ -24,8 +24,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Pending.
-- Git note: Push not yet attempted for this run.
+- Commit: Local implementation commit `071eadc` (`明确来源正本选择`); this follow-up note records the final push blocker.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-19 08:12 JST
 
