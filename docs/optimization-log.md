@@ -1,3 +1,27 @@
+## 2026-08-19 23:05 JST
+
+- Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前本地首页已是更晚的 `news-1700-2026-08-19`，因此未回退早间版，而是在当前最新版上补入 1 条同日安全非重复可靠媒体信号，聚焦 AI 数据中心反弹进入地方许可、州长选举、能源账单和社区收益政治。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI News、Google AI、Axios AI/Technology、TechCrunch AI、AP、Pennsylvania GRID、Pew Research Center、Goldman Sachs 和历史 URL。
+  - 新增 Axios 2026-08-19 数据中心政治反弹报道，保持 `媒体背景` / `reported` / `originalDependency: must-read`；Pew、Goldman Sachs 和 Pennsylvania 页面只作为背景核对，不把地方政治判断升级为项目级容量延误结论。
+  - 跳过 Axios 模型传闻/社交讨论型文章、旧 LinkedIn slop 复述、播客/付费墙/登录墙正文、社区讨论、随机网页和已收录数据中心旧主线补量。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 45 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local content commit message `补充08点AI新闻情报`; amended after push attempts to record the remote blocker.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-19 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 9 source/candidate workflow task. Added guidance for choosing the source of record when official, media, filing, regulator, research, vendor, and customer-side pages all cover the same event.
