@@ -1,3 +1,29 @@
+## 2026-08-21 08:12 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-21`，发布 12 条安全非重复信号，聚焦 OpenAI 零留存安全处理、ChatGPT Apple Messages 插件、OpenAI/Anthropic 企业支出、Google 出版商来源按钮、Pew AI 网页测量、Ramp Router、Binance Agent OS、Meta AI Mac、Slack Code、AI 裁员沟通、Reddit/ChatGPT 引用波动和 AI-cyber 基金。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI 官方页、Pew Data Labs 原始研究、TechCrunch AI、Axios AI/Technology、The Verge AI、Google 原始背景页和历史 URL。
+  - 新增注册研究来源 `pew-data-labs`；来源数从 45 增至 46。
+  - 本期 1/12 为 OpenAI 官方来源，1/12 为 Pew 研究原文，10/12 为可靠媒体雷达；媒体项保持 `媒体背景` / `reported` / `originalDependency: must-read`，并把完整事实、采访、图表、数据和上下文留给原文。
+  - 跳过 The Verge/OpenAI 安全放缓复述和 Axios 数据中心选举升级等近重复题材；未用旧稿、播客、付费/登录墙、社区讨论或弱证据补量。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors `data/news.json` for edition metadata, reader/source framing, briefing, deep briefing, item count, references and item order.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 46 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local content commit `更新17点AI新闻情报`; this amended log records the final push blocker.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-19 23:05 JST
 
 - Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前本地首页已是更晚的 `news-1700-2026-08-19`，因此未回退早间版，而是在当前最新版上补入 1 条同日安全非重复可靠媒体信号，聚焦 AI 数据中心反弹进入地方许可、州长选举、能源账单和社区收益政治。
