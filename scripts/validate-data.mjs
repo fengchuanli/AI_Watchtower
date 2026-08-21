@@ -80,6 +80,9 @@ const incidentBriefingSections = [
   ["provenance", "source boundary", 20],
   ["verificationStatus", "verification status", 2],
 ];
+const chineseTextPattern = /[\u4e00-\u9fff]/;
+const sourceRoleBoundaryPattern = /(官方|媒体|研究|社区|厂商|监管|文件|论文|原文|背景|信号|核对|边界|证据|确认|验证|证明)/;
+const englishSourceInstructionPattern = /\b(use for|use only|treat|verify|summaries should|official company|established media|community or trend)\b/i;
 
 const errors = [];
 
@@ -1342,8 +1345,40 @@ function validateSourceConcentration(concentration, items, context) {
   }
 }
 
+function validateSourceRegistryReadability(registry) {
+  const trustLevels = registry.trustLevels || {};
+  for (const family of allowedSourceFamilies) {
+    const description = String(trustLevels[family] || "");
+    if (!chineseTextPattern.test(description) || !sourceRoleBoundaryPattern.test(description)) {
+      errors.push(`data/sources.json trustLevels.${family} must be a Chinese source-role description.`);
+    }
+
+    if (englishSourceInstructionPattern.test(description)) {
+      errors.push(`data/sources.json trustLevels.${family} should not use English source instructions.`);
+    }
+  }
+
+  const policyText = Object.values(registry.policy || {}).join(" ");
+  if (!chineseTextPattern.test(policyText) || !/中文|原始|官方|媒体|社区|事实|核对/.test(policyText)) {
+    errors.push("data/sources.json policy must give Chinese source-use guidance.");
+  }
+
+  for (const [index, source] of (registry.sources || []).entries()) {
+    const notes = String(source.notes || "");
+    if (!chineseTextPattern.test(notes) || !sourceRoleBoundaryPattern.test(notes)) {
+      errors.push(`data/sources.json sources[${index}] notes must explain the source role in Chinese.`);
+    }
+
+    if (englishSourceInstructionPattern.test(notes)) {
+      errors.push(`data/sources.json sources[${index}] notes should avoid English source-use instructions.`);
+    }
+  }
+}
+
 if (!Array.isArray(sourceRegistry.sources) || !sourceRegistry.sources.length) {
   errors.push("data/sources.json must include at least one source.");
+} else {
+  validateSourceRegistryReadability(sourceRegistry);
 }
 
 if (!Array.isArray(newsFeed.items)) {

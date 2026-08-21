@@ -1271,7 +1271,8 @@ if (
   !/Day 9[\s\S]*source-of-record[\s\S]*official pages[\s\S]*filings or regulator records[\s\S]*research artifacts/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 10/.test(optimizationDecisionIndex) ||
+  !/Day 10[\s\S]*data\/sources\.json[\s\S]*Chinese editor-facing source-role language/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 11/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

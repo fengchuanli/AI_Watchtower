@@ -2,15 +2,15 @@
   "version": 1,
   "updatedAt": "2026-08-21",
   "policy": {
-    "primaryRule": "Prefer official sources and RSS feeds. Use media reports for context. Treat community posts as trend signals until confirmed by official sources or reliable reporting.",
-    "language": "Summaries for the site should be written in Chinese, with source links preserved.",
-    "claimSafety": "Do not present rumors, leaks, or community speculation as facts. Label them as unconfirmed signals when included."
+    "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
+    "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
+    "claimSafety": "传闻、泄露和社区讨论必须标为待核验信号；没有官方、可靠媒体、论文或监管材料前，不写成确定事实。"
   },
   "trustLevels": {
-    "official": "Official company, lab, platform, or research organization source.",
-    "reliable_media": "Established media or industry publication. Useful for context and market movement.",
-    "research": "Academic or research-focused source. Useful for papers, benchmarks, and technical direction.",
-    "community_signal": "Community or trend source. Useful for discovery, not final confirmation."
+    "official": "官方或一手发布：适合核对产品、模型、政策、公司公告、安全说明和平台规则，但厂商效果主张仍需外部证据。",
+    "reliable_media": "可靠媒体背景：适合发现市场、融资、监管、公司和产品动向；只摘最小事实，完整采访、图表和上下文留给原文。",
+    "research": "研究或数据原文：适合论文、基准、调查和方法说明；注意样本、方法、复现和同行评议边界。",
+    "community_signal": "社区发现信号：只用于找线索或观察讨论热度；发布前必须等待官方、论文、监管或可靠媒体确认。"
   },
   "sources": [
     {
@@ -28,7 +28,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for OpenAI product releases, model updates, safety notes, research, and global affairs."
+      "notes": "官方核对 OpenAI 产品、模型、安全、研究和全球事务事实；效果、采用和影响结论仍需外部证据。"
     },
     {
       "id": "openai-developers-rss",
@@ -43,7 +43,7 @@
       "trustLevel": "official",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for API, developer tooling, and platform updates."
+      "notes": "官方核对 OpenAI API、开发者工具、平台能力和文档更新；适合确认接口变化，不直接证明客户效果。"
     },
     {
       "id": "anthropic-news",
@@ -60,7 +60,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Claude releases, Anthropic policy posts, company announcements, and safety updates."
+      "notes": "官方核对 Claude 发布、政策、安全和公司公告；商业采用或外部影响需要客户、监管或媒体补证。"
     },
     {
       "id": "anthropic-support",
@@ -75,7 +75,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for official Claude help-center policy, product behavior, compliance, and account guidance when the newsroom is not the original support surface."
+      "notes": "官方核对 Claude 支持中心里的产品行为、账号、合规和政策细节；当支持页才是原始入口时优先用它。"
     },
     {
       "id": "google-deepmind-blog",
@@ -91,7 +91,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Gemini, DeepMind research, AI science, and responsibility updates."
+      "notes": "官方核对 Gemini、DeepMind 研究、AI 科学和责任说明；研究结论需看方法、评测和复现边界。"
     },
     {
       "id": "google-keyword-ai",
@@ -107,7 +107,7 @@
       "trustLevel": "official",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for official Google AI product, Gemini app, developer, and company AI updates when the DeepMind blog is not the original source."
+      "notes": "官方核对 Google AI 产品、Gemini 应用、开发者和公司层面的 AI 更新；不是 DeepMind 原始研究时优先看这里。"
     },
     {
       "id": "mistral-news",
@@ -123,7 +123,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Mistral model releases, platform updates, and open model strategy."
+      "notes": "官方核对 Mistral 模型、平台、开源模型和企业策略；性能和客户效果仍需独立评测或客户证据。"
     },
     {
       "id": "huggingface-blog",
@@ -139,7 +139,7 @@
       "trustLevel": "official",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for open-source model, dataset, tooling, and community engineering updates."
+      "notes": "官方/社区平台原文，用于开放模型、数据集、工具和工程生态更新；项目质量仍需代码、评测或采用证据。"
     },
     {
       "id": "nvidia-blog-ai",
@@ -155,7 +155,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI infrastructure, GPU ecosystem, enterprise AI, and model acceleration updates."
+      "notes": "厂商原文，用于 AI 基础设施、GPU 生态、企业 AI 和模型加速消息；性能、交付和客户成效需外部证明。"
     },
     {
       "id": "meta-ai-blog",
@@ -171,7 +171,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Llama, Meta AI research, open models, and product integration updates."
+      "notes": "官方核对 Llama、Meta AI 研究、开放模型和产品整合；愿景和性能主张需第三方测试或用户侧数据。"
     },
     {
       "id": "microsoft-ai-blog",
@@ -187,7 +187,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Copilot, Azure AI, enterprise deployment, and Microsoft AI strategy."
+      "notes": "官方核对 Copilot、Azure AI、企业部署和 Microsoft AI 策略；采用效果与成本收益需客户或审计证据。"
     },
     {
       "id": "arxiv-ai",
@@ -200,7 +200,7 @@
       "trustLevel": "research",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for artificial intelligence preprints. Summaries should avoid overstating unreviewed claims."
+      "notes": "研究原文，用于 AI 预印本；只能说明作者发布了方法和结果，不能直接写成已验证突破。"
     },
     {
       "id": "arxiv-cl",
@@ -214,7 +214,7 @@
       "trustLevel": "research",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for NLP and language model research preprints."
+      "notes": "研究原文，用于 NLP 和语言模型预印本；注意数据集、评测设置、复现和同行评议边界。"
     },
     {
       "id": "arxiv-cv",
@@ -229,7 +229,7 @@
       "trustLevel": "research",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for computer vision, image generation, and multimodal research preprints."
+      "notes": "研究原文，用于视觉、图像生成和多模态预印本；避免把单篇结果写成已稳定落地。"
     },
     {
       "id": "techcrunch-ai",
@@ -245,7 +245,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for startup, funding, and product market coverage."
+      "notes": "可靠媒体背景，用于创业公司、融资和产品市场动向；只摘最小事实，官方或文件能替代时优先换源。"
     },
     {
       "id": "venturebeat-ai",
@@ -261,7 +261,7 @@
       "trustLevel": "reliable_media",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for enterprise AI adoption, business strategy, and market context."
+      "notes": "可靠媒体背景，用于企业 AI、商业策略和市场上下文；供应商案例和成效叙事需独立核对。"
     },
     {
       "id": "mit-technology-review-ai",
@@ -277,7 +277,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for deeper analysis of AI research, society, and policy impact."
+      "notes": "可靠媒体/深度分析背景，用于 AI 研究、社会和政策影响；区分事实报道、分析判断和作者观点。"
     },
     {
       "id": "hacker-news-ai-search",
@@ -292,7 +292,7 @@
       "trustLevel": "community_signal",
       "hasRss": false,
       "language": "en",
-      "notes": "Use only as a discovery signal. Confirm important items elsewhere before publishing as facts."
+      "notes": "社区发现入口，只用于发现开发者讨论和早期线索；重要事实必须另找官方、论文或可靠媒体。"
     },
     {
       "id": "github-trending-ai",
@@ -307,7 +307,7 @@
       "trustLevel": "community_signal",
       "hasRss": false,
       "language": "en",
-      "notes": "Use to discover fast-moving open-source tools. Verify project quality before featuring."
+      "notes": "社区/代码发现入口，用于发现开源工具热度；发布前核对仓库质量、维护状态、许可和独立使用证据。"
     },
     {
       "id": "product-hunt-ai",
@@ -322,7 +322,7 @@
       "trustLevel": "community_signal",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for early product discovery. Treat popularity as a signal, not proof of quality."
+      "notes": "社区/产品发现入口，用于早期 AI 产品线索；热度不等于质量、收入或采用证明。"
     },
     {
       "id": "reuters-technology",
@@ -339,7 +339,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for reliable reporting on AI company strategy, capital markets, regulation, acquisitions, and infrastructure moves."
+      "notes": "可靠媒体背景，用于 AI 公司策略、资本市场、监管、并购和基础设施动向；金额和责任事实尽量回查文件或公司声明。"
     },
     {
       "id": "bloomberg-technology",
@@ -356,7 +356,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI capital spending, IPO/listing context, hyperscaler strategy, chips, and market-moving company coverage."
+      "notes": "可靠媒体背景，用于 AI 资本支出、上市、云厂商、芯片和市场动向；付费内容只用公开可见信息并保留原文入口。"
     },
     {
       "id": "cnbc-technology",
@@ -373,7 +373,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for public-company AI spending, executive statements, chip demand, and acquisition or market context."
+      "notes": "可靠媒体背景，用于上市公司 AI 支出、高管表态、芯片需求、并购和市场上下文；关键公司动作需官方确认。"
     },
     {
       "id": "the-information-ai",
@@ -389,7 +389,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI company strategy, fundraising, leadership, and competitive dynamics; verify paywalled claims carefully before publishing."
+      "notes": "可靠媒体背景，用于 AI 公司策略、融资、领导层和竞争动态；付费报道不得重构全文，发布前优先寻找可核对原始来源。"
     },
     {
       "id": "axios-ai",
@@ -404,7 +404,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI policy, market structure, leadership, and geopolitical context when official confirmation is unavailable or incomplete."
+      "notes": "可靠媒体背景，用于 AI 政策、市场结构、领导层和地缘科技语境；没有官方确认时保持 reported 边界。"
     },
     {
       "id": "financial-times-tech",
@@ -420,7 +420,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI company strategy, regulation, capital markets, and geopolitical technology coverage. Treat paywalled pages as must-read references and avoid reconstructing full articles."
+      "notes": "可靠媒体背景，用于 AI 战略、监管、资本市场和地缘科技；付费页只保留公开信息与 must-read 原文入口。"
     },
     {
       "id": "guardian-technology",
@@ -436,7 +436,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI policy, society, labor, infrastructure, and public-interest analysis. Keep opinion or scenario coverage clearly labeled as analysis rather than confirmed fact."
+      "notes": "可靠媒体/公共议题背景，用于 AI 政策、社会、劳动、基础设施和分析；观点或情景判断必须标为分析。"
     },
     {
       "id": "marketwatch-technology",
@@ -452,7 +452,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for market-facing AI company, talent, capital, and public-equity context. Verify company actions against official statements when available."
+      "notes": "可靠媒体背景，用于 AI 公司、人才、资本和公开市场语境；公司行动和数据应回查官方声明或文件。"
     },
     {
       "id": "wall-street-journal-ai",
@@ -468,7 +468,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI business strategy, capital spending, power constraints, chips, and company competition. Keep paywalled/newsletter coverage as media background and avoid reconstructing full articles."
+      "notes": "可靠媒体背景，用于 AI 商业策略、资本支出、电力约束、芯片和竞争；付费/通讯内容不得改写成站内替代版。"
     },
     {
       "id": "barrons-technology",
@@ -484,7 +484,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI-adjacent public-company, infrastructure, cloud, financing, and market context. Treat paywalled pages as must-read references and avoid reconstructing full articles."
+      "notes": "可靠媒体背景，用于 AI 相关上市公司、基础设施、云、融资和市场语境；付费页保留 must-read 边界。"
     },
     {
       "id": "businessinsider-ai",
@@ -500,7 +500,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI company, government adoption, workforce, and market context. Keep media facts minimal and verify official actions when available."
+      "notes": "可靠媒体背景，用于 AI 公司、政府采用、劳动力和市场语境；官方动作、合同或政策结论需原始来源确认。"
     },
     {
       "id": "theverge-ai",
@@ -516,7 +516,7 @@
       "trustLevel": "reliable_media",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for AI product, platform, developer-tool, and policy coverage. Treat previews and teasers as media background until official launch details are available."
+      "notes": "可靠媒体背景，用于 AI 产品、平台、开发者工具、消费者体验和政策；预告、爆料和体验文需等待官方细节。"
     },
     {
       "id": "wired-ai",
@@ -532,7 +532,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for AI product, platform, culture, policy, and company coverage. Keep media facts minimal and preserve original links for full context."
+      "notes": "可靠媒体背景，用于 AI 产品、平台、文化、政策和公司报道；只摘最小事实，完整上下文留在 WIRED 原文。"
     },
     {
       "id": "arxiv-cr",
@@ -546,7 +546,7 @@
       "trustLevel": "research",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for AI security, agent security, cryptography, and security-system preprints. Summaries should avoid overstating unreviewed claims."
+      "notes": "研究原文，用于 AI 安全、Agent 安全、密码学和安全系统预印本；结论需看威胁模型、复现和同行评议。"
     },
     {
       "id": "arxiv-se",
@@ -561,7 +561,7 @@
       "trustLevel": "research",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for software engineering, coding-agent, testing-agent, and developer-workflow preprints. Summaries should avoid overstating unreviewed claims."
+      "notes": "研究原文，用于软件工程、编码 Agent、测试 Agent 和开发流程预印本；不要把实验结果直接写成生产效果。"
     },
     {
       "id": "pacing-frontier-statement",
@@ -576,7 +576,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use only for the public statement, signatory count, and named signatories; treat it as a coalition statement, not as company policy."
+      "notes": "公开声明原文，只用于核对声明内容、签署数量和具名签署者；不等同于任何单一公司的正式政策。"
     },
     {
       "id": "us-doj-news",
@@ -591,7 +591,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for official DOJ enforcement actions, settlements, and civil-rights or competition matters involving AI companies."
+      "notes": "监管/官方原文，用于 DOJ 执法、和解、民权或竞争事项；法律责任和范围以原文为准。"
     },
     {
       "id": "suno-blog",
@@ -606,7 +606,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Suno product, transparency, trust and safety, rights-holder, and AI music ecosystem updates; treat outcome and ecosystem-health claims as vendor claims until externally verified."
+      "notes": "厂商原文，用于 Suno 产品、透明度、信任安全、权利人和 AI 音乐生态更新；生态健康和效果主张需外部证据。"
     },
     {
       "id": "crowdstrike-blog",
@@ -622,7 +622,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for CrowdStrike threat-intelligence, AI security, agent security, and incident-response updates; treat vendor telemetry and product outcome claims as vendor claims until independently corroborated."
+      "notes": "厂商/安全原文，用于威胁情报、AI 安全、Agent 安全和事件响应；遥测和产品效果需独立佐证。"
     },
     {
       "id": "ap-technology",
@@ -638,7 +638,7 @@
       "trustLevel": "reliable_media",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for wire-service technology coverage and company/regulatory AI context; keep full AP reporting in the original source."
+      "notes": "可靠媒体背景，用于通讯社科技报道和公司/监管 AI 语境；完整 AP 报道留在原文。"
     },
     {
       "id": "wired-security",
@@ -654,7 +654,7 @@
       "trustLevel": "reliable_media",
       "hasRss": true,
       "language": "en",
-      "notes": "Use for security reporting that intersects AI systems, privacy, surveillance, and infrastructure risk; retain original context in WIRED."
+      "notes": "可靠媒体背景，用于 AI 系统、隐私、监控和基础设施风险相关安全报道；保留 WIRED 原文上下文。"
     },
     {
       "id": "runway-news",
@@ -670,7 +670,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for official Runway model, generative media platform, developer API, and enterprise workflow announcements; treat customer or performance outcomes as vendor claims until independently verified."
+      "notes": "厂商原文，用于 Runway 模型、生成媒体平台、开发者 API 和企业流程公告；客户或性能成效需独立验证。"
     },
     {
       "id": "etched-progress",
@@ -685,7 +685,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for official Etched financing, inference hardware, cluster, and production progress claims; require customer, benchmark, supply-chain, or filing evidence before upgrading performance and delivery conclusions."
+      "notes": "厂商原文，用于 Etched 融资、推理硬件、集群和生产进展主张；性能、交付和供应链结论需客户、基准、文件或供应链证据。"
     },
     {
       "id": "xai-news",
@@ -701,7 +701,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for xAI/Grok model releases, product availability, API pricing, and safety notes; treat benchmark and performance claims as vendor claims until independently tested."
+      "notes": "官方核对 xAI/Grok 模型、产品可用性、API 定价和安全说明；benchmark 和性能主张需独立测试。"
     },
     {
       "id": "cursor-blog",
@@ -717,7 +717,7 @@
       "trustLevel": "official",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Cursor company, product, coding-agent, security, and acquisition updates; verify customer impact and performance claims with external evidence."
+      "notes": "厂商原文，用于 Cursor 公司、产品、编码 Agent、安全和并购更新；客户影响和性能需外部证据。"
     },
     {
       "id": "pew-data-labs",
@@ -732,7 +732,7 @@
       "trustLevel": "research",
       "hasRss": false,
       "language": "en",
-      "notes": "Use for Pew Research Center data-lab analyses, surveys, and web/data methodology posts. Treat measurements as research findings with method caveats."
+      "notes": "研究/数据原文，用于 Pew Data Labs 分析、调查和网页/数据方法；解读时保留样本、方法和测量边界。"
     }
   ]
 }

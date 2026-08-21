@@ -16,6 +16,14 @@ Before a semi-automated gathering run drafts item fields, use `docs/candidate-so
 
 - `sourceCount`: Number of registered sources available to the current homepage. It must match `data/sources.json` `sources.length` so the hero stats do not drift from the source registry.
 
+## Source Registry Fields
+
+`data/sources.json` is an editor-facing source map, not only a machine registry. Keep `policy`, `trustLevels`, and every `sources[].notes` field in clear Chinese so non-technical editors can decide whether a page is official confirmation, research original, reliable-media background, vendor claim, regulator/file record, or community discovery before drafting.
+
+- `policy`: Chinese source-use guidance. It should remind editors to prefer official/original pages, keep original links as verification entrances, and label rumors or community discussion as unconfirmed signals.
+- `trustLevels`: Chinese descriptions for `official`, `research`, `reliable_media`, and `community_signal`. Each description should state what that source tier can support and what still needs external evidence.
+- `sources[].notes`: Chinese role note for the individual source. Avoid generic English instructions such as `Use for...`; name the safest editorial use and the boundary, for example whether performance, adoption, customer outcome, paywalled context, or community popularity still needs independent proof.
+
 ## Edition Fields
 
 The required top-level `edition` object gives each homepage snapshot a stable archive identity. Update it whenever the feed advances to a new editorial date.

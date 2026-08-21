@@ -1,3 +1,36 @@
+## 2026-08-21 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 10 source/candidate workflow task. Reviewed `data/sources.json` labels and descriptions so source roles are readable to non-technical Chinese editors.
+- Changed files:
+  - `data/sources.json`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Rewrote `data/sources.json` `policy`, `trustLevels`, and all 46 `sources[].notes` from English `Use for...` style copy into Chinese editor-facing source-role notes.
+  - The new notes tell editors whether a source should be treated as official verification, research/data original, reliable-media background, vendor claim, regulator/file record, or community discovery, and name the main proof boundary such as external evidence, must-read original context, method caveats, paywall limits, or independent confirmation.
+  - Documented the source-registry readability rule in `docs/news-data-format.md`.
+  - Added `validateSourceRegistryReadability` to `scripts/validate-data.mjs` so source policy, trust-level descriptions, and source notes must remain Chinese-readable and cannot drift back to generic English source-use instructions.
+  - Updated `docs/optimization-decision-index.md` and `scripts/validate-site.mjs` so Day 10 is tracked and Day 11 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 46 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local implementation commit `7e674c9` (`优化来源角色说明`); push status recorded after the final push attempt.
+- Git note: Push will be attempted after commit; remote sync depends on DNS/network recovery if `github.com` remains unresolved.
+
 ## 2026-08-21 08:12 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-21`，发布 12 条安全非重复信号，聚焦 OpenAI 零留存安全处理、ChatGPT Apple Messages 插件、OpenAI/Anthropic 企业支出、Google 出版商来源按钮、Pew AI 网页测量、Ramp Router、Binance Agent OS、Meta AI Mac、Slack Code、AI 裁员沟通、Reddit/ChatGPT 引用波动和 AI-cyber 基金。
