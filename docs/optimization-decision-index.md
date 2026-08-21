@@ -28,7 +28,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 7 | Complete | `02cd2b2` | `docs/candidate-intake-format.md` now has an Intake Scratch Template for 08:00 and 17:00 JST runs, mirrored in `docs/update-run-checklist.md` and guarded by `scripts/validate-site.mjs`. |
 | Day 8 | Complete | `e113ec8` | Duplicate reporting now distinguishes `repeated-url`, `near-title-review`, `fresh-source-fact`, and `manual-clear`, so editors know when to reject, hold, or draft based on a new source-backed action. |
 | Day 9 | Complete | `071eadc` | `docs/original-source-replacement-guide.md` now has a source-of-record decision table: official pages own product/policy facts, filings or regulator records own accountable business/legal facts, research artifacts own capability claims, and customer-side or independent evidence owns deployment outcomes. |
-| Day 10 | Complete | `7e674c9` | `data/sources.json` policy, trust-level descriptions, and every source note now use Chinese editor-facing source-role language, with data validation blocking English `Use for...` style instructions from returning. |
+| Day 10 | Complete | `813f364` | `data/sources.json` policy, trust-level descriptions, and every source note now use Chinese editor-facing source-role language, with data validation blocking English `Use for...` style instructions from returning. |
 
 ## Historical Guard Anchors
 

@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check` for touched files.
-- Commit: Local implementation commit `7e674c9` (`优化来源角色说明`); push status recorded after the final push attempt.
+- Commit: Local implementation commit `813f364` (`优化来源角色说明`); push status recorded after the final push attempt.
 - Git note: Push will be attempted after commit; remote sync depends on DNS/network recovery if `github.com` remains unresolved.
 
 ## 2026-08-21 08:12 JST
