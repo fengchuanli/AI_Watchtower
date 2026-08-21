@@ -1,994 +1,459 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-21",
-  "status": "published",
+  "updatedAt": "2026-08-22",
+  "status": "updated",
   "statusLabel": "已更新",
-  "sourceCount": 46,
-  "editorNote": "2026-08-21 17:00 JST：17:00 自动化更新当前版，发布 12 条新闻情报；GitHub DNS 仍阻塞同步。",
+  "sourceCount": 47,
+  "editorNote": "2026-08-22 17:00 JST 版：聚焦 AI 数据中心政治风险、训练数据监管、招聘自动化、生命科学安全、企业协作入口和政府监督。",
   "edition": {
-    "id": "news-1700-2026-08-21",
-    "date": "2026-08-21",
+    "id": "news-1700-2026-08-22",
+    "date": "2026-08-22",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
     "archiveLabel": "17:00 JST 发布",
-    "note": "本期聚焦企业模型支出、隐私安全、Agent 工具、AI 搜索、内容真实性与劳动力叙事。",
-    "operationalStatus": "已查来源政策、注册来源、OpenAI/Pew 原始页、TechCrunch/Axios/The Verge 和历史 URL；GitHub DNS 阻塞 pull。",
-    "editorialInterpretation": "本期发布 12 条安全非重复信号，达到 10 条质量门槛；媒体项均保持最低事实和原文依赖，未用旧稿、播客、付费/登录墙、社区讨论或弱证据补量。",
+    "note": "本期聚焦数据中心政治、训练数据、AI 招聘、生命科学安全、企业协作与监督。",
+    "operationalStatus": "已尝试拉取 origin/main，但 GitHub DNS 解析失败；基于本地 main 核查来源并发布 10 条安全非重复信号。",
+    "editorialInterpretation": "本期发布 10 条安全非重复信号，主轴是数据中心社会许可、AI 数据治理、企业协作入口和政府监督证据。",
     "readerFrame": {
-      "headline": "阅读本期：把企业支出、隐私安全、Agent 执行、AI 搜索分发和劳动力叙事分开核验",
-      "whyItMatters": "这 12 条显示 AI 正从模型发布进入企业预算、消息/交易/代码执行、出版商流量、内容真实性和员工信任的运营层；它们是核查雷达，不是效果已经被独立证明。",
-      "mobile": {
-        "headline": "手机先看五条线",
-        "summary": "零留存安全、Agent 执行、AI 搜索和企业信任是重点。",
-        "primaryUses": [
-          "安全团队查零留存监控。",
-          "产品团队查消息与商家权限。",
-          "运营团队查 AI 搜索来源波动。"
-        ],
-        "proofBoundary": "尚未证明安全、留存、ROI、流量恢复或就业影响已验证。"
-      },
+      "headline": "AI 的约束正在从模型端转向社会许可、数据来源和监督证据",
+      "whyItMatters": "本期集中展示 AI 落地后的约束：数据中心要过社会许可，训练数据和招聘自动化要留下证据，企业协作与政府监督要能被审计。",
       "useThisIssueFor": [
-        "安全、法务和采购团队用本期更新零数据留存、客户内容加密、滥用监控和供应商数据政策清单。",
-        "产品、平台和风控团队用本期检查 ChatGPT Messages、Binance Agent OS、Slack Code、Meta AI Mac 和 Ramp Router 的权限/审计边界。",
-        "媒体、搜索和品牌团队用本期跟踪 Google Preferred Sources、Pew AI 网页测量和 Reddit 在 ChatGPT 引用中的波动。",
-        "管理层、人力和投资团队用本期评估企业模型支出、AI 裁员沟通和 AI-cyber 资本迁移。"
+        "基础设施团队检查数据中心能源、许可、选举和社区沟通风险。",
+        "法务和政策团队核对训练数据、招聘自动化、州级 AI 审计和国家安全监督证据。",
+        "企业 IT 团队跟进 Gemini in Chat 的权限、导出和使用限额变化。"
       ],
       "notProvenYet": [
-        "不证明 Private Safety Processing 已经通过外部审计，也不证明零留存与安全监控的冲突已完全解决。",
-        "不证明 ChatGPT Messages、Meta AI、Slack Code、Binance Agent OS 或 Ramp Router 已经具备稳定生产采用和低风险权限模型。",
-        "不证明 Preferred Sources 能恢复出版商流量，也不证明 Pew 检测结果可判定任意单篇网页作者身份。"
-      ]
+        "不证明数据中心反弹已经阻断美国 AI 基础设施建设。",
+        "不证明 AI 招聘、生物安全或训练数据争议已形成统一监管结论。",
+        "不证明官方产品更新已经带来可量化客户收益。"
+      ],
+      "mobile": {
+        "headline": "本期看 AI 的社会许可和证据链",
+        "summary": "数据中心、训练数据、招聘、生物安全和企业协作入口都进入核查清单。",
+        "primaryUses": [
+          "基础设施团队查许可",
+          "法务团队核对证据",
+          "IT团队查权限"
+        ],
+        "proofBoundary": "仍需官方文件证明监管结论和项目实际结果"
+      }
     },
     "changeSummary": {
-      "headline": "相较 8 月 19 日版，本期从前沿安全放缓扩展到企业隐私、Agent 执行、AI 搜索分发和组织沟通",
+      "headline": "较上一版新增数据中心政治、训练数据竞争法、招聘 AI 和监督机制信号",
       "freshFacts": [
-        "本期新增来源事实：OpenAI 官方预览 Private Safety Processing，称可在零数据留存承诺下返回有限安全信号。",
-        "本期新增来源事实：TechCrunch 报道 ChatGPT Apple Messages 插件、Ramp Router、Binance Agent OS、Meta AI Mac 和 Google 出版商按钮。",
-        "本期新增来源事实：Pew Data Labs 发布 Common Crawl 样本研究，称 ChatGPT 后网页中超过三分之一有 AI 作者迹象。",
-        "本期新增来源事实：Axios 报道 CEO AI 裁员叙事降温、Reddit 在 ChatGPT 引用占比下降和 CrowdStrike CTO 转向 AI-cyber 基金。",
-        "本期新增来源事实：The Verge 报道 Slack Code 将编码 Agent 协作放进可审计频道。"
+        "本期新增 Axios 8 月 21 日数据中心政治与公共健康报道。",
+        "本期新增 Axios 对民间组织要求 FTC 调查 AI 训练数据毁书采购问题的报道。",
+        "本期新增 Google Workspace 官方 Ask Gemini in Chat 逐步上线安排。",
+        "本期新增 OpenAI 国家安全 AI 民主监督支持计划。"
       ],
       "repeatedContext": [
-        "延续背景：上一版已覆盖 OpenAI 前沿安全放缓、ChatGPT for Teens、Cursor Origin、Etched、Groq 和数据中心政治，不在本期重复重发。",
-        "仍是同一主线：AI 竞争继续从能力竞赛延伸到权限控制、企业预算、分发规则、真实资金执行和员工信任。"
+        "数据中心能源与地方反弹延续 8 月中旬已出现的算力社会许可主线。",
+        "OpenAI/Anthropic 安全放缓争议仍是背景，本期不重复旧安全放缓报道。",
+        "企业 AI 入口延续协作、招聘和公共部门流程下沉旧主线，采用效果仍需外部证据。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对安全、隐私与劳动力叙事",
+        "label": "查数据中心社会许可",
         "count": 4,
-        "meaning": "用来更新零留存安全处理、模型滥用监控、AI 裁员沟通和 AI-cyber 投资观察清单。"
+        "meaning": "用来检查能源、选举、许可、社区沟通和外部影响叙事是否改变项目清单。"
       },
       {
-        "label": "核对 Agent 执行控制面",
-        "count": 4,
-        "meaning": "用来检查消息代发、金融交易、模型路由和 Slack 编码频道的权限、审批、日志和成本边界。"
+        "label": "核对治理证据边界",
+        "count": 5,
+        "meaning": "用来更新训练数据、招聘自动化、生物安全、州级审计和政府监督证据要求。"
       },
       {
-        "label": "验证搜索、内容与企业采用证据",
-        "count": 4,
-        "meaning": "用来核对 Google/Reddit 分发变化、Pew AI 内容测量、Meta 商家入口和 OpenAI/Anthropic 支出数据。"
+        "label": "查企业协作入口",
+        "count": 1,
+        "meaning": "用来核对 Gemini in Chat 的权限、导出、限额和管理员控制。"
       }
     ],
     "sourceRisk": {
-      "label": "可靠媒体占优，官方和研究来源补强关键边界",
-      "note": "可靠媒体来源占 10/12，已经形成来源家族集中；OpenAI 官方和 Pew 研究只补强关键锚点。",
-      "nextCheck": "查 OpenAI 白皮书、Pew 数据/方法、Google/Search 文档、平台日志、客户采用、审计记录、基金文件和监管材料。"
+      "label": "媒体雷达占主导",
+      "note": "可靠媒体来源集中占比 8/10，适合做雷达，不等同于监管结论、项目结果或客户成效。",
+      "nextCheck": "下一步优先查信件原文、州法文本、项目许可、官方报告、审计日志和客户/平台数据。"
     },
     "sourceConcentration": {
-      "sourceId": "techcrunch-ai",
-      "sourceName": "TechCrunch AI",
-      "count": 6,
-      "share": "6/12",
-      "note": "TechCrunch 贡献 6 条产品、工具和市场雷达；未达到三分之二，但仍需避免把同一媒体窗口当作完整覆盖。",
-      "nextCheck": "用官方产品页、API 文档、客户日志、第三方评测、原始数据和监管/合同材料补强。"
+      "sourceId": "axios-ai",
+      "sourceName": "Axios AI / Technology",
+      "count": 7,
+      "share": "7/10",
+      "note": "Axios 是本期最大单一来源，说明本期偏美国政策和基础设施雷达。",
+      "nextCheck": "用官方文件、监管记录、项目合同、RAND 原文、平台报告和客户侧数据补强。"
     },
     "trendNotes": [
       {
-        "topic": "privacy-safety-tradeoff",
-        "label": "企业 AI 的安全与隐私冲突更具体",
-        "note": "跨期看，OpenAI pacing、Anthropic 数据留存争议和本期 Private Safety Processing 都把前沿模型安全拉到客户数据控制层。",
-        "boundary": "不证明方案有效，仍需技术白皮书、外部审计、客户侧日志和监管认可。"
+        "topic": "数据中心",
+        "label": "社会许可升温",
+        "note": "跨期看，数据中心从能源和电费争议延续到选举、健康和外部影响叙事。",
+        "boundary": "这仍不证明建设停滞；需要项目许可、融资关闭、PPA、电价和施工数据验证。"
       },
       {
-        "topic": "agent-permission-surface",
-        "label": "Agent 开始接触高风险执行面",
-        "note": "跨期看，Cursor/Warp、ChatGPT Messages、Binance Agent OS 和 Slack Code 都在把 Agent 从建议推向消息、交易和代码协作。",
-        "boundary": "不证明可安全自动化，仍需权限模型、审批日志、故障率、资金限额和审计材料。"
+        "topic": "AI治理",
+        "label": "证据链前置",
+        "note": "历史版本已出现安全和政策主线，本期再次把训练数据、招聘、生物安全和国家安全监督推到审计层。",
+        "boundary": "这不证明监管已经统一成型；需要法律文本、执法文件、审计报告和第三方评估。"
       },
       {
-        "topic": "ai-distribution-rewritten",
-        "label": "AI 搜索与内容供应链继续重写",
-        "note": "跨期看，Google 数据资产、Preferred Sources、Reddit 引用下降和 Pew AI 网页测量都指向信息分发规则变化。",
-        "boundary": "不证明流量恢复或内容质量改善，仍需点击率、引用日志、数据方法、出版商收入和第三方复现。"
-      },
-      {
-        "topic": "enterprise-roi-trust",
-        "label": "企业 AI 从支出增长进入信任压力",
-        "note": "跨期看，BNY onboarding、Ramp 支出份额、AI 裁员沟通和 CrowdStrike AI-cyber 基金显示组织采用需要 ROI、人才和安全叙事同时成立。",
-        "boundary": "不证明 ROI 已稳定，仍需财务披露、客户续约、岗位数据、安全产品收入和独立调查。"
+        "topic": "企业入口",
+        "label": "协作面延续",
+        "note": "延续此前 Slack、Meta AI 和 Agent 工具信号，Google Chat 的 Gemini 入口再次显示协作界面成为 AI 控制面。",
+        "boundary": "这不证明生产率提升；需要后台使用指标、权限审计和客户侧工作流数据。"
       }
     ],
     "topicContinuity": [
       {
         "topic": "policy",
-        "label": "治理扩展",
+        "label": "政策压力更强",
         "status": "stronger",
-        "previousPattern": "上一版覆盖 OpenAI 前沿训练放缓、青少年保护、FDA 医疗 AI 和数据中心政治。",
-        "currentSignal": "本期新增 OpenAI 零留存安全处理、CEO AI 裁员叙事和 Google/出版商分发治理。",
-        "signalDirection": "增强：治理从模型安全扩展到客户数据、员工信任和平台分发规则。",
-        "stillUnproven": "仍需审计报告、监管文本、员工数据、客户日志和出版商指标。"
+        "previousPattern": "此前版本已记录 AI 安全、数据中心和劳动力叙事进入政策讨论。",
+        "currentSignal": "本期新增 FTC 信件、得州 AI 审计、国家安全监督和多条数据中心政策信号。",
+        "signalDirection": "增强：从单点争议转向州级、联邦和公共部门多线审查。",
+        "stillUnproven": "仍需 FTC 文件、州法文本、政府试点记录和项目许可证明影响落地。"
       },
       {
-        "topic": "developer-tooling",
-        "label": "工具扩权",
+        "topic": "infrastructure",
+        "label": "算力建设阻力重复但范围扩大",
         "status": "stronger",
-        "previousPattern": "上一版覆盖 Cursor Origin 与 Warp Factories。",
-        "currentSignal": "本期新增 Slack Code、Ramp Router、Binance Agent OS 和 ChatGPT Messages 插件。",
-        "signalDirection": "增强：工具从代码托管扩展到通信、交易、模型路由和团队审批。",
-        "stillUnproven": "仍需官方文档、权限设计、审计日志、事故记录、价格页和客户采用数据。"
+        "previousPattern": "历史版本已出现数据中心反弹、能源账单和地方许可风险。",
+        "currentSignal": "本期加入 MAHA 燃煤反对、投资人政治风险和 Hochul 路线。",
+        "signalDirection": "增强：从容量供给问题转为社会许可和选举风险。",
+        "stillUnproven": "仍需电力合同、州级审批、施工进度和融资文件验证是否延误。"
       },
       {
         "topic": "enterprise",
-        "label": "企业采用从单点案例转向预算和沟通证据",
-        "status": "stronger",
-        "previousPattern": "上一版覆盖 BNY 分析师 onboarding 和 Perplexity 增长实验。",
-        "currentSignal": "本期新增 Ramp 支出份额、Meta 商家工具、CEO 裁员叙事和 AI-cyber 基金。",
-        "signalDirection": "增强：企业主题进入预算迁移、工作流连接、组织沟通和安全投资。",
-        "stillUnproven": "仍需财务数据、续约率、生产率指标、员工转岗记录和基金文件。"
+        "label": "企业 AI 入口继续下沉",
+        "status": "repeated",
+        "previousPattern": "此前已有 Slack、Meta AI、Ramp Router 等工作流入口信号。",
+        "currentSignal": "本期 Google 把 Ask Gemini 放进 Chat 命令入口。",
+        "signalDirection": "重复：从单工具扩展到协作中枢，但仍是企业入口下沉主线。",
+        "stillUnproven": "仍需管理后台日志、活跃用户指标、权限审计和客户案例验证采用效果。"
       }
     ],
     "companyContinuity": [
       {
         "company": "OpenAI",
-        "label": "安全、隐私和执行入口同步推进",
-        "lastMention": "上一版覆盖 Astra 安全放缓、ChatGPT for Teens 和 CodeAI。",
-        "whatChanged": "本期新增 Private Safety Processing、ChatGPT Apple Messages 插件、Ramp 支出份额和 Reddit/ChatGPT 引用波动。",
-        "stillUnproven": "仍需技术白皮书、外部审计、Messages 权限文档、客户侧日志、支出原始数据和引用平台日志。"
-      },
-      {
-        "company": "Meta",
-        "label": "桌面商家入口",
-        "lastMention": "历史版覆盖 Meta 个人超级智能愿景和 Muse Code。",
-        "whatChanged": "本期新增 Meta AI Mac、小企业工具和 Pocket 在美国推出。",
-        "stillUnproven": "仍需官方文档、权限说明、商家采用、广告效果数据和隐私审计。"
+        "label": "监督叙事转向公共部门证据",
+        "lastMention": "上一版记录 OpenAI 零留存安全处理和企业支出竞争。",
+        "whatChanged": "本期 OpenAI 官方新增国家安全 AI 民主监督支持计划。",
+        "stillUnproven": "仍需参与机构名单、试点协议、政府记录和第三方评估证明监督效果。"
       },
       {
         "company": "Google",
-        "label": "AI 搜索分发成为出版商关系焦点",
-        "lastMention": "此前 Google 在近期版被提及为 Gemini 应用、Spirit 数据资产、AI 搜索和数据中心相关信号的主体。",
-        "whatChanged": "本期新增 Preferred Sources 出版商按钮和 Meta AI 对 Google Workspace 连接的引用场景。",
-        "stillUnproven": "仍需 Search/AI Mode 点击率、出版商收入数据、产品文档和第三方流量测量。"
+        "label": "Gemini 进入协作入口",
+        "lastMention": "历史版本多次记录 Gemini 模型、连接应用和 Workspace/开发者能力。",
+        "whatChanged": "本期 Google Workspace 官方宣布 Ask Gemini in Chat 逐步上线。",
+        "stillUnproven": "仍需 Workspace 管理日志、使用率、导出记录和客户侧工作流数据证明实际采用。"
       },
       {
-        "company": "Slack",
-        "label": "团队协作层吸收编码 Agent",
-        "lastMention": "历史版主要覆盖 Cursor、Warp、A2A 和 OpenRouter。",
-        "whatChanged": "本期新增 Slack Code 把编码 Agent 放入专用频道、diff、预览、批准和归档流程。",
-        "stillUnproven": "仍需官方 SLA、市场集成清单、审计日志、企业采用和生产事故数据。"
+        "company": "Meta",
+        "label": "数据中心叙事关联公共事务",
+        "lastMention": "上一版记录 Meta AI Mac 面向小企业和创作者工作流。",
+        "whatChanged": "本期 Business Insider 报道数据中心反弹沟通中提到科技公司用公共事务叙事回应反对。",
+        "stillUnproven": "仍需公司公告、地方听证记录、平台归因数据和民调证明外部影响说法。"
       }
     ],
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方来源",
-        "count": 1,
-        "role": "用于核对 OpenAI 发布 Private Safety Processing 预览；读者仍需白皮书、客户侧日志和外部审计。"
-      },
-      {
-        "family": "research",
-        "label": "研究来源",
-        "count": 1,
-        "role": "用于核对 Pew 对网页 AI 作者迹象的样本和方法；读者应保留检测误差和复现边界。"
+        "count": 2,
+        "role": "OpenAI 和 Google Workspace 直接支持发布事实，但采用效果仍需外部证据。"
       },
       {
         "family": "reliable_media",
         "label": "可靠媒体",
-        "count": 10,
-        "role": "用于发现产品、工具、市场、组织和资本雷达；读者应回到原文并等待官方/客户侧材料补强。"
+        "count": 8,
+        "role": "Axios 与 Business Insider 提供政策、市场和公共事务雷达，完整事实和上下文仍回到原文。"
       }
     ],
     "topicGroups": [
       {
         "id": "policy",
-        "label": "政策",
-        "count": 3,
+        "label": "政策与治理",
+        "count": 5,
         "itemIds": [
-          "openai-private-safety-processing-zdr-2026-08-21",
-          "axios-ceos-ai-layoff-messaging-shift-2026-08-21",
-          "techcrunch-google-preferred-sources-publisher-button-2026-08-21"
+          "axios-ai-hiring-ghost-jobs-trust-2026-08-22",
+          "axios-ftc-ai-book-destruction-letter-2026-08-22",
+          "axios-rand-ai-bioweapons-roadmap-2026-08-22",
+          "axios-texas-ag-ai-audit-plan-2026-08-22",
+          "openai-democratic-oversight-national-security-2026-08-22"
         ],
-        "meaning": "用来更新企业安全隐私、AI 劳动力沟通和 AI 搜索分发治理清单。"
+        "meaning": "用来更新招聘、训练数据、生物安全、州级执法和公共部门 AI 监督清单。"
       },
       {
-        "id": "developer-tooling",
-        "label": "开发工具",
+        "id": "infrastructure",
+        "label": "基础设施",
         "count": 4,
         "itemIds": [
-          "techcrunch-chatgpt-apple-messages-plugin-2026-08-21",
-          "techcrunch-ramp-router-model-routing-2026-08-21",
-          "techcrunch-binance-agent-os-trading-2026-08-21",
-          "theverge-slack-code-agent-channels-2026-08-21"
+          "axios-maha-coal-ai-data-centers-2026-08-22",
+          "axios-data-center-political-risk-investors-2026-08-22",
+          "axios-hochul-data-center-position-2026-08-22",
+          "businessinsider-data-center-china-messaging-2026-08-22"
         ],
-        "meaning": "用来检查 Agent 连接消息、交易、模型路由和团队代码协作时的权限、审批和日志。"
+        "meaning": "用来检查数据中心能源、许可、选举、社区和信息归因风险。"
       },
       {
         "id": "enterprise",
-        "label": "企业",
-        "count": 3,
+        "label": "企业工作流",
+        "count": 1,
         "itemIds": [
-          "techcrunch-openai-anthropic-ramp-business-share-2026-08-21",
-          "techcrunch-meta-ai-mac-business-tools-2026-08-21",
-          "axios-crowdstrike-cto-ai-cyber-fund-2026-08-21"
+          "google-workspace-ask-gemini-chat-2026-08-22"
         ],
-        "meaning": "用来评估企业模型预算、商家工具入口和 AI-cyber 资本迁移。"
-      },
-      {
-        "id": "model",
-        "label": "模型",
-        "count": 2,
-        "itemIds": [
-          "pew-ai-authored-webpages-common-crawl-2026-08-21",
-          "axios-reddit-chatgpt-citation-drop-2026-08-21"
-        ],
-        "meaning": "用来核对模型生成内容和模型引用来源如何改变可见性、可信度和数据供应。"
+        "meaning": "用来核对企业协作入口中的权限、导出、限额和管理员控制。"
       }
     ],
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期多数信号来自可靠媒体索引，适合做新问题清单和后续核查排程。",
-      "doNotConclude": "不能得出产品已大规模采用、隐私方案已通过审计、AI 搜索流量已恢复或 Agent 执行已安全的结论。",
-      "useInstead": "用来生成核查清单：先查白皮书、方法数据、产品文档、客户日志、审计、监管记录和第三方测量。"
+      "body": "本期主要是美国政策和基础设施摩擦的雷达，适合更新待核查清单。",
+      "doNotConclude": "不证明数据中心建设会全面受阻、AI 招聘违法已成定论，或外部影响行动已经解释公众反弹。",
+      "useInstead": "应该用官方信件、州法文本、项目许可、融资合同、平台归因数据、审计日志和第三方研究复核。"
     }
   },
   "categories": [
     {
       "id": "model",
       "label": "模型",
-      "description": "本期用来比较 OpenAI 与 Anthropic 在 Ramp 企业支出样本中的变化；仍需验证原始支出、续约率和客户规模。"
+      "description": "本期模型筛选无单独新模型发布；读者可用来从 OpenAI 和 RAND 相关治理信号旁观能力边界，仍需评测、审计和监管证据。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期用来检查 ChatGPT Messages、Meta AI Mac、Google Preferred Sources 和 Reddit 引用波动；需验证权限、点击率、留存和采用。"
+      "description": "本期产品筛选用来核对 Google Ask Gemini in Chat；需验证 Workspace 权限、导出、限额和客户使用指标。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期用来核对 Pew Data Labs 对 AI 生成网页的样本和方法；不直接证明单篇作者身份，等待复现和误差说明。"
+      "description": "本期研究筛选用来核对 Axios/RAND 生物安全路线图；不直接证明危险阈值已跨越，等待 RAND 原文、实验验证和监管指南。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期工具项包括 Ramp Router、Binance Agent OS 和 Slack Code；用于检查 Agent/API/协作入口，需验证价格、风控、审计日志和生产稳定性。"
+      "description": "本期工具筛选无独立开发者工具发布；读者可用来跟踪 Gemini 和 OpenAI 相关权限、日志和模型无关性，仍需产品文档确认。"
     },
     {
       "id": "funding",
       "label": "融资",
-      "description": "本期用来跟踪 CrowdStrike 前 CTO 发起 AI-cyber 基金这一资本迁移信号；不证明投资回报，仍需基金文件和项目落地。"
+      "description": "本期融资筛选用来检查 Axios 报道的数据中心投资政治风险；不证明泡沫破裂，仍需项目融资、许可和施工进度确认。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期用来更新 OpenAI 零留存安全处理、AI 裁员沟通和出版商流量补救清单；需验证审计、监管文本和员工数据。"
+      "description": "本期政策筛选用来更新 Axios、OpenAI 和 Business Insider 涉及的 FTC 训练数据、AI 招聘、国家安全监督和数据中心争议；需验证法律文本、官方信件和审计记录。"
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "AI 进入执行层，真正要核验的是权限、数据和信任",
-    "summary": "本期 17:00 JST 版显示，AI 新闻重点从模型能力转向企业数据留存、消息/交易/代码执行、搜索分发、AI 内容污染和员工沟通。官方和研究来源提供关键锚点，但大多数仍是可靠媒体雷达。",
+    "headline": "AI 的下一道门槛是社会许可和可审查证据",
+    "summary": "本期 17:00 JST 版显示，AI 争议从模型发布扩展到数据中心、训练数据、招聘、生物安全、企业协作和政府监督。官方来源给出产品与治理锚点，但大部分仍是可靠媒体雷达。",
     "cta": "查看本期情报",
     "watchPoints": [
       {
-        "title": "安全与隐私",
-        "body": "OpenAI 零留存安全处理需要等白皮书、审计和客户侧日志。"
+        "title": "数据中心",
+        "body": "能源、选举、健康和外部影响叙事同时进入项目风险清单。"
       },
       {
-        "title": "Agent 执行",
-        "body": "消息、交易和代码频道都需要权限、审批、回滚和事故记录。"
+        "title": "数据与合规",
+        "body": "训练语料、招聘筛选和生物数据都需要原始记录与监管材料。"
       },
       {
-        "title": "分发与信任",
-        "body": "Google/Reddit/Pew 信号说明 AI 搜索和 AI 内容测量仍在快速变化。"
+        "title": "企业入口",
+        "body": "Gemini in Chat 需要用管理日志、导出路径和限额说明验证。"
       }
     ]
   },
   "deepBriefing": {
     "kicker": "17:00 JST 情报简报",
-    "title": "AI 从“会说”进入“可执行”，核查重点转向权限和证据",
-    "subtitle": "OpenAI、TechCrunch、Axios、The Verge 与 Pew 的新信号共同显示，企业 AI 的关键问题正在变成数据是否可控、Agent 是否可审计、AI 搜索是否可分发，以及组织能否解释 AI 对工作的影响。",
-    "dateLabel": "2026 年 8 月 21 日 17:00 JST",
-    "status": "已发布，媒体项保持原文依赖",
-    "overview": "本期不是单一模型发布，而是一组运营层变化：OpenAI 试图同时满足安全监控和零留存，ChatGPT、Binance、Slack、Ramp、Meta 把 Agent 接入通信、交易、代码和商家工作流，Google、Reddit 与 Pew 则暴露 AI 搜索和 AI 生成内容对信息生态的压力。",
+    "title": "AI 的瓶颈正在变成信任、许可和证据链",
+    "subtitle": "8 月 22 日版把数据中心政治、训练数据竞争法、招聘自动化、生命科学安全、企业协作和国家安全监督放在同一张核查表里。",
+    "dateLabel": "2026年8月22日 17:00 JST",
+    "status": "已发布，媒体项保持待独立补证",
+    "overview": "本期不是模型参数竞赛，而是 AI 进入真实制度后的约束扫描：数据中心要面对地方政治和能源叙事，训练数据要面对竞争法，招聘和生命科学要面对安全边界，公共部门部署要留下监督证据。",
     "timeline": [
       {
-        "label": "08月20日 07:10 JST",
-        "title": "OpenAI 发布零留存安全处理预览",
-        "body": "官方页给出本期最强来源锚点，但白皮书和外部审计仍在后面。"
+        "label": "08月18日",
+        "title": "OpenAI 发布监督计划",
+        "body": "OpenAI 宣布支持民主监督机构审查国家安全场景中的 AI 使用。"
       },
       {
-        "label": "08月20日 白天",
-        "title": "Axios 与 Pew 给出组织和内容生态信号",
-        "body": "裁员叙事、ChatGPT 引用变化和 AI 网页测量把采用问题推向信任与分发。"
+        "label": "08月19日",
+        "title": "Google 发布 Gemini in Chat 路线",
+        "body": "Google Workspace 官方说明 Ask Gemini 将进入 Google Chat，并说明数据访问和历史迁移边界。"
       },
       {
-        "label": "08月20日晚至21日早",
-        "title": "工具和产品入口集中更新",
-        "body": "Messages、Agent OS、Router、Meta AI Mac、Slack Code 把 AI 放进执行和协作流程。"
+        "label": "08月21日",
+        "title": "媒体集中报道 AI 社会许可问题",
+        "body": "Axios 与 Business Insider 新增数据中心、训练数据、招聘、州级审计和公共事务信号。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "12",
+        "value": "10",
         "label": "本期安全非重复信号"
       },
       {
-        "value": "10/12",
-        "label": "可靠媒体雷达项"
+        "value": "7/10",
+        "label": "来自 Axios 的单源雷达"
       },
       {
-        "value": "1",
-        "label": "OpenAI 官方来源锚点"
+        "value": "2",
+        "label": "官方来源锚点"
       },
       {
-        "value": "1",
-        "label": "Pew 研究原文锚点"
+        "value": "500万美元",
+        "label": "OpenAI 计划提供的监督支持规模"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "安全隐私",
-        "title": "零留存不再只是数据承诺",
-        "body": "OpenAI 的 Private Safety Processing 把多交互风险识别放到客户内容不可见的架构里，回应企业对敏感数据和安全监控的双重要求。",
-        "soWhat": "采购团队应把白皮书、密钥控制、告警流程和申诉机制列入供应商审查。"
+        "label": "基础设施",
+        "title": "数据中心进入社会许可压力测试",
+        "body": "本期多条信号指向同一问题：AI 算力扩张必须解释能源、健康、电价和地方收益。",
+        "soWhat": "项目尽调不能只看芯片和电力，还要看州法、听证、社区协议和选举周期。"
       },
       {
         "number": "02",
-        "label": "Agent 执行",
-        "title": "消息、交易和代码都进入工具调用范围",
-        "body": "ChatGPT Messages、Binance Agent OS 和 Slack Code 显示 Agent 正接触个人通信、真实资金和团队代码审查。",
-        "soWhat": "产品和风控团队应优先定义授权、最终确认、资金限额、审计日志和回滚流程。"
+        "label": "治理",
+        "title": "训练数据和招聘自动化需要可审查记录",
+        "body": "FTC 信件和招聘 AI 报道说明，数据来源、算法筛选和人类复核会成为监管材料。",
+        "soWhat": "企业应准备采购记录、销毁记录、模型评估、候选人申诉和人工复核日志。"
       },
       {
         "number": "03",
-        "label": "分发信任",
-        "title": "AI 搜索和 AI 内容改变信息供应链",
-        "body": "Google Preferred Sources、Reddit 引用下降和 Pew 网页测量共同显示，内容是否被写、读和引用正在被模型系统重排。",
-        "soWhat": "媒体和品牌团队要跟踪原始点击、引用日志、检测方法和收入影响，不能只看平台口径。"
-      },
-      {
-        "number": "04",
-        "label": "企业采用",
-        "title": "AI ROI 叙事进入证据压力期",
-        "body": "Ramp 支出数据、CEO 裁员措辞和 AI-cyber 基金说明企业 AI 采用已牵涉预算、员工信任和安全投资。",
-        "soWhat": "管理层应把 AI 采用从宣传口径转成岗位、成本、续约、安全和生产率证据表。"
+        "label": "企业入口",
+        "title": "协作工具把 AI 放进日常控制面",
+        "body": "Ask Gemini in Chat 让企业 AI 更靠近会话、任务和文件，但也带来导出、历史和权限问题。",
+        "soWhat": "IT 团队要先核对默认启用、Smart Features、使用限额、日志和数据导出路径。"
       }
     ],
     "actions": [
-      "把所有可执行 Agent 功能列入权限、审批、日志和回滚矩阵。",
-      "对模型供应商建立数据留存、滥用监控和客户可审计性对照表。",
-      "对 AI 搜索/GEO 指标保留平台日志和第三方测量，避免单一来源过拟合。",
-      "把 AI 裁员或效率叙事与真实岗位变化、培训和生产率数据绑定。"
+      "把数据中心项目的许可、能源和社区沟通证据列入周度核查。",
+      "为 AI 招聘和训练数据采购建立可导出的审计包。",
+      "上线 Gemini in Chat 前检查管理员设置、历史导出和使用限额说明。"
     ],
     "coverageLimits": [
       {
         "label": "时间边界",
-        "body": "本期覆盖 8 月 20 日至 8 月 21 日 17:00 JST 前可核查的新信号，不回填旧题材补量。"
+        "body": "本期以 2026-08-21 美国时间至 2026-08-22 JST 前可核查来源为主。"
       },
       {
         "label": "来源边界",
-        "body": "多数产品和市场项来自可靠媒体，完整事实、采访、图表和上下文仍在原文。"
+        "body": "8 条为可靠媒体背景，不能替代官方文件、原始报告或监管记录。"
       },
       {
         "label": "结论边界",
-        "body": "本期不能证明产品采用、隐私有效性、AI 搜索恢复、资金执行安全或就业影响已经成立。"
+        "body": "本期不证明数据中心建设停滞、AI 招聘违法普遍成立或官方工具已产生客户收益。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI 官方页直接支持 Private Safety Processing 的预览、零留存描述和 9 月白皮书计划。",
-        "Pew 研究页直接支持 Common Crawl 样本、检测方法和 AI 作者迹象比例。",
-        "TechCrunch、Axios 和 The Verge 支持媒体报道层面的产品、工具、支出、组织和分发信号。"
+        "OpenAI 官方发布国家安全 AI 民主监督支持计划。",
+        "Google Workspace 官方发布 Ask Gemini in Chat 的上线、语言和管理员边界。",
+        "Axios 与 Business Insider 报道美国 AI 基础设施、训练数据、招聘和州级监管争议。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 将本期解释为 Agent 执行层和企业治理层同步升温。",
-        "本期优先提醒读者建立权限、审计、数据留存、搜索分发和员工沟通的核查清单。"
+        "AI Watchtower 判断本期重点是社会许可和证据链，而不是模型能力排名。",
+        "本期数据中心信号密集，说明算力项目需要把政治风险纳入运营模型。"
       ],
       "unknowns": [
-        "尚不清楚 OpenAI 零留存安全处理的技术细节、误报率、客户体验和外部审计结果。",
-        "尚不清楚这些 Agent 工具在真实生产环境中的采用率、事故率、成本和合规效果。",
-        "尚不清楚 Preferred Sources、GEO 波动和 AI 内容增长对出版商收入与用户信任的长期影响。"
+        "尚无足够项目文件证明数据中心建设节奏已经实质放慢。",
+        "尚无足够审计、监管或客户数据证明各项治理方案已经产生效果。"
       ]
     },
     "references": [
       {
-        "label": "TechCrunch 报道 OpenAI 追近 Anthropic",
-        "url": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/"
+        "label": "媒体报道 AI 招聘信任问题",
+        "url": "https://www.axios.com/2026/08/21/job-seekers-ai-hiring-ghost-jobs-trust"
       },
       {
-        "label": "TechCrunch 报道 ChatGPT 接入 Messages",
-        "url": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/"
+        "label": "媒体报道燃煤数据中心反对信",
+        "url": "https://www.axios.com/2026/08/21/ai-data-centers-coal-trump-rfk-maga-warning"
       },
       {
-        "label": "TechCrunch 报道 Google 来源按钮",
-        "url": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/"
+        "label": "媒体分析数据中心外部影响叙事",
+        "url": "https://www.businessinsider.com/china-data-center-ai-backlash-tech-messaging-2026-8"
       },
       {
-        "label": "TechCrunch 报道 Ramp 模型路由",
-        "url": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/"
+        "label": "媒体报道数据中心投资政治风险",
+        "url": "https://www.axios.com/2026/08/21/data-center-business-politics"
       },
       {
-        "label": "研究显示网页 AI 作者迹象上升",
-        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+        "label": "媒体报道 FTC 训练数据信件",
+        "url": "https://www.axios.com/2026/08/21/ftc-ai-companies-book-destruction-investigate"
       },
       {
-        "label": "TechCrunch 报道 Meta AI Mac 工具",
-        "url": "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/"
+        "label": "媒体报道 RAND 生物安全路线图",
+        "url": "https://www.axios.com/2026/08/21/safeguards-ai-bioweapons-roadmap"
       },
       {
-        "label": "The Verge 报道 Slack Code 频道",
-        "url": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch"
+        "label": "媒体报道纽约数据中心政策路线",
+        "url": "https://www.axios.com/2026/08/21/kathy-hochul-business-friendly-data-center-plan"
       },
       {
-        "label": "媒体报道 Axios AI 裁员叙事变化",
-        "url": "https://www.axios.com/2026/08/20/ceos-shift-messaging-around-ai-and-layoffs"
+        "label": "媒体报道得州 AI 审计计划",
+        "url": "https://www.axios.com/2026/08/21/texas-ag-democratic-nominee-ai-audit-plan"
       },
       {
-        "label": "媒体报道 Axios Reddit 引用下降",
-        "url": "https://www.axios.com/2026/08/20/chatgpt-reddit-citations-geo-strategy"
+        "label": "Google 官方发布 Gemini in Chat",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html"
       },
       {
-        "label": "TechCrunch 报道 Binance Agent 交易",
-        "url": "https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/"
-      },
-      {
-        "label": "媒体报道 Axios AI-cyber 基金融资",
-        "url": "https://www.axios.com/2026/08/20/exclusive-crowdstrikes-cto-is-leaving-to-launch-an-ai-cyber-fund"
-      },
-      {
-        "label": "OpenAI 官方发布零留存安全预览",
-        "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/"
+        "label": "OpenAI 发布国家安全监督计划",
+        "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security/"
       }
     ]
   },
   "items": [
     {
-      "id": "techcrunch-openai-anthropic-ramp-business-share-2026-08-21",
-      "category": "model",
-      "label": "模型",
-      "title": "TechCrunch：Ramp 数据显示 OpenAI 在企业用户中追近 Anthropic",
-      "body": "TechCrunch 引用 Ramp 支出数据称，Anthropic 仍领先该样本，但 OpenAI 在第三季度企业用户增长更快。",
-      "summary": "TechCrunch 引用 Ramp 支出数据称，Anthropic 仍领先该样本，但 OpenAI 在第三季度企业用户增长更快。",
-      "whyItMatters": "企业 AI 支出可能随模型、价格和数据政策快速切换，削弱单一模型供应商的长期锁定叙事。",
-      "detailBody": "报道称 Ramp 样本覆盖 7 万多家美国企业；截至 7 月，Anthropic 接近 44%，OpenAI 接近 40%，但 OpenAI 当前季度增速更快。 报道引用 Ramp 样本称 Anthropic 7 月仍领先，但 OpenAI 在第三季度至今增长更快，且 Ramp 未披露具体美元支出。",
-      "trend": "企业模型份额越来越像可迁移预算池，数据留存、性能和开发者偏好会共同影响采购。",
-      "detailTrend": "企业模型份额越来越像可迁移预算池，数据留存、性能和开发者偏好会共同影响采购。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响企业模型预算迁移判断，值得进入本期。",
-      "topReason": "用于判断企业模型预算是否正在从单一赢家叙事转向可迁移支出；下一步要查 Ramp 原始口径、客户规模和续约数据。",
-      "detailWhyRanked": "因为 TechCrunch 引用 Ramp 样本给出 Anthropic 仍领先、OpenAI 第三季度增长更快、且未披露具体美元支出的边界，所以读者应把它用于模型采购粘性核查。还要等待原始支出、客户分层、续约率和大企业样本，才能升级为企业市场份额判断。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "本项用于比较模型竞争；不把单一来源扩展成市场定论。"
-      },
-      "impact": "企业 AI 支出可能随模型、价格和数据政策快速切换，削弱单一模型供应商的长期锁定叙事。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责模型采购、企业支出分析和供应商切换的 CIO/采购/平台团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "CIO/采购/平台团队用它更新模型供应商和企业支出清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认Ramp 数据显示 OpenAI 在企业用户中追近 Anthropic。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明Ramp 数据显示 OpenAI 在企业用户中追近 Anthropic已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/",
-      "originalUrl": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T15:36:00-07:00",
-      "freshSourceFact": null,
-      "time": "08月21日 07:36 JST",
-      "tags": [
-        "企业采用",
-        "模型竞争",
-        "支出数据"
-      ],
-      "companies": [
-        "OpenAI",
-        "Anthropic",
-        "Ramp"
-      ],
-      "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "techcrunch-chatgpt-apple-messages-plugin-2026-08-21",
-      "category": "product",
-      "label": "产品",
-      "title": "TechCrunch：ChatGPT 接入 Apple Messages 并可代发短信",
-      "body": "TechCrunch 报道 ChatGPT 新增 Apple Messages 插件，可搜索、整理、起草和发送消息，但自动发送会带来审批风险。",
-      "summary": "TechCrunch 报道 ChatGPT 新增 Apple Messages 插件，可搜索、整理、起草和发送消息，但自动发送会带来审批风险。",
-      "whyItMatters": "私人通信进入 Agent 工具链后，权限、最终确认和本地处理边界会成为消费/办公 AI 的核心风险。",
-      "detailBody": "TechCrunch 报道称 ChatGPT 的 Apple Messages 插件可在 Mac 上连接消息库，支持搜索历史、整理对话、起草回复、删除消息和代发消息。报道还点出 OpenAI 对持续批准的警告，因此核心核查点是用户是否始终保留最终确认。",
-      "trend": "AI 助手正在从回答问题进入个人通信执行层，下一步竞争点是可撤销权限和可审计动作。",
-      "detailTrend": "AI 助手正在从回答问题进入个人通信执行层，下一步竞争点是可撤销权限和可审计动作。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响个人通信 Agent 权限，值得进入本期。",
-      "topReason": "用于判断个人通信是否已经进入 Agent 执行面；下一步要查本地处理、最终确认、撤销日志和企业管控。",
-      "detailWhyRanked": "因为 TechCrunch 写明插件可搜索、删除、起草和代发消息，还点出持续批准会移除最终确认，所以读者应把它升级为个人通信 Agent 权限审查项，核对本地处理、撤销、日志和误发责任。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "影响5/新鲜度4/叙事4/证据3/读者效用5；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "本项用于观察产品入口；不把单一来源扩展成市场定论。"
-      },
-      "impact": "私人通信进入 Agent 工具链后，权限、最终确认和本地处理边界会成为消费/办公 AI 的核心风险。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 AI 产品入口、权限设计、搜索分发和商家工具的产品/运营团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "产品/运营团队用它更新产品入口、数据权限和分发清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认ChatGPT 接入 Apple Messages 并可代发短信。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明ChatGPT 接入 Apple Messages 并可代发短信已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/",
-      "originalUrl": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T15:09:00-07:00",
-      "freshSourceFact": null,
-      "time": "08月21日 07:09 JST",
-      "tags": [
-        "ChatGPT",
-        "Agent",
-        "隐私"
-      ],
-      "companies": [
-        "OpenAI",
-        "Apple"
-      ],
-      "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "techcrunch-google-preferred-sources-publisher-button-2026-08-21",
-      "category": "product",
-      "label": "产品",
-      "title": "TechCrunch：Google 给出版商嵌入 Preferred Sources 按钮",
-      "body": "TechCrunch 报道 Google 让出版商在自己网站放置 Preferred Sources 按钮，以影响 Search、Discover 和 News 展示。",
-      "summary": "TechCrunch 报道 Google 让出版商在自己网站放置 Preferred Sources 按钮，以影响 Search、Discover 和 News 展示。",
-      "whyItMatters": "AI 搜索压缩外链流量后，平台开始把“可信来源选择”变成发布商自救和分发治理工具。",
-      "detailBody": "报道称 Google 将 Preferred Sources 扩展给出版商嵌入，延续其 5 月在 AI Mode、AI Overviews 和 Top Stories 中的来源偏好功能。 报道说明 Google 将 Preferred Sources 按钮开放给出版商嵌入，目标是影响 Search、Discover 和 News 中的来源显示。",
-      "trend": "搜索平台正在用用户偏好标签缓和 AI 摘要与原创内容之间的分发冲突。",
-      "detailTrend": "搜索平台正在用用户偏好标签缓和 AI 摘要与原创内容之间的分发冲突。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响 AI 搜索分发和出版商流量核查，值得进入本期。",
-      "topReason": "用于判断 AI 搜索是否开始用来源偏好缓和出版商流量压力；下一步要查点击率、出版商收入和 Search 文档。",
-      "detailWhyRanked": "因为 TechCrunch 报道 Google 将 Preferred Sources 按钮开放给出版商嵌入，并把它连接到 Search、Discover 和 News 的来源显示，所以读者应把它用于 AI 搜索分发核查。还要等待点击率、展示量、出版商收入、Google 文档和第三方流量测量。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "影响4/新鲜度4/叙事4/证据3/读者效用4；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "本项用于观察产品入口；不把单一来源扩展成市场定论。"
-      },
-      "impact": "AI 搜索压缩外链流量后，平台开始把“可信来源选择”变成发布商自救和分发治理工具。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 AI 产品入口、权限设计、搜索分发和商家工具的产品/运营团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "产品/运营团队用它更新产品入口、数据权限和分发清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认Google 给出版商嵌入 Preferred Sources 按钮。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明Google 给出版商嵌入 Preferred Sources 按钮已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/",
-      "originalUrl": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T12:18:00-07:00",
-      "freshSourceFact": null,
-      "time": "08月21日 04:18 JST",
-      "tags": [
-        "AI搜索",
-        "出版商",
-        "流量"
-      ],
-      "companies": [
-        "Google"
-      ],
-      "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "techcrunch-ramp-router-model-routing-2026-08-21",
-      "category": "tool",
-      "label": "工具",
-      "title": "TechCrunch：Ramp 推出 AI 模型路由服务 Router",
-      "body": "TechCrunch 报道 Ramp 发布 Router，让企业通过 API 在多个大模型之间切换和按策略路由请求。",
-      "summary": "TechCrunch 报道 Ramp 发布 Router，让企业通过 API 在多个大模型之间切换和按策略路由请求。",
-      "whyItMatters": "支付/费用平台也开始切入模型路由，说明 AI 成本、供应商切换和推理采购正在平台化。",
-      "detailBody": "报道称 Router 先在美国可用，2026 年内免费但需支付推理成本，支持 OpenAI、Anthropic、DeepSeek、xAI、Nvidia 等模型。 报道说明 Router 先在美国开放，2026 年内免服务费但仍收模型推理成本，并支持多个模型供应商。",
-      "trend": "模型路由从开发者网关扩展到财务和运营平台，采购控制面正在靠近预算系统。",
-      "detailTrend": "模型路由从开发者网关扩展到财务和运营平台，采购控制面正在靠近预算系统。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响Agent 执行控制，值得进入本期。",
-      "topReason": "读者需要这条信号来判断Agent 执行权限和审计是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 TechCrunch 写明 Router 支持多家模型和路由策略，且暂未说明明年价格，所以读者应把它用于核对模型采购控制面、成本归因、SLA、可用模型和日志，而不是只看新 API。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "本项用于检查工具控制面；不把单一来源扩展成市场定论。"
-      },
-      "impact": "支付/费用平台也开始切入模型路由，说明 AI 成本、供应商切换和推理采购正在平台化。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 Agent 工作流、开发平台、金融权限和 API 成本控制的工程/风控团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "工程/风控团队用它更新Agent 权限、审批、日志和成本清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认Ramp 推出 AI 模型路由服务 Router。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明Ramp 推出 AI 模型路由服务 Router已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/",
-      "originalUrl": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T09:46:00-07:00",
-      "freshSourceFact": null,
-      "time": "08月21日 01:46 JST",
-      "tags": [
-        "模型路由",
-        "企业工具",
-        "成本控制"
-      ],
-      "companies": [
-        "Ramp",
-        "OpenAI",
-        "Anthropic",
-        "xAI",
-        "NVIDIA"
-      ],
-      "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "pew-ai-authored-webpages-common-crawl-2026-08-21",
-      "category": "research",
-      "label": "研究",
-      "title": "Pew：ChatGPT 后发布网页中超过三分之一有 AI 作者迹象",
-      "body": "Pew Data Labs 用 Common Crawl 与检测模型分析近 49 万英文网页，称新近网页的 AI 写作迹象明显上升。",
-      "summary": "Pew Data Labs 用 Common Crawl 与检测模型分析近 49 万英文网页，称新近网页的 AI 写作迹象明显上升。",
-      "whyItMatters": "AI 生成内容正在改变搜索、训练数据和品牌可见性，内容真实性需要从单篇判断转为大样本监测。",
-      "detailBody": "Pew 称 2026 年 7 月随机样本中，所有网页约 10% 有明显 AI 作者迹象；筛出 ChatGPT 发布后网页后，比例超过三分之一。 Pew 使用 Common Crawl、Open Pangram 和近 49 万英文网页样本，区分总体网页与 ChatGPT 后发布网页。",
-      "trend": "互联网内容层可能进入“机器写、机器读、机器排序”的反馈循环，检测误差和样本边界必须一起看。",
-      "detailTrend": "互联网内容层可能进入“机器写、机器读、机器排序”的反馈循环，检测误差和样本边界必须一起看。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响内容真实性判断，值得进入本期。",
-      "topReason": "读者需要这条信号来判断内容真实性方法是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 Pew Research Center Data Labs 提供了新的来源事实，所以读者应把它用于更新核查清单，并等待原始数据、客户日志、文档、审计或第三方测量补齐后再升级判断。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "影响5/新鲜度4/叙事4/证据4/读者效用5；研究原文支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "本项用于核对研究方法；不把单一来源扩展成市场定论。"
-      },
-      "impact": "AI 生成内容正在改变搜索、训练数据和品牌可见性，内容真实性需要从单篇判断转为大样本监测。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责内容质量、搜索索引、训练数据和品牌可信度的数据/研究团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "数据/研究团队用它更新内容质量、检测方法和训练数据清单。",
-      "nextCheck": "查技术白皮书、第三方复现、客户侧日志、监管文件或审计材料，确认ChatGPT 后发布网页中超过三分之一有 AI 作者迹象是否产生可验证效果。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要公开方法、技术报告、客户侧记录或独立复现，才能从来源事实升级为可验证影响判断。",
-      "claimBoundary": "当前不证明ChatGPT 后发布网页中超过三分之一有 AI 作者迹象已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "Pew Research Center Data Labs",
-      "sourceName": "Pew Research Center Data Labs",
-      "sourceId": "pew-data-labs",
-      "sourceUrl": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
-      "originalUrl": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
-      "sourceRole": "研究原文",
-      "trustLevel": "research",
-      "verificationStatus": "已核验",
-      "originalDependency": "recommended",
-      "sourceType": "research",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T09:00:00-04:00",
-      "freshSourceFact": null,
-      "time": "08月20日 22:00 JST",
-      "tags": [
-        "AI内容",
-        "互联网",
-        "研究"
-      ],
-      "companies": [
-        "Pew Research Center"
-      ],
-      "provenance": "Pew Research Center Data Labs直接支持研究方法、样本和统计结果；单篇归因与因果解释仍需方法复核。"
-    },
-    {
-      "id": "techcrunch-meta-ai-mac-business-tools-2026-08-21",
-      "category": "product",
-      "label": "产品",
-      "title": "TechCrunch：Meta AI Mac 应用转向桌面和小企业工作流",
-      "body": "TechCrunch 报道 Meta AI 推出 Mac 应用，带系统级听写、屏幕上下文理解和小企业营销数据连接。",
-      "summary": "TechCrunch 报道 Meta AI 推出 Mac 应用，带系统级听写、屏幕上下文理解和小企业营销数据连接。",
-      "whyItMatters": "Meta 正把 AI 助手从社交聊天推向广告、内容运营和桌面生产力，权限边界会进入商家日常工具。",
-      "detailBody": "报道称新应用可跨应用听写、读取当前屏幕上下文，并连接 Instagram、Facebook、广告活动和 Google Workspace 以生成洞察与文档。 报道说明 Meta AI Mac 可进行系统级听写、读取屏幕上下文，并连接广告活动、社交账户和 Google Workspace。",
-      "trend": "消费平台 AI 正向经营后台移动，商家数据连接会决定它是助手还是新的广告操作面板。",
-      "detailTrend": "消费平台 AI 正向经营后台移动，商家数据连接会决定它是助手还是新的广告操作面板。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响产品入口与数据权限，值得进入本期。",
-      "topReason": "读者需要这条信号来判断产品入口和数据权限是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 TechCrunch 写明 Meta AI Mac 连接广告、社交账户和 Workspace 数据，所以读者应把它用于核查商家数据授权、竞品情报边界、留存政策、广告效果和实际采用。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "影响4/新鲜度4/叙事4/证据3/读者效用4；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "本项用于观察产品入口；不把单一来源扩展成市场定论。"
-      },
-      "impact": "Meta 正把 AI 助手从社交聊天推向广告、内容运营和桌面生产力，权限边界会进入商家日常工具。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 AI 产品入口、权限设计、搜索分发和商家工具的产品/运营团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "产品/运营团队用它更新产品入口、数据权限和分发清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认Meta AI Mac 应用转向桌面和小企业工作流。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明Meta AI Mac 应用转向桌面和小企业工作流已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/",
-      "originalUrl": "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T05:11:00-07:00",
-      "freshSourceFact": null,
-      "time": "08月20日 21:11 JST",
-      "tags": [
-        "Meta AI",
-        "桌面应用",
-        "小企业"
-      ],
-      "companies": [
-        "Meta",
-        "Google"
-      ],
-      "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "theverge-slack-code-agent-channels-2026-08-21",
-      "category": "tool",
-      "label": "工具",
-      "title": "The Verge：Slack 推出协作式 vibe-coding 频道",
-      "body": "The Verge 报道 Slack Code 允许团队在专用频道中召入 Claude、Devin、Vercel Agent 和 GitHub Copilot 协作写代码。",
-      "summary": "The Verge 报道 Slack Code 允许团队在专用频道中召入 Claude、Devin、Vercel Agent 和 GitHub Copilot 协作写代码。",
-      "whyItMatters": "AI 编程正在从个人 IDE 转向团队可见、可审计、可批准的协作空间，企业会重新定义代码评审流程。",
-      "detailBody": "报道称 Slack Code 提供项目频道、用户标签、diff 对比、HTML 预览、自动归档和审计日志，并面向所有 Slack 计划开放。 The Verge 报道 Slack Code 提供专用代码频道、diff、HTML 预览、批准流程、自动归档和审计日志。",
-      "trend": "Agent 开发工具开始嵌入团队通信层，核心卖点从生成速度转向可见性和批准链。",
-      "detailTrend": "Agent 开发工具开始嵌入团队通信层，核心卖点从生成速度转向可见性和批准链。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响Agent 执行控制，值得进入本期。",
-      "topReason": "读者需要这条信号来判断Agent 执行权限和审计是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 The Verge 写明 Slack Code 提供 diff、预览、批准、自动归档和审计日志，所以读者应核查这些记录能否满足企业代码评审、合规留痕和 Agent 事故复盘。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "影响5/新鲜度4/叙事4/证据3/读者效用5；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "本项用于检查工具控制面；不把单一来源扩展成市场定论。"
-      },
-      "impact": "AI 编程正在从个人 IDE 转向团队可见、可审计、可批准的协作空间，企业会重新定义代码评审流程。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 Agent 工作流、开发平台、金融权限和 API 成本控制的工程/风控团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "工程/风控团队用它更新Agent 权限、审批、日志和成本清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认Slack 推出协作式 vibe-coding 频道。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明Slack 推出协作式 vibe-coding 频道已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "The Verge AI",
-      "sourceName": "The Verge AI",
-      "sourceId": "theverge-ai",
-      "sourceUrl": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch",
-      "originalUrl": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T12:00:00+00:00",
-      "freshSourceFact": null,
-      "time": "08月20日 21:00 JST",
-      "tags": [
-        "开发工具",
-        "Slack",
-        "Agent"
-      ],
-      "companies": [
-        "Slack",
-        "Anthropic",
-        "Cognition",
-        "Vercel",
-        "GitHub"
-      ],
-      "provenance": "The Verge AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "axios-ceos-ai-layoff-messaging-shift-2026-08-21",
+      "id": "axios-ai-hiring-ghost-jobs-trust-2026-08-22",
       "category": "policy",
       "label": "政策",
-      "title": "Axios：CEO 对 AI 裁员叙事开始降温",
-      "body": "Axios 报道企业领导人不再高调把 AI 与裁员绑定，而是更谨慎地区分岗位重组、技能变化和替代叙事。",
-      "summary": "Axios 报道企业领导人不再高调把 AI 与裁员绑定，而是更谨慎地区分岗位重组、技能变化和替代叙事。",
-      "whyItMatters": "AI ROI 叙事正在遭遇员工信任和公共舆论约束，组织变革需要可解释证据而不是效率口号。",
-      "detailBody": "报道引用民调和裁员数据称，AI 已连续多月成为美国裁员公告中的常见原因，领导者开始调整对内对外措辞。 Axios 报道 CEO 正弱化“AI 替代岗位”式表述，并引用民调和裁员公告数据说明员工信任压力。",
-      "trend": "AI 采用从技术部署进入劳动关系和沟通治理，证据链要覆盖实际岗位、培训和生产率。",
-      "detailTrend": "AI 采用从技术部署进入劳动关系和沟通治理，证据链要覆盖实际岗位、培训和生产率。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响治理和组织风险，值得进入本期。",
-      "topReason": "读者需要这条信号来判断治理与组织风险是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 Axios 同时给出民调、裁员公告、企业表述变化和沟通顾问建议，所以读者应把它用于组织沟通风险核查，而不是直接断定某家公司用 AI 替代岗位。还要等待岗位明细、培训计划、生产率数据和员工调查。",
+      "title": "Axios：AI 让求职更快，也让招聘信任更脆弱",
+      "body": "Axios 报道称，2026 年求职者和雇主两侧都在使用 AI，申请量、自动筛选和“幽灵职位”正在拉长招聘链路。",
+      "summary": "Axios 报道称，2026 年求职者和雇主两侧都在使用 AI，申请量、自动筛选和“幽灵职位”正在拉长招聘链路。",
+      "whyItMatters": "招聘市场的 AI 摩擦开始从效率问题变成信任和合规问题，HR 技术采购需要重新检查透明度。",
+      "detailBody": "报道引用 Ashby、Greenhouse 和 Indeed 相关数据，指出每次招聘处理的申请量上升，AI 面试和筛选让候选人更难判断流程是否真实。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。",
+      "trend": "AI 正把招聘从双边匹配推向自动化漏斗，下一阶段争议会集中在披露、偏差和候选人体验。",
+      "detailTrend": "AI 正把招聘从双边匹配推向自动化漏斗，下一阶段争议会集中在披露、偏差和候选人体验。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "AI 让求职更快，也让招聘信任更脆弱影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "招聘市场的 AI 摩擦开始从效率问题变成信任和合规问题，HR 技术采购需要重新检查透明度。 下一步要核对 Ashby、Greenhouse、Indeed 原始报告、EEOC/州法文本和雇主侧审计日志。。",
+      "detailWhyRanked": "报道引用 Ashby、Greenhouse 和 Indeed 相关数据，指出每次招聘处理的申请量上升，AI 面试和筛选让候选人更难判断流程是否真实。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
       "selectionScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
         "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 21,
-        "note": "影响5/新鲜度4/叙事4/证据3/读者效用5；媒体背景支撑事实，仍需后续独立证明。"
+        "total": 20,
+        "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体背景支撑最低事实，仍需独立证明。"
       },
       "editorScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
         "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 21,
-        "note": "本项用于更新治理清单；不把单一来源扩展成市场定论。"
+        "total": 20,
+        "note": "本项用于更新政策清单；不把单一来源扩展成全市场结论。"
       },
-      "impact": "AI ROI 叙事正在遭遇员工信任和公共舆论约束，组织变革需要可解释证据而不是效率口号。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 AI 治理、员工沟通、采购合规和安全审计的法务/安全/人力团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "法务/安全/人力团队用它更新治理、合规和组织沟通清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认CEO 对 AI 裁员叙事开始降温。",
+      "impact": "招聘市场的 AI 摩擦开始从效率问题变成信任和合规问题，HR 技术采购需要重新检查透明度。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责招聘自动化、候选人体验和劳动合规的 HR/法务/People Ops 团队应该关注这条信号，因为它会影响 AI 面试、简历筛选和岗位发布规则。",
+      "readerUse": "HR/法务团队用它检查 AI 招聘工具披露、申诉和人工复核流程。",
+      "nextCheck": "查 Ashby、Greenhouse、Indeed 原始报告、EEOC/州法文本和雇主侧审计日志。",
       "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
         "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
       ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明CEO 对 AI 裁员叙事开始降温已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
+      "evidenceThreshold": "需要原始招聘数据、雇主审计记录或监管文件，才能从媒体信号升级为已确认的招聘 AI 风险趋势。",
+      "claimBoundary": "当前不证明 AI 招聘工具普遍违法，也不证明所有岗位延迟都由 AI 造成。",
+      "counterEvidence": "若后续雇主日志、候选人申诉率或监管调查显示人工复核充分且误筛率下降，应下调风险判断。",
       "source": "Axios AI / Technology",
       "sourceName": "Axios AI / Technology",
       "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/20/ceos-shift-messaging-around-ai-and-layoffs",
-      "originalUrl": "https://www.axios.com/2026/08/20/ceos-shift-messaging-around-ai-and-layoffs",
+      "sourceUrl": "https://www.axios.com/2026/08/21/job-seekers-ai-hiring-ghost-jobs-trust",
+      "originalUrl": "https://www.axios.com/2026/08/21/job-seekers-ai-hiring-ghost-jobs-trust",
       "sourceRole": "媒体背景",
       "trustLevel": "media",
       "verificationStatus": "已核验",
@@ -996,108 +461,314 @@
       "sourceType": "reliable_media",
       "sourceReliability": "medium",
       "claimStatus": "reported",
-      "publishedAt": "2026-08-20T07:00:00-04:00",
+      "publishedAt": "2026-08-21T14:15:00-04:00",
       "freshSourceFact": null,
-      "time": "08月20日 20:00 JST",
+      "time": "08月22日 03:15 JST",
       "tags": [
-        "就业",
-        "企业治理",
-        "AI采用"
+        "AI招聘",
+        "劳动市场",
+        "自动筛选"
       ],
       "companies": [
-        "Klarna",
-        "Salesforce",
-        "Coinbase",
-        "Etsy",
-        "Patreon",
+        "Axios",
+        "Ashby",
+        "Greenhouse",
+        "Indeed"
+      ],
+      "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+    },
+    {
+      "id": "axios-maha-coal-ai-data-centers-2026-08-22",
+      "category": "policy",
+      "label": "政策",
+      "title": "Axios：MAHA 人士反对用燃煤扩张 AI 数据中心",
+      "body": "Axios 报道称，MAHA 运动中的多名人士致信特朗普，反对把 AI 数据中心需求作为继续燃煤的理由。",
+      "summary": "Axios 报道称，MAHA 运动中的多名人士致信特朗普，反对把 AI 数据中心需求作为继续燃煤的理由。",
+      "whyItMatters": "AI 基础设施争议正在从电价和许可扩展到公共健康叙事，项目沟通和能源方案会承压。",
+      "detailBody": "报道指出联名信要求制定“健康优先”的 AI 基础设施标准，并把煤电污染、储能、地热和能效纳入数据中心政治讨论。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "数据中心已经成为 AI 能力扩张的社会许可测试，能源来源会影响项目审批、选举叙事和品牌风险。",
+      "detailTrend": "数据中心已经成为 AI 能力扩张的社会许可测试，能源来源会影响项目审批、选举叙事和品牌风险。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "MAHA 人士反对用燃煤扩张 AI 数据中心影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "AI 基础设施争议正在从电价和许可扩展到公共健康叙事，项目沟通和能源方案会承压。 下一步要核对联名信原文、能源部资助文件、州级许可记录、空气质量数据和项目电力合同。。",
+      "detailWhyRanked": "报道指出联名信要求制定“健康优先”的 AI 基础设施标准，并把煤电污染、储能、地热和能效纳入数据中心政治讨论。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "影响4/新鲜度4/叙事4/证据3/读者效用4；媒体背景支撑最低事实，仍需独立证明。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "本项用于更新政策清单；不把单一来源扩展成全市场结论。"
+      },
+      "impact": "AI 基础设施争议正在从电价和许可扩展到公共健康叙事，项目沟通和能源方案会承压。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责 AI 数据中心选址、电力采购和公共事务的基础设施/政策团队应该关注这条信号，因为它会影响社区沟通和能源组合论证。",
+      "readerUse": "基础设施团队用它更新数据中心能源叙事、健康影响和地方审批清单。",
+      "nextCheck": "查联名信原文、能源部资助文件、州级许可记录、空气质量数据和项目电力合同。",
+      "followUpQuestions": [
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+      ],
+      "evidenceThreshold": "需要联名信、监管记录、电力合同和环境/健康数据，才能升级为确认的项目审批或能源政策影响。",
+      "claimBoundary": "当前不证明某个 AI 数据中心会改用煤电，也不证明联名信已改变联邦政策。",
+      "counterEvidence": "若能源部文件、项目合同或州级许可显示燃煤方案未进入项目边界，且社区反对未影响审批，应下调判断。",
+      "source": "Axios AI / Technology",
+      "sourceName": "Axios AI / Technology",
+      "sourceId": "axios-ai",
+      "sourceUrl": "https://www.axios.com/2026/08/21/ai-data-centers-coal-trump-rfk-maga-warning",
+      "originalUrl": "https://www.axios.com/2026/08/21/ai-data-centers-coal-trump-rfk-maga-warning",
+      "sourceRole": "媒体背景",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-21T10:45:00-04:00",
+      "freshSourceFact": null,
+      "time": "08月21日 23:45 JST",
+      "tags": [
+        "数据中心",
+        "能源",
+        "公共健康"
+      ],
+      "companies": [
+        "Axios"
+      ],
+      "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+    },
+    {
+      "id": "businessinsider-data-center-china-messaging-2026-08-22",
+      "category": "policy",
+      "label": "政策",
+      "title": "Business Insider：科技公司尝试把数据中心反弹与中国叙事相连",
+      "body": "Business Insider 报道称，部分科技和投资圈人士试图把美国数据中心反对声与中国影响叙事相连，但证据仍不充分。",
+      "summary": "Business Insider 报道称，部分科技和投资圈人士试图把美国数据中心反对声与中国影响叙事相连，但证据仍不充分。",
+      "whyItMatters": "AI 基础设施公关正在进入信息战叙事，企业需要区分真实社区诉求、外部影响和未证实指控。",
+      "detailBody": "报道指出，虽然存在与中国相关的反 AI 内容生成尝试，但把本土数据中心反对直接归因于外部操纵仍缺少决定性证据。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "数据中心争议不再只是项目沟通问题，也会牵涉平台治理、影响行动归因和公众信任。",
+      "detailTrend": "数据中心争议不再只是项目沟通问题，也会牵涉平台治理、影响行动归因和公众信任。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "科技公司尝试把数据中心反弹与中国叙事相连影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "AI 基础设施公关正在进入信息战叙事，企业需要区分真实社区诉求、外部影响和未证实指控。 下一步要核对 OpenAI 影响行动报告、平台溯源数据、地方听证记录、舆情样本和独立研究。。",
+      "detailWhyRanked": "报道指出，虽然存在与中国相关的反 AI 内容生成尝试，但把本土数据中心反对直接归因于外部操纵仍缺少决定性证据。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "影响4/新鲜度5/叙事4/证据3/读者效用5；媒体背景支撑最低事实，仍需独立证明。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "本项用于更新政策清单；不把单一来源扩展成全市场结论。"
+      },
+      "impact": "AI 基础设施公关正在进入信息战叙事，企业需要区分真实社区诉求、外部影响和未证实指控。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责 AI 数据中心公关、平台信任安全和政策沟通的公共事务/安全团队应该关注这条信号，因为它会影响反对声归因和社区回应方式。",
+      "readerUse": "公共事务团队用它检查对外沟通中哪些说法有证据，哪些应保留为待核验风险。",
+      "nextCheck": "查 OpenAI 影响行动报告、平台溯源数据、地方听证记录、舆情样本和独立研究。",
+      "followUpQuestions": [
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+      ],
+      "evidenceThreshold": "需要平台归因数据、官方影响行动报告、地方民调或独立研究，才能升级为确认的信息行动影响判断。",
+      "claimBoundary": "当前不证明中国行动造成了美国数据中心反弹，也不否定电价、环境和就业等本土担忧。",
+      "counterEvidence": "若平台归因数据、地方民调、听证记录或独立舆情研究显示反对主要来自本地成本和环境因素，应下调外部影响叙事。",
+      "source": "Business Insider AI / Tech",
+      "sourceName": "Business Insider AI / Tech",
+      "sourceId": "businessinsider-ai",
+      "sourceUrl": "https://www.businessinsider.com/china-data-center-ai-backlash-tech-messaging-2026-8",
+      "originalUrl": "https://www.businessinsider.com/china-data-center-ai-backlash-tech-messaging-2026-8",
+      "sourceRole": "媒体背景",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-21T09:00:00-04:00",
+      "freshSourceFact": null,
+      "time": "08月21日 22:00 JST",
+      "tags": [
+        "数据中心",
+        "信息行动",
+        "公共事务"
+      ],
+      "companies": [
+        "Business Insider",
+        "OpenAI",
+        "Meta"
+      ],
+      "provenance": "Business Insider AI / Tech提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+    },
+    {
+      "id": "axios-data-center-political-risk-investors-2026-08-22",
+      "category": "funding",
+      "label": "融资",
+      "title": "Axios：数据中心投资人可能低估政治阻力",
+      "body": "Axios 报道称，数据中心商业热度与地方政治阻力之间出现错位，纽约、宾州、得州等地已出现限制或监管路障。",
+      "summary": "Axios 报道称，数据中心商业热度与地方政治阻力之间出现错位，纽约、宾州、得州等地已出现限制或监管路障。",
+      "whyItMatters": "AI 算力资本开支不只受芯片和电力约束，也受地方选举、许可和电费反弹约束。",
+      "detailBody": "报道把公开和私募资本热度与州级限制并置，指出地方反对可能被全国化，进而影响 AI 数据中心长期建设节奏。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "算力扩张正在进入资本市场和地方治理的双重审查阶段，项目模型需要加入政治风险折价。",
+      "detailTrend": "算力扩张正在进入资本市场和地方治理的双重审查阶段，项目模型需要加入政治风险折价。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "数据中心投资人可能低估政治阻力影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "AI 算力资本开支不只受芯片和电力约束，也受地方选举、许可和电费反弹约束。 下一步要核对州级法案、地方听证记录、项目融资文件、电价数据和开发商施工进度。。",
+      "detailWhyRanked": "报道把公开和私募资本热度与州级限制并置，指出地方反对可能被全国化，进而影响 AI 数据中心长期建设节奏。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "影响5/新鲜度4/叙事4/证据3/读者效用5；媒体背景支撑最低事实，仍需独立证明。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "本项用于更新融资清单；不把单一来源扩展成全市场结论。"
+      },
+      "impact": "AI 算力资本开支不只受芯片和电力约束，也受地方选举、许可和电费反弹约束。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责 AI 基础设施融资、项目尽调和电力侧合作的投资/战略团队应该关注这条信号，因为它会影响数据中心估值和建设时间表。",
+      "readerUse": "投资和战略团队用它检查数据中心项目的许可、选举和社区风险。",
+      "nextCheck": "查州级法案、地方听证记录、项目融资文件、电价数据和开发商施工进度。",
+      "followUpQuestions": [
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+      ],
+      "evidenceThreshold": "需要许可记录、融资文件和项目交付数据，才能从媒体信号升级为确认的算力建设延误判断。",
+      "claimBoundary": "当前不证明 AI 数据中心投资泡沫已经破裂，也不证明所有州都会收紧审批。",
+      "counterEvidence": "若后续项目按期获批、融资关闭且电价/社区指标未恶化，应下调政治风险权重。",
+      "source": "Axios AI / Technology",
+      "sourceName": "Axios AI / Technology",
+      "sourceId": "axios-ai",
+      "sourceUrl": "https://www.axios.com/2026/08/21/data-center-business-politics",
+      "originalUrl": "https://www.axios.com/2026/08/21/data-center-business-politics",
+      "sourceRole": "媒体背景",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-21T07:00:00-04:00",
+      "freshSourceFact": null,
+      "time": "08月21日 20:00 JST",
+      "tags": [
+        "算力资本",
+        "数据中心",
+        "地方政治"
+      ],
+      "companies": [
+        "Axios"
+      ],
+      "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+    },
+    {
+      "id": "axios-ftc-ai-book-destruction-letter-2026-08-22",
+      "category": "policy",
+      "label": "政策",
+      "title": "Axios：民间组织要求 FTC 调查 AI 公司毁书训练数据",
+      "body": "Axios 报道称，多家民间组织敦促 FTC 调查 AI 公司购买、扫描并销毁书籍是否构成不公平竞争。",
+      "summary": "Axios 报道称，多家民间组织敦促 FTC 调查 AI 公司购买、扫描并销毁书籍是否构成不公平竞争。",
+      "whyItMatters": "训练数据争议可能从版权转向竞争法和稀缺资料控制，影响模型训练数据采购方式。",
+      "detailBody": "报道称信件关注“囤积并销毁”资料是否提高竞争对手成本，尤其是稀有书籍和训练材料被物理移除的情形。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "AI 数据供应链正在从“能否使用作品”扩展到“是否改变资料市场结构”的监管问题。",
+      "detailTrend": "AI 数据供应链正在从“能否使用作品”扩展到“是否改变资料市场结构”的监管问题。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "民间组织要求 FTC 调查 AI 公司毁书训练数据影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "训练数据争议可能从版权转向竞争法和稀缺资料控制，影响模型训练数据采购方式。 下一步要核对 FTC 是否立案、组织信件全文、法院案卷、采购合同和书籍库存/销毁记录。。",
+      "detailWhyRanked": "报道称信件关注“囤积并销毁”资料是否提高竞争对手成本，尤其是稀有书籍和训练材料被物理移除的情形。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "影响5/新鲜度5/叙事4/证据3/读者效用5；媒体背景支撑最低事实，仍需独立证明。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "本项用于更新政策清单；不把单一来源扩展成全市场结论。"
+      },
+      "impact": "训练数据争议可能从版权转向竞争法和稀缺资料控制，影响模型训练数据采购方式。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责模型训练数据采购、版权诉讼和竞争法风险的法务/政策/数据治理团队应该关注这条信号，因为它会影响书籍扫描和数据留存策略。",
+      "readerUse": "法务和数据治理团队用它检查训练语料采购、销毁记录和竞争法暴露。",
+      "nextCheck": "查 FTC 是否立案、组织信件全文、法院案卷、采购合同和书籍库存/销毁记录。",
+      "followUpQuestions": [
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+      ],
+      "evidenceThreshold": "需要 FTC 文件、法院案卷、采购合同或库存记录，才能升级为确认的竞争法调查或训练数据风险。",
+      "claimBoundary": "当前不证明 FTC 已启动调查，也不证明所有 AI 公司存在毁书行为。",
+      "counterEvidence": "若 FTC 未采取行动，或法院/合同记录显示资料未被稀缺化，应下调竞争法风险判断。",
+      "source": "Axios AI / Technology",
+      "sourceName": "Axios AI / Technology",
+      "sourceId": "axios-ai",
+      "sourceUrl": "https://www.axios.com/2026/08/21/ftc-ai-companies-book-destruction-investigate",
+      "originalUrl": "https://www.axios.com/2026/08/21/ftc-ai-companies-book-destruction-investigate",
+      "sourceRole": "媒体背景",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-21T05:00:00-04:00",
+      "freshSourceFact": null,
+      "time": "08月21日 18:00 JST",
+      "tags": [
+        "训练数据",
+        "FTC",
+        "竞争法"
+      ],
+      "companies": [
+        "FTC",
+        "Anthropic",
+        "OpenAI",
+        "Google",
         "Microsoft"
       ],
       "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
     },
     {
-      "id": "axios-reddit-chatgpt-citation-drop-2026-08-21",
-      "category": "product",
-      "label": "产品",
-      "title": "Axios：Reddit 在 ChatGPT 引用中的占比近期下降",
-      "body": "Axios 报道 Promptwatch 数据显示，Reddit 在 ChatGPT Search 引用中的占比从 7 月下旬均值 3.83% 降到约 0.52%。",
-      "summary": "Axios 报道 Promptwatch 数据显示，Reddit 在 ChatGPT Search 引用中的占比从 7 月下旬均值 3.83% 降到约 0.52%。",
-      "whyItMatters": "品牌和媒体不能把 AI 可见性押在单一社区或单一平台引用规则上，GEO 策略需要可观测和分散。",
-      "detailBody": "报道同时指出 Promptwatch 将降幅视为暂定，可能来自来源选择变化，也不排除数据采集问题；Reddit 称对业务影响不大。 Axios 引用 Promptwatch 数据称 Reddit 在 ChatGPT Search 引用占比下降，同时保留数据采集问题这个 caveat。",
-      "trend": "生成式搜索优化正在变成动态分发实验，引用来源的波动比传统 SEO 更难稳定复现。",
-      "detailTrend": "生成式搜索优化正在变成动态分发实验，引用来源的波动比传统 SEO 更难稳定复现。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响产品入口与数据权限，值得进入本期。",
-      "topReason": "读者需要这条信号来判断产品入口和数据权限是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 Axios AI / Technology 提供了新的来源事实，所以读者应把它用于更新核查清单，并等待原始数据、客户日志、文档、审计或第三方测量补齐后再升级判断。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "影响4/新鲜度4/叙事4/证据3/读者效用4；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "本项用于观察产品入口；不把单一来源扩展成市场定论。"
-      },
-      "impact": "品牌和媒体不能把 AI 可见性押在单一社区或单一平台引用规则上，GEO 策略需要可观测和分散。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 AI 产品入口、权限设计、搜索分发和商家工具的产品/运营团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "产品/运营团队用它更新产品入口、数据权限和分发清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认Reddit 在 ChatGPT 引用中的占比近期下降。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明Reddit 在 ChatGPT 引用中的占比近期下降已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "Axios AI / Technology",
-      "sourceName": "Axios AI / Technology",
-      "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/20/chatgpt-reddit-citations-geo-strategy",
-      "originalUrl": "https://www.axios.com/2026/08/20/chatgpt-reddit-citations-geo-strategy",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T07:00:00-04:00",
-      "freshSourceFact": null,
-      "time": "08月20日 20:00 JST",
-      "tags": [
-        "GEO",
-        "ChatGPT Search",
-        "Reddit"
-      ],
-      "companies": [
-        "Reddit",
-        "OpenAI",
-        "Promptwatch"
-      ],
-      "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "techcrunch-binance-agent-os-trading-2026-08-21",
-      "category": "tool",
-      "label": "工具",
-      "title": "TechCrunch：Binance 让 AI Agent 接入交易基础设施",
-      "body": "TechCrunch 报道 Binance 推出 Agent OS，允许 AI 应用读取市场数据、查看账户信息并在授权后执行交易。",
-      "summary": "TechCrunch 报道 Binance 推出 Agent OS，允许 AI 应用读取市场数据、查看账户信息并在授权后执行交易。",
-      "whyItMatters": "Agent 一旦进入真实资金账户，权限分层、风控、交易限额和责任归属会比“能否调用工具”更重要。",
-      "detailBody": "报道称 Agent OS 连接 Binance API、钱包、x402 交易验证、支付 facilitator API 和 MCP，并可与 ChatGPT、Claude Code、Cursor 等工具配合。 报道说明 Agent OS 连接 Binance API、钱包、x402、Skill Hub 与 MCP，让授权 Agent 可读取账户并交易。",
-      "trend": "金融 Agent 正从信息查询进入资金执行，交易平台会成为高风险工具调用治理样本。",
-      "detailTrend": "金融 Agent 正从信息查询进入资金执行，交易平台会成为高风险工具调用治理样本。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响Agent 执行控制，值得进入本期。",
-      "topReason": "读者需要这条信号来判断Agent 执行权限和审计是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 TechCrunch 写明 Agent OS 可连接账户信息、市场数据和交易执行，所以读者应把它用于高风险工具调用核查。还要等待官方风控文档、交易限额、审批日志、异常回滚、监管责任和用户损失数据。",
+      "id": "axios-rand-ai-bioweapons-roadmap-2026-08-22",
+      "category": "research",
+      "label": "研究",
+      "title": "Axios：RAND 报告提出 AI 生物武器风险缓解路线图",
+      "body": "Axios 报道称，RAND 新报告提出九类缓解策略，关注 AI 降低生物武器设计门槛的风险。",
+      "summary": "Axios 报道称，RAND 新报告提出九类缓解策略，关注 AI 降低生物武器设计门槛的风险。",
+      "whyItMatters": "AI for biology 的治理重点正在从模型能力扩展到数据、工具、材料和公共卫生准备的组合防线。",
+      "detailBody": "报道指出 RAND 将开放生物工具和数据、材料获取、误用检测与公共卫生准备纳入同一套风险缓解框架。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "生命科学 Agent 的进展使安全问题更像供应链治理，而不是单一模型拒答策略。",
+      "detailTrend": "生命科学 Agent 的进展使安全问题更像供应链治理，而不是单一模型拒答策略。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "RAND 报告提出 AI 生物武器风险缓解路线图影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "AI for biology 的治理重点正在从模型能力扩展到数据、工具、材料和公共卫生准备的组合防线。 下一步要核对 RAND 报告全文、Anthropic 生物研究原文、实验室验证数据、NIH/CDC/FDA 或相关监管指南。。",
+      "detailWhyRanked": "报道指出 RAND 将开放生物工具和数据、材料获取、误用检测与公共卫生准备纳入同一套风险缓解框架。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
       "selectionScore": {
         "impact": 5,
         "novelty": 4,
@@ -1105,7 +776,7 @@
         "evidenceQuality": 3,
         "readerUtility": 5,
         "total": 22,
-        "note": "影响5/新鲜度4/叙事5/证据3/读者效用5；媒体背景支撑事实，仍需后续独立证明。"
+        "note": "影响5/新鲜度4/叙事5/证据3/读者效用5；媒体背景支撑最低事实，仍需独立证明。"
       },
       "editorScore": {
         "impact": 5,
@@ -1114,95 +785,24 @@
         "evidenceQuality": 3,
         "readerUtility": 5,
         "total": 22,
-        "note": "本项用于检查工具控制面；不把单一来源扩展成市场定论。"
+        "note": "本项用于更新研究清单；不把单一来源扩展成全市场结论。"
       },
-      "impact": "Agent 一旦进入真实资金账户，权限分层、风控、交易限额和责任归属会比“能否调用工具”更重要。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 Agent 工作流、开发平台、金融权限和 API 成本控制的工程/风控团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "工程/风控团队用它更新Agent 权限、审批、日志和成本清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认Binance 让 AI Agent 接入交易基础设施。",
+      "impact": "AI for biology 的治理重点正在从模型能力扩展到数据、工具、材料和公共卫生准备的组合防线。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责生物安全、AI 科研平台和实验数据访问控制的科研机构/安全/政策团队应该关注这条信号，因为它会影响模型、数据集和湿实验材料的权限设计。",
+      "readerUse": "科研和安全团队用它更新生物数据访问、模型能力评估和公共卫生准备清单。",
+      "nextCheck": "查 RAND 报告全文、Anthropic 生物研究原文、实验室验证数据、NIH/CDC/FDA 或相关监管指南。",
       "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
         "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
       ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明Binance 让 AI Agent 接入交易基础设施已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/",
-      "originalUrl": "https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/",
-      "sourceRole": "媒体背景",
-      "trustLevel": "media",
-      "verificationStatus": "已核验",
-      "originalDependency": "must-read",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "publishedAt": "2026-08-20T02:30:00-07:00",
-      "freshSourceFact": null,
-      "time": "08月20日 18:30 JST",
-      "tags": [
-        "Agent",
-        "金融",
-        "MCP"
-      ],
-      "companies": [
-        "Binance",
-        "OpenAI",
-        "Anthropic",
-        "Cursor"
-      ],
-      "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
-    },
-    {
-      "id": "axios-crowdstrike-cto-ai-cyber-fund-2026-08-21",
-      "category": "funding",
-      "label": "融资",
-      "title": "Axios：CrowdStrike CTO 离职创办 AI 网络安全基金",
-      "body": "Axios 报道 CrowdStrike 全球 CTO Elia Zaitsev 将离职，联合创办面向 AI 网络安全公司的 Cognition 基金。",
-      "summary": "Axios 报道 CrowdStrike 全球 CTO Elia Zaitsev 将离职，联合创办面向 AI 网络安全公司的 Cognition 基金。",
-      "whyItMatters": "Agentic AI 被安全圈视为平台重置时刻，人才和资本正在围绕新攻击面寻找下一代安全平台。",
-      "detailBody": "报道称 Cognition 目标募资 1.7 亿美元，计划领投或联合领投种子和 A 轮，每年集中投三到四家公司。 Axios 报道 Elia Zaitsev 离开 CrowdStrike，计划与伙伴创办目标 1.7 亿美元的 AI-cyber 基金。",
-      "trend": "AI 安全从模型测试扩展到企业攻击面、身份、Agent 权限和平台级防御。",
-      "detailTrend": "AI 安全从模型测试扩展到企业攻击面、身份、Agent 权限和平台级防御。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响AI 安全资本流向，值得进入本期。",
-      "topReason": "读者需要这条信号来判断AI 安全资本迁移是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 Axios 写明基金目标规模、投资节奏、创始团队背景和 AI 攻击面 thesis，所以读者应把它用于跟踪安全人才资本迁移。还要等待基金文件、LP 信息、首批被投公司、客户验证和后续融资结果。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "影响4/新鲜度4/叙事4/证据3/读者效用4；媒体背景支撑事实，仍需后续独立证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "本项用于跟踪资本迁移；不把单一来源扩展成市场定论。"
-      },
-      "impact": "Agentic AI 被安全圈视为平台重置时刻，人才和资本正在围绕新攻击面寻找下一代安全平台。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "关注 AI 安全创业、资本配置和企业攻防平台的投资/安全战略团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "投资/安全战略团队用它更新AI 安全资本与人才流向清单。",
-      "nextCheck": "查官方公告、原始数据、客户侧日志、合同/监管文件或第三方测试，确认CrowdStrike CTO 离职创办 AI 网络安全基金。",
-      "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
-        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
-      ],
-      "evidenceThreshold": "需要官方文件、原始数据、客户/监管记录或第三方复测，才能从媒体信号升级为确认事实。",
-      "claimBoundary": "当前不证明CrowdStrike CTO 离职创办 AI 网络安全基金已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
+      "evidenceThreshold": "需要 RAND 原文、实验验证材料和监管/机构指南，才能升级为确认的 AI 生物安全治理框架。",
+      "claimBoundary": "当前不证明 AI 已让非专业人员可直接制造生物武器，也不证明所有开放生物数据应受限。",
+      "counterEvidence": "若独立生物安全评估显示关键危险阈值未被跨越，或访问控制已覆盖高风险数据，应下调紧迫性。",
       "source": "Axios AI / Technology",
       "sourceName": "Axios AI / Technology",
       "sourceId": "axios-ai",
-      "sourceUrl": "https://www.axios.com/2026/08/20/exclusive-crowdstrikes-cto-is-leaving-to-launch-an-ai-cyber-fund",
-      "originalUrl": "https://www.axios.com/2026/08/20/exclusive-crowdstrikes-cto-is-leaving-to-launch-an-ai-cyber-fund",
+      "sourceUrl": "https://www.axios.com/2026/08/21/safeguards-ai-bioweapons-roadmap",
+      "originalUrl": "https://www.axios.com/2026/08/21/safeguards-ai-bioweapons-roadmap",
       "sourceRole": "媒体背景",
       "trustLevel": "media",
       "verificationStatus": "已核验",
@@ -1210,87 +810,291 @@
       "sourceType": "reliable_media",
       "sourceReliability": "medium",
       "claimStatus": "reported",
-      "publishedAt": "2026-08-20T02:00:00-04:00",
+      "publishedAt": "2026-08-21T04:00:00-04:00",
       "freshSourceFact": null,
-      "time": "08月20日 15:00 JST",
+      "time": "08月21日 17:00 JST",
       "tags": [
-        "网络安全",
-        "融资",
-        "Agent"
+        "生物安全",
+        "AI科学",
+        "RAND"
       ],
       "companies": [
-        "CrowdStrike",
-        "Cognition"
+        "RAND",
+        "Anthropic"
       ],
       "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
     },
     {
-      "id": "openai-private-safety-processing-zdr-2026-08-21",
+      "id": "axios-hochul-data-center-position-2026-08-22",
       "category": "policy",
       "label": "政策",
-      "title": "OpenAI 预告零数据留存下的安全监控方案",
-      "body": "OpenAI 发布 Private Safety Processing 预览，声称可在不让人员接触客户内容的情况下跨交互识别滥用信号。",
-      "summary": "OpenAI 发布 Private Safety Processing 预览，声称可在不让人员接触客户内容的情况下跨交互识别滥用信号。",
-      "whyItMatters": "企业在使用更强模型时同时要安全监控和数据控制，这把隐私承诺变成前沿模型采购条件。",
-      "detailBody": "OpenAI 称该方案面向符合零数据留存条件的 API 客户，客户内容留在客户控制的基础设施，或由客户控制密钥加密，OpenAI 只接收有限安全信号。 OpenAI 官方页说明该预览面向零数据留存客户，安全系统只返回有限风险信号，白皮书计划在 9 月发布。",
-      "trend": "前沿模型治理正在从单次请求过滤转向跨会话、跨 Agent 任务的私有化监控。",
-      "detailTrend": "前沿模型治理正在从单次请求过滤转向跨会话、跨 Agent 任务的私有化监控。 这条信号的关键不是单一功能是否新鲜，而是它把权限、数据、成本或信任问题推到可核查的运营层。读者应等待日志、文档或第三方数据补齐。",
-      "whyRanked": "此项影响治理和组织风险，值得进入本期。",
-      "topReason": "读者需要这条信号来判断治理与组织风险是否该进入本周核查清单；当前仍需独立证据补强。",
-      "detailWhyRanked": "因为 OpenAI 官方页写明零留存、客户控制密钥、有限安全信号和 9 月白皮书计划，所以读者应把它用于企业供应商审查。还要等待技术白皮书、误报率、客户侧日志、外部审计和监管反馈。",
+      "title": "Axios：纽约州长试图提出亲商业的数据中心路线",
+      "body": "Axios 报道称，纽约州长 Hochul 正把一年期数据中心暂停与亲商业、低成本和环境关切放在同一政策叙事中。",
+      "summary": "Axios 报道称，纽约州长 Hochul 正把一年期数据中心暂停与亲商业、低成本和环境关切放在同一政策叙事中。",
+      "whyItMatters": "民主党内部的数据中心立场开始分化，AI 基础设施公司需要同时回应就业、电价和环境边界。",
+      "detailBody": "报道称 Hochul 把纽约定位为数据中心政策试验场，同时与更长期或更高门槛的进步派暂停方案拉开距离。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "AI 数据中心正在变成地方政策模板竞争，短暂停建、条件审批和劳动力转型会被其他州参考。",
+      "detailTrend": "AI 数据中心正在变成地方政策模板竞争，短暂停建、条件审批和劳动力转型会被其他州参考。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "纽约州长试图提出亲商业的数据中心路线影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "民主党内部的数据中心立场开始分化，AI 基础设施公司需要同时回应就业、电价和环境边界。 下一步要核对纽约州法案文本、州长办公室公告、听证记录、暂停范围和项目审批清单。。",
+      "detailWhyRanked": "报道称 Hochul 把纽约定位为数据中心政策试验场，同时与更长期或更高门槛的进步派暂停方案拉开距离。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
       "selectionScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "影响5/新鲜度4/叙事4/证据5/读者效用5；官方核对支撑事实，仍需后续独立证明。"
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "影响4/新鲜度4/叙事4/证据3/读者效用4；媒体背景支撑最低事实，仍需独立证明。"
       },
       "editorScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "本项用于更新治理清单；不把单一来源扩展成市场定论。"
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "本项用于更新政策清单；不把单一来源扩展成全市场结论。"
       },
-      "impact": "企业在使用更强模型时同时要安全监控和数据控制，这把隐私承诺变成前沿模型采购条件。 先看来源可直接支持的事实，再看外部证据是否补齐。",
-      "whoShouldCare": "负责 AI 治理、员工沟通、采购合规和安全审计的法务/安全/人力团队应该关注这条信号，因为它会影响本周的权限、采购、沟通或验证清单。",
-      "readerUse": "法务/安全/人力团队用它更新治理、合规和组织沟通清单。",
-      "nextCheck": "查技术白皮书、第三方复现、客户侧日志、监管文件或审计材料，确认OpenAI 预告零数据留存下的安全监控方案是否产生可验证效果。",
+      "impact": "民主党内部的数据中心立场开始分化，AI 基础设施公司需要同时回应就业、电价和环境边界。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责州级政策、数据中心公共事务和劳动力转型方案的政府关系/基础设施团队应该关注这条信号，因为它会影响项目审批话术和社区收益承诺。",
+      "readerUse": "政府关系团队用它比较数据中心暂停、环保条件和劳动力转型政策选项。",
+      "nextCheck": "查纽约州法案文本、州长办公室公告、听证记录、暂停范围和项目审批清单。",
       "followUpQuestions": [
-        "是否已有官方文档、原始数据、客户侧日志或监管文件支持这条信号？",
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
         "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
       ],
-      "evidenceThreshold": "需要公开方法、技术报告、客户侧记录或独立复现，才能从来源事实升级为可验证影响判断。",
-      "claimBoundary": "当前不证明OpenAI 预告零数据留存下的安全监控方案已经带来稳定采用、合规有效性、收入改善或安全效果。",
-      "counterEvidence": "若后续官方更正、平台日志、客户数据、监管记录或第三方复测显示功能受限、采用低、误报高或风险未控，应下调判断。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/",
-      "originalUrl": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/",
+      "evidenceThreshold": "需要州级法案、行政令、审批记录或项目清单，才能升级为确认的纽约数据中心政策变化。",
+      "claimBoundary": "当前不证明 Hochul 方案已经成为全国民主党路线，也不证明所有纽约项目都会受同一影响。",
+      "counterEvidence": "若最终法案范围缩小、暂停期未执行或项目审批继续按原节奏推进，应下调政策外溢判断。",
+      "source": "Axios AI / Technology",
+      "sourceName": "Axios AI / Technology",
+      "sourceId": "axios-ai",
+      "sourceUrl": "https://www.axios.com/2026/08/21/kathy-hochul-business-friendly-data-center-plan",
+      "originalUrl": "https://www.axios.com/2026/08/21/kathy-hochul-business-friendly-data-center-plan",
+      "sourceRole": "媒体背景",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-21T03:00:00-04:00",
+      "freshSourceFact": null,
+      "time": "08月21日 16:00 JST",
+      "tags": [
+        "纽约",
+        "数据中心",
+        "劳动力"
+      ],
+      "companies": [
+        "New York State"
+      ],
+      "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+    },
+    {
+      "id": "axios-texas-ag-ai-audit-plan-2026-08-22",
+      "category": "policy",
+      "label": "政策",
+      "title": "Axios：得州总检察长候选人提出 AI 审计计划",
+      "body": "Axios 报道称，得州民主党总检察长候选人 Nathan Johnson 提出上任 30 天内审查州法如何处理 AI 伤害。",
+      "summary": "Axios 报道称，得州民主党总检察长候选人 Nathan Johnson 提出上任 30 天内审查州法如何处理 AI 伤害。",
+      "whyItMatters": "州检察长正把 AI 从事后诉讼推向法律盘点和立法建议，企业需要按州准备合规证据。",
+      "detailBody": "报道称该计划覆盖消费者保护、公平竞争和就业法律，并点名雇主用 AI 决定解雇时的披露缺口。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "美国 AI 治理可能继续州级碎片化，执法者会把既有消费者、就业和竞争法改造成 AI 审计工具。",
+      "detailTrend": "美国 AI 治理可能继续州级碎片化，执法者会把既有消费者、就业和竞争法改造成 AI 审计工具。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "得州总检察长候选人提出 AI 审计计划影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "州检察长正把 AI 从事后诉讼推向法律盘点和立法建议，企业需要按州准备合规证据。 下一步要核对候选人公告、Texas Responsible AI Governance Act、总检察长执法文件和立法提案文本。。",
+      "detailWhyRanked": "报道称该计划覆盖消费者保护、公平竞争和就业法律，并点名雇主用 AI 决定解雇时的披露缺口。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "影响4/新鲜度4/叙事4/证据3/读者效用4；媒体背景支撑最低事实，仍需独立证明。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "本项用于更新政策清单；不把单一来源扩展成全市场结论。"
+      },
+      "impact": "州检察长正把 AI 从事后诉讼推向法律盘点和立法建议，企业需要按州准备合规证据。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责美国州级 AI 合规、消费者保护和员工决策系统的法务/公共政策团队应该关注这条信号，因为它会影响州检察长执法和披露清单。",
+      "readerUse": "法务团队用它检查得州 AI 决策披露、消费者保护和就业算法审计准备。",
+      "nextCheck": "查候选人公告、Texas Responsible AI Governance Act、总检察长执法文件和立法提案文本。",
+      "followUpQuestions": [
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+      ],
+      "evidenceThreshold": "需要正式政策公告、州法文本、立法提案或执法行动，才能升级为确认的得州 AI 审计制度变化。",
+      "claimBoundary": "当前不证明该候选人会当选，也不证明计划会形成法律或执法行动。",
+      "counterEvidence": "若选举结果、立法议程或总检察长办公室文件未采用该计划，应下调影响判断。",
+      "source": "Axios AI / Technology",
+      "sourceName": "Axios AI / Technology",
+      "sourceId": "axios-ai",
+      "sourceUrl": "https://www.axios.com/2026/08/21/texas-ag-democratic-nominee-ai-audit-plan",
+      "originalUrl": "https://www.axios.com/2026/08/21/texas-ag-democratic-nominee-ai-audit-plan",
+      "sourceRole": "媒体背景",
+      "trustLevel": "media",
+      "verificationStatus": "已核验",
+      "originalDependency": "must-read",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "publishedAt": "2026-08-21T02:00:00-04:00",
+      "freshSourceFact": null,
+      "time": "08月21日 15:00 JST",
+      "tags": [
+        "得州",
+        "AI审计",
+        "州级监管"
+      ],
+      "companies": [
+        "Texas Attorney General"
+      ],
+      "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+    },
+    {
+      "id": "google-workspace-ask-gemini-chat-2026-08-22",
+      "category": "product",
+      "label": "产品",
+      "title": "Google：Ask Gemini 将进入 Google Chat 并替代侧边栏入口",
+      "body": "Google Workspace Updates 宣布 Ask Gemini in Chat 将从 8 月 26 日起逐步推出，提供跨 Gmail、Drive、Calendar 等数据的工作入口。",
+      "summary": "Google Workspace Updates 宣布 Ask Gemini in Chat 将从 8 月 26 日起逐步推出，提供跨 Gmail、Drive、Calendar 等数据的工作入口。",
+      "whyItMatters": "企业协作产品正在把 Gemini 从侧边栏变成 Chat 内命令入口，管理员需要重新检查数据访问和导出路径。",
+      "detailBody": "官方说明称该入口可搜索 Workspace 数据、生成内容、总结会话、管理任务，并提示旧 Gemini Chat 侧边栏历史不会迁移。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。 还需回到原文核对数字口径、相关方表述和未证实边界。",
+      "trend": "企业 AI 助手正从单应用插件走向协作中枢，真正的采购问题会落在权限、历史迁移和使用限额。",
+      "detailTrend": "企业 AI 助手正从单应用插件走向协作中枢，真正的采购问题会落在权限、历史迁移和使用限额。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "Ask Gemini 将进入 Google Chat 并替代侧边栏入口影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "企业协作产品正在把 Gemini 从侧边栏变成 Chat 内命令入口，管理员需要重新检查数据访问和导出路径。 下一步要核对 Google Admin 帮助、Workspace 审计日志、Data Export/Takeout 行为和上线后使用指标。。",
+      "detailWhyRanked": "官方说明称该入口可搜索 Workspace 数据、生成内容、总结会话、管理任务，并提示旧 Gemini Chat 侧边栏历史不会迁移。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；官方来源支撑发布事实，效果仍需外部证据。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "本项用于更新产品清单；不把单一来源扩展成全市场结论。"
+      },
+      "impact": "企业协作产品正在把 Gemini 从侧边栏变成 Chat 内命令入口，管理员需要重新检查数据访问和导出路径。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责 Google Workspace、企业协作和数据导出的 IT 管理员/安全团队应该关注这条信号，因为它会影响 Chat 内 Gemini 权限和历史保留策略。",
+      "readerUse": "Workspace 管理员和安全团队用它检查 Gemini in Chat 默认启用、Smart Features、导出和限额策略。",
+      "nextCheck": "查 Google Admin 帮助、Workspace 审计日志、Data Export/Takeout 行为和上线后使用指标。",
+      "followUpQuestions": [
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+      ],
+      "evidenceThreshold": "需要管理后台日志、帮助中心细则和客户侧使用数据，才能升级为确认的企业协作效率或治理变化。",
+      "claimBoundary": "当前不证明 Ask Gemini 已在所有语言和版本可用，也不证明它能替代现有工作流。",
+      "counterEvidence": "若上线后日志显示启用率低、权限配置复杂或历史迁移造成合规问题，应下调产品影响。",
+      "source": "Google Workspace Updates",
+      "sourceName": "Google Workspace Updates",
+      "sourceId": "google-workspace-updates",
+      "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html",
+      "originalUrl": "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html",
       "sourceRole": "官方核对",
       "trustLevel": "official",
       "verificationStatus": "已核验",
-      "originalDependency": "optional",
+      "originalDependency": "recommended",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
-      "publishedAt": "2026-08-19T15:10:00-07:00",
+      "publishedAt": "2026-08-19T09:00:00-07:00",
       "freshSourceFact": null,
-      "time": "08月20日 07:10 JST",
+      "time": "08月20日 01:00 JST",
       "tags": [
-        "安全",
-        "隐私",
-        "企业AI"
+        "Gemini",
+        "Google Chat",
+        "企业协作"
+      ],
+      "companies": [
+        "Google"
+      ],
+      "provenance": "Google Workspace Updates直接支持发布事实；采用效果、成本收益和外部影响仍需独立材料验证。"
+    },
+    {
+      "id": "openai-democratic-oversight-national-security-2026-08-22",
+      "category": "policy",
+      "label": "政策",
+      "title": "OpenAI 推出国家安全 AI 民主监督支持计划",
+      "body": "OpenAI 宣布将帮助民主监督机构理解和审查国家安全场景中的政府 AI 使用，并提供 500 万美元支持。",
+      "summary": "OpenAI 宣布将帮助民主监督机构理解和审查国家安全场景中的政府 AI 使用，并提供 500 万美元支持。",
+      "whyItMatters": "前沿模型进入国家安全场景后，监督能力本身也需要工具、培训和证据控制机制。",
+      "detailBody": "OpenAI 称计划提供培训、技术支持和 credits，并试点让授权审查者查看 AI 辅助政府决策相关输入、输出和工具使用记录。 来源还给出发布时间、相关机构或数据口径，适合在详情页保留事实边界。",
+      "trend": "AI 治理正在从发布前评估扩展到部署后的证据留存、审查可读性和政府监督能力建设。",
+      "detailTrend": "AI 治理正在从发布前评估扩展到部署后的证据留存、审查可读性和政府监督能力建设。 这条信号应被当作本期雷达的一部分，先检查它改变了哪些权限、成本、监管或运营清单，再等待可审计证据。",
+      "whyRanked": "推出国家安全 AI 民主监督支持计划影响本期政策、算力或工作流判断，值得进入扫描。",
+      "topReason": "前沿模型进入国家安全场景后，监督能力本身也需要工具、培训和证据控制机制。 下一步要核对参与监督机构名单、试点工具说明、证据保留规则、政府采购文件和第三方评估。。",
+      "detailWhyRanked": "OpenAI 称计划提供培训、技术支持和 credits，并试点让授权审查者查看 AI 辅助政府决策相关输入、输出和工具使用记录。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。 当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "影响5/新鲜度4/叙事4/证据4/读者效用5；官方来源支撑发布事实，效果仍需外部证据。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "本项用于更新政策清单；不把单一来源扩展成全市场结论。"
+      },
+      "impact": "前沿模型进入国家安全场景后，监督能力本身也需要工具、培训和证据控制机制。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+      "whoShouldCare": "负责公共部门 AI、国家安全合规和审计记录的政策/安全/政府客户团队应该关注这条信号，因为它会影响高风险部署的监督证据设计。",
+      "readerUse": "政策和安全团队用它检查政府 AI 项目的审查记录、授权边界和模型无关工具要求。",
+      "nextCheck": "查参与监督机构名单、试点工具说明、证据保留规则、政府采购文件和第三方评估。",
+      "followUpQuestions": [
+        "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+        "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+      ],
+      "evidenceThreshold": "需要试点协议、政府记录、工具文档或第三方评估，才能升级为确认的国家安全 AI 监督机制。",
+      "claimBoundary": "当前只证明 OpenAI 发布计划，不证明政府监督已实际增强或所有结果可公开审查。",
+      "counterEvidence": "若后续没有参与机构、试点记录或独立评估，或证据仍由供应商控制，应下调治理成效判断。",
+      "source": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "openai-news",
+      "sourceUrl": "https://openai.com/index/strengthening-democratic-oversight-in-national-security/",
+      "originalUrl": "https://openai.com/index/strengthening-democratic-oversight-in-national-security/",
+      "sourceRole": "官方核对",
+      "trustLevel": "official",
+      "verificationStatus": "已核验",
+      "originalDependency": "recommended",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "publishedAt": "2026-08-18T09:00:00-07:00",
+      "freshSourceFact": null,
+      "time": "08月19日 01:00 JST",
+      "tags": [
+        "国家安全",
+        "AI监督",
+        "公共部门"
       ],
       "companies": [
         "OpenAI"
       ],
-      "provenance": "OpenAI News直接支持该公司发布或预览此方案；效果、采用和外部审计仍需独立材料。"
+      "provenance": "OpenAI News直接支持发布事实；采用效果、成本收益和外部影响仍需独立材料验证。"
     }
   ]
 }
