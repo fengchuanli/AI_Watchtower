@@ -1,3 +1,25 @@
+## 2026-08-21 23:03 JST
+
+- Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是更晚的 `news-1700-2026-08-21`，且含 12 条安全非重复信号，因此本次未将页面回退到早间版，也未用旧稿或弱证据补量。
+- Changed files:
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI News/官方 Daybreak 页面、Anthropic News/Support、Google AI、Spotify 官方 Newsroom、TechCrunch AI、VentureBeat AI、Axios AI/Technology、The Verge AI 和历史 URL。
+  - 当前 `data/news.json` 与最新 `data/news-history.json` 均为 `news-1700-2026-08-21`，含 12 条项目，已经覆盖本日企业模型支出、隐私安全、Agent 工具、AI 搜索、内容真实性和劳动力叙事主线。
+  - 新搜索到的可核查候选多为 8 月 10-17 日旧稿，或已被当前 17:00 版覆盖；未使用付费/登录墙正文、社区讨论、随机网页、二次聚合或传闻型内容。
+- Archive mirror: unchanged - latest `data/news-history.json` edition already mirrors `data/news.json` for edition metadata, reader/source framing, item count, references and item order.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 46 sources.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local log-only commit message `记录08点新闻核查`；push 仍取决于 GitHub DNS 恢复。
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+
 ## 2026-08-21 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 10 source/candidate workflow task. Reviewed `data/sources.json` labels and descriptions so source roles are readable to non-technical Chinese editors.
