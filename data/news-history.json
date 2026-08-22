@@ -1,8 +1,925 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-22",
-  "totalItems": 506,
+  "updatedAt": "2026-08-23",
+  "totalItems": 516,
   "editions": [
+    {
+      "id": "news-1700-2026-08-23",
+      "date": "2026-08-23",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦企业 Agent 治理、运行时、推理成本、医疗责任与数据中心政治。",
+      "operationalStatus": "GitHub DNS 阻断拉取；已核查官方与可靠来源，发布 10 条非重复信号。",
+      "editorialInterpretation": "本期发布 10 条信号，主轴是 Agent 控制面、可审计责任和算力社会许可。",
+      "readerFrame": {
+        "headline": "AI 落地的主线从模型能力转向 Agent 控制面和责任证据",
+        "whyItMatters": "本期显示企业开始把 Agent 当作可审计系统管理：自主权要被拆分，成本要能实时叫停，医疗和数据中心也要回应责任与社会许可。",
+        "useThisIssueFor": [
+          "平台工程团队检查 Agent 权限、预算、日志和 runtime 所有权。",
+          "合规和法务团队更新医疗 AI、数据中心政治和高风险决策责任清单。",
+          "研究团队跟进游戏环境、KV cache 和多模型路由的可复现证据。"
+        ],
+        "notProvenYet": [
+          "不证明更高自主权的 Agent 已经失去商业价值。",
+          "不证明本期厂商基准或媒体调查已经形成独立验证结论。",
+          "不证明数据中心反弹已直接改变具体项目许可。"
+        ],
+        "mobile": {
+          "headline": "本期看 Agent 控制面",
+          "summary": "企业 Agent、自托管 harness、推理成本、医疗责任和数据中心政治进入核查清单。",
+          "primaryUses": [
+            "平台团队查权限",
+            "合规团队查责任",
+            "研究团队查复现"
+          ],
+          "proofBoundary": "仍需日志、原始报告、客户指标和第三方复测"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版新增 Agent 控制面、推理成本和医疗责任信号",
+        "freshFacts": [
+          "本期新增 VentureBeat 8 月 22 日企业 Agent 自主权治理文章。",
+          "本期新增 Google DeepMind 8 月 21 日游戏研究合作更新。",
+          "本期新增 TrueFoundry 官方 TrueForge 开源 Agent harness 发布。",
+          "本期新增 Axios 对医疗 AI 医生责任框架和数据中心选举风险的报道。"
+        ],
+        "repeatedContext": [
+          "Slack Code 已在历史版出现，本期不重复作为单独主线。",
+          "数据中心社会许可延续 8 月 22 日版，本期只补入竞选备忘录视角。",
+          "企业 Agent 入口延续此前协作工具和开发者工具下沉主线，效果仍需客户数据。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查 Agent 控制面",
+          "count": 5,
+          "meaning": "用来检查自主权拆分、预算停机、Slack Agent、ITSM 后台 Agent 和自托管 harness。"
+        },
+        {
+          "label": "验证研究与成本证据",
+          "count": 2,
+          "meaning": "用来核对 DeepMind 游戏实验和 Nvidia KV cache 迁移是否有论文、代码和复测。"
+        },
+        {
+          "label": "核对政策责任边界",
+          "count": 3,
+          "meaning": "用来更新 OpenAI 治理叙事、医疗 AI 医生责任和数据中心政治风险清单。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体雷达仍占多数",
+        "note": "可靠媒体来源集中占 7/10，适合做雷达，不等同于独立验证。",
+        "nextCheck": "查官方文件、原始报告、客户日志和复测。"
+      },
+      "sourceConcentration": {
+        "sourceId": "venturebeat-ai",
+        "sourceName": "VentureBeat AI",
+        "count": 5,
+        "share": "5/10",
+        "note": "VentureBeat 是单一最大来源，但未超过三分之二。",
+        "nextCheck": "用其他媒体、官方原文、论文和客户数据复核。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "控制面成为主战场",
+          "note": "跨期看，Slack、Claude Code、Codex、NanoClaw、TrueForge 和 Serval 都把 Agent 从个人工具推向团队系统。",
+          "boundary": "这不证明 Agent 已产生稳定 ROI；仍需客户指标、日志、审计和事故数据。"
+        },
+        {
+          "topic": "policy",
+          "label": "责任证据前置",
+          "note": "历史版本已记录安全放缓、招聘和国家安全监督，本期医疗与数据中心进一步把责任链前置。",
+          "boundary": "这不证明监管已经统一落地；仍需法规文本、官方文件、审计报告和执行记录。"
+        },
+        {
+          "topic": "model",
+          "label": "成本从算力扩展到推理和社会许可",
+          "note": "历史数据中心主线继续存在，本期又加入多模型推理成本和地方政治风险。",
+          "boundary": "这不证明基础设施建设受阻；仍需许可记录、PPA、项目融资、NVIDIA 论文复测、成本账单和客户指标。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "Agent 信号增强",
+          "status": "stronger",
+          "previousPattern": "此前版本已记录 Slack Code、Meta AI、Ramp Router 和多个 Agent 工具入口。",
+          "currentSignal": "本期新增 Agent 自主权治理、运行时 harness、Slack Agent 团队、ITSM 后台 Agent 和实时成本控制。",
+          "signalDirection": "增强：从工具入口扩展到权限、预算、审计和 runtime 所有权。",
+          "stillUnproven": "仍需客户日志、审计记录、预算指标和第三方评测证明生产价值。"
+        },
+        {
+          "topic": "policy",
+          "label": "高风险责任继续升温",
+          "status": "stronger",
+          "previousPattern": "此前已有国家安全监督、AI 招聘和训练数据治理信号。",
+          "currentSignal": "本期新增 OpenAI AI Futures、医疗 AI 医生责任和数据中心竞选风险。",
+          "signalDirection": "增强：治理叙事从模型安全扩展到制度、医疗和社会许可。",
+          "stillUnproven": "仍需政策文本、框架原文、监管记录和项目文件证明约束落地。"
+        },
+        {
+          "topic": "model",
+          "label": "模型与推理成本重复出现",
+          "status": "repeated",
+          "previousPattern": "此前版本已经记录模型路由、数据中心和推理成本相关信号。",
+          "currentSignal": "本期补入 DeepMind 游戏研究和 Nvidia KV cache 迁移这种研究与运行成本信号。",
+          "signalDirection": "重复：模型竞争仍在，但关注点从发布参数延伸到实验环境和运行成本。",
+          "stillUnproven": "仍需论文复测、代码、成本账单、客户指标和实验记录。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "治理叙事继续制度化",
+          "lastMention": "上一版记录 OpenAI 国家安全 AI 民主监督支持计划。",
+          "whatChanged": "本期 OpenAI 推出 AI Futures 博客，把权力集中和个人自主列入长期研究议题。",
+          "stillUnproven": "仍需后续论文、政策文件、产品规则或外部专家报告证明其会影响实际治理。"
+        },
+        {
+          "company": "Google",
+          "label": "研究试验场从产品回到游戏",
+          "lastMention": "上一版记录 Google Workspace Ask Gemini in Chat 进入企业协作入口。",
+          "whatChanged": "本期 Google DeepMind 用游戏合作说明复杂可控环境仍用于 AI 研究。",
+          "stillUnproven": "仍需论文、实验记录、SDK 或第三方复现证明研究价值。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "Agent 生态被作为对照对象",
+          "lastMention": "此前版本多次记录 Claude Code、Claude 企业使用和 Anthropic 数据保留争议。",
+          "whatChanged": "本期 TrueForge、Slack/NanoClaw 和企业编排调查都把 Claude 或 Anthropic 平台作为 Agent 生态参照。",
+          "stillUnproven": "仍需 Anthropic 官方文档、客户日志、采购记录和第三方评测确认竞争影响。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 3,
+          "role": "OpenAI、Google DeepMind 和 TrueFoundry 支持核对发布事实；采用和效果仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 7,
+          "role": "VentureBeat 与 Axios 提供企业、政策和市场雷达；完整事实和上下文仍回到原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent 与运行时",
+          "count": 4,
+          "itemIds": [
+            "venturebeat-agent-limited-autonomy-governance-2026-08-23",
+            "venturebeat-runaway-agent-spend-control-2026-08-23",
+            "venturebeat-nanoclaw-slack-agent-teams-2026-08-23",
+            "truefoundry-trueforge-agent-harness-2026-08-23"
+          ],
+          "meaning": "用来检查 Agent 自主权、预算、身份、权限和运行时所有权。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发与自动化工具",
+          "count": 1,
+          "itemIds": [
+            "venturebeat-serval-catalyst-agent-automation-2026-08-23"
+          ],
+          "meaning": "用来更新 ITSM 自动化、审批和回滚清单。"
+        },
+        {
+          "id": "model",
+          "label": "模型与推理",
+          "count": 2,
+          "itemIds": [
+            "google-deepmind-games-ai-research-2026-08-23",
+            "venturebeat-nvidia-kv-cache-transfer-2026-08-23"
+          ],
+          "meaning": "用来核对游戏研究环境和多模型推理成本证据。"
+        },
+        {
+          "id": "policy",
+          "label": "政策与责任",
+          "count": 3,
+          "itemIds": [
+            "axios-gop-ai-data-center-warning-2026-08-23",
+            "openai-ai-futures-governance-blog-2026-08-23",
+            "axios-doctors-ai-health-care-ama-2026-08-23"
+          ],
+          "meaning": "用来核对治理叙事、医疗责任和数据中心政治风险。"
+        }
+      ],
+      "overreadBoundary": {
+        "label": "不要过度解读媒体雷达",
+        "body": "不要把本期读成全市场结论，它适合更新 Agent 和政策核查清单。",
+        "doNotConclude": "不证明 Agent 项目普遍失败、厂商成本主张成立，或数据中心项目会被选举阻断。",
+        "useInstead": "应该用官方文件、原始报告、客户日志、论文复测、许可和审计记录复核。"
+      },
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "venturebeat-agent-limited-autonomy-governance-2026-08-23",
+          "category": "policy",
+          "label": "政策",
+          "title": "VentureBeat：企业 Agent 赢家开始限制自主权而不是放大自主权",
+          "body": "VentureBeat 8 月 22 日文章把 Gartner 与 McKinsey 调查并置，指出许多 Agent 项目失败点不是模型能力，而是成本、业务价值和风险控制。",
+          "summary": "VentureBeat 8 月 22 日文章把 Gartner 与 McKinsey 调查并置，指出许多 Agent 项目失败点不是模型能力，而是成本、业务价值和风险控制。",
+          "whyItMatters": "企业 Agent 采购的核心指标正在从“能不能自动完成任务”转向“能不能被风险、法务和合规批准上线”。",
+          "detailBody": "VentureBeat 8 月 22 日文章把 Gartner 与 McKinsey 调查并置，指出许多 Agent 项目失败点不是模型能力，而是成本、业务价值和风险控制。 文中强调治理成熟的团队会把 Agent 拆成窄职责、在高风险决策前设置人工检查点，并把决策谱系作为设计要求。",
+          "trend": "Agentic AI 进入生产后，最稀缺的不再只是模型能力，而是权限、审计、成本和责任边界的工程化。",
+          "detailTrend": "Agentic AI 进入生产后，最稀缺的不再只是模型能力，而是权限、审计、成本和责任边界的工程化。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "企业 Agent 治理从“更自主”转向“可审计边界”影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "企业 Agent 采购的核心指标正在从“能不能自动完成任务”转向“能不能被风险、法务和合规批准上线”。 下一步要核对 Gartner 原始预测、McKinsey 调查方法、企业上线日志和审计记录。",
+          "detailWhyRanked": "文中强调治理成熟的团队会把 Agent 拆成窄职责、在高风险决策前设置人工检查点，并把决策谱系作为设计要求。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "企业 Agent 采购的核心指标正在从“能不能自动完成任务”转向“能不能被风险、法务和合规批准上线”。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责 Agent 上线、风险评审、法务合规和平台工程的团队应该关注，因为它影响自主权范围和审计设计。",
+          "readerUse": "平台/合规团队用它检查 Agent 职责拆分、人工检查点和决策日志。",
+          "nextCheck": "Gartner 原始预测、McKinsey 调查方法、企业上线日志和审计记录",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要原始调查数据、企业部署记录和审计报告，才能升级为已确认的 Agent 治理趋势。",
+          "claimBoundary": "当前不证明所有高自主 Agent 都会失败，也不证明窄职责设计一定带来更高 ROI。",
+          "counterEvidence": "如果后续企业指标显示高自主 Agent 在明确日志和权限下通过审计并降低成本，应下调风险判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceUrl": "https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone",
+          "originalUrl": "https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-22T14:30:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月23日 06:30 JST",
+          "tags": [
+            "Agent治理",
+            "企业AI",
+            "风险控制"
+          ],
+          "companies": [
+            "VentureBeat",
+            "Gartner",
+            "McKinsey"
+          ],
+          "provenance": "VentureBeat AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+        },
+        {
+          "id": "venturebeat-nvidia-kv-cache-transfer-2026-08-23",
+          "category": "research",
+          "label": "研究",
+          "title": "VentureBeat：Nvidia 研究用线性映射降低多模型会话切换成本",
+          "body": "VentureBeat 报道称，Nvidia 研究人员提出跨模型 KV cache transfer，用线性映射减少长会话在模型之间切换时的重复预填充成本。",
+          "summary": "VentureBeat 报道称，Nvidia 研究人员提出跨模型 KV cache transfer，用线性映射减少长会话在模型之间切换时的重复预填充成本。",
+          "whyItMatters": "如果可复现，多模型 Agent 的路由成本和延迟会下降，企业可以更细地在小模型与大模型之间分工。",
+          "detailBody": "VentureBeat 报道称，Nvidia 研究人员提出跨模型 KV cache transfer，用线性映射减少长会话在模型之间切换时的重复预填充成本。 报道给出的实验范围显示，在兼容模型对上，映射比重算上下文更快，并保留大部分目标模型单独运行精度；这仍需回到论文和代码验证。",
+          "trend": "多模型编排的下一轮优化正在从“选哪个模型”进入“如何保留上下文计算资产”。",
+          "detailTrend": "多模型编排的下一轮优化正在从“选哪个模型”进入“如何保留上下文计算资产”。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "Nvidia KV cache 迁移指向多模型 Agent 成本瓶颈影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "如果可复现，多模型 Agent 的路由成本和延迟会下降，企业可以更细地在小模型与大模型之间分工。 下一步要核对 Nvidia 论文、开源代码、兼容模型清单、延迟指标和独立复测。",
+          "detailWhyRanked": "报道给出的实验范围显示，在兼容模型对上，映射比重算上下文更快，并保留大部分目标模型单独运行精度；这仍需回到论文和代码验证。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "如果可复现，多模型 Agent 的路由成本和延迟会下降，企业可以更细地在小模型与大模型之间分工。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责推理平台、Agent 路由和模型成本优化的工程团队应该关注，因为它触及长上下文成本结构。",
+          "readerUse": "推理平台团队用它检查 KV cache、模型切换和路由网关的实验路线。",
+          "nextCheck": "Nvidia 论文、开源代码、兼容模型清单、延迟指标和独立复测",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要论文细节、代码发布、基准数据和第三方复测，才能升级为已验证的推理优化方案。",
+          "claimBoundary": "当前不证明该方法适用于所有模型架构，也不证明生产 Agent 成本会按报道比例下降。",
+          "counterEvidence": "如果独立复测显示兼容范围窄、精度下降或延迟收益不足，应下调工程采用判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceUrl": "https://venturebeat.com/technology/nvidia-finds-that-simple-linear-math-can-replace-costly-ai-model-handoffs",
+          "originalUrl": "https://venturebeat.com/technology/nvidia-finds-that-simple-linear-math-can-replace-costly-ai-model-handoffs",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-21T09:33:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月22日 01:33 JST",
+          "tags": [
+            "推理优化",
+            "KV缓存",
+            "多模型路由"
+          ],
+          "companies": [
+            "VentureBeat",
+            "NVIDIA"
+          ],
+          "provenance": "VentureBeat AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+        },
+        {
+          "id": "google-deepmind-games-ai-research-2026-08-23",
+          "category": "research",
+          "label": "研究",
+          "title": "Google DeepMind：从 Atari 到 EVE Online，游戏仍是 AI 研究试验场",
+          "body": "Google DeepMind 8 月 21 日介绍与游戏开发者合作，用游戏世界原型测试新的玩法体验和 AI 研究问题。",
+          "summary": "Google DeepMind 8 月 21 日介绍与游戏开发者合作，用游戏世界原型测试新的玩法体验和 AI 研究问题。",
+          "whyItMatters": "游戏场景可作为多智能体、长程规划和人机交互的低风险实验层，研发团队可以借此观察 Agent 行为。",
+          "detailBody": "Google DeepMind 8 月 21 日介绍与游戏开发者合作，用游戏世界原型测试新的玩法体验和 AI 研究问题。 官方文章把 Atari、Go、StarCraft 等历史脉络与新的游戏合作放在一起，说明可控但复杂的环境仍被用来观察智能、规划和协作。",
+          "trend": "AI 研究正在重新利用游戏作为可控复杂系统，把模型能力、交互设计和安全观察放到同一试验环境里。",
+          "detailTrend": "AI 研究正在重新利用游戏作为可控复杂系统，把模型能力、交互设计和安全观察放到同一试验环境里。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "DeepMind 用游戏合作延续智能体研究试验场影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "游戏场景可作为多智能体、长程规划和人机交互的低风险实验层，研发团队可以借此观察 Agent 行为。 下一步要核对 合作游戏名单、实验设计、论文结果、开发者 SDK 和第三方复现。",
+          "detailWhyRanked": "官方文章把 Atari、Go、StarCraft 等历史脉络与新的游戏合作放在一起，说明可控但复杂的环境仍被用来观察智能、规划和协作。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "游戏场景可作为多智能体、长程规划和人机交互的低风险实验层，研发团队可以借此观察 Agent 行为。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责多智能体研究、游戏 AI、模拟环境和交互评测的研发团队应该关注，因为它影响实验平台选择。",
+          "readerUse": "研究/产品团队用它评估游戏环境是否适合作为 Agent 行为测试床。",
+          "nextCheck": "合作游戏名单、实验设计、论文结果、开发者 SDK 和第三方复现",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要论文、实验日志、可复现环境或开发者测试报告，才能升级为已验证的研究突破。",
+          "claimBoundary": "当前只证明 DeepMind 宣布研究方向，不证明新游戏环境已产生通用智能突破。",
+          "counterEvidence": "如果后续论文或开发者报告缺少可复现任务、指标和失败案例，应降低研究价值判断。",
+          "source": "Google DeepMind Blog",
+          "sourceName": "Google DeepMind Blog",
+          "sourceId": "google-deepmind-blog",
+          "sourceUrl": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+          "originalUrl": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "reference",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-21T12:00:00+00:00",
+          "freshSourceFact": null,
+          "time": "08月21日 21:00 JST",
+          "tags": [
+            "AI研究",
+            "游戏环境",
+            "多智能体"
+          ],
+          "companies": [
+            "Google DeepMind",
+            "Google"
+          ],
+          "provenance": "Google DeepMind Blog提供官方或一手核对入口；效果、采用和外部影响仍需第三方证据。"
+        },
+        {
+          "id": "venturebeat-runaway-agent-spend-control-2026-08-23",
+          "category": "product",
+          "label": "产品",
+          "title": "VentureBeat：五分之一企业无法实时叫停失控 Agent 花费",
+          "body": "VentureBeat 根据 VB Pulse 数据报道，107 家企业中，多数同时使用多个编排平台，约五分之一仍只能事后看日志，无法实时停止失控 Agent 支出。",
+          "summary": "VentureBeat 根据 VB Pulse 数据报道，107 家企业中，多数同时使用多个编排平台，约五分之一仍只能事后看日志，无法实时停止失控 Agent 支出。",
+          "whyItMatters": "Agent 成本失控会把模型调用从工程问题变成预算、审计和运营风险，尤其影响多平台部署。",
+          "detailBody": "VentureBeat 根据 VB Pulse 数据报道，107 家企业中，多数同时使用多个编排平台，约五分之一仍只能事后看日志，无法实时停止失控 Agent 支出。 报道还提到企业常用原生预算限制、自建网关和动态路由控制成本，但跨平台可见性与实时 kill switch 仍不完整。",
+          "trend": "企业 Agent 控制面正在从“接入模型”转向“跨平台可见性、预算阈值和停机机制”。",
+          "detailTrend": "企业 Agent 控制面正在从“接入模型”转向“跨平台可见性、预算阈值和停机机制”。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "Agent 成本治理暴露实时控制缺口影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "Agent 成本失控会把模型调用从工程问题变成预算、审计和运营风险，尤其影响多平台部署。 下一步要核对 VB Pulse 原始样本、企业网关日志、平台预算配置和采购记录。",
+          "detailWhyRanked": "报道还提到企业常用原生预算限制、自建网关和动态路由控制成本，但跨平台可见性与实时 kill switch 仍不完整。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "Agent 成本失控会把模型调用从工程问题变成预算、审计和运营风险，尤其影响多平台部署。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责 AI 平台预算、可观测性、采购和运维的团队应该关注，因为它影响生产 Agent 的成本护栏。",
+          "readerUse": "平台/财务运营团队用它检查预算上限、实时停机和跨平台监控。",
+          "nextCheck": "VB Pulse 原始样本、企业网关日志、平台预算配置和采购记录",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要原始调查数据、企业日志和成本指标，才能升级为已确认的 Agent 支出风险趋势。",
+          "claimBoundary": "当前不证明所有多平台企业都会出现失控花费，也不证明单平台部署一定更安全。",
+          "counterEvidence": "如果后续平台日志显示实时预算阈值普遍可用且事故率下降，应下调成本风险判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceUrl": "https://venturebeat.com/orchestration/one-in-five-enterprises-cant-stop-a-runaway-ai-agents-spending-in-real-time",
+          "originalUrl": "https://venturebeat.com/orchestration/one-in-five-enterprises-cant-stop-a-runaway-ai-agents-spending-in-real-time",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-20T12:57:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月21日 04:57 JST",
+          "tags": [
+            "Agent成本",
+            "可观测性",
+            "企业AI"
+          ],
+          "companies": [
+            "VentureBeat",
+            "Microsoft",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "provenance": "VentureBeat AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+        },
+        {
+          "id": "venturebeat-nanoclaw-slack-agent-teams-2026-08-23",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：NanoClaw 把持久 Agent 团队接入 Slack",
+          "body": "VentureBeat 报道称，NanoCo 为开源 Agent harness NanoClaw 推出 Slack 集成，让用户用一条消息创建带角色、记忆和权限的 Agent 团队。",
+          "summary": "VentureBeat 报道称，NanoCo 为开源 Agent harness NanoClaw 推出 Slack 集成，让用户用一条消息创建带角色、记忆和权限的 Agent 团队。",
+          "whyItMatters": "协作工具正在从“召唤一个聊天机器人”转向“管理多个有身份和权限的数字同事”。",
+          "detailBody": "VentureBeat 报道称，NanoCo 为开源 Agent harness NanoClaw 推出 Slack 集成，让用户用一条消息创建带角色、记忆和权限的 Agent 团队。 报道强调这些 Agent 可以在频道和 Slack Canvas 中协作，也可跨 Telegram 或 WhatsApp 被触达；企业仍需核对权限隔离和日志。",
+          "trend": "Agent 工作流继续向企业消息层下沉，控制难点会转向身份、记忆、权限和跨平台审计。",
+          "detailTrend": "Agent 工作流继续向企业消息层下沉，控制难点会转向身份、记忆、权限和跨平台审计。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "Slack 中的持久 Agent 团队成为新工具形态影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "协作工具正在从“召唤一个聊天机器人”转向“管理多个有身份和权限的数字同事”。 下一步要核对 NanoClaw 官方文档、开源代码、权限模型、客户部署日志和安全审计。",
+          "detailWhyRanked": "报道强调这些 Agent 可以在频道和 Slack Canvas 中协作，也可跨 Telegram 或 WhatsApp 被触达；企业仍需核对权限隔离和日志。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "协作工具正在从“召唤一个聊天机器人”转向“管理多个有身份和权限的数字同事”。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责协作工具、Agent 平台和企业权限治理的团队应该关注，因为它改变 Slack 内的 Agent 身份模型。",
+          "readerUse": "IT/平台团队用它检查 Slack Agent 身份、权限、记忆和跨平台消息边界。",
+          "nextCheck": "NanoClaw 官方文档、开源代码、权限模型、客户部署日志和安全审计",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要官方文档、代码、客户部署记录和安全审计报告，才能升级为已确认的企业 Agent 协作方案。",
+          "claimBoundary": "当前不证明 NanoClaw 已大规模采用，也不证明多 Agent Slack 协作默认安全。",
+          "counterEvidence": "如果官方文档缺少权限隔离、导出和审计记录，或客户日志显示误操作，应下调采用判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceUrl": "https://venturebeat.com/orchestration/nanoclaw-comes-to-slack-letting-you-create-persistent-ai-agent-teams-and-colleagues-from-a-single-message",
+          "originalUrl": "https://venturebeat.com/orchestration/nanoclaw-comes-to-slack-letting-you-create-persistent-ai-agent-teams-and-colleagues-from-a-single-message",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-20T10:25:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月21日 02:25 JST",
+          "tags": [
+            "Slack",
+            "Agent团队",
+            "协作工具"
+          ],
+          "companies": [
+            "VentureBeat",
+            "NanoCo",
+            "NanoClaw",
+            "Slack"
+          ],
+          "provenance": "VentureBeat AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+        },
+        {
+          "id": "venturebeat-serval-catalyst-agent-automation-2026-08-23",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：Serval Catalyst 默认启用后台 Agent 自动化",
+          "body": "VentureBeat 报道称，Serval 将 Catalyst 作为面向管理员的 AI super agent 正式开放并默认启用，用于发现重复 IT 工作并草拟自动化流程。",
+          "summary": "VentureBeat 报道称，Serval 将 Catalyst 作为面向管理员的 AI super agent 正式开放并默认启用，用于发现重复 IT 工作并草拟自动化流程。",
+          "whyItMatters": "ITSM 市场的 AI 竞争点正在从工单应答转向流程发现、自动化生成和主动排障。",
+          "detailBody": "VentureBeat 报道称，Serval 将 Catalyst 作为面向管理员的 AI super agent 正式开放并默认启用，用于发现重复 IT 工作并草拟自动化流程。 报道提到 Catalyst 可检查票据历史、SOP 或自然语言指令，生成工作流、技能、表单、访问策略和仪表盘，并创建后台 Agent 预先发现问题。",
+          "trend": "企业自动化平台正在把 Agent 放到后台运营层，下一步争议会集中在审批、回滚和责任归属。",
+          "detailTrend": "企业自动化平台正在把 Agent 放到后台运营层，下一步争议会集中在审批、回滚和责任归属。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "IT 服务管理开始让 Agent 主动发现可自动化工作影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "ITSM 市场的 AI 竞争点正在从工单应答转向流程发现、自动化生成和主动排障。 下一步要核对 Serval 官方发布、客户上线记录、变更审批日志和事故回滚数据。",
+          "detailWhyRanked": "报道提到 Catalyst 可检查票据历史、SOP 或自然语言指令，生成工作流、技能、表单、访问策略和仪表盘，并创建后台 Agent 预先发现问题。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "ITSM 市场的 AI 竞争点正在从工单应答转向流程发现、自动化生成和主动排障。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责 IT 服务管理、自动化平台和访问策略的运维团队应该关注，因为它会影响工单前置处理。",
+          "readerUse": "ITSM/运维团队用它检查自动化草稿、访问策略、审批和回滚流程。",
+          "nextCheck": "Serval 官方发布、客户上线记录、变更审批日志和事故回滚数据",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要官方发布说明、客户记录、审批日志和事故数据，才能升级为已确认的 IT 自动化落地。",
+          "claimBoundary": "当前不证明 Catalyst 能减少所有工单，也不证明默认启用不会增加误自动化风险。",
+          "counterEvidence": "如果客户日志显示误报、审批缺失或回滚频繁，应下调主动 Agent 的运营价值判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceUrl": "https://venturebeat.com/infrastructure/servals-super-agent-catalyst-creates-roving-background-agents-to-identify-and-fix-it-issues-before-theyre-ticketed",
+          "originalUrl": "https://venturebeat.com/infrastructure/servals-super-agent-catalyst-creates-roving-background-agents-to-identify-and-fix-it-issues-before-theyre-ticketed",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-20T07:42:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月20日 23:42 JST",
+          "tags": [
+            "ITSM",
+            "自动化",
+            "后台Agent"
+          ],
+          "companies": [
+            "VentureBeat",
+            "Serval",
+            "ServiceNow",
+            "Atlassian"
+          ],
+          "provenance": "VentureBeat AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+        },
+        {
+          "id": "openai-ai-futures-governance-blog-2026-08-23",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI：推出 AI Futures，聚焦 transformative AI 下的权力与自由",
+          "body": "OpenAI 8 月 20 日推出 AI Futures 博客，由 Strategic Futures 团队讨论 transformative AI 对权力结构、个人自主和制度设计的影响。",
+          "summary": "OpenAI 8 月 20 日推出 AI Futures 博客，由 Strategic Futures 团队讨论 transformative AI 对权力结构、个人自主和制度设计的影响。",
+          "whyItMatters": "OpenAI 把长期治理讨论单独产品化，说明前沿模型竞争已同时进入制度设计和社会授权叙事。",
+          "detailBody": "OpenAI 8 月 20 日推出 AI Futures 博客，由 Strategic Futures 团队讨论 transformative AI 对权力结构、个人自主和制度设计的影响。 首篇文章明确声明代表作者观点，提出围绕权力集中、个体责任、窄范围集体行动和高风险 AI 行为可追溯性的研究方向。",
+          "trend": "AI 公司正在把治理研究从安全附属议题扩展为面向政治经济结构的长期公共叙事。",
+          "detailTrend": "AI 公司正在把治理研究从安全附属议题扩展为面向政治经济结构的长期公共叙事。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "OpenAI 新增 AI Futures 治理讨论入口影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "OpenAI 把长期治理讨论单独产品化，说明前沿模型竞争已同时进入制度设计和社会授权叙事。 下一步要核对 后续 AI Futures 论文、政策建议、外部专家回应和 OpenAI 产品规则变化。",
+          "detailWhyRanked": "首篇文章明确声明代表作者观点，提出围绕权力集中、个体责任、窄范围集体行动和高风险 AI 行为可追溯性的研究方向。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "OpenAI 把长期治理讨论单独产品化，说明前沿模型竞争已同时进入制度设计和社会授权叙事。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责 AI 政策、公共事务、风险治理和研究议程的团队应该关注，因为它影响 OpenAI 的治理叙事。",
+          "readerUse": "政策/战略团队用它跟踪 OpenAI 对权力集中、匿名性和可追溯性的公开框架。",
+          "nextCheck": "后续 AI Futures 论文、政策建议、外部专家回应和 OpenAI 产品规则变化",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要后续论文、政策文本、产品规则或外部专家报告，才能升级为已确认的制度设计路线。",
+          "claimBoundary": "当前不代表 OpenAI 组织正式政策，也不证明这些原则会变成产品或监管规则。",
+          "counterEvidence": "如果后续官方说明限定其为个人观点且没有政策或产品文件承接，应收窄影响判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/introducing-ai-futures/",
+          "originalUrl": "https://openai.com/index/introducing-ai-futures/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "reference",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "publishedAt": "2026-08-20T07:00:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月20日 23:00 JST",
+          "tags": [
+            "AI治理",
+            "权力集中",
+            "OpenAI"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "provenance": "OpenAI News提供官方或一手核对入口；效果、采用和外部影响仍需第三方证据。"
+        },
+        {
+          "id": "axios-gop-ai-data-center-warning-2026-08-23",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：共和党竞选备忘录把 AI 数据中心反弹列为选举风险",
+          "body": "Axios 报道称，一份参议院共和党竞选机构备忘录警告 AI 公司，数据中心负面舆情正在伤害俄亥俄州关键席位。",
+          "summary": "Axios 报道称，一份参议院共和党竞选机构备忘录警告 AI 公司，数据中心负面舆情正在伤害俄亥俄州关键席位。",
+          "whyItMatters": "AI 算力建设的约束不只是电力和资本，也包括选举叙事、地方许可和社区信任。",
+          "detailBody": "Axios 报道称，一份参议院共和党竞选机构备忘录警告 AI 公司，数据中心负面舆情正在伤害俄亥俄州关键席位。 报道把地方数据中心反弹与全国性政治沟通相连，指出企业被要求更快解释项目收益、成本和社区影响。",
+          "trend": "数据中心正在从工程项目变成政治对象，AI 公司需要把社会许可纳入基础设施路线图。",
+          "detailTrend": "数据中心正在从工程项目变成政治对象，AI 公司需要把社会许可纳入基础设施路线图。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "AI 数据中心争议继续进入选举和基础设施许可叙事影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "AI 算力建设的约束不只是电力和资本，也包括选举叙事、地方许可和社区信任。 下一步要核对 NRSC 备忘录原文、地方听证记录、项目许可、民调数据和公司公告。",
+          "detailWhyRanked": "报道把地方数据中心反弹与全国性政治沟通相连，指出企业被要求更快解释项目收益、成本和社区影响。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "AI 算力建设的约束不只是电力和资本，也包括选举叙事、地方许可和社区信任。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责数据中心选址、公共事务、政策沟通和基础设施融资的团队应该关注，因为它影响许可节奏。",
+          "readerUse": "公共事务/基础设施团队用它更新俄亥俄数据中心沟通与许可风险清单。",
+          "nextCheck": "NRSC 备忘录原文、地方听证记录、项目许可、民调数据和公司公告",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要备忘录原文、许可文件、民调数据和项目进度记录，才能升级为已确认的基础设施政治风险。",
+          "claimBoundary": "当前不证明某个数据中心项目会被取消，也不证明选举结果将由 AI 基础设施决定。",
+          "counterEvidence": "如果官方备忘录、许可记录或民调数据无法确认该风险，应下调政治影响判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/19/gop-data-center-memo-ai-election",
+          "originalUrl": "https://www.axios.com/2026/08/19/gop-data-center-memo-ai-election",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-19T15:00:00-04:00",
+          "freshSourceFact": null,
+          "time": "08月20日 04:00 JST",
+          "tags": [
+            "数据中心",
+            "公共事务",
+            "选举风险"
+          ],
+          "companies": [
+            "Axios",
+            "NRSC"
+          ],
+          "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+        },
+        {
+          "id": "axios-doctors-ai-health-care-ama-2026-08-23",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：医生组织要求在医疗 AI 中保留医生核心角色",
+          "body": "Axios 报道称，American Medical Association 与 Digital Medicine Society 发布框架，强调 AI 时代医生仍需维护患者信任、临床判断和安全实施。",
+          "summary": "Axios 报道称，American Medical Association 与 Digital Medicine Society 发布框架，强调 AI 时代医生仍需维护患者信任、临床判断和安全实施。",
+          "whyItMatters": "医疗 AI 的关键问题不再只是模型是否准确，而是患者信任、责任归属、临床验证和谁能覆盖错误。",
+          "detailBody": "Axios 报道称，American Medical Association 与 Digital Medicine Society 发布框架，强调 AI 时代医生仍需维护患者信任、临床判断和安全实施。 报道把该框架与 JAMA 关于 AI 可能胜过医生的评论放在同一背景下，指出自主医疗 AI 进展快于监管时，医生责任边界更关键。",
+          "trend": "高风险行业正在把 AI 自动化重新拉回“专业责任和可审计监督”的框架里。",
+          "detailTrend": "高风险行业正在把 AI 自动化重新拉回“专业责任和可审计监督”的框架里。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "医疗 AI 争论转向医生责任和患者信任影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "医疗 AI 的关键问题不再只是模型是否准确，而是患者信任、责任归属、临床验证和谁能覆盖错误。 下一步要核对 AMA/DiME 框架原文、JAMA 评论、州级医疗规则、临床验证数据和医院审计。",
+          "detailWhyRanked": "报道把该框架与 JAMA 关于 AI 可能胜过医生的评论放在同一背景下，指出自主医疗 AI 进展快于监管时，医生责任边界更关键。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "医疗 AI 的关键问题不再只是模型是否准确，而是患者信任、责任归属、临床验证和谁能覆盖错误。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责医疗 AI 产品、医院合规、临床安全和保险支付规则的团队应该关注，因为它影响医生监督要求。",
+          "readerUse": "医疗产品/合规团队用它检查医生在环、临床验证、责任和患者沟通要求。",
+          "nextCheck": "AMA/DiME 框架原文、JAMA 评论、州级医疗规则、临床验证数据和医院审计",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要框架原文、监管文本、临床验证数据和医院审计记录，才能升级为已确认的医疗 AI 规则变化。",
+          "claimBoundary": "当前不证明自主 AI 医疗已被禁止，也不证明 AI 可替代医生的主张已被证伪。",
+          "counterEvidence": "如果框架原文或监管文件没有新增约束，或临床数据支持更高自主级别，应下调政策影响判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceUrl": "https://www.axios.com/2026/08/19/doctors-ai-health-care-ama",
+          "originalUrl": "https://www.axios.com/2026/08/19/doctors-ai-health-care-ama",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "verificationStatus": "已核验",
+          "originalDependency": "must-read",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "publishedAt": "2026-08-19T10:00:00-04:00",
+          "freshSourceFact": null,
+          "time": "08月19日 23:00 JST",
+          "tags": [
+            "医疗AI",
+            "医生责任",
+            "临床监督"
+          ],
+          "companies": [
+            "Axios",
+            "AMA",
+            "Digital Medicine Society",
+            "JAMA"
+          ],
+          "provenance": "Axios AI / Technology提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。"
+        },
+        {
+          "id": "truefoundry-trueforge-agent-harness-2026-08-23",
+          "category": "tool",
+          "label": "工具",
+          "title": "TrueFoundry：开源 TrueForge，主打可自托管的 Agent harness",
+          "body": "TrueFoundry 8 月 18 日发布 TrueForge，称其是 MIT 许可的开源 Agent harness，可本地或自托管运行，并支持自带模型、MCP、沙箱和审批。",
+          "summary": "TrueFoundry 8 月 18 日发布 TrueForge，称其是 MIT 许可的开源 Agent harness，可本地或自托管运行，并支持自带模型、MCP、沙箱和审批。",
+          "whyItMatters": "Agent 竞争正在从模型本身扩展到运行时控制权，企业会更关心能否自托管、换模型和保留审计证据。",
+          "detailBody": "TrueFoundry 8 月 18 日发布 TrueForge，称其是 MIT 许可的开源 Agent harness，可本地或自托管运行，并支持自带模型、MCP、沙箱和审批。 官方文章把 harness 定义为模型外层的执行循环、上下文、工具、沙箱、审批和会话状态层，同时给出相对 Claude Managed Agents 的成本基准主张。",
+          "trend": "开源 Agent harness 正在挑战托管式 Agent 服务，但成本和可靠性主张必须经过复现。",
+          "detailTrend": "开源 Agent harness 正在挑战托管式 Agent 服务，但成本和可靠性主张必须经过复现。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、审计或治理动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "TrueForge 把 Agent runtime 推向开源和自托管影响本期 Agent、治理或基础设施判断，值得进入扫描。",
+          "topReason": "Agent 竞争正在从模型本身扩展到运行时控制权，企业会更关心能否自托管、换模型和保留审计证据。 下一步要核对 GitHub 代码、benchmark 任务、客户部署记录、第三方复现和安全审计。",
+          "detailWhyRanked": "官方文章把 harness 定义为模型外层的执行循环、上下文、工具、沙箱、审批和会话状态层，同时给出相对 Claude Managed Agents 的成本基准主张。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持把它放入本期观察清单，后续仍要用原始文件、日志或第三方数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "Agent 竞争正在从模型本身扩展到运行时控制权，企业会更关心能否自托管、换模型和保留审计证据。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责 Agent 平台选型、自托管、安全审批和模型网关的工程团队应该关注，因为它影响 runtime 所有权。",
+          "readerUse": "平台/安全团队用它评估 Agent harness 的自托管、审批和审计路线，并安排基准复现。",
+          "nextCheck": "GitHub 代码、benchmark 任务、客户部署记录、第三方复现和安全审计",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要代码审查、基准复现、客户部署记录和第三方评测报告，才能升级为已验证的成本优势。",
+          "claimBoundary": "当前只证明 TrueFoundry 发布了该项目和厂商基准主张，不证明真实企业成本必然降低。",
+          "counterEvidence": "如果第三方复测数据或客户记录无法确认成本、准确率和稳定性，应下调厂商主张。",
+          "source": "TrueFoundry Blog",
+          "sourceName": "TrueFoundry Blog",
+          "sourceId": "truefoundry-blog",
+          "sourceUrl": "https://www.truefoundry.com/blog/engineering/trueforge-open-source-agent-harness/",
+          "originalUrl": "https://www.truefoundry.com/blog/engineering/trueforge-open-source-agent-harness/",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "verificationStatus": "已核验",
+          "originalDependency": "verify-externally",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "claimed",
+          "publishedAt": "2026-08-18T12:00:00+00:00",
+          "freshSourceFact": null,
+          "time": "08月18日 21:00 JST",
+          "tags": [
+            "开源Agent",
+            "Agent runtime",
+            "MCP"
+          ],
+          "companies": [
+            "TrueFoundry",
+            "TrueForge",
+            "Anthropic",
+            "OpenAI"
+          ],
+          "provenance": "TrueFoundry Blog支持核对厂商发布、开源仓库和自述基准主张；采用、成本和可靠性结论仍需外部证据。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-22",
       "date": "2026-08-22",
