@@ -25,8 +25,8 @@
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
-- Commit: Local implementation commit `60a16b8` (`细化来源集中审稿`); this log/index follow-up records the implementation hash.
-- Git note: `git push origin main` still needs a final retry after this log commit; remote sync depends on DNS/network recovery if `github.com` remains unresolved.
+- Commit: Local implementation commit `60a16b8` (`细化来源集中审稿`) and log/index follow-up commit `650dcea` (`记录来源集中审稿优化`); this push-blocker note records the latest local status.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns.
 
 ## 2026-08-22 08:10 JST
 
