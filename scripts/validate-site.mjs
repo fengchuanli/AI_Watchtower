@@ -757,7 +757,14 @@ if (
   !/source owner/.test(sourceDiversityTriageNote) ||
   !/source family/.test(sourceDiversityTriageNote) ||
   !/narrative angle/.test(sourceDiversityTriageNote) ||
+  !/Common Owner Concentration Review/.test(sourceDiversityTriageNote) ||
+  !/TechCrunch/.test(sourceDiversityTriageNote) ||
+  !/Axios/.test(sourceDiversityTriageNote) ||
+  !/one vendor/.test(sourceDiversityTriageNote) ||
+  !/one research feed/.test(sourceDiversityTriageNote) ||
   !/source-diversity-triage-note\.md/.test(candidateSourceChecklist) ||
+  !/Common Owner Concentration Review/.test(candidateSourceChecklist) ||
+  !/TechCrunch, Axios, one vendor, or one research feed/.test(updateRunChecklist) ||
   !/source-diversity-triage-note\.md/.test(candidateIntakeFormat) ||
   !/source-diversity-triage-note\.md/.test(candidatePriorityRubric) ||
   !/source-diversity-triage-note\.md/.test(candidateToNewsHandoff) ||
@@ -1272,7 +1279,10 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 10[\s\S]*data\/sources\.json[\s\S]*Chinese editor-facing source-role language/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 11/.test(optimizationDecisionIndex) ||
+  !/Day 11[\s\S]*Common Owner Concentration Review[\s\S]*TechCrunch[\s\S]*Axios[\s\S]*one vendor[\s\S]*one research feed/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 12/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
