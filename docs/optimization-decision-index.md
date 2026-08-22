@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 2, Source And Candidate Workflow Friction
-- Last indexed run: 2026-08-21 20:00 JST
+- Last indexed run: 2026-08-22 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -29,6 +29,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 8 | Complete | `e113ec8` | Duplicate reporting now distinguishes `repeated-url`, `near-title-review`, `fresh-source-fact`, and `manual-clear`, so editors know when to reject, hold, or draft based on a new source-backed action. |
 | Day 9 | Complete | `071eadc` | `docs/original-source-replacement-guide.md` now has a source-of-record decision table: official pages own product/policy facts, filings or regulator records own accountable business/legal facts, research artifacts own capability claims, and customer-side or independent evidence owns deployment outcomes. |
 | Day 10 | Complete | `813f364` | `data/sources.json` policy, trust-level descriptions, and every source note now use Chinese editor-facing source-role language, with data validation blocking English `Use for...` style instructions from returning. |
+| Day 11 | Complete | `60a16b8` | `docs/source-diversity-triage-note.md` now has a Common Owner Concentration Review for TechCrunch, Axios, one vendor, and one research feed, with checklist prompts to name the independent owner or source type needed next. |
 
 ## Historical Guard Anchors
 
@@ -53,9 +54,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 11: add a source-owner concentration review note for batches dominated by TechCrunch, Axios, one vendor, or one research feed.
+- Continue with Day 12: add a safer way to record held-but-promising candidates for later runs without letting them become stale current news.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 11 first.
-- If Day 9 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 11 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

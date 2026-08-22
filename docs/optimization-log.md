@@ -1,3 +1,33 @@
+## 2026-08-22 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 11 source/candidate workflow task. Added a concrete source-owner concentration review note for batches dominated by TechCrunch, Axios, one vendor, or one research feed.
+- Changed files:
+  - `docs/source-diversity-triage-note.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `Common Owner Concentration Review` to `docs/source-diversity-triage-note.md`, with separate overread risks and review actions for TechCrunch, Axios, one vendor, and one research feed.
+  - Updated the candidate source checklist and update run checklist so editors run that review when a familiar owner/feed supplies three or more draftable candidates in a normal 8-to-12 item batch.
+  - The new guidance tells editors to keep useful strong-source items, but name what the dominant owner can show, what it cannot prove, and which independent owner or source type should be checked next before filling more homepage slots.
+  - Updated `scripts/validate-site.mjs` and `docs/optimization-decision-index.md` so Day 11 is tracked and Day 12 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/source-diversity-triage-note.md`, `docs/candidate-source-checklist.md`, `docs/update-run-checklist.md`, `docs/news-data-format.md`, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 47 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: Local implementation commit `60a16b8` (`细化来源集中审稿`); this log/index follow-up records the implementation hash.
+- Git note: `git push origin main` still needs a final retry after this log commit; remote sync depends on DNS/network recovery if `github.com` remains unresolved.
+
 ## 2026-08-22 08:10 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-22`，发布 10 条安全非重复信号，聚焦 AI 数据中心社会许可、训练数据竞争法、AI 招聘、生物安全、企业协作入口和国家安全监督。
