@@ -26,6 +26,7 @@ const candidateWorkflowPlainLanguageGuide = readFileSync(
 const candidateSourceChecklist = readFileSync("docs/candidate-source-checklist.md", "utf8");
 const candidateIntakeFormat = readFileSync("docs/candidate-intake-format.md", "utf8");
 const candidateHoldRejectReasons = readFileSync("docs/candidate-hold-reject-reasons.md", "utf8");
+const heldCandidateReviewNote = readFileSync("docs/held-candidate-review-note.md", "utf8");
 const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md", "utf8");
 const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-note.md", "utf8");
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
@@ -727,6 +728,32 @@ if (
 }
 
 if (
+  !/Held Candidate Review Note/.test(heldCandidateReviewNote) ||
+  !/Ledger Shape/.test(heldCandidateReviewNote) ||
+  !/holdUntilJst/.test(heldCandidateReviewNote) ||
+  !/recheckTrigger/.test(heldCandidateReviewNote) ||
+  !/freshnessLimit/.test(heldCandidateReviewNote) ||
+  !/staleFallback/.test(heldCandidateReviewNote) ||
+  !/nextEditorAction/.test(heldCandidateReviewNote) ||
+  !/not a draft queue/.test(heldCandidateReviewNote) ||
+  !/older than seven days/.test(heldCandidateReviewNote) ||
+  !/fresh source-backed fact/.test(heldCandidateReviewNote) ||
+  !/reject-stale-no-current-hook/.test(heldCandidateReviewNote) ||
+  !/background-only/.test(heldCandidateReviewNote) ||
+  !/replace-with-fresh-source/.test(heldCandidateReviewNote) ||
+  !/held-candidate-review-note\.md/.test(candidateIntakeFormat) ||
+  !/held-candidate-review-note\.md/.test(candidateSourceChecklist) ||
+  !/held-candidate-review-note\.md/.test(updateRunChecklist) ||
+  !/held-candidate-review-note\.md/.test(readme) ||
+  !/Day 12[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 13/.test(optimizationDecisionIndex)
+) {
+  errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
+}
+
+if (
   !/Candidate Priority Rubric/.test(candidatePriorityRubric) ||
   !/Reader utility/.test(candidatePriorityRubric) ||
   !/Evidence strength/.test(candidatePriorityRubric) ||
@@ -1282,7 +1309,10 @@ if (
   !/Day 11[\s\S]*Common Owner Concentration Review[\s\S]*TechCrunch[\s\S]*Axios[\s\S]*one vendor[\s\S]*one research feed/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 12/.test(optimizationDecisionIndex) ||
+  !/Day 12[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 13/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

@@ -1,6 +1,6 @@
 # Candidate Source Checklist
 
-Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. If the workflow feels too technical, start with `docs/candidate-workflow-plain-language-guide.md`, then use this checklist as the source gate. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md`, the hold/reject vocabulary in `docs/candidate-hold-reject-reasons.md`, the priority ranking in `docs/candidate-priority-rubric.md`, the source-diversity triage note in `docs/source-diversity-triage-note.md`, the original-source replacement guide in `docs/original-source-replacement-guide.md`, the field-level handoff in `docs/candidate-to-news-handoff.md`, or `docs/editorial-checklist.md` after drafting.
+Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. If the workflow feels too technical, start with `docs/candidate-workflow-plain-language-guide.md`, then use this checklist as the source gate. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md`, the hold/reject vocabulary in `docs/candidate-hold-reject-reasons.md`, the held-candidate ledger in `docs/held-candidate-review-note.md`, the priority ranking in `docs/candidate-priority-rubric.md`, the source-diversity triage note in `docs/source-diversity-triage-note.md`, the original-source replacement guide in `docs/original-source-replacement-guide.md`, the field-level handoff in `docs/candidate-to-news-handoff.md`, or `docs/editorial-checklist.md` after drafting.
 
 ## 1. Candidate Identity
 
@@ -52,6 +52,7 @@ Skip candidates that are routine marketing, repeated coverage of an already arch
 - If TechCrunch, Axios, one vendor, or one research feed supplies three or more draftable candidates in an 8-to-12 item batch, use the Common Owner Concentration Review in `docs/source-diversity-triage-note.md` before ranking the final set.
 - If the safe candidates are too concentrated by source owner, source family, evidence mode, company, geography, or narrative angle, run `docs/source-diversity-triage-note.md` before choosing the final draft set. Use `hold-batch-balance` when a safe but repetitive candidate should wait for a later batch.
 - Do not republish old archive items as current news unless a fresh source-specific fact changes the editorial value.
+- When a candidate is promising but not draftable, use `docs/held-candidate-review-note.md` before ending the run. The held note must name `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, and `staleFallback`; otherwise reject the candidate or keep it as background context instead of letting it become stale current news later.
 
 ## 6. Drafting Handoff
 

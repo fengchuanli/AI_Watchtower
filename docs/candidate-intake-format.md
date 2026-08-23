@@ -2,18 +2,19 @@
 
 Use this lightweight record before turning a discovered URL into `data/news.json`. The goal is to preserve the editor's source judgment and drafting decision without copying source text or creating a long internal database.
 
-This format sits after the readable editor path in `docs/candidate-workflow-plain-language-guide.md` and between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-priority-rubric.md`, `docs/source-diversity-triage-note.md`, `docs/original-source-replacement-guide.md`, `docs/candidate-to-news-handoff.md`, `docs/update-run-checklist.md`, and `docs/editorial-checklist.md`:
+This format sits after the readable editor path in `docs/candidate-workflow-plain-language-guide.md` and between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/held-candidate-review-note.md`, `docs/candidate-priority-rubric.md`, `docs/source-diversity-triage-note.md`, `docs/original-source-replacement-guide.md`, `docs/candidate-to-news-handoff.md`, `docs/update-run-checklist.md`, and `docs/editorial-checklist.md`:
 
 1. The plain-language guide asks the editor to answer what happened, why it matters, what is unproven, which source is safest, whether the batch is balanced, and whether the item should draft, hold, or reject.
 2. The candidate checklist decides whether a URL is allowed into intake.
 3. This intake record captures the minimum editorial judgment needed before drafting.
 4. The hold/reject vocabulary keeps non-draft decisions consistent and reviewable.
-5. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
-6. The source-diversity triage note checks whether the draftable batch is too concentrated by owner, source family, evidence mode, company, geography, or narrative angle.
-7. The original-source replacement guide decides whether a media report should be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting.
-8. The candidate-to-news handoff maps intake fields into `data/news.json` fields without duplicating source article text.
-9. The update-run checklist records source discovery, candidate intake, duplicate reporting, drafting, validation, commit, and push status for the whole news update.
-10. The editorial checklist and validators review the finished `data/news.json` item.
+5. The held-candidate review note records promising non-draft leads with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, and `staleFallback` so later runs do not treat old leads as fresh current news.
+6. The priority rubric ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
+7. The source-diversity triage note checks whether the draftable batch is too concentrated by owner, source family, evidence mode, company, geography, or narrative angle.
+8. The original-source replacement guide decides whether a media report should be replaced by an official, filing, paper, regulator, customer-side, dataset, or benchmark original before drafting.
+9. The candidate-to-news handoff maps intake fields into `data/news.json` fields without duplicating source article text.
+10. The update-run checklist records source discovery, candidate intake, duplicate reporting, drafting, validation, commit, and push status for the whole news update.
+11. The editorial checklist and validators review the finished `data/news.json` item.
 
 ## Required Intake Fields
 
@@ -79,7 +80,7 @@ Keep scratch notes brief. If `duplicateStatus` is `fresh-source-fact`, the `sour
 
 Use `draft`, `hold`, or `reject` as the intake decision. Use `draft` only when the candidate has a source-backed fact, clear AI relevance, a named proof boundary, a next independent check, no unresolved duplicate, and a copyright-safe path to concise Chinese explanation.
 
-Use `hold` when the candidate may become useful but needs registration, a better original source, clearer date, duplicate review, independent confirmation, a stated proof boundary, or a stronger AI consequence. Use the shared hold codes from `docs/candidate-hold-reject-reasons.md`.
+Use `hold` when the candidate may become useful but needs registration, a better original source, clearer date, duplicate review, independent confirmation, a stated proof boundary, or a stronger AI consequence. Use the shared hold codes from `docs/candidate-hold-reject-reasons.md`. If the candidate should be revisited after this run, add a compact block from `docs/held-candidate-review-note.md` with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, and `staleFallback`; do not leave an open-ended "later" note.
 
 Use `reject` when the candidate is paywall/body-dependent, login-only, repeated, stale, shallow commentary, routine marketing, weakly AI-related, unverifiable, copyright-substitute risk, or unable to support a detail-page briefing. Use the shared reject codes from `docs/candidate-hold-reject-reasons.md`.
 

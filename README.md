@@ -26,6 +26,7 @@ npx serve .
 │   ├── contributing.md
 │   ├── candidate-workflow-plain-language-guide.md
 │   ├── candidate-hold-reject-reasons.md
+│   ├── held-candidate-review-note.md
 │   ├── candidate-intake-format.md
 │   ├── candidate-priority-rubric.md
 │   ├── candidate-source-checklist.md
@@ -77,6 +78,7 @@ npx serve .
 - 候选来源筛选清单：`docs/candidate-source-checklist.md`
 - 候选进入起草前记录：`docs/candidate-intake-format.md`
 - 候选暂缓/拒绝原因词表：`docs/candidate-hold-reject-reasons.md`
+- 暂缓候选复查记录：`docs/held-candidate-review-note.md`
 - 候选优先级评分：`docs/candidate-priority-rubric.md`
 - 批次来源多样性判断：`docs/source-diversity-triage-note.md`
 - 媒体报道替换原始来源判断：`docs/original-source-replacement-guide.md`
