@@ -30,7 +30,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 9 | Complete | `071eadc` | `docs/original-source-replacement-guide.md` now has a source-of-record decision table: official pages own product/policy facts, filings or regulator records own accountable business/legal facts, research artifacts own capability claims, and customer-side or independent evidence owns deployment outcomes. |
 | Day 10 | Complete | `813f364` | `data/sources.json` policy, trust-level descriptions, and every source note now use Chinese editor-facing source-role language, with data validation blocking English `Use for...` style instructions from returning. |
 | Day 11 | Complete | `60a16b8` | `docs/source-diversity-triage-note.md` now has a Common Owner Concentration Review for TechCrunch, Axios, one vendor, and one research feed, with checklist prompts to name the independent owner or source type needed next. |
-| Day 12 | Complete | `pending` | `docs/held-candidate-review-note.md` now records promising held candidates with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, `staleFallback`, and `nextEditorAction` so later runs must recheck evidence before treating old leads as current news. |
+| Day 12 | Complete | `9acbfc9` | `docs/held-candidate-review-note.md` now records promising held candidates with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, `staleFallback`, and `nextEditorAction` so later runs must recheck evidence before treating old leads as current news. |
 
 ## Historical Guard Anchors
 

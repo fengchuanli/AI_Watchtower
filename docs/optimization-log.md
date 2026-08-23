@@ -1,3 +1,36 @@
+## 2026-08-23 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 12 source/candidate workflow task. Added a safer way to record held-but-promising candidates for later runs without letting them become stale current news.
+- Changed files:
+  - `README.md`
+  - `docs/held-candidate-review-note.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `docs/held-candidate-review-note.md`, a compact review ledger for promising held candidates with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, `staleFallback`, and `nextEditorAction`.
+  - Clarified that a held candidate is not a draft queue: later runs must find a fresh source-backed fact, stronger original source, independent proof, or explicit source-role/duplicate resolution before drafting.
+  - Updated the candidate intake, source checklist, update-run checklist, README, decision index, and site validator so future news runs record held leads with an expiry path instead of carrying vague "later" notes.
+  - Updated `docs/optimization-decision-index.md` so Day 12 is tracked and Day 13 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/candidate-intake-format.md`, `docs/candidate-hold-reject-reasons.md`, `docs/candidate-source-checklist.md`, `docs/update-run-checklist.md`, `README.md`, `docs/candidate-to-news-handoff.md`, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 48 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local implementation commit `9acbfc9` (`增加暂缓候选复查`); this log/index follow-up records the run details and latest local status.
+- Git note: `git push origin main` still needs a retry after this log commit; earlier pull was blocked by `ssh: Could not resolve hostname github.com: -65563`.
+
 ## 2026-08-23 08:10 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-23`，发布 10 条安全非重复信号，聚焦企业 Agent 治理、Agent runtime、推理成本、医疗责任、数据中心政治和 OpenAI 治理叙事。
