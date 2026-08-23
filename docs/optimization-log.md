@@ -1,3 +1,25 @@
+## 2026-08-23 23:01 JST
+
+- Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是更晚的 `news-1700-2026-08-23`，含 10 条安全非重复信号，因此本次未回退到早间版，也未用近重复或弱证据内容补量。
+- Changed files:
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；复核 OpenAI News、Anthropic Newsroom、Google AI、Mistral News、Hugging Face Blog、NVIDIA AI Blog、Meta AI、VentureBeat AI、Axios Technology 和历史 URL。
+  - 当前 `data/news.json` 与最新 `data/news-history.json` 均为 `news-1700-2026-08-23`，已覆盖企业 Agent 治理、运行时控制、推理成本、医疗责任、数据中心政治和 OpenAI 治理叙事。
+  - 新核查到的可用候选多为当前 17:00 版已覆盖来源事实、8 月中旬旧稿、社区/企业博客弱信号或需等待论文、客户日志、监管文件和第三方复测的背景材料；未使用付费/登录墙正文、随机网页、社区讨论、二次聚合或传闻型内容。
+- Archive mirror: unchanged - latest `data/news-history.json` edition already mirrors `data/news.json` for edition metadata, reader/source framing, item count, references and item order.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 48 sources.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local log-only commit message `记录08点新闻核查`；push 仍取决于 GitHub DNS 恢复。
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-23 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 12 source/candidate workflow task. Added a safer way to record held-but-promising candidates for later runs without letting them become stale current news.
