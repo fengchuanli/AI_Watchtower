@@ -1,3 +1,29 @@
+## 2026-08-24 17:00 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-24`，发布 10 条安全非重复信号，聚焦匿名模型路由、AI 安全披露、Agent harness、数据中心资本、训练数据和教育/家庭 AI 产品。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md` 和 `rag/learning-notes.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、Anthropic Newsroom、Google/DeepMind、VentureBeat AI、Axios Technology、TechCrunch AI、OpenRouter 官方模型页和历史 URL 去重。
+  - 新增官方来源 `openrouter-models`，source count 从 48 更新到 49。
+  - 本期发布 10 条：OpenRouter Ox Alpha 匿名模型；TechCrunch 对 Flock AI 监控反弹、HBS AI 头像训练营、Inherent Faraday 科研 Agent、OpenAI/SB 53、Guidelight 前沿模型遏制预案、Nvidia/Cloverleaf 数据中心合作、Nvidia Agent harness、Micro1 训练数据收入、Linkdaze 家庭 AI 日历的报道。
+  - OpenRouter 条目为 `官方核对` / `confirmed`；TechCrunch 条目均为 `媒体背景` / `reported` / `originalDependency: must-read`，明确要求官方文件、法案文本、论文代码、审计、合同、客户指标和第三方复测后才能升级。
+  - 未使用付费/登录墙正文、随机网页、社区讨论、二次聚合、传闻或历史已收录 URL 补量。
+- Archive mirror: latest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, item count, references and item order; total history items updated to 526.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 49 sources.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: Pending before final git diff/check and local commit; push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; final push attempt will be recorded after commit.
+
 ## 2026-08-23 23:01 JST
 
 - Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是更晚的 `news-1700-2026-08-23`，含 10 条安全非重复信号，因此本次未回退到早间版，也未用近重复或弱证据内容补量。

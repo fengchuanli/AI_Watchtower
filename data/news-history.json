@@ -1,8 +1,934 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-23",
-  "totalItems": 516,
+  "updatedAt": "2026-08-24",
+  "totalItems": 526,
   "editions": [
+    {
+      "id": "news-1700-2026-08-24",
+      "date": "2026-08-24",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦匿名模型、AI 安全披露、Agent 运行时与数据供应链。",
+      "operationalStatus": "GitHub DNS 阻断拉取；已核查官方模型页与可靠媒体，发布 10 条非重复信号。",
+      "editorialInterpretation": "本期发布 10 条信号，主轴是模型供应链透明度、Agent 控制面和 AI 基础设施外溢。",
+      "readerFrame": {
+        "headline": "AI 风险从模型能力延伸到来源、运行时和数据供应链",
+        "whyItMatters": "本期显示开发者可用模型、教育头像、公共监控、数据中心资本和训练数据供应都需要同一套核查：谁提供、能否审计、哪里会误用。",
+        "useThisIssueFor": [
+          "平台工程团队检查匿名模型、Agent harness、模型路由和数据保留。",
+          "合规和政策团队更新 SB 53、模型遏制预案、AI 监控与隐私采购清单。",
+          "产品和投资团队核对教育头像、家庭 AI、训练数据和数据中心资本的真实采用证据。"
+        ],
+        "notProvenYet": [
+          "不证明匿名模型来源已经明确或适合生产。",
+          "不证明媒体报道中的收入、性能或采用指标已经独立审计。",
+          "不证明 AI 监控、教育头像或家庭 AI 已经形成稳定市场需求。"
+        ],
+        "mobile": {
+          "headline": "本期查 AI 供应链",
+          "summary": "匿名模型、模型遏制、Agent harness、训练数据和 AI 监控进入核查清单。",
+          "primaryUses": [
+            "平台团队查来源",
+            "安全团队查预案",
+            "产品团队查采用"
+          ],
+          "proofBoundary": "仍需官方文件、审计、第三方复测和客户日志"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版新增匿名模型、安全披露和数据供应链信号",
+        "freshFacts": [
+          "本期新增 OpenRouter 官方模型页对 Ox Alpha 发布时间、1M 上下文和匿名第三方提供方的披露。",
+          "本期新增 TechCrunch 8 月 22 日对 OpenAI 支持加强 California SB 53 监测和网络安全要求的报道。",
+          "本期新增 TechCrunch 8 月 22 日对 Guidelight 前沿实验室公开遏制预案评估的报道。",
+          "本期新增 TechCrunch 8 月 20-23 日对 HBS 头像、Flock 监控、Micro1 训练数据和 Linkdaze 家庭 AI 的报道。"
+        ],
+        "repeatedContext": [
+          "Agent 控制面延续 8 月 23 日版，本期补入 Nvidia harness 研究视角。",
+          "数据中心政治和资本延续上周主线，本期只新增 Nvidia/Cloverleaf 合作角度。",
+          "OpenAI 安全治理延续此前国家安全监督和 ZDR 线索，本期不重复旧文。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查模型与 Agent 控制面",
+          "count": 4,
+          "meaning": "用来检查匿名模型来源、科研 Agent、前沿模型遏制预案和 Agent harness 设计。"
+        },
+        {
+          "label": "核对政策与公共风险",
+          "count": 2,
+          "meaning": "用来更新 SB 53、AI 监控、数据留存和误用追责清单。"
+        },
+        {
+          "label": "验证基础设施与数据供给",
+          "count": 2,
+          "meaning": "用来核对 Nvidia 数据中心资本和 Micro1 训练数据收入是否有文件、合同和审计。"
+        },
+        {
+          "label": "观察教育与家庭产品",
+          "count": 2,
+          "meaning": "用来评估 AI 头像教学和家庭日历硬件是否有真实使用与隐私证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "TechCrunch 雷达集中",
+        "note": "同一可靠媒体家族集中占 9/10，适合做快速雷达和候选清单，不等同于独立验证。",
+        "nextCheck": "查官方页面、立法文本、研究原文、审计、客户合同和第三方复测。"
+      },
+      "sourceConcentration": {
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 9,
+        "share": "9/10",
+        "note": "TechCrunch 是本期单一最大来源，超过三分之二；本期必须作为媒体雷达阅读。",
+        "nextCheck": "用 OpenRouter、OpenAI、Nvidia、Guidelight、Flock、Micro1、HBS/HeyGen 和监管文件交叉复核。"
+      },
+      "trendNotes": [
+        {
+          "topic": "model",
+          "label": "模型来源成为采购问题",
+          "note": "跨期看，模型路由、匿名模型、隐私保护和多模型切换不断出现，说明企业不只在比较能力，也在核查来源和数据路径。",
+          "boundary": "这不证明匿名模型可以进入生产；仍需提供方披露、审计、第三方基准和企业日志。"
+        },
+        {
+          "topic": "agent",
+          "label": "运行时比模型榜单更重要",
+          "note": "历史版本已记录 Slack Code、TrueForge、Claude Code 和 Agent 预算控制，本期 Nvidia harness 与 Inherent Faraday 继续把焦点推向系统包装层。",
+          "boundary": "这不证明 harness 可解决所有长程任务；仍需论文代码、复测、成本记录和生产事故数据。"
+        },
+        {
+          "topic": "policy",
+          "label": "AI 责任证据继续前置",
+          "note": "跨期看，国家安全监督、医疗责任、数据中心政治和本期 SB 53/Flock/遏制预案连续出现，说明政策信号正从原则表态转向可执行责任证据。",
+          "boundary": "这不证明监管已经统一落地；仍需立法文本、执行记录、访问日志和独立审计。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "model",
+          "label": "匿名模型信号增强",
+          "status": "stronger",
+          "previousPattern": "此前版本已记录 OpenAI/Anthropic 企业使用、模型路由和隐私保护竞争。",
+          "currentSignal": "本期新增 OpenRouter Ox Alpha 匿名模型和 TechCrunch 对来源猜测的报道背景。",
+          "signalDirection": "增强：模型选择从能力比较延伸到提供方身份、数据保留和路由平台责任。",
+          "stillUnproven": "仍需提供方披露、OpenRouter条款、第三方评测和企业日志证明可用性。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent 控制面继续增强",
+          "status": "stronger",
+          "previousPattern": "上一版记录 Agent 自主权、预算停机、自托管 harness 和 Slack Agent 团队。",
+          "currentSignal": "本期新增 Nvidia harness 研究与 Inherent 科研 Agent 复现主张。",
+          "signalDirection": "增强：从企业治理扩展到长程任务运行时和科研自动化评测。",
+          "stillUnproven": "仍需论文、代码、客户指标、成本记录和第三方复测证明生产价值。"
+        },
+        {
+          "topic": "policy",
+          "label": "高风险部署责任重复升温",
+          "status": "stronger",
+          "previousPattern": "此前已有国家安全监督、医疗责任、数据中心政治和 AI 招聘治理信号。",
+          "currentSignal": "本期新增 SB 53 修订姿态、前沿模型遏制预案和 Flock 监控反弹。",
+          "signalDirection": "增强：政策讨论从原则转向监测、撤权、数据留存和误用惩戒。",
+          "stillUnproven": "仍需法案文本、监管执行、访问日志和审计报告证明约束落地。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "安全监管姿态继续调整",
+          "lastMention": "上一版记录 OpenAI AI Futures 与国家安全民主监督叙事。",
+          "whatChanged": "本期 TechCrunch 报道 OpenAI 支持加强 California SB 53 中的训练期监测和网络安全保护。",
+          "stillUnproven": "仍需 OpenAI 官方原文、California SB 53 修订文件、加州立法记录和执行细则证明义务落地。"
+        },
+        {
+          "company": "Nvidia",
+          "label": "从芯片扩展到运行时和数据中心",
+          "lastMention": "上一版记录 Nvidia KV cache 迁移与推理成本信号。",
+          "whatChanged": "本期新增 Nvidia harness 研究报道和 Cloverleaf 数据中心合作报道。",
+          "stillUnproven": "仍需论文复测、投资文件、项目许可和客户成本记录证明实际影响。"
+        },
+        {
+          "company": "OpenRouter",
+          "label": "模型路由平台风险上升",
+          "lastMention": "此前版本记录 Ramp Router、OpenRouter/Stripe 和多模型路由相关信号。",
+          "whatChanged": "本期 OpenRouter 官方模型页披露匿名 Ox Alpha 的 1M 上下文、免费预览和第三方提供方边界。",
+          "stillUnproven": "仍需提供方身份、数据保留审计、第三方评测和稳定性记录证明生产可用。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "OpenRouter 支持核对模型页披露事实；身份、性能和生产价值仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 9,
+          "role": "TechCrunch 提供最新市场、产品和政策雷达；完整事实和上下文仍回到原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "model",
+          "label": "模型与来源",
+          "count": 2,
+          "itemIds": [
+            "openrouter-ox-alpha-stealth-model-2026-08-24",
+            "techcrunch-inherent-faraday-research-agent-2026-08-24"
+          ],
+          "meaning": "用来检查模型来源、科研 Agent 评测和第三方复现证据。"
+        },
+        {
+          "id": "policy",
+          "label": "政策与安全责任",
+          "count": 3,
+          "itemIds": [
+            "techcrunch-flock-ai-surveillance-backlash-2026-08-24",
+            "techcrunch-openai-sb53-safety-amendments-2026-08-24",
+            "techcrunch-frontier-labs-containment-plans-2026-08-24"
+          ],
+          "meaning": "用来更新监管、遏制预案、数据留存和公共部门误用清单。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施与数据",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-nvidia-cloverleaf-data-center-2026-08-24",
+            "techcrunch-micro1-training-data-run-rate-2026-08-24"
+          ],
+          "meaning": "用来核对算力、电力、训练数据和资本投入证据。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent 与产品运行时",
+          "count": 3,
+          "itemIds": [
+            "techcrunch-hbs-foundry-ai-avatars-2026-08-24",
+            "techcrunch-nvidia-agent-harness-arc-agi3-2026-08-24",
+            "techcrunch-linkdaze-ai-household-calendar-2026-08-24"
+          ],
+          "meaning": "用来检查 Agent harness、教育头像和家庭 AI 工作流。"
+        }
+      ],
+      "overreadBoundary": {
+        "label": "不要把媒体雷达读成市场定论",
+        "body": "不要把本期读成全市场结论；它是 TechCrunch 最新雷达集中批次，适合更新核查清单。",
+        "doNotConclude": "不证明匿名模型可靠、教育头像有效、数据收入已审计，或监控治理已经解决。",
+        "useInstead": "应该用官方页面、法案文本、论文代码、审计文件、合同数据、客户指标和第三方复测复核。"
+      },
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "techcrunch-flock-ai-surveillance-backlash-2026-08-24",
+          "category": "policy",
+          "label": "政策",
+          "title": "TechCrunch：Flock 在 AI 监控反弹中呼吁隐私与安全折中",
+          "body": "TechCrunch 报道 Flock Safety CEO 在持续反弹中主张隐私与公共安全折中，并提到公司把默认数据保留期从 30 天降至 7 天。",
+          "summary": "TechCrunch 报道 Flock Safety CEO 在持续反弹中主张隐私与公共安全折中，并提到公司把默认数据保留期从 30 天降至 7 天。",
+          "whyItMatters": "AI 监控争议正在从产品能力变成采购、数据留存、误用追责和跨党派监管风险。",
+          "detailBody": "TechCrunch 报道 Flock Safety CEO 在持续反弹中主张隐私与公共安全折中，并提到公司把默认数据保留期从 30 天降至 7 天。 报道还提到 Flock 面对政界和民权组织压力，数据保留调整可被特定模式覆盖，因此需要看访问审批和审计记录是否同步收紧。",
+          "trend": "公共部门 AI 和自动化感知系统的落地门槛正在被滥用案例、默认设置和监管文本重新定义。",
+          "detailTrend": "公共部门 AI 和自动化感知系统的落地门槛正在被滥用案例、默认设置和监管文本重新定义。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它把 AI 硬件、执法数据和政治反弹连在一起，适合更新高风险部署清单。",
+          "topReason": "AI 监控争议正在从产品能力变成采购、数据留存、误用追责和跨党派监管风险。 下一步要核对Flock产品文档、警方访问日志、州法案文本、ACLU评估和采购合同。",
+          "detailWhyRanked": "它把 AI 硬件、执法数据和政治反弹连在一起，适合更新高风险部署清单。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用Flock产品文档、警方访问日志、州法案文本、ACLU评估和采购合同补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "AI 监控争议正在从产品能力变成采购、数据留存、误用追责和跨党派监管风险。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责公共部门技术采购、隐私合规、城市治理和企业安防方案的团队应该关注，因为它影响数据留存和误用追责。",
+          "readerUse": "政策/采购团队用它检查摄像头、车牌识别和生物识别系统的默认保留与访问审批。",
+          "nextCheck": "Flock产品文档、警方访问日志、州法案文本、ACLU评估和采购合同",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要监管文本、访问日志和独立审计，才能升级为已确认的监控技术治理转向。",
+          "claimBoundary": "当前不证明 Flock 技术被普遍滥用，也不证明 7 天默认保留已满足隐私要求。",
+          "counterEvidence": "如果后续访问日志、执法审批记录和独立审计数据显示违规访问下降且 Evidence Mode 受强约束，应下调系统性风险判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/",
+          "originalUrl": "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-23T16:31:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月24日 08:31 JST",
+          "tags": [
+            "AI监控",
+            "隐私",
+            "公共部门"
+          ],
+          "companies": [
+            "Flock Safety",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-hbs-foundry-ai-avatars-2026-08-24",
+          "category": "product",
+          "label": "产品",
+          "title": "TechCrunch：HBS Foundry 把 AI 讲师头像放进 699 美元创业训练营",
+          "body": "TechCrunch 报道 Harvard Business School 的 HBS Foundry 八周训练营使用 HeyGen 生成的讲师头像，为练习路演和董事会模拟提供反馈。",
+          "summary": "TechCrunch 报道 Harvard Business School 的 HBS Foundry 八周训练营使用 HeyGen 生成的讲师头像，为练习路演和董事会模拟提供反馈。",
+          "whyItMatters": "生成式头像从营销演示进入付费教育产品，关键问题变成授权、学习效果和真人教师的职责边界。",
+          "detailBody": "TechCrunch 报道 Harvard Business School 的 HBS Foundry 八周训练营使用 HeyGen 生成的讲师头像，为练习路演和董事会模拟提供反馈。 报道写到课程仍有每周真人讲师环节，AI 头像承担练习反馈；这使问题集中在头像授权、反馈质量和学员数据处理。",
+          "trend": "教育 AI 正在从聊天助手转向“专家形象+场景演练”，但学习结果仍需用对照数据验证。",
+          "detailTrend": "教育 AI 正在从聊天助手转向“专家形象+场景演练”，但学习结果仍需用对照数据验证。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它是高信任教育品牌采用 AI 头像的可见案例，适合检查合成媒体授权和学习评估。",
+          "topReason": "生成式头像从营销演示进入付费教育产品，关键问题变成授权、学习效果和真人教师的职责边界。 下一步要核对HBS项目页、HeyGen合同说明、学员完成率、学习结果对照和隐私政策。",
+          "detailWhyRanked": "它是高信任教育品牌采用 AI 头像的可见案例，适合检查合成媒体授权和学习评估。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用HBS项目页、HeyGen合同说明、学员完成率、学习结果对照和隐私政策补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "生成式头像从营销演示进入付费教育产品，关键问题变成授权、学习效果和真人教师的职责边界。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责在线教育、企业培训、合成媒体授权和学习产品评估的团队应该关注，因为它影响专家形象复用和效果证明。",
+          "readerUse": "教育/产品团队用它检查头像授权、反馈质量、学生数据和真人教师介入点。",
+          "nextCheck": "HBS项目页、HeyGen合同说明、学员完成率、学习结果对照和隐私政策",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要项目官方说明、授权条款和学习结果数据，才能升级为已验证的 AI 教育产品模式。",
+          "claimBoundary": "当前不证明 AI 头像改善创业训练效果，也不证明学生长期接受这种反馈方式。",
+          "counterEvidence": "如果后续学习结果数据、留存指标或对照实验显示头像反馈低于真人/文本教练，应下调产品模式判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+          "originalUrl": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-22T14:46:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月23日 06:46 JST",
+          "tags": [
+            "教育AI",
+            "合成媒体",
+            "产品实验"
+          ],
+          "companies": [
+            "Harvard Business School",
+            "HeyGen",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-inherent-faraday-research-agent-2026-08-24",
+          "category": "research",
+          "label": "研究",
+          "title": "TechCrunch：Inherent 称 Faraday 科研 Agent 在论文复现任务超过更大模型",
+          "body": "TechCrunch 报道 DeepMind 校友创办的 Inherent 发布 Faraday，并称其在独立复现论文发现的任务上超过更大的 OpenAI 与 Anthropic 模型。",
+          "summary": "TechCrunch 报道 DeepMind 校友创办的 Inherent 发布 Faraday，并称其在独立复现论文发现的任务上超过更大的 OpenAI 与 Anthropic 模型。",
+          "whyItMatters": "科研 Agent 的竞争点开始转向复现实验、研究品味和小模型加训练方法，而不是只比模型规模。",
+          "detailBody": "TechCrunch 报道 DeepMind 校友创办的 Inherent 发布 Faraday，并称其在独立复现论文发现的任务上超过更大的 OpenAI 与 Anthropic 模型。 报道指出 Faraday 面向论文发现复现任务，且 Inherent 以较小模型和强化学习方法解释其路线；这仍需技术报告和第三方复测。",
+          "trend": "科研自动化正在把“读懂论文”推进到“设计并跑复现实验”，但基准和任务选择必须被独立复核。",
+          "detailTrend": "科研自动化正在把“读懂论文”推进到“设计并跑复现实验”，但基准和任务选择必须被独立复核。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它连接 DeepMind 人才外溢、小模型 Agent 和科学发现工作流，是本期研究工具主线。",
+          "topReason": "科研 Agent 的竞争点开始转向复现实验、研究品味和小模型加训练方法，而不是只比模型规模。 下一步要核对Faraday技术报告、基准任务集、代码、第三方复测和真实科研工作流日志。",
+          "detailWhyRanked": "它连接 DeepMind 人才外溢、小模型 Agent 和科学发现工作流，是本期研究工具主线。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用Faraday技术报告、基准任务集、代码、第三方复测和真实科研工作流日志补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 21,
+            "note": "影响4/新鲜度5/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 21,
+            "note": "影响4/新鲜度5/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "科研 Agent 的竞争点开始转向复现实验、研究品味和小模型加训练方法，而不是只比模型规模。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责科研自动化、实验平台、模型评测和 AI 投资尽调的团队应该关注，因为它影响科研 Agent 的评估标准。",
+          "readerUse": "研究/尽调团队用它检查论文复现基准、任务范围和模型成本假设。",
+          "nextCheck": "Faraday技术报告、基准任务集、代码、第三方复测和真实科研工作流日志",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要公开基准任务集、技术报告、代码、复现实验材料和第三方测试，才能升级为已验证的科研 Agent 能力突破。",
+          "claimBoundary": "当前主要支持 Inherent 的发布与媒体报道，不证明 Faraday 能普遍发现新科学知识。",
+          "counterEvidence": "如果公开复测无法重复结果或任务选择过窄，应下调科研突破判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+          "originalUrl": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-22T12:00:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月23日 04:00 JST",
+          "tags": [
+            "科研Agent",
+            "论文复现",
+            "小模型"
+          ],
+          "companies": [
+            "Inherent",
+            "Google DeepMind",
+            "OpenAI",
+            "Anthropic",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-openai-sb53-safety-amendments-2026-08-24",
+          "category": "policy",
+          "label": "政策",
+          "title": "TechCrunch：OpenAI 转向支持加强加州 SB 53 AI 安全要求",
+          "body": "TechCrunch 报道 OpenAI 全球事务团队称加州 SB 53 应增加训练/评估期模型监测和模型开发全周期网络安全保护。",
+          "summary": "TechCrunch 报道 OpenAI 全球事务团队称加州 SB 53 应增加训练/评估期模型监测和模型开发全周期网络安全保护。",
+          "whyItMatters": "领先实验室从反对州级规则转向要求增强保护，会影响美国 AI 安全监管的州-联邦路径。",
+          "detailBody": "TechCrunch 报道 OpenAI 全球事务团队称加州 SB 53 应增加训练/评估期模型监测和模型开发全周期网络安全保护。 报道还提到 OpenAI 把这一姿态放在“reverse federalism”框架下，主张州级保护可为未来全国标准打底。",
+          "trend": "AI 安全政策正在从原则声明进入具体操作要求：监测、网络安全、事件报告和跨州一致性。",
+          "detailTrend": "AI 安全政策正在从原则声明进入具体操作要求：监测、网络安全、事件报告和跨州一致性。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它直接改变 OpenAI 对州级 AI 安全法的姿态，是本期政策核查重点。",
+          "topReason": "领先实验室从反对州级规则转向要求增强保护，会影响美国 AI 安全监管的州-联邦路径。 下一步要核对OpenAI原帖、SB 53修订文本、加州立法记录、其他实验室表态和执行细则。",
+          "detailWhyRanked": "它直接改变 OpenAI 对州级 AI 安全法的姿态，是本期政策核查重点。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用OpenAI原帖、SB 53修订文本、加州立法记录、其他实验室表态和执行细则补强。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 21,
+            "note": "影响5/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 21,
+            "note": "影响5/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "领先实验室从反对州级规则转向要求增强保护，会影响美国 AI 安全监管的州-联邦路径。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责 AI 政策、模型安全、政府事务和合规路线图的团队应该关注，因为它影响 SB 53 与全国标准的衔接。",
+          "readerUse": "政策/合规团队用它追踪训练期监测、严重事件报告和网络安全义务是否写入规则。",
+          "nextCheck": "OpenAI原帖、SB 53修订文本、加州立法记录、其他实验室表态和执行细则",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要官方原帖、修订文本和立法记录，才能升级为已确认的监管义务变化。",
+          "claimBoundary": "当前不证明 SB 53 已修改，也不证明其他 AI 实验室会采取相同立场。",
+          "counterEvidence": "如果加州未采纳相关修订或 OpenAI 后续收窄表态，应下调政策转向强度。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+          "originalUrl": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-22T09:30:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月23日 01:30 JST",
+          "tags": [
+            "AI安全",
+            "SB53",
+            "政策"
+          ],
+          "companies": [
+            "OpenAI",
+            "California",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-frontier-labs-containment-plans-2026-08-24",
+          "category": "policy",
+          "label": "政策",
+          "title": "TechCrunch：Guidelight 研究称前沿 AI 实验室公开遏制预案仍不足",
+          "body": "TechCrunch 报道 Guidelight AI Standards 基于公开材料评估 Anthropic、Google、OpenAI、Meta 和 xAI 的失控模型遏制准备。",
+          "summary": "TechCrunch 报道 Guidelight AI Standards 基于公开材料评估 Anthropic、Google、OpenAI、Meta 和 xAI 的失控模型遏制准备。",
+          "whyItMatters": "Agent 系统进入高权限环境后，事故响应不只是安全愿景，而是需要可触发的停机、撤权和审计流程。",
+          "detailBody": "TechCrunch 报道 Guidelight AI Standards 基于公开材料评估 Anthropic、Google、OpenAI、Meta 和 xAI 的失控模型遏制准备。 报道强调评估依据是公开材料，包括日志监测、异常后暂停、第三方审计和失控模型撤权计划等维度。",
+          "trend": "AI 安全焦点正在从部署前评测扩展到运行中异常、权限回收和紧急遏制计划。",
+          "detailTrend": "AI 安全焦点正在从部署前评测扩展到运行中异常、权限回收和紧急遏制计划。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它给实验室安全披露提供了可操作核查框架，适合本期 TOP3 候选。",
+          "topReason": "Agent 系统进入高权限环境后，事故响应不只是安全愿景，而是需要可触发的停机、撤权和审计流程。 下一步要核对Guidelight原始评分、实验室内部政策、第三方审计报告和真实演练记录。",
+          "detailWhyRanked": "它给实验室安全披露提供了可操作核查框架，适合本期 TOP3 候选。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用Guidelight原始评分、实验室内部政策、第三方审计报告和真实演练记录补强。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 21,
+            "note": "影响5/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 21,
+            "note": "影响5/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "Agent 系统进入高权限环境后，事故响应不只是安全愿景，而是需要可触发的停机、撤权和审计流程。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责模型风险、企业安全、第三方审计和 AI 采购问卷的团队应该关注，因为它影响事故响应证据清单。",
+          "readerUse": "安全/采购团队用它补充供应商问卷：异常监测、权限撤销、停机触发和第三方审计。",
+          "nextCheck": "Guidelight原始评分、实验室内部政策、第三方审计报告和真实演练记录",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要原始评分方法、实验室正式预案和独立审计，才能升级为已确认的安全成熟度比较。",
+          "claimBoundary": "当前不证明这些实验室没有内部预案，只说明公开可见证据有限。",
+          "counterEvidence": "如果实验室公开完整遏制预案并通过第三方演练，应下调披露不足风险。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
+          "originalUrl": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-22T09:00:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月23日 01:00 JST",
+          "tags": [
+            "模型安全",
+            "遏制预案",
+            "Agent风险"
+          ],
+          "companies": [
+            "Guidelight AI Standards",
+            "OpenAI",
+            "Anthropic",
+            "Google",
+            "Meta",
+            "xAI",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-nvidia-cloverleaf-data-center-2026-08-24",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch：Nvidia 与 Cloverleaf 合作，把资本继续投向 AI 数据中心前置基础设施",
+          "body": "TechCrunch 报道 Nvidia 宣布与数据中心开发商 Cloverleaf Infrastructure 合作，媒体称交易条款未披露但涉及少数股权投资。",
+          "summary": "TechCrunch 报道 Nvidia 宣布与数据中心开发商 Cloverleaf Infrastructure 合作，媒体称交易条款未披露但涉及少数股权投资。",
+          "whyItMatters": "芯片供应商正在向电力、站点和数据中心前置设施延伸，说明算力竞争也在争夺项目落地路径。",
+          "detailBody": "TechCrunch 报道 Nvidia 宣布与数据中心开发商 Cloverleaf Infrastructure 合作，媒体称交易条款未披露但涉及少数股权投资。 报道把合作放在 Nvidia 持续投资 AI 数据中心开发的背景下，但交易条款、投资规模和实际容量仍未由公开文件完全证实。",
+          "trend": "AI 基础设施的瓶颈从 GPU 扩展到电力接入、土地、融资和开发商网络。",
+          "detailTrend": "AI 基础设施的瓶颈从 GPU 扩展到电力接入、土地、融资和开发商网络。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它延续数据中心社会许可和资本链主线，帮助读者理解 Nvidia 如何维持 AI 飞轮。",
+          "topReason": "芯片供应商正在向电力、站点和数据中心前置设施延伸，说明算力竞争也在争夺项目落地路径。 下一步要核对Nvidia公告、Cloverleaf公告、投资文件、Reuters/WSJ细节、项目许可和PPA。",
+          "detailWhyRanked": "它延续数据中心社会许可和资本链主线，帮助读者理解 Nvidia 如何维持 AI 飞轮。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用Nvidia公告、Cloverleaf公告、投资文件、Reuters/WSJ细节、项目许可和PPA补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 19,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 19,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "芯片供应商正在向电力、站点和数据中心前置设施延伸，说明算力竞争也在争夺项目落地路径。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责云成本、数据中心选址、能源采购和基础设施投资的团队应该关注，因为它影响算力供给路径。",
+          "readerUse": "基础设施/财务团队用它追踪 GPU 厂商是否通过投资影响电力与站点供给。",
+          "nextCheck": "Nvidia公告、Cloverleaf公告、投资文件、Reuters/WSJ细节、项目许可和PPA",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要交易文件、股权比例和项目清单，才能升级为已确认的容量扩张判断。",
+          "claimBoundary": "当前不证明具体新增多少 AI 计算容量，也不证明所有项目能获得电力和许可。",
+          "counterEvidence": "如果投资文件显示规模有限、项目许可记录受阻或 PPA 未确认，应下调算力供给影响。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
+          "originalUrl": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-21T15:37:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月22日 07:37 JST",
+          "tags": [
+            "Nvidia",
+            "数据中心",
+            "AI资本"
+          ],
+          "companies": [
+            "Nvidia",
+            "Cloverleaf Infrastructure",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-nvidia-agent-harness-arc-agi3-2026-08-24",
+          "category": "tool",
+          "label": "工具",
+          "title": "TechCrunch：Nvidia 研究把 Agent 成败焦点推向 harness 而非单个模型",
+          "body": "TechCrunch 报道 Nvidia 研究显示，带记忆和监督组件的自定义 harness 可显著改善长程任务表现，文章以 ARC-AGI-3 互动推理任务为例。",
+          "summary": "TechCrunch 报道 Nvidia 研究显示，带记忆和监督组件的自定义 harness 可显著改善长程任务表现，文章以 ARC-AGI-3 互动推理任务为例。",
+          "whyItMatters": "企业部署 Agent 时，运行时、记忆、工具和监督器可能比单独换模型更影响任务可靠性。",
+          "detailBody": "TechCrunch 报道 Nvidia 研究显示，带记忆和监督组件的自定义 harness 可显著改善长程任务表现，文章以 ARC-AGI-3 互动推理任务为例。 报道提到 Nvidia 研究使用带记忆和监督组件的自定义 harness，并把它与长程任务稳定性联系起来；这不是现成产品发布。",
+          "trend": "Agent 工程正在从“模型 API”变成“模型+harness+监督器+运行库”的系统设计问题。",
+          "detailTrend": "Agent 工程正在从“模型 API”变成“模型+harness+监督器+运行库”的系统设计问题。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它补强本期 Agent 控制面主线，给工程团队一个可检查的架构层。",
+          "topReason": "企业部署 Agent 时，运行时、记忆、工具和监督器可能比单独换模型更影响任务可靠性。 下一步要核对Nvidia论文/代码、ARC-AGI-3设置、第三方复测和企业长程任务日志。",
+          "detailWhyRanked": "它补强本期 Agent 控制面主线，给工程团队一个可检查的架构层。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用Nvidia论文/代码、ARC-AGI-3设置、第三方复测和企业长程任务日志补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事5/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "企业部署 Agent 时，运行时、记忆、工具和监督器可能比单独换模型更影响任务可靠性。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责 Agent 平台、开发者工具、模型评测和长程任务自动化的工程团队应该关注，因为它影响系统架构选择。",
+          "readerUse": "工程团队用它检查记忆、工具、监督器和回退策略，而不是只比较模型榜单。",
+          "nextCheck": "Nvidia论文/代码、ARC-AGI-3设置、第三方复测和企业长程任务日志",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要论文、代码和独立复测，才能升级为已验证的 Agent harness 设计结论。",
+          "claimBoundary": "当前不证明所有 Agent 任务都能靠 harness 解决，也不证明该设置适合生产环境。",
+          "counterEvidence": "如果复测显示结果依赖特定基准或成本过高，应下调通用工程价值。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
+          "originalUrl": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-21T12:43:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月22日 04:43 JST",
+          "tags": [
+            "Agent运行时",
+            "Nvidia",
+            "评测"
+          ],
+          "companies": [
+            "Nvidia",
+            "OpenAI",
+            "Anthropic",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-micro1-training-data-run-rate-2026-08-24",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch：Micro1 被报道在训练数据需求中达到 5 亿美元 gross run rate",
+          "body": "TechCrunch 报道 AI 数据创业公司 Micro1 的 gross annual run rate 从 1 亿美元增至 5 亿美元，显示专业标注和合成数据需求继续升温。",
+          "summary": "TechCrunch 报道 AI 数据创业公司 Micro1 的 gross annual run rate 从 1 亿美元增至 5 亿美元，显示专业标注和合成数据需求继续升温。",
+          "whyItMatters": "训练数据正在被当作与算力并列的 AI 供给瓶颈，企业要同时检查数据质量、来源和地缘风险。",
+          "detailBody": "TechCrunch 报道 AI 数据创业公司 Micro1 的 gross annual run rate 从 1 亿美元增至 5 亿美元，显示专业标注和合成数据需求继续升温。 报道还写到 Micro1 保留其中约 60%-70% 作为净年化收入区间，并讨论合成数据与可复用数据集的毛利潜力。",
+          "trend": "AI 投资从模型和 GPU 外溢到数据工厂、专家标注和可复用数据集。",
+          "detailTrend": "AI 投资从模型和 GPU 外溢到数据工厂、专家标注和可复用数据集。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它补充“算力之外的 AI 基础设施”视角，适合投资和采购读者更新数据供应链。",
+          "topReason": "训练数据正在被当作与算力并列的 AI 供给瓶颈，企业要同时检查数据质量、来源和地缘风险。 下一步要核对Micro1财务文件、客户合同、数据来源审计、毛利证明和第三方市场数据。",
+          "detailWhyRanked": "它补充“算力之外的 AI 基础设施”视角，适合投资和采购读者更新数据供应链。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用Micro1财务文件、客户合同、数据来源审计、毛利证明和第三方市场数据补强。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 19,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 3,
+            "total": 19,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "训练数据正在被当作与算力并列的 AI 供给瓶颈，企业要同时检查数据质量、来源和地缘风险。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责模型训练、数据采购、供应链安全和 AI 投资尽调的团队应该关注，因为它影响数据来源与成本结构。",
+          "readerUse": "数据/采购团队用它检查专家标注、合成数据、转售权和客户集中风险。",
+          "nextCheck": "Micro1财务文件、客户合同、数据来源审计、毛利证明和第三方市场数据",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要公司文件、客户合同和审计数据，才能升级为已确认的数据基础设施增长结论。",
+          "claimBoundary": "当前不证明 Micro1 收入已审计，也不证明训练数据支出会普遍追平算力支出。",
+          "counterEvidence": "如果合同流失、收入未经确认或数据来源受监管限制，应下调增长判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
+          "originalUrl": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-20T17:13:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月21日 09:13 JST",
+          "tags": [
+            "训练数据",
+            "数据标注",
+            "AI投资"
+          ],
+          "companies": [
+            "Micro1",
+            "Mercor",
+            "Handshake",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "techcrunch-linkdaze-ai-household-calendar-2026-08-24",
+          "category": "product",
+          "label": "产品",
+          "title": "TechCrunch：Linkdaze 把 AI 餐单识别放进家庭共享日历硬件",
+          "body": "TechCrunch 报道 Linkdaze 智能日历同步多平台日程，并用 AI meal planner 将纸质菜谱或学校午餐菜单照片转成餐单和购物清单。",
+          "summary": "TechCrunch 报道 Linkdaze 智能日历同步多平台日程，并用 AI meal planner 将纸质菜谱或学校午餐菜单照片转成餐单和购物清单。",
+          "whyItMatters": "AI 正在进入家庭协调这种低风险但高频的场景，产品成败取决于纠错、共享权限和是否减少认知负担。",
+          "detailBody": "TechCrunch 报道 Linkdaze 智能日历同步多平台日程，并用 AI meal planner 将纸质菜谱或学校午餐菜单照片转成餐单和购物清单。 报道同时列出多平台日历同步、硬件尺寸和不收主要功能月费的定价选择，AI 功能只是家庭协作产品的一部分。",
+          "trend": "消费级 AI 不只是在聊天框里生成内容，也在家务、日程和采购这种多成员协作场景里寻找入口。",
+          "detailTrend": "消费级 AI 不只是在聊天框里生成内容，也在家务、日程和采购这种多成员协作场景里寻找入口。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它是小型硬件把 AI 放入家庭操作流的案例，适合产品团队观察非订阅模式。",
+          "topReason": "AI 正在进入家庭协调这种低风险但高频的场景，产品成败取决于纠错、共享权限和是否减少认知负担。 下一步要核对Linkdaze产品页、隐私政策、用户留存、识别错误率和竞品定价数据。",
+          "detailWhyRanked": "它是小型硬件把 AI 放入家庭操作流的案例，适合产品团队观察非订阅模式。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用Linkdaze产品页、隐私政策、用户留存、识别错误率和竞品定价数据补强。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 3,
+            "total": 17,
+            "note": "影响3/新鲜度4/叙事4/证据3/读者效用3；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 3,
+            "total": 17,
+            "note": "影响3/新鲜度4/叙事4/证据3/读者效用3；按来源角色保留证据边界。"
+          },
+          "impact": "AI 正在进入家庭协调这种低风险但高频的场景，产品成败取决于纠错、共享权限和是否减少认知负担。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责家庭硬件、生活方式应用、AI 影像识别和订阅定价的产品团队应该关注，因为它影响家务协同设计。",
+          "readerUse": "产品团队用它检查照片转结构化任务、家庭成员编辑权限和订阅/硬件收入取舍。",
+          "nextCheck": "Linkdaze产品页、隐私政策、用户留存、识别错误率和竞品定价数据",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要官方规格、隐私条款和用户使用指标，才能升级为已验证的家庭 AI 产品趋势。",
+          "claimBoundary": "当前不证明家庭用户会长期依赖该设备，也不证明 AI 餐单识别准确可靠。",
+          "counterEvidence": "如果后续用户留存指标、识别错误率数据或客服记录显示 AI 餐单很少复用，应下调产品价值判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI提供最低必要事实和上下文入口；完整事实、采访、图表、数据和细节仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/20/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
+          "originalUrl": "https://techcrunch.com/2026/08/20/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-20T11:20:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月21日 03:20 JST",
+          "tags": [
+            "家庭AI",
+            "智能硬件",
+            "消费产品"
+          ],
+          "companies": [
+            "Linkdaze",
+            "TechCrunch"
+          ]
+        },
+        {
+          "id": "openrouter-ox-alpha-stealth-model-2026-08-24",
+          "category": "model",
+          "label": "模型",
+          "title": "OpenRouter 上线匿名 Ox Alpha，1M 上下文和免费预览引发来源核查",
+          "body": "OpenRouter 模型页显示 Ox Alpha 于 8 月 20 日发布，定位为编码、长程 Agent 和生产工作负载推理模型，提供 1M 上下文并披露匿名第三方提供方。",
+          "summary": "OpenRouter 模型页显示 Ox Alpha 于 8 月 20 日发布，定位为编码、长程 Agent 和生产工作负载推理模型，提供 1M 上下文并披露匿名第三方提供方。",
+          "whyItMatters": "匿名高容量模型进入开发者路由平台，会把“能不能用”之外的供应链、数据保留和来源透明度问题推到前台。",
+          "detailBody": "OpenRouter 模型页显示 Ox Alpha 于 8 月 20 日发布，定位为编码、长程 Agent 和生产工作负载推理模型，提供 1M 上下文并披露匿名第三方提供方。 页面还说明该模型由匿名第三方提供方开发和运营，OpenRouter 负责路由但不是开发者；这把数据保留、供应商披露和生产准入变成首要核查项。",
+          "trend": "模型竞争正在从单一实验室发布扩展到路由平台、匿名提供方和临时免费容量的组合。",
+          "detailTrend": "模型竞争正在从单一实验室发布扩展到路由平台、匿名提供方和临时免费容量的组合。 这条信号应被放进本期观察清单：先看它改变了哪些权限、成本、治理或产品动作，再等待原始文件、日志或独立评测补强。",
+          "whyRanked": "它同时影响模型选择、供应链治理和开发者试用风险，是本期最需要核查来源身份的信号。",
+          "topReason": "匿名高容量模型进入开发者路由平台，会把“能不能用”之外的供应链、数据保留和来源透明度问题推到前台。 下一步要核对OpenRouter条款、提供方披露、第三方基准、企业使用日志和数据保留审计。",
+          "detailWhyRanked": "它同时影响模型选择、供应链治理和开发者试用风险，是本期最需要核查来源身份的信号。 因此读者应把它用于更新本周清单，而不是直接升级为长期趋势定论。当前证据只支持本期观察，后续仍要用OpenRouter条款、提供方披露、第三方基准、企业使用日志和数据保留审计补强。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "影响5/新鲜度5/叙事5/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "影响5/新鲜度5/叙事5/证据4/读者效用5；按来源角色保留证据边界。"
+          },
+          "impact": "匿名高容量模型进入开发者路由平台，会把“能不能用”之外的供应链、数据保留和来源透明度问题推到前台。 先看来源能直接支持的事实，再看外部证据是否补齐。",
+          "whoShouldCare": "负责模型采购、API 路由、开发者平台和安全审计的团队应该关注，因为它影响供应商披露和数据保留评估。",
+          "readerUse": "平台/安全团队用它检查匿名模型是否允许进入生产、日志和敏感数据流程。",
+          "nextCheck": "OpenRouter条款、提供方披露、第三方基准、企业使用日志和数据保留审计",
+          "followUpQuestions": [
+            "是否已有官方文件、原始数据、客户侧日志或监管文本支持这条信号？",
+            "后续是否出现能量化采用、风险、成本或效果的第三方证据？"
+          ],
+          "evidenceThreshold": "需要提供方身份披露、独立基准和客户侧日志，才能升级为已确认的可生产部署模型。",
+          "claimBoundary": "当前只证明 OpenRouter 发布了该模型页，不证明其开发方身份、真实能力或长期可用性。",
+          "counterEvidence": "如果后续提供方下线模型、修正上下文/价格说明或第三方测试显示能力不足，应下调采用价值判断。",
+          "source": "OpenRouter Models",
+          "sourceName": "OpenRouter Models",
+          "sourceId": "openrouter-models",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenRouter模型页可核对模型列表、上下文窗口、价格和匿名提供方披露；真实开发方、长期可用性和生产效果仍需外部证据。",
+          "sourceUrl": "https://openrouter.ai/stealth/ox-alpha",
+          "originalUrl": "https://openrouter.ai/stealth/ox-alpha",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-20T00:00:00-07:00",
+          "freshSourceFact": null,
+          "time": "08月20日 16:00 JST",
+          "tags": [
+            "匿名模型",
+            "模型路由",
+            "开发者平台"
+          ],
+          "companies": [
+            "OpenRouter"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-23",
       "date": "2026-08-23",
