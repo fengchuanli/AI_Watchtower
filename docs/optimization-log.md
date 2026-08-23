@@ -21,8 +21,8 @@
   - Ran `node scripts/validate-site.mjs`.
   - Ran `node scripts/validate-pages.mjs`.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
-- Commit: Pending before final git diff/check and local commit; push still depends on GitHub DNS recovery.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; final push attempt will be recorded after commit.
+- Commit: Local commit `d23d442` (`更新17点AI新闻情报`); push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
 
 ## 2026-08-23 23:01 JST
 
