@@ -1,3 +1,30 @@
+## 2026-08-24 23:08 JST
+
+- Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是同日更晚的 `news-1700-2026-08-24`，本次未回退版本，而是在足够安全、非重复且可核对的情况下把当前版从 10 条补到 14 条。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md`、`rag/learning-notes.md` 和 `rag/azure-search-schema.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、Anthropic Newsroom、Google AI、Mistral News、TechCrunch AI、Axios Technology、OpenRouter 官方模型页、Binance Developer Docs 和历史 URL 去重。
+  - 新增官方来源 `binance-developers`，source count 从 49 更新到 50。
+  - 新增 4 条：Binance MCP Server/Agentic 子账户官方文档；TechCrunch 对 Alation 网络攻击的报道；Axios 对 Anthropic 候选人使命/股价文化面试问题的报道；Axios 对 Luke Metz 加入 Meta Superintelligence Labs 的报道。
+  - Binance 条目为 `官方核对` / `confirmed`；TechCrunch 和 Axios 条目均为 `媒体背景` / `reported` / `originalDependency: must-read`，明确要求官方文件、客户通知、交易日志、审计、监管文本、人事确认或第三方复测后才能升级。
+  - 未使用付费/登录墙正文、随机网页、社区讨论、二次聚合、传闻或历史已收录 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, item count, references and item order; total history items updated to 530.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 50 sources.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit note: 本轮内容提交使用 `补充08点AI新闻情报`；推送仍取决于 GitHub DNS 恢复。
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit.
+
 ## 2026-08-24 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 13 source/candidate workflow task. Cross-linked the two most confusing candidate workflow entry points so editors can route from plain-language judgment to source gate to intake without treating every document as a start page.
