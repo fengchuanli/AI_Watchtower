@@ -74,9 +74,7 @@ npx serve .
 - 产品目标与优化基准：`docs/product-principles.md`
 - 版权安全规则：`docs/copyright-safety.md`
 - 情报源列表：`data/sources.json`
-- 候选编辑通俗流程：`docs/candidate-workflow-plain-language-guide.md`
-- 候选来源筛选清单：`docs/candidate-source-checklist.md`
-- 候选进入起草前记录：`docs/candidate-intake-format.md`
+- 候选入口顺序：先读 `docs/candidate-workflow-plain-language-guide.md`，再用 `docs/candidate-source-checklist.md` 做硬门槛，通过后才填 `docs/candidate-intake-format.md`
 - 候选暂缓/拒绝原因词表：`docs/candidate-hold-reject-reasons.md`
 - 暂缓候选复查记录：`docs/held-candidate-review-note.md`
 - 候选优先级评分：`docs/candidate-priority-rubric.md`

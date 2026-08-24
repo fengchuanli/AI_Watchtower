@@ -2,7 +2,20 @@
 
 Use this lightweight record before turning a discovered URL into `data/news.json`. The goal is to preserve the editor's source judgment and drafting decision without copying source text or creating a long internal database.
 
-This format sits after the readable editor path in `docs/candidate-workflow-plain-language-guide.md` and between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/held-candidate-review-note.md`, `docs/candidate-priority-rubric.md`, `docs/source-diversity-triage-note.md`, `docs/original-source-replacement-guide.md`, `docs/candidate-to-news-handoff.md`, `docs/update-run-checklist.md`, and `docs/editorial-checklist.md`:
+This format sits after the readable editor path in `docs/candidate-workflow-plain-language-guide.md` and between `docs/candidate-source-checklist.md`, `docs/candidate-hold-reject-reasons.md`, `docs/held-candidate-review-note.md`, `docs/candidate-priority-rubric.md`, `docs/source-diversity-triage-note.md`, `docs/original-source-replacement-guide.md`, `docs/candidate-to-news-handoff.md`, `docs/update-run-checklist.md`, and `docs/editorial-checklist.md`.
+
+## Where This Record Starts And Ends
+
+Use this entry order when candidate workflow documents feel overlapping:
+
+1. `docs/candidate-workflow-plain-language-guide.md` is the human decision path: what happened, why it matters, what remains unproven, and whether the item should draft, hold, or reject.
+2. `docs/candidate-source-checklist.md` is the hard source gate: source role, timestamp, copyright/paywall safety, duplicate risk, original-source need, and concentration risk.
+3. This intake format is the structured record only after the source gate passes or after a `hold` / `reject` reason must be preserved. It should capture short field answers, not reopen source judgment or become public copy.
+4. `docs/candidate-to-news-handoff.md` starts only after `draftingDecision` is `draft`, when the editor maps safe intake fields into `data/news.json`.
+
+If the source checklist blocks a URL, do not fill a full intake as if it were draft-ready. Record only the blocker, reason code, and any held-candidate review timing needed for a later recheck.
+
+The normal sequence is:
 
 1. The plain-language guide asks the editor to answer what happened, why it matters, what is unproven, which source is safest, whether the batch is balanced, and whether the item should draft, hold, or reject.
 2. The candidate checklist decides whether a URL is allowed into intake.

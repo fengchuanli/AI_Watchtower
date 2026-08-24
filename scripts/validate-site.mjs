@@ -650,6 +650,9 @@ if (
 
 if (
   !/Candidate Source Checklist/.test(candidateSourceChecklist) ||
+  !/Workflow Entry Order/.test(candidateSourceChecklist) ||
+  !/plain-language note first/.test(candidateSourceChecklist) ||
+  !/source checklist only after that first judgment/.test(candidateSourceChecklist) ||
   !/Candidate Identity/.test(candidateSourceChecklist) ||
   !/Source Role/.test(candidateSourceChecklist) ||
   !/Minimum Evidence/.test(candidateSourceChecklist) ||
@@ -671,6 +674,9 @@ if (
 
 if (
   !/Candidate Intake Format/.test(candidateIntakeFormat) ||
+  !/Where This Record Starts And Ends/.test(candidateIntakeFormat) ||
+  !/hard source gate/.test(candidateIntakeFormat) ||
+  !/do not fill a full intake as if it were draft-ready/.test(candidateIntakeFormat) ||
   !/candidateUrl/.test(candidateIntakeFormat) ||
   !/Intake Scratch Template/.test(candidateIntakeFormat) ||
   !/During 08:00 and 17:00 JST news runs/.test(candidateIntakeFormat) ||
@@ -698,6 +704,11 @@ if (
   !/candidate-hold-reject-reasons\.md/.test(candidateIntakeFormat) ||
   !/candidate-intake-format\.md/.test(candidateSourceChecklist) ||
   !/candidate-intake-format\.md/.test(readme) ||
+  !/候选入口顺序/.test(readme) ||
+  !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 14/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -748,7 +759,10 @@ if (
   !/Day 12[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 13/.test(optimizationDecisionIndex)
+  !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 14/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -1312,7 +1326,10 @@ if (
   !/Day 12[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 13/.test(optimizationDecisionIndex) ||
+  !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 14/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

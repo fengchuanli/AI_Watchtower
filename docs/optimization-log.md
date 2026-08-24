@@ -1,3 +1,34 @@
+## 2026-08-24 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 13 source/candidate workflow task. Cross-linked the two most confusing candidate workflow entry points so editors can route from plain-language judgment to source gate to intake without treating every document as a start page.
+- Changed files:
+  - `README.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/candidate-intake-format.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `Workflow Entry Order` to `docs/candidate-source-checklist.md`, naming the sequence: plain-language guide first, source checklist as the hard gate, intake format after the source gate, and candidate-to-news handoff only after `draft`.
+  - Added `Where This Record Starts And Ends` to `docs/candidate-intake-format.md`, clarifying that intake records preserve short field answers and hold/reject reasons rather than reopening source judgment or becoming public copy.
+  - Updated `README.md` so the candidate workflow list now presents the entry order instead of three separate same-level start points.
+  - Updated `docs/optimization-decision-index.md` and `scripts/validate-site.mjs` so Day 13 is tracked and Day 14 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/candidate-workflow-plain-language-guide.md`, `docs/candidate-source-checklist.md`, `docs/candidate-intake-format.md`, `docs/update-run-checklist.md`, `README.md`, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 49 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Pending local commit; final hash will be recorded after commit creation.
+- Git note: Push not yet attempted for this run; remote sync still depends on GitHub DNS/network recovery.
+
 ## 2026-08-24 17:00 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-24`，发布 10 条安全非重复信号，聚焦匿名模型路由、AI 安全披露、Agent harness、数据中心资本、训练数据和教育/家庭 AI 产品。
