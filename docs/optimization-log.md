@@ -1,3 +1,30 @@
+## 2026-08-25 08:13 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-25`，发布 11 条安全非重复信号，聚焦编码/协作 Agent 成本、NVIDIA AI 工厂栈、IBM 主机 AI、机器人资本、内存供应链、数据中心社会许可和合成内容信任风险。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md`、`rag/learning-notes.md` 和 `rag/azure-search-schema.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、NVIDIA Blog、IBM Newsroom、VentureBeat AI/Orchestration、Axios AI/Business/Technology/Policy、TechCrunch AI 和历史 URL 去重。
+  - 新增官方来源 `ibm-newsroom`，source count 从 50 更新到 51。
+  - 本期发布 11 条：OpenAI GPT-5.6 in Kiro；NVIDIA Vera Rubin NVL72 Agent 能效；NVIDIA Groq 3 LPX/Spectrum-X/Scale-In；NVIDIA NVLink Fusion/XPU AI factory；IBM 双架构 Z/LinuxONE 处理器；VentureBeat 对 Claude Tag 全频道上下文更新的报道；Axios 对 Generalist 机器人 AI 融资、Deere/UAW、合成内容和 Texas 数据中心反弹的报道；TechCrunch 对 Amazon 硬件涨价/内存成本的报道。
+  - OpenAI、NVIDIA、IBM 条目为 `官方核对` / `confirmed`，但厂商性能和采用主张仍需第三方基准、客户日志、功耗账单和系统规格；VentureBeat、Axios、TechCrunch 条目均为 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未使用付费/登录墙正文、随机网页、社区讨论、二次聚合、传闻、已归档 URL 或近重复的 Anthropic/Meta/Flock 旧主线补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, item count, references and item order; total history items updated to 541.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 51 sources.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: pending local commit `更新17点AI新闻情报`; push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-24 23:08 JST
 
 - Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是同日更晚的 `news-1700-2026-08-24`，本次未回退版本，而是在足够安全、非重复且可核对的情况下把当前版从 10 条补到 14 条。
