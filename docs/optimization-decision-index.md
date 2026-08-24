@@ -31,7 +31,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 10 | Complete | `813f364` | `data/sources.json` policy, trust-level descriptions, and every source note now use Chinese editor-facing source-role language, with data validation blocking English `Use for...` style instructions from returning. |
 | Day 11 | Complete | `60a16b8` | `docs/source-diversity-triage-note.md` now has a Common Owner Concentration Review for TechCrunch, Axios, one vendor, and one research feed, with checklist prompts to name the independent owner or source type needed next. |
 | Day 12 | Complete | `9acbfc9` | `docs/held-candidate-review-note.md` now records promising held candidates with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, `staleFallback`, and `nextEditorAction` so later runs must recheck evidence before treating old leads as current news. |
-| Day 13 | Complete | `pending` | Candidate workflow entry points now route editors in order: plain-language guide for judgment, `docs/candidate-source-checklist.md` as the hard source gate, `docs/candidate-intake-format.md` as the structured record, and `docs/candidate-to-news-handoff.md` only after `draft`. |
+| Day 13 | Complete | `0e26164` | Candidate workflow entry points now route editors in order: plain-language guide for judgment, `docs/candidate-source-checklist.md` as the hard source gate, `docs/candidate-intake-format.md` as the structured record, and `docs/candidate-to-news-handoff.md` only after `draft`. |
 
 ## Historical Guard Anchors
 

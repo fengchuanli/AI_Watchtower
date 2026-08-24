@@ -26,7 +26,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check` for touched files.
-- Commit: Pending local commit; final hash will be recorded after commit creation.
+- Commit: Local commit `0e26164` (`明确候选流程入口`); push still depends on GitHub DNS recovery.
 - Git note: Push not yet attempted for this run; remote sync still depends on GitHub DNS/network recovery.
 
 ## 2026-08-24 17:00 JST
