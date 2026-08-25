@@ -1,3 +1,29 @@
+## 2026-08-26 08:12 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-26`，发布 10 条安全非重复信号，聚焦推理芯片、行业 Agent、Agent 身份治理、运行时沙箱、端侧 AI、物理 AI 融资和 MCP/Agent 标准生态。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md`、`rag/learning-notes.md`、`rag/azure-search-schema.md`、`rag/azure_search_docs.jsonl` 和 `rag/prepare_azure_search_docs.py` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、Google Cloud Blog/release notes、NVIDIA Newsroom、Apple Newsroom、Hugging Face Blog、Gatik 公司原文、Linux Foundation Press 和历史 URL 去重。
+  - 新增或更新官方/公司来源 `google-cloud-ai-blog`、`google-cloud-release-notes`、`nvidia-newsroom`、`apple-newsroom`、`gatik-news` 和 `linux-foundation-press`，source count 从 52 更新到 58。
+  - 本期发布 10 条：OpenAI Jalapeno 首批推理芯片结果；Google Cloud 法律/金融版 Gemini Enterprise；Google Ray/gVisor 沙箱；Google Agent Identity GA；NVIDIA Jetson Orin Nano 2；Apple M6/M5 Ultra AI compute；Hugging Face Gradio Workflow；Gatik 2 亿美元 D 轮；Linux Foundation AGNTCon/MCPCon Japan 议程。
+  - 官方项均只核对发布动作、规格、日期和自述范围；Gatik 标为 `厂商主张`，要求融资文件、客户合同、监管许可、安全记录和第三方运营数据后才能升级。未使用付费/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, item count, references and item order; total history items updated to 558.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 58 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local current-HEAD content commit (`更新17点AI新闻情报`); push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` and two `git push origin main` attempts failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-25 23:10 JST
 
 - Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是同日更晚的 `news-1700-2026-08-25`，本次未回退版本，而是在足够安全、非重复且可核对的情况下把当前版从 11 条补到 18 条。
