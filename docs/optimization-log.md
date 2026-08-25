@@ -1,3 +1,36 @@
+## 2026-08-25 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 14 detail-page task. Reviewed the current detail-page path and made the fact, impact, boundary, and next-check blocks easier to scan on mobile.
+- Changed files:
+  - `news-detail.js`
+  - `styles.css`
+  - `docs/detail-page-review-guide.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added a visible four-block proof path immediately after the `30 秒速览` section on detail pages: minimum fact, reader impact, proof boundary, and next verification step.
+  - Kept longer event explanation, interpretation, trend reading, source provenance, evidence threshold, downgrade signal, editor score, and original-source link after the quick scan path.
+  - Updated `docs/detail-page-review-guide.md` so mobile review explicitly requires the four-block briefing before narrative paragraphs.
+  - Updated `docs/optimization-decision-index.md` and `scripts/validate-site.mjs` so Day 14 is tracked and Day 15 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/detail-page-review-guide.md`, `news-detail.js`, relevant styles, current `data/news.json`, and validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check news-detail.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 51 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local implementation commit `e493b97` (`优化详情页速览结构`); this log/index follow-up records the concrete hash and latest local status.
+- Git note: `git push origin main` still needs retry after this log commit; previous pull failed due to `ssh: Could not resolve hostname github.com: -65563`.
+
 ## 2026-08-25 08:13 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-25`，发布 11 条安全非重复信号，聚焦编码/协作 Agent 成本、NVIDIA AI 工厂栈、IBM 主机 AI、机器人资本、内存供应链、数据中心社会许可和合成内容信任风险。

@@ -32,7 +32,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 11 | Complete | `60a16b8` | `docs/source-diversity-triage-note.md` now has a Common Owner Concentration Review for TechCrunch, Axios, one vendor, and one research feed, with checklist prompts to name the independent owner or source type needed next. |
 | Day 12 | Complete | `9acbfc9` | `docs/held-candidate-review-note.md` now records promising held candidates with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, `staleFallback`, and `nextEditorAction` so later runs must recheck evidence before treating old leads as current news. |
 | Day 13 | Complete | `1510ea4` | Candidate workflow entry points now route editors in order: plain-language guide for judgment, `docs/candidate-source-checklist.md` as the hard source gate, `docs/candidate-intake-format.md` as the structured record, and `docs/candidate-to-news-handoff.md` only after `draft`. |
-| Day 14 | Complete | `pending` | Current detail pages now show the four-block fact, impact, boundary, and next-check briefing immediately after the 30-second summary, before longer narrative sections. |
+| Day 14 | Complete | `e493b97` | Current detail pages now show the four-block fact, impact, boundary, and next-check briefing immediately after the 30-second summary, before longer narrative sections. |
 
 ## Historical Guard Anchors
 
