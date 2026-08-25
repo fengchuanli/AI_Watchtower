@@ -1,3 +1,30 @@
+## 2026-08-25 23:10 JST
+
+- Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是同日更晚的 `news-1700-2026-08-25`，本次未回退版本，而是在足够安全、非重复且可核对的情况下把当前版从 11 条补到 18 条。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`，未触碰既有 `rag/architecture.md`、`rag/learning-notes.md` 和 `rag/azure-search-schema.md` 工作区变化。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 Axios Technology、TechCrunch AI、VentureBeat AI、Alabama Attorney General 官方原文和当前历史 URL 去重。
+  - 新增官方/监管来源 `alabama-ag`，source count 从 51 更新到 52。
+  - 新增 7 条：Axios 对模型路由、Cisco/Supermicro/NVIDIA AI 工厂、UNDP/DFINITY 主权 AI 试点和 AI 基建借债压力的报道；VentureBeat 对 Perplexity/NVIDIA 本地 Agent Portable Computer 的报道；Alabama AG 对 OpenAI/Hugging Face 事件传票的官方原文；TechCrunch 对 Instinct 私测个人 Agent 隐私与条款风险的报道。
+  - Alabama AG 条目为 `官方核对` / `confirmed`；Axios、VentureBeat、TechCrunch 条目均为 `媒体背景` / `reported` / `originalDependency: must-read`，明确要求官方规格、客户部署、监管文件、融资文件、企业日志、审计报告或第三方基准后才能升级。
+  - 未使用付费/登录墙正文、随机网页、社区讨论、二次聚合、传闻、已归档 URL 或近重复的 Generalist/Amazon/Deere/Texas/合成内容旧事实补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, item count, references and item order; total history items updated to 548.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 18 current news items against 52 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local content commit (`补充08点AI新闻情报`); push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-25 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 14 detail-page task. Reviewed the current detail-page path and made the fact, impact, boundary, and next-check blocks easier to scan on mobile.
