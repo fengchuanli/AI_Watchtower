@@ -568,6 +568,9 @@ if (
   !/incident-jump-nav/.test(detailJs) ||
   !/quick-summary/.test(detailJs) ||
   !/function getQuickSummary/.test(detailJs) ||
+  !/class="canonical-briefing detail-scan-briefing"/.test(detailJs) ||
+  !/getCanonicalBriefingBlocks\(item\)/.test(detailJs) ||
+  !/先看这四点/.test(detailJs) ||
   !/function getDetailSourceReminder\(item\)/.test(detailJs) ||
   !/这条是媒体背景/.test(detailJs) ||
   !/完整事实、引述、采访、图表、数据与上下文仍归/.test(detailJs) ||
@@ -580,6 +583,10 @@ if (
   !/sourceReminder/.test(detailJs)
 ) {
   errors.push("News detail page must render a simplified reader-first structure with media-specific source reminders and source boundaries at the end.");
+}
+
+if (!/id="quick-summary"[\s\S]*class="canonical-briefing detail-scan-briefing"[\s\S]*class="detail-grid simplified-detail-grid"/.test(detailJs)) {
+  errors.push("News detail page must put the fact, impact, boundary, and next-check scan before the long explanation.");
 }
 if (/<span>\$\{escapeHtml\(node\.label\)\}<\/span>/.test(detailJs)) {
   errors.push("News detail overview diagram must not render redundant small text labels inside each node.");
@@ -708,7 +715,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 14/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 15/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -762,7 +769,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 14/.test(optimizationDecisionIndex)
+  !/Continue with Day 15/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -1137,6 +1144,7 @@ if (
 
 if (
   !/\.simplified-detail-grid/.test(styles) ||
+  !/\.detail-scan-briefing/.test(styles) ||
   !/\.source-verification-list/.test(styles) ||
   !/\.detail-editor-details/.test(styles) ||
   !/\.detail-source-reminder/.test(styles) ||
@@ -1302,7 +1310,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-08-10 through 2026-09-08/.test(optimizationDecisionIndex) ||
-  !/Phase 2, Source And Candidate Workflow Friction/.test(optimizationDecisionIndex) ||
+  !/Phase 3, Detail Pages And Proof Boundaries/.test(optimizationDecisionIndex) ||
   !/Previous Day 27[\s\S]*vendor-narrative-promotion-rule\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
   !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
@@ -1329,7 +1337,10 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 14/.test(optimizationDecisionIndex) ||
+  !/Day 14[\s\S]*four-block fact, impact, boundary, and next-check briefing[\s\S]*30-second summary/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 15/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

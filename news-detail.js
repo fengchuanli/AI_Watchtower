@@ -601,6 +601,16 @@ function renderDetail(item, data) {
       </ol>
     </section>
 
+    <section class="canonical-briefing detail-scan-briefing" aria-label="事实、影响、边界和下一步核对速览">
+      <div>
+        <p class="eyebrow">Mobile Proof Path</p>
+        <h2>先看这四点</h2>
+      </div>
+      <div class="canonical-briefing-grid">
+        ${renderCanonicalBriefingBlocks(getCanonicalBriefingBlocks(item))}
+      </div>
+    </section>
+
     <section class="detail-grid simplified-detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
         <section class="detail-block incident-block detail-primary-section" id="incident-overview">

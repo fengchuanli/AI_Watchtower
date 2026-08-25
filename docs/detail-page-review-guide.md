@@ -60,6 +60,7 @@ Official, research, regulator, and reliable-media items need different review pr
 
 A useful detail page should be easy to scan on a phone.
 
+- Put the four-block fact, impact, boundary, and next-check briefing immediately after the 30-second summary, before the longer prose sections. A phone reader should not need to scroll through narrative paragraphs before seeing what happened, why it matters, what remains unproven, and what evidence to check next.
 - Keep each paragraph focused on one job: fact, interpretation, boundary, or next check.
 - Prefer short Chinese clauses over stacked English technical terms.
 - Put the reader-facing consequence before deep background.
