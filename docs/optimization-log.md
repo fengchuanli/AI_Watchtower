@@ -1,3 +1,28 @@
+## 2026-08-26 23:02 JST
+
+- Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是同日更晚的 `news-1700-2026-08-26`，本次未回退版本，而是在当前版补充 2 条安全非重复 OpenAI 官方信号，把当前版从 10 条补到 12 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News 当前列表、OpenAI 全栈计算策略文章、OpenAI Admin plugin 文章、Google Cloud/Mistral/TechCrunch 等候选和当前历史 URL 去重。
+  - 新增 2 条：OpenAI 全栈计算策略，把数据中心、芯片、模型、平台、产品和设备放入同一系统；OpenAI Admin plugin for ChatGPT Work and Codex，面向工作区活动、访问、用量和管理动作。
+  - 两条新增均为 `官方核对` / `confirmed`；只核对 OpenAI 发布动作、日期和自述范围，不证明成本优势、供应链优势、权限安全、误操作率或客户成效。
+  - 未使用 Google 合作方复述稿、付费/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已收录 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, item count, references and item order; total history items updated to 560.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 58 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Pending local content commit (`补充08点AI新闻情报`); push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; will attempt push after commit.
+
 ## 2026-08-26 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 15 detail-page proof-boundary task. Added an editorial rule for when `detailTrend` should be split because it carries more than one idea, then applied it to the two current detail items the new guard caught.
