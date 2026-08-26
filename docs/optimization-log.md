@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 58 sources.
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
-- Commit: Pending local commit; final hash to be recorded after commit creation.
+- Commit: Local implementation commit `b407942` (`拆分详情趋势说明`); final bookkeeping commit will record this hash.
 - Git note: Push still depends on GitHub DNS recovery.
 
 ## 2026-08-26 08:12 JST

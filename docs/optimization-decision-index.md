@@ -33,7 +33,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 12 | Complete | `9acbfc9` | `docs/held-candidate-review-note.md` now records promising held candidates with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, `staleFallback`, and `nextEditorAction` so later runs must recheck evidence before treating old leads as current news. |
 | Day 13 | Complete | `1510ea4` | Candidate workflow entry points now route editors in order: plain-language guide for judgment, `docs/candidate-source-checklist.md` as the hard source gate, `docs/candidate-intake-format.md` as the structured record, and `docs/candidate-to-news-handoff.md` only after `draft`. |
 | Day 14 | Complete | `e493b97` | Current detail pages now show the four-block fact, impact, boundary, and next-check briefing immediately after the 30-second summary, before longer narrative sections. |
-| Day 15 | Complete | `pending` | `detailTrend` now has a split rule: keep one trend meaning there, and move reader action, upgrade proof, downgrade proof, or source-caveat logic into `readerUse`, `impact`, `evidenceThreshold`, `nextCheck`, `counterEvidence`, or `claimBoundary`. |
+| Day 15 | Complete | `b407942` | `detailTrend` now has a split rule: keep one trend meaning there, and move reader action, upgrade proof, downgrade proof, or source-caveat logic into `readerUse`, `impact`, `evidenceThreshold`, `nextCheck`, `counterEvidence`, or `claimBoundary`. |
 
 ## Historical Guard Anchors
 
