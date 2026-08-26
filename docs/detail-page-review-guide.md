@@ -46,6 +46,27 @@ Example shape:
 下一步核对：等待第三方复测、任务日志、成本/延迟指标和失败样例。
 ```
 
+## DetailTrend Split Rule
+
+`detailTrend` should answer one question: what broader AI direction this item suggests. Split it when the same paragraph also tries to do another job.
+
+Use this quick test before publication:
+
+- If the sentence says who should act or how to use the signal, move that part to `readerUse`, `impact`, or `whoShouldCare`.
+- If it says what would upgrade the claim, move that part to `evidenceThreshold` or `nextCheck`.
+- If it says what would weaken the claim, move that part to `counterEvidence` or `claimBoundary`.
+- If it mainly restates the source fact, move that part back to `detailBody` and keep `detailTrend` as interpretation.
+
+Good shape:
+
+```text
+detailTrend：企业 Agent 的竞争正在从模型回答质量转向权限、审计和工作流集成。
+readerUse：法务、数据和采购团队可用它检查 Agent 是否继承现有系统权限。
+evidenceThreshold：需要客户上线记录、审计日志样例和第三方法律技术评测，才能升级为已验证部署趋势。
+```
+
+Stop and split when `detailTrend` reads like "趋势 + 对读者怎么用 + 下一步要看什么" in one paragraph. That shape slows mobile scanning and makes fact, interpretation, proof boundary, and next action harder to distinguish.
+
 ## Source-Type Adjustments
 
 Official, research, regulator, and reliable-media items need different review pressure.

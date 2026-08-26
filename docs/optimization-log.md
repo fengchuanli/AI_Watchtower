@@ -1,3 +1,36 @@
+## 2026-08-26 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 15 detail-page proof-boundary task. Added an editorial rule for when `detailTrend` should be split because it carries more than one idea, then applied it to the two current detail items the new guard caught.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/news-data-format.md`
+  - `docs/detail-page-review-guide.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Defined the `detailTrend` split rule: keep one core trend meaning in `detailTrend`; move reader action into `readerUse`, `impact`, or `whoShouldCare`; move upgrade proof into `evidenceThreshold` or `nextCheck`; and move downgrade/boundary logic into `counterEvidence` or `claimBoundary`.
+  - Added `validateDetailTrendSplit` so obvious three-job `detailTrend` paragraphs are rejected for current items and the latest archive snapshot.
+  - Split the extra reader-action clause out of the current and latest archived `google-cloud-agent-identity-ga-2026-08-26` and `linux-foundation-agntcon-mcpcon-japan-2026-08-26` detail trends, preserving their existing reader-use and proof-threshold fields.
+  - Updated `docs/optimization-decision-index.md` and `scripts/validate-site.mjs` so Day 15 is tracked and Day 16 is the next useful task.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/news-data-format.md`, `docs/detail-page-review-guide.md`, current `data/news.json`, latest `data/news-history.json` entries, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check news-detail.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 58 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+- Commit: Pending local commit; final hash to be recorded after commit creation.
+- Git note: Push still depends on GitHub DNS recovery.
+
 ## 2026-08-26 08:12 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-26`，发布 10 条安全非重复信号，聚焦推理芯片、行业 Agent、Agent 身份治理、运行时沙箱、端侧 AI、物理 AI 融资和 MCP/Agent 标准生态。

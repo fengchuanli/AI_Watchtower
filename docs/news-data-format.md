@@ -132,7 +132,7 @@ The current feed must not promote stale background material as a new batch. Keep
 - `whyItMatters`: Preferred one-sentence reader-facing reason this item matters. During migration, `impact`, `trend`, or `whyRanked` remain fallbacks.
 - `detailBody`: Source-supported event explanation for the detail page. It must add context beyond `body`, but for media sources it should remain a minimum-fact summary rather than a replacement for the original article.
 - `trend`: Chinese editorial interpretation that links the item to a broader observable trend without adding unverified facts.
-- `detailTrend`: Longer Chinese trend explanation for the detail page. It should be AI Watchtower's own interpretation, not a rewritten version of the source article.
+- `detailTrend`: Longer Chinese trend explanation for the detail page. It should be AI Watchtower's own interpretation, not a rewritten version of the source article. Keep it to one core trend meaning. If the paragraph also starts giving reader instructions, upgrade evidence, downgrade evidence, or source-caveat logic, split those jobs into `readerUse`, `evidenceThreshold`, `counterEvidence`, or `claimBoundary` instead of stacking them into `detailTrend`.
 - `whyRanked`: Short Chinese explanation for why the item deserves homepage attention or ranking priority.
 - `topReason`: Preferred concise explanation for why the item entered Today TOP3. Keep it behind the expandable editorial judgment area on the homepage.
 - `detailWhyRanked`: Longer Chinese detail-page explanation of why the item matters. It should preserve important source facts, boundaries, and caveats that are too long for the homepage card.
@@ -164,6 +164,13 @@ The current feed must not promote stale background material as a new batch. Keep
 - `time`: Short display time.
 
 The detail page derives a source-boundary panel from existing item fields rather than adding a separate claim layer. `provenance` is shown as what the linked source can directly support, `detailTrend` is shown as AI Watchtower's interpretation, and `claimBoundary` is shown as what the item still cannot prove. Keep these fields written so a reader can distinguish source-backed facts from editorial judgment without leaving the page.
+
+Use this split test before saving `detailTrend`: if one paragraph answers more than one of these questions, move the extra answer to its dedicated field.
+
+- Trend meaning: what broader AI product, policy, research, infrastructure, or market direction this item suggests.
+- Reader action: who should use the signal and what checklist or decision it informs; put this in `readerUse`, `impact`, or `whoShouldCare`.
+- Upgrade proof: what artifact would make the claim stronger or confirmed; put this in `evidenceThreshold` or `nextCheck`.
+- Downgrade proof: what observable result would weaken the judgment; put this in `counterEvidence` or `claimBoundary`.
 
 For media-sourced detail pages, the top and bottom source reminders must explicitly assign complete facts to the original article. Keep `sourceRole: "媒体背景"`, `sourceType: "reliable_media"` or `media_report`, `claimStatus: "reported"`, and `originalDependency: "must-read"`. The page reminder should say AI Watchtower keeps only the minimum fact and original Chinese interpretation, while full facts, quotes, interviews, charts, data, and context remain in the named source article.
 

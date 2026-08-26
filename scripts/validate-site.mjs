@@ -715,7 +715,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 15/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 16/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -769,7 +769,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 15/.test(optimizationDecisionIndex)
+  !/Continue with Day 16/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -909,6 +909,7 @@ if (
   !/Four-Block Review/.test(detailPageReviewGuide) ||
   !/Technical Claim Conversion/.test(detailPageReviewGuide) ||
   !/Source-Type Adjustments/.test(detailPageReviewGuide) ||
+  !/DetailTrend Split Rule/.test(detailPageReviewGuide) ||
   !/Mobile Readability Pass/.test(detailPageReviewGuide) ||
   !/Stop Conditions/.test(detailPageReviewGuide) ||
   !/fact, impact, boundary, and next check/.test(detailPageReviewGuide) ||
@@ -921,6 +922,10 @@ if (
   !/`counterEvidence`/.test(detailPageReviewGuide) ||
   !/`followUpQuestions`/.test(detailPageReviewGuide) ||
   !/`sourceReferences`/.test(detailPageReviewGuide) ||
+  !/趋势 \+ 对读者怎么用 \+ 下一步要看什么/.test(detailPageReviewGuide) ||
+  !/Keep it to one core trend meaning/.test(newsDataFormat) ||
+  !/function validateDetailTrendSplit\(item, context\)/.test(validateDataJs) ||
+  !/detailTrend mixes trend meaning, reader action, and proof work/.test(validateDataJs) ||
   !/official file, customer metric, audit, benchmark, dataset, replication, contract, filing, regulator text, logs, deployment status, or third-party test/.test(
     detailPageReviewGuide,
   ) ||
@@ -1340,7 +1345,8 @@ if (
   !/Day 14[\s\S]*four-block fact, impact, boundary, and next-check briefing[\s\S]*30-second summary/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 15/.test(optimizationDecisionIndex) ||
+  !/Day 15[\s\S]*detailTrend[\s\S]*readerUse[\s\S]*evidenceThreshold/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 16/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

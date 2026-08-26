@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 3, Detail Pages And Proof Boundaries
-- Last indexed run: 2026-08-25 20:00 JST
+- Last indexed run: 2026-08-26 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -33,6 +33,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 12 | Complete | `9acbfc9` | `docs/held-candidate-review-note.md` now records promising held candidates with `holdUntilJst`, `recheckTrigger`, `freshnessLimit`, `staleFallback`, and `nextEditorAction` so later runs must recheck evidence before treating old leads as current news. |
 | Day 13 | Complete | `1510ea4` | Candidate workflow entry points now route editors in order: plain-language guide for judgment, `docs/candidate-source-checklist.md` as the hard source gate, `docs/candidate-intake-format.md` as the structured record, and `docs/candidate-to-news-handoff.md` only after `draft`. |
 | Day 14 | Complete | `e493b97` | Current detail pages now show the four-block fact, impact, boundary, and next-check briefing immediately after the 30-second summary, before longer narrative sections. |
+| Day 15 | Complete | `pending` | `detailTrend` now has a split rule: keep one trend meaning there, and move reader action, upgrade proof, downgrade proof, or source-caveat logic into `readerUse`, `impact`, `evidenceThreshold`, `nextCheck`, `counterEvidence`, or `claimBoundary`. |
 
 ## Historical Guard Anchors
 
@@ -57,9 +58,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 15: add an editorial rule for when `detailTrend` should be split because it carries more than one idea.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 14 first.
-- If Day 14 is already complete, continue with the first useful unfinished task from the current plan.
+- Continue with Day 16: review media-backed detail pages and make sure the original-article must-read reminder is visible without overwhelming the primary explanation.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 15 first.
+- If Day 15 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

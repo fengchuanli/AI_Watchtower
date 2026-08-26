@@ -516,6 +516,31 @@ function validateDetailParagraphLength(item, context) {
   }
 }
 
+function validateDetailTrendSplit(item, context) {
+  const detailTrend = String(item.detailTrend || "").trim();
+
+  if (!detailTrend) {
+    return;
+  }
+
+  const clauseCount = detailTrend
+    .split(/[。！？；\n]+/)
+    .map((clause) => clause.trim())
+    .filter(Boolean).length;
+  const hasTrendMeaning = /正在|开始|转向|变成|意味着|说明|竞争|趋势|阶段|进入/.test(detailTrend);
+  const hasReaderAction = /对读者|读者|团队|采购|产品|工程|安全|法务|审计|可以把|用来|用于/.test(detailTrend);
+  const hasProofWork =
+    /下一步|后续要看|至少需要|仍需|待验证|待核对|升级|削弱|反证|第三方|独立|审计|监管|合同|指标|日志|复测|文件/.test(
+      detailTrend,
+    );
+
+  if (clauseCount >= 3 && hasTrendMeaning && hasReaderAction && hasProofWork) {
+    errors.push(
+      `${context} ${item.id || "unknown item"} detailTrend mixes trend meaning, reader action, and proof work. Split reader action into readerUse/impact and proof work into evidenceThreshold, nextCheck, counterEvidence, or claimBoundary.`,
+    );
+  }
+}
+
 function validateVendorClaimBoundary(item, context) {
   if (item.sourceRole !== "厂商主张") {
     return;
@@ -1812,6 +1837,7 @@ for (const item of newsFeed.items || []) {
 
   validateCounterEvidenceSpecificity(item, "data/news.json item");
   validateDetailParagraphLength(item, "data/news.json item");
+  validateDetailTrendSplit(item, "data/news.json item");
 
   validateVendorClaimBoundary(item, "data/news.json item");
   validateMediaSourceReminder(item, "data/news.json item");
@@ -1938,6 +1964,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         validateEvidenceThresholdSpecificity(item, "data/news-history.json latest promoted item");
         validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
         validateDetailParagraphLength(item, "data/news-history.json latest promoted item");
+        validateDetailTrendSplit(item, "data/news-history.json latest item");
         validateMediaSourceReminder(item, "data/news-history.json latest item");
         validatePromotedVendorNarrativeCard(item, "data/news-history.json latest promoted item");
       }
