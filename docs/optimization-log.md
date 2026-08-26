@@ -1,3 +1,30 @@
+## 2026-08-27 08:10 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-27`，发布 9 条安全非重复信号，聚焦 AI 滥用、企业 Agent 入口、算力锁仓、Agent 安全、IP 政策、数据中心社会许可和开发协作控制面。少于 10 条是质量门槛结果，未用旧文章、传闻、登录墙正文、重复来源或弱证明条目补量。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、Salesforce Newsroom、Google Blog、TechCrunch AI、VentureBeat Security、Axios Technology/Economy 和历史 URL 去重。
+  - 新增官方来源 `salesforce-news`，source count 更新为 59。
+  - 本期发布 9 条：OpenAI 披露俄罗斯来源账号与 IBI 影响行动；Salesforce/Anthropic Claudeforce；TechCrunch 对 Anthropic/Nscale 450 亿美元算力协议的报道；VentureBeat 对 GhostJacking 与模型外授权门的报道；Google AI/IP 演讲；Axios 对 Bill Gates AI 转型倡议的报道；VentureBeat 对 Prompt Injection/OWASP 事故可见性落差的报道；Axios 数据中心专题；Salesforce Slack Code 官方发布。
+  - OpenAI、Salesforce、Google 项保持 `官方核对` / `confirmed`；TechCrunch、VentureBeat、Axios 项保持 `媒体背景` / `reported` / `originalDependency: must-read`，要求合同文件、平台透明度报告、权限测试、审计日志、监管/法院文本、原始备忘录、第三方评测或客户数据后才能升级。
+  - 移出 Mistral Agentic Search 候选，因为 8 月 20 日来源被当前 feed 新鲜度规则判定过旧；未使用付费/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 569.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 9 current news items against 59 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: pending local commit `更新17点AI新闻情报`; push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit.
+
 ## 2026-08-26 23:02 JST
 
 - Focus: 补充核查 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是同日更晚的 `news-1700-2026-08-26`，本次未回退版本，而是在当前版补充 2 条安全非重复 OpenAI 官方信号，把当前版从 10 条补到 12 条。
