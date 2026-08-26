@@ -1113,6 +1113,676 @@ Documented the end-to-end RAG pipeline architecture, including document ingestio
 RAG の処理全体を、ドキュメント読み込み、chunking、検索、citation 付き context 作成、回答生成、評価という pipeline として整理しました。
 ```
 
+## Day 12: Azure 化前の接口边界设计
+
+### 今天学什么
+
+在 Azure 化之前，明确每个 RAG component 的职责和替换边界。
+
+### 为什么学
+
+Azure OpenAI 和 Azure AI Search 不是简单把 API 调用写进现有脚本就结束。
+
+Azure API 会带来：
+
+- 认证
+- secret 管理
+- 成本
+- timeout
+- retry
+- rate limit
+- local / production 环境差异
+
+所以需要先定义 component boundary，让本地 prototype 后续可以安全替换成 Azure 实现。
+
+### 已实现内容
+
+更新文件：
+
+```text
+rag/architecture.md
+```
+
+新增章节：
+
+```text
+Azure-ready Component Boundaries
+```
+
+覆盖组件：
+
+```text
+DocumentLoader
+Chunker
+Retriever
+ContextBuilder
+AnswerGenerator
+Evaluator
+```
+
+### 关键边界
+
+#### Retriever
+
+当前实现：
+
+```text
+rag/search_chunks.py
+rag/vector_search_demo.py
+```
+
+未来替换：
+
+```text
+Azure OpenAI Embedding
+Azure AI Search
+hybrid search
+reranking
+```
+
+职责：
+
+```text
+Retriever 只负责找资料，返回 top k chunks。
+```
+
+#### AnswerGenerator
+
+当前实现：
+
+```text
+rag/answer_demo.py
+```
+
+未来替换：
+
+```text
+Azure OpenAI Chat Completion
+```
+
+职责：
+
+```text
+AnswerGenerator 只负责基于 context 生成 grounded answer。
+```
+
+#### Evaluator
+
+当前实现：
+
+```text
+rag/eval_questions.json
+rag/evaluate_demo.py
+rag/eval_report.md
+```
+
+未来扩展：
+
+```text
+citation accuracy
+hallucination check
+regression test
+Application Insights metrics
+```
+
+职责：
+
+```text
+Evaluator 负责验证 retrieval 和 answer 的质量。
+```
+
+### Retriever 和 AnswerGenerator 的区别
+
+```text
+Retriever 负责找资料。
+AnswerGenerator 负责基于资料生成回答。
+```
+
+例：
+
+```text
+问题：Kimi K3 权重发布有什么风险？
+```
+
+Retriever：
+
+```text
+从 data/news.json 和 news-history 中找 Kimi K3 相关 chunks。
+```
+
+AnswerGenerator：
+
+```text
+只基于 Retriever 找到的 chunks，总结许可、部署约束、运行成本、数据合规等风险，并加 citation。
+```
+
+### 为什么不要把 Azure API 调用写死在检索脚本里
+
+原因：
+
+- API key 和 endpoint 需要安全管理
+- timeout 和 rate limit 需要处理
+- retry policy 需要独立设计
+- embedding / chat completion 有成本
+- local 和 production 环境不同
+- 测试时不应该每次都调用 Azure
+- deployment name 和 model version 以后可能改变
+
+结论：
+
+```text
+Azure API 应该被封装在 component 的内部实现中。
+外层 pipeline 只依赖 input/output contract。
+```
+
+### 完成标准
+
+- `architecture.md` 里有 `Azure-ready Component Boundaries`
+- 能说明 Retriever 和 AnswerGenerator 的区别
+- 能说明为什么不要把 Azure API 调用写死在检索脚本里
+- 能说明哪些本地组件未来会被 Azure 替换
+
+### 作品集写法
+
+```text
+Defined Azure-ready component boundaries for the RAG pipeline, making local prototype components replaceable with Azure OpenAI and Azure AI Search services.
+```
+
+### 日文面试表达
+
+```text
+Azure API の呼び出しを検索処理に直接書くのではなく、責務ごとに component を分けることで、テスト、差し替え、障害対応をしやすくしました。
+```
+
+## Day 13: Azure AI Search Index Schema
+
+### 今天学什么
+
+设计 Azure AI Search 的 index schema，把当前 `chunks.jsonl` 映射成 Azure AI Search 可以保存和检索的 document fields。
+
+### 为什么学
+
+Azure AI Search 是后续 RAG 的检索层。它不只是保存 `content_vector`。
+
+RAG 的回答需要显示出处，所以 index 中必须同时保存：
+
+```text
+检索字段
+向量字段
+过滤字段
+citation metadata
+```
+
+否则即使检索到了相关 chunk，也无法说明回答依据来自哪里。
+
+### 已实现内容
+
+新增文件：
+
+```text
+rag/azure-search-schema.md
+```
+
+文档包含：
+
+- Purpose
+- Source Data
+- Fields
+- Field Usage
+- Citation Metadata
+- Example Index Document
+- Mapping from chunks.jsonl
+- Future Notes
+- Key Understanding
+- Portfolio Summary
+- 日文面试表达
+
+### 设计字段
+
+```text
+id
+document_id
+source
+title
+chunk_index
+text
+content_vector
+source_type
+heading
+published_at
+document_type
+```
+
+字段用途分类：
+
+```text
+Searchable:
+text, title, heading
+
+Vector Searchable:
+content_vector
+
+Filterable:
+source_type, published_at, document_type
+
+Retrievable / Citation:
+source, title, document_id, chunk_index, text
+```
+
+### 关键理解
+
+```text
+content_vector 用来找资料。
+citation metadata 用来证明资料来源。
+```
+
+Azure AI Search index 同时承担两件事：
+
+```text
+1. 找到相关 chunk
+2. 保留回答出处
+```
+
+如果只保存 `text` 和 `content_vector`，会出现以下问题：
+
+- 回答无法显示出处
+- 用户无法判断来源是否可信
+- evaluation 无法检查 expected source
+- 线上问题无法追踪回答依据
+- 企业场景无法审计
+
+### 完成标准
+
+- 有 `rag/azure-search-schema.md`
+- 能说明每个字段用途
+- 能说明哪些字段用于 text search
+- 能说明哪些字段用于 vector search
+- 能说明哪些字段用于 filter
+- 能说明哪些字段用于 citation
+- 能说明为什么不能只保存 text 和 vector
+
+### 作品集写法
+
+```text
+Designed an Azure AI Search index schema for chunk-level vector retrieval while preserving citation metadata for source traceability.
+```
+
+### 日文面试表达
+
+```text
+Azure AI Search の index には、検索用の text と content_vector だけでなく、回答の根拠を追跡するための source、title、document_id、chunk_index も保存する設計にしました。
+```
+
+## Day 14: Azure AI Search Indexing Payload
+
+### 今天学什么
+
+把本地 `rag/chunks.jsonl` 转换成未来可以上传到 Azure AI Search 的 document payload。
+
+### 为什么学
+
+`chunks.jsonl` 是本地 RAG prototype 的中间数据。Azure AI Search 需要符合 index schema 的 document。
+
+Day 14 的目标不是连接 Azure，而是先把数据边界准备好：
+
+```text
+rag/chunks.jsonl
+→ rag/azure_search_docs.jsonl
+```
+
+### 已实现内容
+
+新增脚本：
+
+```text
+rag/prepare_azure_search_docs.py
+```
+
+生成文件：
+
+```text
+rag/azure_search_docs.jsonl
+```
+
+运行命令：
+
+```bash
+python3 rag/prepare_azure_search_docs.py
+```
+
+当前运行结果：
+
+```text
+Loaded chunks: 1273
+Created Azure Search docs: 1273
+Source type counts:
+- current_news: 22
+- docs: 772
+- history_news: 479
+```
+
+### 输出字段
+
+每条 Azure Search document 包含：
+
+```text
+id
+document_id
+source
+title
+chunk_index
+text
+content_vector
+source_type
+heading
+published_at
+document_type
+```
+
+其中：
+
+```text
+content_vector = []
+```
+
+暂时留空。后续接 Azure OpenAI Embedding 时再填入真实 vector。
+
+### 字段推导
+
+`source_type` 根据 `source` 推导：
+
+```text
+docs/... → docs
+data/news.json#... → current_news
+data/news-history.json#... → history_news
+```
+
+`document_type` 根据 `source_type` 推导：
+
+```text
+docs → markdown
+current_news / history_news → news_item
+```
+
+`heading` 当前从 chunk text 中的 Markdown heading 推导；没有 heading 时使用 title。
+
+`published_at` 当前从 news chunk text 中的 `发布时间:` 提取；docs 为 null。
+
+### 关键理解
+
+Indexing payload 是 Azure AI Search 的输入数据格式。
+
+```text
+本地 chunk
+→ Azure Search document
+→ 后续 upload/indexing
+```
+
+Day 14 只准备 payload，不调用 Azure API。
+
+### 完成标准
+
+- 有 `rag/prepare_azure_search_docs.py`
+- 有 `rag/azure_search_docs.jsonl`
+- 每条数据保留 citation metadata
+- 每条数据预留 `content_vector`
+- 能说明这是 Azure AI Search indexing payload
+
+### 作品集写法
+
+```text
+Prepared Azure AI Search indexing payloads from local RAG chunks, preserving citation metadata and reserving vector fields for embedding-based retrieval.
+```
+
+### 日文面试表达
+
+```text
+ローカルで作成した chunk データを Azure AI Search に登録しやすい document 形式に変換し、citation 用の metadata と embedding 用の vector field を保持しました。
+```
+
+## Day 15: Azure OpenAI Embedding 接入设计
+
+### 今天学什么
+
+设计 `EmbeddingProvider` 边界，明确本地 mock embedding 和未来 Azure OpenAI Embedding 实现的差异。
+
+### 为什么学
+
+Day 14 已经把本地 chunks 转成 Azure AI Search indexing payload，并预留了：
+
+```text
+content_vector
+```
+
+但 `content_vector` 不能随便填，也不能直接在检索脚本里硬写 Azure API 调用。
+
+原因：
+
+- Azure OpenAI API 需要 API key、endpoint 和 deployment 配置
+- API 调用会有 timeout、retry、rate limit 问题
+- embedding 会产生费用
+- local test 不应该每次都依赖真实 Azure
+- 后续 model version 或 deployment name 可能变化
+
+所以需要先设计一个清楚的 provider 边界：
+
+```text
+text
+→ EmbeddingProvider
+→ list[float]
+→ content_vector
+```
+
+### 已实现内容
+
+新增设计文档：
+
+```text
+rag/embedding-provider-design.md
+```
+
+更新架构文档：
+
+```text
+rag/architecture.md
+```
+
+新增的架构组件：
+
+```text
+EmbeddingProvider
+```
+
+### EmbeddingProvider 的职责
+
+```text
+把 text 转成 embedding vector。
+```
+
+输入：
+
+```text
+text: string
+```
+
+输出：
+
+```text
+list[float]
+```
+
+它不负责：
+
+- 搜索资料
+- 构建 context
+- 生成回答
+- 判断回答是否正确
+
+这些分别属于：
+
+```text
+Retriever
+ContextBuilder
+AnswerGenerator
+Evaluator
+```
+
+### 本地 mock 和 Azure OpenAI 的区别
+
+当前本地实现：
+
+```text
+rag/vector_search_demo.py
+```
+
+作用：
+
+```text
+用本地词频向量模拟 embedding，帮助理解 vector search 流程。
+```
+
+特点：
+
+- 不需要 API key
+- 不产生费用
+- 适合本地学习和测试
+- 不是真正的 semantic embedding
+
+未来 Azure 实现：
+
+```text
+AzureOpenAIEmbeddingProvider
+```
+
+作用：
+
+```text
+调用 Azure OpenAI Embedding，把 chunk text 和 user query 转成真实语义向量。
+```
+
+特点：
+
+- 语义检索效果更好
+- 需要 Azure OpenAI endpoint / API key / deployment
+- 需要处理 timeout / retry / rate limit
+- 需要成本控制
+
+### 需要的环境变量
+
+未来接 Azure 时，连接信息不写死在代码里，而是从环境变量读取：
+
+```text
+AZURE_OPENAI_ENDPOINT
+AZURE_OPENAI_API_KEY
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT
+AZURE_OPENAI_API_VERSION
+```
+
+重要原则：
+
+```text
+API key 不写进代码，不 commit 到 git。
+```
+
+### Error Handling 设计
+
+embedding 生成时需要考虑：
+
+```text
+empty text
+text too long
+timeout
+rate limit
+temporary service error
+invalid API key / endpoint
+failure rate too high
+```
+
+关键原则：
+
+```text
+embedding 失败时不能悄悄写入空 vector。
+```
+
+否则后续检索质量变差时，很难发现真正原因。
+
+### Cost Control 设计
+
+当前已经有：
+
+```text
+1273 chunks
+```
+
+新闻每天会更新，所以不能每天对所有 chunks 重新生成 embedding。
+
+成本控制方案：
+
+- 用 `chunk_id + text_hash + deployment + api_version` 做 cache key
+- text 没变化的 chunk 不重新 embedding
+- 只处理新增或变化的新闻 chunk
+- 使用 batch embedding 减少 API 调用次数
+- 失败 chunk 进入 retry queue
+
+### 关键理解
+
+Azure OpenAI Embedding 和 Azure AI Search 的区别：
+
+```text
+Azure OpenAI Embedding:
+把 text 转成 vector。
+
+Azure AI Search:
+保存 vector 和 metadata，并根据 query vector 检索 top k chunks。
+```
+
+EmbeddingProvider 和 Retriever 的区别：
+
+```text
+EmbeddingProvider 负责把 text 变成 vector。
+Retriever 负责根据 question 找到相关 chunks。
+```
+
+### 为什么不要把 Azure API 调用写死在检索脚本里
+
+原因：
+
+- API key 管理不安全
+- local test 会依赖 Azure
+- evaluation 每次运行都会产生成本
+- retry / rate limit 逻辑会分散在多个脚本里
+- 以后更换 model 或 deployment 时改动范围大
+- production 出问题时不好排查
+
+正确做法：
+
+```text
+检索脚本只依赖 provider interface。
+具体使用 local mock 还是 Azure OpenAI，由 provider 实现决定。
+```
+
+### 完成标准
+
+- 有 `rag/embedding-provider-design.md`
+- `rag/architecture.md` 中补充了 `EmbeddingProvider`
+- 能说明 `EmbeddingProvider` 的输入输出
+- 能说明 local mock 和 Azure OpenAI embedding 的区别
+- 能说明为什么 API key 不能写进代码
+- 能说明 retry、rate limit、cache、batch 的必要性
+- 能说明 `content_vector` 后续如何生成
+
+### 作品集写法
+
+```text
+Designed an embedding provider boundary to separate local prototyping from Azure OpenAI embedding integration, considering retry, rate limit, cost control, and secret management.
+```
+
+### 日文面试表达
+
+```text
+Embedding の処理を provider として分離し、ローカル検証用の mock 実装と Azure OpenAI 用の実装を差し替えられる設計にしました。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -1128,6 +1798,10 @@ RAG の処理全体を、ドキュメント読み込み、chunking、検索、ci
 - Day 9: RAG Evaluation 入门
 - Day 10: Evaluation Report
 - Day 11: RAG Pipeline 架构整理
+- Day 12: Azure 化前の接口边界设计
+- Day 13: Azure AI Search Index Schema
+- Day 14: Azure AI Search Indexing Payload
+- Day 15: Azure OpenAI Embedding 接入设计
 
 ### 当前已生成或新增的文件
 
@@ -1144,6 +1818,10 @@ rag/eval_questions.json
 rag/evaluate_demo.py
 rag/eval_report.md
 rag/architecture.md
+rag/azure-search-schema.md
+rag/prepare_azure_search_docs.py
+rag/azure_search_docs.jsonl
+rag/embedding-provider-design.md
 rag/learning-notes.md
 ```
 
@@ -1157,18 +1835,22 @@ AI Watchtower RAG Assistant 目前可以读取 docs 和 data 中的知识库内�
 系统现在可以用测试问题评估 source hit rate、citation 覆盖和资料不足处理。
 评估结果已经整理成日语报告，包含失败原因和下一步改进方向。
 当前 RAG pipeline 已整理成架构文档，覆盖输入输出、组件职责、限制和 Azure 化路线。
+架构文档中已经补充 Azure-ready component boundaries，明确本地实现和 Azure 替换点。
+Azure AI Search index schema 已完成，明确 text/vector/filter/citation 字段设计。
+本地 chunks 已转换成 Azure AI Search indexing payload，并预留 content_vector 字段。
+EmbeddingProvider 边界设计已完成，明确 local mock 和 Azure OpenAI Embedding 的替换方式，并考虑 retry、rate limit、cost control 和 secret management。
 ```
 
 ### 下一步
 
-Day 12 建议进入：
+Day 16 建议进入：
 
 ```text
-准备 Azure 化前的接口边界。
+Embedding cache / batch indexing 设计。
 ```
 
 目标是理解：
 
 ```text
-先定义组件职责和替换边界，再逐步把本地实现替换为 Azure OpenAI / Azure AI Search。
+如何只为新增或变化的 chunks 生成 embedding，避免每天全量重算导致成本增加。
 ```

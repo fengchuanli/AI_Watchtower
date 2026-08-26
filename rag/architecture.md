@@ -46,6 +46,14 @@ Grounded Answer Draft
 rag/evaluate_demo.py
         ↓
 rag/eval_report.md
+        ↓
+rag/prepare_azure_search_docs.py
+        ↓
+rag/azure_search_docs.jsonl
+        ↓
+rag/embedding-provider-design.md
+        ↓
+Future: Azure OpenAI Embedding fills content_vector
 ```
 
 ## Pipeline Steps
@@ -60,6 +68,8 @@ rag/eval_report.md
 | Answer Drafting | `rag/answer_demo.py` | Question, citation-aware context | Grounded answer draft | 検索された context の範囲だけで保守的な回答草稿を作る |
 | Evaluation | `rag/evaluate_demo.py` | `rag/eval_questions.json`, retriever output | PASS / FAIL, source hit rate | expected source に到達できたか、citation があるかを評価する |
 | Evaluation Report | `rag/eval_report.md` | Evaluation results | Human-readable report | 評価結果、失敗原因、改善方針を日語で整理する |
+| Azure Search Payload | `rag/prepare_azure_search_docs.py` | `rag/chunks.jsonl` | `rag/azure_search_docs.jsonl` | Azure AI Search に登録しやすい document payload に変換し、`content_vector` を予約する |
+| Embedding Provider Design | `rag/embedding-provider-design.md` | text | vector | local mock と Azure OpenAI embedding の差し替え境界を定義する |
 
 ## Data Sources
 
@@ -221,6 +231,43 @@ CHUNK_OVERLAP = 120
 - token-based chunking
 - document type 別 chunking
 
+### EmbeddingProvider
+
+対応ファイル:
+
+```text
+rag/embedding-provider-design.md
+rag/vector_search_demo.py
+```
+
+責務:
+
+- text を embedding vector に変換する
+- local mock と Azure OpenAI embedding の差し替え境界を定義する
+- retry、rate limit、timeout、cost control、secret management を考慮する
+
+現在の実装:
+
+```text
+rag/vector_search_demo.py
+```
+
+現在は本物の embedding ではなく、local term-frequency vector で vector search の流れを確認しています。
+
+将来の Azure 化:
+
+```text
+AzureOpenAIEmbeddingProvider
+```
+
+重要点:
+
+```text
+EmbeddingProvider は検索しない。
+EmbeddingProvider は回答を生成しない。
+EmbeddingProvider は text を vector に変換するだけ。
+```
+
 ### Retriever
 
 対応ファイル:
@@ -328,6 +375,404 @@ Failed: 2
 Evaluation pass rate: 60.0%
 Source hit rate: 50.0%
 Insufficient-evidence cases passed: 1/1
+```
+
+## Azure-ready Component Boundaries
+
+Azure 化する前に、各処理を component として分けておく理由は、ローカル prototype をそのままクラウドに貼り替えるのではなく、責務ごとに安全に差し替えられるようにするためです。
+
+特に Azure API は認証、コスト、timeout、retry、rate limit、secret management、環境差異を伴います。そのため、検索処理や回答生成処理の中に API 呼び出しを直接書き込むのではなく、component boundary を明確にしておきます。
+
+### Boundary Summary
+
+| Component | Current local implementation | Future Azure replacement | Boundary |
+|---|---|---|---|
+| DocumentLoader | `rag/ingest_docs.py` | Blob Storage, scheduled ingestion, Azure Functions trigger | source documents を読み込み、統一 document に変換する |
+| Chunker | `rag/chunk_docs.py` | Azure-hosted ingestion job or Functions batch process | document を metadata 付き chunks に変換する |
+| EmbeddingProvider | `rag/vector_search_demo.py` concept, `rag/embedding-provider-design.md` | Azure OpenAI Embedding | text を embedding vector に変換する |
+| Retriever | `rag/search_chunks.py`, `rag/vector_search_demo.py` | Azure OpenAI Embedding + Azure AI Search | query に関連する chunks を返す |
+| ContextBuilder | `rag/build_context.py` | Mostly reusable application logic | retrieved chunks を citation-aware context に整形する |
+| AnswerGenerator | `rag/answer_demo.py` | Azure OpenAI Chat Completion | context に基づいて grounded answer を生成する |
+| Evaluator | `rag/evaluate_demo.py`, `rag/eval_questions.json` | CI/regression evaluation, Application Insights metrics | retrieval / citation / insufficient evidence を評価する |
+
+### DocumentLoader Boundary
+
+責務:
+
+```text
+source documents を読み込み、RAG が扱いやすい document 形式に変換する。
+```
+
+現在:
+
+```text
+docs/*.md
+data/news.json
+data/news-history.json
+→ rag/corpus.jsonl
+```
+
+Azure 化後:
+
+```text
+Blob Storage
+scheduled ingestion
+Azure Functions timer trigger
+→ normalized documents
+```
+
+置き換え境界:
+
+```text
+DocumentLoader の output は id/source/title/text を持つ document list に固定する。
+読み込み元が local file でも Blob Storage でも、後続の Chunker は同じ形で受け取れるようにする。
+```
+
+### Chunker Boundary
+
+責務:
+
+```text
+document text を検索しやすい chunk に分割し、citation に必要な metadata を保持する。
+```
+
+現在:
+
+```text
+rag/corpus.jsonl
+→ fixed-size chunking
+→ rag/chunks.jsonl
+```
+
+Azure 化後:
+
+```text
+Azure-hosted ingestion process
+→ heading-aware / token-based chunks
+→ Azure AI Search indexing payload
+```
+
+置き換え境界:
+
+```text
+Chunker の output は id/document_id/source/title/chunk_index/text を持つ chunk list に固定する。
+```
+
+今後追加したい metadata:
+
+```text
+source_type
+heading
+published_at
+document_type
+```
+
+### EmbeddingProvider Boundary
+
+責務:
+
+```text
+text を embedding vector に変換する。
+```
+
+現在:
+
+```text
+rag/vector_search_demo.py
+→ local term-frequency vector
+→ cosine similarity の理解用 prototype
+```
+
+将来:
+
+```text
+AzureOpenAIEmbeddingProvider
+→ Azure OpenAI Embedding
+→ content_vector
+```
+
+置き換え境界:
+
+```text
+EmbeddingProvider の input は text、output は list[float] に固定する。
+provider の中身が local mock でも Azure OpenAI でも、Retriever や indexing job は同じ interface で扱う。
+```
+
+必要な環境変数:
+
+```text
+AZURE_OPENAI_ENDPOINT
+AZURE_OPENAI_API_KEY
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT
+AZURE_OPENAI_API_VERSION
+```
+
+設計で考慮する点:
+
+```text
+retry
+timeout
+rate limit handling
+batch embedding
+cache by chunk_id + text_hash + deployment
+secret management
+```
+
+重要:
+
+```text
+EmbeddingProvider は検索しない。
+EmbeddingProvider は回答も生成しない。
+EmbeddingProvider は text を vector に変換するだけ。
+```
+
+詳細:
+
+```text
+rag/embedding-provider-design.md
+```
+
+### Retriever Boundary
+
+責務:
+
+```text
+user query に関連する top k chunks を返す。
+```
+
+現在:
+
+```text
+keyword retrieval
+local term-frequency vector search
+```
+
+Azure 化後:
+
+```text
+Azure OpenAI Embedding
+Azure AI Search vector search
+hybrid search
+reranking
+```
+
+置き換え境界:
+
+Retriever の入力:
+
+```text
+question
+top_k
+optional filters
+```
+
+Retriever の出力:
+
+```text
+score
+id
+document_id
+source
+title
+chunk_index
+text
+```
+
+重要:
+
+```text
+Retriever は回答を生成しない。
+Retriever は「資料を探す」component であり、LLM による文章生成は AnswerGenerator の責務。
+```
+
+Azure API を Retriever に直接書き込まない理由:
+
+```text
+Azure API は認証、コスト、timeout、retry、rate limit、環境差異を伴う。
+Retriever boundary を保つことで、local retriever、Azure AI Search retriever、test retriever を差し替えやすくなる。
+```
+
+### ContextBuilder Boundary
+
+責務:
+
+```text
+retrieved chunks を LLM に渡せる citation-aware context に整形する。
+```
+
+現在:
+
+```text
+Top K chunks
+→ [1] [2] citation context
+```
+
+Azure 化後:
+
+この component は基本的に application logic として再利用できます。
+
+置き換え境界:
+
+```text
+Retriever が local 実装でも Azure AI Search でも、同じ chunk result 形式を返せば ContextBuilder はそのまま使える。
+```
+
+重要:
+
+```text
+ContextBuilder は検索もしない。
+ContextBuilder は回答も生成しない。
+ContextBuilder は retrieved chunks を根拠として使いやすい形に整えるだけ。
+```
+
+### AnswerGenerator Boundary
+
+責務:
+
+```text
+citation-aware context の範囲だけを使って grounded answer を生成する。
+```
+
+現在:
+
+```text
+rag/answer_demo.py
+template-based conservative answer
+```
+
+Azure 化後:
+
+```text
+Azure OpenAI Chat Completion
+grounded prompt
+insufficient evidence handling
+citation validation
+```
+
+置き換え境界:
+
+AnswerGenerator の入力:
+
+```text
+question
+citation-aware context
+citations
+```
+
+AnswerGenerator の出力:
+
+```text
+answer
+used_citations
+insufficient_evidence flag
+```
+
+重要:
+
+```text
+AnswerGenerator は資料を探さない。
+AnswerGenerator は Retriever が返した context の範囲だけで回答する。
+```
+
+Azure API を AnswerGenerator に閉じ込める理由:
+
+```text
+LLM API は token cost、timeout、safety behavior、model version、prompt 変更の影響を受ける。
+AnswerGenerator boundary を作ることで、template prototype と Azure OpenAI 実装を安全に差し替えられる。
+```
+
+### Evaluator Boundary
+
+責務:
+
+```text
+retrieval と answer の品質を継続的に確認する。
+```
+
+現在:
+
+```text
+rag/eval_questions.json
+rag/evaluate_demo.py
+rag/eval_report.md
+```
+
+評価対象:
+
+```text
+source hit rate
+citation coverage
+insufficient evidence handling
+```
+
+Azure 化後:
+
+```text
+regression test
+citation accuracy
+hallucination check
+retrieval score monitoring
+Application Insights metrics
+```
+
+置き換え境界:
+
+```text
+Evaluator は retriever や answer generator の実装詳細に依存しすぎない。
+local implementation でも Azure implementation でも同じ eval questions で比較できるようにする。
+```
+
+### Retriever と AnswerGenerator の違い
+
+最重要の区別:
+
+```text
+Retriever は資料を探す。
+AnswerGenerator は資料に基づいて回答を書く。
+```
+
+例:
+
+```text
+質問: Kimi K3 权重发布有什么风险？
+```
+
+Retriever の仕事:
+
+```text
+Kimi K3 に関連する chunk を data/news.json や news-history から探す。
+```
+
+AnswerGenerator の仕事:
+
+```text
+Retriever が返した chunk の範囲だけを使って、许可、部署约束、运行成本、数据合规などのリスクを citation 付きで説明する。
+```
+
+この区別を守る理由:
+
+```text
+検索と回答生成を混ぜると、テスト、差し替え、失敗分析が難しくなる。
+検索が悪いのか、context が悪いのか、LLM 回答が悪いのかを切り分けられなくなる。
+```
+
+### なぜ Azure API 呼び出しを検索スクリプトに直接書かないか
+
+理由:
+
+- Azure API key や endpoint を安全に管理する必要がある
+- timeout や rate limit に対応する必要がある
+- retry policy が必要になる
+- embedding や chat completion にはコストがかかる
+- local development と production で実行環境が違う
+- テスト時に毎回 Azure API を呼ぶと遅く、費用もかかる
+- model version や deployment name を変更しやすくする必要がある
+
+結論:
+
+```text
+Azure API は component の内部実装として閉じ込める。
+外側の pipeline は input/output contract にだけ依存する。
 ```
 
 ## Current Limitations
