@@ -1,8 +1,1000 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-27",
-  "totalItems": 570,
+  "updatedAt": "2026-08-28",
+  "totalItems": 581,
   "editions": [
+    {
+      "id": "news-1700-2026-08-28",
+      "date": "2026-08-28",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦安全防御、评测可信度、AI入口、物理AI、成本和基建约束。",
+      "operationalStatus": "GitHub DNS 阻断拉取；已核查官方/可靠媒体来源、历史 URL 去重和来源角色，本期发布 11 条安全非重复信号。",
+      "editorialInterpretation": "本期达到 11 条安全非重复信号；官方原文核对发布动作，Axios 项仅作市场与治理雷达。",
+      "readerFrame": {
+        "headline": "AI 控制面继续向防御、评测、语音和基建扩展",
+        "whyItMatters": "今天的信号说明，AI 竞争不只在模型能力，还在网络防御、评测证据、语音/视频入口、实体硬件、区域运营、成本控制和社会许可。",
+        "useThisIssueFor": [
+          "安全与政策团队检查关键基础设施防御、影响行动和模型评测证据链。",
+          "产品与工程团队评估 Gemini 视频/语音 API、Microduck 物理 AI 和企业 AI 成本控制。",
+          "基础设施和财务团队核对 AI capex、表外承诺、数据中心许可和地方反弹。"
+        ],
+        "notProvenYet": [
+          "不证明公开信已经转化为资金、工具或监管执行。",
+          "不证明 Google/Pollen/OpenAI 的效果主张已经被第三方复现。",
+          "不证明媒体报道的资本承诺、企业成本或影响行动细节已由原始文件完整确认。"
+        ],
+        "mobile": {
+          "headline": "本期查 AI 控制面",
+          "summary": "网络防御、评测、视频、语音、物理AI、区域运营、成本和数据中心进入同一轮核查。",
+          "primaryUses": [
+            "安全团队查防御",
+            "产品团队查入口",
+            "财务团队查基建"
+          ],
+          "proofBoundary": "仍需政府文件、技术报告、第三方评测、客户日志、合同、filings、许可和交付记录"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版从事故后续转向防御与评测制度",
+        "freshFacts": [
+          "本批新增事实：OpenAI 发布百余组织共同签署的 AI 网络防御公开信。",
+          "本批新增事实：Google DeepMind 宣布双盲前沿模型评测试点。",
+          "本批新增事实：Google 发布 Gemini Omni 1.1 Flash 与 Gemini 3.5 Transcribe。",
+          "本批新增事实：Pollen Robotics 发布 Microduck 开源双足机器人预售。"
+        ],
+        "repeatedContext": [
+          "延续上一版 OpenAI Hugging Face 事故、Prompt Injection、GhostJacking 和影响行动治理主线。",
+          "延续上一版数据中心社会许可、Anthropic/Nscale 算力和企业 Agent 控制面主线。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查安全与评测证据",
+          "count": 3,
+          "meaning": "用来更新关键基础设施防御、双盲评测和影响行动核查清单。"
+        },
+        {
+          "label": "评估工具入口",
+          "count": 3,
+          "meaning": "用来评估 Gemini 视频/语音 API、Microduck 和开发者工作流边界。"
+        },
+        {
+          "label": "核对采用证据",
+          "count": 2,
+          "meaning": "用来核对教育实验、巴西商业运营和采用数据的外部证据。"
+        },
+        {
+          "label": "验证成本与基建风险",
+          "count": 3,
+          "meaning": "用来检查企业 AI 成本、AI capex、表外承诺和数据中心社会许可。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源过半，效果仍需外证",
+        "note": "本期 7 条官方/公司原文可核对发布动作、公开数字和自述能力，4 条 Axios 媒体背景只适合做市场与治理雷达。",
+        "nextCheck": "用政府指南、技术报告、第三方评测、客户日志、filings、合同、许可、交付记录和审计材料交叉复核。"
+      },
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "AI 安全从事故披露进入制度化防御",
+          "note": "跨期看，Hugging Face 事故、OpenAI 网络防御公开信、Google 双盲评测和 Meta 影响行动线索都在强化“可验证控制面”。",
+          "boundary": "这不证明治理机制已经有效；仍需政府文件、独立评测、IOC、审计日志和事故响应数据。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "入口扩展",
+          "note": "跨期看，Slack Code、Gemini Enterprise、Gemini Omni、Gemini Transcribe 和 Microduck 连续指向开发者入口从协作扩到多模态、语音和物理硬件。",
+          "boundary": "这不证明生产质量或出货可靠；仍需第三方评测、真实项目日志、交付记录和用户侧复现。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "AI 成本和社会许可继续压住扩张节奏",
+          "note": "Axios 的 Uber 成本、表外承诺和数据中心反弹延续近期算力锁仓与地方许可主线。",
+          "boundary": "这不证明所有项目都会延期；仍需 filings、合同、电力协议、许可和建设进度数据。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "防御、评测和影响行动同框",
+          "status": "stronger",
+          "previousPattern": "上一版记录 OpenAI Hugging Face 事故后续、影响行动和 Prompt Injection 议题。",
+          "currentSignal": "本期新增 OpenAI 集体网络防御信、DeepMind 双盲评测和 Meta 伊朗关联行动媒体信号。",
+          "signalDirection": "增强：政策控制面从事故复盘扩展到防御资源、评测流程和平台完整性。",
+          "stillUnproven": "仍需政府指南、技术报告、IOC、第三方评测、审计日志和监管文件。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "多模态入口更接近生产工具链",
+          "status": "stronger",
+          "previousPattern": "此前记录 Slack Code、Gemini Enterprise、Agent Identity 和 Mistral 检索线索。",
+          "currentSignal": "本期新增 Gemini Omni 1.1 Flash、Gemini 3.5 Transcribe 和 Microduck。",
+          "signalDirection": "增强：工具入口从协作和检索扩展到视频、语音和实体机器人。",
+          "stillUnproven": "仍需 API 文档、价格页、第三方测试、客户日志、开源代码活跃度和交付记录。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "成本、资本和数据中心阻力并行",
+          "status": "stronger",
+          "previousPattern": "上一版记录 Anthropic/Nscale 算力、Axios 数据中心专题和 OpenAI 全栈算力。",
+          "currentSignal": "本期新增 Uber 成本控制、AI 表外承诺和数据中心社会许可背景。",
+          "signalDirection": "增强：基础设施约束从容量扩展到预算、会计、社区和许可。",
+          "stillUnproven": "仍需公司 filings、合同、电力协议、地方许可、建设进度和客户侧成本日志。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "从事故复盘转向防御倡议和区域运营",
+          "lastMention": "上一版记录 Hugging Face 事故后续、影响行动和算力控制面。",
+          "whatChanged": "本期新增网络防御公开信、教育实验摘要和巴西商业运营。",
+          "stillUnproven": "仍需政府/签署方行动、论文复现、客户合同、使用审计和区域监管材料。"
+        },
+        {
+          "company": "Google",
+          "label": "评测和入口扩张",
+          "lastMention": "上一版记录 Google IP 立场和行业 Agent 相关线索。",
+          "whatChanged": "本期新增 DeepMind 双盲评测、Gemini Omni 1.1 Flash 和 Gemini 3.5 Transcribe。",
+          "stillUnproven": "仍需技术报告、第三方测试、API 日志、价格页和企业客户评估。"
+        },
+        {
+          "company": "Meta",
+          "label": "平台治理与数据中心压力继续交汇",
+          "lastMention": "历史版记录 Meta 个人超级智能愿景和数据中心项目。",
+          "whatChanged": "本期新增 Axios 对伊朗关联 AI 影响行动和 Big Tech/数据中心反弹的媒体背景。",
+          "stillUnproven": "仍需 Meta 原始报告、IOC、政府归因、地方许可、诉讼文件和项目进度。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/公司原文",
+          "count": 7,
+          "role": "OpenAI、Google/DeepMind 和 Pollen 支持核对发布动作、公开数字、产品能力和作者自述；效果、采用和安全成效仍需外证。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体背景",
+          "count": 4,
+          "role": "Axios 用于市场、治理、成本和平台安全雷达；完整事实、采访、数据和上下文仍属于原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "安全、评测与平台治理",
+          "count": 4,
+          "itemIds": [
+            "openai-collective-cyber-defense-letter-2026-08-28",
+            "deepmind-double-blind-evaluation-2026-08-28",
+            "axios-meta-iran-ai-influence-operation-2026-08-28",
+            "axios-big-tech-ai-resistance-2026-08-28"
+          ],
+          "meaning": "用来更新关键基础设施防御、模型评测、影响行动和数据中心社会许可检查表。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "视频、语音与物理AI工具",
+          "count": 3,
+          "itemIds": [
+            "google-gemini-omni-1-1-flash-2026-08-28",
+            "google-gemini-3-5-transcribe-2026-08-28",
+            "pollen-microduck-open-source-robot-2026-08-28"
+          ],
+          "meaning": "用来评估开发者入口、API 成本、真实质量、开源代码和交付边界。"
+        },
+        {
+          "id": "enterprise",
+          "label": "教育、区域运营与企业成本",
+          "count": 3,
+          "itemIds": [
+            "openai-student-critical-thinking-study-2026-08-28",
+            "openai-brazil-commercial-operations-2026-08-28",
+            "axios-uber-ai-cost-control-2026-08-28"
+          ],
+          "meaning": "用来检查 AI 采用是否有教学、区域商业化和企业运营证据。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "资本与数据中心",
+          "count": 1,
+          "itemIds": [
+            "axios-big-tech-ai-off-balance-spending-2026-08-28"
+          ],
+          "meaning": "用来核对 AI capex、表外承诺、租赁和供货合同证据。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 4,
+        "share": "4/11",
+        "note": "本期没有单一来源超过三分之二；Axios 是最大单一媒体来源，4 条仅用于背景雷达。",
+        "nextCheck": "用官方报告、filings、合同、许可、客户日志和第三方评测复核 Axios 线索。"
+      },
+      "overreadBoundary": {
+        "label": "官方原文较多，别读成效果确认",
+        "body": "不要把本期读成全市场结论；本期官方/公司原文超过半数，适合核对发布动作、公开数字和自述能力，媒体项只提供市场与治理雷达。",
+        "doNotConclude": "不要据此认定防御倡议已落地、模型评测已成为行业标准、视频/语音/机器人效果已被独立验证，或 AI 基建风险已有定论。",
+        "useInstead": "应该继续核对政府指南、技术报告、第三方评测、客户日志、filings、合同、许可、PPA、交付记录和审计材料。"
+      },
+      "items": [
+        {
+          "id": "axios-big-tech-ai-resistance-2026-08-28",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：数据中心扩张让 Big Tech 遭遇更强社会许可压力",
+          "body": "Axios 报道称 Meta 重大和解、地方反弹和数据中心建设压力正在让 AI 行业重新面对 Big Tech 监管阻力。",
+          "summary": "Axios 报道称 Meta 重大和解、地方反弹和数据中心建设压力正在让 AI 行业重新面对 Big Tech 监管阻力。",
+          "whyItMatters": "AI 基础设施能否上线，越来越取决于地方社区、电力、水资源、监管和公众信任。",
+          "detailBody": "Axios 8 月 27 日报道称，Big Tech 正遭遇更强监管与公众反弹，而 AI 行业尤其依赖需要大量电力的数据中心。报道把 Meta 和解、社区反对与 Wall Street 对延迟风险的关注放在同一背景下。\n\n本站只把它作为社会许可背景，不把单篇报道扩展成全部市场结论。",
+          "trend": "数据中心从技术部署问题变成政治经济问题：电力、土地、就业、地方税收和居民信任都会影响 AI 容量。",
+          "detailTrend": "它延续前几期数据中心反弹和算力资本开支线索，提醒读者把社会许可当作 AI 供应链约束。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "媒体背景能帮助读者理解为什么 AI capex、能源项目和平台监管会互相影响。",
+          "topReason": "社会许可正在变成 AI 基建约束；下一步要看地方许可、电力协议、诉讼和项目延期记录。",
+          "detailWhyRanked": "媒体背景能帮助读者理解为什么 AI capex、能源项目和平台监管会互相影响。 Axios AI / Technology 支持核对来源事实；更强结论仍需 地方许可文件、电力互联申请、诉讼/和解文件、银行研究原文、项目延期或取消记录。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体背景有用，但需项目级文件验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体背景有用，但需项目级文件验证。"
+          },
+          "impact": "数据中心、云采购、政策和公共事务团队需要把社区沟通、许可、能源和平台监管纳入部署时间表。",
+          "whoShouldCare": "负责 AI 数据中心选址、电力采购、公共事务、政策风险和云容量规划的团队应该关注。",
+          "readerUse": "负责 AI 数据中心选址、电力采购、公共事务、政策风险和云容量规划的团队可用该信号检查项目许可、社区反馈、电力接入、诉讼风险和企业公关叙事。",
+          "nextCheck": "地方许可文件、电力互联申请、诉讼/和解文件、银行研究原文、项目延期或取消记录",
+          "followUpQuestions": [
+            "哪些 AI 数据中心项目已出现许可延迟、诉讼或电力接入瓶颈？",
+            "企业是否把社区利益、用水用电和透明度写进可核对承诺？"
+          ],
+          "evidenceThreshold": "需要项目许可、电力文件、法院材料和建设进度数据，才能升级为已确认的基础设施约束。",
+          "claimBoundary": "当前不证明所有 AI 数据中心都会被阻止，也不证明 Meta 和解直接导致 AI 项目延期。",
+          "counterEvidence": "如果后续地方许可文件、电力互联申请、诉讼/和解文件不支持当前说法，应下调为待核验背景信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "Axios AI / Technology 只用于市场和事件背景；完整事实、采访、图表、数据和上下文仍属于原文，本站只保留最小事实和中文判断。",
+          "sourceUrl": "https://www.axios.com/2026/08/27/meta-settlement-big-tech-ai-backlash-data-centers",
+          "originalUrl": "https://www.axios.com/2026/08/27/meta-settlement-big-tech-ai-backlash-data-centers",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T10:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 10:00 JST",
+          "tags": [
+            "数据中心",
+            "社会许可",
+            "AI监管"
+          ],
+          "companies": [
+            "Meta",
+            "Google",
+            "Microsoft",
+            "Amazon"
+          ]
+        },
+        {
+          "id": "axios-meta-iran-ai-influence-operation-2026-08-28",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：Meta 移除伊朗关联 AI 影响行动账号",
+          "body": "Axios 报道 Meta 移除 4 个 Facebook 和 31 个 Instagram 账号，称其使用 AI 内容冒充美国人并面向美国政治受众。",
+          "summary": "Axios 报道 Meta 移除 4 个 Facebook 和 31 个 Instagram 账号，称其使用 AI 内容冒充美国人并面向美国政治受众。",
+          "whyItMatters": "影响行动正在把生成式内容、虚假 persona、代理基础设施和平台检测放到同一条攻防链里。",
+          "detailBody": "Axios 8 月 27 日报道称，Meta 向其披露一个伊朗关联行动：4 个 Facebook 账号和 31 个 Instagram 账号冒充美国普通用户，使用 AI 生成政治内容。\n\n报道还称该网络利用美国和加拿大代理/托管服务隐藏来源。本站把它作为媒体背景，等待 Meta 威胁报告、IOC 或政府归因补证。",
+          "trend": "AI 影响行动的重点不只是内容生成，而是身份伪装、受众积累、跨平台基础设施和早期发现。",
+          "detailTrend": "OpenAI 俄罗斯 IBI 案和 Meta 伊朗案共同显示，平台治理要追踪模型生成痕迹，也要追踪账号、代理、托管和传播路径。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "它补充了 OpenAI 影响行动线索，适合政策和平台安全团队更新 AI 选举/舆论风险清单。",
+          "topReason": "Meta 案例显示 AI persona 仍在被用于政治影响行动；下一步要看 Meta 原始报告和政府归因。",
+          "detailWhyRanked": "它补充了 OpenAI 影响行动线索，适合政策和平台安全团队更新 AI 选举/舆论风险清单。 Axios AI / Technology 支持核对来源事实；更强结论仍需 Meta Adversarial Threat Report、IOC、政府归因、其他平台同步披露和受影响用户通知记录。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体独家有价值，但官方报告未完全核对。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体独家有价值，但官方报告未完全核对。"
+          },
+          "impact": "平台安全、公共政策和竞选安全团队应检查虚假身份、AI 内容标记、代理基础设施和用户通知流程。",
+          "whoShouldCare": "负责平台完整性、选举安全、威胁情报、公共政策和品牌风险的团队应该关注。",
+          "readerUse": "负责平台完整性、选举安全、威胁情报、公共政策和品牌风险的团队可用该信号更新 AI 影响行动监控指标、账号关联分析、代理服务规则和跨平台情报共享。",
+          "nextCheck": "Meta Adversarial Threat Report、IOC、政府归因、其他平台同步披露和受影响用户通知记录",
+          "followUpQuestions": [
+            "Meta 是否发布完整威胁报告、IOC 和检测方法？",
+            "其他平台或政府机构是否确认同一伊朗关联行动？"
+          ],
+          "evidenceThreshold": "需要 Meta 原始威胁报告、IOC、政府或独立威胁情报确认，才能升级为完整归因案例。",
+          "claimBoundary": "当前不证明该行动影响了选民行为，也不证明 AI 内容本身突破了平台检测。",
+          "counterEvidence": "如果 Meta 原始威胁报告、IOC、政府归因文件或独立威胁情报修正账号规模、归因或影响范围，应下调为待核验背景信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "Axios AI / Technology 只用于市场和事件背景；完整事实、采访、图表、数据和上下文仍属于原文，本站只保留最小事实和中文判断。",
+          "sourceUrl": "https://www.axios.com/2026/08/27/facebook-instagram-iran-ai-disinformation",
+          "originalUrl": "https://www.axios.com/2026/08/27/facebook-instagram-iran-ai-disinformation",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T09:40:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 09:40 JST",
+          "tags": [
+            "影响行动",
+            "平台安全",
+            "AI内容"
+          ],
+          "companies": [
+            "Meta",
+            "Facebook",
+            "Instagram"
+          ]
+        },
+        {
+          "id": "axios-big-tech-ai-off-balance-spending-2026-08-28",
+          "category": "funding",
+          "label": "资金",
+          "title": "Axios：Big Tech AI 支出还有大量表外承诺",
+          "body": "Axios 引述 Morgan Stanley 分析称，大型科技公司的 AI 基础设施承诺可能有约 3 万亿美元在表外。",
+          "summary": "Axios 引述 Morgan Stanley 分析称，大型科技公司的 AI 基础设施承诺可能有约 3 万亿美元在表外。",
+          "whyItMatters": "AI 算力竞赛的风险不只在公开 capex，也在租赁、采购、融资和长期承诺如何进入资产负债表。",
+          "detailBody": "Axios 8 月 27 日报道称，Morgan Stanley 分析认为 Google、Microsoft、Nvidia、Meta、Oracle、Amazon、Broadcom 等公司的 AI 相关表外承诺规模可达约 3 万亿美元。\n\n该项是媒体/分析背景，不能替代公司 filings。它提醒读者把数据中心、芯片采购、租赁和供应链融资放到同一张资本开支地图里。",
+          "trend": "AI 基础设施正在金融化：云、芯片、地产、电力和客户融资互相绑定，公开财报可能滞后于真实承诺规模。",
+          "detailTrend": "这延续 Anthropic/Nscale、Nvidia 资本方案和数据中心社会许可线索，说明算力扩张会同时受资金、会计和地方阻力约束。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "它给出一个需要用 filings 核对的资本风险框架，适合投资、采购和基础设施团队跟踪。",
+          "topReason": "表外承诺提示 AI capex 可能被低估；下一步要看 10-K、租赁披露、PPA 和供货合同。",
+          "detailWhyRanked": "它给出一个需要用 filings 核对的资本风险框架，适合投资、采购和基础设施团队跟踪。 Axios AI / Technology 支持核对来源事实；更强结论仍需 公司 10-K/10-Q、租赁脚注、PPA、电力 interconnect 文件、供应合同和 Morgan Stanley 原始报告。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响5/新鲜度4/叙事4/证据3/读者效用5；数字来自媒体转述分析，必须用 filings 复核。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响5/新鲜度4/叙事4/证据3/读者效用5；数字来自媒体转述分析，必须用 filings 复核。"
+          },
+          "impact": "基础设施、财务和采购团队应把 AI 项目的资本承诺、租赁义务、电力协议和供应商融资统一核查。",
+          "whoShouldCare": "负责 AI 基础设施采购、财务风控、数据中心选址、芯片供应链和企业预算的团队应该关注。",
+          "readerUse": "负责 AI 基础设施采购、财务风控、数据中心选址、芯片供应链和企业预算的团队可用该信号更新 AI capex 跟踪表，区分已入账支出、未来购买承诺、租赁和项目融资。",
+          "nextCheck": "公司 10-K/10-Q、租赁脚注、PPA、电力 interconnect 文件、供应合同和 Morgan Stanley 原始报告",
+          "followUpQuestions": [
+            "3 万亿美元口径包括哪些租赁、采购、融资或云服务承诺？",
+            "这些承诺何时会转入正式负债、折旧、租赁或现金流压力？"
+          ],
+          "evidenceThreshold": "需要公司 filings、租赁和供货合同、PPA 与原始研究报告，才能升级为已确认的 AI 资本承诺地图。",
+          "claimBoundary": "当前不证明每家公司实际债务增加，也不证明所有承诺都会变成已建成算力。",
+          "counterEvidence": "如果公司 filings、租赁合同、PPA、电力接入文件或 Morgan Stanley 原始报告显示承诺口径被高估、取消或转嫁，应下调资本压力判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "Axios AI / Technology 只用于市场和事件背景；完整事实、采访、图表、数据和上下文仍属于原文，本站只保留最小事实和中文判断。",
+          "sourceUrl": "https://www.axios.com/2026/08/27/ai-spending-spending-balance-sheet",
+          "originalUrl": "https://www.axios.com/2026/08/27/ai-spending-spending-balance-sheet",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T09:20:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 09:20 JST",
+          "tags": [
+            "AI资本开支",
+            "数据中心",
+            "表外承诺"
+          ],
+          "companies": [
+            "Google",
+            "Microsoft",
+            "Nvidia",
+            "Meta",
+            "Oracle",
+            "Amazon",
+            "Broadcom"
+          ]
+        },
+        {
+          "id": "axios-uber-ai-cost-control-2026-08-28",
+          "category": "product",
+          "label": "产品",
+          "title": "Axios：Uber 在 AI 使用量激增后稳定成本",
+          "body": "Axios 报道称 Uber 自 2 月以来每周 Agent 请求增长 9.4 倍，但 4 月后 AI 成本趋稳。",
+          "summary": "Axios 报道称 Uber 自 2 月以来每周 Agent 请求增长 9.4 倍，但 4 月后 AI 成本趋稳。",
+          "whyItMatters": "企业 AI 进入第二阶段：问题不再只是试点上线，而是如何在使用量上升时管住模型、路由和预算。",
+          "detailBody": "Axios 8 月 27 日报道称，Uber 第一季度曾用尽全年 AI 预算，但随后在使用量继续增长时稳定了 AI 成本。报道提到开源权重模型和成本优化策略。\n\n本站只把它作为媒体背景，说明大型企业正在把模型路由、预算控制和 Agent 请求增长放到同一套运营指标里。",
+          "trend": "企业 AI 从“能不能部署”转向“能不能规模化而不烧穿预算”，成本治理、模型选择和用量治理成为采购核心。",
+          "detailTrend": "这与前几期 Agent 成本、身份和权限控制呼应：生产 AI 的胜负越来越取决于运营系统，而不是单次 demo。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "报道给出企业级成本与使用量张力，适合 CIO 和平台团队更新 AI 成本治理。",
+          "topReason": "Uber 案例把 AI 成本控制拉回运营指标；下一步要核对 Uber 原始指标、模型路由和预算口径。",
+          "detailWhyRanked": "报道给出企业级成本与使用量张力，适合 CIO 和平台团队更新 AI 成本治理。 Axios AI / Technology 支持核对来源事实；更强结论仍需 Uber 官方技术博客、财报/投资者材料、模型路由文档、内部指标口径和第三方成本评测。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体信号有用，但需公司侧数据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响4/新鲜度4/叙事4/证据3/读者效用5；媒体信号有用，但需公司侧数据。"
+          },
+          "impact": "企业平台团队应监控每类 Agent 请求、模型路由、缓存、开源/闭源组合和预算阈值。",
+          "whoShouldCare": "负责企业 AI 平台、成本治理、采购、数据工程和 Agent 运营指标的团队应该关注。",
+          "readerUse": "负责企业 AI 平台、成本治理、采购、数据工程和 Agent 运营指标的团队可用该信号检查 AI 预算仪表盘、模型路由策略、开源权重评估和 runaway usage 阈值。",
+          "nextCheck": "Uber 官方技术博客、财报/投资者材料、模型路由文档、内部指标口径和第三方成本评测",
+          "followUpQuestions": [
+            "Uber 稳定成本来自模型路由、缓存、开源权重还是产品限制？",
+            "使用量增长是否伴随任务成功率、延迟和用户满意度同步改善？"
+          ],
+          "evidenceThreshold": "需要 Uber 官方指标、技术博客、财务口径和任务成功率数据，才能升级为已验证的企业 AI 成本案例。",
+          "claimBoundary": "当前不证明所有企业都能复制 Uber 成本曲线，也不证明质量没有下降。",
+          "counterEvidence": "如果 Uber 官方技术博客、财报材料、模型路由文档、成本仪表盘或任务成功率日志不支持当前说法，应下调为待核验背景信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceId": "axios-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "Axios AI / Technology 只用于市场和事件背景；完整事实、采访、图表、数据和上下文仍属于原文，本站只保留最小事实和中文判断。",
+          "sourceUrl": "https://www.axios.com/2026/08/27/ai-uber-spending",
+          "originalUrl": "https://www.axios.com/2026/08/27/ai-uber-spending",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T09:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 09:00 JST",
+          "tags": [
+            "企业AI",
+            "成本控制",
+            "AI FinOps"
+          ],
+          "companies": [
+            "Uber"
+          ]
+        },
+        {
+          "id": "openai-brazil-commercial-operations-2026-08-28",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 在巴西启动商业运营，披露当地采用数据",
+          "body": "OpenAI 宣布在圣保罗启动巴西商业运营，并称巴西是 ChatGPT 每周活跃用户前三大市场之一。",
+          "summary": "OpenAI 宣布在圣保罗启动巴西商业运营，并称巴西是 ChatGPT 每周活跃用户前三大市场之一。",
+          "whyItMatters": "前沿 AI 公司正在把增长从全球自助使用推进到本地团队、企业客户、开发者生态和公共机构合作。",
+          "detailBody": "OpenAI 8 月 27 日宣布在巴西启动商业运营，称当地团队将服务企业、开发者、研究者和公共机构。官方还称巴西用户每天约发送 2.15 亿条 ChatGPT 消息。\n\nOpenAI 称巴西按 OpenAI API 开发者数量位居全球第二，Codex 周活跃用户自 2026 年初以来增长超过 11 倍。采用效果仍需外部经济数据和客户案例。",
+          "trend": "AI 全球化进入本地商业运营阶段，区域市场不只是用户增长，也影响 API、Codex、企业座席和政策合作。",
+          "detailTrend": "这类国家级扩张信号可用于观察 OpenAI 如何在非美国核心市场处理语言、支付、企业销售和公共部门信任。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "官方披露市场排名、消息量和开发者数据，适合追踪 OpenAI 国际商业化。",
+          "topReason": "巴西扩张显示 OpenAI 国际化从使用热度进入本地商业运营；下一步要看企业合同和公共部门落地。",
+          "detailWhyRanked": "官方披露市场排名、消息量和开发者数据，适合追踪 OpenAI 国际商业化。 OpenAI News 支持核对来源事实；更强结论仍需 巴西客户合同、公共部门采购、RegLab 方法、企业座席数据、API 使用审计和本地监管材料。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据5/读者效用4；官方数字明确，但经济效果仍需外部材料。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据5/读者效用4；官方数字明确，但经济效果仍需外部材料。"
+          },
+          "impact": "出海产品、开发者平台和企业销售团队可用巴西案例检查区域增长、定价、本地支持和合规节奏。",
+          "whoShouldCare": "负责 AI 产品出海、企业销售、开发者生态、教育/公共部门合作和区域合规的团队应该关注。",
+          "readerUse": "负责 AI 产品出海、企业销售、开发者生态、教育/公共部门合作和区域合规的团队可用该信号更新拉美市场优先级、API 增长指标、Codex 本地化和企业客户开发假设。",
+          "nextCheck": "巴西客户合同、公共部门采购、RegLab 方法、企业座席数据、API 使用审计和本地监管材料",
+          "followUpQuestions": [
+            "OpenAI 巴西团队是否公布客户、渠道、定价或公共机构合作清单？",
+            "官方采用数据能否被独立经济研究、企业采购或开发者生态指标交叉验证？"
+          ],
+          "evidenceThreshold": "需要客户合同、采购文件、独立经济研究和使用审计，才能升级为已验证的区域商业化成果。",
+          "claimBoundary": "当前只证明 OpenAI 宣布本地商业运营和自述采用数据，不证明经济影响已经实现。",
+          "counterEvidence": "如果后续巴西客户合同、公共部门采购、RegLab 方法不支持当前说法，应下调为待核验背景信号。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "provenance": "OpenAI News 用于核对发布动作、日期、公开数字和作者自述；效果、采用、安全或治理结论仍需外部证据。",
+          "sourceUrl": "https://openai.com/index/expanding-our-presence-in-brazil/",
+          "originalUrl": "https://openai.com/index/expanding-our-presence-in-brazil/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T08:20:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 08:20 JST",
+          "tags": [
+            "国际化",
+            "OpenAI",
+            "企业采用"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "openai-student-critical-thinking-study-2026-08-28",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI：ChatGPT 与批判性思维训练在学生实验中呈互补作用",
+          "body": "OpenAI 与 Bocconi 研究者发布千人随机实验，称 ChatGPT 提升作业质量，因果推理训练提升想法多样性。",
+          "summary": "OpenAI 与 Bocconi 研究者发布千人随机实验，称 ChatGPT 提升作业质量，因果推理训练提升想法多样性。",
+          "whyItMatters": "教育 AI 的判断标准正在从“有没有用工具”转向“评分、原创性、推理过程和教学设计如何同时衡量”。",
+          "detailBody": "OpenAI 8 月 27 日发布 Bocconi University 合作研究摘要，称超过 1,000 名一年级本科生被随机分组，分别获得 ChatGPT、因果推理训练、两者或都不获得。\n\nOpenAI 称 ChatGPT 组在五分量表上接近提高一分，而批判性思维训练提升想法多样性和因果解释。该结果仍需看论文方法、样本和复现。",
+          "trend": "学校采用 AI 的争论正在转向评估设计：最终答案会更流畅，课程必须测量原创性、推理和问题分解。",
+          "detailTrend": "这给教师和教育产品一个更具体的测试框架：AI 可能补足表达与结构，训练仍负责拓宽想法和判断质量。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "官方摘要给出随机实验、样本规模和可核对方向，适合更新教育 AI 评估框架。",
+          "topReason": "它把教育 AI 争论落到实验设计；下一步要读论文、数据和独立复现。",
+          "detailWhyRanked": "官方摘要给出随机实验、样本规模和可核对方向，适合更新教育 AI 评估框架。 OpenAI News 支持核对来源事实；更强结论仍需 Bocconi/OpenAI 论文原文、数据与代码、同行评议、跨学科复现和学校真实课堂试点。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；官方研究摘要清楚，但仍需论文与复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据4/读者效用5；官方研究摘要清楚，但仍需论文与复现。"
+          },
+          "impact": "教育机构和学习产品团队应把评分标准、过程记录、原创性任务和 AI 使用培训一起设计。",
+          "whoShouldCare": "负责 K-12/高校 AI 政策、学习评测、课程设计和教育产品的团队应该关注。",
+          "readerUse": "负责 K-12/高校 AI 政策、学习评测、课程设计和教育产品的团队可用该信号更新课堂实验、作业 rubric、AI 使用说明和教师培训里的“过程证据”要求。",
+          "nextCheck": "Bocconi/OpenAI 论文原文、数据与代码、同行评议、跨学科复现和学校真实课堂试点",
+          "followUpQuestions": [
+            "论文原文是否公开随机化、评分者一致性、自动文本分析和样本限制？",
+            "其他学科、年龄段和非商业案例作业中是否出现同样互补关系？"
+          ],
+          "evidenceThreshold": "需要论文原文、数据/代码、同行评议和跨场景复现，才能升级为稳健教育 AI 效果判断。",
+          "claimBoundary": "当前不证明 ChatGPT 总能提升学习，也不证明传统评分能衡量学生真实理解。",
+          "counterEvidence": "如果论文原文、数据集、评分者一致性材料、同行评议或跨课堂复现显示效果依赖单一任务，应收窄到特定课堂实验信号。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "provenance": "OpenAI News 用于核对发布动作、日期、公开数字和作者自述；效果、采用、安全或治理结论仍需外部证据。",
+          "sourceUrl": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/",
+          "originalUrl": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T08:10:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 08:10 JST",
+          "tags": [
+            "教育AI",
+            "学习评测",
+            "批判性思维"
+          ],
+          "companies": [
+            "OpenAI",
+            "Bocconi University"
+          ]
+        },
+        {
+          "id": "pollen-microduck-open-source-robot-2026-08-28",
+          "category": "tool",
+          "label": "工具",
+          "title": "Hugging Face/Pollen 推出 399 美元开源双足机器人 Microduck",
+          "body": "Pollen Robotics 发布 Microduck：25 厘米、15 个电机、开源 SDK 与强化学习训练栈，预售价格 399 美元。",
+          "summary": "Pollen Robotics 发布 Microduck：25 厘米、15 个电机、开源 SDK 与强化学习训练栈，预售价格 399 美元。",
+          "whyItMatters": "物理 AI 的低成本开发硬件正在走向桌面化，机器人学习不再只围绕昂贵机械臂或人形平台。",
+          "detailBody": "Pollen Robotics 8 月 27 日发布 Microduck，称该双足机器人高 25 厘米，含 15 个电机、摄像头、LiDAR、IMU 和可抓取小物体的鸟喙。\n\n官方页面称 Microduck 预售 399 美元，计划 2026 年圣诞前发货，并开放 SDK、仿真和强化学习训练栈。",
+          "trend": "开源 AI 平台正在把模型、数据集、仿真和实体硬件连成更低门槛的物理 AI 学习栈。",
+          "detailTrend": "如果交付稳定，这类小型机器人会让开发者在真实硬件上测试 sim-to-real、行为策略和具身数据采集，而不是只看视频 demo。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "官方规格、价格、交付窗口和开源路径清楚，适合作为物理 AI 工具链信号。",
+          "topReason": "Microduck 把强化学习机器人开发压到消费级价格；下一步要看交付、代码质量、社区和硬件可靠性。",
+          "detailWhyRanked": "官方规格、价格、交付窗口和开源路径清楚，适合作为物理 AI 工具链信号。 Pollen Robotics 支持核对来源事实；更强结论仍需 首批交付记录、GitHub 代码活跃度、用户侧硬件评测、课程采用案例和故障/维修数据。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "影响4/新鲜度5/叙事4/证据4/读者效用5；官方产品强，但出货和开发者采用未验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "影响4/新鲜度5/叙事4/证据4/读者效用5；官方产品强，但出货和开发者采用未验证。"
+          },
+          "impact": "机器人开发者、教育机构和具身智能团队可以用它评估低成本真实硬件是否能进入训练和课程流程。",
+          "whoShouldCare": "负责机器人学习、具身智能课程、开源硬件、仿真训练和开发者社区的团队应该关注。",
+          "readerUse": "负责机器人学习、具身智能课程、开源硬件、仿真训练和开发者社区的团队可用该信号检查 SDK、仿真、策略训练、硬件可靠性、交付地区和课程/实验预算。",
+          "nextCheck": "首批交付记录、GitHub 代码活跃度、用户侧硬件评测、课程采用案例和故障/维修数据",
+          "followUpQuestions": [
+            "Microduck 首批发货后硬件可靠性、续航和动作策略是否符合官方自述？",
+            "开源 SDK 与 RL 训练栈是否形成可复现的开发者工作流？"
+          ],
+          "evidenceThreshold": "需要首批用户评测、GitHub 活跃度、复现教程和交付记录，才能升级为已验证的低成本物理 AI 平台。",
+          "claimBoundary": "当前不证明 Microduck 能完成复杂家务或工业任务，也不证明交付和耐用性已验证。",
+          "counterEvidence": "如果首批交付记录、GitHub 代码、用户评测、维修数据或课程复现显示交付延期或硬件不稳，应下调平台化判断。",
+          "source": "Pollen Robotics",
+          "sourceName": "Pollen Robotics",
+          "sourceId": "pollen-robotics",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "provenance": "Pollen Robotics 用于核对发布动作、日期、公开数字和作者自述；效果、采用、安全或治理结论仍需外部证据。",
+          "sourceUrl": "https://pollen-robotics.com/microduck/blog/introducing-microduck/",
+          "originalUrl": "https://pollen-robotics.com/microduck/blog/introducing-microduck/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T08:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 08:00 JST",
+          "tags": [
+            "物理AI",
+            "开源机器人",
+            "强化学习"
+          ],
+          "companies": [
+            "Hugging Face",
+            "Pollen Robotics"
+          ]
+        },
+        {
+          "id": "google-gemini-omni-1-1-flash-2026-08-28",
+          "category": "model",
+          "label": "模型",
+          "title": "Google 发布 Gemini Omni 1.1 Flash，强化可控视频生成",
+          "body": "Google 发布 Gemini Omni 1.1 Flash，面向开发者提供场景延展、首尾帧插值、360p 草稿和 4K 升级等能力。",
+          "summary": "Google 发布 Gemini Omni 1.1 Flash，面向开发者提供场景延展、首尾帧插值、360p 草稿和 4K 升级等能力。",
+          "whyItMatters": "生成式视频的竞争点正在从“能生成”转向“能被开发者低成本控制、迭代并接入生产流程”。",
+          "detailBody": "Google 8 月 27 日发布 Gemini Omni 1.1 Flash，称它通过 Google AI Studio 和 Gemini Enterprise Agent Platform 面向开发者。新能力包括最长 40 秒场景延展、首尾帧过渡、360p 草稿和 4K 输出。\n\nGoogle 还称该模型面向 Google Flow 订阅用户上线，并把场景延展带入 Gemini app。本站只核对官方发布和能力范围，不验证样片质量。",
+          "trend": "多模态模型发布正在变成创意工具链 API 竞争：控制、预览成本、后期质量和企业部署入口同等重要。",
+          "detailTrend": "这延续了视频模型从演示转向工作流的路线，开发者更关心可重复控制、成本分层和是否能与已有编辑软件集成。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "官方发布同时涉及 API、企业平台和消费创作入口，适合开发者评估视频生成工作流。",
+          "topReason": "Omni 1.1 Flash 把视频生成推向可控生产；下一步要看真实项目延迟、成本、版权和一致性测试。",
+          "detailWhyRanked": "官方发布同时涉及 API、企业平台和消费创作入口，适合开发者评估视频生成工作流。 Google Keyword AI 支持核对来源事实；更强结论仍需 Google 模型文档、价格页、API 日志、第三方样片测试、版权政策和客户生产案例。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据5/读者效用4；官方能力清楚，真实质量和成本仍需测试。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "影响4/新鲜度4/叙事4/证据5/读者效用4；官方能力清楚，真实质量和成本仍需测试。"
+          },
+          "impact": "创意工具、广告、电商、媒体资产和企业内容团队需要重新评估生成视频从原型到交付的成本边界。",
+          "whoShouldCare": "负责生成式视频产品、创意自动化、媒体工作流和企业内容平台的产品/工程团队应该关注。",
+          "readerUse": "负责生成式视频产品、创意自动化、媒体工作流和企业内容平台的产品/工程团队可用该信号测试场景延展、首尾帧控制、草稿成本、4K 输出和企业平台接入是否适合现有流程。",
+          "nextCheck": "Google 模型文档、价格页、API 日志、第三方样片测试、版权政策和客户生产案例",
+          "followUpQuestions": [
+            "Omni 1.1 Flash 在长镜头一致性、人物身份保持和编辑可控性上是否经得起第三方测试？",
+            "企业平台是否提供足够的权限、审计和内容安全控制？"
+          ],
+          "evidenceThreshold": "需要公开模型文档、价格页、第三方质量评测和生产项目日志，才能升级为可验证的生产级视频模型判断。",
+          "claimBoundary": "当前不证明视频质量优于竞品，也不证明 4K 输出适合所有商业交付场景。",
+          "counterEvidence": "如果后续Google 模型文档、价格页、API 日志不支持当前说法，应下调为待核验背景信号。",
+          "source": "Google Keyword AI",
+          "sourceName": "Google Keyword AI",
+          "sourceId": "google-keyword-ai",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "provenance": "Google Keyword AI 用于核对发布动作、日期、公开数字和作者自述；效果、采用、安全或治理结论仍需外部证据。",
+          "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+          "originalUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T07:20:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 07:20 JST",
+          "tags": [
+            "视频生成",
+            "Gemini Omni",
+            "开发者工具"
+          ],
+          "companies": [
+            "Google",
+            "Google DeepMind"
+          ]
+        },
+        {
+          "id": "deepmind-double-blind-evaluation-2026-08-28",
+          "category": "policy",
+          "label": "政策",
+          "title": "Google DeepMind 试点双盲前沿模型评测",
+          "body": "Google DeepMind 与新加坡 AI Safety Institute、OpenMined、AVERI、MLCommons 试点专有模型双盲评测。",
+          "summary": "Google DeepMind 与新加坡 AI Safety Institute、OpenMined、AVERI、MLCommons 试点专有模型双盲评测。",
+          "whyItMatters": "它尝试解决外部评测中的两难：评测方不想交出机密题目，模型方也不想交出权重。",
+          "detailBody": "Google DeepMind 8 月 27 日称，正用 Google Cloud Confidential Space 对 Gemini Flash Lite 进行双盲评测试点。评测方看不到模型权重，Google 也看不到机密测试提示。\n\n该机制目标是降低 benchmark contamination 和数据主权风险，让政策机构和第三方在不泄露双方敏感资产的情况下做高风险评测。",
+          "trend": "模型治理开始从披露评测结果，走向可验证的评测流程、机密计算环境和第三方测试接口。",
+          "detailTrend": "如果这种模式被监管或企业采购采用，前沿模型评测会更像安全审计：关注证据链、执行环境和是否能证明模型没有提前见题。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "这是官方责任安全试点，直接影响模型评测可信度、监管接口和企业采购证明。",
+          "topReason": "双盲评测给监管和采购一个技术路径；下一步要看技术报告、第三方复测和是否扩展到更高风险模型。",
+          "detailWhyRanked": "这是官方责任安全试点，直接影响模型评测可信度、监管接口和企业采购证明。 Google DeepMind Blog 支持核对来源事实；更强结论仍需 Google 技术报告、Singapore AISI/MLCommons/OpenMined 方法说明、第三方复测结果和监管采纳文件。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "影响4/新鲜度5/叙事4/证据5/读者效用5；官方试点清晰，但行业采纳仍待验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "影响4/新鲜度5/叙事4/证据5/读者效用5；官方试点清晰，但行业采纳仍待验证。"
+          },
+          "impact": "治理、采购和安全评测团队可以把机密计算、测试题保护、模型权重保护和第三方可验证性纳入要求。",
+          "whoShouldCare": "负责模型采购、外部评测、监管合规、AI 安全研究和云安全架构的团队应该关注。",
+          "readerUse": "负责模型采购、外部评测、监管合规、AI 安全研究和云安全架构的团队可用该信号更新前沿模型评测 RFP、AISI 合作接口、机密 benchmark 管理和供应商审计条款。",
+          "nextCheck": "Google 技术报告、Singapore AISI/MLCommons/OpenMined 方法说明、第三方复测结果和监管采纳文件",
+          "followUpQuestions": [
+            "试点报告是否公开评测任务类型、执行证明和失败模式？",
+            "其他模型提供商或 AISI 是否采用类似双盲评测流程？"
+          ],
+          "evidenceThreshold": "需要技术报告、第三方复测和监管或采购文件采纳，才能升级为可复用的行业评测范式。",
+          "claimBoundary": "当前只证明 Google DeepMind 宣布并描述试点，不证明所有 benchmark 污染问题已解决。",
+          "counterEvidence": "如果 Google 技术报告、Singapore AISI 材料、MLCommons 记录或第三方复测显示适用范围很窄，应下调为单厂商试验。",
+          "source": "Google DeepMind Blog",
+          "sourceName": "Google DeepMind Blog",
+          "sourceId": "google-deepmind-blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "provenance": "Google DeepMind Blog 用于核对发布动作、日期、公开数字和作者自述；效果、采用、安全或治理结论仍需外部证据。",
+          "sourceUrl": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+          "originalUrl": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T07:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 07:00 JST",
+          "tags": [
+            "模型评测",
+            "AI安全",
+            "机密计算"
+          ],
+          "companies": [
+            "Google DeepMind",
+            "Singapore AI Safety Institute",
+            "OpenMined",
+            "MLCommons"
+          ]
+        },
+        {
+          "id": "openai-collective-cyber-defense-letter-2026-08-28",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI 等百余组织呼吁把 AI 网络防御升为基础设施议题",
+          "body": "OpenAI 发布开放信，Anthropic、AWS、Google、Microsoft 等百余组织共同呼吁在数月窗口内强化 AI 时代网络防御。",
+          "summary": "OpenAI 发布开放信，Anthropic、AWS、Google、Microsoft 等百余组织共同呼吁在数月窗口内强化 AI 时代网络防御。",
+          "whyItMatters": "它把 Agent 与模型能力风险从单个实验室事故扩展到医院、水务、互联网基础设施和政府资金配置。",
+          "detailBody": "OpenAI 8 月 27 日发布集体网络防御公开信，签署方包括 Anthropic、AWS、Google、Microsoft、Cloudflare、CrowdStrike、Visa 等。信中称未来数月 AI 辅助攻击会更普遍、更复杂。\n\n公开信要求组织提高安全标准，政府加强情报共享和资金支持，AI 公司为关键基础设施防守方提供模型访问、工具、培训和支持。",
+          "trend": "AI 安全议程正在从模型发布安全转向关键基础设施防御、AI 生成代码采购标准和 Agent 身份可追踪。",
+          "detailTrend": "跨期看，Hugging Face 事故、Prompt Injection 和这封公开信都指向同一问题：防御能力、身份控制和验证修复需要与模型能力同步升级。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "签署方范围广，且来源是官方公开信，适合安全、政府和企业采购团队更新 AI 防御优先级。",
+          "topReason": "官方公开信把 AI 网络风险压到关键基础设施层；下一步要看政府拨款、CISA/NSA 指南、采购标准和防御工具落地。",
+          "detailWhyRanked": "签署方范围广，且来源是官方公开信，适合安全、政府和企业采购团队更新 AI 防御优先级。 OpenAI News 支持核对来源事实；更强结论仍需 CISA/NSA/FBI 后续指南、政府拨款文件、签署方工具发布、关键基础设施试点记录和事故响应数据。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "影响5/新鲜度4/叙事5/证据5/读者效用5；官方文本强，但承诺尚未变成资金、工具或监管动作。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "影响5/新鲜度4/叙事5/证据5/读者效用5；官方文本强，但承诺尚未变成资金、工具或监管动作。"
+          },
+          "impact": "安全团队应把 AI 生成代码、最小权限、补丁验证、事故响应和关键基础设施供应链列为同一张检查表。",
+          "whoShouldCare": "负责关键基础设施安全、企业采购、AI 平台治理、红队和政府数字服务的团队应该关注。",
+          "readerUse": "相关团队可用它检查董事会安全优先级、供应商 AI 代码要求、应急模型访问和威胁情报共享流程。",
+          "nextCheck": "CISA/NSA/FBI 后续指南、政府拨款文件、签署方工具发布、关键基础设施试点记录和事故响应数据",
+          "followUpQuestions": [
+            "签署方是否把公开信转化为明确资金、工具可用性或服务承诺？",
+            "CISA、NSA、FBI 或地方政府是否发布配套的 AI 网络防御指南？"
+          ],
+          "evidenceThreshold": "需要政府指南、资金文件、签署方工具交付和关键基础设施试点结果，才能升级为已落地的防御行动。",
+          "claimBoundary": "当前证明百余组织发布倡议，不证明任何机构已经完成防御升级或攻击风险已被降低。",
+          "counterEvidence": "如果后续没有工具、资金、采购标准或事故响应改进记录，应把它降为政策倡议而非落地信号。，应下调为待核验背景信号。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "provenance": "OpenAI News 用于核对发布动作、日期、公开数字和作者自述；效果、采用、安全或治理结论仍需外部证据。",
+          "sourceUrl": "https://openai.com/collective-cyberdefense/",
+          "originalUrl": "https://openai.com/collective-cyberdefense/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T06:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月28日 06:00 JST",
+          "tags": [
+            "AI网络安全",
+            "关键基础设施",
+            "Agent治理"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Google",
+            "Microsoft",
+            "AWS"
+          ]
+        },
+        {
+          "id": "google-gemini-3-5-transcribe-2026-08-28",
+          "category": "tool",
+          "label": "工具",
+          "title": "Google 推出 Gemini 3.5 Transcribe，把语音转写接入 Gemini API",
+          "body": "Google 发布 Gemini 3.5 Transcribe，提供实时流式和录音处理两类 API，并支持说话人、时间戳和自定义词汇。",
+          "summary": "Google 发布 Gemini 3.5 Transcribe，提供实时流式和录音处理两类 API，并支持说话人、时间戳和自定义词汇。",
+          "whyItMatters": "语音入口正在从普通听写变成可调用函数、理解上下文并触发 Agent 工作流的输入层。",
+          "detailBody": "Google 8 月 26 日发布 Gemini 3.5 Transcribe，称其面向实时语音应用和预录音频处理，模型 ID 包括 gemini-3.5-transcribe-live 与 gemini-3.5-transcribe。\n\n官方称该模型支持 85 种以上语言、多说话人、词级时间戳、自定义词汇，并已进入 Gemini API、AI Studio、Gemini Enterprise Agent Platform 和部分 Gemini app 场景。",
+          "trend": "企业语音 AI 的边界正在从转写准确率扩展到函数调用、应用上下文、实时延迟和跨工具任务执行。",
+          "detailTrend": "当转写模型接入 Agent 平台，会议、客服、医疗记录和桌面操作会共享同一条语音控制链，治理重点会转向权限和审计。 对读者而言，关键不是把它当作单点发布，而是把来源事实拆成可测试的权限、成本、质量、合规和复现项，再用后续原始材料逐项升级或降级。",
+          "whyRanked": "官方给出 API、模型 ID 和上线入口，开发者可以直接评估语音 Agent 的底座变化。",
+          "topReason": "语音转写进入 Gemini API 主线；下一步要看真实噪声、专业术语、隐私和延迟表现。",
+          "detailWhyRanked": "官方给出 API、模型 ID 和上线入口，开发者可以直接评估语音 Agent 的底座变化。 Google Keyword AI 支持核对来源事实；更强结论仍需 Google API 文档、价格页、Artificial Analysis 方法、企业试点日志、隐私条款和真实噪声测试。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "影响4/新鲜度4/叙事4/证据5/读者效用5；官方信息充分，真实场景表现仍需日志和评测。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "影响4/新鲜度4/叙事4/证据5/读者效用5；官方信息充分，真实场景表现仍需日志和评测。"
+          },
+          "impact": "客服、会议、医疗、桌面 Agent 和开发工具团队需要重测语音输入的准确率、隐私、成本和操作权限。",
+          "whoShouldCare": "负责语音助手、会议智能、客服自动化、桌面 Agent 和实时字幕的产品/工程团队应该关注。",
+          "readerUse": "负责语音助手、会议智能、客服自动化、桌面 Agent 和实时字幕的产品/工程团队可用该信号更新语音 Agent 原型、转写质量评测、数据保留策略和函数调用权限设计。",
+          "nextCheck": "Google API 文档、价格页、Artificial Analysis 方法、企业试点日志、隐私条款和真实噪声测试",
+          "followUpQuestions": [
+            "Gemini 3.5 Transcribe 在行业术语、口音、多人会议和低质量音频中是否稳定？",
+            "函数调用和屏幕上下文是否有足够的企业权限与审计控制？"
+          ],
+          "evidenceThreshold": "需要 API 文档、价格页、第三方 WER 测试、企业日志和隐私说明，才能升级为可验证的语音 Agent 基础设施判断。",
+          "claimBoundary": "当前只证明 Google 发布并自述能力，不证明所有语言、噪声和行业场景达到同等质量。",
+          "counterEvidence": "如果第三方测试或客户日志显示延迟、WER、说话人分离或权限控制不达标，应下调采用判断。",
+          "source": "Google Keyword AI",
+          "sourceName": "Google Keyword AI",
+          "sourceId": "google-keyword-ai",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "provenance": "Google Keyword AI 用于核对发布动作、日期、公开数字和作者自述；效果、采用、安全或治理结论仍需外部证据。",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+          "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-27T08:30:00+09:00",
+          "freshSourceFact": null,
+          "time": "08月27日 08:30 JST",
+          "tags": [
+            "语音AI",
+            "Gemini API",
+            "Agent入口"
+          ],
+          "companies": [
+            "Google",
+            "Gemini"
+          ]
+        }
+      ],
+      "itemCount": 11
+    },
     {
       "id": "news-1700-2026-08-27",
       "date": "2026-08-27",
