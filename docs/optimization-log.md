@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check` for touched files.
-- Commit: Pending local commit for this run; final hash will be available after commit.
+- Commit: Local implementation commit `849c751` (`优化媒体原文提醒`); this follow-up note records the implementation hash.
 - Git note: Push still depends on GitHub DNS/network recovery.
 
 ## 2026-08-27 08:10 JST

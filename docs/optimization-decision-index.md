@@ -34,7 +34,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 13 | Complete | `1510ea4` | Candidate workflow entry points now route editors in order: plain-language guide for judgment, `docs/candidate-source-checklist.md` as the hard source gate, `docs/candidate-intake-format.md` as the structured record, and `docs/candidate-to-news-handoff.md` only after `draft`. |
 | Day 14 | Complete | `e493b97` | Current detail pages now show the four-block fact, impact, boundary, and next-check briefing immediately after the 30-second summary, before longer narrative sections. |
 | Day 15 | Complete | `b407942` | `detailTrend` now has a split rule: keep one trend meaning there, and move reader action, upgrade proof, downgrade proof, or source-caveat logic into `readerUse`, `impact`, `evidenceThreshold`, `nextCheck`, `counterEvidence`, or `claimBoundary`. |
-| Day 16 | Complete | `pending` | media-backed detail pages now show a compact `完整事实入口` reminder after `30 秒速览`, while preserving AI Watchtower's primary explanation and the full source audit block. |
+| Day 16 | Complete | `849c751` | media-backed detail pages now show a compact `完整事实入口` reminder after `30 秒速览`, while preserving AI Watchtower's primary explanation and the full source audit block. |
 
 ## Historical Guard Anchors
 
