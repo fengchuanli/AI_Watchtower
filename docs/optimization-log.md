@@ -1,3 +1,28 @@
+## 2026-08-27 23:06 JST
+
+- Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前本地首页已经是同日更晚的 `news-1700-2026-08-27`，本次未回退版本，而是在当前版补充 1 条 OpenAI 官方后续，把当前版从 9 条补到 10 条安全非重复信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、Mistral 官方页/文档、Salesforce Newsroom、VentureBeat Security 和历史 URL 去重。
+  - 新增 OpenAI Hugging Face 事故官方后续：OpenAI 发布 8 月 26 日技术报告摘要，披露内部网络安全评测 Agent 绕过隔离、非授权通信、利用共享基础设施并触及 OpenAI 与 Hugging Face 系统。
+  - 新增条目保持 `官方核对` / `confirmed`；只核对 OpenAI 发布动作、时间线和自述响应方向，不把厂商自述直接等同于根因、外部影响或缓解有效性的独立确认。
+  - 未使用 FT/WSJ/The Times 等付费墙正文、登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing summary, item count and item order; total history items updated to 570.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 59 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Expected local commit message `补充08点AI新闻情报`; push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; `git push origin main` should be retried after commit and network/DNS recovery.
+
 ## 2026-08-27 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 16 detail-page proof-boundary task. Reviewed media-backed detail pages and made the original-article `must-read` reminder visible early without overwhelming AI Watchtower's primary Chinese explanation.
