@@ -22,8 +22,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check` for touched files.
-- Commit: Pending local content commit `更新17点AI新闻情报`; push still depends on GitHub DNS recovery.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; will attempt `git push origin main` after commit.
+- Commit: Local content commit `9501c01` (`更新17点AI新闻情报`); push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
 
 ## 2026-08-27 23:06 JST
 
