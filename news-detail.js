@@ -486,6 +486,29 @@ function getDetailSourceReminder(item) {
   return "本站只做中文解读，完整事实、方法、数据和上下文请查看原文。";
 }
 
+function getMediaOriginalCallout(item) {
+  if (!isMediaSourcedItem(item)) {
+    return "";
+  }
+
+  const sourceName = getDetailSourceName(item);
+
+  return `媒体原文必读：本站先帮你判断意义和核验边界；金额、采访、图表、文件细节和上下文仍请回到 ${sourceName} 核对。`;
+}
+
+function renderMediaOriginalCallout(callout) {
+  if (!callout) {
+    return "";
+  }
+
+  return `
+    <aside class="media-original-callout" aria-label="媒体原文阅读提醒">
+      <strong>完整事实入口</strong>
+      <p>${escapeHtml(callout)}</p>
+    </aside>
+  `;
+}
+
 function getDetailFactArticle(item) {
   return item.detailBody || item.body;
 }
@@ -572,6 +595,7 @@ function renderDetail(item, data) {
   const claimStatus = getDetailClaimStatus(item);
   const originalDependency = getDetailOriginalDependency(item);
   const sourceReminder = getDetailSourceReminder(item);
+  const mediaOriginalCallout = getMediaOriginalCallout(item);
 
   detailShell.innerHTML = `
     <div class="incident-hero simplified-detail-hero">
@@ -600,6 +624,8 @@ function renderDetail(item, data) {
         ${renderQuickSummary(quickSummary)}
       </ol>
     </section>
+
+    ${renderMediaOriginalCallout(mediaOriginalCallout)}
 
     <section class="canonical-briefing detail-scan-briefing" aria-label="事实、影响、边界和下一步核对速览">
       <div>

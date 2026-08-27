@@ -77,6 +77,20 @@ Official, research, regulator, and reliable-media items need different review pr
 - Reliable media source: keep the media fact minimal, keep `originalDependency: "must-read"`, and tell readers which complete facts, interviews, figures, charts, or context still require the original article.
 - Community or social signal: do not use as a confirmed detail-page fact unless an official, research, regulator, or reliable-media source has already supported the central claim.
 
+## Media Original Reminder
+
+For media-backed detail pages, the original-article reminder should be visible early without becoming the main explanation.
+
+Use this placement:
+
+- Keep the hero reminder short: say the item is media background and that AI Watchtower keeps only minimal facts plus Chinese interpretation.
+- Add one compact reminder after `30 秒速览` and before the four-block proof path, using the shape `完整事实入口` + one sentence.
+- In that reminder, name what still belongs in the original article: amount, interview, chart, file detail, figures, source wording, or full context.
+- Keep the main explanatory sections focused on AI Watchtower's own fact, impact, boundary, trend, reader-use, and next-check analysis.
+- Keep the bottom source block as the complete audit trail with source name, type, status, `originalDependency`, proof boundary, and source link.
+
+Do not move the media reminder into a large warning panel, repeat it before every paragraph, or let it replace the actual source-boundary fields. The goal is a quick scan cue: readers should know when they must open the original article, while still getting enough Chinese framing to decide why the signal matters.
+
 ## Mobile Readability Pass
 
 A useful detail page should be easy to scan on a phone.

@@ -1,3 +1,36 @@
+## 2026-08-27 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 16 detail-page proof-boundary task. Reviewed media-backed detail pages and made the original-article `must-read` reminder visible early without overwhelming AI Watchtower's primary Chinese explanation.
+- Changed files:
+  - `news-detail.js`
+  - `styles.css`
+  - `docs/detail-page-review-guide.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added a media-only `完整事实入口` callout after `30 秒速览` and before the four-block proof path, so `must-read` media items tell readers to return to the original article for amounts, interviews, charts, file details and full context.
+  - Kept official/non-media detail pages unchanged, and preserved the bottom source block as the complete audit trail with source name, type, status, `originalDependency`, proof boundary and source link.
+  - Updated `docs/detail-page-review-guide.md` with the placement rule: visible early, one sentence, not a large warning panel, and not a replacement for fact/impact/boundary/next-check analysis.
+  - Updated `docs/optimization-decision-index.md` and `scripts/validate-site.mjs` so Day 16 is tracked and Day 17 is the next useful task. While updating the guard, tightened old `Day 7` and `Day 12` checks so future `Day 17` text does not accidentally match earlier day numbers.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/detail-page-review-guide.md`, `news-detail.js`, relevant styles, current media-backed detail items and validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`.
+  - Ran `node --check news-detail.js`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 9 current news items against 59 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Pending local commit for this run; final hash will be available after commit.
+- Git note: Push still depends on GitHub DNS/network recovery.
+
 ## 2026-08-27 08:10 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-27`，发布 9 条安全非重复信号，聚焦 AI 滥用、企业 Agent 入口、算力锁仓、Agent 安全、IP 政策、数据中心社会许可和开发协作控制面。少于 10 条是质量门槛结果，未用旧文章、传闻、登录墙正文、重复来源或弱证明条目补量。

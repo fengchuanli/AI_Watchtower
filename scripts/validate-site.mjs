@@ -572,6 +572,14 @@ if (
   !/getCanonicalBriefingBlocks\(item\)/.test(detailJs) ||
   !/先看这四点/.test(detailJs) ||
   !/function getDetailSourceReminder\(item\)/.test(detailJs) ||
+  !/function getMediaOriginalCallout\(item\)/.test(detailJs) ||
+  !/renderMediaOriginalCallout\(mediaOriginalCallout\)/.test(detailJs) ||
+  !/media-original-callout/.test(styles) ||
+  !/完整事实入口/.test(detailJs) ||
+  !/媒体原文必读/.test(detailJs) ||
+  !/id="quick-summary"[\s\S]*renderMediaOriginalCallout\(mediaOriginalCallout\)[\s\S]*class="canonical-briefing detail-scan-briefing"/.test(
+    detailJs,
+  ) ||
   !/这条是媒体背景/.test(detailJs) ||
   !/完整事实、引述、采访、图表、数据与上下文仍归/.test(detailJs) ||
   !/事件简述/.test(detailJs) ||
@@ -715,7 +723,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 16/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 17/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -763,13 +771,13 @@ if (
   !/held-candidate-review-note\.md/.test(candidateSourceChecklist) ||
   !/held-candidate-review-note\.md/.test(updateRunChecklist) ||
   !/held-candidate-review-note\.md/.test(readme) ||
-  !/Day 12[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
+  !/\| Day 12 \|[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
     optimizationDecisionIndex,
   ) ||
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 16/.test(optimizationDecisionIndex)
+  !/Continue with Day 17/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -910,6 +918,7 @@ if (
   !/Technical Claim Conversion/.test(detailPageReviewGuide) ||
   !/Source-Type Adjustments/.test(detailPageReviewGuide) ||
   !/DetailTrend Split Rule/.test(detailPageReviewGuide) ||
+  !/Media Original Reminder/.test(detailPageReviewGuide) ||
   !/Mobile Readability Pass/.test(detailPageReviewGuide) ||
   !/Stop Conditions/.test(detailPageReviewGuide) ||
   !/fact, impact, boundary, and next check/.test(detailPageReviewGuide) ||
@@ -923,6 +932,8 @@ if (
   !/`followUpQuestions`/.test(detailPageReviewGuide) ||
   !/`sourceReferences`/.test(detailPageReviewGuide) ||
   !/趋势 \+ 对读者怎么用 \+ 下一步要看什么/.test(detailPageReviewGuide) ||
+  !/完整事实入口/.test(detailPageReviewGuide) ||
+  !/30 秒速览[\s\S]*four-block proof path/.test(detailPageReviewGuide) ||
   !/Keep it to one core trend meaning/.test(newsDataFormat) ||
   !/function validateDetailTrendSplit\(item, context\)/.test(validateDataJs) ||
   !/detailTrend mixes trend meaning, reader action, and proof work/.test(validateDataJs) ||
@@ -967,7 +978,7 @@ if (
   !/update-run-checklist\.md/.test(candidateIntakeFormat) ||
   !/update-run-checklist\.md/.test(candidateToNewsHandoff) ||
   !/update-run-checklist\.md/.test(readme) ||
-  !/Day 7[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex)
+  !/\| Day 7 \|[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex)
 ) {
   errors.push("News update workflow must include an intake scratch template plus an update-run checklist for discovery, intake, duplicate reporting, drafting, validation, commit, and push status.");
 }
@@ -989,7 +1000,7 @@ if (
   !/partial-batch-publication-guide\.md/.test(candidateToNewsHandoff) ||
   !/partial-batch-publication-guide\.md/.test(newsDataFormat) ||
   !/partial-batch-publication-guide\.md/.test(readme) ||
-  !/Day 12[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex)
+  !/\| Day 12 \|[\s\S]*partial-batch-publication-guide\.md/.test(optimizationDecisionIndex)
 ) {
   errors.push("News update workflow must include partial-batch guidance for publishing or holding one- or two-item safe batches without padding.");
 }
@@ -1327,7 +1338,7 @@ if (
   !/Day 4[\s\S]*categories\[\]\.description/.test(optimizationDecisionIndex) ||
   !/Day 5[\s\S]*editorialInterpretation/.test(optimizationDecisionIndex) ||
   !/Day 6[\s\S]*Omitted planned topics/.test(optimizationDecisionIndex) ||
-  !/Day 7[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex) ||
+  !/\| Day 7 \|[\s\S]*Intake Scratch Template/.test(optimizationDecisionIndex) ||
   !/Day 8[\s\S]*repeated-url[\s\S]*near-title-review[\s\S]*fresh-source-fact/.test(optimizationDecisionIndex) ||
   !/Day 9[\s\S]*source-of-record[\s\S]*official pages[\s\S]*filings or regulator records[\s\S]*research artifacts/.test(
     optimizationDecisionIndex,
@@ -1336,7 +1347,7 @@ if (
   !/Day 11[\s\S]*Common Owner Concentration Review[\s\S]*TechCrunch[\s\S]*Axios[\s\S]*one vendor[\s\S]*one research feed/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Day 12[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
+  !/\| Day 12 \|[\s\S]*held-candidate-review-note\.md[\s\S]*holdUntilJst[\s\S]*freshnessLimit/.test(
     optimizationDecisionIndex,
   ) ||
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
@@ -1346,7 +1357,8 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 15[\s\S]*detailTrend[\s\S]*readerUse[\s\S]*evidenceThreshold/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 16/.test(optimizationDecisionIndex) ||
+  !/Day 16[\s\S]*media-backed detail pages[\s\S]*完整事实入口/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 17/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
