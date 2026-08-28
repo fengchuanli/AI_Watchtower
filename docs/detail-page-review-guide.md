@@ -46,6 +46,20 @@ Example shape:
 下一步核对：等待第三方复测、任务日志、成本/延迟指标和失败样例。
 ```
 
+## EvidenceThreshold Upgrade Examples
+
+`evidenceThreshold` should say what stronger evidence would unlock, not only what to watch next. Use it to move from a source-limited signal to a named editorial status.
+
+Use these common upgrade paths:
+
+| Starting evidence | Upgrade evidence to name | Upgraded status unlocked | Good `evidenceThreshold` shape |
+| --- | --- | --- | --- |
+| Media signal | Official announcement, filing, regulator text, company statement, court record, or named organization document | Confirmed organization change, confirmed policy action, or confirmed transaction fact | `需要公司公告、监管文件或法院记录确认报道中的组织调整，才能从媒体信号升级为已确认公司动作。` |
+| Vendor claim | Customer-side metric, signed contract, deployment log, third-party benchmark, audit material, external expert review, or regulator filing | Independently verified deployment, validated performance/cost claim, or externally supported safety claim | `需要客户侧上线指标、合同或第三方测试复现，才能从厂商主张升级为独立验证的部署成效。` |
+| Research preprint | Peer review, independent replication, released dataset/code, third-party benchmark rerun, safety evaluation, or real-world transfer test | Replicated research result, validated benchmark movement, or deployable capability evidence | `需要独立团队复现、公开数据/代码和第三方安全评测，才能从预印本结果升级为可复核研究结论。` |
+
+Keep the sentence concrete: name both the artifact and the status change. Avoid `等待更多证据`, `继续观察`, or `看后续进展` unless the same sentence also names the exact document, metric, replication, audit, or deployment outcome that would change the judgment.
+
 ## DetailTrend Split Rule
 
 `detailTrend` should answer one question: what broader AI direction this item suggests. Split it when the same paragraph also tries to do another job.

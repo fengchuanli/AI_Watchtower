@@ -723,7 +723,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 17/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 18/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -777,7 +777,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 17/.test(optimizationDecisionIndex)
+  !/Continue with Day 18/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -916,6 +916,7 @@ if (
   !/When To Use It/.test(detailPageReviewGuide) ||
   !/Four-Block Review/.test(detailPageReviewGuide) ||
   !/Technical Claim Conversion/.test(detailPageReviewGuide) ||
+  !/EvidenceThreshold Upgrade Examples/.test(detailPageReviewGuide) ||
   !/Source-Type Adjustments/.test(detailPageReviewGuide) ||
   !/DetailTrend Split Rule/.test(detailPageReviewGuide) ||
   !/Media Original Reminder/.test(detailPageReviewGuide) ||
@@ -928,6 +929,14 @@ if (
   !/`claimBoundary`/.test(detailPageReviewGuide) ||
   !/`nextCheck`/.test(detailPageReviewGuide) ||
   !/`evidenceThreshold`/.test(detailPageReviewGuide) ||
+  !/Media signal[\s\S]*Official announcement[\s\S]*Confirmed organization change/.test(detailPageReviewGuide) ||
+  !/Vendor claim[\s\S]*Customer-side metric[\s\S]*Independently verified deployment/.test(detailPageReviewGuide) ||
+  !/Research preprint[\s\S]*independent replication[\s\S]*Replicated research result/.test(
+    detailPageReviewGuide,
+  ) ||
+  !/media signal -> official announcement[\s\S]*vendor claim -> customer-side metric[\s\S]*research preprint -> peer review/.test(
+    newsDataFormat,
+  ) ||
   !/`counterEvidence`/.test(detailPageReviewGuide) ||
   !/`followUpQuestions`/.test(detailPageReviewGuide) ||
   !/`sourceReferences`/.test(detailPageReviewGuide) ||
@@ -1358,7 +1367,10 @@ if (
   ) ||
   !/Day 15[\s\S]*detailTrend[\s\S]*readerUse[\s\S]*evidenceThreshold/.test(optimizationDecisionIndex) ||
   !/Day 16[\s\S]*media-backed detail pages[\s\S]*完整事实入口/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 17/.test(optimizationDecisionIndex) ||
+  !/Day 17[\s\S]*evidenceThreshold[\s\S]*media signal[\s\S]*vendor claim[\s\S]*research preprint/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 18/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
