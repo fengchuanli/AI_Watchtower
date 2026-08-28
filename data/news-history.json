@@ -1,8 +1,1125 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-28",
-  "totalItems": 584,
+  "updatedAt": "2026-08-29",
+  "totalItems": 597,
   "editions": [
+    {
+      "id": "news-1700-2026-08-29",
+      "date": "2026-08-29",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦政府采购、Agent 评估与安全、办公数据、算力内存、模型路由、文档解析和消费 Agent 融资。",
+      "operationalStatus": "GitHub DNS 阻断拉取；已核查官方/可靠媒体来源、历史 URL 去重和来源角色，本期发布 13 条安全非重复信号。",
+      "editorialInterpretation": "本期达到 13 条安全非重复信号；官方来源用于核对发布动作和规格，媒体来源只作司法、融资、市场和工程雷达。",
+      "readerFrame": {
+        "headline": "Agent 控制面进入采购、评估、安全和成本层",
+        "whyItMatters": "今天的信号显示，AI 竞争从模型发布扩展到政府采购资格、Agent 评估与工具护栏、办公数据执行、内存/算力协作、模型路由和权限型消费 Agent。",
+        "useThisIssueFor": [
+          "政策与法务团队检查政府 AI 采购、供应链风险标记和模型使用政策冲突。",
+          "平台与安全团队评估 AgentCore Evaluations、Bedrock Guardrails、生产自动修复和工具调用审计。",
+          "基础设施、数据和采购团队核对 NVLink Fusion/NVHBM、Copilot Python、文档解析成本和模型路由。"
+        ],
+        "notProvenYet": [
+          "不证明法院裁定已经形成最终政府采购规则或所有国防合同影响。",
+          "不证明 AWS、NVIDIA、Microsoft、Cohere 或 Visa 的效果主张已经被第三方验证。",
+          "不证明媒体报道的融资、订单、模型覆盖率或增长型 Agent 留存已由原始文件完整确认。"
+        ],
+        "mobile": {
+          "headline": "本期查 Agent 控制面",
+          "summary": "采购、评估、安全、办公数据、算力和融资同场核查。",
+          "primaryUses": [
+            "法务团队查采购",
+            "工程团队查评估",
+            "基建团队查算力"
+          ],
+          "proofBoundary": "仍需外部文件证明性能、订单和政策效果"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版从安全雷达推进到采购、评估和生产控制面",
+        "freshFacts": [
+          "本期新增事实：OpenAI 宣布泰国 MHESI AI Accelerator，首批 10 家医疗、健康和教育初创公司进入八周项目。",
+          "本期新增事实：AP 报道美国联邦法官阻止五角大楼对 Anthropic 的供应链风险标记。",
+          "本期新增事实：AWS 发布 AgentCore Evaluations 和工具交互 Guardrails 两条官方工程说明。",
+          "本期新增事实：NVIDIA 发布 NVLink Fusion/NVHBM 更新，Microsoft 365 Copilot release notes 更新 Excel Python 能力。"
+        ],
+        "repeatedContext": [
+          "延续上一版 OpenAI/Anthropic/Meta 安全治理、模型评测和数据中心社会许可主线。",
+          "延续近期 Agent 成本控制、工具边界、算力锁仓和企业采用证据不足的检查框架。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对采购与合规",
+          "count": 3,
+          "meaning": "用来更新 Anthropic 政府采购争议、AWS 工具护栏和 Visa 自动修复审批边界。"
+        },
+        {
+          "label": "评估 Agent 工程控制面",
+          "count": 3,
+          "meaning": "用来检查 AgentCore 评估、EvoHarness-RL 和 GLM-5.3-Flash 路由是否改变生产 Agent 设计。"
+        },
+        {
+          "label": "验证数据与办公入口",
+          "count": 2,
+          "meaning": "用来评估 Microsoft 365 Copilot Python 与 Cohere Parse 5 对企业数据工作流的影响。"
+        },
+        {
+          "label": "核对资本与算力证据",
+          "count": 5,
+          "meaning": "用来核对 OpenAI 泰国试点、NVIDIA NVHBM、Instinct 融资、Amazon GPU 订单和 Runable 融资证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方与媒体混合，结论需分层",
+        "note": "本期 5 条官方/公司原文可核对发布动作和规格，7 条可靠媒体只适合做司法、融资、模型路由和市场雷达。",
+        "nextCheck": "用法院案卷、公司公告、价格页、产品文档、客户日志、filings、供应链记录、第三方 benchmark 和审计材料交叉复核。"
+      },
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "采购与安全控制面",
+          "note": "跨期看，OpenAI 网络防御、EU AI Act、AWS 工具护栏、Visa 自动修复和 Anthropic 采购争议都在把 AI 风险转成制度与审计问题。",
+          "boundary": "这不证明控制机制已经有效；仍需法院案卷、监管文件、审计日志、红队报告和客户事件数据。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent 评估标准化",
+          "note": "跨期看，GhostJacking、Prompt Injection、AgentCore Evaluations 和 EvoHarness-RL 连续指向 Agent 需要可观察、可评估、可恢复的运行时。",
+          "boundary": "这不证明某个框架已成为标准；仍需开源代码、生产日志、第三方评测和跨框架迁移案例。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力与内存协作",
+          "note": "NVIDIA Vera、NVLink Fusion/NVHBM、Amazon GPU 订单和此前表外承诺延续算力供给与架构锁定主线。",
+          "boundary": "这不证明供应缓解或成本下降；仍需云实例规格、供应链记录、合同、财报和客户成本数据。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "政府与安全边界更具体",
+          "status": "stronger",
+          "previousPattern": "上一版记录 OpenAI 网络防御信、Meta 影响行动和 EU AI Act 执行背景。",
+          "currentSignal": "本期新增 Anthropic/DoD 裁定、AWS 工具护栏和 Visa 自动修复报道。",
+          "signalDirection": "增强：政策控制面从平台治理扩展到采购资格、工具调用和生产变更审批。",
+          "stillUnproven": "仍需法院案卷、DoD 文件、Visa 官方文档、审计日志和红队报告。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "Agent 评估和数据入口继续扩张",
+          "status": "stronger",
+          "previousPattern": "此前记录 Gemini 语音/视频、Microduck、Slack Code 和 Agent Identity。",
+          "currentSignal": "本期新增 AgentCore Evaluations、Cohere Parse 5、Microsoft Excel Python 和 EvoHarness-RL。",
+          "signalDirection": "增强：工具入口从生成和协作扩展到评估、解析、办公代码执行和状态管理。",
+          "stillUnproven": "仍需产品文档、价格页、客户日志、第三方测试、论文复现和管理员审计。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力堆栈向内存和订单证据延伸",
+          "status": "stronger",
+          "previousPattern": "上一版记录 Vera CPU、AI capex、表外承诺和数据中心社会许可。",
+          "currentSignal": "本期新增 NVLink Fusion/NVHBM 与 Amazon 上调 NVIDIA 芯片订单报道。",
+          "signalDirection": "增强：基础设施约束从资本和许可扩到内存架构、XPU 集成和供应链订单。",
+          "stillUnproven": "仍需 AWS/NVIDIA 公告、云实例规格、供应链记录、filings、合同和客户成本日志。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "区域采用从巴西扩到泰国试点",
+          "lastMention": "上一版记录 OpenAI 巴西商业运营、教育实验和网络防御公开信。",
+          "whatChanged": "本期新增与泰国 MHESI 的 AI Accelerator，场景集中在医疗、健康和教育。",
+          "stillUnproven": "仍需 MHESI/NIA 文件、试点数据、用户评估和政府验收记录。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "从科研访问进入政府采购争议",
+          "lastMention": "上一版记录 Claude 科研席位、Nscale 算力和 Salesforce in Claude。",
+          "whatChanged": "本期 AP 报道法院阻止五角大楼对 Anthropic 的供应链风险标记。",
+          "stillUnproven": "仍需法院案卷、上诉文件、DoD 采购指引和 Anthropic 官方回应。"
+        },
+        {
+          "company": "AWS",
+          "label": "Agent 平台转向评估和工具护栏",
+          "lastMention": "历史版记录 AWS、Bedrock、AgentCore 与云 Agent 基础设施线索。",
+          "whatChanged": "本期新增 AgentCore Evaluations 和 Bedrock Guardrails 工具交互边界两条官方工程说明。",
+          "stillUnproven": "仍需 AWS 文档、样例代码、客户日志、审计记录和红队测试。"
+        },
+        {
+          "company": "NVIDIA",
+          "label": "Vera、NVHBM与订单",
+          "lastMention": "上一版记录 Vera CPU 交付、AI capex 和数据中心约束。",
+          "whatChanged": "本期新增 NVLink Fusion/NVHBM 及 Amazon 上调 NVIDIA 芯片订单的媒体信号。",
+          "stillUnproven": "仍需云规格、供应链记录、独立 benchmark、合同和客户成本数据。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/公司原文",
+          "count": 5,
+          "role": "官方/公司原文支持核对 OpenAI、AWS、NVIDIA 和 Microsoft 的发布动作、日期、规格和自述范围；效果、采用和安全结果仍需外证。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体背景",
+          "count": 8,
+          "role": "AP、VentureBeat 和 TechCrunch 用于司法、融资、市场、模型和工程方向雷达；完整事实、采访、数据、金额和上下文仍属于原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "采购、安全与审批边界",
+          "count": 3,
+          "itemIds": [
+            "ap-anthropic-pentagon-blacklist-ruling-2026-08-29",
+            "aws-bedrock-guardrails-tool-interactions-2026-08-29",
+            "venturebeat-visa-security-ai-patches-code-2026-08-29"
+          ],
+          "meaning": "用来更新政府采购、工具调用护栏和自动修复审批的风险清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "Agent 评估、解析与办公入口",
+          "count": 5,
+          "itemIds": [
+            "aws-agentcore-evaluations-2026-08-29",
+            "microsoft-365-copilot-python-excel-2026-08-29",
+            "venturebeat-meta-evoharness-rl-2026-08-29",
+            "venturebeat-cohere-parse-5-cost-2026-08-29",
+            "venturebeat-glm-5-3-flash-workloads-2026-08-29"
+          ],
+          "meaning": "用来检查 Agent 评估、模型路由、文档解析和办公代码执行是否进入生产控制面。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "算力、内存和订单",
+          "count": 2,
+          "itemIds": [
+            "nvidia-nvlink-fusion-nvhbm-2026-08-29",
+            "techcrunch-amazon-nvidia-chip-order-2026-08-29"
+          ],
+          "meaning": "用来核对 AI 基础设施的内存架构、GPU 订单和实际供给证据。"
+        },
+        {
+          "id": "enterprise",
+          "label": "采用与商业化试点",
+          "count": 3,
+          "itemIds": [
+            "openai-thailand-ai-accelerator-2026-08-29",
+            "techcrunch-instinct-350m-valuation-2026-08-29",
+            "techcrunch-runable-21m-agent-business-growth-2026-08-29"
+          ],
+          "meaning": "用来核对公共部门试点、消费权限型 Agent 和经营型 Agent 融资是否产生真实采用证据。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "venturebeat-ai",
+        "sourceName": "VentureBeat AI",
+        "count": 4,
+        "share": "4/13",
+        "note": "单一媒体来源 VentureBeat 提供 4 条工程与模型市场信号，存在来源集中风险。",
+        "nextCheck": "用官方原文、论文、第三方 benchmark、客户日志和其他媒体交叉确认。"
+      },
+      "overreadBoundary": {
+        "label": "媒体信号偏多",
+        "body": "本期可靠媒体来源多于官方来源，适合做风险雷达和核验清单，不适合直接当作交易、订单、性能或采用结论。",
+        "doNotConclude": "不要把本期读成全市场结论，也不要据此断定融资已交割、订单已交付、模型路由有效或自动修复安全。",
+        "useInstead": "优先查法院案卷、公司公告、价格页、产品文档、供应链记录、客户日志、第三方 benchmark 和审计报告。"
+      },
+      "itemCount": 13,
+      "items": [
+        {
+          "id": "techcrunch-instinct-350m-valuation-2026-08-29",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch：AI 助手 Instinct 融资 3.5 亿美元",
+          "body": "TechCrunch 报道 AI 助手 Instinct 融资 3.5 亿美元，估值约 25 亿美元。",
+          "summary": "TechCrunch 报道 AI 助手 Instinct 融资 3.5 亿美元，估值约 25 亿美元。",
+          "whyItMatters": "资本继续押注“个人权限层”的消费 Agent，但隐私、安全和真实留存仍是能否成为平台的核心证据。",
+          "detailBody": "报道只作为融资和市场背景；完整投资方、条款、产品权限争议和上下文应回到 TechCrunch 原文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "消费 AI Agent 的竞争点可能从模型能力转到谁能获得用户跨应用权限和可审计授权。",
+          "detailTrend": "消费 AI Agent 的竞争点可能从模型能力转到谁能获得用户跨应用权限和可审计授权。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "融资额足以改变消费 Agent 赛道关注度，但仍需官方融资文件和产品安全证据。",
+          "topReason": "融资额足以改变消费 Agent 赛道关注度，但仍需官方融资文件和产品安全证据。",
+          "detailWhyRanked": "融资额足以改变消费 Agent 赛道关注度，但仍需官方融资文件和产品安全证据。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "融资和隐私冲突有叙事强度，仍需官方和产品数据验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "融资和隐私冲突有叙事强度，仍需官方和产品数据验证。"
+          },
+          "impact": "创业者和投资团队可把权限、审计、撤销和留存作为消费 Agent 尽调重点。",
+          "whoShouldCare": "正在设计个人助手、日程、邮箱、支付或跨应用自动化产品的创始人/安全团队，应关注权限授权如何影响增长、审计和监管风险。",
+          "readerUse": "相关团队用来检查消费 Agent 的融资热度、权限风险和产品留存证据。",
+          "nextCheck": "等待公司公告、融资文件、隐私政策、权限审计、用户留存和监管反馈。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Instinct的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得公司公告、融资文件、投资方确认、权限审计和留存数据后，才能从媒体融资信号升级为确认的市场采用判断。",
+          "claimBoundary": "不证明 Instinct 已经规模化留存，也不证明用户愿意长期交出跨应用权限。",
+          "counterEvidence": "若融资未获官方确认、产品权限被平台限制、用户留存低或隐私投诉增加，应下调赛道判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/",
+          "originalUrl": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-29T03:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "03:00",
+          "tags": [
+            "消费Agent",
+            "融资",
+            "隐私"
+          ],
+          "companies": [
+            "Instinct"
+          ]
+        },
+        {
+          "id": "techcrunch-amazon-nvidia-chip-order-2026-08-29",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch：Amazon 因需求上调 NVIDIA 芯片订单",
+          "body": "TechCrunch 报道 Amazon 因 AI 需求上调 NVIDIA 芯片订单。",
+          "summary": "TechCrunch 报道 Amazon 因 AI 需求上调 NVIDIA 芯片订单。",
+          "whyItMatters": "如果属实，这显示自研 Trainium 与采购 NVIDIA 并行，云厂商短期仍需多路径保障 AI 算力。",
+          "detailBody": "该项来自媒体报道，适合记录算力需求信号；订单规模、交付节奏和财务承诺需原始采购或供应链材料确认。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "AI 云基础设施的现实路线可能不是单一自研替代，而是自研芯片、NVIDIA 生态和融资安排并行。",
+          "detailTrend": "AI 云基础设施的现实路线可能不是单一自研替代，而是自研芯片、NVIDIA 生态和融资安排并行。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "算力供需影响大，但媒体报道必须等待 Amazon/NVIDIA、供应链或 filings 验证。",
+          "topReason": "算力供需影响大，但媒体报道必须等待 Amazon/NVIDIA、供应链或 filings 验证。",
+          "detailWhyRanked": "算力供需影响大，但媒体报道必须等待 Amazon/NVIDIA、供应链或 filings 验证。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响很高但需要供应链、财报或公司确认。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "影响很高但需要供应链、财报或公司确认。"
+          },
+          "impact": "云客户和基础设施采购团队可关注 GPU 供给、排队时间和云价变化。",
+          "whoShouldCare": "需要规划训练/推理容量、预算和多云采购的 CTO/财务运营/基础设施团队，应把此类订单信号与实际实例供应分开看。",
+          "readerUse": "相关团队用来更新 GPU 供给、云容量和 AI capex 观察表。",
+          "nextCheck": "核对 Amazon/NVIDIA 公告、供应链交付记录、财报披露、实例可用区和价格变化。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Amazon的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得公司公告、采购文件、财报披露、供应链记录或云实例交付数据后，才能从媒体报道升级为确认的算力扩张事实。",
+          "claimBoundary": "不证明订单已经全部交付，也不证明客户可立即获得更便宜算力。",
+          "counterEvidence": "若订单数字被否认、交付延迟、实例供应未改善或云价格继续上涨，应下调供给改善判断。，且相关日志或数据无法确认时，应下调判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
+          "originalUrl": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-29T02:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "02:00",
+          "tags": [
+            "GPU",
+            "云算力",
+            "订单"
+          ],
+          "companies": [
+            "Amazon",
+            "NVIDIA"
+          ]
+        },
+        {
+          "id": "venturebeat-meta-evoharness-rl-2026-08-29",
+          "category": "research",
+          "label": "研究",
+          "title": "VentureBeat：Meta/UIUC 用 EvoHarness-RL 训练 Agent 使用外部状态",
+          "body": "VentureBeat 报道 Meta/UIUC 的 EvoHarness-RL Agent 状态管理研究。",
+          "summary": "VentureBeat 报道 Meta/UIUC 的 EvoHarness-RL Agent 状态管理研究。",
+          "whyItMatters": "它把 Agent 可靠性的难点从 prompt 规则转到可训练的运行时状态管理，直接关联长任务成本和错误恢复。",
+          "detailBody": "报道引用论文和作者解释，称 ALFWorld 实验中 Qwen3-8B 经训练后接近 Claude Opus 4.5 的成功率；完整方法和数字应看论文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
+          "trend": "Agent 工程可能从手写 harness 走向模型学习如何管理记忆、进度和环境信念。",
+          "detailTrend": "Agent 工程可能从手写 harness 走向模型学习如何管理记忆、进度和环境信念。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "研究信号强，且有论文入口。",
+          "topReason": "研究信号强，且有论文入口。",
+          "detailWhyRanked": "研究信号强，且有论文入口。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "报道提供论文入口，需论文原文和复现支撑生产判断。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "报道提供论文入口，需论文原文和复现支撑生产判断。"
+          },
+          "impact": "Agent 平台团队可把动态状态管理作为下一轮框架评估维度。",
+          "whoShouldCare": "构建长流程迁移、财务审计、软件维护或运维 Agent 的工程团队，应关注外部状态是否可训练、可压缩和可审计。",
+          "readerUse": "相关团队用来设计 Agent memory、progress tracker 和工具调用成本的实验计划。",
+          "nextCheck": "阅读 arXiv 论文、代码、benchmark 设置，并寻找第三方复现和真实任务迁移结果。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Meta的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得论文代码、独立复现、跨 benchmark 结果和企业任务日志后，才能从媒体/论文信号升级为可复用 Agent 训练方法。",
+          "claimBoundary": "不证明 8B 模型在真实企业工作流中已稳定替代 frontier model。",
+          "counterEvidence": "若真实任务迁移失败、状态工具成本抵消收益、复现结果低于论文或安全审计发现不可控行为，应下调判断。，且相关日志或数据无法确认时，应下调判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://venturebeat.com/orchestration/meta-researchers-taught-an-8b-ai-model-to-match-claude-opus-4-5-without-the-frontier-price-tag",
+          "originalUrl": "https://venturebeat.com/orchestration/meta-researchers-taught-an-8b-ai-model-to-match-claude-opus-4-5-without-the-frontier-price-tag",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-29T01:33:00+09:00",
+          "freshSourceFact": null,
+          "time": "01:33",
+          "tags": [
+            "Agent研究",
+            "运行时",
+            "Meta"
+          ],
+          "companies": [
+            "Meta"
+          ]
+        },
+        {
+          "id": "techcrunch-runable-21m-agent-business-growth-2026-08-29",
+          "category": "funding",
+          "label": "资金",
+          "title": "TechCrunch：Runable 融资 2100 万美元押注经营型 Agent",
+          "body": "TechCrunch 报道 Runable 融资 2100 万美元，押注经营型 Agent。",
+          "summary": "TechCrunch 报道 Runable 融资 2100 万美元，押注经营型 Agent。",
+          "whyItMatters": "小额但方向清晰的融资显示 Agent 创业从代码/客服扩到增长运营，关键验证点是能否产生可归因业绩。",
+          "detailBody": "该项为媒体融资信号，AI Watchtower 只记录方向和金额；完整投资方、产品细节和客户证据应看原文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "Agent 市场正在细分为能执行具体经营动作的垂直工具，而非泛用聊天入口。",
+          "detailTrend": "Agent 市场正在细分为能执行具体经营动作的垂直工具，而非泛用聊天入口。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "作为资金信号低于巨额融资，但能补足 Agent 商业化方向。",
+          "topReason": "作为资金信号低于巨额融资，但能补足 Agent 商业化方向。",
+          "detailWhyRanked": "作为资金信号低于巨额融资，但能补足 Agent 商业化方向。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 16,
+            "note": "补充商业化方向，证据强度低于官方和大额交易。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 16,
+            "note": "补充商业化方向，证据强度低于官方和大额交易。"
+          },
+          "impact": "增长和运营团队可观察 Agent 是否开始承担获客、实验和漏斗优化任务。",
+          "whoShouldCare": "负责增长实验、销售线索、营销运营和自动化工作流的创始人/运营团队，应关注经营型 Agent 如何证明增量效果。",
+          "readerUse": "相关团队用来检查 Agent 创业方向是否从生产力工具进入收入相关流程。",
+          "nextCheck": "寻找 Runable 官方公告、客户案例、融资文件、产品日志和可归因增长指标。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Runable的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得公司公告、投资方确认、客户侧增长数据和产品审计日志后，才能从融资报道升级为已验证商业化信号。",
+          "claimBoundary": "不证明经营型 Agent 已能稳定带来收入，也不证明融资金额代表市场成熟。",
+          "counterEvidence": "若客户无法复现增长、自动化造成合规问题、融资未确认或产品留存不足，应下调方向判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/26/runable-hits-21m-to-bet-ai-agents-can-go-from-building-businesses-to-growing-them/",
+          "originalUrl": "https://techcrunch.com/2026/08/26/runable-hits-21m-to-bet-ai-agents-can-go-from-building-businesses-to-growing-them/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-29T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-29",
+          "tags": [
+            "Agent创业",
+            "增长",
+            "融资"
+          ],
+          "companies": [
+            "Runable"
+          ]
+        },
+        {
+          "id": "venturebeat-cohere-parse-5-cost-2026-08-29",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：Cohere Parse 5 以每页成本切入文档解析",
+          "body": "VentureBeat 报道 Cohere Parse 5 以每页成本切入企业文档解析。",
+          "summary": "VentureBeat 报道 Cohere Parse 5 以每页成本切入企业文档解析。",
+          "whyItMatters": "RAG 和 Agent 的瓶颈常在混乱文档，解析工具的成本/页可能比单次 benchmark 排名更影响规模化部署。",
+          "detailBody": "该报道适合作为市场背景：它提示文档 AI 供应商在准确率、版面保持和单位成本之间重新定位。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "企业 AI 数据层竞争正在从“能否解析”转向“能否以可审计成本持续处理大量页面”。",
+          "detailTrend": "企业 AI 数据层竞争正在从“能否解析”转向“能否以可审计成本持续处理大量页面”。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "媒体信号能提示采购问题，但必须回到产品文档、价格页和客户评测。",
+          "topReason": "媒体信号能提示采购问题，但必须回到产品文档、价格页和客户评测。",
+          "detailWhyRanked": "媒体信号能提示采购问题，但必须回到产品文档、价格页和客户评测。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "市场信号有用但需要价格页和第三方测试确认。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "市场信号有用但需要价格页和第三方测试确认。"
+          },
+          "impact": "数据平台团队可把解析质量和每页成本放进同一评估表。",
+          "whoShouldCare": "负责合同、发票、报告和知识库进入 RAG/Agent 流程的数据工程与采购团队，应关注解析质量、成本和审计字段是否一起达标。",
+          "readerUse": "相关团队用来比较文档解析 API 的总拥有成本、版面保真度和下游检索质量。",
+          "nextCheck": "核对 Cohere 官方文档、价格页、第三方 benchmark、客户样本和错误分析。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Cohere的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得产品文档、价格页、第三方测试和客户语料评测后，才能从媒体市场信号升级为已验证文档处理优势。，并形成可复核报告。",
+          "claimBoundary": "不证明 Parse 5 是最佳解析器，也不证明成本优势适用于中文、扫描件或复杂表格。",
+          "counterEvidence": "若第三方测试显示准确率不足、隐藏费用高、复杂版面失败或下游 RAG 指标下降，应下调采购意义。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://venturebeat.com/data/cohere-parse-5-loses-the-benchmark-on-points-it-wins-on-cost-per-page",
+          "originalUrl": "https://venturebeat.com/data/cohere-parse-5-loses-the-benchmark-on-points-it-wins-on-cost-per-page",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-29T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-29",
+          "tags": [
+            "文档解析",
+            "RAG",
+            "成本"
+          ],
+          "companies": [
+            "Cohere"
+          ]
+        },
+        {
+          "id": "ap-anthropic-pentagon-blacklist-ruling-2026-08-29",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：美国法官阻止五角大楼对 Anthropic 的风险标记",
+          "body": "AP 报道，美国法官阻止五角大楼对 Anthropic 的供应链风险标记。",
+          "summary": "AP 报道，美国法官阻止五角大楼对 Anthropic 的供应链风险标记。",
+          "whyItMatters": "这把 AI 模型供应商、国防采购、言论保护和军事用途限制放进同一法律冲突，影响政府客户如何处理模型准入。",
+          "detailBody": "报道称裁决暂时阻止相关限制，争议源于 Anthropic 对无限制军事用途的反对；完整法律事实仍应读判决书和 AP 原文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
+          "trend": "国家安全采购不再只是能力竞标，也在测试模型公司的使用政策能否承受政府压力。",
+          "detailTrend": "国家安全采购不再只是能力竞标，也在测试模型公司的使用政策能否承受政府压力。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "可靠媒体给出明确司法动作。",
+          "topReason": "可靠媒体给出明确司法动作。",
+          "detailWhyRanked": "可靠媒体给出明确司法动作。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "司法动作明确但仍需案卷和政府后续文件确认影响范围。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "司法动作明确但仍需案卷和政府后续文件确认影响范围。"
+          },
+          "impact": "公共部门采购团队需要把模型供应商政策立场纳入法律和供应链风险评估。",
+          "whoShouldCare": "服务政府、国防、公共安全和高合规行业的法务/销售/政策团队，应关注 AI 使用限制如何触发采购资格争议。",
+          "readerUse": "相关团队用来更新政府 AI 采购、供应链风险标记和模型使用政策冲突的观察清单。",
+          "nextCheck": "读取法院裁定、政府上诉文件、DoD 采购指引和 Anthropic 官方回应。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Anthropic的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得法院原始裁定、上诉案卷或 DoD 正式采购更新后，才能从媒体报道升级为已确认政策和采购影响。",
+          "claimBoundary": "不证明 Anthropic 最终胜诉，也不证明所有政府 AI 合同都会接受供应商自设限制。",
+          "counterEvidence": "若上诉推翻裁定、DoD 发布新的合法依据或采购禁令以其他形式恢复，应下调政策影响判断。",
+          "source": "Associated Press Technology",
+          "sourceName": "Associated Press Technology",
+          "sourceId": "ap-technology",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c",
+          "originalUrl": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T12:40:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-28",
+          "tags": [
+            "政府采购",
+            "国防AI",
+            "AI合规"
+          ],
+          "companies": [
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "openai-thailand-ai-accelerator-2026-08-29",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 与泰国 MHESI 启动 AI 初创加速器",
+          "body": "OpenAI 与泰国 MHESI 启动八周 AI Accelerator，首批覆盖 10 家医疗、健康和教育初创公司。",
+          "summary": "OpenAI 与泰国 MHESI 启动八周 AI Accelerator，首批覆盖 10 家医疗、健康和教育初创公司。",
+          "whyItMatters": "这把 frontier model 支持、政府创新网络和本地高风险场景放在同一试点里，适合观察主权市场如何要求可评估产品。",
+          "detailBody": "OpenAI 原文核对了项目日期、合作方、八周周期、10 家公司和每队 API credits；医疗电话、儿童学习和教育评测仍属项目目标。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "区域 AI 合作正在从“开办公室”转向把模型供应商、政府、大学和本地创业者捆成可审计试点。",
+          "detailTrend": "区域 AI 合作正在从“开办公室”转向把模型供应商、政府、大学和本地创业者捆成可审计试点。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "官方证据强，且有具体 cohort、时间表和 Demo Day。",
+          "topReason": "官方证据强，且有具体 cohort、时间表和 Demo Day。",
+          "detailWhyRanked": "官方证据强，且有具体 cohort、时间表和 Demo Day。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源支撑发布事实，影响取决于试点评估和政府后续文件。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源支撑发布事实，影响取决于试点评估和政府后续文件。"
+          },
+          "impact": "医疗和教育 AI 团队可把它作为东南亚公共部门试点的评估清单。",
+          "whoShouldCare": "负责医疗语音、教育产品和政府创新项目的产品/政策团队，应关注试点如何设置评估、安全和商业里程碑。",
+          "readerUse": "相关团队用来检查本地化 AI 项目是否同时具备模型资源、用户证据、隐私安全和政府承接路径。",
+          "nextCheck": "核对 Demo Day 输出、试点医院/学校记录、用户评估数据和 MHESI/NIA 后续文件。",
+          "followUpQuestions": [
+            "是否已有独立来源确认OpenAI的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得项目名单确认、试点数据、用户评估报告或政府验收文件后，才能从官方发布升级为已验证公共部门采用案例。",
+          "claimBoundary": "不证明这些医疗和教育产品已经安全有效，也不证明泰国市场采用率已经形成。",
+          "counterEvidence": "若 Demo Day 无真实用户证据、试点取消、隐私审计不通过或合作机构未确认部署，应下调采用判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "provenance": "OpenAI News 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
+          "sourceUrl": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/",
+          "originalUrl": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-28",
+          "tags": [
+            "区域合作",
+            "医疗AI",
+            "教育AI"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "venturebeat-glm-5-3-flash-workloads-2026-08-29",
+          "category": "model",
+          "label": "模型",
+          "title": "VentureBeat：GLM-5.3-Flash 被定位为低成本工作负载模型",
+          "body": "VentureBeat 分析 GLM-5.3-Flash 的低成本工作负载覆盖潜力。",
+          "summary": "VentureBeat 分析 GLM-5.3-Flash 的低成本工作负载覆盖潜力。",
+          "whyItMatters": "模型采购正在从“永远上最大模型”转向按任务分层，价格、延迟和能力边界会直接改变 Agent 经济性。",
+          "detailBody": "这是一篇分析性媒体信号，不等于官方 benchmark；需核对 z.ai、Artificial Analysis 和真实工作负载数据。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
+          "trend": "企业模型路由将更强调中档模型的覆盖率，用小模型处理常规任务，把 frontier model 留给高风险步骤。",
+          "detailTrend": "企业模型路由将更强调中档模型的覆盖率，用小模型处理常规任务，把 frontier model 留给高风险步骤。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "有助于解释模型分层采购，但不能直接采信 45% 口径。",
+          "topReason": "有助于解释模型分层采购，但不能直接采信 45% 口径。",
+          "detailWhyRanked": "有助于解释模型分层采购，但不能直接采信 45% 口径。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "分析视角有用，数字口径必须用官方和第三方评测校准。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "分析视角有用，数字口径必须用官方和第三方评测校准。"
+          },
+          "impact": "平台团队可把模型路由、成本阈值和任务难度分类纳入预算优化。",
+          "whoShouldCare": "正在为客服、代码、知识库和内部 Agent 做模型路由的工程/采购团队，应评估哪些任务可从 frontier model 下放。",
+          "readerUse": "相关团队用来设定低成本模型试验、A/B 评测和 fallback 规则。",
+          "nextCheck": "核对 z.ai 官方模型卡、Artificial Analysis 数据、价格页和内部任务集 A/B 结果。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Z.ai的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得官方模型卡、独立 benchmark、价格页和客户任务评测后，才能从媒体分析升级为可采用的模型路由策略。，并形成可复核报告。",
+          "claimBoundary": "不证明 GLM-5.3-Flash 能处理 45% 的任何企业工作负载，也不证明安全和合规边界满足要求。",
+          "counterEvidence": "若内部任务失败率高、长上下文不稳定、价格优势消失或合规要求无法满足，应下调路由建议。，且相关日志或数据无法确认时，应下调判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://venturebeat.com/orchestration/glm-5-3-flash-will-likely-handle-45-of-your-ai-workloads",
+          "originalUrl": "https://venturebeat.com/orchestration/glm-5-3-flash-will-likely-handle-45-of-your-ai-workloads",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-28",
+          "tags": [
+            "模型路由",
+            "成本",
+            "GLM"
+          ],
+          "companies": [
+            "Z.ai"
+          ]
+        },
+        {
+          "id": "venturebeat-visa-security-ai-patches-code-2026-08-29",
+          "category": "policy",
+          "label": "政策",
+          "title": "VentureBeat：Visa 推出可先补代码的安全 AI",
+          "body": "VentureBeat 报道 Visa 的安全 AI 可在人工 review 前生成生产代码修复。",
+          "summary": "VentureBeat 报道 Visa 的安全 AI 可在人工 review 前生成生产代码修复。",
+          "whyItMatters": "安全自动化正触碰变更审批底线：速度提升和错误扩散风险会同时进入企业治理讨论。",
+          "detailBody": "报道用于提示 Visa 的安全 AI 方向；完整技术细节、控制流程和事故边界仍需 Visa 原始材料。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "安全 Agent 的竞争点从告警归纳进入 patch 执行动作，审批和回滚机制会成为关键控制面。",
+          "detailTrend": "安全 Agent 的竞争点从告警归纳进入 patch 执行动作，审批和回滚机制会成为关键控制面。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "可靠媒体提供高冲击信号，但生产变更事实必须由 Visa 文档、审计日志或客户案例确认。",
+          "topReason": "可靠媒体提供高冲击信号，但生产变更事实必须由 Visa 文档、审计日志或客户案例确认。",
+          "detailWhyRanked": "可靠媒体提供高冲击信号，但生产变更事实必须由 Visa 文档、审计日志或客户案例确认。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响高，但缺少原始技术和审计材料前只能作为媒体信号。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "影响高，但缺少原始技术和审计材料前只能作为媒体信号。"
+          },
+          "impact": "安全负责人可重新审查自动修复、人工审批和变更回滚的权限边界。",
+          "whoShouldCare": "允许 AI 参与漏洞修复、生产变更或代码审查的安全工程/DevSecOps 团队，应检查谁能批准、回滚和审计每次修改。",
+          "readerUse": "相关团队用来更新自动 patch、human-in-the-loop 和生产权限分离的治理清单。",
+          "nextCheck": "寻找 Visa 官方技术说明、变更审计样本、回滚机制、客户部署记录和第三方安全评测。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Visa的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得 Visa 官方文档、审计日志、客户案例或独立安全评估后，才能从媒体报道升级为确认的生产安全自动化实践。",
+          "claimBoundary": "不证明 AI 已可安全绕过人工 review，也不证明 Visa 的方案适合其他企业直接复制。",
+          "counterEvidence": "若出现错误补丁、权限越界、审计链不完整或人工审批恢复为强制步骤，应下调自动修复判断。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceId": "venturebeat-ai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
+          "sourceUrl": "https://venturebeat.com/security/visa-agentic-security-harness-autonomous-fix",
+          "originalUrl": "https://venturebeat.com/security/visa-agentic-security-harness-autonomous-fix",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-28T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-28",
+          "tags": [
+            "安全AI",
+            "自动修复",
+            "治理"
+          ],
+          "companies": [
+            "Visa"
+          ]
+        },
+        {
+          "id": "aws-bedrock-guardrails-tool-interactions-2026-08-29",
+          "category": "policy",
+          "label": "政策",
+          "title": "AWS 将 Bedrock Guardrails 扩到 Agent 工具交互边界",
+          "body": "AWS 说明如何把 Bedrock Guardrails 扩到 Agent 工具交互边界。",
+          "summary": "AWS 说明如何把 Bedrock Guardrails 扩到 Agent 工具交互边界。",
+          "whyItMatters": "这回应了模型边界之外的真实风险：Agent 调工具、读外部数据、传给下游系统时，传统 prompt/response 审查会漏掉关键路径。",
+          "detailBody": "AWS 原文把工具参数、外部数据、误导内容和多 Agent 传播列为模型级护栏之外的风险点。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "Agent 安全正在从“模型输入输出过滤”升级为工具层和数据层的连续验证。",
+          "detailTrend": "Agent 安全正在从“模型输入输出过滤”升级为工具层和数据层的连续验证。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "官方安全架构与近期 Agent 事故主线高度相关，适合转化为企业控制面检查项。",
+          "topReason": "官方安全架构与近期 Agent 事故主线高度相关，适合转化为企业控制面检查项。",
+          "detailWhyRanked": "官方安全架构与近期 Agent 事故主线高度相关，适合转化为企业控制面检查项。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方安全文章支撑架构事实，安全成效需红队和客户事件验证。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方安全文章支撑架构事实，安全成效需红队和客户事件验证。"
+          },
+          "impact": "安全工程团队可据此审查 MCP、工具参数、PII 和跨 Agent 数据流。",
+          "whoShouldCare": "正在部署 Agent 访问数据库、SaaS、MCP server 或内部 API 的安全/平台团队，应检查工具调用前后是否有独立校验点。",
+          "readerUse": "相关团队用来补充 Agent 工具边界、数据入口和下游传播风险的安全设计清单。",
+          "nextCheck": "核对示例代码、IAM 策略、审计日志、红队报告和客户部署故障率。",
+          "followUpQuestions": [
+            "是否已有独立来源确认AWS的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得可运行样例、审计记录、红队测试和客户事件数据后，才能从官方架构建议升级为有效安全控制。",
+          "claimBoundary": "不证明这些检查点能阻止所有 prompt injection、数据投毒或越权工具调用。",
+          "counterEvidence": "若实测绕过率高、延迟不可接受、工具覆盖不足或审计日志不能重建事件，应下调安全有效性判断。",
+          "source": "AWS Security Blog",
+          "sourceName": "AWS Security Blog",
+          "sourceId": "aws-security-blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "provenance": "AWS Security Blog 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
+          "sourceUrl": "https://aws.amazon.com/blogs/security/extend-amazon-bedrock-guardrails-to-tool-interactions-using-the-strands-agents-sdk/",
+          "originalUrl": "https://aws.amazon.com/blogs/security/extend-amazon-bedrock-guardrails-to-tool-interactions-using-the-strands-agents-sdk/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-27T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-27",
+          "tags": [
+            "Agent安全",
+            "Guardrails",
+            "MCP"
+          ],
+          "companies": [
+            "AWS"
+          ]
+        },
+        {
+          "id": "aws-agentcore-evaluations-2026-08-29",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS 推出跨框架 AgentCore Evaluations",
+          "body": "AWS 介绍 Bedrock AgentCore Evaluations，用 OpenTelemetry 轨迹评估多框架 Agent。",
+          "summary": "AWS 介绍 Bedrock AgentCore Evaluations，用 OpenTelemetry 轨迹评估多框架 Agent。",
+          "whyItMatters": "Agent 评估正在从框架内工具变成云平台控制面，生产团队可把 CI 回归测试和线上抽样监测接到同一指标链。",
+          "detailBody": "AWS 原文说明 on-demand 与 online 两种模式、CloudWatch 结果路径和 OpenTelemetry/OpenInference 集成合同。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
+          "trend": "Agent 平台竞争开始围绕可观测性和评估标准化，而不是只比模型调用入口。",
+          "detailTrend": "Agent 平台竞争开始围绕可观测性和评估标准化，而不是只比模型调用入口。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "官方工程细节具体，直接影响生产 Agent 的质量门槛和框架迁移成本。",
+          "topReason": "官方工程细节具体，直接影响生产 Agent 的质量门槛和框架迁移成本。",
+          "detailWhyRanked": "官方工程细节具体，直接影响生产 Agent 的质量门槛和框架迁移成本。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方技术说明完整，仍需客户日志和第三方实践验证评分稳定性。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方技术说明完整，仍需客户日志和第三方实践验证评分稳定性。"
+          },
+          "impact": "企业平台团队可评估是否把 agent 轨迹纳入统一质量看板。",
+          "whoShouldCare": "正在用多套 Agent 框架做客服、数据、运维或代码自动化的平台工程/SRE 团队，应检查 telemetry 是否足够支撑统一评估。",
+          "readerUse": "相关团队用来设计 agent CI、线上抽样评估、CloudWatch 告警和跨框架治理接口。",
+          "nextCheck": "核对 AWS 文档、样例仓库、价格页、支持区域和真实 agent 日志接入结果。",
+          "followUpQuestions": [
+            "是否已有独立来源确认AWS的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得公开文档、样例代码、客户侧评估日志和线上告警数据后，才能从官方功能发布升级为可验证生产评估能力。",
+          "claimBoundary": "不证明 LLM-as-judge 在所有业务场景可靠，也不证明非 AWS 工作负载可无成本迁移。",
+          "counterEvidence": "若支持框架受限、生产日志缺失关键字段、评分漂移无法校准或价格过高，应下调落地价值。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "provenance": "AWS Machine Learning Blog 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/evaluate-any-agent-framework-with-amazon-bedrock-agentcore-evaluations/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/evaluate-any-agent-framework-with-amazon-bedrock-agentcore-evaluations/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-26T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-26",
+          "tags": [
+            "Agent评估",
+            "OpenTelemetry",
+            "Bedrock"
+          ],
+          "companies": [
+            "AWS"
+          ]
+        },
+        {
+          "id": "nvidia-nvlink-fusion-nvhbm-2026-08-29",
+          "category": "tool",
+          "label": "工具",
+          "title": "NVIDIA 为 NVLink Fusion 增加 NVHBM 记忆体方案",
+          "body": "NVIDIA 称 NVLink Fusion 增加 NVHBM，Amazon Annapurna Labs 将率先协作。",
+          "summary": "NVIDIA 称 NVLink Fusion 增加 NVHBM，Amazon Annapurna Labs 将率先协作。",
+          "whyItMatters": "AI 基础设施竞争正从 GPU 扩到 XPU、内存控制器、rack-scale 网络和半定制芯片协作；仍需 AWS 规格、供货记录和独立 benchmark 才能证明优势。",
+          "detailBody": "NVIDIA 原文称 NVHBM 把自定义 memory controller 放入 HBM base die，并披露带宽、功耗和 die area 主张。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
+          "trend": "云厂商自研芯片和 NVIDIA 生态不是简单替代关系，更像在 rack-scale 标准和半定制组件上重新分工。",
+          "detailTrend": "云厂商自研芯片和 NVIDIA 生态不是简单替代关系，更像在 rack-scale 标准和半定制组件上重新分工。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "厂商技术路线清楚，但必须等 AWS 规格和独立 benchmark。",
+          "topReason": "厂商技术路线清楚，但必须等 AWS 规格和独立 benchmark。",
+          "detailWhyRanked": "厂商技术路线清楚，但必须等 AWS 规格和独立 benchmark。 该来源给出 NVHBM、NVLink Fusion 和 Annapurna Labs 的明确入口；本期排名依据是它能指向 AWS 规格、供货记录、第三方 benchmark 和客户成本数据，而不是采信厂商性能结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "厂商技术主张明确，外部验证和量产信息仍是关键。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "厂商技术主张明确，外部验证和量产信息仍是关键。"
+          },
+          "impact": "基础设施团队可把它作为未来 AI rack 架构、内存带宽和供应链锁定的观察点。",
+          "whoShouldCare": "规划训练/推理集群、XPU 采购和云迁移路线的基础设施/财务团队，应关注 NVLink Fusion 是否改变自研芯片与 NVIDIA 平台的组合方式。",
+          "readerUse": "基础设施和采购团队用来检查内存带宽、XPU 集成、AWS Trainium 路线和供应商依赖的长期风险，并等待外部性能证据。",
+          "nextCheck": "等待 AWS 规格、内存伙伴验证、独立 benchmark、量产供货记录和云实例可用性。",
+          "followUpQuestions": [
+            "是否已有独立来源确认NVIDIA的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得 AWS 服务规格、第三方性能测试、供货记录和客户成本数据后，才能从厂商主张升级为已验证基础设施优势。",
+          "claimBoundary": "不证明 NVHBM 已量产，也不证明 30% 带宽和 15% 功耗主张会在客户工作负载中实现。",
+          "counterEvidence": "若 AWS 官方规格文件缺席、供应链记录显示延期、独立 benchmark 复测不达标或客户成本数据无改善，应下调基础设施意义。",
+          "source": "NVIDIA AI Blog",
+          "sourceName": "NVIDIA AI Blog",
+          "sourceId": "nvidia-blog-ai",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "medium",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "provenance": "NVIDIA 官方博客属于厂商主张，可核对其发布、声称的架构和合作对象；性能、功耗、交付和客户效果仍需独立证据。",
+          "sourceUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
+          "originalUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-26T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-26",
+          "tags": [
+            "AI基础设施",
+            "NVLink",
+            "HBM"
+          ],
+          "companies": [
+            "NVIDIA",
+            "AWS"
+          ]
+        },
+        {
+          "id": "microsoft-365-copilot-python-excel-2026-08-29",
+          "category": "product",
+          "label": "产品",
+          "title": "Microsoft 365 Copilot 将 Python 编辑带进 Excel",
+          "body": "Microsoft 365 Copilot release notes 将 Python 编辑带入 Excel。",
+          "summary": "Microsoft 365 Copilot release notes 将 Python 编辑带入 Excel。",
+          "whyItMatters": "办公 AI 正从文本助手进入可执行分析环境，管理员需要同时评估效率、代码执行控制和数据治理。",
+          "detailBody": "官方发布说明把该功能列在 Windows、Mac、Web 的 Excel 更新中，并强调现有安全和执行控制继续适用。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
+          "trend": "企业办公套件正在把“让 AI 写建议”推进到“让 AI 运行分析代码”，治理重心会转向权限、审计和输出可复核性。",
+          "detailTrend": "企业办公套件正在把“让 AI 写建议”推进到“让 AI 运行分析代码”，治理重心会转向权限、审计和输出可复核性。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
+          "whyRanked": "官方 release notes 支撑功能事实。",
+          "topReason": "官方 release notes 支撑功能事实。",
+          "detailWhyRanked": "官方 release notes 支撑功能事实。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "官方发布说明明确，实际影响取决于租户可用性和治理记录。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "官方发布说明明确，实际影响取决于租户可用性和治理记录。"
+          },
+          "impact": "数据分析、财务和运营团队可评估 Copilot 生成 Python 结果的审计流程。",
+          "whoShouldCare": "允许员工在 Excel 中处理财务、客户或运营数据的 IT 管理员和数据治理团队，应检查 Python 执行、权限和结果复核规则。",
+          "readerUse": "相关团队用来更新办公 AI、低代码分析和终端用户计算治理清单。",
+          "nextCheck": "核对租户 rollout、管理员策略、审计日志、数据隔离说明和用户侧错误率。",
+          "followUpQuestions": [
+            "是否已有独立来源确认Microsoft的核心事实？",
+            "下一版能否找到客户日志、官方文件、论文复现或监管材料来升级这条信号？"
+          ],
+          "evidenceThreshold": "需要取得管理员文档、租户日志、执行环境说明和用户验证案例后，才能从功能发布升级为可治理的企业分析能力。",
+          "claimBoundary": "不证明所有 Microsoft 365 租户已可用，也不证明 Copilot 生成的 Python 分析天然正确。",
+          "counterEvidence": "若 rollout 受限、管理员无法审计代码、敏感数据控制不足或输出错误率高，应下调采用建议。",
+          "source": "Microsoft Learn Copilot Release Notes",
+          "sourceName": "Microsoft Learn Copilot Release Notes",
+          "sourceId": "microsoft-learn-copilot",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "provenance": "Microsoft Learn Copilot Release Notes 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
+          "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+          "originalUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-25T00:00:00+09:00",
+          "freshSourceFact": null,
+          "time": "08-25",
+          "tags": [
+            "Copilot",
+            "Excel",
+            "企业数据"
+          ],
+          "companies": [
+            "Microsoft"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-28",
       "date": "2026-08-28",

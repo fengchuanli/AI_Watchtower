@@ -1,3 +1,29 @@
+## 2026-08-29 08:10 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-29`，发布 13 条安全非重复信号，聚焦政府 AI 采购、Agent 评估与工具护栏、办公数据执行、算力/内存协作、模型路由、文档解析、生产自动修复和消费/经营型 Agent 融资。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、AP Technology、AWS Machine Learning Blog、AWS Security Blog、NVIDIA Blog、Microsoft Learn Copilot release notes、VentureBeat、TechCrunch 和历史 URL 去重。
+  - 新增官方来源 `aws-machine-learning-blog`、`aws-security-blog`、`microsoft-learn-copilot`，source count 更新为 63。
+  - 本期发布 13 条：OpenAI/泰国 MHESI AI Accelerator；AP 对 Anthropic/DoD 供应链风险裁定的报道；AWS AgentCore Evaluations；AWS Bedrock Guardrails 工具交互边界；NVIDIA NVLink Fusion/NVHBM；Microsoft 365 Copilot Excel Python；VentureBeat 对 EvoHarness-RL、Cohere Parse 5、Visa 安全 AI、GLM-5.3-Flash 的报道/分析；TechCrunch 对 Instinct 融资、Amazon/NVIDIA 芯片订单和 Runable 融资的报道。
+  - OpenAI、AWS、Microsoft 项保持 `官方核对` / `confirmed`；NVIDIA 项保持 `厂商主张`，在可见理由中写明需 AWS 规格、供货记录和独立 benchmark；AP/VentureBeat/TechCrunch 项保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未使用付费墙/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 597.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 63 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: pending.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be retried after commit and may depend on DNS/network recovery.
+
 ## 2026-08-28 23:10 JST
 
 - Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前本地首页已是同日更晚的 `news-1700-2026-08-28`，本次未回退版本，而是在当前版补充 3 条安全非重复信号，把当前版从 11 条补到 14 条。
