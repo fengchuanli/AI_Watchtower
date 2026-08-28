@@ -35,7 +35,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 14 | Complete | `e493b97` | Current detail pages now show the four-block fact, impact, boundary, and next-check briefing immediately after the 30-second summary, before longer narrative sections. |
 | Day 15 | Complete | `b407942` | `detailTrend` now has a split rule: keep one trend meaning there, and move reader action, upgrade proof, downgrade proof, or source-caveat logic into `readerUse`, `impact`, `evidenceThreshold`, `nextCheck`, `counterEvidence`, or `claimBoundary`. |
 | Day 16 | Complete | `849c751` | media-backed detail pages now show a compact `完整事实入口` reminder after `30 秒速览`, while preserving AI Watchtower's primary explanation and the full source audit block. |
-| Day 17 | Complete | `pending` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now give `evidenceThreshold` upgrade examples for media signal -> official confirmation, vendor claim -> independent proof, and research preprint -> replicated result. |
+| Day 17 | Complete | `7166932` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now give `evidenceThreshold` upgrade examples for media signal -> official confirmation, vendor claim -> independent proof, and research preprint -> replicated result. |
 
 ## Historical Guard Anchors
 
