@@ -1,3 +1,29 @@
+## 2026-08-28 23:10 JST
+
+- Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前本地首页已是同日更晚的 `news-1700-2026-08-28`，本次未回退版本，而是在当前版补充 3 条安全非重复信号，把当前版从 11 条补到 14 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 Anthropic Newsroom、NVIDIA AI Blog、Axios Technology 和历史 URL 去重。
+  - 新增 Anthropic 科学家 Claude 访问计划、NVIDIA Vera CPU 面向 AWS 的交付更新、Axios 对 EU AI Act 透明度要求进入执行窗口的媒体背景。
+  - Anthropic 项保持 `官方核对` / `confirmed`；NVIDIA 项保持 `厂商主张` / `vendor_claim`；Axios 项保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 三条新增均保留明确证据边界：需要项目名单、论文/数据、审计产物、政府访问规则、AWS/OCI 服务规格、客户日志、独立 benchmark、欧盟官方指南、企业披露和执法材料后才能升级。
+  - 未使用付费墙/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 584.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 60 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched files.
+- Commit: Local content commit `8f7fd03` (`补充08点AI新闻情报`); push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery.
+
 ## 2026-08-28 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 17 detail-page proof-boundary task. Added concrete `evidenceThreshold` upgrade examples so editors can distinguish media signals, vendor claims, and research preprints from stronger confirmed evidence.
