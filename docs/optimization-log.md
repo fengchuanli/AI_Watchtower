@@ -1,3 +1,35 @@
+## 2026-08-29 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 18 detail-page proof-boundary task. Reviewed current `followUpQuestions` and replaced generic "confirm core fact / find more evidence" prompts with item-specific source artifacts and observable checks.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/detail-page-review-guide.md`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Updated all 13 current homepage items so `followUpQuestions` now name concrete next checks such as financing filings, court records, model cards, price pages, benchmark setups, audit logs, rollout documents, customer metrics, red-team reports, supply records, or government follow-up files.
+  - Mirrored the same `followUpQuestions` into the latest `data/news-history.json` edition so the archive snapshot keeps the current homepage's verification path.
+  - Added `Follow-Up Question Specificity` guidance to `docs/detail-page-review-guide.md` and expanded `docs/news-data-format.md` so future editors avoid reusable `核心事实` / `继续观察` templates.
+  - Added `validateFollowUpQuestionSpecificity` to `scripts/validate-data.mjs` and guarded the new guidance plus Day 19 handoff in `scripts/validate-site.mjs`.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/detail-page-review-guide.md`, `docs/news-data-format.md`, current `followUpQuestions`, and validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 63 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Confirmed latest archive `followUpQuestions` mirror the current homepage for all 13 items.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `2dee98b` (`细化后续核验问题`); push still depends on GitHub DNS recovery.
+- Git note: `git push origin main` had not yet succeeded at log-writing time because the earlier pull failed on DNS; push needs retry when DNS/network access returns. Current run executed at 2026-08-29 11:04 JST local shell time / 20:00 JST scheduled automation window.
+
 ## 2026-08-29 08:10 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-29`，发布 13 条安全非重复信号，聚焦政府 AI 采购、Agent 评估与工具护栏、办公数据执行、算力/内存协作、模型路由、文档解析、生产自动修复和消费/经营型 Agent 融资。
