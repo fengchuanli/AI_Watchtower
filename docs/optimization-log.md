@@ -27,8 +27,8 @@
   - Confirmed latest archive `followUpQuestions` mirror the current homepage for all 13 items.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `2dee98b` (`细化后续核验问题`); push still depends on GitHub DNS recovery.
-- Git note: `git push origin main` had not yet succeeded at log-writing time because the earlier pull failed on DNS; push needs retry when DNS/network access returns. Current run executed at 2026-08-29 11:04 JST local shell time / 20:00 JST scheduled automation window.
+- Commit: Local implementation commit `2dee98b` (`细化后续核验问题`) and log/index follow-up commit `4b9a105` (`记录后续核验问题优化`); final push-status commit recorded this DNS blocker.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push needs retry when DNS/network access returns. Current run executed at 2026-08-29 11:04 JST local shell time / 20:00 JST scheduled automation window.
 
 ## 2026-08-29 08:10 JST
 
