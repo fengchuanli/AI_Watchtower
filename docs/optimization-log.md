@@ -1,3 +1,29 @@
+## 2026-08-29 23:05 JST
+
+- Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前本地首页已是同日更晚的 `news-1700-2026-08-29`，本次未回退版本，而是在当前版补充 2 条安全非重复信号，把当前版从 13 条补到 15 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 OpenAI News、Guardian Technology、Business Insider AI、The Verge AI、TechCrunch AI、VentureBeat AI 和历史 URL 去重。
+  - 新增 OpenAI/Cursor/SpaceX 合同风控官方信号：OpenAI 称已通知 SpaceX，计划结束向 Cursor 提供 OpenAI 模型的合同，拟定停用日期为 2026-11-12。
+  - 新增 Guardian/Loss of Control Observatory 媒体背景信号：Guardian 报道该观测项目基于用户报告监测到 2026 年 7 月 AI 失控事件样本超过 300 起。
+  - OpenAI/Cursor 项保持 `官方核对` / `confirmed`，并明确仍需 Cursor/SpaceX 官方回应、合同披露、客户通知或服务状态记录；Guardian 项保持 `媒体背景` / `reported` / `originalDependency: must-read`，并明确社交平台报告样本不能直接当作全行业事故率。
+  - 未使用付费墙/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 599.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 15 current news items against 63 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Pending before commit: `git diff --check`.
+- Commit: Pending; planned commit message `补充08点AI新闻情报`。
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; final push attempt will be retried after commit.
+
 ## 2026-08-29 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 18 detail-page proof-boundary task. Reviewed current `followUpQuestions` and replaced generic "confirm core fact / find more evidence" prompts with item-specific source artifacts and observable checks.
