@@ -723,7 +723,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 18/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 19/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -777,7 +777,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 18/.test(optimizationDecisionIndex)
+  !/Continue with Day 19/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -934,6 +934,13 @@ if (
   !/Research preprint[\s\S]*independent replication[\s\S]*Replicated research result/.test(
     detailPageReviewGuide,
   ) ||
+  !/Follow-Up Question Specificity/.test(detailPageReviewGuide) ||
+  !/Question 1 asks whether the source-of-record artifact has appeared/.test(detailPageReviewGuide) ||
+  !/Question 2 asks whether that artifact changes the editorial status/.test(detailPageReviewGuide) ||
+  !/是否已有独立来源确认\[公司\]的核心事实/.test(detailPageReviewGuide) ||
+  !/source artifact, observable result, or status change/.test(newsDataFormat) ||
+  !/function validateFollowUpQuestionSpecificity\(item, question, index, context\)/.test(validateDataJs) ||
+  !/must name the concrete next artifact/.test(validateDataJs) ||
   !/media signal -> official announcement[\s\S]*vendor claim -> customer-side metric[\s\S]*research preprint -> peer review/.test(
     newsDataFormat,
   ) ||
@@ -1370,7 +1377,10 @@ if (
   !/Day 17[\s\S]*evidenceThreshold[\s\S]*media signal[\s\S]*vendor claim[\s\S]*research preprint/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 18/.test(optimizationDecisionIndex) ||
+  !/Day 18[\s\S]*followUpQuestions[\s\S]*source artifacts[\s\S]*observable checks/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 19/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

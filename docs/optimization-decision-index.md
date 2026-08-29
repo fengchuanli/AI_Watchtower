@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 3, Detail Pages And Proof Boundaries
-- Last indexed run: 2026-08-28 20:00 JST
+- Last indexed run: 2026-08-29 20:00 JST
 - Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; local `main` remains ahead of the known remote until sync succeeds.
 
 ## Recent Plan-Day Decisions
@@ -36,6 +36,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 15 | Complete | `b407942` | `detailTrend` now has a split rule: keep one trend meaning there, and move reader action, upgrade proof, downgrade proof, or source-caveat logic into `readerUse`, `impact`, `evidenceThreshold`, `nextCheck`, `counterEvidence`, or `claimBoundary`. |
 | Day 16 | Complete | `849c751` | media-backed detail pages now show a compact `完整事实入口` reminder after `30 秒速览`, while preserving AI Watchtower's primary explanation and the full source audit block. |
 | Day 17 | Complete | `7166932` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now give `evidenceThreshold` upgrade examples for media signal -> official confirmation, vendor claim -> independent proof, and research preprint -> replicated result. |
+| Day 18 | Complete | `pending` | Current and latest archived `followUpQuestions` now name item-specific source artifacts and observable checks, and validation rejects generic `核心事实` / `继续观察` prompts. |
 
 ## Historical Guard Anchors
 
@@ -60,7 +61,7 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 18: review `followUpQuestions` so they point to concrete next checks rather than generic "continue observing" prompts.
+- Continue with Day 19: add guidance for when `counterEvidence` should downgrade a story rather than merely narrow it.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 17 first.
 - If Day 17 is already complete, continue with the first useful unfinished task from the current plan.
 

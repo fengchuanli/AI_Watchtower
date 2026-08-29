@@ -60,6 +60,17 @@ Use these common upgrade paths:
 
 Keep the sentence concrete: name both the artifact and the status change. Avoid `等待更多证据`, `继续观察`, or `看后续进展` unless the same sentence also names the exact document, metric, replication, audit, or deployment outcome that would change the judgment.
 
+## Follow-Up Question Specificity
+
+`followUpQuestions` should turn the next check into two concrete editorial questions. They are not a generic reminder to keep watching the company.
+
+Use this shape:
+
+- Question 1 asks whether the source-of-record artifact has appeared: official announcement, filing, court record, regulator text, model card, price page, code, dataset, benchmark setup, audit sample, contract, deployment log, or customer metric.
+- Question 2 asks whether that artifact changes the editorial status: confirms a reported fact, validates a deployment or performance claim, proves a policy effect, supports replication, or weakens the current judgment.
+
+Avoid reusable templates such as `是否已有独立来源确认[公司]的核心事实？` or `下一版能否找到客户日志、官方文件、论文复现或监管材料？` because they do not tell the next editor where to look first. A good question names the actual source path for the item, for example `法院原始裁定、案卷编号或 DoD 采购文件是否已公开可核对？` or `真实 Agent 日志、CloudWatch 告警和评分漂移记录是否支持生产评估？`.
+
 ## DetailTrend Split Rule
 
 `detailTrend` should answer one question: what broader AI direction this item suggests. Split it when the same paragraph also tries to do another job.

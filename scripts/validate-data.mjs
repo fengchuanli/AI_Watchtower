@@ -1202,6 +1202,20 @@ function validateCounterEvidenceSpecificity(item, context) {
   }
 }
 
+function validateFollowUpQuestionSpecificity(item, question, index, context) {
+  if (/核心事实|继续观察|继续关注|后续消息/.test(question)) {
+    errors.push(`${context} ${item.id} followUpQuestions[${index}] must name the concrete next artifact, not a generic watch prompt.`);
+  }
+
+  if (
+    !/公告|文件|案卷|法院|裁定|上诉|采购|规格|财报|披露|记录|日志|指标|数据|政策|价格页|模型卡|代码|配置|benchmark|复测|复现|样本|审计|合同|客户|rollout|权限|评估|报告|说明|回应|验收|供货|可用区|错误率|故障率/.test(
+      question,
+    )
+  ) {
+    errors.push(`${context} ${item.id} followUpQuestions[${index}] must include a source artifact, proof type, or observable result.`);
+  }
+}
+
 function validateEvidenceThresholdSpecificity(item, context) {
   const evidenceThreshold = String(item.evidenceThreshold || "");
 
@@ -1831,6 +1845,8 @@ for (const item of newsFeed.items || []) {
         errors.push(`${item.id} followUpQuestions[${index}] must be written as a Chinese question.`);
       } else if (question.length < 18) {
         errors.push(`${item.id} followUpQuestions[${index}] is too vague for editorial follow-up.`);
+      } else {
+        validateFollowUpQuestionSpecificity(item, question, index, "data/news.json item");
       }
     }
   }
