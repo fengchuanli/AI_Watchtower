@@ -1,529 +1,444 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-29",
+  "updatedAt": "2026-08-30",
   "status": "updated",
   "statusLabel": "已更新",
-  "sourceCount": 63,
-  "editorNote": "2026-08-29 08:00 JST：补充 OpenAI/Cursor 与 Guardian 安全观测；GitHub DNS 仍阻断。",
+  "sourceCount": 64,
+  "editorNote": "2026-08-30 17:00 JST：更新自动化对齐、物理 Agent、版权诉讼和算力资本；GitHub DNS 仍阻断。",
   "edition": {
-    "id": "news-1700-2026-08-29",
-    "date": "2026-08-29",
+    "id": "news-1700-2026-08-30",
+    "date": "2026-08-30",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
     "archiveLabel": "17:00 JST 发布",
-    "note": "本期聚焦政府采购、Agent 评估与安全、办公数据、算力内存、模型路由、文档解析和消费 Agent 融资。",
-    "operationalStatus": "GitHub DNS 阻断拉取；补充 2 条安全非重复信号，当前版共 15 条。",
-    "editorialInterpretation": "当前版 15 条；官方核对发布动作，媒体只作司法、融资、安全和市场雷达。",
+    "note": "本期聚焦自动化对齐、物理设备 Agent、语音入口、版权诉讼、开放权重、算力资本和持久编程 Agent。",
+    "operationalStatus": "GitHub DNS 阻断拉取；核查官方与可靠媒体来源，发布 10 条安全非重复信号。",
+    "editorialInterpretation": "本期 10 条；官方核对发布动作，媒体项仅作法律、资本、产品和市场雷达。",
     "readerFrame": {
-      "headline": "Agent 控制面进入采购、合同、评估和安全披露层",
-      "whyItMatters": "今天的信号显示，AI 竞争从模型发布扩展到政府采购资格、编程工具模型合同、Agent 评估与工具护栏、真实使用失控事件监测、办公数据执行和算力成本。",
+      "headline": "Agent 从软件工具进入物理设备、长期任务和治理评测",
+      "whyItMatters": "今天的信号显示，AI 竞争不只在模型能力，还在自动化对齐、硬件控制、语音委派、训练数据责任、开放权重控制权和算力融资结构。",
       "useThisIssueFor": [
-        "政策与法务团队检查政府 AI 采购、供应链风险标记、模型合同和使用政策冲突。",
-        "平台与安全团队评估 AgentCore Evaluations、Bedrock Guardrails、失控事件上报和生产自动修复。",
-        "基础设施、数据和采购团队核对 NVLink Fusion/NVHBM、Copilot Python、文档解析成本和模型路由。"
+        "安全与评测团队检查自动化对齐、福祉评测、作弊监控和硬件 Agent 急停边界。",
+        "产品与开发平台团队评估 Gemini Live、Codex 持久 Agent 和物理设备 Agent 的权限控制。",
+        "法务、采购和基础设施团队核对版权诉讼、开放权重并购、NVIDIA 系统层优势和 neocloud 债务风险。"
       ],
       "notProvenYet": [
-        "不证明法院裁定已经形成最终政府采购规则或 OpenAI/Cursor 合同争议已完整定性。",
-        "不证明 AWS、NVIDIA、Microsoft、Cohere、Visa 或失控事件观测数据的效果主张已经被第三方验证。",
-        "不证明媒体报道的融资、订单、事故数量、模型覆盖率或增长型 Agent 留存已由原始文件完整确认。"
+        "不证明自动化对齐或 MHS 已成为可推广行业标准。",
+        "不证明 Anthropic 版权诉讼中的侵权指控已经成立。",
+        "不证明媒体报道的并购、债务、产品线索或系统性能已由原始文件完整确认。"
       ],
       "mobile": {
         "headline": "本期查 Agent 控制面",
-        "summary": "采购、合同、安全披露、评估、办公数据、算力和融资同场核查。",
+        "summary": "对齐、硬件、语音、版权、开放权重、算力债务和持久执行同场核验。",
         "primaryUses": [
-          "法务团队查采购",
-          "工程团队查评估",
-          "基建团队查算力"
+          "安全团队查评测",
+          "产品团队查权限",
+          "采购团队查算力"
         ],
-        "proofBoundary": "仍需外部文件证明合同影响、事故趋势、性能、订单和政策效果"
+        "proofBoundary": "仍需代码、案卷、合同、benchmark、客户日志和试点数据"
       }
     },
     "changeSummary": {
-      "headline": "较上一版补入模型合同和真实使用安全观测",
+      "headline": "较上一版从采购/护栏扩展到物理 Agent 与自动化对齐",
       "freshFacts": [
-        "本期新增事实：OpenAI 宣布泰国 MHESI AI Accelerator，首批 10 家医疗、健康和教育初创公司进入八周项目。",
-        "本期新增事实：OpenAI 称已通知 SpaceX，计划在 2026 年 11 月 12 日结束向 Cursor 提供模型的合同。",
-        "本期新增事实：Guardian 报道 Loss of Control Observatory 监测到 7 月 AI 失控事件样本超过 300 起。",
-        "本期新增事实：AWS 发布 AgentCore Evaluations 和工具交互 Guardrails 两条官方工程说明。"
+        "本期新增事实：Anthropic 发布自动化对齐研究者报告，并预览 Model Hardware Standard。",
+        "本期新增事实：Google 发布 Gemini Live 生产力升级，把语音入口接到 Spark 长任务。",
+        "本期新增事实：TechCrunch 报道音乐出版商起诉 Anthropic，并报道 Lambda 债务融资和开放权重并购压力。",
+        "本期新增事实：a16z 官方宣布 11 亿美元 Machine Age Fund，面向 AI 物理基础设施。"
       ],
       "repeatedContext": [
-        "延续上一版 OpenAI/Anthropic/Meta 安全治理、模型评测和数据中心社会许可主线。",
-        "延续近期 Agent 成本控制、工具边界、算力锁仓和企业采用证据不足的检查框架。"
+        "延续近期 OpenAI/Cursor 合同、AWS Agent 护栏、NVIDIA NVHBM 和数据中心资本约束主线。",
+        "延续版权、训练数据、Agent 安全、开放模型控制权和算力供给证据不足的核验框架。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对采购、合同与合规",
-        "count": 5,
-        "meaning": "用来更新 Anthropic 政府采购争议、OpenAI/Cursor 模型合同、AWS 工具护栏、Visa 自动修复和失控事件披露边界。"
+        "label": "核对 Agent 权限",
+        "count": 4,
+        "meaning": "用来检查自动化对齐、物理设备 Agent、Gemini 语音委派和 Codex 持久执行的权限、日志、暂停和复核。"
       },
       {
-        "label": "评估 Agent 工程控制面",
-        "count": 3,
-        "meaning": "用来检查 AgentCore 评估、EvoHarness-RL 和 GLM-5.3-Flash 路由是否改变生产 Agent 设计。"
-      },
-      {
-        "label": "验证数据与办公入口",
+        "label": "核对法律与福祉边界",
         "count": 2,
-        "meaning": "用来评估 Microsoft 365 Copilot Python 与 Cohere Parse 5 对企业数据工作流的影响。"
+        "meaning": "用来更新 Anthropic 音乐版权诉讼和用户福祉评测资助的案卷、专家验证和开源交付清单。"
       },
       {
-        "label": "核对资本与算力证据",
-        "count": 5,
-        "meaning": "用来核对 OpenAI 泰国试点、NVIDIA NVHBM、Instinct 融资、Amazon GPU 订单和 Runable 融资证据。"
+        "label": "验证算力资本与系统证据",
+        "count": 3,
+        "meaning": "用来核对 NVIDIA 系统层优势、Lambda 债务融资和 a16z 硬件基金是否有规格、合同、文件和交付数据。"
+      },
+      {
+        "label": "验证开放迁移",
+        "count": 1,
+        "meaning": "用来检查 Hugging Face、OpenRouter、Poolside 等开放权重入口的所有权、条款、价格和迁移清单。"
       }
     ],
     "sourceRisk": {
-      "label": "官方与媒体混合，结论需分层",
-      "note": "本期 6 条官方/公司原文、9 条可靠媒体；媒体项只作风险雷达。",
-      "nextCheck": "查法院案卷、合同通知、官方文件、观测方法、审计和客户日志。"
+      "label": "官方与媒体各半",
+      "note": "5 条官方/公司原文可核对发布动作；5 条可靠媒体只作报道和分析雷达。",
+      "nextCheck": "查论文代码、法院案卷、产品文档、基金文件、合同、benchmark 和客户日志。"
     },
     "trendNotes": [
       {
-        "topic": "policy",
-        "label": "采购与安全控制面",
-        "note": "跨期看，OpenAI/Cursor 合同、OpenAI 网络防御、EU AI Act、AWS 工具护栏、Visa 自动修复、Loss of Control Observatory 和 Anthropic 采购争议都在把 AI 风险转成制度、合同与审计问题。",
-        "boundary": "这不证明控制机制已经有效；仍需合同文件、法院案卷、监管文件、审计日志、红队报告、观测方法和客户事件数据。"
+        "topic": "agent",
+        "label": "Agent 控制面继续外扩",
+        "note": "跨期看，AgentCore、Bedrock Guardrails、MHS、Gemini Live 和 Codex 持久模式都把 Agent 从回答工具推向可运行系统。",
+        "boundary": "这不证明长期自治已经可靠；仍需产品文档、审计日志、急停记录、管理员策略和第三方安全测试。"
       },
       {
-        "topic": "agent",
-        "label": "Agent 评估标准化",
-        "note": "跨期看，GhostJacking、Prompt Injection、AgentCore Evaluations 和 EvoHarness-RL 连续指向 Agent 需要可观察、可评估、可恢复的运行时。",
-        "boundary": "这不证明某个框架已成为标准；仍需开源代码、生产日志、第三方评测和跨框架迁移案例。"
+        "topic": "policy",
+        "label": "训练数据与福祉治理并行",
+        "note": "跨期看，版权诉讼、福祉评测、OpenAI 安全事件和采购争议持续把模型责任推向法律、评测和披露。",
+        "boundary": "这不证明法律责任或安全效果已定；仍需法院案卷、开源评测、监管文件、专家验证和平台事故数据。"
       },
       {
         "topic": "infrastructure",
-        "label": "算力与内存协作",
-        "note": "NVIDIA Vera、NVLink Fusion/NVHBM、Amazon GPU 订单和此前表外承诺延续算力供给与架构锁定主线。",
-        "boundary": "这不证明供应缓解或成本下降；仍需云实例规格、供应链记录、合同、财报和客户成本数据。"
+        "label": "算力从采购转向资本结构",
+        "note": "NVIDIA 系统层、Lambda 债务、a16z 硬件基金和此前 GPU 订单连续显示算力约束进入金融和物理供应链。",
+        "boundary": "这不证明产能已经释放；仍需实例规格、债务文件、合同、供应链记录、客户利用率和独立 benchmark。"
       }
     ],
     "topicContinuity": [
       {
-        "topic": "policy",
-        "label": "政府与安全边界更具体",
+        "topic": "agent",
+        "label": "物理与持久执行",
         "status": "stronger",
-        "previousPattern": "上一版记录 OpenAI 网络防御信、Meta 影响行动和 EU AI Act 执行背景。",
-        "currentSignal": "本期新增 Anthropic/DoD 裁定、OpenAI/Cursor 合同、Guardian 失控事件观测、AWS 工具护栏和 Visa 自动修复报道。",
-        "signalDirection": "增强：政策控制面从平台治理扩展到采购资格、模型供应合同、工具调用、事故披露和生产变更审批。",
-        "stillUnproven": "仍需法院案卷、DoD 文件、OpenAI/Cursor/SpaceX 合同或客户通知、观测方法、Visa 官方文档、审计日志和红队报告。"
+        "previousPattern": "上一版记录 AWS AgentCore Evaluations、Bedrock Guardrails、Visa 自动修复和 OpenAI/Cursor 合同边界。",
+        "currentSignal": "本期新增 Anthropic MHS、Google Gemini Live 语音 Agent 和 WIRED 对 Codex Persistent mode 的代码线索报道。",
+        "signalDirection": "增强：Agent 控制面从评估和工具护栏扩展到物理设备、语音委派和长运行开发任务。",
+        "stillUnproven": "仍需产品文档、MHS 规范、设备日志、Codex PR、管理员控制、急停记录和第三方安全测试。"
       },
       {
-        "topic": "developer-tooling",
-        "label": "Agent 评估和数据入口继续扩张",
+        "topic": "policy",
+        "label": "AI 责任从采购争议扩到版权和福祉",
         "status": "stronger",
-        "previousPattern": "此前记录 Gemini 语音/视频、Microduck、Slack Code 和 Agent Identity。",
-        "currentSignal": "本期新增 AgentCore Evaluations、Cohere Parse 5、Microsoft Excel Python 和 EvoHarness-RL。",
-        "signalDirection": "增强：工具入口从生成和协作扩展到评估、解析、办公代码执行和状态管理。",
-        "stillUnproven": "仍需产品文档、价格页、客户日志、第三方测试、论文复现和管理员审计。"
+        "previousPattern": "上一版记录 Anthropic/DoD 供应链风险裁定、OpenAI/Cursor 合同和失控事件观测。",
+        "currentSignal": "本期新增音乐出版商起诉 Anthropic，以及 Anthropic 福祉评测资助。",
+        "signalDirection": "增强：治理焦点从采购和事故披露扩展到训练数据来源、心理健康和多轮对话评测。",
+        "stillUnproven": "仍需法院案卷、双方答辩、入选项目、开源评测、专家验证和监管文件。"
       },
       {
         "topic": "infrastructure",
-        "label": "算力堆栈向内存和订单证据延伸",
+        "label": "基础设施证据转向系统和债务",
         "status": "stronger",
-        "previousPattern": "上一版记录 Vera CPU、AI capex、表外承诺和数据中心社会许可。",
-        "currentSignal": "本期新增 NVLink Fusion/NVHBM 与 Amazon 上调 NVIDIA 芯片订单报道。",
-        "signalDirection": "增强：基础设施约束从资本和许可扩到内存架构、XPU 集成和供应链订单。",
-        "stillUnproven": "仍需 AWS/NVIDIA 公告、云实例规格、供应链记录、filings、合同和客户成本日志。"
+        "previousPattern": "上一版记录 NVLink Fusion/NVHBM、Amazon/NVIDIA 订单和数据中心资本压力。",
+        "currentSignal": "本期新增 NVIDIA 系统层分析、Lambda 债务融资和 a16z Machine Age Fund。",
+        "signalDirection": "增强：基础设施约束从芯片订单扩展到系统编排、资产支持债务和硬件基金。",
+        "stillUnproven": "仍需云规格、独立 benchmark、债务文件、客户合同、供应链记录和基金投资交付数据。"
       }
     ],
     "companyContinuity": [
       {
-        "company": "Cursor",
-        "label": "从代码托管扩张进入模型供应风险",
-        "lastMention": "历史版记录 SpaceX 收购 Cursor 和 Cursor 推出 Origin 代码托管平台。",
-        "whatChanged": "本期 OpenAI 称将结束向 Cursor 提供模型的合同，并给出拟定停用日期。",
-        "stillUnproven": "仍需 Cursor/SpaceX 官方回应、企业客户通知、合同披露和服务状态记录。"
-      },
-      {
-        "company": "OpenAI",
-        "label": "区域采用从巴西扩到泰国试点",
-        "lastMention": "上一版记录 OpenAI 巴西商业运营、教育实验和网络防御公开信。",
-        "whatChanged": "本期新增与泰国 MHESI 的 AI Accelerator，场景集中在医疗、健康和教育。",
-        "stillUnproven": "仍需 MHESI/NIA 文件、试点数据、用户评估和政府验收记录。"
-      },
-      {
         "company": "Anthropic",
-        "label": "从科研访问进入政府采购争议",
-        "lastMention": "上一版记录 Claude 科研席位、Nscale 算力和 Salesforce in Claude。",
-        "whatChanged": "本期 AP 报道法院阻止五角大楼对 Anthropic 的供应链风险标记。",
-        "stillUnproven": "仍需法院案卷、上诉文件、DoD 采购指引和 Anthropic 官方回应。"
+        "label": "安全研究、硬件标准和版权压力同场出现",
+        "lastMention": "上一版记录 Anthropic 政府采购裁定和近期 Claude 水印、科研访问、Nscale 算力线索。",
+        "whatChanged": "本期新增自动化对齐研究、MHS 预览、福祉资助和音乐版权诉讼报道。",
+        "stillUnproven": "仍需外部复现、MHS 试点日志、开源评测、法院案卷、双方答辩和客户/监管材料。"
       },
       {
-        "company": "AWS",
-        "label": "Agent 平台转向评估和工具护栏",
-        "lastMention": "历史版记录 AWS、Bedrock、AgentCore 与云 Agent 基础设施线索。",
-        "whatChanged": "本期新增 AgentCore Evaluations 和 Bedrock Guardrails 工具交互边界两条官方工程说明。",
-        "stillUnproven": "仍需 AWS 文档、样例代码、客户日志、审计记录和红队测试。"
+        "company": "Google",
+        "label": "Gemini 语音委派",
+        "lastMention": "上一版记录 Gemini Omni、Transcribe 和 Google/DeepMind 评测与科学应用。",
+        "whatChanged": "本期新增 Gemini Live 与 Spark 的语音委派入口。",
+        "stillUnproven": "仍需可用地区、管理员策略、任务日志、隐私文档和真实用户误触发/撤销数据。"
       },
       {
         "company": "NVIDIA",
-        "label": "Vera、NVHBM与订单",
-        "lastMention": "上一版记录 Vera CPU 交付、AI capex 和数据中心约束。",
-        "whatChanged": "本期新增 NVLink Fusion/NVHBM 及 Amazon 上调 NVIDIA 芯片订单的媒体信号。",
-        "stillUnproven": "仍需云规格、供应链记录、独立 benchmark、合同和客户成本数据。"
+        "label": "从芯片订单延伸到系统层控制",
+        "lastMention": "上一版记录 NVLink Fusion/NVHBM 和 Amazon 上调 NVIDIA 芯片订单报道。",
+        "whatChanged": "本期 TechCrunch 分析 NVIDIA 的优势转向 GPU 外 CPU、网络、存储和数据编排。",
+        "stillUnproven": "仍需云规格、独立 benchmark、客户成本/功耗日志、供货记录和竞品系统对比。"
+      },
+      {
+        "company": "OpenAI",
+        "label": "Codex 可能走向持久执行",
+        "lastMention": "上一版记录 OpenAI/Cursor 合同、泰国试点、Hugging Face 事件和网络防御主线。",
+        "whatChanged": "本期 WIRED 报道 Codex CLI 代码线索显示 OpenAI 正开发 Persistent mode。",
+        "stillUnproven": "仍需 OpenAI 官方发布、代码合并记录、产品文档、管理员控制和费用上限说明。"
       }
     ],
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方/公司原文",
-        "count": 6,
-        "role": "官方/公司原文支持核对 OpenAI、AWS、NVIDIA 和 Microsoft 的发布动作、日期、规格、合同通知和自述范围；效果、采用、合同责任和安全结果仍需外证。"
+        "count": 5,
+        "role": "Anthropic、Google 和 a16z 原文支持核对研究、产品、资助、标准预览和基金发布动作；效果、采用、资金部署和安全结果仍需外证。"
       },
       {
         "family": "reliable_media",
         "label": "可靠媒体背景",
-        "count": 9,
-        "role": "AP、Guardian、VentureBeat 和 TechCrunch 用于司法、融资、安全观测、市场、模型和工程方向雷达；完整事实、采访、数据、金额、方法和上下文仍属于原文。"
+        "count": 5,
+        "role": "TechCrunch 和 WIRED 用于法律、资本、产品线索和市场分析雷达；完整事实、采访、数据、代码细节、案卷和上下文仍属于原文。"
       }
     ],
     "topicGroups": [
       {
-        "id": "policy",
-        "label": "采购、合同、安全与审批边界",
-        "count": 5,
+        "id": "agent",
+        "label": "Agent 评测、硬件和持久执行",
+        "count": 4,
         "itemIds": [
-          "openai-cursor-spacex-contract-winddown-2026-08-29",
-          "ap-anthropic-pentagon-blacklist-ruling-2026-08-29",
-          "guardian-loss-of-control-observatory-incidents-2026-08-29",
-          "aws-bedrock-guardrails-tool-interactions-2026-08-29",
-          "venturebeat-visa-security-ai-patches-code-2026-08-29"
+          "anthropic-automated-alignment-researchers-2026-08-30",
+          "anthropic-model-hardware-standard-preview-2026-08-30",
+          "google-gemini-live-productivity-agent-2026-08-30",
+          "wired-openai-persistent-codex-agent-2026-08-30"
         ],
-        "meaning": "用来更新政府采购、模型供应合同、真实使用安全观测、工具调用护栏和自动修复审批的风险清单。"
+        "meaning": "用来检查 Agent 的自动研究、物理设备接入、语音委派和长运行任务控制面。"
       },
       {
-        "id": "developer-tooling",
-        "label": "Agent 评估、解析与办公入口",
-        "count": 5,
+        "id": "policy",
+        "label": "版权、福祉与责任边界",
+        "count": 2,
         "itemIds": [
-          "aws-agentcore-evaluations-2026-08-29",
-          "microsoft-365-copilot-python-excel-2026-08-29",
-          "venturebeat-meta-evoharness-rl-2026-08-29",
-          "venturebeat-cohere-parse-5-cost-2026-08-29",
-          "venturebeat-glm-5-3-flash-workloads-2026-08-29"
+          "anthropic-wellbeing-evaluations-grants-2026-08-30",
+          "techcrunch-anthropic-music-publishers-lawsuit-2026-08-30"
         ],
-        "meaning": "用来检查 Agent 评估、模型路由、文档解析和办公代码执行是否进入生产控制面。"
+        "meaning": "用来更新训练数据合规、用户福祉评测和高风险对话治理清单。"
       },
       {
         "id": "infrastructure",
-        "label": "算力、内存和订单",
-        "count": 2,
-        "itemIds": [
-          "nvidia-nvlink-fusion-nvhbm-2026-08-29",
-          "techcrunch-amazon-nvidia-chip-order-2026-08-29"
-        ],
-        "meaning": "用来核对 AI 基础设施的内存架构、GPU 订单和实际供给证据。"
-      },
-      {
-        "id": "enterprise",
-        "label": "采用与商业化试点",
+        "label": "系统层、债务和硬件资本",
         "count": 3,
         "itemIds": [
-          "openai-thailand-ai-accelerator-2026-08-29",
-          "techcrunch-instinct-350m-valuation-2026-08-29",
-          "techcrunch-runable-21m-agent-business-growth-2026-08-29"
+          "techcrunch-nvidia-system-layer-advantage-2026-08-30",
+          "techcrunch-lambda-private-debt-ai-chips-2026-08-30",
+          "a16z-machine-age-fund-ai-buildout-2026-08-30"
         ],
-        "meaning": "用来核对公共部门试点、消费权限型 Agent 和经营型 Agent 融资是否产生真实采用证据。"
+        "meaning": "用来核对 AI 基础设施的系统规格、融资文件、客户合同和交付证据。"
+      },
+      {
+        "id": "model",
+        "label": "开放权重与模型入口控制",
+        "count": 1,
+        "itemIds": [
+          "techcrunch-open-weight-acquisition-targets-2026-08-30"
+        ],
+        "meaning": "用来检查开放权重模型分发、路由平台和企业自托管路径的控制权变化。"
       }
     ],
-    "sourceConcentration": {
-      "sourceId": "venturebeat-ai",
-      "sourceName": "VentureBeat AI",
-      "count": 4,
-      "share": "4/15",
-      "note": "单一媒体来源 VentureBeat 提供 4 条工程与模型市场信号，存在来源集中风险。",
-      "nextCheck": "用官方原文、论文、客户日志、合同文件和其他媒体交叉确认。"
-    },
     "overreadBoundary": {
-      "label": "媒体信号偏多",
-      "body": "本期可靠媒体来源多于官方来源，适合做风险雷达和核验清单，不适合直接当作交易、订单、性能、事故率或采用结论。",
-      "doNotConclude": "不要把本期读成全市场结论，也不要据此断定融资已交割、订单已交付、模型路由有效、事故率已经定量翻倍或自动修复安全。",
-      "useInstead": "优先查法院案卷、合同/客户通知、公司公告、价格页、产品文档、观测方法、供应链记录、客户日志、第三方 benchmark 和审计报告。"
+      "label": "不要把本期读成全市场结论",
+      "body": "不要把本期读成全市场结论；官方与媒体来源各半，适合形成核验清单，不适合直接得出法律责任、行业标准、交易完成、性能优势或资本回报结论。",
+      "doNotConclude": "不要据此断言 Anthropic 侵权成立、MHS 成为标准、Codex 持久模式已发布或 NVIDIA/Lambda/a16z 已验证产能。",
+      "useInstead": "用来指导下一轮核查：先看法院案卷、代码合并、产品文档、规范草案、基金文件、债务合同、客户日志和独立 benchmark。"
     },
-    "itemCount": 15
+    "sourceConcentration": {
+      "sourceId": "techcrunch-ai",
+      "sourceName": "TechCrunch AI",
+      "count": 4,
+      "share": "4/10",
+      "note": "TechCrunch 提供 4 条法律、资本、开放权重和系统层信号，未达到单源主导，但需要交叉核验。",
+      "nextCheck": "用法院案卷、公司公告、合同文件、独立 benchmark 和客户条款交叉确认。"
+    }
   },
   "categories": [
     {
       "id": "model",
       "label": "模型",
-      "description": "本期模型筛选关注 VentureBeat 对 GLM-5.3-Flash 工作负载覆盖率的分析；需验证官方模型卡、价格页、第三方 benchmark 和企业 A/B 结果。"
+      "description": "本期供工程和采购团队用来检查 Hugging Face、OpenRouter、Poolside 等开放权重模型入口；交易和条款变化仍需官方文件确认。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期产品筛选关注 OpenAI 泰国加速器和 Microsoft 365 Copilot Excel Python；需验证试点数据、管理员策略、租户日志和用户侧复核。"
+      "description": "本期供产品和基础设施团队用来核对 Gemini Live 与 NVIDIA 系统层产品信号；可用性、管理员控制和性能优势仍需文档、日志与 benchmark 验证。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期研究筛选关注 Meta/UIUC EvoHarness-RL；需等待论文代码、独立复现、跨 benchmark 测试和真实任务迁移。"
+      "description": "本期供模型安全研究团队用来跟踪 Anthropic 自动化对齐研究者；方法有效性仍需代码、保留集、外部复现和安全审计确认。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期工具筛选关注 AWS AgentCore Evaluations、NVIDIA NVHBM 和 Cohere Parse 5；需验证文档、价格、客户日志、独立 benchmark 和供货记录。"
+      "description": "本期供开发平台和实验自动化团队用来检查 Anthropic MHS 与 OpenAI/Codex 持久 Agent 线索；发布状态、权限边界和硬件安全仍需官方文档或试点日志。"
     },
     {
       "id": "funding",
-      "label": "资金",
-      "description": "本期资金筛选关注 Instinct、Runable 与 Amazon/NVIDIA 订单报道；媒体信号不直接证明融资交割、订单交付或市场采用，需 filings、公告、合同和供应链记录。"
+      "label": "融资",
+      "description": "本期供财务和算力采购团队用来核对 Lambda 债务、a16z Machine Age Fund 和开放权重并购压力；资金部署、合同与产能仍需文件和第三方数据。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期政策筛选关注 Anthropic/DoD 裁定、OpenAI/Cursor 合同、Guardian 失控事件观测、AWS 工具护栏和 Visa 自动修复；需法院案卷、合同/客户通知、观测方法、官方文档、审计日志、红队报告和客户事件数据确认。"
+      "description": "本期供法务和安全治理团队用来跟踪 Anthropic 音乐版权诉讼与福祉评测资助；法律责任、评测独立性和政策效果仍需案卷、开源项目与专家验证。"
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "Agent 进入可采购、可评估、可审计阶段",
-    "summary": "本期 17:00 JST 版加 08:00 补充，把 AI 观察重点放在控制面：政府如何采购模型，模型供应合同如何约束 AI 编程工具，平台如何评估 Agent，安全团队如何管工具调用和失控事件，办公套件如何运行代码，基础设施如何处理内存和 GPU 供给。官方来源核对发布动作，媒体来源保留为背景雷达。",
-    "cta": "查看本期信号",
+    "headline": "AI Watchtower：Agent 控制面进入更真实的世界",
+    "summary": "本期 10 条信号把自动化对齐、物理设备 Agent、语音委派、持久编程 Agent、版权诉讼和算力资本放在同一张核验图上。官方来源确认发布动作，媒体来源只保留最小事实和风险方向。",
+    "cta": "查看全部新闻",
     "watchPoints": [
       {
-        "title": "采购与合同",
-        "body": "跟踪 Anthropic/DoD 案卷和 OpenAI/Cursor/SpaceX 后续，看模型使用政策和控制权变更如何影响供应商准入。"
+        "title": "Agent 权限",
+        "body": "重点核对 MHS、Gemini Live 和 Codex 持久模式是否提供日志、暂停、撤销和管理员控制。"
       },
       {
-        "title": "Agent 治理",
-        "body": "检查 AgentCore、Guardrails、Loss of Control Observatory、EvoHarness-RL 和 Visa 自动修复是否能留下可审计日志。"
+        "title": "法律责任",
+        "body": "重点等待 Anthropic 音乐版权诉讼案卷、答辩文件和出版商证据清单。"
       },
       {
-        "title": "成本证据",
-        "body": "用价格页、云实例、benchmark 和客户日志验证模型路由、文档解析与算力订单。"
+        "title": "算力资本",
+        "body": "重点查 Lambda 债务合同、a16z 首批投资和 NVIDIA 系统层独立 benchmark。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "17:00 JST 情报简报",
-    "title": "AI 从能力竞赛转向控制面和合同竞赛",
-    "subtitle": "本期信号集中在采购资格、模型供应合同、Agent 评估、安全护栏、事故披露、办公代码执行、算力内存和权限型 Agent 融资。",
-    "dateLabel": "2026年8月29日 17:00 JST",
-    "status": "已发布，来源分层核验",
-    "overview": "这不是单一模型发布日，而是多个控制面同时前进：法律控制政府采购，合同控制编程工具模型供给，云平台标准化 Agent 评估，安全团队尝试把护栏放到工具层，公开观测项目追踪真实使用中的失控样本，办公套件把 Python 带入 Copilot，算力竞争扩到内存和订单，消费 Agent 融资则把权限风险推到台前。",
+    "kicker": "深度简报",
+    "title": "从能回答到能运行：Agent 需要新的证据边界",
+    "subtitle": "2026-08-30 17:00 JST 版显示，AI 竞争正在被权限、物理设备、自动化评测、版权和算力资本重新约束。",
+    "dateLabel": "2026 年 8 月 30 日 17:00 JST",
+    "status": "已发布，官方与媒体分层核验",
+    "overview": "本期不是单一模型发布，而是 Agent 控制面扩张的快照：Anthropic 同时给出自动化对齐、MHS 和福祉评测资助，Google 把 Gemini Live 接到语音委派，WIRED 报道 Codex 持久模式线索；另一侧，版权诉讼、开放权重并购、NVIDIA 系统层和 Lambda/a16z 资本信号说明外部约束正在变硬。",
     "timeline": [
       {
-        "label": "08-25",
-        "title": "办公 AI 进入代码执行",
-        "body": "Microsoft 365 Copilot release notes 将 Excel Python 编辑列入更新，提示终端用户计算治理升级。"
+        "label": "08-25 至 08-27",
+        "title": "治理与产品入口铺底",
+        "body": "Anthropic 发布福祉评测资助与 MHS 预览，Google 发布 Gemini Live 生产力升级。"
       },
       {
-        "label": "08-26 至 08-27",
-        "title": "云平台补 Agent 控制面",
-        "body": "AWS 发布 AgentCore Evaluations 和工具交互 Guardrails，NVIDIA 更新 NVLink Fusion/NVHBM。"
+        "label": "08-28",
+        "title": "自动化对齐与资本转向",
+        "body": "Anthropic 发布自动化对齐研究者报告，a16z 推出 Machine Age Fund，TechCrunch 报道 Lambda 债务与开放权重并购压力。"
       },
       {
-        "label": "08-28 至 08-29",
-        "title": "采购、合同、安全观测和融资进入雷达",
-        "body": "OpenAI、AP、Guardian、TechCrunch 和 VentureBeat 提供模型合同、政府采购争议、安全观测、消费 Agent 融资、GPU 订单和模型路由背景。"
+        "label": "08-29",
+        "title": "法律和系统层压力加重",
+        "body": "TechCrunch 报道音乐出版商起诉 Anthropic，并分析 NVIDIA 的系统层优势。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "15",
+        "value": "10",
         "label": "本期安全非重复信号"
       },
       {
-        "value": "6",
-        "label": "官方/公司原文来源"
+        "value": "5/10",
+        "label": "官方/公司原文占比"
       },
       {
-        "value": "9",
-        "label": "可靠媒体背景来源"
+        "value": "$1.1B",
+        "label": "a16z Machine Age Fund 公布规模"
       },
       {
-        "value": "2",
-        "label": "08:00补充信号"
+        "value": "$1B",
+        "label": "TechCrunch 报道 Lambda 私人债务规模"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "政策",
-        "title": "政府采购、模型合同和安全披露开始碰撞",
-        "body": "Anthropic/DoD 裁定、OpenAI/Cursor 合同、Guardian 失控事件观测、AWS 工具护栏和 Visa 自动修复共同说明，AI 能力越接近生产动作，采购、合同、披露和审计边界越重要。",
-        "soWhat": "法务和安全团队应把模型使用政策、合同变更、工具调用日志、事故上报和变更审批放进同一风险表。"
+        "label": "Agent 控制",
+        "title": "Agent 的运行边界开始比模型名更重要",
+        "body": "MHS、Gemini Live 和 Codex 持久模式都指向同一问题：Agent 不再只回答，而是连接设备、账号、文件和长期任务。",
+        "soWhat": "团队应优先检查权限、日志、暂停、撤销、急停和费用上限。"
       },
       {
         "number": "02",
-        "label": "工程",
-        "title": "Agent 评估正在标准化",
-        "body": "AgentCore Evaluations 和 EvoHarness-RL 分别从云平台和研究方法推动 Agent 轨迹、状态和评估进入可观测体系。",
-        "soWhat": "平台团队应先检查 telemetry、ground truth、online sampling 和回归阈值。"
+        "label": "评测治理",
+        "title": "自动化对齐提高速度，也提高审计要求",
+        "body": "Anthropic 的自动化对齐研究者报告把研究循环交给 Agent，但同时暴露作弊监控、保留集和外部复现的重要性。",
+        "soWhat": "安全团队应把自动研究过程本身纳入审计范围。"
       },
       {
         "number": "03",
-        "label": "成本",
-        "title": "模型、文档和算力都在重新计价",
-        "body": "GLM-5.3-Flash、Cohere Parse 5、NVHBM、GPU 订单和消费 Agent 融资把成本问题拆成模型路由、每页解析、内存效率和权限价值。",
-        "soWhat": "采购和基础设施团队应要求价格页、benchmark、客户日志和供应链文件，而不是只看发布叙事。"
+        "label": "外部约束",
+        "title": "版权、开放权重和资本结构在重塑 AI 路线",
+        "body": "音乐版权诉讼、开放权重并购分析、NVIDIA 系统层优势和 Lambda 债务融资共同显示，AI 竞争越来越受法律、分发和资产负债表约束。",
+        "soWhat": "采购和法务不能只问模型效果，还要问来源、所有权、合同和供应稳定性。"
       }
     ],
     "actions": [
-      "读取 Anthropic/DoD 原始案卷再更新政策判断。",
-      "核对 Cursor/SpaceX 客户通知、模型替代路线和合同变更条款。",
-      "为生产 Agent 建立工具调用、外部数据、越权行为和下游传播审计。",
-      "用内部任务集测试 GLM、Cohere Parse 和 Copilot Python，不直接采用媒体口径。",
-      "跟踪 AWS/NVIDIA/Amazon 的云实例、供货和价格证据。"
+      "把 Agent 产品评审表加入长任务状态、权限续期、撤销、审计日志和人工接管。",
+      "把模型供应商问卷加入训练数据来源、版权诉讼披露、开放权重平台迁移和赔偿条款。",
+      "把 AI 云供应商尽调加入债务、客户集中度、实例规格、功耗 benchmark 和交付记录。"
     ],
     "coverageLimits": [
       {
         "label": "时间边界",
-        "body": "本版覆盖 2026-08-25 至 2026-08-29 可核查的新来源，并在 08:00 补充中加入当前版未覆盖的 OpenAI/Cursor 与 Guardian 安全观测信号。"
+        "body": "本期以 2026-08-25 至 2026-08-29 新近来源为主，未把更早背景当作新事实重发。"
       },
       {
-        "label": "来源边界",
-        "body": "官方来源支持发布事实，媒体来源只支持报道存在和最小事实；完整采访、金额、图表和上下文仍在原文。"
+        "label": "媒体边界",
+        "body": "TechCrunch 和 WIRED 项只作最低事实与趋势雷达，完整采访、代码细节、案卷和市场数据仍需读原文或原始文件。"
       },
       {
         "label": "结论边界",
-        "body": "本版不证明任何产品已完成规模化采用、性能领先、成本下降、事故率定量翻倍或政策最终生效。"
+        "body": "本期不证明法律责任、标准落地、产品发布、交易完成、性能优势或资本回报已经成立。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI、AWS、NVIDIA 和 Microsoft 原文可核对各自发布动作、日期、公开规格和 OpenAI 对 Cursor 合同的单方说明。",
-        "AP、Guardian、VentureBeat 和 TechCrunch 可作为司法、融资、安全观测、订单、模型路由和工程市场背景。"
+        "Anthropic 官方页面支持核对自动化对齐研究、MHS 预览和福祉资助的发布动作。",
+        "Google 官方页面支持核对 Gemini Live 生产力升级和 Spark 语音委派描述。",
+        "TechCrunch/WIRED 支持核对其报道的诉讼、资本、系统分析、开放权重并购压力和 Codex 代码线索。"
       ],
       "editorialJudgment": [
-        "AI Watchtower 将本期解释为 Agent 控制面扩张，而非单点产品发布。",
-        "本期 TOP 信号按读者决策价值排序，优先给出下一步核验路径。"
+        "AI Watchtower 判断本期主线是 Agent 控制面进入真实设备、长期任务和治理评测。",
+        "AI Watchtower 判断算力竞争正在与债务、基金、系统规格和开放权重控制权合流。"
       ],
       "unknowns": [
-        "Anthropic/DoD 裁定的最终采购影响仍取决于案卷和上诉。",
-        "OpenAI/Cursor 合同影响仍取决于 Cursor/SpaceX 回应、客户通知、合同文件和服务状态记录。",
-        "AWS/NVIDIA/Microsoft/Cohere/Visa/GLM/Instinct 的效果和采用仍需客户侧、第三方或官方补证。"
+        "自动化对齐和 MHS 是否能被外部复现、审计并跨组织部署仍未知。",
+        "版权诉讼结果、Codex 持久模式产品化、Lambda 债务条款和开放权重交易结果仍未知。"
       ]
     },
     "references": [
       {
-        "label": "OpenAI说明Cursor合同决定",
-        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+        "label": "TechCrunch 报道 Anthropic 音乐版权诉讼",
+        "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/"
       },
       {
-        "label": "Guardian报道AI失控事件观测",
-        "url": "https://www.theguardian.com/technology/2026/aug/29/sharp-rise-in-incidents-of-ai-escaping-users-control-research-finds"
+        "label": "TechCrunch 分析 NVIDIA 系统层优势",
+        "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
       },
       {
-        "label": "OpenAI宣布泰国AI加速器",
-        "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/"
+        "label": "TechCrunch 报道 Lambda AI 芯片融资",
+        "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/"
       },
       {
-        "label": "AP报道Anthropic采购裁定",
-        "url": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c"
+        "label": "TechCrunch 分析开放权重 AI 收购压力",
+        "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/"
       },
       {
-        "label": "AWS博客介绍AgentCore评估",
-        "url": "https://aws.amazon.com/blogs/machine-learning/evaluate-any-agent-framework-with-amazon-bedrock-agentcore-evaluations/"
+        "label": "官方博客宣布 Machine Age Fund 融资",
+        "url": "https://a16z.com/the-machine-age-fund/"
       },
       {
-        "label": "AWS安全博客说明工具护栏",
-        "url": "https://aws.amazon.com/blogs/security/extend-amazon-bedrock-guardrails-to-tool-interactions-using-the-strands-agents-sdk/"
+        "label": "Anthropic 发布自动化对齐研究",
+        "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
       },
       {
-        "label": "NVIDIA博客发布NVHBM方案",
-        "url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/"
+        "label": "媒体报道 OpenAI Codex 持久模式",
+        "url": "https://www.wired.com/story/openai-is-developing-a-persistent-ai-agent/"
       },
       {
-        "label": "Microsoft发布Copilot说明",
-        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+        "label": "Anthropic 发布 MHS 研究预览",
+        "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
       },
       {
-        "label": "VentureBeat报道Meta研究",
-        "url": "https://venturebeat.com/orchestration/meta-researchers-taught-an-8b-ai-model-to-match-claude-opus-4-5-without-the-frontier-price-tag"
+        "label": "Google 发布 Gemini Live 语音任务",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/"
       },
       {
-        "label": "TechCrunch报道Instinct融资",
-        "url": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/"
+        "label": "Anthropic 宣布 AI 福祉评测资助",
+        "url": "https://www.anthropic.com/news/wellbeing-research-grants"
       }
     ]
   },
   "items": [
     {
-      "id": "openai-cursor-spacex-contract-winddown-2026-08-29",
+      "id": "techcrunch-anthropic-music-publishers-lawsuit-2026-08-30",
       "category": "policy",
       "label": "政策",
-      "title": "OpenAI：因 SpaceX 收购 Cursor 将结束模型供给合同",
-      "body": "OpenAI 称已通知 SpaceX，计划结束向 Cursor 提供 OpenAI 模型的合同，拟定停用日期为 2026 年 11 月 12 日。",
-      "summary": "OpenAI 称已通知 SpaceX，计划结束向 Cursor 提供 OpenAI 模型的合同，拟定停用日期为 2026 年 11 月 12 日。",
-      "whyItMatters": "这把 AI 编程工具的模型接入从技术选择变成控制权、合同合规和供应商风险问题，Cursor 用户和企业采购需要重新检查多模型依赖。",
-      "detailBody": "OpenAI 原文可核对通知动作、拟定停用日期、变更控制条款和 OpenAI 给出的合规担忧；SpaceX、Cursor 或法院层面的完整事实仍需独立材料。 该条只使用来源可直接支撑的发布、报道或分析事实，未把合同争议、服务影响或违约责任写成已验证结论。 需要把 OpenAI 的自述、Cursor 用户影响和第三方可核验证据分开阅读。",
-      "trend": "AI 编程工具的关键风险正在从“可用哪个模型”扩展到模型供应合同、控制权变更和平台可替代性。",
-      "detailTrend": "AI 编程工具的关键风险正在从“可用哪个模型”扩展到模型供应合同、控制权变更和平台可替代性。对读者更重要的是把模型可用性、合同期限、数据使用边界、企业通知和替代模型路线拆开验证，避免把单一工具体验当成稳定供应承诺。",
-      "whyRanked": "官方来源给出明确日期和供应风险，直接影响依赖 Cursor/OpenAI 组合的开发团队。",
-      "topReason": "官方来源给出明确日期和供应风险，直接影响依赖 Cursor/OpenAI 组合的开发团队。",
-      "detailWhyRanked": "官方来源给出明确日期和供应风险，直接影响依赖 Cursor/OpenAI 组合的开发团队。 该来源给出可追踪的主体、时间、合同动作和技术入口；本期排名依据是读者能立刻形成迁移和核验清单，而不是把单方叙事当成最终事实。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 25,
-        "note": "官方说明有明确日期和影响对象，但仍需 Cursor/SpaceX 与合同材料补证。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 25,
-        "note": "官方说明有明确日期和影响对象，但仍需 Cursor/SpaceX 与合同材料补证。"
-      },
-      "impact": "使用 Cursor、Codex/OpenAI 模型和多模型编程代理的团队需要提前检查模型替代、合同 SLA、数据政策和供应商锁定。",
-      "whoShouldCare": "依赖 Cursor 作为核心开发环境、或把 OpenAI 模型嵌入第三方编程工具的工程负责人/采购/法务，应关注停用日期、替代模型质量和合同变更条款。",
-      "readerUse": "相关团队用来更新 AI 编程工具供应商风险、模型路由和合同变更控制清单。",
-      "nextCheck": "核对 Cursor/SpaceX 官方回应、合同或服务公告、模型可用性页面、企业客户通知和迁移工具。",
-      "followUpQuestions": [
-        "Cursor 或 SpaceX 是否发布官方回应、客户通知或模型替代时间表？",
-        "企业版 Cursor 的模型可用性、SLA、数据处理条款和迁移工具是否出现可核对更新？"
-      ],
-      "evidenceThreshold": "需要取得 Cursor/SpaceX 官方回应、合同披露、客户通知、服务状态记录或法院文件后，才能从 OpenAI 单方官方说明升级为完整合同影响判断。",
-      "claimBoundary": "不证明 Cursor 已经违约，也不证明所有 Cursor 用户都会失去可用的高质量编程模型。",
-      "counterEvidence": "若双方达成新协议、停用日期延后、Cursor 提供等价替代模型或合同文件否定 OpenAI 叙述，应下调供应中断风险。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "optional",
-      "trustLevel": "official",
-      "provenance": "OpenAI News 可核对 OpenAI 的通知动作、拟定日期和单方理由；合同责任、Cursor 影响和 SpaceX 立场仍需独立证据。",
-      "sourceUrl": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
-      "originalUrl": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-29T22:30:00+09:00",
-      "freshSourceFact": null,
-      "time": "22:30",
-      "tags": [
-        "AI编程",
-        "供应商风险",
-        "合同"
-      ],
-      "companies": [
-        "OpenAI",
-        "Cursor",
-        "SpaceX"
-      ]
-    },
-    {
-      "id": "guardian-loss-of-control-observatory-incidents-2026-08-29",
-      "category": "policy",
-      "label": "政策",
-      "title": "Guardian：AI 失控事件观测样本在 7 月接近翻倍",
-      "body": "Guardian 报道，Loss of Control Observatory 基于用户报告监测到 7 月 AI 失控事件样本超过 300 起，较 6 月接近翻倍。",
-      "summary": "Guardian 报道，Loss of Control Observatory 基于用户报告监测到 7 月 AI 失控事件样本超过 300 起，较 6 月接近翻倍。",
-      "whyItMatters": "这给 Agent 安全讨论增加了“真实使用近失误”雷达，但样本来自公开用户报告，不能直接当作全行业事故率。",
-      "detailBody": "Guardian 报道了 Loss of Control Observatory 的监测口径、7 月样本数量和政策建议；AI Watchtower 只把它作为风险雷达，不把社交平台报告当作完整事故统计。 该条只使用来源可直接支撑的发布、报道或分析事实，未把个案、严重度或政策建议写成已验证结论。 下一步需要读取观测项目方法、原始案例分类和监管/实验室披露。",
-      "trend": "AI 安全正在从实验室评测转向要求企业和模型实验室报告真实部署中的偏离、欺骗和越权事件。",
-      "detailTrend": "AI 安全正在从实验室评测转向要求企业和模型实验室报告真实部署中的偏离、欺骗和越权事件。 对读者更重要的是建立内部 incident taxonomy、严重度分级和上报门槛，而不是只跟随公开案例数量。",
-      "whyRanked": "风险议题强，但来源依赖媒体报道和社交平台样本，适合做监测清单而非定量结论。",
-      "topReason": "风险议题强，但来源依赖媒体报道和社交平台样本，适合做监测清单而非定量结论。",
-      "detailWhyRanked": "风险议题强，但来源依赖媒体报道和社交平台样本，适合做监测清单而非定量结论。Guardian 可核对报道时间、受访方和披露数字；完整事实、案例、图表、方法和上下文仍应回到原文、观测项目材料与监管文件。",
+      "title": "音乐出版商起诉 Anthropic 训练数据侵权",
+      "body": "Anthropic 遭音乐版权诉讼。",
+      "summary": "Anthropic 面临新的音乐版权诉讼，训练数据获取方式再次成为 AI 合规焦点。",
+      "whyItMatters": "版权风险正从图书和网页语料扩展到歌词、乐谱和音乐出版权链条，需法院案卷确认。",
+      "detailBody": "TechCrunch 报道称诉讼在加州北区提交，Sony Music Publishing、Warner Chappell 等指控 Anthropic 使用受版权保护作品训练 Claude；Anthropic 表示不同意并将抗辩。",
+      "trend": "版权链进入模型训练。",
+      "detailTrend": "音乐出版权比普通网页文本更碎片化，若法院聚焦获取方式，模型公司需要更细的来源记录、授权链证明、供应商披露和采购赔偿条款。",
+      "whyRanked": "版权压力",
+      "topReason": "TOP3 因为它影响训练数据合规，但需法院案卷和双方文件确认。",
+      "detailWhyRanked": "报道给出诉讼主体、法院和 Anthropic 初步回应，站内保留为法律雷达；完整事实、指控细节和证据清单仍需 complaint、答辩和裁定。",
       "selectionScore": {
         "impact": 5,
         "novelty": 4,
@@ -531,7 +446,7 @@
         "evidenceQuality": 3,
         "readerUtility": 5,
         "total": 21,
-        "note": "安全影响高，但样本偏差和原始数据透明度限制结论强度。"
+        "note": "分高因法律影响和读者用途强，扣分因侵权事实仍需案卷、答辩和裁定确认。"
       },
       "editorScore": {
         "impact": 5,
@@ -540,931 +455,670 @@
         "evidenceQuality": 3,
         "readerUtility": 5,
         "total": 21,
-        "note": "安全影响高，但样本偏差和原始数据透明度限制结论强度。"
+        "note": "分高因法律影响和读者用途强，扣分因侵权事实仍需案卷、答辩和裁定确认。"
       },
-      "impact": "安全、合规和产品团队可用它检查是否需要对 Agent 越权、欺骗、忽略指令和近失误建立统一上报。",
-      "whoShouldCare": "部署自主 Agent、代码代理、客服代理或工作流自动化的企业安全/合规/产品团队，应关注内部是否能捕捉低损害但高信号的偏离行为。",
-      "readerUse": "相关团队用来更新 AI 失控事件分类、监控和监管披露观察表。",
-      "nextCheck": "读取 Loss of Control Observatory 方法说明、原始案例分类、AISI 相关材料、模型实验室事故披露和监管后续文件。",
+      "impact": "法务、数据治理和模型采购团队应检查训练语料来源证明、版权赔偿条款和供应商披露。",
+      "whoShouldCare": "负责模型采购、训练数据合规和内容授权谈判的法务/数据治理团队需要把音乐出版权纳入风险清单。",
+      "readerUse": "模型采购、训练数据合规和内容授权法务团队用于更新数据来源、授权链和诉讼披露问卷。",
+      "nextCheck": "查法院 complaint、案号、Anthropic 答辩、出版商证据清单和后续裁定。",
       "followUpQuestions": [
-        "Loss of Control Observatory 是否公开去重方法、严重度标准和原始案例样本？",
-        "AISI、OpenAI、Anthropic 或监管机构是否发布可核对的事故披露或报告要求？"
+        "加州北区案卷是否公开 complaint、案号和具体版权作品清单？",
+        "Anthropic 后续答辩是否披露训练数据获取方式、授权抗辩或和解路径？"
       ],
-      "evidenceThreshold": "需要取得观测项目方法文档、去重后案例数据、监管披露或模型实验室事故报告后，才能从媒体风险雷达升级为较强的趋势判断。",
-      "claimBoundary": "不证明 7 月全行业 AI 事故率翻倍，也不证明所有个案都达到严重安全事故标准。",
-      "counterEvidence": "若方法披露显示重复样本、定义过宽、社交平台偏差过大，或监管/实验室数据未显示同向趋势，应下调趋势强度。",
-      "source": "The Guardian Technology",
-      "sourceName": "The Guardian Technology",
-      "sourceId": "guardian-technology",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、案例、图表、方法、数据和上下文仍应回到原文与观测项目材料。",
-      "sourceUrl": "https://www.theguardian.com/technology/2026/aug/29/sharp-rise-in-incidents-of-ai-escaping-users-control-research-finds",
-      "originalUrl": "https://www.theguardian.com/technology/2026/aug/29/sharp-rise-in-incidents-of-ai-escaping-users-control-research-finds",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-29T16:00:00+09:00",
-      "freshSourceFact": null,
-      "time": "16:00",
-      "tags": [
-        "AI安全",
-        "Agent治理",
-        "事故披露"
-      ],
-      "companies": [
-        "OpenAI",
-        "Anthropic"
-      ]
-    },
-    {
-      "id": "techcrunch-instinct-350m-valuation-2026-08-29",
-      "category": "funding",
-      "label": "资金",
-      "title": "TechCrunch：AI 助手 Instinct 融资 3.5 亿美元",
-      "body": "TechCrunch 报道 AI 助手 Instinct 融资 3.5 亿美元，估值约 25 亿美元。",
-      "summary": "TechCrunch 报道 AI 助手 Instinct 融资 3.5 亿美元，估值约 25 亿美元。",
-      "whyItMatters": "资本继续押注“个人权限层”的消费 Agent，但隐私、安全和真实留存仍是能否成为平台的核心证据。",
-      "detailBody": "报道只作为融资和市场背景；完整投资方、条款、产品权限争议和上下文应回到 TechCrunch 原文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "消费 AI Agent 的竞争点可能从模型能力转到谁能获得用户跨应用权限和可审计授权。",
-      "detailTrend": "消费 AI Agent 的竞争点可能从模型能力转到谁能获得用户跨应用权限和可审计授权。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "融资额足以改变消费 Agent 赛道关注度，但仍需官方融资文件和产品安全证据。",
-      "topReason": "融资额足以改变消费 Agent 赛道关注度，但仍需官方融资文件和产品安全证据。",
-      "detailWhyRanked": "融资额足以改变消费 Agent 赛道关注度，但仍需官方融资文件和产品安全证据。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "融资和隐私冲突有叙事强度，仍需官方和产品数据验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "融资和隐私冲突有叙事强度，仍需官方和产品数据验证。"
-      },
-      "impact": "创业者和投资团队可把权限、审计、撤销和留存作为消费 Agent 尽调重点。",
-      "whoShouldCare": "正在设计个人助手、日程、邮箱、支付或跨应用自动化产品的创始人/安全团队，应关注权限授权如何影响增长、审计和监管风险。",
-      "readerUse": "相关团队用来检查消费 Agent 的融资热度、权限风险和产品留存证据。",
-      "nextCheck": "等待公司公告、融资文件、隐私政策、权限审计、用户留存和监管反馈。",
-      "followUpQuestions": [
-        "Instinct 是否公开融资公告、投资方确认或公司登记文件来核对估值？",
-        "下一版是否能看到隐私政策、权限审计或留存数据来判断消费 Agent 采用？"
-      ],
-      "evidenceThreshold": "需要取得公司公告、融资文件、投资方确认、权限审计和留存数据后，才能从媒体融资信号升级为确认的市场采用判断。",
-      "claimBoundary": "不证明 Instinct 已经规模化留存，也不证明用户愿意长期交出跨应用权限。",
-      "counterEvidence": "若融资未获官方确认、产品权限被平台限制、用户留存低或隐私投诉增加，应下调赛道判断。",
+      "evidenceThreshold": "需要法院案卷、双方正式文件或裁定后，才能升级为确认的侵权事实或合规责任判断。",
+      "claimBoundary": "目前只能说明媒体报道了诉讼和双方初步立场，不证明侵权已经成立。",
+      "counterEvidence": "若法院驳回核心指控、作品清单不成立或双方文件显示合法授权，应下调合规风险判断。",
       "source": "TechCrunch AI",
       "sourceName": "TechCrunch AI",
+      "sourceRole": "媒体背景",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "originalDependency": "must-read",
+      "trustLevel": "media",
       "sourceId": "techcrunch-ai",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/",
-      "originalUrl": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/",
+      "provenance": "TechCrunch AI 用于最低限度事实和背景入口；完整事实、采访、数据、引文和上下文仍应阅读原文。",
+      "sourceUrl": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+      "originalUrl": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-08-29T03:00:00+09:00",
+      "publishedAt": "2026-08-29T11:41:00-07:00",
       "freshSourceFact": null,
-      "time": "03:00",
+      "time": "08-30 07:45",
       "tags": [
-        "消费Agent",
-        "融资",
-        "隐私"
+        "copyright",
+        "training-data",
+        "lawsuit"
       ],
       "companies": [
-        "Instinct"
+        "Anthropic",
+        "Claude",
+        "Sony Music",
+        "Warner Chappell"
       ]
     },
     {
-      "id": "techcrunch-amazon-nvidia-chip-order-2026-08-29",
-      "category": "funding",
-      "label": "资金",
-      "title": "TechCrunch：Amazon 因需求上调 NVIDIA 芯片订单",
-      "body": "TechCrunch 报道 Amazon 因 AI 需求上调 NVIDIA 芯片订单。",
-      "summary": "TechCrunch 报道 Amazon 因 AI 需求上调 NVIDIA 芯片订单。",
-      "whyItMatters": "如果属实，这显示自研 Trainium 与采购 NVIDIA 并行，云厂商短期仍需多路径保障 AI 算力。",
-      "detailBody": "该项来自媒体报道，适合记录算力需求信号；订单规模、交付节奏和财务承诺需原始采购或供应链材料确认。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "AI 云基础设施的现实路线可能不是单一自研替代，而是自研芯片、NVIDIA 生态和融资安排并行。",
-      "detailTrend": "AI 云基础设施的现实路线可能不是单一自研替代，而是自研芯片、NVIDIA 生态和融资安排并行。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "算力供需影响大，但媒体报道必须等待 Amazon/NVIDIA、供应链或 filings 验证。",
-      "topReason": "算力供需影响大，但媒体报道必须等待 Amazon/NVIDIA、供应链或 filings 验证。",
-      "detailWhyRanked": "算力供需影响大，但媒体报道必须等待 Amazon/NVIDIA、供应链或 filings 验证。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "影响很高但需要供应链、财报或公司确认。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "影响很高但需要供应链、财报或公司确认。"
-      },
-      "impact": "云客户和基础设施采购团队可关注 GPU 供给、排队时间和云价变化。",
-      "whoShouldCare": "需要规划训练/推理容量、预算和多云采购的 CTO/财务运营/基础设施团队，应把此类订单信号与实际实例供应分开看。",
-      "readerUse": "相关团队用来更新 GPU 供给、云容量和 AI capex 观察表。",
-      "nextCheck": "核对 Amazon/NVIDIA 公告、供应链交付记录、财报披露、实例可用区和价格变化。",
-      "followUpQuestions": [
-        "Amazon 或 NVIDIA 是否发布采购公告、财报披露或供应链交付记录？",
-        "云实例可用区、排队时间或价格页是否显示 GPU 供给实际改善？"
-      ],
-      "evidenceThreshold": "需要取得公司公告、采购文件、财报披露、供应链记录或云实例交付数据后，才能从媒体报道升级为确认的算力扩张事实。",
-      "claimBoundary": "不证明订单已经全部交付，也不证明客户可立即获得更便宜算力。",
-      "counterEvidence": "若订单数字被否认、交付延迟、实例供应未改善或云价格继续上涨，应下调供给改善判断。，且相关日志或数据无法确认时，应下调判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
-      "originalUrl": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-29T02:00:00+09:00",
-      "freshSourceFact": null,
-      "time": "02:00",
-      "tags": [
-        "GPU",
-        "云算力",
-        "订单"
-      ],
-      "companies": [
-        "Amazon",
-        "NVIDIA"
-      ]
-    },
-    {
-      "id": "venturebeat-meta-evoharness-rl-2026-08-29",
-      "category": "research",
-      "label": "研究",
-      "title": "VentureBeat：Meta/UIUC 用 EvoHarness-RL 训练 Agent 使用外部状态",
-      "body": "VentureBeat 报道 Meta/UIUC 的 EvoHarness-RL Agent 状态管理研究。",
-      "summary": "VentureBeat 报道 Meta/UIUC 的 EvoHarness-RL Agent 状态管理研究。",
-      "whyItMatters": "它把 Agent 可靠性的难点从 prompt 规则转到可训练的运行时状态管理，直接关联长任务成本和错误恢复。",
-      "detailBody": "报道引用论文和作者解释，称 ALFWorld 实验中 Qwen3-8B 经训练后接近 Claude Opus 4.5 的成功率；完整方法和数字应看论文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
-      "trend": "Agent 工程可能从手写 harness 走向模型学习如何管理记忆、进度和环境信念。",
-      "detailTrend": "Agent 工程可能从手写 harness 走向模型学习如何管理记忆、进度和环境信念。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "研究信号强，且有论文入口。",
-      "topReason": "研究信号强，且有论文入口。",
-      "detailWhyRanked": "研究信号强，且有论文入口。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "报道提供论文入口，需论文原文和复现支撑生产判断。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "报道提供论文入口，需论文原文和复现支撑生产判断。"
-      },
-      "impact": "Agent 平台团队可把动态状态管理作为下一轮框架评估维度。",
-      "whoShouldCare": "构建长流程迁移、财务审计、软件维护或运维 Agent 的工程团队，应关注外部状态是否可训练、可压缩和可审计。",
-      "readerUse": "相关团队用来设计 Agent memory、progress tracker 和工具调用成本的实验计划。",
-      "nextCheck": "阅读 arXiv 论文、代码、benchmark 设置，并寻找第三方复现和真实任务迁移结果。",
-      "followUpQuestions": [
-        "EvoHarness-RL 论文是否公开代码、训练配置和 benchmark 设置供复现？",
-        "是否有第三方复测或企业任务日志证明 8B Agent 能迁移到真实工作流？"
-      ],
-      "evidenceThreshold": "需要取得论文代码、独立复现、跨 benchmark 结果和企业任务日志后，才能从媒体/论文信号升级为可复用 Agent 训练方法。",
-      "claimBoundary": "不证明 8B 模型在真实企业工作流中已稳定替代 frontier model。",
-      "counterEvidence": "若真实任务迁移失败、状态工具成本抵消收益、复现结果低于论文或安全审计发现不可控行为，应下调判断。，且相关日志或数据无法确认时，应下调判断。",
-      "source": "VentureBeat AI",
-      "sourceName": "VentureBeat AI",
-      "sourceId": "venturebeat-ai",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://venturebeat.com/orchestration/meta-researchers-taught-an-8b-ai-model-to-match-claude-opus-4-5-without-the-frontier-price-tag",
-      "originalUrl": "https://venturebeat.com/orchestration/meta-researchers-taught-an-8b-ai-model-to-match-claude-opus-4-5-without-the-frontier-price-tag",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-29T01:33:00+09:00",
-      "freshSourceFact": null,
-      "time": "01:33",
-      "tags": [
-        "Agent研究",
-        "运行时",
-        "Meta"
-      ],
-      "companies": [
-        "Meta"
-      ]
-    },
-    {
-      "id": "techcrunch-runable-21m-agent-business-growth-2026-08-29",
-      "category": "funding",
-      "label": "资金",
-      "title": "TechCrunch：Runable 融资 2100 万美元押注经营型 Agent",
-      "body": "TechCrunch 报道 Runable 融资 2100 万美元，押注经营型 Agent。",
-      "summary": "TechCrunch 报道 Runable 融资 2100 万美元，押注经营型 Agent。",
-      "whyItMatters": "小额但方向清晰的融资显示 Agent 创业从代码/客服扩到增长运营，关键验证点是能否产生可归因业绩。",
-      "detailBody": "该项为媒体融资信号，AI Watchtower 只记录方向和金额；完整投资方、产品细节和客户证据应看原文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "Agent 市场正在细分为能执行具体经营动作的垂直工具，而非泛用聊天入口。",
-      "detailTrend": "Agent 市场正在细分为能执行具体经营动作的垂直工具，而非泛用聊天入口。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "作为资金信号低于巨额融资，但能补足 Agent 商业化方向。",
-      "topReason": "作为资金信号低于巨额融资，但能补足 Agent 商业化方向。",
-      "detailWhyRanked": "作为资金信号低于巨额融资，但能补足 Agent 商业化方向。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 3,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 16,
-        "note": "补充商业化方向，证据强度低于官方和大额交易。"
-      },
-      "editorScore": {
-        "impact": 3,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 16,
-        "note": "补充商业化方向，证据强度低于官方和大额交易。"
-      },
-      "impact": "增长和运营团队可观察 Agent 是否开始承担获客、实验和漏斗优化任务。",
-      "whoShouldCare": "负责增长实验、销售线索、营销运营和自动化工作流的创始人/运营团队，应关注经营型 Agent 如何证明增量效果。",
-      "readerUse": "相关团队用来检查 Agent 创业方向是否从生产力工具进入收入相关流程。",
-      "nextCheck": "寻找 Runable 官方公告、客户案例、融资文件、产品日志和可归因增长指标。",
-      "followUpQuestions": [
-        "Runable 是否发布融资公告、投资方确认或产品客户名单？",
-        "客户侧增长指标、漏斗实验记录或审计日志是否支持经营型 Agent 成效？"
-      ],
-      "evidenceThreshold": "需要取得公司公告、投资方确认、客户侧增长数据和产品审计日志后，才能从融资报道升级为已验证商业化信号。",
-      "claimBoundary": "不证明经营型 Agent 已能稳定带来收入，也不证明融资金额代表市场成熟。",
-      "counterEvidence": "若客户无法复现增长、自动化造成合规问题、融资未确认或产品留存不足，应下调方向判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://techcrunch.com/2026/08/26/runable-hits-21m-to-bet-ai-agents-can-go-from-building-businesses-to-growing-them/",
-      "originalUrl": "https://techcrunch.com/2026/08/26/runable-hits-21m-to-bet-ai-agents-can-go-from-building-businesses-to-growing-them/",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-29T00:00:00+09:00",
-      "freshSourceFact": null,
-      "time": "08-29",
-      "tags": [
-        "Agent创业",
-        "增长",
-        "融资"
-      ],
-      "companies": [
-        "Runable"
-      ]
-    },
-    {
-      "id": "venturebeat-cohere-parse-5-cost-2026-08-29",
-      "category": "tool",
-      "label": "工具",
-      "title": "VentureBeat：Cohere Parse 5 以每页成本切入文档解析",
-      "body": "VentureBeat 报道 Cohere Parse 5 以每页成本切入企业文档解析。",
-      "summary": "VentureBeat 报道 Cohere Parse 5 以每页成本切入企业文档解析。",
-      "whyItMatters": "RAG 和 Agent 的瓶颈常在混乱文档，解析工具的成本/页可能比单次 benchmark 排名更影响规模化部署。",
-      "detailBody": "该报道适合作为市场背景：它提示文档 AI 供应商在准确率、版面保持和单位成本之间重新定位。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "企业 AI 数据层竞争正在从“能否解析”转向“能否以可审计成本持续处理大量页面”。",
-      "detailTrend": "企业 AI 数据层竞争正在从“能否解析”转向“能否以可审计成本持续处理大量页面”。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "媒体信号能提示采购问题，但必须回到产品文档、价格页和客户评测。",
-      "topReason": "媒体信号能提示采购问题，但必须回到产品文档、价格页和客户评测。",
-      "detailWhyRanked": "媒体信号能提示采购问题，但必须回到产品文档、价格页和客户评测。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "市场信号有用但需要价格页和第三方测试确认。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "市场信号有用但需要价格页和第三方测试确认。"
-      },
-      "impact": "数据平台团队可把解析质量和每页成本放进同一评估表。",
-      "whoShouldCare": "负责合同、发票、报告和知识库进入 RAG/Agent 流程的数据工程与采购团队，应关注解析质量、成本和审计字段是否一起达标。",
-      "readerUse": "相关团队用来比较文档解析 API 的总拥有成本、版面保真度和下游检索质量。",
-      "nextCheck": "核对 Cohere 官方文档、价格页、第三方 benchmark、客户样本和错误分析。",
-      "followUpQuestions": [
-        "Cohere Parse 5 官方文档、价格页和 API 字段是否已可核对？",
-        "第三方文档解析 benchmark 或客户样本是否验证中文、表格和扫描件表现？"
-      ],
-      "evidenceThreshold": "需要取得产品文档、价格页、第三方测试和客户语料评测后，才能从媒体市场信号升级为已验证文档处理优势。，并形成可复核报告。",
-      "claimBoundary": "不证明 Parse 5 是最佳解析器，也不证明成本优势适用于中文、扫描件或复杂表格。",
-      "counterEvidence": "若第三方测试显示准确率不足、隐藏费用高、复杂版面失败或下游 RAG 指标下降，应下调采购意义。",
-      "source": "VentureBeat AI",
-      "sourceName": "VentureBeat AI",
-      "sourceId": "venturebeat-ai",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "sourceReliability": "medium",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://venturebeat.com/data/cohere-parse-5-loses-the-benchmark-on-points-it-wins-on-cost-per-page",
-      "originalUrl": "https://venturebeat.com/data/cohere-parse-5-loses-the-benchmark-on-points-it-wins-on-cost-per-page",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-29T00:00:00+09:00",
-      "freshSourceFact": null,
-      "time": "08-29",
-      "tags": [
-        "文档解析",
-        "RAG",
-        "成本"
-      ],
-      "companies": [
-        "Cohere"
-      ]
-    },
-    {
-      "id": "ap-anthropic-pentagon-blacklist-ruling-2026-08-29",
-      "category": "policy",
-      "label": "政策",
-      "title": "AP：美国法官阻止五角大楼对 Anthropic 的风险标记",
-      "body": "AP 报道，美国法官阻止五角大楼对 Anthropic 的供应链风险标记。",
-      "summary": "AP 报道，美国法官阻止五角大楼对 Anthropic 的供应链风险标记。",
-      "whyItMatters": "这把 AI 模型供应商、国防采购、言论保护和军事用途限制放进同一法律冲突，影响政府客户如何处理模型准入。",
-      "detailBody": "报道称裁决暂时阻止相关限制，争议源于 Anthropic 对无限制军事用途的反对；完整法律事实仍应读判决书和 AP 原文。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
-      "trend": "国家安全采购不再只是能力竞标，也在测试模型公司的使用政策能否承受政府压力。",
-      "detailTrend": "国家安全采购不再只是能力竞标，也在测试模型公司的使用政策能否承受政府压力。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "可靠媒体给出明确司法动作。",
-      "topReason": "可靠媒体给出明确司法动作。",
-      "detailWhyRanked": "可靠媒体给出明确司法动作。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "司法动作明确但仍需案卷和政府后续文件确认影响范围。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "司法动作明确但仍需案卷和政府后续文件确认影响范围。"
-      },
-      "impact": "公共部门采购团队需要把模型供应商政策立场纳入法律和供应链风险评估。",
-      "whoShouldCare": "服务政府、国防、公共安全和高合规行业的法务/销售/政策团队，应关注 AI 使用限制如何触发采购资格争议。",
-      "readerUse": "相关团队用来更新政府 AI 采购、供应链风险标记和模型使用政策冲突的观察清单。",
-      "nextCheck": "读取法院裁定、政府上诉文件、DoD 采购指引和 Anthropic 官方回应。",
-      "followUpQuestions": [
-        "法院原始裁定、案卷编号或 DoD 采购文件是否已公开可核对？",
-        "Anthropic 或美国政府后续回应是否改变供应链风险标记的适用范围？"
-      ],
-      "evidenceThreshold": "需要取得法院原始裁定、上诉案卷或 DoD 正式采购更新后，才能从媒体报道升级为已确认政策和采购影响。",
-      "claimBoundary": "不证明 Anthropic 最终胜诉，也不证明所有政府 AI 合同都会接受供应商自设限制。",
-      "counterEvidence": "若上诉推翻裁定、DoD 发布新的合法依据或采购禁令以其他形式恢复，应下调政策影响判断。",
-      "source": "Associated Press Technology",
-      "sourceName": "Associated Press Technology",
-      "sourceId": "ap-technology",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c",
-      "originalUrl": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-28T12:40:00+09:00",
-      "freshSourceFact": null,
-      "time": "08-28",
-      "tags": [
-        "政府采购",
-        "国防AI",
-        "AI合规"
-      ],
-      "companies": [
-        "Anthropic"
-      ]
-    },
-    {
-      "id": "openai-thailand-ai-accelerator-2026-08-29",
+      "id": "techcrunch-nvidia-system-layer-advantage-2026-08-30",
       "category": "product",
       "label": "产品",
-      "title": "OpenAI 与泰国 MHESI 启动 AI 初创加速器",
-      "body": "OpenAI 与泰国 MHESI 启动八周 AI Accelerator，首批覆盖 10 家医疗、健康和教育初创公司。",
-      "summary": "OpenAI 与泰国 MHESI 启动八周 AI Accelerator，首批覆盖 10 家医疗、健康和教育初创公司。",
-      "whyItMatters": "这把 frontier model 支持、政府创新网络和本地高风险场景放在同一试点里，适合观察主权市场如何要求可评估产品。",
-      "detailBody": "OpenAI 原文核对了项目日期、合作方、八周周期、10 家公司和每队 API credits；医疗电话、儿童学习和教育评测仍属项目目标。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "区域 AI 合作正在从“开办公室”转向把模型供应商、政府、大学和本地创业者捆成可审计试点。",
-      "detailTrend": "区域 AI 合作正在从“开办公室”转向把模型供应商、政府、大学和本地创业者捆成可审计试点。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "官方证据强，且有具体 cohort、时间表和 Demo Day。",
-      "topReason": "官方证据强，且有具体 cohort、时间表和 Demo Day。",
-      "detailWhyRanked": "官方证据强，且有具体 cohort、时间表和 Demo Day。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+      "title": "TechCrunch 称 NVIDIA 优势转向 GPU 外系统层",
+      "body": "NVIDIA 系统层优势被重新讨论。",
+      "summary": "NVIDIA 的护城河被描述为从单颗 GPU 扩展到机架和数据移动控制。",
+      "whyItMatters": "采购方不能只比较 GPU 峰值，还要比较数据移动、tokens-per-watt 和整机架可运维性。",
+      "detailBody": "TechCrunch 围绕 Vera CPU、Rubin 架构、存储和网络组件分析称，大规模 AI 部署的瓶颈正在移到 GPU 周边系统、数据移动和机架级编排。",
+      "trend": "基建竞争转向系统层。",
+      "detailTrend": "当训练和推理进入兆瓦/吉瓦规模，成本差异可能来自机架内数据路径、存储吞吐、网络拥塞、调度效率、功耗曲线和运维成熟度。",
+      "whyRanked": "系统竞争",
+      "topReason": "它解释了为什么 GPU 竞争并不自动削弱 NVIDIA 的系统控制力。",
+      "detailWhyRanked": "报道把近期 Vera、NVLink Fusion、NVHBM 和云订单放进系统层竞争框架；站内要求云规格、客户成本日志和独立 benchmark 验证。",
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 5,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 22,
-        "note": "官方来源支撑发布事实，影响取决于试点评估和政府后续文件。"
+        "total": 20,
+        "note": "分析价值高，但仍需规格和客户侧数据验证。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 5,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 22,
-        "note": "官方来源支撑发布事实，影响取决于试点评估和政府后续文件。"
+        "total": 20,
+        "note": "分析价值高，但仍需规格和客户侧数据验证。"
       },
-      "impact": "医疗和教育 AI 团队可把它作为东南亚公共部门试点的评估清单。",
-      "whoShouldCare": "负责医疗语音、教育产品和政府创新项目的产品/政策团队，应关注试点如何设置评估、安全和商业里程碑。",
-      "readerUse": "相关团队用来检查本地化 AI 项目是否同时具备模型资源、用户证据、隐私安全和政府承接路径。",
-      "nextCheck": "核对 Demo Day 输出、试点医院/学校记录、用户评估数据和 MHESI/NIA 后续文件。",
+      "impact": "云采购、芯片和平台团队应核对整机架规格、实际吞吐、功耗、存储路径和网络绑定。",
+      "whoShouldCare": "负责 AI 云采购、推理平台成本和数据中心架构的基础设施团队需要用它重查系统级 benchmark。",
+      "readerUse": "AI 云采购、推理平台和数据中心架构团队用于扩展系统级 benchmark 与供应商评估表。",
+      "nextCheck": "查 NVIDIA/AWS/云厂商规格、独立 benchmark、客户功耗日志和供货记录。",
       "followUpQuestions": [
-        "Demo Day 是否公开项目名单、医院/学校试点记录或用户评估报告？",
-        "MHESI/NIA 是否发布验收文件、安全要求或后续资助安排？"
+        "云厂商是否发布 Vera/Rubin 机架实例规格、网络拓扑和存储路径指标？",
+        "是否有第三方 benchmark 同时测 token 吞吐、延迟、功耗和数据移动瓶颈？"
       ],
-      "evidenceThreshold": "需要取得项目名单确认、试点数据、用户评估报告或政府验收文件后，才能从官方发布升级为已验证公共部门采用案例。",
-      "claimBoundary": "不证明这些医疗和教育产品已经安全有效，也不证明泰国市场采用率已经形成。",
-      "counterEvidence": "若 Demo Day 无真实用户证据、试点取消、隐私审计不通过或合作机构未确认部署，应下调采用判断。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "optional",
-      "trustLevel": "official",
-      "provenance": "OpenAI News 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
-      "sourceUrl": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/",
-      "originalUrl": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/",
+      "evidenceThreshold": "需要云实例规格、独立 benchmark、客户功耗/延迟日志和供应链记录后，才能升级为系统级优势已验证。",
+      "claimBoundary": "不证明 NVIDIA 在所有系统层都不可替代，也不证明竞品 GPU 已失去机会。",
+      "counterEvidence": "若独立 benchmark 或客户成本日志显示竞品系统在成本、延迟、能耗或稳定性上追平，应下调优势判断。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceRole": "媒体背景",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "originalDependency": "must-read",
+      "trustLevel": "media",
+      "sourceId": "techcrunch-ai",
+      "provenance": "TechCrunch AI 用于最低限度事实和背景入口；完整事实、采访、数据、引文和上下文仍应阅读原文。",
+      "sourceUrl": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+      "originalUrl": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-08-28T00:00:00+09:00",
+      "publishedAt": "2026-08-29T06:00:00-07:00",
       "freshSourceFact": null,
-      "time": "08-28",
+      "time": "08-30 07:40",
       "tags": [
-        "区域合作",
-        "医疗AI",
-        "教育AI"
+        "infrastructure",
+        "nvidia",
+        "datacenter"
       ],
       "companies": [
+        "NVIDIA",
         "OpenAI"
       ]
     },
     {
-      "id": "venturebeat-glm-5-3-flash-workloads-2026-08-29",
-      "category": "model",
-      "label": "模型",
-      "title": "VentureBeat：GLM-5.3-Flash 被定位为低成本工作负载模型",
-      "body": "VentureBeat 分析 GLM-5.3-Flash 的低成本工作负载覆盖潜力。",
-      "summary": "VentureBeat 分析 GLM-5.3-Flash 的低成本工作负载覆盖潜力。",
-      "whyItMatters": "模型采购正在从“永远上最大模型”转向按任务分层，价格、延迟和能力边界会直接改变 Agent 经济性。",
-      "detailBody": "这是一篇分析性媒体信号，不等于官方 benchmark；需核对 z.ai、Artificial Analysis 和真实工作负载数据。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
-      "trend": "企业模型路由将更强调中档模型的覆盖率，用小模型处理常规任务，把 frontier model 留给高风险步骤。",
-      "detailTrend": "企业模型路由将更强调中档模型的覆盖率，用小模型处理常规任务，把 frontier model 留给高风险步骤。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "有助于解释模型分层采购，但不能直接采信 45% 口径。",
-      "topReason": "有助于解释模型分层采购，但不能直接采信 45% 口径。",
-      "detailWhyRanked": "有助于解释模型分层采购，但不能直接采信 45% 口径。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+      "id": "techcrunch-lambda-private-debt-ai-chips-2026-08-30",
+      "category": "funding",
+      "label": "融资",
+      "title": "Lambda 再用债务融资购买 AI 芯片",
+      "body": "Lambda 被报道用债务买芯片。",
+      "summary": "Neocloud 的 GPU 扩张越来越依赖资产支持债务和特定客户部署。",
+      "whyItMatters": "AI 算力供给正在金融化，风险从芯片稀缺扩展到租约、债务期限和客户利用率。",
+      "detailBody": "TechCrunch 援引报道称 Lambda 获 10 亿美元短期私人债务以购买将租给 Microsoft 的 NVIDIA 芯片；文章还提到 Lambda 本周宣布 9.26 亿美元贷款用于 GB300 GPU 部署。",
+      "trend": "算力扩张金融化。",
+      "detailTrend": "这种资产支持扩容能快速增加 GPU 供给，但要求芯片交付、客户租约、现金流入、利用率和再融资窗口同时兑现，否则会把算力风险转成财务风险。",
+      "whyRanked": "债务算力",
+      "topReason": "它把算力竞争的压力从芯片订单带到资产负债表。",
+      "detailWhyRanked": "报道把 neocloud 扩张从融资新闻变成供应商稳定性问题；站内关注债务文件、客户合同、实例上线容量、GPU 交付记录和利用率披露，而不是直接判断融资健康。",
       "selectionScore": {
         "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
+        "novelty": 4,
+        "narrativeStrength": 4,
         "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 17,
-        "note": "分析视角有用，数字口径必须用官方和第三方评测校准。"
+        "total": 19,
+        "note": "金额和方向有用，但核心细节仍依赖原始债务与客户文件。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
+        "novelty": 4,
+        "narrativeStrength": 4,
         "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 17,
-        "note": "分析视角有用，数字口径必须用官方和第三方评测校准。"
+        "total": 19,
+        "note": "金额和方向有用，但核心细节仍依赖原始债务与客户文件。"
       },
-      "impact": "平台团队可把模型路由、成本阈值和任务难度分类纳入预算优化。",
-      "whoShouldCare": "正在为客服、代码、知识库和内部 Agent 做模型路由的工程/采购团队，应评估哪些任务可从 frontier model 下放。",
-      "readerUse": "相关团队用来设定低成本模型试验、A/B 评测和 fallback 规则。",
-      "nextCheck": "核对 z.ai 官方模型卡、Artificial Analysis 数据、价格页和内部任务集 A/B 结果。",
+      "impact": "采购和财务团队应检查 neocloud 的融资期限、客户集中度、芯片交付和服务可用性。",
+      "whoShouldCare": "负责 GPU 云采购、供应商风险和 AI 成本预算的财务/基础设施团队需要核对债务驱动扩容风险。",
+      "readerUse": "GPU 云采购、供应商风险和 AI 成本预算团队用于核对债务、租约、客户集中度和交付记录。",
+      "nextCheck": "查 Lambda 官方贷款公告、债务文件、Microsoft 合同确认、GPU 交付记录和利用率数据。",
       "followUpQuestions": [
-        "Z.ai 模型卡、价格页和 Artificial Analysis 数据是否支持 45% 工作负载口径？",
-        "内部任务集 A/B 结果、失败率和合规记录是否证明低成本路由可用？"
+        "Lambda 是否披露 10 亿美元私人债务的期限、抵押物和客户租约条款？",
+        "Microsoft 或 Lambda 是否确认对应 GPU 部署时间表、实例规格和可用容量？"
       ],
-      "evidenceThreshold": "需要取得官方模型卡、独立 benchmark、价格页和客户任务评测后，才能从媒体分析升级为可采用的模型路由策略。，并形成可复核报告。",
-      "claimBoundary": "不证明 GLM-5.3-Flash 能处理 45% 的任何企业工作负载，也不证明安全和合规边界满足要求。",
-      "counterEvidence": "若内部任务失败率高、长上下文不稳定、价格优势消失或合规要求无法满足，应下调路由建议。，且相关日志或数据无法确认时，应下调判断。",
-      "source": "VentureBeat AI",
-      "sourceName": "VentureBeat AI",
-      "sourceId": "venturebeat-ai",
+      "evidenceThreshold": "需要债务文件、客户合同确认、GPU 上线记录和收入/利用率披露后，才能升级为可持续算力扩容证据。",
+      "claimBoundary": "不证明 Lambda 已完成芯片部署，也不证明债务融资没有再融资或利用率风险。",
+      "counterEvidence": "若交付延期、客户合同未确认、利用率不足或债务再融资成本上升，应下调扩容质量判断。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
       "sourceRole": "媒体背景",
       "sourceType": "reliable_media",
       "sourceReliability": "medium",
       "claimStatus": "reported",
       "originalDependency": "must-read",
       "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://venturebeat.com/orchestration/glm-5-3-flash-will-likely-handle-45-of-your-ai-workloads",
-      "originalUrl": "https://venturebeat.com/orchestration/glm-5-3-flash-will-likely-handle-45-of-your-ai-workloads",
+      "sourceId": "techcrunch-ai",
+      "provenance": "TechCrunch AI 用于最低限度事实和背景入口；完整事实、采访、数据、引文和上下文仍应阅读原文。",
+      "sourceUrl": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+      "originalUrl": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-08-28T00:00:00+09:00",
+      "publishedAt": "2026-08-28T13:24:00-07:00",
       "freshSourceFact": null,
-      "time": "08-28",
+      "time": "08-30 07:35",
       "tags": [
-        "模型路由",
-        "成本",
-        "GLM"
+        "neocloud",
+        "gpu",
+        "debt"
       ],
       "companies": [
-        "Z.ai"
+        "Lambda",
+        "Microsoft",
+        "NVIDIA"
       ]
     },
     {
-      "id": "venturebeat-visa-security-ai-patches-code-2026-08-29",
-      "category": "policy",
-      "label": "政策",
-      "title": "VentureBeat：Visa 推出可先补代码的安全 AI",
-      "body": "VentureBeat 报道 Visa 的安全 AI 可在人工 review 前生成生产代码修复。",
-      "summary": "VentureBeat 报道 Visa 的安全 AI 可在人工 review 前生成生产代码修复。",
-      "whyItMatters": "安全自动化正触碰变更审批底线：速度提升和错误扩散风险会同时进入企业治理讨论。",
-      "detailBody": "报道用于提示 Visa 的安全 AI 方向；完整技术细节、控制流程和事故边界仍需 Visa 原始材料。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "安全 Agent 的竞争点从告警归纳进入 patch 执行动作，审批和回滚机制会成为关键控制面。",
-      "detailTrend": "安全 Agent 的竞争点从告警归纳进入 patch 执行动作，审批和回滚机制会成为关键控制面。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "可靠媒体提供高冲击信号，但生产变更事实必须由 Visa 文档、审计日志或客户案例确认。",
-      "topReason": "可靠媒体提供高冲击信号，但生产变更事实必须由 Visa 文档、审计日志或客户案例确认。",
-      "detailWhyRanked": "可靠媒体提供高冲击信号，但生产变更事实必须由 Visa 文档、审计日志或客户案例确认。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+      "id": "techcrunch-open-weight-acquisition-targets-2026-08-30",
+      "category": "funding",
+      "label": "融资",
+      "title": "开放权重 AI 公司成为并购焦点",
+      "body": "开放权重公司成并购焦点。",
+      "summary": "开放权重生态从“替代选择”变成大公司对冲模型和芯片依赖的战略资产。",
+      "whyItMatters": "如果并购继续，开放模型分发、路由和企业自托管能力可能被芯片和支付平台重新整合，需正式文件确认。",
+      "detailBody": "TechCrunch 围绕 NVIDIA、Stripe、Poolside、OpenRouter、Hugging Face 和 Fireworks 的交易与传闻，解释开放权重模型分发、路由和企业自托管资产的战略价值。",
+      "trend": "开放入口被重新定价。",
+      "detailTrend": "开放权重不再只是许可议题，也成为降低推理成本、争夺开发者、绑定硬件标准、掌握企业模型路由和对冲闭源模型依赖的商业入口。",
+      "whyRanked": "控制权",
+      "topReason": "它帮助读者理解开放模型生态的资本重组压力。",
+      "detailWhyRanked": "报道混合已报道交易和传闻分析；站内只采用市场控制权视角，交易事实、估值、条款、客户迁移影响、监管结果和正式披露仍等公司公告或备案文件。",
       "selectionScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
         "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "影响高，但缺少原始技术和审计材料前只能作为媒体信号。"
+        "readerUtility": 4,
+        "total": 19,
+        "note": "战略解释有价值，但交易事实需官方或备案确认。"
       },
       "editorScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
         "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "影响高，但缺少原始技术和审计材料前只能作为媒体信号。"
+        "readerUtility": 4,
+        "total": 19,
+        "note": "战略解释有价值，但交易事实需官方或备案确认。"
       },
-      "impact": "安全负责人可重新审查自动修复、人工审批和变更回滚的权限边界。",
-      "whoShouldCare": "允许 AI 参与漏洞修复、生产变更或代码审查的安全工程/DevSecOps 团队，应检查谁能批准、回滚和审计每次修改。",
-      "readerUse": "相关团队用来更新自动 patch、human-in-the-loop 和生产权限分离的治理清单。",
-      "nextCheck": "寻找 Visa 官方技术说明、变更审计样本、回滚机制、客户部署记录和第三方安全评测。",
+      "impact": "开发者平台、模型路由和企业采购团队应检查开放模型供应商的所有权、价格和迁移风险。",
+      "whoShouldCare": "依赖 Hugging Face、OpenRouter、Fireworks 或开放权重自托管的工程/采购团队需要检查供应商控制权风险。",
+      "readerUse": "依赖开放权重平台、模型路由和自托管方案的工程/采购团队用于更新迁移、价格和所有权风险清单。",
+      "nextCheck": "查公司公告、并购文件、反垄断审查、员工转移协议和客户条款更新。",
       "followUpQuestions": [
-        "Visa 是否发布技术说明、权限设计或变更审计样本供核对？",
-        "客户部署记录、回滚日志或第三方安全评估是否证明自动修复可控？"
+        "NVIDIA、Hugging Face 或监管机构是否确认任何收购文件或反垄断审查？",
+        "OpenRouter、Poolside 或开放模型平台是否更新客户条款、价格或模型分发政策？"
       ],
-      "evidenceThreshold": "需要取得 Visa 官方文档、审计日志、客户案例或独立安全评估后，才能从媒体报道升级为确认的生产安全自动化实践。",
-      "claimBoundary": "不证明 AI 已可安全绕过人工 review，也不证明 Visa 的方案适合其他企业直接复制。",
-      "counterEvidence": "若出现错误补丁、权限越界、审计链不完整或人工审批恢复为强制步骤，应下调自动修复判断。",
-      "source": "VentureBeat AI",
-      "sourceName": "VentureBeat AI",
-      "sourceId": "venturebeat-ai",
+      "evidenceThreshold": "需要正式公告、并购文件、监管备案或客户条款更新后，才能升级为确认交易或平台控制权变化。",
+      "claimBoundary": "报道包含传闻和市场分析，不能证明 Hugging Face 等交易已经完成。",
+      "counterEvidence": "若相关公司否认交易、监管阻止、客户条款不变或开放平台保持独立，应降低整合趋势强度。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
       "sourceRole": "媒体背景",
       "sourceType": "reliable_media",
       "sourceReliability": "medium",
       "claimStatus": "reported",
       "originalDependency": "must-read",
       "trustLevel": "media",
-      "provenance": "AI Watchtower 只保留最小事实和中文判断，完整事实、采访、图表、金额、上下文仍应回到原文。",
-      "sourceUrl": "https://venturebeat.com/security/visa-agentic-security-harness-autonomous-fix",
-      "originalUrl": "https://venturebeat.com/security/visa-agentic-security-harness-autonomous-fix",
+      "sourceId": "techcrunch-ai",
+      "provenance": "TechCrunch AI 用于最低限度事实和背景入口；完整事实、采访、数据、引文和上下文仍应阅读原文。",
+      "sourceUrl": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
+      "originalUrl": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-08-28T00:00:00+09:00",
+      "publishedAt": "2026-08-28T11:19:00-07:00",
       "freshSourceFact": null,
-      "time": "08-28",
+      "time": "08-30 07:25",
       "tags": [
-        "安全AI",
-        "自动修复",
-        "治理"
-      ],
-      "companies": [
-        "Visa"
-      ]
-    },
-    {
-      "id": "aws-bedrock-guardrails-tool-interactions-2026-08-29",
-      "category": "policy",
-      "label": "政策",
-      "title": "AWS 将 Bedrock Guardrails 扩到 Agent 工具交互边界",
-      "body": "AWS 说明如何把 Bedrock Guardrails 扩到 Agent 工具交互边界。",
-      "summary": "AWS 说明如何把 Bedrock Guardrails 扩到 Agent 工具交互边界。",
-      "whyItMatters": "这回应了模型边界之外的真实风险：Agent 调工具、读外部数据、传给下游系统时，传统 prompt/response 审查会漏掉关键路径。",
-      "detailBody": "AWS 原文把工具参数、外部数据、误导内容和多 Agent 传播列为模型级护栏之外的风险点。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "Agent 安全正在从“模型输入输出过滤”升级为工具层和数据层的连续验证。",
-      "detailTrend": "Agent 安全正在从“模型输入输出过滤”升级为工具层和数据层的连续验证。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "官方安全架构与近期 Agent 事故主线高度相关，适合转化为企业控制面检查项。",
-      "topReason": "官方安全架构与近期 Agent 事故主线高度相关，适合转化为企业控制面检查项。",
-      "detailWhyRanked": "官方安全架构与近期 Agent 事故主线高度相关，适合转化为企业控制面检查项。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方安全文章支撑架构事实，安全成效需红队和客户事件验证。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方安全文章支撑架构事实，安全成效需红队和客户事件验证。"
-      },
-      "impact": "安全工程团队可据此审查 MCP、工具参数、PII 和跨 Agent 数据流。",
-      "whoShouldCare": "正在部署 Agent 访问数据库、SaaS、MCP server 或内部 API 的安全/平台团队，应检查工具调用前后是否有独立校验点。",
-      "readerUse": "相关团队用来补充 Agent 工具边界、数据入口和下游传播风险的安全设计清单。",
-      "nextCheck": "核对示例代码、IAM 策略、审计日志、红队报告和客户部署故障率。",
-      "followUpQuestions": [
-        "示例代码、IAM 策略和审计日志是否覆盖工具调用前后的风险点？",
-        "红队报告或客户故障率是否证明 Bedrock Guardrails 能降低越权调用？"
-      ],
-      "evidenceThreshold": "需要取得可运行样例、审计记录、红队测试和客户事件数据后，才能从官方架构建议升级为有效安全控制。",
-      "claimBoundary": "不证明这些检查点能阻止所有 prompt injection、数据投毒或越权工具调用。",
-      "counterEvidence": "若实测绕过率高、延迟不可接受、工具覆盖不足或审计日志不能重建事件，应下调安全有效性判断。",
-      "source": "AWS Security Blog",
-      "sourceName": "AWS Security Blog",
-      "sourceId": "aws-security-blog",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "optional",
-      "trustLevel": "official",
-      "provenance": "AWS Security Blog 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
-      "sourceUrl": "https://aws.amazon.com/blogs/security/extend-amazon-bedrock-guardrails-to-tool-interactions-using-the-strands-agents-sdk/",
-      "originalUrl": "https://aws.amazon.com/blogs/security/extend-amazon-bedrock-guardrails-to-tool-interactions-using-the-strands-agents-sdk/",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-27T00:00:00+09:00",
-      "freshSourceFact": null,
-      "time": "08-27",
-      "tags": [
-        "Agent安全",
-        "Guardrails",
-        "MCP"
-      ],
-      "companies": [
-        "AWS"
-      ]
-    },
-    {
-      "id": "aws-agentcore-evaluations-2026-08-29",
-      "category": "tool",
-      "label": "工具",
-      "title": "AWS 推出跨框架 AgentCore Evaluations",
-      "body": "AWS 介绍 Bedrock AgentCore Evaluations，用 OpenTelemetry 轨迹评估多框架 Agent。",
-      "summary": "AWS 介绍 Bedrock AgentCore Evaluations，用 OpenTelemetry 轨迹评估多框架 Agent。",
-      "whyItMatters": "Agent 评估正在从框架内工具变成云平台控制面，生产团队可把 CI 回归测试和线上抽样监测接到同一指标链。",
-      "detailBody": "AWS 原文说明 on-demand 与 online 两种模式、CloudWatch 结果路径和 OpenTelemetry/OpenInference 集成合同。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
-      "trend": "Agent 平台竞争开始围绕可观测性和评估标准化，而不是只比模型调用入口。",
-      "detailTrend": "Agent 平台竞争开始围绕可观测性和评估标准化，而不是只比模型调用入口。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "官方工程细节具体，直接影响生产 Agent 的质量门槛和框架迁移成本。",
-      "topReason": "官方工程细节具体，直接影响生产 Agent 的质量门槛和框架迁移成本。",
-      "detailWhyRanked": "官方工程细节具体，直接影响生产 Agent 的质量门槛和框架迁移成本。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方技术说明完整，仍需客户日志和第三方实践验证评分稳定性。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方技术说明完整，仍需客户日志和第三方实践验证评分稳定性。"
-      },
-      "impact": "企业平台团队可评估是否把 agent 轨迹纳入统一质量看板。",
-      "whoShouldCare": "正在用多套 Agent 框架做客服、数据、运维或代码自动化的平台工程/SRE 团队，应检查 telemetry 是否足够支撑统一评估。",
-      "readerUse": "相关团队用来设计 agent CI、线上抽样评估、CloudWatch 告警和跨框架治理接口。",
-      "nextCheck": "核对 AWS 文档、样例仓库、价格页、支持区域和真实 agent 日志接入结果。",
-      "followUpQuestions": [
-        "AWS 文档、样例仓库和价格页是否说明 AgentCore Evaluations 的接入边界？",
-        "真实 Agent 日志、CloudWatch 告警和评分漂移记录是否支持生产评估？"
-      ],
-      "evidenceThreshold": "需要取得公开文档、样例代码、客户侧评估日志和线上告警数据后，才能从官方功能发布升级为可验证生产评估能力。",
-      "claimBoundary": "不证明 LLM-as-judge 在所有业务场景可靠，也不证明非 AWS 工作负载可无成本迁移。",
-      "counterEvidence": "若支持框架受限、生产日志缺失关键字段、评分漂移无法校准或价格过高，应下调落地价值。",
-      "source": "AWS Machine Learning Blog",
-      "sourceName": "AWS Machine Learning Blog",
-      "sourceId": "aws-machine-learning-blog",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "optional",
-      "trustLevel": "official",
-      "provenance": "AWS Machine Learning Blog 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
-      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/evaluate-any-agent-framework-with-amazon-bedrock-agentcore-evaluations/",
-      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/evaluate-any-agent-framework-with-amazon-bedrock-agentcore-evaluations/",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-26T00:00:00+09:00",
-      "freshSourceFact": null,
-      "time": "08-26",
-      "tags": [
-        "Agent评估",
-        "OpenTelemetry",
-        "Bedrock"
-      ],
-      "companies": [
-        "AWS"
-      ]
-    },
-    {
-      "id": "nvidia-nvlink-fusion-nvhbm-2026-08-29",
-      "category": "tool",
-      "label": "工具",
-      "title": "NVIDIA 为 NVLink Fusion 增加 NVHBM 记忆体方案",
-      "body": "NVIDIA 称 NVLink Fusion 增加 NVHBM，Amazon Annapurna Labs 将率先协作。",
-      "summary": "NVIDIA 称 NVLink Fusion 增加 NVHBM，Amazon Annapurna Labs 将率先协作。",
-      "whyItMatters": "AI 基础设施竞争正从 GPU 扩到 XPU、内存控制器、rack-scale 网络和半定制芯片协作；仍需 AWS 规格、供货记录和独立 benchmark 才能证明优势。",
-      "detailBody": "NVIDIA 原文称 NVHBM 把自定义 memory controller 放入 HBM base die，并披露带宽、功耗和 die area 主张。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。",
-      "trend": "云厂商自研芯片和 NVIDIA 生态不是简单替代关系，更像在 rack-scale 标准和半定制组件上重新分工。",
-      "detailTrend": "云厂商自研芯片和 NVIDIA 生态不是简单替代关系，更像在 rack-scale 标准和半定制组件上重新分工。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "厂商技术路线清楚，但必须等 AWS 规格和独立 benchmark。",
-      "topReason": "厂商技术路线清楚，但必须等 AWS 规格和独立 benchmark。",
-      "detailWhyRanked": "厂商技术路线清楚，但必须等 AWS 规格和独立 benchmark。 该来源给出 NVHBM、NVLink Fusion 和 Annapurna Labs 的明确入口；本期排名依据是它能指向 AWS 规格、供货记录、第三方 benchmark 和客户成本数据，而不是采信厂商性能结论。",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "厂商技术主张明确，外部验证和量产信息仍是关键。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "厂商技术主张明确，外部验证和量产信息仍是关键。"
-      },
-      "impact": "基础设施团队可把它作为未来 AI rack 架构、内存带宽和供应链锁定的观察点。",
-      "whoShouldCare": "规划训练/推理集群、XPU 采购和云迁移路线的基础设施/财务团队，应关注 NVLink Fusion 是否改变自研芯片与 NVIDIA 平台的组合方式。",
-      "readerUse": "基础设施和采购团队用来检查内存带宽、XPU 集成、AWS Trainium 路线和供应商依赖的长期风险，并等待外部性能证据。",
-      "nextCheck": "等待 AWS 规格、内存伙伴验证、独立 benchmark、量产供货记录和云实例可用性。",
-      "followUpQuestions": [
-        "AWS 是否公开 NVHBM/NVLink Fusion 规格、实例计划或供货时间表？",
-        "第三方 benchmark、量产记录或客户成本数据是否支持带宽和功耗主张？"
-      ],
-      "evidenceThreshold": "需要取得 AWS 服务规格、第三方性能测试、供货记录和客户成本数据后，才能从厂商主张升级为已验证基础设施优势。",
-      "claimBoundary": "不证明 NVHBM 已量产，也不证明 30% 带宽和 15% 功耗主张会在客户工作负载中实现。",
-      "counterEvidence": "若 AWS 官方规格文件缺席、供应链记录显示延期、独立 benchmark 复测不达标或客户成本数据无改善，应下调基础设施意义。",
-      "source": "NVIDIA AI Blog",
-      "sourceName": "NVIDIA AI Blog",
-      "sourceId": "nvidia-blog-ai",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "sourceReliability": "medium",
-      "claimStatus": "confirmed",
-      "originalDependency": "optional",
-      "trustLevel": "official",
-      "provenance": "NVIDIA 官方博客属于厂商主张，可核对其发布、声称的架构和合作对象；性能、功耗、交付和客户效果仍需独立证据。",
-      "sourceUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
-      "originalUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-08-26T00:00:00+09:00",
-      "freshSourceFact": null,
-      "time": "08-26",
-      "tags": [
-        "AI基础设施",
-        "NVLink",
-        "HBM"
+        "open-weight",
+        "acquisition",
+        "model-routing"
       ],
       "companies": [
         "NVIDIA",
-        "AWS"
+        "Hugging Face",
+        "Stripe",
+        "OpenRouter",
+        "Poolside"
       ]
     },
     {
-      "id": "microsoft-365-copilot-python-excel-2026-08-29",
-      "category": "product",
-      "label": "产品",
-      "title": "Microsoft 365 Copilot 将 Python 编辑带进 Excel",
-      "body": "Microsoft 365 Copilot release notes 将 Python 编辑带入 Excel。",
-      "summary": "Microsoft 365 Copilot release notes 将 Python 编辑带入 Excel。",
-      "whyItMatters": "办公 AI 正从文本助手进入可执行分析环境，管理员需要同时评估效率、代码执行控制和数据治理。",
-      "detailBody": "官方发布说明把该功能列在 Windows、Mac、Web 的 Excel 更新中，并强调现有安全和执行控制继续适用。 该条只使用来源可直接支撑的发布、报道或分析事实，未把目标、效果或市场反应写成已验证结论。 需要把来源直接支持的事实、作者解释和 AI Watchtower 的判断分开阅读，并在下一版用原始文件或客户侧证据复核。",
-      "trend": "企业办公套件正在把“让 AI 写建议”推进到“让 AI 运行分析代码”，治理重心会转向权限、审计和输出可复核性。",
-      "detailTrend": "企业办公套件正在把“让 AI 写建议”推进到“让 AI 运行分析代码”，治理重心会转向权限、审计和输出可复核性。 对读者更重要的是把能力、权限、成本和审计要求拆开验证，避免把单一来源叙事当成落地证明。",
-      "whyRanked": "官方 release notes 支撑功能事实。",
-      "topReason": "官方 release notes 支撑功能事实。",
-      "detailWhyRanked": "官方 release notes 支撑功能事实。 该来源给出可追踪的主体、时间、金额、技术入口或政策动作；本期排名依据是读者能立刻形成核验清单，而不是把来源叙事当成最终结论。",
+      "id": "a16z-machine-age-fund-ai-buildout-2026-08-30",
+      "category": "funding",
+      "label": "融资",
+      "title": "a16z 推出 11 亿美元 Machine Age Fund",
+      "body": "a16z 宣布 Machine Age Fund。",
+      "summary": "AI 创投资金正在从软件扩展到物理基础设施和硬件供应链。",
+      "whyItMatters": "这说明投资人把 AI 瓶颈看作电力、内存、互连、机架密度和制造能力，但需基金文件和投资交付验证。",
+      "detailBody": "a16z 在官方文章中称该基金面向 AI 物理建设，覆盖计算、存储、网络、机器人、数据中心、电力、冷却、材料和制造供应链，并把 AI 发展描述为机器时代基础设施问题。",
+      "trend": "资本转向硬件供给。",
+      "detailTrend": "基金叙事把 AI 需求映射到供应链升级，但资本承诺能否变成产能，仍取决于投资部署、被投项目交付、客户合同和硬件验证。",
+      "whyRanked": "硬件资本",
+      "topReason": "它是资本市场把 AI 基础设施“硬件化”的明确信号。",
+      "detailWhyRanked": "官方页面给出基金规模、投资范围和供给约束叙事；站内按机构/厂商主张处理，要求基金文件、交易数据库、首批投资公告和被投项目交付证据后再升级。",
       "selectionScore": {
         "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
         "total": 20,
-        "note": "官方发布说明明确，实际影响取决于租户可用性和治理记录。"
+        "note": "官方发布明确，但效果和资金部署仍需交易证据。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
         "total": 20,
-        "note": "官方发布说明明确，实际影响取决于租户可用性和治理记录。"
+        "note": "官方发布明确，但效果和资金部署仍需交易证据。"
       },
-      "impact": "数据分析、财务和运营团队可评估 Copilot 生成 Python 结果的审计流程。",
-      "whoShouldCare": "允许员工在 Excel 中处理财务、客户或运营数据的 IT 管理员和数据治理团队，应检查 Python 执行、权限和结果复核规则。",
-      "readerUse": "相关团队用来更新办公 AI、低代码分析和终端用户计算治理清单。",
-      "nextCheck": "核对租户 rollout、管理员策略、审计日志、数据隔离说明和用户侧错误率。",
+      "impact": "创业者、供应链和企业采购团队应关注硬件、数据中心和电力项目的融资条件变化。",
+      "whoShouldCare": "面向 AI 芯片、内存、互连、机器人和数据中心创业的创始人/投资团队需要跟踪这类资本偏好。",
+      "readerUse": "AI 硬件、内存、互连、机器人和数据中心创业/投资团队用于跟踪资本偏好和供应链合作机会。",
+      "nextCheck": "查基金文件、LP 披露、首批投资、项目交付和第三方交易数据库。",
       "followUpQuestions": [
-        "Microsoft 是否公开租户 rollout、管理员策略和 Python 执行环境说明？",
-        "审计日志、数据隔离记录或用户错误率是否证明 Excel Copilot 可治理？"
+        "a16z 是否披露 Machine Age Fund 的 LP 文件、投资期和首批项目名单？",
+        "首批被投公司是否能提供客户合同、交付里程碑或硬件验证报告？"
       ],
-      "evidenceThreshold": "需要取得管理员文档、租户日志、执行环境说明和用户验证案例后，才能从功能发布升级为可治理的企业分析能力。",
-      "claimBoundary": "不证明所有 Microsoft 365 租户已可用，也不证明 Copilot 生成的 Python 分析天然正确。",
-      "counterEvidence": "若 rollout 受限、管理员无法审计代码、敏感数据控制不足或输出错误率高，应下调采用建议。",
-      "source": "Microsoft Learn Copilot Release Notes",
-      "sourceName": "Microsoft Learn Copilot Release Notes",
-      "sourceId": "microsoft-learn-copilot",
+      "evidenceThreshold": "需要基金文件、投资公告、交易数据库和被投项目交付证据后，才能升级为资本实际流向已验证。",
+      "claimBoundary": "不证明 11 亿美元会快速转化为产能，也不证明基金叙事代表全市场共识。",
+      "counterEvidence": "若基金部署缓慢、项目无法交付、估值回落或 LP 文件限制投资范围，应下调基础设施资本热度判断。",
+      "source": "Andreessen Horowitz Blog",
+      "sourceName": "Andreessen Horowitz Blog",
+      "sourceRole": "厂商主张",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "trustLevel": "official",
+      "sourceId": "a16z-blog",
+      "provenance": "a16z 官方博客可证明机构发布了 Machine Age Fund 及其投资叙事；这是机构/厂商主张，资金部署、回报和产能影响仍需外部文件。",
+      "sourceUrl": "https://a16z.com/the-machine-age-fund/",
+      "originalUrl": "https://a16z.com/the-machine-age-fund/",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-08-28T12:00:00+09:00",
+      "freshSourceFact": null,
+      "time": "08-30 07:30",
+      "tags": [
+        "funding",
+        "infrastructure",
+        "hardware"
+      ],
+      "companies": [
+        "a16z"
+      ]
+    },
+    {
+      "id": "anthropic-automated-alignment-researchers-2026-08-30",
+      "category": "research",
+      "label": "研究",
+      "title": "Anthropic 发布自动化对齐研究者报告",
+      "body": "Anthropic 发布自动对齐研究。",
+      "summary": "Anthropic 把“AI 帮 AI 做对齐后训练”推进到可测基准和开源 harness。",
+      "whyItMatters": "如果复现成立，对齐团队要开始审计自动研究循环，而不是只审计最终模型。",
+      "detailBody": "Anthropic 称自动化研究者会检索文献、提出训练方法、运行约束实验并迭代，在 10 类可测对齐失败上改善目标指标，同时监控并剔除作弊轨迹。",
+      "trend": "对齐研究 Agent 化。",
+      "detailTrend": "这让对齐研发更像受控实验流水线：关键不只是模型能否提出修复方法，还在评测隔离、作弊监控、保留集、外部复现和能力退化检查是否可靠。",
+      "whyRanked": "对齐自动化",
+      "topReason": "TOP3 因为它给出可复查 harness，但仍需外部复现和作弊监控审计。",
+      "detailWhyRanked": "官方报告给出 benchmark、Petri 审计、较大模型迁移和作弊监控框架；站内将其作为自动化对齐流程信号，而不是通用安全结论。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 23,
+        "note": "官方研究原文强，但外部复现和监控审计尚未完成。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 23,
+        "note": "官方研究原文强，但外部复现和监控审计尚未完成。"
+      },
+      "impact": "安全、模型和评测团队应检查自动研究循环的隔离、日志、作弊检测和保留集设计。",
+      "whoShouldCare": "负责模型安全后训练、红队评测和内部研究平台的实验/治理团队需要用它检查自动化研究边界。",
+      "readerUse": "模型安全和评测平台团队用于更新权限、数据隔离、保留集和人工复核清单。",
+      "nextCheck": "查论文、代码、Petri 审计设置、外部复现实验和作弊轨迹样本。",
+      "followUpQuestions": [
+        "Anthropic 是否发布完整 harness 代码、数据生成规则和保留集说明？",
+        "是否有外部实验室复现 10 类对齐失败的改善幅度和作弊过滤结果？"
+      ],
+      "evidenceThreshold": "需要独立复现、代码审计、保留集复测和第三方安全评估后，才能升级为可推广的自动对齐方法证据。",
+      "claimBoundary": "不证明自动化研究者能解决生产模型的全部对齐问题，也不证明未来更强模型仍可监控。",
+      "counterEvidence": "若外部复现失败、发现 benchmark 泄漏、能力退化或作弊日志漏检，应降级为受限实验信号。",
+      "source": "Anthropic Newsroom",
+      "sourceName": "Anthropic Newsroom",
       "sourceRole": "官方核对",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "optional",
       "trustLevel": "official",
-      "provenance": "Microsoft Learn Copilot Release Notes 可核对发布动作、日期和作者自述范围；效果和外部影响仍需独立证据。",
-      "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
-      "originalUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+      "sourceId": "anthropic-news",
+      "provenance": "Anthropic Newsroom 可核对发布动作、日期和自述范围；效果、采用和外部影响仍需独立材料。",
+      "sourceUrl": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+      "originalUrl": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-08-25T00:00:00+09:00",
+      "publishedAt": "2026-08-28T12:00:00+09:00",
       "freshSourceFact": null,
-      "time": "08-25",
+      "time": "08-30 08:10",
       "tags": [
-        "Copilot",
-        "Excel",
-        "企业数据"
+        "alignment",
+        "evaluation",
+        "agent"
       ],
       "companies": [
-        "Microsoft"
+        "Anthropic",
+        "Claude"
+      ]
+    },
+    {
+      "id": "wired-openai-persistent-codex-agent-2026-08-30",
+      "category": "tool",
+      "label": "工具",
+      "title": "WIRED 称 OpenAI 正开发持久型 Codex Agent",
+      "body": "WIRED 报道 Codex 持久模式。",
+      "summary": "Codex 可能从一次性编程助手走向会持续运行、等待休眠的 Agent。",
+      "whyItMatters": "持久 Agent 会改变代码审查、权限续期、后台任务和成本控制的默认假设，需 OpenAI 官方说明确认。",
+      "detailBody": "WIRED 报道称其查看到 Codex CLI 公开代码变化，显示 OpenAI 正开发 Persistent mode，可能让 Agent 持续主动工作，直到用户将其休眠。",
+      "trend": "编程 Agent 长运行。",
+      "detailTrend": "持久运行能提高复杂任务完成率，但也要求明确的暂停、唤醒、日志、费用上限、权限续期、仓库写入审批和失败恢复策略。",
+      "whyRanked": "持久执行",
+      "topReason": "它提示开发工具团队提前设计长运行 Agent 的控制面。",
+      "detailWhyRanked": "这不是官方发布，而是代码线索报道；站内价值在于提醒开发平台提前设计长运行 Agent 的生命周期、成本、权限、日志、休眠唤醒和仓库写入控制面。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "代码线索报道可作预警，产品事实需官方确认。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "代码线索报道可作预警，产品事实需官方确认。"
+      },
+      "impact": "工程平台、安全和成本团队应检查 Agent 会话生命周期、审批、日志和自动继续策略。",
+      "whoShouldCare": "负责内部代码 Agent、CI 自动化和开发者平台权限的工程/安全团队需要准备长运行任务控制面。",
+      "readerUse": "内部代码 Agent、CI 自动化和开发者平台安全团队用于准备后台执行、费用上限和仓库写权限评审。",
+      "nextCheck": "查 OpenAI 官方发布说明、Codex CLI PR、配置文档、桌面端行为和管理员控制。",
+      "followUpQuestions": [
+        "Codex CLI 是否合并 Persistent mode 相关 PR、配置项和权限说明？",
+        "OpenAI 是否发布管理员开关、费用上限、日志导出和休眠/唤醒行为文档？"
+      ],
+      "evidenceThreshold": "需要 OpenAI 官方说明、代码合并记录、产品文档和管理员控制后，才能升级为确认产品能力。",
+      "claimBoundary": "不证明该功能已经面向用户发布，也不证明最终形态会进入桌面端或 ChatGPT Work。",
+      "counterEvidence": "若相关代码被回滚、官方否认、功能仅限实验或缺少管理员控制，应下调产品化判断。",
+      "source": "WIRED AI",
+      "sourceName": "WIRED AI",
+      "sourceRole": "媒体背景",
+      "sourceType": "reliable_media",
+      "sourceReliability": "medium",
+      "claimStatus": "reported",
+      "originalDependency": "must-read",
+      "trustLevel": "media",
+      "sourceId": "wired-ai",
+      "provenance": "WIRED AI 用于最低限度事实和背景入口；完整事实、采访、数据、引文和上下文仍应阅读原文。",
+      "sourceUrl": "https://www.wired.com/story/openai-is-developing-a-persistent-ai-agent/",
+      "originalUrl": "https://www.wired.com/story/openai-is-developing-a-persistent-ai-agent/",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-08-27T12:52:00-04:00",
+      "freshSourceFact": null,
+      "time": "08-30 07:20",
+      "tags": [
+        "codex",
+        "developer-tooling",
+        "agent"
+      ],
+      "companies": [
+        "OpenAI",
+        "Codex"
+      ]
+    },
+    {
+      "id": "anthropic-model-hardware-standard-preview-2026-08-30",
+      "category": "tool",
+      "label": "工具",
+      "title": "Anthropic 预览 Model Hardware Standard",
+      "body": "Anthropic 预览 MHS。",
+      "summary": "MHS 把 Agent 的工具调用边界延伸到显微镜、液体处理器、机械臂和制造设备。",
+      "whyItMatters": "物理设备接入 Agent 后，权限、急停、状态回滚和责任记录会变成部署前置条件。",
+      "detailBody": "Anthropic 称 MHS 是共享规范，先面向部分科研实验室和先进制造伙伴预览，目标是让显微镜、液体处理器、机械臂等可编程设备被 Agent 安全调用。",
+      "trend": "Agent 进入物理设备。",
+      "detailTrend": "一旦 Agent 能操作真实设备，标准的价值不只在减少集成时间，还在把危险动作、环境状态、人工接管、急停记录和审计日志写进协议层。",
+      "whyRanked": "物理 Agent",
+      "topReason": "TOP3 因为它把 Agent 风险从软件工具扩到物理设备，需伙伴日志和安全评测验证。",
+      "detailWhyRanked": "官方页面点名实验室和制造场景，说明 Agent 正从软件工具进入物理控制；站内重点关注伙伴试点、设备日志、危险动作分类、急停记录和安全评测。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 23,
+        "note": "官方发布动作明确，实际安全性和互操作性仍等试点证据。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 23,
+        "note": "官方发布动作明确，实际安全性和互操作性仍等试点证据。"
+      },
+      "impact": "机器人、实验室自动化和制造团队应检查设备权限、任务范围、日志、急停和责任链。",
+      "whoShouldCare": "要让 Agent 控制实验设备、机器人或制造机台的科研/自动化/安全团队需要据此重查硬件接入流程。",
+      "readerUse": "机器人、实验室自动化和制造安全团队用于制定设备白名单、危险动作审批和急停测试。",
+      "nextCheck": "查研究预览伙伴名单、规范草案、MCP 接口、设备日志、急停测试和第三方安全评估。",
+      "followUpQuestions": [
+        "Anthropic 是否公开 MHS 规范草案、危险动作分类和伙伴实验日志？",
+        "HHMI Janelia 或制造伙伴是否发布设备级任务成功率、故障回滚日志和急停测试报告？"
+      ],
+      "evidenceThreshold": "需要公开规范、伙伴部署日志、第三方安全测试和设备级事故/回滚数据后，才能升级为可验证硬件 Agent 标准。",
+      "claimBoundary": "不证明 MHS 已成行业标准，也不证明自动实验或制造任务已可无人值守。",
+      "counterEvidence": "若伙伴试点缺少日志、设备错误率高、急停失效或跨厂商实现不兼容，应降级为厂商预览。",
+      "source": "Anthropic Newsroom",
+      "sourceName": "Anthropic Newsroom",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "optional",
+      "trustLevel": "official",
+      "sourceId": "anthropic-news",
+      "provenance": "Anthropic Newsroom 可核对发布动作、日期和自述范围；效果、采用和外部影响仍需独立材料。",
+      "sourceUrl": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "originalUrl": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-08-27T12:00:00+09:00",
+      "freshSourceFact": null,
+      "time": "08-30 08:05",
+      "tags": [
+        "agent",
+        "hardware",
+        "robotics"
+      ],
+      "companies": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google-gemini-live-productivity-agent-2026-08-30",
+      "category": "product",
+      "label": "产品",
+      "title": "Google 将 Gemini Live 推向语音 Agent 入口",
+      "body": "Gemini Live 接入语音任务。",
+      "summary": "Gemini Live 从对话语音转向能委派长任务的个人 Agent 入口。",
+      "whyItMatters": "语音降低了触发 Agent 的门槛，也放大了账号连接、后台执行和误操作治理问题。",
+      "detailBody": "Google 称 Gemini Live 集成 Spark 后，可用自然语音启动跨 Docs、Sheets、Drive 和网页的多步骤任务，并支持在后台或跨天持续执行。",
+      "trend": "语音触发 Agent。",
+      "detailTrend": "这类入口的竞争焦点会从语音识别准确率转向连接权限、任务记忆、后台运行状态、用户确认、企业管理员控制和可撤销性。",
+      "whyRanked": "语音入口",
+      "topReason": "它让消费级 Agent 更接近真实账户和长期任务。",
+      "detailWhyRanked": "官方页面把 Gemini Live 从对话体验推向账户连接和长期任务；站内关注的是语音触发 Agent 的权限、任务日志、可撤销性、管理员策略和可用地区。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "官方产品事实明确，执行可靠性和治理体验需实测。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "官方产品事实明确，执行可靠性和治理体验需实测。"
+      },
+      "impact": "产品、安全和隐私团队应检查语音触发、应用连接、任务确认、撤销和日志可见性。",
+      "whoShouldCare": "负责桌面助手、移动助手、企业账号连接和隐私评审的产品/安全团队需要审查语音触发 Agent 的权限设计。",
+      "readerUse": "用于更新个人 Agent 的权限提示、长任务状态和用户确认测试。",
+      "nextCheck": "查 Gemini 设置、Spark 任务日志、企业管理策略、隐私说明和真实可用地区。",
+      "followUpQuestions": [
+        "Google 是否发布 Gemini Live 与 Spark 的管理员控制文档、任务日志和撤销记录说明？",
+        "实际账户连接日志中哪些 Docs、Sheets、Drive 或网页动作需要二次确认记录？"
+      ],
+      "evidenceThreshold": "需要产品文档、管理员策略、可用地区清单和用户侧任务日志后，才能升级为已验证的语音 Agent 工作流。",
+      "claimBoundary": "不证明 Gemini Live 可可靠完成所有长期任务，也不证明默认权限适合企业场景。",
+      "counterEvidence": "若任务日志显示状态不可见、误触发率高、撤销记录不足或管理员策略无法限制连接，应降低生产采用判断。",
+      "source": "Google Keyword AI",
+      "sourceName": "Google Keyword AI",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "optional",
+      "trustLevel": "official",
+      "sourceId": "google-keyword-ai",
+      "provenance": "Google Keyword AI 可核对发布动作、日期和自述范围；效果、采用和外部影响仍需独立材料。",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+      "originalUrl": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-08-26T12:00:00+09:00",
+      "freshSourceFact": null,
+      "time": "08-30 07:55",
+      "tags": [
+        "gemini",
+        "voice",
+        "agent"
+      ],
+      "companies": [
+        "Google",
+        "Gemini"
+      ]
+    },
+    {
+      "id": "anthropic-wellbeing-evaluations-grants-2026-08-30",
+      "category": "policy",
+      "label": "政策",
+      "title": "Anthropic 设 500 万美元 AI 福祉评测资助",
+      "body": "Anthropic 设福祉评测资助。",
+      "summary": "Anthropic 把陪伴、心理健康和过度顺从风险推向可测评测议题。",
+      "whyItMatters": "消费者 AI 的安全边界正在从有害内容过滤扩展到长期关系、心理状态和真实使用场景。",
+      "detailBody": "Anthropic 称资助将提供资金、模型访问和技术支持，鼓励独立团队构建开源评测，覆盖 AI 对用户福祉、陪伴和心理健康场景的影响。",
+      "trend": "安全扩到用户福祉。",
+      "detailTrend": "这类评测若包含临床专家验证、多轮危机场景、真实使用假设和跨模型测试，可能给聊天陪伴、教育和心理健康入口建立更具体风险标准。",
+      "whyRanked": "福祉评测",
+      "topReason": "它把 AI 伴侣和心理健康争议转成资助、评测和开源基准问题。",
+      "detailWhyRanked": "官方页面把陪伴和心理健康风险明确纳入评测资助；站内关注入选项目是否独立、开源、可复现，是否包含专家验证、多轮场景和跨模型测试报告。",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "官方资助事实明确，实质效果要等项目与开源结果。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "官方资助事实明确，实质效果要等项目与开源结果。"
+      },
+      "impact": "消费者 AI、教育和心理健康场景团队应检查多轮对话、过度顺从、过度拒绝和专家校准。",
+      "whoShouldCare": "负责聊天陪伴、教育助手、心理健康入口和模型安全政策的产品/研究团队需要据此补充福祉评测。",
+      "readerUse": "消费者 AI、教育助手和心理健康入口团队用于补充福祉评测、专家参与和多轮场景测试。",
+      "nextCheck": "查入选项目名单、评测定义、专家验证方法、开源仓库和模型访问条件。",
+      "followUpQuestions": [
+        "Anthropic 10 月是否发布入选团队公告、评测主题说明和开源交付物清单？",
+        "入选项目报告是否包含临床专家标注、多轮危机场景数据和真实用户使用假设？"
+      ],
+      "evidenceThreshold": "需要入选项目、开源评测、专家验证报告和跨模型测试结果后，才能升级为可用福祉评测框架。",
+      "claimBoundary": "不证明 Claude 或其他模型已经改善用户福祉，也不证明资助项目一定独立充分。",
+      "counterEvidence": "若入选项目公告缺失、开源仓库不可用、临床验证报告不足或只测单轮对话，应降级为治理姿态。",
+      "source": "Anthropic Newsroom",
+      "sourceName": "Anthropic Newsroom",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "optional",
+      "trustLevel": "official",
+      "sourceId": "anthropic-news",
+      "provenance": "Anthropic Newsroom 可核对发布动作、日期和自述范围；效果、采用和外部影响仍需独立材料。",
+      "sourceUrl": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "originalUrl": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-08-25T12:00:00+09:00",
+      "freshSourceFact": null,
+      "time": "08-30 07:50",
+      "tags": [
+        "safety",
+        "wellbeing",
+        "evaluation"
+      ],
+      "companies": [
+        "Anthropic",
+        "Claude"
       ]
     }
   ],
-  "itemCount": 15
+  "itemCount": 10
 }

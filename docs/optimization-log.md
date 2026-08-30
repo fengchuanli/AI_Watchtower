@@ -1,3 +1,30 @@
+## 2026-08-30 10:53 JST
+
+- Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-30`，发布 10 条安全非重复信号，聚焦自动化对齐、物理设备 Agent、语音委派、福祉评测、版权诉讼、NVIDIA 系统层、Lambda 债务融资、a16z 硬件基金、开放权重并购压力和 Codex 持久模式线索。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 Anthropic News/Research、Google Keyword AI、a16z 官方博客、TechCrunch AI、WIRED AI 和历史 URL 去重。
+  - 新增官方/机构来源 `a16z-blog`，source count 更新为 64。
+  - 本期发布 10 条：Anthropic 自动化对齐研究者报告、Anthropic MHS 研究预览、Anthropic 福祉评测资助、Google Gemini Live 语音委派、TechCrunch 对 Anthropic 音乐版权诉讼、NVIDIA 系统层优势、Lambda 债务融资和开放权重并购压力的报道/分析、a16z Machine Age Fund、WIRED 对 OpenAI Codex Persistent mode 的代码线索报道。
+  - Anthropic/Google 项保持 `官方核对` 或研究/产品原文边界；a16z 项保持 `厂商主张` 并要求基金文件、交易数据库和被投项目交付证据；TechCrunch/WIRED 项保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未使用付费墙/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 609.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 64 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending at log-writing time; planned message `更新17点AI新闻情报`。
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may remain blocked by DNS.
+
 ## 2026-08-29 23:05 JST
 
 - Focus: 补充 AI Watchtower 08:00 JST 新闻情报；当前本地首页已是同日更晚的 `news-1700-2026-08-29`，本次未回退版本，而是在当前版补充 2 条安全非重复信号，把当前版从 13 条补到 15 条。
