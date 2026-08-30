@@ -723,7 +723,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 19/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 20/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -777,7 +777,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 19/.test(optimizationDecisionIndex)
+  !/Continue with Day 20/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -856,6 +856,10 @@ if (
 
 if (
   !/Counter-Evidence Observable Outcome Guide/.test(counterEvidenceObservableGuide) ||
+  !/Downgrade Or Narrow Decision/.test(counterEvidenceObservableGuide) ||
+  !/break the story's central reading/.test(counterEvidenceObservableGuide) ||
+  !/only reduce its scope/.test(counterEvidenceObservableGuide) ||
+  !/core-break condition first/.test(counterEvidenceObservableGuide) ||
   !/When To Name An Observable Outcome/.test(counterEvidenceObservableGuide) ||
   !/When A Document Is Enough/.test(counterEvidenceObservableGuide) ||
   !/Mixed Claims/.test(counterEvidenceObservableGuide) ||
@@ -877,6 +881,19 @@ if (
   !/Day 25[\s\S]*counterEvidence[\s\S]*observable outcome/.test(optimizationDecisionIndex)
 ) {
   errors.push("Counter-evidence guidance must tell editors when downgrade signals need observable outcomes instead of another document.");
+}
+
+if (
+  !/Counter-Evidence Downgrade Test/.test(detailPageReviewGuide) ||
+  !/refute the central reading/.test(detailPageReviewGuide) ||
+  !/only make it smaller/.test(detailPageReviewGuide) ||
+  !/official denial, invalid legal basis, missing contract\/filing, failed replication, cancelled delivery/.test(
+    detailPageReviewGuide,
+  ) ||
+  !/fewer users, regions, customers, tasks, features, dates, or deployment contexts/.test(detailPageReviewGuide) ||
+  !/whether the result should `降级\/下调` the story or only `收窄\/限定` its scope/.test(newsDataFormat)
+) {
+  errors.push("Counter-evidence guidance must distinguish central downgrades from scope narrowing.");
 }
 
 if (
@@ -1380,7 +1397,10 @@ if (
   !/Day 18[\s\S]*followUpQuestions[\s\S]*source artifacts[\s\S]*observable checks/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 19/.test(optimizationDecisionIndex) ||
+  !/Day 19[\s\S]*counterEvidence[\s\S]*downgrade[\s\S]*narrow/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 20/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {

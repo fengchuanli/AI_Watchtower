@@ -71,6 +71,14 @@ Use this shape:
 
 Avoid reusable templates such as `是否已有独立来源确认[公司]的核心事实？` or `下一版能否找到客户日志、官方文件、论文复现或监管材料？` because they do not tell the next editor where to look first. A good question names the actual source path for the item, for example `法院原始裁定、案卷编号或 DoD 采购文件是否已公开可核对？` or `真实 Agent 日志、CloudWatch 告警和评分漂移记录是否支持生产评估？`.
 
+## Counter-Evidence Downgrade Test
+
+When reviewing `counterEvidence`, first ask whether later evidence would refute the central reading or only make it smaller.
+
+- Use `降级`, `下调`, `降低`, or `削弱` when the core claim fails: official denial, invalid legal basis, missing contract/filing, failed replication, cancelled delivery, or negative measured result. The sentence should name the weaker status that replaces the current reading.
+- Use `收窄` or `限定` when the core fact remains but its reach is smaller: fewer users, regions, customers, tasks, features, dates, or deployment contexts. The sentence should name the smaller boundary.
+- If a claim could move either way, write both outcomes briefly so a later editor does not treat a central refutation as a harmless scope correction.
+
 ## DetailTrend Split Rule
 
 `detailTrend` should answer one question: what broader AI direction this item suggests. Split it when the same paragraph also tries to do another job.

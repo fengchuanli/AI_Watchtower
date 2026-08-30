@@ -1,3 +1,32 @@
+## 2026-08-30 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 19 detail-page proof-boundary task. Added guidance for when `counterEvidence` should downgrade a story rather than merely narrow its scope.
+- Changed files:
+  - `docs/counter-evidence-observable-guide.md`
+  - `docs/detail-page-review-guide.md`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added a `Downgrade Or Narrow Decision` section to the counter-evidence guide so editors distinguish evidence that breaks the central claim from evidence that only reduces the audience, region, feature, task, time, or rollout boundary.
+  - Added detail-page review guidance that maps `降级` / `下调` to central refutations and `收窄` / `限定` to smaller-but-still-plausible claims.
+  - Updated the `counterEvidence` data-format definition so promoted items name the weaker replacement status when the core claim fails, or the smaller boundary when the claim merely narrows.
+  - Advanced the decision index to Day 20: review detail-page source references so labels name the exact source fact they support.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/counter-evidence-observable-guide.md`, `docs/detail-page-review-guide.md`, `docs/news-data-format.md`, and validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 64 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending at log-write time; final hash will be recorded after commit if network/status allows.
+- Git note: Push still depends on GitHub DNS recovery. Current run executed at 2026-08-30 11:04 JST local shell time / 20:00 JST scheduled automation window.
+
 ## 2026-08-30 10:53 JST
 
 - Focus: 更新 AI Watchtower 17:00 JST 新闻情报版；首页推进为 `news-1700-2026-08-30`，发布 10 条安全非重复信号，聚焦自动化对齐、物理设备 Agent、语音委派、福祉评测、版权诉讼、NVIDIA 系统层、Lambda 债务融资、a16z 硬件基金、开放权重并购压力和 Codex 持久模式线索。

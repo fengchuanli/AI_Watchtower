@@ -8,6 +8,26 @@ Use this guide when writing or reviewing `counterEvidence` in `data/news.json` a
 - `evidenceThreshold` says what would upgrade the item.
 - `counterEvidence` says what would downgrade, narrow, or weaken the current editorial reading.
 
+## Downgrade Or Narrow Decision
+
+Use this check before writing the final sentence: decide whether later evidence would break the story's central reading or only reduce its scope.
+
+- Downgrade the story when the later evidence attacks the core claim: the actor denies or reverses the event, the legal or policy basis disappears, the benchmark or paper fails replication, the product is not delivered, the contract or filing does not exist, or the measured effect turns negative. Use verbs such as `降级`, `下调`, `降低`, or `削弱`, and name the weaker replacement status, such as `受限实验信号`, `厂商预览`, `政策意向`, or `媒体线索`.
+- Narrow the story when the core fact remains plausible but the scope is smaller: fewer regions, limited customers, shorter timeline, narrower feature set, lower usage, partial rollout, or weaker-but-still-present effect. Use verbs such as `收窄` or `限定`, and name the new boundary, such as `单一地区试点`, `小范围客户案例`, or `特定任务有效`.
+- If both are possible, put the core-break condition first and the scope-narrowing condition second: `如果[核心证据被否定]，应降级为[更弱状态]；若只是[范围更小]，则收窄为[具体边界]。`
+
+Good shapes:
+
+```text
+如果法院驳回核心指控或授权文件成立，应下调为媒体法律风险线索；若仅是作品清单缩小，则收窄为部分权利范围争议。
+```
+
+```text
+如果第三方复测无法重现主要结果，应降级为方法探索；若只在少数任务有效，则限定为特定 benchmark 信号。
+```
+
+This distinction matters because `收窄` should not hide a refuted central claim, and `降级` should not overstate a normal scope correction.
+
 ## When To Name An Observable Outcome
 
 Prefer a concrete observable outcome instead of another document when the claim is about real-world effect, adoption, deployment, safety, performance, cost, or policy implementation.
@@ -78,6 +98,8 @@ These phrases do not tell readers what would change the judgment. Replace them w
 Do not publish or promote the item until `counterEvidence` is rewritten when:
 
 - The field only names a supportive next source and never says what would downgrade the judgment.
+- The central claim could be refuted, but the sentence only says `收窄` or `限定` without naming the weaker replacement status.
+- The core fact remains plausible, but the sentence says `降级` without explaining the smaller scope or boundary.
 - The claim is about adoption, performance, safety, cost, deployment, or policy effect but the downgrade signal names only "another report."
 - The downgrade action is missing: `下调`, `收窄`, `削弱`, `降低`, `降级`, or `限定`.
 - A reader cannot tell what evidence to check in the next edition.
