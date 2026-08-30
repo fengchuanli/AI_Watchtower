@@ -24,7 +24,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Pending at log-write time; final hash will be recorded after commit if network/status allows.
+- Commit: Local implementation commit `179876e` (`明确反证降级规则`); final local record commit follows this log hash update.
 - Git note: Push still depends on GitHub DNS recovery. Current run executed at 2026-08-30 11:04 JST local shell time / 20:00 JST scheduled automation window.
 
 ## 2026-08-30 10:53 JST
