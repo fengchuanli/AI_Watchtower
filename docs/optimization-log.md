@@ -21,8 +21,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check` for touched content files.
-- Commit: Local content commit follows this log update; push still depends on GitHub DNS recovery.
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Existing `rag/architecture.md`, `rag/learning-notes.md`, and untracked `rag/embedding-cache-design.md` were present outside this task and left untouched.
+- Commit: Local content commit `116f9e6` (`更新08点AI新闻情报`); final local record commit follows this log hash update.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Existing `rag/architecture.md`, `rag/learning-notes.md`, and untracked `rag/embedding-cache-design.md` were present outside this task and left untouched.
 
 ## 2026-08-30 20:00 JST
 
