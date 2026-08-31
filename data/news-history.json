@@ -1,8 +1,781 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-31",
-  "totalItems": 619,
+  "updatedAt": "2026-09-01",
+  "totalItems": 627,
   "editions": [
+    {
+      "id": "news-1700-2026-09-01",
+      "date": "2026-09-01",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦 ChatGPT 广告、AI 搜索控制、时间序列模型、Agent 治理、数据中心和推理可靠性。",
+      "operationalStatus": "GitHub DNS 阻断拉取；核查官方/研究/可靠媒体与历史 URL，发布 8 条安全非重复信号。",
+      "editorialInterpretation": "本期发布 8 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源和弱证据素材补数。",
+      "readerFrame": {
+        "headline": "AI 产品入口、Agent 控制和算力社会许可同时进入核查期",
+        "whyItMatters": "今天的信号把 ChatGPT 商业化、Google AI 搜索分发、企业 Agent 边界、欧洲主权、数据中心政治和 MoE 推理可靠性放到同一张风险图上。",
+        "useThisIssueFor": [
+          "产品和增长团队检查对话式广告、AI 搜索曝光、站长控制和用户信任边界。",
+          "安全与平台团队更新 Agent 身份、执行权限、数据契约、审计日志和高风险审批。",
+          "基础设施与 MLOps 团队核对数据中心许可、时间序列模型复现和 MoE 推理灰故障监控。"
+        ],
+        "notProvenYet": [
+          "不证明 OpenAI 广告收入口径、广告效果或用户信任指标已经过外部审计。",
+          "不证明 Google Search 控制项会改善出版方流量或普通搜索排名。",
+          "不证明媒体报道中的政策情绪已经变成正式法规、采购或项目变更。"
+        ],
+        "mobile": {
+          "headline": "本期查入口、Agent 和算力约束",
+          "summary": "广告、AI 搜索、Agent 边界、数据中心、欧洲主权和 MoE 可靠性同场更新。",
+          "primaryUses": [
+            "产品团队查广告边界",
+            "安全团队查执行治理",
+            "平台团队查推理可靠性"
+          ],
+          "proofBoundary": "仍需广告文档、站点数据、监管文件、客户日志和第三方复现"
+        }
+      },
+      "changeSummary": {
+        "headline": "较 08:00 版从 AWS AgentCore 集中转向多来源产品、政策和研究信号",
+        "freshFacts": [
+          "本期新增事实：OpenAI 官方宣布 ChatGPT Ads 年化收入运行率和区域扩张。",
+          "本期新增事实：Google 更新 AI Search 站长控制与洞察的全球推出状态。",
+          "本期新增事实：Google Research 发布 TimesFM-3，多变量时间序列基础模型进入开放复现队列。",
+          "本期新增事实：Axios、TechCrunch 和 VentureBeat 分别补充数据中心政治、欧洲主权和 Agent 执行治理信号。"
+        ],
+        "repeatedContext": [
+          "延续上午 Agent 身份、权限、RAG、可观测和训练平台治理主线，但不重复 AWS 方案博客。",
+          "延续近几日 OpenAI、Google、NVIDIA、Anthropic 和欧洲 AI 主权/算力约束背景，仅把新来源事实作为当前新闻。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对产品入口",
+          "count": 2,
+          "meaning": "用来检查 ChatGPT Ads 与 Google AI Search 控制项对广告、分发、隐私和站长指标的影响。"
+        },
+        {
+          "label": "验证 Agent 边界",
+          "count": 2,
+          "meaning": "用来更新企业 Agent 身份、执行权限、数据契约、反馈环和人工审批清单。"
+        },
+        {
+          "label": "核对政策主权",
+          "count": 2,
+          "meaning": "用来核对数据中心地方政治、欧洲 AI 主权、隐私和供应商连续性风险。"
+        },
+        {
+          "label": "验证研究设施",
+          "count": 2,
+          "meaning": "用来更新 TimesFM-3 和 FaultSense 的代码、论文、benchmark 与生产可用性复核计划。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体与官方混合",
+        "note": "本期 3 条可靠媒体、3 条官方来源和 2 条研究来源，适合作为核查雷达，不适合直接推出市场定论。",
+        "nextCheck": "查官方文档、Search Console 数据、PAC/许可文件、客户日志、论文代码和第三方 benchmark。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "不要把本期读成全市场结论：这是一组入口、Agent、政策和研究雷达，不能直接推出采用、收入、流量或可靠性定论。",
+        "doNotConclude": "不证明广告、AI 搜索、Agent 治理、欧洲主权或 MoE 可靠性已经形成稳定市场结论。",
+        "useInstead": "用来检查广告文档、Search Console 数据、监管/许可文件、客户日志、论文代码和第三方复现结果。"
+      },
+      "trendNotes": [
+        {
+          "topic": "product",
+          "label": "聊天入口商业化加速",
+          "note": "跨期看，ChatGPT 教育、企业和广告信号连续把通用助手推向可计费入口。",
+          "boundary": "这不证明用户体验或信任未受影响；仍需广告标注、隐私设置、投诉指标和第三方测量。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent 从能力演示转向边界工程",
+          "note": "跨期看，AgentCore、Codex 持久模式、VentureBeat 身份/执行治理和工程边界文章持续指向可控运行。",
+          "boundary": "这不证明自治 Agent 已可靠；仍需审计日志、事故复盘、权限测试和平台文档。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力约束进入社会与可靠性层",
+          "note": "跨期看，数据中心政治、欧洲主权、NVIDIA 算力叙事和 MoE 灰故障共同显示基础设施约束外溢。",
+          "boundary": "这不证明容量会短缺或项目会停摆；仍需许可、PPA、集群指标、供应记录和第三方复现。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "执行边界继续增强",
+          "status": "stronger",
+          "previousPattern": "此前 Agent 主题反复出现身份、跨账号知识库、医疗语音、运行时信任和 AgentCore 评估。",
+          "currentSignal": "17:00 版新增执行治理和工程边界两条媒体/专家信号。",
+          "signalDirection": "增强：从云服务方案扩展到组织权限、内容层和数据契约。",
+          "stillUnproven": "仍需平台文档、客户日志、事故复盘、权限审计和第三方测试。"
+        },
+        {
+          "topic": "policy",
+          "label": "算力与主权风险升温",
+          "status": "stronger",
+          "previousPattern": "此前 policy 主题反复出现数据中心社会许可、OpenAI/Anthropic 安全、欧洲主权和监管边界。",
+          "currentSignal": "17:00 版新增美国数据中心政治动员和 TechBBQ 欧洲控制权讨论。",
+          "signalDirection": "增强：政策风险从监管文本扩展到地方政治、会议议程和供应商连续性。",
+          "stillUnproven": "仍需监管文本、PAC 文件、地方许可、企业采购和电力协议。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "专用模型与推理可靠性延续",
+          "status": "repeated",
+          "previousPattern": "此前 infrastructure 主题反复出现 GPU/数据中心、训练平台、可观测和推理成本。",
+          "currentSignal": "17:00 版新增 TimesFM-3 多变量时间序列模型和 FaultSense MoE 灰故障定位。",
+          "signalDirection": "重复但更工程化：基础设施观察从容量扩展到专用模型复现和推理可靠性。",
+          "stillUnproven": "仍需论文、代码、模型权重、业务数据复现和第三方 benchmark。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "商业化入口新增广告证据",
+          "lastMention": "此前版本记录 ChatGPT 教育、Codex 持久模式、Hugging Face 事件和 GPT-5.6 相关信号。",
+          "whatChanged": "本期新增 ChatGPT Ads 年化收入运行率和区域扩张官方口径。",
+          "stillUnproven": "仍需广告产品文档、审计口径、投放效果、用户控制和投诉指标。"
+        },
+        {
+          "company": "Google",
+          "label": "搜索分发与研究模型同步更新",
+          "lastMention": "此前版本记录 Gemini Live、Gemini Enterprise、AI Search 和 Google Research 健康/天气模型。",
+          "whatChanged": "本期新增 AI Search 站长控制全球状态和 TimesFM-3 研究发布。",
+          "stillUnproven": "仍需 Search Console 数据、开发者文档、论文代码、模型权重和第三方复现。"
+        },
+        {
+          "company": "Microsoft",
+          "label": "推理可靠性研究进入观察",
+          "lastMention": "此前版本记录 Microsoft 365 Copilot Excel Python 与 Copilot 相关发布说明。",
+          "whatChanged": "本期新增 Microsoft Research FaultSense 对 MoE 服务灰故障的研究索引信号。",
+          "stillUnproven": "仍需论文全文、代码、实验配置、Azure 产品文档和第三方集群复现。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 3,
+          "role": "用于核对 OpenAI、Google Search 和 Google Research 的发布事实，但效果和采用仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 4,
+          "role": "用于发现数据中心政治、Agent 治理和欧洲主权背景；完整事实与采访仍回到原文。"
+        },
+        {
+          "family": "research",
+          "label": "研究来源",
+          "count": 1,
+          "role": "用于跟踪 Microsoft Research 研究来源和方法方向；应用结论需论文原文、代码和第三方复现。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "enterprise",
+          "label": "产品入口",
+          "count": 2,
+          "itemIds": [
+            "openai-chatgpt-ads-arr-2026-08-31",
+            "google-ai-search-owner-controls-worldwide-2026-08-31"
+          ],
+          "meaning": "用来检查广告、搜索分发、站长控制、隐私和可见性指标。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent治理",
+          "count": 2,
+          "itemIds": [
+            "venturebeat-agent-execution-governance-2026-08-31",
+            "venturebeat-engineering-agent-boundaries-2026-08-31"
+          ],
+          "meaning": "用来更新 Agent 执行权限、数据契约、审批和回滚机制。"
+        },
+        {
+          "id": "policy",
+          "label": "政策与主权",
+          "count": 2,
+          "itemIds": [
+            "axios-data-center-political-backlash-2026-08-31",
+            "techcrunch-techbbq-europe-ai-control-2026-08-29"
+          ],
+          "meaning": "用来核对数据中心社会许可、欧洲主权和供应商依赖。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "研究基础设施",
+          "count": 2,
+          "itemIds": [
+            "google-research-timesfm-3-2026-08-31",
+            "microsoft-research-faultsense-moe-serving-2026-09-01"
+          ],
+          "meaning": "用来更新模型复现、推理灰故障监控和 benchmark 重跑计划。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "venturebeat-ai",
+        "sourceName": "VentureBeat AI",
+        "count": 2,
+        "share": "2/8",
+        "note": "本期没有单一来源超过三分之二；VentureBeat 仅提供 2 条 Agent 治理背景，需用平台文档和客户日志交叉核验。",
+        "nextCheck": "查 Box 文档、真实 PR/回滚数据、客户审计日志、NIST/OWASP 文件和第三方安全测试。"
+      },
+      "itemCount": 8,
+      "items": [
+        {
+          "id": "microsoft-research-faultsense-moe-serving-2026-09-01",
+          "category": "research",
+          "label": "研究",
+          "title": "Microsoft Research 披露 MoE 推理灰故障定位研究 FaultSense",
+          "body": "Microsoft Research 9 月 1 日列出 FaultSense，聚焦 MoE 模型服务中 GPU 慢节点导致的延迟定位问题。",
+          "summary": "Microsoft Research 9 月 1 日列出 FaultSense，聚焦 MoE 模型服务中 GPU 慢节点导致的延迟定位问题。",
+          "whyItMatters": "MoE 推理规模扩大后，显性宕机之外的灰故障会影响延迟、成本和服务可靠性。",
+          "detailBody": "Microsoft Research 研究索引显示，FaultSense 面向大规模 MoE 模型服务基础设施，试图用应用层方法定位 GPU 慢节点等灰故障；该页支持研究方向、日期和问题设定，不支持生产效果或 Azure 落地结论。",
+          "trend": "模型服务可靠性正在从吞吐 benchmark 转向故障定位、尾延迟和异构集群可观测。",
+          "detailTrend": "模型服务可靠性正在从吞吐 benchmark 转向故障定位、尾延迟和异构集群可观测。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "它把 MoE 服务的灰故障问题具象化，适合平台团队跟踪论文和工具实现。",
+          "topReason": "研究索引给出方向；下一步要查论文、实验环境和复现代码。",
+          "detailWhyRanked": "它把 MoE 服务的灰故障问题具象化，适合平台团队跟踪论文和工具实现。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "研究索引支持方向判断，需论文和代码补强。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "研究索引支持方向判断，需论文和代码补强。"
+          },
+          "impact": "推理平台团队应检查 GPU 健康信号、all-to-all 通信、尾延迟告警和节点隔离策略。",
+          "whoShouldCare": "负责 MoE 推理集群、GPU 调度、SLA 和模型服务可观测的平台/MLOps 团队应关注此信号。",
+          "readerUse": "研究和 MLOps 团队用来安排 FaultSense 论文跟踪、灰故障演练和尾延迟监控指标补齐。",
+          "nextCheck": "查 Microsoft Research 论文页、实验代码、数据集、集群规模、复现脚本和第三方测试。",
+          "followUpQuestions": [
+            "FaultSense 是否发布论文、代码或实验配置，说明如何定位 GPU straggler？",
+            "第三方 MoE 服务环境是否有文档、日志或数据复现其定位准确率、开销和对尾延迟的改善？"
+          ],
+          "evidenceThreshold": "还需要在论文、代码和第三方集群复现确认定位准确率与开销，，才可升级为可复核推理可靠性方法。",
+          "claimBoundary": "不证明 FaultSense 已进入 Azure 或企业生产，也不证明所有 MoE 灰故障都能被定位。",
+          "counterEvidence": "若论文缺少代码、实验配置只覆盖小规模集群或第三方复现数据显示误报率高，应下调为早期研究索引信号。",
+          "source": "Microsoft Research Blog",
+          "sourceName": "Microsoft Research Blog",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "trustLevel": "research",
+          "sourceId": "microsoft-research-blog",
+          "provenance": "Microsoft Research Blog 支持作者发布的方法、模型和评测声明；工程或业务结论需复现和外部测试。",
+          "sourceUrl": "https://www.microsoft.com/en-us/research/?taxonomy=msr-locale&term=en_us",
+          "originalUrl": "https://www.microsoft.com/en-us/research/?taxonomy=msr-locale&term=en_us",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-01T00:00:00-07:00",
+          "time": "09/01",
+          "tags": [
+            "MoE",
+            "推理服务",
+            "灰故障",
+            "可观测"
+          ],
+          "companies": [
+            "Microsoft"
+          ]
+        },
+        {
+          "id": "venturebeat-engineering-agent-boundaries-2026-08-31",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：软件工程重心转向设计 Agent 不能越过的边界",
+          "body": "VentureBeat 文章认为，代码生成降低语法摩擦后，工程师价值转向数据契约、反馈和系统边界。",
+          "summary": "VentureBeat 文章认为，代码生成降低语法摩擦后，工程师价值转向数据契约、反馈和系统边界。",
+          "whyItMatters": "开发团队评估 Agent 编码时，需要把测试、语义契约和确定性工具当成核心产物。",
+          "detailBody": "VentureBeat 以数据平台和 Agent 编码为背景，提出工程师工作正在从写局部逻辑转向建立收敛条件、数据契约和反馈环。 该条仅保留来源可支撑的发布时间、对象和动作，不扩写原文细节。",
+          "trend": "AI 编码工具越强，企业越需要把隐性业务规则转成可执行的边界和评测。",
+          "detailTrend": "AI 编码工具越强，企业越需要把隐性业务规则转成可执行的边界和评测。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "它把 Cursor、Claude Code 等 Agent 编码工具落到企业数据平台治理实践。",
+          "topReason": "适合作为工程组织检查表；下一步要查真实 PR、故障率和评测数据。",
+          "detailWhyRanked": "它把 Cursor、Claude Code 等 Agent 编码工具落到企业数据平台治理实践。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "观点性强但工作流价值明确，需要生产指标验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "观点性强但工作流价值明确，需要生产指标验证。"
+          },
+          "impact": "工程负责人应投资数据契约、幂等 API、不可变日志、回归测试和业务 owner 审核。",
+          "whoShouldCare": "负责把 AI 编码 Agent 接入数据平台、后端服务和生产变更流程的工程/平台团队应关注此信号。",
+          "readerUse": "工程和平台团队用来更新 Agent 编码上线门禁、测试覆盖、语义契约和人审触发条件。",
+          "nextCheck": "查团队 PR 数据、回滚率、测试失败类型、数据契约覆盖率和事故复盘。",
+          "followUpQuestions": [
+            "接入 Agent 后，团队 PR 日志、回滚率数据、测试失败类型和业务语义错误是否有统计？",
+            "关键数据表和 API 是否已有可由 Agent 自动读取的语义契约与 owner 信息？"
+          ],
+          "evidenceThreshold": "还需要在真实仓库 PR 数据、回滚率和事故复盘证明边界设计降低错误，，才可升级为经过生产验证的工程模式。",
+          "claimBoundary": "不证明软件工程岗位被替代，也不证明所有代码生成任务都能靠契约完全收敛。",
+          "counterEvidence": "若生产数据表明 Agent 生成代码仍主要因基础语法或框架误用失败，应收窄为数据平台场景观点。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "reliable_media",
+          "sourceId": "venturebeat-ai",
+          "provenance": "VentureBeat AI 只支持最小报道事实；完整事实、采访、引述、图表、数据和上下文仍需阅读原文。",
+          "sourceUrl": "https://venturebeat.com/orchestration/software-engineers-new-job-isnt-writing-code-its-designing-the-boundaries-ai-agents-cant-break",
+          "originalUrl": "https://venturebeat.com/orchestration/software-engineers-new-job-isnt-writing-code-its-designing-the-boundaries-ai-agents-cant-break",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T11:52:00-07:00",
+          "time": "08/31",
+          "tags": [
+            "AI编码",
+            "Agent",
+            "数据契约",
+            "软件工程"
+          ],
+          "companies": [
+            "Cursor",
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "venturebeat-agent-execution-governance-2026-08-31",
+          "category": "policy",
+          "label": "政策",
+          "title": "VentureBeat：Agent 安全从访问控制转向执行治理",
+          "body": "VentureBeat 刊文称，企业 Agent 仅靠身份和权限不足，需要按动作、内容和审批层级约束行为。",
+          "summary": "VentureBeat 刊文称，企业 Agent 仅靠身份和权限不足，需要按动作、内容和审批层级约束行为。",
+          "whyItMatters": "企业安全团队正在从“谁能访问”转向“Agent 在每一步能做什么”。",
+          "detailBody": "VentureBeat 基于 Box 安全负责人的观点，讨论 Agent 权限应按任务动态收窄，并将高风险、不可逆动作纳入人工审批。 该条仅保留来源可支撑的发布时间、对象和动作，不扩写原文细节。",
+          "trend": "Agent 治理开始落到执行层、内容层和可回滚性，而不是只依赖提示词或静态 IAM。",
+          "detailTrend": "Agent 治理开始落到执行层、内容层和可回滚性，而不是只依赖提示词或静态 IAM。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "它延续上午 Agent 身份主题，并把控制重点推进到执行与内容层。",
+          "topReason": "媒体/专家框架有操作性；下一步要查 Box 文档、审计日志和事故样本。",
+          "detailWhyRanked": "它延续上午 Agent 身份主题，并把控制重点推进到执行与内容层。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体/专家框架可用于检查清单，效果需平台和客户证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体/专家框架可用于检查清单，效果需平台和客户证据。"
+          },
+          "impact": "安全架构和数据治理团队应检查短期凭据、动作白名单、内容分类、审批层级和撤销机制。",
+          "whoShouldCare": "负责企业 Agent 身份、内容权限、审批流和审计日志的安全/平台/数据治理团队应关注此信号。",
+          "readerUse": "政策/安全团队用来把 Agent 风险评审从账号权限扩展到动作权限、内容分类和高风险审批。",
+          "nextCheck": "查 Box 平台文档、客户审计日志、DLP 记录、事故复盘和 NIST/OWASP Agent 控制建议。",
+          "followUpQuestions": [
+            "Box 是否发布 Agent 身份、内容分类和审批控制的产品文档或审计日志样例？",
+            "客户审计日志是否显示动态收窄权限能减少越权读取或误写事件？"
+          ],
+          "evidenceThreshold": "还需要在平台文档、审计日志和第三方安全评测证明执行控制有效，，才可升级为可验证治理模式。",
+          "claimBoundary": "不证明 Box 方法已成行业标准，也不证明所有 Agent 风险都能靠执行网关解决。",
+          "counterEvidence": "若事故复盘、审计日志或第三方安全测试显示动态权限无法拦截越权链路，应下调为专家观点信号。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "reliable_media",
+          "sourceId": "venturebeat-ai",
+          "provenance": "VentureBeat AI 只支持最小报道事实；完整事实、采访、引述、图表、数据和上下文仍需阅读原文。",
+          "sourceUrl": "https://venturebeat.com/security/identity-and-permissions-arent-enough-to-govern-ai-agent-behavior",
+          "originalUrl": "https://venturebeat.com/security/identity-and-permissions-arent-enough-to-govern-ai-agent-behavior",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T07:00:00-07:00",
+          "time": "08/31",
+          "tags": [
+            "Agent安全",
+            "身份",
+            "权限",
+            "执行治理"
+          ],
+          "companies": [
+            "Box"
+          ]
+        },
+        {
+          "id": "axios-data-center-political-backlash-2026-08-31",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios 称美国 AI 数据中心争议进入选举政治",
+          "body": "Axios 报道特朗普公开支持数据中心扩张，同时 AI 行业组织准备投入资金反击地方反对。",
+          "summary": "Axios 报道特朗普公开支持数据中心扩张，同时 AI 行业组织准备投入资金反击地方反对。",
+          "whyItMatters": "算力建设的约束从芯片和资金扩展到地方许可、水电、税收和选举压力。",
+          "detailBody": "Axios 报道称，特朗普在 8 月 31 日发声支持数据中心，Build American AI 等组织准备以资金和政治动员回应地方反对。 该条仅保留来源可支撑的发布时间、对象和动作，不扩写原文细节。",
+          "trend": "AI 基础设施已经成为地方政治议题，数据中心项目的社会许可可能影响模型和云服务供给。",
+          "detailTrend": "AI 基础设施已经成为地方政治议题，数据中心项目的社会许可可能影响模型和云服务供给。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "它把 AI 算力、社区反弹和政策动员放到同一条风险链上。",
+          "topReason": "媒体背景提示政策风险；下一步要查地方许可、电价和 PAC 文件。",
+          "detailWhyRanked": "它把 AI 算力、社区反弹和政策动员放到同一条风险链上。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "可靠媒体给出政治风险雷达，项目事实需文件核对。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "可靠媒体给出政治风险雷达，项目事实需文件核对。"
+          },
+          "impact": "基础设施、公共政策和采购团队应把水、电、税收、地方选举和社区听证纳入项目风险表。",
+          "whoShouldCare": "负责 AI 数据中心选址、电力采购、公共事务和云容量规划的基础设施/政策团队应关注此信号。",
+          "readerUse": "政策/安全团队用来更新数据中心社会许可、地方反对、政治资金和电力成本核查清单。",
+          "nextCheck": "查地方许可记录、PPA/电价文件、PAC 申报、Annenberg 调查原文和政府听证材料。",
+          "followUpQuestions": [
+            "Build American AI 或相关 PAC 是否提交公开资金申报文件和候选人支持清单？",
+            "相关州县是否出现新的数据中心许可、听证、电价或用水文件？"
+          ],
+          "evidenceThreshold": "还需要在 PAC 文件、地方许可、PPA 和政府听证材料确认动员与项目变化，，才可升级为已确认政策/基础设施约束。",
+          "claimBoundary": "不证明所有美国社区都反对数据中心，也不证明具体项目已被批准或取消。",
+          "counterEvidence": "若地方许可继续通过、资金申报不支持报道规模或电力协议缓解费率压力，应收窄为选举叙事信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "reliable_media",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology 只支持最小报道事实；完整事实、采访、引述、图表、数据和上下文仍需阅读原文。",
+          "sourceUrl": "https://www.axios.com/2026/08/31/trump-data-centers-backlash-ai-campaign",
+          "originalUrl": "https://www.axios.com/2026/08/31/trump-data-centers-backlash-ai-campaign",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T04:00:00-04:00",
+          "time": "08/31",
+          "tags": [
+            "数据中心",
+            "政策",
+            "算力",
+            "选举"
+          ],
+          "companies": [
+            "NVIDIA",
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "google-ai-search-owner-controls-worldwide-2026-08-31",
+          "category": "product",
+          "label": "产品",
+          "title": "Google 将 AI Search 站长控制与洞察扩至全球",
+          "body": "Google 更新站长控制说明，称生成式搜索入口相关控制和洞察已面向全球网站推出。",
+          "summary": "Google 更新站长控制说明，称生成式搜索入口相关控制和洞察已面向全球网站推出。",
+          "whyItMatters": "发布方与搜索平台的 AI 流量争议进入工具化阶段，媒体和内容团队要核对曝光、链接和选择权。",
+          "detailBody": "Google 在 6 月文章的 8 月 31 日更新中称，Search Console 生成式 AI 搜索相关控制和洞察已推广到全球网站。 该条仅保留来源可支撑的发布时间、对象和动作，不扩写原文细节。",
+          "trend": "AI 搜索不再只是答案形态变化，也开始成为内容分发、站点可见性和平台治理的操作问题。",
+          "detailTrend": "AI 搜索不再只是答案形态变化，也开始成为内容分发、站点可见性和平台治理的操作问题。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "它直接影响网站经营者如何看待 AI Overviews、AI Mode 和内容可见性。",
+          "topReason": "官方更新给出全球可用节点；下一步要查 Search Console 数据口径。",
+          "detailWhyRanked": "它直接影响网站经营者如何看待 AI Overviews、AI Mode 和内容可见性。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方更新支撑工具推出事实，流量影响需要站点和监管材料。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方更新支撑工具推出事实，流量影响需要站点和监管材料。"
+          },
+          "impact": "内容、SEO、媒体和增长团队应检查 Search Console 是否出现 AI 搜索曝光与国家维度数据。",
+          "whoShouldCare": "负责内容分发、SEO、出版授权和品牌获客的媒体/增长/法务团队应关注此信号。",
+          "readerUse": "政策/安全团队用来更新 AI 搜索可见性、站点控制、订阅标签和出版方谈判证据清单。",
+          "nextCheck": "查 Search Console 实际面板、Google 开发者文档、CMA/监管材料和站点流量变化。",
+          "followUpQuestions": [
+            "Search Console 是否已经在目标站点显示 AI Overviews 或 AI Mode 曝光数据？",
+            "Google 开发者文档或 Search Console 指标面板是否解释 AI 入口链接展示影响？"
+          ],
+          "evidenceThreshold": "还需要在 Search Console 文档、站点后台截图和第三方流量实验一致确认指标变化，，才可升级为已验证平台分发变化。",
+          "claimBoundary": "不证明 AI 搜索会增加网站流量，也不证明控制项可改变普通搜索排名。",
+          "counterEvidence": "若 Google 文档限定功能地区、Search Console 面板缺失或独立流量实验数据提示点击下降，应收窄为工具可见性信号。",
+          "source": "Google Keyword AI",
+          "sourceName": "Google Keyword AI",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "google-keyword-ai",
+          "provenance": "Google Keyword AI 支持官方发布事实；效果、采用和外部影响仍需独立证据。",
+          "sourceUrl": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+          "originalUrl": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T00:00:00-07:00",
+          "time": "08/31",
+          "tags": [
+            "Google Search",
+            "AI Overviews",
+            "出版",
+            "Search Console"
+          ],
+          "companies": [
+            "Google"
+          ]
+        },
+        {
+          "id": "google-research-timesfm-3-2026-08-31",
+          "category": "research",
+          "label": "研究",
+          "title": "Google Research 发布多变量时间序列基础模型 TimesFM-3",
+          "body": "Google Research 发布 TimesFM-3，称其支持零样本多变量预测，并开放 GitHub 与 Hugging Face 入口。",
+          "summary": "Google Research 发布 TimesFM-3，称其支持零样本多变量预测，并开放 GitHub 与 Hugging Face 入口。",
+          "whyItMatters": "企业预测、可观测、制造和金融团队需要评估时间序列基础模型是否能减少专门训练成本。",
+          "detailBody": "Google Research 称 TimesFM-3 是新一代时间序列基础模型，采用 3.3 亿参数和超过 1 万亿时间点预训练，支持多目标、历史协变量、未来已知协变量，并提供 GitHub/Hugging Face 入口。",
+          "trend": "基础模型路线继续进入结构化业务预测，不只服务文本、图像和代码。",
+          "detailTrend": "基础模型路线继续进入结构化业务预测，不只服务文本、图像和代码。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "它有官方研究说明、模型开放入口和明确应用场景，适合技术团队做复现排期。",
+          "topReason": "研究原文和开放入口明确；升级结论要看代码、数据和第三方 benchmark。",
+          "detailWhyRanked": "它有官方研究说明、模型开放入口和明确应用场景，适合技术团队做复现排期。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "研究原文信息完整，生产价值需要复现和业务数据验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "研究原文信息完整，生产价值需要复现和业务数据验证。"
+          },
+          "impact": "数据科学和平台团队可用它设计对照实验，重点比较现有 Prophet/DeepAR/自研模型和 TimesFM-3。",
+          "whoShouldCare": "负责需求预测、金融时序、制造排程、可观测容量和健康传感数据的数据科学/MLOps 团队应关注此信号。",
+          "readerUse": "研究和 MLOps 团队用来安排 GitHub/Hugging Face 复现、BigQuery 集成观察和业务基准对照。",
+          "nextCheck": "查论文、代码、模型权重、许可证、Gift-Eval/FEV-Bench/Time 重跑结果和 BigQuery 文档。",
+          "followUpQuestions": [
+            "TimesFM-3 的 GitHub 代码、Hugging Face 权重和许可证文件是否允许目标业务场景商用？",
+            "第三方是否已按公开 benchmark 或企业私有时序数据复现排名结果？"
+          ],
+          "evidenceThreshold": "还需要在代码、权重、评测脚本和第三方复现确认主要 benchmark 结果，，才可升级为可复核研究能力。",
+          "claimBoundary": "不证明它在企业私有数据、异常高噪声或低频小样本任务中优于现有模型。",
+          "counterEvidence": "若第三方 benchmark 重跑无法复现排名、许可证文件限制生产使用或 BigQuery 文档显示集成延期，应下调为研究预览信号。",
+          "source": "Google Research Blog",
+          "sourceName": "Google Research Blog",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "google-research-blog",
+          "provenance": "Google Research Blog 支持作者发布的方法、模型和评测声明；工程或业务结论需复现和外部测试。",
+          "sourceUrl": "https://www.research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+          "originalUrl": "https://www.research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T00:00:00-07:00",
+          "time": "08/31",
+          "tags": [
+            "TimesFM-3",
+            "时间序列",
+            "基础模型",
+            "预测"
+          ],
+          "companies": [
+            "Google"
+          ]
+        },
+        {
+          "id": "openai-chatgpt-ads-arr-2026-08-31",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 称 ChatGPT Ads 年化收入达到 10 亿美元",
+          "body": "OpenAI 8 月 31 日宣布 ChatGPT Ads 年化收入运行率达 10 亿美元，并扩大自助购买区域。",
+          "summary": "OpenAI 8 月 31 日宣布 ChatGPT Ads 年化收入运行率达 10 亿美元，并扩大自助购买区域。",
+          "whyItMatters": "广告成为 ChatGPT 免费层和商业化的正式支柱，产品团队需要核对答案、广告和隐私边界。",
+          "detailBody": "OpenAI 官方称 ChatGPT Ads 推出不足 200 天后达到 10 亿美元年化收入运行率，并在印度、欧洲、中东和北非开放 Ads Manager 自助购买。 该条仅保留来源可支撑的发布时间、对象和动作，不扩写原文细节。",
+          "trend": "通用聊天入口正在变成决策与广告市场，商业化压力会直接影响信任、标注和个性化控制设计。",
+          "detailTrend": "通用聊天入口正在变成决策与广告市场，商业化压力会直接影响信任、标注和个性化控制设计。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "官方来源给出收入、区域和产品化节点，足以更新 AI 应用商业化观察清单。",
+          "topReason": "官方商业化节点明确；下一步要查广告标注、隐私设置和第三方投放效果。",
+          "detailWhyRanked": "官方来源给出收入、区域和产品化节点，足以更新 AI 应用商业化观察清单。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方发布商业化里程碑，但效果和用户信任仍需外部证据。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方发布商业化里程碑，但效果和用户信任仍需外部证据。"
+          },
+          "impact": "广告团队、隐私团队和产品治理团队应检查对话上下文、广告标注、转化 API 和用户控制。",
+          "whoShouldCare": "负责 ChatGPT 类产品、广告投放、隐私合规和增长实验的产品/法务/数据团队应关注此信号。",
+          "readerUse": "产品和增长团队用来更新对话式广告、免费层补贴、个性化设置和广告答案隔离的检查表。",
+          "nextCheck": "查 Ads Manager 文档、帮助中心、地区可用性、隐私设置页和第三方投放报告。",
+          "followUpQuestions": [
+            "OpenAI 帮助中心说明文件是否给出各地区准入、广告标注和个性化控制细则？",
+            "是否有广告主或测量伙伴公开可复核的转化、留存和投诉数据？"
+          ],
+          "evidenceThreshold": "还需要在 OpenAI 帮助中心、广告产品文档和第三方测量报告共同确认投放机制与效果，，才可升级为已确认商业化产品扩张。",
+          "claimBoundary": "不证明广告不会影响用户信任，也不证明 10 亿美元口径已经过审计。",
+          "counterEvidence": "若官方文档缩小可用地区、监管要求整改标注或第三方数据显示投诉/误导率上升，应下调为受限商业化信号。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "openai-news",
+          "provenance": "OpenAI News 支持官方发布事实；效果、采用和外部影响仍需独立证据。",
+          "sourceUrl": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+          "originalUrl": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T00:00:00-07:00",
+          "time": "08/31",
+          "tags": [
+            "ChatGPT",
+            "广告",
+            "商业化",
+            "隐私"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "techcrunch-techbbq-europe-ai-control-2026-08-29",
+          "category": "policy",
+          "label": "政策",
+          "title": "TechCrunch：TechBBQ 上欧洲 AI 讨论聚焦控制权",
+          "body": "TechCrunch 报道 TechBBQ 会议上欧洲投资者和创业者围绕 AI 主权、隐私和基础设施控制权展开讨论。",
+          "summary": "TechCrunch 报道 TechBBQ 会议上欧洲投资者和创业者围绕 AI 主权、隐私和基础设施控制权展开讨论。",
+          "whyItMatters": "欧洲 AI 议题从监管合规扩展到模型、数据、基础设施和代理系统控制权。",
+          "detailBody": "TechCrunch 8 月 29 日报道，TechBBQ 参会者多次讨论欧洲是否能掌控 AI 技术栈，并提到隐私、主权和外部模型依赖。 该条仅保留来源可支撑的发布时间、对象和动作，不扩写原文细节。",
+          "trend": "AI 主权叙事正在从政府政策进入创业和投资现场，控制权成为产品选型和基础设施投资问题。",
+          "detailTrend": "AI 主权叙事正在从政府政策进入创业和投资现场，控制权成为产品选型和基础设施投资问题。 这条只把来源事实转成核查方向，仍需对应文档、日志、指标或第三方复现后再升级判断。",
+          "whyRanked": "它补充美国数据中心之外的区域主权风险，帮助读者比较不同政策约束。",
+          "topReason": "会议报道提示区域风险；下一步要查欧盟、成员国和企业采购文件。",
+          "detailWhyRanked": "它补充美国数据中心之外的区域主权风险，帮助读者比较不同政策约束。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文或文件确认。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "媒体会议观察有叙事价值，政策和采购变化需文件确认。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "媒体会议观察有叙事价值，政策和采购变化需文件确认。"
+          },
+          "impact": "欧洲业务、合规和基础设施团队应关注本地模型、数据驻留、隐私评估和供应商替代方案。",
+          "whoShouldCare": "负责欧洲市场 AI 采购、数据驻留、隐私评估和供应商连续性的产品/合规/基础设施团队应关注此信号。",
+          "readerUse": "政策/安全团队用来更新欧洲 AI 主权、隐私和外部 API 依赖风险清单。",
+          "nextCheck": "查欧盟 AI Act 实施文件、成员国算力计划、企业采购公告和本地模型项目进展。",
+          "followUpQuestions": [
+            "欧盟或成员国是否发布新的 AI 主权算力、采购或数据驻留文件？",
+            "欧洲企业采购公告、供应商切换记录或数据驻留文件是否显示路线调整？"
+          ],
+          "evidenceThreshold": "还需要在监管文本、政府算力计划或企业采购文件确认路线变化，，才可升级为已确认区域政策/采购信号。",
+          "claimBoundary": "不证明欧洲已形成统一 AI 主权路线，也不证明美国或中国模型供应商会失去欧洲市场。",
+          "counterEvidence": "若企业采购继续集中在外部 API，或政策文件未支持本地替代资金，应收窄为会议情绪信号。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "reliable_media",
+          "sourceId": "techcrunch-ai",
+          "provenance": "TechCrunch AI 只支持最小报道事实；完整事实、采访、引述、图表、数据和上下文仍需阅读原文。",
+          "sourceUrl": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/",
+          "originalUrl": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-29T10:51:00-07:00",
+          "time": "08/29",
+          "tags": [
+            "欧洲AI",
+            "主权",
+            "隐私",
+            "基础设施"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI",
+            "NVIDIA"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-08-31",
       "date": "2026-08-31",

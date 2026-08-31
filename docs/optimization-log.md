@@ -1,3 +1,29 @@
+## 2026-09-01 08:12 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update with a quality-gated short batch covering product entry points, Agent execution governance, AI search controls, data-center politics, European AI sovereignty, time-series foundation models, and MoE inference reliability.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Added registered sources `google-research-blog` and `microsoft-research-blog`; source count is now 66.
+  - Used 8 safe non-duplicate signals: OpenAI ChatGPT Ads ARR/region expansion; Google AI Search website-owner controls global update; Google Research TimesFM-3; Axios data-center political backlash; VentureBeat Agent execution governance; VentureBeat AI coding boundary engineering; TechCrunch TechBBQ European AI control discussion; and Microsoft Research FaultSense.
+  - Kept official items as source-bounded release facts, research items as research-original / research-index signals, and media items as `媒体背景` with `originalDependency: must-read`.
+  - Published 8 rather than padding to 10 because safe current non-duplicate sources were limited; skipped old articles, podcasts/videos, paywall/login-wall body text, community discussion, repeated coverage, and weak-evidence material.
+- Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- Archive diff: skipped-one-edition - only one 2026-09-01 archive edition exists, so no morning/evening comparison was written.
+- Verification:
+  - Attempted `git pull --ff-only origin main`, but GitHub DNS resolution failed in this environment.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 66 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched content files.
+- Commit: pending.
+
 ## 2026-08-31 23:13 JST
 
 - Focus: 更新 AI Watchtower 08:00 JST 新闻情报版；首页推进为 `news-0800-2026-08-31`，发布 10 条安全非重复信号，聚焦 Agent 运行时身份、网关部署顺序、Amazon Quick/fal 创意流程、Natera 医疗语音 Agent、跨账号 RAG、SageMaker SDK v3、SFT 数据质量、GoDaddy Quick 分析、OpenSearch MCP Apps 和 HyperPod Ray。

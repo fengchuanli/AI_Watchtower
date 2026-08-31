@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-09-01",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1011,7 +1011,39 @@
       "hasRss": false,
       "language": "en",
       "notes": "机构原文，用于核对 a16z 基金、投资主题和公开主张；基金部署、被投项目成效和市场影响仍需 filings、LP/基金文件或第三方交易数据。"
+    },
+    {
+      "id": "google-research-blog",
+      "name": "Google Research Blog",
+      "url": "https://research.google/blog/",
+      "feedUrl": null,
+      "category": [
+        "research",
+        "model",
+        "science",
+        "developer"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Google Research 官方研究博客，用于核对研究发布、模型方法、代码/模型开放和 benchmark 声明；效果结论仍需论文细节、复现、第三方评测或真实业务数据。"
+    },
+    {
+      "id": "microsoft-research-blog",
+      "name": "Microsoft Research Blog",
+      "url": "https://www.microsoft.com/en-us/research/blog/",
+      "feedUrl": null,
+      "category": [
+        "research",
+        "infrastructure",
+        "model",
+        "developer"
+      ],
+      "trustLevel": "research",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Microsoft Research 研究发布入口，用于核对系统、模型、AI 基础设施和论文项；性能、可移植性和生产收益仍需论文、代码、公开 benchmark 或第三方复现。"
     }
   ],
-  "sourceCount": 60
+  "sourceCount": 66
 }
