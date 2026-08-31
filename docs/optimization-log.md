@@ -1,3 +1,29 @@
+## 2026-08-31 23:13 JST
+
+- Focus: 更新 AI Watchtower 08:00 JST 新闻情报版；首页推进为 `news-0800-2026-08-31`，发布 10 条安全非重复信号，聚焦 Agent 运行时身份、网关部署顺序、Amazon Quick/fal 创意流程、Natera 医疗语音 Agent、跨账号 RAG、SageMaker SDK v3、SFT 数据质量、GoDaddy Quick 分析、OpenSearch MCP Apps 和 HyperPod Ray。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 AWS Machine Learning Blog、VentureBeat AI/Security、Google/OpenAI/Anthropic 近期页面和历史 URL 去重。
+  - Google/OpenAI/Anthropic 的多条 8 月下旬官方更新已在近期历史版次中收录，本期未重复发布。
+  - 本期发布 8 条 AWS 官方/方案博客信号和 2 条 VentureBeat 媒体背景信号；AWS 来源集中，因此版次层保留 `sourceRisk`、`sourceConcentration` 和 `overreadBoundary`，明确不能把客户案例、方案叙述或专家框架读成全行业效果结论。
+  - AWS 客户/方案项保持 `厂商主张` 或官方能力边界；VentureBeat 项保持 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未使用付费墙/登录墙正文、随机网页、社区讨论、二次聚合、传闻或已归档 URL 补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 619.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 64 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched content files.
+- Commit: Local content commit follows this log update; push still depends on GitHub DNS recovery.
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Existing `rag/architecture.md`, `rag/learning-notes.md`, and untracked `rag/embedding-cache-design.md` were present outside this task and left untouched.
+
 ## 2026-08-30 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 19 detail-page proof-boundary task. Added guidance for when `counterEvidence` should downgrade a story rather than merely narrow its scope.

@@ -1,8 +1,1124 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-30",
-  "totalItems": 609,
+  "updatedAt": "2026-08-31",
+  "totalItems": 619,
   "editions": [
+    {
+      "id": "news-0800-2026-08-31",
+      "date": "2026-08-31",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "08:00 JST 发布",
+      "note": "本期聚焦 Agent 身份、企业工作流、医疗语音、RAG 边界、可观测与训练基础设施。",
+      "operationalStatus": "GitHub DNS 阻断拉取；核查 AWS、VentureBeat 与历史 URL，发布 10 条安全非重复信号。",
+      "editorialInterpretation": "本期 10 条；AWS 项用于核对发布和方案动作，媒体项仅作 Agent 安全雷达。",
+      "readerFrame": {
+        "headline": "Agent 上线从模型能力转向身份、数据和运行证据",
+        "whyItMatters": "今天的信号显示，企业 AI 竞争正在落到 Agent 清单、跨账号数据访问、医疗语音、创意流程、可观测图表和训练平台治理。",
+        "useThisIssueFor": [
+          "安全与平台团队检查 Agent 独立身份、委派上下文、短期凭据、归因日志和停止路径。",
+          "数据与 MLOps 团队核对跨账号 RAG、SFT 数据质量、SageMaker SDK v3 和 HyperPod Ray 迁移。",
+          "业务运营与医疗/创意产品团队评估 Amazon Quick、Natera 语音 Agent 和 fal MCP 工作流的审批证据。"
+        ],
+        "notProvenYet": [
+          "不证明 AWS 客户案例中的效率、成本或准确率已被独立验证。",
+          "不证明 VentureBeat 专家框架已成为正式标准或监管基线。",
+          "不证明 AgentCore、Quick、OpenSearch MCP Apps 或 HyperPod Ray 适合所有企业架构。"
+        ],
+        "mobile": {
+          "headline": "本期查企业 Agent 证据链",
+          "summary": "身份、RAG、医疗语音、创意流程、可观测和训练平台同场核查。",
+          "primaryUses": [
+            "安全团队查归因",
+            "数据团队查边界",
+            "MLOps团队查迁移"
+          ],
+          "proofBoundary": "仍需客户日志、权限审计、真实指标、CVE 记录和 benchmark"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版从模型/算力叙事转向企业 Agent 落地证据",
+        "freshFacts": [
+          "本期新增事实：AWS 发布 Amazon Quick 与 fal 通过 MCP 组合创意 Agent 工作流。",
+          "本期新增事实：AWS 发布 Natera 基于 Bedrock AgentCore 的医疗预约语音 Agent 案例。",
+          "本期新增事实：AWS 发布 OpenSearch MCP Apps、跨账号知识库和 SageMaker SDK v3/HyperPod Ray 更新。",
+          "本期新增事实：VentureBeat 刊登两篇 Agent 身份、网关、记忆污染和运行时信任分析。"
+        ],
+        "repeatedContext": [
+          "延续近期 AgentCore Evaluations、Bedrock Guardrails、Gemini Live、Codex 持久模式和物理 Agent 控制面主线。",
+          "延续企业 AI 采购必须核对权限、日志、合规、成本和客户侧效果证据的编辑框架。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对 Agent 身份",
+          "count": 5,
+          "meaning": "用来检查 ARD、跨账号 RAG、医疗语音 Agent、运行时信任和网关部署顺序的身份、委派、权限与停止路径。"
+        },
+        {
+          "label": "验证企业工作流",
+          "count": 2,
+          "meaning": "用来评估 Amazon Quick 创意流程和 GoDaddy 自助分析案例是否有审批、权限、质量和采用证据。"
+        },
+        {
+          "label": "核对训练工程",
+          "count": 2,
+          "meaning": "用来更新 SageMaker SDK v3 与 SFT 数据准备迁移清单，重点看兼容性、验证集和回归测试。"
+        },
+        {
+          "label": "验证可观测算力",
+          "count": 1,
+          "meaning": "用来核对 OpenSearch MCP Apps 和 HyperPod Ray 等基础设施信号的查询可复现性、集群成本和 benchmark。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "AWS 来源集中",
+        "note": "官方来源族占 8/10，且同一 AWS Machine Learning Blog 集中，适合核对发布动作，不证明客户效果。",
+        "nextCheck": "查官方文档、客户日志、第三方审计、CVE 文件、benchmark、成本账单并复核。"
+      },
+      "sourceConcentration": {
+        "sourceId": "aws-machine-learning-blog",
+        "sourceName": "AWS Machine Learning Blog",
+        "count": 8,
+        "share": "8/10",
+        "note": "AWS Machine Learning Blog 提供本期 8 条信号，形成云厂商视角集中，需外部客户和第三方材料交叉核验。",
+        "nextCheck": "用客户日志、公开文档、独立 benchmark、权限审计、CVE 数据和成本账单交叉确认。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期是企业 Agent 和 MLOps 架构雷达，来源集中在 AWS 官方/方案博客，不适合直接推出全市场采用、成本或安全效果结论。",
+        "doNotConclude": "不证明 AgentCore、Amazon Quick、OpenSearch MCP Apps 或 HyperPod Ray 已在所有企业场景验证。",
+        "useInstead": "用来建立核验清单：先查客户日志、平台文档、权限审计、生产演练、成本账单、CVE 记录和第三方 benchmark。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent 控制面转向可归因身份",
+          "note": "跨期看，AgentCore Evaluations、Bedrock Guardrails、Codex 持久模式和本期身份/网关分析共同把 Agent 从工具调用推向运行治理。",
+          "boundary": "这不证明自治系统已可靠；仍需审计日志、委派记录、事故复盘、平台文档和第三方安全测试。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "企业采用从聊天进入业务流程",
+          "note": "跨期看，Quick/fal、GoDaddy、Natera 和此前 Salesforce/Claude、Microsoft Copilot 线索连续显示企业 AI 正进入创意、分析、医疗和 CRM 流程。",
+          "boundary": "这不证明 ROI 已普遍成立；仍需客户指标、错误率、权限审计、留存数据和业务结果。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "工程底座 Agent 化",
+          "note": "跨期看，SageMaker SDK v3、SFT 数据准备、HyperPod Ray 和 OpenSearch MCP Apps 连续把开发、训练、推理与排障连到 Agent 工作台。",
+          "boundary": "这不证明迁移成本下降；仍需官方兼容表、第三方 benchmark、生产演练、查询日志、指标和成本账单。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "身份与委派证据增强",
+          "status": "stronger",
+          "previousPattern": "上一版记录 MHS、Gemini Live、Codex 持久模式和自动化对齐。",
+          "currentSignal": "本期新增 ARD、跨账号知识库、Natera 语音 Agent 和两条运行时信任/网关分析。",
+          "signalDirection": "增强：Agent 控制面从能力演示延伸到发现、身份、委派、数据访问和停止路径。",
+          "stillUnproven": "仍需 Agent 注册表、IAM 日志、客户运行数据、CVE 记录和第三方安全测试。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "工作流案例增加",
+          "status": "stronger",
+          "previousPattern": "此前企业工作流主线记录 Salesforce in Claude、Microsoft 365 Copilot Excel Python 和 AWS AgentCore。",
+          "currentSignal": "本期新增 Quick/fal 创意工作流、GoDaddy Quick 分析迁移和 Natera 医疗语音 Agent。",
+          "signalDirection": "增强：企业 AI 从办公插件扩展到创意、BI 和医疗预约流程。",
+          "stillUnproven": "仍需客户日志、错误率、权限审计、长期采用指标和合规材料。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "训练与部署接口延续收敛",
+          "status": "repeated",
+          "previousPattern": "此前版本记录 Hugging Face、Google、AWS 与 OpenAI 开发者工具和评测入口。",
+          "currentSignal": "本期新增 SageMaker SDK v3、SFT 数据准备和 HyperPod Ray。",
+          "signalDirection": "重复但更工程化：工具更新继续围绕少 API、可评估数据和统一集群体验。",
+          "stillUnproven": "仍需官方迁移测试、CI 记录、版本兼容表、验证集指标和成本 benchmark。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "AWS",
+          "label": "企业 Agent 版图继续扩张",
+          "lastMention": "上一版和前几版记录 AgentCore Evaluations、Bedrock Guardrails、AWS 安全博客和 AgentCore 客户案例。",
+          "whatChanged": "本期新增 ARD、跨账号知识库、OpenSearch MCP Apps、Quick/fal、Natera、GoDaddy、SageMaker SDK v3 和 HyperPod Ray。",
+          "stillUnproven": "仍需客户侧生产日志、权限审计、成本账单、公开文档、CVE 数据和独立 benchmark。"
+        },
+        {
+          "company": "Amazon Quick",
+          "label": "从 BI 扩展到创意和自动化",
+          "lastMention": "此前 Amazon Quick 连续出现在业务智能、自动化报告和 Quick Suite 工作流相关版本中。",
+          "whatChanged": "本期新增 Quick/fal 创意工作流和 GoDaddy Quick 分析迁移案例。",
+          "stillUnproven": "仍需 Quick 使用日志、报告质量审计、审批记录、素材版权材料和客户留存数据。"
+        },
+        {
+          "company": "Amazon SageMaker",
+          "label": "训练平台继续统一",
+          "lastMention": "此前记录 SageMaker HyperPod、AI 推理和 AWS 模型工程相关更新。",
+          "whatChanged": "本期新增 SageMaker Python SDK v3 Script mode 与 HyperPod Ray 能力。",
+          "stillUnproven": "仍需版本兼容表、迁移流水线、Ray Serve benchmark、集群恢复日志和成本账单。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/厂商原文",
+          "count": 8,
+          "role": "AWS 原文支持核对 AgentCore、Quick、OpenSearch、SageMaker 和 HyperPod 的发布动作或方案叙述；效果、成本和采用仍需外证。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体背景",
+          "count": 2,
+          "role": "VentureBeat 提供 Agent 身份、网关、记忆污染和运行时信任分析入口；完整论证、数据和上下文仍属于原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent 身份、委派和数据边界",
+          "count": 5,
+          "itemIds": [
+            "venturebeat-agent-runtime-trust-2026-08-30",
+            "venturebeat-agent-memory-poisoning-gateway-2026-08-30",
+            "aws-natera-bedrock-agentcore-scheduling-2026-08-26",
+            "aws-agentcore-cross-account-knowledge-bases-2026-08-26",
+            "aws-opensearch-mcp-apps-observability-2026-08-25"
+          ],
+          "meaning": "用来检查 Agent 在真实业务系统中的身份、权限、数据访问、排障证据和人工接管。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业工作流与业务采用",
+          "count": 2,
+          "itemIds": [
+            "aws-quick-fal-agentic-creative-workflows-2026-08-27",
+            "aws-godaddy-amazon-quick-analytics-2026-08-26"
+          ],
+          "meaning": "用来评估创意生产、BI 自助分析和自动周报是否有审批、质量和采用证据。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "训练数据与开发接口",
+          "count": 2,
+          "itemIds": [
+            "aws-sagemaker-sdk-v3-script-mode-2026-08-26",
+            "aws-supervised-finetuning-data-quality-2026-08-26"
+          ],
+          "meaning": "用来更新模型训练、SFT 数据准备和 SDK 迁移清单。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "分布式训练与集群运行",
+          "count": 1,
+          "itemIds": [
+            "aws-sagemaker-hyperpod-ray-2026-08-24"
+          ],
+          "meaning": "用来核对 Ray on HyperPod 的区域、成本、恢复和推理 benchmark。"
+        }
+      ],
+      "briefing": {
+        "label": "今日简报",
+        "headline": "AI Watchtower：企业 Agent 需要可验证证据链",
+        "summary": "本期 10 条信号以 AWS 官方/方案博客为主，补充两条 VentureBeat Agent 安全背景。重点不是模型新名字，而是 Agent 身份、委派、数据边界、医疗语音、创意工作流、可观测图表和训练平台迁移。",
+        "cta": "查看全部新闻",
+        "watchPoints": [
+          {
+            "title": "身份归因",
+            "body": "先查 Agent 注册表、委派上下文、短期凭据、工具日志和跨系统停止路径。"
+          },
+          {
+            "title": "客户效果",
+            "body": "AWS 客户案例需等待客户侧生产日志、错误率、合规审计和长期采用指标。"
+          },
+          {
+            "title": "工程迁移",
+            "body": "SageMaker SDK v3、SFT 数据和 HyperPod Ray 需用兼容表、验证集和成本 benchmark 验证。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "深度简报",
+        "title": "从能调用工具到能证明行为：企业 Agent 的下一道门槛",
+        "subtitle": "2026-08-31 08:00 JST 版显示，AI 落地的关键证据正在从模型能力转向身份、权限、数据边界、客户日志和可验证界面。",
+        "dateLabel": "2026 年 8 月 31 日 08:00 JST",
+        "status": "已发布，AWS 集中来源并保留外部核验边界",
+        "overview": "本期不是追逐单一模型发布，而是把企业 Agent 落地拆成可检查证据链：VentureBeat 提醒运行时信任和网关顺序，AWS 发布 ARD、跨账号知识库、Natera 语音预约、OpenSearch MCP Apps、Quick/fal 创意流程、GoDaddy Quick 分析、SageMaker SDK v3、SFT 数据准备和 HyperPod Ray。",
+        "timeline": [
+          {
+            "label": "08-24 至 08-25",
+            "title": "基础设施和可观测铺底",
+            "body": "AWS 发布 HyperPod Ray 与 OpenSearch MCP Apps，分别指向训练/推理集群和排障证据。"
+          },
+          {
+            "label": "08-26 至 08-27",
+            "title": "企业流程与数据边界扩展",
+            "body": "AWS 发布 Natera、GoDaddy、跨账号知识库、SFT 数据、SDK v3 和 Quick/fal 工作流。"
+          },
+          {
+            "label": "08-30",
+            "title": "Agent 安全框架补充",
+            "body": "VentureBeat 刊登两篇 Agent 身份、运行时信任、网关和记忆污染分析。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期安全非重复信号"
+          },
+          {
+            "value": "8/10",
+            "label": "AWS Machine Learning Blog 来源占比"
+          },
+          {
+            "value": "500",
+            "label": "Natera 案例披露的端到端模拟次数"
+          },
+          {
+            "value": "6",
+            "label": "VentureBeat 文章提出的 Agent 安全依赖门槛"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "身份治理",
+            "title": "Agent 需要被单独命名和归因",
+            "body": "运行时信任、网关顺序和 ARD 都指向同一件事：企业需要知道哪个 Agent 在谁的委派下、用什么凭据、为了哪个任务调用工具。",
+            "soWhat": "上线前先建 Agent 清单、短期凭据、委派上下文、审计日志和停止路径。"
+          },
+          {
+            "number": "02",
+            "label": "业务流程",
+            "title": "客户案例开始进入高敏和高频工作",
+            "body": "Natera、GoDaddy 和 Quick/fal 把 Agent 放进医疗预约、BI 分析和创意生产，但客户效果仍需生产日志和审计材料。",
+            "soWhat": "不要只看演示流程，要看失败率、权限、人工接管、审批和长期采用。"
+          },
+          {
+            "number": "03",
+            "label": "工程底座",
+            "title": "训练、推理和排障正在接入 Agent 工作台",
+            "body": "SageMaker SDK v3、SFT 数据准备、HyperPod Ray 和 OpenSearch MCP Apps 显示，MLOps 与 SRE 工具链也在被 Agent 化。",
+            "soWhat": "迁移判断要落到兼容性、benchmark、查询可复现和成本账单。"
+          }
+        ],
+        "actions": [
+          "把 Agent 上线评审表加入独立身份、委派人、任务 ID、短期凭据、工具日志和停止路径。",
+          "把客户案例核验表加入真实使用量、错误率、人工接管、合规审计、留存和成本数据。",
+          "把 MLOps 迁移清单加入 SDK 兼容表、验证集、回归测试、Ray Serve benchmark 和账单对比。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期以 2026-08-24 至 2026-08-30 新近来源为主，未把已归档 Google/OpenAI/Anthropic 条目重发。"
+          },
+          {
+            "label": "来源边界",
+            "body": "AWS 来源集中，可核对发布动作和方案叙述；客户效果、成本和安全结果仍需外部材料。"
+          },
+          {
+            "label": "媒体边界",
+            "body": "VentureBeat 项是专家背景，不是监管标准、事故统计或厂商正式发布。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "AWS 官方/方案博客支持核对本期 8 条 AgentCore、Quick、OpenSearch、SageMaker 和 HyperPod 相关发布或案例动作。",
+            "VentureBeat 支持核对其刊登的 Agent 运行时信任、网关顺序、记忆污染和身份归因分析。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 判断企业 Agent 的关键门槛正在从“能不能调用工具”转向“能不能证明行为”。",
+            "AI Watchtower 判断客户案例和技术指南的读者价值在于形成核验清单，而不是直接证明 ROI。"
+          ],
+          "unknowns": [
+            "AWS 客户案例中的真实生产效果、合规审计、成本和长期采用情况仍未知。",
+            "VentureBeat 专家框架是否会进入 OWASP、NIST、云厂商或企业采购基线仍未知。"
+          ]
+        },
+        "references": [
+          {
+            "label": "媒体报道 Agent 运行时信任框架",
+            "url": "https://venturebeat.com/security/ai-agents-need-their-own-identity-before-they-need-a-gateway"
+          },
+          {
+            "label": "媒体分析 Agent 网关部署顺序",
+            "url": "https://venturebeat.com/security/ai-agents-that-pass-authentication-can-still-drift-expose-data-or-get-memory-poisoned"
+          },
+          {
+            "label": "官方博客发布 Quick/fal MCP 流程",
+            "url": "https://aws.amazon.com/blogs/machine-learning/build-agentic-creative-workflows-with-amazon-quick-and-fal/"
+          },
+          {
+            "label": "官方博客披露 Natera AgentCore 案例",
+            "url": "https://aws.amazon.com/blogs/machine-learning/nateras-intelligent-appointment-scheduling-with-amazon-bedrock-agentcore/"
+          },
+          {
+            "label": "官方博客说明 AgentCore 跨账号知识库",
+            "url": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/"
+          },
+          {
+            "label": "官方博客介绍 SageMaker SDK v3",
+            "url": "https://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-ai-script-mode-in-sdk-v3/"
+          },
+          {
+            "label": "官方博客发布 SFT 数据质量指南",
+            "url": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-1-formatting-and-quality/"
+          },
+          {
+            "label": "官方博客披露 GoDaddy Quick 案例",
+            "url": "https://aws.amazon.com/blogs/machine-learning/how-godaddy-transformed-its-analytics-with-amazon-quick/"
+          },
+          {
+            "label": "官方博客发布 OpenSearch MCP Apps",
+            "url": "https://aws.amazon.com/blogs/machine-learning/agentic-observability-with-amazon-opensearch-service-mcp-apps/"
+          },
+          {
+            "label": "官方博客发布 HyperPod Ray 能力",
+            "url": "https://aws.amazon.com/blogs/machine-learning/introducing-new-ray-capabilities-on-sagemaker-hyperpod/"
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "本期用来提示模型团队回看当前 Gemini、Claude、OpenAI 和开放权重条目；无新模型卡片，新的模型结论仍需官方模型卡、价格页和第三方 benchmark。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "本期供产品和业务团队核对 Amazon Quick、Natera 语音 Agent、GoDaddy Quick 与 HyperPod Ray；真实效果仍需客户日志、合规审计和成本数据。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "本期供模型定制团队检查 AWS SFT 数据准备方法；质量收益不直接证明，仍需验证集、回归测试和上线失败样本。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "本期供平台团队核对 ARD、跨账号知识库、SageMaker SDK v3 与 OpenSearch MCP Apps；可用性仍需文档、权限审计和生产演练确认。"
+        },
+        {
+          "id": "funding",
+          "label": "融资",
+          "description": "本期用来提示财务和算力采购团队回看当前 Lambda、a16z、NVIDIA 线索；无新融资卡片，资本判断仍需合同、基金文件、账单和交付记录验证。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "本期供安全治理团队核对 VentureBeat 对 Agent 身份、网关、记忆污染和运行时信任的分析；正式基线仍需 OWASP、NIST、CVE 和平台文件确认。"
+        }
+      ],
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "venturebeat-agent-runtime-trust-2026-08-30",
+          "category": "policy",
+          "label": "政策",
+          "title": "Agent 通过认证后仍需要运行时信任",
+          "body": "VentureBeat 刊登 Agent 运行时信任分析。",
+          "summary": "VentureBeat 专家文章把 Agent 安全焦点从登录认证推进到运行中行为验证。",
+          "whyItMatters": "企业 Agent 获得合法凭据后仍可能越权、漂移或误用工具，安全团队需核对独立身份和运行时策略。",
+          "detailBody": "VentureBeat 专家文章指出，Agent 会在执行中选择工具、调用 API、读取上下文并改变计划；传统认证只能说明它拿到访问权，不能说明后续行为仍符合委派目标和组织策略。",
+          "trend": "Agent 安全从身份进入运行期。",
+          "detailTrend": "当 Agent 成为跨系统执行者，安全边界要覆盖意图验证、行为监控、策略执行、短期权限和高风险人工确认，而不是停在登录成功。",
+          "whyRanked": "运行期治理",
+          "topReason": "TOP3 因为它把 Agent 上线清单推向运行期控制，但需真实事故数据和平台日志验证。",
+          "detailWhyRanked": "文章给出意图验证、行为监控、策略执行、最小权限和人工确认等控制方向；站内把它作为专家背景和核验清单，不替代原文完整论证、引用材料与数据来源。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "读者用途强，扣分因其为专家分析，需事故样本、平台日志和标准文件支撑。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "读者用途强，扣分因其为专家分析，需事故样本、平台日志和标准文件支撑。"
+          },
+          "impact": "CISO、平台工程和审计团队应检查 Agent 身份、委派上下文、短期凭据、行为日志和高风险审批。",
+          "whoShouldCare": "负责把 Agent 接入 Microsoft 365、ServiceNow、Salesforce、GitHub 和内部 API 的安全/平台团队需要补运行时证明。",
+          "readerUse": "安全团队用于把 Agent 上线评审从登录认证扩展到运行中意图、工具调用和审批链。",
+          "nextCheck": "查企业 Agent 平台日志、OWASP/NIST 更新、真实事故复盘和厂商运行时策略文档。",
+          "followUpQuestions": [
+            "是否有平台日志显示 Agent 身份、委派人、任务目标和工具调用能被串联审计？",
+            "OWASP、NIST 或云厂商是否发布运行时信任控制的正式文件、测试基线或参考实现？"
+          ],
+          "evidenceThreshold": "需要真实部署日志、事故复盘或标准文件后，才能升级为确认的企业 Agent 安全基线判断。",
+          "claimBoundary": "目前只能说明专家文章提出运行时信任框架，不证明该框架已成行业标准。",
+          "counterEvidence": "若后续事故数据显示主要风险仍来自基础认证缺陷而非运行期漂移，应下调运行时信任优先级。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "sourceId": "venturebeat-ai",
+          "provenance": "VentureBeat 用于最低限度背景和专家观点入口；完整事实、原文论证、引用、图表、数据和上下文仍应阅读原文。",
+          "sourceUrl": "https://venturebeat.com/security/ai-agents-need-their-own-identity-before-they-need-a-gateway",
+          "originalUrl": "https://venturebeat.com/security/ai-agents-need-their-own-identity-before-they-need-a-gateway",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-30T16:00:00-07:00",
+          "freshSourceFact": null,
+          "time": "08-31 08:00",
+          "tags": [
+            "agent-security",
+            "runtime-trust",
+            "identity"
+          ],
+          "companies": [
+            "VentureBeat",
+            "OWASP",
+            "NIST"
+          ]
+        },
+        {
+          "id": "venturebeat-agent-memory-poisoning-gateway-2026-08-30",
+          "category": "policy",
+          "label": "政策",
+          "title": "Agent 网关前置可能掩盖身份与记忆风险",
+          "body": "VentureBeat 分析 Agent 网关控制顺序。",
+          "summary": "VentureBeat 文章提醒，Agent 网关需要建立在 Agent 清单、独立身份、任务凭据和可归因日志之后。",
+          "whyItMatters": "如果企业只先上网关，仍可能看不见 Agent 记忆污染、权限继承和跨系统行为归因断点。",
+          "detailBody": "VentureBeat 专家文章提出，网关若缺少 Agent 清单、独立身份、任务凭据和可归因遥测，就难以区分合法 API 调用与偏离委派目标的危险动作。",
+          "trend": "Agent 安全变成依赖顺序问题。",
+          "detailTrend": "这条信号把 Agent 安全从单点网关转向依赖顺序：先能命名、归因、缩权和回放任务链，再让策略拦截与异常检测发挥作用。",
+          "whyRanked": "部署顺序",
+          "topReason": "TOP3 因为它给出 Agent 治理排序，但需企业样本、CVE 关联和平台验证。",
+          "detailWhyRanked": "文章引用 LiteLLM CVE、Teleport 和 Okta 调查作为背景；站内只保留部署顺序清单，完整数据和论证仍需读原文及原始报告。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 18,
+            "note": "用途强且新鲜，扣分因其主要是专家框架和引用数据，需独立样本验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 18,
+            "note": "用途强且新鲜，扣分因其主要是专家框架和引用数据，需独立样本验证。"
+          },
+          "impact": "负责 Agent 平台、IAM 和 SOC 的团队应先盘点 Agent、委派关系和凭据边界，再部署网关策略。",
+          "whoShouldCare": "正在把 Agent 接入 IAM、RAG、MCP、工单和财务系统的安全架构团队需要检查控制部署顺序。",
+          "readerUse": "平台治理团队用于设计 30 天 Agent 清单、归因日志、短期凭据和停止路径检查。",
+          "nextCheck": "查 Teleport/Okta 原始调查、LiteLLM CVE 记录、企业事故复盘和云厂商 Agent 身份功能。",
+          "followUpQuestions": [
+            "Teleport 或 Okta 原始调查是否公开样本、问题设计和 Agent 权限定义？",
+            "LiteLLM 相关 CVE 是否出现新的在野利用、补丁采用率或云厂商缓解公告？"
+          ],
+          "evidenceThreshold": "需要原始调查方法、CVE 利用记录和企业日志样本后，才能升级为确认的部署顺序风险结论。",
+          "claimBoundary": "目前只能说明专家提出依赖门槛，不证明所有企业都应按同一顺序改造。",
+          "counterEvidence": "若平台原生日志和网关已能稳定提供 Agent 归因与停止路径，应收窄为旧架构或自建系统风险。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "sourceId": "venturebeat-ai",
+          "provenance": "VentureBeat 用于最低限度背景和专家观点入口；完整事实、原文论证、引用、图表、数据和上下文仍应阅读原文。",
+          "sourceUrl": "https://venturebeat.com/security/ai-agents-that-pass-authentication-can-still-drift-expose-data-or-get-memory-poisoned",
+          "originalUrl": "https://venturebeat.com/security/ai-agents-that-pass-authentication-can-still-drift-expose-data-or-get-memory-poisoned",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-30T13:15:00-07:00",
+          "freshSourceFact": null,
+          "time": "08-31 07:55",
+          "tags": [
+            "agent-security",
+            "memory-poisoning",
+            "gateway"
+          ],
+          "companies": [
+            "VentureBeat",
+            "Teleport",
+            "Okta",
+            "LiteLLM"
+          ]
+        },
+        {
+          "id": "aws-quick-fal-agentic-creative-workflows-2026-08-27",
+          "category": "product",
+          "label": "产品",
+          "title": "AWS 展示 Quick 与 fal 的 Agent 创意工作流",
+          "body": "Amazon Quick 通过 MCP 连接 fal 生成媒体工具。",
+          "summary": "AWS 博客展示 Amazon Quick、Skills、MCP 与 fal 组合成可复用创意 Agent 工作流。",
+          "whyItMatters": "创意团队不只需要生成模型，还需要保留风格、角色、审批和资产上下文的可复用流程。",
+          "detailBody": "AWS 展示两个流程：八格 storyboard 和音乐视频概念原型；Quick 负责规划和审批上下文，fal 通过 MCP 提供图像、音频、视频等工具。",
+          "trend": "生成媒体进入流程编排。",
+          "detailTrend": "创意 Agent 的竞争点从单次出图转向多步骤资产生产：可复用 Skill、MCP 工具发现、审批门槛和跨模态上下文开始变成产品能力。",
+          "whyRanked": "创意流程",
+          "topReason": "进入 TOP3 因为它体现 MCP 化创意生产，但需客户项目指标和版权审计。",
+          "detailWhyRanked": "AWS 方案文列出 Quick、Skills、MCP 与 fal 的组合和审批步骤；站内把它作为创意 Agent 工作流信号，不把演示流程当作客户 ROI。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "新意在创意流程编排，扣分因效果与版权安全需客户侧证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "新意在创意流程编排，扣分因效果与版权安全需客户侧证据。"
+          },
+          "impact": "设计运营、品牌和创意技术团队应检查 Agent 生成流程里的审批、素材授权、模型替换和输出追踪。",
+          "whoShouldCare": "负责把图像、视频、音频生成接入品牌生产线的创意技术/法务团队需要核对审批和版权证据。",
+          "readerUse": "创意运营团队用于设计 storyboard、角色参考、音乐预览和交付资产的审批门槛。",
+          "nextCheck": "查 fal 模型条款、客户项目日志、版权审计、输出水印和 Quick Skill 管理文档。",
+          "followUpQuestions": [
+            "fal MCP 工具是否公开模型清单、版权条款、日志保留和企业审计接口？",
+            "Quick Skill 是否提供团队级审批记录、素材版本和模型替换审计？"
+          ],
+          "evidenceThreshold": "需要客户项目指标、版权审计和平台日志后，才能升级为已验证的创意生产效率或合规方案。",
+          "claimBoundary": "目前只能说明 AWS 展示了方案流程，不证明所有创意任务都能稳定提效。",
+          "counterEvidence": "若客户试点显示审批返工、版权审核或模型替换成本过高，应收窄为概念验证工具链。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS 官方/客户方案博客用于核对厂商主张、案例叙述、架构和披露数字；不等同于独立客户效果证明。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/build-agentic-creative-workflows-with-amazon-quick-and-fal/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/build-agentic-creative-workflows-with-amazon-quick-and-fal/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-27T16:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 07:45",
+          "tags": [
+            "mcp",
+            "creative-ai",
+            "amazon-quick"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon Quick",
+            "fal",
+            "MCP"
+          ]
+        },
+        {
+          "id": "aws-natera-bedrock-agentcore-scheduling-2026-08-26",
+          "category": "product",
+          "label": "产品",
+          "title": "Natera 用 Bedrock AgentCore 构建医疗预约语音 Agent",
+          "body": "AWS 发布 Natera 医疗预约 Agent 架构案例。",
+          "summary": "AWS 介绍 Natera 用 Bedrock AgentCore 做移动采血预约语音 Agent，并披露验证指标。",
+          "whyItMatters": "医疗语音 Agent 进入高敏流程，关键不只是自然对话，还包括认证、延迟、工具调用和合规边界。",
+          "detailBody": "AWS 称该方案使用双 WebSocket 桥、事件驱动延迟遮蔽和渐进式信任认证，并在 500 次端到端模拟中报告 100% 工具调用准确率。",
+          "trend": "医疗 Agent 走向交易型流程。",
+          "detailTrend": "医疗预约、保险和客服流程会要求 Agent 同时处理语音、身份、后台工具、PHI 和审计；模拟指标必须经过生产通话、合规材料和患者结果复核。",
+          "whyRanked": "医疗落地",
+          "topReason": "TOP3 因为它给出医疗语音 Agent 架构，但需真实通话日志、合规审计和患者结果验证。",
+          "detailWhyRanked": "AWS 案例披露双 WebSocket、渐进认证和模拟指标；站内保留为医疗语音 Agent 设计信号，等待 Natera 侧生产证据。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "医疗高风险与架构细节强，扣分因验证指标仍需客户侧和合规材料。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "医疗高风险与架构细节强，扣分因验证指标仍需客户侧和合规材料。"
+          },
+          "impact": "医疗产品、合规和呼叫中心团队应核对语音 Agent 的身份验证、人工接管、失败处理和 PHI 日志。",
+          "whoShouldCare": "把患者预约、检测、客服和后台系统交给语音 Agent 的医疗产品/合规团队需要核对真实运营边界。",
+          "readerUse": "医疗运营团队用于设计语音预约 Agent 的认证、延迟、工具调用和人工升级检查表。",
+          "nextCheck": "查 Natera 生产日志、HIPAA/隐私审计、患者投诉、失败率、人工接管记录和真实成本数据。",
+          "followUpQuestions": [
+            "Natera 是否公开生产环境通话量、失败率、人工接管率和患者体验指标？",
+            "AWS 或 Natera 是否披露 PHI 处理、日志保留、BAA 和审计材料？"
+          ],
+          "evidenceThreshold": "需要生产日志、合规审计和患者侧指标后，才能升级为已验证的医疗语音 Agent 落地效果。",
+          "claimBoundary": "目前只能说明 AWS 发布了案例与模拟指标，不证明真实医疗运营已达到相同结果。",
+          "counterEvidence": "若生产日志显示高失败率、认证误判或合规问题，应下调为有限试点或架构示例。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS 官方/客户方案博客用于核对厂商主张、案例叙述、架构和披露数字；不等同于独立客户效果证明。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/nateras-intelligent-appointment-scheduling-with-amazon-bedrock-agentcore/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/nateras-intelligent-appointment-scheduling-with-amazon-bedrock-agentcore/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-26T20:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 07:35",
+          "tags": [
+            "healthcare-ai",
+            "voice-agent",
+            "agentcore"
+          ],
+          "companies": [
+            "AWS",
+            "Natera",
+            "Amazon Bedrock AgentCore"
+          ]
+        },
+        {
+          "id": "aws-agentcore-cross-account-knowledge-bases-2026-08-26",
+          "category": "tool",
+          "label": "工具",
+          "title": "Bedrock AgentCore 支持跨账号知识库访问模式",
+          "body": "AWS 解释 AgentCore 跨账号知识库架构。",
+          "summary": "AWS 发布 AgentCore 跨账号知识库方案，让 Agent 在不复制数据的情况下查询另一账号的 Redshift 知识库。",
+          "whyItMatters": "企业 RAG 的难点正在从检索准确率转向账号边界、最小权限、引用和工具托管责任。",
+          "detailBody": "方案通过受限 IAM 角色调用 Knowledge Bases 的 RetrieveAndGenerate，并比较 Strands Agent 与声明式 AgentCore harness 两种编排方式。",
+          "trend": "RAG 边界进入多账号治理。",
+          "detailTrend": "大型企业的数据与 Agent 往往分属不同账号和团队，跨账号模式把数据不复制、权限可审计和引用可追踪变成 RAG 基础设施要求。",
+          "whyRanked": "数据边界",
+          "topReason": "重要但未进 TOP3；它是企业 RAG 安全架构信号，需实测延迟和权限审计。",
+          "detailWhyRanked": "AWS 技术文给出 IAM 角色、RetrieveAndGenerate 和两种 AgentCore 编排路径；站内关注数据不复制与跨账号权限边界。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "impact": "数据平台、云架构和安全团队应检查跨账号 IAM 角色、知识库资源策略、引用链和工具执行日志。",
+          "whoShouldCare": "管理多账号 Redshift、RAG 知识库和 AgentCore 工具权限的数据平台/云安全团队需要更新架构评审。",
+          "readerUse": "云架构团队用于判断 Agent 是否能在不复制受管数据的情况下访问跨账号知识库。",
+          "nextCheck": "查 AWS 样例仓库、IAM policy、CloudTrail 日志、延迟测试和引用准确率报告。",
+          "followUpQuestions": [
+            "AWS 样例仓库是否公开最小权限 IAM policy、CloudTrail 事件和失败路径？",
+            "跨账号 RetrieveAndGenerate 在真实 Redshift 数据量下的延迟和引用准确率如何？"
+          ],
+          "evidenceThreshold": "需要样例代码、权限审计和真实数据测试后，才能升级为确认的企业跨账号 RAG 模式。",
+          "claimBoundary": "官方文档证明方案存在，不证明它适合所有合规和延迟要求。",
+          "counterEvidence": "若 CloudTrail 日志、IAM policy 审计或延迟测试显示引用缺失、权限过宽或延迟不可接受，应收窄为特定 AWS 架构模式。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS Machine Learning Blog 用于核对产品能力、技术路径和客户案例发布动作；效果、成本和采用结论仍需客户侧或第三方材料。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-26T19:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 07:30",
+          "tags": [
+            "rag",
+            "agentcore",
+            "iam"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon Bedrock AgentCore",
+            "Amazon Redshift"
+          ]
+        },
+        {
+          "id": "aws-sagemaker-sdk-v3-script-mode-2026-08-26",
+          "category": "tool",
+          "label": "工具",
+          "title": "SageMaker Python SDK v3 重写自带模型脚本模式",
+          "body": "AWS 发布 SageMaker SDK v3 Script mode 指南。",
+          "summary": "AWS 介绍 SageMaker Python SDK v3，用统一 ModelTrainer/ModelBuilder 和 SourceCode 配置简化自带模型训练部署。",
+          "whyItMatters": "模型工程正在减少框架专用样板，把训练脚本、容器控制和部署接口统一到更少 API。",
+          "detailBody": "SDK v3 把本地源码目录在运行时同步进训练任务，支持自带容器、AWS 深度学习容器或第三方镜像，并覆盖 scikit-learn 与 Stable Diffusion 3.5 LoRA 示例。",
+          "trend": "训练部署接口统一化。",
+          "detailTrend": "当企业同时管理传统 ML、生成模型和自定义推理二进制时，统一训练/部署原语可降低维护成本，但迁移仍取决于兼容性和 CI/CD。",
+          "whyRanked": "开发者效率",
+          "topReason": "未进 TOP3；它是工程接口更新，需迁移样例和版本兼容验证。",
+          "detailWhyRanked": "AWS 指南给出 ModelTrainer、ModelBuilder 和 SourceCode 迁移路径；站内关注多框架训练部署接口统一，不直接判断迁移收益。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "impact": "ML 平台团队应评估 SDK v3 对训练脚本、容器构建、权限、模型注册和部署流水线的影响。",
+          "whoShouldCare": "维护 SageMaker 训练/推理模板和多框架模型流水线的 MLOps 团队需要检查 SDK v3 迁移成本。",
+          "readerUse": "MLOps 团队用于规划 Script mode、容器策略和统一训练部署 API 的迁移清单。",
+          "nextCheck": "查 SageMaker SDK v3 文档、GitHub 示例、版本兼容表、CI 迁移记录和训练成本日志。",
+          "followUpQuestions": [
+            "SageMaker Python SDK v3 GitHub 代码、迁移文档或兼容表是否覆盖现有 PyTorch、XGBoost 和自定义镜像流水线？",
+            "迁移到 ModelTrainer/ModelBuilder 后的训练时长、失败率和权限策略是否有实测对比？"
+          ],
+          "evidenceThreshold": "需要迁移样例、兼容表和真实流水线测试后，才能升级为确认的 MLOps 提效判断。",
+          "claimBoundary": "目前只能说明 AWS 发布了 SDK v3 路径，不证明所有旧脚本可直接迁移。",
+          "counterEvidence": "若 CI 迁移记录、兼容表或训练失败日志显示大量脚本重写和权限调整，应收窄为新项目优先采用。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS Machine Learning Blog 用于核对产品能力、技术路径和客户案例发布动作；效果、成本和采用结论仍需客户侧或第三方材料。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-ai-script-mode-in-sdk-v3/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-ai-script-mode-in-sdk-v3/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-26T18:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 07:20",
+          "tags": [
+            "sagemaker",
+            "mlops",
+            "sdk"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon SageMaker"
+          ]
+        },
+        {
+          "id": "aws-supervised-finetuning-data-quality-2026-08-26",
+          "category": "research",
+          "label": "研究",
+          "title": "AWS 把监督微调重点拉回数据格式与质量",
+          "body": "AWS 发布 SFT 数据准备系列第一篇。",
+          "summary": "AWS 发布监督微调数据准备指南，强调质量检查、对话 JSONL、推理/工具调用 schema 和训练评估切分。",
+          "whyItMatters": "模型定制的瓶颈常在数据，而不是微调按钮；企业需要先证明数据能支撑输出格式、领域分类和语气约束。",
+          "detailBody": "文章把 continued pre-training、SFT、偏好优化等定制路径分开，并把 SFT 前的数据质量、格式、schema 和评估拆成工程步骤。",
+          "trend": "后训练进入数据工程期。",
+          "detailTrend": "随着基础模型变强，企业微调更像可靠性工程：定义失败模式、构造可评估数据、保持 schema 一致，并用验证集防止表面提效。",
+          "whyRanked": "数据质量",
+          "topReason": "未进 TOP3；它是微调准备信号，需真实任务评估和回归测试。",
+          "detailWhyRanked": "AWS 方法文把 CPT、SFT、偏好优化和数据格式分层说明，并列出 schema、验证集和质量检查路径；站内把它作为微调准备清单，等待真实任务评估。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "impact": "模型定制、数据工程和质量评测团队应先清洗数据、定义 schema、保留评估集和回归指标。",
+          "whoShouldCare": "准备用企业语料微调客服、分类、工具调用或合规输出模型的数据/MLOps 团队需要先核对数据门槛。",
+          "readerUse": "模型定制团队用于设计 SFT 数据审查、训练/评估切分和 schema 一致性检查。",
+          "nextCheck": "查第二篇高级策略、训练日志、验证集表现、回归测试和上线后失败样本。",
+          "followUpQuestions": [
+            "AWS 第二篇是否给出学习曲线、数据子集选择和合成数据混合的可复现实验？",
+            "企业 SFT 任务是否保留独立验证集、失败样本库和上线后回归指标？"
+          ],
+          "evidenceThreshold": "需要真实任务评估、回归测试和上线监控后，才能升级为确认的微调质量收益。",
+          "claimBoundary": "目前只能说明 AWS 发布数据准备方法，不证明某个 SFT 项目一定改善。",
+          "counterEvidence": "若验证集或生产日志显示微调后退化、遗忘或 schema 失效，应下调定制收益判断。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS Machine Learning Blog 用于核对产品能力、技术路径和客户案例发布动作；效果、成本和采用结论仍需客户侧或第三方材料。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-1-formatting-and-quality/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-1-formatting-and-quality/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-26T17:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 07:10",
+          "tags": [
+            "fine-tuning",
+            "data-quality",
+            "amazon-nova"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon Nova",
+            "Amazon Bedrock"
+          ]
+        },
+        {
+          "id": "aws-godaddy-amazon-quick-analytics-2026-08-26",
+          "category": "product",
+          "label": "产品",
+          "title": "GoDaddy 用 Amazon Quick 重构自助分析",
+          "body": "AWS 发布 GoDaddy Amazon Quick 分析迁移案例。",
+          "summary": "AWS 称 GoDaddy 迁移到 Amazon Quick 后减少仪表盘数量，并把自然语言分析和自动化流程带给更多员工。",
+          "whyItMatters": "企业 AI 采用不只发生在聊天窗口，也在 BI、知识空间、自动报告和业务复盘流程里重构。",
+          "detailBody": "AWS 案例称 GoDaddy 从旧 BI 迁移到 Amazon Quick，仪表盘从 5000 多个压缩到 2500 个以内，并引入 Quick chat agents 与 Quick Flows。",
+          "trend": "BI 进入 Agent 化运营。",
+          "detailTrend": "自助分析的下一步不是更多 dashboard，而是把自然语言查询、自动复盘、知识空间和治理规则组合成业务日常流程。",
+          "whyRanked": "企业采用",
+          "topReason": "未进 TOP3；它是客户案例，需 GoDaddy 侧指标、审计和长期使用数据。",
+          "detailWhyRanked": "AWS 客户案例给出 dashboard 精简、Quick agents 和 Quick Flows 线索；站内只保留为企业 BI Agent 化信号，等待 GoDaddy 侧验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "impact": "数据团队应检查自然语言 BI 的权限、指标口径、幻觉防护、报告审批和使用率。",
+          "whoShouldCare": "负责把 BI、自助分析和周报流程交给 AI 助手的数据产品/业务运营团队需要核对治理证据。",
+          "readerUse": "数据产品团队用于评估 dashboard 精简、自然语言查询、Quick Flows 和业务复盘自动化。",
+          "nextCheck": "查 GoDaddy 公开材料、Quick 使用日志、权限审计、报告错误率和业务团队留存数据。",
+          "followUpQuestions": [
+            "GoDaddy 是否公开 Quick chat agent 的活跃用户、错误率、权限审计和业务满意度？",
+            "Quick Flows 自动周报是否保留引用、审批记录和指标口径变更日志？"
+          ],
+          "evidenceThreshold": "需要客户侧日志、报告质量审计和长期采用指标后，才能升级为已验证的企业 BI 提效案例。",
+          "claimBoundary": "目前只能说明 AWS 发布了 GoDaddy 案例，不证明其他企业能复现同样收益。",
+          "counterEvidence": "若 GoDaddy 使用日志、报告质量审计或留存数据显示长期使用率下降、报告错误增多或治理成本抵消收益，应收窄为特定组织迁移案例。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS 官方/客户方案博客用于核对厂商主张、案例叙述、架构和披露数字；不等同于独立客户效果证明。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-godaddy-transformed-its-analytics-with-amazon-quick/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/how-godaddy-transformed-its-analytics-with-amazon-quick/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-26T16:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 07:00",
+          "tags": [
+            "business-intelligence",
+            "amazon-quick",
+            "enterprise-ai"
+          ],
+          "companies": [
+            "AWS",
+            "GoDaddy",
+            "Amazon Quick"
+          ]
+        },
+        {
+          "id": "aws-opensearch-mcp-apps-observability-2026-08-25",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenSearch MCP Apps 把可验证图表带进 Agent 对话",
+          "body": "AWS 发布 OpenSearch Service MCP Apps 可观测能力。",
+          "summary": "AWS 宣布 OpenSearch Service 支持 MCP Apps，让 Agent 工具调用同时返回文本摘要和可交互可观测图表。",
+          "whyItMatters": "运维 Agent 的价值取决于可验证证据，图表、trace 和服务拓扑进入对话能减少人工切换和重复查询。",
+          "detailBody": "OpenSearch MCP Apps 通过本地 MCP server 连接 IDE 与 OpenSearch UI，工具调用返回结构化文本和同线程可视化，用于告警、trace、日志和服务图。",
+          "trend": "Agent 输出变成可验证界面。",
+          "detailTrend": "MCP 正从调用工具扩展到返回可检查 UI；对 SRE 来说，关键是让 Agent 的分析和底层查询结果在同一审计上下文里出现。",
+          "whyRanked": "可观测证据",
+          "topReason": "未进 TOP3；它是 Agent 可验证输出信号，需生产事故演练和权限审计。",
+          "detailWhyRanked": "AWS 官方文和开发者指南说明 MCP Apps 的双响应、图表渲染和本地 MCP server 路径；站内关注可复查证据，不直接断言排障提速。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "impact": "SRE、平台和安全团队应检查 MCP server 权限、查询可复现性、图表审计和事故回放。",
+          "whoShouldCare": "把告警、日志、trace 和服务拓扑交给 Agent 辅助排障的 SRE/平台团队需要验证同线程证据。",
+          "readerUse": "可观测团队用于评估 Agent 排障是否能给出可点击、可复查、可审计的原始图表。",
+          "nextCheck": "查 OpenSearch 开发者指南、MCP server 包校验、权限 policy、事故演练和查询一致性日志。",
+          "followUpQuestions": [
+            "OpenSearch MCP server 是否提供 mcpb 包校验、权限范围和查询审计日志？",
+            "生产演练日志中 Agent 文本结论与 OpenSearch 图表是否能稳定互相复核？"
+          ],
+          "evidenceThreshold": "需要生产演练、查询日志和权限审计后，才能升级为确认的 Agent 可观测提效能力。",
+          "claimBoundary": "官方文证明能力发布，不证明所有 IDE 和数据源都能无缝支持。",
+          "counterEvidence": "若生产演练日志、查询审计或权限 policy 显示图表无法复现、权限过宽或延迟过高，应收窄为开发环境辅助能力。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS Machine Learning Blog 用于核对产品能力、技术路径和客户案例发布动作；效果、成本和采用结论仍需客户侧或第三方材料。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/agentic-observability-with-amazon-opensearch-service-mcp-apps/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/agentic-observability-with-amazon-opensearch-service-mcp-apps/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-25T16:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 06:50",
+          "tags": [
+            "mcp",
+            "observability",
+            "opensearch"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon OpenSearch Service",
+            "MCP"
+          ]
+        },
+        {
+          "id": "aws-sagemaker-hyperpod-ray-2026-08-24",
+          "category": "product",
+          "label": "产品",
+          "title": "SageMaker HyperPod 增加托管 Ray 能力",
+          "body": "AWS 宣布 HyperPod on EKS 支持 Ray。",
+          "summary": "AWS 宣布 SageMaker HyperPod 在 EKS 上提供托管 Ray 体验，支持训练、推理、观测和 Ray Serve KV 缓存。",
+          "whyItMatters": "分布式训练和长上下文推理正在向统一集群体验靠拢，Ray 与 HyperPod 结合影响成本、弹性和运维方式。",
+          "detailBody": "AWS 称 HyperPod 现在可创建和监控 Ray 集群，把 Studio notebook 连接到实时集群，并支持基于 KubeRay 的训练和加速推理。",
+          "trend": "训练与推理集群统一。",
+          "detailTrend": "AI 基础设施竞争从单卡性能转向集群生命周期、故障恢复、KV 缓存、Ray Serve 和开发者工作台的一体化。",
+          "whyRanked": "算力平台",
+          "topReason": "未进 TOP3；它是基础设施能力更新，需区域可用性、成本和 benchmark。",
+          "detailWhyRanked": "AWS 公告说明 HyperPod EKS、KubeRay、Studio 和 Tiered Storage KV 缓存路径；站内关注集群体验，不直接判断成本收益。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "分数来自读者用途和新鲜度；扣分点是仍需外部效果证据。"
+          },
+          "impact": "基础设施和 MLOps 团队应评估 Ray 训练、Ray Serve、KV 缓存、节点恢复和集群成本。",
+          "whoShouldCare": "管理 Ray、KubeRay、SageMaker Studio 和长文档推理集群的 MLOps/基础设施团队需要核对迁移收益。",
+          "readerUse": "基础设施团队用于判断是否把 Ray 工作负载迁入 HyperPod EKS 并复用 SageMaker Studio。",
+          "nextCheck": "查支持区域、实例规格、Ray Serve benchmark、故障恢复日志、KV 缓存命中率和成本账单。",
+          "followUpQuestions": [
+            "HyperPod EKS 官方文档、可用区、实例规格和迁移指南是否覆盖现有 Ray 训练/推理工作负载？",
+            "Ray Serve 在 HyperPod Tiered Storage KV 缓存下的 TTFT、吞吐和成本是否有独立 benchmark？"
+          ],
+          "evidenceThreshold": "需要区域清单、工作负载 benchmark 和成本账单后，才能升级为确认的训练/推理平台收益。",
+          "claimBoundary": "官方公告证明能力可用，不证明所有 Ray 脚本都能获得成本或性能优势。",
+          "counterEvidence": "若迁移测试日志、Ray Serve 指标或成本账单显示兼容问题、缓存收益不足或成本上升，应收窄为特定 Ray 工作负载。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "trustLevel": "official",
+          "sourceId": "aws-machine-learning-blog",
+          "provenance": "AWS Machine Learning Blog 用于核对产品能力、技术路径和客户案例发布动作；效果、成本和采用结论仍需客户侧或第三方材料。",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-new-ray-capabilities-on-sagemaker-hyperpod/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-new-ray-capabilities-on-sagemaker-hyperpod/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-24T16:00:00Z",
+          "freshSourceFact": null,
+          "time": "08-31 06:40",
+          "tags": [
+            "sagemaker",
+            "ray",
+            "infrastructure"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon SageMaker",
+            "Ray",
+            "KubeRay"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-08-30",
       "date": "2026-08-30",
