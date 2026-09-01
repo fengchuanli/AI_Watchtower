@@ -1,3 +1,26 @@
+## 2026-09-01 23:06 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报自动化补充；当前本地首页已是同日更晚的 `news-1700-2026-09-01`，本次未回退版本，而是在当前版补充 1 条安全非重复官方信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核查 Anthropic 官方安全/对齐更新、OpenAI/Google/Mistral/Anthropic 当前页面、VentureBeat/TechCrunch/Axios 候选和历史 URL 去重。
+  - 新增 Anthropic 官方信号：Claude 评测/训练环境暂停与加固、实时拦截、沙箱校验、外部评测伙伴实践和后续 METR review/Risk Report 核查路径。
+  - 当前版从 8 条增至 9 条安全非重复信号；少于 10 条是质量门槛结果，未使用旧文、播客、付费墙/登录墙正文、社区讨论、随机网页、二次聚合、传闻或弱证据素材补量。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 628.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 9 current news items against 66 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+- Commit: 本次提交记录 08:00 JST 自动化补充；push 仍依赖 GitHub DNS 恢复。
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Existing unrelated worktree changes, if any, were left untouched.
+
 ## 2026-09-01 11:10 JST
 
 - Focus: 将 VisionHub 风格的网站结构、内容表达和 UI 目标加入现有 2026-08-10 至 2026-09-08 优化计划，并把它设为后续自动优化的产品/UI 优先轨道。

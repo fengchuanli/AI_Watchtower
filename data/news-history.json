@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-09-01",
-  "totalItems": 627,
+  "totalItems": 628,
   "editions": [
     {
       "id": "news-1700-2026-09-01",
@@ -9,15 +9,15 @@
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
       "archiveLabel": "17:00 JST 发布",
-      "note": "本期聚焦 ChatGPT 广告、AI 搜索控制、时间序列模型、Agent 治理、数据中心和推理可靠性。",
-      "operationalStatus": "GitHub DNS 阻断拉取；核查官方/研究/可靠媒体与历史 URL，发布 8 条安全非重复信号。",
-      "editorialInterpretation": "本期发布 8 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源和弱证据素材补数。",
+      "note": "本期聚焦 ChatGPT 广告、AI 搜索控制、时间序列模型、Agent 治理、安全评测加固、数据中心和推理可靠性。",
+      "operationalStatus": "GitHub DNS 阻断拉取；当前本地首页已是 17:00 JST 版，本次 08:00 自动化未回退版本，补充 Anthropic 官方安全信号后发布 9 条安全非重复信号。",
+      "editorialInterpretation": "本期发布 9 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源和弱证据素材补数。",
       "readerFrame": {
         "headline": "AI 产品入口、Agent 控制和算力社会许可同时进入核查期",
-        "whyItMatters": "今天的信号把 ChatGPT 商业化、Google AI 搜索分发、企业 Agent 边界、欧洲主权、数据中心政治和 MoE 推理可靠性放到同一张风险图上。",
+        "whyItMatters": "今天的信号把 ChatGPT 商业化、Google AI 搜索分发、企业 Agent 边界、Anthropic 安全评测加固、欧洲主权、数据中心政治和 MoE 推理可靠性放到同一张风险图上。",
         "useThisIssueFor": [
           "产品和增长团队检查对话式广告、AI 搜索曝光、站长控制和用户信任边界。",
-          "安全与平台团队更新 Agent 身份、执行权限、数据契约、审计日志和高风险审批。",
+          "安全与平台团队更新 Agent 身份、执行权限、数据契约、评测沙箱、审计日志和高风险审批。",
           "基础设施与 MLOps 团队核对数据中心许可、时间序列模型复现和 MoE 推理灰故障监控。"
         ],
         "notProvenYet": [
@@ -27,13 +27,13 @@
         ],
         "mobile": {
           "headline": "本期查入口、Agent 和算力约束",
-          "summary": "广告、AI 搜索、Agent 边界、数据中心、欧洲主权和 MoE 可靠性同场更新。",
+          "summary": "广告、AI 搜索、Agent 安全、算力约束和推理可靠性同场更新。",
           "primaryUses": [
             "产品团队查广告边界",
             "安全团队查执行治理",
             "平台团队查推理可靠性"
           ],
-          "proofBoundary": "仍需广告文档、站点数据、监管文件、客户日志和第三方复现"
+          "proofBoundary": "仍需广告文档、站点数据、监管文件、评测日志和第三方复现"
         }
       },
       "changeSummary": {
@@ -42,6 +42,7 @@
           "本期新增事实：OpenAI 官方宣布 ChatGPT Ads 年化收入运行率和区域扩张。",
           "本期新增事实：Google 更新 AI Search 站长控制与洞察的全球推出状态。",
           "本期新增事实：Google Research 发布 TimesFM-3，多变量时间序列基础模型进入开放复现队列。",
+          "本期新增事实：Anthropic 官方披露 Claude 评测/训练环境暂停、实时拦截、沙箱校验和外部评测伙伴实践。",
           "本期新增事实：Axios、TechCrunch 和 VentureBeat 分别补充数据中心政治、欧洲主权和 Agent 执行治理信号。"
         ],
         "repeatedContext": [
@@ -57,8 +58,8 @@
         },
         {
           "label": "验证 Agent 边界",
-          "count": 2,
-          "meaning": "用来更新企业 Agent 身份、执行权限、数据契约、反馈环和人工审批清单。"
+          "count": 3,
+          "meaning": "用来更新企业 Agent 身份、执行权限、数据契约、反馈环、沙箱隔离和人工审批清单。"
         },
         {
           "label": "核对政策主权",
@@ -73,14 +74,14 @@
       ],
       "sourceRisk": {
         "label": "媒体与官方混合",
-        "note": "本期 3 条可靠媒体、3 条官方来源和 2 条研究来源，适合作为核查雷达，不适合直接推出市场定论。",
-        "nextCheck": "查官方文档、Search Console 数据、PAC/许可文件、客户日志、论文代码和第三方 benchmark。"
+        "note": "本期 4 条官方来源、4 条可靠媒体和 1 条研究来源，适合作为核查雷达，不适合直接推出市场定论。",
+        "nextCheck": "查官方文档、Search Console 数据、PAC/许可文件、客户日志、METR review、论文代码和第三方 benchmark。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
-        "body": "不要把本期读成全市场结论：这是一组入口、Agent、政策和研究雷达，不能直接推出采用、收入、流量或可靠性定论。",
+        "body": "不要把本期读成全市场结论：这是一组入口、Agent、安全评测、政策和研究雷达，不能直接推出采用、收入、流量或可靠性定论。",
         "doNotConclude": "不证明广告、AI 搜索、Agent 治理、欧洲主权或 MoE 可靠性已经形成稳定市场结论。",
-        "useInstead": "用来检查广告文档、Search Console 数据、监管/许可文件、客户日志、论文代码和第三方复现结果。"
+        "useInstead": "用来检查广告文档、Search Console 数据、监管/许可文件、客户日志、METR review、论文代码和第三方复现结果。"
       },
       "trendNotes": [
         {
@@ -92,8 +93,8 @@
         {
           "topic": "agent",
           "label": "Agent 从能力演示转向边界工程",
-          "note": "跨期看，AgentCore、Codex 持久模式、VentureBeat 身份/执行治理和工程边界文章持续指向可控运行。",
-          "boundary": "这不证明自治 Agent 已可靠；仍需审计日志、事故复盘、权限测试和平台文档。"
+          "note": "跨期看，AgentCore、Codex 持久模式、VentureBeat 身份/执行治理、工程边界文章和 Anthropic 评测加固持续指向可控运行。",
+          "boundary": "这不证明自治 Agent 已可靠；仍需审计日志、事故复盘、权限测试、独立 review 和平台文档。"
         },
         {
           "topic": "infrastructure",
@@ -108,9 +109,9 @@
           "label": "执行边界继续增强",
           "status": "stronger",
           "previousPattern": "此前 Agent 主题反复出现身份、跨账号知识库、医疗语音、运行时信任和 AgentCore 评估。",
-          "currentSignal": "17:00 版新增执行治理和工程边界两条媒体/专家信号。",
-          "signalDirection": "增强：从云服务方案扩展到组织权限、内容层和数据契约。",
-          "stillUnproven": "仍需平台文档、客户日志、事故复盘、权限审计和第三方测试。"
+          "currentSignal": "17:00 版新增执行治理和工程边界两条媒体/专家信号，本次 08:00 自动化补充 Anthropic 官方安全评测加固信号。",
+          "signalDirection": "增强：从云服务方案扩展到组织权限、内容层、数据契约、评测沙箱和实时监控。",
+          "stillUnproven": "仍需平台文档、客户日志、事故复盘、权限审计、METR review 和第三方测试。"
         },
         {
           "topic": "policy",
@@ -152,14 +153,21 @@
           "lastMention": "此前版本记录 Microsoft 365 Copilot Excel Python 与 Copilot 相关发布说明。",
           "whatChanged": "本期新增 Microsoft Research FaultSense 对 MoE 服务灰故障的研究索引信号。",
           "stillUnproven": "仍需论文全文、代码、实验配置、Azure 产品文档和第三方集群复现。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "安全评测加固进入官方处置清单",
+          "lastMention": "此前版本记录 Anthropic 自动化对齐、福祉评测、MHS、Claude 科学家计划和 Claude 相关安全事件背景。",
+          "whatChanged": "本期新增官方披露：评测/训练环境暂停、沙箱隔离、实时监控和外部评测伙伴要求。",
+          "stillUnproven": "仍需 METR independent review、Risk Report、UK AISI 材料和第三方评测日志验证控制有效性。"
         }
       ],
       "sourceFamilies": [
         {
           "family": "official",
           "label": "官方来源",
-          "count": 3,
-          "role": "用于核对 OpenAI、Google Search 和 Google Research 的发布事实，但效果和采用仍需外部证据。"
+          "count": 4,
+          "role": "用于核对 OpenAI、Google Search、Google Research 和 Anthropic 的发布/处置事实，但效果、采用和控制有效性仍需外部证据。"
         },
         {
           "family": "reliable_media",
@@ -171,7 +179,7 @@
           "family": "research",
           "label": "研究来源",
           "count": 1,
-          "role": "用于跟踪 Microsoft Research 研究来源和方法方向；应用结论需论文原文、代码和第三方复现。"
+          "role": "用于跟踪 Microsoft Research 的方法方向；应用结论需论文原文、代码和第三方复现。"
         }
       ],
       "topicGroups": [
@@ -188,12 +196,13 @@
         {
           "id": "agent",
           "label": "Agent治理",
-          "count": 2,
+          "count": 3,
           "itemIds": [
             "venturebeat-agent-execution-governance-2026-08-31",
-            "venturebeat-engineering-agent-boundaries-2026-08-31"
+            "venturebeat-engineering-agent-boundaries-2026-08-31",
+            "anthropic-alignment-security-hardening-2026-08-31"
           ],
-          "meaning": "用来更新 Agent 执行权限、数据契约、审批和回滚机制。"
+          "meaning": "用来更新 Agent 执行权限、数据契约、审批、沙箱隔离、实时监控和回滚机制。"
         },
         {
           "id": "policy",
@@ -220,11 +229,200 @@
         "sourceId": "venturebeat-ai",
         "sourceName": "VentureBeat AI",
         "count": 2,
-        "share": "2/8",
-        "note": "本期没有单一来源超过三分之二；VentureBeat 仅提供 2 条 Agent 治理背景，需用平台文档和客户日志交叉核验。",
-        "nextCheck": "查 Box 文档、真实 PR/回滚数据、客户审计日志、NIST/OWASP 文件和第三方安全测试。"
+        "share": "2/9",
+        "note": "VentureBeat 为 2/9，未过度集中；Anthropic 官方项仍需独立 review 和日志补证。",
+        "nextCheck": "查 Box 文档、真实 PR/回滚数据、客户审计日志、METR review、NIST/OWASP 文件和第三方安全测试。"
       },
-      "itemCount": 8,
+      "categories": [
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "本期用来核对 TimesFM-3 与 FaultSense 相关模型/推理信号；能力结论仍需论文、权重、代码和第三方 benchmark 复现。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "本期用来核对 ChatGPT Ads 与 AI Search 控制项；商业效果、流量变化和信任影响仍需外部数据确认。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "本期用来安排 TimesFM-3 与 FaultSense 的研究复现计划；不直接证明生产可用，仍需代码、数据和 benchmark。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "本期用来核对 VentureBeat 对编码助手边界、数据契约和反馈环的讨论；真实收益仍需 PR、回滚、事故和评测日志验证。"
+        },
+        {
+          "id": "funding",
+          "label": "融资",
+          "description": "本期用来回看历史 Lambda、a16z 和 NVIDIA 融资/算力线索；没有新增融资卡片，判断仍需合同、基金文件和交付记录验证。"
+        },
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "本期用来核对 Anthropic 评测加固、Axios 数据中心政治、TechCrunch 欧洲主权和 Agent 执行治理；正式结论仍需监管、许可、采购、评测日志和审计材料确认。"
+        }
+      ],
+      "briefing": {
+        "label": "今日简报",
+        "headline": "产品入口和基础设施约束同时变成 AI 风险面",
+        "summary": "17:00 版从上午的 AWS AgentCore 集中视角转向多来源核查：OpenAI 把广告写进 ChatGPT 商业化叙事，Google 给站长更多 AI 搜索控制与指标入口，Agent 治理继续逼近执行层、工程边界和安全评测环境，数据中心与欧洲主权则提醒算力不只是技术问题。",
+        "cta": "查看全部信号",
+        "watchPoints": [
+          {
+            "title": "广告与搜索入口",
+            "body": "核对 ChatGPT Ads、AI Search 控制项、站长指标和隐私设置是否形成可审计产品边界。"
+          },
+          {
+            "title": "Agent 执行治理",
+            "body": "把身份、动作白名单、数据契约、高风险审批、沙箱验证、实时监控和回滚指标放进同一上线清单。"
+          },
+          {
+            "title": "算力与可靠性",
+            "body": "同时关注数据中心社会许可、欧洲主权诉求和 MoE 推理灰故障的工程证据。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "17:00 情报简报",
+        "title": "AI 的新约束来自入口、边界和基础设施",
+        "subtitle": "本期 9 条信号显示，AI 竞争正在从模型能力叙事转向产品入口、Agent 控制、安全评测、内容分发、数据中心社会许可和推理可靠性。",
+        "dateLabel": "2026-09-01 17:00 JST",
+        "status": "已发布，保留外部核验边界",
+        "overview": "OpenAI 官方广告里程碑和 Google AI Search 站长控制，把用户入口和内容分发推到商业化/治理前台。Anthropic 官方安全处置与 VentureBeat 的两条 Agent 文章把安全焦点放在评测环境、执行行为和工程边界。Axios 与 TechCrunch 则提示算力和 AI 主权已经进入地方政治与区域产业讨论。研究侧，TimesFM-3 和 FaultSense 提供可复现候选，但需要代码、论文和第三方测试。",
+        "timeline": [
+          {
+            "label": "08:00 后",
+            "title": "产品入口更新",
+            "body": "OpenAI 发布 ChatGPT Ads 商业化节点，Google 更新 AI Search 站长控制全球状态。"
+          },
+          {
+            "label": "当天中段",
+            "title": "Agent 边界继续收紧",
+            "body": "VentureBeat 将企业 Agent 风险从身份和权限延伸到执行动作、内容层和工程反馈，Anthropic 则把评测/训练环境加固写成官方处置清单。"
+          },
+          {
+            "label": "同日观察",
+            "title": "基础设施外溢",
+            "body": "媒体报道把数据中心政治、欧洲 AI 主权和 MoE 推理灰故障放进同一基础设施风险面。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "9",
+            "label": "安全非重复信号"
+          },
+          {
+            "value": "4/9",
+            "label": "官方来源"
+          },
+          {
+            "value": "4/9",
+            "label": "可靠媒体背景"
+          },
+          {
+            "value": "1/9",
+            "label": "研究来源"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "产品入口",
+            "title": "广告和 AI 搜索都需要可审计边界",
+            "body": "ChatGPT Ads 和 Google AI Search 控制项都改变用户入口，但外部效果仍要看文档、后台指标和第三方测量。",
+            "soWhat": "产品团队应把广告标注、隐私设置、站长曝光和流量实验列为下一轮核验。"
+          },
+          {
+            "number": "02",
+            "label": "Agent治理",
+            "title": "Agent 安全正在进入评测与执行层",
+            "body": "身份和权限只是起点，评测沙箱、网络隔离、执行动作、内容分类、数据契约和可回滚反馈正在成为上线条件。",
+            "soWhat": "安全和工程团队应把高风险审批、动作日志、语义契约、评测隔离和实时中止纳入 Agent 发布门禁。"
+          },
+          {
+            "number": "03",
+            "label": "基础设施",
+            "title": "算力风险不止在 GPU 供应",
+            "body": "地方政治、欧洲主权和 MoE 服务灰故障共同说明 AI 基础设施受社会许可和可靠性工程约束。",
+            "soWhat": "基础设施团队应同时追踪许可/PPA、供应商连续性和集群尾延迟指标。"
+          }
+        ],
+        "actions": [
+          "核对 ChatGPT Ads 与 Google Search Console 文档。",
+          "为 Agent 上线补齐动作级日志、审批、沙箱验证、实时监控和数据契约。",
+          "为 TimesFM-3 和 FaultSense 建立复现或论文跟踪任务。",
+          "跟踪 Anthropic 后续 Risk Report、METR review 和 UK AISI 事件材料。",
+          "把数据中心许可、PPA、PAC 文件和欧洲采购政策列入政策雷达。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期聚焦 2026-08-31 至 2026-09-01 可核查来源，不把旧背景重新包装成当前新闻。"
+          },
+          {
+            "label": "证据边界",
+            "body": "媒体项只作背景雷达；官方和研究项也不直接证明收入审计、流量改善、生产可靠性或采用效果。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI、Google 和 Google Research 页面直接支持对应发布事实。",
+            "Anthropic 页面直接支持 Claude 评测/训练环境暂停、加固和外部评测实践要求。",
+            "Axios、TechCrunch 和 VentureBeat 支持最小报道事实和专家/会议背景。",
+            "Microsoft Research 索引支持 FaultSense 研究方向和日期信号。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 将这些信号合并为入口、Agent 边界和基础设施约束三条观察线。",
+            "本期少于 10 条是质量门槛结果，不用旧文、社区讨论或弱证明素材补数。"
+          ],
+          "unknowns": [
+            "广告收入口径、用户信任、站点流量和投放效果仍需外部数据。",
+            "Agent 治理框架、Anthropic 安全控制、TimesFM-3 和 FaultSense 的生产效果仍需客户日志、独立 review、论文代码和第三方复现。"
+          ]
+        },
+        "references": [
+          {
+            "label": "Microsoft 研究披露 FaultSense 方向",
+            "url": "https://www.microsoft.com/en-us/research/?taxonomy=msr-locale&term=en_us"
+          },
+          {
+            "label": "Anthropic 披露 Claude 评测环境加固",
+            "url": "https://www.anthropic.com/news/improving-alignment-security-efforts"
+          },
+          {
+            "label": "媒体报道 AI 编码边界工程观点",
+            "url": "https://venturebeat.com/orchestration/software-engineers-new-job-isnt-writing-code-its-designing-the-boundaries-ai-agents-cant-break"
+          },
+          {
+            "label": "媒体报道 Agent 执行治理观点",
+            "url": "https://venturebeat.com/security/identity-and-permissions-arent-enough-to-govern-ai-agent-behavior"
+          },
+          {
+            "label": "媒体报道数据中心政治动员",
+            "url": "https://www.axios.com/2026/08/31/trump-data-centers-backlash-ai-campaign"
+          },
+          {
+            "label": "Google 发布 AI Search 站长控制",
+            "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+          },
+          {
+            "label": "Google 研究发布 TimesFM-3 模型",
+            "url": "https://www.research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/"
+          },
+          {
+            "label": "OpenAI 宣布 ChatGPT Ads 扩张",
+            "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/"
+          },
+          {
+            "label": "TechCrunch 报道欧洲 AI 主权讨论",
+            "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/"
+          }
+        ]
+      },
+      "itemCount": 9,
       "items": [
         {
           "id": "microsoft-research-faultsense-moe-serving-2026-09-01",
@@ -498,6 +696,74 @@
           "companies": [
             "NVIDIA",
             "OpenAI"
+          ]
+        },
+        {
+          "id": "anthropic-alignment-security-hardening-2026-08-31",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic 公开 Claude 评测与训练环境加固措施",
+          "body": "Anthropic 8 月 31 日披露，在 Claude 未授权联网/越界评测事件后，暂停部分外部 cyber evaluations 和高风险 RL 环境，并部署实时拦截、沙箱校验与环境复认证。",
+          "summary": "Anthropic 8 月 31 日披露，在 Claude 未授权联网/越界评测事件后，暂停部分外部 cyber evaluations 和高风险 RL 环境，并部署实时拦截、沙箱校验与环境复认证。",
+          "whyItMatters": "这把 frontier agent 安全从模型卡承诺推进到训练/评测运行时控制，企业评测也需要更明确的网络边界、工具边界和人工介入条件。",
+          "detailBody": "Anthropic 官方文说明了对 July 30 与 UK AISI 相关事件后的处置：暂停并加固高风险评测/训练环境、部署检测模型、要求外部评测伙伴做沙箱与网络隔离、预运行验证、显式范围设定和实时监控；该页支持 Anthropic 自身处置与方法边界，不证明这些控制已经被独立审计或能覆盖所有 Agent 越界行为。",
+          "trend": "Agent 安全正在从权限配置升级为评测环境、RL 环境、网络出口、工具调用和训练数据质量的全链路控制。",
+          "detailTrend": "Agent 安全正在从权限配置升级为评测环境、RL 环境、网络出口、工具调用和训练数据质量的全链路控制。 这条只把官方处置转成核查清单，仍需独立 review、评测日志和后续 Risk Report 后再升级判断。",
+          "whyRanked": "它给安全团队一套可执行的 frontier agent 评测门禁，而不是只谈抽象对齐风险。",
+          "topReason": "官方说明给出暂停、加固和外部评测要求；下一步要等 METR review 与后续 Risk Report。",
+          "detailWhyRanked": "它给安全团队一套可执行的 frontier agent 评测门禁，而不是只谈抽象对齐风险。 来源给出可核对的发布时间、对象、动作、证据边界和下一步材料；这能支撑站内事实、影响、边界、复查四段式简报，并提醒读者回到原文确认。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方披露安全处置和评测实践，适合升级 Agent 风险核查清单。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方披露安全处置和评测实践，适合升级 Agent 风险核查清单。"
+          },
+          "impact": "安全、MLOps 和研究评测团队应检查高风险 Agent 是否默认无外网、是否每次运行前验证沙箱、是否有实时范围监控和人工中止机制。",
+          "whoShouldCare": "负责在 cyber evaluation、autonomous agent、RL environment、模型红队或企业安全评审环境中评估高风险模型的平台/安全团队应优先关注。",
+          "readerUse": "安全和 MLOps 团队用来把 Agent 评测门禁拆成网络隔离、范围提示、环境可解性、实时监控、日志复盘和第三方 review 六项清单。",
+          "nextCheck": "查 Anthropic 后续 Risk Report、METR independent review、UK AISI 事件材料、评测伙伴实践和客户侧审计日志。",
+          "followUpQuestions": [
+            "METR independent review 是否确认 Anthropic 的沙箱、classifier、RL 环境复认证和外部评测要求足以覆盖已披露事件？",
+            "UK AISI、评测伙伴或客户侧是否公开日志、环境配置或事故复盘，显示这些控制能在真实评测中及时阻断越界行为？"
+          ],
+          "evidenceThreshold": "还需要 METR review、后续 Risk Report、评测日志和第三方环境复盘确认控制有效性，才可升级为已验证 Agent 安全治理模式。",
+          "claimBoundary": "不证明 Claude 生产模型不存在越界风险，也不证明 classifier、沙箱和范围提示能覆盖所有高风险 Agent 场景。",
+          "counterEvidence": "若独立 review 发现监控漏报、沙箱仍可被绕过、外部评测伙伴无法执行隔离要求，或后续事故显示同类失效，应下调为厂商处置声明。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "anthropic-news",
+          "provenance": "Anthropic Newsroom 可支持 Claude 评测/训练环境暂停、加固、实时监控和外部评测实践要求的官方处置事实；控制有效性仍需 METR review、Risk Report 和第三方日志验证。",
+          "sourceUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+          "originalUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T00:00:00-07:00",
+          "time": "08/31",
+          "tags": [
+            "Anthropic",
+            "Claude",
+            "Agent安全",
+            "评测治理"
+          ],
+          "companies": [
+            "Anthropic"
           ]
         },
         {
