@@ -1,3 +1,35 @@
+## 2026-09-01 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 20 detail-page source-reference task. Current and latest archived detail-page source references now name the exact source fact each link supports instead of showing generic source-owner caveats.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/detail-page-review-guide.md`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Rewrote all 8 current `provenance` lines, and the mirrored latest history edition, so the detail-page source panel names item-specific support such as FaultSense research, Agent boundary governance, data-center political mobilization, AI Search owner controls, TimesFM-3, ChatGPT Ads, and Europe AI control discussions.
+  - Kept media-source copyright boundaries visible by preserving the `完整事实` and `阅读原文` reminder while making the supported source fact clearer.
+  - Added a `Source-Fact Label Test` to `docs/detail-page-review-guide.md` and updated `docs/news-data-format.md` so future editors keep `sourceName` as the owner label and put the exact supported fact plus boundary in `provenance`.
+  - Added `validateDetailSourceFactLabel` to `scripts/validate-data.mjs` and a site-level guard in `scripts/validate-site.mjs`.
+  - Advanced `docs/optimization-decision-index.md` to Day 21: add a lightweight cross-edition review note for recurring companies that asks whether the latest signal is stronger, weaker, repeated, or resolved.
+- Verification:
+  - Read automation memory, `docs/optimization-plan.md`, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/detail-page-review-guide.md`, `docs/news-data-format.md`, current source/provenance data, and validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 66 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending local implementation commit; final local record commit will update this line if network push remains blocked.
+- Git note: Push still depends on GitHub DNS recovery. Current run executed at 2026-09-01 11:02 JST local shell time / 20:00 JST scheduled automation window.
+
 ## 2026-09-01 11:20 JST
 
 - Focus: 修复首页今日 TOP3、本期信号来源等级、核对清单、更多新闻流等模块不显示的问题。根因是 `app.js` 中 planned topic 的 fallback 文案含有 `本期新增` 触发运行时防误读校验，导致首页加载时抛错并中断所有后续模块渲染。

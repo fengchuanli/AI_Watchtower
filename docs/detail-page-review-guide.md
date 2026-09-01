@@ -71,6 +71,18 @@ Use this shape:
 
 Avoid reusable templates such as `是否已有独立来源确认[公司]的核心事实？` or `下一版能否找到客户日志、官方文件、论文复现或监管材料？` because they do not tell the next editor where to look first. A good question names the actual source path for the item, for example `法院原始裁定、案卷编号或 DoD 采购文件是否已公开可核对？` or `真实 Agent 日志、CloudWatch 告警和评分漂移记录是否支持生产评估？`.
 
+## Source-Fact Label Test
+
+The detail-page source panel is a reference label, not a source directory. Before publishing, check that `sourceName`, `sourceUrl`, and especially `provenance` tell readers which exact source fact the link supports.
+
+Use this shape:
+
+- `sourceName` names the source owner or source family, such as `Google Research Blog` or `Axios AI / Technology`.
+- `provenance` names the supported source fact with an action and object: published TimesFM-3, reported a data-center political campaign, announced an Ads Manager expansion, or discussed Agent execution governance.
+- The same sentence names the boundary: what still needs original text, filings, logs, metrics, code, replication, customer evidence, or third-party review.
+
+Avoid bare labels such as `VentureBeat AI 只支持最小报道事实`, `官方来源`, `source link`, or `original article` when the reader cannot tell which fact the source supports. If one item has multiple support paths, name the source-of-record fact first and put upgrade or downgrade proof in `evidenceThreshold`, `counterEvidence`, or `followUpQuestions`.
+
 ## Counter-Evidence Downgrade Test
 
 When reviewing `counterEvidence`, first ask whether later evidence would refute the central reading or only make it smaller.

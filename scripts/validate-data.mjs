@@ -1238,6 +1238,37 @@ function validateEvidenceThresholdSpecificity(item, context) {
   }
 }
 
+function validateDetailSourceFactLabel(item, context) {
+  const itemLabel = `${context} ${item.id || "unknown item"}`;
+  const sourceName = String(item.sourceName || item.source || "").trim();
+  const provenance = String(item.provenance || "").trim();
+  const sourceFactPattern =
+    /(发布|宣布|报道|称|说明|介绍|提出|讨论|披露|更新|确认|显示|观察|追踪|记录|提交|扩展|开放|推出|准备|支持|采用)/;
+  const sourceObjectPattern =
+    /(Agent|Ads|Search|Console|TimesFM|FaultSense|MoE|数据中心|政治|治理|边界|权限|模型|研究|论文|代码|融资|收入|区域|网站|欧洲|主权|控制|搜索|广告|推理|故障|文档|指标)/i;
+
+  if (!sourceName) {
+    errors.push(`${itemLabel} must include a sourceName or source for the detail-page source reference.`);
+  }
+
+  if (!provenance) {
+    errors.push(`${itemLabel} must include provenance for the detail-page source reference.`);
+    return;
+  }
+
+  if (sourceName && !provenance.includes(sourceName)) {
+    errors.push(`${itemLabel} provenance should name the source shown in the detail-page source reference.`);
+  }
+
+  if (!sourceFactPattern.test(provenance) || !sourceObjectPattern.test(provenance)) {
+    errors.push(`${itemLabel} provenance must name the exact source fact the detail-page reference supports.`);
+  }
+
+  if (/^(?:官方来源|媒体来源|研究来源|source link|original article)$/i.test(provenance)) {
+    errors.push(`${itemLabel} provenance must not be a bare source label.`);
+  }
+}
+
 function validateDeepBriefingReference(reference, index, context) {
   const label = String(reference?.label || "").trim();
   const url = String(reference?.url || "").trim();
@@ -1852,6 +1883,7 @@ for (const item of newsFeed.items || []) {
   }
 
   validateCounterEvidenceSpecificity(item, "data/news.json item");
+  validateDetailSourceFactLabel(item, "data/news.json item");
   validateDetailParagraphLength(item, "data/news.json item");
   validateDetailTrendSplit(item, "data/news.json item");
 
@@ -1979,6 +2011,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         validateIncidentBriefingReadiness(item, "data/news-history.json latest promoted item");
         validateEvidenceThresholdSpecificity(item, "data/news-history.json latest promoted item");
         validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
+        validateDetailSourceFactLabel(item, "data/news-history.json latest item");
         validateDetailParagraphLength(item, "data/news-history.json latest promoted item");
         validateDetailTrendSplit(item, "data/news-history.json latest item");
         validateMediaSourceReminder(item, "data/news-history.json latest item");

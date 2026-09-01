@@ -727,7 +727,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 20/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -781,7 +781,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 20/.test(optimizationDecisionIndex)
+  !/Continue with Day 21/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -956,9 +956,14 @@ if (
     detailPageReviewGuide,
   ) ||
   !/Follow-Up Question Specificity/.test(detailPageReviewGuide) ||
+  !/Source-Fact Label Test/.test(detailPageReviewGuide) ||
   !/Question 1 asks whether the source-of-record artifact has appeared/.test(detailPageReviewGuide) ||
   !/Question 2 asks whether that artifact changes the editorial status/.test(detailPageReviewGuide) ||
   !/是否已有独立来源确认\[公司\]的核心事实/.test(detailPageReviewGuide) ||
+  !/provenance` names the supported source fact/.test(detailPageReviewGuide) ||
+  !/source owner \+ supported source fact \+ boundary/.test(newsDataFormat) ||
+  !/function validateDetailSourceFactLabel\(item, context\)/.test(validateDataJs) ||
+  !/exact source fact the detail-page reference supports/.test(validateDataJs) ||
   !/source artifact, observable result, or status change/.test(newsDataFormat) ||
   !/function validateFollowUpQuestionSpecificity\(item, question, index, context\)/.test(validateDataJs) ||
   !/must name the concrete next artifact/.test(validateDataJs) ||
@@ -1363,7 +1368,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-08-10 through 2026-09-08/.test(optimizationDecisionIndex) ||
-  !/Phase 3, Detail Pages And Proof Boundaries/.test(optimizationDecisionIndex) ||
+  !/Phase 4, Continuity And Archive Usefulness/.test(optimizationDecisionIndex) ||
   !/Previous Day 27[\s\S]*vendor-narrative-promotion-rule\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
   !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
@@ -1404,7 +1409,8 @@ if (
   !/Day 19[\s\S]*counterEvidence[\s\S]*downgrade[\s\S]*narrow/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 20/.test(optimizationDecisionIndex) ||
+  !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
