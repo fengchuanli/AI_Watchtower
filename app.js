@@ -48,7 +48,7 @@ const plannedTopicGroups = [
     emptyReason: "本期未捕捉到足够清楚的 Agent 工作流信号；概念演示不足以单独进入 TOP3。",
     omissionBoundary: "这不是说 Agent 不重要，而是本期缺少新的上线、客户使用或安全事件来源事实。",
     promotionThreshold: "需要可核对的上线、客户使用、安全事件或工程变更，且能说明对读者的实际影响。",
-    fallback: "可先看归档或标签页里的 Agent、开发者工具条目，只作背景脉络，不当成本期新增事实。",
+    fallback: "可先看归档或标签页里的 Agent、开发者工具条目，只作背景脉络，不当作当前新变化。",
   },
   {
     id: "model",

@@ -1,3 +1,21 @@
+## 2026-09-01 11:20 JST
+
+- Focus: 修复首页今日 TOP3、本期信号来源等级、核对清单、更多新闻流等模块不显示的问题。根因是 `app.js` 中 planned topic 的 fallback 文案含有 `本期新增` 触发运行时防误读校验，导致首页加载时抛错并中断所有后续模块渲染。
+- Changed files:
+  - `app.js`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Fix:
+  - 将 Agent 主题的 fallback 文案从“不当成本期新增事实”改为“不当作当前新变化”，避免误触发运行时禁止词。
+  - 在 `scripts/validate-site.mjs` 增加防回归检查，阻止会被首页运行时拒绝的 planned topic fallback 文案进入自动优化结果。
+- Verification:
+  - Simulated homepage loading with local structured data; confirmed 今日 TOP3, 更多新闻流, 来源等级, 主题分组, 读者框架, 今日深挖, and 深度简报 render without warnings.
+  - Ran JavaScript syntax checks for `app.js`, `scripts/validate-site.mjs`, and `scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 66 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed current JSON and HTML files and ran `git diff --check`.
+
 ## 2026-09-01 08:12 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update with a quality-gated short batch covering product entry points, Agent execution governance, AI search controls, data-center politics, European AI sovereignty, time-series foundation models, and MoE inference reliability.

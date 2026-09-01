@@ -75,6 +75,10 @@ if (
 ) {
   errors.push("Homepage runtime overread boundary wording must pass app.js validation so feed modules render.");
 }
+if (/不当成本期新增事实|本期新增事实/.test(appJs)) {
+  errors.push("planned topic fallbacks must not contain phrases that app.js rejects at runtime.");
+}
+
 const requiredMetaTags = [
   ["name", "description"],
   ["name", "application-name"],
