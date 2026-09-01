@@ -15,14 +15,34 @@ News intelligence updates run twice per day.
 
 Site optimization runs separately and should follow this plan.
 
-- 14:00 JST: Content and structure improvement.
-- 15:00 JST: Product quality, layout, accessibility, or validation improvement.
-- 16:00 JST: Editorial depth, source framing, or data structure improvement.
-- 17:30 JST: Detail-page, navigation, or interaction improvement.
-- 18:00 JST: Readability, wording, or visual hierarchy improvement.
-- 19:00 JST: Maintenance, documentation, checks, or publishing resilience.
-- 20:00 JST: Content polish, Chinese copy, summaries, or category clarity.
-- 21:00 JST: Final quality pass, consistency check, or deployment hygiene.
+- 20:00 JST: One focused site optimization pass. Choose the next useful item from the current phase or the VisionHub-style redesign track below.
+- Older 14:00, 15:00, 16:00, 17:30, 18:00, 19:00, and 21:00 optimization jobs should remain paused unless the user explicitly restores a higher cadence.
+
+## VisionHub-Style Redesign Track
+
+Added on 2026-09-01 after reviewing VisionHub's public homepage structure. This track has priority over routine polish because the user cares about UI quality and wants AI Watchtower to become a Chinese, easy-to-read AI news briefing site rather than a dense intelligence-system dashboard.
+
+Target: create a VisionHub-inspired Chinese reading experience without copying VisionHub's code, assets, text, brand, or protected presentation materials. Match the information architecture, reading rhythm, visual clarity, and editorial impact; keep AI Watchtower's own identity, copyright safety rules, and original Chinese analysis.
+
+Priority order:
+
+- UI direction: use a strong daily hero, compact "5-second key points", clear TOP3 ranking, readable briefing bands, and visual hierarchy that feels closer to an editorial briefing than an operations dashboard.
+- Content structure: every news item should be explainable as a short event page with title, three-line summary, context, why it matters, trend meaning, next watch points, and source boundary.
+- Homepage structure: put "today's AI changes", "TOP3", and "latest highlights" before process notes, scoring details, source caveats, or internal checklists.
+- Mobile first: make the phone view the baseline. The first screen should answer what happened today and why it matters before showing editorial machinery.
+- Selection logic: keep official/research/regulator sources as evidence anchors, but also track AI leaders, major investments, acquisitions, compute moves, policy fights, and business events when they materially affect the AI era.
+- Detail pages: replace repeated labels with a clean narrative path: quick take, event context, AI Watchtower interpretation, trend meaning, reader impact, next checks, source links.
+- Visual assets: prefer self-made diagrams, timelines, ranking cards, and relationship maps. Do not reuse media article images, paid screenshots, or third-party presentation graphics unless licensing is clear.
+- Link behavior: make in-site article reading primary, but keep original links prominent as verification and deeper context. Do not create a replacement for paywalled or media source articles.
+- Validation: add checks gradually so future automatic optimization cannot break TOP3 rendering, hidden/folded mobile sections, source links, article structure, or copyright boundaries again.
+
+Suggested rollout within the remaining current plan:
+
+- Day 21-23: Review the homepage against the VisionHub-style structure and simplify the first-screen order, TOP3, latest highlights, and mobile fold.
+- Day 24-26: Redesign one detail-page template into a cleaner article/briefing layout, then apply it to all current news items.
+- Day 27-28: Add visual explanation components such as timeline, actor map, number cards, or cause-effect diagram generated from structured fields.
+- Day 29: Run mobile visual QA and record remaining UI gaps compared with the target.
+- Day 30: Write the next 30-day plan with UI quality, content understandability, and VisionHub-style briefing polish as explicit first-class goals.
 
 ## Phase 1: Homepage Edition Quality
 
@@ -76,6 +96,7 @@ Site optimization runs separately and should follow this plan.
 - Read `docs/product-principles.md` first and keep every improvement aligned with the product purpose.
 - Read `docs/copyright-safety.md` before changing news content, source policy, detail-page copy, candidate workflow, or future optimization plans.
 - Follow this plan in order unless a user request overrides it.
+- Treat the VisionHub-style redesign track as the current product/UI priority until the homepage, detail pages, mobile scan path, and article briefings visibly reach that standard.
 - If the plan is complete, write the next 30-day plan before making further daily improvements.
 - When writing the next 30-day plan, preserve the product goal: help Chinese-native readers who are not comfortable tracking English AI sources understand important AI changes easily.
 - Use `data/sources.json`, `docs/source-policy.md`, `docs/candidate-source-checklist.md`, and `docs/editorial-checklist.md` for content-related decisions.

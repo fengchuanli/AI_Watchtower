@@ -1,3 +1,19 @@
+## 2026-09-01 11:10 JST
+
+- Focus: 将 VisionHub 风格的网站结构、内容表达和 UI 目标加入现有 2026-08-10 至 2026-09-08 优化计划，并把它设为后续自动优化的产品/UI 优先轨道。
+- Changed files:
+  - `docs/optimization-plan.md`
+  - `docs/optimization-log.md`
+- Plan update:
+  - 保留 AI Watchtower 自己的中文解读、版权安全边界和来源核验规则，不复制 VisionHub 的代码、素材、文字或品牌。
+  - 新增 VisionHub-style redesign track：优先改首页首屏、5 秒要点、今日 TOP3、Latest Highlights、详情页叙事结构、手机端阅读节奏和自制解释图。
+  - 将日常页面优化节奏记录为当前实际的 20:00 JST 一次，08:00/17:00 JST 继续作为新闻情报更新；旧的 14:00-21:00 多次优化任务保持暂停，除非用户明确恢复。
+- UI answer:
+  - UI 可以做到非常接近 VisionHub 的阅读节奏、信息层级和精致感，但应做成 AI Watchtower 自己的中文版本，避免 1:1 复制对方页面、素材和文案。
+- Verification:
+  - 已检查当前优化计划、最近优化履历和站点校验中对计划文档的依赖；本次只更新计划与履历，不改新闻数据。
+- Commit: 本次提交记录该计划更新。
+
 ## 2026-09-01 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 20 detail-page source-reference task. Current and latest archived detail-page source references now name the exact source fact each link supports instead of showing generic source-owner caveats.
