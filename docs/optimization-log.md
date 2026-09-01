@@ -18,8 +18,8 @@
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
-- Commit: 本次提交记录 08:00 JST 自动化补充；push 仍依赖 GitHub DNS 恢复。
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Existing unrelated worktree changes, if any, were left untouched.
+- Commit: Local content commit `58b7fea` (`补充08点AI新闻情报`); final local push-status record follows this log update.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Existing unrelated worktree changes, if any, were left untouched.
 
 ## 2026-09-01 11:10 JST
 
