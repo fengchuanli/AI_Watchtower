@@ -1,8 +1,1045 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01",
-  "totalItems": 628,
+  "updatedAt": "2026-09-02",
+  "totalItems": 638,
   "editions": [
+    {
+      "id": "news-1700-2026-09-02",
+      "date": "2026-09-02",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期聚焦 Astra 安全阈值、Claude 5.1、医疗数据、企业隐私、AI 图像、农业助手、神经渲染和开源政策。",
+      "operationalStatus": "GitHub DNS 阻断拉取；基于当前本地 main，核查官方/RSS/可靠媒体入口后发布 10 条安全非重复信号。",
+      "editorialInterpretation": "本期发布 10 条安全非重复信号；未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源和弱证据素材补数。",
+      "readerFrame": {
+        "headline": "前沿模型发布进入能力分级、行业连接和治理证明期",
+        "whyItMatters": "今天的信号把 Astra 网络安全阈值、Claude 5.1、医疗 EHR、企业隐私、Workspace 图像、农业数据、神经渲染和 Debian AI 贡献政策放进同一张执行风险图。",
+        "useThisIssueFor": [
+          "安全和合规团队检查高风险模型访问、滥用监测、数据留存、开源贡献和审计材料。",
+          "产品和行业团队评估医疗、农业、办公创意和企业 Agent 工作流的权限、复核和采用边界。",
+          "工程和平台团队安排 Claude、DLSS 5、Codex 工作流和 Workspace 插件的测试、日志和回滚计划。"
+        ],
+        "notProvenYet": [
+          "不证明 Astra 或 Claude 5.1 的安全措施已经被独立验证。",
+          "不证明医疗、农业、Workspace 或神经渲染产品已经形成稳定 ROI。",
+          "不证明 Debian 政策会被所有维护者一致接受或执行。"
+        ],
+        "mobile": {
+          "headline": "本期查高风险模型和行业数据入口",
+          "summary": "高风险模型、行业数据入口和工具责任同步更新。",
+          "primaryUses": [
+            "安全团队查访问控制",
+            "行业团队查数据权限",
+            "工程团队查评测日志"
+          ],
+          "proofBoundary": "仍需系统卡、客户审计、价格页、驱动实测和项目执行记录"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版从广告/Search/Agent 治理转向模型发布与行业数据连接",
+        "freshFacts": [
+          "本期新增事实：OpenAI 将 Astra 标为 Critical 网络安全能力并限制高级访问。",
+          "本期新增事实：Anthropic 发布 Fable 5.1、Mythos 5.1，并提出 EFS 企业隐私/监测方案。",
+          "本期新增事实：OpenAI、Google 和 John Deere 分别把 AI 接入医疗、办公创意和农业设备数据场景。",
+          "本期新增事实：NVIDIA、Microsoft 和 Debian 分别补充神经渲染、责任 AI 报告和开源 LLM 使用政策。"
+        ],
+        "repeatedContext": [
+          "延续前几版 Agent 权限、执行边界、数据留存和安全评测主线，但不重复 9 月 1 日旧 URL。",
+          "延续 OpenAI、Anthropic、Google、Microsoft 和 NVIDIA 的基础设施/治理竞争背景，仅把新来源事实作为当前新闻。"
+        ]
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "不要把本期读成全市场结论：官方发布能说明产品、模型和政策动作已经出现，不能直接说明安全、成本、ROI、临床效果或社区执行已经稳定。",
+        "doNotConclude": "不证明前沿模型安全措施、行业 AI 采用、神经渲染画质或开源政策执行已经被独立验证。",
+        "useInstead": "用来安排 system card、客户日志、审计报告、价格页、驱动评测、临床/农场反馈和维护记录复核。"
+      },
+      "coverageMix": [
+        {
+          "label": "核对安全治理",
+          "count": 4,
+          "meaning": "用来检查 Astra 访问、EFS 隐私、Microsoft 透明度和 Debian 贡献责任的证据链。"
+        },
+        {
+          "label": "验证行业入口",
+          "count": 3,
+          "meaning": "用来核对医疗 EHR、Google Pics 和 JD AI 的权限、审计、数据承诺和工作流影响。"
+        },
+        {
+          "label": "验证模型工具",
+          "count": 3,
+          "meaning": "用来核对 Claude 5.1、DLSS 5 和 AI-native 工作流的 benchmark、日志和客户侧复核。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 10,
+          "role": "用于核对 OpenAI、Anthropic、Google、Microsoft、NVIDIA、John Deere 和 Debian 的发布/政策事实；效果、采用和执行仍需外部证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源占主导",
+        "note": "官方来源为 10/10，来源家族高度集中；适合核对发布事实，不适合直接推出效果或采用定论。",
+        "nextCheck": "复核官方文档、独立客户审计、第三方 benchmark、监管反馈和安全红队报告。"
+      },
+      "sourceConcentration": {
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "count": 3,
+        "share": "3/10",
+        "note": "OpenAI 为 3/10，未过度集中；但本期整体由官方发布主导，厂商效果主张需独立验证。",
+        "nextCheck": "查独立客户审计、第三方 benchmark、监管材料和开源维护记录。"
+      },
+      "trendNotes": [
+        {
+          "topic": "model",
+          "label": "高能力模型发布绑定访问控制",
+          "note": "跨期看，Astra、Claude 5.1 和此前 Anthropic 评测加固都把能力增长和权限/监控一起呈现。",
+          "boundary": "这不证明控制有效；仍需官方 system card、model card、第三方红队报告、客户日志和漏洞披露记录。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "行业数据入口继续变深",
+          "note": "跨期看，医疗 EHR、农业设备数据、Workspace 图片和企业 Agent 工作流都在把 AI 接入专有业务语境。",
+          "boundary": "这不证明业务价值稳定；仍需客户指标、权限审计、错误样本、投诉记录和合规材料。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "AI 工具链进入责任重写期",
+          "note": "跨期看，Codex 工作流、DLSS 5、Debian LLM 政策和企业 Agent 案例都在重写开发者工具的责任边界。",
+          "boundary": "这不证明 AI 产出可直接进入生产；仍需测试日志、review 记录、许可证检查和第三方实测。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "安全治理证据增强",
+          "status": "stronger",
+          "previousPattern": "此前 policy 主题反复出现数据中心社会许可、AI 搜索控制、Anthropic 评测加固和 Agent 执行边界。",
+          "currentSignal": "本期新增 Astra Critical 网络安全阈值、Anthropic EFS、Microsoft 透明度报告和 Debian LLM 贡献政策。",
+          "signalDirection": "增强：治理从单点产品规则扩展到模型能力分级、企业隐私、透明度报告和开源协作。",
+          "stillUnproven": "仍需 system card、model card、客户审计、监管反馈、Debian 执行记录和第三方红队报告。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "行业入口更具体",
+          "status": "stronger",
+          "previousPattern": "此前 enterprise 主题反复出现 ChatGPT Ads、AI Search、AgentCore、CRM 和企业上下文。",
+          "currentSignal": "本期新增医疗 EHR、Google Pics、JD AI 和 AI-native 工作流案例。",
+          "signalDirection": "增强：从通用入口转向医疗、办公创意、农业设备和可复用流程。",
+          "stillUnproven": "仍需临床审计、Workspace 管理日志、农场客户指标、客户侧 KPI 和错误样本。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "工具责任继续扩展",
+          "status": "stronger",
+          "previousPattern": "此前 developer-tooling 主题反复出现 Codex 持久模式、Agent 边界和工程治理。",
+          "currentSignal": "本期新增 DLSS 5 神经渲染、Debian AI 贡献政策和 OpenAI 工作流案例。",
+          "signalDirection": "增强：工具从编码助手扩展到图形管线、开源责任和业务流程封装。",
+          "stillUnproven": "仍需驱动实测、SDK 文档、维护者记录、任务日志、许可证检查和 review 成本数据。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "从广告入口转向高风险能力和医疗数据",
+          "lastMention": "上一版记录 ChatGPT Ads、AI Search 背景和 Anthropic 安全加固。",
+          "whatChanged": "本期新增 Astra Critical 网络安全阈值、ChatGPT Healthcare 数据连接和 AI-native 工作流案例。",
+          "stillUnproven": "仍需 Astra system card、医疗客户审计、Enterprise Signals 方法、任务日志和漏洞披露记录。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "模型发布与企业隐私方案同步",
+          "lastMention": "上一版记录 Anthropic 评测/训练环境暂停与安全处置。",
+          "whatChanged": "本期新增 Claude Fable 5.1 / Mythos 5.1 和 Enterprise Frontier Safeguards。",
+          "stillUnproven": "仍需 model card、价格页、EFS 架构、云伙伴文档、客户合同和第三方 benchmark。"
+        },
+        {
+          "company": "Google",
+          "label": "Workspace 创意入口补位",
+          "lastMention": "上一版记录 Google AI Search 站长控制和 TimesFM-3。",
+          "whatChanged": "本期新增 Google Pics 面向 Workspace 的 AI 图像生成与局部编辑发布。",
+          "stillUnproven": "仍需管理员文档、用量限制、Drive 集成状态、企业审计日志和版权政策说明。"
+        },
+        {
+          "company": "NVIDIA",
+          "label": "神经渲染进入首发测试",
+          "lastMention": "此前版本多次记录 NVIDIA 算力、系统层和 AI 图形基础设施背景。",
+          "whatChanged": "本期新增 DLSS 5 3D-Guided Neural Rendering 在 NBA 2K27 首发。",
+          "stillUnproven": "仍需驱动、SDK、论文、更多游戏支持名单和第三方帧率/画质评测。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "安全与治理",
+          "itemIds": [
+            "openai-astra-critical-cyber-safeguards-2026-09-01",
+            "anthropic-enterprise-frontier-safeguards-2026-09-01",
+            "microsoft-responsible-ai-transparency-report-2026-09-01",
+            "debian-generative-ai-policy-vote-2026-08-31"
+          ],
+          "meaning": "用来检查前沿模型访问、企业隐私、安全透明度和开源贡献责任。",
+          "count": 4
+        },
+        {
+          "id": "model",
+          "label": "模型发布",
+          "itemIds": [
+            "anthropic-claude-fable-mythos-5-1-2026-09-01"
+          ],
+          "meaning": "用来核对 Claude 版本、受限能力、缓存成本和第三方复现计划。",
+          "count": 1
+        },
+        {
+          "id": "enterprise",
+          "label": "行业入口",
+          "itemIds": [
+            "openai-chatgpt-healthcare-ehr-public-data-2026-09-01",
+            "google-pics-workspace-ga-2026-09-01",
+            "john-deere-jd-ai-assistant-2026-09-01"
+          ],
+          "meaning": "用来更新医疗、办公创意和农业设备数据的权限、审计和采用清单。",
+          "count": 3
+        },
+        {
+          "id": "developer-tooling",
+          "label": "工具与工作流",
+          "itemIds": [
+            "nvidia-dlss-5-neural-rendering-2026-09-01",
+            "openai-ai-native-workflows-enterprise-signals-2026-09-01"
+          ],
+          "meaning": "用来检查神经渲染 SDK、企业 Agent 流程封装和人类 review 机制。",
+          "count": 2
+        }
+      ],
+      "briefing": {
+        "label": "今日简报",
+        "headline": "高能力模型的下一步不是只比聪明，而是证明可控",
+        "summary": "9 月 2 日 17:00 JST 版显示，前沿模型、行业插件、企业隐私方案和开发者政策都在围绕同一件事重排：AI 可以进入更深的工作流，但必须把权限、日志、误拦截、客户审计和人类复核写进发布条件。",
+        "cta": "查看本期信号",
+        "watchPoints": [
+          {
+            "title": "Astra 与 Claude 的安全卡",
+            "body": "系统卡、模型卡、漏洞披露和外部红队会决定这批能力发布能否从厂商口径升级。"
+          },
+          {
+            "title": "行业数据入口的审计证据",
+            "body": "医疗 EHR、农场数据和 Workspace 图片都需要管理员日志、客户指标和错误样本。"
+          },
+          {
+            "title": "工具链责任边界",
+            "body": "DLSS 5 和 Debian LLM 政策会把生成式 AI 的质量、许可和 review 成本推到台前。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "深度简报",
+        "title": "前沿能力、行业数据和开发者责任同时进入可审计阶段",
+        "subtitle": "本期不是单一模型发布日，而是高风险能力、行业连接和工具链责任同时被重新定义的一天。",
+        "dateLabel": "2026-09-02 17:00 JST",
+        "status": "已发布，官方来源占主导",
+        "overview": "OpenAI 把 Astra 网络安全能力放进 Critical 阈值，Anthropic 用 Claude 5.1 和 EFS 回应成本、隐私与安全，OpenAI/Google/John Deere 把 AI 接入更深行业数据，NVIDIA 和 Debian 则分别把生成式 AI 带入图形管线和开源贡献规则。读者应把本期当作核查清单，而不是效果定论。",
+        "timeline": [
+          {
+            "label": "模型能力",
+            "title": "Astra 与 Claude 5.1 把发布条件复杂化",
+            "body": "高能力模型的发布不再只看 benchmark，还要看访问分层、误拦截、成本、数据留存和系统卡。"
+          },
+          {
+            "label": "行业入口",
+            "title": "医疗、农业和办公创意开始接入专有数据",
+            "body": "EHR、农场设备数据和 Workspace 图片工作流把 AI 的价值与权限、审计和来源引用绑定。"
+          },
+          {
+            "label": "工具责任",
+            "title": "生成式 AI 进入图形与开源治理",
+            "body": "DLSS 5 需要画质/性能实测，Debian 政策则要求贡献者继续对 AI 辅助输出负责。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期安全非重复信号"
+          },
+          {
+            "value": "3/10",
+            "label": "OpenAI 来源占比"
+          },
+          {
+            "value": "69",
+            "label": "登记来源总数"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "高风险模型",
+            "title": "能力越强，发布越像安全工程项目",
+            "body": "Astra 和 Claude 5.1 都把能力、访问、误拦截和敏感任务边界放进发布叙事。下一步不是看谁先上线，而是看系统卡、模型卡和外部红队是否能复核。",
+            "soWhat": "安全团队应把高能力模型当作分级系统接入，而不是普通 API 升级。"
+          },
+          {
+            "number": "02",
+            "label": "行业数据",
+            "title": "AI 开始进入受监管和专有数据工作流",
+            "body": "ChatGPT Healthcare、Google Pics 和 JD AI 的共同点是接入具体业务数据。真正的风险在权限、日志、错误样本、数据承诺和客户复核。",
+            "soWhat": "产品团队应先设计审计与人工复核，再讨论自动化深度。"
+          },
+          {
+            "number": "03",
+            "label": "工具责任",
+            "title": "开发者工具的产出责任被重新写入流程",
+            "body": "DLSS 5 把生成式模型放进实时图形，Debian 把 LLM 使用纳入贡献责任。两者都要求人类和组织明确谁对输出负责。",
+            "soWhat": "工程团队应把测试、许可证、画质 QA 和可解释 review 作为工具上线条件。"
+          }
+        ],
+        "actions": [
+          "为 Astra/Claude 5.1 建立系统卡、模型卡、红队和误拦截跟踪表。",
+          "为医疗、农业和 Workspace AI 入口补齐权限、日志、数据流和客户反馈字段。",
+          "为 DLSS 5 与 AI 代码贡献安排第三方实测、许可证检查和维护者 review 记录。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期覆盖 2026-09-01 至 2026-09-02 17:00 JST 前可核查的官方/可靠来源。"
+          },
+          {
+            "label": "结论边界",
+            "body": "官方发布可以证明动作发生，不能单独证明安全、成本、临床、农场、画质或开源执行效果。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI、Anthropic、Google、Microsoft、NVIDIA、John Deere 和 Debian 均有可核对的一手入口。",
+            "媒体页面仅用于发现和交叉检查候选，不把社区评论或传闻写成事实。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower 将本期解读为高能力模型与行业数据入口的治理升级。",
+            "官方来源占主导，因此本期更适合作为核查清单，而不是采用效果定论。"
+          ],
+          "unknowns": [
+            "Astra、Claude 5.1、EFS、医疗 EHR、JD AI 和 DLSS 5 的独立效果数据仍未充分公开。",
+            "Debian LLM 政策的执行一致性需要后续邮件列表和包维护记录验证。"
+          ]
+        },
+        "references": [
+          {
+            "label": "OpenAI 披露 Astra Critical 网络安全阈值与访问限制",
+            "url": "https://openai.com/index/path-to-astra/"
+          },
+          {
+            "label": "Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1",
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+          },
+          {
+            "label": "OpenAI 宣布 ChatGPT Healthcare 连接 Epic 和公共医疗数据",
+            "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/"
+          },
+          {
+            "label": "Google Workspace Updates 宣布 Google Pics 一般可用",
+            "url": "https://workspaceupdates.googleblog.com/2026/09/google-pics-brings-pro-level-ai-image-creation-and-editing-to-Google-Workspace.html"
+          },
+          {
+            "label": "Debian 官方投票页记录 LLM 代码政策与贡献责任文本",
+            "url": "https://www.debian.org/vote/2026/vote_002.en.html"
+          }
+        ]
+      },
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "openai-astra-critical-cyber-safeguards-2026-09-01",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI 将 Astra 标为 Critical 网络安全能力并限制高级访问",
+          "body": "OpenAI 称 Astra 达到 Preparedness Framework 的 Critical 网络安全阈值，并将在发布时限制最强网络安全能力。",
+          "summary": "OpenAI 称 Astra 达到 Preparedness Framework 的 Critical 网络安全阈值，并将在发布时限制最强网络安全能力。",
+          "whyItMatters": "前沿模型发布开始把能力、访问控制、监控和误拦截成本作为同一套上线条件。",
+          "detailBody": "OpenAI 9 月 1 日披露 Astra 在网络安全评估中达到 Critical 阈值，并称高级网络安全工作将先给小范围测试者，系统卡会在发布时补充更多评测细节。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "模型上线正从性能发布转向能力分层、滥用拦截、误报处理和防御性访问分配。",
+          "detailTrend": "模型上线正从性能发布转向能力分层、滥用拦截、误报处理和防御性访问分配。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "这是本期最强安全治理信号，直接改变前沿模型如何开放高风险能力。",
+          "topReason": "这是本期最强安全治理信号，直接改变前沿模型如何开放高风险能力。",
+          "detailWhyRanked": "这是本期最强安全治理信号，直接改变前沿模型如何开放高风险能力。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方安全披露清楚给出能力阈值、限制措施和后续证据路径。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方安全披露清楚给出能力阈值、限制措施和后续证据路径。"
+          },
+          "impact": "安全、平台和合规团队应把前沿模型接入审批、长任务监控、误拦截处理和红队复测列入上线清单。",
+          "whoShouldCare": "负责把高能力模型接入安全研究、漏洞分析、Codex 长任务和 API 自动化的安全/平台/合规团队应关注。",
+          "readerUse": "安全和平台团队用来更新高风险模型能力分级、测试者名单、授权边界、审计日志和人工复核流程。",
+          "nextCheck": "查 Astra system card、Preparedness Framework 更新、Daybreak Blue 访问规则、漏洞披露状态和独立红队报告。",
+          "followUpQuestions": [
+            "Astra system card 是否公布 ExploitBench 内部移植集、红队设置、误报率和监控触发样本？",
+            "OpenAI 披露的两个 zero-day 是否完成维护者确认、CVE/公告或补丁记录？"
+          ],
+          "evidenceThreshold": "需要 system card、漏洞披露记录、独立红队报告和访问控制文档确认，才可升级为已验证的高风险部署治理案例。",
+          "claimBoundary": "不证明 Astra 已公开发布，也不证明这些安全措施足以控制所有自治网络安全行为。",
+          "counterEvidence": "若 system card 缺少测试细节、漏洞未被维护者确认或外部红队复测显示绕过率高，应下调为厂商安全预告。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "openai-news",
+          "provenance": "OpenAI News 可支持这条来源事实：OpenAI 披露 Astra 模型达到 Critical 网络安全阈值、将限制高级网络安全能力访问并计划发布 system card；有效性仍需系统卡、漏洞披露和外部红队复核。",
+          "sourceUrl": "https://openai.com/index/path-to-astra/",
+          "originalUrl": "https://openai.com/index/path-to-astra/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T09:00:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "Astra",
+            "网络安全",
+            "模型治理",
+            "Preparedness Framework"
+          ],
+          "companies": [
+            "OpenAI"
+          ]
+        },
+        {
+          "id": "anthropic-claude-fable-mythos-5-1-2026-09-01",
+          "category": "model",
+          "label": "模型",
+          "title": "Anthropic 发布 Claude Fable 5.1 与受限的 Mythos 5.1",
+          "body": "Anthropic 发布 Fable 5.1 和 Mythos 5.1，强调编码、知识工作、成本、数据留存和安全干预调整。",
+          "summary": "Anthropic 发布 Fable 5.1 和 Mythos 5.1，强调编码、知识工作、成本、数据留存和安全干预调整。",
+          "whyItMatters": "模型竞争开始把价格、缓存成本、受限能力和误拦截率一起包装为企业可用性。",
+          "detailBody": "Anthropic 9 月发布 Claude Fable 5.1 与 Claude Mythos 5.1；Fable 5.1 面向一般可用，Mythos 5.1 通过可信访问项目开放，并区分网络安全和生命科学能力边界。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "前沿模型发布正在从单一 benchmark 转向成本曲线、行业访问、敏感能力路由和企业隐私配置。",
+          "detailTrend": "前沿模型发布正在从单一 benchmark 转向成本曲线、行业访问、敏感能力路由和企业隐私配置。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "它是本期关键模型发布，但官方效果与成本主张仍需客户侧和第三方评测补证。",
+          "topReason": "它是本期关键模型发布，但官方效果与成本主张仍需客户侧和第三方评测补证。",
+          "detailWhyRanked": "它是本期关键模型发布，但官方效果与成本主张仍需客户侧和第三方评测补证。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方模型发布，影响大但效果需外部复现。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方模型发布，影响大但效果需外部复现。"
+          },
+          "impact": "模型采购和工程团队应重新核对 Claude 任务路由、缓存成本、受限能力、误拦截和数据留存要求。",
+          "whoShouldCare": "负责 Claude Code、知识工作 Agent、科研任务和企业模型采购的平台/安全/财务团队应关注。",
+          "readerUse": "模型采购和平台团队用来更新 Claude 版本评估、成本试算、可信访问条件和高风险任务转交规则。",
+          "nextCheck": "查 Anthropic pricing/API 文档、model card、客户合同、第三方 benchmark 和 Project Glasswing 访问说明。",
+          "followUpQuestions": [
+            "Anthropic 是否发布 Fable 5.1 / Mythos 5.1 的完整 model card、API 价格页和安全评测说明？",
+            "第三方编码、科研和企业 Agent benchmark 是否复现官方成本与性能曲线？"
+          ],
+          "evidenceThreshold": "需要官方 model card、价格页、第三方 benchmark 和客户侧任务日志确认，才可升级为已验证的模型替换与成本改善判断。",
+          "claimBoundary": "不证明 Fable 5.1 在所有工作负载都更便宜，也不证明 Mythos 5.1 已对普通用户开放。",
+          "counterEvidence": "若第三方 benchmark 不复现性能提升、缓存成本只适合少数任务或安全路由导致任务失败率升高，应收窄为特定场景发布。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "anthropic-news",
+          "provenance": "Anthropic Newsroom 可支持这条来源事实：Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1 模型，并说明一般可用/可信访问差异和成本/安全主张；实际性能与成本仍需第三方评测和客户日志。",
+          "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "originalUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:55:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "Claude",
+            "Fable 5.1",
+            "Mythos 5.1",
+            "模型成本"
+          ],
+          "companies": [
+            "Anthropic"
+          ]
+        },
+        {
+          "id": "openai-chatgpt-healthcare-ehr-public-data-2026-09-01",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI 为 ChatGPT Healthcare 接入 Epic 与公共医疗数据",
+          "body": "OpenAI 宣布 ChatGPT for Healthcare 可连接 Epic 授权病历语境，并提供 Healthcare Public Data 插件。",
+          "summary": "OpenAI 宣布 ChatGPT for Healthcare 可连接 Epic 授权病历语境，并提供 Healthcare Public Data 插件。",
+          "whyItMatters": "医疗 AI 从问答走向受权限控制的数据连接，评价重点转到 BAA、审计、来源引用和临床复核。",
+          "detailBody": "OpenAI 9 月 1 日宣布新的 Epic EHR 集成和 Healthcare Public Data 插件，面向合格医疗工作区提供只读病历语境和九个官方公共医疗来源。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "垂直行业 AI 正把插件、EHR、公开数据和合规工作区合并成受控业务入口。",
+          "detailTrend": "垂直行业 AI 正把插件、EHR、公开数据和合规工作区合并成受控业务入口。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "医疗数据连接是高风险行业采用信号，必须同时看权限、审计和安全评价。",
+          "topReason": "医疗数据连接是高风险行业采用信号，必须同时看权限、审计和安全评价。",
+          "detailWhyRanked": "医疗数据连接是高风险行业采用信号，必须同时看权限、审计和安全评价。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方高风险行业产品发布，读者行动明确。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方高风险行业产品发布，读者行动明确。"
+          },
+          "impact": "医疗机构应检查 BAA、EHR 权限、PHI 数据流、引用回链、临床复核和公共源查询边界。",
+          "whoShouldCare": "负责医疗工作区、EHR 集成、临床运营、合规审计和医疗软件开发的产品/信息安全/临床团队应关注。",
+          "readerUse": "医疗产品和合规团队用来更新医疗 AI 接入清单、Epic 配置、公共数据插件权限和临床输出复核流程。",
+          "nextCheck": "查 OpenAI 帮助中心、Epic 配置文档、BAA 条款、UCSF/AdventHealth 试点材料和临床安全审计。",
+          "followUpQuestions": [
+            "OpenAI 帮助中心是否公布 Epic 集成的权限模型、日志字段、PHI 处理和管理员配置步骤？",
+            "试点医疗机构是否发布临床工作流、错误样本、复核结果或上线范围说明？"
+          ],
+          "evidenceThreshold": "需要帮助中心配置文档、BAA/合规说明、客户侧临床审计和错误样本，才可升级为可验证医疗部署判断。",
+          "claimBoundary": "不证明该集成适合所有医疗机构，也不替代临床判断或本地合规审批。",
+          "counterEvidence": "若试点审计报告、PHI 访问日志或临床复核记录显示引用错误、权限越界或复核负担升高，应下调为受限试点产品信号。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "openai-news",
+          "provenance": "OpenAI News 可支持这条来源事实：OpenAI 宣布 ChatGPT for Healthcare 医疗模型入口接入 Epic 数据和 Healthcare Public Data 插件；临床效果、合规充分性和安全性仍需客户审计。",
+          "sourceUrl": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/",
+          "originalUrl": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:50:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "医疗AI",
+            "Epic",
+            "插件",
+            "合规"
+          ],
+          "companies": [
+            "OpenAI",
+            "Epic"
+          ]
+        },
+        {
+          "id": "anthropic-enterprise-frontier-safeguards-2026-09-01",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic 提出 Enterprise Frontier Safeguards 兼顾 ZDR 与滥用检测",
+          "body": "Anthropic 宣布 EFS，让客户在自有云中存储数据，同时保留跨时间和账号的滥用检测信号。",
+          "summary": "Anthropic 宣布 EFS，让客户在自有云中存储数据，同时保留跨时间和账号的滥用检测信号。",
+          "whyItMatters": "前沿模型企业隐私不再只是零留存，厂商正尝试把客户侧存储和安全监测重新组合。",
+          "detailBody": "Anthropic 9 月 1 日宣布 Enterprise Frontier Safeguards，称数据存储在客户控制的云基础设施中，监测信号交由客户 review，并计划从今年秋季分阶段推出。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "企业模型治理正在从简单 ZDR 承诺转向客户可控存储、跨账号异常检测和监管可审计流程。",
+          "detailTrend": "企业模型治理正在从简单 ZDR 承诺转向客户可控存储、跨账号异常检测和监管可审计流程。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "它回应了前沿模型在隐私、滥用检测和企业合规之间的核心冲突。",
+          "topReason": "它回应了前沿模型在隐私、滥用检测和企业合规之间的核心冲突。",
+          "detailWhyRanked": "它回应了前沿模型在隐私、滥用检测和企业合规之间的核心冲突。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "厂商方案主张清晰，独立证据路径明确。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "厂商方案主张清晰，独立证据路径明确。"
+          },
+          "impact": "受监管企业应比较 ZDR、客户云存储、滥用检测、供应商审计和合同通知义务。",
+          "whoShouldCare": "负责银行、医疗、制造、电信、法律和公共部门模型采购的数据治理/安全/法务团队应关注。",
+          "readerUse": "企业安全和法务团队用来更新 Claude 接入的数据留存、客户云、异常审查和供应商风险清单。",
+          "nextCheck": "查 EFS 技术白皮书、云部署架构、客户合同、审计报告、AWS/Google Cloud/Microsoft Foundry 支持文档。",
+          "followUpQuestions": [
+            "Anthropic 是否发布 EFS 的架构图、审计材料、日志保留周期和客户 review 工作流？",
+            "AWS、Google Cloud 和 Microsoft Foundry 是否发布支持文档、部署限制、审计日志字段或合规说明？"
+          ],
+          "evidenceThreshold": "需要技术白皮书、云伙伴文档、合同条款和客户审计结果确认，才可升级为已验证的企业隐私/安全方案。",
+          "claimBoundary": "不证明 EFS 已全面可用，也不证明客户云存储能消除所有滥用检测和合规冲突。",
+          "counterEvidence": "若云伙伴文档缺失、客户审计发现监测不可解释或合同仍要求广泛数据访问，应收窄为厂商设计预告。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "anthropic-news",
+          "provenance": "Anthropic Newsroom 可支持这条来源事实：Anthropic 厂商主张宣布 EFS 模型企业隐私方案、客户云存储和分阶段推出计划；隐私、安全与合规效果仍需云伙伴文档、合同和审计补证。",
+          "sourceUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+          "originalUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:45:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "EFS",
+            "ZDR",
+            "企业安全",
+            "数据留存"
+          ],
+          "companies": [
+            "Anthropic",
+            "AWS",
+            "Google",
+            "Microsoft"
+          ]
+        },
+        {
+          "id": "microsoft-responsible-ai-transparency-report-2026-09-01",
+          "category": "policy",
+          "label": "政策",
+          "title": "Microsoft 发布 2026 Responsible AI Transparency Report",
+          "body": "Microsoft 表示 2026 责任 AI 透明度报告聚焦自适应治理、技术风险管理、工具能力和伙伴实践。",
+          "summary": "Microsoft 表示 2026 责任 AI 透明度报告聚焦自适应治理、技术风险管理、工具能力和伙伴实践。",
+          "whyItMatters": "Agentic AI 扩张后，大厂透明度报告正在变成采购、审计和监管对话的核查入口。",
+          "detailBody": "Microsoft On the Issues 9 月 1 日宣布发布第三份 Responsible AI Transparency Report，并把治理、技术风险管理、工具和共享实践作为过去一年的投入重点。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "责任 AI 从原则声明转向年度透明度、治理流程、技术工具和客户实践的可审计材料。",
+          "detailTrend": "责任 AI 从原则声明转向年度透明度、治理流程、技术工具和客户实践的可审计材料。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "它为企业采购和政策观察提供一手治理材料，但仍需报告细节与外部审计验证。",
+          "topReason": "它为企业采购和政策观察提供一手治理材料，但仍需报告细节与外部审计验证。",
+          "detailWhyRanked": "它为企业采购和政策观察提供一手治理材料，但仍需报告细节与外部审计验证。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方治理材料证据质量高，但不是独立审计；企业核查价值高。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "官方治理材料证据质量高，但不是独立审计；企业核查价值高。"
+          },
+          "impact": "采购、合规和公共政策团队应把报告中的治理流程、风险分类、工具说明和客户实践纳入供应商评估。",
+          "whoShouldCare": "负责 Copilot、Azure AI、供应商审计、公共政策回应和企业 AI 风险登记的合规/采购/平台团队应关注。",
+          "readerUse": "采购和合规团队用来更新 Microsoft AI 供应商问卷、责任 AI 控制项和 Agentic AI 风险审计问题。",
+          "nextCheck": "查完整透明度报告、工具文档、客户案例、审计声明、监管反馈和事故披露口径。",
+          "followUpQuestions": [
+            "完整报告是否列出 Agentic AI 风险分类、控制测试、事故处理和客户工具采用指标？",
+            "是否有监管机构、客户审计或第三方评估引用并验证 Microsoft 报告中的控制效果？"
+          ],
+          "evidenceThreshold": "需要完整报告、工具文档、审计材料和监管/客户反馈确认，才可升级为已验证治理成熟度判断。",
+          "claimBoundary": "不证明 Microsoft 所有 AI 产品都已达到同一治理水平，也不证明客户部署天然合规。",
+          "counterEvidence": "若完整报告缺少可验证指标、事故披露或外部审计，应该下调为供应商透明度材料。",
+          "source": "Microsoft AI Blog",
+          "sourceName": "Microsoft AI Blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "microsoft-ai-blog",
+          "provenance": "Microsoft AI Blog 可支持这条来源事实：Microsoft On the Issues 宣布 2026 Responsible AI Transparency Report 并概述治理重点；控制有效性仍需完整报告、客户审计和监管反馈。",
+          "sourceUrl": "https://blogs.microsoft.com/on-the-issues/2026/09/01/responsible-ai-in-2026-how-we-are-adapting-for-whats-ahead/",
+          "originalUrl": "https://blogs.microsoft.com/on-the-issues/2026/09/01/responsible-ai-in-2026-how-we-are-adapting-for-whats-ahead/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:40:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "Responsible AI",
+            "透明度报告",
+            "治理",
+            "Copilot"
+          ],
+          "companies": [
+            "Microsoft"
+          ]
+        },
+        {
+          "id": "google-pics-workspace-ga-2026-09-01",
+          "category": "product",
+          "label": "产品",
+          "title": "Google Pics 面向 Workspace 推出 AI 图像生成与局部编辑",
+          "body": "Google Workspace Updates 宣布 Google Pics 一般可用，提供文本生成、对象级局部编辑、文本修改和翻译。",
+          "summary": "Google Workspace Updates 宣布 Google Pics 一般可用，提供文本生成、对象级局部编辑、文本修改和翻译。",
+          "whyItMatters": "生成式图像正在进入 Docs、Slides 和 Drive 周边的办公生产流，创意工具边界继续平台化。",
+          "detailBody": "Google 9 月 1 日宣布 Google Pics 从 Rapid Release 开始逐步推出，支持提示生成、选择对象局部编辑、文本编辑/翻译和 Workspace 计划内使用限制。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "办公套件正把 AI 图像工具从独立设计软件拉回文档、演示和团队协作环境。",
+          "detailTrend": "办公套件正把 AI 图像工具从独立设计软件拉回文档、演示和团队协作环境。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "它把 Nano Banana/Gemini 图像能力放进 Workspace 工作流，直接影响企业创意生产入口。",
+          "topReason": "它把 Nano Banana/Gemini 图像能力放进 Workspace 工作流，直接影响企业创意生产入口。",
+          "detailWhyRanked": "它把 Nano Banana/Gemini 图像能力放进 Workspace 工作流，直接影响企业创意生产入口。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方产品可用性信号，工作流影响清楚。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方产品可用性信号，工作流影响清楚。"
+          },
+          "impact": "营销、销售和知识工作团队应检查生成图像权限、品牌审查、素材来源、用量限制和第三方设计工具替代边界。",
+          "whoShouldCare": "负责 Workspace 管理、营销素材、销售演示、品牌合规和教育账户配置的产品/运营/IT 团队应关注。",
+          "readerUse": "Workspace 管理和营销团队用来更新管理员开关、设计审查流程、图片版权检查和用量预算。",
+          "nextCheck": "查 Google Workspace Admin Help、Pics 可用性文档、用量限制、Drive 集成时间和品牌/版权政策。",
+          "followUpQuestions": [
+            "Google 是否发布 Pics 管理员开关、审计日志、数据使用和版权/水印说明？",
+            "Drive 集成推出后，管理员文档或审计日志是否支持限制特定组织单位和外部共享生成图片？"
+          ],
+          "evidenceThreshold": "需要管理员文档、可用性页面、用量限制和实际企业配置记录确认，才可升级为稳定办公图像入口判断。",
+          "claimBoundary": "不证明 Pics 能替代专业设计平台，也不证明生成素材自动满足品牌或版权要求。",
+          "counterEvidence": "若推出延期、管理员控制不足或企业用量限制显著收紧，应收窄为早期 Workspace 功能发布。",
+          "source": "Google Workspace Updates",
+          "sourceName": "Google Workspace Updates",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "google-workspace-updates",
+          "provenance": "Google Workspace Updates 可支持这条来源事实：Google Workspace Updates 可支持 Google Pics 一般可用、功能范围、推出节奏和可用计划；生产效果仍需管理员文档与企业使用数据。",
+          "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/google-pics-brings-pro-level-ai-image-creation-and-editing-to-Google-Workspace.html",
+          "originalUrl": "https://workspaceupdates.googleblog.com/2026/09/google-pics-brings-pro-level-ai-image-creation-and-editing-to-Google-Workspace.html",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:35:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "Google Pics",
+            "Workspace",
+            "图像生成",
+            "Nano Banana"
+          ],
+          "companies": [
+            "Google"
+          ]
+        },
+        {
+          "id": "john-deere-jd-ai-assistant-2026-09-01",
+          "category": "product",
+          "label": "产品",
+          "title": "John Deere 在 Operations Center 测试 JD 农业 AI 助手",
+          "body": "John Deere 宣布 JD AI 助手进入早期访问，利用农场字段、机器和运营数据回答设备与作业问题。",
+          "summary": "John Deere 宣布 JD AI 助手进入早期访问，利用农场字段、机器和运营数据回答设备与作业问题。",
+          "whyItMatters": "行业 AI 正进入设备数据和生产运营场景，数据控制承诺会成为采用前提。",
+          "detailBody": "John Deere 9 月 1 日宣布 JD AI Assistant，称其嵌入 Operations Center，面向部分美国客户早期测试，并强调 Farmer Data Commitment。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "垂直行业 Agent 正从通用问答转向设备、历史运营数据和现场决策辅助。",
+          "detailTrend": "垂直行业 Agent 正从通用问答转向设备、历史运营数据和现场决策辅助。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "农业设备数据是高价值专有场景，能观察 AI、IoT 和数据权利如何绑定。",
+          "topReason": "农业设备数据是高价值专有场景，能观察 AI、IoT 和数据权利如何绑定。",
+          "detailWhyRanked": "农业设备数据是高价值专有场景，能观察 AI、IoT 和数据权利如何绑定。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "行业产品信号强，但效果仍是厂商主张。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "行业产品信号强，但效果仍是厂商主张。"
+          },
+          "impact": "农业技术、设备平台和数据治理团队应核查模型来源、数据共享控制、经销商责任和现场决策复核。",
+          "whoShouldCare": "负责农业运营平台、设备数据、经销商系统、农场隐私和现场作业辅助的产品/数据/法务团队应关注。",
+          "readerUse": "农业平台和数据治理团队用来更新行业 AI 数据控制、设备知识库、农场数据授权和客户早期访问观察清单。",
+          "nextCheck": "查 John Deere 产品文档、Farmer Data Commitment、早期访问条款、客户反馈和 FTC/维修权后续材料。",
+          "followUpQuestions": [
+            "John Deere 是否披露 JD AI 的模型供应商、数据权限、日志保留和第三方共享控制？",
+            "早期访问客户是否发布设备设置、燃油、收获时机等建议的准确率、错误样本和人工复核流程？"
+          ],
+          "evidenceThreshold": "需要产品文档、早期访问条款、客户侧效果指标和监管/维修权材料确认，才可升级为行业 AI 落地案例。",
+          "claimBoundary": "不证明 JD AI 已广泛上线，也不证明农场数据承诺在所有经销商和伙伴场景中执行充分。",
+          "counterEvidence": "若客户反馈显示建议不可用、权限设置不清或监管材料指出数据控制缺口，应下调为厂商早期测试信号。",
+          "source": "John Deere News",
+          "sourceName": "John Deere News",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "john-deere-news",
+          "provenance": "John Deere News 可支持这条来源事实：John Deere 厂商主张宣布 JD AI Assistant 数据助手早期访问、Operations Center 集成和 Farmer Data Commitment；效果与数据治理执行仍需客户侧和监管证据。",
+          "sourceUrl": "https://www.deere.com/en-us/john-deere-news/introducing-jd-ai-assistant",
+          "originalUrl": "https://www.deere.com/en-us/john-deere-news/introducing-jd-ai-assistant",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:30:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "农业AI",
+            "Operations Center",
+            "数据治理",
+            "行业Agent"
+          ],
+          "companies": [
+            "John Deere"
+          ]
+        },
+        {
+          "id": "nvidia-dlss-5-neural-rendering-2026-09-01",
+          "category": "tool",
+          "label": "工具",
+          "title": "NVIDIA 宣布 DLSS 5 神经渲染将随 NBA 2K27 首发",
+          "body": "NVIDIA 称 DLSS 5 的 3D-Guided Neural Rendering 将于 9 月 3 日在 NBA 2K27 首发，支持 RTX 50 系列和 GeForce NOW。",
+          "summary": "NVIDIA 称 DLSS 5 的 3D-Guided Neural Rendering 将于 9 月 3 日在 NBA 2K27 首发，支持 RTX 50 系列和 GeForce NOW。",
+          "whyItMatters": "实时图形中的生成式 AI 开始从补帧走向材质、光照和艺术控制。",
+          "detailBody": "NVIDIA 9 月 1 日宣布 DLSS 5 将在 NBA 2K27 中首发，称其以游戏引擎渲染帧为基础，加入 3D-guided neural rendering、语义遮罩和开发者控制。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "AI 图形管线正在从性能重建扩展到创作意图、局部控制和实时神经材质增强。",
+          "detailTrend": "AI 图形管线正在从性能重建扩展到创作意图、局部控制和实时神经材质增强。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "它把生成式模型放进实时渲染生产链；进入 TOP3 前仍要看驱动、SDK、论文和第三方画质/帧率实测。",
+          "topReason": "它把生成式模型放进实时渲染生产链；进入 TOP3 前仍要看驱动、SDK、论文和第三方画质/帧率实测。",
+          "detailWhyRanked": "它把生成式模型放进实时渲染生产链；进入 TOP3 前仍要看驱动、SDK、论文和第三方画质/帧率实测。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "厂商技术发布新颖，但性能和画质效果仍需独立实测补强。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "厂商技术发布新颖，但性能和画质效果仍需独立实测补强。"
+          },
+          "impact": "游戏、图形和硬件团队应核查 RTX 50 要求、驱动、SDK、画质副作用、帧率成本和开发者控制粒度。",
+          "whoShouldCare": "负责游戏引擎、实时渲染、GPU 采购、云游戏和视觉质量评测的工程/内容团队应关注。",
+          "readerUse": "游戏工程和图形平台团队用来更新神经渲染试用计划、GPU 要求、画质 QA、玩家开关和开发者 SDK 评估。",
+          "nextCheck": "查 NVIDIA SDK/driver、NBA 2K27 实测、第三方帧率/画质评测、更多游戏支持名单和研究论文。",
+          "followUpQuestions": [
+            "9 月 3 日驱动发布后，第三方评测是否复现 RTX 50 系列的帧率、延迟和画质表现？",
+            "NVIDIA 是否发布 DLSS 5 SDK、论文、更多游戏名单、驱动说明和开发者控制参数文档？"
+          ],
+          "evidenceThreshold": "需要驱动、SDK、论文和第三方实测确认帧率成本与画质稳定性，才可升级为可复核实时神经渲染能力。",
+          "claimBoundary": "不证明 DLSS 5 会被多数游戏采用，也不证明所有画面都会更符合创作者意图。",
+          "counterEvidence": "若第三方评测显示高延迟、画面漂移、角色形变或支持游戏稀少，应收窄为单作/高端硬件演示。",
+          "source": "NVIDIA GeForce News",
+          "sourceName": "NVIDIA GeForce News",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "nvidia-geforce-news",
+          "provenance": "NVIDIA GeForce News 可支持这条来源事实：NVIDIA GeForce News 厂商主张宣布 DLSS 5 模型上线时间、RTX 50/GeForce NOW 范围和 3D-Guided Neural Rendering；画质、性能和采用仍需第三方实测。",
+          "sourceUrl": "https://www.nvidia.com/en-eu/geforce/news/dlss-5-3d-guided-neural-rendering/",
+          "originalUrl": "https://www.nvidia.com/en-eu/geforce/news/dlss-5-3d-guided-neural-rendering/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:25:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "DLSS 5",
+            "神经渲染",
+            "RTX 50",
+            "游戏AI"
+          ],
+          "companies": [
+            "NVIDIA"
+          ]
+        },
+        {
+          "id": "openai-ai-native-workflows-enterprise-signals-2026-09-01",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI 用 Enterprise Signals 案例描述 AI-native 工作流差距",
+          "body": "OpenAI 发布 AI-native 公司工作流案例，称高使用企业的人均输出 token 差距扩大，并列出 Basis、Clay、Exa 的 Agent 工作流。",
+          "summary": "OpenAI 发布 AI-native 公司工作流案例，称高使用企业的人均输出 token 差距扩大，并列出 Basis、Clay、Exa 的 Agent 工作流。",
+          "whyItMatters": "企业 Agent 采用的核心问题转向流程可教、上下文持久、测试可见和人类 review。",
+          "detailBody": "OpenAI 9 月 1 日用 Basis、Clay、Exa Labs 案例说明 Agent 如何进入 onboarding、账户管理和开发者集成，并引用 Enterprise Signals 的使用深度差距。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "企业 AI 采用正从“员工会不会用”转向“组织能否把成功流程封装、度量并复用”。",
+          "detailTrend": "企业 AI 采用正从“员工会不会用”转向“组织能否把成功流程封装、度量并复用”。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "它是厂商采用叙事，但给出了可检查的工作流设计清单和后续证据路径。",
+          "topReason": "它是厂商采用叙事，但给出了可检查的工作流设计清单和后续证据路径。",
+          "detailWhyRanked": "它是厂商采用叙事，但给出了可检查的工作流设计清单和后续证据路径。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "采用案例对读者有用，但需方法与客户数据补强。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "采用案例对读者有用，但需方法与客户数据补强。"
+          },
+          "impact": "运营和平台团队应核查 Agent job description、触发条件、权限、证据产物、KPI 和 review 负担。",
+          "whoShouldCare": "负责把 Agent 放进 onboarding、销售账户、开发者关系和内部运营流程的业务/平台/Enablement 团队应关注。",
+          "readerUse": "企业运营和平台团队用来更新 Agent 实验模板、技能封装、共享工作区、审核点和指标定义。",
+          "nextCheck": "查 Enterprise Signals 方法、Basis/Clay/Exa 客户侧数据、PR/任务日志、失败样本和人工 review 记录。",
+          "followUpQuestions": [
+            "Enterprise Signals 是否公开样本口径、行业分布、token 指标和活跃用户定义？",
+            "Basis、Clay 或 Exa 是否发布独立任务日志、KPI 变化、失败样本和人工审核成本？"
+          ],
+          "evidenceThreshold": "需要方法说明、客户侧指标、任务日志和失败样本确认，才可升级为已验证企业 Agent 运营模式。",
+          "claimBoundary": "不证明高 token 使用等于业务价值，也不证明案例模式适合大型受监管企业。",
+          "counterEvidence": "若客户侧指标显示节省时间不可复现、审核负担升高或失败样本集中在关键任务，应收窄为案例叙事。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "openai-news",
+          "provenance": "OpenAI News 可支持这条来源事实：OpenAI 官方可支持其发布 Enterprise Signals 案例和三家公司工作流描述；业务价值和可迁移性仍需客户侧指标与方法披露。",
+          "sourceUrl": "https://openai.com/index/ai-native-company-workflows/",
+          "originalUrl": "https://openai.com/index/ai-native-company-workflows/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-02T08:20:00+09:00",
+          "time": "09/02",
+          "tags": [
+            "Enterprise Signals",
+            "Agent工作流",
+            "Codex",
+            "企业采用"
+          ],
+          "companies": [
+            "OpenAI",
+            "Basis",
+            "Clay",
+            "Exa Labs"
+          ]
+        },
+        {
+          "id": "debian-generative-ai-policy-vote-2026-08-31",
+          "category": "policy",
+          "label": "政策",
+          "title": "Debian 通过 LLM 使用决议：不禁止但要求贡献者负责",
+          "body": "Debian 官方投票页显示项目选择不把生成式 AI 工具特殊化，贡献仍需满足质量、许可和法律合规标准。",
+          "summary": "Debian 官方投票页显示项目选择不把生成式 AI 工具特殊化，贡献仍需满足质量、许可和法律合规标准。",
+          "whyItMatters": "开源项目正在把 AI 辅助贡献纳入既有责任框架，而不是简单全面禁止或放任。",
+          "detailBody": "Debian General Resolution 页面显示，项目围绕 LLM 使用进行多方案投票；获采用立场允许负责任使用，但强调贡献者对质量、正确性、维护性和法律合规承担责任。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、图表、报价或条款仍以原始来源为准。",
+          "trend": "开源治理的 AI 规则正从口号转向贡献责任、披露礼貌、敏感数据限制和维护者判断。",
+          "detailTrend": "开源治理的 AI 规则正从口号转向贡献责任、披露礼貌、敏感数据限制和维护者判断。 它说明 AI 发布叙事正在从单点能力展示变成围绕工作流、责任分配、访问边界和运营代价的系统化竞争。",
+          "whyRanked": "它是开发者生态政策信号，直接影响 AI 生成代码进入关键基础设施的审查方式。",
+          "topReason": "它是开发者生态政策信号，直接影响 AI 生成代码进入关键基础设施的审查方式。",
+          "detailWhyRanked": "它是开发者生态政策信号，直接影响 AI 生成代码进入关键基础设施的审查方式。 原始来源给出可核对的动作、对象、时间、适用范围和证据边界，使站内可以拆出事实、影响、边界和复查四段，而不是只保留一句发布摘要。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方治理文件证据质量高，但执行一致性待观察；开发者实用性强。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方治理文件证据质量高，但执行一致性待观察；开发者实用性强。"
+          },
+          "impact": "开源维护者和企业开源办公室应更新 AI 辅助贡献披露、许可证检查、安全 review 和敏感数据规则。",
+          "whoShouldCare": "负责 Linux 发行版、上游依赖、开源合规、AI 代码审查和企业贡献政策的工程/法务团队应关注。",
+          "readerUse": "开源办公室和工程团队用来对照企业内部 AI 代码贡献政策、SBOM/许可证流程和维护者 review 要求。",
+          "nextCheck": "查 Debian 投票结果、邮件列表执行讨论、包维护记录、争议案例和其他项目政策更新。",
+          "followUpQuestions": [
+            "Debian 是否公布最终投票统计、实施说明和维护者如何标记 AI 辅助贡献？",
+            "后续包维护或邮件列表是否出现因 LLM 输出质量、许可或披露争议而被拒的案例？"
+          ],
+          "evidenceThreshold": "需要最终投票结果、实施说明和后续维护记录确认，才可升级为已验证的开源 AI 贡献治理实践。",
+          "claimBoundary": "不证明 Debian 社区已达成共识，也不证明 AI 生成代码进入发行版的风险已经消除。",
+          "counterEvidence": "若后续邮件列表、包维护记录或拒收案例显示执行混乱、法律/安全问题集中出现，应下调为争议中的治理试验。",
+          "source": "Debian General Resolutions",
+          "sourceName": "Debian General Resolutions",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "debian-vote",
+          "provenance": "Debian General Resolutions 可支持这条来源事实：Debian General Resolutions 页面记录 LLM 代码使用决议文本和贡献责任框架；执行效果仍需邮件列表、包维护和争议案例验证。",
+          "sourceUrl": "https://www.debian.org/vote/2026/vote_002.en.html",
+          "originalUrl": "https://www.debian.org/vote/2026/vote_002.en.html",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-08-31T00:00:00+00:00",
+          "time": "09/02",
+          "tags": [
+            "Debian",
+            "开源治理",
+            "AI代码",
+            "LLM政策"
+          ],
+          "companies": [
+            "Debian"
+          ]
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-01",
       "date": "2026-09-01",

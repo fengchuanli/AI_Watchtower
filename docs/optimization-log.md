@@ -1,3 +1,29 @@
+## 2026-09-02 08:13 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-02`，发布 10 条安全非重复信号，聚焦 Astra 网络安全阈值、Claude Fable/Mythos 5.1、ChatGPT Healthcare、Anthropic EFS、Microsoft 责任 AI 报告、Google Pics、JD AI、DLSS 5、AI-native 工作流和 Debian LLM 政策。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；优先官方/一手入口，可靠媒体只用于发现和交叉核对候选，不使用付费墙/登录墙正文、社区讨论、随机网页、二次聚合、传闻或重复历史 URL。
+  - 新增登记来源 `nvidia-geforce-news`、`john-deere-news` 和 `debian-vote`，source count 更新为 69。
+  - 本期 10 条均有官方/一手入口；OpenAI、Anthropic、Google、Microsoft、NVIDIA、John Deere、Debian 项分别保留发布事实、厂商主张、治理材料、技术预告和执行边界。
+  - 官方来源为 10/10，版次层保留 `sourceRisk` 与 `overreadBoundary`，明确不能把发布事实直接读成安全、成本、ROI、临床、农场、画质或开源执行效果定论。
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json` for edition metadata, reader/source framing, overread boundary, source concentration, briefing, deep briefing references, item count and item order; total history items updated to 638.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 69 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and homepage overread/source-risk rendering guards.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check` for touched content files.
+- Commit: 待本次数据提交后记录；计划提交信息为 `更新17点AI新闻情报`。
+- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may depend on DNS/network recovery. Local run time is 2026-09-02 08:13 JST while automation prompt is the 17:00 JST news-intelligence window.
+
 ## 2026-09-01 23:06 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报自动化补充；当前本地首页已是同日更晚的 `news-1700-2026-09-01`，本次未回退版本，而是在当前版补充 1 条安全非重复官方信号。

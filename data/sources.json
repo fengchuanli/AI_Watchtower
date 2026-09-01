@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-02",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1043,6 +1043,52 @@
       "hasRss": false,
       "language": "en",
       "notes": "Microsoft Research 研究发布入口，用于核对系统、模型、AI 基础设施和论文项；性能、可移植性和生产收益仍需论文、代码、公开 benchmark 或第三方复现。"
+    },
+    {
+      "id": "nvidia-geforce-news",
+      "name": "NVIDIA GeForce News",
+      "url": "https://www.nvidia.com/en-us/geforce/news/",
+      "feedUrl": null,
+      "category": [
+        "infrastructure",
+        "model",
+        "developer",
+        "graphics"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "NVIDIA 官方 GeForce 发布入口，用于核对 DLSS、RTX、驱动、开发者图形能力和上线范围；性能、画质和采用效果仍需独立测试与开发者证据。"
+    },
+    {
+      "id": "john-deere-news",
+      "name": "John Deere News",
+      "url": "https://www.deere.com/en-us/john-deere-news/",
+      "feedUrl": null,
+      "category": [
+        "enterprise",
+        "product",
+        "industry"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "John Deere 官方新闻入口，用于核对农业、设备和 Operations Center 相关 AI 产品事实；收入、农场效果和数据治理执行仍需客户侧与监管证据。"
+    },
+    {
+      "id": "debian-vote",
+      "name": "Debian General Resolutions",
+      "url": "https://www.debian.org/vote/",
+      "feedUrl": null,
+      "category": [
+        "developer",
+        "policy",
+        "open_source"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Debian 官方投票与决议入口，用于核对项目治理、贡献政策和开源协作规则；社区接受度和执行效果仍需邮件列表、包维护记录与后续争议处理。"
     }
   ],
   "sourceCount": 66
