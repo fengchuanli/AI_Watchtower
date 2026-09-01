@@ -21,8 +21,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check` for touched content files.
-- Commit: 待本次数据提交后记录；计划提交信息为 `更新17点AI新闻情报`。
-- Git note: `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may depend on DNS/network recovery. Local run time is 2026-09-02 08:13 JST while automation prompt is the 17:00 JST news-intelligence window.
+- Commit: Local content commit `4d8ffa2` (`更新17点AI新闻情报`); final local push-status record follows this log update.
+- Git note: `git pull --ff-only origin main` and `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Local run time is 2026-09-02 08:13 JST while automation prompt is the 17:00 JST news-intelligence window.
 
 ## 2026-09-01 23:06 JST
 
