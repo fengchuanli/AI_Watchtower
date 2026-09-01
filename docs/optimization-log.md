@@ -27,8 +27,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `05fa6e8` (`明确详情页来源事实`); final local record commit follows this hash update.
-- Git note: Push still depends on GitHub DNS recovery. Current run executed at 2026-09-01 11:02 JST local shell time / 20:00 JST scheduled automation window.
+- Commit: Local implementation commit `05fa6e8` (`明确详情页来源事实`), hash-record commit `a738812` (`记录详情来源事实优化`), and final push-status commit follows this log update.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Current run executed at 2026-09-01 11:02 JST local shell time / 20:00 JST scheduled automation window. Local `main` was ahead of known `origin/main` by 3 commits after the failed push.
 
 ## 2026-09-01 11:20 JST
 
