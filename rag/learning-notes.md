@@ -1783,6 +1783,218 @@ Designed an embedding provider boundary to separate local prototyping from Azure
 Embedding の処理を provider として分離し、ローカル検証用の mock 実装と Azure OpenAI 用の実装を差し替えられる設計にしました。
 ```
 
+## Day 16: Embedding cache / batch indexing 设计
+
+### 今天学什么
+
+设计 embedding cache 和 batch indexing 策略，理解如何只为新增或变化的 chunks 生成 embedding。
+
+### 为什么学
+
+AI Watchtower 的新闻每天都会更新。如果每次都重新 embedding 所有 chunks，会带来实际工程问题：
+
+- API cost 增加
+- 执行时间变长
+- rate limit 风险增加
+- 失败后 retry 范围变大
+- 没有变化的 docs 也被重复处理
+
+所以 Day16 的目标是设计增量处理：
+
+```text
+只处理新增或变化的 chunk。
+没变化的 chunk 直接复用旧 vector。
+```
+
+### 已实现内容
+
+新增设计文档：
+
+```text
+rag/embedding-cache-design.md
+```
+
+更新架构文档：
+
+```text
+rag/architecture.md
+```
+
+新增的架构组件：
+
+```text
+EmbeddingCache
+```
+
+### 核心判断规则
+
+```text
+chunk_id 不存在
+→ 新增 chunk，需要 embedding。
+
+chunk_id 存在 + text_hash 变了
+→ 内容变化，需要重新 embedding。
+
+chunk_id 存在 + text_hash 没变
+→ 内容没变，复用 cache 里的 vector。
+
+embedding deployment / api_version 变了
+→ cache 失效，需要重新 embedding。
+```
+
+### cache key 设计
+
+推荐 cache key：
+
+```text
+chunk_id + text_hash + embedding_deployment + api_version
+```
+
+不能只用 `chunk_id`。
+
+原因：
+
+```text
+同一个 chunk_id 的正文可能会变化。
+正文变化后，旧 vector 就不能代表新正文。
+```
+
+也不能只用 `text_hash`。
+
+原因：
+
+```text
+不同 embedding deployment 或 api_version 生成的 vector 可能不兼容。
+```
+
+### text_hash 的作用
+
+`text_hash` 用来判断 chunk 正文是否变化。
+
+例：
+
+```text
+标题没变，但新闻摘要或分析内容变了
+→ text_hash 会变化
+→ 需要重新 embedding
+```
+
+### batch embedding 的作用
+
+batch embedding 是把多个需要处理的 chunks 合并成一批处理，而不是一个 chunk 调一次 API。
+
+作用：
+
+- 减少 API 调用次数
+- 缩短整体运行时间
+- 更容易控制 retry
+- 更容易处理 rate limit
+
+例：
+
+```text
+changed chunks: 37
+batch size: 16
+
+batch 1: 16 chunks
+batch 2: 16 chunks
+batch 3: 5 chunks
+```
+
+### 每日新闻更新流程
+
+每天新闻更新后，RAG indexing 的理想流程：
+
+```text
+data/news.json 更新
+→ ingest_docs.py
+→ chunk_docs.py
+→ 计算每个 chunk 的 text_hash
+→ 检查 embedding cache
+→ cache hit: 复用 vector
+→ cache miss / changed: 加入 batch
+→ EmbeddingProvider.embed_batch()
+→ 更新 cache
+→ 生成 content_vector 完整的 Azure Search docs
+→ Azure AI Search upsert
+```
+
+### cache invalidation 条件
+
+以下情况不能复用旧 cache：
+
+```text
+text 变了
+embedding deployment 变了
+api_version 变了
+vector dimension 变了
+cache record 损坏
+embedding provider 设置变化
+```
+
+关键原则：
+
+```text
+embedding 失败的 chunk 不能用空 vector 假装成功。
+```
+
+否则后续检索效果变差时，很难排查原因。
+
+### 需要记录的 metrics
+
+未来 daily indexing job 可以记录：
+
+```text
+total_chunks
+cache_hits
+cache_misses
+changed_chunks
+new_chunks
+deleted_chunks
+embedded_chunks
+failed_chunks
+batch_count
+estimated_cost
+duration_seconds
+```
+
+这些指标后续可以接到 Application Insights。
+
+### 当前阶段不做什么
+
+Day16 只完成设计，不做真实 Azure 调用，也不生成真实 embedding cache。
+
+未来可能新增：
+
+```text
+rag/embedding_cache.jsonl
+rag/build_embedding_cache.py
+rag/prepare_vectorized_azure_search_docs.py
+```
+
+### 完成标准
+
+- 有 `rag/embedding-cache-design.md`
+- `rag/architecture.md` 中补充了 `EmbeddingCache`
+- 能说明为什么 embedding cache 必要
+- 能说明 `chunk_id` 和 `text_hash` 的作用
+- 能说明 cache key 为什么要包含 deployment / api_version
+- 能说明 batch embedding 的目的
+- 能说明每日新闻更新时如何只处理变化数据
+- 能说明 cache invalidation 条件
+
+### 作品集写法
+
+```text
+Designed an incremental embedding cache and batch indexing strategy to avoid recomputing vectors for unchanged chunks during daily news updates.
+```
+
+### 日文面试表达
+
+```text
+毎日ニュースが更新されるため、全 chunk を再 embedding するのではなく、chunk_id と text hash を使って変更された chunk だけを batch 処理する設計にしました。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -1802,6 +2014,7 @@ Embedding の処理を provider として分離し、ローカル検証用の mo
 - Day 13: Azure AI Search Index Schema
 - Day 14: Azure AI Search Indexing Payload
 - Day 15: Azure OpenAI Embedding 接入设计
+- Day 16: Embedding cache / batch indexing 设计
 
 ### 当前已生成或新增的文件
 
@@ -1822,6 +2035,7 @@ rag/azure-search-schema.md
 rag/prepare_azure_search_docs.py
 rag/azure_search_docs.jsonl
 rag/embedding-provider-design.md
+rag/embedding-cache-design.md
 rag/learning-notes.md
 ```
 
@@ -1839,18 +2053,19 @@ AI Watchtower RAG Assistant 目前可以读取 docs 和 data 中的知识库内�
 Azure AI Search index schema 已完成，明确 text/vector/filter/citation 字段设计。
 本地 chunks 已转换成 Azure AI Search indexing payload，并预留 content_vector 字段。
 EmbeddingProvider 边界设计已完成，明确 local mock 和 Azure OpenAI Embedding 的替换方式，并考虑 retry、rate limit、cost control 和 secret management。
+EmbeddingCache 设计已完成，明确用 chunk_id、text_hash、embedding deployment 和 api_version 判断哪些 chunks 需要重新 embedding，并设计 batch indexing 和 cache invalidation 策略。
 ```
 
 ### 下一步
 
-Day 16 建议进入：
+Day 17 建议进入：
 
 ```text
-Embedding cache / batch indexing 设计。
+Azure OpenAI Embedding 实装准备。
 ```
 
 目标是理解：
 
 ```text
-如何只为新增或变化的 chunks 生成 embedding，避免每天全量重算导致成本增加。
+真实接入 Azure OpenAI Embedding 前，需要准备哪些环境变量、依赖、最小验证脚本和失败处理。
 ```

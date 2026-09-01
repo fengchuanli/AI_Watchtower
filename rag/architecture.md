@@ -54,6 +54,10 @@ rag/azure_search_docs.jsonl
 rag/embedding-provider-design.md
         ↓
 Future: Azure OpenAI Embedding fills content_vector
+        ↓
+rag/embedding-cache-design.md
+        ↓
+Future: incremental embedding and batch indexing
 ```
 
 ## Pipeline Steps
@@ -70,6 +74,7 @@ Future: Azure OpenAI Embedding fills content_vector
 | Evaluation Report | `rag/eval_report.md` | Evaluation results | Human-readable report | 評価結果、失敗原因、改善方針を日語で整理する |
 | Azure Search Payload | `rag/prepare_azure_search_docs.py` | `rag/chunks.jsonl` | `rag/azure_search_docs.jsonl` | Azure AI Search に登録しやすい document payload に変換し、`content_vector` を予約する |
 | Embedding Provider Design | `rag/embedding-provider-design.md` | text | vector | local mock と Azure OpenAI embedding の差し替え境界を定義する |
+| Embedding Cache Design | `rag/embedding-cache-design.md` | chunks, text hash, embedding cache | changed chunks only | 変更された chunk だけ embedding し、未変更 chunk の vector を再利用する設計を定義する |
 
 ## Data Sources
 
@@ -268,6 +273,47 @@ EmbeddingProvider は回答を生成しない。
 EmbeddingProvider は text を vector に変換するだけ。
 ```
 
+### EmbeddingCache
+
+対応ファイル:
+
+```text
+rag/embedding-cache-design.md
+```
+
+責務:
+
+- chunk_id と text_hash で既存 vector を再利用できるか判定する
+- 新規または変更された chunk だけ embedding 対象にする
+- embedding deployment / api_version が変わった場合に cache を無効化する
+- batch embedding の対象 chunk を整理する
+- cache hit / miss / failed chunks を記録する
+
+基本判断:
+
+```text
+chunk_id がない → new chunk
+chunk_id がある + text_hash が変わった → changed chunk
+chunk_id がある + text_hash が同じ → cache hit
+deployment / api_version が変わった → cache invalidation
+```
+
+将来の Azure 化:
+
+```text
+embedding cache
+batch indexing job
+Azure AI Search upsert
+Application Insights metrics
+```
+
+重要点:
+
+```text
+ニュースは毎日更新されるため、全 chunk を毎回 embedding し直さない。
+変更された chunk だけ処理し、変更されていない chunk は cache から vector を再利用する。
+```
+
 ### Retriever
 
 対応ファイル:
@@ -390,6 +436,7 @@ Azure 化する前に、各処理を component として分けておく理由は
 | DocumentLoader | `rag/ingest_docs.py` | Blob Storage, scheduled ingestion, Azure Functions trigger | source documents を読み込み、統一 document に変換する |
 | Chunker | `rag/chunk_docs.py` | Azure-hosted ingestion job or Functions batch process | document を metadata 付き chunks に変換する |
 | EmbeddingProvider | `rag/vector_search_demo.py` concept, `rag/embedding-provider-design.md` | Azure OpenAI Embedding | text を embedding vector に変換する |
+| EmbeddingCache | `rag/embedding-cache-design.md` | Cache storage, batch indexing job | chunk_id と text_hash で再 embedding が必要な chunk を判定する |
 | Retriever | `rag/search_chunks.py`, `rag/vector_search_demo.py` | Azure OpenAI Embedding + Azure AI Search | query に関連する chunks を返す |
 | ContextBuilder | `rag/build_context.py` | Mostly reusable application logic | retrieved chunks を citation-aware context に整形する |
 | AnswerGenerator | `rag/answer_demo.py` | Azure OpenAI Chat Completion | context に基づいて grounded answer を生成する |
@@ -530,6 +577,53 @@ EmbeddingProvider は text を vector に変換するだけ。
 
 ```text
 rag/embedding-provider-design.md
+```
+
+### EmbeddingCache Boundary
+
+責務:
+
+```text
+chunk_id、text_hash、embedding deployment、api_version を使って、embedding を再利用できるか判定する。
+```
+
+現在:
+
+```text
+rag/embedding-cache-design.md
+→ cache / batch indexing の設計
+```
+
+将来:
+
+```text
+rag/embedding_cache.jsonl
+rag/build_embedding_cache.py
+rag/prepare_vectorized_azure_search_docs.py
+```
+
+置き換え境界:
+
+```text
+EmbeddingCache は chunk text と既存 cache を比較し、embedding が必要な chunks だけを EmbeddingProvider に渡す。
+```
+
+cache key:
+
+```text
+chunk_id + text_hash + embedding_deployment + api_version
+```
+
+重要:
+
+```text
+embedding に失敗した chunk を空 vector のまま Azure AI Search に入れない。
+```
+
+詳細:
+
+```text
+rag/embedding-cache-design.md
 ```
 
 ### Retriever Boundary
