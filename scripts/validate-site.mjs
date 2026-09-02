@@ -32,6 +32,7 @@ const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-not
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const companyContinuityReviewNote = readFileSync("docs/company-continuity-review-note.md", "utf8");
+const topicContinuityReviewNote = readFileSync("docs/topic-continuity-review-note.md", "utf8");
 const counterEvidenceObservableGuide = readFileSync("docs/counter-evidence-observable-guide.md", "utf8");
 const detailPageReviewGuide = readFileSync("docs/detail-page-review-guide.md", "utf8");
 const homepageEditionPreflight = readFileSync("docs/homepage-edition-preflight.md", "utf8");
@@ -1595,6 +1596,22 @@ if (
   !/topicContinuity/.test(newsJson)
 ) {
   errors.push("Homepage feed metadata must render and validate recurring topic continuity notes.");
+}
+
+if (
+  !/docs\/topic-continuity-review-note\.md/.test(readme) ||
+  !/Topic Continuity Review Note/.test(topicContinuityReviewNote) ||
+  !/stronger[\s\S]*weaker[\s\S]*repeated/.test(topicContinuityReviewNote) ||
+  !/continuityStatus: stronger \/ weaker \/ repeated/.test(topicContinuityReviewNote) ||
+  !/Repetition is not evidence strength/.test(topicContinuityReviewNote) ||
+  !/媒体多次报道已经证明/.test(topicContinuityReviewNote) ||
+  !/topicContinuity/.test(topicContinuityReviewNote) ||
+  !/docs\/topic-continuity-review-note\.md/.test(newsDataFormat) ||
+  !/several media reports/.test(newsDataFormat) ||
+  !/repeated media coverage as stronger evidence/.test(validateDataJs) ||
+  !/docs\/topic-continuity-review-note\.md/.test(currentToHistoryPublicationChecklist)
+) {
+  errors.push("Topic continuity review must prevent repeated media coverage from being written as stronger trend evidence.");
 }
 
 if (

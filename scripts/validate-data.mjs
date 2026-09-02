@@ -944,6 +944,21 @@ function validateTopicContinuity(notes, topicGroups = [], context) {
       errors.push(`${context} topicContinuity[${index}].stillUnproven must name the next evidence source or proof type.`);
     }
 
+    const currentEvidenceText = `${note.currentSignal || ""}${note.signalDirection || ""}`;
+    const saysMediaRepetition =
+      /媒体|报道|newsletter|播客|二级摘要|secondary summary/i.test(currentEvidenceText) &&
+      /反复|重复|多次|多家|再次|继续/.test(currentEvidenceText);
+    const namesStrongerArtifact =
+      /官方|原文|公告|文件|财报|合同|日志|审计|指标|第三方|监管|数据|报告|论文|model card|system card|benchmark|复现/i.test(
+        currentEvidenceText,
+      );
+
+    if (note.status === "stronger" && saysMediaRepetition && !namesStrongerArtifact) {
+      errors.push(
+        `${context} topicContinuity[${index}] must not mark repeated media coverage as stronger evidence without a stronger source artifact.`,
+      );
+    }
+
     seenTopics.add(note.topic);
   }
 }
