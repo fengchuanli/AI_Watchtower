@@ -1995,6 +1995,143 @@ Designed an incremental embedding cache and batch indexing strategy to avoid rec
 毎日ニュースが更新されるため、全 chunk を再 embedding するのではなく、chunk_id と text hash を使って変更された chunk だけを batch 処理する設計にしました。
 ```
 
+## Day 17: Azure OpenAI Embedding 实装准备
+
+### 今天完成了什么
+
+Day17 不是直接把所有 chunks 发到 Azure，而是把真实接入前的准备工作做清楚。
+
+新增：
+
+```text
+rag/azure-openai-embedding-readiness.md
+rag/check_azure_openai_embedding_readiness.py
+```
+
+更新：
+
+```text
+rag/architecture.md
+rag/learning-notes.md
+```
+
+### 为什么先做 readiness
+
+Azure OpenAI Embedding 不是单纯写一行 API 调用。
+
+真实接入前必须先确认：
+
+```text
+endpoint 是否正确
+API key 是否安全管理
+embedding deployment name 是否正确
+api_version 是否固定
+azure_search_docs.jsonl 是否已有可填 content_vector 的 payload
+失败时是否会停止，而不是写入空 vector
+```
+
+如果这些没有先想清楚，后面容易出现三类问题：
+
+- API key 被写进代码或日志
+- vector dimension 和 Azure AI Search schema 不一致
+- embedding 失败后仍把空 vector 当成功结果上传
+
+### 需要的环境变量
+
+```text
+AZURE_OPENAI_ENDPOINT
+AZURE_OPENAI_API_KEY
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT
+AZURE_OPENAI_API_VERSION
+```
+
+关键理解：
+
+```text
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT 是 Azure 里的 deployment name，
+不一定等于 model name。
+```
+
+### 最小验证脚本
+
+新增脚本：
+
+```bash
+python3 rag/check_azure_openai_embedding_readiness.py
+```
+
+这个脚本目前不调用 Azure API，也不会产生费用。
+
+它检查：
+
+- 环境变量是否存在
+- API key 是否只做 masked display
+- `rag/azure_search_docs.jsonl` 是否存在
+- payload required fields 是否齐全
+- `content_vector` 当前是空 placeholder 还是已有真实 vector
+- 下一步 embeddings endpoint path 应该是什么形状
+
+strict mode：
+
+```bash
+python3 rag/check_azure_openai_embedding_readiness.py --strict
+```
+
+在 strict mode 下，如果环境变量缺失，就用 exit code 1 停止。
+
+### Day17 的边界
+
+今天不做：
+
+```text
+不全量 embedding
+不上传 Azure AI Search
+不把 API key 写进 repository
+不把 Azure API 调用写死在 retriever 里
+```
+
+今天完成的是：
+
+```text
+真实 Azure 接入前的 configuration / payload / failure handling / smoke test 顺序。
+```
+
+### 下一步怎么做
+
+Day18 建议进入：
+
+```text
+Azure OpenAI Embedding one-text smoke test。
+```
+
+顺序：
+
+```text
+1. 设置 Azure OpenAI 环境变量
+2. 用一句短文本调用 embedding endpoint
+3. 确认返回 list[float]
+4. 确认 vector dimension
+5. 再把它接进 EmbeddingProvider
+```
+
+不要一开始就处理 1273 个 chunks。
+
+### 作品集写法
+
+```text
+Prepared the Azure OpenAI Embedding implementation path by defining required environment variables, dependency boundaries, a local readiness check, smoke-test order, and failure handling before sending real chunks to Azure.
+```
+
+### 日文面试表达
+
+```text
+Azure OpenAI Embedding に接続する前に、環境変数、deployment 名、API version、payload 形式、失敗時の停止条件を整理しました。
+```
+
+```text
+まず全 chunk を送るのではなく、1 文だけで smoke test を行い、vector dimension と secret management を確認してから batch embedding と cache に進む設計にしています。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -2015,6 +2152,7 @@ Designed an incremental embedding cache and batch indexing strategy to avoid rec
 - Day 14: Azure AI Search Indexing Payload
 - Day 15: Azure OpenAI Embedding 接入设计
 - Day 16: Embedding cache / batch indexing 设计
+- Day 17: Azure OpenAI Embedding 实装准备
 
 ### 当前已生成或新增的文件
 
@@ -2036,6 +2174,8 @@ rag/prepare_azure_search_docs.py
 rag/azure_search_docs.jsonl
 rag/embedding-provider-design.md
 rag/embedding-cache-design.md
+rag/azure-openai-embedding-readiness.md
+rag/check_azure_openai_embedding_readiness.py
 rag/learning-notes.md
 ```
 
@@ -2054,18 +2194,19 @@ Azure AI Search index schema 已完成，明确 text/vector/filter/citation 字�
 本地 chunks 已转换成 Azure AI Search indexing payload，并预留 content_vector 字段。
 EmbeddingProvider 边界设计已完成，明确 local mock 和 Azure OpenAI Embedding 的替换方式，并考虑 retry、rate limit、cost control 和 secret management。
 EmbeddingCache 设计已完成，明确用 chunk_id、text_hash、embedding deployment 和 api_version 判断哪些 chunks 需要重新 embedding，并设计 batch indexing 和 cache invalidation 策略。
+Azure OpenAI Embedding 实装准备已完成，明确环境变量、依赖边界、readiness check、one-text smoke test 顺序和失败时停止条件。
 ```
 
 ### 下一步
 
-Day 17 建议进入：
+Day 18 建议进入：
 
 ```text
-Azure OpenAI Embedding 实装准备。
+Azure OpenAI Embedding one-text smoke test。
 ```
 
 目标是理解：
 
 ```text
-真实接入 Azure OpenAI Embedding 前，需要准备哪些环境变量、依赖、最小验证脚本和失败处理。
+如何先用一小段文本安全调用 Azure OpenAI Embedding，确认返回 vector dimension 后，再进入 batch embedding 和 cache。
 ```

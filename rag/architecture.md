@@ -58,6 +58,11 @@ Future: Azure OpenAI Embedding fills content_vector
 rag/embedding-cache-design.md
         ↓
 Future: incremental embedding and batch indexing
+        ↓
+rag/azure-openai-embedding-readiness.md
+rag/check_azure_openai_embedding_readiness.py
+        ↓
+Future: one-text Azure OpenAI Embedding smoke test
 ```
 
 ## Pipeline Steps
@@ -75,6 +80,7 @@ Future: incremental embedding and batch indexing
 | Azure Search Payload | `rag/prepare_azure_search_docs.py` | `rag/chunks.jsonl` | `rag/azure_search_docs.jsonl` | Azure AI Search に登録しやすい document payload に変換し、`content_vector` を予約する |
 | Embedding Provider Design | `rag/embedding-provider-design.md` | text | vector | local mock と Azure OpenAI embedding の差し替え境界を定義する |
 | Embedding Cache Design | `rag/embedding-cache-design.md` | chunks, text hash, embedding cache | changed chunks only | 変更された chunk だけ embedding し、未変更 chunk の vector を再利用する設計を定義する |
+| Azure OpenAI Embedding Readiness | `rag/azure-openai-embedding-readiness.md`, `rag/check_azure_openai_embedding_readiness.py` | env vars, Azure Search payload | readiness report | 実 Azure embedding の前に設定、payload、secret boundary、失敗時の停止条件を確認する |
 
 ## Data Sources
 
@@ -437,6 +443,7 @@ Azure 化する前に、各処理を component として分けておく理由は
 | Chunker | `rag/chunk_docs.py` | Azure-hosted ingestion job or Functions batch process | document を metadata 付き chunks に変換する |
 | EmbeddingProvider | `rag/vector_search_demo.py` concept, `rag/embedding-provider-design.md` | Azure OpenAI Embedding | text を embedding vector に変換する |
 | EmbeddingCache | `rag/embedding-cache-design.md` | Cache storage, batch indexing job | chunk_id と text_hash で再 embedding が必要な chunk を判定する |
+| AzureOpenAIEmbeddingReadiness | `rag/azure-openai-embedding-readiness.md`, `rag/check_azure_openai_embedding_readiness.py` | Azure environment preflight, one-text smoke test | 実 Azure 呼び出し前に env、payload、secret、failure handling を確認する |
 | Retriever | `rag/search_chunks.py`, `rag/vector_search_demo.py` | Azure OpenAI Embedding + Azure AI Search | query に関連する chunks を返す |
 | ContextBuilder | `rag/build_context.py` | Mostly reusable application logic | retrieved chunks を citation-aware context に整形する |
 | AnswerGenerator | `rag/answer_demo.py` | Azure OpenAI Chat Completion | context に基づいて grounded answer を生成する |
@@ -624,6 +631,37 @@ embedding に失敗した chunk を空 vector のまま Azure AI Search に入�
 
 ```text
 rag/embedding-cache-design.md
+```
+
+### AzureOpenAIEmbeddingReadiness Boundary
+
+責務:
+
+```text
+実 Azure OpenAI Embedding 呼び出しの前に、環境変数、payload、secret boundary、失敗時の停止条件を確認する。
+```
+
+現在:
+
+```text
+rag/azure-openai-embedding-readiness.md
+rag/check_azure_openai_embedding_readiness.py
+```
+
+確認すること:
+
+- `AZURE_OPENAI_ENDPOINT`
+- `AZURE_OPENAI_API_KEY`
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT`
+- `AZURE_OPENAI_API_VERSION`
+- `rag/azure_search_docs.jsonl` の required fields
+- `content_vector` が placeholder か実 vector か
+
+重要:
+
+```text
+readiness check は Azure API を呼ばない。
+まず設定と payload を確認し、実 API 呼び出しは 1 文の smoke test から始める。
 ```
 
 ### Retriever Boundary
@@ -936,6 +974,8 @@ local vector demo を本物の semantic embedding に置き換える。
 想定:
 
 - Azure OpenAI embedding deployment
+- readiness check for env vars and payload shape
+- one-text smoke test before batch processing
 - chunk text を embedding に変換
 - query も embedding に変換
 - cosine similarity または Azure AI Search vector search
@@ -1026,6 +1066,7 @@ GET /health
 - Evaluation Dataset
 - Evaluation Script
 - Evaluation Report
+- Azure OpenAI Embedding Readiness Check
 
 ### 設計・改善予定
 
