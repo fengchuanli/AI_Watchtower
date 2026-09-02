@@ -1,3 +1,32 @@
+## 2026-09-02 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 21 continuity task. Added a lightweight company continuity review note so recurring-company signals are classified as stronger, weaker, repeated, or resolved before editors write public `companyContinuity` copy.
+- Changed files:
+  - `docs/company-continuity-review-note.md`
+  - `docs/news-data-format.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+  - `README.md`
+- Remote sync:
+  - Before editing: pulled - `git pull --ff-only origin main` completed and local `main` was already up to date.
+- Content posture:
+  - Added a four-way company continuity decision for `stronger`, `weaker`, `repeated`, and `resolved` so repeated company names are not treated as automatic trend proof.
+  - Kept the new review note as an editorial scratch workflow rather than adding a required public data field, avoiding churn in the current 17:00 JST news edition and historical archive data.
+  - Linked the note from README, `docs/news-data-format.md`, and the current-to-history publication checklist so future update runs classify recurring companies before mirroring archive copy.
+  - Advanced `docs/optimization-decision-index.md` to Day 22: review `topicContinuity` notes and remove wording that implies a trend is confirmed only because several media items repeated it.
+- Verification:
+  - Read `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-plan.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md` entries, `docs/detail-page-review-guide.md`, `docs/news-data-format.md`, `docs/archive-diff-summary-format.md`, `docs/current-to-history-publication-checklist.md`, current news data, and relevant validation guards.
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 69 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new company-continuity review guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `06f1307` (`补充公司连续观察复查`); final log/index record commit follows this entry.
+- Git note: Push status will be recorded after the log/index follow-up commit.
+
 ## 2026-09-02 08:13 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-02`，发布 10 条安全非重复信号，聚焦 Astra 网络安全阈值、Claude Fable/Mythos 5.1、ChatGPT Healthcare、Anthropic EFS、Microsoft 责任 AI 报告、Google Pics、JD AI、DLSS 5、AI-native 工作流和 Debian LLM 政策。

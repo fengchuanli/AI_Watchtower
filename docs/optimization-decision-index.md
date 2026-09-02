@@ -39,7 +39,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 18 | Complete | `2dee98b` | Current and latest archived `followUpQuestions` now name item-specific source artifacts and observable checks, and validation rejects generic `核心事实` / `继续观察` prompts. |
 | Day 19 | Complete | `179876e` | `counterEvidence` guidance now distinguishes central downgrade from scope narrowing: downgrade when the core claim breaks, narrow when the fact still stands but the boundary is smaller. |
 | Day 20 | Complete | `05fa6e8` | Current and latest archived detail-page `provenance` source references now name the exact source fact they support, and validation rejects bare source labels. |
-| Day 21 | Complete | `pending` | `docs/company-continuity-review-note.md` classifies recurring-company signals as stronger, weaker, repeated, or resolved before editors write public `companyContinuity` notes. |
+| Day 21 | Complete | `06f1307` | `docs/company-continuity-review-note.md` classifies recurring-company signals as stronger, weaker, repeated, or resolved before editors write public `companyContinuity` notes. |
 
 ## Historical Guard Anchors
 
