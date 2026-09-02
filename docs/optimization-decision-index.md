@@ -8,7 +8,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 4, Continuity And Archive Usefulness
 - Last indexed run: 2026-09-02 20:00 JST
-- Network status: Latest 20:00 run pulled cleanly from `origin main`; push status is recorded in `docs/optimization-log.md`.
+- Network status: Latest 20:00 run pulled cleanly from `origin main` and pushed successfully; final status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
 

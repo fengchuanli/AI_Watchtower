@@ -24,8 +24,8 @@
   - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `06f1307` (`补充公司连续观察复查`); final log/index record commit follows this entry.
-- Git note: Push status will be recorded after the log/index follow-up commit.
+- Commit: Local implementation commit `06f1307` (`补充公司连续观察复查`) and log/index record commit `18263e3` (`记录公司连续观察优化`).
+- Git note: pushed - `git push origin main` successfully pushed the Day 21 implementation and record commits; this final push-status wording is included in the follow-up record commit.
 
 ## 2026-09-02 08:13 JST
 
