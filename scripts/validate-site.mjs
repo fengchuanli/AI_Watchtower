@@ -729,7 +729,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -783,7 +783,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 22/.test(optimizationDecisionIndex)
+  !/Continue with Day 23/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -1412,7 +1412,7 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1579,7 +1579,7 @@ if (
   !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 22/.test(optimizationDecisionIndex)
+  !/Continue with Day 23/.test(optimizationDecisionIndex)
 ) {
   errors.push("Company continuity review must classify recurring-company signals before public continuity copy is written.");
 }
@@ -1609,7 +1609,11 @@ if (
   !/docs\/topic-continuity-review-note\.md/.test(newsDataFormat) ||
   !/several media reports/.test(newsDataFormat) ||
   !/repeated media coverage as stronger evidence/.test(validateDataJs) ||
-  !/docs\/topic-continuity-review-note\.md/.test(currentToHistoryPublicationChecklist)
+  !/docs\/topic-continuity-review-note\.md/.test(currentToHistoryPublicationChecklist) ||
+  !/Day 22[\s\S]*topic-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 23/.test(optimizationDecisionIndex)
 ) {
   errors.push("Topic continuity review must prevent repeated media coverage from being written as stronger trend evidence.");
 }

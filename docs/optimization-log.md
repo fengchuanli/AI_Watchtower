@@ -1,5 +1,39 @@
 ## 2026-09-02 20:00 JST
 
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 22 continuity task. Reviewed `topicContinuity` and added a topic-level review rule so repeated media coverage cannot be written as stronger trend evidence without a stronger source artifact.
+- Changed files:
+  - `docs/topic-continuity-review-note.md`
+  - `docs/news-data-format.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `README.md`
+  - `docs/optimization-decision-index.md`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `docs/topic-continuity-review-note.md` with a three-way `stronger` / `weaker` / `repeated` decision for recurring topics.
+  - Updated `docs/news-data-format.md` and the current-to-history publication checklist so `topicContinuity` must use the new note before public copy is written.
+  - Tightened current and latest archived `topicContinuity.previousPattern` wording from "反复出现" to archive-background framing, reducing the chance that repeated mentions read as confirmation.
+  - Added a `scripts/validate-data.mjs` guard that rejects `status: "stronger"` when the current evidence text only says media/reporting repetition without a stronger official, research, filing, audit, metric, regulator, data, report, model/system card, benchmark, or replication artifact.
+  - Advanced `docs/optimization-decision-index.md` to Day 23: add archive-diff guidance for correction-only updates where the reader-facing story did not materially change.
+- Verification:
+  - Read automation memory, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-plan.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md`, `docs/news-data-format.md`, `docs/archive-diff-summary-format.md`, `docs/current-to-history-publication-checklist.md`, current/latest `topicContinuity` data, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 69 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new topic-continuity review guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `809cc8d` (`规范主题连续观察`); final log/index record commit follows this log update.
+- Git note: `git push origin main` still needs GitHub DNS recovery. Current run executed at 2026-09-02 11:05 JST local shell time / 20:00 JST scheduled automation window.
+
+## 2026-09-02 20:00 JST
+
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 21 continuity task. Added a lightweight company continuity review note so recurring-company signals are classified as stronger, weaker, repeated, or resolved before editors write public `companyContinuity` copy.
 - Changed files:
   - `docs/company-continuity-review-note.md`
