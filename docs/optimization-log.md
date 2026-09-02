@@ -22,7 +22,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit note: content/log commit follows this entry; push may remain blocked if GitHub DNS is unavailable.
+- Commit: Local content/log commit `d44c8ba` (`补充SafeMind安全情报`); final push-status record follows this log update.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; elevated retry was rejected by the app safety review because it would publish multiple local commits to `main`. Remote sync needs explicit user authorization or network/DNS recovery in a trusted push context.
 
 ## 2026-09-02 20:00 JST
 
