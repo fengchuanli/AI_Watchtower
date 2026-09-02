@@ -19,8 +19,8 @@
   - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 70 sources.
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
-- Commit: Pending local commit `更新17点AI新闻情报`.
-- Git note: push not attempted yet in this entry; previous pull failed due to DNS, and remote sync still depends on GitHub DNS/network recovery or explicit trusted push authorization.
+- Commit: Local content/log commit `a4bbaca` (`更新17点AI新闻情报`); final push-status record follows this log update.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; elevated retry was rejected by the app safety review because it would push local commits to `main` without explicit trusted authorization. Remote sync needs explicit user authorization or network/DNS recovery in a trusted push context.
 
 ## 2026-09-02 23:05 JST
 
