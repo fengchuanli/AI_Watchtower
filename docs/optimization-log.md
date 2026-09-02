@@ -1,3 +1,27 @@
+## 2026-09-03 08:13 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-03`，发布 12 条安全非重复信号，聚焦 Gemini 3.8、Astra 可监控性、OpenAI 版权/责任诉讼、纽约校园 AI、巴西选举 deepfake、HiddenLayer 融资、JioPC 云 PC、Adobe/Rilo、野火响应 AI 与 Microsoft yield 框架。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先尝试 `git pull --ff-only origin main`，但本机因 `github.com` DNS 解析失败无法拉取；继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；优先官方/一手入口，可靠媒体只保留最小事实和 AI Watchtower 中文解读，不使用付费墙/登录墙正文、社区讨论、随机网页、二次聚合、传闻或重复历史 URL。
+  - 本期 12 条来源包括 Google 官方、Microsoft 官方，以及 AP、TechCrunch、Axios 可靠媒体；媒体来源为 10/12，版次层保留 `sourceRisk`、`sourceConcentration` 与 `overreadBoundary`，明确这是核查雷达，不是法律、效果、采用或成本定论。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 651。
+- Verification:
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, current `data/news.json`, latest archive mirror, recent `docs/optimization-log.md`, and candidate official/reliable web sources.
+  - Checked Google AI, OpenAI, Anthropic, Microsoft, TechCrunch AI, AP Technology, Axios Technology/AI, and duplicate candidates; skipped old, duplicate, paywalled/login-walled, community, random-page, and weak-evidence items.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 70 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+- Commit: Pending local commit `更新17点AI新闻情报`.
+- Git note: push not attempted yet in this entry; previous pull failed due to DNS, and remote sync still depends on GitHub DNS/network recovery or explicit trusted push authorization.
+
 ## 2026-09-02 23:05 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；`git pull --ff-only origin main` 仍因 GitHub DNS 解析失败而阻断，所以未降级当前 `news-1700-2026-09-02` 版，而是在现有 17:00 版基础上补充 1 条安全非重复官方/厂商主张信号。
