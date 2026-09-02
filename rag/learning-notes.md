@@ -2132,6 +2132,142 @@ Azure OpenAI Embedding に接続する前に、環境変数、deployment 名、A
 まず全 chunk を送るのではなく、1 文だけで smoke test を行い、vector dimension と secret management を確認してから batch embedding と cache に進む設計にしています。
 ```
 
+## Day 18: Azure OpenAI Embedding one-text smoke test
+
+### 今天完成了什么
+
+Day18 做的是 Azure OpenAI Embedding 的最小真实调用入口。
+
+新增：
+
+```text
+rag/azure-openai-embedding-smoke-test.md
+rag/azure_openai_embedding_smoke_test.py
+```
+
+更新：
+
+```text
+rag/architecture.md
+rag/learning-notes.md
+```
+
+### 为什么只做 one-text smoke test
+
+Embedding 接入不能一开始就把 1273 个 chunks 全部发出去。
+
+先用一句短文本验证，可以提前确认：
+
+```text
+endpoint / deployment / api_version 是否正确
+API key 是否没有进入 log
+response.data[0].embedding 是否存在
+embedding 是否是 list[float]
+vector dimension 是否和 Azure AI Search schema 匹配
+失败时是否会停止，而不是写入空 vector
+```
+
+这样做的价值是把风险控制在最小范围：
+
+- 不产生大量 token / embedding 成本
+- 不污染 `content_vector`
+- 不把错误 deployment 的 vector 写入 cache
+- 不让 Retriever 直接依赖 Azure API 细节
+
+### 新增脚本
+
+执行 dry run：
+
+```bash
+python3 rag/azure_openai_embedding_smoke_test.py --dry-run
+```
+
+dry run 会显示环境变量状态和 request path shape，但不会真的调用 Azure。
+
+执行真实 smoke test：
+
+```bash
+python3 rag/azure_openai_embedding_smoke_test.py \
+  --text "AI Watchtower citation test."
+```
+
+如果已经知道 deployment 的 vector dimension，可以加检查：
+
+```bash
+python3 rag/azure_openai_embedding_smoke_test.py \
+  --text "AI Watchtower citation test." \
+  --expected-dimension 1536
+```
+
+### 成功标准
+
+真实调用成功时，脚本应输出：
+
+```text
+Smoke test passed
+- embedding type: list[float]
+- vector dimension: <number>
+- API key printed: no
+```
+
+如果 dimension 不符合预期，脚本会失败，不会继续进入 batch embedding。
+
+### 错误处理
+
+脚本会把常见错误分成可读原因：
+
+- missing env
+- endpoint 不是 `https://`
+- HTTP 400: API version 或 request body 问题
+- HTTP 401: API key 问题
+- HTTP 403: permission / network policy 问题
+- HTTP 404: endpoint 或 deployment name 问题
+- HTTP 429: rate limit
+- timeout / network error
+- response 不是 JSON
+- response 里没有合法 embedding
+- vector dimension mismatch
+
+关键原则：
+
+```text
+失败就是失败，不能把 content_vector: [] 当成 embedding 成功。
+```
+
+### Day18 的边界
+
+今天不做：
+
+```text
+不 batch embedding
+不写 embedding cache
+不更新 azure_search_docs.jsonl 的 content_vector
+不 upsert Azure AI Search
+不把 Azure API call 写进 Retriever
+```
+
+今天完成的是：
+
+```text
+从 readiness check 进入真实 Azure Embedding 前的最小 smoke test 脚本和操作说明。
+```
+
+### 作品集写法
+
+```text
+Implemented a one-text Azure OpenAI Embedding smoke test that validates response shape, vector dimension, timeout and HTTP failure handling, and secret-safe logging before attempting batch embedding or Azure AI Search indexing.
+```
+
+### 日文面试表达
+
+```text
+Azure OpenAI Embedding を全データに適用する前に、まず 1 文だけで smoke test を行い、返ってくる embedding が list[float] であることと vector dimension を確認するようにしました。
+```
+
+```text
+API key は log に出さず、HTTP error や timeout の場合も空 vector を成功扱いしないようにしています。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -2153,6 +2289,7 @@ Azure OpenAI Embedding に接続する前に、環境変数、deployment 名、A
 - Day 15: Azure OpenAI Embedding 接入设计
 - Day 16: Embedding cache / batch indexing 设计
 - Day 17: Azure OpenAI Embedding 实装准备
+- Day 18: Azure OpenAI Embedding one-text smoke test
 
 ### 当前已生成或新增的文件
 
@@ -2176,6 +2313,8 @@ rag/embedding-provider-design.md
 rag/embedding-cache-design.md
 rag/azure-openai-embedding-readiness.md
 rag/check_azure_openai_embedding_readiness.py
+rag/azure-openai-embedding-smoke-test.md
+rag/azure_openai_embedding_smoke_test.py
 rag/learning-notes.md
 ```
 
@@ -2195,18 +2334,19 @@ Azure AI Search index schema 已完成，明确 text/vector/filter/citation 字�
 EmbeddingProvider 边界设计已完成，明确 local mock 和 Azure OpenAI Embedding 的替换方式，并考虑 retry、rate limit、cost control 和 secret management。
 EmbeddingCache 设计已完成，明确用 chunk_id、text_hash、embedding deployment 和 api_version 判断哪些 chunks 需要重新 embedding，并设计 batch indexing 和 cache invalidation 策略。
 Azure OpenAI Embedding 实装准备已完成，明确环境变量、依赖边界、readiness check、one-text smoke test 顺序和失败时停止条件。
+Azure OpenAI Embedding one-text smoke test 已完成，能够在真实 batch embedding 前验证 response shape、list[float]、vector dimension、secret-safe logging 和常见 Azure 错误处理。
 ```
 
 ### 下一步
 
-Day 18 建议进入：
+Day 19 建议进入：
 
 ```text
-Azure OpenAI Embedding one-text smoke test。
+AzureOpenAIEmbeddingProvider implementation。
 ```
 
 目标是理解：
 
 ```text
-如何先用一小段文本安全调用 Azure OpenAI Embedding，确认返回 vector dimension 后，再进入 batch embedding 和 cache。
+如何把 Day18 的 one-text smoke test 封装成 EmbeddingProvider implementation，让后续 batch embedding 和 Retriever 不直接依赖 Azure API 细节。
 ```
