@@ -1,6 +1,6 @@
 # Current To History Publication Checklist
 
-Use this checklist during every 08:00 JST and 17:00 JST news publication after `data/news.json` has been drafted and before the run is committed. Its purpose is to keep the latest archived edition in `data/news-history.json` aligned with the homepage edition, so archive readers do not see stale framing, missing caveats, or a different item order from the current homepage. After a clean 17:00 JST mirror, use `docs/archive-diff-summary-format.md` when a same-day morning edition exists so the archive can explain what changed without duplicating both batches.
+Use this checklist during every 08:00 JST and 17:00 JST news publication after `data/news.json` has been drafted and before the run is committed. Its purpose is to keep the latest archived edition in `data/news-history.json` aligned with the homepage edition, so archive readers do not see stale framing, missing caveats, or a different item order from the current homepage. After a clean 17:00 JST mirror, use `docs/archive-diff-summary-format.md` when a same-day morning edition exists so the archive can explain what changed without duplicating both batches. When recurring companies appear, use `docs/company-continuity-review-note.md` before writing `companyContinuity` so repeated company names are classified as stronger, weaker, repeated, or resolved rather than treated as automatic trend proof.
 
 This is a publication check, not a license to republish old material as new. If the current homepage intentionally advances to a new edition, create or update the newest history edition for that same batch. If the current batch is only a correction, keep the same edition ID and record what changed in the optimization log.
 
@@ -34,7 +34,7 @@ The newest `data/news-history.json` edition should match the current `data/news.
 | `edition.sourceConcentration` | `editions[0].sourceConcentration` | Same dominant source-owner caveat when required. |
 | `edition.trendNotes` | `editions[0].trendNotes` | Same cross-edition trend wording and boundary. |
 | `edition.topicContinuity` | `editions[0].topicContinuity` | Same recurring-topic strength direction and proof boundary. |
-| `edition.companyContinuity` | `editions[0].companyContinuity` | Same recurring-company change notes and still-unproven boundaries. |
+| `edition.companyContinuity` | `editions[0].companyContinuity` | Same recurring-company change notes and still-unproven boundaries, after the company continuity review has classified the latest signal as stronger, weaker, repeated, or resolved. |
 | `edition.topicGroups` | `editions[0].topicGroups` | Same topic grouping, item IDs, and action-oriented meanings. |
 | `items.length` | `editions[0].itemCount`, `editions[0].items.length` | Same item count. Short batches need a log reason, not a silent mismatch. |
 | `items[].id` order | `editions[0].items[].id` order | Same newest-first item order unless the homepage was deliberately re-ranked. |

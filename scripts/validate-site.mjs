@@ -31,6 +31,7 @@ const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md"
 const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-note.md", "utf8");
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
+const companyContinuityReviewNote = readFileSync("docs/company-continuity-review-note.md", "utf8");
 const counterEvidenceObservableGuide = readFileSync("docs/counter-evidence-observable-guide.md", "utf8");
 const detailPageReviewGuide = readFileSync("docs/detail-page-review-guide.md", "utf8");
 const homepageEditionPreflight = readFileSync("docs/homepage-edition-preflight.md", "utf8");
@@ -727,7 +728,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -781,7 +782,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 21/.test(optimizationDecisionIndex)
+  !/Continue with Day 22/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -1410,7 +1411,7 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 21/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 22/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1562,6 +1563,24 @@ if (
   !/companyContinuity/.test(newsJson)
 ) {
   errors.push("Homepage feed metadata must render and validate recurring company continuity notes.");
+}
+
+if (
+  !/docs\/company-continuity-review-note\.md/.test(readme) ||
+  !/Company Continuity Review Note/.test(companyContinuityReviewNote) ||
+  !/stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(companyContinuityReviewNote) ||
+  !/continuityStatus: stronger \/ weaker \/ repeated \/ resolved/.test(companyContinuityReviewNote) ||
+  !/Repetition is not evidence strength/.test(companyContinuityReviewNote) ||
+  !/companyContinuity/.test(companyContinuityReviewNote) ||
+  !/docs\/company-continuity-review-note\.md/.test(newsDataFormat) ||
+  !/stronger, weaker, repeated, or resolved/.test(newsDataFormat) ||
+  !/docs\/company-continuity-review-note\.md/.test(currentToHistoryPublicationChecklist) ||
+  !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 22/.test(optimizationDecisionIndex)
+) {
+  errors.push("Company continuity review must classify recurring-company signals before public continuity copy is written.");
 }
 
 if (

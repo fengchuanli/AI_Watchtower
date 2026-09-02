@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 4, Continuity And Archive Usefulness
-- Last indexed run: 2026-09-01 20:00 JST
-- Network status: Latest 20:00 run was blocked by GitHub DNS for pull and push; local `main` remains ahead of the known remote until sync succeeds.
+- Last indexed run: 2026-09-02 20:00 JST
+- Network status: Latest 20:00 run pulled cleanly from `origin main`; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
 
@@ -39,6 +39,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 18 | Complete | `2dee98b` | Current and latest archived `followUpQuestions` now name item-specific source artifacts and observable checks, and validation rejects generic `核心事实` / `继续观察` prompts. |
 | Day 19 | Complete | `179876e` | `counterEvidence` guidance now distinguishes central downgrade from scope narrowing: downgrade when the core claim breaks, narrow when the fact still stands but the boundary is smaller. |
 | Day 20 | Complete | `05fa6e8` | Current and latest archived detail-page `provenance` source references now name the exact source fact they support, and validation rejects bare source labels. |
+| Day 21 | Complete | `pending` | `docs/company-continuity-review-note.md` classifies recurring-company signals as stronger, weaker, repeated, or resolved before editors write public `companyContinuity` notes. |
 
 ## Historical Guard Anchors
 
@@ -63,9 +64,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 21: add a lightweight cross-edition review note for recurring companies that asks whether the latest signal is stronger, weaker, repeated, or resolved.
+- Continue with Day 22: review `topicContinuity` notes and remove wording that implies a trend is confirmed only because several media items repeated it.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 20 first.
-- If Day 21 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 22 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 
