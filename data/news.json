@@ -3,20 +3,20 @@
   "updatedAt": "2026-09-02",
   "status": "published",
   "statusLabel": "已发布",
-  "sourceCount": 69,
-  "editorNote": "2026-09-02 17:00 JST 自动化更新：GitHub DNS 阻断远端拉取，基于当前本地 main 发布 10 条安全非重复信号。",
+  "sourceCount": 70,
+  "editorNote": "2026-09-02 23:00 JST 自动化更新：GitHub DNS 阻断远端拉取，在 17:00 版基础上补充 1 条 SafeMind 官方/厂商主张信号，当前 11 条安全非重复信号。",
   "edition": {
     "id": "news-1700-2026-09-02",
     "date": "2026-09-02",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
     "archiveLabel": "17:00 JST 发布",
-    "note": "本期聚焦 Astra 安全阈值、Claude 5.1、医疗数据、企业隐私、AI 图像、农业助手、神经渲染和开源政策。",
-    "operationalStatus": "GitHub DNS 阻断拉取；基于当前本地 main，核查官方/RSS/可靠媒体入口后发布 10 条安全非重复信号。",
-    "editorialInterpretation": "本期发布 10 条安全非重复信号；未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源和弱证据素材补数。",
+    "note": "本期聚焦 Astra 安全阈值、SafeMind 防御模型、Claude 5.1、医疗数据、企业隐私、AI 图像、农业助手、神经渲染和开源政策。",
+    "operationalStatus": "GitHub DNS 阻断拉取；基于当前本地 main，在 17:00 版基础上补充 1 条官方/厂商主张信号，当前发布 11 条安全非重复信号。",
+    "editorialInterpretation": "本期发布 11 条安全非重复信号；新增 SafeMind 作为防御侧 agentic security 补充，未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源和弱证据素材补数。",
     "readerFrame": {
-      "headline": "前沿模型发布进入能力分级、行业连接和治理证明期",
-      "whyItMatters": "今天的信号把 Astra 网络安全阈值、Claude 5.1、医疗 EHR、企业隐私、Workspace 图像、农业数据、神经渲染和 Debian AI 贡献政策放进同一张执行风险图。",
+      "headline": "高风险模型和防御侧 Agent 同步进入核查期",
+      "whyItMatters": "今天的信号把 Astra 网络安全阈值、SafeMind 防御模型、Claude 5.1、医疗 EHR、企业隐私、Workspace 图像、农业数据、神经渲染和 Debian AI 贡献政策放进同一张执行风险图。",
       "useThisIssueFor": [
         "安全和合规团队检查高风险模型访问、滥用监测、数据留存、开源贡献和审计材料。",
         "产品和行业团队评估医疗、农业、办公创意和企业 Agent 工作流的权限、复核和采用边界。",
@@ -28,20 +28,21 @@
         "不证明 Debian 政策会被所有维护者一致接受或执行。"
       ],
       "mobile": {
-        "headline": "本期查高风险模型和行业数据入口",
-        "summary": "高风险模型、行业数据入口和工具责任同步更新。",
+        "headline": "本期查高风险模型和防御 Agent",
+        "summary": "高风险模型、防御 Agent、行业数据入口和工具责任同步更新。",
         "primaryUses": [
           "安全团队查访问控制",
-          "行业团队查数据权限",
-          "工程团队查评测日志"
+          "SOC 团队查自动修复",
+          "行业团队查数据权限"
         ],
-        "proofBoundary": "仍需系统卡、客户审计、价格页、驱动实测和项目执行记录"
+        "proofBoundary": "仍需系统卡、客户审计、独立红队、价格页、驱动实测和项目执行记录"
       }
     },
     "changeSummary": {
       "headline": "较上一版从广告/Search/Agent 治理转向模型发布与行业数据连接",
       "freshFacts": [
         "本期新增事实：OpenAI 将 Astra 标为 Critical 网络安全能力并限制高级访问。",
+        "本期新增事实：CrowdStrike 与 NVIDIA 发布 SafeMind，将红蓝队安全模型和 Falcon 遥测组合成 agentic defense 系统。",
         "本期新增事实：Anthropic 发布 Fable 5.1、Mythos 5.1，并提出 EFS 企业隐私/监测方案。",
         "本期新增事实：OpenAI、Google 和 John Deere 分别把 AI 接入医疗、办公创意和农业设备数据场景。",
         "本期新增事实：NVIDIA、Microsoft 和 Debian 分别补充神经渲染、责任 AI 报告和开源 LLM 使用政策。"
@@ -54,8 +55,8 @@
     "coverageMix": [
       {
         "label": "核对安全治理",
-        "count": 4,
-        "meaning": "用来检查 Astra 访问、EFS 隐私、Microsoft 透明度和 Debian 贡献责任的证据链。"
+        "count": 5,
+        "meaning": "用来检查 Astra 访问、SafeMind 自动防御、EFS 隐私、Microsoft 透明度和 Debian 贡献责任的证据链。"
       },
       {
         "label": "验证行业入口",
@@ -70,8 +71,8 @@
     ],
     "sourceRisk": {
       "label": "官方来源占主导",
-      "note": "官方来源为 10/10，来源家族高度集中；适合核对发布事实，不适合直接推出效果或采用定论。",
-      "nextCheck": "复核官方文档、独立客户审计、第三方 benchmark、监管反馈和安全红队报告。"
+      "note": "官方来源为 11/11，来源家族高度集中，其中 SafeMind 属于厂商主张；适合核对发布事实，不适合直接推出效果、采用或防护能力定论。",
+      "nextCheck": "复核官方文档、独立客户审计、第三方 benchmark、监管反馈、安全红队报告和 Falcon 管理员材料。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
@@ -162,8 +163,8 @@
       {
         "family": "official",
         "label": "官方来源",
-        "count": 10,
-        "role": "用于核对 OpenAI、Anthropic、Google、Microsoft、NVIDIA、John Deere 和 Debian 的发布/政策事实；效果、采用和执行仍需外部证据。"
+        "count": 11,
+        "role": "用于核对 OpenAI、Anthropic、Google、Microsoft、NVIDIA、CrowdStrike、John Deere 和 Debian 的发布/政策事实；效果、采用和执行仍需外部证据。"
       }
     ],
     "topicGroups": [
@@ -172,12 +173,13 @@
         "label": "安全与治理",
         "itemIds": [
           "openai-astra-critical-cyber-safeguards-2026-09-01",
+          "crowdstrike-nvidia-safemind-agentic-cybersecurity-2026-09-01",
           "anthropic-enterprise-frontier-safeguards-2026-09-01",
           "microsoft-responsible-ai-transparency-report-2026-09-01",
           "debian-generative-ai-policy-vote-2026-08-31"
         ],
-        "meaning": "用来检查前沿模型访问、企业隐私、安全透明度和开源贡献责任。",
-        "count": 4
+        "meaning": "用来检查前沿模型访问、自动化防御、企业隐私、安全透明度和开源贡献责任。",
+        "count": 5
       },
       {
         "id": "model",
@@ -214,9 +216,9 @@
       "sourceId": "openai-news",
       "sourceName": "OpenAI News",
       "count": 3,
-      "share": "3/10",
-      "note": "OpenAI 为 3/10，未过度集中；但本期整体由官方发布主导，厂商效果主张需独立验证。",
-      "nextCheck": "查独立客户审计、第三方 benchmark、监管材料和开源维护记录。"
+      "share": "3/11",
+      "note": "OpenAI 为 3/11，未过度集中；但本期整体由官方发布主导，SafeMind 等厂商效果主张需独立验证。",
+      "nextCheck": "查独立客户审计、第三方 benchmark、监管材料、开源维护记录和安全红队复测。"
     }
   },
   "categories": [
@@ -254,12 +256,12 @@
   "briefing": {
     "label": "今日简报",
     "headline": "高能力模型的下一步不是只比聪明，而是证明可控",
-    "summary": "9 月 2 日 17:00 JST 版显示，前沿模型、行业插件、企业隐私方案和开发者政策都在围绕同一件事重排：AI 可以进入更深的工作流，但必须把权限、日志、误拦截、客户审计和人类复核写进发布条件。",
+    "summary": "9 月 2 日 17:00 JST 版补充显示，前沿模型、agentic security、行业插件、企业隐私方案和开发者政策都在围绕同一件事重排：AI 可以进入更深的工作流，但必须把权限、日志、误拦截、客户审计、红蓝队复测和人类复核写进发布条件。",
     "cta": "查看本期信号",
     "watchPoints": [
       {
-        "title": "Astra 与 Claude 的安全卡",
-        "body": "系统卡、模型卡、漏洞披露和外部红队会决定这批能力发布能否从厂商口径升级。"
+        "title": "Astra、SafeMind 与 Claude 的安全卡",
+        "body": "系统卡、模型卡、漏洞披露、Falcon 日志和外部红队会决定这批能力发布能否从厂商口径升级。"
       },
       {
         "title": "行业数据入口的审计证据",
@@ -276,13 +278,13 @@
     "title": "前沿能力、行业数据和开发者责任同时进入可审计阶段",
     "subtitle": "本期不是单一模型发布日，而是高风险能力、行业连接和工具链责任同时被重新定义的一天。",
     "dateLabel": "2026-09-02 17:00 JST",
-    "status": "已发布，官方来源占主导",
-    "overview": "OpenAI 把 Astra 网络安全能力放进 Critical 阈值，Anthropic 用 Claude 5.1 和 EFS 回应成本、隐私与安全，OpenAI/Google/John Deere 把 AI 接入更深行业数据，NVIDIA 和 Debian 则分别把生成式 AI 带入图形管线和开源贡献规则。读者应把本期当作核查清单，而不是效果定论。",
+    "status": "已发布，官方来源占主导，SafeMind 为厂商主张",
+    "overview": "OpenAI 把 Astra 网络安全能力放进 Critical 阈值，CrowdStrike 与 NVIDIA 用 SafeMind 描述防御侧 agentic security，Anthropic 用 Claude 5.1 和 EFS 回应成本、隐私与安全，OpenAI/Google/John Deere 把 AI 接入更深行业数据，NVIDIA 和 Debian 则分别把生成式 AI 带入图形管线和开源贡献规则。读者应把本期当作核查清单，而不是效果定论。",
     "timeline": [
       {
         "label": "模型能力",
-        "title": "Astra 与 Claude 5.1 把发布条件复杂化",
-        "body": "高能力模型的发布不再只看 benchmark，还要看访问分层、误拦截、成本、数据留存和系统卡。"
+        "title": "Astra、SafeMind 与 Claude 5.1 把发布条件复杂化",
+        "body": "高能力模型和防御侧 Agent 的发布不再只看 benchmark，还要看访问分层、遥测范围、误拦截、成本、数据留存和系统卡。"
       },
       {
         "label": "行业入口",
@@ -297,15 +299,15 @@
     ],
     "keyNumbers": [
       {
-        "value": "10",
+        "value": "11",
         "label": "本期安全非重复信号"
       },
       {
-        "value": "3/10",
+        "value": "3/11",
         "label": "OpenAI 来源占比"
       },
       {
-        "value": "69",
+        "value": "70",
         "label": "登记来源总数"
       }
     ],
@@ -314,7 +316,7 @@
         "number": "01",
         "label": "高风险模型",
         "title": "能力越强，发布越像安全工程项目",
-        "body": "Astra 和 Claude 5.1 都把能力、访问、误拦截和敏感任务边界放进发布叙事。下一步不是看谁先上线，而是看系统卡、模型卡和外部红队是否能复核。",
+        "body": "Astra、SafeMind 和 Claude 5.1 都把能力、访问、误拦截、自动化防御和敏感任务边界放进发布叙事。下一步不是看谁先上线，而是看系统卡、模型卡、Falcon 日志和外部红队是否能复核。",
         "soWhat": "安全团队应把高能力模型当作分级系统接入，而不是普通 API 升级。"
       },
       {
@@ -333,23 +335,23 @@
       }
     ],
     "actions": [
-      "为 Astra/Claude 5.1 建立系统卡、模型卡、红队和误拦截跟踪表。",
+      "为 Astra/Claude 5.1/SafeMind 建立系统卡、模型卡、红队、误拦截、Falcon 日志和自动修复权限跟踪表。",
       "为医疗、农业和 Workspace AI 入口补齐权限、日志、数据流和客户反馈字段。",
       "为 DLSS 5 与 AI 代码贡献安排第三方实测、许可证检查和维护者 review 记录。"
     ],
     "coverageLimits": [
       {
         "label": "时间边界",
-        "body": "本期覆盖 2026-09-01 至 2026-09-02 17:00 JST 前可核查的官方/可靠来源。"
+        "body": "本期覆盖 2026-09-01 至 2026-09-02 晚间 JST 前可核查的官方/可靠来源。"
       },
       {
         "label": "结论边界",
-        "body": "官方发布可以证明动作发生，不能单独证明安全、成本、临床、农场、画质或开源执行效果。"
+        "body": "官方发布可以证明动作发生，不能单独证明安全、成本、临床、农场、画质、自动防御或开源执行效果。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI、Anthropic、Google、Microsoft、NVIDIA、John Deere 和 Debian 均有可核对的一手入口。",
+        "OpenAI、Anthropic、Google、Microsoft、NVIDIA、CrowdStrike、John Deere 和 Debian 均有可核对的一手入口。",
         "媒体页面仅用于发现和交叉检查候选，不把社区评论或传闻写成事实。"
       ],
       "editorialJudgment": [
@@ -357,7 +359,7 @@
         "官方来源占主导，因此本期更适合作为核查清单，而不是采用效果定论。"
       ],
       "unknowns": [
-        "Astra、Claude 5.1、EFS、医疗 EHR、JD AI 和 DLSS 5 的独立效果数据仍未充分公开。",
+        "Astra、SafeMind、Claude 5.1、EFS、医疗 EHR、JD AI 和 DLSS 5 的独立效果数据仍未充分公开。",
         "Debian LLM 政策的执行一致性需要后续邮件列表和包维护记录验证。"
       ]
     },
@@ -365,6 +367,10 @@
       {
         "label": "OpenAI 披露 Astra Critical 网络安全阈值与访问限制",
         "url": "https://openai.com/index/path-to-astra/"
+      },
+      {
+        "label": "CrowdStrike 宣布 SafeMind 安全模型与 NVIDIA Nemotron 合作",
+        "url": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-launches-frontier-models-for-cybersecurity-with-nvidia/"
       },
       {
         "label": "Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1",
@@ -385,6 +391,76 @@
     ]
   },
   "items": [
+    {
+      "id": "crowdstrike-nvidia-safemind-agentic-cybersecurity-2026-09-01",
+      "category": "policy",
+      "label": "政策",
+      "title": "CrowdStrike 与 NVIDIA 发布 SafeMind 红蓝队安全模型系统",
+      "body": "CrowdStrike 称 SafeMind 将 Red Tempest 攻击模型、Blue Solano 防御模型和 NVIDIA Nemotron 组合进 Falcon 平台，用闭环红蓝队代理测试企业防御。",
+      "summary": "CrowdStrike 称 SafeMind 将 Red Tempest 攻击模型、Blue Solano 防御模型和 NVIDIA Nemotron 组合进 Falcon 平台，用闭环红蓝队代理测试企业防御。",
+      "whyItMatters": "今天的高风险模型治理不只看模型供应商限制能力，也开始看防御侧是否能用专用模型、遥测和仿真环境追上自动化攻击速度。",
+      "detailBody": "CrowdStrike 9 月 1 日发布 SafeMind，称其把 Red Tempest、Blue Solano、agent harness、Falcon 遥测和 NVIDIA Nemotron 组合成防御系统。 站内仅保留最小事实、影响判断和后续核查路径，完整技术细节、指标口径、报价或条款仍以原始来源为准。",
+      "trend": "安全 AI 正从告警总结和 copilots 转向以仿真、遥测、红蓝对抗和自动验证为核心的模型化防御栈。",
+      "detailTrend": "安全 AI 正从告警总结和 copilots 转向以仿真、遥测、红蓝对抗和自动验证为核心的模型化防御栈。 它说明 Astra 这类高能力模型带来的风险，也在推动防御厂商把专用模型、企业数据边界和可验证闭环写进产品路线。",
+      "whyRanked": "这是本期 Astra 安全阈值之外最直接的防御侧补充，展示企业安全厂商如何包装 agentic security。",
+      "topReason": "这是本期 Astra 安全阈值之外最直接的防御侧补充，展示企业安全厂商如何包装 agentic security。",
+      "detailWhyRanked": "这是本期 Astra 安全阈值之外最直接的防御侧补充，展示企业安全厂商如何包装 agentic security。 CrowdStrike 新闻稿和 NVIDIA 技术博客能核对产品、模型角色和合作方，但检测率、速度与成本优势仍是厂商评估，必须等独立复测或客户日志。",
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 23,
+        "note": "官方发布清楚说明模型/平台动作，但核心检测率和成本优势仍是厂商评估。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 23,
+        "note": "官方发布清楚说明模型/平台动作，但核心检测率和成本优势仍是厂商评估。"
+      },
+      "impact": "企业安全、SOC、平台和合规团队应把 AI 防御模型纳入工具权限、遥测范围、仿真环境、自动修复和人类审批清单。",
+      "whoShouldCare": "负责 Falcon、EDR、云安全、红队演练、漏洞修复和 AI 安全治理的 SOC/安全工程/平台团队应关注。",
+      "readerUse": "安全团队用来检查 agentic 防御系统的训练数据边界、自动化修复权限、红蓝队仿真日志和第三方验证计划。",
+      "nextCheck": "查 CrowdStrike 技术白皮书、Falcon 管理员文档、NVIDIA 技术评测、独立红队复测、客户审计日志和误报/漏报样本。",
+      "followUpQuestions": [
+        "SafeMind 的技术白皮书、Falcon 管理员日志或评测报告是否公开误报率、漏报率和人工审批流程？",
+        "第三方红队或客户审计能否复现 CrowdStrike 宣称的检测率、修复速度和成本优势？"
+      ],
+      "evidenceThreshold": "需要独立红队复测、客户侧遥测、审计报告、Falcon 配置文档和可复现评测口径确认，才可升级为已验证的生产级 AI 防御案例。",
+      "claimBoundary": "不证明 SafeMind 已在所有 Falcon 客户环境全面可用，也不证明自动攻防闭环能在真实生产网络中稳定降低风险。",
+      "counterEvidence": "若客户日志显示误报/漏报高、自动修复受限、评测集不可复现或独立测试未确认成本优势，应下调为厂商安全产品发布。",
+      "source": "CrowdStrike Pressroom",
+      "sourceName": "CrowdStrike Pressroom",
+      "sourceRole": "厂商主张",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "vendor-claim",
+      "originalDependency": "recommended",
+      "trustLevel": "official",
+      "sourceId": "crowdstrike-news",
+      "provenance": "CrowdStrike Pressroom 提供厂商主张来源，可支持这条窄事实：CrowdStrike 发布 SafeMind，称其包含 Red Tempest、Blue Solano、agent harness，并与 NVIDIA Nemotron 和 Falcon 平台相关；检测率、速度、成本和客户防护效果仍需独立复测与客户侧证据。",
+      "sourceUrl": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-launches-frontier-models-for-cybersecurity-with-nvidia/",
+      "originalUrl": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-launches-frontier-models-for-cybersecurity-with-nvidia/",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-09-02T09:10:00+09:00",
+      "time": "09/02",
+      "tags": [
+        "SafeMind",
+        "CrowdStrike",
+        "NVIDIA Nemotron",
+        "agentic security"
+      ],
+      "companies": [
+        "CrowdStrike",
+        "NVIDIA",
+        "CoreWeave"
+      ]
+    },
     {
       "id": "openai-astra-critical-cyber-safeguards-2026-09-01",
       "category": "policy",
