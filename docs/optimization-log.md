@@ -29,8 +29,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `809cc8d` (`规范主题连续观察`); final log/index record commit follows this log update.
-- Git note: `git push origin main` still needs GitHub DNS recovery. Current run executed at 2026-09-02 11:05 JST local shell time / 20:00 JST scheduled automation window.
+- Commit: Local implementation commit `809cc8d` (`规范主题连续观察`) and log/index record commit `b118309` (`记录主题连续观察优化`); final push-status record follows this log update.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; remote sync depends on DNS/network recovery. Current run executed at 2026-09-02 11:05 JST local shell time / 20:00 JST scheduled automation window.
 
 ## 2026-09-02 20:00 JST
 
