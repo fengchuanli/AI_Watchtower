@@ -22,8 +22,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: pending (`更新9月4日17点AI新闻情报`).
-- Git note: pull failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may require network/DNS recovery.
+- Commit: `77a3a3a` (`更新9月4日17点AI新闻情报`); final push-status record follows this log update.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; elevated retry was rejected by the app safety review because it would publish local `main` to an unverified GitHub remote. Remote sync needs explicit user authorization in a trusted push context or network/DNS recovery with approved publishing.
 
 ## 2026-09-03 23:04 JST
 
