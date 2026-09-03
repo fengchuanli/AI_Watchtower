@@ -92,12 +92,25 @@ news-current-venturebeat-kimi-k3-full-weights-2026-07-28-0000
 ## Cache Record Format
 
 local prototype では、将来以下のような cache file を持つ想定です。
+Day20 で、この cache file を扱う local cache layer を実装しました。
 
 想定ファイル:
 
 ```text
 rag/embedding_cache.jsonl
 ```
+
+対応ファイル:
+
+```text
+rag/embedding_cache.py
+rag/inspect_embedding_cache.py
+rag/test_embedding_cache.py
+rag/embedding-cache-file.md
+```
+
+Day20 時点では、まだ本物の Azure vector がないため `rag/embedding_cache.jsonl` は作成していません。
+cache layer は実装済みで、実 vector が取得できた後に successful embedding だけを保存します。
 
 record example:
 
@@ -319,17 +332,21 @@ rag/chunks.jsonl
 rag/azure_search_docs.jsonl
 rag/prepare_azure_search_docs.py
 rag/embedding-provider-design.md
+rag/embedding_providers.py
+rag/embedding_cache.py
+rag/inspect_embedding_cache.py
 ```
 
-将来追加する可能性があるファイル:
+現在実装済みまたは将来使うファイル:
 
 ```text
 rag/embedding_cache.jsonl
-rag/build_embedding_cache.py
+rag/test_embedding_cache.py
 rag/prepare_vectorized_azure_search_docs.py
 ```
 
-Day 16 では、まだこれらの実装は行いません。まず設計を確定します。
+Day20 では cache record と hit/miss/change 判定まで実装しました。
+`rag/embedding_cache.jsonl` と `rag/prepare_vectorized_azure_search_docs.py` は、本物の vector を取得した後に使います。
 
 ## Day 16 Completion Criteria
 
@@ -342,6 +359,36 @@ Day 16 の完了条件:
 - 毎日ニュース更新時に変更分だけ処理する流れを説明できる
 - cache invalidation の条件を説明できる
 - 失敗した chunk を空 vector でごまかしてはいけない理由を説明できる
+
+## Day 20 Implementation Update
+
+Day20 で local embedding cache file layer を実装しました。
+
+実装内容:
+
+- `chunk_id + text_hash + embedding_deployment + api_version` の cache key
+- JSONL cache record の read / write
+- cache hit / miss / changed chunk の分類
+- deployment / api_version 変更時の cache miss
+- 空 vector / 非数値 vector の拒否
+- 現在の `rag/chunks.jsonl` に対する cache inspection
+
+実行:
+
+```bash
+python3 -B rag/inspect_embedding_cache.py
+```
+
+現在の結果:
+
+```text
+total chunks: 1273
+cache hits: 0
+cache misses: 1273
+changed chunks: 0
+```
+
+これは、本物の Azure embedding cache がまだ存在しないため正しい状態です。
 
 ## Portfolio Summary
 

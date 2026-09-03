@@ -2412,6 +2412,153 @@ Azure OpenAI Embedding の API 呼び出しを Provider として切り出し、
 また、fake transport を使った contract test により、Azure 環境がない状態でも response shape、dimension mismatch、secret redaction を確認できるようにしています。
 ```
 
+## Day 20: Embedding cache file implementation
+
+### 今天完成了什么
+
+Day20 把 Day16 的 cache 设计落成了本地 cache 文件层。
+
+新增：
+
+```text
+rag/embedding_cache.py
+rag/inspect_embedding_cache.py
+rag/test_embedding_cache.py
+rag/embedding-cache-file.md
+```
+
+更新：
+
+```text
+rag/embedding-cache-design.md
+rag/architecture.md
+rag/learning-notes.md
+```
+
+### 为什么要做 cache file layer
+
+Embedding 会产生费用，而且 AI Watchtower 的新闻每天会更新。
+
+如果每次都重新 embedding 全部 1273 个 chunks，会带来：
+
+- 成本增加
+- 运行时间变长
+- rate limit 风险增加
+- 失败后 retry 范围过大
+- 未修改 docs 也被重复处理
+
+所以 Day20 的目标是：
+
+```text
+只有 chunk text 或 embedding 设置变化时，才需要重新 embedding。
+```
+
+### 新增实现
+
+核心文件：
+
+```text
+rag/embedding_cache.py
+```
+
+实现内容：
+
+- `hash_text(text)` 生成 `sha256:...`
+- `EmbeddingCacheRecord`
+- `EmbeddingCache.read()`
+- `EmbeddingCache.write()`
+- `EmbeddingCache.get()`
+- `EmbeddingCache.upsert()`
+- `inspect_chunks()` 统计 cache hits / misses / changed chunks
+
+cache key：
+
+```text
+chunk_id + text_hash + embedding_deployment + api_version
+```
+
+### Inspect script
+
+新增：
+
+```text
+rag/inspect_embedding_cache.py
+```
+
+执行：
+
+```bash
+python3 -B rag/inspect_embedding_cache.py
+```
+
+当前结果：
+
+```text
+total chunks: 1273
+cache hits: 0
+cache misses: 1273
+changed chunks: 0
+```
+
+这是正确状态。因为现在还没有真实 Azure vector，也没有创建 `rag/embedding_cache.jsonl`。
+
+### Contract test
+
+新增：
+
+```text
+rag/test_embedding_cache.py
+```
+
+测试内容：
+
+- text hash 稳定
+- unchanged chunk 是 cache hit
+- 同一 chunk_id 但 text 变化会变成 changed chunk
+- deployment 变化会使 cache miss
+- cache read/write round trip 正常
+- 空 vector 被拒绝
+
+运行：
+
+```bash
+python3 -B rag/test_embedding_cache.py
+```
+
+### Day20 的边界
+
+今天不做：
+
+```text
+不调用 Azure OpenAI
+不生成真实 embedding_cache.jsonl
+不写 fake vector 到 cache
+不更新 azure_search_docs.jsonl 的 content_vector
+不 upsert Azure AI Search
+```
+
+今天完成的是：
+
+```text
+embedding cache file 的数据结构、读写逻辑、hit/miss/change 判断和本地验证。
+```
+
+### 作品集写法
+
+```text
+Implemented a local embedding cache file layer that keys vectors by chunk ID, text hash, embedding deployment, and API version, with hit/miss/change inspection and validation that prevents empty or invalid vectors from being cached.
+```
+
+### 日文面试表达
+
+```text
+Embedding の再計算を避けるために、chunk_id、text_hash、deployment、api_version を key にした local cache layer を実装しました。
+```
+
+```text
+本文が変わっていない chunk は cache hit として再利用し、本文や embedding 設定が変わった場合は cache miss として再 embedding する設計にしています。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -2435,6 +2582,7 @@ Azure OpenAI Embedding の API 呼び出しを Provider として切り出し、
 - Day 17: Azure OpenAI Embedding 实装准备
 - Day 18: Azure OpenAI Embedding one-text smoke test
 - Day 19: AzureOpenAIEmbeddingProvider implementation
+- Day 20: Embedding cache file implementation
 
 ### 当前已生成或新增的文件
 
@@ -2463,6 +2611,10 @@ rag/azure_openai_embedding_smoke_test.py
 rag/azure-openai-embedding-provider.md
 rag/embedding_providers.py
 rag/test_embedding_provider_contract.py
+rag/embedding-cache-file.md
+rag/embedding_cache.py
+rag/inspect_embedding_cache.py
+rag/test_embedding_cache.py
 rag/learning-notes.md
 ```
 
@@ -2484,18 +2636,19 @@ EmbeddingCache 设计已完成，明确用 chunk_id、text_hash、embedding depl
 Azure OpenAI Embedding 实装准备已完成，明确环境变量、依赖边界、readiness check、one-text smoke test 顺序和失败时停止条件。
 Azure OpenAI Embedding one-text smoke test 已完成，能够在真实 batch embedding 前验证 response shape、list[float]、vector dimension、secret-safe logging 和常见 Azure 错误处理。
 AzureOpenAIEmbeddingProvider implementation 已完成，已经把 Azure API 调用边界、env config、single-text/small-batch embedding、response contract、dimension check 和 secret-safe error handling 封装进 provider。
+Embedding cache file implementation 已完成，已经用 chunk_id、text_hash、embedding_deployment、api_version 管理本地 cache record，并能报告当前 chunks 的 cache hit/miss/change 状态。
 ```
 
 ### 下一步
 
-Day 20 建议进入：
+Day 21 建议进入：
 
 ```text
-Embedding cache file implementation。
+Prepare vectorized Azure Search docs from cache。
 ```
 
 目标是理解：
 
 ```text
-如何把 provider 返回的 vector 和 chunk_id/text_hash/deployment/api_version 关联起来，先做本地 embedding cache 文件，不急着 upsert Azure AI Search。
+如何把 cache 中已有的 vector 安全填回 Azure Search payload，生成 vectorized docs 文件；仍然先不 upsert Azure AI Search。
 ```

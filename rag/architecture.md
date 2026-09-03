@@ -55,9 +55,11 @@ rag/embedding-provider-design.md
 rag/azure-openai-embedding-provider.md
 rag/embedding_providers.py
         ↓
-Future: embedding cache fills content_vector
-        ↓
 rag/embedding-cache-design.md
+rag/embedding-cache-file.md
+rag/embedding_cache.py
+rag/inspect_embedding_cache.py
+rag/test_embedding_cache.py
         ↓
 Future: incremental embedding and batch indexing
         ↓
@@ -70,7 +72,7 @@ rag/azure_openai_embedding_smoke_test.py
 AzureOpenAIEmbeddingProvider contract test
 rag/test_embedding_provider_contract.py
         ↓
-Future: embedding cache integration
+Future: vectorized Azure Search docs from cache
 ```
 
 ## Pipeline Steps
@@ -89,6 +91,7 @@ Future: embedding cache integration
 | Embedding Provider Design | `rag/embedding-provider-design.md` | text | vector | local mock と Azure OpenAI embedding の差し替え境界を定義する |
 | Azure OpenAI Embedding Provider | `rag/azure-openai-embedding-provider.md`, `rag/embedding_providers.py`, `rag/test_embedding_provider_contract.py` | text or small text batch | `list[float]` or `list[list[float]]` | Azure API 呼び出しを provider に分離し、config、response contract、dimension、secret-safe error を扱う |
 | Embedding Cache Design | `rag/embedding-cache-design.md` | chunks, text hash, embedding cache | changed chunks only | 変更された chunk だけ embedding し、未変更 chunk の vector を再利用する設計を定義する |
+| Embedding Cache File | `rag/embedding-cache-file.md`, `rag/embedding_cache.py`, `rag/inspect_embedding_cache.py`, `rag/test_embedding_cache.py` | chunks, cache JSONL | cache hit / miss / changed report | `chunk_id + text_hash + deployment + api_version` で cache record を管理し、空 vector を拒否する |
 | Azure OpenAI Embedding Readiness | `rag/azure-openai-embedding-readiness.md`, `rag/check_azure_openai_embedding_readiness.py` | env vars, Azure Search payload | readiness report | 実 Azure embedding の前に設定、payload、secret boundary、失敗時の停止条件を確認する |
 | Azure OpenAI Embedding Smoke Test | `rag/azure-openai-embedding-smoke-test.md`, `rag/azure_openai_embedding_smoke_test.py` | one short text, Azure env vars | `list[float]` vector check | 全 chunk 処理の前に 1 文だけ実 API に送り、response shape、dimension、failure handling を確認する |
 
@@ -304,6 +307,10 @@ EmbeddingProvider は text を vector に変換するだけ。
 
 ```text
 rag/embedding-cache-design.md
+rag/embedding-cache-file.md
+rag/embedding_cache.py
+rag/inspect_embedding_cache.py
+rag/test_embedding_cache.py
 ```
 
 責務:
@@ -624,14 +631,20 @@ chunk_id、text_hash、embedding deployment、api_version を使って、embeddi
 ```text
 rag/embedding-cache-design.md
 → cache / batch indexing の設計
+
+rag/embedding_cache.py
+→ local cache record / hit-miss classification
+
+rag/inspect_embedding_cache.py
+→ current chunks cache inspection
 ```
 
-将来:
+現在の local cache file:
 
 ```text
 rag/embedding_cache.jsonl
-rag/build_embedding_cache.py
-rag/prepare_vectorized_azure_search_docs.py
+→ successful embedding vectors only
+→ not generated until real vectors exist
 ```
 
 置き換え境界:
@@ -656,6 +669,7 @@ embedding に失敗した chunk を空 vector のまま Azure AI Search に入�
 
 ```text
 rag/embedding-cache-design.md
+rag/embedding-cache-file.md
 ```
 
 ### AzureOpenAIEmbeddingReadiness Boundary
