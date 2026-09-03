@@ -36,7 +36,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Editorial review | Confirm `docs/editorial-checklist.md`, `docs/source-policy.md`, and `docs/copyright-safety.md` were applied to the final items. |
 | Homepage preflight | Confirm `docs/homepage-edition-preflight.md` was applied, and say whether reader question, TOP3 use, source boundary, mobile scan path, proof boundary, and archive mirror are `done`, `partial`, or `blocked`. |
 | Archive mirror | Confirm `docs/current-to-history-publication-checklist.md` was applied after drafting, and say whether the latest history edition was mirrored, corrected, not needed, or blocked. |
-| Archive diff | For 17:00 JST runs, confirm `docs/archive-diff-summary-format.md` was applied and say whether the morning/evening comparison was done, skipped because only one same-day edition exists, skipped because the update was correction-only, or blocked by archive drift. |
+| Archive diff | For 17:00 JST runs, confirm `docs/archive-diff-summary-format.md` was applied and say whether the morning/evening comparison was done, skipped because only one same-day edition exists, skipped because the update was correction-only with no reader-facing story change, or blocked by archive drift. |
 | Rollback check | If bad data was detected, confirm `docs/bad-data-rollback-note.md` was applied and say whether rollback was corrected, not needed, or blocked. |
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |

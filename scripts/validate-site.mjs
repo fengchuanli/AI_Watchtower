@@ -729,7 +729,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -783,7 +783,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 23/.test(optimizationDecisionIndex)
+  !/Continue with Day 24/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -1088,6 +1088,12 @@ if (
   !/New signals/.test(archiveDiffSummaryFormat) ||
   !/Source posture/.test(archiveDiffSummaryFormat) ||
   !/Reader takeaway/.test(archiveDiffSummaryFormat) ||
+  !/Correction-Only Decision/.test(archiveDiffSummaryFormat) ||
+  !/Reader-facing story changed/.test(archiveDiffSummaryFormat) ||
+  !/archive-diff: skipped-correction-only/.test(archiveDiffSummaryFormat) ||
+  !/correction-only with no reader-facing story change/.test(updateRunChecklist) ||
+  !/correction-only decision/.test(currentToHistoryPublicationChecklist) ||
+  !/claim status, proof boundary, next check/.test(newsDataFormat) ||
   !/archive-diff: done/.test(archiveDiffSummaryFormat) ||
   !/data\/news-history\.json/.test(archiveDiffSummaryFormat) ||
   !/archive-diff-summary-format\.md/.test(updateRunChecklist) ||
@@ -1412,7 +1418,7 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 23/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1579,7 +1585,7 @@ if (
   !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 23/.test(optimizationDecisionIndex)
+  !/Continue with Day 24/.test(optimizationDecisionIndex)
 ) {
   errors.push("Company continuity review must classify recurring-company signals before public continuity copy is written.");
 }
@@ -1613,7 +1619,7 @@ if (
   !/Day 22[\s\S]*topic-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 23/.test(optimizationDecisionIndex)
+  !/Continue with Day 24/.test(optimizationDecisionIndex)
 ) {
   errors.push("Topic continuity review must prevent repeated media coverage from being written as stronger trend evidence.");
 }

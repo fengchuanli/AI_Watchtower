@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 4, Continuity And Archive Usefulness
-- Last indexed run: 2026-09-02 20:00 JST
+- Last indexed run: 2026-09-03 20:00 JST
 - Network status: Latest 20:00 follow-up run could not pull or push because `github.com` DNS resolution failed; local commits are ahead of known `origin/main`.
 
 ## Recent Plan-Day Decisions
@@ -41,6 +41,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 20 | Complete | `05fa6e8` | Current and latest archived detail-page `provenance` source references now name the exact source fact they support, and validation rejects bare source labels. |
 | Day 21 | Complete | `06f1307` | `docs/company-continuity-review-note.md` classifies recurring-company signals as stronger, weaker, repeated, or resolved before editors write public `companyContinuity` notes. |
 | Day 22 | Complete | `809cc8d` | `docs/topic-continuity-review-note.md` classifies recurring-topic signals as stronger, weaker, or repeated, and validation blocks repeated media coverage from being written as stronger trend evidence. |
+| Day 23 | Complete | `pending` | `docs/archive-diff-summary-format.md` now has a correction-only decision rule: skip archive diffs only when wording, metadata, URL/name, order, or mirror fixes do not change items, source posture, topic movement, proof boundaries, or reader interpretation. |
 
 ## Historical Guard Anchors
 
@@ -65,9 +66,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 23: add archive-diff guidance for correction-only updates where the reader-facing story did not materially change.
+- Continue with Day 24: review all-news and tag-page framing so archive readers understand older items as context, not current alerts.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 22 first.
-- If Day 22 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 23 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

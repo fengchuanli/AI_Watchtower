@@ -48,7 +48,7 @@ The newest `data/news-history.json` edition should match the current `data/news.
 4. Check that no older history edition repeats a current `sourceUrl` or near-duplicate title unless the current item has a valid `freshSourceFact`.
 5. Run `node scripts/validate-data.mjs` and treat any archive-readiness mismatch as a publication blocker.
 6. Open or parse `archive.html`, `all-news.html`, and `news-detail.html` when page behavior changed or when an archived detail link was affected.
-7. For 17:00 JST editions, check whether `docs/archive-diff-summary-format.md` should produce a morning/evening comparison or a skipped reason.
+7. For 17:00 JST editions, check whether `docs/archive-diff-summary-format.md` should produce a morning/evening comparison or a skipped reason. For correction-only updates, apply its correction-only decision before deciding whether the reader-facing story changed.
 8. Record in `docs/optimization-log.md` whether the latest history edition was mirrored, created, corrected, or intentionally left unchanged with a reason.
 9. If a correction removes or demotes a bad current item, also record the rollback shape from `docs/bad-data-rollback-note.md` so future runs know whether the issue reached draft, commit, or push.
 

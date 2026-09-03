@@ -18,6 +18,18 @@ Skip the diff with a reason when:
 - The second batch is a correction-only update with no item, source-family, topic, or proof-boundary change.
 - The morning edition is missing, invalid, or not yet mirrored from `data/news.json`; fix archive readiness first with `docs/current-to-history-publication-checklist.md`.
 
+## Correction-Only Decision
+
+Use this check before writing a morning/evening diff for a correction. A correction-only update should be logged, but it should not create a reader-facing archive diff unless the correction changes what the reader should believe.
+
+| Correction type | Reader-facing story changed? | Archive-diff action |
+| --- | --- | --- |
+| Typo, punctuation, label cleanup, short wording fix, or validator-only field alignment | No | Skip the diff and log `archive-diff: skipped-correction-only`. |
+| Source URL, source name, timestamp, item order, or mirror metadata corrected without changing item count, source family, topic group, claim status, proof boundary, or next check | No | Skip the diff and mention the fixed field in `docs/optimization-log.md`. |
+| Claim boundary, `nextCheck`, `evidenceThreshold`, `counterEvidence`, `claimStatus`, `sourceRole`, source family, topic group, added item, removed item, or re-ranked TOP3 changed | Yes | Write or update the archive diff because the reader's interpretation changed. |
+
+When skipping, the log should still name the correction and say why no diff was written. Do not hide a correction behind the skip status if it demotes a claim, changes the supported source fact, removes a repeated item, or narrows a proof boundary.
+
 ## Comparison Scope
 
 Compare only adjacent same-day morning/evening editions. Do not compare against yesterday, last week, or an unrelated archive entry unless a future plan adds an explicit continuity feature.
@@ -97,6 +109,12 @@ Use this wording when the diff is intentionally skipped:
 
 ```text
 Archive diff: skipped-one-edition - only one same-day archive edition exists, so no morning/evening comparison was written.
+```
+
+Use this wording when a correction did not change the reader-facing story:
+
+```text
+Archive diff: skipped-correction-only - correction fixed wording, metadata, or mirroring without changing items, source posture, topic movement, or proof boundaries.
 ```
 
 Use this wording when archive drift blocks the diff:
