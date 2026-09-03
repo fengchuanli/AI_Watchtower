@@ -1,3 +1,30 @@
+## 2026-09-04 08:12 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-04`，发布 11 条安全非重复信号，聚焦 GPT-6 Astra 官方 API 入口、OpenAI 状态页可靠性、Agent 安全立法、ASI 禁令、NVIDIA PAIR、Microsoft FY27 披露口径、Microsoft India WTI 和 AIR Security。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；本机仍因 `github.com` DNS 解析失败无法拉取，继续基于当前本地 `main`。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；优先官方、状态页、SEC filing 和可靠媒体最小事实，不使用付费墙/登录墙正文、社区讨论、随机网页、传闻或重复 NVIDIA/Hugging Face 并购线补量。
+  - 新增登记来源 `openai-status`、`nvidia-technical-blog`、`microsoft-source-asia`、`sanders-senate` 和 `air-security`，source count 更新为 76。
+  - 官方/文件/状态来源占 9/11，版次层保留 `sourceRisk`、`sourceConcentration` 与 `overreadBoundary`，明确不能把发布事实、状态页记录、法案新闻稿或厂商案例写成 AGI、生产率、通过概率、共同 outage 根因或产品效果定论。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 663。
+- Verification:
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, current `data/news.json`, latest archive mirror, recent `docs/optimization-log.md`, and candidate official/reliable web sources.
+  - Checked OpenAI API docs/customer stories/status, NVIDIA Technical Blog, Microsoft Source Asia, Microsoft SEC 8-K, Axios, Sanders official press release, AIR Security, The Verge and duplicate candidates; skipped old, duplicate, paywalled/login-walled, community, random-page, and weak-evidence items.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 76 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending (`更新9月4日17点AI新闻情报`).
+- Git note: pull failed due to `ssh: Could not resolve hostname github.com: -65563`; push will be attempted after commit and may require network/DNS recovery.
+
 ## 2026-09-03 23:04 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-03`，所以未回退版次，而是在 17:00 版基础上补充 1 条高置信官方/监管文件信号。

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-04",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1121,6 +1121,80 @@
       "hasRss": false,
       "language": "en",
       "notes": "CrowdStrike 官方新闻入口，用于核对 Falcon、SafeMind、Charlotte AI、agentic cybersecurity 和企业安全平台发布事实；检测率、成本、自动修复和客户效果仍需独立测试、客户日志或审计证据。"
+    },
+    {
+      "id": "openai-status",
+      "name": "OpenAI Status",
+      "url": "https://status.openai.com/",
+      "feedUrl": null,
+      "category": [
+        "product",
+        "infrastructure",
+        "incident"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方状态页，用于核对 OpenAI 产品、API、Codex 和平台 incident 的时间线、影响组件、恢复状态和事后说明；不证明其他厂商或第三方平台状态。"
+    },
+    {
+      "id": "nvidia-technical-blog",
+      "name": "NVIDIA Technical Blog",
+      "url": "https://developer.nvidia.com/blog/",
+      "feedUrl": null,
+      "category": [
+        "developer",
+        "infrastructure",
+        "hardware"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "NVIDIA 技术原文，用于核对开发者工具、本地推理、GPU 软件栈和示例指标；性能、兼容性和稳定性仍需第三方测试或用户侧日志。"
+    },
+    {
+      "id": "microsoft-source-asia",
+      "name": "Microsoft Source Asia",
+      "url": "https://news.microsoft.com/source/asia/",
+      "feedUrl": null,
+      "category": [
+        "enterprise",
+        "research",
+        "company"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Microsoft 区域官方新闻，用于核对 Work Trend Index、客户案例和区域 AI 发布事实；生产率和采用效果仍需原始数据、客户日志或第三方研究。"
+    },
+    {
+      "id": "sanders-senate",
+      "name": "Senator Bernie Sanders Press Releases",
+      "url": "https://www.sanders.senate.gov/press-releases/",
+      "feedUrl": null,
+      "category": [
+        "policy",
+        "government"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "议员办公室官方发布，用于核对法案名称、发起人、政策主张和发布时间；立法进度、通过概率和影响仍需国会文本与程序记录。"
+    },
+    {
+      "id": "air-security",
+      "name": "AIR Security",
+      "url": "https://www.air.security/",
+      "feedUrl": null,
+      "category": [
+        "security",
+        "agent",
+        "startup"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "厂商官方入口，用于核对 AI agent firewall、融资和产品定位主张；安装量、检测效果和企业采用需要客户侧日志、审计或独立安全评测。"
     }
   ],
   "sourceCount": 70
