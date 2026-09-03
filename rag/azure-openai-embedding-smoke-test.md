@@ -59,6 +59,9 @@ rag/azure_openai_embedding_smoke_test.py
 
 この script は Python 標準ライブラリだけで動きます。
 
+Day19 以降、この script は直接 HTTP 処理を持たず、`rag/embedding_providers.py` の `AzureOpenAIEmbeddingProvider` を使います。
+そのため、smoke test は provider 実装の最小利用例としても機能します。
+
 dry run:
 
 ```bash

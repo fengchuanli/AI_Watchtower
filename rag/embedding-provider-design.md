@@ -111,14 +111,16 @@ LocalMockEmbeddingProvider
 → semantic quality は低い
 ```
 
-## Future Azure Implementation
+## Current Azure Implementation
 
-将来は Azure OpenAI Embedding を使って、chunk text と user query を本物の semantic vector に変換します。
+Day19 で、Azure OpenAI Embedding を呼び出す provider boundary を実装しました。
 
-想定 component:
+対応ファイル:
 
 ```text
-AzureOpenAIEmbeddingProvider
+rag/embedding_providers.py
+rag/azure-openai-embedding-provider.md
+rag/test_embedding_provider_contract.py
 ```
 
 責務:
@@ -127,22 +129,33 @@ AzureOpenAIEmbeddingProvider
 - response から vector を取り出す
 - timeout / retry / rate limit を処理する
 - 失敗時に pipeline が判断できる error を返す
-- batch embedding に対応する
+- small batch embedding の境界を提供する
+- API key を error message から redact する
+- expected dimension mismatch を失敗にする
 
-想定入力:
+現在の入力:
 
 ```text
 chunk text
 user query
+small text batch
 ```
 
-想定出力:
+現在の出力:
 
 ```text
-content_vector: list[float]
+list[float]
+list[list[float]]
 ```
 
-この vector を `rag/azure_search_docs.jsonl` の `content_vector` に入れ、Azure AI Search に upload します。
+次の段階で、この vector を embedding cache に保存し、`rag/azure_search_docs.jsonl` の `content_vector` に入れて Azure AI Search に upload します。
+
+重要:
+
+```text
+Day19 では provider implementation まで。
+全 chunk の batch embedding、cache 保存、Azure AI Search upsert はまだ行わない。
+```
 
 ## Environment Variables
 
@@ -294,6 +307,29 @@ search script / retriever
 → EmbeddingProvider interface
 → LocalMockEmbeddingProvider or AzureOpenAIEmbeddingProvider
 ```
+
+## Day 19 Update
+
+Day19 では、Day18 の one-text smoke test にあった Azure API 呼び出し処理を `rag/embedding_providers.py` に移しました。
+
+これにより、smoke test は provider の利用例になり、将来の batch embedding や Retriever は同じ provider boundary を使えます。
+
+追加した error model:
+
+| Error | 役割 |
+|---|---|
+| `EmbeddingConfigurationError` | env / endpoint の設定エラー |
+| `EmbeddingRequestError` | HTTP error、timeout、network error |
+| `EmbeddingResponseError` | response contract mismatch |
+| `EmbeddingDimensionError` | Azure AI Search schema と dimension が合わない |
+
+local contract test:
+
+```bash
+python3 -B rag/test_embedding_provider_contract.py
+```
+
+この test は fake transport を使うため、Azure API key や network がなくても provider の contract を確認できます。
 
 ## Day 15 Completion Criteria
 

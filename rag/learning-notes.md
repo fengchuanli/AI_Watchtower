@@ -2268,6 +2268,150 @@ Azure OpenAI Embedding を全データに適用する前に、まず 1 文だけ
 API key は log に出さず、HTTP error や timeout の場合も空 vector を成功扱いしないようにしています。
 ```
 
+## Day 19: AzureOpenAIEmbeddingProvider implementation
+
+### 今天完成了什么
+
+Day19 把 Day18 的 one-text smoke test 抽成真正的 provider 边界。
+
+新增：
+
+```text
+rag/embedding_providers.py
+rag/test_embedding_provider_contract.py
+rag/azure-openai-embedding-provider.md
+```
+
+更新：
+
+```text
+rag/azure_openai_embedding_smoke_test.py
+rag/embedding-provider-design.md
+rag/architecture.md
+rag/learning-notes.md
+```
+
+### 为什么要做 Provider implementation
+
+如果把 Azure OpenAI API call 直接写进 Retriever 或 batch script，会让后续系统变得难维护。
+
+问题包括：
+
+- API key 管理范围变大
+- HTTP error / timeout / rate limit 处理会重复
+- 测试会依赖真实 Azure 和网络
+- model deployment 或 api_version 变化时影响面太大
+- batch embedding、cache、retriever 的责任边界混在一起
+
+所以 Day19 的目标是：
+
+```text
+下游只知道 provider.embed_text(text) 返回 list[float]。
+下游不需要知道 endpoint、headers、API key、response parsing、HTTP error。
+```
+
+### 新增实现
+
+核心文件：
+
+```text
+rag/embedding_providers.py
+```
+
+主要内容：
+
+- `EmbeddingProvider`
+- `AzureOpenAIEmbeddingConfig`
+- `AzureOpenAIEmbeddingProvider`
+- `EmbeddingConfigurationError`
+- `EmbeddingRequestError`
+- `EmbeddingResponseError`
+- `EmbeddingDimensionError`
+
+Provider contract：
+
+```text
+embed_text(text) -> list[float]
+embed_batch(texts) -> list[list[float]]
+```
+
+当前 batch 只是小批量边界，不代表已经开始处理全部 chunks。
+
+### Day18 smoke test 的变化
+
+更新：
+
+```text
+rag/azure_openai_embedding_smoke_test.py
+```
+
+它现在不再自己维护 Azure HTTP 细节，而是调用：
+
+```text
+AzureOpenAIEmbeddingProvider
+```
+
+这说明 smoke test 已经从一次性脚本，变成 provider 的最小使用例。
+
+### Contract test
+
+新增：
+
+```text
+rag/test_embedding_provider_contract.py
+```
+
+本地不需要 Azure key，也不需要网络。
+
+测试内容：
+
+- missing env 会变成 configuration error
+- `embed_text()` 返回 `list[float]`
+- `embed_batch()` 能按 index order 返回
+- embedding 中出现非数字会失败
+- vector dimension 不一致会失败
+- HTTP error 中不会泄露 API key
+
+运行：
+
+```bash
+python3 -B rag/test_embedding_provider_contract.py
+```
+
+### Day19 的边界
+
+今天不做：
+
+```text
+不全量 batch embedding
+不写 embedding cache
+不更新 azure_search_docs.jsonl
+不 upsert Azure AI Search
+不把 Retriever 换成 Azure AI Search
+```
+
+今天完成的是：
+
+```text
+Azure OpenAI Embedding 的 provider implementation 和本地 contract test。
+```
+
+### 作品集写法
+
+```text
+Implemented an Azure OpenAI Embedding provider boundary with environment-based configuration, single-text and small-batch embedding methods, response contract validation, dimension checks, and secret-safe error handling.
+```
+
+### 日文面试表达
+
+```text
+Azure OpenAI Embedding の API 呼び出しを Provider として切り出し、検索処理や batch indexing が endpoint、API key、response parsing などの詳細に直接依存しない構成にしました。
+```
+
+```text
+また、fake transport を使った contract test により、Azure 環境がない状態でも response shape、dimension mismatch、secret redaction を確認できるようにしています。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -2290,6 +2434,7 @@ API key は log に出さず、HTTP error や timeout の場合も空 vector を
 - Day 16: Embedding cache / batch indexing 设计
 - Day 17: Azure OpenAI Embedding 实装准备
 - Day 18: Azure OpenAI Embedding one-text smoke test
+- Day 19: AzureOpenAIEmbeddingProvider implementation
 
 ### 当前已生成或新增的文件
 
@@ -2315,6 +2460,9 @@ rag/azure-openai-embedding-readiness.md
 rag/check_azure_openai_embedding_readiness.py
 rag/azure-openai-embedding-smoke-test.md
 rag/azure_openai_embedding_smoke_test.py
+rag/azure-openai-embedding-provider.md
+rag/embedding_providers.py
+rag/test_embedding_provider_contract.py
 rag/learning-notes.md
 ```
 
@@ -2335,18 +2483,19 @@ EmbeddingProvider 边界设计已完成，明确 local mock 和 Azure OpenAI Emb
 EmbeddingCache 设计已完成，明确用 chunk_id、text_hash、embedding deployment 和 api_version 判断哪些 chunks 需要重新 embedding，并设计 batch indexing 和 cache invalidation 策略。
 Azure OpenAI Embedding 实装准备已完成，明确环境变量、依赖边界、readiness check、one-text smoke test 顺序和失败时停止条件。
 Azure OpenAI Embedding one-text smoke test 已完成，能够在真实 batch embedding 前验证 response shape、list[float]、vector dimension、secret-safe logging 和常见 Azure 错误处理。
+AzureOpenAIEmbeddingProvider implementation 已完成，已经把 Azure API 调用边界、env config、single-text/small-batch embedding、response contract、dimension check 和 secret-safe error handling 封装进 provider。
 ```
 
 ### 下一步
 
-Day 19 建议进入：
+Day 20 建议进入：
 
 ```text
-AzureOpenAIEmbeddingProvider implementation。
+Embedding cache file implementation。
 ```
 
 目标是理解：
 
 ```text
-如何把 Day18 的 one-text smoke test 封装成 EmbeddingProvider implementation，让后续 batch embedding 和 Retriever 不直接依赖 Azure API 细节。
+如何把 provider 返回的 vector 和 chunk_id/text_hash/deployment/api_version 关联起来，先做本地 embedding cache 文件，不急着 upsert Azure AI Search。
 ```
