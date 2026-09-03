@@ -1,3 +1,32 @@
+## 2026-09-03 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 23 archive-diff task. Added correction-only archive-diff guidance so fixed wording, metadata, URL/name, order, or mirror fields do not create a reader-facing same-day diff unless the story, source posture, topic movement, proof boundary, or reader interpretation changed.
+- Changed files:
+  - `docs/archive-diff-summary-format.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/news-data-format.md`
+  - `docs/update-run-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added a `Correction-Only Decision` table to `docs/archive-diff-summary-format.md` that distinguishes typo/label/metadata-only fixes from changes to claim boundary, `nextCheck`, `evidenceThreshold`, `counterEvidence`, `claimStatus`, `sourceRole`, source family, topic group, item count, or TOP3 ranking.
+  - Added the `archive-diff: skipped-correction-only` compact log note so future runs record why no morning/evening diff was written.
+  - Updated the current-to-history publication checklist, update-run checklist, and data format guide so correction-only archive decisions are made before archive readers see an unnecessary "change" summary.
+  - Updated `scripts/validate-site.mjs` so the correction-only archive-diff rule and Day 24 next-task anchor remain guarded.
+  - Advanced `docs/optimization-decision-index.md` to Day 24: review all-news and tag-page framing so archive readers understand older items as context, not current alerts.
+- Verification:
+  - Read automation memory, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-plan.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md`, `docs/archive-diff-summary-format.md`, `docs/current-to-history-publication-checklist.md`, `docs/news-data-format.md`, `docs/update-run-checklist.md`, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 70 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the correction-only archive-diff guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `3d61d30` (`明确归档修正差异规则`); final log/index record commit follows this log update.
+- Git note: `git push origin main` not yet attempted for the record commit at log-writing time; prior pull failed because `github.com` DNS resolution was unavailable. Current run executed at 2026-09-03 11:03 JST local shell time / 20:00 JST scheduled automation window.
+
 ## 2026-09-03 08:13 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-03`，发布 12 条安全非重复信号，聚焦 Gemini 3.8、Astra 可监控性、OpenAI 版权/责任诉讼、纽约校园 AI、巴西选举 deepfake、HiddenLayer 融资、JioPC 云 PC、Adobe/Rilo、野火响应 AI 与 Microsoft yield 框架。
