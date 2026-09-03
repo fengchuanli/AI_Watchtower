@@ -1,3 +1,30 @@
+## 2026-09-03 23:04 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-03`，所以未回退版次，而是在 17:00 版基础上补充 1 条高置信官方/监管文件信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/sources.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 已按要求先执行 `git pull --ff-only origin main`，远端返回 Already up to date。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 NVIDIA 官方博客、NVIDIA SEC 8-K、AP/ Axios/Business Insider/FT 等重复与背景线索，未使用付费墙正文、登录墙正文、社区讨论、随机页面或传闻。
+  - 新增 NVIDIA/Hugging Face 并购信号：NVIDIA 宣布同意以 12,930,300,000 美元收购 Hugging Face；SEC 8-K 披露约 119 亿美元股东对价、最高约 10 亿美元员工留任股权、预计 2027 年上半年完成且需监管批准。
+  - 将本条标为 `官方核对` / `confirmed`，但明确不证明交易已经交割、监管一定批准，或 Hugging Face 的开放平台承诺会在所有地区、模型和产品上长期不变。
+  - 新增 `sec-edgar` 来源登记，来源总数更新为 71；当前版从 12 条增至 13 条安全非重复信号，最新 `data/news-history.json` 归档镜像同步更新，total history items 更新为 652。
+- Verification:
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, current `data/news.json`, latest archive mirror, recent `docs/optimization-log.md`, and candidate official/reliable web sources.
+  - Checked OpenAI News, Anthropic Newsroom, Google AI, Microsoft, NVIDIA Blog/Newsroom, SEC EDGAR, AP, Axios, TechCrunch and duplicate candidates; skipped old, duplicate, paywalled/login-walled, community, random-page, and weak-evidence items.
+  - `git pull --ff-only origin main` succeeded before editing.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 13 current news items against 71 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Pending commit and push.
+
 ## 2026-09-03 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 23 archive-diff task. Added correction-only archive-diff guidance so fixed wording, metadata, URL/name, order, or mirror fields do not create a reader-facing same-day diff unless the story, source posture, topic movement, proof boundary, or reader interpretation changed.

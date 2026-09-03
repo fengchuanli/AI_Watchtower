@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-03",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -623,6 +623,22 @@
       "hasRss": false,
       "language": "en",
       "notes": "厂商/安全原文，用于威胁情报、AI 安全、Agent 安全和事件响应；遥测和产品效果需独立佐证。"
+    },
+    {
+      "id": "sec-edgar",
+      "name": "SEC EDGAR Filings",
+      "url": "https://www.sec.gov/edgar/search/",
+      "feedUrl": null,
+      "category": [
+        "company",
+        "filing",
+        "infrastructure",
+        "policy"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "监管文件原文，用于核对上市公司交易、风险因素、披露日期和监管审批边界；商业效果与整合结果仍需后续文件和市场证据。"
     },
     {
       "id": "ap-technology",
