@@ -1,3 +1,27 @@
+## 2026-09-04 23:12 JST
+
+- Focus: Supplemental 08:00 automation pass for the active 2026-09-04 edition; kept the current 17:00 JST homepage label and added one safe non-duplicate official Google science-AI signal.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read automation memory, `data/sources.json`, and `docs/source-policy.md` before editing.
+  - Ran `git pull --ff-only origin main`; first attempt failed on GitHub DNS, elevated retry succeeded and confirmed `origin/main` was already up to date.
+  - Checked current history duplicates and skipped the Google Gemini 3.8 Flash/Cyber candidate because it was already archived in `news-1700-2026-09-03`.
+  - Added Google WeatherNext 3 from Google Keyword AI / Google DeepMind official source as `官方核对` / `confirmed`, with explicit boundaries around Brightband evaluation, Google Cloud API docs, industry logs, regional coverage, and extreme-weather error evidence.
+  - Updated current edition metadata, reader frame, coverage mix, source-family counts, topic/company continuity, briefing, deep briefing references, and newest history mirror; current homepage now has 12 items and total history items is 664.
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: local commit created with message `补充WeatherNext科学AI情报`.
+- Git note: normal `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; elevated retry was rejected by the app safety review because it would publish six local commits, including four pre-existing commits, to `main`. Remote sync needs explicit user approval for that exact push payload or a trusted push context.
+
 ## 2026-09-04 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 24 archive-framing task. Reviewed all-news and tag-page copy so archived items read as historical background, while only the latest homepage batch reads as the current priority.
