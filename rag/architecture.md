@@ -52,8 +52,15 @@ rag/prepare_azure_search_docs.py
 rag/azure_search_docs.jsonl
         ↓
 rag/embedding-provider-design.md
+rag/azure-openai-embedding-readiness.md
+rag/check_azure_openai_embedding_readiness.py
+        ↓
+rag/azure-openai-embedding-smoke-test.md
+rag/azure_openai_embedding_smoke_test.py
+        ↓
 rag/azure-openai-embedding-provider.md
 rag/embedding_providers.py
+rag/test_embedding_provider_contract.py
         ↓
 rag/embedding-cache-design.md
 rag/embedding-cache-file.md
@@ -61,18 +68,13 @@ rag/embedding_cache.py
 rag/inspect_embedding_cache.py
 rag/test_embedding_cache.py
         ↓
-Future: incremental embedding and batch indexing
+rag/prepare_vectorized_azure_search_docs.py
         ↓
-rag/azure-openai-embedding-readiness.md
-rag/check_azure_openai_embedding_readiness.py
+rag/prepare_azure_search_upload_actions.py
         ↓
-rag/azure-openai-embedding-smoke-test.md
-rag/azure_openai_embedding_smoke_test.py
+rag/azure_search_retriever.py
         ↓
-AzureOpenAIEmbeddingProvider contract test
-rag/test_embedding_provider_contract.py
-        ↓
-Future: vectorized Azure Search docs from cache
+Future: retriever abstraction and real Azure smoke test
 ```
 
 ## Pipeline Steps
@@ -92,6 +94,9 @@ Future: vectorized Azure Search docs from cache
 | Azure OpenAI Embedding Provider | `rag/azure-openai-embedding-provider.md`, `rag/embedding_providers.py`, `rag/test_embedding_provider_contract.py` | text or small text batch | `list[float]` or `list[list[float]]` | Azure API 呼び出しを provider に分離し、config、response contract、dimension、secret-safe error を扱う |
 | Embedding Cache Design | `rag/embedding-cache-design.md` | chunks, text hash, embedding cache | changed chunks only | 変更された chunk だけ embedding し、未変更 chunk の vector を再利用する設計を定義する |
 | Embedding Cache File | `rag/embedding-cache-file.md`, `rag/embedding_cache.py`, `rag/inspect_embedding_cache.py`, `rag/test_embedding_cache.py` | chunks, cache JSONL | cache hit / miss / changed report | `chunk_id + text_hash + deployment + api_version` で cache record を管理し、空 vector を拒否する |
+| Vectorized Azure Search Docs | `rag/vectorized-azure-search-docs.md`, `rag/prepare_vectorized_azure_search_docs.py` | Azure Search payload, embedding cache | vectorized docs report or JSONL | cache にある検証済み vector だけを `content_vector` に反映し、欠損 vector を report する |
+| Azure Search Upload Actions | `rag/azure-search-upload-actions.md`, `rag/prepare_azure_search_upload_actions.py` | vectorized docs | local upload action JSONL | Azure upsert 前に required fields、非空 vector、dimension を検証して `@search.action` を付ける |
+| Azure Search Retriever Contract | `rag/azure-search-retriever-contract.md`, `rag/azure_search_retriever.py` | query vector, Azure Search response | citation-ready retrieved chunks | `vectorQueries` payload を作り、Azure response を既存 RAG の chunk contract に正規化する |
 | Azure OpenAI Embedding Readiness | `rag/azure-openai-embedding-readiness.md`, `rag/check_azure_openai_embedding_readiness.py` | env vars, Azure Search payload | readiness report | 実 Azure embedding の前に設定、payload、secret boundary、失敗時の停止条件を確認する |
 | Azure OpenAI Embedding Smoke Test | `rag/azure-openai-embedding-smoke-test.md`, `rag/azure_openai_embedding_smoke_test.py` | one short text, Azure env vars | `list[float]` vector check | 全 chunk 処理の前に 1 文だけ実 API に送り、response shape、dimension、failure handling を確認する |
 
@@ -672,6 +677,52 @@ rag/embedding-cache-design.md
 rag/embedding-cache-file.md
 ```
 
+### AzureSearchIndexing Boundary
+
+責務:
+
+```text
+embedding cache の vector を Azure Search payload に安全に反映し、upload action までを local file として準備する。
+```
+
+対応ファイル:
+
+```text
+rag/prepare_vectorized_azure_search_docs.py
+rag/prepare_azure_search_upload_actions.py
+rag/vectorized-azure-search-docs.md
+rag/azure-search-upload-actions.md
+```
+
+重要:
+
+```text
+vector が欠損している document は upload-ready として扱わない。
+Day21-22 は Azure API を呼ばず、local payload validation までに止める。
+```
+
+### AzureSearchRetriever Boundary
+
+責務:
+
+```text
+query vector から Azure AI Search の vector query payload を作り、Azure response を citation-ready chunk に正規化する。
+```
+
+対応ファイル:
+
+```text
+rag/azure_search_retriever.py
+rag/azure-search-retriever-contract.md
+```
+
+重要:
+
+```text
+Retriever は回答を生成しない。
+AnswerGenerator は Azure response format ではなく、score/source/title/text/chunk_index を持つ normalized result だけを見る。
+```
+
 ### AzureOpenAIEmbeddingReadiness Boundary
 
 責務:
@@ -1047,6 +1098,8 @@ local vector demo を本物の semantic embedding に置き換える。
 - readiness check for env vars and payload shape
 - one-text smoke test before batch processing
 - AzureOpenAIEmbeddingProvider boundary
+- embedding cache file
+- vectorized Azure Search docs from cache
 - chunk text を embedding に変換
 - query も embedding に変換
 - cosine similarity または Azure AI Search vector search

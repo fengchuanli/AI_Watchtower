@@ -2559,6 +2559,188 @@ Embedding の再計算を避けるために、chunk_id、text_hash、deployment�
 本文が変わっていない chunk は cache hit として再利用し、本文や embedding 設定が変わった場合は cache miss として再 embedding する設計にしています。
 ```
 
+## Day 21: Prepare vectorized Azure Search docs from cache
+
+### 今天完成了什么
+
+Day21 做的是把 embedding cache 中已有的 vector 安全填回 Azure Search payload。
+
+新增：
+
+```text
+rag/prepare_vectorized_azure_search_docs.py
+rag/test_prepare_vectorized_azure_search_docs.py
+rag/vectorized-azure-search-docs.md
+```
+
+### 为什么要做
+
+Azure AI Search 最终需要带 `content_vector` 的 documents。
+
+但不能因为 payload 里有 `content_vector: []` 就当成已经准备好了。Day21 的重点是：
+
+```text
+只有 cache 中存在匹配的 chunk_id + text_hash + deployment + api_version 时，
+才把 vector 填入 content_vector。
+```
+
+如果缺 vector，就只报告，不写 upload-ready 文件。
+
+### 本地验证结果
+
+执行：
+
+```bash
+python3 -B rag/prepare_vectorized_azure_search_docs.py --report-only
+```
+
+当前结果：
+
+```text
+total docs: 1273
+vectorized docs: 0
+missing vectors: 1273
+output written: no
+```
+
+这是正确状态，因为现在还没有真实 `rag/embedding_cache.jsonl`。
+
+### Day21 的边界
+
+今天不做：
+
+```text
+不调用 Azure OpenAI
+不创建 fake vector
+不生成 upload-ready production payload
+不 upsert Azure AI Search
+```
+
+### 作品集写法
+
+```text
+Prepared vectorized Azure Search documents from validated embedding cache records, preventing missing vectors or dimension mismatches from being treated as upload-ready data.
+```
+
+### 日文面试表达
+
+```text
+embedding cache にある検証済み vector だけを Azure Search payload の content_vector に反映し、欠損や dimension mismatch がある場合は upload-ready として扱わないようにしました。
+```
+
+## Day 22: Azure Search upload actions
+
+### 今天完成了什么
+
+Day22 做的是把 vectorized docs 转成 Azure AI Search 的本地 upload action payload。
+
+新增：
+
+```text
+rag/prepare_azure_search_upload_actions.py
+rag/test_prepare_azure_search_upload_actions.py
+rag/azure-search-upload-actions.md
+```
+
+### 为什么要做
+
+真正 upsert Azure AI Search 前，需要先确认：
+
+- required fields 都存在
+- `content_vector` 不是空数组
+- vector 里都是数字
+- dimension 和 index schema 一致
+- `@search.action` 明确是 `upload` 或 `mergeOrUpload`
+
+Day22 的价值是把“准备上传的数据”和“真正调用 Azure”分开。
+
+### Day22 的边界
+
+今天不做：
+
+```text
+不调用 Azure AI Search
+不创建 index
+不上传 production data
+不补 missing vector
+```
+
+### 作品集写法
+
+```text
+Prepared Azure AI Search upload action records from vectorized documents with validation for required fields, non-empty vectors, and vector dimensions before any production upsert.
+```
+
+### 日文面试表达
+
+```text
+Azure AI Search に送る前に、content_vector が空ではないことと必要 field が揃っていることを検証し、upload action を local payload として準備する段階を分けました。
+```
+
+## Day 23: Azure Search retriever contract
+
+### 今天完成了什么
+
+Day23 定义 Azure AI Search vector retriever 的请求和响应边界。
+
+新增：
+
+```text
+rag/azure_search_retriever.py
+rag/test_azure_search_retriever.py
+rag/azure-search-retriever-contract.md
+```
+
+### 为什么要做
+
+RAG 的后半段不应该直接处理 Azure Search 原始 response。
+
+正确边界是：
+
+```text
+query vector
+→ Azure Search vector query payload
+→ Azure Search response
+→ normalized retrieved chunks
+→ ContextBuilder
+→ AnswerGenerator
+```
+
+Day23 根据 Microsoft Learn 当前 Azure AI Search vector query 形状，使用：
+
+```text
+vectorQueries
+kind: vector
+vector: [...]
+fields: content_vector
+k: top_k
+```
+
+### Day23 的边界
+
+今天不做：
+
+```text
+不调用 Azure AI Search
+不生成 query embedding
+不替换当前 local retriever
+不改 answer generation
+```
+
+今天完成的是 request payload builder 和 response normalization。
+
+### 作品集写法
+
+```text
+Defined an Azure AI Search retriever contract that builds vector query payloads and normalizes search results into citation-ready RAG chunks without coupling the answer pipeline to Azure response details.
+```
+
+### 日文面试表达
+
+```text
+Azure AI Search の vector query payload と response normalization を retriever boundary として定義し、回答生成側は Azure の response 形式ではなく、既存の citation-ready chunk 形式だけを扱うようにしました。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -2583,6 +2765,9 @@ Embedding の再計算を避けるために、chunk_id、text_hash、deployment�
 - Day 18: Azure OpenAI Embedding one-text smoke test
 - Day 19: AzureOpenAIEmbeddingProvider implementation
 - Day 20: Embedding cache file implementation
+- Day 21: Prepare vectorized Azure Search docs from cache
+- Day 22: Azure Search upload actions
+- Day 23: Azure Search retriever contract
 
 ### 当前已生成或新增的文件
 
@@ -2615,6 +2800,15 @@ rag/embedding-cache-file.md
 rag/embedding_cache.py
 rag/inspect_embedding_cache.py
 rag/test_embedding_cache.py
+rag/vectorized-azure-search-docs.md
+rag/prepare_vectorized_azure_search_docs.py
+rag/test_prepare_vectorized_azure_search_docs.py
+rag/azure-search-upload-actions.md
+rag/prepare_azure_search_upload_actions.py
+rag/test_prepare_azure_search_upload_actions.py
+rag/azure-search-retriever-contract.md
+rag/azure_search_retriever.py
+rag/test_azure_search_retriever.py
 rag/learning-notes.md
 ```
 
@@ -2637,18 +2831,21 @@ Azure OpenAI Embedding 实装准备已完成，明确环境变量、依赖边界
 Azure OpenAI Embedding one-text smoke test 已完成，能够在真实 batch embedding 前验证 response shape、list[float]、vector dimension、secret-safe logging 和常见 Azure 错误处理。
 AzureOpenAIEmbeddingProvider implementation 已完成，已经把 Azure API 调用边界、env config、single-text/small-batch embedding、response contract、dimension check 和 secret-safe error handling 封装进 provider。
 Embedding cache file implementation 已完成，已经用 chunk_id、text_hash、embedding_deployment、api_version 管理本地 cache record，并能报告当前 chunks 的 cache hit/miss/change 状态。
+Vectorized Azure Search docs preparation 已完成，能够从 validated embedding cache 把 vector 填回 Azure Search payload，并在缺 vector 时停止 upload-ready 输出。
+Azure Search upload actions preparation 已完成，能够在本地验证 required fields、非空 vector、dimension，并生成 `@search.action` payload。
+Azure Search retriever contract 已完成，能够构造 `vectorQueries` 请求 payload，并把 Azure Search response 规范化成 citation-ready chunks。
 ```
 
 ### 下一步
 
-Day 21 建议进入：
+Day 24 建议进入：
 
 ```text
-Prepare vectorized Azure Search docs from cache。
+Retriever abstraction and end-to-end ask pipeline。
 ```
 
 目标是理解：
 
 ```text
-如何把 cache 中已有的 vector 安全填回 Azure Search payload，生成 vectorized docs 文件；仍然先不 upsert Azure AI Search。
+如何把 local retriever 和 Azure retriever contract 统一到同一个接口，让 ask pipeline 可以切换 retrieval backend。
 ```
