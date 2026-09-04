@@ -27,8 +27,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: pending; final local commit hash will be recorded after commit.
-- Git note: push pending after commit. Current run executed at 2026-09-04 20:00 JST scheduled automation window.
+- Commit: Local implementation commit `11c3e5c` (`明确历史新闻背景定位`); final push-status record follows this log update.
+- Git note: push pending after implementation commit. Current run executed at 2026-09-04 20:00 JST scheduled automation window.
 
 ## 2026-09-04 08:12 JST
 
