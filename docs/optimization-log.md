@@ -28,7 +28,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
 - Commit: Local implementation commit `11c3e5c` (`明确历史新闻背景定位`); final push-status record follows this log update.
-- Git note: push pending after implementation commit. Current run executed at 2026-09-04 20:00 JST scheduled automation window.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; elevated retry was rejected by the app safety review because it would publish local `main` to an unverified GitHub remote. Remote sync needs explicit user authorization in a trusted push context or network/DNS recovery with approved publishing. Current run executed at 2026-09-04 20:00 JST scheduled automation window.
 
 ## 2026-09-04 08:12 JST
 
