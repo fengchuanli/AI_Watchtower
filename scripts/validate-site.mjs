@@ -435,23 +435,38 @@ if (
   !/function summarizeTagItems\(items\) \{/.test(tagsJs) ||
   !/function renderTagContext\(tag, items\) \{/.test(tagsJs) ||
   !/公司观察重点/.test(tagsJs) ||
-  !/最新覆盖/.test(tagsJs) ||
-  !/最新信号/.test(tagsJs) ||
-  !/最后出现/.test(tagsJs) ||
+  !/最近一次收录/.test(tagsJs) ||
+  !/收录线索/.test(tagsJs) ||
+  !/最近期次/.test(tagsJs) ||
+  !/历史背景/.test(tagsJs) ||
   !/来源边界/.test(tagsJs) ||
   !/sourceCaveat/.test(tagsJs) ||
   !/latestItem\.claimBoundary \|\| latestItem\.provenance \|\| latestItem\.nextCheck/.test(tagsJs) ||
   !/class="tag-signal-list"/.test(tagsJs) ||
   !/class="tag-source-note"/.test(tagsJs) ||
   !/Company tag pages derive OpenAI, Anthropic, Google, and Meta views/.test(newsDataFormat) ||
-  !/latest matched signal/.test(newsDataFormat) ||
+  !/most recent captured line/.test(newsDataFormat) ||
   !/last-seen edition date/.test(newsDataFormat) ||
   !/source caveat/.test(newsDataFormat) ||
+  !/当前首页批次/.test(newsDataFormat) ||
+  !/历史背景/.test(newsDataFormat) ||
   !/\.tag-context\s*\{[\s\S]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/.test(styles) ||
   !/\.tag-signal-list\s*\{[\s\S]*gap:\s*10px;/.test(styles) ||
   !/\.tag-source-note\s*\{[\s\S]*border-top:\s*1px solid var\(--line\);/.test(styles)
 ) {
-  errors.push("Company tag pages must render focus, latest signal, last-seen date, and source-boundary context.");
+  errors.push("Company tag pages must render focus, recent captured context, last-seen date, and source-boundary context without making archive items sound current.");
+}
+
+if (
+  !/当前首页批次/.test(allNewsHtml) ||
+  !/旧批次只作背景回看/.test(allNewsHtml) ||
+  !/label: isLatest \? "当前首页批次" : "历史背景"/.test(allNewsJs) ||
+  !/历史批次只用于回看背景/.test(allNewsJs) ||
+  !/旧批次不是当前警报/.test(tagsHtml) ||
+  !/旧条目不代表当前警报/.test(tagsJs) ||
+  /最新信号|最新覆盖/.test(tagsJs)
+) {
+  errors.push("All-news and tag pages must distinguish current homepage batches from archived background context.");
 }
 
 if (
@@ -508,12 +523,13 @@ if (
   !/期次归档状态/.test(html) ||
   !/aria-label="全部题目列表相关页面"/.test(allNewsHtml) ||
   !/本页适合快速扫标题/.test(allNewsHtml) ||
+  !/旧批次只作背景回看/.test(allNewsHtml) ||
   !/href="\.\/tags\.html"[\s\S]*公司连续观察/.test(allNewsHtml) ||
   !/aria-label="期次归档相关页面"/.test(archiveHtml) ||
   !/href="\.\/all-news\.html"[\s\S]*全部题目列表/.test(archiveHtml) ||
   !/想按题目快速回看/.test(archiveHtml) ||
   !/aria-label="公司连续观察相关页面"/.test(tagsHtml) ||
-  !/本页适合看同一公司的连续信号/.test(tagsHtml) ||
+  !/本页适合回看同一公司的历史背景/.test(tagsHtml) ||
   !/aria-label="站内解读相关页面"/.test(detailHtml) ||
   !/返回最新新闻流/.test(detailHtml) ||
   !/href="\.\/tags\.html"[\s\S]*公司连续观察/.test(detailHtml)
@@ -522,15 +538,15 @@ if (
 }
 
 if (
-  !/<meta name="description" content="AI Watchtower 全部 AI 新闻列表，按时间顺序整理进入本站的新闻线索，点击标题查看中文解读与原始来源。"/.test(allNewsHtml) ||
+  !/<meta name="description" content="AI Watchtower 全部 AI 新闻列表，按时间顺序整理进入本站的当前与归档线索，旧批次只作背景回看。"/.test(allNewsHtml) ||
   !/<meta name="application-name" content="AI Watchtower" \/>/.test(allNewsHtml) ||
   !/<meta property="og:title" content="全部 AI 新闻 \| AI Watchtower" \/>/.test(allNewsHtml) ||
-  !/<meta\s+property="og:description"\s+content="按时间顺序整理进入 AI Watchtower 的 AI 新闻线索。点击标题查看本站解读与原始来源。"\s+\/>/s.test(
+  !/<meta\s+property="og:description"\s+content="按时间顺序整理 AI Watchtower 当前与归档 AI 新闻；旧批次用于背景回看，当前首页批次会单独标出。"\s+\/>/s.test(
     allNewsHtml,
   ) ||
   !/<meta name="twitter:card" content="summary" \/>/.test(allNewsHtml) ||
   !/<meta name="twitter:title" content="全部 AI 新闻 \| AI Watchtower" \/>/.test(allNewsHtml) ||
-  !/<meta\s+name="twitter:description"\s+content="按时间顺序整理进入 AI Watchtower 的 AI 新闻线索。点击标题查看本站解读与原始来源。"\s+\/>/s.test(
+  !/<meta\s+name="twitter:description"\s+content="按时间顺序整理 AI Watchtower 当前与归档 AI 新闻；旧批次用于背景回看，当前首页批次会单独标出。"\s+\/>/s.test(
     allNewsHtml,
   )
 ) {
@@ -729,7 +745,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -783,7 +799,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 24/.test(optimizationDecisionIndex)
+  !/Continue with Day 25/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -1418,7 +1434,8 @@ if (
     optimizationDecisionIndex,
   ) ||
   !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 24/.test(optimizationDecisionIndex) ||
+  !/Day 24[\s\S]*historical background[\s\S]*current homepage batch/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1585,7 +1602,7 @@ if (
   !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 24/.test(optimizationDecisionIndex)
+  !/Continue with Day 25/.test(optimizationDecisionIndex)
 ) {
   errors.push("Company continuity review must classify recurring-company signals before public continuity copy is written.");
 }
@@ -1619,7 +1636,7 @@ if (
   !/Day 22[\s\S]*topic-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 24/.test(optimizationDecisionIndex)
+  !/Continue with Day 25/.test(optimizationDecisionIndex)
 ) {
   errors.push("Topic continuity review must prevent repeated media coverage from being written as stronger trend evidence.");
 }
@@ -1770,7 +1787,7 @@ if (
   !/function getFilteredHistoryItems\(history\)/.test(allNewsJs) ||
   !/function sortHistoryFlatItems\(items, sortOrder = "newest"\)/.test(allNewsJs) ||
   !/selectedSort = historySort\.value === "oldest" \? "oldest" : "newest";/.test(allNewsJs) ||
-  !/本页只显示题目，点击进入站内解读/.test(allNewsJs) ||
+  !/本页只显示题目，点击进入对应期次的站内解读/.test(allNewsJs) ||
   !/\.history-controls/.test(styles) ||
   !/\.history-filter-tabs button\.active/.test(styles) ||
   !/class="history-title-list flat"/.test(allNewsJs) ||
@@ -1786,8 +1803,8 @@ if (
 
 if (
   !/function getEditionBatchStatus\(edition, latestEdition\)/.test(allNewsJs) ||
-  !/最新抓取/.test(allNewsJs) ||
-  !/已归档/.test(allNewsJs) ||
+  !/当前首页批次/.test(allNewsJs) ||
+  !/历史背景/.test(allNewsJs) ||
   !/class="batch-status \$\{escapeHtml\(item\.batchStatus\.tone\)\}"/.test(allNewsJs) ||
   !/\.history-title-meta \.batch-status\.archived/.test(styles)
 ) {

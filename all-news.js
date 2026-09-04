@@ -110,7 +110,7 @@ function getEditionBatchStatus(edition, latestEdition) {
   const isLatest = getEditionKey(edition) === getEditionKey(latestEdition);
 
   return {
-    label: isLatest ? "最新抓取" : "已归档",
+    label: isLatest ? "当前首页批次" : "历史背景",
     tone: isLatest ? "latest" : "archived",
     note: isLatest
       ? "本批次对应当前首页新闻流，可优先阅读。"
@@ -283,8 +283,8 @@ function renderHistory(history) {
     getHistoryCategories(history).find((category) => category.id === selectedCategory)?.label || "全部";
   const sortLabel = selectedSort === "oldest" ? "最早新闻优先" : "最新新闻优先";
 
-  historyMeta.textContent = `目前共 ${history.editions.length} 个抓取批次 · ${history.totalItems || filteredItems.length} 条 AI 新闻 · 最新抓取：${latestEdition.date} · ${latestEdition.archiveLabel}`;
-  historyResultNote.textContent = `当前显示：${categoryLabel} · ${sortedItems.length} 条 AI 新闻 · ${sortLabel}。本页只显示题目，点击进入站内解读；最新抓取批次会用小标签标出，${archivedEditionCount} 个已归档批次用于回看背景。`;
+  historyMeta.textContent = `目前共 ${history.editions.length} 个抓取批次 · ${history.totalItems || filteredItems.length} 条 AI 新闻 · 当前首页批次：${latestEdition.date} · ${latestEdition.archiveLabel}`;
+  historyResultNote.textContent = `当前显示：${categoryLabel} · ${sortedItems.length} 条 AI 新闻 · ${sortLabel}。本页只显示题目，点击进入对应期次的站内解读；当前首页批次会用小标签标出，${archivedEditionCount} 个历史批次只用于回看背景。`;
   renderHistoryControls(history);
 
   if (!sortedItems.length) {

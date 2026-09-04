@@ -98,7 +98,7 @@ function summarizeTagItems(items) {
 
   return {
     latestLabel: latestItem ? `${latestItem.editionDate} · ${latestItem.editionLabel}` : "暂无匹配批次",
-    latestSignal: latestItem ? latestItem.title : "暂无最新信号",
+    latestSignal: latestItem ? latestItem.title : "暂无收录线索",
     lastSeenDate: latestItem ? latestItem.editionDate : "暂无记录",
     categoryLabel: categories.length ? categories.slice(0, 4).join(" / ") : "暂无分类",
     sourceLabel: sourceRoles.length ? sourceRoles.slice(0, 3).join(" / ") : "等待来源",
@@ -120,12 +120,12 @@ function renderTagResults(history, selectedTagId) {
   const tag = tagDefinitions.find((item) => item.id === selectedTagId) || tagDefinitions[0];
   const items = sortItems(flattenHistory(history).filter((item) => itemMatchesTag(item, tag)));
   tagEyebrow.textContent = `${tag.label} Intelligence`;
-  tagTitle.textContent = `${tag.label} 情报`;
-  tagMeta.textContent = `${items.length} 条 · 来自全部历史抓取批次`;
+  tagTitle.textContent = `${tag.label} 历史背景`;
+  tagMeta.textContent = `${items.length} 条 · 来自全部抓取批次，旧条目不代表当前警报`;
   renderTagContext(tag, items);
 
   if (!items.length) {
-    tagResults.innerHTML = `<p class="feed-state">暂无 ${escapeHtml(tag.label)} 情报，后续抓取到相关来源后会自动出现在这里。</p>`;
+    tagResults.innerHTML = `<p class="feed-state">暂无 ${escapeHtml(tag.label)} 历史背景；后续抓取到相关来源后会自动出现在这里。</p>`;
     return;
   }
 
@@ -137,7 +137,7 @@ function renderTagResults(history, selectedTagId) {
         <article class="tag-result-card">
           <span>${escapeHtml(item.editionDate)} · ${escapeHtml(item.editionLabel)}</span>
           <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
-          <p><strong>3行总结</strong>${escapeHtml(item.body)}</p>
+          <p><strong>当期简述</strong>${escapeHtml(item.body)}</p>
           <p>${escapeHtml(item.impact)}</p>
           <a class="reference-link" href="${detailUrl}">查看事件简报</a>
         </article>
@@ -156,19 +156,19 @@ function renderTagContext(tag, items) {
       <p>${escapeHtml(tag.focus)}</p>
     </article>
     <article class="tag-context-card">
-      <p class="eyebrow">最新覆盖</p>
+      <p class="eyebrow">最近一次收录</p>
       <h3>${escapeHtml(summary.latestLabel)}</h3>
       <dl class="tag-signal-list">
         <div>
-          <dt>最新信号</dt>
+          <dt>收录线索</dt>
           <dd>${escapeHtml(summary.latestSignal)}</dd>
         </div>
         <div>
-          <dt>最后出现</dt>
+          <dt>最近期次</dt>
           <dd>${escapeHtml(summary.lastSeenDate)}</dd>
         </div>
       </dl>
-      <p>当前标签下共 ${items.length} 条情报；分类覆盖：${escapeHtml(summary.categoryLabel)}。</p>
+      <p>当前标签下共 ${items.length} 条历史背景；分类覆盖：${escapeHtml(summary.categoryLabel)}。只有同日当前首页批次才应被当作优先阅读入口。</p>
     </article>
     <article class="tag-context-card">
       <p class="eyebrow">来源边界</p>

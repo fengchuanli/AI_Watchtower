@@ -1,3 +1,35 @@
+## 2026-09-04 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 24 archive-framing task. Reviewed all-news and tag-page copy so archived items read as historical background, while only the latest homepage batch reads as the current priority.
+- Changed files:
+  - `all-news.html`
+  - `all-news.js`
+  - `tags.html`
+  - `tags.js`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Reworded all-news metadata, intro copy, dynamic batch meta, and result note to distinguish `当前首页批次` from `历史背景`.
+  - Reworded company tag page metadata, intro copy, context cards, empty state, and card labels from ambiguous latest-signal language to `最近一次收录`, `收录线索`, `最近期次`, and `历史背景`.
+  - Updated `docs/news-data-format.md` so future editors keep historical pages as archive-background tracking aids and avoid treating old batch items as current alerts.
+  - Updated `scripts/validate-site.mjs` so all-news and tag pages must preserve the current-vs-history framing.
+  - Advanced `docs/optimization-decision-index.md` to Day 25: add a note for retiring stale `nextCheck` questions when later official, filing, audit, metric, or third-party evidence appears.
+- Verification:
+  - Read automation memory, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-plan.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md`, `all-news.html`, `all-news.js`, `tags.html`, `tags.js`, `docs/news-data-format.md`, and relevant validation guards.
+  - `git pull --ff-only origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`.
+  - Ran `node --check app.js`, `all-news.js`, `tags.js`, `news-detail.js`, `archive.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 76 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the archive-background framing guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending; final local commit hash will be recorded after commit.
+- Git note: push pending after commit. Current run executed at 2026-09-04 20:00 JST scheduled automation window.
+
 ## 2026-09-04 08:12 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-04`，发布 11 条安全非重复信号，聚焦 GPT-6 Astra 官方 API 入口、OpenAI 状态页可靠性、Agent 安全立法、ASI 禁令、NVIDIA PAIR、Microsoft FY27 披露口径、Microsoft India WTI 和 AIR Security。
