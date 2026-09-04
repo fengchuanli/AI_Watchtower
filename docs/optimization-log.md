@@ -1,3 +1,25 @@
+## 2026-09-05 17:00 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-05`，发布 11 条安全非重复信号，聚焦 Reuters/CNA Agent 外逸报道、OpenAI APAC 状态页、Google Workspace 语音入口、NVIDIA 本地 AI/身份网关、Abliteration.ai、Crusoe、Thinking Machines、AI 菜单同质化、Astra 可监控性和美欧 AI 护栏讨论。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次 DNS 失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；优先官方、状态页、技术博客与可靠媒体最小事实，不使用付费墙/登录墙正文、社区讨论、随机网页、传闻或重复历史 URL 补量。
+  - 媒体来源保持 `媒体背景` / `reported` / `must-read`，官方来源只核对发布、状态或厂商叙事本身；效果、归因、融资完成、产能交付和监管执行仍需后续文件、日志、合同、研究全文或第三方测试。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 675。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 76 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: 待提交。
+
 ## 2026-09-04 23:12 JST
 
 - Focus: Supplemental 08:00 automation pass for the active 2026-09-04 edition; kept the current 17:00 JST homepage label and added one safe non-duplicate official Google science-AI signal.
