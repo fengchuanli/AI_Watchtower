@@ -1,3 +1,27 @@
+## 2026-09-05 23:05 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-05`，所以未回退版次，而是在同日 17:00 版基础上补充 1 条安全非重复可靠媒体政策组织信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、最新归档和历史重复 URL，未使用付费墙/登录墙正文、社区讨论、随机页面或重复旧事实补量。
+  - 新增 Axios 2026-09-05 报道 OpenAI 扩充州政策团队信号，标为 `媒体背景` / `reported` / `must-read`；仅保留三名州政策相关负责人及职责这一最小报道事实，完整采访、背景、数据和政策语境仍回到原文。
+  - 当前首页从 11 条增至 12 条安全非重复信号；最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 676。
+- Verification:
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, current `data/news.json`, latest archive mirror, recent `docs/optimization-log.md`, and candidate official/reliable web sources.
+  - Checked OpenAI, Anthropic, Google AI, NVIDIA, Axios, TechCrunch, VentureBeat, Guardian and duplicate candidates; skipped old, duplicate, paywalled/login-walled, community, random-page, and weak-evidence items.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 76 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: local content/log commit follows this entry.
+
 ## 2026-09-05 20:00 JST
 
 - Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 25 continuity task. Added a retirement rule for stale `nextCheck` and `followUpQuestions` prompts so later official, filing, audit, metric, regulator, customer-side, replication, or third-party evidence can resolve, replace, or downgrade old questions instead of letting them repeat as current uncertainty.
