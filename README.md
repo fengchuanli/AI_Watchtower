@@ -33,6 +33,7 @@ npx serve .
 │   ├── candidate-to-news-handoff.md
 │   ├── company-continuity-review-note.md
 │   ├── topic-continuity-review-note.md
+│   ├── next-check-retirement-note.md
 │   ├── counter-evidence-observable-guide.md
 │   ├── detail-page-review-guide.md
 │   ├── homepage-edition-preflight.md
@@ -85,6 +86,7 @@ npx serve .
 - 候选到新闻字段交接：`docs/candidate-to-news-handoff.md`
 - 公司连续观察复查：`docs/company-continuity-review-note.md`
 - 主题连续观察复查：`docs/topic-continuity-review-note.md`
+- 过期 nextCheck 退休判断：`docs/next-check-retirement-note.md`
 - 反向证据可观察结果写法：`docs/counter-evidence-observable-guide.md`
 - 详情页技术主张审稿：`docs/detail-page-review-guide.md`
 - 首页版次发布预检：`docs/homepage-edition-preflight.md`

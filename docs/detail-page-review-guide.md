@@ -1,6 +1,6 @@
 # Detail Page Review Guide
 
-Use this guide after a drafted item has passed `docs/candidate-to-news-handoff.md` and before publishing `data/news.json`. Its job is to make each detail page useful for Chinese readers without turning the source article, vendor post, paper, or media report into a translated substitute. When the review reaches `counterEvidence`, use `docs/counter-evidence-observable-guide.md` to decide whether the downgrade signal should name a source artifact or a concrete observable outcome.
+Use this guide after a drafted item has passed `docs/candidate-to-news-handoff.md` and before publishing `data/news.json`. Its job is to make each detail page useful for Chinese readers without turning the source article, vendor post, paper, or media report into a translated substitute. When later evidence answers an older `nextCheck`, use `docs/next-check-retirement-note.md` before carrying the question forward. When the review reaches `counterEvidence`, use `docs/counter-evidence-observable-guide.md` to decide whether the downgrade signal should name a source artifact or a concrete observable outcome.
 
 Review technical claims by converting them into four visible blocks: fact, impact, boundary, and next check. If any block cannot be written in plain Chinese from the available source material, hold the item or downgrade the claim before publication.
 
@@ -25,7 +25,7 @@ For each important claim, write or verify these four blocks before saving the it
 | Boundary | `claimBoundary`, `provenance`, `verificationStatus`, `originalDependency` | What does this source not prove yet? | Explicitly says whether the claim is official, reported, measured, early, limited, or still unconfirmed. |
 | Next check | `nextCheck`, `evidenceThreshold`, `counterEvidence`, `followUpQuestions`, `sourceReferences` | What observable evidence would upgrade, confirm, weaken, or refute the claim? | Names a concrete artifact or outcome: official file, customer metric, audit, benchmark, dataset, replication, contract, filing, regulator text, logs, deployment status, or third-party test. |
 
-Do not publish a detail page where the fact is long, the impact is vague, the boundary is missing, or the next check says only "继续关注".
+Do not publish a detail page where the fact is long, the impact is vague, the boundary is missing, or the next check says only "继续关注". If a later official page, filing, audit, metric, regulator text, customer record, replication, or third-party test has already answered a previous next check, retire or replace that stale question instead of repeating it as current uncertainty.
 
 ## Technical Claim Conversion
 

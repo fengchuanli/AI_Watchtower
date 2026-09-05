@@ -33,6 +33,7 @@ const originalSourceReplacementGuide = readFileSync("docs/original-source-replac
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const companyContinuityReviewNote = readFileSync("docs/company-continuity-review-note.md", "utf8");
 const topicContinuityReviewNote = readFileSync("docs/topic-continuity-review-note.md", "utf8");
+const nextCheckRetirementNote = readFileSync("docs/next-check-retirement-note.md", "utf8");
 const counterEvidenceObservableGuide = readFileSync("docs/counter-evidence-observable-guide.md", "utf8");
 const detailPageReviewGuide = readFileSync("docs/detail-page-review-guide.md", "utf8");
 const homepageEditionPreflight = readFileSync("docs/homepage-edition-preflight.md", "utf8");
@@ -745,7 +746,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -799,7 +800,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 25/.test(optimizationDecisionIndex)
+  !/Continue with Day 26/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -1435,7 +1436,7 @@ if (
   ) ||
   !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
   !/Day 24[\s\S]*historical background[\s\S]*current homepage batch/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 25/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1602,7 +1603,7 @@ if (
   !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 25/.test(optimizationDecisionIndex)
+  !/Continue with Day 26/.test(optimizationDecisionIndex)
 ) {
   errors.push("Company continuity review must classify recurring-company signals before public continuity copy is written.");
 }
@@ -1636,9 +1637,30 @@ if (
   !/Day 22[\s\S]*topic-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 25/.test(optimizationDecisionIndex)
+  !/Continue with Day 26/.test(optimizationDecisionIndex)
 ) {
   errors.push("Topic continuity review must prevent repeated media coverage from being written as stronger trend evidence.");
+}
+
+if (
+  !/docs\/next-check-retirement-note\.md/.test(readme) ||
+  !/Next Check Retirement Note/.test(nextCheckRetirementNote) ||
+  !/retire-resolved[\s\S]*retire-replaced[\s\S]*retire-downgraded[\s\S]*keep-open/.test(
+    nextCheckRetirementNote,
+  ) ||
+  !/later official[\s\S]*filing[\s\S]*audit[\s\S]*metric[\s\S]*third-party evidence/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/docs\/next-check-retirement-note\.md/.test(newsDataFormat) ||
+  !/retire-resolved[\s\S]*retire-replaced[\s\S]*retire-downgraded[\s\S]*keep-open/.test(newsDataFormat) ||
+  !/docs\/next-check-retirement-note\.md/.test(detailPageReviewGuide) ||
+  !/docs\/next-check-retirement-note\.md/.test(currentToHistoryPublicationChecklist) ||
+  !/Day 25[\s\S]*next-check-retirement-note\.md[\s\S]*retire-resolved[\s\S]*retire-replaced[\s\S]*retire-downgraded[\s\S]*keep-open/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 26/.test(optimizationDecisionIndex)
+) {
+  errors.push("Next-check retirement review must retire stale nextCheck questions when later source-of-record evidence answers them.");
 }
 
 if (
