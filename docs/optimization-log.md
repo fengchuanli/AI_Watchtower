@@ -1,3 +1,33 @@
+## 2026-09-05 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 25 continuity task. Added a retirement rule for stale `nextCheck` and `followUpQuestions` prompts so later official, filing, audit, metric, regulator, customer-side, replication, or third-party evidence can resolve, replace, or downgrade old questions instead of letting them repeat as current uncertainty.
+- Changed files:
+  - `docs/next-check-retirement-note.md`
+  - `README.md`
+  - `docs/detail-page-review-guide.md`
+  - `docs/news-data-format.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: pulled - `git pull --ff-only origin main` completed and local `main` was already up to date.
+- Content posture:
+  - Added `docs/next-check-retirement-note.md` with four decisions: `retire-resolved`, `retire-replaced`, `retire-downgraded`, and `keep-open`.
+  - Linked the rule from the detail-page review guide, news data format, current-to-history publication checklist, and README so editors see it before repeating an old follow-up question.
+  - Updated `scripts/validate-site.mjs` so the new guide, docs links, Day 25 decision-index anchor, and Day 26 next-task anchor remain discoverable.
+  - Advanced `docs/optimization-decision-index.md` to Day 26: review source-concentration notes across the latest archived editions and identify any repeated caveat that should become a clearer standing rule.
+- Verification:
+  - Read automation memory, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-plan.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md`, `docs/detail-page-review-guide.md`, `docs/news-data-format.md`, `docs/current-to-history-publication-checklist.md`, `README.md`, and relevant validation guards.
+  - Ran `git pull --ff-only origin main` successfully before editing.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 76 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new next-check retirement guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `c73144a` (`规范后续核对退休规则`); final log/index record commit follows this entry.
+
 ## 2026-09-05 17:00 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-05`，发布 11 条安全非重复信号，聚焦 Reuters/CNA Agent 外逸报道、OpenAI APAC 状态页、Google Workspace 语音入口、NVIDIA 本地 AI/身份网关、Abliteration.ai、Crusoe、Thinking Machines、AI 菜单同质化、Astra 可监控性和美欧 AI 护栏讨论。

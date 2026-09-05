@@ -43,7 +43,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 22 | Complete | `809cc8d` | `docs/topic-continuity-review-note.md` classifies recurring-topic signals as stronger, weaker, or repeated, and validation blocks repeated media coverage from being written as stronger trend evidence. |
 | Day 23 | Complete | `3d61d30` | `docs/archive-diff-summary-format.md` now has a correction-only decision rule: skip archive diffs only when wording, metadata, URL/name, order, or mirror fixes do not change items, source posture, topic movement, proof boundaries, or reader interpretation. |
 | Day 24 | Complete | `11c3e5c` | `all-news.html`, `all-news.js`, `tags.html`, and `tags.js` now label older batches as historical background and reserve current-alert framing for the current homepage batch. |
-| Day 25 | Complete | `pending` | `docs/next-check-retirement-note.md` classifies stale `nextCheck` prompts as `retire-resolved`, `retire-replaced`, `retire-downgraded`, or `keep-open` when later official, filing, audit, metric, regulator, customer-side, replication, or third-party evidence appears. |
+| Day 25 | Complete | `c73144a` | `docs/next-check-retirement-note.md` classifies stale `nextCheck` prompts as `retire-resolved`, `retire-replaced`, `retire-downgraded`, or `keep-open` when later official, filing, audit, metric, regulator, customer-side, replication, or third-party evidence appears. |
 
 ## Historical Guard Anchors
 
