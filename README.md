@@ -46,6 +46,7 @@ npx serve .
 │   ├── remote-sync-log-convention.md
 │   ├── original-source-replacement-guide.md
 │   ├── source-diversity-triage-note.md
+│   ├── source-concentration-archive-review-note.md
 │   ├── update-run-checklist.md
 │   ├── news-data-format.md
 │   ├── editorial-checklist.md
@@ -82,6 +83,7 @@ npx serve .
 - 暂缓候选复查记录：`docs/held-candidate-review-note.md`
 - 候选优先级评分：`docs/candidate-priority-rubric.md`
 - 批次来源多样性判断：`docs/source-diversity-triage-note.md`
+- 归档来源集中复查：`docs/source-concentration-archive-review-note.md`
 - 媒体报道替换原始来源判断：`docs/original-source-replacement-guide.md`
 - 候选到新闻字段交接：`docs/candidate-to-news-handoff.md`
 - 公司连续观察复查：`docs/company-continuity-review-note.md`

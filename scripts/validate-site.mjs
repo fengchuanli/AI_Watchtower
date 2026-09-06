@@ -29,6 +29,10 @@ const candidateHoldRejectReasons = readFileSync("docs/candidate-hold-reject-reas
 const heldCandidateReviewNote = readFileSync("docs/held-candidate-review-note.md", "utf8");
 const candidatePriorityRubric = readFileSync("docs/candidate-priority-rubric.md", "utf8");
 const sourceDiversityTriageNote = readFileSync("docs/source-diversity-triage-note.md", "utf8");
+const sourceConcentrationArchiveReviewNote = readFileSync(
+  "docs/source-concentration-archive-review-note.md",
+  "utf8",
+);
 const originalSourceReplacementGuide = readFileSync("docs/original-source-replacement-guide.md", "utf8");
 const candidateToNewsHandoff = readFileSync("docs/candidate-to-news-handoff.md", "utf8");
 const companyContinuityReviewNote = readFileSync("docs/company-continuity-review-note.md", "utf8");
@@ -746,7 +750,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 27/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -800,7 +804,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex)
+  !/Continue with Day 27/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -851,6 +855,26 @@ if (
   !/Day 5[\s\S]*source-diversity-triage-note\.md/.test(optimizationDecisionIndex)
 ) {
   errors.push("Candidate gathering must include batch-level source-diversity triage for over-concentrated owner, source-family, and narrative-angle candidate sets.");
+}
+
+if (
+  !/docs\/source-concentration-archive-review-note\.md/.test(readme) ||
+  !/Source Concentration Archive Review Note/.test(sourceConcentrationArchiveReviewNote) ||
+  !/Repeated Caveat Decisions/.test(sourceConcentrationArchiveReviewNote) ||
+  !/official-release-boundary/.test(sourceConcentrationArchiveReviewNote) ||
+  !/media-radar-boundary/.test(sourceConcentrationArchiveReviewNote) ||
+  !/single-owner-balance/.test(sourceConcentrationArchiveReviewNote) ||
+  !/proof-path-repeat/.test(sourceConcentrationArchiveReviewNote) ||
+  !/archive-source-concentration/.test(sourceConcentrationArchiveReviewNote) ||
+  !/source-concentration-archive-review-note\.md/.test(sourceDiversityTriageNote) ||
+  !/source-concentration-archive-review-note\.md/.test(newsDataFormat) ||
+  !/official or technical source concentration proves publication\/access\/status only/.test(newsDataFormat) ||
+  !/Day 26[\s\S]*source-concentration-archive-review-note\.md[\s\S]*official\/technical concentration[\s\S]*media concentration[\s\S]*single-owner feeds/.test(
+    optimizationDecisionIndex,
+  ) ||
+  !/Continue with Day 27/.test(optimizationDecisionIndex)
+) {
+  errors.push("Archive source-concentration reviews must turn repeated caveats into standing source-posture rules.");
 }
 
 if (
@@ -1436,7 +1460,7 @@ if (
   ) ||
   !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
   !/Day 24[\s\S]*historical background[\s\S]*current homepage batch/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 27/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1603,7 +1627,7 @@ if (
   !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex)
+  !/Continue with Day 27/.test(optimizationDecisionIndex)
 ) {
   errors.push("Company continuity review must classify recurring-company signals before public continuity copy is written.");
 }
@@ -1637,7 +1661,7 @@ if (
   !/Day 22[\s\S]*topic-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex)
+  !/Continue with Day 27/.test(optimizationDecisionIndex)
 ) {
   errors.push("Topic continuity review must prevent repeated media coverage from being written as stronger trend evidence.");
 }
@@ -1658,7 +1682,7 @@ if (
   !/Day 25[\s\S]*next-check-retirement-note\.md[\s\S]*retire-resolved[\s\S]*retire-replaced[\s\S]*retire-downgraded[\s\S]*keep-open/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 26/.test(optimizationDecisionIndex)
+  !/Continue with Day 27/.test(optimizationDecisionIndex)
 ) {
   errors.push("Next-check retirement review must retire stale nextCheck questions when later source-of-record evidence answers them.");
 }

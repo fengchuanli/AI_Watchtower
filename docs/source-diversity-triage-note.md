@@ -4,6 +4,8 @@ Use this note after a candidate batch has passed the hard source, copyright, dup
 
 This note sits after `docs/candidate-priority-rubric.md` and before `docs/candidate-to-news-handoff.md`: first score safe candidates, then check whether the group is too concentrated by source owner, source family, company, geography, evidence mode, or narrative angle.
 
+After the current edition has been archived, use `docs/source-concentration-archive-review-note.md` to inspect repeated `sourceRisk`, `sourceConcentration`, and `overreadBoundary` caveats across recent editions. If the same warning keeps returning, turn it into a standing rule here, in `docs/news-data-format.md`, or in the relevant validator instead of relying on batch-by-batch prose.
+
 ## When To Trigger The Note
 
 Run the source-diversity triage when any of these are true:
@@ -28,6 +30,8 @@ Use this quick review before final ranking when the draft list leans on a famili
 | One research feed | Several papers or benchmark notes may look like field consensus even when they share lab incentives or methods. | Keep method limits visible, prefer replicated results or independent datasets, and say whether the batch is research exploration rather than deployment evidence. |
 
 If the owner stays dominant after review, add or preserve `edition.sourceConcentration` / `sourceRisk` and write the caveat as a reader instruction: what the source owner can show, what it cannot prove, and which independent owner or source type should be checked next.
+
+Archive reviews in September 2026 showed three caveats returning across adjacent editions: official/technical releases can verify publication and access but not effects, media-heavy batches are radar rather than confirmation, and repeated single-owner feeds should trigger a balance search even when they stay below two thirds. Treat those as default posture checks before final ranking.
 
 ## Triage Decision
 
