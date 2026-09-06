@@ -1,3 +1,32 @@
+## 2026-09-06 20:00 JST
+
+- Focus: Completed the 2026-08-10 to 2026-09-08 plan's Day 26 continuity task. Reviewed the newest archived `sourceRisk`, `sourceConcentration`, and `overreadBoundary` notes and turned recurring source-concentration caveats into a standing archive review rule.
+- Changed files:
+  - `docs/source-concentration-archive-review-note.md`
+  - `docs/source-diversity-triage-note.md`
+  - `docs/news-data-format.md`
+  - `README.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Remote sync:
+  - Before editing: blocked-dns - `git pull --ff-only origin main` failed because `github.com` could not be resolved; continued on local `main`.
+- Content posture:
+  - Added `docs/source-concentration-archive-review-note.md` with four decisions: `official-release-boundary`, `media-radar-boundary`, `single-owner-balance`, and `proof-path-repeat`.
+  - Identified the repeated caveat across recent archives: official/technical-heavy batches prove publication, access, status, disclosure, or self-described scope only; media-heavy batches remain radar until a source-of-record artifact appears; repeated single-owner feeds should trigger a balance search even below the two-thirds `sourceConcentration` threshold.
+  - Linked the rule from `docs/source-diversity-triage-note.md`, `docs/news-data-format.md`, and `README.md`.
+  - Updated `scripts/validate-site.mjs` so the new guide, standing rule, Day 26 decision-index anchor, and Day 27 next-task anchor remain discoverable.
+  - Advanced `docs/optimization-decision-index.md` to Day 27: add a compact monthly continuity snapshot shape that can summarize repeated companies, topics, unresolved claims, and resolved checks.
+- Verification:
+  - Read automation memory, `docs/product-principles.md`, `docs/copyright-safety.md`, `docs/optimization-plan.md`, `docs/optimization-decision-index.md`, recent `docs/optimization-log.md`, `docs/source-diversity-triage-note.md`, `docs/news-data-format.md`, `README.md`, and recent archived source concentration fields.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 77 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new archive source-concentration guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: Local implementation commit `de25fb7` (`固化来源集中复查规则`); final log/index record commit follows this entry.
+
 ## 2026-09-06 08:15 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-06`，发布 10 条安全非重复信号，聚焦 OpenAI Daybreak 前线防御计划、GPT-6 Astra in Microsoft Foundry、Agent 记忆/上下文成本、Workspace 自动化动作、Gemini Notebook 审计、Lyria 3.5、Jetson 边缘推理和 OpenAI Agent 事件独立调查边界。
