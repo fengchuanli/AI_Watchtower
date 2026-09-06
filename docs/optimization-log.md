@@ -25,7 +25,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: Local implementation commit `de25fb7` (`固化来源集中复查规则`); final log/index record commit follows this entry.
+- Commit: Local implementation commit `de25fb7` (`固化来源集中复查规则`) and local log/index record commit `dc91c0e` (`记录来源集中复查优化`); final push-status record follows this entry.
+- Git note: `git push origin main` failed due to `ssh: Could not resolve hostname github.com: -65563`; elevated retry was rejected by the app safety review because it would publish local `main` to a shared default branch without explicit trusted approval. Remote sync needs explicit user authorization in a trusted push context or network/DNS recovery with approved publishing.
 
 ## 2026-09-06 08:15 JST
 
