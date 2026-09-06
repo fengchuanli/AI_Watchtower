@@ -20,7 +20,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: local content/log commit follows this entry.
+- Commit: `14a9aae` (`补充Fairwind防御情报`), pushed to `origin/main`; final log-status record follows this entry.
 
 ## 2026-09-06 20:00 JST
 
