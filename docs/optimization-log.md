@@ -1,3 +1,28 @@
+## 2026-09-07 08:07 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-07`，发布 3 条安全非重复短批次信号，聚焦 OpenAI 官方安全放慢/RSI 立场、OpenAI 研究 Agent 内部指标，以及 VentureBeat 对 Agent 运维语义数据质量的工程提醒。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI 官方新闻/安全页、VentureBeat AI、当前首页、最新归档和历史重复 URL。
+  - Partial batch: publish-partial-batch - 本期发布 3 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复 URL、弱证据、聚合页或营销补量。
+  - OpenAI 两条标为 `官方核对` / `confirmed`，只证明 OpenAI 发布了对应安全与研究加速披露；VentureBeat 条目标为 `媒体背景` / `reported` / `must-read`，只保留最小工程事实，完整案例和上下文仍回到原文。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 690。
+- Verification:
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, `docs/news-data-format.md`, `docs/partial-batch-publication-guide.md`, `docs/current-to-history-publication-checklist.md`, `docs/archive-diff-summary-format.md`, `docs/copyright-safety.md`, `docs/candidate-source-checklist.md`, `docs/source-concentration-archive-review-note.md`, current `data/news.json`, latest archive metadata, and recent `docs/optimization-log.md`.
+  - Checked OpenAI News/Safety, Google Keyword AI, Google Cloud, Google Workspace Updates, Anthropic News, Mistral News, NVIDIA Technical Blog, Axios AI, TechCrunch AI, VentureBeat AI, and duplicate candidates; skipped old, duplicate, paywalled/login-walled, community, random-page, sponsored, aggregator, and weak-evidence items.
+  - Candidate duplicate check cleared the three published URLs before drafting.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 77 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Archive mirror: done - newest data/news-history.json edition matches data/news.json for edition metadata, reader/source framing, item count, and item order.
+  - Archive diff: skipped-one-edition - only one same-day archive edition exists, so no morning/evening comparison was written.
+- Commit note: 准备以 `更新9月7日17点AI新闻情报` 提交并推送到 `origin/main`。
+
 ## 2026-09-06 23:05 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-06`，所以未回退版次，而是在同日 17:00 版基础上补充 1 条安全非重复 Google 官方 cyber 防御分发信号。

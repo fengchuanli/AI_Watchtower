@@ -1,8 +1,372 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-06",
-  "totalItems": 687,
+  "updatedAt": "2026-09-07",
+  "totalItems": 690,
   "editions": [
+    {
+      "id": "news-1700-2026-09-07",
+      "date": "2026-09-07",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期短批次聚焦 OpenAI 安全披露、研究 Agent 指标和 Agent 运维数据质量。",
+      "operationalStatus": "已拉取并确认 origin/main 最新；已核对 OpenAI 官方、安全页、可靠媒体、当前首页和历史重复 URL。",
+      "editorialInterpretation": "本期发布 3 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复 URL、弱证据、聚合页或营销补量。",
+      "readerFrame": {
+        "headline": "前沿模型安全门槛和研发自动化成为同一张核查表",
+        "whyItMatters": "本期把 OpenAI 安全放慢机制、内部研究 Agent 指标和企业 Agent 数据质量监控放在一起看：能力扩展越快，监控、审计和业务结果校验越要前置。",
+        "useThisIssueFor": [
+          "安全和法务团队复核前沿模型暂停权、外部审计、事故披露和供应商安全门槛。",
+          "研究平台和数据工程团队检查 Agent 使用指标、人工干预率、业务不变量和语义监控告警。"
+        ],
+        "notProvenYet": [
+          "不证明 OpenAI 已经建立外部强制审计或政府认可的安全门槛。",
+          "不证明研发 Agent 或语义监控已在外部组织产生可复现的生产率或质量收益。"
+        ],
+        "mobile": {
+          "headline": "查前沿安全门槛",
+          "summary": "OpenAI 两篇官方披露叠加 Agent 运维数据质量。",
+          "primaryUses": [
+            "法务团队查暂停权",
+            "平台团队查研发指标",
+            "数据团队查语义告警"
+          ],
+          "proofBoundary": "仍需审计文件、监管文本、公开数据和企业事故样本"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版从控制面发布转向安全放慢、研发指标和语义监控",
+        "freshFacts": [
+          "本期新增事实：OpenAI 9月6日发布首席科学家文章，讨论 RSI、监控衰减和安全门槛。",
+          "本期新增事实：OpenAI 9月6日发布研究加速快照，披露自动化研究实习生目标和内部 Agent 使用指标。",
+          "本期新增事实：VentureBeat 9月6日刊发数据管道语义质量文章，并连接到 Agent 工作流监控。"
+        ],
+        "repeatedContext": [
+          "延续 9月6日 Astra、Daybreak、Fairwind 和 Agent 事故调查主线，但不重复旧 URL。",
+          "延续企业控制面和成本/审计背景，本期只补可发布的新来源事实。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对前沿安全与研发指标",
+          "count": 2,
+          "meaning": "用来检查 OpenAI 安全暂停、外部审计、研究 Agent 指标、人工干预和公开复核路径。"
+        },
+        {
+          "label": "核对Agent结果校验",
+          "count": 1,
+          "meaning": "用来检查企业 Agent 是否验证业务数字、schema 漂移和静默质量失败。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "短批次且官方占主导",
+        "note": "官方来源占 2/3，适合核对 OpenAI 公开披露，不适合直接证明执行效果或外部采用。",
+        "nextCheck": "核对审计文件、监管草案、公开数据、企业事故样本和第三方评测。"
+      },
+      "sourceConcentration": {
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "count": 2,
+        "share": "2/3",
+        "note": "OpenAI News 是本期最大来源，只能证明 OpenAI 自身披露和立场。",
+        "nextCheck": "用第三方审计、监管文本、其他实验室披露和公开数据复核。"
+      },
+      "overreadBoundary": {
+        "label": "不要把官方披露读成外部验证",
+        "body": "不要把本期读成全市场结论：这是短批次雷达，OpenAI 官方来源证明其披露了安全与研究加速口径，VentureBeat 只提供媒体/专家背景。",
+        "doNotConclude": "不证明前沿模型安全问题已经解决，不证明研发 Agent 普遍提升生产率，也不证明语义监控已成为行业标准。",
+        "useInstead": "用来安排安全框架、审计材料、监管文本、公开数据、企业日志和第三方评测的后续核查。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent从功能发布转向安全暂停条件",
+          "note": "跨期看，Astra、Daybreak、事故调查、OpenAI 安全文章和研究加速快照都把 Agent 能力推进到监控、暂停和审计问题。",
+          "boundary": "这不证明安全机制已经充分；仍需官方框架、审计记录、事故报告和监管文本。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "企业Agent要看结果正确性",
+          "note": "跨期看，Foundry、Workspace、NemoClaw 和本期 VentureBeat 数据质量文章都把企业 Agent 从能执行转向可验证。",
+          "boundary": "这不证明成本或质量改善；仍需客户日志、业务指标、第三方报告和内部事故样本。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "安全门槛更明确",
+          "status": "stronger",
+          "previousPattern": "上一版记录 Daybreak、Fairwind、NemoClaw 和 Agent 事故调查边界。",
+          "currentSignal": "本期新增 OpenAI 首席科学家安全文章和研究加速披露。",
+          "signalDirection": "增强：从防御分发和调查边界推进到放慢条件、监控衰减和研发自动化指标。",
+          "stillUnproven": "仍需新版 Preparedness Framework、审计文件、监管文本和公开执行记录。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "结果校验成为运维边界",
+          "status": "repeated",
+          "previousPattern": "上一版记录 Foundry 上下文工程、Workspace 动作和 Gemini Notebook 审计。",
+          "currentSignal": "本期新增 VentureBeat 对数据管道语义监控的工程提醒。",
+          "signalDirection": "重复并具体化：从权限/审计扩展到业务数字是否正确。",
+          "stillUnproven": "仍需企业事故样本、Agent 自动修复日志、客户指标和第三方数据质量报告。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "安全披露与研发自动化并行",
+          "lastMention": "上一版记录 Daybreak、Astra in Foundry、German wiki/Hugging Face 事故调查边界。",
+          "whatChanged": "本期新增两篇 9月6日官方披露，把 RSI、监控衰减、暂停机制和研究 Agent 指标公开化。",
+          "stillUnproven": "仍需审计记录、监管文本、公开方法数据和第三方复核。"
+        },
+        {
+          "company": "VentureBeat",
+          "label": "媒体背景补运维检查",
+          "lastMention": "历史归档多次使用 VentureBeat AI 作为企业 AI、Agent 运维和开发者工具的可靠媒体背景来源。",
+          "whatChanged": "本期新增数据管道语义质量文章，用最小事实提示 Agent 工作流监控边界。",
+          "stillUnproven": "仍需企业事故数据、客户影响记录和第三方数据质量报告。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 2,
+          "role": "用于核对 OpenAI 安全与研究加速披露；执行效果、外部采用和治理结果仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 1,
+          "role": "用于记录 Agent 运维与数据质量背景；完整案例和上下文仍回到原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent安全与研发自动化",
+          "itemIds": [
+            "openai-research-acceleration-agent-intern-2026-09-07",
+            "openai-alien-mind-safety-bars-2026-09-07"
+          ],
+          "meaning": "用来核对前沿 Agent 的安全暂停、监控衰减、研究指标和外部审计路径。",
+          "count": 2
+        },
+        {
+          "id": "enterprise",
+          "label": "企业Agent结果校验",
+          "itemIds": [
+            "venturebeat-semantic-data-quality-agent-workflows-2026-09-07"
+          ],
+          "meaning": "用来检查企业 Agent 是否验证业务数字、schema 漂移和静默质量失败。",
+          "count": 1
+        }
+      ],
+      "itemCount": 3,
+      "items": [
+        {
+          "id": "venturebeat-semantic-data-quality-agent-workflows-2026-09-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat 用数据管道事故提示 Agent 运维要监控语义正确性",
+          "body": "VentureBeat 关注 Agent 运维数据质量。",
+          "summary": "VentureBeat 把数据管道“运行成功但数字错误”的故障模式连接到 Agent 运维监控。",
+          "whyItMatters": "企业把 Agent 接进数据和运营系统前，需要监控业务不变量，而不是只看任务是否跑完。",
+          "detailBody": "VentureBeat 9月6日刊发技术文章，作者以广告数据管道字段漂移和空分区事故说明结构性成功不等于语义正确，并把该故障模式延伸到 Agent 工作流。",
+          "trend": "Agent运维转向语义校验。",
+          "detailTrend": "Agent 进入数据管道和运营修复后，可靠性不再只是作业是否完成，还包括业务数字是否合理、schema 是否漂移、异常分布是否触发告警；这是企业落地的工程边界。",
+          "whyRanked": "工程检查清单。",
+          "topReason": "媒体背景：最小事实用于提示监控方向，完整案例和上下文仍看原文。",
+          "detailWhyRanked": "VentureBeat AI 的文章把 schema 漂移、业务指标异常和 Agent 运维放在同一检查表；本站只保留最小事实，完整案例、细节和上下文仍需读原文。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "实用性高且发布时间新，但属于媒体/专家背景，不是独立行业统计。"
+          },
+          "impact": "数据平台和 Agent 运维团队应在 DAG、表行数之外加入 schema、业务指标、异常分布和客户影响检查。",
+          "whoShouldCare": "负责把 Agent 接入数据管道、营销分析、运营报表和自动修复流程的数据工程/平台可靠性团队。",
+          "readerUse": "数据工程、平台可靠性和 Agent 运维团队用来更新验收清单：检查语义正确性、字段漂移、业务指标和静默失败告警。",
+          "nextCheck": "核对企业内部事故样本、数据质量平台报告、客户影响记录和 Agent 自动修复日志。",
+          "followUpQuestions": [
+            "是否有数据质量平台发布 Agent 工作流语义错误的可量化事故报告？",
+            "企业内部 Agent 回填或自动修复日志是否能证明语义监控降低了错误结果？"
+          ],
+          "evidenceThreshold": "需要企业事故数据、客户影响记录、第三方数据质量报告或 Agent 修复日志，才能升级为验证过的运维模式结论。",
+          "claimBoundary": "媒体文章支持一个技术经验和工程提醒，不证明所有 Agent 工作流都存在同等故障率。",
+          "counterEvidence": "若实测显示语义监控误报过高、不能提前发现错误或不适用关键工作流，应收窄为特定数据管道经验。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "reliable_media",
+          "sourceId": "venturebeat-ai",
+          "provenance": "VentureBeat AI 支持的来源事实：刊发数据管道静默质量失败与 Agent 工作流监控关系的技术文章；完整事实、案例细节、背景和上下文需读原文。",
+          "sourceUrl": "https://venturebeat.com/orchestration/most-pipeline-monitoring-checks-if-the-job-ran-this-one-didnt-check-if-the-numbers-were-right",
+          "originalUrl": "https://venturebeat.com/orchestration/most-pipeline-monitoring-checks-if-the-job-ran-this-one-didnt-check-if-the-numbers-were-right",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-07T06:00:00+09:00",
+          "time": "9月6日",
+          "tags": [
+            "agent-ops",
+            "data-quality",
+            "monitoring"
+          ],
+          "companies": [
+            "VentureBeat"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "实用性高且发布时间新，但属于媒体/专家背景，不是独立行业统计。"
+          }
+        },
+        {
+          "id": "openai-research-acceleration-agent-intern-2026-09-07",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI 披露 Agent 已成为内部研究加速变量",
+          "body": "OpenAI 发布研究加速快照。",
+          "summary": "OpenAI 把研究 Agent 的内部用量、任务跨度和安全暂停影响整理成公开快照。",
+          "whyItMatters": "这给“AI 研发是否被 AI 加速”提供了少见的一手指标，但仍需要外部方法复核。",
+          "detailBody": "OpenAI 9月6日发布研究加速快照，称已达到自动化研究实习生目标，并披露研究组织中 Agent 用量、实验数量、任务分类、人工干预和 Astra 安全限制影响。",
+          "trend": "AI 实验室正在把内部研发自动化从愿景转成可量化、可争议的生产指标。",
+          "detailTrend": "如果研发 Agent 真的能稳定完成多小时研究任务，模型进步节奏会更依赖工具链、监控、算力分配和人类决策瓶颈；本次披露的价值在于指标框架，而不是外部验证。",
+          "whyRanked": "内部研发指标。",
+          "topReason": "官方研究披露：可用于设定核查问题，不能直接当作独立研究生产率证明。",
+          "detailWhyRanked": "它把内部研发自动化从愿景变成一组可追问的公开指标：Agent 工作日、实验吞吐、任务时长、人工干预和受安全限制的算力转移。来源能证明 OpenAI 披露了这些口径，但不能证明外部实验室同样适用。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "一手指标新颖且高影响，但数据来自 OpenAI 内部，需要外部复核。"
+          },
+          "impact": "研发管理者应关注 Agent 使用量、实验吞吐、人工干预率和安全限制对研发节奏的共同影响。",
+          "whoShouldCare": "负责 AI 研发平台、实验基础设施、模型安全评审和工程效率度量的研究管理/平台工程团队。",
+          "readerUse": "研究管理、平台工程和模型安全团队用来设计研发 Agent 指标：任务时长、成功率、人工干预、算力转移和安全暂停影响。",
+          "nextCheck": "核对 OpenAI 方法附录、Epoch AI 分类法、后续公开数据、第三方复核或其他实验室的同类披露。",
+          "followUpQuestions": [
+            "OpenAI 是否公开更细的指标口径、样本排除规则或可复现实验数据？",
+            "Anthropic、Google DeepMind 或独立研究机构是否发布可比较的研发 Agent 生产率指标？"
+          ],
+          "evidenceThreshold": "需要外部审计、跨实验室复现、公开数据集或独立方法评审，才能升级为确认的研发生产率结论。",
+          "claimBoundary": "该来源证明 OpenAI 的内部披露和指标口径，不证明 Agent 普遍提高所有研究组织效率。",
+          "counterEvidence": "若外部复核发现样本偏差、指标不能映射研究产出或人工干预成本被低估，应收窄为内部案例。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "openai-news",
+          "provenance": "OpenAI News 支持的来源事实：发布《Research acceleration: The view inside OpenAI》，披露自动化研究实习生目标、Agent 使用指标和安全限制影响。",
+          "sourceUrl": "https://openai.com/index/research-acceleration-view-inside-openai/",
+          "originalUrl": "https://openai.com/index/research-acceleration-view-inside-openai/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-06T09:30:00+09:00",
+          "time": "9月6日",
+          "tags": [
+            "research-automation",
+            "codex",
+            "rsi"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "一手指标新颖且高影响，但数据来自 OpenAI 内部，需要外部复核。"
+          }
+        },
+        {
+          "id": "openai-alien-mind-safety-bars-2026-09-07",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI 首席科学家公开呼吁放慢无把握的前沿扩展",
+          "body": "OpenAI 发布首席科学家安全文章。",
+          "summary": "OpenAI 首席科学家公开把 RSI、链式思维监控衰减和强制安全门槛放到同一条安全议程。",
+          "whyItMatters": "这把前沿模型竞争从“能否继续扩展”推向“谁定义安全置信度和第三方审计门槛”。",
+          "detailBody": "OpenAI 9月6日发布首席科学家 Jakub Pachocki 的安全文章，讨论 RSI、链式思维监控衰减、Agent cyber 风险、放慢或停止扩展的必要条件。",
+          "trend": "前沿实验室开始把训练速度、监控可信度和外部安全门槛绑定成同一个治理问题。",
+          "detailTrend": "这不是一次产品发布，而是 OpenAI 内部安全负责人把 RSI、Agent cyber 风险、链式思维监控衰减和第三方审计放进公开议程；它提示企业采购和政策制定者要看停止条件。",
+          "whyRanked": "官方安全边界。",
+          "topReason": "官方核对：重点不是证明风险已解决，而是把安全门槛和放慢机制公开化。",
+          "detailWhyRanked": "这篇文章把 OpenAI 对 RSI、监控衰减、cyber 防御窗口和外部安全门槛的立场集中公开；它适合核对官方口径，也暴露仍缺可执行审计材料。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方一手安全立场很强，但它仍是政策主张，不是外部审计结果。"
+          },
+          "impact": "政策、法务和模型治理团队应把“何时暂停、谁来审计、监控失效如何披露”写入供应商核查表。",
+          "whoShouldCare": "负责前沿模型采购、Agent 安全评审、监管沟通和第三方审计条款的法务/安全/公共政策团队。",
+          "readerUse": "法务、安全和公共政策团队用来更新前沿模型合同中的暂停权、事故披露、外部审计和安全评估触发条件。",
+          "nextCheck": "核对 OpenAI 是否发布更新版 Preparedness Framework、第三方审计安排、政府规则草案或 Astra 运行报告。",
+          "followUpQuestions": [
+            "OpenAI 新版 Preparedness Framework 文件是否写入文中“放慢或停止”的触发条件？",
+            "是否有第三方审计机构、政府部门或国际组织公布可执行的前沿模型安全门槛？"
+          ],
+          "evidenceThreshold": "需要新版安全框架、审计合同、监管文本或公开执行记录，才能升级为确认的治理机制变化。",
+          "claimBoundary": "官方文章证明 OpenAI 公开表达安全立场，不证明其已经建立外部可执行约束。",
+          "counterEvidence": "若后续发布未包含暂停触发条件、外部审计或执行记录，应下调为内部安全倡议。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "trustLevel": "official",
+          "sourceId": "openai-news",
+          "provenance": "OpenAI News 支持的来源事实：发布《An Alien Mind》，公开讨论 RSI、链式思维监控衰减、Agent cyber 风险和放慢扩展的安全门槛。",
+          "sourceUrl": "https://openai.com/index/an-alien-mind/",
+          "originalUrl": "https://openai.com/index/an-alien-mind/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-06T09:00:00+09:00",
+          "time": "9月6日",
+          "tags": [
+            "frontier-safety",
+            "rsi",
+            "governance"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方一手安全立场很强，但它仍是政策主张，不是外部审计结果。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-06",
       "date": "2026-09-06",
