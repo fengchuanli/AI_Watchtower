@@ -1,6 +1,6 @@
 # Update Run Checklist
 
-Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether held-but-promising candidates were recorded with `docs/held-candidate-review-note.md`, whether duplicates were checked, whether `docs/homepage-edition-preflight.md` confirmed the reader question, TOP3 use, source boundary, mobile scan path, proof boundary, and archive mirror, whether `docs/partial-batch-publication-guide.md` was needed for a one- or two-item safe batch, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, whether `docs/archive-diff-summary-format.md` should summarize the same-day morning/evening change, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
+Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether held-but-promising candidates were recorded with `docs/held-candidate-review-note.md`, whether duplicates were checked, whether `docs/homepage-edition-preflight.md` confirmed the reader question, TOP3 use, source boundary, mobile scan path, proof boundary, and archive mirror, whether `docs/partial-batch-publication-guide.md` was needed for a one- or two-item safe batch, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, whether `docs/archive-diff-summary-format.md` should summarize the same-day morning/evening change, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording, commit title prefixes, and the required `网站可见变化` note. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
 
 This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, use `docs/partial-batch-publication-guide.md` to decide whether to publish a short batch with a clear reason, continue searching, or hold the update instead of padding the homepage with weak, repeated, or copyright-risk items.
 
@@ -40,7 +40,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Rollback check | If bad data was detected, confirm `docs/bad-data-rollback-note.md` was applied and say whether rollback was corrected, not needed, or blocked. |
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
-| Commit | Record the local commit message and whether the log can include the final hash without amending itself. |
+| Commit | Record the local commit message and whether the log can include the final hash without amending itself. News runs must use a `【新闻更新】` title prefix and the log must include `网站可见变化`, naming homepage TOP3, more news feed, all-news, archive, or detail pages where readers can see the update. |
 | Push | Record `pushed`, `blocked-dns`, `blocked-auth`, `blocked-non-fast-forward`, or `not-attempted-with-reason` using `docs/remote-sync-log-convention.md`. |
 
 ## Minimum Editor Note
@@ -58,6 +58,8 @@ Drafting: done - public copy uses minimum source facts and original Chinese inte
 Validation: done - validate-data, validate-site, validate-pages, HTML parse, JSON parse, diff check.
 Archive diff: done - morning/evening editions compared for source posture and proof-boundary change.
 Push: blocked-dns
+Commit title: 【新闻更新】发布17点AI新闻：3条研究与产品信号
+网站可见变化：首页TOP3、更多新闻流、全部AI新闻和详情页可看到本次新闻更新。
 Short batch reason: only three reliable non-duplicate research originals passed the source and copyright gates.
 Partial batch: publish-partial-batch - the shortage came from source, duplicate, proof-boundary, and copyright gates, not from padding avoidance alone.
 ```

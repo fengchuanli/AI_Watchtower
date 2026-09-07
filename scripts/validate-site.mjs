@@ -60,6 +60,7 @@ const githubPagesReadiness = readFileSync("docs/github-pages-readiness.md", "utf
 const monthlyOptimizationSummary = readFileSync("docs/monthly-optimization-summary.md", "utf8");
 const optimizationDecisionIndex = readFileSync("docs/optimization-decision-index.md", "utf8");
 const optimizationLogArchiveGuide = readFileSync("docs/optimization-log-archive-guide.md", "utf8");
+const automationHealthCheck = readFileSync("docs/automation-health-check.md", "utf8");
 const contributing = readFileSync("docs/contributing.md", "utf8");
 const readme = readFileSync("README.md", "utf8");
 const errors = [];
@@ -1191,6 +1192,25 @@ if (
   !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex)
 ) {
   errors.push("Remote sync failures must use a shared optimization-log convention for pull and push status.");
+}
+
+if (
+  !/Commit And Push Message Wording/.test(remoteSyncLogConvention) ||
+  !/【新闻更新】/.test(remoteSyncLogConvention) ||
+  !/【网站优化】/.test(remoteSyncLogConvention) ||
+  !/【VisionHub网站风格优化】/.test(remoteSyncLogConvention) ||
+  !/网站可见变化/.test(remoteSyncLogConvention) ||
+  !/【新闻更新】/.test(updateRunChecklist) ||
+  !/网站可见变化/.test(updateRunChecklist) ||
+  !/【VisionHub网站风格优化】/.test(optimizationPlan) ||
+  !/网站可见变化/.test(optimizationPlan) ||
+  !/【VisionHub网站风格优化】/.test(readme) ||
+  !/网站可见变化/.test(readme) ||
+  !/【新闻更新】/.test(automationHealthCheck) ||
+  !/【网站优化】/.test(automationHealthCheck) ||
+  !/【VisionHub网站风格优化】/.test(automationHealthCheck)
+) {
+  errors.push("Commit and push wording must clearly label news updates, ordinary site optimization, VisionHub-style UI work, and visible website changes.");
 }
 
 if (

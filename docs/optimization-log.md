@@ -1,3 +1,22 @@
+## 2026-09-07 10:09 JST
+
+- Focus: 统一 AI Watchtower 的提交和推送文案规则，让未来履历能直接看出是新闻更新、普通网站优化，还是 VisionHub 网站风格优化。
+- Changed files:
+  - `README.md`
+  - `docs/automation-health-check.md`
+  - `docs/optimization-plan.md`
+  - `docs/remote-sync-log-convention.md`
+  - `docs/update-run-checklist.md`
+  - `scripts/validate-site.mjs`
+- Automation prompts updated:
+  - `AI Watchtower 08:00 news intelligence update` now requires `【新闻更新】` commit titles and a `网站可见变化` log line.
+  - `AI Watchtower 17:00 news intelligence update` now requires `【新闻更新】` commit titles and a `网站可见变化` log line.
+  - `AI Watchtower 20:00 content optimization` now requires `【网站优化】` or `【VisionHub网站风格优化】` commit titles and a `网站可见变化` log line.
+- 网站可见变化：无，属于提交/推送文案、自动化提示词和校验规则更新；以后 GitHub 提交标题和优化履历会更容易看懂。
+- Verification:
+  - 已检查当前三个活跃定时任务的配置，并保持 08:00、17:00、20:00 的 ACTIVE 状态不变。
+  - 已增加站点校验，防止提交分类标题和 `网站可见变化` 规则从文档中丢失。
+- Commit: 本次提交记录提交/推送文案规范。
 ## 2026-09-07 08:07 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-07`，发布 3 条安全非重复短批次信号，聚焦 OpenAI 官方安全放慢/RSI 立场、OpenAI 研究 Agent 内部指标，以及 VentureBeat 对 Agent 运维语义数据质量的工程提醒。

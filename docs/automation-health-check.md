@@ -26,7 +26,7 @@ For each active AI Watchtower automation, verify:
 - `rrule` has the correct hour and minute for JST.
 - `rrule` has no stale `UNTIL` date. Use `UNTIL` only for intentionally temporary jobs.
 - `cwds` points to `/Users/zhangxiaoying/Documents/Codex/ai-watchtower`.
-- The prompt asks the run to pull, validate, commit with a Chinese message, and push to `origin main`.
+- The prompt asks the run to pull, validate, write `网站可见变化` in the log, commit with `【新闻更新】`, `【网站优化】`, or `【VisionHub网站风格优化】`, and push to `origin main`.
 - The repo remote remains SSH: `git@github.com:fengchuanli/AI_Watchtower.git`.
 
 ## If A Run Is Missed

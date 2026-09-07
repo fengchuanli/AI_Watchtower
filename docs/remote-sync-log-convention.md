@@ -4,6 +4,26 @@ Use this convention whenever an optimization or news update run attempts to pull
 
 This is a logging convention, not a reason to skip validation. If network sync fails, still finish the local content improvement only when the local branch can be validated and committed safely.
 
+## Commit And Push Message Wording
+
+Every public commit or push summary should make the work type visible at the beginning. Do not use vague titles such as `Day16`, `optimization`, `update`, or `fix` by themselves.
+
+Use one of these title prefixes:
+
+- `【新闻更新】`: for 08:00 or 17:00 news intelligence updates that change `data/news.json`, `data/news-history.json`, source records, or visible news content.
+- `【网站优化】`: for ordinary website, document, validation, navigation, wording, archive, source-policy, or maintenance improvements.
+- `【VisionHub网站风格优化】`: for changes that directly improve the VisionHub-inspired homepage structure, content expression, UI layout, mobile reading path, ranking cards, detail-page narrative structure, or visual briefing components.
+
+Commit title examples:
+
+```text
+【新闻更新】发布17点AI新闻：10条模型与产业信号
+【网站优化】修复首页TOP3模块显示
+【VisionHub网站风格优化】简化首页首屏和新闻卡片层级
+```
+
+Each `docs/optimization-log.md` entry must include a short `Visible on site` or `网站可见变化` line. Say where the reader can see the change, such as homepage TOP3, more news feed, all-news list, detail page source panel, mobile layout, tag page, or archive page. If a change is only documentation or validation, write `网站可见变化：无，属于规则/校验/计划更新`.
+
 ## Status Values
 
 Use these exact status values for pull and push notes:
