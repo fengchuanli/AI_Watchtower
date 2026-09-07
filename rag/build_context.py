@@ -2,8 +2,7 @@ import argparse
 import re
 from typing import Dict, List, Tuple
 
-from search_chunks import search_chunks
-from vector_search_demo import vector_search
+from retrievers import create_local_retriever, to_scored_context_items
 
 DEFAULT_TOP_K = 5
 DEFAULT_MAX_CHARS_PER_CHUNK = 700
@@ -21,10 +20,8 @@ def trim_text(text: str, max_chars: int) -> str:
 
 
 def get_results(query: str, top_k: int, mode: str) -> List[Tuple[float, Dict]]:
-    if mode == "keyword":
-        return [(float(score), chunk) for score, chunk in search_chunks(query, top_k)]
-
-    return vector_search(query, top_k)
+    retriever = create_local_retriever(mode)
+    return to_scored_context_items(retriever.retrieve(query, top_k))
 
 
 def build_citations(results: List[Tuple[float, Dict]], max_chars_per_chunk: int) -> List[Dict]:

@@ -74,7 +74,10 @@ rag/prepare_azure_search_upload_actions.py
         ↓
 rag/azure_search_retriever.py
         ↓
-Future: retriever abstraction and real Azure smoke test
+rag/retrievers.py
+rag/ask_pipeline.py
+        ↓
+Future: backend-agnostic evaluation
 ```
 
 ## Pipeline Steps
@@ -97,6 +100,7 @@ Future: retriever abstraction and real Azure smoke test
 | Vectorized Azure Search Docs | `rag/vectorized-azure-search-docs.md`, `rag/prepare_vectorized_azure_search_docs.py` | Azure Search payload, embedding cache | vectorized docs report or JSONL | cache にある検証済み vector だけを `content_vector` に反映し、欠損 vector を report する |
 | Azure Search Upload Actions | `rag/azure-search-upload-actions.md`, `rag/prepare_azure_search_upload_actions.py` | vectorized docs | local upload action JSONL | Azure upsert 前に required fields、非空 vector、dimension を検証して `@search.action` を付ける |
 | Azure Search Retriever Contract | `rag/azure-search-retriever-contract.md`, `rag/azure_search_retriever.py` | query vector, Azure Search response | citation-ready retrieved chunks | `vectorQueries` payload を作り、Azure response を既存 RAG の chunk contract に正規化する |
+| Retriever Abstraction and Ask Pipeline | `rag/retriever-abstraction-ask-pipeline.md`, `rag/retrievers.py`, `rag/ask_pipeline.py` | question, retriever backend | citation-aware answer draft | local / Azure contract retriever を同じ interface に揃え、ContextBuilder と AnswerGenerator を再利用する |
 | Azure OpenAI Embedding Readiness | `rag/azure-openai-embedding-readiness.md`, `rag/check_azure_openai_embedding_readiness.py` | env vars, Azure Search payload | readiness report | 実 Azure embedding の前に設定、payload、secret boundary、失敗時の停止条件を確認する |
 | Azure OpenAI Embedding Smoke Test | `rag/azure-openai-embedding-smoke-test.md`, `rag/azure_openai_embedding_smoke_test.py` | one short text, Azure env vars | `list[float]` vector check | 全 chunk 処理の前に 1 文だけ実 API に送り、response shape、dimension、failure handling を確認する |
 
@@ -798,6 +802,8 @@ user query に関連する top k chunks を返す。
 ```text
 keyword retrieval
 local term-frequency vector search
+retriever abstraction
+backend-agnostic ask pipeline
 ```
 
 Azure 化後:
@@ -829,6 +835,9 @@ source
 title
 chunk_index
 text
+source_type
+heading
+published_at
 ```
 
 重要:
@@ -843,6 +852,27 @@ Azure API を Retriever に直接書き込まない理由:
 ```text
 Azure API は認証、コスト、timeout、retry、rate limit、環境差異を伴う。
 Retriever boundary を保つことで、local retriever、Azure AI Search retriever、test retriever を差し替えやすくなる。
+```
+
+Day24 実装:
+
+```text
+rag/retrievers.py
+→ LocalKeywordRetriever
+→ LocalVectorRetriever
+→ AzureSearchRetrieverContract
+
+rag/ask_pipeline.py
+→ Retriever.retrieve()
+→ build_citations()
+→ build_context_text()
+→ build_answer()
+```
+
+重要:
+
+```text
+AzureSearchRetrieverContract は local contract であり、search client を注入しない限り Azure API を呼ばない。
 ```
 
 ### ContextBuilder Boundary

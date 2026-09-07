@@ -2741,6 +2741,155 @@ Defined an Azure AI Search retriever contract that builds vector query payloads 
 Azure AI Search の vector query payload と response normalization を retriever boundary として定義し、回答生成側は Azure の response 形式ではなく、既存の citation-ready chunk 形式だけを扱うようにしました。
 ```
 
+## Day 24: Retriever abstraction and end-to-end ask pipeline
+
+### 今天完成了什么
+
+Day24 把 local retriever 和 Azure Search retriever contract 统一到了同一个接口。
+
+新增：
+
+```text
+rag/retrievers.py
+rag/ask_pipeline.py
+rag/test_retrievers.py
+rag/test_ask_pipeline.py
+rag/retriever-abstraction-ask-pipeline.md
+```
+
+更新：
+
+```text
+rag/build_context.py
+rag/architecture.md
+rag/learning-notes.md
+```
+
+### 为什么要做
+
+RAG 作品集不能只展示一堆分散脚本。
+
+面试时更重要的是能说明：
+
+```text
+同一条 ask pipeline 可以切换 local keyword、local vector、future Azure Search backend。
+```
+
+这样 ContextBuilder、AnswerGenerator、citation、sources 不需要因为 backend 不同而重写。
+
+### Retriever contract
+
+统一接口：
+
+```text
+retrieve(question, top_k) -> list[RetrievedChunk]
+```
+
+统一输出：
+
+```text
+score
+id
+document_id
+source
+title
+chunk_index
+text
+source_type
+heading
+published_at
+```
+
+当前实现：
+
+- `LocalKeywordRetriever`
+- `LocalVectorRetriever`
+- `AzureSearchRetrieverContract`
+
+`AzureSearchRetrieverContract` 今天不会调用 Azure。它需要注入 query vector provider 和 search client；没有 search client 时会明确失败。
+
+### End-to-end ask pipeline
+
+新增：
+
+```text
+rag/ask_pipeline.py
+```
+
+流程：
+
+```text
+question
+→ Retriever.retrieve()
+→ build_citations()
+→ build_context_text()
+→ build_answer()
+→ sources
+```
+
+运行：
+
+```bash
+python3 -B rag/ask_pipeline.py "Kimi K3 权重发布有什么风险？" --retriever vector --top-k 3
+```
+
+切换 backend：
+
+```bash
+python3 -B rag/ask_pipeline.py "AI Watchtower 如何判断来源可信度？" --retriever keyword --top-k 3
+```
+
+### Day24 的边界
+
+今天不做：
+
+```text
+不调用 Azure OpenAI
+不调用 Azure AI Search
+不配置 Azure 环境变量
+不替换 evaluation baseline
+不提升 retrieval quality
+```
+
+今天完成的是：
+
+```text
+backend-agnostic retriever interface 和 end-to-end ask pipeline。
+```
+
+### 验证结果
+
+新增测试：
+
+```text
+rag/test_retrievers.py
+rag/test_ask_pipeline.py
+```
+
+验证内容：
+
+- local keyword retriever 返回 citation-ready chunks
+- local vector retriever 返回 citation-ready chunks
+- Azure Search retriever contract 可以用 fake vector provider / fake search client 测试
+- 没有 search client 时不会调用 Azure
+- ask pipeline 能复用 retriever output 生成 context、answer、sources
+
+### 作品集写法
+
+```text
+Built a backend-agnostic retrieval interface and end-to-end ask pipeline so local keyword, local vector, and future Azure Search retrieval can feed the same citation-aware context and answer generation flow.
+```
+
+### 日文面试表达
+
+```text
+local retrieval と Azure Search retrieval を同じ Retriever interface に揃え、回答生成側は backend に依存しない構成にしました。
+```
+
+```text
+Retriever は citation-ready chunk を返し、ContextBuilder と AnswerGenerator は backend の違いを意識せずに再利用できるようにしています。
+```
+
 ## 当前进度总结
 
 ### 已完成
@@ -2768,6 +2917,7 @@ Azure AI Search の vector query payload と response normalization を retrieve
 - Day 21: Prepare vectorized Azure Search docs from cache
 - Day 22: Azure Search upload actions
 - Day 23: Azure Search retriever contract
+- Day 24: Retriever abstraction and end-to-end ask pipeline
 
 ### 当前已生成或新增的文件
 
@@ -2809,6 +2959,11 @@ rag/test_prepare_azure_search_upload_actions.py
 rag/azure-search-retriever-contract.md
 rag/azure_search_retriever.py
 rag/test_azure_search_retriever.py
+rag/retriever-abstraction-ask-pipeline.md
+rag/retrievers.py
+rag/ask_pipeline.py
+rag/test_retrievers.py
+rag/test_ask_pipeline.py
 rag/learning-notes.md
 ```
 
@@ -2834,18 +2989,19 @@ Embedding cache file implementation 已完成，已经用 chunk_id、text_hash�
 Vectorized Azure Search docs preparation 已完成，能够从 validated embedding cache 把 vector 填回 Azure Search payload，并在缺 vector 时停止 upload-ready 输出。
 Azure Search upload actions preparation 已完成，能够在本地验证 required fields、非空 vector、dimension，并生成 `@search.action` payload。
 Azure Search retriever contract 已完成，能够构造 `vectorQueries` 请求 payload，并把 Azure Search response 规范化成 citation-ready chunks。
+Retriever abstraction and end-to-end ask pipeline 已完成，local keyword、local vector、future Azure Search contract 都可以统一成 `retrieve(question, top_k)`，并复用同一套 context / answer / sources 输出。
 ```
 
 ### 下一步
 
-Day 24 建议进入：
+Day 25 建议进入：
 
 ```text
-Retriever abstraction and end-to-end ask pipeline。
+Backend-agnostic RAG evaluation。
 ```
 
 目标是理解：
 
 ```text
-如何把 local retriever 和 Azure retriever contract 统一到同一个接口，让 ask pipeline 可以切换 retrieval backend。
+如何让同一套 evaluation questions 可以评估不同 retrieval backend 的 source hit、citation 和 insufficient evidence 行为。
 ```
