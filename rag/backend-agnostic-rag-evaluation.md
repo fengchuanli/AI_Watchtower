@@ -48,7 +48,7 @@ python3 -B rag/evaluate_demo.py --retriever all
 
 The older `--mode vector|keyword` option remains available as a compatibility alias.
 
-## Current Result
+## Day25 Baseline
 
 | Backend | Passed | Pass rate | Source hit rate | Insufficient evidence |
 |---|---:|---:|---:|---:|
@@ -58,6 +58,19 @@ The older `--mode vector|keyword` option remains available as a compatibility al
 The comparison exposes retrieval quality; Day25 does not tune ranking. The existing vector
 baseline remains 3/5, and the two documentation questions still show why source-aware
 filtering and semantic retrieval are needed.
+
+## Day26 Update
+
+After applying explicit source-type filters and local docs query expansion, the same cases
+produce:
+
+| Backend | Passed | Pass rate | Source hit rate | Insufficient evidence |
+|---|---:|---:|---:|---:|
+| `local-vector` | 5/5 | 100.0% | 100.0% | 1/1 |
+| `local-keyword` | 3/5 | 60.0% | 50.0% | 1/1 |
+
+The question set now declares only the allowed source category, not the exact answer source.
+The expected source remains an independent assertion used after retrieval.
 
 ## Azure Migration Point
 

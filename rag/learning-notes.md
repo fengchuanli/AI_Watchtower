@@ -2919,6 +2919,7 @@ Retriever は citation-ready chunk を返し、ContextBuilder と AnswerGenerato
 - Day 23: Azure Search retriever contract
 - Day 24: Retriever abstraction and end-to-end ask pipeline
 - Day 25: Backend-agnostic RAG evaluation
+- Day 26: Source-aware retrieval filters
 
 ### 当前已生成或新增的文件
 
@@ -2967,6 +2968,9 @@ rag/test_retrievers.py
 rag/test_ask_pipeline.py
 rag/backend-agnostic-rag-evaluation.md
 rag/test_backend_agnostic_evaluation.py
+rag/source_filters.py
+rag/source-aware-retrieval.md
+rag/test_source_aware_retrieval.py
 rag/learning-notes.md
 ```
 
@@ -2994,20 +2998,21 @@ Azure Search upload actions preparation 已完成，能够在本地验证 requir
 Azure Search retriever contract 已完成，能够构造 `vectorQueries` 请求 payload，并把 Azure Search response 规范化成 citation-ready chunks。
 Retriever abstraction and end-to-end ask pipeline 已完成，local keyword、local vector、future Azure Search contract 都可以统一成 `retrieve(question, top_k)`，并复用同一套 context / answer / sources 输出。
 Backend-agnostic RAG evaluation 已完成，同一套问题现在可以评估不同 Retriever 的 source hit、citation 和 insufficient-evidence 行为，并输出后端对比结果。
+Source-aware retrieval filters 已完成，docs / current_news / history_news 使用统一分类和过滤语义，并能转换为 Azure Search OData filter。
 ```
 
 ### 下一步
 
-Day 26 建议进入：
+Day 27 建议进入：
 
 ```text
-Source-aware retrieval filters。
+Azure OpenAI embedding smoke validation and batch cache population。
 ```
 
 目标是理解：
 
 ```text
-如何根据 docs / current_news / history_news 对检索候选进行过滤，并改善当前两个 docs 问题的 source hit。
+如何在真实 Azure 环境验证 embedding deployment，并为 chunks 生成可复用的 embedding cache。
 ```
 
 ## Day 25: Backend-agnostic RAG Evaluation
@@ -3052,4 +3057,47 @@ Day27 才需要 Azure 环境，用于验证 Azure OpenAI embedding、生成真�
 
 ```text
 Built a backend-agnostic RAG evaluation harness that reuses one grounded-answer test set across local vector, keyword, and future Azure Search retrievers.
+```
+
+## Day 26: Source-aware Retrieval Filters
+
+### 今天完成了什么
+
+新增统一 `source_type` 分类：
+
+```text
+docs
+current_news
+history_news
+```
+
+local keyword、local vector、Azure Search contract 现在都支持：
+
+```text
+retrieve(question, top_k, source_types=None)
+```
+
+本地检索会在 ranking 前过滤；Azure contract 会生成对应 OData filter。
+文档类中文问题还会使用一组透明的中英检索词扩展，补足当前本地模型的跨语言能力。
+
+### 评测结果
+
+```text
+local-vector: 3/5 -> 5/5，source hit rate 50.0% -> 100.0%
+local-keyword: 2/5 -> 3/5，source hit rate 25.0% -> 50.0%
+insufficient-evidence: 两个 backend 都保持 1/1
+```
+
+### 为什么这样做
+
+docs 和新闻数据混在同一个候选池时，历史新闻数量会压过规则文档。先按来源类别缩小候选集，既能提升当前本地结果，也能直接映射到 Azure AI Search filter。
+
+### Azure 提醒
+
+Day26 不需要 Azure 环境。Day27 正式开始 Azure 移植，需要 Azure OpenAI embedding deployment 和 Azure AI Search 资源配置。
+
+### 作品集写法
+
+```text
+Added source-aware query routing across local and Azure-ready retrievers and improved the local vector evaluation from 60% to 100% while preserving conservative insufficient-evidence behavior.
 ```

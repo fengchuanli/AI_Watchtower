@@ -4,7 +4,9 @@ import math
 import re
 from collections import Counter
 from pathlib import Path
-from typing import List, Tuple
+from typing import Iterable, List, Optional, Tuple
+
+from source_filters import expand_query_for_source_types, infer_source_type, normalize_source_types
 
 ROOT = Path(__file__).resolve().parents[1]
 CHUNKS_FILE = ROOT / "rag" / "chunks.jsonl"
@@ -67,13 +69,23 @@ def chunk_search_text(chunk: dict) -> str:
     )
 
 
-def vector_search(query: str, top_k: int) -> List[Tuple[float, dict]]:
-    query_vector = text_to_vector(query)
+def vector_search(
+    query: str,
+    top_k: int,
+    source_types: Optional[Iterable[str]] = None,
+) -> List[Tuple[float, dict]]:
+    normalized_source_types = normalize_source_types(source_types)
+    expanded_query = expand_query_for_source_types(query, normalized_source_types)
+    query_vector = text_to_vector(expanded_query)
     if not query_vector:
         return []
 
     scored_chunks = []
     for chunk in load_jsonl(CHUNKS_FILE):
+        if normalized_source_types is not None and infer_source_type(
+            str(chunk.get("source", ""))
+        ) not in normalized_source_types:
+            continue
         chunk_vector = text_to_vector(chunk_search_text(chunk))
         similarity = cosine_similarity(query_vector, chunk_vector)
         if similarity > 0:

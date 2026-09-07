@@ -86,7 +86,8 @@ def default_insufficient_max_score(retriever: Retriever) -> float:
 def evaluate_case(case: Dict, retriever: Retriever, config: EvaluationConfig) -> Dict:
     question = case["question"]
     expected_sources = case.get("expected_sources", [])
-    retrieved_chunks = retriever.retrieve(question, config.top_k)
+    source_types = case.get("source_types")
+    retrieved_chunks = retriever.retrieve(question, config.top_k, source_types)
     citations = build_citations(
         to_scored_context_items(retrieved_chunks),
         config.max_chars_per_chunk,
@@ -114,6 +115,7 @@ def evaluate_case(case: Dict, retriever: Retriever, config: EvaluationConfig) ->
         "backend": retriever.name,
         "question": question,
         "expected_sources": expected_sources,
+        "source_types": source_types,
         "retrieved_sources": retrieved_sources,
         "top_score": top_score,
         "answer": answer,
@@ -161,6 +163,7 @@ def print_case_result(result: Dict) -> None:
     print(f"{result['id']}: {status}")
     print(f"question: {result['question']}")
     print(f"expected_sources: {result['expected_sources']}")
+    print(f"source_types: {result['source_types']}")
     print("retrieved_sources:")
     for source in result["retrieved_sources"]:
         print(f"- {source}")

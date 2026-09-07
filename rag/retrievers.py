@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Callable, Dict, List, Optional, Protocol, Tuple
+from typing import Callable, Dict, Iterable, List, Optional, Protocol, Tuple
 
 from azure_search_retriever import (
     RetrievedChunk,
@@ -7,13 +7,23 @@ from azure_search_retriever import (
     normalize_azure_search_results,
 )
 from search_chunks import search_chunks
+from source_filters import (
+    build_source_type_filter,
+    combine_filter_expressions,
+    infer_source_type,
+)
 from vector_search_demo import vector_search
 
 
 class Retriever(Protocol):
     name: str
 
-    def retrieve(self, question: str, top_k: int) -> List[RetrievedChunk]:
+    def retrieve(
+        self,
+        question: str,
+        top_k: int,
+        source_types: Optional[Iterable[str]] = None,
+    ) -> List[RetrievedChunk]:
         ...
 
 
@@ -30,7 +40,7 @@ def result_tuple_to_retrieved_chunk(score: float, chunk: Dict) -> RetrievedChunk
         title=str(chunk.get("title", "")),
         chunk_index=int(chunk.get("chunk_index", 0)),
         text=str(chunk.get("text", "")),
-        source_type=str(chunk.get("source_type", "")),
+        source_type=str(chunk.get("source_type") or infer_source_type(str(chunk.get("source", "")))),
         heading=str(chunk.get("heading", "")),
         published_at=chunk.get("published_at"),
     )
@@ -44,16 +54,32 @@ def to_scored_context_items(results: List[RetrievedChunk]) -> List[Tuple[float, 
 class LocalKeywordRetriever:
     name: str = "local-keyword"
 
-    def retrieve(self, question: str, top_k: int) -> List[RetrievedChunk]:
-        return [result_tuple_to_retrieved_chunk(score, chunk) for score, chunk in search_chunks(question, top_k)]
+    def retrieve(
+        self,
+        question: str,
+        top_k: int,
+        source_types: Optional[Iterable[str]] = None,
+    ) -> List[RetrievedChunk]:
+        return [
+            result_tuple_to_retrieved_chunk(score, chunk)
+            for score, chunk in search_chunks(question, top_k, source_types)
+        ]
 
 
 @dataclass
 class LocalVectorRetriever:
     name: str = "local-vector"
 
-    def retrieve(self, question: str, top_k: int) -> List[RetrievedChunk]:
-        return [result_tuple_to_retrieved_chunk(score, chunk) for score, chunk in vector_search(question, top_k)]
+    def retrieve(
+        self,
+        question: str,
+        top_k: int,
+        source_types: Optional[Iterable[str]] = None,
+    ) -> List[RetrievedChunk]:
+        return [
+            result_tuple_to_retrieved_chunk(score, chunk)
+            for score, chunk in vector_search(question, top_k, source_types)
+        ]
 
 
 SearchClient = Callable[[Dict], Dict]
@@ -68,7 +94,12 @@ class AzureSearchRetrieverContract:
     filter_expression: Optional[str] = None
     name: str = "azure-search-contract"
 
-    def retrieve(self, question: str, top_k: int) -> List[RetrievedChunk]:
+    def retrieve(
+        self,
+        question: str,
+        top_k: int,
+        source_types: Optional[Iterable[str]] = None,
+    ) -> List[RetrievedChunk]:
         if self.search_client is None:
             raise RetrieverUnavailableError(
                 "AzureSearchRetrieverContract needs a search_client before it can retrieve. "
@@ -76,11 +107,15 @@ class AzureSearchRetrieverContract:
             )
 
         query_vector = self.query_vector_provider(question)
+        filter_expression = combine_filter_expressions(
+            self.filter_expression,
+            build_source_type_filter(source_types),
+        )
         payload = build_vector_search_payload(
             query_vector=query_vector,
             top_k=top_k,
             vector_field=self.vector_field,
-            filter_expression=self.filter_expression,
+            filter_expression=filter_expression,
         )
         response = self.search_client(payload)
         return normalize_azure_search_results(response)

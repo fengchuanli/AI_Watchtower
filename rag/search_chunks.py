@@ -3,7 +3,9 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
-from typing import List, Tuple
+from typing import Iterable, List, Optional, Tuple
+
+from source_filters import expand_query_for_source_types, infer_source_type, normalize_source_types
 
 ROOT = Path(__file__).resolve().parents[1]
 CHUNKS_FILE = ROOT / "rag" / "chunks.jsonl"
@@ -42,14 +44,24 @@ def score_chunk(query_terms: Counter, chunk: dict) -> int:
     return score
 
 
-def search_chunks(query: str, top_k: int) -> List[Tuple[int, dict]]:
-    query_terms = Counter(tokenize(query))
+def search_chunks(
+    query: str,
+    top_k: int,
+    source_types: Optional[Iterable[str]] = None,
+) -> List[Tuple[int, dict]]:
+    normalized_source_types = normalize_source_types(source_types)
+    expanded_query = expand_query_for_source_types(query, normalized_source_types)
+    query_terms = Counter(tokenize(expanded_query))
 
     if not query_terms:
         return []
 
     scored_chunks = []
     for chunk in load_jsonl(CHUNKS_FILE):
+        if normalized_source_types is not None and infer_source_type(
+            str(chunk.get("source", ""))
+        ) not in normalized_source_types:
+            continue
         score = score_chunk(query_terms, chunk)
         if score > 0:
             scored_chunks.append((score, chunk))

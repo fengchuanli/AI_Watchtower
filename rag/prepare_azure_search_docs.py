@@ -3,6 +3,8 @@ import re
 from pathlib import Path
 from typing import Dict, Optional
 
+from source_filters import infer_source_type
+
 ROOT = Path(__file__).resolve().parents[1]
 CHUNKS_FILE = ROOT / "rag" / "chunks.jsonl"
 OUTPUT_FILE = ROOT / "rag" / "azure_search_docs.jsonl"
@@ -22,19 +24,6 @@ def write_jsonl(path: Path, records) -> int:
             file.write(json.dumps(record, ensure_ascii=False) + "\n")
             count += 1
     return count
-
-
-def infer_source_type(source: str) -> str:
-    if source.startswith("docs/"):
-        return "docs"
-
-    if source.startswith("data/news.json#"):
-        return "current_news"
-
-    if source.startswith("data/news-history.json#"):
-        return "history_news"
-
-    return "unknown"
 
 
 def infer_document_type(source_type: str) -> str:

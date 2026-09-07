@@ -1225,13 +1225,13 @@ GET /health
 - Azure Search Payload and Retriever Contracts
 - Backend-agnostic Retriever and Ask Pipeline
 - Backend-agnostic RAG Evaluation
+- Source-aware Retrieval Filters
 
 ### 設計・改善予定
 
 - Azure OpenAI Embedding
 - Azure AI Search
 - heading-aware chunking
-- docs/news retrieval filter
 - reranking
 - Azure Functions API
 - Application Insights
@@ -1259,4 +1259,8 @@ Documented the end-to-end RAG pipeline architecture, including document ingestio
 
 ```text
 Decoupled evaluation from retrieval infrastructure so local and Azure backends can be compared with the same grounded-answer test set.
+```
+
+```text
+Added shared source-type routing for docs, current news, and history news. Local retrievers filter before ranking, while the Azure Search contract converts the same metadata into OData filters.
 ```

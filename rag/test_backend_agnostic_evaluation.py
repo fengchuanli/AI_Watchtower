@@ -17,8 +17,8 @@ class FakeRetriever:
         self.results_by_question = results_by_question
         self.calls = []
 
-    def retrieve(self, question, top_k):
-        self.calls.append((question, top_k))
+    def retrieve(self, question, top_k, source_types=None):
+        self.calls.append((question, top_k, source_types))
         return self.results_by_question.get(question, [])[:top_k]
 
 
@@ -41,6 +41,7 @@ class BackendAgnosticEvaluationTest(unittest.TestCase):
                 "id": "source-hit",
                 "question": "grounded question",
                 "expected_sources": ["docs/example.md"],
+                "source_types": ["docs"],
             },
             {
                 "id": "insufficient",
@@ -63,7 +64,10 @@ class BackendAgnosticEvaluationTest(unittest.TestCase):
             EvaluationConfig(top_k=3, min_score=0.2, insufficient_max_score=0.2),
         )
 
-        self.assertEqual(retriever.calls, [("grounded question", 3), ("unknown question", 3)])
+        self.assertEqual(
+            retriever.calls,
+            [("grounded question", 3, ["docs"]), ("unknown question", 3, None)],
+        )
         self.assertTrue(results[0]["source_hit"])
         self.assertTrue(results[0]["citation_ok"])
         self.assertTrue(results[1]["insufficient_ok"])

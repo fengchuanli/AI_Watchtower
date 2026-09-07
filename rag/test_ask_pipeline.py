@@ -7,9 +7,10 @@ from ask_pipeline import run_ask_pipeline
 class FakeRetriever:
     name = "fake"
 
-    def retrieve(self, question, top_k):
+    def retrieve(self, question, top_k, source_types=None):
         self.question = question
         self.top_k = top_k
+        self.source_types = source_types
         return [
             RetrievedChunk(
                 score=0.9,
@@ -31,6 +32,7 @@ class AskPipelineTest(unittest.TestCase):
 
         self.assertEqual(retriever.question, "What is this?")
         self.assertEqual(retriever.top_k, 1)
+        self.assertIsNone(retriever.source_types)
         self.assertEqual(result.retriever_name, "fake")
         self.assertIn("[1]", result.answer)
         self.assertIn("docs/example.md", result.sources)
