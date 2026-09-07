@@ -1,3 +1,30 @@
+## 2026-09-07 23:03 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-07`，所以未回退版次，而是在同日 17:00 版基础上补充 1 条安全非重复 Google DeepMind 官方环境AI项目孵化信号，当前共 4 条。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、Anthropic Newsroom、Google Keyword/DeepMind 官方页、Microsoft 官方博客、VentureBeat AI、TechCrunch AI、NVIDIA 新闻候选、当前首页和历史重复 URL。
+  - 新增 Google DeepMind Accelerator: AI for the Planet in APAC 官方信号，标为 `官方核对` / `confirmed`；只证明 Google 官方发布了亚太首批 16 个组织、三个月导师/技术支持、Singapore bootcamp 和 Google AI stack/frontier AI 模型支持，不证明项目已经规模化或产生可量化环保收益。
+  - Partial batch: publish-partial-batch - 本期发布 4 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复 URL、弱证据、聚合页或营销补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 691。
+- 网站可见变化：首页 TOP3 和更多新闻 feed 新增 Google DeepMind 亚太环境AI项目；全部情报列表、归档页和详情页同步显示该补充信号与核验边界。
+- Verification:
+  - Read automation memory, `data/sources.json`, `docs/source-policy.md`, current `data/news.json`, latest archive mirror, recent `docs/optimization-log.md`, and official/reliable candidate web sources.
+  - Candidate duplicate check cleared the Google DeepMind APAC accelerator URL before drafting; skipped old, duplicate, paywalled/login-walled, community, random-page, sponsored, aggregator, and weak-evidence items.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 4 current news items against 77 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `b46db48` (`【新闻更新】补充23点AI新闻：4条安全与科学AI信号`)。
+- Git note: `git push origin main` 首次因 GitHub DNS 解析失败；网络授权重试被 app safety review 拒绝，因为会同时发布本次新闻提交和运行前已存在的 `87a0b67` Day26 本地提交到默认分支。当前 `main` 仍领先 `origin/main` 2 个提交，需要用户在知情后授权推送或先处理既有本地提交。
+
 ## 2026-09-07 10:09 JST
 
 - Focus: 统一 AI Watchtower 的提交和推送文案规则，让未来履历能直接看出是新闻更新、普通网站优化，还是 VisionHub 网站风格优化。
