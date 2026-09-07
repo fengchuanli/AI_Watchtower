@@ -2918,6 +2918,7 @@ Retriever は citation-ready chunk を返し、ContextBuilder と AnswerGenerato
 - Day 22: Azure Search upload actions
 - Day 23: Azure Search retriever contract
 - Day 24: Retriever abstraction and end-to-end ask pipeline
+- Day 25: Backend-agnostic RAG evaluation
 
 ### 当前已生成或新增的文件
 
@@ -2964,6 +2965,8 @@ rag/retrievers.py
 rag/ask_pipeline.py
 rag/test_retrievers.py
 rag/test_ask_pipeline.py
+rag/backend-agnostic-rag-evaluation.md
+rag/test_backend_agnostic_evaluation.py
 rag/learning-notes.md
 ```
 
@@ -2990,18 +2993,63 @@ Vectorized Azure Search docs preparation 已完成，能够从 validated embeddi
 Azure Search upload actions preparation 已完成，能够在本地验证 required fields、非空 vector、dimension，并生成 `@search.action` payload。
 Azure Search retriever contract 已完成，能够构造 `vectorQueries` 请求 payload，并把 Azure Search response 规范化成 citation-ready chunks。
 Retriever abstraction and end-to-end ask pipeline 已完成，local keyword、local vector、future Azure Search contract 都可以统一成 `retrieve(question, top_k)`，并复用同一套 context / answer / sources 输出。
+Backend-agnostic RAG evaluation 已完成，同一套问题现在可以评估不同 Retriever 的 source hit、citation 和 insufficient-evidence 行为，并输出后端对比结果。
 ```
 
 ### 下一步
 
-Day 25 建议进入：
+Day 26 建议进入：
 
 ```text
-Backend-agnostic RAG evaluation。
+Source-aware retrieval filters。
 ```
 
 目标是理解：
 
 ```text
-如何让同一套 evaluation questions 可以评估不同 retrieval backend 的 source hit、citation 和 insufficient evidence 行为。
+如何根据 docs / current_news / history_news 对检索候选进行过滤，并改善当前两个 docs 问题的 source hit。
+```
+
+## Day 25: Backend-agnostic RAG Evaluation
+
+### 今天完成了什么
+
+`rag/evaluate_demo.py` 不再直接调用某个本地检索函数，而是接收统一的 `Retriever`。
+同一套 `rag/eval_questions.json` 可以评估 local vector、local keyword，以及未来的 Azure AI Search。
+
+运行单个 backend：
+
+```bash
+python3 -B rag/evaluate_demo.py --retriever vector
+```
+
+对比全部本地 backend：
+
+```bash
+python3 -B rag/evaluate_demo.py --retriever all
+```
+
+### 当前结果
+
+```text
+local-vector: 3/5, pass rate 60.0%, source hit rate 50.0%, insufficient evidence 1/1
+local-keyword: 2/5, pass rate 40.0%, source hit rate 25.0%, insufficient evidence 1/1
+```
+
+keyword 和 vector 的 score 范围不同，因此 evidence threshold 必须按 backend 校准。
+跨 backend 更值得直接比较的是 source hit、citation 和 refusal behavior，而不是原始 score 数值。
+
+### Azure 时间点
+
+```text
+Day26 继续做本地 source-aware retrieval filter。
+Day27 开始真实 Azure 移植。
+```
+
+Day27 才需要 Azure 环境，用于验证 Azure OpenAI embedding、生成真实 vector、创建并上传 Azure AI Search index，以及运行 Azure retriever evaluation。
+
+### 作品集写法
+
+```text
+Built a backend-agnostic RAG evaluation harness that reuses one grounded-answer test set across local vector, keyword, and future Azure Search retrievers.
 ```

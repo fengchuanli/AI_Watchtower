@@ -1221,6 +1221,10 @@ GET /health
 - Evaluation Script
 - Evaluation Report
 - Azure OpenAI Embedding Readiness Check
+- Azure OpenAI Embedding Provider and Cache
+- Azure Search Payload and Retriever Contracts
+- Backend-agnostic Retriever and Ask Pipeline
+- Backend-agnostic RAG Evaluation
 
 ### 設計・改善予定
 
@@ -1243,8 +1247,16 @@ RAG の処理全体を、ドキュメント読み込み、chunking、検索、ci
 現在はローカル prototype として実装し、retriever の失敗も evaluation report に記録しています。次の段階では Azure OpenAI Embedding と Azure AI Search に置き換え、semantic search と source metadata による citation を強化する予定です。
 ```
 
+```text
+回答 pipeline と evaluation は Retriever interface のみに依存するため、Day27 から Azure AI Search に移行しても同じ質問、citation check、source hit 指標を再利用できます。
+```
+
 ## Portfolio Summary
 
 ```text
 Documented the end-to-end RAG pipeline architecture, including document ingestion, chunking, retrieval, citation-aware context building, grounded answering, and evaluation.
+```
+
+```text
+Decoupled evaluation from retrieval infrastructure so local and Azure backends can be compared with the same grounded-answer test set.
 ```
