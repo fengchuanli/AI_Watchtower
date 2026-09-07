@@ -23,7 +23,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit note: 准备以 `【新闻更新】发布17点AI新闻：5条政策版权与资本信号` 提交并推送到 `origin/main`。
+- Commit: `1ef8a12` (`【新闻更新】发布17点AI新闻：5条政策版权与资本信号`), pushed to `origin/main`; final log-status record follows this entry.
 
 ## 2026-09-07 23:03 JST
 
