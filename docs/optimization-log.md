@@ -20,7 +20,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `72ad4e5` (`【网站优化】增加月度连续观察快照`); log/index record commit follows this entry.
+- Commit: `72ad4e5` (`【网站优化】增加月度连续观察快照`); log/index record commit `ace17a8` (`【网站优化】记录月度连续快照优化`).
+- Push: first sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed through `ace17a8`. This push-status record commit follows this entry.
 
 ## 2026-09-08 17:00 JST
 
