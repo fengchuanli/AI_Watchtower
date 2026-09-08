@@ -1,8 +1,633 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08",
-  "totalItems": 701,
+  "updatedAt": "2026-09-09",
+  "totalItems": 707,
   "editions": [
+    {
+      "id": "news-1700-2026-09-09",
+      "date": "2026-09-09",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期发布6条AI新闻情报，聚焦个人Agent、创意工具、芯片政策、版权和研究诚信。",
+      "operationalStatus": "已拉取origin/main；核对官方Meta/Adobe页面、Axios、The Verge和历史重复URL。",
+      "editorialInterpretation": "本期发布6条安全非重复信号；少于10条是质量门槛结果，未用旧稿、聚合页、社区讨论、付费墙正文或弱证据补量。",
+      "readerFrame": {
+        "headline": "AI进入可执行权限、政策分裂和研究诚信核查",
+        "whyItMatters": "9月9日版把个人Agent、创意软件Agent、芯片出口管制、版权诉讼、开放模型和AI数学争议放在同一张核查表里。",
+        "useThisIssueFor": [
+          "产品、安全和隐私团队复核个人Agent的账号、支付、浏览器、审批和审计边界。",
+          "法务、政策和研究团队跟进芯片出口管制、训练数据版权、开放模型准入和AI辅助证明。"
+        ],
+        "notProvenYet": [
+          "不证明Meta Muse或Adobe创意AI已经通过真实生产环境的安全、效率和版权验证。",
+          "不证明Anthropic政策立场、NYT诉讼、Goldman开放模型观点或OpenAI数学宣称已有最终源文件结论。"
+        ],
+        "mobile": {
+          "headline": "查Agent权限与源文件",
+          "summary": "6条信号覆盖个人Agent、创作工具、芯片政策、版权、开放模型和数学争议。",
+          "primaryUses": [
+            "安全团队查Agent审批",
+            "法务团队查法院案卷",
+            "研究团队查证明材料"
+          ],
+          "proofBoundary": "多数结论仍需审计、案卷、政策文本、论文和用户侧指标"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月8日版从资本与ROI转向执行权限和源文件核查",
+        "freshFacts": [
+          "本期新增事实：Meta 9月8日官方发布Muse个人AI Agent和Secure VM/Sentinel安全设计。",
+          "本期新增事实：Adobe 9月8日官方发布Premiere生成媒体与After Effects AI Assistant工作流更新。",
+          "本期新增事实：Axios报道Anthropic因AI芯片出口管制立场退出ITI。",
+          "本期新增事实：Axios报道NYT v. OpenAI/Microsoft版权案进入关键法律意见阶段。",
+          "本期新增事实：Axios报道Goldman Sachs CIO谈开放权重模型的企业安全准入。",
+          "本期新增事实：The Verge报道OpenAI Navier-Stokes数学宣称引发独立性和数据来源争议。"
+        ],
+        "repeatedContext": [
+          "延续9月8日版权、数学AI、开放模型和Agent执行经济学背景，但不重复已归档URL。",
+          "仍以官方发布和可靠媒体为主，未把聚合摘要、旧稿、社区讨论、传闻或付费墙正文写成新闻事实。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对高权限Agent清单",
+          "count": 2,
+          "meaning": "用来检查Meta Muse和Adobe创意AI在账号、支付、项目文件、审批和审计上的执行边界。"
+        },
+        {
+          "label": "验证政策与版权源文件",
+          "count": 2,
+          "meaning": "用来核对Anthropic芯片政策分歧和NYT版权案的法案、案卷、组织声明与法院命令。"
+        },
+        {
+          "label": "验证开放模型与科研证据",
+          "count": 2,
+          "meaning": "用来检查Goldman开放模型观点和OpenAI数学争议是否获得正式政策、审计、论文与专家复核。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "可靠媒体占三分之二",
+        "note": "可靠媒体4/6，适合作雷达；Meta和Adobe官方页面只确认发布与设计主张。",
+        "nextCheck": "优先核对审计报告、法院案卷、法案文本、公司声明、论文和用户侧指标。"
+      },
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 3,
+        "share": "3/6",
+        "note": "Axios占3/6，说明本期政策和企业准入仍偏媒体雷达。",
+        "nextCheck": "用Anthropic/ITI声明、国会文本、法院案卷、Goldman正式政策和监管材料交叉复核。"
+      },
+      "overreadBoundary": {
+        "label": "不要把雷达批次读成结论",
+        "body": "不要把本期读成全市场结论：多数政策、版权、开放模型和研究争议仍来自可靠媒体，官方条目也主要证明产品发布而非真实效果。",
+        "doNotConclude": "不证明个人Agent安全可靠、创意AI提高产能、出口管制将通过、版权案已有胜负或AI已解决数学难题。",
+        "useInstead": "适合用来安排安全审计、隐私政策、法案文本、法院案卷、正式企业政策、论文和专家复核。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "权限问题前置",
+          "note": "跨期看，Agent主线从企业token ROI和创业执行经济学推进到个人账户、支付、浏览器和创意项目文件。",
+          "boundary": "不证明Agent已可放心代办；仍需审计、故障记录、权限日志、支付纠纷和用户侧指标。"
+        },
+        {
+          "topic": "policy",
+          "label": "责任源文件更重要",
+          "note": "版权、芯片出口管制和开放模型准入连续出现，政策判断越来越依赖案卷、法案和正式组织文件。",
+          "boundary": "不证明政策结果已定；仍需法院命令、国会文本、公司声明、监管材料和合规审计。"
+        },
+        {
+          "topic": "model",
+          "label": "科研证明链升级",
+          "note": "AI数学从能力叙事进入证明、署名、数据来源和独立复核问题，延续9月8日数学趋势背景。",
+          "boundary": "不证明数学突破成立；仍需论文、代码、形式化验证、专家评审和数据来源说明。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "执行权限增强",
+          "status": "stronger",
+          "previousPattern": "上一版记录企业token ROI、创业执行经济学和法律AI人类判断边界。",
+          "currentSignal": "本期新增Meta Muse与Adobe创意AI官方发布，Agent进入个人账户和专业项目工作流。",
+          "signalDirection": "增强：官方产品入口比单纯讨论更具体，但效果仍未由外部数据验证。",
+          "stillUnproven": "仍需安全审计、用户侧日志、项目效率指标、支付争议记录和隐私监管材料。"
+        },
+        {
+          "topic": "policy",
+          "label": "版权与芯片重复",
+          "status": "repeated",
+          "previousPattern": "上一版记录版权付款、新闻训练数据诉讼和法律AI责任边界。",
+          "currentSignal": "本期新增NYT案程序节点、Anthropic芯片政策分歧和Goldman开放模型观点。",
+          "signalDirection": "重复并扩展：政策冲突从内容版权延伸到芯片和开放模型准入。",
+          "stillUnproven": "仍需法院案卷、国会文本、公司声明、正式企业政策和监管审计文件。"
+        },
+        {
+          "topic": "model",
+          "label": "数学争议增强",
+          "status": "stronger",
+          "previousPattern": "上一版记录AI数学趋势和证明丰裕讨论。",
+          "currentSignal": "本期新增OpenAI Navier-Stokes宣称和独立性争议报道。",
+          "signalDirection": "增强：从趋势报道进入具体高影响问题和研究诚信核查。",
+          "stillUnproven": "仍需论文、证明材料、代码、形式化验证、专家评审和数据来源说明。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Meta",
+          "label": "个人Agent落到产品",
+          "lastMention": "历史归档记录Meta个人智能、Muse Spark和AI支出压力。",
+          "whatChanged": "本期新增Meta官方Muse发布，把个人Agent从模型路线推进到消费级执行入口。",
+          "stillUnproven": "仍需安全审计、隐私政策、用户侧错误率、支付纠纷记录和监管材料。"
+        },
+        {
+          "company": "Adobe",
+          "label": "创意Agent进工作流",
+          "lastMention": "历史归档记录Adobe收购Rilo和创意AI生态背景。",
+          "whatChanged": "本期新增Adobe官方Premiere/After Effects生成媒体和AI Assistant更新。",
+          "stillUnproven": "仍需项目效率指标、版权政策、素材来源日志、创作者评测和企业管理文档。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "政策立场更硬",
+          "lastMention": "近期归档记录Claude模型、安全、版权和企业安全边界。",
+          "whatChanged": "本期新增Axios报道Anthropic在AI芯片出口管制上与ITI分裂。",
+          "stillUnproven": "仍需Anthropic声明、ITI声明、国会文本、NDAA记录和监管执行文件。"
+        },
+        {
+          "company": "OpenAI",
+          "label": "版权与科研同压",
+          "lastMention": "上一版记录OpenAI新闻训练数据诉讼和AI数学趋势。",
+          "whatChanged": "本期新增NYT案程序节点和Navier-Stokes数学宣称争议。",
+          "stillUnproven": "仍需法院案卷、授权合同、论文、证明材料、专家评审和数据来源说明。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 2,
+          "role": "来源用于核对Meta和Adobe产品发布、功能设计和公开安全主张；效果仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 4,
+          "role": "来源用于记录政策、版权、开放模型和研究争议雷达；结论仍需案卷、文本、论文或正式声明。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent执行与专业工具",
+          "itemIds": [
+            "meta-muse-personal-ai-agent-2026-09-08",
+            "adobe-premiere-after-effects-ai-workflows-2026-09-08"
+          ],
+          "meaning": "用来检查高权限Agent在个人账户、支付、创意项目和审计日志中的落地边界。",
+          "count": 2
+        },
+        {
+          "id": "policy",
+          "label": "政策、版权与开放模型",
+          "itemIds": [
+            "axios-anthropic-iti-chip-export-controls-2026-09-08",
+            "axios-nyt-openai-microsoft-summary-judgment-2026-09-08",
+            "axios-goldman-cio-open-weight-models-2026-09-08"
+          ],
+          "meaning": "用来核对AI芯片出口、训练数据版权和开放权重模型准入的源文件。",
+          "count": 3
+        },
+        {
+          "id": "model",
+          "label": "数学AI与研究诚信",
+          "itemIds": [
+            "theverge-openai-navier-stokes-ai-math-dispute-2026-09-08"
+          ],
+          "meaning": "用来核对AI辅助证明是否获得论文、代码、形式化验证和专家复核。",
+          "count": 1
+        }
+      ],
+      "itemCount": 6,
+      "items": [
+        {
+          "id": "axios-anthropic-iti-chip-export-controls-2026-09-08",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：Anthropic因芯片出口管制立场退出ITI科技游说组织",
+          "body": "Axios报道Anthropic与ITI在芯片出口管制上分裂。",
+          "summary": "Axios 9月8日报道，Anthropic因支持多项AI芯片出口管制法案而退出Information Technology Industry Council。",
+          "whyItMatters": "前沿模型公司开始在芯片安全和行业游说上公开分叉，政策团队需要核对法案文本和组织声明。",
+          "detailBody": "Axios称，Anthropic支持Chip Security Act、AI OVERWATCH Act和MATCH Act相关方向，而ITI反对这些法案，并将争议连到NDAA议程。",
+          "trend": "AI政策从模型规则延伸到算力出口控制。",
+          "detailTrend": "模型能力竞争正在把AI公司推向芯片流向、出口许可和国家安全立场选择；媒体报道说明冲突存在，但具体政策结果要回到法案和组织文件。",
+          "whyRanked": "芯片政策分歧影响AI供应链。",
+          "topReason": "媒体背景：适合列入政策核查，不能替代法案文本和官方声明。",
+          "detailWhyRanked": "Axios AI / Technology把Anthropic、ITI和三项AI芯片出口管制法案放在同一政策冲突中，适合跟踪AI算力供应链阵营变化；但官方声明和国会文本才可确认政策结果。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "政策影响大且冲突清晰；当前证据仍依赖媒体报道。"
+          },
+          "impact": "政策、法务、云采购和芯片供应链团队应追踪NDAA、出口许可和AI硬件访问规则。",
+          "whoShouldCare": "负责AI算力采购、出口管制合规、公共政策和模型供应链风险评估的法务、政策、采购与安全团队。",
+          "readerUse": "政策、法务、云采购和芯片供应链团队可用来更新出口管制观察表，标记Anthropic、ITI和三项法案的正式文件状态。",
+          "nextCheck": "核对Anthropic声明、ITI声明、国会法案文本、NDAA修订记录和出口许可执行细则。",
+          "followUpQuestions": [
+            "Anthropic和ITI是否发布正式声明或会员变更文件确认退出与法案立场？",
+            "Chip Security Act、AI OVERWATCH Act、MATCH Act在NDAA中的条文文本、修订记录和投票记录是否更新？"
+          ],
+          "evidenceThreshold": "需要公司/ITI声明、国会文本、NDAA修订记录和监管执行文件确认，才能升级为已确认政策阵营变化。",
+          "claimBoundary": "Axios报道提供媒体事实线索，不证明法案会通过、出口规则已改变或所有AI公司立场一致。",
+          "counterEvidence": "若官方声明否认退出原因、法案未进入NDAA或条文被实质删除，应下调为政策游说传闻线索。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology 报道Anthropic因AI模型芯片出口管制政策边界退出ITI；AI Watchtower只保留最小事实，完整事实、采访、引述和政策语境仍在Axios原文。",
+          "sourceUrl": "https://www.axios.com/2026/09/08/anthropic-breaks-tech-group-chips",
+          "originalUrl": "https://www.axios.com/2026/09/08/anthropic-breaks-tech-group-chips",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-09T04:00:00+09:00",
+          "time": "9月9日",
+          "tags": [
+            "anthropic",
+            "chip-controls",
+            "policy"
+          ],
+          "companies": [
+            "Anthropic",
+            "Information Technology Industry Council"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "政策影响大且冲突清晰；当前证据仍依赖媒体报道。"
+          }
+        },
+        {
+          "id": "theverge-openai-navier-stokes-ai-math-dispute-2026-09-08",
+          "category": "research",
+          "label": "研究",
+          "title": "The Verge：OpenAI数学里程碑引发Navier-Stokes独立性争议",
+          "body": "The Verge报道OpenAI数学证明争议。",
+          "summary": "The Verge 9月8日报道，OpenAI称内部AI模型解决Navier-Stokes问题后，相关数学家对思路来源和数据使用提出质疑。",
+          "whyItMatters": "AI数学突破如果缺少论文、同行评审和数据来源说明，很快会从能力展示变成研究诚信核查。",
+          "detailBody": "The Verge称争议围绕OpenAI内部模型、并发Agent、相近研究路径和用户数据使用疑问；OpenAI方面否认使用特定用户数据。",
+          "trend": "AI科研突破需要可审计证明链。",
+          "detailTrend": "模型生成科学成果后，关键不只是答案是否正确，还包括证明是否可复查、思路来源是否清楚、数据边界是否能让研究共同体验证。",
+          "whyRanked": "数学AI与研究诚信同时升温。",
+          "topReason": "媒体背景：值得跟踪，但必须等待论文、专家评审和OpenAI原始材料。",
+          "detailWhyRanked": "The Verge AI报道把OpenAI数学模型宣称、相近研究路径和数据使用疑问放在同一时间线，可用于观察AI科研突破如何触发研究诚信核对；但仍需论文和专家复核。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "影响和叙事强，但目前需等待原始论文与专家复核。"
+          },
+          "impact": "研究机构、AI实验室和学术出版团队应检查AI辅助证明、数据来源、署名和同行评审流程。",
+          "whoShouldCare": "负责AI科研工具、数学验证、论文审稿、训练数据治理和研究伦理合规的研究、法务与平台团队。",
+          "readerUse": "研究机构、AI实验室、论文审稿和训练数据治理团队可用来追踪AI数学成果是否能提供完整论文、形式化验证、代码、数据来源说明和独立专家评审。",
+          "nextCheck": "等待OpenAI论文或技术报告、数学专家评审、形式化验证、代码/证明材料和数据使用说明。",
+          "followUpQuestions": [
+            "OpenAI是否发布Navier-Stokes证明论文、技术报告、代码、形式化验证或专家评审意见？",
+            "相关数学家是否公开可核对的先前工作、时间线、数据使用证据或独立复查结论？"
+          ],
+          "evidenceThreshold": "需要论文、证明材料、代码、形式化验证、专家评审和数据来源说明，才能升级为可验证数学突破。",
+          "claimBoundary": "The Verge报道说明争议和各方说法，不证明Navier-Stokes问题已被学界接受解决，也不证明数据不当使用成立。",
+          "counterEvidence": "若专家复核否定证明、OpenAI无法提供材料或数据来源争议被证实，应下调为未经验证的研究宣称。",
+          "source": "The Verge AI",
+          "sourceName": "The Verge AI",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "sourceId": "theverge-ai",
+          "provenance": "The Verge AI 报道OpenAI Navier-Stokes数学模型宣称和独立性争议；AI Watchtower只保留最小事实，完整事实、采访、各方说法和时间线仍在The Verge原文并需等待原始材料。",
+          "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/991710/openai-navier-stokes-solution",
+          "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/991710/openai-navier-stokes-solution",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-08T23:30:00+09:00",
+          "time": "9月8日",
+          "tags": [
+            "openai",
+            "math",
+            "research-integrity"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "影响和叙事强，但目前需等待原始论文与专家复核。"
+          }
+        },
+        {
+          "id": "adobe-premiere-after-effects-ai-workflows-2026-09-08",
+          "category": "tool",
+          "label": "工具",
+          "title": "Adobe把生成媒体和AI Assistant推进Premiere与After Effects工作流",
+          "body": "Adobe官方发布视频创作AI工作流更新。",
+          "summary": "Adobe 9月8日称，Premiere可在时间线内生成视频、音效和音乐，After Effects AI Assistant进入公共测试。",
+          "whyItMatters": "创意AI正在嵌入专业软件的原始时间线和项目结构，但效率、版权安全和可编辑质量需要创作者实测。",
+          "detailBody": "Adobe官方博客称，Premiere新增时间线内生成媒体能力，After Effects AI Assistant可用自然语言整理项目、处理表达式和执行多步骤任务。",
+          "trend": "创作Agent从独立生成器回到专业工具链。",
+          "detailTrend": "Adobe的方向是把模型选择、素材生成和多步骤助手放进剪辑与动效软件内部，减少导出导入断点；真正价值取决于可控编辑和团队交付质量。",
+          "whyRanked": "官方工具更新影响专业创作流程。",
+          "topReason": "官方核对：可确认功能发布，效率和版权边界仍需项目实测。",
+          "detailWhyRanked": "Adobe原文把Premiere时间线生成、After Effects AI Assistant、项目整理和表达式处理放在同一更新中，足以观察创意AI进入专业生产链；但仍需创作者项目指标验证。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方功能信息清楚，适合创意工作流观察；真实效率仍需用户侧项目验证。"
+          },
+          "impact": "创意、品牌、法务和生产团队可用它检查生成素材、模型选择、项目可编辑性和版权审查流程。",
+          "whoShouldCare": "负责视频剪辑、动效制作、品牌内容、素材授权和创意工具采购的制作、设计、法务与IT团队。",
+          "readerUse": "视频制作、设计、法务和IT团队可用来更新Premiere/After Effects试点清单，特别是素材生成、表达式辅助、模型来源和审稿流程。",
+          "nextCheck": "查看Adobe功能文档、Firefly/第三方模型权利说明、团队试点效率数据和客户案例。",
+          "followUpQuestions": [
+            "Adobe是否发布Generative Media模型来源文档、版权赔偿政策、素材标记记录和企业管理文档？",
+            "创作者项目日志中的返工率、审片周期、版权审核记录和导出质量指标是否有可量化变化？"
+          ],
+          "evidenceThreshold": "需要项目级效率指标、版权政策、素材出处日志和第三方创作者评测，才能升级为专业创作效率已验证结论。",
+          "claimBoundary": "Adobe官方页面证明功能发布和设计目标，不证明生成内容已经满足所有专业交付、版权或品牌安全要求。",
+          "counterEvidence": "若项目日志、版权审核记录、导出质量指标或创作者评测显示返工率升高、素材权利不清或团队禁用，应收窄为早期测试功能。",
+          "source": "Adobe Blog",
+          "sourceName": "Adobe Blog",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "reference",
+          "trustLevel": "official",
+          "sourceId": "adobe-blog",
+          "provenance": "Adobe Blog 官方发布Premiere Agent工具文档更新和After Effects AI Assistant公共测试更新；生产效果和版权安全仍需用户侧与第三方证据。",
+          "sourceUrl": "https://blog.adobe.com/en/publish/2026/09/08/generate-create-directly-in-your-timeline-with-new-ai-powered-innovations-in-premiere-after-effects",
+          "originalUrl": "https://blog.adobe.com/en/publish/2026/09/08/generate-create-directly-in-your-timeline-with-new-ai-powered-innovations-in-premiere-after-effects",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-08T23:00:00+09:00",
+          "time": "9月8日",
+          "tags": [
+            "adobe",
+            "creative-ai",
+            "premiere"
+          ],
+          "companies": [
+            "Adobe",
+            "Google",
+            "Runway",
+            "Luma",
+            "Kling"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方功能信息清楚，适合创意工作流观察；真实效率仍需用户侧项目验证。"
+          }
+        },
+        {
+          "id": "axios-nyt-openai-microsoft-summary-judgment-2026-09-08",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：NYT诉OpenAI/Microsoft版权案进入关键法律意见阶段",
+          "body": "Axios报道NYT与OpenAI/Microsoft版权案进展。",
+          "summary": "Axios 9月8日报道，NYT、OpenAI和Microsoft向法官提交关键意见，摘要判决和2027年审判路径成为焦点。",
+          "whyItMatters": "训练数据版权争议进入更硬的法院程序，出版、模型和法务团队需要回到案卷而非舆论摘要。",
+          "detailBody": "Axios称，NYT寻求摘要判决，OpenAI以近期AI训练fair use判例作为抗辩背景，法官可能决定案件或部分关键问题是否进入2027年审判程序。",
+          "trend": "版权战从舆论争议转向程序节点。",
+          "detailTrend": "AI训练合法性正在由个案判例、案卷事实和许可市场共同塑形；媒体报道能提示节点，但不能替代法院文件中的论点和证据。",
+          "whyRanked": "版权判例会影响训练数据商业模式。",
+          "topReason": "媒体背景：程序节点重要，下一步必须看法院案卷。",
+          "detailWhyRanked": "Axios AI / Technology报道的摘要判决节点直接关系训练数据版权案卷、授权谈判和2027年审判范围，适合列为法务核对优先项；但案卷和法官命令才是结论来源。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "法律影响广且节点清晰；证据升级依赖法院案卷。"
+          },
+          "impact": "出版、法务、数据治理和模型训练团队应复核训练数据来源、授权合同和诉讼风险清单。",
+          "whoShouldCare": "负责训练数据授权、新闻内容合作、版权诉讼风险和模型合规审计的法务、数据治理、出版与采购团队。",
+          "readerUse": "出版、法务、数据治理和模型训练团队可用来安排法院案卷、授权合同、训练记录和内容删除机制的下一轮核查。",
+          "nextCheck": "查阅SDNY案卷、双方brief、法官命令、许可合同披露和OpenAI/Microsoft官方回应。",
+          "followUpQuestions": [
+            "法院是否公开摘要判决brief、证据附件、庭审日程或法官命令？",
+            "OpenAI、Microsoft或NYT是否披露新的授权协议、训练数据记录或内容移除机制？"
+          ],
+          "evidenceThreshold": "需要法院案卷、法官命令、双方正式文件和授权合同披露，才能升级为可确认法律进展结论。",
+          "claimBoundary": "Axios报道说明程序争议，不证明法院已经认定训练侵权或fair use成立。",
+          "counterEvidence": "若SDNY案卷、法官命令或双方正式文件显示摘要判决被驳回、报道遗漏关键限制或双方和解，应收窄为程序观察线索。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology 报道NYT v. OpenAI/Microsoft训练数据版权治理边界的关键意见提交和审判路径；AI Watchtower只保留最小事实，完整事实、法律论点、引用和语境仍在Axios原文与法院案卷。",
+          "sourceUrl": "https://www.axios.com/2026/09/08/nyt-openai-microsoft-copyright-lawsuit",
+          "originalUrl": "https://www.axios.com/2026/09/08/nyt-openai-microsoft-copyright-lawsuit",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-08T22:00:00+09:00",
+          "time": "9月8日",
+          "tags": [
+            "copyright",
+            "openai",
+            "microsoft"
+          ],
+          "companies": [
+            "OpenAI",
+            "Microsoft",
+            "The New York Times"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "法律影响广且节点清晰；证据升级依赖法院案卷。"
+          }
+        },
+        {
+          "id": "axios-goldman-cio-open-weight-models-2026-09-08",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：Goldman CIO称金融机构不应排除开放权重模型",
+          "body": "Axios报道Goldman CIO谈开放权重模型。",
+          "summary": "Axios 9月8日报道，Goldman Sachs CIO Marco Argenti称，在零信任和纵深防御下，企业不应直接排除开放权重模型。",
+          "whyItMatters": "金融业对开放模型的态度影响企业选型、数据控制和监管沟通，但采访观点不等于机构正式部署政策。",
+          "detailBody": "Axios称，Goldman Sachs CIO Marco Argenti把开放权重模型放进零信任和纵深防御讨论，并将其与美国AI框架和Nvidia等开放模型立场联系起来。",
+          "trend": "开放模型争论进入企业安全架构语言。",
+          "detailTrend": "开放权重模型不再只是开发者生态话题，正在被金融机构用风险控制、可审计和可替换性语言重新评估；落地仍要看正式策略和审计结果。",
+          "whyRanked": "金融机构视角影响开放模型采购。",
+          "topReason": "媒体背景：有采购信号价值，仍需Goldman正式政策和部署证据。",
+          "detailWhyRanked": "Axios AI / Technology采访把Goldman CIO观点放进企业安全、零信任和政策框架，能帮助读者观察开放权重模型准入如何进入金融机构讨论；但不等于正式部署政策。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "企业选型价值高；当前只是媒体采访信号。"
+          },
+          "impact": "金融、风控、模型平台和采购团队可用它复核开放模型准入、隔离、评测和供应商管理规则。",
+          "whoShouldCare": "负责银行AI平台、开放模型准入、第三方风险、模型审计和监管沟通的技术、风控、采购与合规团队。",
+          "readerUse": "金融、风控、模型平台和采购团队可用来检查开放权重模型是否被企业安全控制、零信任架构和模型治理流程覆盖。",
+          "nextCheck": "核对Goldman正式AI政策、模型准入清单、审计报告、监管沟通文件和生产部署记录。",
+          "followUpQuestions": [
+            "Goldman是否发布正式开放模型政策、供应商评估标准或生产部署案例？",
+            "监管机构是否给出金融机构使用开放权重模型的检查口径或审计要求？"
+          ],
+          "evidenceThreshold": "需要正式政策、部署记录、审计报告和监管材料确认，才能升级为金融机构开放模型采用趋势。",
+          "claimBoundary": "Axios报道证明一位CIO表达选型观点，不证明Goldman或金融业已全面采用开放权重模型。",
+          "counterEvidence": "若Goldman正式政策限制开放模型、监管要求收紧或审计显示风险不可控，应下调为个人观点信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "sourceReliability": "medium",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "trustLevel": "media",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology 报道Goldman Sachs CIO谈开放权重模型与企业安全控制；AI Watchtower只保留最小事实，完整事实、采访、引述和背景判断仍在Axios原文。",
+          "sourceUrl": "https://www.axios.com/2026/09/08/goldman-cio-dont-rule-out-open-models",
+          "originalUrl": "https://www.axios.com/2026/09/08/goldman-cio-dont-rule-out-open-models",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-08T21:30:00+09:00",
+          "time": "9月8日",
+          "tags": [
+            "open-models",
+            "goldman-sachs",
+            "enterprise-ai"
+          ],
+          "companies": [
+            "Goldman Sachs",
+            "Nvidia"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "企业选型价值高；当前只是媒体采访信号。"
+          }
+        },
+        {
+          "id": "meta-muse-personal-ai-agent-2026-09-08",
+          "category": "product",
+          "label": "产品",
+          "title": "Meta发布Muse个人Agent，把邮件、购物和长期目标交给安全VM执行",
+          "body": "Meta官方发布Muse个人AI Agent。",
+          "summary": "Meta 9月8日发布 Muse 个人AI Agent，称其可在 Muse Secure VM 中代表用户处理邮件、旅行、购物和长期目标。",
+          "whyItMatters": "这把消费者Agent从聊天框推向可执行账户与支付场景，但安全、隐私和真实可靠性仍需外部审计与用户侧记录验证。",
+          "detailBody": "Meta官方称 Muse 可在 iOS、Android、muse.ai 和 WhatsApp 中使用，并通过专用云端VM、Sentinel Agent、审批和审计轨迹控制敏感动作。",
+          "trend": "个人Agent进入账户执行阶段。",
+          "detailTrend": "Meta把Agent包装成大众消费入口，核心变化不是回答更流畅，而是让AI持续处理外部任务；风险随账号、付款和个人数据权限一起上升。",
+          "whyRanked": "官方产品发布且牵涉高权限Agent。",
+          "topReason": "官方核对：可确认发布、架构和权限设计，仍需安全审计与用户侧故障数据。",
+          "detailWhyRanked": "Meta原文同时给出产品入口、Secure VM、Sentinel、支付审批和审计轨迹设计，足以支撑站内跟踪高权限个人Agent；但官方发布不证明真实可靠性或长期安全表现。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方发布、消费者入口和高权限执行场景清晰；风险边界需要外部审计。"
+          },
+          "impact": "产品、安全、隐私和支付团队应把它纳入个人Agent权限、审批、审计和责任设计检查表。",
+          "whoShouldCare": "负责消费者AI助手、支付授权、账号连接、隐私合规和Agent安全评估的产品、风控、法务与安全团队。",
+          "readerUse": "消费者AI、安全、隐私和支付团队可用来检查邮件、支付、购物和日程权限上的审批、撤销、日志和数据训练边界。",
+          "nextCheck": "核对Meta安全设计说明、第三方安全审计、隐私政策、用户投诉记录和监管问询。",
+          "followUpQuestions": [
+            "Meta是否发布Muse安全白皮书、隐私政策更新、故障报告或第三方审计结果？",
+            "支付、邮件和浏览器连接的审批日志是否能被用户导出、撤销和追责？"
+          ],
+          "evidenceThreshold": "需要第三方安全审计、用户侧错误率、监管材料和支付/账号日志验证，才能升级为可靠个人Agent落地结论。",
+          "claimBoundary": "Meta官方页面证明Muse发布和设计主张，不证明其长期任务、支付和隐私保护在真实使用中可靠。",
+          "counterEvidence": "若出现未授权购买、邮件误发、日志缺失、监管处罚或独立审计失败，应下调为高风险产品试验。",
+          "source": "Meta Newsroom",
+          "sourceName": "Meta Newsroom",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "reference",
+          "trustLevel": "official",
+          "sourceId": "meta-newsroom",
+          "provenance": "Meta Newsroom 官方发布 Muse 个人AI Agent、Secure VM、Sentinel审批、支付与连接器设计；可靠性和隐私效果仍需外部证据。",
+          "sourceUrl": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+          "originalUrl": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-08T19:00:00+09:00",
+          "time": "9月8日",
+          "tags": [
+            "meta",
+            "muse",
+            "personal-agent"
+          ],
+          "companies": [
+            "Meta",
+            "Stripe",
+            "Shopify",
+            "1Password"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方发布、消费者入口和高权限执行场景清晰；风险边界需要外部审计。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-08",
       "date": "2026-09-08",

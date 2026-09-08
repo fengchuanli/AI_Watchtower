@@ -1,3 +1,29 @@
+## 2026-09-09 08:10 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-09`，发布 6 条安全非重复短批次信号，聚焦 Meta Muse 个人Agent、Adobe 创意工具AI、Anthropic 芯片出口管制政策分歧、NYT v. OpenAI/Microsoft 版权案、Goldman 开放模型观点和 OpenAI 数学争议。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；新增 `meta-newsroom` 和 `adobe-blog` 两个官方来源注册项，来源总数更新为 79。
+  - 采用 Meta 官方 Muse 发布页、Adobe 官方 Premiere/After Effects AI 工作流发布页、Axios 和 The Verge 可靠媒体来源；保留原始 URL 作为核验入口。
+  - 可靠媒体条目保持 `媒体背景` / `reported` / `originalDependency: must-read`；官方条目只确认发布、功能和设计主张，不证明安全、效率、版权、政策或科研结论已经外部验证。
+  - Partial batch: publish-partial-batch - 本期发布 6 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、聚合页、社区讨论、传闻、付费墙正文、重复历史 URL、弱证据或营销材料补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 707。
+- 网站可见变化: 首页 TOP3 现在优先显示 Meta Muse、Anthropic 芯片政策分歧和 OpenAI 数学争议；更多新闻、全部新闻、归档页和详情页同步显示 6 条 9月9日情报。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 current news items against 79 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: 准备以 `【新闻更新】发布17点AI新闻：6条Agent政策与研究信号` 提交并推送到 `origin/main`。
+
 ## 2026-09-08 23:10 JST
 
 - Focus: Supplemented the current 17:00 JST AI news intelligence snapshot for the 08:00 automation run, expanding it from 5 to 10 safe non-duplicate items.
