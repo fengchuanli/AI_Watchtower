@@ -1,3 +1,27 @@
+## 2026-09-08 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 27，增加月度连续观察快照形状，让月底复盘能从当前/归档字段概括重复公司、重复主题、未解决主张、已解决核对和可固化规则，而不把重复报道写成新证据。
+- Changed files:
+  - `docs/monthly-continuity-snapshot.md`
+  - `README.md`
+  - `docs/news-data-format.md`
+  - `docs/update-run-checklist.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md` 和 `docs/copyright-safety.md`；本次只增加内部编辑规则和校验锚点，没有新增新闻事实、来源正文改写或对外报道结论。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 5 current news items against 77 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new Day 27 monthly-continuity snapshot guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `72ad4e5` (`【网站优化】增加月度连续观察快照`); log/index record commit follows this entry.
+
 ## 2026-09-08 17:00 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-08`，发布 5 条安全非重复短批次信号，聚焦 Altman 创业执行经济学、课堂AI政策、Anthropic 和解付款争议、Atoms robotaxi 资本方向，以及 Seattle Times/Newsday 对 OpenAI/Microsoft 的新闻训练数据诉讼。
