@@ -1,3 +1,26 @@
+## 2026-09-08 23:10 JST
+
+- Focus: Supplemented the current 17:00 JST AI news intelligence snapshot for the 08:00 automation run, expanding it from 5 to 10 safe non-duplicate items.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Pulled `origin/main` before editing; sandboxed DNS failed first, elevated retry succeeded and confirmed the branch was already up to date.
+  - Used `data/sources.json` and `docs/source-policy.md` as the source guide.
+  - Added Mistral official Series D financing plus Axios, VentureBeat and Business Insider reliable-media signals on legal AI, AI mathematics, AI startup revenue quality and enterprise token ROI.
+  - Kept media items as `媒体背景` / `reported` / `originalDependency: must-read`; skipped paywalled body text, community discussion, weak evidence, old items and duplicate history URLs.
+- 网站可见变化: 首页 TOP3 现在显示 Mistral 融资、Google 法律AI边界和 AI 创业收入口径；更多新闻、全部新闻、归档页和详情页同步显示 10 条 9月8日情报。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, and `tags.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `【新闻更新】补充23点AI新闻：10条资本与治理信号`.
+
 ## 2026-09-08 20:00 JST
 
 - Focus: 完成当前 30 天计划 Day 27，增加月度连续观察快照形状，让月底复盘能从当前/归档字段概括重复公司、重复主题、未解决主张、已解决核对和可固化规则，而不把重复报道写成新证据。
