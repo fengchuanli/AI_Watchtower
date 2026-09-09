@@ -22,7 +22,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: 待提交；计划提交标题 `【新闻更新】发布17点AI新闻：12条Agent安全与模型治理信号`。
+- Commit: `d085699` (`【新闻更新】发布17点AI新闻：12条Agent安全与模型治理信号`), pushed to `origin/main`; final log-status record follows this entry.
 
 ## 2026-09-09 23:02 JST
 
