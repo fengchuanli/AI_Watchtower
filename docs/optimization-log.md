@@ -1,3 +1,29 @@
+## 2026-09-10 08:13 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-10`，发布 12 条安全非重复信号，聚焦 Anthropic Claude 网络安全评测事故对齐评估、OpenAI GPT-6 Astra 工作版、NSA/FBI/CISA 模型蒸馏通告、Anthropic 经济情景模型、OpenAI 安全治理任命、Google AI 订阅与企业 Agent/RAG 工程，以及 AP 对安全辞职和中方回应的媒体背景。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、Anthropic Research / Institute、Google One Blog、Google Cloud AI & Machine Learning Blog、Microsoft Azure AI Blog、NSA Press Room、AP、当前首页和历史重复 URL。
+  - 新增 `anthropic-research`、`google-one-blog`、`nsa-press` 和 `ap-news` 四个来源注册项，来源总数更新为 85。
+  - OpenAI、Anthropic、Google、Microsoft 与 NSA 条目按官方/研究/机构或厂商主张边界处理；AP 条目标为 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未使用旧稿、聚合页、社区讨论、传闻、付费墙正文、登录墙正文、重复历史 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 727。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月10日17:00 版 12 条情报；读者可在首页看到 Claude 事故评估、Astra 工作版、AI 蒸馏通告、OpenAI 治理、Google AI 订阅和企业 RAG/Agent 工程更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 85 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, first-screen reader-order guard, and overread boundary rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: 待提交；计划提交标题 `【新闻更新】发布17点AI新闻：12条Agent安全与模型治理信号`。
+
 ## 2026-09-09 23:02 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-09`，所以未回退版次，而是在同日 17:00 版基础上补充 8 条安全非重复信号，当前共 14 条，新增图像模型、青少年安全研究、科学Agent、新闻生态、AI编程融资、企业Agent部署、Claude账户安全和AI事故披露。
