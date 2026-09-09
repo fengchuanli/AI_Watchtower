@@ -393,6 +393,38 @@ if (
   errors.push("Homepage must place a prominent all-news entry directly after Today TOP3.");
 }
 
+function getHomepageSectionIndex(pattern) {
+  const match = html.match(pattern);
+
+  return match ? match.index : -1;
+}
+
+const homepageFirstScreenSections = [
+  ["hero", getHomepageSectionIndex(/<section\b(?=[^>]*\bclass="hero")[^>]*>/)],
+  ["today briefing", getHomepageSectionIndex(/<section\b(?=[^>]*\bid="today")[^>]*>/)],
+  ["today TOP3", getHomepageSectionIndex(/<section\b(?=[^>]*\bid="top3")[^>]*>/)],
+  ["deep briefing", getHomepageSectionIndex(/<section\b(?=[^>]*\bid="deep-briefing")[^>]*>/)],
+  ["compact feed", getHomepageSectionIndex(/<section\b(?=[^>]*\bid="feed")[^>]*>/)],
+];
+
+if (
+  homepageFirstScreenSections.some(([, index]) => index < 0) ||
+  homepageFirstScreenSections.some(([, index], position, sections) => position > 0 && index <= sections[position - 1][1]) ||
+  !/briefingHeadline/.test(appJs) ||
+  !/briefingSummary/.test(appJs) ||
+  !/updateTodayBriefing\(data\.briefing\);/.test(appJs) ||
+  !/const dailyTopItems = getDailyTopStories\(data, history\);/.test(appJs) ||
+  !/updateTopStories\(dailyTopItems\);/.test(appJs) ||
+  !/visibleNews = scopedNews\.filter\(\(item\) => !dailyTopStoryIds\.has\(item\.id\)\)/.test(appJs) ||
+  !/First-Screen Reader Order Guard/.test(homepageEditionPreflight) ||
+  !/hero -> today briefing -> TOP3 -> deep briefing -> compact feed/.test(homepageEditionPreflight) ||
+  !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
+  !/Day 28[\s\S]*First-Screen Reader Order Guard/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 29/.test(optimizationDecisionIndex)
+) {
+  errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, deep briefing, then compact non-TOP3 feed.");
+}
+
 if (
   /So What\?/.test(appJs) ||
   !/为什么重要/.test(appJs) ||
@@ -752,7 +784,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 29/.test(optimizationDecisionIndex) ||
   !/sourceBackedFact/.test(candidateSourceChecklist) ||
   !/nextIndependentCheck/.test(candidateSourceChecklist)
 ) {
@@ -806,7 +838,7 @@ if (
   !/Day 13[\s\S]*candidate-source-checklist\.md[\s\S]*candidate-intake-format\.md[\s\S]*candidate-to-news-handoff\.md/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex)
+  !/Continue with Day 29/.test(optimizationDecisionIndex)
 ) {
   errors.push("Held candidate workflow must record recheck timing, evidence triggers, freshness limits, and stale fallbacks before old leads can be reconsidered.");
 }
@@ -874,7 +906,7 @@ if (
   !/Day 26[\s\S]*source-concentration-archive-review-note\.md[\s\S]*official\/technical concentration[\s\S]*media concentration[\s\S]*single-owner feeds/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex)
+  !/Continue with Day 29/.test(optimizationDecisionIndex)
 ) {
   errors.push("Archive source-concentration reviews must turn repeated caveats into standing source-posture rules.");
 }
@@ -900,7 +932,7 @@ if (
   !/Day 27[\s\S]*monthly-continuity-snapshot\.md[\s\S]*repeated companies[\s\S]*unresolved claims[\s\S]*resolved checks/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex)
+  !/Continue with Day 29/.test(optimizationDecisionIndex)
 ) {
   errors.push("Monthly continuity snapshots must summarize repeated companies, topics, unresolved claims, and resolved checks without adding new source claims.");
 }
@@ -1468,7 +1500,7 @@ if (
   !/docs\/optimization-decision-index\.md/.test(readme) ||
   !/Recent Decision Index/.test(optimizationDecisionIndex) ||
   !/2026-08-10 through 2026-09-08/.test(optimizationDecisionIndex) ||
-  !/Phase 4, Continuity And Archive Usefulness/.test(optimizationDecisionIndex) ||
+  !/Phase 5, Validation, QA, And Next Cycle/.test(optimizationDecisionIndex) ||
   !/Previous Day 27[\s\S]*vendor-narrative-promotion-rule\.md/.test(optimizationDecisionIndex) ||
   !/Previous Day 28[\s\S]*vendor-narrative-promotion-rule\.md[\s\S]*guard/.test(optimizationDecisionIndex) ||
   !/Previous Day 29[\s\S]*monthly-optimization-summary\.md/.test(optimizationDecisionIndex) ||
@@ -1511,7 +1543,7 @@ if (
   ) ||
   !/Day 20[\s\S]*provenance[\s\S]*exact source fact/.test(optimizationDecisionIndex) ||
   !/Day 24[\s\S]*historical background[\s\S]*current homepage batch/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex) ||
+  !/Continue with Day 29/.test(optimizationDecisionIndex) ||
   !/docs\/optimization-log\.md/.test(optimizationDecisionIndex) ||
   !/avoid duplicate work/.test(optimizationDecisionIndex)
 ) {
@@ -1678,7 +1710,7 @@ if (
   !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex)
+  !/Continue with Day 29/.test(optimizationDecisionIndex)
 ) {
   errors.push("Company continuity review must classify recurring-company signals before public continuity copy is written.");
 }
@@ -1712,7 +1744,7 @@ if (
   !/Day 22[\s\S]*topic-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex)
+  !/Continue with Day 29/.test(optimizationDecisionIndex)
 ) {
   errors.push("Topic continuity review must prevent repeated media coverage from being written as stronger trend evidence.");
 }
@@ -1733,7 +1765,7 @@ if (
   !/Day 25[\s\S]*next-check-retirement-note\.md[\s\S]*retire-resolved[\s\S]*retire-replaced[\s\S]*retire-downgraded[\s\S]*keep-open/.test(
     optimizationDecisionIndex,
   ) ||
-  !/Continue with Day 28/.test(optimizationDecisionIndex)
+  !/Continue with Day 29/.test(optimizationDecisionIndex)
 ) {
   errors.push("Next-check retirement review must retire stale nextCheck questions when later source-of-record evidence answers them.");
 }

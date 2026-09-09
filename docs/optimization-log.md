@@ -1,3 +1,25 @@
+## 2026-09-09 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 28，增加首页首屏阅读顺序校验，避免 VisionHub-style 首页从「hero -> 今日深挖 -> 今日 TOP3 -> 深度简报 -> 紧凑新闻流」退回到先展示编辑流程、来源机械信息或重复 TOP3 的结构。
+- Changed files:
+  - `scripts/validate-site.mjs`
+  - `docs/homepage-edition-preflight.md`
+  - `docs/editorial-validator-limits.md`
+  - `docs/optimization-decision-index.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md` 和 `docs/copyright-safety.md`；本次只增加首页结构校验与编辑说明，没有新增新闻事实、来源正文改写或对外报道结论。
+- 网站可见变化：无，属于规则/校验/计划更新；之后首页结构若移走今日简报、TOP3、同日TOP3排序或紧凑非TOP3新闻流，`node scripts/validate-site.mjs` 会阻止回归。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 current news items against 79 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, and the new first-screen reader-order guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending.
+- Push: pending.
+
 ## 2026-09-09 09:53 JST
 
 - Focus: 明确 `【VisionHub网站风格优化】` 优先于普通 `【网站优化】`，避免首页结构、UI、手机端、详情页叙事和视觉简报类改动被写成普通网站优化。

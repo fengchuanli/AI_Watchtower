@@ -37,6 +37,13 @@ The validators protect the product goal: Chinese readers should get a clear, sou
 - The checks favor complete mobile-readable briefings over sparse headline aggregation. If the source cannot support these fields, keep the item out of the promoted feed.
 - The validator checks field presence and minimum specificity; it cannot confirm that the source actually supports every sentence.
 
+### First-screen reader-order checks
+
+- `scripts/validate-site.mjs` expects the homepage section order to stay `hero -> today briefing -> TOP3 -> deep briefing -> compact feed`.
+- This is intentionally strict because the VisionHub-style direction depends on readers seeing today's change and ranked items before workflow notes, dense metadata, archives, or source machinery.
+- The guard also checks that the today briefing is data-backed, TOP3 is selected from same-day ranked items, and the compact feed excludes items already shown in TOP3.
+- If a future redesign changes markup names or moves sections, update the validator only after the new first screen still answers what changed today, why it matters, and what to read next on mobile.
+
 ### Chinese readability and mobile length checks
 
 - Detail paragraphs over 180 Chinese characters are rejected for mobile reading. Split or tighten the paragraph rather than hiding important context.

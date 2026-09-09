@@ -6,8 +6,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
-- Current phase: Phase 4, Continuity And Archive Usefulness
-- Last indexed run: 2026-09-08 20:00 JST
+- Current phase: Phase 5, Validation, QA, And Next Cycle
+- Last indexed run: 2026-09-09 20:00 JST
 - Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
@@ -46,6 +46,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 25 | Complete | `c73144a` | `docs/next-check-retirement-note.md` classifies stale `nextCheck` prompts as `retire-resolved`, `retire-replaced`, `retire-downgraded`, or `keep-open` when later official, filing, audit, metric, regulator, customer-side, replication, or third-party evidence appears. |
 | Day 26 | Complete | `de25fb7` | `docs/source-concentration-archive-review-note.md` turns repeated archived caveats into standing rules: official/technical concentration proves publication or access only, media concentration stays a radar until source-of-record proof appears, and repeated single-owner feeds trigger a balance search even below the two-thirds threshold. |
 | Day 27 | Complete | `72ad4e5` | `docs/monthly-continuity-snapshot.md` gives editors a compact monthly snapshot for repeated companies, topics, unresolved claims, resolved checks, and standing-rule candidates without adding new source claims. |
+| Day 28 | Complete | `pending` | `docs/homepage-edition-preflight.md` now has a First-Screen Reader Order Guard, and `scripts/validate-site.mjs` enforces hero -> today briefing -> TOP3 -> deep briefing -> compact feed plus data-backed today/TOP3/feed hooks. |
 
 ## Historical Guard Anchors
 
@@ -70,9 +71,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 28: add or refine a lightweight validation guard for whichever homepage, detail-page, or workflow rule most directly affects current reader trust during this cycle.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 28 first.
-- If Day 28 is already complete, continue with the first useful unfinished task from the current plan.
+- Continue with Day 29: summarize what improved during this 30-day cycle and list remaining weaknesses.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 29 first.
+- If Day 29 is already complete, continue with Day 30 and write the next 30-day plan before further daily optimization.
 
 ## Update Rules
 
