@@ -1,3 +1,29 @@
+## 2026-09-09 23:02 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-09`，所以未回退版次，而是在同日 17:00 版基础上补充 8 条安全非重复信号，当前共 14 条，新增图像模型、青少年安全研究、科学Agent、新闻生态、AI编程融资、企业Agent部署、Claude账户安全和AI事故披露。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、Cognition Blog、Accenture Newsroom、TechCrunch AI、Axios AI / Technology、当前首页和历史重复 URL。
+  - 新增 `cognition-blog` 和 `accenture-newsroom` 两个官方/一手来源注册项，来源总数更新为 81。
+  - OpenAI 与 Cognition 条目标为 `官方核对` / `confirmed`；Accenture/Google Cloud 条目标为 `厂商主张` / `vendor-claim`；TechCrunch 与 Axios 补充条目标为 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未使用旧稿、聚合页、社区讨论、传闻、付费墙正文、登录墙正文、重复历史 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，total history items 更新为 715。
+- 网站可见变化: 首页 TOP3 保持同日高权重判断，更多新闻 feed 新增 OpenAI Images 2.5、青少年研究资助、量子实验Agent、新闻业合作、Cognition融资、Accenture/Google Cloud企业Agent部署、Claude token安全背景和美国AI事故披露框架核查；全部新闻、归档页和详情页同步显示 14 条 9月9日情报。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, and `data/news-history.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 81 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, first-screen reader-order guard, and overread boundary rendering.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: 准备以 `【新闻更新】补充23点AI新闻：14条Agent安全与科研信号` 提交并推送到 `origin/main`。
+
 ## 2026-09-09 20:00 JST
 
 - Focus: 完成当前 30 天计划 Day 28，增加首页首屏阅读顺序校验，避免 VisionHub-style 首页从「hero -> 今日深挖 -> 今日 TOP3 -> 深度简报 -> 紧凑新闻流」退回到先展示编辑流程、来源机械信息或重复 TOP3 的结构。
