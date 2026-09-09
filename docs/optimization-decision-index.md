@@ -46,7 +46,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 25 | Complete | `c73144a` | `docs/next-check-retirement-note.md` classifies stale `nextCheck` prompts as `retire-resolved`, `retire-replaced`, `retire-downgraded`, or `keep-open` when later official, filing, audit, metric, regulator, customer-side, replication, or third-party evidence appears. |
 | Day 26 | Complete | `de25fb7` | `docs/source-concentration-archive-review-note.md` turns repeated archived caveats into standing rules: official/technical concentration proves publication or access only, media concentration stays a radar until source-of-record proof appears, and repeated single-owner feeds trigger a balance search even below the two-thirds threshold. |
 | Day 27 | Complete | `72ad4e5` | `docs/monthly-continuity-snapshot.md` gives editors a compact monthly snapshot for repeated companies, topics, unresolved claims, resolved checks, and standing-rule candidates without adding new source claims. |
-| Day 28 | Complete | `pending` | `docs/homepage-edition-preflight.md` now has a First-Screen Reader Order Guard, and `scripts/validate-site.mjs` enforces hero -> today briefing -> TOP3 -> deep briefing -> compact feed plus data-backed today/TOP3/feed hooks. |
+| Day 28 | Complete | `829b83e` | `docs/homepage-edition-preflight.md` now has a First-Screen Reader Order Guard, and `scripts/validate-site.mjs` enforces hero -> today briefing -> TOP3 -> deep briefing -> compact feed plus data-backed today/TOP3/feed hooks. |
 
 ## Historical Guard Anchors
 

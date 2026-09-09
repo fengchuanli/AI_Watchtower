@@ -17,7 +17,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: pending.
+- Commit: `829b83e` (`【VisionHub网站风格优化】守住首页首屏阅读顺序`).
 - Push: pending.
 
 ## 2026-09-09 09:53 JST
