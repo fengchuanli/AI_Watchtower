@@ -18,7 +18,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: `829b83e` (`【VisionHub网站风格优化】守住首页首屏阅读顺序`).
-- Push: pending.
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry was rejected by the app safety review because publishing local `main` to the shared default branch needs explicit user approval. Local `main` contains the implementation and record commits but has not been pushed.
 
 ## 2026-09-09 09:53 JST
 

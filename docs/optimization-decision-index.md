@@ -8,7 +8,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 5, Validation, QA, And Next Cycle
 - Last indexed run: 2026-09-09 20:00 JST
-- Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
+- Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization; push was blocked by the app safety review because publishing local `main` to the shared default branch needs explicit user approval.
 
 ## Recent Plan-Day Decisions
 
