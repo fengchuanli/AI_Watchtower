@@ -2,7 +2,7 @@
 
 This plan guides daily AI Watchtower optimization work from 2026-08-10 through 2026-09-08. It follows the 2026-08-09 monthly summary: the next cycle should make real news updates lower-friction, keep homepage reading lighter on mobile, and turn accumulated editorial rules into clearer update habits without weakening copyright, source, duplicate, or vendor-claim boundaries.
 
-Each automated optimization pass should complete one small, verifiable improvement from the current phase, update `docs/optimization-log.md`, commit with a categorized Chinese message, and push to `origin main` when network access allows. Use `【网站优化】` for ordinary improvements and `【VisionHub网站风格优化】` for UI, structure, mobile, article-layout, or visual-briefing work tied to the VisionHub-style redesign track.
+Each automated optimization pass should complete one small, verifiable improvement from the current phase, update `docs/optimization-log.md`, commit with a categorized Chinese message, and push to `origin main` when network access allows. `【VisionHub网站风格优化】` has priority over `【网站优化】`: use it for any reader-visible UI, structure, mobile, article-layout, card hierarchy, ranking, or visual-briefing work tied to the VisionHub-style redesign track. Use `【网站优化】` only for ordinary non-VisionHub maintenance, documentation, validation, schedule, or workflow work.
 
 When all tasks in this plan are complete, create the next 30-day plan in this same file before continuing optimization. Do not stop daily optimization just because this plan ends.
 
@@ -96,7 +96,7 @@ Suggested rollout within the remaining current plan:
 - Read `docs/product-principles.md` first and keep every improvement aligned with the product purpose.
 - Read `docs/copyright-safety.md` before changing news content, source policy, detail-page copy, candidate workflow, or future optimization plans.
 - Follow this plan in order unless a user request overrides it.
-- Treat the VisionHub-style redesign track as the current product/UI priority until the homepage, detail pages, mobile scan path, and article briefings visibly reach that standard.
+- Treat the VisionHub-style redesign track as the current product/UI priority until the homepage, detail pages, mobile scan path, and article briefings visibly reach that standard; when a task could be classified as either ordinary website optimization or VisionHub-style improvement, choose `【VisionHub网站风格优化】`.
 - If the plan is complete, write the next 30-day plan before making further daily improvements.
 - When writing the next 30-day plan, preserve the product goal: help Chinese-native readers who are not comfortable tracking English AI sources understand important AI changes easily.
 - Use `data/sources.json`, `docs/source-policy.md`, `docs/candidate-source-checklist.md`, and `docs/editorial-checklist.md` for content-related decisions.
@@ -106,5 +106,5 @@ Suggested rollout within the remaining current plan:
 - Prefer readable Chinese labels and avoid repeated section titles.
 - Run lightweight checks before committing.
 - Update `docs/optimization-log.md` with focus, changed files, verification, commit status, and `网站可见变化` that says where readers can see the change; if there is no visible website change, say it is a rule, validation, or plan-only update.
-- Commit with a categorized Chinese title: `【新闻更新】`, `【网站优化】`, or `【VisionHub网站风格优化】`, followed by the concrete improvement.
+- Commit with a categorized Chinese title: `【新闻更新】`, `【VisionHub网站风格优化】`, or `【网站优化】`, followed by the concrete improvement. Use `【VisionHub网站风格优化】` before `【网站优化】` whenever the change affects visible UI or reader-facing content structure.
 - Push to `origin main` when GitHub network access is available.

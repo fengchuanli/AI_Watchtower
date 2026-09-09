@@ -1227,15 +1227,19 @@ if (
   !/【网站优化】/.test(remoteSyncLogConvention) ||
   !/【VisionHub网站风格优化】/.test(remoteSyncLogConvention) ||
   !/网站可见变化/.test(remoteSyncLogConvention) ||
+  !/outranks/.test(remoteSyncLogConvention) ||
   !/【新闻更新】/.test(updateRunChecklist) ||
   !/网站可见变化/.test(updateRunChecklist) ||
   !/【VisionHub网站风格优化】/.test(optimizationPlan) ||
+  !/priority over `【网站优化】`/.test(optimizationPlan) ||
   !/网站可见变化/.test(optimizationPlan) ||
   !/【VisionHub网站风格优化】/.test(readme) ||
+  !/优先于普通 `【网站优化】`/.test(readme) ||
   !/网站可见变化/.test(readme) ||
   !/【新闻更新】/.test(automationHealthCheck) ||
   !/【网站优化】/.test(automationHealthCheck) ||
-  !/【VisionHub网站风格优化】/.test(automationHealthCheck)
+  !/【VisionHub网站风格优化】/.test(automationHealthCheck) ||
+  !/outranks `【网站优化】`/.test(automationHealthCheck)
 ) {
   errors.push("Commit and push wording must clearly label news updates, ordinary site optimization, VisionHub-style UI work, and visible website changes.");
 }

@@ -14,6 +14,8 @@ Use one of these title prefixes:
 - `【网站优化】`: for ordinary website, document, validation, navigation, wording, archive, source-policy, or maintenance improvements.
 - `【VisionHub网站风格优化】`: for changes that directly improve the VisionHub-inspired homepage structure, content expression, UI layout, mobile reading path, ranking cards, detail-page narrative structure, or visual briefing components.
 
+Priority rule: `【VisionHub网站风格优化】` outranks `【网站优化】`. If a change is reader-visible and touches homepage structure, UI, mobile layout, card hierarchy, article readability, detail-page narrative, ranking presentation, or visual briefing components, use `【VisionHub网站风格优化】` even when it also counts as general website optimization. Reserve `【网站优化】` for non-VisionHub maintenance such as documentation-only rules, validators, source-policy workflow, archive bookkeeping, schedule health, or infrastructure fixes with no direct UI/content-structure effect.
+
 Commit title examples:
 
 ```text

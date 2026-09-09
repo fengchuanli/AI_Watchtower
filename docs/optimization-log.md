@@ -1,3 +1,19 @@
+## 2026-09-09 09:53 JST
+
+- Focus: 明确 `【VisionHub网站风格优化】` 优先于普通 `【网站优化】`，避免首页结构、UI、手机端、详情页叙事和视觉简报类改动被写成普通网站优化。
+- Changed files:
+  - `README.md`
+  - `docs/automation-health-check.md`
+  - `docs/optimization-plan.md`
+  - `docs/remote-sync-log-convention.md`
+  - `scripts/validate-site.mjs`
+- Automation prompt updated:
+  - `AI Watchtower 20:00 content optimization` now treats the VisionHub-style redesign track as the first priority, and uses `【网站优化】` only for non-VisionHub maintenance, documentation, validation, archive, schedule, or infrastructure work.
+- 网站可见变化：无，属于提交分类、自动化提示词和校验规则更新；之后涉及首页 UI、手机布局、新闻卡片层级、详情页叙事或视觉简报的提交，会优先显示 `【VisionHub网站风格优化】`。
+- Verification:
+  - Checked recent git history and confirmed the newest visible-news updates already use `【新闻更新】`, while ordinary plan/documentation work had used `【网站优化】`.
+  - Updated validation rules so the priority wording cannot disappear from the core docs.
+- Commit: 本次提交记录 VisionHub 分类优先级。
 ## 2026-09-09 08:10 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-09`，发布 6 条安全非重复短批次信号，聚焦 Meta Muse 个人Agent、Adobe 创意工具AI、Anthropic 芯片出口管制政策分歧、NYT v. OpenAI/Microsoft 版权案、Goldman 开放模型观点和 OpenAI 数学争议。
