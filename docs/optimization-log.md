@@ -1,3 +1,24 @@
+## 2026-09-10 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 29，总结 2026-08-10 至 2026-09-08 这一轮 AI Watchtower 优化中已经改善的首页简报结构、TOP3 证据边界、详情页叙事、候选工作流、连续观察和校验守护，并列出下一轮仍要处理的 VisionHub-style 弱点。
+- Changed files:
+  - `docs/monthly-optimization-summary.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md` 和 `docs/copyright-safety.md`；本次只更新月度优化总结、决策索引和校验锚点，没有新增新闻事实、来源正文改写或对外报道结论。
+- 网站可见变化：无，属于规则/校验/计划更新；后续维护者可在 `docs/monthly-optimization-summary.md` 看到本轮已改善方向、仍然薄弱的地方和 Day 30 下一轮计划重点。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 12 current news items against 85 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 44 local references, static page link targets, the refreshed monthly summary guard, and Day 30 next-task anchors.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `5a0ae94` (`【VisionHub网站风格优化】总结本轮简报体验差距`); log/index record commit follows this entry.
+
 ## 2026-09-10 08:13 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-10`，发布 12 条安全非重复信号，聚焦 Anthropic Claude 网络安全评测事故对齐评估、OpenAI GPT-6 Astra 工作版、NSA/FBI/CISA 模型蒸馏通告、Anthropic 经济情景模型、OpenAI 安全治理任命、Google AI 订阅与企业 Agent/RAG 工程，以及 AP 对安全辞职和中方回应的媒体背景。

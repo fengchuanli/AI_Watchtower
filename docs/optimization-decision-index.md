@@ -47,7 +47,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 26 | Complete | `de25fb7` | `docs/source-concentration-archive-review-note.md` turns repeated archived caveats into standing rules: official/technical concentration proves publication or access only, media concentration stays a radar until source-of-record proof appears, and repeated single-owner feeds trigger a balance search even below the two-thirds threshold. |
 | Day 27 | Complete | `72ad4e5` | `docs/monthly-continuity-snapshot.md` gives editors a compact monthly snapshot for repeated companies, topics, unresolved claims, resolved checks, and standing-rule candidates without adding new source claims. |
 | Day 28 | Complete | `829b83e` | `docs/homepage-edition-preflight.md` now has a First-Screen Reader Order Guard, and `scripts/validate-site.mjs` enforces hero -> today briefing -> TOP3 -> deep briefing -> compact feed plus data-backed today/TOP3/feed hooks. |
-| Day 29 | Complete | `pending` | `docs/monthly-optimization-summary.md` summarizes the 2026-08-10 to 2026-09-08 cycle's homepage, detail-page, candidate workflow, continuity, validation, and remaining VisionHub-style weaknesses. |
+| Day 29 | Complete | `5a0ae94` | `docs/monthly-optimization-summary.md` summarizes the 2026-08-10 to 2026-09-08 cycle's homepage, detail-page, candidate workflow, continuity, validation, and remaining VisionHub-style weaknesses. |
 
 ## Historical Guard Anchors
 
