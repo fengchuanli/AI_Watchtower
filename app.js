@@ -1522,7 +1522,8 @@ function renderNews(filter = "all") {
             <p class="card-summary">${escapeHtml(getItemSummary(item))}</p>
           </div>
           <footer class="feed-card-meta">
-            <span>${escapeHtml(getSourceType(item))}</span>
+            <span class="feed-source">${escapeHtml(getSourceName(item))}</span>
+            <span class="feed-trust">${escapeHtml(getSourceType(item))}</span>
             <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
             <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看详情 →</a>
           </footer>
