@@ -443,8 +443,48 @@ function getDetailSourceName(item) {
   return item.sourceName || item.source;
 }
 
+const detailSourceTypeLabels = {
+  official: "官方",
+  research: "研究",
+  regulator: "机构",
+  reliable_media: "媒体背景",
+  media_report: "媒体背景",
+  media: "媒体背景",
+  community: "社区信号",
+  vendor: "厂商叙事",
+};
+
+const detailClaimStatusLabels = {
+  confirmed: "已确认",
+  reported: "媒体报道",
+  announced: "已公告",
+  preprint: "预印本",
+  rumored: "未证实",
+};
+
+const detailDependencyLabels = {
+  "must-read": "必须读原文",
+  recommended: "建议读原文",
+  optional: "可选读原文",
+};
+
 function getDetailSourceType(item) {
   return item.sourceType || item.sourceRole || item.trustLevel;
+}
+
+function getDetailSourceTypeLabel(item) {
+  const raw = item.sourceType || item.trustLevel;
+  return detailSourceTypeLabels[String(raw)] || item.sourceRole || raw || "未标注";
+}
+
+function getDetailClaimStatusLabel(item) {
+  const raw = getDetailClaimStatus(item);
+  return detailClaimStatusLabels[String(raw)] || raw || "未标注";
+}
+
+function getDetailOriginalDependencyLabel(item) {
+  const raw = getDetailOriginalDependency(item);
+  return detailDependencyLabels[String(raw)] || raw;
 }
 
 function getDetailClaimStatus(item) {
@@ -600,7 +640,7 @@ function renderDetail(item, data) {
   detailShell.innerHTML = `
     <div class="incident-hero simplified-detail-hero">
       <p class="eyebrow">Incident Briefing · ${escapeHtml(item.label)}</p>
-      <p class="detail-date">${escapeHtml(data.edition.date)} · ${escapeHtml(data.edition.archiveLabel)} · ${escapeHtml(claimStatus)}</p>
+      <p class="detail-date">${escapeHtml(data.edition.date)} · ${escapeHtml(data.edition.archiveLabel)} · ${escapeHtml(getDetailClaimStatusLabel(item))}</p>
       <h1>${escapeHtml(item.title)}</h1>
       <p class="detail-lede">${escapeHtml(getDetailSummary(item))}</p>
       <p class="detail-source-reminder">${escapeHtml(sourceReminder)}</p>
@@ -629,7 +669,7 @@ function renderDetail(item, data) {
 
     <section class="canonical-briefing detail-scan-briefing" aria-label="事实、影响、边界和下一步核对速览">
       <div>
-        <p class="eyebrow">Mobile Proof Path</p>
+        <p class="eyebrow">Proof Path</p>
         <h2>先看这四点</h2>
       </div>
       <div class="canonical-briefing-grid">
@@ -684,7 +724,7 @@ function renderDetail(item, data) {
             </div>
             <div>
               <dt>来源类型</dt>
-              <dd>${escapeHtml(sourceType)}</dd>
+              <dd>${escapeHtml(getDetailSourceTypeLabel(item))}</dd>
             </div>
             <div>
               <dt>发布时间</dt>
@@ -692,11 +732,11 @@ function renderDetail(item, data) {
             </div>
             <div>
               <dt>核验状态</dt>
-              <dd>${escapeHtml(claimStatus)}</dd>
+              <dd>${escapeHtml(getDetailClaimStatusLabel(item))}</dd>
             </div>
             <div>
               <dt>原文依赖</dt>
-              <dd>${escapeHtml(originalDependency)}</dd>
+              <dd>${escapeHtml(getDetailOriginalDependencyLabel(item))}</dd>
             </div>
           </dl>
           <p class="detail-so-what"><strong>来源能支持</strong>${escapeHtml(item.provenance)}</p>

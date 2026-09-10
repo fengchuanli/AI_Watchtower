@@ -909,6 +909,17 @@ function getClaimStatus(item) {
   return item.claimStatus || item.verificationStatus;
 }
 
+const dependencyLabels = {
+  "must-read": "必须读原文",
+  recommended: "建议读原文",
+  optional: "可选读原文",
+};
+
+function getOriginalDependencyLabel(item) {
+  const raw = getOriginalDependency(item);
+  return dependencyLabels[String(raw)] || raw;
+}
+
 function getOriginalDependency(item) {
   if (item.originalDependency) {
     return item.originalDependency;
@@ -971,7 +982,7 @@ function updateTopStories(items) {
               ${renderSelectionScore(getEditorScore(item))}
               <p><strong>可核验程度</strong>${escapeHtml(claimStatus)}</p>
               <p><strong>下一步核验项</strong>${escapeHtml(nextCheck)}</p>
-              <p><strong>原文依赖</strong>${escapeHtml(getOriginalDependency(item))}</p>
+              <p><strong>原文依赖</strong>${escapeHtml(getOriginalDependencyLabel(item))}</p>
             </details>
           </div>
         </article>

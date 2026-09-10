@@ -1074,7 +1074,7 @@ h3 {
 .deep-section span {
   display: inline-flex;
   margin-bottom: 18px;
-  color: var(--coral);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
@@ -1844,7 +1844,7 @@ h3 {
 
 .overview-risk-grid h3 {
   margin-bottom: 8px;
-  color: var(--coral);
+  color: var(--accent);
   font-size: 16px;
 }
 
@@ -1925,7 +1925,7 @@ h3 {
   gap: 18px;
   align-items: start;
   padding: 24px;
-  background: #ffffff;
+  background: var(--bg-raised);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -2035,7 +2035,7 @@ h3 {
 .detail-block span {
   display: inline-flex;
   margin-bottom: 14px;
-  color: var(--coral);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
@@ -3801,5 +3801,76 @@ h3 {
   .hero-stats div {
     min-width: 0;
     flex: 1 1 40%;
+  }
+}
+
+/* ============================================================
+   Day 5 — 子页面对齐设计系统
+   ============================================================ */
+
+.filter-tabs button.active,
+.history-filter-tabs button.active,
+.tag-tabs a.active {
+  color: var(--accent-fg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* 详情页「先看这四点」：与其余卡片同一层级 */
+.canonical-briefing article {
+  background: var(--bg-inset);
+  border-color: var(--border);
+}
+
+.canonical-briefing h3 {
+  color: var(--fg-primary);
+}
+
+.canonical-briefing p {
+  color: var(--fg-secondary);
+}
+
+/* 详情页正文行长与段落节奏 */
+.detail-block p,
+.detail-lede,
+.detail-source-reminder,
+.quick-summary li p {
+  max-width: 68ch;
+}
+
+.detail-block {
+  border-left: 3px solid var(--accent);
+}
+
+/* 归档与标签页：卡片、徽章统一走 token */
+.history-title-item,
+.tag-result-card,
+.tag-context-card {
+  border-radius: var(--radius-md);
+}
+
+.history-title-meta .batch-status.archived {
+  color: var(--fg-muted);
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+}
+
+.history-title-meta .batch-status.latest {
+  border-radius: var(--radius-pill);
+}
+
+/* 详情页速览：标题列不换行挤压 */
+.canonical-briefing {
+  grid-template-columns: minmax(200px, 240px) 1fr;
+}
+
+.canonical-briefing .eyebrow {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 920px) {
+  .canonical-briefing {
+    grid-template-columns: 1fr;
   }
 }

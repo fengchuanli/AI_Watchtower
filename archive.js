@@ -36,15 +36,42 @@ function validateHistory(history) {
     throw new Error("News history must include editions.");
   }
 
+  const usableEditions = [];
+  const skippedEditions = [];
+
   for (const edition of history.editions) {
     const missingField = ["id", "date", "timezone", "archiveLabel", "archiveStatus", "itemCount"].find(
       (field) => !edition[field] && edition[field] !== 0,
     );
 
     if (missingField) {
-      throw new Error(`History edition ${edition.id || "without id"} is missing ${missingField}.`);
+      skippedEditions.push(`${edition.id || "无 id 期次"}（缺 ${missingField}）`);
+      continue;
     }
+
+    usableEditions.push(edition);
   }
+
+  if (!usableEditions.length) {
+    throw new Error("News history has no renderable editions.");
+  }
+
+  if (skippedEditions.length) {
+    console.warn(`已跳过 ${skippedEditions.length} 个字段不完整的期次：${skippedEditions.join("、")}`);
+  }
+
+  return { usableEditions, skippedEditions };
+}
+
+const archiveStatusLabels = {
+  published: "已发布",
+  archived: "已归档",
+  draft: "草稿",
+  pending: "待发布",
+};
+
+function getArchiveStatusLabel(status) {
+  return archiveStatusLabels[String(status)] || status || "已发布";
 }
 
 function getEditionKey(edition) {
@@ -102,7 +129,7 @@ function renderEditionCard(edition, currentEdition) {
       <small>${escapeHtml(status.note)}</small>
       <div class="archive-label-row" aria-label="期次状态">
         <em class="archive-status ${escapeHtml(status.tone)}">${escapeHtml(status.label)}</em>
-        <em>${escapeHtml(edition.archiveStatus || "published")} · ${escapeHtml(itemCount)} 条</em>
+        <em>${escapeHtml(getArchiveStatusLabel(edition.archiveStatus))} · ${escapeHtml(itemCount)} 条</em>
       </div>
       <a class="text-link" href="${detailUrl}" aria-label="${escapeHtml(`查看 ${edition.archiveLabel} 的全部 AI 新闻题目`)}">查看题目列表</a>
     </article>
@@ -149,13 +176,13 @@ async function loadArchive() {
     ]);
 
     validateCurrentFeed(currentFeed);
-    validateHistory(history);
+    const { usableEditions, skippedEditions } = validateHistory(history);
 
     const currentEdition = {
       ...currentFeed.edition,
       itemCount: currentFeed.items.length,
     };
-    const sortedEditions = sortEditions(history.editions);
+    const sortedEditions = sortEditions(usableEditions);
     const archivedCount = sortedEditions.filter(
       (edition) => getEditionKey(edition) !== getEditionKey(currentEdition),
     ).length;
@@ -174,6 +201,10 @@ async function loadArchive() {
 
     if (archivedCount > 0) {
       currentArchiveMeta.textContent += ` 另有 ${archivedCount} 个历史批次用于回看背景。`;
+    }
+
+    if (skippedEditions.length) {
+      currentArchiveMeta.textContent += ` 有 ${skippedEditions.length} 个期次字段不完整，已暂不展示。`;
     }
   } catch (error) {
     console.warn(error);
