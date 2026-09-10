@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-08-10 through 2026-09-08
 - Current phase: Phase 5, Validation, QA, And Next Cycle
-- Last indexed run: 2026-09-09 20:00 JST
-- Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization; push was blocked by the app safety review because publishing local `main` to the shared default branch needs explicit user approval.
+- Last indexed run: 2026-09-10 20:00 JST
+- Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization.
 
 ## Recent Plan-Day Decisions
 
@@ -47,6 +47,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 26 | Complete | `de25fb7` | `docs/source-concentration-archive-review-note.md` turns repeated archived caveats into standing rules: official/technical concentration proves publication or access only, media concentration stays a radar until source-of-record proof appears, and repeated single-owner feeds trigger a balance search even below the two-thirds threshold. |
 | Day 27 | Complete | `72ad4e5` | `docs/monthly-continuity-snapshot.md` gives editors a compact monthly snapshot for repeated companies, topics, unresolved claims, resolved checks, and standing-rule candidates without adding new source claims. |
 | Day 28 | Complete | `829b83e` | `docs/homepage-edition-preflight.md` now has a First-Screen Reader Order Guard, and `scripts/validate-site.mjs` enforces hero -> today briefing -> TOP3 -> deep briefing -> compact feed plus data-backed today/TOP3/feed hooks. |
+| Day 29 | Complete | `pending` | `docs/monthly-optimization-summary.md` summarizes the 2026-08-10 to 2026-09-08 cycle's homepage, detail-page, candidate workflow, continuity, validation, and remaining VisionHub-style weaknesses. |
 
 ## Historical Guard Anchors
 
@@ -71,9 +72,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 29: summarize what improved during this 30-day cycle and list remaining weaknesses.
+- Continue with Day 30: write the next 30-day optimization plan before further daily optimization.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 29 first.
-- If Day 29 is already complete, continue with Day 30 and write the next 30-day plan before further daily optimization.
+- If Day 30 is already complete, continue with the first useful task from the new plan.
 
 ## Update Rules
 
