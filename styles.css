@@ -2460,12 +2460,8 @@ h3 {
     min-height: 64px;
   }
 
-  .brand span:last-child {
-    display: none;
-  }
-
   .hero {
-    min-height: calc(100vh - 64px);
+    min-height: clamp(440px, 66vh, 600px);
   }
 
   h1 {
@@ -3616,4 +3612,194 @@ h3 {
   align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-5);
+}
+
+/* ============================================================
+   Day 4 — 移动端导航与断点
+   ============================================================ */
+
+.site-header {
+  position: sticky;
+  z-index: 30;
+}
+
+/* 汉堡按钮：桌面端隐藏，920px 以下接管主导航 */
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: var(--fg-primary);
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.nav-toggle span,
+.nav-toggle::before,
+.nav-toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  margin-left: -10px;
+  background: currentcolor;
+  border-radius: 2px;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.nav-toggle::before {
+  top: 14px;
+}
+
+.nav-toggle span {
+  top: 21px;
+}
+
+.nav-toggle::after {
+  top: 28px;
+}
+
+.nav-toggle.is-open {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.nav-toggle.is-open::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span {
+  opacity: 0;
+}
+
+.nav-toggle.is-open::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-toggle:focus-visible,
+.header-action:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle span,
+  .nav-toggle::before,
+  .nav-toggle::after {
+    transition: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .nav-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .header-action {
+    order: 3;
+  }
+
+  /* 折叠面板：从顶栏下方展开，占满整行 */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    order: 4;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    max-height: calc(100dvh - 72px);
+    padding: var(--space-2) var(--space-4) var(--space-4);
+    overflow-y: auto;
+    background: var(--bg-deep);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-2);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    padding: 0 var(--space-2);
+    color: var(--fg-primary);
+    border-bottom: 1px solid var(--border);
+    font-size: var(--text-md);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: 0;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  /* TOP3 两列会留下孤儿卡，直接改成单列 */
+  .top-stories {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 平板窄边：三列改两列的中间档 */
+@media (max-width: 768px) {
+  .news-grid,
+  .source-grid,
+  .library-grid,
+  .brief-list,
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .archive-stats {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section,
+  .today-key-inner,
+  .archive-stats,
+  .subscribe {
+    width: min(1180px, calc(100% - 32px));
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    gap: var(--space-3);
+  }
+
+  .nav-links {
+    max-height: calc(100dvh - 64px);
+  }
+
+  .category-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding-block: var(--space-7);
+  }
+
+  .hero-stats div {
+    min-width: 0;
+    flex: 1 1 40%;
+  }
 }

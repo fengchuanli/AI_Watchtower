@@ -31,7 +31,16 @@
         <span class="brand-mark">AW</span>
         <span>AI Watchtower</span>
       </a>
-      <nav class="nav-links" aria-label="全部题目列表相关页面">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="siteNav"
+        aria-label="打开栏目菜单"
+      >
+        <span></span>
+      </button>
+      <nav class="nav-links" id="siteNav" aria-label="全部题目列表相关页面">
         <a href="./#feed">最新新闻流</a>
         <a href="./#deep-briefing">本期深度简报</a>
         <a href="./tags.html">公司连续观察</a>
@@ -85,6 +94,7 @@
       <span>All captured intelligence stays readable in site.</span>
     </footer>
 
+    <script src="./nav.js" defer></script>
     <script src="./all-news.js"></script>
   </body>
 </html>
