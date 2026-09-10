@@ -17,8 +17,9 @@ npx serve .
 ```text
 .
 ├── assets/
+│   ├── ai-intel-hero-900.webp
 │   ├── ai-intel-hero.jpg
-│   └── ai-intel-hero.png
+│   └── ai-intel-hero.webp
 ├── data/
 │   ├── news.json
 │   └── sources.json
@@ -63,6 +64,8 @@ npx serve .
 │   └── source-policy.md
 ├── scripts/
 │   ├── build-derived-data.mjs
+│   ├── check_layout.py
+│   ├── layout-baseline.json
 │   ├── repair-duplicate-copy.mjs
 │   ├── validate-data.mjs
 │   ├── validate-pages.mjs
@@ -124,7 +127,12 @@ node scripts/build-derived-data.mjs
 node scripts/validate-data.mjs
 node scripts/validate-site.mjs
 node scripts/validate-pages.mjs
+python3 scripts/check_layout.py
 ```
+
+`check_layout.py` 需要 `pip install playwright && playwright install chromium`。
+它渲染六个页面 × 桌面/移动两种宽度，检查横向溢出、文字对比度、JS 报错、页面高度和数据下载量，
+与 `scripts/layout-baseline.json` 对比。版面故意变化时用 `--update` 重建基线。
 
 ## 数据分层
 

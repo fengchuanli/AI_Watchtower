@@ -46,6 +46,7 @@ node scripts/build-derived-data.mjs
 node scripts/validate-data.mjs
 node scripts/validate-site.mjs
 node scripts/validate-pages.mjs
+python3 scripts/check_layout.py
 git diff --check
 ```
 

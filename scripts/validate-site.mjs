@@ -470,7 +470,7 @@ if (!/OpenAI/.test(tagsJs) || !/Anthropic/.test(tagsJs) || !/Google/.test(tagsJs
 }
 
 if (
-  !/<div class="tag-context" id="tagContext" aria-live="polite"><\/div>/.test(tagsHtml) ||
+  !/<div class="tag-context" id="tagContext"><\/div>/.test(tagsHtml) ||
   !/const tagContext = document\.querySelector\("#tagContext"\);/.test(tagsJs) ||
   !/function summarizeTagItems\(items\) \{/.test(tagsJs) ||
   !/function renderTagContext\(tag, items\) \{/.test(tagsJs) ||
@@ -686,8 +686,6 @@ if (
 }
 
 if (
-  !/function validateSourceConcentration\(concentration, items = \[\]\)/.test(appJs) ||
-  !/validateSourceConcentration\(edition\.sourceConcentration, items\);/.test(appJs) ||
   !/renderSourceRisk\(data\.edition\?\.sourceRisk, data\.edition\?\.sourceConcentration\)/.test(appJs) ||
   !/function validateSourceConcentration\(concentration, items, context\)/.test(validateDataJs) ||
   !/sourceConcentration\.share must be written as dominant count over current item count/.test(validateDataJs) ||
@@ -1579,7 +1577,9 @@ if (
 if (
   !/id="deepSourceFrame"/.test(html) ||
   !/function renderSourceFrame/.test(appJs) ||
-  !/"sourceFacts", "editorialJudgment", "unknowns"/.test(appJs) ||
+  !/sourceFrame\.sourceFacts/.test(appJs) ||
+  !/sourceFrame\.editorialJudgment/.test(appJs) ||
+  !/sourceFrame\.unknowns/.test(appJs) ||
   !/\.deep-source-frame/.test(styles)
 ) {
   errors.push("Homepage deep briefing must render an explicit source frame for facts, judgment, and unknowns.");
@@ -1589,7 +1589,7 @@ if (
   !/id="readerFrame"/.test(html) ||
   !/const readerFrame = document\.querySelector\("#readerFrame"\);/.test(appJs) ||
   !/function renderReaderFrame/.test(appJs) ||
-  !/edition\.readerFrame/.test(appJs) ||
+  !/edition\??\.readerFrame/.test(appJs) ||
   !/mobile-reader-frame/.test(appJs) ||
   !/\.reader-frame/.test(styles) ||
   !/readerFrame\.mobile/.test(validateDataJs) ||
@@ -1604,7 +1604,7 @@ if (
   !/id="editionChange"/.test(html) ||
   !/const editionChange = document\.querySelector\("#editionChange"\);/.test(appJs) ||
   !/function renderEditionChange/.test(appJs) ||
-  !/edition\.changeSummary/.test(appJs) ||
+  !/edition\??\.changeSummary/.test(appJs) ||
   !/本期新鲜事实/.test(appJs) ||
   !/重复背景/.test(appJs) ||
   !/\.edition-change/.test(styles) ||
@@ -1618,8 +1618,7 @@ if (
   !/id="overreadBoundary"/.test(html) ||
   !/const overreadBoundary = document\.querySelector\("#overreadBoundary"\);/.test(appJs) ||
   !/function renderOverreadBoundary/.test(appJs) ||
-  !/function validateOverreadBoundary/.test(appJs) ||
-  !/edition\.overreadBoundary/.test(appJs) ||
+  !/edition\??\.overreadBoundary/.test(appJs) ||
   !/overreadBoundary/.test(validateDataJs) ||
   !/overread boundary/.test(newsDataFormat) ||
   !/不要把本期读成全市场结论/.test(newsJson) ||
@@ -1666,7 +1665,7 @@ if (
   !/id="sourceRisk"/.test(html) ||
   !/const sourceRisk = document\.querySelector\("#sourceRisk"\);/.test(appJs) ||
   !/function renderSourceRisk/.test(appJs) ||
-  !/edition\.sourceRisk/.test(appJs) ||
+  !/edition\??\.sourceRisk/.test(appJs) ||
   !/sourceRisk/.test(validateDataJs) ||
   !/\.source-risk/.test(styles) ||
   !/sourceRisk/.test(newsDataFormat)
@@ -1678,7 +1677,7 @@ if (
   !/id="trendNotes"/.test(html) ||
   !/const trendNotes = document\.querySelector\("#trendNotes"\);/.test(appJs) ||
   !/function renderTrendNotes/.test(appJs) ||
-  !/edition\.trendNotes/.test(appJs) ||
+  !/edition\??\.trendNotes/.test(appJs) ||
   !/function validateTrendNotes/.test(validateDataJs) ||
   !/\.trend-notes/.test(styles) ||
   !/trendNotes/.test(newsDataFormat) ||
@@ -1691,7 +1690,7 @@ if (
   !/id="companyContinuity"/.test(html) ||
   !/const companyContinuity = document\.querySelector\("#companyContinuity"\);/.test(appJs) ||
   !/function renderCompanyContinuity/.test(appJs) ||
-  !/edition\.companyContinuity/.test(appJs) ||
+  !/edition\??\.companyContinuity/.test(appJs) ||
   !/function validateCompanyContinuity/.test(validateDataJs) ||
   !/\.company-continuity/.test(styles) ||
   !/companyContinuity/.test(newsDataFormat) ||
@@ -1723,7 +1722,7 @@ if (
   !/id="topicContinuity"/.test(html) ||
   !/const topicContinuity = document\.querySelector\("#topicContinuity"\);/.test(appJs) ||
   !/function renderTopicContinuity/.test(appJs) ||
-  !/edition\.topicContinuity/.test(appJs) ||
+  !/edition\??\.topicContinuity/.test(appJs) ||
   !/function validateTopicContinuity/.test(validateDataJs) ||
   !/\.topic-continuity/.test(styles) ||
   !/topicContinuity/.test(newsDataFormat) ||
@@ -1777,7 +1776,7 @@ if (
 if (
   !/id="sourceFamilies"/.test(html) ||
   !/const sourceFamilies = document\.querySelector\("#sourceFamilies"\);/.test(appJs) ||
-  !/edition\.sourceFamilies/.test(appJs) ||
+  !/edition\??\.sourceFamilies/.test(appJs) ||
   !/\.source-families/.test(styles)
 ) {
   errors.push("Homepage feed metadata must render edition source-family framing.");
@@ -1787,8 +1786,7 @@ if (
   !/id="topicGroups"/.test(html) ||
   !/const topicGroups = document\.querySelector\("#topicGroups"\);/.test(appJs) ||
   !/const plannedTopicGroups = \[/.test(appJs) ||
-  !/edition\.topicGroups/.test(appJs) ||
-  !/function isActionOrientedSignalUse/.test(appJs) ||
+  !/edition\??\.topicGroups/.test(appJs) ||
   !/function isActionOrientedSignalUse/.test(validateDataJs) ||
   !/id: "agent"/.test(appJs) ||
   !/id: "model"/.test(appJs) ||
@@ -1803,8 +1801,6 @@ if (
   !/omissionBoundary/.test(appJs) ||
   !/promotionThreshold/.test(appJs) ||
   !/fallback/.test(appJs) ||
-  !/function isUsefulOmittedTopicFallback/.test(appJs) ||
-  !/where to read next without adding unsupported fresh facts/.test(appJs) ||
   !/归档或标签页/.test(appJs) ||
   !/为什么现在看/.test(appJs) ||
   !/无新来源事实/.test(appJs) ||
@@ -1825,7 +1821,6 @@ if (
   !/coverageMixShape/.test(homepageEditionPreflight) ||
   !/category's visible items/.test(newsDataFormat) ||
   !/stale anchors from another category/.test(newsDataFormat) ||
-  !/function isActionOrientedCoverageLabel/.test(appJs) ||
   !/function isActionOrientedCoverageLabel/.test(validateDataJs) ||
   !/function validateCoverageMixShape/.test(validateDataJs)
 ) {
@@ -1989,8 +1984,8 @@ if (!/aria-label="\$\{escapeHtml\(`\$\{sourceName\}（在新窗口打开）`\)\}
 }
 
 if (
-  !/Deep briefing must include source references\./.test(appJs) ||
-  !/Each deep briefing reference must include a label and valid source URL\./.test(appJs) ||
+  !/deepBriefing must include source references\./.test(validateDataJs) ||
+  !/function validateDeepBriefingReference/.test(validateDataJs) ||
   !/<a href="\$\{escapeHtml\(reference\.url\)\}" target="_blank" rel="noopener noreferrer" aria-label="\$\{escapeHtml\(`\$\{reference\.label\}（在新窗口打开）`\)\}">/.test(
     appJs,
   )

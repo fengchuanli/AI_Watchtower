@@ -3874,3 +3874,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+/* hero 图：picture 不参与网格，由内部 img 直接占位 */
+.hero-picture {
+  display: contents;
+}

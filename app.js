@@ -163,7 +163,7 @@ async function loadNews() {
     }
 
     const data = await response.json();
-    validateNewsData(data);
+    assertRenderableFeed(data);
     news = sortNewsItems(data.items);
     newsCategories = data.categories;
     const history = await loadNewsHistory();
@@ -264,46 +264,6 @@ function getDetailUrl(item) {
   return `./news-detail.html?${params.toString()}`;
 }
 
-function validateNewsData(data) {
-  if (!Array.isArray(data.items)) {
-    throw new Error("News data must include an items array.");
-  }
-
-  validateEdition(data.edition, data.updatedAt, data.items);
-  validateCategories(data.categories, data.items);
-  validateBriefing(data.briefing);
-  validateDeepBriefing(data.deepBriefing);
-
-  const invalidItem = data.items.find((item) => requiredCardFields.some((field) => !item[field]));
-
-  if (invalidItem) {
-    throw new Error(`News item ${invalidItem.id || "without id"} is missing required display fields.`);
-  }
-
-  const itemWithInvalidUrl = data.items.find((item) => !isValidSourceUrl(item.sourceUrl));
-
-  if (itemWithInvalidUrl) {
-    throw new Error(`News item ${itemWithInvalidUrl.id || "without id"} has an invalid source URL.`);
-  }
-
-  const itemWithInvalidFollowUp = data.items.find(
-    (item) =>
-      !Array.isArray(item.followUpQuestions) ||
-      item.followUpQuestions.length < 2 ||
-      item.followUpQuestions.some((question) => !question || !question.endsWith("？")),
-  );
-
-  if (itemWithInvalidFollowUp) {
-    throw new Error(`News item ${itemWithInvalidFollowUp.id || "without id"} must include follow-up questions.`);
-  }
-
-  const itemWithInvalidSelectionScore = data.items.find((item) => !isValidSelectionScore(item.selectionScore));
-
-  if (itemWithInvalidSelectionScore) {
-    throw new Error(`News item ${itemWithInvalidSelectionScore.id || "without id"} has an invalid selection score.`);
-  }
-}
-
 function isValidSelectionScore(score) {
   if (!score || typeof score !== "object") {
     return false;
@@ -321,23 +281,6 @@ function isValidSelectionScore(score) {
   );
 }
 
-function isActionOrientedSignalUse(text) {
-  return /用来(更新|检查|调整|核对|评估|复查|列出)/.test(String(text || ""));
-}
-
-function isUsefulOmittedTopicFallback(text) {
-  const fallback = String(text || "");
-  return (
-    /归档|标签页|本期已入选|历史/.test(fallback) &&
-    /背景|脉络|核对|等待|不当作|避免/.test(fallback) &&
-    !/新增来源事实|本期新增|已经证明|确认落地|全市场/.test(fallback)
-  );
-}
-
-function isActionOrientedCoverageLabel(text) {
-  return /^(查|核对|验证|更新|观察|复查|评估)/.test(String(text || "").trim());
-}
-
 function renderSelectionScore(score) {
   if (!isValidSelectionScore(score)) {
     return "";
@@ -351,391 +294,28 @@ function renderSelectionScore(score) {
   `;
 }
 
-function validateCategories(categories, items) {
-  if (!Array.isArray(categories) || !categories.length) {
-    throw new Error("News data must include category definitions.");
+// 完整的数据模式校验在 CI 里跑（scripts/validate-data.mjs，2000+ 行）。
+// 页面只需要确认拿到的数据能渲染，不必在每次加载时把 schema 再验一遍。
+function assertRenderableFeed(data) {
+  if (!Array.isArray(data?.items) || !data.items.length) {
+    throw new Error("Feed must include a non-empty items array.");
   }
 
-  const categoryIds = new Set(categories.map((category) => category.id));
-  const invalidCategory = categories.find(
-    (category) => !category.id || !category.label || !category.description,
-  );
-
-  if (invalidCategory) {
-    throw new Error("Each news category must include id, label, and description.");
+  if (!Array.isArray(data.categories) || !data.categories.length) {
+    throw new Error("Feed must include category definitions.");
   }
 
-  const itemWithoutCategory = items.find((item) => !categoryIds.has(item.category));
+  const requiredForRender = ["id", "category", "label", "title", "publishedAt", "time"];
+  const brokenItem = data.items.find((item) => requiredForRender.some((field) => !item[field]));
 
-  if (itemWithoutCategory) {
-    throw new Error(`News item ${itemWithoutCategory.id || "without id"} has no category definition.`);
-  }
-}
-
-function validateEdition(edition, updatedAt, items = []) {
-  const requiredFields = [
-    "id",
-    "date",
-    "timezone",
-    "archiveStatus",
-    "archiveLabel",
-    "note",
-    "operationalStatus",
-    "editorialInterpretation",
-  ];
-
-  if (!edition || requiredFields.some((field) => !edition[field])) {
-    throw new Error("News data must include complete edition metadata.");
+  if (brokenItem) {
+    throw new Error(`Item ${brokenItem.id || "without id"} is missing fields the cards render.`);
   }
 
-  if (edition.date !== updatedAt) {
-    throw new Error("News edition date must match updatedAt.");
-  }
+  const itemWithInvalidUrl = data.items.find((item) => item.sourceUrl && !isValidSourceUrl(item.sourceUrl));
 
-  if (edition.note.length > 80) {
-    throw new Error("News edition note must stay short and leave status details to dedicated fields.");
-  }
-
-  if (!Array.isArray(edition.coverageMix) || edition.coverageMix.length < 2) {
-    throw new Error("News edition must include a coverage mix.");
-  }
-
-  validateReaderFrame(edition.readerFrame);
-  validateEditionChange(edition.changeSummary);
-  validateOverreadBoundary(edition.overreadBoundary, edition.sourceFamilies, items);
-  validateTrendNotes(edition.trendNotes);
-  validateTopicContinuity(edition.topicContinuity, edition.topicGroups);
-  validateCompanyContinuity(edition.companyContinuity, items);
-  validateSourceConcentration(edition.sourceConcentration, items);
-
-  const invalidCoverage = edition.coverageMix.find(
-    (item) =>
-      !item.label ||
-      !isActionOrientedCoverageLabel(item.label) ||
-      !Number.isInteger(item.count) ||
-      item.count < 1 ||
-      !item.meaning ||
-      !isActionOrientedSignalUse(item.meaning),
-  );
-
-  if (invalidCoverage) {
-    throw new Error("Each edition coverage mix item must include action-oriented label, count, and meaning.");
-  }
-
-  if (!Array.isArray(edition.sourceFamilies) || !edition.sourceFamilies.length) {
-    throw new Error("News edition must include source family framing.");
-  }
-
-  if (
-    !edition.sourceRisk ||
-    !edition.sourceRisk.label ||
-    !edition.sourceRisk.note ||
-    !edition.sourceRisk.nextCheck ||
-    !/来源|媒体|官方|核对|集中|单一|研究|预印本/.test(edition.sourceRisk.note) ||
-    !/官方|原文|核对|复核|文件|公告|第三方|复现|同行评议|代码|数据/.test(edition.sourceRisk.nextCheck)
-  ) {
-    throw new Error("News edition must include a source concentration risk note and next-check boundary.");
-  }
-
-  const invalidSourceFamily = edition.sourceFamilies.find(
-    (item) => !item.family || !item.label || !Number.isInteger(item.count) || item.count < 1 || !item.role,
-  );
-
-  if (invalidSourceFamily) {
-    throw new Error("Each edition source family must include family, label, count, and role.");
-  }
-
-  if (!Array.isArray(edition.topicGroups) || !edition.topicGroups.length) {
-    throw new Error("News edition must include topic groups.");
-  }
-
-  const invalidPlannedTopic = plannedTopicGroups.find(
-    (topic) =>
-      !topic.whyNow ||
-      !topic.omissionType ||
-      !topic.emptyReason ||
-      !topic.omissionBoundary ||
-      !topic.promotionThreshold ||
-      !topic.fallback ||
-      !isUsefulOmittedTopicFallback(topic.fallback),
-  );
-
-  if (invalidPlannedTopic) {
-    throw new Error(
-      "Each planned topic must explain why it matters now, whether omission means no fresh source fact, why it was omitted, what would promote it, and where to read next without adding unsupported fresh facts.",
-    );
-  }
-
-  const itemIds = new Set(items.map((item) => item.id));
-  const allowedTopics = new Set(plannedTopicGroups.map((topic) => topic.id));
-  const invalidTopicGroup = edition.topicGroups.find(
-    (topic) =>
-      !topic.id ||
-      !topic.label ||
-      !Number.isInteger(topic.count) ||
-      topic.count < 1 ||
-      !Array.isArray(topic.itemIds) ||
-      topic.itemIds.length !== topic.count ||
-      !topic.meaning ||
-      !isActionOrientedSignalUse(topic.meaning) ||
-      !allowedTopics.has(topic.id) ||
-      topic.itemIds.some((id) => !itemIds.has(id)),
-  );
-
-  if (invalidTopicGroup) {
-    throw new Error("Each edition topic group must use a supported topic, reference current news items, and name the reader action.");
-  }
-}
-
-function validateSourceConcentration(concentration, items = []) {
-  const sourceCounts = new Map();
-
-  for (const item of items) {
-    if (item.sourceId) {
-      sourceCounts.set(item.sourceId, (sourceCounts.get(item.sourceId) || 0) + 1);
-    }
-  }
-
-  const dominantEntry = [...sourceCounts.entries()].sort((first, second) => second[1] - first[1])[0];
-  const dominantSourceId = dominantEntry?.[0];
-  const dominantCount = dominantEntry?.[1] || 0;
-  const hasDominantOwner = items.length > 1 && dominantCount >= Math.ceil(items.length * 0.67);
-
-  if (!hasDominantOwner) {
-    return;
-  }
-
-  if (
-    !concentration ||
-    concentration.sourceId !== dominantSourceId ||
-    concentration.count !== dominantCount ||
-    concentration.share !== `${dominantCount}/${items.length}` ||
-    !concentration.sourceName ||
-    !/同一|单一|集中|全部|来源/.test(concentration.note || "") ||
-    !/其他|独立|官方|媒体|监管|论文|原文|第三方|复现/.test(concentration.nextCheck || "")
-  ) {
-    throw new Error("News edition must explain repeated source-owner concentration and the next independent check.");
-  }
-}
-
-function validateReaderFrame(frame) {
-  if (!frame || !frame.headline || !frame.whyItMatters) {
-    throw new Error("News edition must include a reader frame.");
-  }
-
-  if (frame.mobile) {
-    const mobileUses = frame.mobile.primaryUses || [];
-
-    if (
-      !frame.mobile.headline ||
-      !frame.mobile.summary ||
-      !Array.isArray(mobileUses) ||
-      mobileUses.length < 2 ||
-      !frame.mobile.proofBoundary
-    ) {
-      throw new Error("News edition reader frame mobile variant must include a short headline, summary, reader uses, and proof boundary.");
-    }
-  }
-
-  if (!Array.isArray(frame.useThisIssueFor) || frame.useThisIssueFor.length < 2) {
-    throw new Error("News edition reader frame must include reader uses.");
-  }
-
-  if (!Array.isArray(frame.notProvenYet) || frame.notProvenYet.length < 2) {
-    throw new Error("News edition reader frame must include unresolved proof boundaries.");
-  }
-}
-
-function validateEditionChange(changeSummary) {
-  if (!changeSummary || !changeSummary.headline) {
-    throw new Error("News edition must include a change summary.");
-  }
-
-  if (!Array.isArray(changeSummary.freshFacts) || changeSummary.freshFacts.length < 2) {
-    throw new Error("News edition change summary must include fresh facts.");
-  }
-
-  if (!Array.isArray(changeSummary.repeatedContext) || changeSummary.repeatedContext.length < 2) {
-    throw new Error("News edition change summary must separate repeated context.");
-  }
-}
-
-function validateOverreadBoundary(boundary, sourceFamilies = [], items = []) {
-  const dominantFamily = sourceFamilies.find(
-    (family) => Number.isInteger(family.count) && family.count >= Math.ceil(items.length * 0.67),
-  );
-
-  if (!dominantFamily) {
-    return;
-  }
-
-  if (
-    !boundary ||
-    !boundary.label ||
-    !boundary.body ||
-    !boundary.doNotConclude ||
-    !boundary.useInstead ||
-    !/不要|过度|误读/.test(`${boundary.label}${boundary.body}`) ||
-    !/不能|不证明|不代表|尚未/.test(boundary.doNotConclude) ||
-    !/用来|适合|先把|应该/.test(boundary.useInstead)
-  ) {
-    throw new Error("News edition must include a do-not-overread boundary when one evidence mode dominates.");
-  }
-}
-
-function validateTrendNotes(notes) {
-  if (!Array.isArray(notes) || notes.length < 2) {
-    throw new Error("News edition must include cross-edition trend notes.");
-  }
-
-  const invalidNote = notes.find(
-    (note) =>
-      !note.label ||
-      !note.topic ||
-      !note.note ||
-      !note.boundary ||
-      !/跨期|连续|再次|延续|历史|归档/.test(note.note) ||
-      !/不证明|不能|仍需|尚未/.test(note.boundary),
-  );
-
-  if (invalidNote) {
-    throw new Error("Each cross-edition trend note must name the repeated signal and its proof boundary.");
-  }
-}
-
-function validateCompanyContinuity(notes, items = []) {
-  if (!Array.isArray(notes) || notes.length < 2) {
-    throw new Error("News edition must include recurring company continuity notes.");
-  }
-
-  const currentCompanies = new Set(items.flatMap((item) => (Array.isArray(item.companies) ? item.companies : [])));
-  const invalidNote = notes.find(
-    (note) =>
-      !note.company ||
-      !currentCompanies.has(note.company) ||
-      !note.label ||
-      !note.lastMention ||
-      !note.whatChanged ||
-      !note.stillUnproven ||
-      !/上次|此前|上一|历史|归档|连续/.test(note.lastMention) ||
-      !/本期|这次|新增|转向|推进|变成|从/.test(note.whatChanged) ||
-      !/不证明|不能|仍未|尚未|仍需/.test(note.stillUnproven),
-  );
-
-  if (invalidNote) {
-    throw new Error("Each recurring company note must say what changed and what remains unproven.");
-  }
-}
-
-function validateTopicContinuity(notes, topicGroups = []) {
-  if (!Array.isArray(notes) || notes.length < 2) {
-    throw new Error("News edition must include recurring topic continuity notes.");
-  }
-
-  const currentTopics = new Set(topicGroups.map((topic) => topic.id));
-  const allowedStatuses = new Set(["stronger", "weaker", "repeated"]);
-  const invalidNote = notes.find(
-    (note) =>
-      !note.topic ||
-      !currentTopics.has(note.topic) ||
-      !note.label ||
-      !allowedStatuses.has(note.status) ||
-      !note.previousPattern ||
-      !note.currentSignal ||
-      !note.signalDirection ||
-      !note.stillUnproven ||
-      !/上次|此前|上一|历史|归档|连续/.test(note.previousPattern) ||
-      !/本期|这次|新增|继续|再次|延续/.test(note.currentSignal) ||
-      !/增强|减弱|重复/.test(note.signalDirection) ||
-      !/不证明|不能|仍未|尚未|仍需/.test(note.stillUnproven),
-  );
-
-  if (invalidNote) {
-    throw new Error("Each recurring topic note must say whether the signal is stronger, weaker, or repeated and what remains unproven.");
-  }
-}
-
-function validateBriefing(briefing) {
-  if (!briefing) {
-    return;
-  }
-
-  const missingMainField = ["label", "headline", "summary", "cta"].find((field) => !briefing[field]);
-
-  if (missingMainField) {
-    throw new Error(`News briefing is missing ${missingMainField}.`);
-  }
-
-  if (!Array.isArray(briefing.watchPoints) || briefing.watchPoints.length !== 3) {
-    throw new Error("News briefing must include exactly three watch points.");
-  }
-
-  const invalidPoint = briefing.watchPoints.find((point) => !point.title || !point.body);
-
-  if (invalidPoint) {
-    throw new Error("Each briefing watch point must include title and body.");
-  }
-}
-
-function validateDeepBriefing(deepBriefing) {
-  if (!deepBriefing) {
-    throw new Error("News data must include a deepBriefing object.");
-  }
-
-  const requiredFields = ["kicker", "title", "subtitle", "dateLabel", "status", "overview"];
-  const missingField = requiredFields.find((field) => !deepBriefing[field]);
-
-  if (missingField) {
-    throw new Error(`Deep briefing is missing ${missingField}.`);
-  }
-
-  if (!Array.isArray(deepBriefing.timeline) || deepBriefing.timeline.length < 3) {
-    throw new Error("Deep briefing must include at least three timeline items.");
-  }
-
-  if (!Array.isArray(deepBriefing.keyNumbers) || deepBriefing.keyNumbers.length < 3) {
-    throw new Error("Deep briefing must include at least three key numbers.");
-  }
-
-  if (!Array.isArray(deepBriefing.sections) || deepBriefing.sections.length < 3) {
-    throw new Error("Deep briefing must include at least three sections.");
-  }
-
-  if (!Array.isArray(deepBriefing.actions) || deepBriefing.actions.length < 2) {
-    throw new Error("Deep briefing must include reader actions.");
-  }
-
-  if (!Array.isArray(deepBriefing.coverageLimits) || deepBriefing.coverageLimits.length < 2) {
-    throw new Error("Deep briefing must include coverage limits.");
-  }
-
-  if (!deepBriefing.sourceFrame) {
-    throw new Error("Deep briefing must include a source frame.");
-  }
-
-  const sourceFrameFields = ["sourceFacts", "editorialJudgment", "unknowns"];
-  const missingSourceFrameField = sourceFrameFields.find((field) => !Array.isArray(deepBriefing.sourceFrame[field]));
-
-  if (missingSourceFrameField) {
-    throw new Error(`Deep briefing source frame is missing ${missingSourceFrameField}.`);
-  }
-
-  if (!Array.isArray(deepBriefing.references) || !deepBriefing.references.length) {
-    throw new Error("Deep briefing must include source references.");
-  }
-
-  const invalidCoverageLimit = deepBriefing.coverageLimits.find((limit) => !limit.label || !limit.body);
-
-  if (invalidCoverageLimit) {
-    throw new Error("Each deep briefing coverage limit must include label and body.");
-  }
-
-  const invalidReference = deepBriefing.references.find(
-    (reference) => !reference.label || !isValidSourceUrl(reference.url),
-  );
-
-  if (invalidReference) {
-    throw new Error("Each deep briefing reference must include a label and valid source URL.");
+  if (itemWithInvalidUrl) {
+    throw new Error(`Item ${itemWithInvalidUrl.id} has a source URL that is not http(s).`);
   }
 }
 
