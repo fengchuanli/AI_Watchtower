@@ -12,6 +12,7 @@ const newsJson = readFileSync("data/news.json", "utf8");
 const detailJs = readFileSync("news-detail.js", "utf8");
 const allNewsJs = readFileSync("all-news.js", "utf8");
 const tagsJs = readFileSync("tags.js", "utf8");
+const buildDerivedDataJs = readFileSync("scripts/build-derived-data.mjs", "utf8");
 const archiveJs = readFileSync("archive.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
@@ -480,7 +481,7 @@ if (
   !/历史背景/.test(tagsJs) ||
   !/来源边界/.test(tagsJs) ||
   !/sourceCaveat/.test(tagsJs) ||
-  !/latestItem\.claimBoundary \|\| latestItem\.provenance \|\| latestItem\.nextCheck/.test(tagsJs) ||
+  !/item\.claimBoundary \|\| item\.provenance \|\| item\.nextCheck/.test(buildDerivedDataJs) ||
   !/class="tag-signal-list"/.test(tagsJs) ||
   !/class="tag-source-note"/.test(tagsJs) ||
   !/Company tag pages derive OpenAI, Anthropic, Google, and Meta views/.test(newsDataFormat) ||
@@ -509,12 +510,12 @@ if (
 }
 
 if (
-  !/fetch\("\.\/data\/news-history\.json"/.test(allNewsJs) ||
+  !/fetch\("\.\/data\/news-index\.json"/.test(allNewsJs) ||
   !/const detailUrl = `\.\/news-detail\.html\?id=\$\{encodeURIComponent\(item\.id\)\}&edition=\$\{encodeURIComponent\(item\.editionId\)\}`;/.test(
     allNewsJs,
   )
 ) {
-  errors.push("All-news page must read news-history.json and link flat title rows to in-site detail pages with edition IDs.");
+  errors.push("All-news page must read the derived news-index.json and link flat title rows to in-site detail pages with edition IDs.");
 }
 
 if (
@@ -523,7 +524,7 @@ if (
   !/id="archiveEditionGrid"/.test(archiveHtml) ||
   !/href="\.\/data\/news\.json"[\s\S]*href="\.\/all-news\.html"/.test(archiveHtml) ||
   !/fetchJson\("\.\/data\/news\.json"\)/.test(archiveJs) ||
-  !/fetchJson\("\.\/data\/news-history\.json"\)/.test(archiveJs) ||
+  !/fetchJson\("\.\/data\/news-index\.json"\)/.test(archiveJs) ||
   !/function getEditionTimeLabel/.test(archiveJs) ||
   !/早间版/.test(archiveJs) ||
   !/晚间版/.test(archiveJs) ||
@@ -2026,7 +2027,7 @@ if (
 if (
   !/function renderHistoryLoadError\(\)/.test(allNewsJs) ||
   !/结构化归档文件未能下载成功/.test(allNewsJs) ||
-  !/href="\.\/data\/news-history\.json"[\s\S]*href="\.\/index\.html"[\s\S]*href="\.\/archive\.html"/.test(allNewsJs) ||
+  !/href="\.\/data\/news-index\.json"[\s\S]*href="\.\/index\.html"[\s\S]*href="\.\/archive\.html"/.test(allNewsJs) ||
   !/historyList\.querySelector\("\.feed-retry"\)\?\.addEventListener\("click", loadHistory\)/.test(allNewsJs)
 ) {
   errors.push("All-news loading errors must distinguish data-fetch failure from empty history and offer retry/fallback paths.");

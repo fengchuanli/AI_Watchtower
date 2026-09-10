@@ -144,7 +144,7 @@ function renderLoadError() {
       <p>可以先打开结构化数据，或进入全部 AI 新闻查看已发布题目。</p>
       <div class="feed-state-actions" aria-label="期次归档加载失败后的备用入口">
         <a href="./data/news.json">打开当前数据</a>
-        <a href="./data/news-history.json">打开历史数据</a>
+        <a href="./data/news-index.json">打开历史数据</a>
         <a href="./all-news.html">查看全部 AI 新闻</a>
       </div>
       <button class="feed-retry" type="button">重新加载</button>
@@ -172,7 +172,7 @@ async function loadArchive() {
   try {
     const [currentFeed, history] = await Promise.all([
       fetchJson("./data/news.json"),
-      fetchJson("./data/news-history.json"),
+      fetchJson("./data/news-index.json"),
     ]);
 
     validateCurrentFeed(currentFeed);

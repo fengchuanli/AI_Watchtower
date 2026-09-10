@@ -62,7 +62,10 @@ npx serve .
 │   ├── product-principles.md
 │   └── source-policy.md
 ├── scripts/
+│   ├── build-derived-data.mjs
+│   ├── repair-duplicate-copy.mjs
 │   ├── validate-data.mjs
+│   ├── validate-pages.mjs
 │   └── validate-site.mjs
 ├── app.js
 ├── index.html
@@ -117,9 +120,24 @@ npx serve .
 提交内容更新前可以运行：
 
 ```bash
+node scripts/build-derived-data.mjs
 node scripts/validate-data.mjs
 node scripts/validate-site.mjs
+node scripts/validate-pages.mjs
 ```
+
+## 数据分层
+
+`data/news-history.json` 是归档全文（约 4.5MB），只作为源数据和校验依据，页面不直接读。
+列表页读的是由它生成的派生文件：
+
+| 文件 | 生成方式 | 谁在读 | 体积 |
+| --- | --- | --- | --- |
+| `data/news.json` | 人工/流水线维护 | 首页、详情页 | 约 80KB |
+| `data/news-index.json` | `build-derived-data.mjs` | 全部新闻、公司标签、期次归档 | 约 745KB |
+| `data/news-today.json` | `build-derived-data.mjs` | 首页 TOP3 | 约 80KB |
+
+归档更新后必须重新生成派生文件，否则 `validate-data.mjs` 会报不同步。
 
 后续数据接入方式可以是：
 

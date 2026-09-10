@@ -4,22 +4,7 @@ const historyControls = document.querySelector("#historyControls");
 const historyCategoryFilters = document.querySelector("#historyCategoryFilters");
 const historySort = document.querySelector("#historySort");
 const historyResultNote = document.querySelector("#historyResultNote");
-const requiredHistoryItemFields = [
-  "id",
-  "category",
-  "label",
-  "title",
-  "body",
-  "detailBody",
-  "trend",
-  "detailTrend",
-  "whyRanked",
-  "source",
-  "trustLevel",
-  "verificationStatus",
-  "publishedAt",
-  "time",
-];
+const requiredHistoryItemFields = ["id", "category", "label", "title", "publishedAt", "time"];
 const allCategoryOption = {
   id: "all",
   label: "全部",
@@ -212,7 +197,7 @@ async function loadHistory() {
   `;
 
   try {
-    const response = await fetch("./data/news-history.json", { cache: "no-store" });
+    const response = await fetch("./data/news-index.json", { cache: "no-store" });
 
     if (!response.ok) {
       throw new Error(`News history request failed with ${response.status}`);
@@ -238,7 +223,7 @@ function renderHistoryLoadError() {
       <p>历史 AI 新闻暂时无法读取，请稍后刷新。</p>
       <p>可以先打开原始归档数据，或回到首页查看最新批次摘要。</p>
       <div class="feed-state-actions" aria-label="历史 AI 新闻加载失败后的备用入口">
-        <a href="./data/news-history.json">打开历史数据</a>
+        <a href="./data/news-index.json">打开历史数据</a>
         <a href="./index.html">返回首页</a>
         <a href="./archive.html">查看期次归档</a>
       </div>

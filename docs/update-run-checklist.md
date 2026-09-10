@@ -39,6 +39,8 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Archive diff | For 17:00 JST runs, confirm `docs/archive-diff-summary-format.md` was applied and say whether the morning/evening comparison was done, skipped because only one same-day edition exists, skipped because the update was correction-only with no reader-facing story change, or blocked by archive drift. |
 | Monthly continuity snapshot | Near the end of a plan window, use `docs/monthly-continuity-snapshot.md` when recurring companies, topics, unresolved claims, or resolved checks should inform the next plan or standing editorial rules. Record `done`, `not-needed`, or `blocked`, and do not add fresh source claims from the snapshot. |
 | Rollback check | If bad data was detected, confirm `docs/bad-data-rollback-note.md` was applied and say whether rollback was corrected, not needed, or blocked. |
+| Derived data | 归档写入后先跑 `node scripts/build-derived-data.mjs` 重建 `data/news-index.json` 和 `data/news-today.json`；忘了重建会被 `validate-data.mjs` 拦下。 |
+| Duplicate copy repair | 若校验报出字段重复，跑 `node scripts/repair-duplicate-copy.mjs` 后重新校验。 |
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
 | Commit | Record the local commit message and whether the log can include the final hash without amending itself. News runs must use a `【新闻更新】` title prefix and the log must include `网站可见变化`, naming homepage TOP3, more news feed, all-news, archive, or detail pages where readers can see the update. |
@@ -56,7 +58,7 @@ Candidate intake: done - 3 draft, 4 hold, 2 reject; holds mainly need original-s
 Held-candidate review: done - 4 holds recorded with holdUntilJst, recheckTrigger, freshnessLimit, staleFallback, and nextEditorAction.
 Duplicate reporting: done - manual-clear for 3 drafts; one near-title-review held until a new source action is named.
 Drafting: done - public copy uses minimum source facts and original Chinese interpretation.
-Validation: done - validate-data, validate-site, validate-pages, HTML parse, JSON parse, diff check.
+Validation: done - build-derived-data, validate-data, validate-site, validate-pages, HTML parse, JSON parse, diff check.
 Archive diff: done - morning/evening editions compared for source posture and proof-boundary change.
 Push: blocked-dns
 Commit title: 【新闻更新】发布17点AI新闻：3条研究与产品信号

@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const sourceRegistry = JSON.parse(readFileSync("data/sources.json", "utf8"));
 const newsFeed = JSON.parse(readFileSync("data/news.json", "utf8"));
@@ -1167,6 +1167,47 @@ function validateEditionMetadataReadability(edition, context, editorNote = "") {
   }
 }
 
+const DUPLICATE_COPY_SKIP_FIELDS = new Set([
+  "id",
+  "sourceUrl",
+  "originalUrl",
+  "sourceId",
+  "publishedAt",
+  "time",
+  "category",
+  "label",
+]);
+
+// 自动化流水线曾反复给同一字段追加后缀，产生「X。可用该信号：X。可用该信号：X」这类重复。
+// 修复脚本：node scripts/repair-duplicate-copy.mjs
+function validateNoDuplicatedCopy(item, context) {
+  for (const [field, value] of Object.entries(item)) {
+    if (typeof value !== "string" || DUPLICATE_COPY_SKIP_FIELDS.has(field) || value.length < 40) {
+      continue;
+    }
+
+    const repeatedSegment = value.match(/(.{8,}?)\1/u);
+
+    if (repeatedSegment) {
+      errors.push(
+        `${context} ${item.id} ${field} repeats the segment "${repeatedSegment[1].slice(0, 24)}" back to back. Run node scripts/repair-duplicate-copy.mjs.`,
+      );
+    }
+
+    if (/([一-鿿])\1{2,}/u.test(value)) {
+      errors.push(
+        `${context} ${item.id} ${field} repeats a single character three or more times in a row. Run node scripts/repair-duplicate-copy.mjs.`,
+      );
+    }
+
+    if ((value.match(/可用该信号：/gu) || []).length > 1) {
+      errors.push(
+        `${context} ${item.id} ${field} contains more than one 可用该信号 prefix. Run node scripts/repair-duplicate-copy.mjs.`,
+      );
+    }
+  }
+}
+
 function validateWhoShouldCare(item, context) {
   if (!item.whoShouldCare) {
     errors.push(`${context} ${item.id} must include whoShouldCare for promoted readers.`);
@@ -1488,6 +1529,7 @@ if (!Array.isArray(newsFeed.items)) {
 
   for (const item of promotedItems) {
     validateWhoShouldCare(item, "data/news.json promoted item");
+    validateNoDuplicatedCopy(item, "data/news.json promoted item");
     validateIncidentBriefingReadiness(item, "data/news.json promoted item");
     validateEvidenceThresholdSpecificity(item, "data/news.json promoted item");
     validatePromotedVendorNarrativeCard(item, "data/news.json promoted item");
@@ -2023,6 +2065,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
 
       if (editionIndex === 0) {
         validateWhoShouldCare(item, "data/news-history.json latest promoted item");
+        validateNoDuplicatedCopy(item, "data/news-history.json latest promoted item");
         validateIncidentBriefingReadiness(item, "data/news-history.json latest promoted item");
         validateEvidenceThresholdSpecificity(item, "data/news-history.json latest promoted item");
         validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
@@ -2038,6 +2081,45 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
 
   }
 }
+
+// 列表页读的是 data/news-index.json（由 scripts/build-derived-data.mjs 生成）。
+// 归档更新后如果忘了重建索引，页面会显示旧数据，所以在这里挡一道。
+function validateDerivedNewsIndex() {
+  const indexPath = "data/news-index.json";
+
+  if (!existsSync(indexPath)) {
+    errors.push(`${indexPath} is missing. Run node scripts/build-derived-data.mjs.`);
+    return;
+  }
+
+  const newsIndex = JSON.parse(readFileSync(indexPath, "utf8"));
+  const indexedItems = (newsIndex.editions || []).reduce(
+    (sum, edition) => sum + (edition.items || []).length,
+    0,
+  );
+  const historyItems = (newsHistory.editions || []).reduce(
+    (sum, edition) => sum + (edition.items || []).length,
+    0,
+  );
+
+  if (newsIndex.updatedAt !== newsHistory.updatedAt) {
+    errors.push(
+      `${indexPath} updatedAt ${newsIndex.updatedAt} does not match data/news-history.json ${newsHistory.updatedAt}. Run node scripts/build-derived-data.mjs.`,
+    );
+  }
+
+  if (indexedItems !== historyItems) {
+    errors.push(
+      `${indexPath} has ${indexedItems} items but data/news-history.json has ${historyItems}. Run node scripts/build-derived-data.mjs.`,
+    );
+  }
+
+  if ((newsIndex.editions || []).length !== (newsHistory.editions || []).length) {
+    errors.push(`${indexPath} edition count is out of sync. Run node scripts/build-derived-data.mjs.`);
+  }
+}
+
+validateDerivedNewsIndex();
 
 if (errors.length) {
   console.error(errors.join("\n"));

@@ -198,7 +198,7 @@ async function loadNews() {
 
 async function loadNewsHistory() {
   try {
-    const response = await fetch("./data/news-history.json", { cache: "no-store" });
+    const response = await fetch("./data/news-today.json", { cache: "no-store" });
 
     if (!response.ok) {
       return null;
@@ -826,7 +826,11 @@ function updateArchiveStats(data = {}, history = null) {
     return;
   }
 
-  const editionCount = Array.isArray(history?.editions) ? history.editions.length : 0;
+  const editionCount = Number.isInteger(history?.editionCount)
+    ? history.editionCount
+    : Array.isArray(history?.editions)
+      ? history.editions.length
+      : 0;
   const totalItems = Number.isInteger(history?.totalItems) ? history.totalItems : 0;
 
   archiveEditionCount.textContent = editionCount ? String(editionCount) : "--";

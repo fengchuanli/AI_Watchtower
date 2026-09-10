@@ -42,6 +42,7 @@ node --check app.js
 node --check scripts/validate-data.mjs
 node --check scripts/validate-site.mjs
 node --check scripts/validate-pages.mjs
+node scripts/build-derived-data.mjs
 node scripts/validate-data.mjs
 node scripts/validate-site.mjs
 node scripts/validate-pages.mjs

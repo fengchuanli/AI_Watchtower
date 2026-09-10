@@ -48,7 +48,7 @@ function getSelectedTagId() {
 
 async function loadTags() {
   try {
-    const response = await fetch("./data/news-history.json", { cache: "no-store" });
+    const response = await fetch("./data/news-index.json", { cache: "no-store" });
 
     if (!response.ok) {
       throw new Error(`Tag history request failed with ${response.status}`);
@@ -93,7 +93,7 @@ function summarizeTagItems(items) {
   const categories = [...new Set(items.map((item) => item.label || item.category).filter(Boolean))];
   const sourceRoles = [...new Set(items.map((item) => item.sourceRole || item.trustLevel).filter(Boolean))];
   const sourceCaveat = latestItem
-    ? latestItem.claimBoundary || latestItem.provenance || latestItem.nextCheck || "先读站内事件简报，再用原始来源核对完整事实。"
+    ? latestItem.sourceCaveat || "先读站内事件简报，再用原始来源核对完整事实。"
     : "暂无来源边界；等待后续抓取到相关公司信号。";
 
   return {
