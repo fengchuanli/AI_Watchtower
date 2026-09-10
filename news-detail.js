@@ -226,7 +226,7 @@ function getDiagramNodes(item) {
     {
       label: "这意味着",
       title: "这意味着",
-      body: item.detailTrend,
+      body: stripDetailBoilerplate(item.detailTrend),
       icon: "3",
     },
     {
@@ -260,7 +260,7 @@ function getCanonicalBriefingBlocks(item) {
     {
       label: "01",
       title: "最小事实",
-      body: item.detailBody,
+      body: stripDetailBoilerplate(item.detailBody),
     },
     {
       label: "02",
@@ -290,7 +290,7 @@ function getSourceBoundaryCards(item) {
     {
       title: "本站解读",
       label: item.verificationStatus,
-      body: item.detailTrend,
+      body: stripDetailBoilerplate(item.detailTrend),
     },
     {
       title: "仍不能推出",
@@ -417,9 +417,106 @@ function splitDetailProse(value) {
   return paragraphs.length ? paragraphs : [String(value).trim()];
 }
 
+// detailBody / detailTrend / detailWhyRanked 由流水线在原字段后追加同一段通用说明，
+// 每条新闻都一样，对读者是纯噪声。渲染时去掉，只留这条新闻自己的内容。
+const DETAIL_BOILERPLATE = [
+  /\s*详情页补充：[^。]*。/g,
+  /\s*来源边界是本期排序核心：[^。]*。/g,
+];
+
+function stripDetailBoilerplate(value) {
+  return DETAIL_BOILERPLATE.reduce((text, pattern) => text.replace(pattern, ""), String(value || "")).trim();
+}
+
 function renderDetailProse(value) {
-  return splitDetailProse(value)
+  const cleaned = stripDetailBoilerplate(value);
+
+  if (!cleaned) {
+    return "";
+  }
+
+  return splitDetailProse(cleaned)
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
+}
+
+// 每一段都标明这段话是谁说的：来源原话、本站判断，还是尚未锁定的推断。
+function renderSourceStatus(label, note) {
+  return `<p class="detail-source-status"><b>${escapeHtml(label)}</b><span>${escapeHtml(note)}</span></p>`;
+}
+
+function renderReadingNote(label, body) {
+  if (!body) {
+    return "";
+  }
+
+  return `
+    <aside class="detail-reading-note">
+      <strong>${escapeHtml(label)}</strong>
+      <p>${escapeHtml(body)}</p>
+    </aside>
+  `;
+}
+
+function getVerifySteps(item) {
+  const questions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
+  return [item.nextCheck, ...questions].filter(Boolean);
+}
+
+function getTakeaway(item) {
+  return {
+    headline: getDetailWhyItMatters(item),
+    boundary: item.claimBoundary,
+    firstStep: item.nextCheck,
+  };
+}
+
+function getSourceEntries(item, data) {
+  const entries = [
+    {
+      name: getDetailSourceName(item),
+      title: item.title,
+      date: String(item.publishedAt || "").slice(0, 10) || item.time,
+      role: isMediaSourcedItem(item) ? "二手 · 媒体报道" : "一手 · 来源原文",
+      url: getDetailOriginalUrl(item),
+    },
+  ];
+
+  if (item.originalUrl && item.sourceUrl && item.originalUrl !== item.sourceUrl) {
+    entries.push({
+      name: `${getDetailSourceName(item)}（引用入口）`,
+      title: "本站抓取时使用的链接",
+      date: String(item.publishedAt || "").slice(0, 10),
+      role: "抓取入口",
+      url: item.sourceUrl,
+    });
+  }
+
+  entries.push({
+    name: "AI Watchtower",
+    title: `${data.edition.date} ${data.edition.archiveLabel} 期次整理`,
+    date: data.edition.date,
+    role: "站内整理 · 非独立测量",
+    url: "./archive.html",
+  });
+
+  return entries;
+}
+
+function renderSourceEntries(entries) {
+  return entries
+    .map(
+      (entry, index) => `
+        <li>
+          <span class="source-entry-index">${String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <a href="${escapeHtml(entry.url)}"${entry.url.startsWith("http") ? ' target="_blank" rel="noopener noreferrer"' : ""}>${escapeHtml(entry.name)}</a>
+            <p>${escapeHtml(entry.title)}</p>
+            <small>${escapeHtml(entry.date)} · ${escapeHtml(entry.role)}</small>
+          </div>
+        </li>
+      `,
+    )
     .join("");
 }
 
@@ -550,7 +647,7 @@ function renderMediaOriginalCallout(callout) {
 }
 
 function getDetailFactArticle(item) {
-  return item.detailBody || item.body;
+  return stripDetailBoilerplate(item.detailBody) || item.body;
 }
 
 function getQuickSummary(item) {
@@ -637,28 +734,30 @@ function renderDetail(item, data) {
   const sourceReminder = getDetailSourceReminder(item);
   const mediaOriginalCallout = getMediaOriginalCallout(item);
 
+  const takeaway = getTakeaway(item);
+  const verifySteps = getVerifySteps(item);
+  const sourceEntries = getSourceEntries(item, data);
+  const isMedia = isMediaSourcedItem(item);
+
   detailShell.innerHTML = `
     <div class="incident-hero simplified-detail-hero">
       <p class="eyebrow">Incident Briefing · ${escapeHtml(item.label)}</p>
       <p class="detail-date">${escapeHtml(data.edition.date)} · ${escapeHtml(data.edition.archiveLabel)} · ${escapeHtml(getDetailClaimStatusLabel(item))}</p>
       <h1>${escapeHtml(item.title)}</h1>
       <p class="detail-lede">${escapeHtml(getDetailSummary(item))}</p>
+      <ul class="detail-hero-chips" aria-label="这条信号的基本属性">
+        <li><b>${escapeHtml(sourceName)}</b><span>来源</span></li>
+        <li><b>${escapeHtml(getDetailSourceTypeLabel(item))}</b><span>来源类型</span></li>
+        <li><b>${escapeHtml(getDetailClaimStatusLabel(item))}</b><span>核验状态</span></li>
+        <li><b>${escapeHtml(getDetailOriginalDependencyLabel(item))}</b><span>原文依赖</span></li>
+      </ul>
       <p class="detail-source-reminder">${escapeHtml(sourceReminder)}</p>
     </div>
-
-    <nav class="incident-jump-nav" aria-label="事件简报导航">
-      <a href="#quick-summary">速览</a>
-      <a href="#incident-overview">事件简述</a>
-      <a href="#incident-analysis">怎么理解</a>
-      <a href="#incident-trend">可能变化</a>
-      <a href="#incident-next">继续看哪里</a>
-      <a href="#incident-source">来源与核验</a>
-    </nav>
 
     <section class="quick-summary" id="quick-summary" aria-label="速览">
       <div>
         <p class="eyebrow">30 秒速览</p>
-        <h2>速览</h2>
+        <h2>不看全文也能带走的三句话</h2>
       </div>
       <ol>
         ${renderQuickSummary(quickSummary)}
@@ -671,52 +770,77 @@ function renderDetail(item, data) {
       <div>
         <p class="eyebrow">Proof Path</p>
         <h2>先看这四点</h2>
+        <p class="detail-board-note">左起：来源给了什么事实、可能影响谁、还证明不了什么、下一步查什么。</p>
       </div>
       <div class="canonical-briefing-grid">
         ${renderCanonicalBriefingBlocks(getCanonicalBriefingBlocks(item))}
       </div>
     </section>
 
+    <nav class="incident-jump-nav" aria-label="本页目录">
+      <a href="#incident-overview"><i>01</i>来源说了什么</a>
+      <a href="#incident-analysis"><i>02</i>为什么值得看</a>
+      <a href="#incident-trend"><i>03</i>会改变什么</a>
+      <a href="#incident-source"><i>04</i>证明到哪一步</a>
+      <a href="#incident-next"><i>05</i>自己怎么核对</a>
+      <a href="#incident-editorial"><i>06</i>编辑判断</a>
+    </nav>
+
     <section class="detail-grid simplified-detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
         <section class="detail-block incident-block detail-primary-section" id="incident-overview">
           <span>01 · 事件简述</span>
-          <h2>事件简述</h2>
+          <h2>${escapeHtml(sourceName)}具体说了什么</h2>
+          ${renderSourceStatus(isMedia ? "二手｜媒体报道" : "一手｜来源原文", `${sourceName} · ${String(item.publishedAt || "").slice(0, 10) || item.time}`)}
           <div class="detail-prose article-prose">
             ${renderDetailProse(getDetailFactArticle(item))}
           </div>
+          ${renderReadingNote("这一段的边界", item.provenance)}
         </section>
+
         <section class="detail-block incident-block detail-primary-section" id="incident-analysis">
-          <span>02 · 怎么理解</span>
-          <h2>这件事怎么理解</h2>
+          <span>02 · 这件事怎么理解</span>
+          <h2>为什么这条值得占用你的时间</h2>
+          ${renderSourceStatus("本站判断｜不是来源原话", "以下是 AI Watchtower 的编辑解读，来源没有这样表述。")}
           <div class="detail-prose">
             ${renderDetailProse(item.detailWhyRanked)}
           </div>
           ${item.whoShouldCare ? `<p class="detail-so-what"><strong>谁该关心</strong>${escapeHtml(item.whoShouldCare)}</p>` : ""}
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
+
         <section class="detail-block incident-block detail-primary-section" id="incident-trend">
-          <span>03 · 可能变化</span>
-          <h2>可能带来的变化</h2>
+          <span>03 · 可能带来的变化</span>
+          <h2>如果后续被证实，会改变什么</h2>
+          ${renderSourceStatus("趋势推断｜尚未被证据锁定", "这是对走向的推断，不是已经发生的事实。")}
           <div class="detail-prose">
             ${renderDetailProse(item.detailTrend)}
           </div>
           <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
         </section>
-        <section class="detail-block incident-block detail-primary-section" id="incident-next">
-          <span>04 · 继续看哪里</span>
-          <h2>接下来要看哪里</h2>
-          <p>${escapeHtml(item.nextCheck)}</p>
-          <div class="detail-question-list">
-            <strong>后续观察点</strong>
-            <ul>
-              ${followUpQuestions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}
-            </ul>
-          </div>
-        </section>
+
         <section class="detail-block incident-block source-verification-block detail-secondary-context" id="incident-source">
-          <span>05 · 来源边界</span>
-          <h2>来源与核验边界</h2>
+          <span>04 · 来源与核验边界</span>
+          <h2>这条来源能证明到哪一步</h2>
+          ${renderSourceStatus("核验边界｜本页最关键的一节", "看完上面三段，先确认哪些还只是「报道了」，不是「证实了」。")}
+          <div class="detail-boundary-grid">
+            <article class="boundary-can">
+              <span>来源能支持</span>
+              <p>${escapeHtml(item.provenance)}</p>
+            </article>
+            <article class="boundary-cannot">
+              <span>尚不能证明</span>
+              <p>${escapeHtml(item.claimBoundary)}</p>
+            </article>
+            <article>
+              <span>确认门槛</span>
+              <p>${escapeHtml(item.evidenceThreshold)}</p>
+            </article>
+            <article>
+              <span>降级信号</span>
+              <p>${escapeHtml(item.counterEvidence)}</p>
+            </article>
+          </div>
           <dl class="source-verification-list">
             <div>
               <dt>来源</dt>
@@ -739,19 +863,47 @@ function renderDetail(item, data) {
               <dd>${escapeHtml(getDetailOriginalDependencyLabel(item))}</dd>
             </div>
           </dl>
-          <p class="detail-so-what"><strong>来源能支持</strong>${escapeHtml(item.provenance)}</p>
-          <p class="detail-so-what"><strong>尚不能证明</strong>${escapeHtml(item.claimBoundary)}</p>
-          <p class="detail-so-what"><strong>确认门槛</strong>${escapeHtml(item.evidenceThreshold)}</p>
-          <p class="detail-so-what"><strong>降级信号</strong>${escapeHtml(item.counterEvidence)}</p>
-          <details class="detail-editor-details">
+          <a class="button secondary source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
+        </section>
+
+        <section class="detail-block incident-block detail-primary-section" id="incident-next">
+          <span>05 · 接下来要看哪里</span>
+          <h2>你可以自己核对的几件事</h2>
+          ${renderSourceStatus("行动清单｜按顺序做", "不需要全部做完；第一条通常就能判断这条要不要继续跟。")}
+          <ol class="detail-verify-steps">
+            ${verifySteps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}
+          </ol>
+        </section>
+
+        <section class="detail-block incident-block detail-editorial-section" id="incident-editorial">
+          <span>06 · 编辑判断</span>
+          <h2>本站为什么把它排进这一期</h2>
+          <details class="detail-editor-details" open>
             <summary>编辑评分与入选理由</summary>
             <p><strong>为什么入选</strong>${escapeHtml(getDetailTopReason(item))}</p>
             ${renderDetailSelectionScore(getDetailEditorScore(item))}
           </details>
           <p class="detail-source-reminder">${escapeHtml(sourceReminder)}</p>
-          <a class="button secondary source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
         </section>
       </div>
+    </section>
+
+    <section class="detail-takeaway" aria-label="一句话结论">
+      <p class="eyebrow">Takeaway</p>
+      <p class="takeaway-headline">${escapeHtml(takeaway.headline)}</p>
+      <p class="takeaway-boundary">但目前还证明不了：${escapeHtml(takeaway.boundary)}</p>
+      <p class="takeaway-step"><b>先做这一件</b>${escapeHtml(takeaway.firstStep)}</p>
+    </section>
+
+    <section class="detail-sources" aria-label="情报来源与日期">
+      <div>
+        <p class="eyebrow">Sources</p>
+        <h2>情报来源与日期</h2>
+        <p class="detail-board-note">本页是公开资料的中文整理，不是独立测量或复现。一手来源与二手报道分开标注。</p>
+      </div>
+      <ol class="source-entry-list">
+        ${renderSourceEntries(sourceEntries)}
+      </ol>
     </section>
 
     <div class="detail-actions">
