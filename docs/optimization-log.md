@@ -1,3 +1,30 @@
+## 2026-09-10 23:07 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-10`，所以未回退版次，而是在同日 17:00 版基础上补充 2 条安全非重复官方信号，当前共 14 条，新增 OpenAI AI 政策窗口和 Apple Reference Image / Siri AI 端侧真实性信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、Apple Newsroom、当前首页和历史重复 URL。
+  - OpenAI 与 Apple 条目标为 `官方核对` / `confirmed`；只确认官方政策主张、发布功能、可用性和限制说明，不证明法律已生效、行业已形成共同标准、Reference Image 鉴伪生态已成熟或 Siri AI 效果已外部验证。
+  - 跳过 Databricks 自适应检索等证据更弱或偏厂商/媒体口径的候选，不使用旧稿、聚合页、社区讨论、传闻、付费墙正文、登录墙正文、重复历史 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 729。
+- 网站可见变化: 首页更多新闻 feed 新增 OpenAI AI 政策窗口和 Apple Reference Image / Siri AI 两条情报；首页 TOP3、全部新闻列表、归档页和详情页同步显示 14 条 9月10日情报。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 85 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: planned commit `【新闻更新】补充23点AI新闻：14条政策与端侧真实性信号`.
+
 ## 2026-09-10 20:00 JST
 
 - Focus: 完成当前 30 天计划 Day 29，总结 2026-08-10 至 2026-09-08 这一轮 AI Watchtower 优化中已经改善的首页简报结构、TOP3 证据边界、详情页叙事、候选工作流、连续观察和校验守护，并列出下一轮仍要处理的 VisionHub-style 弱点。
