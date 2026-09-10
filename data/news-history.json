@@ -1,8 +1,1072 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-10",
-  "totalItems": 729,
+  "updatedAt": "2026-09-11",
+  "totalItems": 739,
   "editions": [
+    {
+      "id": "news-1700-2026-09-11",
+      "date": "2026-09-11",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期发布10条AI新闻情报，聚焦AI滥用治理、Agent控制、代码安全与垂直AI入口。",
+      "operationalStatus": "已拉取origin/main；核对官方/可靠媒体来源与历史重复URL，发布10条安全非重复信号。",
+      "editorialInterpretation": "本期发布10条安全非重复信号；媒体作背景，官方/厂商原文只确认发布或主张，不用弱证据补量。",
+      "readerFrame": {
+        "headline": "AI风险从模型能力转向运行时控制、滥用处置和真实业务入口",
+        "whyItMatters": "9月11日版把Anthropic滥用报告、OpenAI事故监管问询、Agent停止机制、AI代码安全扫描、个人Agent邮箱和垂直购物助手放在同一张核查表。",
+        "useThisIssueFor": [
+          "安全、平台和采购团队复核Agent权限、停止机制、滥用分类器、代码扫描复现、审计日志和政府云边界。",
+          "产品、零售、媒体和战略团队跟进个人Agent身份、购物决策入口、媒体真实性工作流和AI基础设施交易监管。"
+        ],
+        "notProvenYet": [
+          "不证明Anthropic滥用拦截、OpenAI事故处置、kill switch、MDASH或NVIDIA检测已被独立验证。",
+          "不证明Instinct邮箱、Instacart Clementine、Mistral迁移案例或NVIDIA媒体AI已经形成可复制商业ROI。"
+        ],
+        "mobile": {
+          "headline": "查AI滥用、Agent控制和代码安全",
+          "summary": "10条覆盖滥用披露、监管问询、停止机制、代码扫描和垂直Agent。",
+          "primaryUses": [
+            "安全团队查滥用处置",
+            "平台团队查停止与权限",
+            "产品团队查Agent身份"
+          ],
+          "proofBoundary": "仍需原始报告、监管文件、产品文档、客户日志和第三方评测"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月10日补充版推进到滥用治理、运行时停止、代码安全和垂直Agent入口",
+        "freshFacts": [
+          "本期新增事实：AP报道Anthropic披露拦截生物、网络和监控相关AI滥用尝试。",
+          "本期新增事实：Axios报道美国参议院小组调查OpenAI Hugging Face事故处置。",
+          "本期新增事实：Axios梳理AI kill switch、权限限制和紧急停止机制讨论。",
+          "本期新增事实：Axios报道DOJ调查NVIDIA与Groq授权协议。",
+          "本期新增事实：TechCrunch报道Instinct给AI助手提供独立邮箱。",
+          "本期新增事实：Instacart宣布Clementine购物助手在美国和加拿大上线。",
+          "本期新增事实：Microsoft称MDASH进入Azure Government预览。",
+          "本期新增事实：Mistral发布AI Agent迁移Fortran遗留代码案例。",
+          "本期新增事实：NVIDIA在IBC展示实时媒体AI与合成内容检测工作流。"
+        ],
+        "repeatedContext": [
+          "延续9月10日Claude事故、OpenAI政策窗口和Apple端侧真实性主线，但不重复已归档URL。",
+          "延续来源边界：媒体材料只给最小事实和背景，官方/厂商材料确认发布或主张，效果仍需第三方或客户侧证据。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "更新AI滥用与监管清单",
+          "count": 5,
+          "meaning": "用来核对Anthropic滥用报告、OpenAI事故问询、kill switch、NVIDIA/Groq交易和AI风险叙事的源文件核查。"
+        },
+        {
+          "label": "查Agent身份入口",
+          "count": 2,
+          "meaning": "用来评估Instinct邮箱和Instacart Clementine如何把Agent带入账户、沟通、计划和交易流程。"
+        },
+        {
+          "label": "评估代码安全工具",
+          "count": 3,
+          "meaning": "用来评估MDASH、Mistral迁移案例和NVIDIA媒体AI是否有代码、日志、客户与第三方证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体与厂商材料混合",
+        "note": "本期可靠媒体6/10、官方/厂商材料4/10：适合做17:00雷达和核查清单，不适合读成最终事实裁定。",
+        "nextCheck": "优先核对Anthropic原始报告、参议院文件、DOJ/SEC材料、产品文档、开源仓库、客户日志和第三方评测。"
+      },
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 4,
+        "share": "4/10",
+        "note": "Axios供应本期4条监管、事故和市场语境信号，适合做政策雷达，不等同于官方调查结论。",
+        "nextCheck": "用参议院文件、DOJ材料、会议实录、公司声明和第三方安全报告校验Axios线索。"
+      },
+      "overreadBoundary": {
+        "label": "不要把雷达读成裁定",
+        "body": "不要把本期读成全市场结论：本期媒体和厂商材料合计占多数，能提示今天应查什么，但不能直接替代原始报告、监管文件、客户日志或第三方评测。",
+        "doNotConclude": "不证明AI滥用处置有效、OpenAI事故责任已定、kill switch成熟、NVIDIA/Groq交易违法或垂直Agent已有稳定ROI。",
+        "useInstead": "适合用来安排Anthropic原始报告、参议院信函、DOJ/SEC文件、产品文档、开源仓库、客户日志和第三方基准核查。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent身份与停止机制同时上桌",
+          "note": "跨期看，昨天的Astra、Apple端侧AI和今天的Instinct邮箱、kill switch讨论都把Agent从能力展示推向权限治理。",
+          "boundary": "不证明现有Agent控制成熟；仍需官方产品文档、权限日志、撤权测试、第三方红队报告和用户侧故障记录。"
+        },
+        {
+          "topic": "policy",
+          "label": "事故披露进入监督周期",
+          "note": "跨期看，Claude事故评估、Anthropic滥用报告、OpenAI事故问询和AI风险话语冲突正在形成政策化时间线。",
+          "boundary": "不证明任何事故责任或法律结论已定案；仍需监管文件、公司答复、原始报告和外部调查。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "防御侧Agent开始产品化",
+          "note": "MDASH和Mistral案例延续代码Agent主线，把价值判断从生成速度转向复现、验证、迁移和审计。",
+          "boundary": "不证明工具效果可复制；仍需开源代码、测试集、客户日志、第三方基准和生产缺陷数据。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "运行时治理增强",
+          "status": "stronger",
+          "previousPattern": "此前模式：9月10日Agent主线集中在Claude事故评估、Astra工作版、Apple端侧AI和Google/Microsoft企业Agent。",
+          "currentSignal": "本期新增Instinct邮箱、Instacart Clementine和Axios kill switch讨论，把Agent权限推向身份、账户和停止控制。",
+          "signalDirection": "增强：从模型能力和企业入口扩展到真实外部身份、交易路径和紧急控制。",
+          "stillUnproven": "仍需产品文档、权限日志、撤权演练、用户控制界面、支付审计和第三方红队报告。"
+        },
+        {
+          "topic": "policy",
+          "label": "事故监督增强",
+          "status": "stronger",
+          "previousPattern": "此前模式：9月10日政策主线是OpenAI政策窗口、NSA/FBI/CISA蒸馏通告、Anthropic事故评估和AP中方回应。",
+          "currentSignal": "本期新增Anthropic滥用处置报道、OpenAI事故参议院问询、NVIDIA/Groq交易调查和风险话语冲突。",
+          "signalDirection": "增强：政策问题从框架讨论推进到调查、交易审查和滥用处置。",
+          "stillUnproven": "仍需参议院信函、OpenAI答复、DOJ文件、Anthropic原始报告、政府通报和听证材料。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "代码安全工具重复但更具体",
+          "status": "stronger",
+          "previousPattern": "历史归档持续跟踪Agent代码工具、Antigravity CLI和企业RAG工程。",
+          "currentSignal": "本期新增MDASH政府云扫描和Mistral遗留代码迁移案例，并延续NVIDIA媒体AI真实性工具线索。",
+          "signalDirection": "增强：代码和媒体Agent从生产力叙事转向安全复现、政府合规、真实性检测和遗留系统迁移。",
+          "stillUnproven": "仍需第三方基准、客户部署日志、生产缺陷数据、代码审查材料和媒体检测报告。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Anthropic",
+          "label": "滥用治理延续",
+          "lastMention": "上一期提及：9月10日Anthropic出现在Claude网络安全事故对齐评估、经济情景模型和研究员辞职背景。",
+          "whatChanged": "本期AP新增Anthropic拦截平台滥用尝试的报道，把关注点从评测事故延伸到真实滥用处置。",
+          "stillUnproven": "仍需Anthropic原始报告、政府通报、受影响方确认、封号样本和外部安全审计。"
+        },
+        {
+          "company": "OpenAI",
+          "label": "事故问询升级",
+          "lastMention": "上一期提及：9月10日OpenAI出现在Astra工作版、Paul Christiano治理任命和AI政策窗口。",
+          "whatChanged": "本期Axios新增参议院小组调查Hugging Face事故处置的报道，给10月1日答复设定核查节点。",
+          "stillUnproven": "仍需参议院信函全文、OpenAI正式答复、METR/Redwood材料、听证记录和内部政策文件。"
+        },
+        {
+          "company": "NVIDIA",
+          "label": "算力与风险叙事并行",
+          "lastMention": "历史归档持续跟踪NVIDIA AI基础设施、开放模型和Agent硬件生态。",
+          "whatChanged": "本期新增NVIDIA/Groq交易调查报道、黄仁勋AI风险评论和IBC媒体AI发布。",
+          "stillUnproven": "仍需DOJ/SEC文件、会议实录、交易协议、第三方媒体AI评测和客户部署日志。"
+        },
+        {
+          "company": "Microsoft",
+          "label": "政府安全扫描补位",
+          "lastMention": "9月10日Microsoft出现在Discovery科研平台和历史企业Agent背景。",
+          "whatChanged": "本期新增MDASH进入Azure Government预览，强调多模型Agent代码扫描与政府云边界。",
+          "stillUnproven": "仍需产品文档、政府客户材料、CyberGym复测、Defender集成说明和部署日志。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/厂商源",
+          "count": 4,
+          "role": "确认产品发布、工具介绍和厂商案例事实；效果、ROI和性能仍需客户或第三方证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 6,
+          "role": "提供监管、事故、市场和产品背景；完整事实、引述和上下文仍回到原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "政策、事故与算力监管",
+          "count": 5,
+          "itemIds": [
+            "anthropic-misuse-bio-cyber-report-ap-2026-09-11",
+            "axios-openai-hugging-face-senate-probe-2026-09-10",
+            "axios-ai-kill-switch-safety-controls-2026-09-10",
+            "axios-nvidia-groq-doj-antitrust-2026-09-10",
+            "axios-jensen-huang-ai-fear-cybersecurity-2026-09-10"
+          ],
+          "meaning": "用来核对AI滥用、事故披露、运行时停止、算力交易和风险叙事背后的正式文件。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent身份与交易入口",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-instinct-agent-email-address-2026-09-09",
+            "instacart-clementine-ai-shopping-assistant-2026-09-09"
+          ],
+          "meaning": "用来检查个人Agent和垂直购物助手进入邮箱、账户、计划和购买路径后的权限边界。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "验证代码安全与媒体AI",
+          "count": 3,
+          "itemIds": [
+            "microsoft-mdash-azure-government-agentic-security-2026-09-08",
+            "mistral-legacy-code-modernization-agents-fortran-2026-09-09",
+            "nvidia-ibc-real-time-ai-media-authenticity-2026-09-09"
+          ],
+          "meaning": "用来评估Agentic工具是否有代码、复现、客户日志、第三方基准和审计材料支撑。"
+        }
+      ],
+      "omittedTopics": {
+        "model": {
+          "status": "无新来源事实",
+          "reason": "本期未发现可安全发布且非重复的新模型发布或系统卡。",
+          "omissionBoundary": "不代表模型竞争降温，只代表本次17:00 JST批次未纳入新的模型源事实。",
+          "evidenceNeeded": "新的官方模型页、系统卡、价格页、API文档或第三方基准会让该主题重新进入当前批次。",
+          "fallback": "读者可回看9月10日Astra、Apple端侧AI和Anthropic事故评估作为历史背景。"
+        },
+        "research": {
+          "status": "无新来源事实",
+          "reason": "本期研究候选多为二次摘要或与已收录主题重复，未提升为当前新闻。",
+          "omissionBoundary": "不代表AI研究没有进展，只代表本批次优先发布更具行动性的监管、工具和产品信号。",
+          "evidenceNeeded": "新的论文原文、代码/数据集、独立复现或实验报告会让研究主题进入下一轮。",
+          "fallback": "读者可在归档页查看Anthropic、OpenAI和arXiv相关历史研究线索。"
+        },
+        "infrastructure": {
+          "status": "已并入政策与工具",
+          "reason": "NVIDIA/Groq交易和NVIDIA媒体AI均已分别放入政策与工具扫描组。",
+          "omissionBoundary": "不代表算力基础设施不重要，只是本期没有单独形成更清晰的基础设施批次。",
+          "evidenceNeeded": "芯片交付、数据中心容量、云合同、监管文件或独立性能数据会让基础设施独立成组。",
+          "fallback": "读者可用NVIDIA/Groq和IBC条目作为本期基础设施背景入口。"
+        },
+        "enterprise": {
+          "status": "已并入Agent与工具",
+          "reason": "Instacart、Mistral、Microsoft和NVIDIA信号均以具体Agent入口或工具形态呈现。",
+          "omissionBoundary": "不代表企业AI落地停滞，只是本期按读者动作合并到更具体的扫描路径。",
+          "evidenceNeeded": "客户生产日志、合同、财报指标、审计报告或第三方评测会让企业落地独立成组。",
+          "fallback": "读者可从Clementine、MDASH、Mistral和NVIDIA媒体AI条目进入企业AI背景。"
+        }
+      },
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "anthropic-misuse-bio-cyber-report-ap-2026-09-11",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：Anthropic披露拦截生物、网络与监控类AI滥用",
+          "body": "AP报道Anthropic披露多类AI滥用拦截。",
+          "summary": "AP报道Anthropic披露多类AI滥用拦截。",
+          "whyItMatters": "这把AI安全争论从“模型会不会失控”拉回到可调查的真实滥用、封号、分类器和政府通报流程。",
+          "detailBody": "AP报道Anthropic披露多类平台滥用尝试，包括网络攻击、监控和可能支持危险生物研究的请求，并称相关账号已被处理。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "前沿模型风险正转向威胁情报工作流：谁发现、谁共享、谁封禁、谁",
+          "detailTrend": "这类报告说明模型公司不只发布能力，也在被要求像安全厂商一样披露滥用样本、处置流程和剩余盲区。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它连接生物安全、网络防御和模型治理，是本期证据质",
+          "topReason": "TOP3原因：需用Anthropic原始报告、政府通报和外部安全评审核对滥用样本与处置效果。",
+          "detailWhyRanked": "本条影响安全、政策和企业采购；AP只能证明报道事实，仍需原始报告与主管机关材料才能升级。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "可靠媒体给出新披露入口，公共安全影响高；完整案例细节必须回到原始报告。"
+          },
+          "impact": "安全和合规团队应把生物、网络、监控滥用分类器、封号证据和政府共享记录列入采购问卷。",
+          "whoShouldCare": "负责模型采购、红队、生物安全审查和平台滥用响应的安全/法务/政策团队应优先核对这条。",
+          "readerUse": "政策/法务/安全团队用来更新AI滥用处置清单：检查请求分类、人工升级、账号处置、政府通报和跨厂商共享机制。",
+          "nextCheck": "查找Anthropic原始威胁报告、相关政府通报、行业共享记录和第三方安全研究对案例样本的复核。",
+          "followUpQuestions": [
+            "Anthropic是否公开完整或删节版威胁情报报告、案例编号和处置时间线？",
+            "是否有政府机构、受影响组织或独立安全研究员确认这些滥用样本与封禁效果？"
+          ],
+          "evidenceThreshold": "需要Anthropic原始报告、政府或受影响方确认、外部安全审计样本，才能从媒体报道升级为已确认平台滥用与处置事实。",
+          "claimBoundary": "AP报道不证明所有请求都有恶意意图，也不证明现有防护已能稳定拦截同类滥用。",
+          "counterEvidence": "若原始报告撤回案例、政府或受影响方否认，或独立审计发现误报率过高，应降级为未充分证实的安全叙事。",
+          "source": "Associated Press",
+          "sourceName": "Associated Press",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "ap-news",
+          "provenance": "Associated Press支持的源事实：报道Anthropic披露并处理网络、监控和潜在生物安全相关AI滥用尝试，涉及Agent、模型、代码、政策或指标边界；完整事实、引述、图表、采访和上下文仍属于原文。",
+          "sourceUrl": "https://apnews.com/article/00266dca90e4f8853f669648998d3bda",
+          "originalUrl": "https://apnews.com/article/00266dca90e4f8853f669648998d3bda",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-11T00:00:00+09:00",
+          "time": "今日",
+          "tags": [
+            "AI安全",
+            "生物安全",
+            "滥用治理"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "可靠媒体给出新披露入口，公共安全影响高；完整案例细节必须回到原始报告。"
+          }
+        },
+        {
+          "id": "axios-openai-hugging-face-senate-probe-2026-09-10",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：美国参议院小组调查OpenAI Hugging Face事故处置",
+          "body": "Axios称参议院小组调查OpenAI事故处置。",
+          "summary": "Axios称参议院小组调查OpenAI事故处置。",
+          "whyItMatters": "模型事故正在从公司安全复盘进入国会问询，披露粒度和外部调查范围会直接影响前沿模型上线节奏。",
+          "detailBody": "Axios称参议员Josh Hawley致信OpenAI，要求其在10月1日前回答与Hugging Face事故及相关内部政策有关的问题。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "当Agent事故进入立法监督，模型公司“内部调查+删节报告”",
+          "detailTrend": "这不是单纯公司公关问题，而是前沿模型事故如何被记录、解释、外部审计和纳入政策的测试。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它把OpenAI事故、国会监督和模型上线安全门槛",
+          "topReason": "TOP3原因：10月1日答复期限给后续核查一个明确源文件节点。",
+          "detailWhyRanked": "国会调查可能改变披露与监管预期；但Axios是媒体报道，需看到信函、答复和听证材料。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "监督节点明确、影响前沿模型治理；待信函与OpenAI答复补强。"
+          },
+          "impact": "政策与安全团队应准备跟踪事故报告、外部调查范围、删节理由和监管问答。",
+          "whoShouldCare": "跟踪AI事故披露、模型上线审批和美国监管风险的政策/法务/安全负责人需要关注这条。",
+          "readerUse": "政策/法务/安全团队用来设置10月1日核查提醒：查参议院信函、OpenAI书面答复、METR/Redwood材料和后续听证。",
+          "nextCheck": "核对参议院公开信、OpenAI正式答复、委员会文件和外部调查报告是否披露更多事故细节。",
+          "followUpQuestions": [
+            "参议院小组是否公布Josh Hawley致OpenAI的公开信函文件、问题清单或委员会新闻稿？",
+            "OpenAI是否在10月1日前提交公开答复、补充事故报告或新的内部政策文件？"
+          ],
+          "evidenceThreshold": "需要委员会文件、OpenAI正式答复或听证记录，才能升级为已确认监管调查与合规要求变化。",
+          "claimBoundary": "Axios报道不证明OpenAI违法或事故根因已定案，也不证明调查必然导致监管行动。",
+          "counterEvidence": "若委员会未发布文件、OpenAI否认收到要求，或调查范围被正式缩小，应降级为政策问询线索。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology支持的源事实：报道参议院小组要求OpenAI说明Hugging Face事故处置和内部政策，涉及Agent、模型、代码、政策或指标边界；完整事实、引述、图表、采访和上下文仍属于原文。",
+          "sourceUrl": "https://www.axios.com/2026/09/10/openai-hugging-face-senate-investigation-hawley",
+          "originalUrl": "https://www.axios.com/2026/09/10/openai-hugging-face-senate-investigation-hawley",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-10T23:59:00+09:00",
+          "time": "今日",
+          "tags": [
+            "监管调查",
+            "AI事故",
+            "OpenAI"
+          ],
+          "companies": [
+            "OpenAI",
+            "Hugging Face"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "监督节点明确、影响前沿模型治理；待信函与OpenAI答复补强。"
+          }
+        },
+        {
+          "id": "axios-ai-kill-switch-safety-controls-2026-09-10",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios聚焦AI kill switch：前沿Agent缺少统一“停止键”",
+          "body": "Axios梳理AI Agent停止机制缺口。",
+          "summary": "Axios梳理AI Agent停止机制缺口。",
+          "whyItMatters": "Agent越能访问文件、代码、邮件和互联网，企业越需要把停止、撤权和审计做成产品级控制。",
+          "detailBody": "Axios报道，多家公司正在构建不同层次的AI紧急停止和权限限制机制，但还没有统一、不可绕过的标准。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "AI安全正从模型对齐扩展到运行时控制：停止键、权限租约、人工",
+          "detailTrend": "真正的问题不是按钮名称，而是Agent在多工具、多账号、多云环境里是否能被可验证地暂停、降权和追责。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它给企业读者一个清晰采购问题：我的Agent失控",
+          "topReason": "TOP3原因：把抽象AI灾难讨论落到权限、日志和运行时停止控制。",
+          "detailWhyRanked": "该信号直接指导企业治理清单；但各公司方案仍需产品文档和外部测试确认。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体综述价值高，具体产品能力需回到各厂商文档验证。"
+          },
+          "impact": "企业安全团队应检查Agent是否支持会话级停止、工具级撤权、预算熔断和不可篡改审计日志。",
+          "whoShouldCare": "正在把Agent接入邮件、文件、代码库、支付或工单系统的平台/安全/采购团队应使用这条更新控制清单。",
+          "readerUse": "政策/法务/安全团队用来审阅Agent上线门禁：停止机制、最小权限、人工批准、隔离环境和事故演练。",
+          "nextCheck": "核对OpenAI、Anthropic、Salesforce MuleSoft和云厂商的正式产品文档、系统卡、审计接口和第三方红队报告。",
+          "followUpQuestions": [
+            "各厂商是否发布Agent停止、撤权、预算熔断和审计日志的正式管理员文档？",
+            "是否有第三方红队或客户演练证明这些停止机制能在多工具任务中生效？"
+          ],
+          "evidenceThreshold": "需要厂商正式文档、管理员界面证据、审计日志样本和第三方红队结果，才能升级为可验证Agent控制能力。",
+          "claimBoundary": "报道不证明任何单一kill switch能覆盖所有模型、工具和部署环境。",
+          "counterEvidence": "若红队显示Agent可绕过停止机制、权限撤销延迟过长或日志不可追溯，应降级为未成熟控制方案。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology支持的源事实：梳理OpenAI、Anthropic和Salesforce等围绕AI Agent停止机制的做法，涉及Agent、模型、代码、政策或指标边界；完整事实、引述、图表、采访和上下文仍属于原文。",
+          "sourceUrl": "https://www.axios.com/2026/09/10/ai-doomsday-doom-fear-kill-switch",
+          "originalUrl": "https://www.axios.com/2026/09/10/ai-doomsday-doom-fear-kill-switch",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-10T23:30:00+09:00",
+          "time": "今日",
+          "tags": [
+            "Agent治理",
+            "运行时控制",
+            "安全"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Salesforce"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "媒体综述价值高，具体产品能力需回到各厂商文档验证。"
+          }
+        },
+        {
+          "id": "axios-nvidia-groq-doj-antitrust-2026-09-10",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：美国司法部调查NVIDIA与Groq授权交易",
+          "body": "Axios称DOJ调查NVIDIA与Groq交易。",
+          "summary": "Axios称DOJ调查NVIDIA与Groq交易。",
+          "whyItMatters": "AI算力与芯片交易开始被按竞争结构审视，非收购式协议也可能进入监管视野。",
+          "detailBody": "Axios称DOJ关注NVIDIA与Groq约200亿美元非排他授权安排的结构，以及它是否绕开传统并购审查。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "监管焦点从大模型扩展到算力供应链：授权、投资、客户融资和供应",
+          "detailTrend": "如果监管开始盯住非收购交易，AI基础设施公司会更难用复杂协议快速扩张产能或控制生态。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它是AI资本与算力市场从商业新闻转向反垄断审查的",
+          "topReason": "监管文件和交易协议将决定这是否只是问询，还是AI基础设施交易范式变化。",
+          "detailWhyRanked": "影响芯片、推理加速和AI创业融资；目前仍是媒体报道，需要DOJ或公司文件补证。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "金额和监管主体使信号重要，但法律状态需官方文件确认。"
+          },
+          "impact": "投资、法务和采购团队应把非排他授权、客户融资和供应绑定纳入AI基础设施交易审查。",
+          "whoShouldCare": "负责AI芯片采购、投融资尽调和反垄断风险评估的战略/法务/财务团队应关注这条。",
+          "readerUse": "政策/法务/安全团队用来更新AI基础设施交易风险表：查协议结构、排他性、融资安排、供货义务和监管问询。",
+          "nextCheck": "核对DOJ公开文件、双方声明、SEC文件、交易协议摘要和后续执法或和解材料。",
+          "followUpQuestions": [
+            "DOJ是否发布传票、民事调查要求或公开执法文件说明调查范围？",
+            "NVIDIA或Groq是否在SEC文件、声明或投资者材料中披露协议结构与监管风险？"
+          ],
+          "evidenceThreshold": "需要DOJ文件、公司正式声明、SEC披露或交易协议细节，才能升级为已确认反垄断调查与交易结构风险。",
+          "claimBoundary": "Axios报道不证明交易违法，也不证明DOJ已经决定采取执法行动。",
+          "counterEvidence": "若DOJ否认调查、公司披露显示协议不触发竞争担忧，或监管无后续动作，应降级为市场问询背景。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology支持的源事实：报道DOJ调查NVIDIA与Groq授权协议的反垄断风险，涉及Agent、模型、代码、政策或指标边界；完整事实、引述、图表、采访和上下文仍属于原文。",
+          "sourceUrl": "https://www.axios.com/2026/09/10/doj-nvidia-groq-antitrust",
+          "originalUrl": "https://www.axios.com/2026/09/10/doj-nvidia-groq-antitrust",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-10T22:30:00+09:00",
+          "time": "今日",
+          "tags": [
+            "AI芯片",
+            "反垄断",
+            "算力"
+          ],
+          "companies": [
+            "NVIDIA",
+            "Groq"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "金额和监管主体使信号重要，但法律状态需官方文件确认。"
+          }
+        },
+        {
+          "id": "axios-jensen-huang-ai-fear-cybersecurity-2026-09-10",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：黄仁勋质疑AI恐惧被安全产业放大",
+          "body": "Axios报道黄仁勋回应AI恐惧叙事。",
+          "summary": "Axios报道黄仁勋回应AI恐惧叙事。",
+          "whyItMatters": "前沿AI风险正在形成公开话语冲突：安全研究、政策监管和算力供应商的利益边界需要分开看。",
+          "detailBody": "Axios称黄仁勋在Goldman Sachs会议上回应AI风险讨论，质疑部分恐惧叙事与网络安全产品需求有关。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "AI治理争论不再只有技术事实，也包含谁从风险叙事、监管门槛和",
+          "detailTrend": "当芯片供应商公开反驳安全恐慌，读者应同时核对技术风险证据和商业立场，而不是把任一方当最终裁判。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它帮助读者识别AI安全争论里的商业激励与证据边界",
+          "topReason": "适合作为政策语境信号，不适合作为风险被证伪或被证明的结论。",
+          "detailWhyRanked": "这条说明市场领袖开始争夺AI风险叙事；但会议发言不能替代安全评测或监管材料。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "叙事冲突明显，证据主要是媒体报道的会议发言。"
+          },
+          "impact": "政策和投资读者应把黄仁勋观点与Anthropic/OpenAI事故材料、系统卡和独立评测并列核对。",
+          "whoShouldCare": "跟踪AI监管话语、算力供应商战略和安全预算的政策/投资/企业采购团队应关注这条。",
+          "readerUse": "政策/法务/安全团队用来分离“风险事实”“商业激励”和“监管立场”，避免把会议观点写成技术结论。",
+          "nextCheck": "核对会议实录、NVIDIA正式材料、独立AI安全评测、事故报告和监管听证中是否出现可验证证据。",
+          "followUpQuestions": [
+            "Goldman Sachs会议是否公开完整会议记录、视频文字稿、文件或NVIDIA书面澄清？",
+            "是否有独立安全评测或事故报告支持或反驳“风险叙事被商业化放大”的判断？"
+          ],
+          "evidenceThreshold": "需要完整会议实录、NVIDIA声明和独立安全证据，才能从媒体语境升级为可评价的行业立场变化。",
+          "claimBoundary": "报道不证明AI风险被夸大，也不证明安全产业的所有警告都出于商业动机。",
+          "counterEvidence": "若完整会议记录、NVIDIA说明文件或独立事故报告显示表述被断章取义或风险证据更强，应收窄为单场会议语境信号。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology支持的源事实：报道黄仁勋在Goldman Sachs会议上评论AI恐惧与网络安全产业需求，涉及Agent、模型、代码、政策或指标边界；完整事实、引述、图表、采访和上下文仍属于原文。",
+          "sourceUrl": "https://www.axios.com/2026/09/10/nvidia-ceo-jensen-huang-ai-anthropic",
+          "originalUrl": "https://www.axios.com/2026/09/10/nvidia-ceo-jensen-huang-ai-anthropic",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-10T22:00:00+09:00",
+          "time": "今日",
+          "tags": [
+            "AI治理",
+            "NVIDIA",
+            "安全产业"
+          ],
+          "companies": [
+            "NVIDIA",
+            "Anthropic"
+          ],
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "叙事冲突明显，证据主要是媒体报道的会议发言。"
+          }
+        },
+        {
+          "id": "techcrunch-instinct-agent-email-address-2026-09-09",
+          "category": "product",
+          "label": "产品",
+          "title": "TechCrunch：Instinct给个人AI助手分配独立邮箱",
+          "body": "TechCrunch称Instinct给AI助手分配邮箱。",
+          "summary": "TechCrunch称Instinct给AI助手分配邮箱。",
+          "whyItMatters": "个人Agent开始拥有可对外通信的身份入口，账户归属、隐私、授权和企业识别都会变复杂。",
+          "detailBody": "TechCrunch称Instinct的新邮箱功能让AI助手处理注册、商家沟通、转发邮件和任务跟进，并在需要用户输入时回到用户。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "个人Agent正从聊天框走向“半独立账号”，下一轮竞争会围绕",
+          "detailTrend": "邮箱让Agent更像一个可交互的数字代表，也让企业和用户更难判断对面是本人、代理人还是自动化系统。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它把Agent权限从“使用工具”推进到“拥有外部",
+          "topReason": "TOP3原因：邮箱、1Password和Stripe组合让个人Agent身份治理变成现实问题。",
+          "detailWhyRanked": "本条适合产品和安全团队更新身份模型；但采用规模和可靠性仍需公司数据和用户侧证据。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "产品形态新颖且影响授权模型，证据来自可靠媒体报道。"
+          },
+          "impact": "产品、安全和客服团队应准备识别AI代理邮箱、授权撤销、敏感信息转发和自动化账户边界。",
+          "whoShouldCare": "正在设计个人Agent、客服流程、账号风控和支付授权的产品/安全/运营团队应跟进这条。",
+          "readerUse": "产品/安全/运营团队用来审查Agent身份设计：邮箱归属、凭证托管、商家沟通、转发权限、付款审批和退出机制。",
+          "nextCheck": "查Instinct官方文档、隐私政策、1Password/Stripe集成说明、用户设置页和企业识别规则。",
+          "followUpQuestions": [
+            "Instinct是否发布邮箱功能的官方帮助文档、权限撤销流程和数据保留说明？",
+            "是否有商家平台政策、风控日志或用户投诉记录说明AI助手邮箱的识别和限制方式？"
+          ],
+          "evidenceThreshold": "需要Instinct官方文档、隐私条款、用户控制界面和第三方集成说明，才能升级为已确认个人Agent身份能力。",
+          "claimBoundary": "TechCrunch报道不证明功能已大规模稳定可用，也不证明AI代理邮箱不会造成身份混淆。",
+          "counterEvidence": "若Instinct官方文档、隐私政策、用户控制界面或事故记录限制功能范围，应收窄为早期产品实验。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "techcrunch-ai",
+          "provenance": "TechCrunch AI支持的源事实：报道Instinct为AI助手推出独立邮箱和相关账户执行设想，涉及Agent、模型、代码、政策或指标边界；完整事实、引述、图表、采访和上下文仍属于原文。",
+          "sourceUrl": "https://techcrunch.com/2026/09/09/viral-ai-assistant-instinct-now-has-its-own-email-address/",
+          "originalUrl": "https://techcrunch.com/2026/09/09/viral-ai-assistant-instinct-now-has-its-own-email-address/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-10T00:13:00+09:00",
+          "time": "今日",
+          "tags": [
+            "个人Agent",
+            "身份",
+            "AI助手"
+          ],
+          "companies": [
+            "Instinct",
+            "1Password",
+            "Stripe"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "产品形态新颖且影响授权模型，证据来自可靠媒体报道。"
+          }
+        },
+        {
+          "id": "instacart-clementine-ai-shopping-assistant-2026-09-09",
+          "category": "product",
+          "label": "产品",
+          "title": "Instacart发布Clementine，把食谱和清单转成购物车",
+          "body": "Instacart宣布Clementine购物助手上线。",
+          "summary": "Instacart宣布Clementine购物助手上线。",
+          "whyItMatters": "零售AI从搜索框变成购买前决策入口，电商平台正争夺“吃什么、买什么、去哪买”的计划层。",
+          "detailBody": "Instacart公告称Clementine面向北美用户上线，Cart Assistant也面向零售商自有网站和App扩展。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "垂直平台正把领域数据、库存信号和大模型对话结合，避免用户把需",
+          "detailTrend": "这类产品的关键不是会聊天，而是能否把实时库存、价格、偏好、促销和结账路径稳定连接起来。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它是消费Agent落到真实交易路径的官方案例，但",
+          "topReason": "需看真实订单、退货、预算命中和零售商侧指标后才能确认商业效果。",
+          "detailWhyRanked": "发布范围和产品能力由官方确认，ROI、篮子大小和留存仍需外部或客户侧验证。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方新闻稿确认上线，商业效果为公司披露口径。"
+          },
+          "impact": "零售、平台和品牌团队应评估AI助手是否正在改写搜索、广告、推荐和结账前决策入口。",
+          "whoShouldCare": "负责电商搜索、零售媒体、履约库存和消费者AI入口的产品/增长/运营团队应关注这条。",
+          "readerUse": "产品/安全/运营团队用来检查垂直Agent上线条件：实时库存、用户偏好、预算约束、零售商白标和结账闭环。",
+          "nextCheck": "核对Instacart后续财报、零售商案例、订单转化、平均篮子、用户留存和第三方体验测试。",
+          "followUpQuestions": [
+            "Instacart是否在下一份财报或投资者材料中披露Clementine使用率、转化率或留存指标？",
+            "Food Bazaar、Harmon’s、ALDI U.S.等零售商是否公布Cart Assistant客户侧效果数据？"
+          ],
+          "evidenceThreshold": "需要财报指标、零售商客户数据、独立体验测试或审计材料，才能升级为已验证消费Agent商业成效。",
+          "claimBoundary": "官方公告证明上线和公司主张，不证明用户长期采用、预算节省或零售商ROI。",
+          "counterEvidence": "若财报不再提及、用户评价显示购物车错误高或零售商暂停接入，应收窄为上线公告。",
+          "source": "Instacart News Releases",
+          "sourceName": "Instacart News Releases",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "sourceId": "instacart-news",
+          "provenance": "Instacart News Releases支持的源事实：公告Clementine购物助手在美国和加拿大上线并扩展Cart Assistant，涉及Agent、模型、代码、政策或指标边界；这是厂商主张，效果、ROI或性能需外部证据。",
+          "sourceUrl": "https://instacart.gcs-web.com/news-releases/news-release-details/meet-clementine-instacarts-ai-shopping-assistant-takes-whats",
+          "originalUrl": "https://instacart.gcs-web.com/news-releases/news-release-details/meet-clementine-instacarts-ai-shopping-assistant-takes-whats",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-09T22:00:00+09:00",
+          "time": "昨日",
+          "tags": [
+            "消费AI",
+            "电商",
+            "AI助手"
+          ],
+          "companies": [
+            "Instacart",
+            "Anthropic",
+            "OpenAI",
+            "Google"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方新闻稿确认上线，商业效果为公司披露口径。"
+          }
+        },
+        {
+          "id": "mistral-legacy-code-modernization-agents-fortran-2026-09-09",
+          "category": "tool",
+          "label": "工具",
+          "title": "Mistral展示AI Agent迁移4万行Fortran遗留代码",
+          "body": "Mistral展示Agent迁移Fortran遗留代码。",
+          "summary": "Mistral展示Agent迁移Fortran遗留代码。",
+          "whyItMatters": "Agent代码迁移正在从小型重构进入遗留系统现代化，但成功标准必须落到测试、架构和人工审查。",
+          "detailBody": "Mistral称案例重点不只是语法翻译，而是处理COMMON blocks、隐式类型和面向对象重构等架构问题。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "企业代码Agent的下一块市场是遗留系统：迁移价值高，但风险",
+          "detailTrend": "遗留代码迁移如果没有测试集、差异分析和领域专家复核，模型生成的现代化代码很容易只在表面成立。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它给企业读者一个从“写新代码”转向“改旧系统”的",
+          "topReason": "需客户侧测试、生产切换记录和代码审查才能确认迁移质量。",
+          "detailWhyRanked": "官方案例可说明Mistral服务方向；客户名称、运行结果和长期维护效果仍待独立材料。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "场景有代表性，但属于厂商案例，独立证据不足。"
+          },
+          "impact": "CIO和工程负责人应把遗留迁移Agent评估重点放在测试覆盖、可解释重构和生产回滚。",
+          "whoShouldCare": "维护能源、金融、制造等遗留系统并评估AI迁移工具的CIO/架构/工程团队应关注这条。",
+          "readerUse": "工程/安全/采购团队用来设计遗留代码迁移PoC：先定义等价测试、业务约束、人工审查点和分阶段切换。",
+          "nextCheck": "核对客户侧技术报告、测试覆盖、生产运行指标、代码审查记录和迁移后缺陷数据。",
+          "followUpQuestions": [
+            "Mistral或客户是否公开迁移测试集、等价性验证方法和生产切换结果？",
+            "是否有第三方代码审查或客户工程博客复核Fortran到C++迁移后的缺陷率和维护成本？"
+          ],
+          "evidenceThreshold": "需要客户技术报告、测试/运行日志、代码审查和第三方复核，才能升级为已验证遗留系统迁移能力。",
+          "claimBoundary": "Mistral文章证明厂商案例叙事，不证明AI Agent可普遍安全迁移所有遗留代码。",
+          "counterEvidence": "若客户未确认、迁移后缺陷率高或测试覆盖不足，应降级为营销案例。",
+          "source": "Mistral AI News",
+          "sourceName": "Mistral AI News",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "sourceId": "mistral-news",
+          "provenance": "Mistral AI News支持的源事实：发布AI Agent迁移4万行Fortran 77遗留代码的厂商案例，涉及Agent、模型、代码、政策或指标边界；这是厂商主张，效果、ROI或性能需外部证据。",
+          "sourceUrl": "https://mistral.ai/news/legacy-code-modernization/",
+          "originalUrl": "https://mistral.ai/news/legacy-code-modernization/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-09T00:00:00+09:00",
+          "time": "昨日",
+          "tags": [
+            "代码迁移",
+            "企业AI",
+            "Agent工具"
+          ],
+          "companies": [
+            "Mistral"
+          ],
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "场景有代表性，但属于厂商案例，独立证据不足。"
+          }
+        },
+        {
+          "id": "nvidia-ibc-real-time-ai-media-authenticity-2026-09-09",
+          "category": "product",
+          "label": "产品",
+          "title": "NVIDIA在IBC扩展实时媒体AI与合成内容检测工作流",
+          "body": "NVIDIA在IBC展示实时媒体AI工作流。",
+          "summary": "NVIDIA在IBC展示实时媒体AI工作流。",
+          "whyItMatters": "生成式媒体越普及，广播和流媒体需要把AI增强与真实性检测放进同一生产管线。",
+          "detailBody": "NVIDIA称AI for Media新增或扩展多项NIM微服务、SDK和工作流，并通过合作伙伴支持实时视频分析与合成检测。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "媒体AI正从后期工具走向直播生产基础设施：增强、翻译、鉴伪和",
+          "detailTrend": "这类方案能否被信任，取决于检测准确率、低延迟、误报处理和广播级审计，而不只是GPU加速。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它把端侧/云侧AI真实性主题延伸到专业媒体工作流",
+          "topReason": "需第三方检测基准、广播客户日志和合规审计确认真实性信号可靠。",
+          "detailWhyRanked": "官方发布确认产品方向；检测与增强效果仍是厂商主张。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。 需用源文件和第三方检测记录复核。",
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "官方发布明确，效果与采用需要客户和第三方材料。"
+          },
+          "impact": "媒体技术团队应把合成检测、实时配音、视频增强和审计日志作为同一套AI生产基础设施评估。",
+          "whoShouldCare": "负责直播、体育转播、流媒体技术和合成内容合规的媒体产品/工程/法务团队应关注这条。",
+          "readerUse": "产品/安全/运营团队用来检查媒体AI采购：真实性分数、延迟、误报、边缘部署、离线环境和合作伙伴集成。",
+          "nextCheck": "核对IBC演示、Wowza/NDI客户材料、第三方合成检测基准、直播日志和合规审计样本。",
+          "followUpQuestions": [
+            "NVIDIA或合作伙伴是否公开SVD真实性检测的准确率、误报率和直播延迟数据？",
+            "是否有广播客户在IBC后发布实际部署日志、合规报告或观众影响指标？"
+          ],
+          "evidenceThreshold": "需要第三方检测基准、客户部署日志、延迟指标和合规审计，才能升级为已验证媒体真实性工作流。",
+          "claimBoundary": "NVIDIA博客证明产品展示和合作方向，不证明合成内容检测已达到行业通用标准。",
+          "counterEvidence": "若第三方测试显示误报/漏报高、直播延迟不可接受或客户未部署，应收窄为展会发布。",
+          "source": "NVIDIA AI Blog",
+          "sourceName": "NVIDIA AI Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "sourceId": "nvidia-blog-ai",
+          "provenance": "NVIDIA AI Blog支持的源事实：提出在IBC 2026扩展AI for Media实时媒体和真实性检测工作流，涉及Agent、模型、代码、政策或指标边界；这是厂商主张，效果、ROI或性能需外部证据。",
+          "sourceUrl": "https://blogs.nvidia.com/blog/ibc-news-2026/",
+          "originalUrl": "https://blogs.nvidia.com/blog/ibc-news-2026/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-09T00:00:00+09:00",
+          "time": "昨日",
+          "tags": [
+            "媒体AI",
+            "合成内容检测",
+            "NVIDIA"
+          ],
+          "companies": [
+            "NVIDIA",
+            "Wowza",
+            "NDI"
+          ],
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "官方发布明确，效果与采用需要客户和第三方材料。"
+          }
+        },
+        {
+          "id": "microsoft-mdash-azure-government-agentic-security-2026-09-08",
+          "category": "tool",
+          "label": "工具",
+          "title": "Microsoft把MDASH Agentic代码扫描带入Azure Government",
+          "body": "Microsoft称MDASH进入Azure Government预览。",
+          "summary": "Microsoft称MDASH进入Azure Government预览。",
+          "whyItMatters": "美国政府软件安全开始引入多Agent漏洞验证，敏感代码能否留在合规云边界内成为采购重点。",
+          "detailBody": "Microsoft称MDASH使用100多个专门Agent寻找、辩论、去重和验证可利用漏洞，并面向部分政府客户预览。 这条详情页只保留源材料能直接支持的最小事实，并把成效、责任或长期影响留给后续源文件核查。",
+          "trend": "AI代码安全正形成“多模型争辩+合规云隔离+可利用性验证”的",
+          "detailTrend": "政府场景强调的不只是模型能力，还包括FedRAMP边界、数据主权、审计和把误报降到可行动列表。 对读者更有用的判断，是把它放进权限、日志、复现、客户指标或监管文件的后续清单。",
+          "whyRanked": "它显示Agentic安全扫描正在进入高合规政府环",
+          "topReason": "需用政府采购文件、客户试点和第三方基准确认Microsoft性能口径。",
+          "detailWhyRanked": "官方博客确认部署与预览方向；96.55基准和成本降低主张仍需外部证据。 本期只把它作为核查入口，不把媒体叙事或厂商指标写成最终结论；后续必须用源文件、日志、指标或第三方报告复核。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方部署信号强，效果数字属于厂商口径。"
+          },
+          "impact": "政府和大型企业应把Agentic扫描的合规边界、模型选择、代码驻留和发现可复现性写入评估表。",
+          "whoShouldCare": "负责政府云、关键系统代码安全和合规AI工具采购的CISO/AppSec/公共部门团队应跟进这条。",
+          "readerUse": "工程/安全/采购团队用来比较MDASH和现有SAST：关注代码边界、误报处理、可利用性证明和审计材料。",
+          "nextCheck": "核对Azure Government产品文档、Microsoft Defender集成说明、政府客户试点、CyberGym基准细节和采购文件。",
+          "followUpQuestions": [
+            "Microsoft是否发布MDASH产品文档、租户访问条件、Defender集成说明或政府云合规材料？",
+            "是否有政府客户、CyberGym材料或第三方评测复核96.55分与成本降低主张？"
+          ],
+          "evidenceThreshold": "需要产品文档、政府采购/试点材料、第三方基准复测和客户部署日志，才能升级为已验证政府AI安全扫描能力。",
+          "claimBoundary": "Microsoft博客证明部署和公司主张，不证明所有政府代码扫描场景都能达到同等效果。",
+          "counterEvidence": "若试点材料缺席、第三方基准低于宣传或合规边界不覆盖敏感代码，应收窄为预览部署公告。",
+          "source": "Microsoft Cloud Blog",
+          "sourceName": "Microsoft Cloud Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "sourceId": "microsoft-cloud-blog",
+          "provenance": "Microsoft Cloud Blog支持的源事实：宣布MDASH多模型Agent代码扫描系统进入Azure Government预览，涉及Agent、模型、代码、政策或指标边界；这是厂商主张，效果、ROI或性能需外部证据。",
+          "sourceUrl": "https://www.microsoft.com/en-us/microsoft-cloud/blog/us-government/2026/09/08/codename-mdash-brings-agentic-ai-security-scanning-to-us-government/",
+          "originalUrl": "https://www.microsoft.com/en-us/microsoft-cloud/blog/us-government/2026/09/08/codename-mdash-brings-agentic-ai-security-scanning-to-us-government/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-08T00:00:00+09:00",
+          "time": "本周",
+          "tags": [
+            "政府云",
+            "代码安全",
+            "Agent工具"
+          ],
+          "companies": [
+            "Microsoft"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方部署信号强，效果数字属于厂商口径。"
+          }
+        }
+      ],
+      "briefing": {
+        "label": "今日简报",
+        "headline": "从失控担忧到可执行控制：AI安全进入源文件核查期",
+        "summary": "本期10条新闻把AI风险拆成更具体的工作项：滥用报告、国会问询、停止机制、交易审查、个人Agent身份、垂直购物入口和代码安全工具。多数信号仍需原始报告、监管文件、客户日志或第三方评测补证。",
+        "cta": "查看本期新闻流",
+        "watchPoints": [
+          {
+            "title": "事故与滥用披露",
+            "body": "先核对Anthropic原始报告和OpenAI事故问询文件，再判断安全治理是否升级。"
+          },
+          {
+            "title": "Agent运行时控制",
+            "body": "检查邮箱、购物车、停止键和权限撤销是否有管理员文档与审计日志。"
+          },
+          {
+            "title": "防御工具证据",
+            "body": "MDASH和Mistral案例需要客户日志、基准、代码审查和第三方复测。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "17:00 JST 深度简报",
+        "title": "AI安全不再只是“模型会怎样”，而是“系统如何停、查、证明”",
+        "subtitle": "9月11日版显示，前沿AI争论正在转向运行时控制、滥用处置、监管问询和业务入口审计。",
+        "dateLabel": "2026年9月11日",
+        "status": "已发布，保留来源边界",
+        "overview": "本期把10条新信号分成三条线：第一是Anthropic、OpenAI、NVIDIA和监管机构相关的事故与政策核查；第二是Instinct和Instacart把Agent推进账户、邮箱和购物决策；第三是Microsoft、Mistral和NVIDIA把AI工具带入代码安全、遗留迁移和媒体真实性工作流。",
+        "timeline": [
+          {
+            "label": "9月9日",
+            "title": "Agent进入身份与交易入口",
+            "body": "Instinct邮箱和Instacart Clementine显示，个人和垂直Agent开始接触账户、通信、库存和结账前决策。"
+          },
+          {
+            "label": "9月10日",
+            "title": "事故与监管问询升温",
+            "body": "Axios报道OpenAI事故问询、kill switch讨论、NVIDIA/Groq调查和黄仁勋风险评论。"
+          },
+          {
+            "label": "9月11日",
+            "title": "滥用处置成为安全主线",
+            "body": "AP报道Anthropic披露并拦截多类AI滥用尝试，把安全讨论带回处置流程与外部核查。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期安全非重复信号"
+          },
+          {
+            "value": "6/10",
+            "label": "来自可靠媒体背景"
+          },
+          {
+            "value": "4/10",
+            "label": "来自官方或厂商原文"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "事故披露",
+            "title": "监管要看的不是口号，而是报告、答复和日志",
+            "body": "Anthropic滥用报道与OpenAI事故问询共同说明，前沿AI公司需要交代发现、升级、封禁、删节和外部审计流程。",
+            "soWhat": "下一步应追踪原始报告、国会信函、公司答复、听证记录和受影响方确认。"
+          },
+          {
+            "number": "02",
+            "label": "运行时控制",
+            "title": "Agent价值越高，停止和撤权越重要",
+            "body": "邮箱、购物车、支付、代码库和政府云都让Agent变成可行动系统，kill switch、权限租约和审计日志成为上线门槛。",
+            "soWhat": "企业采购应要求管理员文档、撤权测试、预算熔断、人工审批和不可篡改日志。"
+          },
+          {
+            "number": "03",
+            "label": "工具证据",
+            "title": "AI代码安全工具必须从“发现”走向“复现”",
+            "body": "MDASH和Mistral案例说明代码Agent正在接管漏洞发现、验证和迁移任务，但效果仍要靠测试与客户数据证明。",
+            "soWhat": "评估时优先看基准复测、沙箱复现、客户部署日志、代码审查和生产缺陷数据。"
+          }
+        ],
+        "actions": [
+          "安全团队：建立AI滥用报告、事故问询、封号证据和政府共享材料的核查表。",
+          "平台团队：检查Agent邮箱、支付、购物车和工具调用是否支持撤权、暂停和审计。",
+          "工程团队：用MDASH类框架评估AI扫描时，把复现与补丁审查放在速度之前。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "这是2026年9月11日17:00 JST批次，不代表全天或全市场完整覆盖。"
+          },
+          {
+            "label": "来源边界",
+            "body": "媒体条目只保留最小事实和AI Watchtower解释，完整引述、图表、采访和上下文仍属于原文。"
+          },
+          {
+            "label": "结论边界",
+            "body": "官方和厂商材料确认发布或主张，不直接证明性能、ROI、安全或监管结论。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "AP报道Anthropic披露拦截多类AI滥用尝试。",
+            "Axios报道OpenAI事故问询、AI停止机制、NVIDIA/Groq调查和黄仁勋观点。",
+            "Instacart、Microsoft、Mistral和NVIDIA分别发布产品或案例材料。"
+          ],
+          "editorialJudgment": [
+            "AI风险正在被拆成更具体的运行时控制、源文件披露和审计问题。",
+            "Agent进入邮箱、购物和代码安全后，身份、权限、停止和日志比单次模型能力更重要。"
+          ],
+          "unknowns": [
+            "尚未看到Anthropic原始威胁报告、OpenAI对参议院的正式答复或DOJ公开文件。",
+            "尚未看到MDASH、Mistral迁移和NVIDIA媒体AI的独立复测或客户侧生产数据。"
+          ]
+        },
+        "references": [
+          {
+            "label": "AP报道Anthropic披露AI滥用拦截",
+            "url": "https://apnews.com/article/00266dca90e4f8853f669648998d3bda"
+          },
+          {
+            "label": "Axios报道OpenAI事故参议院问询",
+            "url": "https://www.axios.com/2026/09/10/openai-hugging-face-senate-investigation-hawley"
+          },
+          {
+            "label": "Microsoft Cloud Blog宣布MDASH进入Azure Government",
+            "url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/us-government/2026/09/08/codename-mdash-brings-agentic-ai-security-scanning-to-us-government/"
+          },
+          {
+            "label": "官方公告宣布Clementine购物助手在北美上线",
+            "url": "https://instacart.gcs-web.com/news-releases/news-release-details/meet-clementine-instacarts-ai-shopping-assistant-takes-whats"
+          }
+        ]
+      }
+    },
     {
       "id": "news-1700-2026-09-10",
       "date": "2026-09-10",
