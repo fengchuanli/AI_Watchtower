@@ -39,6 +39,18 @@ const deepSections = document.querySelector("#deepSections");
 const deepActions = document.querySelector("#deepActions");
 const deepLimits = document.querySelector("#deepLimits");
 const deepReferences = document.querySelector("#deepReferences");
+const todayKeyText = document.querySelector("#todayKeyText");
+const todayKeyLink = document.querySelector("#todayKeyLink");
+const categoryHighlights = document.querySelector("#categoryHighlights");
+const archiveEditionCount = document.querySelector("#archiveEditionCount");
+const archiveItemCount = document.querySelector("#archiveItemCount");
+const archiveUpdatedAt = document.querySelector("#archiveUpdatedAt");
+const highlightCategories = [
+  { id: "model", label: "模型" },
+  { id: "product", label: "产品" },
+  { id: "research", label: "研究" },
+  { id: "policy", label: "政策" },
+];
 const plannedTopicGroups = [
   {
     id: "agent",
@@ -158,15 +170,21 @@ async function loadNews() {
     const dailyTopItems = getDailyTopStories(data, history);
     dailyTopStoryIds = new Set(dailyTopItems.map((item) => item.id));
     updateTodayBriefing(data.briefing);
+    updateTodayKey(data.briefing, data.edition);
     updateTopStories(dailyTopItems);
+    updateCategoryHighlights(news);
     updateDeepBriefing(data.deepBriefing);
     updateHeroStats(data);
+    updateArchiveStats(data, history);
     updateNewsMeta(data);
   } catch (error) {
     news = [];
     dailyTopStoryIds = new Set();
     updateHeroStats();
+    updateTodayKey();
     updateTopStories([]);
+    updateCategoryHighlights([]);
+    updateArchiveStats();
     updateNewsMeta({ statusLabel: "数据未加载", editorNote: "新闻数据暂时无法读取，请稍后重试。" });
     updateCategoryMeta();
     renderFeedMessage("error", "新闻数据暂时无法读取。", true);
@@ -730,6 +748,92 @@ function isValidSourceUrl(sourceUrl) {
   }
 }
 
+function updateTodayKey(briefing, edition) {
+  if (!todayKeyText) {
+    return;
+  }
+
+  const headline = briefing?.headline;
+
+  if (!headline) {
+    todayKeyText.textContent = "今日要点暂未生成，稍后会随新闻数据一起更新。";
+    return;
+  }
+
+  const dateLabel = edition?.date ? `${edition.date} · ` : "";
+  todayKeyText.textContent = `${dateLabel}${headline}`;
+
+  if (todayKeyLink && briefing.cta) {
+    todayKeyLink.textContent = `${briefing.cta} →`;
+  }
+}
+
+function getScoreOutOfFive(item) {
+  const score = getEditorScore(item);
+  const total = Number(score?.total);
+
+  if (!Number.isFinite(total) || total <= 0) {
+    return null;
+  }
+
+  const dimensionCount = ["impact", "novelty", "narrativeStrength", "evidenceQuality", "readerUtility"].filter(
+    (key) => Number.isFinite(Number(score?.[key])),
+  ).length;
+
+  const maxTotal = (dimensionCount || 5) * 5;
+  return Math.round((total / maxTotal) * 50) / 10;
+}
+
+function updateCategoryHighlights(items) {
+  if (!categoryHighlights) {
+    return;
+  }
+
+  const pool = Array.isArray(items) ? items : [];
+
+  categoryHighlights.innerHTML = highlightCategories
+    .map(({ id, label }) => {
+      const item = pool.find((entry) => entry.category === id);
+
+      if (!item) {
+        return `
+          <article class="category-highlight is-empty">
+            <span class="category">${escapeHtml(label)}</span>
+            <h3>本期未捕捉到该分类的新信号</h3>
+            <p>这不代表该分类不重要，只说明本批次没有达到入选门槛的来源事实。</p>
+            <footer><a href="./all-news.html">到归档看历史 →</a></footer>
+          </article>
+        `;
+      }
+
+      return `
+        <article class="category-highlight">
+          <span class="category">${escapeHtml(item.label || label)}</span>
+          <h3><a class="card-detail-link" href="${getDetailUrl(item)}">${escapeHtml(item.title)}</a></h3>
+          <p>${escapeHtml(getItemSummary(item))}</p>
+          <footer>
+            <span>${escapeHtml(getSourceName(item))}</span>
+            <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
+          </footer>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function updateArchiveStats(data = {}, history = null) {
+  if (!archiveEditionCount) {
+    return;
+  }
+
+  const editionCount = Array.isArray(history?.editions) ? history.editions.length : 0;
+  const totalItems = Number.isInteger(history?.totalItems) ? history.totalItems : 0;
+
+  archiveEditionCount.textContent = editionCount ? String(editionCount) : "--";
+  archiveItemCount.textContent = totalItems ? String(totalItems) : "--";
+  archiveUpdatedAt.textContent = data.edition?.archiveLabel || data.updatedAt || "--";
+}
+
 function updateTodayBriefing(briefing) {
   if (!briefing || !briefingWatchPoints) {
     return;
@@ -786,8 +890,19 @@ function getSourceName(item) {
   return item.sourceName || item.source;
 }
 
+const sourceTypeLabels = {
+  official: "官方",
+  research: "研究",
+  regulator: "机构",
+  reliable_media: "媒体背景",
+  media: "媒体背景",
+  community: "社区信号",
+  vendor: "厂商叙事",
+};
+
 function getSourceType(item) {
-  return item.sourceType || item.sourceRole || item.trustLevel;
+  const raw = item.sourceType || item.trustLevel;
+  return sourceTypeLabels[String(raw)] || item.sourceRole || raw || "未标注";
 }
 
 function getClaimStatus(item) {
@@ -832,19 +947,24 @@ function updateTopStories(items) {
       const topReason = getTopReason(item);
       const nextCheck = item.nextCheck;
 
+      const score = getScoreOutOfFive(item);
+
       return `
         <article class="top-story">
-          <span class="top-rank">${String(index + 1).padStart(2, "0")}</span>
+          <div class="top-story-head">
+            <span class="top-rank">${String(index + 1).padStart(2, "0")}</span>
+            ${score ? `<p class="top-score"><b>${score.toFixed(1)}</b><span>/5</span></p>` : ""}
+          </div>
           <div class="top-story-body">
             <p class="eyebrow">${escapeHtml(item.label)} · ${escapeHtml(item.time)}</p>
             <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
             <p class="top-summary">${escapeHtml(getItemSummary(item))}</p>
-            <p class="top-why"><strong>为什么值得关注</strong>${escapeHtml(getWhyItMatters(item))}</p>
             <div class="top-meta" aria-label="来源和发布时间">
-              <span>${escapeHtml(sourceName)}</span>
-              <span>${escapeHtml(sourceType)}</span>
+              <span class="top-source">${escapeHtml(sourceName)}</span>
+              <span class="top-trust">${escapeHtml(sourceType)}</span>
               <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
             </div>
+            <p class="top-why"><strong>为什么值得关注</strong>${escapeHtml(getWhyItMatters(item))}</p>
             <details class="top-editor-details">
               <summary>编辑判断</summary>
               <p><strong>为什么入选 TOP3</strong>${escapeHtml(topReason)}</p>
@@ -958,16 +1078,23 @@ function updateNewsMeta(data) {
   }
 
   const updatedAt = data.updatedAt ? `更新日期 ${data.updatedAt}` : "等待更新";
-  const editionParts = data.edition
+  const headlineParts = [data.statusLabel || "数据状态", updatedAt];
+
+  if (data.edition) {
+    headlineParts.push(`${data.edition.archiveLabel} ${data.edition.id}`, `时区 ${data.edition.timezone}`);
+  }
+
+  const editionDetailParts = data.edition
     ? [
-        `${data.edition.archiveLabel} ${data.edition.id}`,
-        `时区 ${data.edition.timezone}`,
-        `范围：${data.edition.note}`,
-        `运行：${data.edition.operationalStatus}`,
-        `编辑：${data.edition.editorialInterpretation}`,
+        `<span><strong>范围</strong>${escapeHtml(data.edition.note)}</span>`,
+        `<span><strong>运行：</strong>${escapeHtml(data.edition.operationalStatus)}</span>`,
+        `<span><strong>编辑：</strong>${escapeHtml(data.edition.editorialInterpretation)}</span>`,
       ]
-    : ["尚无期次信息", data.editorNote].filter(Boolean);
-  newsMeta.textContent = `${data.statusLabel || "数据状态"} · ${updatedAt} · ${editionParts.join(" · ")}`;
+    : [data.editorNote ? `<span>${escapeHtml(data.editorNote)}</span>` : ""].filter(Boolean);
+
+  newsMeta.innerHTML =
+    `<p class="data-status-line">${escapeHtml(headlineParts.join(" · "))}</p>` +
+    renderFeedMetaDetails("本期范围、运行与编辑判断", editionDetailParts.join(""));
 
   if (readerFrame) {
     readerFrame.innerHTML = renderFeedMetaDetails("本期读者使用框架", renderReaderFrame(data.edition?.readerFrame));

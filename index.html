@@ -53,7 +53,7 @@
         <a href="#today">今日重点</a>
         <a href="#deep-briefing">深度简报</a>
         <a href="#feed">最新新闻流</a>
-        <a href="#signals">观察优先级</a>
+        <a href="#explore">按目的阅读</a>
         <a href="#library">资料库</a>
         <a href="./tags.html">公司连续观察</a>
         <a href="./all-news.html">全部题目列表</a>
@@ -101,44 +101,69 @@
         </div>
       </section>
 
-      <section class="section compact" id="today">
+      <section class="today-key" aria-label="5 秒今日要点">
+        <div class="today-key-inner">
+          <span class="today-key-badge">5 秒</span>
+          <p class="today-key-text" id="todayKeyText">正在读取今日要点...</p>
+          <a class="today-key-link" id="todayKeyLink" href="#deep-briefing">读今日简报 →</a>
+        </div>
+      </section>
+
+      <section class="section compact" id="explore">
         <div class="section-heading">
-          <p class="eyebrow">Today Briefing</p>
-          <h2>今日深挖</h2>
-        </div>
-        <div class="briefing-grid">
-          <article class="lead-brief">
-            <span class="tag" id="briefingLabel">模型</span>
-            <h3 id="briefingHeadline">多模态 Agent 正在从演示走向真实工作流</h3>
-            <p id="briefingSummary">
-              浏览器操作、文档处理、代码执行和企业内检索开始合流。下一轮竞争不只看模型能力，也看权限、记忆、可审计性和交付体验。
+          <p class="eyebrow">Explore</p>
+          <h2>按目的阅读</h2>
+          <p class="section-copy">
+            知道今天发生了什么、判断来源能不能信、学会自己核对。三条路径分别通向不同的页面。
+          </p>
+          <details class="explore-note">
+            <summary>选题逻辑：什么样的信号才会进首页</summary>
+            <p>
+              AI Watchtower 不追求把所有官方更新铺满首页，而是优先选择能写成事件简报的信号：有明确变化、冲突张力、关键数字、影响对象和可核对来源。
             </p>
-            <a href="#feed" id="briefingCta">追踪相关信号</a>
-          </article>
-          <div class="brief-list" id="briefingWatchPoints">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>开源模型继续压缩闭源优势</h3>
-                <p>社区版本迭代更快，企业采购会更关注推理成本与私有部署。</p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>AI 搜索进入答案可信度竞争</h3>
-                <p>引用质量、可追溯和实时性成为产品留存的关键指标。</p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>各国监管从原则进入执行细则</h3>
-                <p>企业需要把模型风险、数据来源和用户告知机制产品化。</p>
-              </div>
-            </article>
-          </div>
+            <ul>
+              <li><strong>范式变化</strong>模型、Agent、开发工具或工作流改变原有组织方式，而不是普通功能更新。</li>
+              <li><strong>战略风险</strong>监管、安全、主权 AI、模型访问或供应连续性发生变化。</li>
+              <li><strong>部署证据</strong>企业、政府、医疗、金融或教育场景出现可审计的真实采用信号。</li>
+              <li><strong>开发者冲击</strong>开源项目、SDK、CLI、协议或基础设施改变 AI 开发和运维方式。</li>
+            </ul>
+          </details>
         </div>
+        <div class="explore-grid">
+          <article>
+            <span class="explore-index">01</span>
+            <p class="explore-kicker">知动向</p>
+            <h3>今天最值得看的三条</h3>
+            <p>按影响力、新颖度和证据质量打分排序，先看结论，再按需展开编辑判断。</p>
+            <a href="#top3">看今日 TOP3 →</a>
+          </article>
+          <article>
+            <span class="explore-index">02</span>
+            <p class="explore-kicker">选来源</p>
+            <h3>官方、研究、机构还是媒体</h3>
+            <p>每条信号都标注来源角色和可核验程度，媒体报道只作背景，不当结论用。</p>
+            <a href="#sources">看情报源覆盖 →</a>
+          </article>
+          <article>
+            <span class="explore-index">03</span>
+            <p class="explore-kicker">学核对</p>
+            <h3>把信号验成结论</h3>
+            <p>每条都写明下一步核对项、证据门槛和反向证据，你可以照着自己查一遍。</p>
+            <a href="./all-news.html">看全部 AI 新闻 →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section compact" id="today">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow">Today Briefing</p>
+            <h2>今日深挖</h2>
+            <p class="section-copy" id="briefingSummary">正在读取今日简报...</p>
+          </div>
+          <a class="text-link" href="#feed" id="briefingCta">追踪相关信号</a>
+        </div>
+        <div class="brief-list" id="briefingWatchPoints" aria-label="今日观察点"></div>
       </section>
 
       <section class="section compact" id="top3">
@@ -159,6 +184,20 @@
             <p>看完今天最重要的 3 条后，可以直接进入全部 AI 新闻，只看标题快速扫一遍。</p>
           </div>
           <a class="button primary" href="./all-news.html" aria-label="打开全部 AI 新闻题目列表">查看全部 AI 新闻 →</a>
+        </div>
+      </section>
+
+      <section class="section compact" id="categories">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow">Latest by Category</p>
+            <h2>分类最新</h2>
+            <p class="section-copy">模型、产品、研究、政策各取本期最新一条，用来快速判断今天哪一类在动。</p>
+          </div>
+          <a class="text-link" href="./all-news.html">看全部分类 →</a>
+        </div>
+        <div class="category-highlights" id="categoryHighlights" aria-live="polite">
+          <p class="feed-state">正在读取分类最新...</p>
         </div>
       </section>
 
@@ -191,17 +230,22 @@
             <p class="eyebrow">More Signals</p>
             <h2>更多新闻流</h2>
             <p class="latest-capture" id="latestCapture">正在确认最新抓取批次...</p>
-            <p class="data-status" id="newsMeta">正在读取新闻数据...</p>
-            <div class="reader-frame" id="readerFrame" aria-label="本期读者使用框架"></div>
-            <div class="edition-change" id="editionChange" aria-label="本期相对上一批次的变化"></div>
-            <div class="overread-boundary" id="overreadBoundary" aria-label="本期不要过度解读提示"></div>
-            <div class="coverage-mix" id="coverageMix" aria-label="本期覆盖结构"></div>
-            <div class="source-risk" id="sourceRisk" aria-label="本期来源集中度提示"></div>
-            <div class="trend-notes" id="trendNotes" aria-label="跨期趋势提示"></div>
-            <div class="topic-continuity" id="topicContinuity" aria-label="主题连续观察提示"></div>
-            <div class="company-continuity" id="companyContinuity" aria-label="公司连续观察提示"></div>
-            <div class="source-families" id="sourceFamilies" aria-label="本期来源族群"></div>
-            <div class="topic-groups" id="topicGroups" aria-label="本期主题分组"></div>
+            <div class="data-status" id="newsMeta">正在读取新闻数据...</div>
+            <details class="editor-notes" aria-label="本期编辑说明">
+              <summary>本期编辑说明 · 10 项（读者框架、覆盖结构、来源集中度、连续观察…）</summary>
+              <div class="editor-notes-body">
+              <div class="reader-frame" id="readerFrame" aria-label="本期读者使用框架"></div>
+              <div class="edition-change" id="editionChange" aria-label="本期相对上一批次的变化"></div>
+              <div class="overread-boundary" id="overreadBoundary" aria-label="本期不要过度解读提示"></div>
+              <div class="coverage-mix" id="coverageMix" aria-label="本期覆盖结构"></div>
+              <div class="source-risk" id="sourceRisk" aria-label="本期来源集中度提示"></div>
+              <div class="trend-notes" id="trendNotes" aria-label="跨期趋势提示"></div>
+              <div class="topic-continuity" id="topicContinuity" aria-label="主题连续观察提示"></div>
+              <div class="company-continuity" id="companyContinuity" aria-label="公司连续观察提示"></div>
+              <div class="source-families" id="sourceFamilies" aria-label="本期来源族群"></div>
+              <div class="topic-groups" id="topicGroups" aria-label="本期主题分组"></div>
+              </div>
+            </details>
             <p class="category-status" id="categoryMeta">正在读取分类说明...</p>
           </div>
           <div class="filter-tabs" role="tablist" aria-label="按主题筛选更多新闻流">
@@ -300,6 +344,28 @@
         </div>
       </section>
 
+      <section class="archive-stats" id="archive-stats" aria-label="归档规模">
+        <dl>
+          <div>
+            <dt id="archiveEditionCount">--</dt>
+            <dd>已归档期次</dd>
+          </div>
+          <div>
+            <dt id="archiveItemCount">--</dt>
+            <dd>累计新闻条目</dd>
+          </div>
+          <div>
+            <dt id="archiveUpdatedAt">--</dt>
+            <dd>最后更新</dd>
+          </div>
+        </dl>
+        <div class="archive-stats-links">
+          <a class="button primary" href="./all-news.html">全部 AI 新闻</a>
+          <a class="button secondary" href="./archive.html">期次归档</a>
+          <a class="button secondary" href="./data/news.json">本期 JSON</a>
+        </div>
+      </section>
+
       <section class="section source-board" id="sources">
         <div class="section-heading row">
           <div>
@@ -332,50 +398,6 @@
         </div>
       </section>
 
-      <section class="section split" id="signals">
-        <div>
-          <p class="eyebrow">Editorial Priority</p>
-          <h2>选题逻辑</h2>
-          <p class="section-copy">
-            AI Watchtower 不追求把所有官方更新铺满首页，而是优先选择能写成事件简报的信号：有明确变化、冲突张力、关键数字、影响对象和可核对来源。
-          </p>
-        </div>
-        <ol class="ranking-list">
-          <li>
-            <span>01</span>
-            <div class="ranking-copy">
-              <strong>范式变化</strong>
-              <p>模型、Agent、开发工具或工作流改变原有组织方式，而不是普通功能更新。</p>
-            </div>
-            <em>高优先级</em>
-          </li>
-          <li>
-            <span>02</span>
-            <div class="ranking-copy">
-              <strong>战略风险</strong>
-              <p>监管、安全、主权 AI、模型访问或供应连续性发生变化。</p>
-            </div>
-            <em>重点追踪</em>
-          </li>
-          <li>
-            <span>03</span>
-            <div class="ranking-copy">
-              <strong>部署证据</strong>
-              <p>企业、政府、医疗、金融或教育场景出现可审计的真实采用信号。</p>
-            </div>
-            <em>看实际落地</em>
-          </li>
-          <li>
-            <span>04</span>
-            <div class="ranking-copy">
-              <strong>开发者冲击</strong>
-              <p>开源项目、SDK、CLI、协议或基础设施改变 AI 开发和运维方式。</p>
-            </div>
-            <em>看构建者采用</em>
-          </li>
-        </ol>
-      </section>
-
       <section class="section" id="library">
         <div class="section-heading">
           <p class="eyebrow">Library</p>
@@ -383,28 +405,28 @@
         </div>
         <div class="library-grid">
           <article>
-            <span>Models</span>
-            <strong>模型数据库</strong>
-            <small>参数、上下文、价格、能力边界</small>
-            <em>规划中</em>
+            <span>Companies</span>
+            <strong>公司连续观察</strong>
+            <small>按公司聚合历史信号，看同一家公司的动作链条</small>
+            <a href="./tags.html">进入 →</a>
           </article>
           <article>
-            <span>Tools</span>
-            <strong>AI 工具索引</strong>
-            <small>按行业、场景和成熟度筛选</small>
-            <em>规划中</em>
+            <span>Archive</span>
+            <strong>全部 AI 新闻</strong>
+            <small>只看标题快速扫，支持按分类和时间排序</small>
+            <a href="./all-news.html">进入 →</a>
           </article>
           <article>
-            <span>Papers</span>
-            <strong>论文速读</strong>
-            <small>把研究结论翻译成产品判断</small>
-            <em>规划中</em>
+            <span>Editions</span>
+            <strong>期次归档状态</strong>
+            <small>每个批次的发布状态、条数与差异摘要</small>
+            <a href="./archive.html">进入 →</a>
           </article>
           <article>
-            <span>Policy</span>
-            <strong>监管追踪</strong>
-            <small>法规、版权、数据合规变化</small>
-            <em>规划中</em>
+            <span>Rules</span>
+            <strong>来源与判断规则</strong>
+            <small>来源分级、版权安全和编辑核对清单</small>
+            <a href="https://github.com/fengchuanli/AI_Watchtower/tree/main/docs" target="_blank" rel="noopener noreferrer">进入 →</a>
           </article>
         </div>
       </section>
