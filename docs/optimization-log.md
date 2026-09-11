@@ -1,3 +1,32 @@
+## 2026-09-12 08:14 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-12`，发布 10 条安全非重复信号，聚焦 OpenAI Habitat 平台工程、Google GTIG AI Threat Tracker、OpenAI 美国政府 AI 访问、Mistral/Cloudera 主权企业 AI、NVIDIA d-Matrix NVLink Fusion、NVIDIA Robotaxi 三计算平台、Anthropic/胡塞双用途滥用报道、美国国会 AI 监管压力、Gusto 小企业 AI 招聘数据和 Codex 科研工作流。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、Google Threat Intelligence、Mistral News、NVIDIA AI Blog、AP、Axios Technology、当前首页和历史重复 URL。
+  - 新增官方来源 `google-threat-intelligence`，来源总数更新为 88。
+  - OpenAI 与 Google 条目标为 `官方核对` / `confirmed`；Mistral、NVIDIA 与 OpenAI科研案例中效果性叙事按 `厂商主张` 边界处理；AP 与 Axios 条目标为 `媒体背景` / `reported` / `originalDependency: must-read`。
+  - 未使用旧稿、聚合页、社区讨论、传闻、付费墙正文、登录墙正文、重复历史 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 755。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月12日17:00 版 10 条情报；读者可在首页看到 AI 平台工程、Agent式威胁情报、政府AI访问、主权企业AI、AI工厂推理芯片、Robotaxi平台和AI监管压力更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: planned commit `【新闻更新】发布17点AI新闻：10条平台工程与安全治理信号`.
+
 ## 2026-09-11 23:07 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-11`，所以未回退版次，而是在同日 17:00 版基础上补充 6 条安全非重复官方/厂商信号，当前共 16 条，新增 OpenAI Agents API、ChatGPT for Financial Services、ChatGPT Work Data agent、GPT-Live-1 API、Salesforce Trusted Enterprise AI Harness 和 NVIDIA/Skild S1 Physical AI。
