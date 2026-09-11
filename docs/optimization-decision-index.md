@@ -16,8 +16,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | --- | --- | --- | --- |
 | Previous Day 28 | Complete | `829b83e` | `docs/homepage-edition-preflight.md` has a First-Screen Reader Order Guard, and `scripts/validate-site.mjs` enforces hero -> today briefing -> TOP3 -> deep briefing -> compact feed plus data-backed today/TOP3/feed hooks. |
 | Previous Day 29 | Complete | `5a0ae94` | `docs/monthly-optimization-summary.md` summarizes the 2026-08-10 to 2026-09-08 cycle's homepage, detail-page, candidate workflow, continuity, validation, and remaining VisionHub-style weaknesses. |
-| Previous Day 30 | Complete | `pending` | `docs/optimization-plan.md` now covers 2026-09-11 through 2026-10-10 and puts VisionHub-style briefing polish, mobile reading, article readability, update workflow friction, and reader-visible continuity first. |
-| Day 0 | Complete | `pending` | `docs/visionhub-briefing-scorecard.md` gives homepage/detail edits a pass/partial/fail check for five-second understanding, TOP3 reader use, source boundary, original-source dependency, mobile burden, continuity use, and visual-aid purpose. |
+| Previous Day 30 | Complete | `166baeb` | `docs/optimization-plan.md` now covers 2026-09-11 through 2026-10-10 and puts VisionHub-style briefing polish, mobile reading, article readability, update workflow friction, and reader-visible continuity first. |
+| Day 0 | Complete | `166baeb` | `docs/visionhub-briefing-scorecard.md` gives homepage/detail edits a pass/partial/fail check for five-second understanding, TOP3 reader use, source boundary, original-source dependency, mobile burden, continuity use, and visual-aid purpose. |
 
 ## Historical Guard Anchors
 

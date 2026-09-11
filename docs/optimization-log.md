@@ -1,3 +1,26 @@
+## 2026-09-11 20:00 JST
+
+- Focus: 完成上一轮 30 天计划 Day 30，并继续执行新计划 Day 0；将 `docs/optimization-plan.md` 滚动到 2026-09-11 至 2026-10-10，明确下一轮以 VisionHub-style 中文简报质量、手机 1 到 3 分钟阅读、详情页叙事一致性、新闻更新低摩擦和读者可见连续观察为核心。
+- Changed files:
+  - `README.md`
+  - `docs/optimization-plan.md`
+  - `docs/visionhub-briefing-scorecard.md`
+  - `docs/optimization-decision-index.md`
+  - `scripts/validate-site.mjs`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/monthly-optimization-summary.md` 和 `docs/optimization-log.md` 顶部条目。
+  - 本次只更新优化计划、简报评分规则、决策索引和校验锚点，没有新增新闻事实、来源正文改写、媒体图片、付费墙内容或对外报道结论。
+- 网站可见变化：无，属于规则/校验/计划更新；后续维护者可在 `docs/optimization-plan.md` 看到新一轮 30 天优化方向，并在 `docs/visionhub-briefing-scorecard.md` 使用 5 秒理解、TOP3读者用途、来源边界、原文依赖、移动负担、连续观察和视觉辅助评分。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 87 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, the 2026-09-11 through 2026-10-10 plan anchors, and the new VisionHub briefing scorecard guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `166baeb` (`【VisionHub网站风格优化】规划新一轮简报质量优化`); log/index record commit follows this entry.
+
 ## 2026-09-11 08:17 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-11`，发布 10 条安全非重复信号，聚焦 Anthropic 滥用处置、OpenAI Hugging Face 事故监管问询、AI Agent 停止机制、NVIDIA/Groq 交易调查、个人 Agent 邮箱、Instacart 垂直购物助手、MDASH 政府代码扫描、Mistral 遗留代码迁移和 NVIDIA 实时媒体 AI。
