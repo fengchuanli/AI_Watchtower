@@ -1,3 +1,31 @@
+## 2026-09-11 23:07 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-11`，所以未回退版次，而是在同日 17:00 版基础上补充 6 条安全非重复官方/厂商信号，当前共 16 条，新增 OpenAI Agents API、ChatGPT for Financial Services、ChatGPT Work Data agent、GPT-Live-1 API、Salesforce Trusted Enterprise AI Harness 和 NVIDIA/Skild S1 Physical AI。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、Salesforce Newsroom、NVIDIA AI Blog、当前首页和历史重复 URL。
+  - 6 个新增 URL 均未出现在当前首页或历史归档；本次不新增来源注册项，沿用已登记的 `openai-news`、`salesforce-news` 与 `nvidia-blog-ai`。
+  - OpenAI 与 Salesforce 条目标为 `官方核对` / `confirmed`；NVIDIA/Skild 条目标为 `厂商主张` / `vendor-claim`；只确认发布、架构、能力范围和厂商主张，不证明生产稳定性、合规适配、ROI、物理机器人泛化或第三方评测结论。
+  - 未使用旧稿、聚合页、社区讨论、传闻、付费墙正文、登录墙正文、重复历史 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 745。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月11日17:00 版 16 条情报；读者可在首页看到 Agent API、金融AI、企业数据Agent、实时语音API、Salesforce企业Agent控制层和Physical AI机器人更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 16 current news items against 87 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: planned commit `【新闻更新】补充23点AI新闻：16条Agent基础设施与企业数据信号`.
+
 ## 2026-09-11 20:00 JST
 
 - Focus: 完成上一轮 30 天计划 Day 30，并继续执行新计划 Day 0；将 `docs/optimization-plan.md` 滚动到 2026-09-11 至 2026-10-10，明确下一轮以 VisionHub-style 中文简报质量、手机 1 到 3 分钟阅读、详情页叙事一致性、新闻更新低摩擦和读者可见连续观察为核心。
