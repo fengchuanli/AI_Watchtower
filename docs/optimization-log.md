@@ -25,7 +25,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit note: planned commit `【新闻更新】发布17点AI新闻：10条平台工程与安全治理信号`.
+- Commit: `cb404b1` (`【新闻更新】发布17点AI新闻：10条平台工程与安全治理信号`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry was rejected by the app safety review because publishing local commits to shared `origin/main` needs explicit user approval. Local `main` contains the verified news update commit but has not been pushed.
 
 ## 2026-09-11 23:07 JST
 
