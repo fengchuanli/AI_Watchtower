@@ -100,6 +100,7 @@ npx serve .
 - 反向证据可观察结果写法：`docs/counter-evidence-observable-guide.md`
 - 详情页技术主张审稿：`docs/detail-page-review-guide.md`
 - 首页版次发布预检：`docs/homepage-edition-preflight.md`
+- VisionHub 简报质量评分：`docs/visionhub-briefing-scorecard.md`
 - 厂商叙事首页提升规则：`docs/vendor-narrative-promotion-rule.md`
 - 新闻更新运行清单：`docs/update-run-checklist.md`
 - 短批次发布判断：`docs/partial-batch-publication-guide.md`

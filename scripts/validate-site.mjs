@@ -60,6 +60,7 @@ const productPrinciples = readFileSync("docs/product-principles.md", "utf8");
 const localPreviewQa = readFileSync("docs/local-preview-qa.md", "utf8");
 const githubPagesReadiness = readFileSync("docs/github-pages-readiness.md", "utf8");
 const monthlyOptimizationSummary = readFileSync("docs/monthly-optimization-summary.md", "utf8");
+const visionhubBriefingScorecard = readFileSync("docs/visionhub-briefing-scorecard.md", "utf8");
 const optimizationDecisionIndex = readFileSync("docs/optimization-decision-index.md", "utf8");
 const optimizationLogArchiveGuide = readFileSync("docs/optimization-log-archive-guide.md", "utf8");
 const automationHealthCheck = readFileSync("docs/automation-health-check.md", "utf8");
@@ -1351,11 +1352,11 @@ if (
   errors.push("News gathering rules must target 10+ qualified items per run and define TOP3 as a same-day ranking, not the latest batch first three items.");
 }
 if (
-  !/2026-08-10 through 2026-09-08/.test(optimizationPlan) ||
-  !/Homepage Edition Quality/.test(optimizationPlan) ||
-  !/Source And Candidate Workflow Friction/.test(optimizationPlan) ||
-  !/Detail Pages And Proof Boundaries/.test(optimizationPlan) ||
-  !/Continuity And Archive Usefulness/.test(optimizationPlan) ||
+  !/2026-09-11 through 2026-10-10/.test(optimizationPlan) ||
+  !/Homepage Briefing Clarity/.test(optimizationPlan) ||
+  !/Detail-Page Article Quality/.test(optimizationPlan) ||
+  !/News Update Workflow Friction/.test(optimizationPlan) ||
+  !/Reader-Visible Continuity/.test(optimizationPlan) ||
   !/create the next 30-day plan/.test(optimizationPlan) ||
   !/Do not stop daily optimization/.test(optimizationPlan)
 ) {
@@ -1421,6 +1422,23 @@ if (
   !/Day 0[\s\S]*homepage-edition-preflight\.md/.test(optimizationDecisionIndex)
 ) {
   errors.push("Homepage edition preflight must stay linked and preserve reader question, TOP3 use, source-boundary, mobile scan, proof-boundary, and archive-mirror checks.");
+}
+
+if (
+  !/docs\/visionhub-briefing-scorecard\.md/.test(readme) ||
+  !/VisionHub Briefing Scorecard/.test(visionhubBriefingScorecard) ||
+  !/fiveSecondUnderstanding/.test(visionhubBriefingScorecard) ||
+  !/top3ReaderUse/.test(visionhubBriefingScorecard) ||
+  !/sourceBoundaryVisible/.test(visionhubBriefingScorecard) ||
+  !/originalSourceDependency/.test(visionhubBriefingScorecard) ||
+  !/mobileBurden/.test(visionhubBriefingScorecard) ||
+  !/continuityUse/.test(visionhubBriefingScorecard) ||
+  !/visualAidPurpose/.test(visionhubBriefingScorecard) ||
+  !/docs\/homepage-edition-preflight\.md/.test(visionhubBriefingScorecard) ||
+  !/docs\/detail-page-review-guide\.md/.test(visionhubBriefingScorecard) ||
+  !/Day 0[\s\S]*visionhub-briefing-scorecard\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("VisionHub briefing scorecard must stay linked and preserve first-screen, TOP3, source-boundary, mobile, continuity, and visual-aid checks.");
 }
 
 if (
