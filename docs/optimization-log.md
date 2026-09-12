@@ -1,3 +1,31 @@
+## 2026-09-13 08:12 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-13`，发布 10 条安全非重复信号，聚焦前沿AI放缓、OpenAI IPO安全表态、Anthropic/NVIDIA IPO锚定投资报道、AI基建债务、Oracle AI云现金流、生物安全监管、Cognition/Devin Astra测试证据、Gemini Windows桌面入口和Google Cloud Agent生产控制层。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 AP、Axios Technology、Reuters/MarketScreener转载、OpenAI News、Google Keyword AI、Google Cloud Blog、当前首页和历史重复 URL。
+  - 本次不新增来源注册项，沿用已登记的 `ap-news`、`axios-ai`、`reuters-technology`、`openai-news`、`google-keyword-ai` 与 `google-cloud-ai-blog`，来源总数保持 88。
+  - AP、Axios 与 Reuters 条目标为 `媒体背景` / `reported` / `originalDependency: must-read`；OpenAI/Cognition 客户案例按 `厂商主张` 处理；Google 条目标为 `官方核对`，只确认发布和功能范围，不证明采用、效果、融资完成、监管落地或信用风险结论。
+  - 未使用旧稿、聚合页、社区讨论、传闻、付费墙正文、登录墙正文、重复历史 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 770。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月13日17:00 版 10 条情报；读者可在首页看到前沿AI放缓、安全影响IPO、AI债务/Oracle现金流、Gemini Windows和企业Agent控制层更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: planned commit `【新闻更新】发布17点AI新闻：10条安全节奏与资本约束信号`.
+
 ## 2026-09-12 23:10 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-12`，所以未回退版次，而是在同日 17:00 版基础上补充 5 条安全非重复信号，当前合计 15 条，新增 Anthropic 9月威胁报告、TechCrunch 数学归因争议、Garry Tan 蒸馏规则观点、VentureBeat Patch Tuesday AI 透明度和 TechCrunch Mecka 机器人训练数据融资信号。
