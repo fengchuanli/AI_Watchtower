@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `3f6416b` (`【VisionHub网站风格优化】梳理首页首屏今日变化`); log/index record commit follows this entry.
+- Commit: `3f6416b` (`【VisionHub网站风格优化】梳理首页首屏今日变化`); log/index record commit `cb387f9` (`【网站优化】记录首屏今日变化优化`), pushed to `origin/main`.
 
 ## 2026-09-12 08:14 JST
 
