@@ -1,3 +1,35 @@
+## 2026-09-12 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 1，复查首页 hero、今日简报和 `readerFrame.mobile`，让首屏先回答今天 AI 发生了什么变化，再给核查边界。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-today.json`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/visionhub-briefing-scorecard.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只把既有 9月12日17:00 版事实重新组织成更清楚的首屏阅读路径，并同步当前归档镜像。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 今日要点、简报标题和 mobile frame 都先说底层平台、安全源文件、政府与企业采用三条变化。
+  - TOP3 reader use: partial - 本次未改 TOP3 卡片层级，Day 2 继续处理。
+  - Source boundary visible: pass - 新文案继续保留采购文件、报告、IOC、客户证据和第三方基准等核查边界。
+  - Original source dependency: pass - 未扩写媒体来源事实，AP/Axios/GTIG 等仍只是源文件核查入口。
+  - Mobile burden: pass - `readerFrame.mobile` 改成三条具体读者用途：平台团队、安全团队、采购团队。
+  - Continuity use: partial - 本次只整理当前首屏变化，未新增跨期连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化：读者在首页 5 秒今日要点、今日简报和深度简报里的本期读者使用框架，可先按「底层平台」「安全源文件」「政府与企业采用证据」三条线理解 9月12日17:00 版 AI 情报。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `3f6416b` (`【VisionHub网站风格优化】梳理首页首屏今日变化`); log/index record commit follows this entry.
+
 ## 2026-09-12 08:14 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-12`，发布 10 条安全非重复信号，聚焦 OpenAI Habitat 平台工程、Google GTIG AI Threat Tracker、OpenAI 美国政府 AI 访问、Mistral/Cloudera 主权企业 AI、NVIDIA d-Matrix NVLink Fusion、NVIDIA Robotaxi 三计算平台、Anthropic/胡塞双用途滥用报道、美国国会 AI 监管压力、Gusto 小企业 AI 招聘数据和 Codex 科研工作流。
