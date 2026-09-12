@@ -24,7 +24,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit note: planned commit `【新闻更新】发布17点AI新闻：10条安全节奏与资本约束信号`.
+- Commit: `947e0df` (`【新闻更新】发布17点AI新闻：10条安全节奏与资本约束信号`), pushed to `origin/main`.
 
 ## 2026-09-12 23:10 JST
 
