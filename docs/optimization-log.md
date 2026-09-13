@@ -1,3 +1,33 @@
+## 2026-09-14 08:14 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-14`，发布 10 条安全非重复信号，聚焦美国AI安全减速政治回应、Anthropic蒸馏/Agent沙盒风险、Google Cloud编码Agent插件、Meta Muse早期采用、NVIDIA AI基建增长口径、OpenAI数学归因争议和AI放大公共系统漏洞。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 AP、Axios AI/Technology、TechCrunch AI、The Verge AI、Google Cloud Blog、当前首页和历史重复 URL。
+  - 本次不新增来源注册项，沿用已登记的 `ap-news`、`axios-ai`、`techcrunch-ai`、`theverge-ai` 与 `google-cloud-ai-blog`，来源总数保持 88。
+  - 9 条可靠媒体项目均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、趋势解释、来源边界和下一步核查入口；Google Cloud 项目标为 `官方核对`，只确认插件发布事实，不证明采用、效率或安全效果。
+  - 跳过已在历史归档出现的 OpenAI 9月10日官方发布、Astra Pro订阅暂停、公共服务Agent请求、Pocket FM、Maven Robotics、Amodei单篇AP报道和其他重复URL；未使用聚合页、社区讨论、传闻、付费墙正文、登录墙正文、旧稿或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 784。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+  - Archive diff: skipped-one-edition - only one same-day archive edition exists for 2026-09-14, so no morning/evening comparison was written.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月14日17:00 版 10 条情报；读者可在首页看到AI安全减速政治回应、Anthropic蒸馏/Agent沙盒、Google Cloud编码Agent插件、Meta Muse、NVIDIA基建增长和OpenAI数学归因更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json` and `data/news-history.json` with `python3 -m json.tool`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, and the homepage overread-boundary rendering guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending (`【新闻更新】发布17点AI新闻：10条安全减速与Agent风险信号`).
+
 ## 2026-09-13 23:10 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-13`，所以未回退版次，而是在同日 17:00 版基础上补充 4 条安全非重复信号，当前合计 14 条，新增 OpenAI Astra 需求下 Pro 新订阅暂停、AI Agent 冲击公共服务请求、Pocket FM AI 内容生产经济性和 Maven Robotics 仓储 Physical AI 融资/部署信号。
