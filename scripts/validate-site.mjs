@@ -378,13 +378,20 @@ if (
   !/function updateTopStories/.test(appJs) ||
   !/function getItemSummary/.test(appJs) ||
   !/function getWhyItMatters/.test(appJs) ||
+  !/function getCompactTopReason/.test(appJs) ||
+  !/function getReaderUse/.test(appJs) ||
   !/class="top-summary"/.test(appJs) ||
-  !/class="top-why"/.test(appJs) ||
+  !/class="top-brief-list"/.test(appJs) ||
+  !/为什么现在/.test(appJs) ||
+  !/读者用途/.test(appJs) ||
+  !/来源边界/.test(appJs) ||
+  !/下一步核验/.test(appJs) ||
   !/class="top-editor-details"/.test(appJs) ||
-  !/编辑判断/.test(appJs) ||
+  !/展开评分与原文依赖/.test(appJs) ||
+  !/\.top-brief-list/.test(styles) ||
   !/\.top-editor-details/.test(styles)
 ) {
-  errors.push("Homepage TOP3 must show news content first and move editorial judgment into an expandable area.");
+  errors.push("Homepage TOP3 must show title, minimum fact, why now, reader use, source boundary, next-check path, and keep scoring details expandable.");
 }
 
 if (

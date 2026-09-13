@@ -2644,8 +2644,7 @@ h3 {
   margin: 0;
 }
 
-.top-summary,
-.top-why {
+.top-summary {
   margin: 0;
   color: var(--ink);
   line-height: 1.65;
@@ -2656,20 +2655,44 @@ h3 {
   font-weight: 750;
 }
 
-.top-why {
-  padding: 12px 14px;
-  background: var(--bg-inset);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font-size: 14px;
-}
-
-.top-why strong,
 .top-editor-details strong {
   display: block;
   margin-bottom: 4px;
   color: var(--cyan);
   font-size: 12px;
+}
+
+.top-brief-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.top-brief-list div {
+  display: grid;
+  grid-template-columns: minmax(72px, 0.28fr) minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--bg-inset);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.top-brief-list dt,
+.top-brief-list dd {
+  margin: 0;
+}
+
+.top-brief-list dt {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.top-brief-list dd {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .top-meta,
@@ -2839,9 +2862,13 @@ h3 {
   }
 
   .top-summary,
-  .top-why,
   .compact-feed-card .card-summary {
     font-size: 13px;
+  }
+
+  .top-brief-list div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .top-meta,

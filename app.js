@@ -466,6 +466,16 @@ function getTopReason(item) {
   return item.topReason || item.whyRanked;
 }
 
+function getCompactTopReason(item) {
+  const reason = getTopReason(item);
+
+  return reason ? String(reason).replace(/^TOP3原因[：:]\s*/, "") : "";
+}
+
+function getReaderUse(item) {
+  return item.readerUse || item.whoShouldCare || item.impact;
+}
+
 function getEditorScore(item) {
   return item.editorScore || item.selectionScore;
 }
@@ -540,6 +550,8 @@ function updateTopStories(items) {
       const sourceType = getSourceType(item);
       const claimStatus = getClaimStatus(item);
       const topReason = getTopReason(item);
+      const compactTopReason = getCompactTopReason(item);
+      const readerUse = getReaderUse(item);
       const nextCheck = item.nextCheck;
 
       const score = getScoreOutOfFive(item);
@@ -554,14 +566,26 @@ function updateTopStories(items) {
             <p class="eyebrow">${escapeHtml(item.label)} · ${escapeHtml(item.time)}</p>
             <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
             <p class="top-summary">${escapeHtml(getItemSummary(item))}</p>
-            <div class="top-meta" aria-label="来源和发布时间">
-              <span class="top-source">${escapeHtml(sourceName)}</span>
-              <span class="top-trust">${escapeHtml(sourceType)}</span>
-              <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
-            </div>
-            <p class="top-why"><strong>为什么值得关注</strong>${escapeHtml(getWhyItMatters(item))}</p>
+            <dl class="top-brief-list" aria-label="TOP3 入选理由与核验边界">
+              <div>
+                <dt>为什么现在</dt>
+                <dd>${escapeHtml(compactTopReason || getWhyItMatters(item))}</dd>
+              </div>
+              <div>
+                <dt>读者用途</dt>
+                <dd>${escapeHtml(readerUse)}</dd>
+              </div>
+              <div>
+                <dt>来源边界</dt>
+                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)} · ${escapeHtml(claimStatus)}</dd>
+              </div>
+              <div>
+                <dt>下一步核验</dt>
+                <dd>${escapeHtml(nextCheck)}</dd>
+              </div>
+            </dl>
             <details class="top-editor-details">
-              <summary>编辑判断</summary>
+              <summary>展开评分与原文依赖</summary>
               <p><strong>为什么入选 TOP3</strong>${escapeHtml(topReason)}</p>
               ${renderSelectionScore(getEditorScore(item))}
               <p><strong>可核验程度</strong>${escapeHtml(claimStatus)}</p>
