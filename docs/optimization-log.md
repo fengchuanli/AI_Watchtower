@@ -1,3 +1,31 @@
+## 2026-09-13 23:10 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-13`，所以未回退版次，而是在同日 17:00 版基础上补充 4 条安全非重复信号，当前合计 14 条，新增 OpenAI Astra 需求下 Pro 新订阅暂停、AI Agent 冲击公共服务请求、Pocket FM AI 内容生产经济性和 Maven Robotics 仓储 Physical AI 融资/部署信号。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 TechCrunch AI/Robotics、当前首页和历史重复 URL，并跳过与 17:00 版已覆盖的 OpenAI IPO、Anthropic 放慢前沿AI和Anthropic威胁报告同事实簇的候选。
+  - 本次不新增来源注册项，沿用已登记的 `techcrunch-ai`，来源总数保持 88。
+  - 4 条补充项均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、趋势解释、来源边界和下一步核查入口，不把需求规模、AI因果、收入质量、机器人uptime或ROI写成已确认结论。
+  - 未使用旧稿、聚合页、社区讨论、传闻、付费墙正文、登录墙正文、重复历史 URL 或弱证据补量；Anthropic蒸馏/CAPTCHA媒体转述因已由9月12日官方威胁报告覆盖而未重复发布。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 774。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月13日17:00 版补充后的 14 条情报；读者可在更多新闻和详情页看到 Astra 容量、公共服务 agentic flooding、AI内容生产和 Physical AI 仓储机器人更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `python3 -m json.tool`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending (`【新闻更新】补充23点AI新闻：14条容量与Agent外溢信号`).
+
 ## 2026-09-13 20:00 JST
 
 - Focus: 完成当前 30 天计划 Day 2，收紧首页 `今日 TOP3` 卡片层级，让每张卡片在不展开详情页段落的前提下直接显示标题、最小事实、为什么现在、读者用途、来源边界和下一步核验。
