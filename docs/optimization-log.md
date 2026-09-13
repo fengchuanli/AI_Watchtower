@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `9040c3a` (`【VisionHub网站风格优化】强化首页TOP3阅读层级`); log/index record commit follows this entry.
+- Commit: `9040c3a` (`【VisionHub网站风格优化】强化首页TOP3阅读层级`); log/index record commit `ae4dfc3` (`【网站优化】记录TOP3阅读层级优化`) pushed to `origin/main`.
 
 ## 2026-09-13 08:12 JST
 
