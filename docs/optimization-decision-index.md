@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 1, Homepage Briefing Clarity
-- Last indexed run: 2026-09-12 20:00 JST
-- Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization; local `main` remained ahead of `origin/main` before this run.
+- Last indexed run: 2026-09-13 20:00 JST
+- Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization; local `main` was up to date before edits.
 
 ## Recent Plan-Day Decisions
 
@@ -19,6 +19,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Previous Day 30 | Complete | `166baeb` | `docs/optimization-plan.md` now covers 2026-09-11 through 2026-10-10 and puts VisionHub-style briefing polish, mobile reading, article readability, update workflow friction, and reader-visible continuity first. |
 | Day 0 | Complete | `166baeb` | `docs/visionhub-briefing-scorecard.md` gives homepage/detail edits a pass/partial/fail check for five-second understanding, TOP3 reader use, source boundary, original-source dependency, mobile burden, continuity use, and visual-aid purpose. |
 | Day 1 | Complete | `3f6416b` | Current `data/news.json` and mirrored current history/today data now make the homepage hero/today/mobile path start with three reader questions: bottom-layer platform change, safety source files, and government/enterprise adoption evidence. |
+| Day 2 | Complete | `9040c3a` | Homepage TOP3 cards now show minimum fact, why-now rationale, reader use, source boundary, and next-check path on the card face, with score and original-dependency details kept expandable. |
 
 ## Historical Guard Anchors
 
@@ -70,9 +71,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 2: tighten TOP3 card hierarchy so each promoted item shows title, minimum fact, why now, reader use, source role, and next-check boundary without duplicating detail-page paragraphs.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 1 first.
-- If Day 1 is already complete, continue with the first useful unfinished task from the current plan.
+- Continue with Day 3: review the compact non-TOP3 feed and remove repeated metadata that slows scanning after readers already saw TOP3.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 2 first.
+- If Day 2 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

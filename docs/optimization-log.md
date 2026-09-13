@@ -1,3 +1,35 @@
+## 2026-09-13 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 2，收紧首页 `今日 TOP3` 卡片层级，让每张卡片在不展开详情页段落的前提下直接显示标题、最小事实、为什么现在、读者用途、来源边界和下一步核验。
+- Changed files:
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/visionhub-briefing-scorecard.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只调整首页 TOP3 卡片的信息呈现和校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 今日 TOP3 卡片正面先给标题和最小事实，不要求读者展开编辑判断才能知道事件。
+  - TOP3 reader use: pass - 每张 TOP3 卡片正面显示为什么现在、读者用途、来源边界和下一步核验。
+  - Source boundary visible: pass - 来源名称、来源角色和可核验状态合并为 `来源边界` 行，早于展开评分。
+  - Original source dependency: pass - `原文依赖` 仍保留在展开区，媒体来源没有被扩写成原文替代。
+  - Mobile burden: pass - 620px 以下 TOP3 简报行改为单列，避免横向挤压。
+  - Continuity use: partial - 本次未新增跨期连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化：读者在首页 `今日 TOP3` 卡片上可直接看到每条的最小事实、为什么现在值得看、谁该用、来源边界和下一步核验；评分与原文依赖仍可按需展开。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, and the new TOP3 hierarchy guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `9040c3a` (`【VisionHub网站风格优化】强化首页TOP3阅读层级`); log/index record commit follows this entry.
+
 ## 2026-09-13 08:12 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-13`，发布 10 条安全非重复信号，聚焦前沿AI放缓、OpenAI IPO安全表态、Anthropic/NVIDIA IPO锚定投资报道、AI基建债务、Oracle AI云现金流、生物安全监管、Cognition/Devin Astra测试证据、Gemini Windows桌面入口和Google Cloud Agent生产控制层。
