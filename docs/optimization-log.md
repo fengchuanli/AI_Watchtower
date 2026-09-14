@@ -1,3 +1,31 @@
+## 2026-09-14 23:38 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-14`，所以未回退版次，而是在同日 17:00 版基础上补充 5 条安全非重复信号，当前合计 15 条，新增中方回应 Anthropic 限制中国 AI 主张、Microsoft Humanist AI / 人类控制叙事、Axios C-Suite AI 复制护城河框架、Obama 敦促民主党提出 AI 护栏计划，以及 TechCrunch 对 AI 末日警告/减速争论升温的梳理。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 AP、Axios AI/Technology、Axios C-Suite、TechCrunch AI、当前首页和历史重复 URL。
+  - 本次不新增来源注册项，沿用已登记的 `ap-news`、`axios-ai` 和 `techcrunch-ai`，来源总数保持 88。
+  - 5 条补充项均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、趋势解释、来源边界和下一步核查入口；不把媒体雷达写成外交协议、监管落地、Microsoft 产品控制已执行、企业护城河已失效或存在性风险时间表已确认。
+  - 跳过已由 17:00 版覆盖的特朗普/Johnson/跨实验室减速、Anthropic 蒸馏/CAPTCHA、Google Cloud 插件、Meta Muse、NVIDIA 和 OpenAI 数学争议等重复事实簇；未使用聚合页正文、社区讨论、传闻、付费墙正文、登录墙正文、旧稿或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 789。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月14日补充版 15 条情报；读者可在首页和详情页看到新增的中方回应、Microsoft Humanist AI、AI复制护城河、Obama AI护栏和AI风险警告补充信号。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `python3 -m json.tool`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 15 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `【新闻更新】补充23点AI新闻：15条政策地缘与护城河信号`.
+
 ## 2026-09-14 20:00 JST
 
 - Focus: 完成当前 30 天计划 Day 3，压缩首页非 TOP3 新闻流的重复元信息，让读者看完 `今日 TOP3` 后继续扫读时优先看到标题和最小事实。
