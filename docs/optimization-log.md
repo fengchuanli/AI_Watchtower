@@ -29,7 +29,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `b2676ed` (`【VisionHub网站风格优化】压缩首页非TOP3新闻流`); log/index record commit pending.
+- Commit: `b2676ed` (`【VisionHub网站风格优化】压缩首页非TOP3新闻流`); log/index record commit `8e1c5c5` (`【网站优化】记录非TOP3新闻流优化`); push status pending.
 
 ## 2026-09-14 08:14 JST
 
