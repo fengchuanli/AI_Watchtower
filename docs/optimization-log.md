@@ -29,7 +29,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `b2676ed` (`【VisionHub网站风格优化】压缩首页非TOP3新闻流`); log/index record commit `8e1c5c5` (`【网站优化】记录非TOP3新闻流优化`); push status pending.
+- Commit: `b2676ed` (`【VisionHub网站风格优化】压缩首页非TOP3新闻流`); log/index record commit `8e1c5c5` (`【网站优化】记录非TOP3新闻流优化`); local status record commit `6ac375b` (`【网站优化】记录非TOP3新闻流提交状态`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry was rejected by the app safety review because publishing local commits to shared `origin/main` needs explicit user approval. Local `main` contains the verified optimization commits but has not been pushed.
 
 ## 2026-09-14 08:14 JST
 
