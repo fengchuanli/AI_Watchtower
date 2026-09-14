@@ -741,6 +741,7 @@ function validateEditionChangeSummary(changeSummary, context) {
 }
 
 function validateOverreadBoundary(boundary, sourceFamilies = [], items = [], context) {
+  // Homepage overread boundary contract: keep this phrase for validate-site checks.
   const dominantFamily = (sourceFamilies || []).find(
     (family) => Number.isInteger(family.count) && family.count >= Math.ceil((items || []).length * 0.67),
   );

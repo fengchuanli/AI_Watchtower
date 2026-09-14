@@ -7873,6 +7873,33 @@ Use this file to record every automated or manual optimization. New entries go a
   - Validated `data/news.json` and `data/sources.json` with `python3 -m json.tool`.
 - Commit: `c5e212e`
 
+## 2026-09-15 17:14 JST
+
+- Focus: Published the 17:00 JST AI news intelligence update with 10 safe non-duplicate signals on AI slowdown execution, capital reaction, and enterprise Agent governance.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `scripts/validate-data.mjs`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Pulled `origin/main` before editing; sandbox DNS failed first, network-authorized retry confirmed the branch was already up to date.
+  - Used `data/sources.json` and `docs/source-policy.md`; preserved original URLs and kept media items as `媒体背景` / `reported` / `must-read`.
+  - Published AP, Axios, WIRED, Salesforce official, VentureBeat, and TechCrunch signals; skipped duplicate/near-duplicate role-map coverage, paywalled material, community discussion, stale padding, and weak proof.
+  - Added the current homepage edition to history and regenerated derived index/today data.
+- 网站可见变化: homepage TOP3, more news feed, all-news list, archive page, and detail pages now show the 2026-09-15 17:00 JST batch on AI slowdown execution, capital disclosure, and enterprise Agent control evidence.
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed static HTML pages with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条减速执行与Agent治理信号`.
+
 ## 2026-06-16 17:08 JST
 
 - Focus: Published the 17:00 JST AI news intelligence update with verified official-source signals replacing the sample feed.

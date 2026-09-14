@@ -1,8 +1,938 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-14",
-  "totalItems": 789,
+  "updatedAt": "2026-09-15",
+  "totalItems": 799,
   "editions": [
+    {
+      "id": "news-1700-2026-09-15",
+      "date": "2026-09-15",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期10条AI新闻情报，聚焦AI减速政治化、资本反应和企业Agent治理。",
+      "operationalStatus": "已拉取origin/main；核对官方/可靠来源、当前首页和历史重复URL；发布10条安全非重复信号。",
+      "editorialInterpretation": "本期判断：AI减速争论进入政治、资本和企业治理三条执行链；媒体雷达仍占多数，需用正式文本、备案、合同、日志和客户指标复核。",
+      "readerFrame": {
+        "headline": "今天的变化：AI减速争论开始考验执行机制",
+        "whyItMatters": "9月15日17:00版可按三条线读：政策层争论谁能让实验室放慢，资本层观察上市和基建叙事是否被改写，企业层检查Agent控制平面、身份权限和长周期合规漂移。",
+        "useThisIssueFor": [
+          "政策、法务和政府事务团队复核白宫、国会、反垄断和实验室自律的正式文本。",
+          "平台、安全和采购团队把Agent发布、控制平面、身份权限和长周期规则漂移转成工程核查表。"
+        ],
+        "notProvenYet": [
+          "不证明美国已经形成AI监管新法、实验室已经同步减速，或资本市场已经完全吸收AI安全风险。",
+          "不证明Salesforce/Cymphony等供应商的客户效果已独立验证，也不证明长周期Agent合规漂移已在所有企业发生。"
+        ],
+        "mobile": {
+          "headline": "看减速执行与Agent治理",
+          "summary": "政策反减速、IPO/市场反应、企业Agent控制平面和身份安全。",
+          "primaryUses": [
+            "政策团队查文本",
+            "安全团队查日志",
+            "采购团队查合同"
+          ],
+          "proofBoundary": "多数为媒体雷达；官方产品发布仍需客户指标、审计日志和第三方评测"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版新增行政反减速、资本韧性和企业Agent控制面信号",
+        "freshFacts": [
+          "本期新增事实：AP报道AI风险警告重燃公共治理争论，并报道特朗普更明确的反减速表态。",
+          "本期新增事实：Axios/WIRED/The Verge补充OpenAI、Anthropic、政府团队和投资者在减速争论中的不同角色。",
+          "本期新增事实：Salesforce官方发布Agentforce高价值工作代理和Trusted Enterprise AI Harness控制平面。",
+          "本期新增事实：VentureBeat/TechCrunch补充长周期Agent合规漂移和Agent身份安全融资信号。"
+        ],
+        "repeatedContext": [
+          "延续9月14日安全减速、Agent风险、NVIDIA/资本和企业护城河主线，但本期URL均为新收录。",
+          "延续既有边界：媒体材料只作雷达和最小事实入口，不替代正式政策、备案、合同、日志、客户指标或第三方评估。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查减速政策文本",
+          "count": 4,
+          "meaning": "用来检查总统表态、政府团队态度、实验室风险分类和正式监管/反垄断文本。"
+        },
+        {
+          "label": "核对资本披露证据",
+          "count": 2,
+          "meaning": "用来核对Anthropic IPO、AI市场反应、芯片/云订单、财报合同和数据中心约束。"
+        },
+        {
+          "label": "核对企业Agent日志",
+          "count": 3,
+          "meaning": "用来检查Agentforce、控制平面、长周期规则漂移、非人身份和数据权限日志。"
+        },
+        {
+          "label": "核对Agent身份安全",
+          "count": 1,
+          "meaning": "用来检查AI Agent、插件、MCP服务器和个人账号绕过IT的身份与数据暴露证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "可靠媒体主导执行雷达",
+        "note": "可靠媒体占比8/10，来源集中；只作政策、资本与安全工程雷达，结论仍需文本、备案、合同、日志或评测。",
+        "nextCheck": "下一步查行政/国会文本、反垄断指导、IPO文件、财报合同、Salesforce文档、Agent日志和第三方评测。"
+      },
+      "overreadBoundary": {
+        "label": "不要把争论升温读成已经减速",
+        "body": "不要把本期读成全市场结论：本期说明AI减速争论正在进入执行机制、资本披露和企业Agent治理；它不证明实验室已同步放慢、美国监管已落地、资本市场已正确计价，或企业Agent控制平面已成熟。",
+        "doNotConclude": "不证明OpenAI/Anthropic/Google已有统一减速协议，不证明特朗普表态等于正式政策，也不证明Salesforce或Cymphony的客户效果已独立验证。",
+        "useInstead": "用来安排正式文本、备案、财报合同、产品文档、客户日志、审计样本和第三方评测的下一步核查。"
+      },
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "减速争论进入执行问题",
+          "note": "跨期看，9月14日的安全减速讨论已延伸到总统反对、政府团队自愿执行口径和OpenAI风险分类。",
+          "boundary": "不证明政策已形成；下一步查行政文本、国会文件、反垄断指导、实验室承诺和评估协议。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "Agent治理产品化",
+          "note": "跨期看，Google Cloud插件、Salesforce控制平面、Cymphony身份图谱和长周期Agent规则漂移都把Agent治理推向工程平台。",
+          "boundary": "不证明治理能力已成熟；下一步查部署日志、客户指标、权限记录、第三方测试和审计结果。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "资本仍未完全跟随安全减速",
+          "note": "跨期看，NVIDIA增长口径、AI股票反应和Anthropic IPO报道显示资本叙事仍在与安全叙事并行。",
+          "boundary": "不证明真实需求稳固；下一步查财报、订单、IPO文件、供电合同和客户侧现金流。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "政策压力转向谁来执行",
+          "status": "stronger",
+          "previousPattern": "此前模式：9月14日版集中在实验室减速、特朗普淡化监管、国会和民主党护栏讨论。",
+          "currentSignal": "本期新增AP风险争论总览、特朗普更强反减速表态、WIRED政府团队自愿执行口径和Altman风险分类。",
+          "signalDirection": "增强：从是否要减速推进到政府、实验室、反垄断和执行机制谁能落地。",
+          "stillUnproven": "仍需行政令、法案文本、反垄断指导文件、实验室协议、评估访问范围说明和听证记录等正式证据。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "Agent治理更工程化",
+          "status": "stronger",
+          "previousPattern": "此前模式：Google Cloud插件和Agent沙盒风险提示企业需要核查权限、日志和供应链。",
+          "currentSignal": "本期新增Salesforce Agentforce/AI Harness、长周期Agent规则漂移分析和Cymphony身份安全融资。",
+          "signalDirection": "增强：从单点插件安全扩展到控制平面、身份图谱、确定性策略和长周期规则验证。",
+          "stillUnproven": "仍需客户部署日志、管理员文档、审计材料、第三方评测和真实事故复盘。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "资本反应保持分化",
+          "status": "repeated",
+          "previousPattern": "此前模式：NVIDIA增长、AI债务和Oracle现金流让基建需求进入合同与收入确认核查。",
+          "currentSignal": "本期新增Axios关于华尔街相对淡定和Anthropic IPO未放慢的报道。",
+          "signalDirection": "重复：仍是资本叙事与安全风险之间的拉扯，没有新正式财务文件。",
+          "stillUnproven": "仍需IPO备案、财报、客户合同、订单交付、供电文件和融资成本数据。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "风险分类进入治理问卷",
+          "lastMention": "上一期提及：OpenAI出现在数学归因争议、减速表态和AI风险讨论中。",
+          "whatChanged": "本期通过Axios补充Altman把失控和权力集中列为两类核心AI威胁。",
+          "stillUnproven": "仍需OpenAI政策文件、系统卡、评估协议、治理披露和第三方审查。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "安全叙事与IPO路径并行",
+          "lastMention": "上一期提及：Anthropic出现在Amodei主张、中方回应、蒸馏和Agent沙盒风险中。",
+          "whatChanged": "本期新增Axios称Anthropic IPO未因安全风波放慢，并继续作为减速争论中心角色。",
+          "stillUnproven": "仍需IPO备案、风险因素、评估承诺、原始安全报告和客户合同披露。"
+        },
+        {
+          "company": "Salesforce",
+          "label": "Agent治理从发布变成控制平面",
+          "lastMention": "历史线索中Salesforce主要作为企业Agent与Claude集成背景出现。",
+          "whatChanged": "本期新增官方Agentforce高价值工作代理和Trusted Enterprise AI Harness。",
+          "stillUnproven": "仍需客户指标、产品文档、审计日志、价格说明和第三方实施评估。"
+        },
+        {
+          "company": "NVIDIA",
+          "label": "基建乐观叙事仍要合同验证",
+          "lastMention": "上一期提及：NVIDIA出现在黄仁勋增长口径、循环交易回应和AI基建合同核查中。",
+          "whatChanged": "本期通过Axios市场反应报道继续观察投资者如何处理安全减速对芯片/云叙事的冲击。",
+          "stillUnproven": "仍需财报、订单、合同、交付记录、供电文件和客户侧现金流。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 8,
+          "role": "可靠媒体用于捕捉政策反应、资本路径、市场反应和Agent工程风险；完整采访、评论、图表和上下文仍回到原文。"
+        },
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 2,
+          "role": "官方来源用于确认Salesforce产品和架构发布事实；客户效果、安全成熟度和成本收益仍需外部证据。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "AI减速、行政反应与治理角色",
+          "count": 4,
+          "itemIds": [
+            "ap-ai-risk-debate-revived-frontier-slowdown-2026-09-15",
+            "ap-trump-ai-risk-hoax-data-center-conspiracy-2026-09-15",
+            "axios-altman-two-ai-threats-control-concentration-2026-09-15",
+            "wired-sacks-ai-slowdown-voluntary-industry-2026-09-15"
+          ],
+          "meaning": "用来检查正式政策文本、反垄断边界、实验室承诺和第三方评估访问范围。",
+          "whyNow": "前沿AI减速争论已经从实验室安全主张扩展到行政反对、竞争法、政治联盟和供应商治理。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "资本、IPO与AI基建预期",
+          "count": 2,
+          "itemIds": [
+            "axios-anthropic-ipo-safety-uproar-still-on-track-2026-09-15",
+            "axios-wall-street-ai-apocalypse-reaction-muted-2026-09-15"
+          ],
+          "meaning": "用来核对上市文件、财报、芯片订单、云合同、供电文件和投资者风险披露。",
+          "whyNow": "安全减速争论正在测试资本市场是否会重新定价模型公司、芯片公司和数据中心扩张。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业Agent控制平面与身份安全",
+          "count": 3,
+          "itemIds": [
+            "salesforce-agentforce-high-value-work-agents-2026-09-15",
+            "salesforce-trusted-enterprise-ai-harness-control-plane-2026-09-15",
+            "venturebeat-long-running-agents-drop-compliance-rules-2026-09-15"
+          ],
+          "meaning": "用来检查企业Agent的控制平面、业务规则、长周期任务、确定性策略和审计日志。",
+          "whyNow": "Agent正在进入销售、客服、数据治理和合规流程，企业需要从提示词管理转向可审计平台控制。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "Agent身份与数据权限",
+          "count": 1,
+          "itemIds": [
+            "techcrunch-cymphony-agent-identity-security-funding-2026-09-15"
+          ],
+          "meaning": "用来检查非人身份、敏感数据暴露、MCP/插件权限和AI安全供应链。",
+          "whyNow": "Agent安全开始形成身份治理和数据权限产品类别，安全团队需要把AI工具纳入IAM/DLP视图。"
+        }
+      ],
+      "omittedTopics": [
+        {
+          "id": "model",
+          "label": "新模型发布",
+          "status": "无新来源事实",
+          "reason": "本期没有新的官方模型卡、系统卡或模型发布可安全收录。",
+          "omissionBoundary": "不代表模型能力不重要，只说明当前可发布事实集中在治理、资本和企业Agent控制。",
+          "evidenceNeeded": "新的官方模型发布、系统卡、独立评测或安全报告。",
+          "fallback": "读者可回看9月14日模型安全与科研验证归档作为历史背景。"
+        },
+        {
+          "id": "agent",
+          "label": "通用Agent事故",
+          "status": "由企业治理信号覆盖",
+          "reason": "本期没有新的已核验事故通报，使用长周期合规漂移和身份安全作为工程核查信号。",
+          "omissionBoundary": "不代表Agent风险降低，只说明没有新的可发布事故事实。",
+          "evidenceNeeded": "原始事故报告、平台日志、客户通知、第三方取证或修复记录。",
+          "fallback": "读者可回看此前Anthropic/Agent沙盒与OpenAI/Hugging Face相关归档。"
+        }
+      ],
+      "itemCount": 10,
+      "statusLabel": "已发布",
+      "items": [
+        {
+          "id": "wired-sacks-ai-slowdown-voluntary-industry-2026-09-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "WIRED称特朗普团队把AI减速责任推回企业自愿执行",
+          "body": "WIRED报道，特朗普团队认为若AI实验室想放慢节奏，应自行行动，而不是期待政府强制减速。",
+          "summary": "WIRED报道，特朗普团队认为若AI实验室想放慢节奏，应自行行动，而不是期待政府强制减速。",
+          "whyItMatters": "这改变了减速争论的执行问题：即使实验室领袖支持安全节奏，也可能缺少联邦豁免、协调机制和强制规则。",
+          "detailBody": "来源支持的事实是：WIRED报道特朗普团队和David Sacks等人把行业减速责任推回AI公司自身，同时强调美国对中国竞争优势。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以WIRED AI原文为准。",
+          "trend": "AI治理正在从“是否需要护栏”转向“谁有权让竞争者同时放慢”。",
+          "detailTrend": "这会把AI治理从原则争论推向制度协调问题：因为企业自愿、政府授权、反垄断边界和对华竞争压力之间的关系，会决定减速是否能从公开表态变成实验室流程和评估机制。",
+          "whyRanked": "它说明政策/法务读者不能只看CEO是否支持减速，还要查政府是否提供反垄断和评估执行路径。",
+          "topReason": "政策/法务读者应优先核对政府正式文件、反垄断指导和实验室协议，而不是只引用减速口号。",
+          "detailWhyRanked": "WIRED AI原文新增的是政府团队把减速责任推回企业自愿执行；这个来源事实能帮助读者判断安全主张有没有制度入口，仍不能替代正式政策文件、反垄断指导或实验室协议。与首页排序理由相比，详情页重点是来源边界：它证明一种政府口径，不证明执行机制已经存在。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：执行机制问题重要；仍需政府或行业文本确认。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "政策、竞争法和公司治理团队应评估安全协调是否需要政府授权、行业标准或采购合同。",
+          "whoShouldCare": "在AI政策预案、模型采购合规或政府事务跟踪场景中，处理AI安全承诺、反垄断风险和供应商协调条款的政策/法务/治理团队。",
+          "readerUse": "政策/法务/政府事务团队可追问实验室安全合作是否有合法协调边界，以及采购方能否把评估承诺写进合同。",
+          "nextCheck": "查白宫、OSTP、FTC/DOJ、国会和实验室联盟是否发布协调豁免或安全标准文本。",
+          "followUpQuestions": [
+            "美国政府是否给前沿实验室安全协调提供窄范围豁免，对应的正式文件、日志、指标或报告在哪里？",
+            "主要实验室是否公布各自独立执行的评估和发布节奏承诺？"
+          ],
+          "evidenceThreshold": "需要白宫或监管机构正式文件、反垄断指导文本、行业安全标准、实验室签署协议或第三方评估报告，才能升级为可执行协调机制。",
+          "claimBoundary": "WIRED支持政府团队态度和行业执行难题，不证明所有实验室都会单独放慢。",
+          "counterEvidence": "若政府发布协调框架或实验室签署可审计协议，应下调“只能自愿执行”的判断。",
+          "source": "WIRED AI",
+          "sourceName": "WIRED AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "wired-ai",
+          "provenance": "WIRED AI报道特朗普团队讨论AI减速治理责任和企业自愿执行边界；完整事实、引用、图表、采访、数据和上下文仍由WIRED AI原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://www.wired.com/story/ai-leaders-are-calling-for-a-slowdown-trumps-team-says-its-on-them/",
+          "originalUrl": "https://www.wired.com/story/ai-leaders-are-calling-for-a-slowdown-trumps-team-says-its-on-them/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-14T07:00:00-04:00",
+          "time": "20:00 JST",
+          "tags": [
+            "policy",
+            "antitrust",
+            "ai-safety"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "xAI"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：执行机制问题重要；仍需政府或行业文本确认。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "ap-trump-ai-risk-hoax-data-center-conspiracy-2026-09-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP称特朗普把AI风险称为“骗局”，反减速立场进一步公开化",
+          "body": "AP报道，特朗普公开淡化AI风险并批评监管呼声，把AI减速争论推向竞选、数据中心和对华竞争叙事。",
+          "summary": "AP报道，特朗普公开淡化AI风险并批评监管呼声，把AI减速争论推向竞选、数据中心和对华竞争叙事。",
+          "whyItMatters": "美国行政层反减速信号会影响企业预判联邦监管、数据中心许可和实验室自律是否会获得政府支持。",
+          "detailBody": "来源支持的事实是：AP报道特朗普在公开表态中否认AI风险紧迫性，并把监管/减速呼声与数据中心和中国竞争联系起来；站内不复制其完整措辞和政治语境。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以Associated Press原文为准。",
+          "trend": "前沿AI治理开始变成“安全护栏”与“国家竞争/基础设施扩张”之间的政治冲突。",
+          "detailTrend": "如果白宫公开反对减速，短期内正式监管路径会更依赖国会、州层、法院、企业自律和采购方要求，而不是单一行政推动。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它把上一轮“特朗普淡化AI护栏”的信号升级为更明确的政治对抗素材。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "读者应把它当作联邦执行意愿信号，并继续查是否有行政文件或监管动作跟进。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "这条影响AI公司、数据中心开发商和企业采购方对美国监管节奏的预期；但它仍是公开言论和媒体报道，不等于正式政策。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“特朗普公开把AI风险称为骗局并批评监管/减速呼声”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：政策预期影响强；仍需正式文本确认执行含义。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "政府事务和基础设施团队应把AI安全表态、数据中心许可、对华竞争和选举叙事放在同一监测表里。",
+          "whoShouldCare": "在AI政策预案、模型采购合规或政府事务跟踪场景中，负责美国AI政策、数据中心选址、企业合规和模型供应商风险评估的团队。",
+          "readerUse": "政策/法务/政府事务团队可更新政策雷达：区分总统表态、正式行政文件、国会提案和州级监管。",
+          "nextCheck": "查白宫公告、行政令、监管机构行动、国会听证和数据中心许可文件。",
+          "followUpQuestions": [
+            "白宫是否发布与AI监管或数据中心相关的正式文本？",
+            "国会是否用听证或法案回应特朗普的反减速立场？"
+          ],
+          "evidenceThreshold": "需要行政令、机构规则、国会文件或州级许可决定，才能升级为可执行政策变化。",
+          "claimBoundary": "AP支持公开表态事实，不证明美国政府已经取消所有AI监管路径。",
+          "counterEvidence": "若白宫或监管机构随后发布具体AI护栏、报告义务或数据中心限制，应下调“行政层全面反监管”的判断。",
+          "source": "Associated Press",
+          "sourceName": "Associated Press",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "ap-news",
+          "provenance": "Associated Press报道特朗普公开批评AI风险治理和数据中心限制；完整事实、引用、图表、采访、数据和上下文仍由Associated Press原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://apnews.com/article/b85df16775ff7e9611a456b061a0e4b9",
+          "originalUrl": "https://apnews.com/article/b85df16775ff7e9611a456b061a0e4b9",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-14T00:00:00-04:00",
+          "time": "13:20 JST",
+          "tags": [
+            "policy",
+            "data-center",
+            "ai-safety"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI",
+            "NVIDIA"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：政策预期影响强；仍需正式文本确认执行含义。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "ap-ai-risk-debate-revived-frontier-slowdown-2026-09-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP梳理前沿AI风险警告，减速争论从实验室扩展到公共治理",
+          "body": "AP报道，新一轮AI失控风险警告让前沿模型减速、第三方评估和国际协调重新进入公共议程。",
+          "summary": "AP报道，新一轮AI失控风险警告让前沿模型减速、第三方评估和国际协调重新进入公共议程。",
+          "whyItMatters": "这条把分散的CEO表态、前研究员警告和政治回应放回同一张治理地图，适合政策团队区分风险叙事与可执行监管。",
+          "detailBody": "来源支持的事实是：AP报道AI行业领导者和研究人员的新警告重新点燃先进AI是否会失控的长期争论，并把第三方评估、国际协调和政治分歧列为核心议题。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以Associated Press原文为准。",
+          "trend": "AI安全话题正在从公司自律声明变成公共治理、国际协调和监管能力测试。",
+          "detailTrend": "如果风险讨论只停留在声明层，企业很难判断模型路线图是否会变慢；真正改变部署节奏的证据应来自评估协议、政府文本、实验室承诺和事故披露制度。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它为本期提供总框架，说明为什么多个后续信号都围绕减速、反减速和证据链展开。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "政策团队应把这条作为议题地图，而不是把风险概率当成已被证明的事实。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "这条的价值不在于给出单一结论，而在于把实验室、政府、专家和公众风险沟通连成一组待核查对象；读者可据此拆分哪些是源事实，哪些仍是预测和主张。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“新一轮AI风险警告重燃前沿AI减速与公共治理争论”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：公共治理影响大；风险概率仍需源文件和评估制度支撑。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "政策、企业风险和安全团队应建立减速议题清单：评估访问、事故报告、国际协调、竞争例外和监管权限。",
+          "whoShouldCare": "在AI政策预案、模型采购合规或政府事务跟踪场景中，跟踪AI监管、模型采购和企业风险委员会议题的政策/法务/安全负责人。",
+          "readerUse": "政策/法务/政府事务团队可用作议题索引，逐项追问哪些主张已有官方文本、评估协议或事故报告支撑。",
+          "nextCheck": "查Amodei原文、OpenAI/Google/Anthropic后续承诺、政府监管文本和独立评估机构说明。",
+          "followUpQuestions": [
+            "是否有实验室发布可审计的第三方评估访问范围？",
+            "美国、英国或国际机构是否把这些警告转化成正式规则或听证记录？"
+          ],
+          "evidenceThreshold": "需要正式监管文本、实验室书面承诺、独立评估协议或事故披露制度，才能升级为已执行治理变化。",
+          "claimBoundary": "AP支持争论升温和各方表态，不证明先进AI失控概率、时间表或监管路径已被验证。",
+          "counterEvidence": "若实验室继续发布更强模型且无新增评估承诺，或监管机构明确不采纳减速机制，应收窄为公共舆论升温而非执行变化。",
+          "source": "Associated Press",
+          "sourceName": "Associated Press",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "ap-news",
+          "provenance": "Associated Press报道AI风险警告推动前沿模型治理讨论；完整事实、引用、图表、采访、数据和上下文仍由Associated Press原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://apnews.com/article/98316b0d64de17191f33c0fbf1d37858",
+          "originalUrl": "https://apnews.com/article/98316b0d64de17191f33c0fbf1d37858",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-14T00:00:00-04:00",
+          "time": "13:10 JST",
+          "tags": [
+            "policy",
+            "ai-safety",
+            "frontier-models"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Google DeepMind"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：公共治理影响大；风险概率仍需源文件和评估制度支撑。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "axios-altman-two-ai-threats-control-concentration-2026-09-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios报道Altman点出两类AI威胁：失控与权力集中",
+          "body": "Axios报道，Sam Altman把AI失控和权力过度集中列为最担心的两类风险，并支持更窄的安全中间道路。",
+          "summary": "Axios报道，Sam Altman把AI失控和权力过度集中列为最担心的两类风险，并支持更窄的安全中间道路。",
+          "whyItMatters": "OpenAI领导层把风险拆成“模型控制”和“治理集中度”两条线，会影响外部评估者问哪些证据。",
+          "detailBody": "来源支持的事实是：Axios报道Altman公开谈到两类AI威胁，并把节奏控制、第三方评估和避免权力集中放入同一安全框架。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以Axios AI / Technology原文为准。",
+          "trend": "AI安全讨论不再只问模型会不会变强，也开始问谁拥有控制权、评估权和部署权。",
+          "detailTrend": "这会推动企业在采购OpenAI或其他前沿模型时，同时核查技术安全、组织治理、数据隔离、管理员权限和外部评估透明度。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它给减速讨论补上OpenAI自身的风险分类，而不是只引用外部批评。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "采购和政策读者应把“失控”与“权力集中”拆成两套证据要求。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "Altman的表态本身不会证明OpenAI已改变路线图，但它提供了可追问的安全分类：控制、集中度、第三方评估和治理透明。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“Sam Altman把AI失控和权力集中列为两类主要威胁”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：OpenAI风险框架清晰；执行证据仍待官方文件。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "企业客户应追问模型权限、工具调用、数据访问、审计日志、评估报告和组织治理披露。",
+          "whoShouldCare": "在AI政策预案、模型采购合规或政府事务跟踪场景中，采购OpenAI模型/API、设计Agent权限和跟踪前沿模型治理的产品/安全/法务团队。",
+          "readerUse": "政策/法务/政府事务团队可转成供应商问卷：哪些风险由技术控制解决，哪些由治理结构和外部评估解决。",
+          "nextCheck": "查OpenAI官方政策、系统卡、评估承诺、董事会治理说明和第三方评估报告。",
+          "followUpQuestions": [
+            "OpenAI是否发布新的第三方评估访问机制或系统卡更新？",
+            "OpenAI是否说明如何避免单一组织或个人集中关键模型控制权，下一次可核对的源文件、日志或指标是什么？"
+          ],
+          "evidenceThreshold": "需要OpenAI官方文件、评估报告、治理披露或系统卡更新，才能升级为已实施风险控制。",
+          "claimBoundary": "Axios支持Altman表态，不证明OpenAI已经完成相应技术或治理变更。",
+          "counterEvidence": "若OpenAI后续发布更强模型但缺少新增评估、权限或治理披露，应降级为高层表态而非执行路线。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology报道Sam Altman讨论AI失控和权力集中两类治理风险；完整事实、引用、图表、采访、数据和上下文仍由Axios AI / Technology原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://www.axios.com/2026/09/14/openai-sam-altman-ai-threat-doom-doomerism",
+          "originalUrl": "https://www.axios.com/2026/09/14/openai-sam-altman-ai-threat-doom-doomerism",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-14T00:00:00-04:00",
+          "time": "13:30 JST",
+          "tags": [
+            "policy",
+            "openai",
+            "governance"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：OpenAI风险框架清晰；执行证据仍待官方文件。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "axios-wall-street-ai-apocalypse-reaction-muted-2026-09-15",
+          "category": "funding",
+          "label": "资本",
+          "title": "Axios称华尔街未明显消化AI末日风险，市场更看重竞争与基建需求",
+          "body": "Axios报道，尽管AI风险警告升温，投资者反应相对有限，市场仍在权衡监管、对华竞争和AI基建需求。",
+          "summary": "Axios报道，尽管AI风险警告升温，投资者反应相对有限，市场仍在权衡监管、对华竞争和AI基建需求。",
+          "whyItMatters": "资本市场是否相信减速叙事，会影响芯片、云、数据中心和模型公司的融资与扩张预期。",
+          "detailBody": "来源支持的事实是：Axios报道华尔街对AI末日风险的即时反应相对温和，并讨论投资者为何仍重视AI增长和竞争逻辑。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以Axios AI / Technology原文为准。",
+          "trend": "AI风险正在被资本市场重新定价，但短期价格信号未必等于真实安全概率或监管结果。",
+          "detailTrend": "读者应把市场反应当作资金偏好雷达，而不是科学风险评估；真正证明基建需求的仍是合同、利用率、交付、收入确认和电力文件。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它给本期政策争论补上资本市场是否愿意跟随减速的观察面。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "基建和投资团队应分清“市场没跌太多”与“风险不存在”完全不是一回事。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "当AI安全争论冲击芯片和云叙事时，市场反应能提示资金约束是否立即发生；但编辑判断仍需回到合同和财报。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“华尔街对AI末日风险警告的市场反应相对有限”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：资本约束信号清楚；需求真实性仍需合同与财报。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "投资、财务和基础设施团队应同时跟踪监管文本、芯片订单、客户合同、利用率和电力约束。",
+          "whoShouldCare": "在AI基建预算、芯片/云合同评审和资本市场风险会更新场景中，负责供应链风险和投资敞口的财务/战略/基础设施团队。",
+          "readerUse": "投资/财务/采购团队可更新市场监测表：安全叙事是否改变估值、融资成本、供应链合同或数据中心节奏。",
+          "nextCheck": "查NVIDIA/云厂商财报、订单披露、数据中心电力文件、客户合同和监管进展。",
+          "followUpQuestions": [
+            "AI安全争论是否出现在芯片或云公司的风险因素与电话会，对应的正式文件、日志、指标或报告在哪里？",
+            "数据中心许可、供电合同或客户订单是否出现延迟迹象？"
+          ],
+          "evidenceThreshold": "需要财报、订单、合同、供电文件或监管文件，才能升级为安全争论已改变AI基建需求。",
+          "claimBoundary": "Axios支持市场反应观察，不证明AI风险低，也不证明AI基建需求完全稳固。",
+          "counterEvidence": "若芯片订单取消、融资成本上升、监管限制落地或数据中心项目延迟，应下调市场淡定判断。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology报道华尔街观察AI风险警告、融资指标和AI基建资本反应；完整事实、引用、图表、采访、数据和上下文仍由Axios AI / Technology原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://www.axios.com/2026/09/14/ai-stocks-apocalypse-wall-street",
+          "originalUrl": "https://www.axios.com/2026/09/14/ai-stocks-apocalypse-wall-street",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-14T00:00:00-04:00",
+          "time": "14:30 JST",
+          "tags": [
+            "funding",
+            "infrastructure",
+            "markets"
+          ],
+          "companies": [
+            "NVIDIA",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：资本约束信号清楚；需求真实性仍需合同与财报。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "axios-anthropic-ipo-safety-uproar-still-on-track-2026-09-15",
+          "category": "funding",
+          "label": "资本",
+          "title": "Axios称Anthropic IPO未因安全风波放慢，资本时间表与安全叙事并行",
+          "body": "Axios报道，尽管AI安全争议升温，Anthropic的2026年上市计划仍被认为没有放慢。",
+          "summary": "Axios报道，尽管AI安全争议升温，Anthropic的2026年上市计划仍被认为没有放慢。",
+          "whyItMatters": "如果安全减速没有改变资本时间表，读者就要同时核查模型发布节奏、投资者披露和风险因素。",
+          "detailBody": "来源支持的事实是：Axios报道Anthropic IPO时间表仍在推进，安全争议目前未被视为改变上市安排的决定性因素。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以Axios AI / Technology原文为准。",
+          "trend": "前沿AI公司的资本市场压力并没有因为安全争论自然消失，安全承诺可能需要进入招股书和风险披露才有约束力。",
+          "detailTrend": "这会把安全争论从技术伦理拉到证券披露：投资者、客户和监管者会问风险事件、模型控制、收入依赖和诉讼风险如何被披露。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它把同日安全讨论与Anthropic资本路径连接起来，提示读者不要只看道德表态。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "上市文件会成为检验安全争论是否影响公司治理的关键材料。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "如果Anthropic一边倡议放慢，一边保持IPO节奏，下一步最值得查的是正式招股书、风险因素和安全治理披露，而不是二级评论。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“Anthropic IPO时间表未因AI安全风波放慢”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：资本和安全叙事交叉重要；需正式备案验证。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "投资、采购和治理团队应把安全事件、模型风险、营收质量和第三方评估写入尽调清单。",
+          "whoShouldCare": "在AI资本预算、供应商尽调或基建合同评审场景中，评估Anthropic供应商风险、IPO披露和AI资本市场敞口的投资/采购/法务团队。",
+          "readerUse": "投资/财务/采购团队可准备尽调问题：安全事件是否披露、评估承诺是否可审计、收入和算力合同是否透明。",
+          "nextCheck": "查Anthropic正式IPO文件、Nasdaq/SEC披露、风险因素、投资者说明和审计财报。",
+          "followUpQuestions": [
+            "Anthropic招股书是否披露模型安全事件、第三方评估和发布节奏？",
+            "投资者材料是否解释安全减速对收入、算力和客户合同的影响？"
+          ],
+          "evidenceThreshold": "需要正式招股书、监管备案、风险因素和公司声明，才能升级为确认的上市治理事实。",
+          "claimBoundary": "Axios支持IPO时间表报道，不证明监管已接受、估值稳定或安全风险已解决。",
+          "counterEvidence": "若Anthropic提交文件延期、披露重大安全风险或市场条件恶化，应降级为早期资本市场报道。",
+          "source": "Axios AI / Technology",
+          "sourceName": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "axios-ai",
+          "provenance": "Axios AI / Technology报道Anthropic融资上市时间表与AI安全治理争议并行；完整事实、引用、图表、采访、数据和上下文仍由Axios AI / Technology原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://www.axios.com/2026/09/14/anthropic-ipo-safety-openai",
+          "originalUrl": "https://www.axios.com/2026/09/14/anthropic-ipo-safety-openai",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-14T00:00:00-04:00",
+          "time": "14:20 JST",
+          "tags": [
+            "funding",
+            "ipo",
+            "ai-safety"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：资本和安全叙事交叉重要；需正式备案验证。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "salesforce-agentforce-high-value-work-agents-2026-09-15",
+          "category": "product",
+          "label": "产品",
+          "title": "Salesforce扩展Agentforce高价值工作Agent，强调跨销售、服务和商务的长周期任务",
+          "body": "Salesforce宣布扩展Agentforce代理组合，面向销售、服务、商务和员工场景处理更复杂的业务工作。",
+          "summary": "Salesforce宣布扩展Agentforce代理组合，面向销售、服务、商务和员工场景处理更复杂的业务工作。",
+          "whyItMatters": "这说明企业Agent发布正在从“聊天助手”转向可被统计、编排和治理的业务工作单元。",
+          "detailBody": "来源支持的事实是：Salesforce官方宣布新的Agentforce代理组合，称其面向高价值工作，并披露Agentic Work Units等内部采用口径。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以Salesforce Newsroom原文为准。",
+          "trend": "企业软件厂商正在把Agent包装成可购买、可部署、可度量的业务能力，而不只是模型接口。",
+          "detailTrend": "对客户而言，关键不是宣传中的业务结果，而是权限、日志、错误处理、人工介入、成本口径和任务完成率是否可审计。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它给本期安全/政策批次补上企业落地端：Agent仍在进入核心业务流程。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "企业读者应把官方发布转成部署核查表，而不是直接接受效率口径。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "在政策层争论AI要不要减速时，Salesforce仍把Agent推入高价值工作；这让治理问题更具体：谁批准动作、谁回滚错误、谁证明结果。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“扩展Agentforce高价值工作代理组合”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：官方发布可信；成效口径需外部证据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "CRM、客服、商务和IT团队应检查Agentforce部署中的权限、业务规则、人工审批和指标定义。",
+          "whoShouldCare": "在企业Agent上线、CRM流程改造或供应商采购场景中，准备在销售、客服、商务或员工工作流中部署Agentforce的业务/IT/安全负责人。",
+          "readerUse": "业务/IT/安全团队可核对企业Agent采购清单：场景边界、日志、AWU口径、客户侧ROI和失败回滚。",
+          "nextCheck": "查Salesforce产品文档、客户案例原始指标、管理员日志、合同条款和第三方实施报告。",
+          "followUpQuestions": [
+            "Salesforce是否公布Agentic Work Units的定义、计算口径和审计方式？",
+            "客户侧是否披露任务完成率、人工接管率、错误率和成本变化？"
+          ],
+          "evidenceThreshold": "需要客户侧指标、部署日志、合同条款和第三方实施评估，才能升级为已验证业务成效。",
+          "claimBoundary": "官方来源证明Salesforce发布该代理组合和披露自身口径，不证明客户ROI或安全效果已独立验证。",
+          "counterEvidence": "若客户案例显示任务失败率高、人工接管频繁或AWU口径不可审计，应收窄为产品发布而非成效证明。",
+          "source": "Salesforce Newsroom",
+          "sourceName": "Salesforce Newsroom",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "sourceId": "salesforce-news",
+          "provenance": "Salesforce Newsroom官方宣布扩展Agentforce高价值工作Agent组合；官方页面只核对发布事实，客户成效、安全成熟度、成本收益和部署质量仍需客户侧指标、审计日志或第三方评测。",
+          "sourceUrl": "https://www.salesforce.com/ap/news/press-releases/2026/09/14/ph-salesforce-expands-agentforce-with-a-new-portfolio-of-ai-agents-built-for-high-value-work/?bc=OTH",
+          "originalUrl": "https://www.salesforce.com/ap/news/press-releases/2026/09/14/ph-salesforce-expands-agentforce-with-a-new-portfolio-of-ai-agents-built-for-high-value-work/?bc=OTH",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-14T00:00:00-04:00",
+          "time": "15:00 JST",
+          "tags": [
+            "product",
+            "enterprise",
+            "agent"
+          ],
+          "companies": [
+            "Salesforce"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：官方发布可信；成效口径需外部证据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "venturebeat-long-running-agents-drop-compliance-rules-2026-09-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat称长周期Agent会遗忘合规规则，单纯扩大上下文窗口不够",
+          "body": "VentureBeat刊文指出，多日运行的Agent可能在上下文漂移中丢失初始合规规则，需要确定性策略层约束。",
+          "summary": "VentureBeat刊文指出，多日运行的Agent可能在上下文漂移中丢失初始合规规则，需要确定性策略层约束。",
+          "whyItMatters": "这给企业Agent治理提供了具体工程问题：规则不能只写在提示词里，必须外置为可验证状态和策略引擎。",
+          "detailBody": "来源支持的事实是：VentureBeat客座技术文章讨论长周期Agent在大量上下文中遗忘治理规则的架构风险，并建议把业务逻辑与生成层分离。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以VentureBeat AI原文为准。",
+          "trend": "Agent治理正在从提示词技巧转向状态管理、策略引擎、检查点和动作前验证。",
+          "detailTrend": "这类分析不是事故通报，但它能转化为工程核查：多日任务是否重验规则、是否有不可变策略层、是否把scratchpad和业务约束分离。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它把本期宏观安全争论落到企业工程可执行检查项。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "工程团队应检查“规则遗忘”是否能被日志、检查点和策略层捕获。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "长上下文Agent被用于主数据、财务和合规工作时，最大的风险不是一次回答错，而是静默漂移后继续执行；这条提供了可操作的架构反查路径。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“长周期AI Agent合规规则漂移的技术分析”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "取舍：工程可用性强；属于技术分析而非独立事故证据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "平台工程、数据治理和审计团队应要求Agent流程具备中途规则重验、确定性拦截和异常告警。",
+          "whoShouldCare": "在Agent平台架构、安全审计或长期任务治理场景中，运行多日数据校验、财务流程、主数据管理或合规Agent的工程/审计团队。",
+          "readerUse": "平台工程/安全/审计团队可做架构巡检：找出只依赖系统提示词约束的长周期Agent，并要求策略外置。",
+          "nextCheck": "查内部Agent日志、检查点设计、策略引擎配置、审计报告和红队测试样本。",
+          "followUpQuestions": [
+            "现有长周期Agent是否在第4天、第10天和任务结束前重验初始规则，对应的正式文件、日志、指标或报告在哪里？",
+            "动作提交前是否由确定性策略层验证输出，而不是只依赖模型记忆，下一次可核对的源文件、日志或指标是什么？"
+          ],
+          "evidenceThreshold": "需要真实部署日志、红队测试、审计样本或事故复盘，才能升级为已验证企业风险。",
+          "claimBoundary": "VentureBeat文章支持架构风险分析，不证明某家企业已经发生该类事故。",
+          "counterEvidence": "若企业部署显示外置策略层能稳定拦截漂移输出，应收窄为架构警示而非普遍失效。 需要用正式文件、部署日志、客户指标、审计报告或第三方评测作为降级依据。",
+          "source": "VentureBeat AI",
+          "sourceName": "VentureBeat AI",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "venturebeat-ai",
+          "provenance": "VentureBeat AI报道长周期AI Agent合规规则漂移和治理控制风险；完整事实、引用、图表、采访、数据和上下文仍由VentureBeat AI原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://venturebeat.com/orchestration/long-running-ai-agents-quietly-drop-compliance-rules-and-bigger-context-windows-wont-fix-it",
+          "originalUrl": "https://venturebeat.com/orchestration/long-running-ai-agents-quietly-drop-compliance-rules-and-bigger-context-windows-wont-fix-it",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-13T11:00:00-07:00",
+          "time": "03:00 JST",
+          "tags": [
+            "tool",
+            "agent",
+            "governance"
+          ],
+          "companies": [],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "取舍：工程可用性强；属于技术分析而非独立事故证据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "salesforce-trusted-enterprise-ai-harness-control-plane-2026-09-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "Salesforce发布Trusted Enterprise AI Harness，把Agent治理做成控制平面",
+          "body": "Salesforce官方介绍Trusted Enterprise AI Harness，围绕上下文、行动、治理、安全、模型和控制平面组织企业Agent。",
+          "summary": "Salesforce官方介绍Trusted Enterprise AI Harness，围绕上下文、行动、治理、安全、模型和控制平面组织企业Agent。",
+          "whyItMatters": "这把多Agent、多模型、多系统接入的治理问题具象成企业控制平面，适合架构团队对照自身平台。",
+          "detailBody": "来源支持的事实是：Salesforce官方发布Trusted Enterprise AI Harness，并列出六类可信能力和AI Control Plane，用于开放可组合的Agent生态。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以Salesforce Newsroom原文为准。",
+          "trend": "企业Agent平台竞争正在从模型能力转向上下文、权限、治理、安全和跨系统控制。",
+          "detailTrend": "如果企业已经同时运行多个Agent平台，统一控制平面会成为采购和架构问题；但真正价值要看跨平台发现、策略执行、日志和成本控制能否落地。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它是本期少数官方工程/架构信号，可与媒体中的Agent失控和合规漂移形成互证清单。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "架构团队应拿它反查自己的Agent控制平面缺口：身份、策略、成本、日志和人类审批。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "Salesforce Newsroom原文新增的是Trusted Enterprise AI Harness和AI Control Plane发布；它能把Agent治理拆成身份、策略、日志和人工审批等平台能力。与首页排序理由相比，详情页强调来源边界：官方页面证明产品架构发布，不证明客户效果、成本收益或安全成熟度。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：官方架构信号强；成熟度需部署证据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "CIO、平台工程和安全团队应盘点现有Agent是否有统一身份、策略、观测、成本和回滚机制。",
+          "whoShouldCare": "在Agent平台架构、安全审计或长期任务治理场景中，整合Salesforce、Slack、Claude、Microsoft Teams和自建Agent的企业架构/安全团队。",
+          "readerUse": "平台工程/安全/审计团队可制作Agent控制平面对照表：上下文来源、动作权限、治理策略、安全监控、模型选择和成本控制。",
+          "nextCheck": "查Salesforce文档、实际可用功能、价格/升级说明、客户部署日志和第三方评测。",
+          "followUpQuestions": [
+            "AI Control Plane哪些功能已经可用，哪些要等到下一财年，对应的正式文件、日志、指标或报告在哪里？",
+            "跨第三方模型和平台的策略执行是否有客户侧日志或审计样本？"
+          ],
+          "evidenceThreshold": "需要产品文档、可用性说明、客户部署记录、审计日志和第三方评测，才能升级为成熟控制平面证据。",
+          "claimBoundary": "官方来源证明架构和产品方向，不证明所有客户已经能跨平台统一治理Agent。",
+          "counterEvidence": "若后续文档显示关键控制平面功能未上线、只能覆盖Salesforce内部场景或缺少审计日志，应收窄为架构愿景。",
+          "source": "Salesforce Newsroom",
+          "sourceName": "Salesforce Newsroom",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "sourceId": "salesforce-news",
+          "provenance": "Salesforce Newsroom官方介绍Trusted Enterprise AI Harness和AI控制平面；官方页面只核对发布事实，客户成效、安全成熟度、成本收益和部署质量仍需客户侧指标、审计日志或第三方评测。",
+          "sourceUrl": "https://www.salesforce.com/uk/news/stories/enterprise-ai-harness/?bc=OTH",
+          "originalUrl": "https://www.salesforce.com/uk/news/stories/enterprise-ai-harness/?bc=OTH",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-10T00:00:00-04:00",
+          "time": "09:30 JST",
+          "tags": [
+            "tool",
+            "enterprise",
+            "agent-governance"
+          ],
+          "companies": [
+            "Salesforce"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：官方架构信号强；成熟度需部署证据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        },
+        {
+          "id": "techcrunch-cymphony-agent-identity-security-funding-2026-09-15",
+          "category": "funding",
+          "label": "资本",
+          "title": "TechCrunch报道Sequoia加码Cymphony，Agent身份与数据权限成为新安全赛道",
+          "body": "TechCrunch报道，Cymphony获得3000万美元融资，主打员工、AI Agent和非人身份的统一权限与数据暴露视图。",
+          "summary": "TechCrunch报道，Cymphony获得3000万美元融资，主打员工、AI Agent和非人身份的统一权限与数据暴露视图。",
+          "whyItMatters": "融资信号显示，企业已经开始为Agent身份、数据访问和非人账号治理付费，而不只是买模型能力。",
+          "detailBody": "来源支持的事实是：TechCrunch报道Cymphony完成含2500万美元A轮在内的3000万美元融资，并描述其workforce graph用于追踪人和Agent的权限、数据与活动信号。 这条只保留来源可直接支持的最小事实，具体措辞、引用、数据、采访、时间线和上下文仍以TechCrunch AI原文为准。",
+          "trend": "Agent安全正在形成独立供应链：身份、数据可见性、权限修复和非人账号治理会成为企业AI基础设施的一部分。",
+          "detailTrend": "这条不证明Cymphony产品效果，但说明投资者和客户开始把Agent当作会改变权限边界的新主体来管理。 因此后续判断不能只看表态或发布标题，还要回到正式文件、部署日志、客户指标或第三方评测。",
+          "whyRanked": "它把Agent风险从抽象安全讨论连接到融资、客户和产品类别。，方便读者决定下一步查哪类原始证据。",
+          "topReason": "安全团队应把Agent纳入身份治理和数据访问图谱，而不是只管人类账号。 下一步证据应来自正式文件、客户日志、合同、备案或第三方评测。",
+          "detailWhyRanked": "随着Agent接入企业系统，传统IAM和DLP可能看不到它们如何组合权限；Cymphony融资说明市场正在围绕这个缺口形成。 该来源的作用是提供本期新增事实入口，AI Watchtower的排序取决于读者能否据此形成下一步核查动作。 来源层面，本条只支持“Cymphony融资及Agent身份/数据安全定位”这一新增事实，不能替代后续源文件核验。",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：安全赛道信号清楚；产品效果需要客户与审计数据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          },
+          "impact": "CISO、IAM、数据安全和采购团队应盘点AI Agent、插件、MCP服务器和个人账号绕过IT的暴露面。",
+          "whoShouldCare": "在AI资本预算、供应商尽调或基建合同评审场景中，负责企业Agent身份、数据权限、DLP和AI安全采购的安全/平台团队。",
+          "readerUse": "投资/财务/采购团队可更新安全采购清单：非人身份发现、权限图谱、敏感文件暴露、自动修复和客户证明。",
+          "nextCheck": "查Cymphony官方公告、客户安全评估、SOC2/审计材料、部署日志和竞品验证。",
+          "followUpQuestions": [
+            "Cymphony是否发布客户可验证的权限发现、误报率和修复效果指标？",
+            "企业是否能从现有IAM/DLP日志独立复核Agent暴露面？"
+          ],
+          "evidenceThreshold": "需要官方融资公告、客户侧指标、审计材料、部署日志或第三方安全评测，才能升级为已验证平台能力。",
+          "claimBoundary": "TechCrunch支持融资和产品方向报道，不证明Cymphony能普遍解决Agent身份治理问题。",
+          "counterEvidence": "若客户评估报告、部署日志、误报/漏报指标或第三方安全评测显示发现率低、误报高或无法覆盖主流Agent工具，应下调为早期融资信号。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "sourceId": "techcrunch-ai",
+          "provenance": "TechCrunch AI报道Cymphony融资和Agent身份权限安全定位；完整事实、引用、图表、采访、数据和上下文仍由TechCrunch AI原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "sourceUrl": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/",
+          "originalUrl": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-09-09T06:00:00-07:00",
+          "time": "22:00 JST",
+          "tags": [
+            "funding",
+            "security",
+            "agent"
+          ],
+          "companies": [
+            "Cymphony",
+            "Sequoia Capital",
+            "Anthropic",
+            "OpenAI"
+          ],
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：安全赛道信号清楚；产品效果需要客户与审计数据。 当前适合进入雷达，但升级判断仍看原始证据。"
+          }
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "axios-ai",
+        "sourceName": "Axios AI / Technology",
+        "count": 3,
+        "share": "3/10",
+        "note": "Axios是本期单一最多来源3/10，低于三分之二但仍提示资本和OpenAI相关雷达集中；不能替代备案、正式政策、财报或公司原始声明。",
+        "nextCheck": "查OpenAI/Anthropic官方文件、SEC/Nasdaq备案、财报合同、白宫/国会文本和第三方评估。"
+      }
+    },
     {
       "id": "news-1700-2026-09-14",
       "date": "2026-09-14",
