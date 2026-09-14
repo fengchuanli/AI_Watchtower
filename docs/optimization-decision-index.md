@@ -20,7 +20,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 0 | Complete | `166baeb` | `docs/visionhub-briefing-scorecard.md` gives homepage/detail edits a pass/partial/fail check for five-second understanding, TOP3 reader use, source boundary, original-source dependency, mobile burden, continuity use, and visual-aid purpose. |
 | Day 1 | Complete | `3f6416b` | Current `data/news.json` and mirrored current history/today data now make the homepage hero/today/mobile path start with three reader questions: bottom-layer platform change, safety source files, and government/enterprise adoption evidence. |
 | Day 2 | Complete | `9040c3a` | Homepage TOP3 cards now show minimum fact, why-now rationale, reader use, source boundary, and next-check path on the card face, with score and original-dependency details kept expandable. |
-| Day 3 | Complete | `pending` | Homepage non-TOP3 feed cards now collapse category, source role, and time into one low-weight context line so the compact feed does not repeat TOP3-style metadata chips. |
+| Day 3 | Complete | `b2676ed` | Homepage non-TOP3 feed cards now collapse category, source role, and time into one low-weight context line so the compact feed does not repeat TOP3-style metadata chips. |
 
 ## Historical Guard Anchors
 
