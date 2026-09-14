@@ -2706,9 +2706,7 @@ h3 {
 }
 
 .top-meta span,
-.top-meta time,
-.feed-card-meta span,
-.feed-card-meta time {
+.top-meta time {
   display: inline-flex;
   min-height: 28px;
   align-items: center;
@@ -2743,7 +2741,7 @@ h3 {
 
 .compact-feed-card {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   padding: 18px;
 }
 
@@ -2756,6 +2754,19 @@ h3 {
   line-height: 1.55;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.compact-feed-card .feed-card-meta {
+  gap: 12px;
+  padding-top: 12px;
+  border-top-style: dashed;
+}
+
+.feed-context {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .feed-expand {

@@ -499,6 +499,10 @@ function getSourceType(item) {
   return sourceTypeLabels[String(raw)] || item.sourceRole || raw || "未标注";
 }
 
+function getFeedContext(item) {
+  return `${item.label} · ${getSourceName(item)} / ${getSourceType(item)} · ${item.time}`;
+}
+
 function getClaimStatus(item) {
   return item.claimStatus || item.verificationStatus;
 }
@@ -1135,15 +1139,12 @@ function renderNews(filter = "all") {
 
         return `
         <article class="news-card compact-feed-card${isExtra ? " feed-extra" : ""}"${isExtra ? " hidden" : ""}>
-          <span class="category">${escapeHtml(item.label)}</span>
           <div class="news-card-body">
             <h3><a class="card-detail-link" href="${detailUrl}" aria-label="${detailLabel}">${escapeHtml(item.title)}</a></h3>
             <p class="card-summary">${escapeHtml(getItemSummary(item))}</p>
           </div>
           <footer class="feed-card-meta">
-            <span class="feed-source">${escapeHtml(getSourceName(item))}</span>
-            <span class="feed-trust">${escapeHtml(getSourceType(item))}</span>
-            <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time>
+            <span class="feed-context">${escapeHtml(getFeedContext(item))}</span>
             <a class="reference-link" href="${detailUrl}" aria-label="${detailLabel}">查看详情 →</a>
           </footer>
         </article>

@@ -1921,8 +1921,13 @@ if (
   !/function getDailyTopStories/.test(appJs) ||
   !/dailyTopStoryIds = new Set\(dailyTopItems\.map/.test(appJs) ||
   !/visibleNews = scopedNews\.filter\(\(item\) => !dailyTopStoryIds\.has\(item\.id\)\)/.test(appJs) ||
+  !/function getFeedContext\(item\)/.test(appJs) ||
+  !/class="feed-context"/.test(appJs) ||
   !/compact-feed-card/.test(appJs) ||
+  /compact-feed-card[\s\S]*<span class="category">/.test(appJs) ||
+  /compact-feed-card[\s\S]*class="feed-trust"/.test(appJs) ||
   !/当天 TOP3 已覆盖当前新闻流/.test(appJs) ||
+  !/\.feed-context/.test(styles) ||
   /<p class="rank-note"><strong>为什么值得看<\/strong>/.test(appJs)
 ) {
   errors.push("Homepage feed must use same-day TOP3 ranking, avoid duplicating daily TOP3, and keep non-TOP3 feed cards concise.");

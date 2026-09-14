@@ -1,3 +1,36 @@
+## 2026-09-14 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 3，压缩首页非 TOP3 新闻流的重复元信息，让读者看完 `今日 TOP3` 后继续扫读时优先看到标题和最小事实。
+- Changed files:
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只调整首页非 TOP3 feed 的信息密度和校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 首页首屏和 TOP3 结构未被打乱，非 TOP3 feed 继续排在深度简报之后。
+  - TOP3 reader use: pass - TOP3 正面信息保持不变，非 TOP3 不再用多枚 chip 重复 TOP3 式来源层级。
+  - Source boundary visible: pass - 非 TOP3 卡片仍保留分类、来源、来源角色和时间，但合并为一条低权重上下文。
+  - Original source dependency: pass - 未扩写媒体事实，也未把 feed 卡片写成原文替代。
+  - Mobile burden: pass - 非 TOP3 卡片减少独立标签数量，手机扫读时标题和两行摘要更靠前。
+  - Continuity use: partial - 本次未新增跨期连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化：读者在首页 `更多 AI 新闻` 非 TOP3 卡片中会看到更轻的单行上下文（分类、来源、来源角色和时间），标题与两行摘要成为主要扫读路径，详情入口仍保留。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json` and `data/news-history.json` with `python3 -m json.tool`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, and the compact feed guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending.
+
 ## 2026-09-14 08:14 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-14`，发布 10 条安全非重复信号，聚焦美国AI安全减速政治回应、Anthropic蒸馏/Agent沙盒风险、Google Cloud编码Agent插件、Meta Muse早期采用、NVIDIA AI基建增长口径、OpenAI数学归因争议和AI放大公共系统漏洞。
