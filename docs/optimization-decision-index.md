@@ -8,7 +8,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 1, Homepage Briefing Clarity
 - Last indexed run: 2026-09-15 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; local `main` was up to date before edits.
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push hit sandbox DNS and the network-authorized retry was blocked by app safety review pending explicit user approval for publishing to `origin/main`.
 
 ## Recent Plan-Day Decisions
 
@@ -76,6 +76,7 @@ These compact anchors keep validation and future automation aware of the most im
 - Continue with Day 5: add a short rule for when homepage categories should be collapsed, renamed, or reordered because the reader question changed.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 2 first.
 - If Day 2 is already complete, continue with the first useful unfinished task from the current plan.
+- Local `main` is ahead of `origin/main` with verified optimization/log commits from the latest run; push them only after explicit user approval.
 
 ## Update Rules
 
