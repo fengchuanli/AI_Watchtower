@@ -1,3 +1,31 @@
+## 2026-09-15 23:03 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-15`，所以未回退版次，而是在同日 17:00 版基础上补充 4 条安全非重复信号，当前合计 14 条，新增 Dreamforce 成为 AI 减速产业会议场景、AI 安全担忧推高网络安全股、AI 暂停难以迅速落地的信任缺口，以及 AI 减速主张中的安全协作/卡特尔边界疑问。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 Axios AI/Technology、The Verge AI、当前首页和历史重复 URL。
+  - 本次不新增来源注册项，沿用已登记的 `axios-ai` 和 `theverge-ai`，来源总数保持 88。
+  - 4 条补充项均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、趋势解释、来源边界和下一步核查入口；不把媒体雷达写成正式政策、统一减速协议、网络安全收入已增长、监管可执行框架已落地或反垄断违法结论。
+  - 跳过已由 17:00 版覆盖的特朗普/AP/WIRED/Altman/Anthropic IPO/Salesforce Agentforce/长周期 Agent/Cymphony 等重复事实簇；未使用聚合页正文、社区讨论、传闻、付费墙正文、登录墙正文、旧稿或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 803。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月15日补充版 14 条情报；读者可在首页和详情页看到新增的 Dreamforce 减速议程、网络安全股安全预算信号、AI 暂停信任缺口和减速反垄断边界。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `cb8791f` (`【新闻更新】补充23点AI新闻：14条减速治理与安全预算信号`).
+
 ## 2026-09-15 20:00 JST
 
 - Focus: 完成当前 30 天计划 Day 4，重排首页编辑说明里的来源风险、过度解读和连续观察模块，让读者先看到简短阅读边界，再按需展开完整记录。
