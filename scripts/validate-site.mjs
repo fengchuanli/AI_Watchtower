@@ -1641,15 +1641,22 @@ if (
 
 if (
   !/id="overreadBoundary"/.test(html) ||
+  !/id="boundaryDigest"/.test(html) ||
+  !/class="editor-boundary-details"/.test(html) ||
+  !/const boundaryDigest = document\.querySelector\("#boundaryDigest"\);/.test(appJs) ||
+  !/function renderBoundaryDigest/.test(appJs) ||
+  !/阅读边界速览/.test(appJs) ||
   !/const overreadBoundary = document\.querySelector\("#overreadBoundary"\);/.test(appJs) ||
   !/function renderOverreadBoundary/.test(appJs) ||
   !/edition\??\.overreadBoundary/.test(appJs) ||
   !/overreadBoundary/.test(validateDataJs) ||
   !/overread boundary/.test(newsDataFormat) ||
   !/不要把本期读成全市场结论/.test(newsJson) ||
+  !/\.boundary-digest/.test(styles) ||
+  !/\.editor-boundary-details/.test(styles) ||
   !/\.overread-boundary/.test(styles)
 ) {
-  errors.push("Homepage feed metadata must render and validate an edition-level do-not-overread note when one evidence mode dominates.");
+  errors.push("Homepage feed metadata must lead with a compact reading-boundary digest and tuck full overread notes into complete boundary records.");
 }
 
 if (

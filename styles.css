@@ -389,6 +389,7 @@ h3 {
 
 .reader-frame,
 .edition-change,
+.boundary-digest,
 .overread-boundary,
 .coverage-mix,
 .source-risk,
@@ -409,6 +410,7 @@ h3 {
 .topic-continuity,
 .company-continuity,
 .overread-boundary,
+.boundary-digest,
 .topic-groups {
   margin-top: 8px;
 }
@@ -520,6 +522,7 @@ h3 {
 }
 
 .coverage-mix span,
+.boundary-digest span,
 .overread-boundary span,
 .source-risk span,
 .trend-notes span,
@@ -534,6 +537,16 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   font-size: 13px;
+}
+
+.boundary-digest span {
+  max-width: 360px;
+  background: var(--bg-inset);
+  border-color: var(--tint-info-border);
+}
+
+.boundary-digest strong {
+  color: var(--state-info);
 }
 
 .overread-boundary span {
@@ -640,6 +653,7 @@ h3 {
 }
 
 .coverage-mix strong,
+.boundary-digest strong,
 .overread-boundary strong,
 .trend-notes strong,
 .topic-continuity strong,
@@ -3037,6 +3051,7 @@ h3 {
   }
 
   .coverage-mix span,
+  .boundary-digest span,
   .overread-boundary span,
   .source-risk span,
   .trend-notes span,
@@ -3285,6 +3300,49 @@ h3 {
   display: grid;
   gap: var(--space-2);
   padding: 0 var(--space-4) var(--space-4);
+}
+
+.editor-boundary-details {
+  width: 100%;
+  max-width: 760px;
+  margin-top: var(--space-2);
+  background: rgb(255 255 255 / 3%);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.editor-boundary-details > summary {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0 var(--space-3);
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.editor-boundary-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.editor-boundary-details > summary::after {
+  content: "展开";
+  color: var(--link);
+  font-size: var(--text-xs);
+}
+
+.editor-boundary-details[open] > summary::after {
+  content: "收起";
+}
+
+.editor-boundary-body {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0 var(--space-3) var(--space-3);
 }
 
 /* 归档指标条 */

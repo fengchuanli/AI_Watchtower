@@ -9,6 +9,7 @@ const latestCapture = document.querySelector("#latestCapture");
 const newsMeta = document.querySelector("#newsMeta");
 const readerFrame = document.querySelector("#readerFrame");
 const editionChange = document.querySelector("#editionChange");
+const boundaryDigest = document.querySelector("#boundaryDigest");
 const overreadBoundary = document.querySelector("#overreadBoundary");
 const coverageMix = document.querySelector("#coverageMix");
 const sourceRisk = document.querySelector("#sourceRisk");
@@ -688,6 +689,38 @@ function renderFeedMetaDetails(label, body, isOpen = false) {
   `;
 }
 
+function renderBoundaryDigest(edition = {}) {
+  const sourceRiskText = edition.sourceRisk?.note;
+  const overreadText = edition.overreadBoundary?.useInstead || edition.overreadBoundary?.body;
+  const topicText = edition.topicContinuity?.[0]?.signalDirection || edition.topicContinuity?.[0]?.stillUnproven;
+  const companyText = edition.companyContinuity?.[0]?.stillUnproven || edition.companyContinuity?.[0]?.whatChanged;
+  const cards = [
+    { label: "先读什么", body: edition.sourceRisk?.label || edition.overreadBoundary?.label },
+    { label: "不要误读", body: sourceRiskText },
+    { label: "怎么核验", body: overreadText },
+    { label: "连续观察", body: topicText || companyText },
+  ].filter((card) => card.body);
+
+  if (!cards.length) {
+    return "";
+  }
+
+  return renderFeedMetaDetails(
+    "阅读边界速览",
+    cards
+      .map(
+        (card) => `
+          <span>
+            <strong>${escapeHtml(card.label)}</strong>
+            ${escapeHtml(card.body)}
+          </span>
+        `,
+      )
+      .join(""),
+    true,
+  );
+}
+
 function updateNewsMeta(data) {
   if (latestCapture) {
     const captureDate = data.edition?.date || data.updatedAt || "等待更新";
@@ -755,6 +788,10 @@ function updateNewsMeta(data) {
 
   if (trendNotes) {
     trendNotes.innerHTML = renderFeedMetaDetails("跨期趋势提示", renderTrendNotes(data.edition?.trendNotes));
+  }
+
+  if (boundaryDigest) {
+    boundaryDigest.innerHTML = renderBoundaryDigest(data.edition);
   }
 
   if (topicContinuity) {
