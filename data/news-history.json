@@ -1,8 +1,943 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-15",
-  "totalItems": 803,
+  "updatedAt": "2026-09-16",
+  "totalItems": 813,
   "editions": [
+    {
+      "id": "news-1700-2026-09-16",
+      "date": "2026-09-16",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期10条AI新闻情报，聚焦监管迟疑、学校隐私、Agent安全和企业部署。",
+      "operationalStatus": "已拉取origin/main；核对来源与历史URL；发布10条安全非重复信号。",
+      "editorialInterpretation": "本期编辑判断：AI治理进入执行证据阶段；政策只看文本，Agent只看日志，厂商项仍需模型卡、客户侧评测和审计材料。",
+      "readerFrame": {
+        "headline": "本期读法：先看执行证据，再看验证边界",
+        "whyItMatters": "9月16日17点版可按三条线读：美国政治系统能否承接AI监管呼声，教育和公共部门能否把数据护栏写进合同和日志，企业Agent能否用专用模型、本地部署和事故报告机制证明可控。",
+        "useThisIssueFor": [
+          "政策、法务和公共事务团队复核法案、学校合同、国际AI会谈和监管授权。",
+          "平台、安全和采购团队检查Agent事故报告、本地文件权限、CRM模型基准和公共部门客服日志。"
+        ],
+        "notProvenYet": [
+          "不证明美国已经形成AI监管新法，也不证明前沿实验室已同步放慢。",
+          "不证明Koa、Perplexity Portable Computer或TSA Ace的效果已被客户侧日志和第三方评测独立验证。"
+        ],
+        "mobile": {
+          "headline": "看监管执行与Agent可控性",
+          "summary": "查政策文本、学校合同、Agent日志和模型卡。",
+          "primaryUses": [
+            "政策团队查文本",
+            "安全团队查日志",
+            "采购团队查评测"
+          ],
+          "proofBoundary": "媒体项是雷达；厂商项仍需合同、日志、模型卡、审计和第三方测试"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版新增监管执行、教育隐私和Agent部署证据线",
+        "freshFacts": [
+          "本期新增事实：AP报道AI监管呼声与白宫/国会迟疑之间的冲突。",
+          "本期新增事实：AP报道微软/AFT学校AI隐私标准进入合同执行讨论。",
+          "本期新增事实：Axios记录Altman在Dreamforce谈事故报告文化和必要时减速。",
+          "本期新增事实：Salesforce与NVIDIA发布Koa CRM推理模型，NVIDIA发布Perplexity本地Agent Windows RTX支持。"
+        ],
+        "repeatedContext": [
+          "延续9月15日版AI减速、安全预算和企业Agent治理主线，但本期URL均为新收录。",
+          "延续既有边界：媒体材料不替代正式政策、协议、日志、客户指标、监管文件或第三方评估。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查监管与教育文本",
+          "count": 4,
+          "meaning": "用来核对美国监管日程、学校AI隐私合同、中美AI治理和公平AI项目文件。"
+        },
+        {
+          "label": "核对Agent安全日志",
+          "count": 2,
+          "meaning": "用来检查事故报告、暂停阈值、Agent botnet样本、云端滥用记录和威胁情报。"
+        },
+        {
+          "label": "验证企业部署证据",
+          "count": 2,
+          "meaning": "用来核对Koa CRM模型、TSA公共服务Agent、客户日志、审计材料和第三方评测。"
+        },
+        {
+          "label": "核对模型与本地工具证据",
+          "count": 2,
+          "meaning": "用来检查创意模型榜单、本地Agent硬件门槛、数据驻留、模型版本和采购路线。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "可靠媒体与AP集中雷达",
+        "note": "source family集中在可靠媒体7/10，AP单一来源4/10；本期主要是执行雷达，官方项也多为厂商发布或案例主张。",
+        "nextCheck": "需要的独立来源复核是官方文件、国会法案、AFT协议全文、Goalkeepers报告、模型卡、客户日志、TSA材料和第三方评测。"
+      },
+      "sourceConcentration": {
+        "sourceId": "ap-news",
+        "sourceName": "Associated Press",
+        "count": 4,
+        "share": "40%",
+        "note": "AP提供4条政策/教育/地缘/公益雷达，适合了解议题结构，但不能替代正式文本和原始报告。",
+        "nextCheck": "下一步用国会法案、AFT协议、Goalkeepers报告、中美官方文本和独立基准复核。"
+      },
+      "overreadBoundary": {
+        "label": "不要把执行雷达读成落地结论",
+        "body": "不要把本期读成全市场结论：本期说明AI治理正在转向执行材料，如法案、合同、事故报告、客户日志、模型卡和本地权限；它不证明监管已经落地，也不证明企业Agent已经普遍可靠。",
+        "doNotConclude": "不证明美国已形成AI新法，不证明学校AI标准已覆盖所有供应商，也不证明Salesforce、NVIDIA或Perplexity的效果已独立验证。",
+        "useInstead": "用来安排正式文本、合同、系统卡、部署日志、威胁样本、审计材料和第三方测试的下一步核查。"
+      },
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "减速争论转向执行材料",
+          "note": "跨期看，9月15日的减速争论已延伸到国会日程、学校合同、中美竞争和公平AI资金分配。",
+          "boundary": "不证明政策已形成；下一步查法案、协议全文、会谈文本、拨款清单和监管材料。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "Agent治理走向日志和模型卡",
+          "note": "跨期看，Salesforce控制平面、Koa模型、TSA案例、Perplexity本地Agent和Altman事故报告口径都要求可审计证据。",
+          "boundary": "不证明部署成熟；下一步查客户日志、模型卡、事故复盘、审计记录和第三方评测。"
+        },
+        {
+          "topic": "model",
+          "label": "模型比较更贴近任务",
+          "note": "跨期看，创意模型榜单和CRM领域模型都把评测从通用能力推向具体工作任务。",
+          "boundary": "不证明榜单或厂商基准可直接采购；下一步查方法、任务集、置信区间、复测和客户侧指标。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "政策压力仍在增强",
+          "status": "stronger",
+          "previousPattern": "此前模式：9月15日版集中在减速争论、反垄断边界、白宫反应和会议场景。",
+          "currentSignal": "本期新增AP监管迟疑、微软学校AI隐私标准、中美AI竞争和盖茨基金会公平AI资金。",
+          "signalDirection": "增强：从是否减速推进到法案、合同、国际核查和公平部署资金谁来执行。",
+          "stillUnproven": "仍需法案文本、合同附件、官方会谈记录、拨款文件、监管材料和执行日志。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "Agent部署需要证据链",
+          "status": "stronger",
+          "previousPattern": "此前模式：Salesforce AI Harness、Agentforce和长周期Agent风险提示企业需要控制平面。",
+          "currentSignal": "本期新增Koa CRM推理模型、TSA Ace案例、Perplexity本地Agent和Altman事故报告表态。",
+          "signalDirection": "增强：从平台控制进入模型卡、客户日志、本地权限和事故披露机制。",
+          "stillUnproven": "仍需模型卡、客户部署日志、人工接管率、误答率、审计材料和第三方评测。"
+        },
+        {
+          "topic": "model",
+          "label": "模型评估更场景化",
+          "status": "stronger",
+          "previousPattern": "此前模式：模型能力和开放模型争论主要围绕前沿能力、distillation和安全边界。",
+          "currentSignal": "本期新增OpenArt任务化创意模型榜单和Salesforce Koa CRM领域模型。",
+          "signalDirection": "增强：从通用排行榜转向具体生产任务、领域流程和采购路由。",
+          "stillUnproven": "仍需公开方法、任务集、模型卡、第三方复测、客户指标和成本/延迟数据。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "事故治理表态更具体",
+          "lastMention": "上一期提及：OpenAI出现在减速争论、风险分类和数学归因争议中。",
+          "whatChanged": "本期Axios记录Altman在Dreamforce谈事故报告文化、必要时减速和AI第三波主动执行系统。",
+          "stillUnproven": "仍需OpenAI正式事故披露框架、系统卡、客户合同、监管反馈和第三方审查。"
+        },
+        {
+          "company": "Microsoft",
+          "label": "教育AI进入合同护栏",
+          "lastMention": "历史线索中Microsoft多次出现于企业AI、政府云和教育AI工具背景。",
+          "whatChanged": "本期AP报道微软与AFT/UFT学校AI隐私标准，把学生数据训练和人工监督写入合同讨论。",
+          "stillUnproven": "仍需协议全文、学区采纳记录、合同附件、审计机制和其他厂商签署情况。"
+        },
+        {
+          "company": "Salesforce",
+          "label": "Agent平台扩展到模型与公共服务",
+          "lastMention": "上一期提及：Salesforce出现在Agentforce高价值工作代理和AI Harness控制平面中。",
+          "whatChanged": "本期新增Koa CRM推理模型和TSA Ace公共服务Agent案例。",
+          "stillUnproven": "仍需Koa模型卡、CRM Benchmark明细、客户日志、TSA官方数据和独立评测。"
+        },
+        {
+          "company": "NVIDIA",
+          "label": "从算力供应转向端侧Agent",
+          "lastMention": "上一期提及：NVIDIA出现在AI基建增长、Dreamforce场景和安全预算叙事中。",
+          "whatChanged": "本期新增Perplexity Portable Computer Windows RTX支持，以及Koa基于Nemotron的企业模型路线。",
+          "stillUnproven": "仍需本地Agent测试、模型卡、客户部署数据、功耗/成本指标和第三方基准。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 7,
+          "role": "可靠媒体用于捕捉监管迟疑、教育隐私、国际竞争、公平AI、事故治理和安全专家分歧；完整采访、图表和上下文仍回到原文。"
+        },
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 3,
+          "role": "官方来源用于确认NVIDIA和Salesforce发布事实；产品效果、客户收益、隐私实现和可靠性仍需外部证据。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "监管执行、学校隐私与国际AI治理",
+          "count": 4,
+          "itemIds": [
+            "ap-ai-regulation-trump-congress-slow-response-2026-09-16",
+            "ap-microsoft-aft-school-ai-privacy-standard-2026-09-16",
+            "ap-china-us-ai-gap-governance-rivalry-2026-09-16",
+            "axios-altman-dreamforce-ai-safety-third-wave-2026-09-16"
+          ],
+          "meaning": "用来核对法案、合同、会谈文本、拨款清单和监管授权，而不是把表态当作制度落地。",
+          "whyNow": "AI减速争论正从实验室风险语言进入美国政治、学校合同、中美竞争和全球公平部署。"
+        },
+        {
+          "id": "enterprise",
+          "label": "企业与公共部门Agent部署",
+          "count": 3,
+          "itemIds": [
+            "ap-gates-foundation-one-billion-equitable-ai-2026-09-16",
+            "salesforce-koa-crm-reasoning-model-nvidia-nemotron-2026-09-16",
+            "salesforce-tsa-agentforce-ace-traveler-support-2026-09-16"
+          ],
+          "meaning": "用来检查CRM模型、公共服务Agent、客户日志、人工接管率和审计责任。",
+          "whyNow": "Agent正在从演示进入销售、客服和政府问答等具体流程，读者需要看到日志和责任边界。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "本地算力与公益资金约束",
+          "count": 3,
+          "itemIds": [
+            "ap-gates-foundation-one-billion-equitable-ai-2026-09-16",
+            "salesforce-koa-crm-reasoning-model-nvidia-nemotron-2026-09-16",
+            "nvidia-perplexity-portable-computer-windows-rtx-local-agent-2026-09-16"
+          ],
+          "meaning": "用来检查本地GPU部署门槛、数据驻留、公益AI拨款、项目指标和第三方评估。",
+          "whyNow": "AI部署的约束同时来自端侧硬件、隐私控制和资金是否能流向低资源场景。"
+        },
+        {
+          "id": "model",
+          "label": "任务化模型评测与领域模型",
+          "count": 2,
+          "itemIds": [
+            "salesforce-koa-crm-reasoning-model-nvidia-nemotron-2026-09-16",
+            "venturebeat-openart-arena-creative-model-benchmark-2026-09-16"
+          ],
+          "meaning": "用来核对创意模型榜单、CRM推理模型、方法透明度、模型卡和客户侧指标。",
+          "whyNow": "模型选择越来越依赖具体任务、行业流程和部署边界，而不是单一通用排行榜。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "本地Agent与工具权限",
+          "count": 3,
+          "itemIds": [
+            "axios-altman-dreamforce-ai-safety-third-wave-2026-09-16",
+            "axios-ai-agent-botnet-risk-skepticism-2026-09-16",
+            "nvidia-perplexity-portable-computer-windows-rtx-local-agent-2026-09-16"
+          ],
+          "meaning": "用来检查本地Agent文件权限、日志、模型版本、云端切换和安全监控。",
+          "whyNow": "Agent开始处理敏感文件和多步骤任务，开发与IT团队需要知道哪些步骤留在本机。"
+        }
+      ],
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "ap-ai-regulation-trump-congress-slow-response-2026-09-16",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：AI监管呼声撞上白宫与国会迟疑",
+          "body": "AP报道，AI公司高层要求更强监管和减速，但特朗普、共和党领导层与选前国会日程让快速立法仍显困难。",
+          "summary": "AP报道，AI监管呼声获得科技高层支持，但白宫和国会在选前仍未显示快速行动能力。",
+          "whyItMatters": "这把AI安全争论从实验室口号推向立法能力测试，政策团队应核对法案文本、听证日程和行政表态。",
+          "detailBody": "AP支持的事实是：科技高层呼吁AI监管，而特朗普和国会领导层对快速立法保持迟疑。完整采访、引语和政治背景仍以AP原文为准。 这条线索还需要结合查参议院kill switch提案、国会AI caucus材料、白宫会议记录、正式法案文本和委员会排期。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "AI减速争论正在变成美国治理能力测试。",
+          "detailTrend": "AI减速争论正在变成美国治理能力测试。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "政策、法务和合规团队关注：它解释了为什么安全共识未必转成制度动作，是本期政策主线。",
+          "topReason": "政策、法务和合规团队应使用这条核对证据边界：政策/法务团队应先查正式法案、听证和行政文本，而不是把CEO表态当成监管落地。",
+          "impact": "AI治理、公共事务和企业合规团队应把这条作为美国监管窗口的日程风险提示。",
+          "whoShouldCare": "负责AI政策、公共事务和合规预案的团队，需要判断美国监管是否会影响模型采购、部署和风险披露。",
+          "readerUse": "政策、法务和合规团队可用它用来更新美国AI监管观察清单：法案、听证、行政会议、监管授权和党派阻力。",
+          "nextCheck": "查参议院kill switch提案、国会AI caucus材料、白宫会议记录、正式法案文本和委员会排期。",
+          "followUpQuestions": [
+            "参议院是否公开kill switch或前沿模型护栏的国会法案文本、委员会记录或表决材料？",
+            "白宫或国会委员会是否公布AI企业会议记录、听证排期或监管授权草案？"
+          ],
+          "evidenceThreshold": "需要正式法案文本、委员会材料、行政会议记录或监管机构声明，才能升级为可执行政策路径。",
+          "claimBoundary": "AP支持政治迟疑和立法不确定性，不证明美国监管已经失败或完全停摆。",
+          "counterEvidence": "若国会公布两党法案并排期表决，或白宫发布明确监管路线，应下调迟疑判断。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/d2d1bac8e8666c681937665596a4f603",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press原文支持的精确来源事实是“报道AI监管治理边界与白宫/国会迟疑”；完整事实、引语、采访、图表、数据和上下文仍由原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "publishedAt": "2026-09-16T16:00:00+09:00",
+          "time": "13:00 JST",
+          "tags": [
+            "policy",
+            "ai-safety",
+            "us-congress"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "xAI"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：政策影响大且有明确冲突；仍需正式文本验证行动。"
+          },
+          "detailWhyRanked": "Associated Press把“报道AI监管治理边界与白宫/国会迟疑”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/d2d1bac8e8666c681937665596a4f603",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：政策影响大且有明确冲突；仍需正式文本验证行动。"
+          }
+        },
+        {
+          "id": "ap-microsoft-aft-school-ai-privacy-standard-2026-09-16",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：微软与教师工会AI隐私标准进入学校合同层",
+          "body": "AP报道，微软与AFT/UFT推动学校AI安全与隐私标准，核心是限制学生和教师数据训练、广告化使用和高风险自动决策。",
+          "summary": "AP报道微软/AFT学校AI隐私标准，显示教育AI护栏开始走向可写入合同的条款。",
+          "whyItMatters": "教育AI采购不再只问功能，也要问数据训练、家长透明、人工监督和合同追责。",
+          "detailBody": "AP支持的事实是：微软与教师工会推进学校AI安全与隐私标准。AI Watchtower仅保留最小事实，完整条款和采访仍回到AP/原始协议。 这条线索还需要结合查AFT/UFT协议全文、微软客户合同条款、地区学区采纳记录、Google/OpenAI/Anthropic是否签署类似标准。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "学校AI治理正在从原则声明转向合同控制。",
+          "detailTrend": "学校AI治理正在从原则声明转向合同控制。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "政策、法务和合规团队关注：它把AI治理落在学生数据和采购合同上，比抽象伦理更可执行。",
+          "topReason": "政策、法务和合规团队应使用这条核对证据边界：教育采购团队应查合同附件和执行条款，不只看产品介绍。",
+          "impact": "学校、家长、教育科技和法务团队应把数据训练禁用、家长说明和人工监督列入采购底线。",
+          "whoShouldCare": "负责学校AI采购、学生数据合规和教育产品上线的法务/信息化/教学管理团队。",
+          "readerUse": "政策、法务和合规团队可用它用来复核教育AI合同是否覆盖数据训练、广告用途、自动决策、审计和家长透明。",
+          "nextCheck": "查AFT/UFT协议全文、微软客户合同条款、地区学区采纳记录、Google/OpenAI/Anthropic是否签署类似标准。",
+          "followUpQuestions": [
+            "AFT/UFT与微软是否公开完整协议和事实说明书？",
+            "哪些学区把该标准写入合同，Google、OpenAI或Anthropic是否接受同等条款？"
+          ],
+          "evidenceThreshold": "需要协议全文、学区合同、供应商签署记录或监管文件，才能升级为行业通用教育AI标准。",
+          "claimBoundary": "AP报道支持微软协议方向，不证明其他AI厂商已采用相同标准。",
+          "counterEvidence": "若主要学区不采纳或协议例外允许广泛训练用途，应收窄其行业示范意义。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/89b040631d635e0d8673f1e9aa9a6e28",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press原文支持的精确来源事实是“报道微软/AFT学校AI数据治理指标”；完整事实、引语、采访、图表、数据和上下文仍由原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "publishedAt": "2026-09-16T15:55:00+09:00",
+          "time": "13:05 JST",
+          "tags": [
+            "education",
+            "privacy",
+            "policy"
+          ],
+          "companies": [
+            "Microsoft",
+            "OpenAI",
+            "Anthropic",
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：教育AI合同价值高；仍需协议全文和采纳记录。"
+          },
+          "detailWhyRanked": "Associated Press把“报道微软/AFT学校AI数据治理指标”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/89b040631d635e0d8673f1e9aa9a6e28",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：教育AI合同价值高；仍需协议全文和采纳记录。"
+          }
+        },
+        {
+          "id": "ap-china-us-ai-gap-governance-rivalry-2026-09-16",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：中美AI差距缩小让减速争论更难单边处理",
+          "body": "AP报道，中国模型公司能力提升和美国distillation指控，让AI减速、安全协作与地缘竞争重新交织。",
+          "summary": "AP把中国模型追赶、美国安全担忧和distillation争议放在同一张AI竞争地图上。",
+          "whyItMatters": "前沿模型减速若缺少国际核查机制，很容易被产业和政府重新解释为地缘让步或技术封锁。",
+          "detailBody": "AP支持的事实是：中国AI公司能力提升和美方distillation指控并行出现。完整模型比较、专家判断和外交背景仍以AP原文为准。 这条线索还需要结合查中美官方会谈文本、NSA/FBI/CISA材料、中国监管表态、模型系统卡、独立基准和API访问记录。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "AI安全治理正在被地缘竞争持续牵引。",
+          "detailTrend": "AI安全治理正在被地缘竞争持续牵引。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "政策、法务和合规团队关注：它给本周减速争论补上国际约束条件。",
+          "topReason": "政策、法务和合规团队应使用这条核对证据边界：政策团队应把减速讨论与中美模型、芯片和数据访问证据放在一起核对。",
+          "impact": "政策、出口管制和企业全球化团队应同时检查模型访问、合规边界和跨境供应链风险。",
+          "whoShouldCare": "需要评估中美AI政策、模型供应和跨境合规风险的战略、法务、采购和安全团队。",
+          "readerUse": "政策、法务和合规团队可用它用来把AI减速主张放入中美模型竞争、芯片限制和distillation核查表。",
+          "nextCheck": "查中美官方会谈文本、NSA/FBI/CISA材料、中国监管表态、模型系统卡、独立基准和API访问记录。",
+          "followUpQuestions": [
+            "中美是否在正式会谈或监管文件中提出AI安全核查机制？",
+            "独立基准和模型卡是否支持AP报道中关于能力差距变化的判断？"
+          ],
+          "evidenceThreshold": "需要官方会谈文本、监管材料、模型卡、独立基准或API审计，才能升级为可验证的地缘AI风险结论。",
+          "claimBoundary": "AP报道支持竞争与治理张力，不证明任何一方模型能力已全面领先或落后。",
+          "counterEvidence": "若独立基准显示能力差距扩大，或双方发布合作核查机制，应收窄竞争加剧判断。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/adb45169d436d5f940fc7b4ebeaeef3b",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press原文支持的精确来源事实是“报道中美AI模型能力与治理竞争”；完整事实、引语、采访、图表、数据和上下文仍由原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "publishedAt": "2026-09-16T15:50:00+09:00",
+          "time": "13:10 JST",
+          "tags": [
+            "china",
+            "policy",
+            "model"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "DeepSeek",
+            "Alibaba"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：地缘约束重要；能力判断需基准和官方文件复核。"
+          },
+          "detailWhyRanked": "Associated Press把“报道中美AI模型能力与治理竞争”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/adb45169d436d5f940fc7b4ebeaeef3b",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：地缘约束重要；能力判断需基准和官方文件复核。"
+          }
+        },
+        {
+          "id": "ap-gates-foundation-one-billion-equitable-ai-2026-09-16",
+          "category": "funding",
+          "label": "资本",
+          "title": "AP：Gates Foundation承诺10亿美元推动公平AI",
+          "body": "AP报道，盖茨基金会在Goalkeepers报告中提出未来两年投入10亿美元，关注健康、教育、农业和语言包容等AI应用。",
+          "summary": "AP报道盖茨基金会10亿美元公平AI承诺，把AI能力差距转成全球发展议题。",
+          "whyItMatters": "这让AI部署的评价不只看模型能力，也要看弱势地区数据、语言覆盖、卫生教育落地和治理责任。",
+          "detailBody": "AP支持的事实是：盖茨基金会围绕Goalkeepers报告提出10亿美元公平AI投入。完整项目、批评意见和报告上下文仍以AP原文为准。 这条线索还需要结合查Goalkeepers报告、拨款清单、项目伙伴、地区指标、第三方评估和受益人数据。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "公益资本正在把AI普惠纳入可投资议程。",
+          "detailTrend": "公益资本正在把AI普惠纳入可投资议程。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "公益、公共部门和项目评估团队关注：它补足本期资本线：不是所有AI资金都流向算力，也有面向公平性的部署资金。",
+          "topReason": "公益、公共部门和项目评估团队应使用这条核对证据边界：公益和公共部门团队应查项目指标，而不是只看10亿美元承诺。",
+          "impact": "公共卫生、教育、农业和公益技术团队应跟踪资金是否进入可衡量的本地化AI项目。",
+          "whoShouldCare": "在设计公共服务AI、低资源语言工具、健康教育应用和全球发展项目评估框架时，需要核对拨款指标的公益、政府、研究和产品团队。",
+          "readerUse": "公益、公共部门和项目评估团队可用它用来检查公平AI项目是否披露受益人、数据来源、语言覆盖、健康/教育结果和治理机制。",
+          "nextCheck": "查Goalkeepers报告、拨款清单、项目伙伴、地区指标、第三方评估和受益人数据。",
+          "followUpQuestions": [
+            "Goalkeepers报告是否列出具体拨款项目、地区和衡量指标？",
+            "相关AI工具是否公布低资源语言、健康教育结果或第三方评估数据？"
+          ],
+          "evidenceThreshold": "需要拨款文件、项目数据、第三方评估或受益人结果，才能升级为已验证的公平AI影响。",
+          "claimBoundary": "AP报道支持资金承诺和议题方向，不证明项目已经改善健康、教育或农业结果。",
+          "counterEvidence": "若后续拨款集中在少数高收入市场或缺少结果指标，应下调公平AI示范意义。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/26ce25f9be20574a4fa04a5f983521ae",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press原文支持的精确来源事实是“报道Gates Foundation公平AI融资指标”；完整事实、引语、采访、图表、数据和上下文仍由原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "publishedAt": "2026-09-16T15:45:00+09:00",
+          "time": "13:15 JST",
+          "tags": [
+            "funding",
+            "equity",
+            "public-sector"
+          ],
+          "companies": [
+            "Gates Foundation",
+            "盖茨基金会",
+            "OpenAI",
+            "Anthropic",
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "取舍：公共影响强；项目效果仍需拨款和评估数据。"
+          },
+          "detailWhyRanked": "Associated Press把“报道Gates Foundation公平AI融资指标”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/26ce25f9be20574a4fa04a5f983521ae",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "取舍：公共影响强；项目效果仍需拨款和评估数据。"
+          }
+        },
+        {
+          "id": "axios-altman-dreamforce-ai-safety-third-wave-2026-09-16",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：Altman在Dreamforce称AI事故报告文化不可少",
+          "body": "Axios报道，Sam Altman在Dreamforce承认AI风险真实存在，同时主张透明事故报告，并称行业必要时应减速或停止。",
+          "summary": "Axios记录Altman把AI安全落到事故报告、监管学习和第三波主动执行系统。",
+          "whyItMatters": "这让企业采用Agent时要准备事故披露、暂停阈值和责任链，而不是只追求自动化速度。",
+          "detailBody": "Axios支持的事实是：Altman在Dreamforce谈AI风险、事故报告文化和必要时减速。完整现场引语和上下文仍以Axios原文为准。 这条线索还需要结合查OpenAI书面安全政策、事故披露框架、Dreamforce实录、监管反馈和企业客户SLA。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "前沿AI公司正在用事故治理语言回应减速压力。",
+          "detailTrend": "前沿AI公司正在用事故治理语言回应减速压力。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "政策、法务和合规团队关注：它把减速争论转成企业可执行的事故管理问题。",
+          "topReason": "政策、法务和合规团队应使用这条核对证据边界：平台团队应把事故报告、暂停阈值和复盘流程写进Agent上线清单。",
+          "impact": "安全、平台和合规团队应准备Agent事故分类、披露流程、停止开关和外部审查材料。",
+          "whoShouldCare": "负责企业Agent上线、安全事故复盘和合规披露的平台/安全/法务团队。",
+          "readerUse": "政策、法务和合规团队可用它用来设计Agent事故报告、暂停阈值、外部审计和用户沟通机制。",
+          "nextCheck": "查OpenAI书面安全政策、事故披露框架、Dreamforce实录、监管反馈和企业客户SLA。",
+          "followUpQuestions": [
+            "OpenAI是否发布正式事故披露或暂停阈值框架，对应的法案文本、会议记录、日志或评测材料在哪里？",
+            "Dreamforce实录或客户合同是否说明Agent事故由谁记录、上报和复盘？"
+          ],
+          "evidenceThreshold": "需要OpenAI正式政策、事故报告框架、客户合同、监管文件或审计记录，才能升级为已落地治理机制。",
+          "claimBoundary": "Axios支持现场表态，不证明OpenAI已有完整事故披露制度。",
+          "counterEvidence": "若后续事故无透明披露或无暂停执行记录，应下调其治理成熟度。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/15/ai-safety-altman-openai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology原文支持的精确来源事实是“记录Altman在Dreamforce讨论Agent治理”；完整事实、引语、采访、图表、数据和上下文仍由原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "publishedAt": "2026-09-16T12:55:00+09:00",
+          "time": "12:55 JST",
+          "tags": [
+            "openai",
+            "ai-safety",
+            "agents"
+          ],
+          "companies": [
+            "OpenAI",
+            "Salesforce"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：表态直接连接治理执行；制度落地仍需文件。"
+          },
+          "detailWhyRanked": "Axios AI / Technology把“记录Altman在Dreamforce讨论Agent治理”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/15/ai-safety-altman-openai",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：表态直接连接治理执行；制度落地仍需文件。"
+          }
+        },
+        {
+          "id": "salesforce-koa-crm-reasoning-model-nvidia-nemotron-2026-09-16",
+          "category": "model",
+          "label": "模型",
+          "title": "Salesforce发布基于NVIDIA Nemotron的CRM推理模型Koa",
+          "body": "Salesforce称，Koa是其首个CRM推理模型，用合成企业工作流数据后训练Nemotron，用于Agentforce多步骤CRM任务。",
+          "summary": "Salesforce发布Koa CRM推理模型，显示企业软件商开始把领域流程知识写进专用Agent模型。",
+          "whyItMatters": "企业Agent竞争不只靠通用大模型能力，也会转向领域数据、工具调用、信任边界和私有部署控制。",
+          "detailBody": "Salesforce官方支持的事实是：Koa基于NVIDIA Nemotron并面向Agentforce CRM任务。性能和客户收益仍需独立评测。 这条线索还需要结合查Koa模型卡、CRM Benchmark明细、试点客户数据、第三方评测、价格和Missionforce部署文档。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "领域推理模型正在成为企业Agent平台的新分层。",
+          "detailTrend": "领域推理模型正在成为企业Agent平台的新分层。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "CRM、平台架构和业务运营团队关注：它是本期最具体的企业Agent模型发布，直接连接NVIDIA开放模型和Salesforce信任边界。",
+          "topReason": "CRM、平台架构和业务运营团队应使用这条核对证据边界：企业架构团队应查CRM Benchmark、客户日志和推理错误率，而不是只看模型命名。",
+          "impact": "CRM、客服、销售运营和政府数字化团队应评估专用模型是否改善多步骤流程可靠性。",
+          "whoShouldCare": "负责Salesforce Agentforce、CRM自动化、客服流程和受监管环境AI部署的平台/业务/采购团队。",
+          "readerUse": "CRM、平台架构和业务运营团队可用它用来检查领域模型采购：训练数据边界、合成数据、错误率、基准任务、私有部署和客户日志。",
+          "nextCheck": "查Koa模型卡、CRM Benchmark明细、试点客户数据、第三方评测、价格和Missionforce部署文档。",
+          "followUpQuestions": [
+            "Salesforce是否公开Koa模型卡、CRM Benchmark任务集和错误率口径，对应的法案文本、会议记录、日志或评测材料在哪里？",
+            "试点客户是否提供真实流程日志、人工接管率和质量指标？"
+          ],
+          "evidenceThreshold": "需要模型卡、基准明细、试点客户日志、第三方评测或审计材料，才能升级为独立验证的CRM Agent能力。",
+          "claimBoundary": "Salesforce官方支持Koa发布事实，不独立证明三倍错误率改善适用于所有客户。 厂商主张不证明客户效果、性能收益、安全成熟度或ROI已经独立验证。",
+          "counterEvidence": "若第三方评测或客户日志无法复现基准优势，应下调专用模型可靠性判断。",
+          "sourceId": "salesforce-news",
+          "sourceName": "Salesforce Newsroom",
+          "source": "Salesforce Newsroom",
+          "sourceUrl": "https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/?bc=OTH",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Salesforce Newsroom官方页面支持的精确来源事实是“发布Koa CRM推理模型”；厂商主张不证明客户效果、性能收益、安全成熟度或ROI已经独立验证。仍需查Koa模型卡、CRM Benchmark明细、试点客户数据、第三方评测、价格和Missionforce部署文档。。",
+          "publishedAt": "2026-09-16T01:00:00+09:00",
+          "time": "01:00 JST",
+          "tags": [
+            "salesforce",
+            "nvidia",
+            "enterprise-agent"
+          ],
+          "companies": [
+            "Salesforce",
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：企业Agent平台信号强；性能仍属厂商主张。"
+          },
+          "detailWhyRanked": "Salesforce Newsroom把“发布Koa CRM推理模型”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/?bc=OTH",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：企业Agent平台信号强；性能仍属厂商主张。"
+          }
+        },
+        {
+          "id": "venturebeat-openart-arena-creative-model-benchmark-2026-09-16",
+          "category": "research",
+          "label": "研究",
+          "title": "VentureBeat：OpenArt按创作任务拆分图像视频模型榜单",
+          "body": "VentureBeat报道，OpenArt Arena按电影、电商、图形设计、视频剪辑、口型同步等任务发布多模态创作模型榜单。",
+          "summary": "VentureBeat报道OpenArt Arena用任务化榜单比较图像和视频模型，提示企业不要只看总体排名。",
+          "whyItMatters": "创意AI采购需要按工作流、开放性、成本和数据控制选择模型，而不是用单一排行榜替代评估。",
+          "detailBody": "VentureBeat支持的事实是：OpenArt发布按创意任务拆分的AI图像/视频模型榜单。完整排名、采访和方法细节仍以原文为准。 这条线索还需要结合查OpenArt方法文档、提示词样本、评审人数、置信区间、模型版本和第三方复测。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "生成式媒体模型比较正在从通用榜单转向工作任务路由。",
+          "detailTrend": "生成式媒体模型比较正在从通用榜单转向工作任务路由。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "创意技术、采购和产品团队关注：它把创意AI评测从模型崇拜拉回实际生产任务。",
+          "topReason": "创意技术、采购和产品团队应使用这条核对证据边界：产品和采购团队应查方法、样本、置信区间和权重开放性，再决定模型路由。",
+          "impact": "品牌、内容、电商和创意技术团队应建立自己的任务集，不只沿用公开榜单。",
+          "whoShouldCare": "负责AI创意生产、广告素材、电商图片和视频工作流选型的产品/采购/创意技术团队。",
+          "readerUse": "创意技术、采购和产品团队可用它用来设计按任务拆分的模型评测表：质量、成本、速度、开放性、数据驻留和版权风险。",
+          "nextCheck": "查OpenArt方法文档、提示词样本、评审人数、置信区间、模型版本和第三方复测。",
+          "followUpQuestions": [
+            "OpenArt是否公开足够的方法、提示词样本和评审规模供复核？",
+            "第三方基准或企业自测是否复现各任务榜单的模型排序？"
+          ],
+          "evidenceThreshold": "需要公开方法、评审数据、提示词样本、第三方复测或企业A/B测试，才能升级为采购级模型排名依据。",
+          "claimBoundary": "VentureBeat支持榜单发布和方法说明，不证明榜单排名适用于所有创意场景。",
+          "counterEvidence": "若第三方复测或企业自测给出相反排序，应下调OpenArt榜单的泛化权重。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "sourceUrl": "https://venturebeat.com/orchestration/whats-the-best-ai-model-for-graphic-design-video-ads-lip-sync-and-more-openarts-new-arena-offers-leaderboards-for-different-media-jobs",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI原文支持的精确来源事实是“报道OpenArt Arena任务化模型基准”；完整事实、引语、采访、图表、数据和上下文仍由原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "publishedAt": "2026-09-15T23:00:00+09:00",
+          "time": "23:00 JST",
+          "tags": [
+            "benchmark",
+            "creative-ai",
+            "video"
+          ],
+          "companies": [
+            "OpenArt",
+            "OpenAI",
+            "Google",
+            "ByteDance",
+            "Alibaba"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：采购实用性强；榜单透明度需复核。"
+          },
+          "detailWhyRanked": "VentureBeat AI把“报道OpenArt Arena任务化模型基准”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/orchestration/whats-the-best-ai-model-for-graphic-design-video-ads-lip-sync-and-more-openarts-new-arena-offers-leaderboards-for-different-media-jobs",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：采购实用性强；榜单透明度需复核。"
+          }
+        },
+        {
+          "id": "axios-ai-agent-botnet-risk-skepticism-2026-09-16",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：AI Agent接管互联网风险仍处在警报与怀疑之间",
+          "body": "Axios报道，Dario Amodei关于AI Agent式 botnet 的警告引发安全圈讨论，专家同时提醒完全接管互联网的情景仍需谨慎看待。",
+          "summary": "Axios把AI Agent安全警报和网络安全专家怀疑放在一起，提醒读者区分风险放大与末日结论。",
+          "whyItMatters": "安全团队需要把Agent自动化攻击纳入威胁建模，但不能把未经验证的极端情景直接当作预算结论。",
+          "detailBody": "Axios支持的事实是：AI Agent botnet风险警告引发讨论，同时有安全专家质疑极端接管情景。完整专家观点仍以Axios原文为准。 这条线索还需要结合查安全论文、攻击样本、CVE利用日志、威胁情报报告、云端滥用记录和防御指标。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "Agent安全讨论正在从单次事故转向可规模化攻击假设。",
+          "detailTrend": "Agent安全讨论正在从单次事故转向可规模化攻击假设。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "政策、法务和合规团队关注：它给本周安全恐慌补上反证姿态，适合安全团队建模。",
+          "topReason": "政策、法务和合规团队应使用这条核对证据边界：安全团队应优先查可复现实验和真实事件日志，而不是只采信极端预测。",
+          "impact": "CISO和平台安全团队应更新Agent威胁模型、蜜罐监控、API滥用检测和权限隔离策略。",
+          "whoShouldCare": "负责Agent平台、网络防御、身份权限和安全预算的CISO、红队和平台工程团队。",
+          "readerUse": "政策、法务和合规团队可用它用来区分AI攻击自动化、Agent蠕虫实验、真实botnet样本和预算叙事。",
+          "nextCheck": "查安全论文、攻击样本、CVE利用日志、威胁情报报告、云端滥用记录和防御指标。",
+          "followUpQuestions": [
+            "是否有公开可复现的AI Agent蠕虫或botnet样本与传播指标？",
+            "云厂商、CERT或安全公司是否发布真实AI自动化攻击日志？"
+          ],
+          "evidenceThreshold": "需要可复现实验、真实攻击样本、威胁情报、云端日志或第三方复盘，才能升级为确认的Agent botnet风险。",
+          "claimBoundary": "Axios支持风险讨论和专家分歧，不证明AI Agent已具备接管互联网能力。",
+          "counterEvidence": "若真实样本显示传播受限、权限隔离有效或攻击链依赖人工操作，应收窄风险范围。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/15/anthropic-dario-ai-agents-safety-botnet",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology原文支持的精确来源事实是“报道Agent botnet安全模型与专家分歧”；完整事实、引语、采访、图表、数据和上下文仍由原文负责，AI Watchtower仅保留最小事实和中文核查框架。",
+          "publishedAt": "2026-09-15T22:00:00+09:00",
+          "time": "22:00 JST",
+          "tags": [
+            "security",
+            "agents",
+            "anthropic"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：安全建模价值高；极端情景需样本和日志。"
+          },
+          "detailWhyRanked": "Axios AI / Technology把“报道Agent botnet安全模型与专家分歧”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/15/anthropic-dario-ai-agents-safety-botnet",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "取舍：安全建模价值高；极端情景需样本和日志。"
+          }
+        },
+        {
+          "id": "nvidia-perplexity-portable-computer-windows-rtx-local-agent-2026-09-16",
+          "category": "tool",
+          "label": "工具",
+          "title": "NVIDIA：Perplexity本地Agent登陆Windows RTX PC",
+          "body": "NVIDIA称，Perplexity Portable Computer已面向兼容Windows RTX PC开放，可在本机处理多步骤任务并保留敏感文件。",
+          "summary": "NVIDIA发布Perplexity Portable Computer Windows RTX支持，强化本地Agent与隐私工作流路线。",
+          "whyItMatters": "本地Agent把AI工作从云端订阅部分拉回设备侧，但可用性受GPU显存、模型能力和应用权限限制。",
+          "detailBody": "NVIDIA官方支持的事实是：Perplexity Portable Computer向兼容Windows RTX PC开放。设备要求、模型表现和真实任务效果仍需独立测试。 这条线索还需要结合查Perplexity产品文档、Windows app版本、模型卡、本地日志、第三方性能测试和企业部署策略。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "本地AI Agent正在成为云端Agent之外的隐私部署路径。",
+          "detailTrend": "本地AI Agent正在成为云端Agent之外的隐私部署路径。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "IT、安全和本地办公平台团队关注：它把Agent竞争带到端侧硬件和隐私控制层。",
+          "topReason": "IT、安全和本地办公平台团队应使用这条核对证据边界：IT团队应先测文件访问、日志、显存要求和本地/云端切换边界。",
+          "impact": "企业IT、安全和个人生产力团队应评估本地Agent是否适合敏感文件处理和重复任务自动化。",
+          "whoShouldCare": "需要在本机处理代码、财务、税务或内部文件的IT、安全、开发和高隐私办公团队。",
+          "readerUse": "IT、安全和本地办公平台团队可用它用来检查本地Agent采购条件：GPU显存、文件权限、日志、模型版本、云端升级路径和成本。",
+          "nextCheck": "查Perplexity产品文档、Windows app版本、模型卡、本地日志、第三方性能测试和企业部署策略。",
+          "followUpQuestions": [
+            "Perplexity是否公布Windows版Portable Computer的模型、权限和日志细节？",
+            "第三方测试是否验证本地完成任务不上传敏感文件且性能可用？"
+          ],
+          "evidenceThreshold": "需要产品文档、模型卡、本地网络/文件日志、第三方测试和企业部署样本，才能升级为可靠隐私Agent方案。",
+          "claimBoundary": "NVIDIA官方支持发布事实，不独立证明任务质量、隐私实现或企业ROI。 厂商主张不证明客户效果、性能收益、安全成熟度或ROI已经独立验证。",
+          "counterEvidence": "若测试发现关键步骤仍需上传敏感内容，或24GB显存门槛限制主流部署，应收窄其普及判断。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "nvidia-blog-ai",
+          "sourceName": "NVIDIA AI Blog",
+          "source": "NVIDIA AI Blog",
+          "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "NVIDIA AI Blog官方页面支持的精确来源事实是“发布Perplexity Portable Computer本地Agent模型支持”；厂商主张不证明客户效果、性能收益、安全成熟度或ROI已经独立验证。仍需查Perplexity产品文档、Windows app版本、模型卡、本地日志、第三方性能测试和企业部署策略。。",
+          "publishedAt": "2026-09-15T01:00:00+09:00",
+          "time": "01:00 JST",
+          "tags": [
+            "local-ai",
+            "agents",
+            "nvidia"
+          ],
+          "companies": [
+            "NVIDIA",
+            "Perplexity"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "取舍：本地Agent方向重要；厂商效果主张需测试。"
+          },
+          "detailWhyRanked": "NVIDIA AI Blog把“发布Perplexity Portable Computer本地Agent模型支持”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "取舍：本地Agent方向重要；厂商效果主张需测试。"
+          }
+        },
+        {
+          "id": "salesforce-tsa-agentforce-ace-traveler-support-2026-09-16",
+          "category": "product",
+          "label": "产品",
+          "title": "Salesforce称TSA用Agentforce处理旅客安检咨询",
+          "body": "Salesforce称，TSA部署AI Agent Ace，每月处理约10万次旅客对话，并让大量常规咨询无需人工升级。",
+          "summary": "Salesforce TSA案例显示公共部门Agent开始进入高频旅客服务，但效果仍需机构侧日志验证。",
+          "whyItMatters": "公共部门AI不只是后台自动化，也在面向公众解释规则；这要求准确率、升级机制、可访问性和审计记录更透明。",
+          "detailBody": "Salesforce官方支持的事实是：其称TSA部署Ace处理旅客安检咨询。真实效果、错误率和用户体验仍需TSA侧数据。 这条线索还需要结合查TSA官方公告、客服日志、用户满意度、误答率、升级率、无障碍测试和采购文件。，避免把当前来源支持的事实扩展成未经验证的结论。",
+          "trend": "公共服务Agent正在进入规则解释和高频问答场景。",
+          "detailTrend": "公共服务Agent正在进入规则解释和高频问答场景。 这表明AI竞争的重点正在从单点能力展示扩展到制度安排、组织流程、部署环境和责任边界之间的组合优势。",
+          "whyRanked": "公共服务、客服运营和合规团队关注：它给企业Agent补上公共部门落地样本，且有明确场景和指标主张。",
+          "topReason": "公共服务、客服运营和合规团队应使用这条核对证据边界：公共部门团队应查机构日志和人工升级记录，再判断Agent是否可复制。",
+          "impact": "政府、交通、客服和合规团队应关注公共服务Agent如何处理错误、升级和透明说明。",
+          "whoShouldCare": "负责政府客服、交通服务、公共部门数字化和高频规则咨询的产品/运营/合规团队。",
+          "readerUse": "公共服务、客服运营和合规团队可用它用来检查公共部门Agent上线条件：知识库更新、升级机制、对话日志、误答纠正和无障碍体验。",
+          "nextCheck": "查TSA官方公告、客服日志、用户满意度、误答率、升级率、无障碍测试和采购文件。",
+          "followUpQuestions": [
+            "TSA是否公开Ace的采购文件、客服日志或用户满意度指标？",
+            "是否有独立审计验证96%常规咨询无需升级的口径和错误处理流程？"
+          ],
+          "evidenceThreshold": "需要TSA官方材料、客服日志、用户指标、审计材料或采购文件，才能升级为独立验证的公共部门Agent部署。",
+          "claimBoundary": "Salesforce官方案例支持部署和指标主张，不独立证明TSA旅客体验或错误率改善。 厂商主张不证明客户效果、性能收益、安全成熟度或ROI已经独立验证。",
+          "counterEvidence": "若TSA数据披露显示误答高、人工升级不足或投诉增加，应下调公共服务复制价值。 具体要看官方文件、客户日志、第三方评测、审计记录或可复现实验。",
+          "sourceId": "salesforce-news",
+          "sourceName": "Salesforce Newsroom",
+          "source": "Salesforce Newsroom",
+          "sourceUrl": "https://www.salesforce.com/news/press-releases/2026/09/14/tsa-improves-travel-experience-agentforce/?bc=OTH",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Salesforce Newsroom官方页面支持的精确来源事实是“发布TSA Ace公共服务Agent指标案例”；厂商主张不证明客户效果、性能收益、安全成熟度或ROI已经独立验证。仍需查TSA官方公告、客服日志、用户满意度、误答率、升级率、无障碍测试和采购文件。。",
+          "publishedAt": "2026-09-15T00:55:00+09:00",
+          "time": "01:00 JST",
+          "tags": [
+            "public-sector",
+            "agentforce",
+            "customer-service"
+          ],
+          "companies": [
+            "Salesforce",
+            "TSA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "取舍：公共部门落地具体；效果指标仍属供应商案例。"
+          },
+          "detailWhyRanked": "Salesforce Newsroom把“发布TSA Ace公共服务Agent指标案例”作为新的来源事实呈现，因为它给本期提供了可定位的事件、参与方、治理对象和证据边界；它还说明读者应把该条作为核对入口，而不是直接当作落地结论，完整背景、关键数字和原始发布语境仍需回到原始来源。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.salesforce.com/news/press-releases/2026/09/14/tsa-improves-travel-experience-agentforce/?bc=OTH",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "取舍：公共部门落地具体；效果指标仍属供应商案例。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-15",
       "date": "2026-09-15",

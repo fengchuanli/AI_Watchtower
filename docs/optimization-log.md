@@ -1,3 +1,34 @@
+## 2026-09-16 08:16 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-16`，发布 10 条安全非重复信号，聚焦美国AI监管迟疑、学校AI隐私合同、中美AI治理竞争、公平AI资金、Altman事故报告表态、Agent botnet风险分歧、OpenArt任务化创意模型榜单、Perplexity本地Agent、Salesforce Koa CRM推理模型和TSA公共服务Agent案例。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 AP、Axios AI/Technology、VentureBeat AI、NVIDIA AI Blog、Salesforce Newsroom、当前首页和历史重复 URL。
+  - 本次不新增来源注册项，沿用已登记的 `ap-news`、`axios-ai`、`venturebeat-ai`、`nvidia-blog-ai` 与 `salesforce-news`，来源总数保持 88。
+  - 7 条可靠媒体项目均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、趋势解释、来源边界和下一步核查入口；3 条官方项目标为 `厂商主张`，只确认发布或案例主张，不证明客户效果、性能收益、安全成熟度或 ROI。
+  - 跳过已在 9月15日版覆盖的特朗普/AP/WIRED/Anthropic IPO/Salesforce Agentforce控制平面/网络安全股等重复事实簇；未使用聚合页正文、社区讨论、传闻、付费墙正文、登录墙正文、旧稿或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 813。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+  - Archive diff: skipped-one-edition - only one same-day archive edition exists for 2026-09-16, so no morning/evening comparison was written.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月16日17:00 版 10 条情报；读者可在首页看到监管执行、学校AI隐私、Agent安全、本地Agent、CRM推理模型和公共部门Agent案例更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending.
+- Push: pending.
+
 ## 2026-09-15 23:03 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-15`，所以未回退版次，而是在同日 17:00 版基础上补充 4 条安全非重复信号，当前合计 14 条，新增 Dreamforce 成为 AI 减速产业会议场景、AI 安全担忧推高网络安全股、AI 暂停难以迅速落地的信任缺口，以及 AI 减速主张中的安全协作/卡特尔边界疑问。
