@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 1, Homepage Briefing Clarity
-- Last indexed run: 2026-09-14 20:00 JST
-- Network status: Latest 20:00 run pulled `origin/main` successfully after network authorization; local `main` was up to date before edits.
+- Last indexed run: 2026-09-15 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; local `main` was up to date before edits.
 
 ## Recent Plan-Day Decisions
 
@@ -21,6 +21,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 1 | Complete | `3f6416b` | Current `data/news.json` and mirrored current history/today data now make the homepage hero/today/mobile path start with three reader questions: bottom-layer platform change, safety source files, and government/enterprise adoption evidence. |
 | Day 2 | Complete | `9040c3a` | Homepage TOP3 cards now show minimum fact, why-now rationale, reader use, source boundary, and next-check path on the card face, with score and original-dependency details kept expandable. |
 | Day 3 | Complete | `b2676ed` | Homepage non-TOP3 feed cards now collapse category, source role, and time into one low-weight context line so the compact feed does not repeat TOP3-style metadata chips. |
+| Day 4 | Complete | `1fb33e8` | Homepage editor notes now lead boundary/source/continuity context with a concise `阅读边界速览`, while full overread, source-risk, topic continuity, company continuity, and source-family records sit behind `完整边界记录`. |
 
 ## Historical Guard Anchors
 
@@ -72,7 +73,7 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 4: rebalance homepage source-risk, overread-boundary, and continuity modules so warnings support trust but do not dominate the first 1 to 3 minutes.
+- Continue with Day 5: add a short rule for when homepage categories should be collapsed, renamed, or reordered because the reader question changed.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 2 first.
 - If Day 2 is already complete, continue with the first useful unfinished task from the current plan.
 

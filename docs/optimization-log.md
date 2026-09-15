@@ -1,3 +1,36 @@
+## 2026-09-15 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 4，重排首页编辑说明里的来源风险、过度解读和连续观察模块，让读者先看到简短阅读边界，再按需展开完整记录。
+- Changed files:
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只调整首页编辑说明的阅读顺序、折叠层级和校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 首页首屏、TOP3 和更多新闻流顺序未被打乱，边界信息仍在编辑说明内，不抢第一阅读路径。
+  - TOP3 reader use: pass - TOP3 卡片结构未变，来源边界和下一步核验仍在卡片正面。
+  - Source boundary visible: pass - `阅读边界速览` 先给来源集中、误读边界、核验路径和连续观察，完整记录仍可展开。
+  - Original source dependency: pass - 未扩写媒体事实，也未把来源风险或连续观察写成原文替代。
+  - Mobile burden: pass - 手机读者在编辑说明中先看到 4 张速览卡，长边界记录被收进二级折叠。
+  - Continuity use: partial - 连续观察进入速览，但本次未新增独立公共连续性组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化：读者在首页 `更多新闻流` 的 `本期编辑说明` 中会先看到展开的 `阅读边界速览`；完整的来源集中度、不要过度解读、主题/公司连续观察和来源族群记录被收进 `完整边界记录`，需要时再展开。
+- Verification:
+  - Ran `node --check app.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, and the reading-boundary digest guard.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `1fb33e8` (`【VisionHub网站风格优化】收拢首页阅读边界提示`).
+
 ## 2026-09-14 23:38 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-14`，所以未回退版次，而是在同日 17:00 版基础上补充 5 条安全非重复信号，当前合计 15 条，新增中方回应 Anthropic 限制中国 AI 主张、Microsoft Humanist AI / 人类控制叙事、Axios C-Suite AI 复制护城河框架、Obama 敦促民主党提出 AI 护栏计划，以及 TechCrunch 对 AI 末日警告/减速争论升温的梳理。
