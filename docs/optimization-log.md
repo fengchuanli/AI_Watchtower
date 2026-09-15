@@ -24,7 +24,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `cb8791f` (`【新闻更新】补充23点AI新闻：14条减速治理与安全预算信号`).
+- Commit: `94b6d97` (`【新闻更新】补充23点AI新闻：14条减速治理与安全预算信号`).
 
 ## 2026-09-15 20:00 JST
 
