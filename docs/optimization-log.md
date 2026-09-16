@@ -1,3 +1,34 @@
+## 2026-09-16 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 5，补充首页分类路径规则，明确当读者问题改变时如何重写分类说明、调整分类顺序，或把多个单条小类先合并进 `coverageMix` 阅读路径。
+- Changed files:
+  - `docs/homepage-edition-preflight.md`
+  - `docs/news-data-format.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只补充首页分类/阅读路径的编辑规则和校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 规则要求分类路径服务当前读者问题，不让固定分类遮住本期第一判断。
+  - TOP3 reader use: pass - TOP3 卡片结构未变，分类规则只影响 TOP3 后的筛选和扫读路径。
+  - Source boundary visible: pass - 分类说明仍必须包含当前锚点和证据边界，不能只写主题名。
+  - Original source dependency: pass - 未扩写媒体事实，也未新增原文替代内容。
+  - Mobile burden: pass - 当多个单条小类服务同一读者任务时，规则要求先合并进 `coverageMix`，减少手机读者跨筛选跳转。
+  - Continuity use: partial - 本次未新增连续观察组件，但分类路径规则会让未来跨期读者问题更容易落到首页路由。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化：无，属于规则/校验/计划更新。后续读者可见影响会体现在首页分类说明、分类顺序和 `coverageMix` 扫读路径更贴合当期读者问题。
+- Verification:
+  - Ran `node --check scripts/validate-site.mjs` and `node --check scripts/validate-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, and the category-route decision guard.
+  - Ran `git diff --check`.
+- Commit: `1adae4e` (`【VisionHub网站风格优化】补充首页分类路径规则`); log/index record commit pending.
+- Push: pending.
+
 ## 2026-09-16 08:16 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-16`，发布 10 条安全非重复信号，聚焦美国AI监管迟疑、学校AI隐私合同、中美AI治理竞争、公平AI资金、Altman事故报告表态、Agent botnet风险分歧、OpenArt任务化创意模型榜单、Perplexity本地Agent、Salesforce Koa CRM推理模型和TSA公共服务Agent案例。

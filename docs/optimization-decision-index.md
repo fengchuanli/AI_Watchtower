@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 1, Homepage Briefing Clarity
-- Last indexed run: 2026-09-15 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push hit sandbox DNS and the network-authorized retry was blocked by app safety review pending explicit user approval for publishing to `origin/main`.
+- Last indexed run: 2026-09-16 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
 
@@ -22,6 +22,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 2 | Complete | `9040c3a` | Homepage TOP3 cards now show minimum fact, why-now rationale, reader use, source boundary, and next-check path on the card face, with score and original-dependency details kept expandable. |
 | Day 3 | Complete | `b2676ed` | Homepage non-TOP3 feed cards now collapse category, source role, and time into one low-weight context line so the compact feed does not repeat TOP3-style metadata chips. |
 | Day 4 | Complete | `1fb33e8` | Homepage editor notes now lead boundary/source/continuity context with a concise `阅读边界速览`, while full overread, source-risk, topic continuity, company continuity, and source-family records sit behind `完整边界记录`. |
+| Day 5 | Complete | `1adae4e` | `docs/homepage-edition-preflight.md` and `docs/news-data-format.md` now define `categoryRouteDecision`: rewrite, reorder, or collapse the homepage category reading path when the current reader question changes. |
 
 ## Historical Guard Anchors
 
@@ -73,10 +74,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 5: add a short rule for when homepage categories should be collapsed, renamed, or reordered because the reader question changed.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 2 first.
-- If Day 2 is already complete, continue with the first useful unfinished task from the current plan.
-- Local `main` is ahead of `origin/main` with verified optimization/log commits from the latest run; push them only after explicit user approval.
+- Continue with Day 6: run mobile reading-path QA for the homepage at 390px and 768px, record the remaining hierarchy issues, and fix the smallest reader-visible issue.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 6 first.
+- If Day 6 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 
