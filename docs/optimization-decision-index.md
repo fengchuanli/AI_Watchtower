@@ -8,7 +8,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 1, Homepage Briefing Clarity
 - Last indexed run: 2026-09-16 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push hit sandbox DNS and the network-authorized retry was blocked by app safety review pending explicit user approval for publishing to `origin/main`.
 
 ## Recent Plan-Day Decisions
 
@@ -77,6 +77,7 @@ These compact anchors keep validation and future automation aware of the most im
 - Continue with Day 6: run mobile reading-path QA for the homepage at 390px and 768px, record the remaining hierarchy issues, and fix the smallest reader-visible issue.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 6 first.
 - If Day 6 is already complete, continue with the first useful unfinished task from the current plan.
+- Local `main` is ahead of `origin/main` with verified optimization/log commits from the latest run; push them only after explicit user approval.
 
 ## Update Rules
 

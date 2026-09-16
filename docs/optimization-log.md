@@ -26,8 +26,8 @@
   - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 88 sources.
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, and the category-route decision guard.
   - Ran `git diff --check`.
-- Commit: `1adae4e` (`【VisionHub网站风格优化】补充首页分类路径规则`); log/index record commit pending.
-- Push: pending.
+- Commit: `1adae4e` (`【VisionHub网站风格优化】补充首页分类路径规则`); log/index record commit `7e8732f` (`【网站优化】记录首页分类路径优化`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry was rejected by the app safety review because publishing local commits to shared `origin/main` needs explicit user approval. Local `main` contains the verified optimization commits but has not been pushed.
 
 ## 2026-09-16 08:16 JST
 
