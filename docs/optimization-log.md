@@ -1,3 +1,32 @@
+## 2026-09-16 23:14 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-16`，所以未回退版次，而是在同日 17:00 版基础上补充 9 条安全非重复信号，当前合计 19 条，新增 Google ATLAS 采用数据、AI 科学应用、多语言语音路线、Hugging Face/IBM Agent 一致性评测、Google Workspace Gemini MCP 连接器、Gmail AI Overviews 全球扩展、Apps Script 数据区域、AI 数据中心民意阻力和美国监管者 AI 使用经验断层。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 Google Keyword AI、Google Workspace Updates、Hugging Face Blog、The Verge AI、Axios AI/Technology、当前首页和历史重复 URL。
+  - 本次不新增来源注册项，沿用已登记的 `google-keyword-ai`、`google-workspace-updates`、`huggingface-blog`、`theverge-ai` 与 `axios-ai`，来源总数保持 88。
+  - 官方项只确认发布事实、产品范围、研究入口或厂商主张；媒体项均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、趋势解释、来源边界和下一步核查入口。
+  - 跳过已由 17:00 版覆盖的 AP 监管/教育/中美/Gates、Altman Dreamforce、Salesforce Koa/TSA、OpenArt、Agent botnet、Perplexity 本地 Agent 等重复事实簇；未使用聚合页正文、社区讨论、传闻、付费墙正文、登录墙正文、旧稿或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 822。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月16日补充版 19 条情报；读者可在首页和详情页看到新增的 Google 采用/科学/语言证据、Workspace MCP 与邮件 AI 治理、Agent 一致性评测、数据中心民意和监管者 AI 使用断层。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 19 current news items against 88 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `b228f2a` (`【新闻更新】补充23点AI新闻：19条Workspace与采用证据信号`).
+- Push: pending.
+
 ## 2026-09-16 20:00 JST
 
 - Focus: 完成当前 30 天计划 Day 5，补充首页分类路径规则，明确当读者问题改变时如何重写分类说明、调整分类顺序，或把多个单条小类先合并进 `coverageMix` 阅读路径。
