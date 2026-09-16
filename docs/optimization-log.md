@@ -1,3 +1,33 @@
+## 2026-09-17 08:13 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-17`，发布 10 条安全非重复信号，聚焦 Claude Docs/Slides 办公工作台、DeepMind Institute AGI 治理、AI 减速执行难题与 Meta 分歧、AP-NORC 数据中心民调、Alexa+ 印度多语言、WhatsApp Business MCP、SK Hynix/Intel AI 内存供应链、Agent 机器身份安全和 Salesforce DarwinX harness 演化。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 Claude Blog、About Amazon India、AP、Axios、TechCrunch、VentureBeat、当前首页和历史重复 URL。
+  - 新增官方来源登记 `claude-blog` 与 `about-amazon-devices`；来源总数从 88 更新为 90。
+  - 官方项只确认 Claude 与 Alexa+ 发布事实；媒体项均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、中文解释、来源边界和下一步核查入口。
+  - 未使用聚合页正文、社区讨论、传闻、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 832。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月17日17:00 版 10 条情报；读者可在首页和详情页看到办公 Agent、AGI 治理、AI 减速分歧、数据中心公共许可、WhatsApp MCP、AI 内存供应链与 Agent 工程安全更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending (`【新闻更新】发布17点AI新闻：10条办公Agent与治理执行信号`).
+- Push: pending.
+
 ## 2026-09-16 23:14 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-16`，所以未回退版次，而是在同日 17:00 版基础上补充 9 条安全非重复信号，当前合计 19 条，新增 Google ATLAS 采用数据、AI 科学应用、多语言语音路线、Hugging Face/IBM Agent 一致性评测、Google Workspace Gemini MCP 连接器、Gmail AI Overviews 全球扩展、Apps Script 数据区域、AI 数据中心民意阻力和美国监管者 AI 使用经验断层。
