@@ -1848,6 +1848,11 @@ if (
   !/explicit omission status/.test(newsDataFormat) ||
   !/Omitted-topic `fallback` copy should point readers to the archive, tag page, historical context, or current already-selected related topics as background only/.test(newsDataFormat) ||
   !/omittedTopicFallback/.test(homepageEditionPreflight) ||
+  !/categoryRouteDecision/.test(homepageEditionPreflight) ||
+  !/Category route decision: done/.test(homepageEditionPreflight) ||
+  !/targetReaderQuestion/.test(newsDataFormat) ||
+  !/labels, order, and descriptions as reader-routing copy/.test(newsDataFormat) ||
+  !/collapse that first reading path into `coverageMix`/.test(newsDataFormat) ||
   !/action-oriented coverage labels and topic meanings/.test(newsDataFormat) ||
   !/coverageMix tiny-bucket merging/.test(newsDataFormat) ||
   !/coverageMixShape/.test(homepageEditionPreflight) ||

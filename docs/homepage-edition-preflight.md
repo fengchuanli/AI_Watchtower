@@ -12,11 +12,12 @@ Answer these in Chinese before publication:
 2. `top3ReaderUse`: Does each TOP3 item explain why it matters now and which reader decision or checklist it supports?
 3. `sourceMixBoundary`: Is the batch dominated by one source family, source owner, vendor, country, or evidence mode, and does the homepage say what not to conclude?
 4. `coverageMixShape`: Does `coverageMix` merge tiny buckets so there is no more than one single-item bucket and no more than four total scan cues?
-5. `shortBatchNote`: If fewer than 10 safe items are published, does `editorialInterpretation` say this is a quality-gate result and name what was not used for padding?
-6. `omittedTopicFallback`: For each planned topic omitted from `edition.topicGroups`, does the fallback tell readers whether to use archive, tag-page, historical, or already-selected related items as background without adding a new claim?
-7. `mobileScanPath`: Can a phone reader understand the edition from `readerFrame.mobile`, TOP3 titles, summaries, and source labels in 1 to 3 minutes?
-8. `proofBoundary`: Do `sourceRisk`, `overreadBoundary`, `trendNotes`, `topicContinuity`, and promoted cards name the official, filing, audit, metric, benchmark, regulator, customer-side, or third-party evidence needed next?
-9. `archiveMirror`: Will the newest history edition preserve the same reader frame, source boundary, item count, item order, and archive label?
+5. `categoryRouteDecision`: Do homepage filters follow the current reader question, with category descriptions rewritten, categories reordered, or the first reading path collapsed into `coverageMix` when several tiny categories answer the same question?
+6. `shortBatchNote`: If fewer than 10 safe items are published, does `editorialInterpretation` say this is a quality-gate result and name what was not used for padding?
+7. `omittedTopicFallback`: For each planned topic omitted from `edition.topicGroups`, does the fallback tell readers whether to use archive, tag-page, historical, or already-selected related items as background without adding a new claim?
+8. `mobileScanPath`: Can a phone reader understand the edition from `readerFrame.mobile`, TOP3 titles, summaries, and source labels in 1 to 3 minutes?
+9. `proofBoundary`: Do `sourceRisk`, `overreadBoundary`, `trendNotes`, `topicContinuity`, and promoted cards name the official, filing, audit, metric, benchmark, regulator, customer-side, or third-party evidence needed next?
+10. `archiveMirror`: Will the newest history edition preserve the same reader frame, source boundary, item count, item order, and archive label?
 
 ## Compact Note Shape
 
@@ -28,6 +29,7 @@ Reader question: 今天读者要先判断哪些 AI 变化值得继续核对？
 TOP3 use: done - 每条都说明读者用途、选择理由和下一步核验。
 Source mix boundary: done - 单一来源/证据模式已标注，不把雷达版写成全市场结论。
 Coverage mix shape: done - 单条小桶已合并为更宽的读者行动标签。
+Category route decision: done - 分类说明和顺序贴合本期读者问题；多个单条小类先合并进 coverageMix 阅读路径。
 Short batch note: done - 少于 10 条时说明这是质量门槛结果，并列出未用于补量的来源类型。
 Omitted topic fallback: done - 未入选主题只指向归档、标签或本期相关背景，不补写新事实。
 Mobile scan path: done - readerFrame.mobile、TOP3 摘要和来源标签可在 1 到 3 分钟内扫完。
@@ -43,6 +45,8 @@ Do not publish the edition as-is when:
 - TOP3 copy explains why a story is interesting but not who should act on it or what to verify next.
 - A concentrated media, vendor, or research batch lacks `sourceRisk`, `sourceConcentration`, or `overreadBoundary` framing.
 - `coverageMix` reads like a topic inventory, has more than one single-item bucket, or needs more than four labels to explain the current batch.
+- Category descriptions, labels, or display order answer yesterday's topic map instead of today's reader question.
+- Several one-item categories all serve the same reader job, but the homepage still asks mobile readers to hop through separate filters before it offers a broader `coverageMix` scan cue.
 - A short batch says "only", "not enough", or "unfinished" instead of explaining that duplicates, weak evidence, old items, paywall/login-wall body text, community discussion, or routine marketing were not used for padding.
 - An omitted planned topic tells readers a new event happened, implies confirmation or rollout, or gives no archive, tag-page, historical, or already-selected related reading path.
 - The mobile scan path requires reading the long `deepBriefing` before the reader can tell what changed.
