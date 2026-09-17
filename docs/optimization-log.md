@@ -25,7 +25,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: this commit (`【新闻更新】发布17点AI新闻：10条Agent控制面与治理信号`).
-- Push: pending.
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` to `origin/main`.
 
 ## 2026-09-17 23:03 JST
 
