@@ -1,3 +1,31 @@
+## 2026-09-17 23:03 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-17`，所以未回退版次，而是在同日 17:00 版基础上补充 6 条安全非重复信号，当前合计 16 条，新增 OpenAI ChatGPT Ads Sponsored Agents、ChatGPT Work/Codex 管理分析、模型失配披露框架、AWS HCLS Agent Skills、AWS AgentCore 系统提示优化器和 NVIDIA/Google/Emerald AI 弹性AI数据中心联盟。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、AWS Machine Learning Blog、NVIDIA AI Blog、Microsoft Blog候选、当前首页和历史重复 URL。
+  - 新增 6 条安全非重复信号；OpenAI 3 条作为 `官方核对`，AWS/NVIDIA 3 条作为 `厂商主张`，均保留原始 URL、来源边界和下一步独立核查路径。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 838。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月17日17:00 版扩展为 16 条情报；读者可在首页和详情页看到 AI 广告商业化、Codex/Admin 价值度量、模型失配披露、HCLS Agent Skills、AgentCore 轨迹优化和弹性AI数据中心更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 16 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending (`【新闻更新】补充23点AI新闻：16条商业化与Agent控制面信号`).
+- Push: pending.
+
 ## 2026-09-17 11:05 JST
 
 - Focus: 完成当前 30 天计划 Day 6，执行首页移动阅读路径 QA，并修正最小读者可见层级问题：把 `按目的阅读` 从 5 秒要点后移到今日简报与 TOP3 之后，避免手机读者在看到 TOP3 前先穿过整屏导航说明。

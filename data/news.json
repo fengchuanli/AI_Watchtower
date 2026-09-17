@@ -4,19 +4,19 @@
   "status": "published",
   "statusLabel": "已发布",
   "sourceCount": 90,
-  "editorNote": "2026年9月17日17:00 JST：发布10条安全非重复AI情报。",
+  "editorNote": "2026年9月17日23:03 JST：在17:00版基础上补充6条安全非重复AI情报，当前共16条。",
   "edition": {
     "id": "news-1700-2026-09-17",
     "date": "2026-09-17",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
     "archiveLabel": "17:00 JST 发布",
-    "note": "本期10条AI新闻情报，聚焦办公Agent、AGI治理、安全减速、数据中心许可和Agent工程。",
-    "operationalStatus": "已拉取origin/main；核对来源政策、历史URL和候选来源；发布10条安全非重复信号。",
-    "editorialInterpretation": "本期编辑判断：AI进入真实工作流后，权限、日志、评测、公共许可和供应链证据比单点能力发布更关键。",
+    "note": "本期16条AI新闻情报，聚焦办公Agent、AGI治理、安全减速、数据中心许可、Agent工程与AI商业化控制面。",
+    "operationalStatus": "已拉取origin/main；核对来源政策、历史URL和候选来源；在17:00版基础上补充6条安全非重复信号，当前共16条。",
+    "editorialInterpretation": "本期编辑判断：AI进入真实工作流后，权限、日志、评测、公共许可、商业化标识和能源调度证据比单点能力发布更关键。",
     "readerFrame": {
-      "headline": "本期读法：看Agent进入真实工作流后的控制面",
-      "whyItMatters": "9月17日版可按三条线读：Claude/WhatsApp/Alexa把AI带进办公、商务和语音入口；AI减速与AGI治理暴露行业分歧；数据中心、内存和Agent身份安全决定部署能否承受审计。",
+      "headline": "本期读法：看Agent、广告和数据中心的控制面",
+      "whyItMatters": "9月17日版可按四条线读：Claude/WhatsApp/Alexa把AI带进办公、商务和语音入口；OpenAI把广告、管理台和失配披露推向更明确控制面；AI减速与AGI治理暴露行业分歧；数据中心、内存、能源和Agent身份安全决定部署能否承受审计。",
       "useThisIssueFor": [
         "IT、采购和安全团队复核Claude文档/演示、MCP权限、Agent凭证和harness评测。",
         "政策、公共事务和基础设施团队跟踪AI减速、AGI治理、数据中心民调和内存供应链。",
@@ -29,7 +29,7 @@
       ],
       "mobile": {
         "headline": "查权限、日志与执行证据",
-        "summary": "重点看办公Agent、MCP、减速分歧、数据中心许可和Agent身份。",
+        "summary": "重点看办公Agent、AI广告、MCP、减速分歧、数据中心和Agent身份。",
         "primaryUses": [
           "安全团队查凭证",
           "政策团队查文本",
@@ -39,8 +39,10 @@
       }
     },
     "changeSummary": {
-      "headline": "较上一版新增办公Agent、AGI治理、安全分歧和基础设施约束",
+      "headline": "较上一版新增AI广告、管理台、失配披露、Agent技能和能源调度",
       "freshFacts": [
+        "本期新增事实：OpenAI发布ChatGPT Ads Sponsored Agents、Admin analytics与模型失配报告框架。",
+        "本期新增事实：AWS发布HCLS Agent Skills与AgentCore系统提示优化器，NVIDIA/Google/Emerald AI推出弹性AI数据中心联盟。",
         "本期新增事实：Anthropic发布one Claude、Claude Docs和Claude Slides。",
         "本期新增事实：Google/DeepMind推出DeepMind Institute，AP/Axios补充AI减速与政策分歧。",
         "本期新增事实：Amazon Alexa+进入印度，Meta/WhatsApp Business MCP把商家接入交给Agent流程。",
@@ -53,43 +55,43 @@
     },
     "coverageMix": [
       {
-        "label": "查办公与MCP权限",
-        "count": 3,
-        "meaning": "用来检查Claude交付物、WhatsApp Business MCP和Agent凭证是否有管理员控制、日志和撤销机制。"
+        "label": "查办公、广告与MCP权限",
+        "count": 5,
+        "meaning": "用来检查Claude交付物、OpenAI广告/管理台、WhatsApp Business MCP和Agent凭证是否有标识、管理员控制、日志和撤销机制。"
       },
       {
         "label": "查治理与减速文本",
-        "count": 3,
-        "meaning": "用来检查AGI治理机构、行业减速共识、Meta分歧和正式政策/审计材料。"
+        "count": 4,
+        "meaning": "用来检查模型失配披露、AGI治理机构、行业减速共识、Meta分歧和正式政策/审计材料。"
       },
       {
         "label": "查基础设施公共约束",
-        "count": 2,
-        "meaning": "用来检查数据中心民调、地方许可、电力用水、AI内存产能和供应链文件。"
+        "count": 3,
+        "meaning": "用来检查数据中心民调、地方许可、电力/用水、弹性负载、AI内存产能和供应链文件。"
       },
       {
-        "label": "查产品国际化与Agent评测",
-        "count": 2,
-        "meaning": "用来检查Alexa+语言质量、服务接入、DarwinX复测和企业任务验证器。"
+        "label": "查Agent评测与生产闭环",
+        "count": 4,
+        "meaning": "用来检查Agent Skills、AgentCore轨迹优化、DarwinX复测和企业任务验证器。"
       }
     ],
     "sourceRisk": {
-      "label": "可靠媒体占多数，官方发布作锚点",
-      "note": "可靠媒体占比8/10，来源家族明显偏向媒体雷达；官方来源2/10只确认Claude与Alexa+发布事实，不能替代正式文件、原始民调、合同、论文或日志。",
-      "nextCheck": "下一步重点核对管理员文档、权限日志、原始民调、正式政策、合同、论文/代码、第三方benchmark和客户侧任务数据。"
+      "label": "官方补充增强，仍需外部复测",
+      "note": "当前官方/厂商来源8/16，可靠媒体8/16；官方来源能确认发布事实和厂商主张，但不能替代第三方复测、客户指标、监管文本、原始民调、合同或审计日志。",
+      "nextCheck": "下一步用第三方复测、监管文本、原始民调、合同、试点数据和客户指标独立复核。"
     },
     "sourceConcentration": {
-      "sourceId": "ap-news",
-      "sourceName": "Associated Press",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
       "count": 3,
-      "share": "30%",
-      "note": "AP提供3条政策/基础设施背景，适合捕捉公共讨论和民调趋势，但不能替代正式规则或原始调查文件。",
-      "nextCheck": "下一步用法案文本、官方声明、AP-NORC原始民调、地方许可和公司政策文件复核。"
+      "share": "19%",
+      "note": "本次补充中OpenAI提供3条官方信号，适合确认产品/治理发布事实，但不能单独证明商业效果、ROI或行业标准化。",
+      "nextCheck": "下一步用政策文件、Admin API字段、广告权限、alignment报告全文、客户指标和外部研究者反馈复核。"
     },
     "overreadBoundary": {
       "label": "不要把雷达信号读成落地结论",
-      "body": "不要把本期读成全市场结论：本期说明AI正在进入办公、商务、语音、基建和Agent安全控制面；它不证明功能已经成熟、安全协议已经形成或供应链交易已经完成。",
-      "doNotConclude": "不证明AI减速已执行，不证明办公Agent和MCP默认安全，不证明数据中心会普遍停摆，也不证明内存产能已经迁移。",
+      "body": "不要把本期读成全市场结论：本期说明AI正在进入办公、广告、商务、语音、基建和Agent安全控制面；它不证明功能已经成熟、安全协议已经形成、商业化无争议或供应链/能源约束已经解决。",
+      "doNotConclude": "不证明AI减速已执行，不证明办公Agent和MCP默认安全，不证明Sponsored Agent商业化无争议，不证明数据中心会普遍停摆，也不证明弹性负载已经规模化。",
       "useInstead": "用来安排官方文档、审计日志、原始民调、合同、论文、代码、benchmark和客户侧数据的下一步核查。"
     },
     "trendNotes": [
@@ -174,9 +176,9 @@
     "sourceFamilies": [
       {
         "family": "official",
-        "label": "官方来源",
-        "count": 2,
-        "role": "官方来源确认Claude和Alexa+发布事实；企业效果、语言质量、权限安全仍需外部证据。"
+        "label": "官方/厂商来源",
+        "count": 8,
+        "role": "官方/厂商来源确认OpenAI、Anthropic、Amazon、AWS和NVIDIA相关发布事实；效果、采用、安全、ROI和规模化仍需外部证据。"
       },
       {
         "family": "reliable_media",
@@ -188,55 +190,59 @@
     "topicGroups": [
       {
         "id": "agent",
-        "label": "Agent交付物、账号配置与身份安全",
-        "count": 4,
+        "label": "Agent交付物、账号配置、技能与身份安全",
+        "count": 6,
         "itemIds": [
           "claude-one-docs-slides-productivity-workspace-2026-09-17",
           "meta-whatsapp-business-tools-mcp-agent-setup-2026-09-17",
+          "aws-hcls-agent-skills-open-source-reasoning-2026-09-17",
+          "aws-agentcore-system-prompt-optimizer-production-traces-2026-09-17",
           "venturebeat-ai-agent-credential-breach-iam-human-policy-2026-09-17",
           "venturebeat-salesforce-darwinx-agent-harness-evolution-2026-09-17"
         ],
-        "meaning": "用来检查Agent是否进入高权限工作流，以及权限、日志、验证器和回归门槛是否齐全。",
-        "whyNow": "Agent正在从回答问题转向生成交付物、配置账号和执行企业流程。"
+        "meaning": "用来检查Agent是否进入高权限工作流，以及权限、日志、技能、验证器和回归门槛是否齐全。",
+        "whyNow": "Agent正在从回答问题转向生成交付物、配置账号、固化专业流程和执行企业操作。"
       },
       {
         "id": "policy",
-        "label": "AGI治理、减速分歧与公共许可",
-        "count": 4,
+        "label": "失配披露、AGI治理与减速分歧",
+        "count": 5,
         "itemIds": [
+          "openai-model-misalignment-reporting-framework-2026-09-17",
           "axios-google-deepmind-institute-agi-governance-2026-09-17",
           "ap-ai-slowdown-practice-industry-alignment-hard-2026-09-17",
           "ap-meta-zuckerberg-ai-slowdown-split-2026-09-17",
           "ap-norc-ai-data-center-environment-bipartisan-poll-2026-09-17"
         ],
-        "meaning": "用来核对治理机构、行业分歧、民调和正式政策/许可文件。",
-        "whyNow": "AI风险讨论正在从表态进入审计、政策、民意和许可执行。"
+        "meaning": "用来核对披露框架、治理机构、行业分歧、民调和正式政策/许可文件。",
+        "whyNow": "AI风险讨论正在从表态进入案例披露、审计、政策、民意和许可执行。"
       },
       {
         "id": "infrastructure",
-        "label": "数据中心、内存与地区化部署",
-        "count": 3,
+        "label": "数据中心、内存与能源调度",
+        "count": 4,
         "itemIds": [
+          "nvidia-google-emerald-flexible-ai-data-centers-2026-09-17",
           "ap-norc-ai-data-center-environment-bipartisan-poll-2026-09-17",
           "techcrunch-sk-hynix-intel-us-memory-ai-chip-talks-2026-09-17",
           "amazon-alexa-plus-india-hindi-hinglish-launch-2026-09-17"
         ],
         "meaning": "用来检查AI部署所需的电力、水、内存供应、地区语言和本地服务约束。",
-        "whyNow": "AI扩张越来越受社会许可、供应链和地区化产品适配影响。"
+        "whyNow": "AI扩张越来越受社会许可、供应链、能源调度和地区化产品适配影响。"
       },
       {
         "id": "developer-tooling",
-        "label": "MCP、评测与harness演化",
-        "count": 3,
+        "label": "AI广告、ROI与商业化控制面",
+        "count": 2,
         "itemIds": [
-          "meta-whatsapp-business-tools-mcp-agent-setup-2026-09-17",
-          "venturebeat-ai-agent-credential-breach-iam-human-policy-2026-09-17",
-          "venturebeat-salesforce-darwinx-agent-harness-evolution-2026-09-17"
+          "openai-chatgpt-ads-sponsored-agents-shopify-hubspot-2026-09-17",
+          "openai-admin-analytics-codex-business-value-2026-09-17"
         ],
-        "meaning": "用来检查开发者工具是否具备权限边界、身份治理、回归测试和真实任务验证。",
-        "whyNow": "Agent工具链开始处理真实业务系统，工程质量取决于周边控制层。"
+        "meaning": "用来检查AI入口商业化、Sponsored Agent标识、商家权限、管理台指标和业务价值归因。",
+        "whyNow": "AI平台开始把对话入口和企业管理台变成可计费、可归因、可审计的业务系统。"
       }
-    ]
+    ],
+    "itemCount": 16
   },
   "categories": [
     {
@@ -247,12 +253,12 @@
     {
       "id": "product",
       "label": "产品",
-      "description": "本期产品读者可核对Claude Docs/Slides办公工作台；边界是仍需企业管理员文档、审计日志、导出限制和客户配置。"
+      "description": "本期产品读者可核对Claude Docs/Slides和OpenAI ChatGPT Ads；边界是仍需管理员文档、广告政策、权限日志和客户数据。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期工具读者可核对WhatsApp Business MCP、Agent身份安全和Salesforce DarwinX；边界是仍需权限清单、代码/论文、日志和复测。"
+      "description": "本期工具读者可核对WhatsApp Business MCP、OpenAI Admin analytics、AWS AgentCore、Agent身份安全和Salesforce DarwinX；边界是仍需权限清单、代码/论文、日志和复测。"
     },
     {
       "id": "funding",
@@ -262,12 +268,12 @@
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期政策读者可核对DeepMind Institute、AP减速执行报道和Meta分歧；边界是仍需正式政策、审计合同和监管文本。"
+      "description": "本期政策读者可核对OpenAI失配披露框架、DeepMind Institute、AI减速分歧、Meta立场和数据中心民意；边界是仍需正式政策、案例报告、监管文本和原始民调。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期研究读者可用来核对Salesforce DarwinX的Agent harness评测线索；边界是仍需论文、代码、复测和真实任务验证。"
+      "description": "本期研究读者可核对AWS HCLS Agent Skills；边界是仍需仓库、评测数据、复测、专家审查和真实工作流试点。"
     }
   ],
   "briefing": {
@@ -416,6 +422,413 @@
     ]
   },
   "items": [
+    {
+      "id": "openai-chatgpt-ads-sponsored-agents-shopify-hubspot-2026-09-17",
+      "category": "product",
+      "label": "产品",
+      "title": "OpenAI把ChatGPT广告扩展到Sponsored Agents与商家工具",
+      "body": "OpenAI在9月16日宣布测试Sponsored Agents，并把ChatGPT Ads接入HubSpot与Shopify，同时为广告主提供自然语言建站式投放、分析和创意工具。",
+      "summary": "ChatGPT广告从展示位走向可对话Agent和商家工作流。",
+      "whyItMatters": "AI入口开始承接发现、咨询、转化和商家运营，广告治理重点会从“是否显示广告”扩展到Sponsored Agent边界、标识、归因和商家数据使用。",
+      "detailBody": "OpenAI在9月16日宣布测试Sponsored Agents，并把ChatGPT Ads接入HubSpot与Shopify，同时为广告主提供自然语言建站式投放、分析和创意工具。 站内解读只保留该来源可支撑的最小事实，并把重点放在读者下一步应核对的权限、日志、正式文件、合同、方法、复测材料或客户侧指标；完整上下文仍应回到原始来源。",
+      "trend": "AI商业化从搜索式广告转向对话内Agent和CRM/电商工具链。",
+      "detailTrend": "AI商业化从搜索式广告转向对话内Agent和CRM/电商工具链。 这条信号的关键不是单点发布，而是它把AI能力放进更具体的工作流、治理或基础设施约束中。",
+      "whyRanked": "它改变了AI产品的商业化控制面：广告主、商家工具和用户对话边界需要一起审计。",
+      "topReason": "产品和合规团队应核对Sponsored Agent标识、数据隔离、归因、商家权限和国际上线范围。",
+      "impact": "广告主、CRM/电商生态、消费AI产品和隐私合规团队会受影响。",
+      "whoShouldCare": "负责增长、广告产品、CRM/电商集成和隐私合规的团队，需要评估AI对话入口的新商业规则。",
+      "readerUse": "增长、广告产品和隐私团队可用它检查AI广告策略：Sponsored Agent标识、会话隔离、商家权限、线索保存和归因报表。",
+      "nextCheck": "查ChatGPT Ads政策、Sponsored Agent披露样式、HubSpot/Shopify应用权限、归因报表和地区上线清单。",
+      "followUpQuestions": [
+        "Sponsored Agent对话隔离是否有广告政策、产品截图或审计日志证明？",
+        "HubSpot和Shopify集成暴露哪些客户、商品、线索和归因数据权限？"
+      ],
+      "evidenceThreshold": "至少需要广告政策、应用权限清单、商家后台截图/文档、用户披露规范和第三方合规评估，才能升级为成熟商业化结论。",
+      "claimBoundary": "OpenAI页面证明其发布和测试这些广告能力，不证明广告效果、用户接受度或隐私风险已经被独立验证。",
+      "counterEvidence": "若政策限制、用户投诉或商家权限争议出现，应下调商业化顺畅落地判断。 后续跟踪的具体证据包括官方文档、审计日志、合同/监管文件、原始数据、复测报告或客户侧指标。",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "source": "OpenAI News",
+      "sourceUrl": "https://openai.com/index/reimagining-advertising-with-ai/",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "claimStatus": "confirmed",
+      "originalDependency": "primary-source",
+      "provenance": "OpenAI News支持的精确来源事实是“OpenAI测试Sponsored Agents并把ChatGPT Ads接入HubSpot与Shopify”；AI Watchtower只保留最小事实、中文解释和下一步核查路径，效果、采用、安全或财务影响仍需外部证据。",
+      "publishedAt": "2026-09-17T09:12:00+09:00",
+      "time": "09:12 JST",
+      "tags": [
+        "advertising",
+        "agent",
+        "commerce"
+      ],
+      "companies": [
+        "OpenAI",
+        "HubSpot",
+        "Shopify"
+      ],
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 24,
+        "note": "取舍：商业化和Agent边界影响大；效果仍需政策、权限和商家数据验证。"
+      },
+      "detailWhyRanked": "OpenAI News支持的来源事实是“OpenAI测试Sponsored Agents并把ChatGPT Ads接入HubSpot与Shopify”。AI Watchtower保留最小事实、中文解释和下一步核查路径；完整上下文、方法、图表和原始语境仍需回到原始来源。",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "verificationStatus": "已核验",
+      "originalUrl": "https://openai.com/index/reimagining-advertising-with-ai/",
+      "editorScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 24,
+        "note": "取舍：商业化和Agent边界影响大；效果仍需政策、权限和商家数据验证。"
+      }
+    },
+    {
+      "id": "openai-admin-analytics-codex-business-value-2026-09-17",
+      "category": "tool",
+      "label": "工具",
+      "title": "OpenAI把ChatGPT Work和Codex使用量接到业务价值分析",
+      "body": "OpenAI介绍ChatGPT Admin Console里的使用、任务洞察和成果指标，用于查看ChatGPT Work与Codex的花费、任务分类、插件/技能使用和Codex对合并提交的贡献。",
+      "summary": "企业AI采购正在从席位数量转向任务、成本和工程产出度量。",
+      "whyItMatters": "企业买AI不再只看“谁在用”，而要把模型设置、插件、任务类别和交付结果连接到预算、培训和治理。",
+      "detailBody": "OpenAI介绍ChatGPT Admin Console里的使用、任务洞察和成果指标，用于查看ChatGPT Work与Codex的花费、任务分类、插件/技能使用和Codex对合并提交的贡献。 站内解读只保留该来源可支撑的最小事实，并把重点放在读者下一步应核对的权限、日志、正式文件、合同、方法、复测材料或客户侧指标；完整上下文仍应回到原始来源。",
+      "trend": "AI管理台正在成为企业衡量Agent投资回报和治理成熟度的证据层。",
+      "detailTrend": "AI管理台正在成为企业衡量Agent投资回报和治理成熟度的证据层。 这条信号的关键不是单点发布，而是它把AI能力放进更具体的工作流、治理或基础设施约束中。",
+      "whyRanked": "它给企业读者一个可操作核查表：使用量、任务类型、技能/插件、成本和产出必须能串起来。",
+      "topReason": "IT和业务负责人应核对Admin API、任务分类口径、Codex贡献指标和隐私默认设置。",
+      "impact": "CIO、工程管理、采购、销售运营和AI治理团队会用类似指标决定扩容或收缩。",
+      "whoShouldCare": "负责ChatGPT Work、Codex、AI预算和业务流程改造的团队，需要建立可审计的价值指标。",
+      "readerUse": "用它设计AI采用仪表盘：按团队、任务、模型、插件、产出和基线结果追踪。",
+      "nextCheck": "查Admin Console文档、Admin API字段、任务分类方法、Codex贡献定义、隐私设置和客户侧业务指标。",
+      "followUpQuestions": [
+        "任务分类是否有Admin API字段、导出样例或客户KPI对照数据证明可解释性？",
+        "Codex贡献指标如何处理人工修改、代码质量、缺陷率和审查时间？"
+      ],
+      "evidenceThreshold": "至少需要管理台文档、Admin API字段、客户基线、审计日志和业务系统对照数据，才能升级为已验证的企业AI价值度量结论。",
+      "claimBoundary": "OpenAI页面证明其提供这些管理与分析能力，不证明任何客户都能获得同等ROI。",
+      "counterEvidence": "若任务分类不稳定、指标不可导出或业务系统无法对齐，应下调价值归因判断。 后续跟踪的具体证据包括官方文档、审计日志、合同/监管文件、原始数据、复测报告或客户侧指标。",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "source": "OpenAI News",
+      "sourceUrl": "https://openai.com/index/how-to-connect-ai-usage-to-business-value/",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "claimStatus": "confirmed",
+      "originalDependency": "primary-source",
+      "provenance": "OpenAI News支持的精确来源事实是“OpenAI介绍ChatGPT Work和Codex的管理分析、任务洞察与成果指标”；AI Watchtower只保留最小事实、中文解释和下一步核查路径，效果、采用、安全或财务影响仍需外部证据。",
+      "publishedAt": "2026-09-17T09:08:00+09:00",
+      "time": "09:08 JST",
+      "tags": [
+        "enterprise-ai",
+        "codex",
+        "analytics"
+      ],
+      "companies": [
+        "OpenAI",
+        "Datadog"
+      ],
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "取舍：企业治理实用性高；ROI数字需客户侧基线验证。"
+      },
+      "detailWhyRanked": "OpenAI News支持的来源事实是“OpenAI介绍ChatGPT Work和Codex的管理分析、任务洞察与成果指标”。AI Watchtower保留最小事实、中文解释和下一步核查路径；完整上下文、方法、图表和原始语境仍需回到原始来源。",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "verificationStatus": "已核验",
+      "originalUrl": "https://openai.com/index/how-to-connect-ai-usage-to-business-value/",
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "取舍：企业治理实用性高；ROI数字需客户侧基线验证。"
+      }
+    },
+    {
+      "id": "openai-model-misalignment-reporting-framework-2026-09-17",
+      "category": "policy",
+      "label": "政策",
+      "title": "OpenAI发布模型失配报告框架，并披露6个行为案例",
+      "body": "OpenAI发布跟踪、调查和披露模型失配实例的新框架，并同步发布6份过去6个月观察到的异常或令人担忧的模型行为报告。",
+      "summary": "模型安全从一次性系统卡转向更频繁、可外部检查的失配披露。",
+      "whyItMatters": "如果行业要讨论减速、审计和事故上报，首先需要共同理解哪些模型行为应披露、披露应包含什么、何时需要告知监管或政府。",
+      "detailBody": "OpenAI发布跟踪、调查和披露模型失配实例的新框架，并同步发布6份过去6个月观察到的异常或令人担忧的模型行为报告。 站内解读只保留该来源可支撑的最小事实，并把重点放在读者下一步应核对的权限、日志、正式文件、合同、方法、复测材料或客户侧指标；完整上下文仍应回到原始来源。",
+      "trend": "前沿模型治理正在从发布前评测扩展到生命周期内的失配事件披露。",
+      "detailTrend": "前沿模型治理正在从发布前评测扩展到生命周期内的失配事件披露。 这条信号的关键不是单点发布，而是它把AI能力放进更具体的工作流、治理或基础设施约束中。",
+      "whyRanked": "它把AI安全讨论落到报告机制和案例材料，比抽象表态更便于外部复核。",
+      "topReason": "政策和安全团队应核对披露标准、案例报告、政府上报机制和与法律义务的关系。",
+      "impact": "前沿模型实验室、监管者、企业采购和安全评测机构都会参考这类披露框架。",
+      "whoShouldCare": "负责AI安全、合规、模型采购和监管事务的团队，需要把失配披露纳入供应商审查。",
+      "readerUse": "AI安全、合规和采购团队可用它更新供应商尽调问题：失配报告标准、案例库、缓解状态和外部反馈渠道。",
+      "nextCheck": "查6份alignment报告全文、OpenAI后续更新、其他实验室是否采用相似标准、监管或标准组织反馈。",
+      "followUpQuestions": [
+        "哪些行为达到必须披露门槛，哪些只是内部记录？",
+        "报告是否包含复现条件、影响评估、缓解状态和第三方可检查材料？"
+      ],
+      "evidenceThreshold": "至少需要完整案例报告、复现材料、外部研究者反馈和行业/监管采纳，才能升级为通用披露标准。",
+      "claimBoundary": "OpenAI页面证明其建立并试运行框架，不证明行业已经形成统一标准或问题已被完全解释/缓解。",
+      "counterEvidence": "若案例缺少可复核材料、其他实验室不采纳或监管要求不同，应下调行业标准化判断。 后续跟踪的具体证据包括官方文档、审计日志、合同/监管文件、原始数据、复测报告或客户侧指标。",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "source": "OpenAI News",
+      "sourceUrl": "https://openai.com/index/model-misalignment-reporting-framework/",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "claimStatus": "confirmed",
+      "originalDependency": "primary-source",
+      "provenance": "OpenAI News支持的精确来源事实是“OpenAI发布模型失配披露框架并同步发布6份失配行为报告”；AI Watchtower只保留最小事实、中文解释和下一步核查路径，效果、采用、安全或财务影响仍需外部证据。",
+      "publishedAt": "2026-09-17T09:04:00+09:00",
+      "time": "09:04 JST",
+      "tags": [
+        "safety",
+        "misalignment",
+        "governance"
+      ],
+      "companies": [
+        "OpenAI"
+      ],
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 24,
+        "note": "取舍：治理信号强；行业采用与复核材料仍待观察。"
+      },
+      "detailWhyRanked": "OpenAI News支持的来源事实是“OpenAI发布模型失配披露框架并同步发布6份失配行为报告”。AI Watchtower保留最小事实、中文解释和下一步核查路径；完整上下文、方法、图表和原始语境仍需回到原始来源。",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "verificationStatus": "已核验",
+      "originalUrl": "https://openai.com/index/model-misalignment-reporting-framework/",
+      "editorScore": {
+        "impact": 5,
+        "novelty": 5,
+        "narrativeStrength": 5,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 24,
+        "note": "取舍：治理信号强；行业采用与复核材料仍待观察。"
+      }
+    },
+    {
+      "id": "aws-hcls-agent-skills-open-source-reasoning-2026-09-17",
+      "category": "research",
+      "label": "研究",
+      "title": "AWS发布38个HCLS开源Agent Skills，瞄准医疗生命科学推理错误",
+      "body": "AWS Machine Learning Blog发布38个覆盖11个医疗和生命科学领域的开源Agent Skills，称这些markdown技能把领域决策流程交给Agent，并在410个提示评测中相对无技能Agent取得70%-86%胜率。",
+      "summary": "医疗AI Agent的关键瓶颈从知识检索转向可审计的领域决策程序。",
+      "whyItMatters": "HCLS任务里“引用正确指南但用错规则”的风险很高；把决策框架写成可审计技能，可能比单纯RAG或更大模型更适合合规场景。",
+      "detailBody": "AWS Machine Learning Blog发布38个覆盖11个医疗和生命科学领域的开源Agent Skills，称这些markdown技能把领域决策流程交给Agent，并在410个提示评测中给出70%-86%胜率。\n站内补充解读：重点不是医疗结论本身，而是技能仓库、评测集、错误样本、模型配置和专家复审能否被外部复核，并被真实工作流安全吸收。",
+      "trend": "Agent Skills正在成为企业把专业方法、参数和验证标准装入AI工作流的轻量方式。",
+      "detailTrend": "Agent Skills正在成为企业把专业方法、参数和验证标准装入AI工作流的轻量方式。 这条信号的关键不是单点发布，而是它把AI能力放进更具体的工作流、治理或基础设施约束中。",
+      "whyRanked": "它给医疗、生命科学和受监管行业一个具体工程路径：把专家方法显式化，而不是只靠模型记忆。",
+      "topReason": "医疗AI团队应查skills仓库、评测集、错误样本、模型/配置和监管适用边界。",
+      "impact": "医疗运营、药物发现、影像、理赔和合规团队可能用技能形式固化专家规则。",
+      "whoShouldCare": "负责HCLS Agent、医疗数据产品、药物发现自动化和临床/理赔合规的团队，需要评估技能化方法。",
+      "readerUse": "医疗AI、药物发现和合规团队可用它检查自有Agent是否把指南、层级规则、参数和失败条件写成可审计资产。",
+      "nextCheck": "查GitHub仓库、MIT-0许可、410-prompt评测、模型配置、错误分析、临床/监管专家复审。",
+      "followUpQuestions": [
+        "评测提示、评分器和错误样本是否有GitHub仓库、测试数据或专家复审记录证明覆盖真实流程？",
+        "技能维护责任、年度政策更新和专家审批如何记录？"
+      ],
+      "evidenceThreshold": "至少需要GitHub仓库、可复现实验、领域专家复审、真实工作流试点和安全/合规审计记录，才能升级为已验证的HCLS部署方法。",
+      "claimBoundary": "AWS文章证明其发布该技能集合和厂商评测主张，不证明临床安全性、监管认可或所有模型/任务泛化。",
+      "counterEvidence": "若第三方复测胜率下降、真实案例仍误用规则或维护成本过高，应下调方法有效性判断。 后续跟踪的具体证据包括官方文档、审计日志、合同/监管文件、原始数据、复测报告或客户侧指标。",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "source": "AWS Machine Learning Blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/improving-hcls-ai-reasoning-with-open-source-agent-skills/",
+      "sourceRole": "厂商主张",
+      "sourceType": "official",
+      "claimStatus": "vendor-claim",
+      "originalDependency": "primary-source",
+      "provenance": "AWS Machine Learning Blog作为厂商来源主张“发布38个HCLS开源Agent Skills并给出厂商评测结果”；AI Watchtower只保留最小事实、中文解释和下一步核查路径，效果、采用、安全或财务影响仍需外部证据。",
+      "publishedAt": "2026-09-17T09:00:00+09:00",
+      "time": "09:00 JST",
+      "tags": [
+        "agent-skills",
+        "healthcare",
+        "life-sciences"
+      ],
+      "companies": [
+        "AWS"
+      ],
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "取舍：方法启发强；仍是厂商评测，需要外部复测和领域专家审查。"
+      },
+      "detailWhyRanked": "AWS Machine Learning Blog支持的来源事实是“AWS发布38个HCLS开源Agent Skills并给出厂商评测结果”。AI Watchtower保留最小事实、中文解释和下一步核查路径；完整上下文、方法、图表和原始语境仍需回到原始来源。",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "verificationStatus": "已核验",
+      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/improving-hcls-ai-reasoning-with-open-source-agent-skills/",
+      "editorScore": {
+        "impact": 4,
+        "novelty": 5,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 21,
+        "note": "取舍：方法启发强；仍是厂商评测，需要外部复测和领域专家审查。"
+      }
+    },
+    {
+      "id": "aws-agentcore-system-prompt-optimizer-production-traces-2026-09-17",
+      "category": "tool",
+      "label": "工具",
+      "title": "AWS AgentCore把生产轨迹变成系统提示优化候选",
+      "body": "AWS Machine Learning Blog介绍Amazon Bedrock AgentCore系统提示优化器，称其从生产轨迹生成配置修改建议，并在提升前进行验证，包含单Agent和子Agent反射器基准结果。",
+      "summary": "Agent提示优化开始从手工调参转向轨迹驱动、验证后提升的闭环。",
+      "whyItMatters": "企业Agent失败常发生在真实轨迹里；如果优化器能把轨迹、反射、验证和发布门槛连起来，提示工程会更像持续交付流程。",
+      "detailBody": "AWS Machine Learning Blog介绍Amazon Bedrock AgentCore系统提示优化器，称其从生产轨迹生成配置修改建议，并在提升前进行验证。\n站内补充解读：重点看轨迹脱敏、验证集、灰度门槛、回滚记录、客户任务复测和失败样本，而不是只看自动调参叙事。\n若真实任务复测显示过拟合、破坏安全提示或提升不可复现，应把它降级为厂商功能线索。",
+      "trend": "Agent运维正在形成“轨迹采集-配置建议-验证-发布”的生产闭环。",
+      "detailTrend": "Agent运维正在形成“轨迹采集-配置建议-验证-发布”的生产闭环。 这条信号的关键不是单点发布，而是它把AI能力放进更具体的工作流、治理或基础设施约束中。",
+      "whyRanked": "它补上本期Agent控制面主线：不仅要接工具，还要用真实轨迹持续校准。",
+      "topReason": "平台团队应核对轨迹采样、隐私处理、验证集、回滚机制和是否避免过拟合。",
+      "impact": "企业Agent平台、客服自动化、开发者工具和AIOps团队会关注可控优化流程。",
+      "whoShouldCare": "负责Agent平台、提示管理、评测和生产运维的团队，需要评估轨迹驱动优化是否可审计。",
+      "readerUse": "Agent平台、提示管理和运维团队可用它制定Agent提示变更流程：数据来源、建议生成、离线验证、灰度、回滚和审计。",
+      "nextCheck": "查AgentCore文档、优化器方法、benchmark配置、生产轨迹隐私处理、客户复测和失败案例。",
+      "followUpQuestions": [
+        "生产轨迹是否包含敏感数据，如何脱敏与授权？",
+        "优化建议通过哪些benchmark配置、验证日志和回滚记录证明上线门槛？"
+      ],
+      "evidenceThreshold": "至少需要方法文档、可复现benchmark、隐私/安全设计、客户任务复测和回滚记录，才能升级为成熟生产实践。",
+      "claimBoundary": "AWS文章证明其发布该优化方法和厂商基准，不证明所有Agent都能自动变好或不会过拟合。",
+      "counterEvidence": "若优化器在真实任务上过拟合、破坏安全规则或缺少回滚，应下调生产可用性判断。 后续跟踪的具体证据包括官方文档、审计日志、合同/监管文件、原始数据、复测报告或客户侧指标。",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "source": "AWS Machine Learning Blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/optimizing-agent-system-prompts-with-amazon-bedrock-agentcore/",
+      "sourceRole": "厂商主张",
+      "sourceType": "official",
+      "claimStatus": "vendor-claim",
+      "originalDependency": "primary-source",
+      "provenance": "AWS Machine Learning Blog作为厂商来源主张“AgentCore系统提示优化器从生产轨迹生成并验证配置修改建议”；AI Watchtower只保留最小事实、中文解释和下一步核查路径，效果、采用、安全或财务影响仍需外部证据。",
+      "publishedAt": "2026-09-17T08:56:00+09:00",
+      "time": "08:56 JST",
+      "tags": [
+        "agent",
+        "prompt-optimization",
+        "observability"
+      ],
+      "companies": [
+        "AWS"
+      ],
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "取舍：生产运维价值高；仍需真实任务与隐私复核。"
+      },
+      "detailWhyRanked": "AWS Machine Learning Blog支持的来源事实是“AWS介绍AgentCore系统提示优化器从生产轨迹生成并验证配置修改建议”。AI Watchtower保留最小事实、中文解释和下一步核查路径；完整上下文、方法、图表和原始语境仍需回到原始来源。",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "verificationStatus": "已核验",
+      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/optimizing-agent-system-prompts-with-amazon-bedrock-agentcore/",
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 20,
+        "note": "取舍：生产运维价值高；仍需真实任务与隐私复核。"
+      }
+    },
+    {
+      "id": "nvidia-google-emerald-flexible-ai-data-centers-2026-09-17",
+      "category": "funding",
+      "label": "资本",
+      "title": "NVIDIA、Google与Emerald AI组建弹性AI数据中心联盟",
+      "body": "NVIDIA官方称，Emerald AI、Google和NVIDIA发起联盟，推动AI数据中心用可调度计算负载响应电网状态，并把NVIDIA DSX Flex与Emerald AI Conductor作为早期路径。",
+      "summary": "AI数据中心约束从芯片供应扩展到“按电网状态调度token生产”。",
+      "whyItMatters": "数据中心扩张越来越取决于电力、用水和公共许可；如果AI负载能按电网信号弹性调度，算力规划会更像能源协同问题。",
+      "detailBody": "NVIDIA官方称，Emerald AI、Google和NVIDIA发起联盟，推动AI数据中心用可调度计算负载响应电网状态，并把DSX Flex与Conductor作为早期路径。\n站内补充解读：关键证据是试点日志、电网信号、负载类型、SLA影响、PPA材料和第三方能效数据，而不是联盟公告本身。\n若试点只转移低价值批处理，或SLA/成本代价过高，应下调为基础设施探索信号。",
+      "trend": "AI基础设施从“买更多GPU”转向功率、冷却、电网和工作负载共同优化。",
+      "detailTrend": "AI基础设施从“买更多GPU”转向功率、冷却、电网和工作负载共同优化。 这条信号的关键不是单点发布，而是它把AI能力放进更具体的工作流、治理或基础设施约束中。",
+      "whyRanked": "它与本期数据中心民调形成呼应：社会许可压力正在倒逼AI工厂证明电网友好性。",
+      "topReason": "基础设施团队应核对试点规模、电网信号、负载类型、SLA影响和第三方能效数据。",
+      "impact": "AI云厂商、数据中心运营商、电力公司和地方许可机构都需要评估弹性负载。",
+      "whoShouldCare": "负责AI数据中心、能源采购、云容量和公共事务的团队，需要跟踪算力与电网协调。",
+      "readerUse": "数据中心、能源采购和公共事务团队可用它更新基础设施核查表：可中断负载、token/watt、PPA、电网需求响应、SLA和许可材料。",
+      "nextCheck": "查Google/Emerald AI公告、试点数据、电网运营商记录、DSX Flex文档、PPA和地方许可文件。",
+      "followUpQuestions": [
+        "试点调整的负载类型是否有运行日志、电网信号记录或第三方能效数据证明？",
+        "电网响应是否影响客户SLA、成本和碳排放核算？"
+      ],
+      "evidenceThreshold": "至少需要试点运行数据、电网/公用事业记录、客户SLA影响、能效审计和许可文件，才能升级为可规模化基础设施结论。",
+      "claimBoundary": "NVIDIA页面证明联盟和厂商技术方向，不证明弹性数据中心已经大规模降低电网压力。",
+      "counterEvidence": "若试点规模小、只转移负载时间或SLA成本过高，应下调基础设施突破判断。 后续跟踪的具体证据包括官方文档、审计日志、合同/监管文件、原始数据、复测报告或客户侧指标。",
+      "sourceId": "nvidia-blog-ai",
+      "sourceName": "NVIDIA AI Blog",
+      "source": "NVIDIA AI Blog",
+      "sourceUrl": "https://blogs.nvidia.com/blog/ai-energy-management-alliance/",
+      "sourceRole": "厂商主张",
+      "sourceType": "official",
+      "claimStatus": "vendor-claim",
+      "originalDependency": "primary-source",
+      "provenance": "NVIDIA AI Blog作为厂商来源主张“Emerald AI、Google和NVIDIA发起弹性AI数据中心联盟”；AI Watchtower只保留最小事实、中文解释和下一步核查路径，效果、采用、安全或财务影响仍需外部证据。",
+      "publishedAt": "2026-09-17T08:52:00+09:00",
+      "time": "08:52 JST",
+      "tags": [
+        "ai-infrastructure",
+        "data-center",
+        "energy"
+      ],
+      "companies": [
+        "NVIDIA",
+        "Google",
+        "Emerald AI"
+      ],
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 5,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "取舍：基础设施叙事强；仍需电网和试点外部数据。"
+      },
+      "detailWhyRanked": "NVIDIA AI Blog支持的来源事实是“NVIDIA称Emerald AI、Google和NVIDIA发起弹性AI数据中心联盟”。AI Watchtower保留最小事实、中文解释和下一步核查路径；完整上下文、方法、图表和原始语境仍需回到原始来源。",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "verificationStatus": "已核验",
+      "originalUrl": "https://blogs.nvidia.com/blog/ai-energy-management-alliance/",
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 5,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "取舍：基础设施叙事强；仍需电网和试点外部数据。"
+      }
+    },
     {
       "id": "venturebeat-salesforce-darwinx-agent-harness-evolution-2026-09-17",
       "category": "tool",
