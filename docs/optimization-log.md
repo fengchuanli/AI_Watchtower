@@ -1,3 +1,40 @@
+## 2026-09-17 11:05 JST
+
+- Focus: 完成当前 30 天计划 Day 6，执行首页移动阅读路径 QA，并修正最小读者可见层级问题：把 `按目的阅读` 从 5 秒要点后移到今日简报与 TOP3 之后，避免手机读者在看到 TOP3 前先穿过整屏导航说明。
+- Changed files:
+  - `index.html`
+  - `docs/homepage-edition-preflight.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只调整首页现有区块顺序、导航文案和结构校验规则。
+- Mobile reading-path QA:
+  - 390px viewport: TOP3 起点从约 `2892px` 提前到约 `1927px`；`按目的阅读` 改为 TOP3 后的下一步阅读路径。
+  - 768px viewport: TOP3 起点从约 `2332px` 提前到约 `1458px`；首页仍保持 hero、5 秒要点、今日简报、TOP3、目的导航、深度简报、更多新闻流。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 5 秒要点后直接进入今日简报，不再先让手机读者处理目的导航。
+  - TOP3 reader use: pass - TOP3 更早出现，仍保留选择理由、读者用途、来源边界和下一步核验。
+  - Source boundary visible: pass - 来源边界字段与深度简报未改动，目的导航后移不削弱核验入口。
+  - Original source dependency: pass - 未扩写媒体事实，也未新增原文替代内容。
+  - Mobile burden: pass - 390px 与 768px 实测均减少 TOP3 前的滚动距离。
+  - Continuity use: partial - 本次未新增连续观察组件，但降低了到达主要当日判断的移动端负担。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 首页手机与窄屏阅读顺序变为先看今日简报和 TOP3，再进入“按目的阅读”；读者更早看到本期最重要三条情报。
+- Verification:
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, static page link targets, and the new purpose-navigation order guard.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran browser viewport QA at 390px and 768px on local preview `http://localhost:8765/index.html`.
+  - Ran `git diff --check`.
+- Commit: pending final hash (`【VisionHub网站风格优化】提前首页移动端TOP3路径`).
+- Push: pending.
+
 ## 2026-09-17 08:13 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-17`，发布 10 条安全非重复信号，聚焦 Claude Docs/Slides 办公工作台、DeepMind Institute AGI 治理、AI 减速执行难题与 Meta 分歧、AP-NORC 数据中心民调、Alexa+ 印度多语言、WhatsApp Business MCP、SK Hynix/Intel AI 内存供应链、Agent 机器身份安全和 Salesforce DarwinX harness 演化。

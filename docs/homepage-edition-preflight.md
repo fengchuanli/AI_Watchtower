@@ -64,9 +64,9 @@ Do not publish the edition as-is when:
 `scripts/validate-site.mjs` protects the VisionHub-style homepage reading path as a reader-trust rule, not a decorative layout preference. The homepage should keep this first-screen order:
 
 ```text
-hero -> today briefing -> TOP3 -> deep briefing -> compact feed
+hero -> today briefing -> TOP3 -> purpose navigation -> deep briefing -> compact feed
 ```
 
-This order lets a phone reader see the daily promise, the short "what changed today" briefing, the ranked three strongest items, and only then the deeper context and non-TOP3 flow. If a future design changes the layout, keep the same editorial job visible before process notes, source machinery, archive links, or internal workflow copy.
+This order lets a phone reader see the daily promise, the short "what changed today" briefing, the ranked three strongest items, and only then choose a purpose-driven reading route before deeper context and the non-TOP3 flow. The purpose navigation should sit after TOP3 and before deep briefing so it supports the reader's next decision without delaying the first ranked briefing. If a future design changes the layout, keep the same editorial job visible before process notes, source machinery, archive links, or internal workflow copy.
 
 The guard also checks that `app.js` still renders `briefingHeadline`, `briefingSummary`, the same-day TOP3 ranking, and the compact feed that removes items already covered by TOP3. If any of those pieces move, update this note and the validator together so homepage structure still starts from reader understanding rather than editor operations.

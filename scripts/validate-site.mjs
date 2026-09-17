@@ -415,10 +415,16 @@ const homepageFirstScreenSections = [
   ["deep briefing", getHomepageSectionIndex(/<section\b(?=[^>]*\bid="deep-briefing")[^>]*>/)],
   ["compact feed", getHomepageSectionIndex(/<section\b(?=[^>]*\bid="feed")[^>]*>/)],
 ];
+const homepageExploreIndex = getHomepageSectionIndex(/<section\b(?=[^>]*\bid="explore")[^>]*>/);
+const homepageTop3Index = homepageFirstScreenSections[2][1];
+const homepageDeepBriefingIndex = homepageFirstScreenSections[3][1];
 
 if (
   homepageFirstScreenSections.some(([, index]) => index < 0) ||
+  homepageExploreIndex < 0 ||
   homepageFirstScreenSections.some(([, index], position, sections) => position > 0 && index <= sections[position - 1][1]) ||
+  homepageExploreIndex <= homepageTop3Index ||
+  homepageExploreIndex >= homepageDeepBriefingIndex ||
   !/briefingHeadline/.test(appJs) ||
   !/briefingSummary/.test(appJs) ||
   !/updateTodayBriefing\(data\.briefing\);/.test(appJs) ||
@@ -426,12 +432,13 @@ if (
   !/updateTopStories\(dailyTopItems\);/.test(appJs) ||
   !/visibleNews = scopedNews\.filter\(\(item\) => !dailyTopStoryIds\.has\(item\.id\)\)/.test(appJs) ||
   !/First-Screen Reader Order Guard/.test(homepageEditionPreflight) ||
-  !/hero -> today briefing -> TOP3 -> deep briefing -> compact feed/.test(homepageEditionPreflight) ||
+  !/hero -> today briefing -> TOP3 -> purpose navigation -> deep briefing -> compact feed/.test(homepageEditionPreflight) ||
+  !/purpose navigation should sit after TOP3 and before deep briefing/.test(homepageEditionPreflight) ||
   !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
   !/Day 28[\s\S]*First-Screen Reader Order Guard/.test(optimizationDecisionIndex) ||
   !/Continue with Day 30/.test(optimizationDecisionIndex)
 ) {
-  errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, deep briefing, then compact non-TOP3 feed.");
+  errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, purpose navigation, deep briefing, then compact non-TOP3 feed.");
 }
 
 if (
