@@ -23,8 +23,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: pending (`【新闻更新】补充23点AI新闻：16条商业化与Agent控制面信号`).
-- Push: pending.
+- Commit: `b6aaf8c` (`【新闻更新】补充23点AI新闻：16条商业化与Agent控制面信号`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` to `origin/main`.
 
 ## 2026-09-17 11:05 JST
 
