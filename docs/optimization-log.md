@@ -1,3 +1,32 @@
+## 2026-09-18 08:15 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-18`，发布 10 条安全非重复信号，聚焦 Claude 生物分子建模优化、Microsoft AI 转型 playbook、中美 AI 安全治理互信、华为 AI 算力路线、英国 AI 安全会面、美国数据中心电费法案、Claude Code Projects、Google Dream-RSI、AWS OpenSearch Agent 记忆和 AI 监督器。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 Anthropic Research、Microsoft AI Blog、AP、VentureBeat、TechCrunch、当前首页和历史重复 URL。
+  - 官方/研究项只确认 Anthropic 与 Microsoft 自述发布事实；媒体项均标为 `媒体背景` / `reported` / `originalDependency: must-read`，只保留最小事实、中文解释、来源边界和下一步核查入口。
+  - archive-source-concentration: media-radar-boundary; 本期可靠媒体 8/10，AP 为最大单一来源 4/10，读者应把本期当作雷达和核查队列，等待官方文本、代码、benchmark、审计日志、客户指标、监管文件或第三方复测。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 848。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月18日17:00 版 10 条情报；读者可在首页和详情页看到科研工具链复现、Agent 控制面、国际 AI 治理、AI 芯片路线和数据中心能源成本更新。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: this commit (`【新闻更新】发布17点AI新闻：10条Agent控制面与治理信号`).
+- Push: pending.
+
 ## 2026-09-17 23:03 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-17`，所以未回退版次，而是在同日 17:00 版基础上补充 6 条安全非重复信号，当前合计 16 条，新增 OpenAI ChatGPT Ads Sponsored Agents、ChatGPT Work/Codex 管理分析、模型失配披露框架、AWS HCLS Agent Skills、AWS AgentCore 系统提示优化器和 NVIDIA/Google/Emerald AI 弹性AI数据中心联盟。

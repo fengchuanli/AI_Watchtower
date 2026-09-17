@@ -1,8 +1,926 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17",
-  "totalItems": 838,
+  "updatedAt": "2026-09-18",
+  "totalItems": 848,
   "editions": [
+    {
+      "id": "news-1700-2026-09-18",
+      "date": "2026-09-18",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期10条AI新闻情报，聚焦AI安全治理、Agent控制面、科研工具链、算力与数据中心成本。",
+      "operationalStatus": "已拉取origin/main；核对来源政策、历史URL和候选来源；发布10条安全非重复信号。",
+      "editorialInterpretation": "本期编辑判断：AI竞争的重心继续从单次能力发布转向可复现工具链、Agent监督、企业评测、算力替代和公共基础设施约束。",
+      "readerFrame": {
+        "headline": "本期读法：查Agent控制面与公共约束",
+        "whyItMatters": "9月18日版可按四条线读：Anthropic和Google把AI用于科研/搜索工具链优化；Claude Code、OpenSearch和AI监督器暴露Agent工程控制面；中美、英国和美国国会把AI安全与数据中心推向制度场景；华为与数据中心电费法案说明算力竞争进入供应链和公共成本层。",
+        "useThisIssueFor": [
+          "研发和平台团队复核代码优化、Agent搜索、检索记忆、监督器和工程协作日志。",
+          "政策和公共事务团队跟踪中美AI治理、英国安全会面和数据中心电费成本规则。",
+          "基础设施和战略团队评估国产AI算力、数据中心成本归属和企业AI转型评测。"
+        ],
+        "notProvenYet": [
+          "不证明Claude生物分子优化和Dream-RSI已经在外部任务中普遍复现。",
+          "不证明AI监督器、Claude Code Projects或OpenSearch记忆默认适合生产环境。",
+          "不证明中美或英国AI安全讨论已经形成约束性制度，也不证明华为算力已追平NVIDIA。"
+        ],
+        "mobile": {
+          "headline": "查复现、日志与政策文本",
+          "summary": "重点看科研复现、Agent控制面、国际治理、芯片路线和数据中心电费。",
+          "primaryUses": [
+            "研发团队查复现",
+            "安全团队查日志",
+            "政策团队查文本"
+          ],
+          "proofBoundary": "仍需代码、benchmark、审计日志、官方公报、法案文本和客户指标"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版新增科研工具链、Agent项目层、国际治理和能源成本",
+        "freshFacts": [
+          "本期新增事实：Anthropic发布Claude优化生物分子开源模型的研究说明。",
+          "本期新增事实：Microsoft发布自身AI转型经验框架，强调评测、上下文和学习闭环。",
+          "本期新增事实：AP报道中美AI治理互信障碍、英国王室AI安全会面、华为AI芯片路线和美国数据中心电费法案。",
+          "本期新增事实：VentureBeat/TechCrunch补充Claude Code Projects、Dream-RSI、OpenSearch Agent记忆和AI监督器信号。"
+        ],
+        "repeatedContext": [
+          "延续9月17日Agent权限、模型失配和数据中心公共许可主线，但本期10条URL均为新收录。",
+          "延续既有边界：媒体报道不替代官方文本，厂商主张不替代客户指标、第三方复测和审计材料。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查科研复现与成本优化",
+          "count": 2,
+          "meaning": "用来检查Claude生物分子优化和Google Dream-RSI是否有代码、benchmark、复现和实验结果。"
+        },
+        {
+          "label": "查Agent工程控制面",
+          "count": 3,
+          "meaning": "用来检查Claude Code项目层、OpenSearch记忆/检索和AI监督器是否具备日志、权限、评测和回滚机制。"
+        },
+        {
+          "label": "查治理文本与公共承诺",
+          "count": 3,
+          "meaning": "用来检查中美会谈、英国安全会面和AI数据中心电费法案是否产生正式文件和执行路径。"
+        },
+        {
+          "label": "查算力与企业转型证据",
+          "count": 2,
+          "meaning": "用来检查华为AI算力路线和Microsoft企业AI转型框架的规格、客户指标和独立验证。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体雷达占优，官方证据需补强",
+        "note": "可靠媒体集中为8/10，本期是雷达，不是确认结论。",
+        "nextCheck": "用官方文本、代码、benchmark、审计和客户指标复核。"
+      },
+      "sourceConcentration": {
+        "sourceId": "ap-news",
+        "sourceName": "Associated Press",
+        "count": 4,
+        "share": "4/10",
+        "note": "同一来源AP占4/10，政策与基建线索需外部确认。",
+        "nextCheck": "查其他媒体、官方、监管和第三方原文。"
+      },
+      "overreadBoundary": {
+        "label": "不要把雷达信号读成已落地制度",
+        "body": "不要把本期读成全市场结论：本期说明AI安全、Agent控制面、科研工具链和数据中心成本正在形成新检查点；它不证明国际治理已达成、Agent监督已经成熟、研究结果已普遍复现或算力替代已完成。",
+        "doNotConclude": "不证明中美AI治理达成协议，不证明AI监督器可替代人工审计，不证明华为芯片追平NVIDIA，也不证明Microsoft框架可直接复制到所有企业。",
+        "useInstead": "用来安排官方文本、代码仓库、第三方benchmark、客户指标、审计日志、法案进展和监管文件的下一步核查。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent控制面从权限扩展到监督",
+          "note": "跨期看，MCP、AgentCore、DarwinX之后，本期Claude Code Projects、OpenSearch记忆和AI监督器把控制面推到项目、检索和审计层。",
+          "boundary": "不证明默认安全；下一步查权限日志、轨迹导出、误报漏报和客户试点数据。"
+        },
+        {
+          "topic": "policy",
+          "label": "AI安全进入公共制度场景",
+          "note": "跨期看，减速争论、模型失配披露之后，本期中美互信、英国安全会面和数据中心电费法案把治理推向政府文件。",
+          "boundary": "不证明规则已落地；下一步查公报、法律文本、监管细则和公司承诺。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力约束扩展到芯片与电网成本",
+          "note": "跨期看，数据中心民调和内存供应链之后，本期华为AI芯片和美国电费法案强化供应链与公共成本线索。",
+          "boundary": "不证明替代完成或成本规则确定；下一步查规格、benchmark、法案和费率文件。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "Agent治理更偏运行时",
+          "status": "stronger",
+          "previousPattern": "此前模式：MCP、AgentCore、Agent身份和harness评测强调权限与验证。",
+          "currentSignal": "本期新增Claude Code项目协调、OpenSearch记忆/检索和AI监督器调查。",
+          "signalDirection": "增强：从连接工具走向长任务、上下文、记忆和事故审计。",
+          "stillUnproven": "仍需轨迹日志、权限字段、监督器评测、客户试点和审计材料。"
+        },
+        {
+          "topic": "policy",
+          "label": "安全治理外部化",
+          "status": "stronger",
+          "previousPattern": "此前模式：模型失配披露和行业减速争论以实验室与媒体为主。",
+          "currentSignal": "本期新增中美治理互信、英国高层会面和美国数据中心电费法案。",
+          "signalDirection": "增强：治理议题进入外交、王室/政府和立法场景。",
+          "stillUnproven": "仍需正式公报、法律文本、监管细则和企业承诺。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "基础设施约束更硬",
+          "status": "stronger",
+          "previousPattern": "此前模式：数据中心民意、内存供应和弹性数据中心讨论并存。",
+          "currentSignal": "本期新增华为SuperPoD路线和美国数据中心电费成本法案。",
+          "signalDirection": "增强：约束从容量扩张扩展到国产替代、公共电网和成本承担。",
+          "stillUnproven": "仍需官方规格、第三方benchmark、法案文本、费率文件和项目许可。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Anthropic",
+          "label": "从办公入口到科研/开发工具链",
+          "lastMention": "上一版Anthropic以Claude Docs/Slides办公工作台进入首页。",
+          "whatChanged": "本期新增Claude生物分子优化研究和Claude Code Projects报道，说明Claude线索扩展到科研代码和开发协作。",
+          "stillUnproven": "仍需代码复现、湿实验结果、Claude Code官方文档、审计日志和团队试点指标。"
+        },
+        {
+          "company": "Microsoft",
+          "label": "企业AI转型框架化",
+          "lastMention": "历史线索中Microsoft多次出现在Copilot、Azure AI和企业转型语境。",
+          "whatChanged": "本期官方博客把内部AI转型经验写成评测、上下文和学习闭环框架。",
+          "stillUnproven": "仍需客户指标、实施复盘、审计材料和管理台字段。"
+        },
+        {
+          "company": "Google",
+          "label": "治理与研究成本并行",
+          "lastMention": "上一版Google/DeepMind以DeepMind Institute进入AGI治理语境。",
+          "whatChanged": "本期Google相关线索转向Dream-RSI研究，强调降低Agent发现调用成本。",
+          "stillUnproven": "仍需论文、代码、第三方复现和非Google任务测试。"
+        },
+        {
+          "company": "Huawei",
+          "label": "国产AI算力路线外显",
+          "lastMention": "此前AI基础设施主线更多由NVIDIA、SK Hynix和数据中心约束构成。",
+          "whatChanged": "本期AP报道华为Atlas 960 SuperPoD和后续Ascend路线。",
+          "stillUnproven": "仍需官方规格、产能记录、客户部署和独立benchmark。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/研究来源",
+          "count": 2,
+          "role": "官方/研究来源确认Anthropic研究发布和Microsoft经验框架；效果、复现、ROI和可复制性仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 8,
+          "role": "可靠媒体用于捕捉中美治理、英国安全会面、数据中心法案、华为芯片和Agent工程背景；完整事实仍回到原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent项目、检索记忆与监督器",
+          "count": 4,
+          "itemIds": [
+            "venturebeat-claude-code-projects-persistent-agent-coordination-2026-09-18",
+            "venturebeat-google-dream-rsi-agent-discovery-replay-2026-09-18",
+            "venturebeat-aws-opensearch-agent-memory-costs-2026-09-18",
+            "techcrunch-rogue-ai-agent-oversight-with-ai-2026-09-18"
+          ],
+          "meaning": "用来检查Agent是否具备长任务协调、搜索回放、检索记忆、监督器和事故审计能力。",
+          "whyNow": "Agent正在从单次调用进入长期项目、持续检索和大规模运行时监督。"
+        },
+        {
+          "id": "policy",
+          "label": "AI安全外交、会面与立法",
+          "count": 3,
+          "itemIds": [
+            "ap-us-china-ai-safety-cooperation-mistrust-2026-09-18",
+            "ap-king-charles-ai-leaders-safety-meeting-2026-09-18",
+            "ap-house-data-center-energy-cost-bill-2026-09-18"
+          ],
+          "meaning": "用来核对AI治理是否出现正式公报、法律文本、监管细则或公司承诺。",
+          "whyNow": "模型失配和减速争论正在把AI安全推向外交、公共制度和基础设施成本规则。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "芯片、数据中心与企业控制面",
+          "count": 2,
+          "itemIds": [
+            "ap-huawei-atlas-960-ai-chip-superpod-2026-09-18",
+            "microsoft-frontier-firm-ai-transformation-playbook-2026-09-18"
+          ],
+          "meaning": "用来检查算力替代、企业AI评测、上下文治理和业务价值归因。",
+          "whyNow": "AI竞争越来越取决于算力可得性、公共成本和企业内部控制面。"
+        },
+        {
+          "id": "model",
+          "label": "科研模型工具链",
+          "count": 1,
+          "itemIds": [
+            "anthropic-claude-biomolecular-modeling-optimization-2026-09-18"
+          ],
+          "meaning": "用来检查模型是否能进入科研代码维护、加速和实验验证流程。",
+          "whyNow": "AI科学价值开始从答案生成转向改造研究者每天使用的模型与代码。"
+        }
+      ],
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "anthropic-claude-biomolecular-modeling-optimization-2026-09-18",
+          "category": "research",
+          "label": "研究",
+          "title": "Anthropic用Claude优化30多个生物分子开源模型",
+          "body": "Claude优化生物模型。",
+          "summary": "Claude优化生物模型。",
+          "whyItMatters": "科学AI不再只是生成假设，而是在改造研究工具链；但速度和内存收益仍需外部复现。",
+          "detailBody": "Anthropic研究页称Claude优化生物分子建模代码，并配套蛋白设计竞赛和湿实验验证额度；站内只确认该研究发布、开源入口和作者披露的评测范围。",
+          "trend": "科研AI转向工具链维护。",
+          "detailTrend": "如果复现成立，研究团队会把Agent用于优化实验前的工具链，而不只是写报告；趋势意义在于AI开始承担模型维护、性能调优和实验准备这些工程化环节。",
+          "whyRanked": "读者可用它更新科研复现检查表。",
+          "topReason": "官方研究原文给出代码与竞赛入口，下一步看复现和实验结果。",
+          "impact": "科研平台、药物发现团队和开源模型维护者应检查代码差异、benchmark设置和湿实验验证口径。",
+          "whoShouldCare": "负责生物分子建模、药物发现和科研工程平台的研究/工程团队需要评估Claude是否能进入工具链维护流程。",
+          "readerUse": "科研平台团队用于安排代码审查、复现实验、GPU内存测试和湿实验验证清单。",
+          "nextCheck": "下一步查开源仓库提交、第三方复现、benchmark脚本、湿实验结果和外部专家评审。",
+          "followUpQuestions": [
+            "开源代码是否包含可复现的基线、硬件配置和测试脚本？",
+            "Adaptyv Bio或第三方实验室是否公布湿实验报告、命中率数据或失败样本？"
+          ],
+          "evidenceThreshold": "需要第三方复现、代码审计和湿实验数据，才能升级为已验证科研工具链改进。",
+          "claimBoundary": "官方研究页证明Anthropic提出并开源该优化工作，不证明所有生物分子任务都会获得同等收益。",
+          "counterEvidence": "若第三方复现报告无法达到相近速度/内存结果，或湿实验命中率数据不足，应下调为厂商研究演示。",
+          "sourceId": "anthropic-research",
+          "sourceName": "Anthropic Research",
+          "source": "Anthropic Research",
+          "sourceUrl": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Anthropic Research发布Claude优化生物分子建模代码的研究说明；方法、代码和实验细节需回到原文与仓库。",
+          "publishedAt": "2026-09-18T07:02:00+09:00",
+          "time": "07:02",
+          "tags": [
+            "科研AI",
+            "生物分子",
+            "代码优化",
+            "复现"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为科研复现信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新科研复现检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为科研复现信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "microsoft-frontier-firm-ai-transformation-playbook-2026-09-18",
+          "category": "tool",
+          "label": "工具",
+          "title": "Microsoft发布内部AI转型经验，强调评测、上下文和学习闭环",
+          "body": "Microsoft发布AI转型框架。",
+          "summary": "Microsoft发布AI转型框架。",
+          "whyItMatters": "企业AI部署的竞争点正从模型选择转向专有上下文、评测和组织学习机制。",
+          "detailBody": "Microsoft称其Customer Zero经验显示，AI价值来自重新设计工作流并让人保留判断和问责；站内只确认Microsoft发布该转型框架和自述经验。",
+          "trend": "企业AI转向流程控制面。",
+          "detailTrend": "这会推动企业买方要求可审计的业务指标、上下文治理和持续学习机制；趋势意义是企业AI竞争正从买模型转向沉淀专有流程、评测和反馈资产。",
+          "whyRanked": "读者可用它更新企业AI评测检查表。",
+          "topReason": "官方来源给出组织转型框架，但ROI仍需客户侧指标和审计证据。",
+          "impact": "CIO、业务负责人和PMO应把AI项目指标从席位使用量转向任务完成、错误率、上下文质量和复用学习。",
+          "whoShouldCare": "负责企业AI转型、Copilot落地和内部Agent治理的CIO/运营/数据团队需要更新项目度量方式。",
+          "readerUse": "CIO和运营团队用于重写AI转型OKR、评测指标和流程改造路线图。",
+          "nextCheck": "下一步查完整playbook、客户案例指标、审计样本、Copilot管理台字段和第三方实施复盘。",
+          "followUpQuestions": [
+            "Microsoft是否公开可复用的评测模板、指标定义和失败案例？",
+            "客户侧是否披露流程重做后的错误率、节省时间和业务结果？"
+          ],
+          "evidenceThreshold": "需要客户指标、审计材料和第三方实施报告，才能升级为可复制的企业AI转型方法论。",
+          "claimBoundary": "官方博客证明Microsoft发布了经验框架，不证明所有企业采用后都能获得同样收益。",
+          "counterEvidence": "若客户复盘显示流程改造成本高于收益，或评测指标无法落到业务结果，应收窄为Microsoft内部经验。",
+          "sourceId": "microsoft-ai-blog",
+          "sourceName": "Microsoft AI Blog",
+          "source": "Microsoft AI Blog",
+          "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "recommended",
+          "provenance": "Microsoft AI Blog发布企业AI治理指标和转型经验框架；这是厂商主张，业务价值、可复制性和成本收益仍需客户侧证据。",
+          "publishedAt": "2026-09-18T06:55:00+09:00",
+          "time": "06:55",
+          "tags": [
+            "企业AI",
+            "评测",
+            "Copilot",
+            "组织转型"
+          ],
+          "companies": [
+            "Microsoft"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为企业AI评测信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新企业AI评测检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为企业AI评测信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "ap-us-china-ai-safety-cooperation-mistrust-2026-09-18",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：全球AI安全策略卡在中美互不信任上",
+          "body": "AP写中美AI治理互信难题。",
+          "summary": "AP写中美AI治理互信难题。",
+          "whyItMatters": "前沿AI风险治理如果没有中美最低限度互信，实验室减速和国际标准都难落地。",
+          "detailBody": "AP把即将到来的中美元首讨论、芯片限制、开源路线和AI安全合作放在同一治理冲突中；站内只保留最小报道事实和核查方向。",
+          "trend": "AI治理转向地缘信任问题。",
+          "detailTrend": "治理难点不只是写原则，而是让竞争对手相信披露、测试和限制不会被用于战略削弱；趋势意义是AI安全正在被出口管制和国家竞争重写。",
+          "whyRanked": "读者可用它更新中美治理文本检查表。",
+          "topReason": "可靠媒体提供外交与产业背景；下一步要看正式会谈记录和政策文本。",
+          "impact": "政策团队和跨境AI企业应跟踪模型访问、芯片限制、开源政策和联合安全测试是否出现可执行文本。",
+          "whoShouldCare": "负责跨境AI合规、模型访问和芯片/云供应链的政策/法务/战略团队需要跟踪中美治理文本。",
+          "readerUse": "政策和合规团队用于更新中美AI治理、出口管制和安全测试合作观察表。",
+          "nextCheck": "下一步查中美元首会谈公报、监管机构文件、出口管制修订和实验室正式响应。",
+          "followUpQuestions": [
+            "会谈后是否出现AI安全、模型测试或芯片限制的联合声明、公报或监管文件？",
+            "OpenAI、Anthropic、DeepMind或中国实验室是否公布跨境安全合作协议、审计记录或技术报告？"
+          ],
+          "evidenceThreshold": "需要官方会谈文件、监管文本或实验室合作协议，才能升级为确认的国际AI治理进展。",
+          "claimBoundary": "AP报道说明互信障碍和政策背景，不证明双方已拒绝所有AI安全合作。",
+          "counterEvidence": "若后续官方公报、监管文件或实验室协议显示没有实质机制，应降级为外交背景信号；若出现联合测试则上调。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/cd680bd072ec95e5f4b9c99dbee91319",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press报道中美AI治理和模型安全合作互信障碍；完整事实、采访、外交背景和引述需阅读AP原文。",
+          "publishedAt": "2026-09-18T06:48:00+09:00",
+          "time": "06:48",
+          "tags": [
+            "中美AI",
+            "治理",
+            "出口管制",
+            "安全合作"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 22,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为中美治理文本信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新中美治理文本检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/cd680bd072ec95e5f4b9c99dbee91319",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 22,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为中美治理文本信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "ap-huawei-atlas-960-ai-chip-superpod-2026-09-18",
+          "category": "funding",
+          "label": "资本",
+          "title": "华为发布Atlas 960 SuperPoD，继续推进国产AI算力路线",
+          "body": "AP写华为AI算力路线。",
+          "summary": "AP写华为AI算力路线。",
+          "whyItMatters": "中国AI算力自主化正在改变美国芯片限制的效果评估，也影响全球模型训练成本和供应链选择。",
+          "detailBody": "AP称该发布指向中国在AI训练和推理算力上的替代路线，背景是美国先进芯片限制；站内只保留发布和路线图的最小事实。",
+          "trend": "算力竞争转向系统替代。",
+          "detailTrend": "如果国产集群性能持续接近可用阈值，企业和政策制定者会重新评估限制、成本和部署地域；趋势意义是算力竞争更依赖完整系统而非单颗芯片。",
+          "whyRanked": "读者可用它更新AI芯片验证检查表。",
+          "topReason": "媒体报道给出发布事实和路线图；性能仍需官方规格和第三方测试。",
+          "impact": "芯片、云和模型团队应跟踪Atlas 960规格、软件生态、交付能力和实际训练/推理benchmark。",
+          "whoShouldCare": "负责AI芯片采购、云容量规划和中美科技风险评估的基础设施/战略团队需要跟踪国产算力进展。",
+          "readerUse": "基础设施和战略团队用于更新AI芯片供应链、国产替代和模型训练成本情景。",
+          "nextCheck": "下一步查华为官方规格、客户部署、MLPerf或第三方benchmark、出口管制文件和供货记录。",
+          "followUpQuestions": [
+            "华为是否公布Atlas 960 SuperPoD的完整规格、能耗和软件栈？",
+            "第三方benchmark或客户部署是否验证训练/推理性能？"
+          ],
+          "evidenceThreshold": "需要官方规格、独立benchmark和客户部署记录，才能升级为已验证的AI算力替代能力。",
+          "claimBoundary": "AP报道证明发布与路线图信号，不证明其性能、产能或生态已经追平NVIDIA。",
+          "counterEvidence": "若实测性能、产能或软件兼容性低于发布叙事，应收窄为国内战略发布。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/26ab418df1339c518483918218ffbe57",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press报道华为AI模型算力芯片与SuperPoD发布；完整事实、技术背景、数据和专家评论需阅读AP原文。",
+          "publishedAt": "2026-09-18T06:40:00+09:00",
+          "time": "06:40",
+          "tags": [
+            "AI芯片",
+            "华为",
+            "算力",
+            "中美竞争"
+          ],
+          "companies": [
+            "Huawei",
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 22,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为AI芯片验证信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新AI芯片验证检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/26ab418df1339c518483918218ffbe57",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 22,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为AI芯片验证信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "ap-king-charles-ai-leaders-safety-meeting-2026-09-18",
+          "category": "policy",
+          "label": "政策",
+          "title": "英国王室会见AI高管，安全议题继续升温",
+          "body": "AP写英国AI安全会面。",
+          "summary": "AP写英国AI安全会面。",
+          "whyItMatters": "AI安全正在进入更高层级的公共外交场景，但象征性会面还不是约束性规则。",
+          "detailBody": "AP将这次会面放在模型失配披露、AI减速争论和英国AI治理角色中解释；站内只保留会面、议题和后续核查方向。",
+          "trend": "AI安全进入公共外交。",
+          "detailTrend": "这类会面会提高公共压力，但真正影响来自法律、监管权力和模型预检机制；趋势意义是AI安全开始进入更广泛的公共信任场景。",
+          "whyRanked": "读者可用它更新英国安全承诺检查表。",
+          "topReason": "可靠媒体背景充分，下一步仍看政府文件和参会方正式承诺。",
+          "impact": "公共事务和合规团队应关注英国是否把自愿安全对话推进为强制预检或报告制度。",
+          "whoShouldCare": "负责AI公共政策、国际事务和前沿模型合规的团队需要跟踪英国安全制度是否升级。",
+          "readerUse": "公共政策团队用于更新AI安全外交、英国监管和前沿模型预检观察表。",
+          "nextCheck": "下一步查英国政府文件、AI Security Institute要求、参会公司声明和后续立法文本。",
+          "followUpQuestions": [
+            "英国政府是否发布会后原则、监管路线、模型预检要求或AI Security Institute文件？",
+            "参会公司是否承诺第三方评估、事故披露或安全投资？"
+          ],
+          "evidenceThreshold": "需要政府文件、立法文本或公司正式承诺，才能升级为实质治理进展。",
+          "claimBoundary": "AP报道证明高层会面和安全讨论，不证明参会方达成约束性协议。",
+          "counterEvidence": "若后续没有政策文件或公司承诺，应下调为象征性公共外交信号。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/0765bee1e338cf65846a046fb5825a4a",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press报道英国王室与AI领导者模型治理安全会面；完整事实、现场、背景和引述需阅读AP原文。",
+          "publishedAt": "2026-09-18T06:33:00+09:00",
+          "time": "06:33",
+          "tags": [
+            "AI安全",
+            "英国",
+            "公共政策",
+            "前沿模型"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Google",
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为英国安全承诺信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新英国安全承诺检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/0765bee1e338cf65846a046fb5825a4a",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为英国安全承诺信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "ap-house-data-center-energy-cost-bill-2026-09-18",
+          "category": "policy",
+          "label": "政策",
+          "title": "美国众议院通过数据中心电费成本法案",
+          "body": "AP写数据中心电费法案。",
+          "summary": "AP写数据中心电费法案。",
+          "whyItMatters": "AI数据中心争议从民意担忧进入联邦立法流程，成本归属会影响扩建节奏和地方许可。",
+          "detailBody": "该法案针对AI数据中心电力需求与居民/企业电费压力，仍需后续立法流程确认；站内只保留众议院通过的最小报道事实。",
+          "trend": "数据中心进入成本监管。",
+          "detailTrend": "当电力成本由谁承担成为立法问题，数据中心项目将更依赖地方监管和电网证明；趋势意义是AI基础设施开始接受公共账单审查。",
+          "whyRanked": "读者可用它更新数据中心电费规则检查表。",
+          "topReason": "媒体报道法案通过事实；下一步看参议院、州监管和实施细则。",
+          "impact": "云、数据中心和能源团队应把电网成本、PPA、输电升级和地方监管纳入AI容量计划。",
+          "whoShouldCare": "负责数据中心选址、电力采购和AI容量规划的基础设施/法务团队需要跟踪电费成本归属规则。",
+          "readerUse": "基础设施和法务团队用于更新AI数据中心许可、电力成本和社区沟通清单。",
+          "nextCheck": "下一步查法案文本、参议院进展、FERC/州监管响应、公用事业费率文件和项目许可记录。",
+          "followUpQuestions": [
+            "法案在参议院是否保留数据中心成本承担条款？",
+            "州监管者是否开始要求AI数据中心提交新增电网成本测算？"
+          ],
+          "evidenceThreshold": "需要最终法律文本、监管实施细则和费率文件，才能升级为确定的成本规则变化。",
+          "claimBoundary": "AP报道证明众议院通过，不证明法案已成法律或会统一改变所有州的电价机制。",
+          "counterEvidence": "若参议院删除关键条款或实施细则弱化成本转嫁要求，应下调政策影响。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/f073380caa61b720fa424590b5bc7c87",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press报道美国众议院数据中心电费成本法案；完整事实、投票、政策争议和背景需阅读AP原文。",
+          "publishedAt": "2026-09-18T06:25:00+09:00",
+          "time": "06:25",
+          "tags": [
+            "数据中心",
+            "能源",
+            "电费",
+            "立法"
+          ],
+          "companies": [],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为数据中心电费规则信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新数据中心电费规则检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/f073380caa61b720fa424590b5bc7c87",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为数据中心电费规则信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "venturebeat-claude-code-projects-persistent-agent-coordination-2026-09-18",
+          "category": "tool",
+          "label": "工具",
+          "title": "Claude Code Projects把长周期开发任务放进持久协调层",
+          "body": "Claude Code项目层上线。",
+          "summary": "Claude Code项目层上线。",
+          "whyItMatters": "编码Agent正在从单次PR执行转向跨分支、跨线程、可委派的项目管理层。",
+          "detailBody": "报道称该功能面向云端Claude Code会话，负责拆分任务、维护共享目标并协调多个线程；站内只保留beta产品信号。",
+          "trend": "编码Agent转向项目级编排。",
+          "detailTrend": "如果这类协调层成熟，工程团队需要新的分支策略、冲突处理、审计和权限设计；趋势意义是编码Agent正在形成项目经理式控制层。",
+          "whyRanked": "读者可用它更新编码Agent治理检查表。",
+          "topReason": "媒体报道给出产品信号；下一步查Anthropic官方文档和真实团队使用数据。",
+          "impact": "工程团队应检查长任务Agent如何处理仓库权限、分支冲突、任务记忆、审计日志和回滚。",
+          "whoShouldCare": "负责AI编码工具、仓库治理和工程效率平台的开发者体验/平台团队需要评估多Agent协作风险。",
+          "readerUse": "开发者平台团队用于更新AI编码Agent的权限、分支、评审和任务拆分试点清单。",
+          "nextCheck": "下一步查Anthropic官方发布、Claude Code文档、beta限制、审计日志字段和团队试点指标。",
+          "followUpQuestions": [
+            "Claude Code Projects是否公开权限模型、分支隔离和合并冲突处理规则？",
+            "真实团队试点是否披露交付速度指标、缺陷率指标和人工返工记录？"
+          ],
+          "evidenceThreshold": "需要官方文档、beta用户指标和代码审计案例，才能升级为已验证的工程生产力改进。",
+          "claimBoundary": "媒体报道证明产品beta信号，不证明长期开发任务已经可安全自动托管。",
+          "counterEvidence": "若试点指标显示冲突、权限事故或质量问题增加，应下调为早期实验功能。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "sourceUrl": "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道Claude Code Projects beta Agent协调；完整事实、产品细节、引述和上下文需阅读原文。",
+          "publishedAt": "2026-09-18T06:18:00+09:00",
+          "time": "06:18",
+          "tags": [
+            "Claude Code",
+            "开发者工具",
+            "多Agent",
+            "项目记忆"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为编码Agent治理信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新编码Agent治理检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为编码Agent治理信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "venturebeat-google-dream-rsi-agent-discovery-replay-2026-09-18",
+          "category": "research",
+          "label": "研究",
+          "title": "Google Dream-RSI用历史搜索树减少Discovery Agent调用",
+          "body": "Dream-RSI减少Agent调用。",
+          "summary": "Dream-RSI减少Agent调用。",
+          "whyItMatters": "Agent发现和优化任务的成本瓶颈可能从更多模型调用转向更好的搜索记忆与策略评估。",
+          "detailBody": "报道称Dream-RSI在算法、GPU kernel和优化任务中用历史探索树模拟策略，减少重复在线搜索；站内只保留研究报道的最小事实。",
+          "trend": "Agent探索转向离线回放。",
+          "detailTrend": "这指向更便宜的自改进/搜索编排，但必须区分研究benchmark与生产系统收益；趋势意义是Agent调用记录本身可能变成优化资产。",
+          "whyRanked": "读者可用它更新Agent搜索成本检查表。",
+          "topReason": "媒体报道研究结果，下一步应查论文、代码和独立复测。",
+          "impact": "研究和平台团队应检查自己的Agent调用日志是否能用于离线策略评估、回放和成本优化。",
+          "whoShouldCare": "负责自动发现、代码优化和Agent成本控制的研究/平台团队需要评估回放式搜索是否可复用。",
+          "readerUse": "研究和平台团队用于设计Agent探索日志、离线模拟器和成本/质量benchmark。",
+          "nextCheck": "下一步查Google论文、代码仓库、任务定义、基线设置和第三方复现实验。",
+          "followUpQuestions": [
+            "Dream-RSI是否公开论文、代码和历史搜索树构建方式？",
+            "独立团队在非Google任务上是否复现调用量下降和质量保持？"
+          ],
+          "evidenceThreshold": "需要论文、代码、数据和第三方复现，才能升级为通用Agent探索成本优化方法。",
+          "claimBoundary": "媒体报道说明研究结果，不证明所有Agent发现任务都能获得162倍调用减少。",
+          "counterEvidence": "若第三方复测数据或复现记录显示收益只来自特定基线或任务，应收窄为特定benchmark优化。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "sourceUrl": "https://venturebeat.com/orchestration/googles-dream-rsi-cuts-discovery-agent-calls-up-to-162x-by-replaying-searches-it-already-ran",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道Google Dream-RSI Agent搜索研究；完整事实、数据、引述和基准说明需阅读原文并追踪论文。",
+          "publishedAt": "2026-09-18T06:10:00+09:00",
+          "time": "06:10",
+          "tags": [
+            "Agent搜索",
+            "Google",
+            "成本优化",
+            "研究复现"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为Agent搜索成本信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新Agent搜索成本检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/orchestration/googles-dream-rsi-cuts-discovery-agent-calls-up-to-162x-by-replaying-searches-it-already-ran",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为Agent搜索成本信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "venturebeat-aws-opensearch-agent-memory-costs-2026-09-18",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS把OpenSearch定位为Agent检索、成本和记忆控制层",
+          "body": "OpenSearch瞄准Agent记忆。",
+          "summary": "OpenSearch瞄准Agent记忆。",
+          "whyItMatters": "企业Agent的瓶颈不只是模型，而是上下文检索、持久记忆和每次任务的总成本。",
+          "detailBody": "报道结合AWS OpenSearch Serverless、OpenSearch 3.5记忆能力和企业上下文错误调查解释检索层挑战；站内只保留最小事实。",
+          "trend": "Agent基础设施转向检索记忆。",
+          "detailTrend": "企业会要求按成功任务计费和度量，而不只看token或单次查询价格；趋势意义是检索层会成为Agent可靠性的核心成本中心。",
+          "whyRanked": "读者可用它更新Agent检索成本检查表。",
+          "topReason": "媒体报道与厂商主张混合，下一步查AWS文档和客户成本记录。",
+          "impact": "平台团队应测量检索延迟、上下文错误率、记忆保留策略和每个成功Agent任务的总成本。",
+          "whoShouldCare": "负责企业RAG、Agent记忆和检索平台的架构/数据团队需要重新评估OpenSearch与向量服务边界。",
+          "readerUse": "数据和架构团队用于更新Agent检索层选型、成本压测和记忆治理清单。",
+          "nextCheck": "下一步查AWS OpenSearch文档、scale-to-zero条件、客户压测、错误率指标和成本账单。",
+          "followUpQuestions": [
+            "OpenSearch Serverless的scale-to-zero配置文件、压测数据和延迟指标是否适配企业Agent检索工作负载？",
+            "客户是否公开每个成功Agent任务的检索成本、延迟和错误率？"
+          ],
+          "evidenceThreshold": "需要AWS文档、客户账单、压测报告和错误率指标，才能升级为可验证的Agent检索成本优势。",
+          "claimBoundary": "报道说明AWS定位与部分功能，不证明所有企业Agent迁移到OpenSearch都会降本。",
+          "counterEvidence": "若客户压测数据、召回指标或成本账单显示不稳定，应收窄为特定配置下的基础设施选择。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "sourceUrl": "https://venturebeat.com/data/awss-opensearch-pitch-ahead-of-opensearchcon-retrieval-serverless-costs-and-agent-memory",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道AWS OpenSearch的Agent检索和记忆定位；完整事实、采访、数据和厂商说法需阅读原文。",
+          "publishedAt": "2026-09-18T06:02:00+09:00",
+          "time": "06:02",
+          "tags": [
+            "OpenSearch",
+            "RAG",
+            "Agent记忆",
+            "成本"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为Agent检索成本信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新Agent检索成本检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/data/awss-opensearch-pitch-ahead-of-opensearchcon-retrieval-serverless-costs-and-agent-memory",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为Agent检索成本信号，再等待独立证明。"
+          }
+        },
+        {
+          "id": "techcrunch-rogue-ai-agent-oversight-with-ai-2026-09-18",
+          "category": "tool",
+          "label": "工具",
+          "title": "TechCrunch：监督失控Agent的答案可能仍是AI监督器",
+          "body": "AI监督器进入Agent安全。",
+          "summary": "AI监督器进入Agent安全。",
+          "whyItMatters": "Agent安全进入“人类无法逐条审核”的阶段，监督器、日志和调查流程会成为新控制面。",
+          "detailBody": "报道以Hugging Face事件调查为背景，说明大规模Agent轨迹需要AI帮助梳理和定位风险；站内只保留监督趋势的最小事实。",
+          "trend": "Agent安全转向运行时监督。",
+          "detailTrend": "用AI监督AI可以扩展审查能力，但也会引入二阶错误、解释责任和独立性问题；趋势意义是Agent安全将依赖日志、监督器和人工升级组合。",
+          "whyRanked": "读者可用它更新Agent安全审计检查表。",
+          "topReason": "可靠媒体背景有用；下一步查调查报告、监督器评测和审计日志。",
+          "impact": "安全团队应要求Agent平台导出完整轨迹、监督器误报/漏报率和人工升级流程。",
+          "whoShouldCare": "负责AI Agent安全、SOC和平台审计的安全/工程团队需要设计可追踪的监督器和人工升级机制。",
+          "readerUse": "安全和工程团队用于更新Agent运行日志、AI监督器评测和事故调查playbook。",
+          "nextCheck": "下一步查Redwood/METR调查材料、监督器评测、日志格式、事故报告和客户安全审计。",
+          "followUpQuestions": [
+            "AI监督器是否公开误报率、漏报率、覆盖范围评测或事故调查报告？",
+            "Agent平台是否提供可导出的轨迹、权限变更和跨Agent通信日志？"
+          ],
+          "evidenceThreshold": "需要监督器评测、事故调查报告和客户审计样本，才能升级为可靠的Agent安全控制方案。",
+          "claimBoundary": "媒体报道说明监督思路和调查难度，不证明AI监督器已经足以替代人工审计。",
+          "counterEvidence": "若监督器评测数据或事故日志显示漏掉关键违规轨迹或无法解释判断，应下调为辅助调查工具。",
+          "sourceId": "techcrunch-ai",
+          "sourceName": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "sourceUrl": "https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI报道AI监督Agent安全的趋势；完整事实、采访、调查背景和上下文需阅读原文。",
+          "publishedAt": "2026-09-18T05:55:00+09:00",
+          "time": "05:55",
+          "tags": [
+            "Agent安全",
+            "监督器",
+            "审计日志",
+            "事故调查"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为Agent安全审计信号，再等待独立证明。"
+          },
+          "detailWhyRanked": "读者可用它更新Agent安全审计检查表。 因为它影响读者下一步核对顺序；当前来源能支持事件入口和最小事实，但能否升级为成熟能力、制度变化或可复制经验，还要看官方文本、代码、benchmark、日志、客户指标或第三方复测。",
+          "trustLevel": "media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "本项影响和读者用途较强，但证据边界仍清楚；评分取舍是先收录为Agent安全审计信号，再等待独立证明。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-17",
       "date": "2026-09-17",
