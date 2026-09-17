@@ -23,7 +23,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 3 | Complete | `b2676ed` | Homepage non-TOP3 feed cards now collapse category, source role, and time into one low-weight context line so the compact feed does not repeat TOP3-style metadata chips. |
 | Day 4 | Complete | `1fb33e8` | Homepage editor notes now lead boundary/source/continuity context with a concise `阅读边界速览`, while full overread, source-risk, topic continuity, company continuity, and source-family records sit behind `完整边界记录`. |
 | Day 5 | Complete | `1adae4e` | `docs/homepage-edition-preflight.md` and `docs/news-data-format.md` now define `categoryRouteDecision`: rewrite, reorder, or collapse the homepage category reading path when the current reader question changes. |
-| Day 6 | Complete | pending | Homepage mobile reading path now puts `按目的阅读` after 今日简报 and TOP3, so 390px and 768px readers reach the ranked briefing sooner while keeping purpose navigation before the deep briefing. |
+| Day 6 | Complete | `1575584` | Homepage mobile reading path now puts `按目的阅读` after 今日简报 and TOP3, so 390px and 768px readers reach the ranked briefing sooner while keeping purpose navigation before the deep briefing. |
 
 ## Historical Guard Anchors
 

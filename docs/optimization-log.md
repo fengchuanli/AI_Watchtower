@@ -32,7 +32,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran browser viewport QA at 390px and 768px on local preview `http://localhost:8765/index.html`.
   - Ran `git diff --check`.
-- Commit: pending final hash (`【VisionHub网站风格优化】提前首页移动端TOP3路径`).
+- Commit: `1575584` (`【VisionHub网站风格优化】提前首页移动端TOP3路径`).
 - Push: pending.
 
 ## 2026-09-17 08:13 JST
