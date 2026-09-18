@@ -6,8 +6,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
-- Current phase: Phase 1, Homepage Briefing Clarity
-- Last indexed run: 2026-09-17 20:00 JST
+- Current phase: Phase 2, Detail-Page Article Quality
+- Last indexed run: 2026-09-18 20:00 JST
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
@@ -24,6 +24,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 4 | Complete | `1fb33e8` | Homepage editor notes now lead boundary/source/continuity context with a concise `阅读边界速览`, while full overread, source-risk, topic continuity, company continuity, and source-family records sit behind `完整边界记录`. |
 | Day 5 | Complete | `1adae4e` | `docs/homepage-edition-preflight.md` and `docs/news-data-format.md` now define `categoryRouteDecision`: rewrite, reorder, or collapse the homepage category reading path when the current reader question changes. |
 | Day 6 | Complete | `1575584` | Homepage mobile reading path now puts `按目的阅读` after 今日简报 and TOP3, so 390px and 768px readers reach the ranked briefing sooner while keeping purpose navigation before the deep briefing. |
+| Day 7 | Complete | this run | The TechCrunch-backed Agent-supervision detail page now keeps `detailBody` to a minimal reported signal and sends interviews, case detail, investigation background, and context back to the original article; current, latest archive, and derived today data are aligned. |
 
 ## Historical Guard Anchors
 
@@ -75,7 +76,7 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 7: audit one media-backed detail page and reduce any source-fact copy that feels like a substitute for the original article.
+- Continue with Day 8: review one official or research-backed detail page and make the interpretation, trend meaning, and reader impact feel like one article rather than separate labels.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 7 first.
 - If Day 7 is already complete, continue with the first useful unfinished task from the current plan.
 

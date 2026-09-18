@@ -1,3 +1,36 @@
+## 2026-09-18 11:04 JST
+
+- Focus: 完成当前 30 天计划 Day 7，审核一条媒体背景详情页并收紧来源事实表达：将 TechCrunch 支持的 AI 监督 Agent 安全条目从具体调查背景表述，改为最小报道信号 + AI Watchtower 中文判断，并把采访、调查背景、案例细节和上下文明示留给原文。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-today.json`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只把当前与最新归档中的同一媒体详情页事实段落收紧为最小报道信号。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: pass - 条目仍保留读者用途、下一步核验和 Agent 安全检查表价值。
+  - Source boundary visible: pass - `provenance` 更明确把完整事实、采访、调查背景、案例细节和上下文交回 TechCrunch 原文。
+  - Original source dependency: pass - 媒体来源继续保持 `originalDependency: must-read`，详情页不再点名额外调查背景作为站内事实展开。
+  - Mobile burden: pass - 详情页 30 秒事实段更短，手机读者更快看到来源边界。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: TechCrunch「AI 监督器进入 Agent 安全」详情页的事实段和来源说明更克制，读者会看到本站只保留报道信号与中文判断，完整事实仍需打开原文。
+- Verification:
+  - Ran `node --check app.js`, `node --check scripts/validate-data.mjs`, and `node --check scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs` and `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: this optimization commit (`【VisionHub网站风格优化】收紧媒体详情页最小事实`).
+- Push: pending at log-write time.
+
 ## 2026-09-18 08:15 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-18`，发布 10 条安全非重复信号，聚焦 Claude 生物分子建模优化、Microsoft AI 转型 playbook、中美 AI 安全治理互信、华为 AI 算力路线、英国 AI 安全会面、美国数据中心电费法案、Claude Code Projects、Google Dream-RSI、AWS OpenSearch Agent 记忆和 AI 监督器。
