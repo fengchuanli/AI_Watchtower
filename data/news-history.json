@@ -1,8 +1,928 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18",
-  "totalItems": 857,
+  "updatedAt": "2026-09-19",
+  "totalItems": 867,
   "editions": [
+    {
+      "id": "news-1700-2026-09-19",
+      "date": "2026-09-19",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期发布10条AI新闻情报，聚焦安全评估、专业模型、语音Agent、政策和基础设施成本。",
+      "operationalStatus": "已拉取origin/main；核对来源政策、历史URL和候选来源；发布10条安全非重复信号。",
+      "editorialInterpretation": "本期编辑判断：AI竞争继续从模型能力扩展到评估访问、行业工作流、语音/浏览器入口、联邦学习运行时、企业Agent编排和公共政策成本。",
+      "readerFrame": {
+        "headline": "本期读法：查评估访问、行业入口和公共成本",
+        "whyItMatters": "9月19日17:00版把前沿AI安全评估、法律AI、实时语音Agent、AI浏览器、联邦学习运行时、企业Agent平台主用率、美国政策竞速、创意劳动护栏和数据中心电力成本放到同一张核查表里。",
+        "useThisIssueFor": [
+          "安全和治理团队复核第三方评估访问、事故复盘、红队独立性和模型披露。",
+          "产品和平台团队检查法律AI、语音Agent、浏览器AI、Agent编排和联邦学习运行时的权限与日志。",
+          "政策、法务和基础设施团队跟踪美国监管竞速、创意劳动合同和AI数据中心电力成本。"
+        ],
+        "notProvenYet": [
+          "不证明嵌入式评估已经独立有效，也不证明法律AI或语音Agent已适合所有高风险生产场景。",
+          "不证明媒体调查代表全市场Agent平台份额，也不证明美国AI监管或数据中心成本规则已经落地。"
+        ],
+        "mobile": {
+          "headline": "查评估、入口、编排和成本",
+          "summary": "重点看安全评估访问、法律/语音/浏览器入口、Agent平台主用率和政策成本。",
+          "primaryUses": [
+            "安全团队查评估访问",
+            "平台团队查Agent入口",
+            "政策团队查法规成本"
+          ],
+          "proofBoundary": "仍需评估报告、模型卡、客户指标、法案文本、合同和费率文件"
+        }
+      },
+      "changeSummary": {
+        "headline": "较上一版转向评估制度、行业入口和政策成本",
+        "freshFacts": [
+          "本期新增事实：Anthropic与Accenture/Faculty启动嵌入式评估合作。",
+          "本期新增事实：OpenAI推出Astra for Law，Google推出Gemini 3.8 Live语音模型入口。",
+          "本期新增事实：Mistral/Mozilla、NVIDIA FLARE和VentureBeat Agent平台调查补充产品与运行时线索。",
+          "本期新增事实：AP、The Verge和Axios补充美国政策竞速、创意劳动规则、安全评估访问和电力成本讨论。"
+        ],
+        "repeatedContext": [
+          "延续9月18日Agent控制面、安全治理和数据中心公共成本主线，但本期10条URL均为新收录。",
+          "延续既有边界：官方/厂商发布不等于独立成效，媒体报道不替代原文、法案、合同、审计或客户指标。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "查安全评估与事故复盘",
+          "count": 3,
+          "meaning": "用来检查嵌入式评估、第三方访问、红队独立性和前沿模型事故复盘。"
+        },
+        {
+          "label": "查行业AI入口与权限",
+          "count": 3,
+          "meaning": "用来检查法律AI、实时语音Agent、AI浏览器的索引、插件、工具调用和隐私权限。"
+        },
+        {
+          "label": "查Agent平台与运行时",
+          "count": 2,
+          "meaning": "用来检查企业Agent主编排平台、联邦学习运行时、多租户隔离和资源调度。"
+        },
+        {
+          "label": "查政策、劳动与电力成本",
+          "count": 2,
+          "meaning": "用来检查美国AI监管竞速、创意劳动合同和数据中心费率/电网成本。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方与媒体各半，结论需分层",
+        "note": "本期官方/厂商来源5/10，可靠媒体5/10；官方项证明发布事实，媒体项用于雷达。",
+        "nextCheck": "用评估报告、模型卡、客户指标、法案文本、合同、审计和费率文件复核。"
+      },
+      "overreadBoundary": {
+        "label": "不要把入口发布读成成熟制度",
+        "body": "不要把本期读成全市场结论：本期说明AI评估访问、行业入口、Agent编排和公共成本正在形成新检查点；它不证明嵌入式评估已独立有效、法律AI默认可靠、语音Agent生产稳定、美国监管已达成或电力成本规则已落地。",
+        "doNotConclude": "不要把厂商发布、媒体调查或活动报道直接读成全市场结论。",
+        "useInstead": "把它作为下一轮核查队列：评估章程、模型卡、API文档、客户指标、合同文本、法案和费率文件。"
+      },
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "AI安全走向制度访问权",
+          "note": "跨期看，白帽事件、研发透明度指标和本期嵌入式评估/安全研究长文都指向评估者访问权。",
+          "boundary": "不证明评估已经充分；下一步查正式报告、系统卡、审计和监管要求。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent入口更贴近专业工作流",
+          "note": "跨期看，Agent控制面之后，本期法律模型、语音Agent、浏览器助手和主编排调查把入口推向专业场景。",
+          "boundary": "不证明生产稳定；下一步查API限制、客户日志、权限字段和第三方测试。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "AI基础设施成本外部化",
+          "note": "跨期看，芯片、RAG、数据中心民调之后，本期电力成本讨论把算力问题推向费率和公共账单。",
+          "boundary": "不证明规则落地；下一步查法案、EIA数据、PUC案卷和公用事业协议。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "治理从倡议转向访问与规则",
+          "status": "stronger",
+          "previousPattern": "此前模式：AI安全减速、透明度指标和白帽事件以倡议和披露为主。",
+          "currentSignal": "本期新增嵌入式评估、美国政策竞速、工会规则和安全研究访问权。",
+          "signalDirection": "增强：治理问题进入评估制度、州级行政令、合同和事故复盘。",
+          "stillUnproven": "仍需评估报告、法案文本、合同条款、系统卡和监管细则。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent进入行业入口",
+          "status": "stronger",
+          "previousPattern": "此前模式：AgentCore、MCP、OpenSearch记忆和监督器强调控制面。",
+          "currentSignal": "本期新增法律AI、语音Agent、浏览器助手和Agent平台主编排调查。",
+          "signalDirection": "增强：从后台控制面扩展到高风险专业入口和用户界面。",
+          "stillUnproven": "仍需API文档、客户日志、权限字段、错误率和第三方基准。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "基础设施成本更公共化",
+          "status": "repeated",
+          "previousPattern": "此前模式：华为芯片、数据中心电费法案和RAG成本构成基础设施约束。",
+          "currentSignal": "本期Axios补充数据中心电力成本活动报道和公用事业协议线索。",
+          "signalDirection": "重复：继续指向电力成本分摊，但仍缺少原始费率文件。",
+          "stillUnproven": "仍需EIA数据、PUC案卷、法案文本和公用事业协议。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Anthropic",
+          "label": "安全治理外部化",
+          "lastMention": "上一版Anthropic以研发透明度、生命科学访问和Claude工具链出现。",
+          "whatChanged": "本期新增与Accenture/Faculty的嵌入式评估合作，把透明度主线推进到评估组织安排。",
+          "stillUnproven": "仍需评估章程文件、系统卡引用、独立评估报告和冲突披露材料。"
+        },
+        {
+          "company": "OpenAI",
+          "label": "从通用模型到行业基础模型",
+          "lastMention": "上一版OpenAI以白帽安全事件和Codex连接器风险进入安全语境。",
+          "whatChanged": "本期新增Astra for Law，显示OpenAI继续把Astra配置到高风险专业工作流。",
+          "stillUnproven": "仍需法律模型卡、客户指标、API文档和第三方复测。"
+        },
+        {
+          "company": "Google",
+          "label": "语音Agent入口强化",
+          "lastMention": "上一版Google相关线索集中在Dream-RSI和治理/研究成本。",
+          "whatChanged": "本期新增Gemini 3.8 Live，转向实时语音、多模态和工具调用入口。",
+          "stillUnproven": "仍需模型卡、延迟数据、任务完成率和错误恢复日志。"
+        },
+        {
+          "company": "Mistral AI",
+          "label": "浏览器分发与隐私定位",
+          "lastMention": "历史线索中Mistral以开放模型、主权AI和浏览器合作候选出现。",
+          "whatChanged": "本期收录Mistral/Mozilla Smart Window合作，强调浏览器AI入口和区域语言。",
+          "stillUnproven": "仍需Mozilla隐私白皮书文件、Firefox beta发布说明文件和企业管理策略文件。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/厂商来源",
+          "count": 5,
+          "role": "官方和厂商来源确认Anthropic、OpenAI、Google、Mistral/Mozilla、NVIDIA发布或技术说明；效果仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 5,
+          "role": "可靠媒体用于捕捉Agent平台调查、美国政策、创意劳动、安全研究访问和数据中心电力成本；完整事实仍回到原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "安全评估、监管、劳动与公共成本",
+          "count": 5,
+          "itemIds": [
+            "anthropic-accenture-embedded-evaluation-2026-09-19",
+            "ap-democrats-ai-risk-policy-race-2026-09-19",
+            "theverge-hollywood-unions-ai-warnings-labor-2026-09-19",
+            "theverge-ai-safety-research-access-pressure-2026-09-19",
+            "axios-ai-data-center-power-cost-live-2026-09-19"
+          ],
+          "meaning": "用来检查评估访问、事故复盘、州级监管、工会合同和电力成本是否形成可执行文件。",
+          "whyNow": "AI风险讨论正在从实验室声明外溢到评估机构、选举、劳动合同和公用事业监管。"
+        },
+        {
+          "id": "agent",
+          "label": "语音、浏览器、法律与企业编排入口",
+          "count": 4,
+          "itemIds": [
+            "openai-astra-for-law-legal-model-foundation-2026-09-19",
+            "google-gemini-3-8-live-voice-agent-release-2026-09-19",
+            "mistral-mozilla-firefox-smart-window-private-ai-browsing-2026-09-19",
+            "venturebeat-openai-agent-platform-primary-enterprise-survey-2026-09-19"
+          ],
+          "meaning": "用来检查Agent是否成为法律、语音、浏览器和企业编排的默认入口。",
+          "whyNow": "Agent不再只是后台自动化，而是进入专业工作流和用户每天打开的界面。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "联邦学习与数据中心成本",
+          "count": 2,
+          "itemIds": [
+            "nvidia-flare-2-9-federated-learning-runtime-2026-09-19",
+            "axios-ai-data-center-power-cost-live-2026-09-19"
+          ],
+          "meaning": "用来检查跨机构训练运行时、电网成本和公用事业协议。",
+          "whyNow": "AI部署成本正从GPU扩展到调度系统、数据隔离、电网扩容和费率设计。"
+        }
+      ],
+      "itemCount": 10,
+      "sourceConcentration": {
+        "sourceId": "theverge-ai",
+        "sourceName": "The Verge AI",
+        "count": 2,
+        "share": "2/10",
+        "note": "The Verge AI占2/10，是本期最大单一媒体来源；它提供安全研究和创意劳动背景，但不是官方事实源。",
+        "nextCheck": "查METR/Redwood报告、工会合同、州法文本和公司正式回应。"
+      },
+      "items": [
+        {
+          "id": "theverge-hollywood-unions-ai-warnings-labor-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "The Verge称好莱坞工会把AI风险焦点拉回就业与合同护栏",
+          "body": "好莱坞工会回应AI风险叙事。",
+          "summary": "The Verge报道，SAG-AFTRA和WGAE把AI风险讨论拉回创意劳动、合同和政府监管。",
+          "whyItMatters": "AI安全话语不只属于模型实验室，受影响行业会要求可执行合同和监管规则。",
+          "detailBody": "The Verge报道，在科技公司强调AI存在性风险时，SAG-AFTRA和WGAE强调生成式AI对演员、编剧和制作岗位的直接影响，并认为集体谈判不能替代政府监管。",
+          "trend": "行业劳动规则成为AI治理现场。",
+          "detailTrend": "创意行业已经用合同限制数字替身和生成式AI使用，这为其他行业提供了一个“先合同、再监管”的治理样板；边界是不同国家、工会和雇主的约束力差异。",
+          "whyRanked": "它提醒读者AI监管不仅是前沿安全，也是劳动合同和行业权力。",
+          "topReason": "可靠媒体采访提供行业视角，完整引语和背景应回到原文。",
+          "impact": "内容平台、影视公司和品牌团队应复查数字形象授权、AI训练素材、合同披露和劳工协商流程。",
+          "whoShouldCare": "负责影视内容、数字人、品牌素材和创意外包合同的法务/内容运营团队需要关注。",
+          "readerUse": "内容法务和创意运营团队用于更新创意行业AI使用、数字替身授权和劳动合同护栏清单。",
+          "nextCheck": "下一步查SAG-AFTRA、WGAE合同条款、州级法规、制片方AI政策和实际争议案例。",
+          "followUpQuestions": [
+            "SAG-AFTRA或WGAE最新合同是否新增数字替身、训练数据和生成内容披露条款？",
+            "制片厂或平台是否公开AI使用政策、授权流程和争议解决记录？"
+          ],
+          "evidenceThreshold": "需要工会合同文本、州法文本、制片方政策和争议案例，才能升级为可执行行业规则结论。",
+          "claimBoundary": "The Verge报道支持工会观点和行业反应，不证明所有娱乐公司已经遵守或接受相同规则。",
+          "counterEvidence": "若合同执行失败、州法被推翻或平台政策绕开工会要求，应收窄为个别行业压力信号。",
+          "sourceId": "theverge-ai",
+          "sourceName": "The Verge AI",
+          "source": "The Verge AI",
+          "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/997358/what-hollywood-thinks-about-existential-ai-warnings",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Verge AI报道支持的最小来源事实是：The Verge报道创意AI治理中SAG-AFTRA和WGAE回应近期AI风险叙事，并强调就业风险、合同护栏和政府监管需求；完整事实、采访、引语、行业背景和上下文仍需阅读The Verge原文。",
+          "publishedAt": "2026-09-19T08:00:00+09:00",
+          "time": "08:00",
+          "tags": [
+            "创意AI",
+            "劳动合同",
+            "监管",
+            "数字替身"
+          ],
+          "companies": [
+            "SAG-AFTRA",
+            "WGAE"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "行业视角重要，政策效果仍待合同和法规验证。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          },
+          "detailWhyRanked": "它提醒读者AI监管不仅是前沿安全，也是劳动合同和行业权力。 来源层面，The Verge AI当前只支持最小报道事实和背景线索；升级判断仍要看工会合同文本、州法文本、制片方政策和争议案例，才能升级为可执行行业规则结论。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/997358/what-hollywood-thinks-about-existential-ai-warnings",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "行业视角重要，政策效果仍待合同和法规验证。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          }
+        },
+        {
+          "id": "anthropic-accenture-embedded-evaluation-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic把Accenture/Faculty嵌入式评估放进前沿模型安全流程",
+          "body": "Anthropic宣布嵌入式评估合作。",
+          "summary": "Anthropic宣布与Accenture/Faculty开展嵌入式前沿AI评估合作。",
+          "whyItMatters": "第三方评估从外部抽测走向“进入实验室”，会改变前沿模型安全审查的访问权限和利益边界。",
+          "detailBody": "Anthropic宣布与Accenture合作，由其AI业务Faculty参与模型评估、红队、对齐评估和防护测试；双方预计五年内至少投入10亿美元建设相关能力。",
+          "trend": "前沿AI安全评估正在制度化。",
+          "detailTrend": "嵌入式评估把外部评估者带入模型开发现场，趋势意义是安全审查开始争取更接近员工级别的访问；但评估独立性、披露边界和冲突管理仍是核心问题。",
+          "whyRanked": "它把AI安全从倡议推进到具体组织安排。",
+          "topReason": "官方公告支持合作事实，读者要重点看评估权限、披露制度和独立性文件。",
+          "impact": "治理和采购团队应把“谁能进入实验室评估、评估结果如何披露、客户能否引用”列入供应商尽调。",
+          "whoShouldCare": "负责模型风险、供应商安全评估和企业AI采购尽调的法务/安全/治理团队需要跟踪。",
+          "readerUse": "安全和治理团队用于更新前沿模型第三方评估、红队访问和披露责任清单。",
+          "nextCheck": "下一步查Anthropic、Accenture/Faculty的评估章程、冲突披露、样本报告、客户可见字段和监管回应。",
+          "followUpQuestions": [
+            "Anthropic或Accenture是否发布嵌入式评估章程、访问权限范围和利益冲突处理规则？",
+            "后续模型系统卡是否引用Faculty评估样本、失败案例和整改记录？"
+          ],
+          "evidenceThreshold": "需要评估章程、样本报告、系统卡引用、监管或客户审计材料，才能升级为可验证的安全治理机制。",
+          "claimBoundary": "官方公告只证明合作启动和投入意向，不证明嵌入式评估已经独立、充分或能发现全部高风险行为。",
+          "counterEvidence": "若后续文件显示评估访问受限、结果不披露或无法独立发布，应把该项降级为厂商治理安排。",
+          "sourceId": "anthropic-news",
+          "sourceName": "Anthropic Newsroom",
+          "source": "Anthropic Newsroom",
+          "sourceUrl": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Anthropic Newsroom官方公告支持的来源事实是：Anthropic与Accenture/Faculty建立嵌入式前沿AI评估合作，并说明评估、红队、对齐评估和模型防护测试范围；实际独立性与效果仍需后续评估章程和报告。",
+          "publishedAt": "2026-09-19T06:00:00+09:00",
+          "time": "06:00",
+          "tags": [
+            "AI安全",
+            "评估",
+            "红队",
+            "治理"
+          ],
+          "companies": [
+            "Anthropic",
+            "Accenture",
+            "Faculty"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方事实强，效果仍需评估报告验证。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          },
+          "detailWhyRanked": "它把AI安全从倡议推进到具体组织安排。 来源层面，Anthropic Newsroom当前只支持发布事实和自述范围；升级判断仍要看评估章程、样本报告、系统卡引用、监管或客户审计材料，才能升级为可验证的安全治理机制。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方事实强，效果仍需评估报告验证。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          }
+        },
+        {
+          "id": "venturebeat-openai-agent-platform-primary-enterprise-survey-2026-09-19",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat称OpenAI Agent平台在安装企业中更常被设为主编排层",
+          "body": "VB Pulse比较企业Agent平台主用率。",
+          "summary": "VentureBeat根据VB Pulse称，安装OpenAI Agent平台的企业更常把它设为主编排平台。",
+          "whyItMatters": "Agent平台竞争的关键不只是试用数量，而是企业是否把它放进主编排层。",
+          "detailBody": "VentureBeat报道称，其8月VB Pulse数据显示，安装OpenAI Agents SDK或Responses API的75家企业中52家将其列为主编排平台；安装Anthropic Claude Platform和Agent Skills的45家企业中17家这样做。",
+          "trend": "Agent编排层开始形成平台黏性指标。",
+          "detailTrend": "企业Agent选型正在从“接入哪个模型”转向“谁控制编排、工具、记忆和评估”；但媒体调查样本和定义会显著影响结论，不能直接当作全市场份额。",
+          "whyRanked": "它提供了观察Agent平台黏性的早期量化信号。",
+          "topReason": "媒体数据有读者价值，但需要原始样本、定义和第三方调查交叉验证。",
+          "impact": "平台团队应区分试点、安装、主编排平台和生产流量，避免只看供应商Logo。",
+          "whoShouldCare": "负责企业Agent平台选型、架构标准和供应商锁定风险的CTO/平台团队需要参考。",
+          "readerUse": "CTO和平台团队用于设计Agent平台评估表：主编排、替换成本、日志、工具生态和治理接口。",
+          "nextCheck": "下一步查VB Pulse方法、样本行业分布、OpenAI/Anthropic官方客户指标、企业案例和第三方采购调查。",
+          "followUpQuestions": [
+            "VentureBeat是否公开VB Pulse样本、行业分布、主编排定义和误差范围？",
+            "OpenAI、Anthropic或第三方采购调查是否给出生产流量、预算占比和续约数据？"
+          ],
+          "evidenceThreshold": "需要原始调查方法、第三方采购数据和客户生产指标，才能升级为Agent平台市场格局判断。",
+          "claimBoundary": "报道支持一个媒体调查信号，不证明OpenAI在所有企业Agent场景中领先。",
+          "counterEvidence": "若VB Pulse方法文件显示样本偏向OpenAI用户，或第三方采购调查给出相反主用率，应降级为单一调查参考。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "sourceUrl": "https://venturebeat.com/orchestration/69-of-enterprises-that-install-openais-agent-platform-make-it-primary-for-anthropics-claude-platform-its-38",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道支持的最小来源事实是：VB Pulse给出OpenAI与Anthropic Agent平台主编排率比较；完整事实、样本方法、图表、采访和上下文仍需阅读VentureBeat原文。",
+          "publishedAt": "2026-09-19T05:27:00+09:00",
+          "time": "05:27",
+          "tags": [
+            "Agent平台",
+            "企业AI",
+            "编排",
+            "调查"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "VentureBeat"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "读者用途高，但证据依赖媒体调查方法。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          },
+          "detailWhyRanked": "它提供了观察Agent平台黏性的早期量化信号。 来源层面，VentureBeat AI当前只支持最小报道事实和背景线索；升级判断仍要看原始调查方法、第三方采购数据和客户生产指标，才能升级为Agent平台市场格局判断。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/orchestration/69-of-enterprises-that-install-openais-agent-platform-make-it-primary-for-anthropics-claude-platform-its-38",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "读者用途高，但证据依赖媒体调查方法。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          }
+        },
+        {
+          "id": "axios-ai-data-center-power-cost-live-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios Live把AI数据中心电力成本推到“谁买单”议题",
+          "body": "Axios跟踪AI数据中心电力成本争论。",
+          "summary": "Axios报道，AI数据中心带来的电网扩容成本正在成为美国政策和公用事业谈判焦点。",
+          "whyItMatters": "AI基础设施约束已经从芯片和园区选址扩展到费率、消费者账单和公共电网数据。",
+          "detailBody": "Axios报道，在9月15日Axios Live活动中，政策和能源人士讨论AI数据中心电力成本分摊；报道提到House Ratepayer Protection Act、EIA周度电力报告计划以及Duke Energy要求数据中心承担相关基础设施成本的协议方向。",
+          "trend": "AI算力成本外部性进入公共账单。",
+          "detailTrend": "数据中心扩张会把训练和推理成本外溢到电网投资、费率设计和地方政治；下一步不是只看装机容量，而要看谁承担新线路、变电站和备用电源成本。",
+          "whyRanked": "它给昨日本站数据中心法案线索补上能源监管和公用事业执行视角。",
+          "topReason": "媒体活动报道可做雷达，仍需法案、EIA报告和公用事业协议原文。",
+          "impact": "基础设施、政策和采购团队应把电价条款、接入成本、负荷预测和监管听证纳入AI数据中心尽调。",
+          "whoShouldCare": "评估AI数据中心、云成本和能源采购风险的基础设施/财务/政策团队需要关注。",
+          "readerUse": "基础设施和财务政策团队用于更新AI数据中心电力成本、费率监管和公用事业协议观察表。",
+          "nextCheck": "下一步查House Ratepayer Protection Act文本、EIA周度报告、Duke Energy协议、州公用事业委员会案卷和费率文件。",
+          "followUpQuestions": [
+            "EIA是否正式发布面向数据中心负荷的周度电力报告，字段包括哪些区域和负荷类型？",
+            "Duke Energy或其他公用事业公司是否把数据中心专属基础设施成本写入公开费率或合同案卷？"
+          ],
+          "evidenceThreshold": "需要法案文本、EIA数据、PUC案卷和公用事业协议，才能升级为确认的AI电力成本分摊趋势。",
+          "claimBoundary": "Axios报道支持活动讨论和政策雷达，不证明成本分摊规则已经全国落地。",
+          "counterEvidence": "若法案停滞、EIA报告不含数据中心字段或公用事业协议未获批准，应收窄为政策讨论信号。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/18/artificial-intelligence-axios-live-data-centers-grid-costs",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道支持的最小来源事实是：AI数据中心电力成本分摊成为政策和公用事业讨论焦点；完整事实、活动内容、引述、数据和上下文仍需阅读Axios原文。",
+          "publishedAt": "2026-09-19T04:00:00+09:00",
+          "time": "04:00",
+          "tags": [
+            "数据中心",
+            "电力成本",
+            "AI基础设施",
+            "监管"
+          ],
+          "companies": [
+            "Axios",
+            "Duke Energy"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "延续基础设施线索，需原始法案和费率文件。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          },
+          "detailWhyRanked": "它给昨日本站数据中心法案线索补上能源监管和公用事业执行视角。 来源层面，Axios AI / Technology当前只支持最小报道事实和背景线索；升级判断仍要看法案文本、EIA数据、PUC案卷和公用事业协议，才能升级为确认的AI电力成本分摊趋势。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/18/artificial-intelligence-axios-live-data-centers-grid-costs",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "延续基础设施线索，需原始法案和费率文件。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          }
+        },
+        {
+          "id": "ap-democrats-ai-risk-policy-race-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP称美国民主党潜在候选人加速回应AI风险议题",
+          "body": "AP报道美国AI风险政治议题升温。",
+          "summary": "AP报道，美国民主党潜在总统候选人正围绕AI风险提出州级和联邦应对。",
+          "whyItMatters": "AI安全从实验室争论进入选举、州长行政令和国会提案节奏。",
+          "detailBody": "AP报道，Gavin Newsom签署行政令以加快加州AI监管实施，Josh Shapiro、Jon Ossoff、Mark Kelly等也提出或准备提出独立监督、透明度、工人支持基金等主张，同时特朗普继续淡化相关警告。",
+          "trend": "AI治理成为政治竞选议题。",
+          "detailTrend": "当AI风险被州长、参议员和潜在总统候选人使用，监管窗口会从技术安全转向选民焦虑、劳工影响和联邦/州权边界；但政策能否落地仍取决于法案文本和执行机构。",
+          "whyRanked": "它显示AI安全已经进入美国政治议程，而不只是企业自律。",
+          "topReason": "AP报道可作为政策雷达，下一步看行政令、法案文本和委员会动作。",
+          "impact": "政策和企业合规团队应把州级AI监管、kill switch、独立监督和工人影响基金纳入政策观察表。",
+          "whoShouldCare": "跟踪美国AI监管、州级合规和企业公共政策风险的法务/政府事务团队需要关注。",
+          "readerUse": "政策和政府事务团队用于更新美国AI政策雷达、州法实施和选举议题风险清单。",
+          "nextCheck": "下一步查加州行政令全文、Mark Kelly法案文本、Shapiro州级规则、国会委员会日程和监管机构执行细则。",
+          "followUpQuestions": [
+            "查加州行政令文本、实施报告或负责机构公告是否明确独立监督、kill switch和实施时间表？",
+            "查国会法案登记记录是否出现Mark Kelly或其他议员提交的AI工人支持基金或前沿AI安全法案文本？"
+          ],
+          "evidenceThreshold": "需要行政令、法案文本、委员会日程和监管细则，才能升级为确定政策路径。",
+          "claimBoundary": "AP报道支持政治动作和表态，不证明联邦AI监管已经形成共识或会通过。",
+          "counterEvidence": "若法案登记记录显示未正式提交、行政令实施报告延期或国会委员会日程取消，应降级为竞选议题信号。",
+          "sourceId": "ap-news",
+          "sourceName": "Associated Press",
+          "source": "Associated Press",
+          "sourceUrl": "https://apnews.com/article/ai-trump-democrats-newsom-shapiro-warnings-danger-10cdebf21fd6dfcfc46676b0f095bb2c",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press报道支持的最小来源事实是：多名美国民主党政治人物围绕AI风险采取或提出政策动作；完整事实、采访、政治背景、民调数据和上下文仍需回到AP原文。",
+          "publishedAt": "2026-09-19T03:00:00+09:00",
+          "time": "03:00",
+          "tags": [
+            "AI政策",
+            "美国监管",
+            "选举",
+            "安全治理"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "xAI"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "政策影响高，但仍是媒体雷达。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          },
+          "detailWhyRanked": "它显示AI安全已经进入美国政治议程，而不只是企业自律。 来源层面，Associated Press当前只支持最小报道事实和背景线索；升级判断仍要看行政令、法案文本、委员会日程和监管细则，才能升级为确定政策路径。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/ai-trump-democrats-newsom-shapiro-warnings-danger-10cdebf21fd6dfcfc46676b0f095bb2c",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "政策影响高，但仍是媒体雷达。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          }
+        },
+        {
+          "id": "theverge-ai-safety-research-access-pressure-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "The Verge长文描绘AI安全研究者争取更深模型访问的压力",
+          "body": "AI安全评估访问权成为焦点。",
+          "summary": "The Verge报道，METR、Redwood、Apollo等安全研究者正推动更深入的前沿模型评估访问。",
+          "whyItMatters": "前沿AI安全的瓶颈不只是评测方法，还在独立研究者能否看到足够真实的模型行为。",
+          "detailBody": "The Verge长文围绕OpenAI未发布模型事件、第三方评估、链式思考监控、模型规避评测和实验室访问摩擦，梳理AI安全研究社区的压力和分歧。",
+          "trend": "模型评估从benchmark转向事故调查。",
+          "detailTrend": "当安全研究者要求接近事故调查式访问，前沿模型治理会更像航空或网络安全复盘；但媒体长文不能替代正式调查报告、实验数据和公司披露。",
+          "whyRanked": "它把分散的安全研究争议整理成访问权和事故复盘问题。",
+          "topReason": "媒体背景帮助建立问题框架，下一步要看METR/Redwood报告和实验室正式回应。",
+          "impact": "安全治理团队应关注第三方评估访问、事故复盘、chain-of-thought监控边界和红队独立性。",
+          "whoShouldCare": "负责前沿模型采购、安全评估和事故复盘制度的治理/安全团队需要跟踪。",
+          "readerUse": "模型治理和安全团队用于制定第三方AI安全评估访问权、日志保留和事故披露要求。",
+          "nextCheck": "下一步查METR、Redwood、Apollo报告，OpenAI/Anthropic系统卡，事故调查范围和监管机构要求。",
+          "followUpQuestions": [
+            "METR或Redwood是否发布OpenAI事件的正式评估报告、数据范围和方法限制？",
+            "前沿实验室系统卡是否披露第三方评估访问权限、失败样本和整改动作？"
+          ],
+          "evidenceThreshold": "需要正式评估报告、系统卡、事故复盘和监管要求，才能升级为可审计安全治理事实。",
+          "claimBoundary": "The Verge长文支持安全社区压力和背景，不证明每一项模型行为或事故细节都已由官方确认。",
+          "counterEvidence": "若METR/Redwood正式报告PDF、实验室系统卡或监管调查文件否定关键事故链，或证明评估访问已充分，应收窄为安全研究社区担忧背景。",
+          "sourceId": "theverge-ai",
+          "sourceName": "The Verge AI",
+          "source": "The Verge AI",
+          "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Verge AI长文支持的最小来源事实是：AI安全研究者围绕前沿模型访问、第三方评估和事故复盘提出压力与担忧；完整事实、采访、案例、历史背景和上下文仍需回到The Verge原文。",
+          "publishedAt": "2026-09-18T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "AI安全",
+            "第三方评估",
+            "事故复盘",
+            "模型治理"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "METR",
+            "Redwood Research",
+            "Apollo Research"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "叙事和影响强，但需要正式报告确认细节。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          },
+          "detailWhyRanked": "它把分散的安全研究争议整理成访问权和事故复盘问题。 来源层面，The Verge AI当前只支持最小报道事实和背景线索；升级判断仍要看正式评估报告、系统卡、事故复盘和监管要求，才能升级为可审计安全治理事实。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "叙事和影响强，但需要正式报告确认细节。 分数取舍：影响和读者用途较高，证据强度受媒体报道与原始方法限制。"
+          }
+        },
+        {
+          "id": "openai-astra-for-law-legal-model-foundation-2026-09-19",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI推出Astra for Law，把GPT-6 Astra配置成法律工作基础模型",
+          "body": "OpenAI发布法律专用Astra配置。",
+          "summary": "OpenAI推出Astra for Law，面向律所和法律科技工作流。",
+          "whyItMatters": "法律AI从通用问答转向专门索引、工具插件、治理控制和专业工作流评测。",
+          "detailBody": "OpenAI称Astra for Law结合GPT-6 Astra、法律搜索索引、法律分析/写作指令和26个生态插件，先通过ChatGPT与Codex Trusted Access提供给选定律所，并计划进入API。",
+          "trend": "专业行业模型开始走向可组合平台。",
+          "detailTrend": "Astra for Law显示前沿模型正在按行业任务配置索引、插件和治理控制，而不是只发布一个通用模型；法律场景的下一道门槛是引用可靠性、保密、审计和责任分配。",
+          "whyRanked": "它把模型能力、专业资料和工作流插件放在同一个高风险行业入口。",
+          "topReason": "官方来源可核对发布范围和自述评测，读者应等待律所侧测试、责任条款和API文档。",
+          "impact": "法律、合规和知识管理团队应先核对数据保密、引用审计、插件权限和人工复核责任，再考虑迁移核心法律工作流。",
+          "whoShouldCare": "负责法律检索、合同审查、律所知识库和高风险专业服务AI落地的法务/知识管理团队需要评估。",
+          "readerUse": "法务和知识管理团队用于更新法律AI采购、插件权限、引用校验和律师复核清单。",
+          "nextCheck": "下一步查API文档、模型卡、法律索引来源清单、律所试点指标、责任条款和第三方法律研究benchmark复测。",
+          "followUpQuestions": [
+            "OpenAI是否发布Astra for Law的API、模型卡、法律索引更新频率和引用错误处理机制？",
+            "Harvey、Legora或律所客户是否提供可审计的研究准确率、保密控制和人工复核数据？"
+          ],
+          "evidenceThreshold": "需要API/模型卡、律所客户指标、第三方benchmark复测和合同责任条款，才能升级为可独立验证的法律AI工作流能力。",
+          "claimBoundary": "官方页面支持发布与自述评测，不证明其法律答案在所有法域、案型或律所资料库中可靠。",
+          "counterEvidence": "若第三方复测显示引用错误、过期法律、插件越权或保密控制不足，应下调为受限法律AI试点。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "sourceUrl": "https://openai.com/index/astra-for-law/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News官方页面支持的来源事实是：OpenAI发布Astra for Law，并列出法律索引、Trusted Access、插件生态和自述评测；效果与适用边界仍需客户和第三方验证。",
+          "publishedAt": "2026-09-18T02:00:00+09:00",
+          "time": "02:00",
+          "tags": [
+            "法律AI",
+            "GPT-6 Astra",
+            "插件",
+            "专业工作流"
+          ],
+          "companies": [
+            "OpenAI",
+            "Harvey",
+            "Legora",
+            "Thomson Reuters"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "高风险行业发布重要，但性能仍属厂商自述。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          },
+          "detailWhyRanked": "它把模型能力、专业资料和工作流插件放在同一个高风险行业入口。 来源层面，OpenAI News当前只支持发布事实和自述范围；升级判断仍要看API/模型卡、律所客户指标、第三方benchmark复测和合同责任条款，才能升级为可独立验证的法律AI工作流能力。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://openai.com/index/astra-for-law/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "高风险行业发布重要，但性能仍属厂商自述。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          }
+        },
+        {
+          "id": "mistral-mozilla-firefox-smart-window-private-ai-browsing-2026-09-19",
+          "category": "product",
+          "label": "产品",
+          "title": "Mistral与Mozilla把多语言AI浏览助手放进Firefox Smart Window测试版",
+          "body": "Mistral与Mozilla合作AI浏览助手。",
+          "summary": "Mistral宣布为Mozilla Firefox Smart Window beta提供私密、多语言AI浏览能力。",
+          "whyItMatters": "浏览器AI入口的竞争开始转向隐私、本地语境和区域语言，而不是只比模型分数。",
+          "detailBody": "Mistral称Firefox Smart Window beta由其模型支持，可帮助用户理解复杂搜索、记住离开的页面和基于标签页整理信息，先面向法国和北美，英国和德国预计随后跟进。",
+          "trend": "浏览器正在变成AI工作台。",
+          "detailTrend": "如果浏览器助手能理解标签页和搜索路径，它会成为个人知识与任务入口；但隐私承诺要靠数据流、日志保留、模型路由和用户控制来证明。",
+          "whyRanked": "它把开放模型、浏览器分发和隐私定位放到同一个消费级入口。",
+          "topReason": "官方合作信息明确，下一步看Mozilla端隐私文档和实际可用地区。",
+          "impact": "浏览器和企业IT团队应检查标签页权限、数据保留、区域模型路由和退出/禁用策略。",
+          "whoShouldCare": "负责浏览器管理、员工知识入口和隐私合规的IT/安全/产品团队需要关注。",
+          "readerUse": "企业IT和隐私团队用于评估AI浏览助手的隐私、区域语言支持和企业浏览器策略。",
+          "nextCheck": "下一步查Mozilla隐私白皮书、Firefox beta发布说明、数据保留设置、地区上线范围和企业管理策略。",
+          "followUpQuestions": [
+            "Mozilla是否发布Smart Window的数据流、日志保留、模型调用和企业禁用策略？",
+            "法国、北美、英国和德国的实际上线节奏是否与Mistral公告一致？"
+          ],
+          "evidenceThreshold": "需要Mozilla端隐私文档、发布说明和企业策略字段，才能升级为可部署的私密AI浏览入口。",
+          "claimBoundary": "Mistral公告支持合作和计划范围，不证明所有浏览数据都默认私密或本地处理。",
+          "counterEvidence": "若Mozilla文档显示数据保留较长、地区延迟或企业控制不足，应下调为有限beta合作。",
+          "sourceId": "mistral-news",
+          "sourceName": "Mistral AI News",
+          "source": "Mistral AI News",
+          "sourceUrl": "https://mistral.ai/news/mistral-x-mozilla/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Mistral AI News官方公告支持的来源事实是：Mistral与Mozilla合作，为Firefox Smart Window beta提供AI浏览能力并列出首批地区；隐私和企业控制仍需Mozilla文件。",
+          "publishedAt": "2026-09-17T00:00:00+09:00",
+          "time": "00:00",
+          "tags": [
+            "浏览器AI",
+            "Mistral",
+            "Mozilla",
+            "隐私"
+          ],
+          "companies": [
+            "Mistral AI",
+            "Mozilla"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方合作明确，影响取决于Mozilla端落地。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          },
+          "detailWhyRanked": "它把开放模型、浏览器分发和隐私定位放到同一个消费级入口。 来源层面，Mistral AI News当前只支持发布事实和自述范围；升级判断仍要看Mozilla端隐私文档、发布说明和企业策略字段，才能升级为可部署的私密AI浏览入口。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://mistral.ai/news/mistral-x-mozilla/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方合作明确，影响取决于Mozilla端落地。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          }
+        },
+        {
+          "id": "google-gemini-3-8-live-voice-agent-release-2026-09-19",
+          "category": "model",
+          "label": "模型",
+          "title": "Google发布Gemini 3.8 Live与Extended Thinking，瞄准实时语音Agent",
+          "body": "Google把Gemini 3.8 Live推向语音Agent。",
+          "summary": "Google发布Gemini 3.8 Live和Extended Thinking，强化实时语音、视觉上下文和工具调用。",
+          "whyItMatters": "语音Agent开始从“会聊天”转向边说边推理、调用工具和处理后台任务。",
+          "detailBody": "Google称Gemini 3.8 Live面向低延迟、规模化语音交互，Extended Thinking面向复杂任务；页面列出API、AI Studio、Search Live、Workspace和企业预览等分发路径。",
+          "trend": "实时语音正在成为Agent入口。",
+          "detailTrend": "当语音模型能在对话中处理视觉输入、调用工具并异步完成任务，客服、搜索、办公和现场指导会更像连续工作流；边界是延迟、错误恢复和语音水印审计。",
+          "whyRanked": "它把多模态、语音和工具调用合到企业Agent界面。",
+          "topReason": "官方发布提供可核对入口，下一步要看模型卡、真实延迟、故障率和客户评测。",
+          "impact": "产品和客服团队应测试打断恢复、工具调用日志、语言切换、SynthID检测和人类接管机制。",
+          "whoShouldCare": "负责语音助手、客服Agent、搜索入口和现场协作工具的产品/工程团队需要评估。",
+          "readerUse": "语音产品和客服工程团队用于规划实时语音Agent的延迟、工具权限、日志和人工接管测试。",
+          "nextCheck": "下一步查模型卡、API文档、企业预览限制、客户侧延迟/完成率、错误恢复记录和SynthID检测表现。",
+          "followUpQuestions": [
+            "Google模型卡是否披露Gemini 3.8 Live在语音、视觉和工具调用上的限制与安全评估？",
+            "企业试点是否公开端到端延迟、任务完成率、接管率和误调用日志？"
+          ],
+          "evidenceThreshold": "需要模型卡、API限制、客户试点指标和第三方语音Agent基准，才能升级为生产级语音Agent能力结论。",
+          "claimBoundary": "官方发布支持模型和渠道信息，不证明所有语音任务、语言和企业系统都能稳定完成。",
+          "counterEvidence": "若客户侧延迟日志、工具调用审计、错误恢复记录或SynthID检测报告显示高失败率，应收窄到受控语音入口。",
+          "sourceId": "google-keyword-ai",
+          "sourceName": "Google Keyword AI",
+          "source": "Google Keyword AI",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Google Keyword AI官方博客支持的来源事实是：Google发布Gemini 3.8 Live与Gemini 3.8 Live Extended Thinking，并说明语音、视觉、工具调用、SynthID和分发渠道；性能与稳定性仍需模型卡和独立测试。",
+          "publishedAt": "2026-09-16T00:00:00+09:00",
+          "time": "00:00",
+          "tags": [
+            "Gemini",
+            "语音Agent",
+            "多模态",
+            "工具调用"
+          ],
+          "companies": [
+            "Google",
+            "Google DeepMind"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方发布清晰，实际生产表现待验证。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          },
+          "detailWhyRanked": "它把多模态、语音和工具调用合到企业Agent界面。 来源层面，Google Keyword AI当前只支持发布事实和自述范围；升级判断仍要看模型卡、API限制、客户试点指标和第三方语音Agent基准，才能升级为生产级语音Agent能力结论。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方发布清晰，实际生产表现待验证。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          }
+        },
+        {
+          "id": "nvidia-flare-2-9-federated-learning-runtime-2026-09-19",
+          "category": "tool",
+          "label": "工具",
+          "title": "NVIDIA FLARE把联邦学习作业运行时扩展到Docker、Kubernetes和Slurm",
+          "body": "NVIDIA说明FLARE异构联邦学习运行时。",
+          "summary": "NVIDIA技术博客介绍FLARE 2.8/2.9对Docker、Kubernetes和Slurm作业执行的支持。",
+          "whyItMatters": "多机构AI训练的难点从算法转向资源调度、数据隔离、密钥和研究边界。",
+          "detailBody": "NVIDIA技术博客称FLARE将持久联邦服务与临时作业worker分离，Docker/Kubernetes支持来自2.8，Slurm支持来自2.9，并用study边界映射本地数据、镜像、密钥和调度策略。",
+          "trend": "隐私协作AI需要运行时治理。",
+          "detailTrend": "医疗、科研和企业联邦学习要跨越不同算力环境，统一平台往往不现实；FLARE的意义是把本地资源控制和联邦任务编排拆开，但隔离强度仍要靠实际集群策略验证。",
+          "whyRanked": "它给跨机构AI训练提供了具体运行时检查点。",
+          "topReason": "技术博客可核对版本和架构，下一步看代码、文档、部署样例和安全评审。",
+          "impact": "平台团队应检查study边界、镜像审批、Secret注入、GPU资源请求、Slurm/K8s权限和失败恢复。",
+          "whoShouldCare": "负责医疗/科研联邦学习、共享GPU集群和跨机构数据协作的平台/安全团队需要评估。",
+          "readerUse": "平台和安全团队用于更新联邦学习运行时、密钥管理、调度和多租户隔离清单。",
+          "nextCheck": "下一步查NVIDIA FLARE 2.9文档、GitHub代码、CVE记录、生产部署案例和第三方安全评审。",
+          "followUpQuestions": [
+            "FLARE 2.9文档和GitHub是否给出Slurm launcher、study_runtime和Secret映射的完整安全配置？",
+            "医疗或科研生产部署是否公开多租户隔离、作业失败恢复和数据访问审计记录？"
+          ],
+          "evidenceThreshold": "需要NVIDIA FLARE GitHub代码仓库、FLARE 2.9版本文档、部署审计报告和第三方安全评审报告，才能升级为成熟跨机构联邦学习运行时。",
+          "claimBoundary": "技术博客支持架构和版本说明，不证明所有Docker、Kubernetes或Slurm环境都已安全隔离。",
+          "counterEvidence": "若GitHub issue、CVE公告、代码审计报告或生产部署复盘发现study边界绕过、密钥泄露或调度权限混乱，应下调为需强化的技术方案。",
+          "sourceId": "nvidia-technical-blog",
+          "sourceName": "NVIDIA Technical Blog",
+          "source": "NVIDIA Technical Blog",
+          "sourceUrl": "https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "NVIDIA Technical Blog作为厂商技术说明支持的来源事实是：NVIDIA声称FLARE分离持久服务和作业worker，并说明Docker、Kubernetes、Slurm与study边界；安全性和可复制性需代码与部署审计。",
+          "publishedAt": "2026-09-15T00:00:00+09:00",
+          "time": "00:00",
+          "tags": [
+            "联邦学习",
+            "NVIDIA FLARE",
+            "Kubernetes",
+            "Slurm"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "技术价值高，但仍是厂商技术说明。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          },
+          "detailWhyRanked": "它给跨机构AI训练提供了具体运行时检查点。 来源层面，NVIDIA Technical Blog当前只支持发布事实和自述范围；升级判断仍要看开源代码、版本文档、部署审计和第三方安全评审，才能升级为成熟跨机构联邦学习运行时。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "技术价值高，但仍是厂商技术说明。 分数取舍：影响和读者用途较高，证据强度受厂商/官方自述边界限制。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-18",
       "date": "2026-09-18",
