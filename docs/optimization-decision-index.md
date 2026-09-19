@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 2, Detail-Page Article Quality
-- Last indexed run: 2026-09-18 20:00 JST
+- Last indexed run: 2026-09-19 20:00 JST
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
@@ -25,6 +25,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 5 | Complete | `1adae4e` | `docs/homepage-edition-preflight.md` and `docs/news-data-format.md` now define `categoryRouteDecision`: rewrite, reorder, or collapse the homepage category reading path when the current reader question changes. |
 | Day 6 | Complete | `1575584` | Homepage mobile reading path now puts `按目的阅读` after 今日简报 and TOP3, so 390px and 768px readers reach the ranked briefing sooner while keeping purpose navigation before the deep briefing. |
 | Day 7 | Complete | `0030d96` | The TechCrunch-backed Agent-supervision detail page now keeps `detailBody` to a minimal reported signal and sends interviews, case detail, investigation background, and context back to the original article; current, latest archive, and derived today data are aligned. |
+| Day 8 | Complete | `15386aa` | The Anthropic/Accenture official detail page now links trend meaning, ordinary reader impact, and safety/legal/procurement use into one clearer article path while keeping the official-source boundary and next-check artifacts visible. |
 
 ## Historical Guard Anchors
 
@@ -76,9 +77,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 8: review one official or research-backed detail page and make the interpretation, trend meaning, and reader impact feel like one article rather than separate labels.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 7 first.
-- If Day 7 is already complete, continue with the first useful unfinished task from the current plan.
+- Continue with Day 9: add guidance for choosing the strongest opening sentence in `summary`, `fact`, or `detailTrend` without repeating the same claim three times.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation completed Day 8 first.
+- If Day 8 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 
