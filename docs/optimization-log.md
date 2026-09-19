@@ -25,8 +25,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: pending (`【新闻更新】发布17点AI新闻：10条法律边界与评测防御信号`).
-- Push: pending.
+- Commit: `77cb407` (`【新闻更新】发布17点AI新闻：10条法律边界与评测防御信号`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` to `origin/main`.
 
 ## 2026-09-19 23:02 JST
 
