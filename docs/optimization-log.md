@@ -26,7 +26,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: this commit (`【新闻更新】补充23点AI新闻：18条测试隔离与运行时信号`).
-- Push: pending.
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` to `origin/main`.
 
 ## 2026-09-19 11:04 JST
 
