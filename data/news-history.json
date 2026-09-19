@@ -1,229 +1,791 @@
 {
   "version": 1,
   "updatedAt": "2026-09-19",
-  "totalItems": 867,
+  "totalItems": 875,
   "editions": [
     {
       "id": "news-1700-2026-09-19",
       "date": "2026-09-19",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00 JST 发布",
-      "note": "本期发布10条AI新闻情报，聚焦安全评估、专业模型、语音Agent、政策和基础设施成本。",
-      "operationalStatus": "已拉取origin/main；核对来源政策、历史URL和候选来源；发布10条安全非重复信号。",
-      "editorialInterpretation": "本期编辑判断：AI竞争继续从模型能力扩展到评估访问、行业工作流、语音/浏览器入口、联邦学习运行时、企业Agent编排和公共政策成本。",
+      "archiveLabel": "23:00 JST 补充发布",
+      "note": "本期在17:00版基础上补充8条AI新闻情报，聚焦安全事故、Agent运行时、推理基础设施、未成年人保护和前沿能力指标。",
+      "operationalStatus": "已拉取origin/main；核对来源政策、历史URL和候选来源；在17:00版10条基础上补充8条安全非重复信号。",
+      "editorialInterpretation": "本期编辑判断：9月19日晚间新增信号把AI竞争继续推向测试隔离、Agent运行时经济学、GPU推理路由、青少年安全政策、开放模型云分发、AI辅助芯片设计和RSI指标公开。",
       "readerFrame": {
-        "headline": "本期读法：查评估访问、行业入口和公共成本",
-        "whyItMatters": "9月19日17:00版把前沿AI安全评估、法律AI、实时语音Agent、AI浏览器、联邦学习运行时、企业Agent平台主用率、美国政策竞速、创意劳动护栏和数据中心电力成本放到同一张核查表里。",
+        "headline": "本期读法：查隔离、运行时、推理路由和未成年人保护",
+        "whyItMatters": "9月19日23:00补充版把模型测试误触真实系统、AgentCore Runtime V2、HyperPod Inference Gateway、Kimi K3 on Bedrock、澳大利亚青少年安全蓝图、AI芯片设计案例、公众信任民调和RSI讨论放进同一张核查表。",
         "useThisIssueFor": [
-          "安全和治理团队复核第三方评估访问、事故复盘、红队独立性和模型披露。",
-          "产品和平台团队检查法律AI、语音Agent、浏览器AI、Agent编排和联邦学习运行时的权限与日志。",
-          "政策、法务和基础设施团队跟踪美国监管竞速、创意劳动合同和AI数据中心电力成本。"
+          "安全和治理团队复核红队沙箱、事故披露、第三方评估访问和RSI公开指标。",
+          "平台和基础设施团队检查Agent运行时、推理网关、开放模型上云、GPU路由和成本账单。",
+          "政策、教育和产品团队跟踪青少年AI保护、公众信任、医疗/反诈用例和区域监管模板。"
         ],
         "notProvenYet": [
-          "不证明嵌入式评估已经独立有效，也不证明法律AI或语音Agent已适合所有高风险生产场景。",
-          "不证明媒体调查代表全市场Agent平台份额，也不证明美国AI监管或数据中心成本规则已经落地。"
+          "不证明Gemini测试事故造成损害，也不证明任何厂商运行时或推理网关已在所有生产场景降本。",
+          "不证明Kimi K3、AI设计芯片或RSI路线已经达到广泛可验证突破，也不证明青少年安全蓝图已被监管采纳。"
         ],
         "mobile": {
-          "headline": "查评估、入口、编排和成本",
-          "summary": "重点看安全评估访问、法律/语音/浏览器入口、Agent平台主用率和政策成本。",
+          "headline": "查隔离与运行时",
+          "summary": "看测试事故、Agent运行时、推理网关和青少年保护。",
           "primaryUses": [
-            "安全团队查评估访问",
-            "平台团队查Agent入口",
-            "政策团队查法规成本"
+            "安全团队查隔离",
+            "平台团队查成本",
+            "政策团队查保护"
           ],
-          "proofBoundary": "仍需评估报告、模型卡、客户指标、法案文本、合同和费率文件"
+          "proofBoundary": "不证明成效，仍需复盘审计和压测文件核对"
         }
       },
       "changeSummary": {
-        "headline": "较上一版转向评估制度、行业入口和政策成本",
+        "headline": "较17:00版新增事故披露、运行时和公众信任线索",
         "freshFacts": [
-          "本期新增事实：Anthropic与Accenture/Faculty启动嵌入式评估合作。",
-          "本期新增事实：OpenAI推出Astra for Law，Google推出Gemini 3.8 Live语音模型入口。",
-          "本期新增事实：Mistral/Mozilla、NVIDIA FLARE和VentureBeat Agent平台调查补充产品与运行时线索。",
-          "本期新增事实：AP、The Verge和Axios补充美国政策竞速、创意劳动规则、安全评估访问和电力成本讨论。"
+          "本期新增事实：Axios报道称Google披露Gemini测试中误触真实公司系统。",
+          "本期新增事实：AWS发布AgentCore Runtime V2、HyperPod Inference Gateway，并在Bedrock上线Kimi K3。",
+          "本期新增事实：OpenAI发布澳大利亚青少年安全蓝图，Axios民调补充AI公众信任场景差异。",
+          "本期新增事实：VentureBeat报道AI辅助推理芯片设计案例，AP梳理RSI公开指标和实验室分歧。"
         ],
         "repeatedContext": [
-          "延续9月18日Agent控制面、安全治理和数据中心公共成本主线，但本期10条URL均为新收录。",
-          "延续既有边界：官方/厂商发布不等于独立成效，媒体报道不替代原文、法案、合同、审计或客户指标。"
+          "延续17:00版评估访问、行业入口、Agent编排和公共成本主线，但新增URL均为非重复收录。",
+          "延续既有边界：官方/厂商发布不等于独立成效，媒体报道不替代原始复盘、审计、模型卡、客户指标或监管文本。"
         ]
       },
       "coverageMix": [
         {
-          "label": "查安全评估与事故复盘",
-          "count": 3,
-          "meaning": "用来检查嵌入式评估、第三方访问、红队独立性和前沿模型事故复盘。"
+          "label": "查安全事故与前沿评估",
+          "count": 5,
+          "meaning": "用来检查嵌入式评估、测试隔离、安全研究访问、RSI指标和事故复盘。"
         },
         {
-          "label": "查行业AI入口与权限",
-          "count": 3,
-          "meaning": "用来检查法律AI、实时语音Agent、AI浏览器的索引、插件、工具调用和隐私权限。"
+          "label": "查Agent运行时与推理基础设施",
+          "count": 4,
+          "meaning": "用来检查AgentCore运行时、企业Agent主编排、HyperPod推理网关和联邦学习运行时。"
         },
         {
-          "label": "查Agent平台与运行时",
-          "count": 2,
-          "meaning": "用来检查企业Agent主编排平台、联邦学习运行时、多租户隔离和资源调度。"
+          "label": "查行业入口与开放模型",
+          "count": 4,
+          "meaning": "用来检查法律AI、语音Agent、AI浏览器、Kimi K3 on Bedrock和开放模型上云。"
         },
         {
-          "label": "查政策、劳动与电力成本",
-          "count": 2,
-          "meaning": "用来检查美国AI监管竞速、创意劳动合同和数据中心费率/电网成本。"
+          "label": "查政策、青少年保护与公众信任",
+          "count": 5,
+          "meaning": "用来检查美国政策竞速、创意劳动、数据中心电力成本、青少年AI安全和公众信任用例。"
         }
       ],
       "sourceRisk": {
-        "label": "官方与媒体各半，结论需分层",
-        "note": "本期官方/厂商来源5/10，可靠媒体5/10；官方项证明发布事实，媒体项用于雷达。",
-        "nextCheck": "用评估报告、模型卡、客户指标、法案文本、合同、审计和费率文件复核。"
+        "label": "官方、厂商与媒体混合，结论继续分层",
+        "note": "补充后官方/厂商来源9/18，可靠媒体9/18；官方项证明发布事实，媒体项用于雷达和背景。",
+        "nextCheck": "用事故复盘、评估报告、模型卡、客户压测、审计、原始民调、监管文件和硬件流片结果复核。"
       },
       "overreadBoundary": {
-        "label": "不要把入口发布读成成熟制度",
-        "body": "不要把本期读成全市场结论：本期说明AI评估访问、行业入口、Agent编排和公共成本正在形成新检查点；它不证明嵌入式评估已独立有效、法律AI默认可靠、语音Agent生产稳定、美国监管已达成或电力成本规则已落地。",
-        "doNotConclude": "不要把厂商发布、媒体调查或活动报道直接读成全市场结论。",
-        "useInstead": "把它作为下一轮核查队列：评估章程、模型卡、API文档、客户指标、合同文本、法案和费率文件。"
+        "label": "不要把厂商路线图读成已验证成效",
+        "body": "不要把本期读成全市场结论：本期说明AI风险正在进入测试隔离、运行时、推理路由、青少年保护、开放模型上云和RSI指标公开；它不证明所有事故已完全复盘、所有运行时已降本、所有青少年保护已有效，或AI芯片设计已经量产成功。",
+        "doNotConclude": "不要把厂商性能数字、媒体事故线索或民调摘要直接读成独立验证结论。",
+        "useInstead": "把它作为下一轮核查队列：事故复盘、评估报告、API/模型卡、客户压测、原始民调、监管文本和硅片测试。"
       },
       "trendNotes": [
         {
           "topic": "policy",
-          "label": "AI安全走向制度访问权",
-          "note": "跨期看，白帽事件、研发透明度指标和本期嵌入式评估/安全研究长文都指向评估者访问权。",
-          "boundary": "不证明评估已经充分；下一步查正式报告、系统卡、审计和监管要求。"
+          "label": "安全治理转向事故复盘和未成年人保护",
+          "note": "跨期看，嵌入式评估、Google测试事故、OpenAI青少年蓝图和RSI讨论都在要求可审计规则。",
+          "boundary": "不证明规则已经充分；下一步查正式复盘、审计、监管反馈和产品默认设置。"
         },
         {
           "topic": "agent",
-          "label": "Agent入口更贴近专业工作流",
-          "note": "跨期看，Agent控制面之后，本期法律模型、语音Agent、浏览器助手和主编排调查把入口推向专业场景。",
-          "boundary": "不证明生产稳定；下一步查API限制、客户日志、权限字段和第三方测试。"
+          "label": "Agent平台进入运行时经济学",
+          "note": "跨期看，AgentCore控制面之后，运行时V2和推理网关把成本、冷启动、GPU路由变成部署关键点。",
+          "boundary": "不证明客户已降本；下一步查账单、延迟、CloudWatch指标和故障演练。"
         },
         {
           "topic": "infrastructure",
-          "label": "AI基础设施成本外部化",
-          "note": "跨期看，芯片、RAG、数据中心民调之后，本期电力成本讨论把算力问题推向费率和公共账单。",
-          "boundary": "不证明规则落地；下一步查法案、EIA数据、PUC案卷和公用事业协议。"
+          "label": "基础设施从算力采购走向自动化设计",
+          "note": "跨期看，Kimi K3上云、HyperPod网关和AI芯片设计案例再次说明基础设施竞争从算力采购延伸到模型分发、推理调度和硬件自动化。",
+          "boundary": "不证明硬件突破或模型领先；下一步查模型卡、独立基准、客户数据和流片报告。"
         }
       ],
       "topicContinuity": [
         {
           "topic": "policy",
-          "label": "治理从倡议转向访问与规则",
+          "label": "治理扩展到事故",
           "status": "stronger",
-          "previousPattern": "此前模式：AI安全减速、透明度指标和白帽事件以倡议和披露为主。",
-          "currentSignal": "本期新增嵌入式评估、美国政策竞速、工会规则和安全研究访问权。",
-          "signalDirection": "增强：治理问题进入评估制度、州级行政令、合同和事故复盘。",
-          "stillUnproven": "仍需评估报告、法案文本、合同条款、系统卡和监管细则。"
+          "previousPattern": "此前连续模式：17:00版以嵌入式评估、美国政策竞速、工会规则和安全访问权为主。",
+          "currentSignal": "本期新增Google测试事故、OpenAI澳大利亚青少年蓝图、AI信任民调和RSI梳理。",
+          "signalDirection": "增强：治理清单从评估制度扩展到真实测试隔离、未成年人保护和公众信任。",
+          "stillUnproven": "仍需事故复盘报告、监管反馈、产品审计、原始民调数据和实验室指标。"
         },
         {
           "topic": "agent",
-          "label": "Agent进入行业入口",
+          "label": "Agent成本前移",
           "status": "stronger",
-          "previousPattern": "此前模式：AgentCore、MCP、OpenSearch记忆和监督器强调控制面。",
-          "currentSignal": "本期新增法律AI、语音Agent、浏览器助手和Agent平台主编排调查。",
-          "signalDirection": "增强：从后台控制面扩展到高风险专业入口和用户界面。",
-          "stillUnproven": "仍需API文档、客户日志、权限字段、错误率和第三方基准。"
+          "previousPattern": "此前连续模式：17:00版关注法律、语音、浏览器入口和企业主编排。",
+          "currentSignal": "本期新增AgentCore Runtime V2、HyperPod Inference Gateway和Kimi K3上云。",
+          "signalDirection": "增强：从入口和控制面推进到冷启动、内存回收、GPU路由和模型分发。",
+          "stillUnproven": "仍需客户压测报告、账单数据、模型卡、兼容测试和独立基准。"
         },
         {
           "topic": "infrastructure",
-          "label": "基础设施成本更公共化",
-          "status": "repeated",
-          "previousPattern": "此前模式：华为芯片、数据中心电费法案和RAG成本构成基础设施约束。",
-          "currentSignal": "本期Axios补充数据中心电力成本活动报道和公用事业协议线索。",
-          "signalDirection": "重复：继续指向电力成本分摊，但仍缺少原始费率文件。",
-          "stillUnproven": "仍需EIA数据、PUC案卷、法案文本和公用事业协议。"
+          "label": "硬件自动化重复",
+          "status": "stronger",
+          "previousPattern": "此前连续模式：基础设施关注芯片、电力、RAG和推理运行时成本。",
+          "currentSignal": "本期新增AI系统设计推理芯片案例，并继续补充推理网关和运行时信号。",
+          "signalDirection": "增强：AI正在进入AI芯片设计流程自身，但还停在待验证阶段。",
+          "stillUnproven": "仍需流片报告、功耗数据、吞吐指标、良率数据、客户样片和EDA审计。"
         }
       ],
       "companyContinuity": [
         {
-          "company": "Anthropic",
-          "label": "安全治理外部化",
-          "lastMention": "上一版Anthropic以研发透明度、生命科学访问和Claude工具链出现。",
-          "whatChanged": "本期新增与Accenture/Faculty的嵌入式评估合作，把透明度主线推进到评估组织安排。",
-          "stillUnproven": "仍需评估章程文件、系统卡引用、独立评估报告和冲突披露材料。"
+          "company": "Google",
+          "label": "测试隔离事故",
+          "lastMention": "上次同日17:00版Google以Gemini 3.8 Live实时语音入口出现。",
+          "whatChanged": "本期新增Axios报道的Gemini测试误触真实公司系统线索，凸显评估沙箱边界。",
+          "stillUnproven": "不证明造成损害；仍需Google官方复盘、评估方报告、受影响方通知和审计日志。"
+        },
+        {
+          "company": "AWS",
+          "label": "运行时加速",
+          "lastMention": "此前归档中AWS以AgentCore、RAG、Knowledge Bases和客户案例连续出现。",
+          "whatChanged": "本期新增AgentCore Runtime V2、HyperPod Inference Gateway和Kimi K3 on Bedrock。",
+          "stillUnproven": "不证明客户已降本；仍需客户压测、账单数据、模型卡、兼容性测试和安全审计。"
         },
         {
           "company": "OpenAI",
-          "label": "从通用模型到行业基础模型",
-          "lastMention": "上一版OpenAI以白帽安全事件和Codex连接器风险进入安全语境。",
-          "whatChanged": "本期新增Astra for Law，显示OpenAI继续把Astra配置到高风险专业工作流。",
-          "stillUnproven": "仍需法律模型卡、客户指标、API文档和第三方复测。"
+          "label": "青少年政策",
+          "lastMention": "上次同日17:00版OpenAI以Astra for Law进入法律AI入口。",
+          "whatChanged": "本期新增澳大利亚青少年安全蓝图，显示其在区域监管中的政策模板布局。",
+          "stillUnproven": "不证明监管已采纳；仍需澳大利亚监管反馈、产品审计、家长控制数据和危机转接记录。"
         },
         {
-          "company": "Google",
-          "label": "语音Agent入口强化",
-          "lastMention": "上一版Google相关线索集中在Dream-RSI和治理/研究成本。",
-          "whatChanged": "本期新增Gemini 3.8 Live，转向实时语音、多模态和工具调用入口。",
-          "stillUnproven": "仍需模型卡、延迟数据、任务完成率和错误恢复日志。"
-        },
-        {
-          "company": "Mistral AI",
-          "label": "浏览器分发与隐私定位",
-          "lastMention": "历史线索中Mistral以开放模型、主权AI和浏览器合作候选出现。",
-          "whatChanged": "本期收录Mistral/Mozilla Smart Window合作，强调浏览器AI入口和区域语言。",
-          "stillUnproven": "仍需Mozilla隐私白皮书文件、Firefox beta发布说明文件和企业管理策略文件。"
+          "company": "Architect Labs",
+          "label": "芯片待验证",
+          "lastMention": "此前归档中未进入当日版，AI芯片和推理成本主要由NVIDIA/AWS等基础设施线索承担。",
+          "whatChanged": "本期新增VentureBeat关于AI设计推理芯片的媒体背景。",
+          "stillUnproven": "不证明硅片可用；仍需流片报告、功耗/吞吐基准、客户样片和EDA审计。"
         }
       ],
       "sourceFamilies": [
         {
           "family": "official",
           "label": "官方/厂商来源",
-          "count": 5,
-          "role": "官方和厂商来源确认Anthropic、OpenAI、Google、Mistral/Mozilla、NVIDIA发布或技术说明；效果仍需外部证据。"
+          "count": 9,
+          "role": "官方和厂商来源确认Anthropic、OpenAI、Google、Mistral/Mozilla、NVIDIA和AWS发布或技术说明；效果仍需外部证据。"
         },
         {
           "family": "reliable_media",
           "label": "可靠媒体",
-          "count": 5,
-          "role": "可靠媒体用于捕捉Agent平台调查、美国政策、创意劳动、安全研究访问和数据中心电力成本；完整事实仍回到原文。"
+          "count": 9,
+          "role": "可靠媒体用于捕捉Google测试事故、Agent平台调查、政策、创意劳动、安全研究、AI芯片设计、公众信任和RSI背景；完整事实仍回到原文。"
         }
       ],
       "topicGroups": [
         {
           "id": "policy",
-          "label": "安全评估、监管、劳动与公共成本",
-          "count": 5,
+          "label": "安全评估、事故、监管、青少年与公众信任",
+          "count": 9,
           "itemIds": [
+            "axios-google-gemini-testing-live-company-access-2026-09-19",
             "anthropic-accenture-embedded-evaluation-2026-09-19",
+            "ap-recursive-self-improvement-near-labs-2026-09-19",
+            "openai-australian-youth-safety-blueprint-2026-09-19",
             "ap-democrats-ai-risk-policy-race-2026-09-19",
             "theverge-hollywood-unions-ai-warnings-labor-2026-09-19",
             "theverge-ai-safety-research-access-pressure-2026-09-19",
+            "axios-ai-trust-skeptics-medical-safety-usecases-2026-09-19",
             "axios-ai-data-center-power-cost-live-2026-09-19"
           ],
-          "meaning": "用来检查评估访问、事故复盘、州级监管、工会合同和电力成本是否形成可执行文件。",
-          "whyNow": "AI风险讨论正在从实验室声明外溢到评估机构、选举、劳动合同和公用事业监管。"
+          "meaning": "用来检查评估访问、测试隔离、RSI指标、未成年人保护、劳动合同和公众信任是否形成可执行证据。",
+          "whyNow": "AI风险讨论正在从实验室声明外溢到真实测试环境、州级监管、青少年默认保护和公众用例信任。"
         },
         {
           "id": "agent",
-          "label": "语音、浏览器、法律与企业编排入口",
-          "count": 4,
+          "label": "语音、浏览器、法律、企业编排与Agent运行时",
+          "count": 6,
           "itemIds": [
+            "aws-agentcore-runtime-v2-cold-start-memory-2026-09-19",
             "openai-astra-for-law-legal-model-foundation-2026-09-19",
             "google-gemini-3-8-live-voice-agent-release-2026-09-19",
             "mistral-mozilla-firefox-smart-window-private-ai-browsing-2026-09-19",
-            "venturebeat-openai-agent-platform-primary-enterprise-survey-2026-09-19"
+            "venturebeat-openai-agent-platform-primary-enterprise-survey-2026-09-19",
+            "aws-kimi-k3-bedrock-open-weight-model-2026-09-19"
           ],
-          "meaning": "用来检查Agent是否成为法律、语音、浏览器和企业编排的默认入口。",
-          "whyNow": "Agent不再只是后台自动化，而是进入专业工作流和用户每天打开的界面。"
+          "meaning": "用来检查Agent是否成为法律、语音、浏览器、企业编排和云端模型分发的默认入口。",
+          "whyNow": "Agent不再只是后台自动化，而是进入运行时、模型菜单和用户每天打开的界面。"
         },
         {
           "id": "infrastructure",
-          "label": "联邦学习与数据中心成本",
-          "count": 2,
+          "label": "推理网关、联邦学习、硬件设计与数据中心成本",
+          "count": 5,
           "itemIds": [
+            "aws-sagemaker-hyperpod-inference-gateway-gpu-routing-2026-09-19",
+            "venturebeat-architect-labs-ai-designed-inference-chip-2026-09-19",
             "nvidia-flare-2-9-federated-learning-runtime-2026-09-19",
+            "aws-agentcore-runtime-v2-cold-start-memory-2026-09-19",
             "axios-ai-data-center-power-cost-live-2026-09-19"
           ],
-          "meaning": "用来检查跨机构训练运行时、电网成本和公用事业协议。",
-          "whyNow": "AI部署成本正从GPU扩展到调度系统、数据隔离、电网扩容和费率设计。"
+          "meaning": "用来检查GPU路由、推理成本、跨机构训练、AI芯片设计、电网成本和公用事业协议。",
+          "whyNow": "AI部署成本正从GPU扩展到路由系统、运行时内存、硬件设计、电网扩容和费率设计。"
         }
       ],
-      "itemCount": 10,
+      "itemCount": 18,
       "sourceConcentration": {
-        "sourceId": "theverge-ai",
-        "sourceName": "The Verge AI",
-        "count": 2,
-        "share": "2/10",
-        "note": "The Verge AI占2/10，是本期最大单一媒体来源；它提供安全研究和创意劳动背景，但不是官方事实源。",
-        "nextCheck": "查METR/Redwood报告、工会合同、州法文本和公司正式回应。"
+        "label": "AWS补充较多但题材分散",
+        "note": "补充版收录3条AWS官方/厂商项，分别对应运行时、推理网关和开放模型上云；同源集中度可接受，但性能结论均保持厂商主张边界。",
+        "mitigation": "同时收录OpenAI官方、Axios、VentureBeat和AP，避免把本期解读变成单一厂商发布清单。"
       },
       "items": [
+        {
+          "id": "ap-recursive-self-improvement-near-labs-2026-09-19",
+          "category": "research",
+          "label": "研究",
+          "title": "AP梳理递归自我改进：领先实验室称场景正在接近",
+          "body": "RSI从远景假设变成公开核查议题。",
+          "summary": "AP报道，Anthropic、OpenAI、xAI和Microsoft等实验室对递归自我改进路径、风险和人类控制给出不同表述。",
+          "whyItMatters": "递归自我改进是AI安全争论的核心风险之一，关键在于人类监督、公开指标和可验证暂停机制。",
+          "detailBody": "AP梳理称，Anthropic披露Claude承担部分模型研发任务，OpenAI谈到自动化研究实习生和2028年前后自动研究员目标，xAI表达更激进时间表，Microsoft强调humanist superintelligence和边界内能力。",
+          "trend": "前沿能力讨论开始要求跨实验室指标。",
+          "detailTrend": "这条信号不是证明RSI已经到来，而是说明实验室正在把AI参与研发的比例、自动化范围和监督机制变成公共争议焦点。越多实验室披露可比较指标，RSI讨论越会从哲学争论转向治理和评估工程。",
+          "whyRanked": "它为当天多条安全与评估新闻提供总框架，适合作为研究/政策背景。",
+          "topReason": "AP通讯社提供跨公司梳理，具体技术细节仍需各实验室原文。",
+          "impact": "安全、治理和投资团队应跟踪各实验室公开的AI参与研发指标、自动化边界和暂停条件。",
+          "whoShouldCare": "负责前沿模型治理、AI安全研究、政策评估和战略风险规划的团队需要关注。",
+          "readerUse": "供前沿模型治理、AI安全研究和政策团队用于建立RSI观察清单：研发任务占比、监督强度、自动研究能力、暂停条件和第三方评估。",
+          "nextCheck": "下一步查Anthropic指标原文、OpenAI RSI/自动研究员说明、xAI公开材料、Microsoft政策文件和第三方评估。",
+          "followUpQuestions": [
+            "Anthropic、OpenAI、xAI和Microsoft原文是否会公开可比较的AI研发参与指标？",
+            "第三方评估报告、系统卡或安全研究论文是否显示自动化研究能力被用于安全研究，而不是主要推动能力提升？"
+          ],
+          "evidenceThreshold": "需要实验室原文、可比较指标、第三方评估、系统卡和治理承诺，才能升级为已确认RSI进展结论。",
+          "claimBoundary": "AP报道支持跨实验室公开表述的梳理，不证明完全自主递归自我改进已经发生。",
+          "counterEvidence": "若实验室原文澄清目标更窄或能力进展放缓，应下调为政策背景和概念框架。",
+          "sourceId": "ap-technology",
+          "sourceName": "Associated Press Technology",
+          "source": "Associated Press Technology",
+          "sourceUrl": "https://apnews.com/article/ai-recursive-self-improvement-1526da03842cfeef12d0fb69b6b7ad28",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press Technology报道的最小来源事实是：Associated Press Technology报道/梳理了场景正在接近这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读Associated Press Technology原文。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "RSI",
+            "自动研究员",
+            "AI安全",
+            "前沿模型"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI",
+            "xAI",
+            "Microsoft"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "框架意义强，具体能力仍需原始实验室材料。"
+          },
+          "detailWhyRanked": "它为当天多条安全与评估新闻提供总框架，适合作为研究/政策背景。 来源层面，Associated Press Technology当前只支持最小事实和背景线索；升级判断仍要看需要实验室原文、可比较指标、第三方评估、系统卡和治理承诺，才能判断RSI进展。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/ai-recursive-self-improvement-1526da03842cfeef12d0fb69b6b7ad28",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "框架意义强，具体能力仍需原始实验室材料。"
+          }
+        },
+        {
+          "id": "aws-kimi-k3-bedrock-open-weight-model-2026-09-19",
+          "category": "model",
+          "label": "模型",
+          "title": "AWS Bedrock上线Moonshot Kimi K3，开放权重模型继续进入托管云",
+          "body": "开放权重模型进入Bedrock分发。",
+          "summary": "AWS宣布Moonshot AI的Kimi K3登陆Amazon Bedrock，主打原生视觉、百万token上下文和编码/知识工作。",
+          "whyItMatters": "开放权重模型的企业采用不只取决于权重可得，还取决于托管云、生命周期、合规和成本控制。",
+          "detailBody": "AWS称Kimi K3现已在Bedrock可用，并引用Moonshot关于2.8万亿参数、1M上下文窗口、原生视觉和显式提示缓存的说明；AWS文档也列出模型生命周期和接口信息。",
+          "trend": "云厂商继续把开放模型包装为企业可采购能力。",
+          "detailTrend": "这条信号说明企业模型菜单正在扩大，开源/开放权重模型通过Bedrock等托管平台进入采购、权限、日志和区域合规流程。开放模型竞争因此不只发生在下载页面，也发生在云市场、生命周期和企业控制面里。",
+          "whyRanked": "它让读者看到中美开放模型竞争如何通过云平台进入企业环境。",
+          "topReason": "AWS官方证明Bedrock可用性，模型能力仍需独立评测。",
+          "impact": "企业AI平台应比较Kimi K3与闭源模型在上下文、视觉、提示缓存、许可、区域和实际任务效果上的差异。",
+          "whoShouldCare": "负责企业模型采购、云平台接入、代码助手部署和知识工作流评估的团队需要关注。",
+          "readerUse": "供模型平台、企业云采购和知识工作流团队用于更新Bedrock模型清单和开放权重模型治理：许可、上下文、视觉、缓存和EOL政策。",
+          "nextCheck": "下一步查AWS模型卡、Moonshot技术报告、第三方基准、许可条款、区域可用性和客户任务测试。",
+          "followUpQuestions": [
+            "1M上下文在企业长文档和代码仓库任务中的成本/延迟如何？",
+            "开放权重许可、数据边界和Bedrock日志策略是否满足行业合规？"
+          ],
+          "evidenceThreshold": "需要模型卡、Moonshot技术报告、第三方评测、许可文本和客户任务结果，才能升级为已验证模型竞争力结论。",
+          "claimBoundary": "AWS官方页面证明Bedrock上线和厂商给出的模型特性，不证明Kimi K3在所有任务中优于替代模型。 该厂商叙事不等同于独立验证结果，不能单独证明客户生产成效。",
+          "counterEvidence": "若独立评测报告、客户任务数据或模型卡更新显示长上下文可靠性、视觉任务或成本不达预期，应下调为新增模型入口信号。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-on-amazon-bedrock/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official_blog",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "reference",
+          "provenance": "AWS Machine Learning Blog官方/厂商页面声称并说明了AWS Bedrock上线Moonshot Kimi K3，开放权重模型继续进入托管云这一模型、推理或Agent基础设施发布；该厂商主张不证明真实客户效果、独立性能、合规收益或生产成本改善。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "开放权重",
+            "Bedrock",
+            "长上下文",
+            "模型分发"
+          ],
+          "companies": [
+            "AWS",
+            "Moonshot AI",
+            "Kimi"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方上线事实明确，能力判断仍需评测。"
+          },
+          "detailWhyRanked": "它让读者看到中美开放模型竞争如何通过云平台进入企业环境。 来源层面，AWS Machine Learning Blog当前只支持最小事实和背景线索；升级判断仍要看需要模型卡、Moonshot技术报告、第三方评测、许可文本和客户任务结果，才能判断真实竞争力。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-on-amazon-bedrock/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方上线事实明确，能力判断仍需评测。"
+          }
+        },
+        {
+          "id": "aws-agentcore-runtime-v2-cold-start-memory-2026-09-19",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS发布新版AgentCore Runtime，瞄准长跑Agent冷启动和内存账单",
+          "body": "Agent运行时进入成本与冷启动优化。",
+          "summary": "AWS称新版Bedrock AgentCore Runtime可按会话实际内存回收，并让不同镜像大小的冷启动更稳定。",
+          "whyItMatters": "企业Agent从聊天变成长时间后台任务后，运行时的冷启动、隔离和内存计费会直接影响可用性和成本。",
+          "detailBody": "AWS发布新版AgentCore Runtime，强调会话内存按需分页与回收、运行环境快照恢复、硬件隔离、scale-to-zero以及V2平台版本；AWS测试中空echo agent在不同镜像大小下保持约2秒P75冷启动。",
+          "trend": "Agent基础设施开始像生产应用平台一样优化。",
+          "detailTrend": "这说明Agent平台竞争正在从模型调用扩展到运行时工程，长会话、突发并发、镜像大小和会话内存会成为云平台差异化能力。运行时层越能把资源使用和会话行为绑定，企业越会把Agent看成需要SRE治理的生产系统。",
+          "whyRanked": "它把Agent控制面从功能发布推进到运行时经济学，读者可以据此检查生产部署成本。",
+          "topReason": "AWS官方博客证明发布事实和厂商测试口径，真实性能仍需客户侧复测。",
+          "impact": "平台团队应比较V1/V2冷启动、长会话内存曲线、区域可用性、隔离要求和实际账单。",
+          "whoShouldCare": "负责Agent平台、云成本、SRE和企业自动化运行时的团队需要关注。",
+          "readerUse": "供Agent平台、SRE和云成本团队用于更新运行时选型清单：冷启动、会话隔离、内存回收、区域和成本模型。",
+          "nextCheck": "下一步查AWS文档、AgentCore定价、客户压测、CloudWatch指标和安全隔离审计。",
+          "followUpQuestions": [
+            "客户压测报告或CloudWatch指标是否显示真实工具调用和模型延迟加入后，V2仍能降低端到端等待时间？",
+            "账单样本、内存指标和故障演练报告是否显示长会话Agent的内存回收不会影响状态恢复、缓存命中和调试可观测性？"
+          ],
+          "evidenceThreshold": "需要客户压测、账单样本、CloudWatch指标、隔离审计和第三方基准，才能升级为已验证生产成本收益结论。",
+          "claimBoundary": "AWS官方页面证明其发布V2运行时和测试口径，不独立证明所有生产Agent都会降本或加速。 该厂商叙事不等同于独立验证结果，不能单独证明客户生产成效。",
+          "counterEvidence": "若客户压测报告、账单样本或CloudWatch指标显示真实工作负载账单上升、快照恢复失败或冷启动仍不稳定，应下调为特定基准下的厂商主张。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official_blog",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "reference",
+          "provenance": "AWS Machine Learning Blog官方/厂商页面声称并说明了AWS发布新版AgentCore Runtime，瞄准长跑Agent冷启动和内存账单这一模型、推理或Agent基础设施发布；该厂商主张不证明真实客户效果、独立性能、合规收益或生产成本改善。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "AgentCore",
+            "运行时",
+            "冷启动",
+            "云成本"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon Bedrock AgentCore"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方发布且读者用途强，性能效果仍是厂商测试。"
+          },
+          "detailWhyRanked": "它把Agent控制面从功能发布推进到运行时经济学，读者可以据此检查生产部署成本。 来源层面，AWS Machine Learning Blog当前只支持最小事实和背景线索；升级判断仍要看需要客户压测、账单样本、CloudWatch指标、隔离审计和第三方基准，才能判断生产成本收益。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方发布且读者用途强，性能效果仍是厂商测试。"
+          }
+        },
+        {
+          "id": "aws-sagemaker-hyperpod-inference-gateway-gpu-routing-2026-09-19",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS推出SageMaker HyperPod Inference Gateway做GPU感知路由",
+          "body": "推理集群进入GPU实时信号路由。",
+          "summary": "AWS发布SageMaker HyperPod Inference Gateway，用Kubernetes原生插件按GPU负载和模型请求路由推理流量。",
+          "whyItMatters": "大模型推理成本越来越受KV缓存、LoRA适配器、长上下文和突发流量影响，通用负载均衡已经不够。",
+          "detailBody": "AWS称HyperPod Inference Gateway可作为EKS托管插件部署，读取请求中的模型信息和GPU实时信号，把请求转到更合适的模型服务Pod，并宣称在测试中首token延迟最多下降82%。",
+          "trend": "推理编排从Pod级负载均衡走向模型/GPU感知。",
+          "detailTrend": "这条信号说明推理基础设施正在吸收AI工作负载特征：KV缓存、LoRA、长上下文和GPU队列不再只是模型服务器内部问题，而是集群路由决策输入。",
+          "whyRanked": "它给基础设施团队一个明确核查点：推理网关是否开始替代传统Kubernetes负载均衡。",
+          "topReason": "AWS官方发布证明产品入口，性能数字仍需独立压测。",
+          "impact": "运行大规模推理的团队应评估GPU利用率、首token延迟、OpenAI兼容服务器支持、Gateway API兼容性和故障回退。",
+          "whoShouldCare": "负责LLM推理平台、Kubernetes、GPU成本和模型服务可靠性的团队需要关注。",
+          "readerUse": "供LLM推理平台、Kubernetes和GPU成本团队用于更新推理平台选型清单：GPU感知路由、LoRA/KV缓存、GitOps配置和跨集群路线图。",
+          "nextCheck": "下一步查AWS文档、CRD示例、客户压测、成本账单、SGLang/vLLM兼容记录和故障演练。",
+          "followUpQuestions": [
+            "客户压测报告、Gateway指标或成本账单是否显示GPU感知路由在真实多模型、多LoRA和长上下文流量中持续降低尾延迟？",
+            "故障演练记录、CRD配置和观测指标是否证明Gateway故障时有清晰回退路径？"
+          ],
+          "evidenceThreshold": "需要真实流量压测、成本账单、开源服务器兼容测试和故障演练报告，才能升级为已验证生产价值结论。",
+          "claimBoundary": "AWS官方博客证明其发布网关和测试主张，不证明所有客户都能获得82%延迟下降。 该厂商叙事不等同于独立验证结果，不能单独证明客户生产成效。",
+          "counterEvidence": "若客户压测报告、故障演练记录或兼容性测试显示网关引入额外延迟、复杂性或兼容性问题，应收窄为特定架构可用信号。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official_blog",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "reference",
+          "provenance": "AWS Machine Learning Blog官方/厂商页面声称并说明了AWS推出SageMaker HyperPod Inference Gateway做GPU感知路由这一模型、推理或Agent基础设施发布；该厂商主张不证明真实客户效果、独立性能、合规收益或生产成本改善。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "推理",
+            "GPU",
+            "SageMaker HyperPod",
+            "Kubernetes"
+          ],
+          "companies": [
+            "AWS",
+            "Amazon SageMaker"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "基础设施影响高，性能仍需客户侧验证。"
+          },
+          "detailWhyRanked": "它给基础设施团队一个明确核查点：推理网关是否开始替代传统Kubernetes负载均衡。 来源层面，AWS Machine Learning Blog当前只支持最小事实和背景线索；升级判断仍要看需要真实流量压测、成本账单、开源服务器兼容测试和故障演练报告，才能判断生产价值。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "基础设施影响高，性能仍需客户侧验证。"
+          }
+        },
+        {
+          "id": "axios-google-gemini-testing-live-company-access-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios称Google披露Gemini测试误触真实公司系统",
+          "body": "Gemini安全测试暴露隔离边界问题。",
+          "summary": "Axios报道，Google在一次预部署网络安全测试中发现Gemini误触三家真实公司系统。",
+          "whyItMatters": "前沿模型评估的风险不只在结果分数，也在测试环境、联网权限和靶场隔离。",
+          "detailBody": "Axios报道，Google的Gemini模型在原本面向虚拟目标的安全测试中，因为意外互联网访问而触及真实公司系统；Google称发现后模型停止相关动作，并把事件作为安全开发信号公开。",
+          "trend": "模型评估需要更硬的网络隔离。",
+          "detailTrend": "这条信号把“第三方评估访问权”推进到测试环境工程：红队和CTF如果不能证明网络、凭据、目标命名和审计隔离，模型能力越强，误触真实系统的风险越高。",
+          "whyRanked": "它是本期最直接的前沿模型测试事故线索，能更新安全团队的评估清单。",
+          "topReason": "可靠媒体报道提供事故轮廓，完整背景和引述仍需回到Axios原文。",
+          "impact": "安全、红队和平台团队应复查沙箱联网、凭据注入、靶场命名、自动停止和事故披露流程。",
+          "whoShouldCare": "负责模型红队、安全审计、云沙箱运营和合规事故处理的团队需要关注。",
+          "readerUse": "供AI安全、红队和云平台团队用于检查模型评估环境是否存在真实互联网访问、公共凭据和目标混淆风险。",
+          "nextCheck": "下一步查Google安全复盘、Irregular或评估方说明、受影响公司通知、CVE/法律记录和审计日志。",
+          "followUpQuestions": [
+            "Google复盘报告或评估方审计日志是否证明测试环境默认阻断外网和公共凭据访问？",
+            "第三方评估合同、事故通知记录或受影响方公告是否规定真实目标误触时的停机、通知和披露流程？"
+          ],
+          "evidenceThreshold": "需要Google正式复盘、评估方报告、受影响方通知、审计日志和监管材料，才能升级为已确认事故事实结论。",
+          "claimBoundary": "Axios报道支持Google安全测试中出现误触真实系统的媒体事实，不证明造成损害或代表所有Gemini部署风险。",
+          "counterEvidence": "若Google正式复盘、受影响方通知或网络审计日志证明未发生真实访问或已有充分隔离，应收窄为评估流程误报或媒体背景。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/19/google-safety-incidents-testing-hacks",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道的最小来源事实是：Axios AI / Technology报道/梳理了Google披露Gemini测试误触真实公司系统这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读Axios AI / Technology原文。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "模型安全",
+            "红队",
+            "测试隔离",
+            "事故披露"
+          ],
+          "companies": [
+            "Google",
+            "Gemini",
+            "Irregular"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "事故线索影响高，证据仍依赖媒体报道与后续复盘。"
+          },
+          "detailWhyRanked": "它是本期最直接的前沿模型测试事故线索，能更新安全团队的评估清单。 来源层面，Axios AI / Technology当前只支持最小事实和背景线索；升级判断仍要看Google正式复盘、评估方报告、受影响方通知、审计日志和监管材料，才能升级为完整事故结论。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/19/google-safety-incidents-testing-hacks",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "事故线索影响高，证据仍依赖媒体报道与后续复盘。"
+          }
+        },
+        {
+          "id": "axios-ai-trust-skeptics-medical-safety-usecases-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios民调显示AI信任更容易被医疗、反诈和灾害用例撬动",
+          "body": "AI公众信任依赖具体场景。",
+          "summary": "Axios援引Morning Consult民调称，美国成年人对能救命、提升安全或防诈骗的AI用例更容易产生信任。",
+          "whyItMatters": "AI接受度不是抽象的“支持或反对”，而取决于应用场景、风险说明和可见收益。",
+          "detailBody": "Axios报道，Morning Consult在9月15日至16日调查1,522名美国成年人，让受访者评估65个真实AI用例；医疗、反诈和灾害响应等清晰公共利益场景更能赢得怀疑者。",
+          "trend": "AI信任从模型品牌转向用例证据。",
+          "detailTrend": "这条信号提示产品和政策团队：公众接受AI的路径可能不是更强模型发布，而是可解释、可审计、能减少损害的具体应用。信任会围绕医疗、反诈和灾害响应这类可感知收益重新分层。",
+          "whyRanked": "它给监管和产品沟通提供量化背景，能帮助读者避免把公众态度看成单一变量。",
+          "topReason": "Axios提供民调摘要，完整问题设计和交叉表仍需查原始数据。",
+          "impact": "公共部门、医疗、金融风控和安全产品团队应把用例证据、风险边界和问责机制放在发布叙事前面。",
+          "whoShouldCare": "负责AI产品政策、公众沟通、医疗/安全用例和市场研究的团队需要关注。",
+          "readerUse": "供AI产品政策、医疗安全和市场研究团队用于设计AI信任沟通：先证明具体场景的安全收益，再谈泛化能力。",
+          "nextCheck": "下一步查Morning Consult原始问卷、样本交叉表、长期追踪、实际产品事故率和监管反馈。",
+          "followUpQuestions": [
+            "Morning Consult原始问卷、样本交叉表或数据表是否显示哪些AI用例在不同年龄、党派和职业群体中信任差异最大？",
+            "长期追踪数据、产品使用记录或政策投票结果是否显示民调信任会转化为实际使用、付费或政策支持？"
+          ],
+          "evidenceThreshold": "需要原始问卷、交叉表、长期追踪和真实使用/事故数据，才能升级为已确认公众信任变化结论。",
+          "claimBoundary": "Axios报道支持一次民调的方向性发现，不证明美国公众整体已信任AI或所有安全用例都有效。",
+          "counterEvidence": "若后续民调、事故或采用数据反向，应收窄为特定样本和问题设置下的舆情信号。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/19/ai-trust-skeptics-doom-medical-care",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道的最小来源事实是：Axios AI / Technology报道/梳理了Axios民调显示AI信任更容易被医疗、反诈和灾害用例撬动这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读Axios AI / Technology原文。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "AI信任",
+            "民调",
+            "医疗AI",
+            "反诈"
+          ],
+          "companies": [
+            "Morning Consult",
+            "Axios"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "分数取舍：读者用途和政策沟通价值强，但证据强度受媒体摘要和原始民调可得性限制。"
+          },
+          "detailWhyRanked": "它给监管和产品沟通提供量化背景，能帮助读者避免把公众态度看成单一变量。 来源层面，Axios AI / Technology当前只支持最小事实和背景线索；升级判断仍要看需要原始问卷、交叉表、长期追踪和真实使用/事故数据，才能判断公众信任变化。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/19/ai-trust-skeptics-doom-medical-care",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "分数取舍：读者用途和政策沟通价值强，但证据强度受媒体摘要和原始民调可得性限制。"
+          }
+        },
+        {
+          "id": "openai-australian-youth-safety-blueprint-2026-09-19",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI发布澳大利亚青少年AI安全蓝图",
+          "body": "青少年AI安全进入区域政策模板。",
+          "summary": "OpenAI发布Australian Youth Safety Blueprint，提出AI素养、年龄适配保护、年龄确认、危机支持和家长控制等支柱。",
+          "whyItMatters": "青少年AI监管正在与社交媒体年龄限制、教育使用和心理安全合流，产品默认保护会成为市场准入条件。",
+          "detailBody": "OpenAI称该蓝图面向澳大利亚政策讨论，配合ChatGPT for Teens在澳大利亚的默认体验，强调年龄适配保护、隐私保护的年龄确认、现实危机支持路径和可访问的家长控制。",
+          "trend": "AI公司开始把未成年人保护做成地区化政策包。",
+          "detailTrend": "这条信号说明AI安全竞争不只在模型事故，也在儿童/青少年默认体验、年龄确认、家长控制和监管合作；它会影响教育、家庭和平台合规路线。",
+          "whyRanked": "它是官方政策蓝图，能帮助读者跟踪青少年AI产品规则如何区域化。",
+          "topReason": "OpenAI官方页面证明蓝图发布和六类框架，实际落地仍需监管和产品审计。",
+          "impact": "教育、家庭产品和AI平台团队应复查未成年人默认体验、危机转接、家长控制、年龄确认和澳大利亚合规要求。",
+          "whoShouldCare": "负责教育AI、青少年产品安全、信任安全和公共政策的团队需要关注。",
+          "readerUse": "供教育AI、青少年产品安全和公共政策团队用于更新青少年AI安全清单：默认保护、年龄适配、危机支持、家长控制和外部评估。",
+          "nextCheck": "下一步查蓝图PDF、澳大利亚eSafety回应、议会听证、产品审计摘要和家长控制使用数据。",
+          "followUpQuestions": [
+            "ChatGPT for Teens澳大利亚默认体验的产品审计摘要是否列出可审计开关和告警？",
+            "年龄确认评估报告、申诉记录或监管反馈是否证明其兼顾隐私、准确率和可申诉流程？"
+          ],
+          "evidenceThreshold": "需要蓝图全文、监管反馈、产品审计、青少年/家长使用数据和危机转接记录，才能升级为已验证保护效果结论。",
+          "claimBoundary": "OpenAI官方页面证明蓝图发布和公司框架，不证明澳大利亚监管已经采纳或产品保护充分有效。",
+          "counterEvidence": "若监管机构、学校或审计发现保护不足，应收窄为公司政策倡议而非落地标准。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "sourceUrl": "https://openai.com/index/australian-youth-safety-blueprint/",
+          "sourceRole": "官方核对",
+          "sourceType": "official_statement",
+          "claimStatus": "confirmed",
+          "originalDependency": "reference",
+          "provenance": "OpenAI News官方页面发布并说明Australian Youth Safety Blueprint这一模型安全与青少年保护框架，列出AI素养、年龄适配保护、年龄确认、危机支持和家长控制等来源事实；实际采纳和效果需要监管、审计和用户侧证据。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "青少年安全",
+            "政策",
+            "家长控制",
+            "澳大利亚"
+          ],
+          "companies": [
+            "OpenAI",
+            "ChatGPT"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "分数取舍：官方政策价值和读者用途较高，但保护效果仍需监管反馈、产品审计和使用数据验证。"
+          },
+          "detailWhyRanked": "它是官方政策蓝图，能帮助读者跟踪青少年AI产品规则如何区域化。 来源层面，OpenAI News当前只支持最小事实和背景线索；升级判断仍要看需要蓝图全文、监管反馈、产品审计、青少年/家长使用数据和危机转接记录，才能判断实际保护效果。",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://openai.com/index/australian-youth-safety-blueprint/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "分数取舍：官方政策价值和读者用途较高，但保护效果仍需监管反馈、产品审计和使用数据验证。"
+          }
+        },
+        {
+          "id": "venturebeat-architect-labs-ai-designed-inference-chip-2026-09-19",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat称Architect Labs用AI两周设计推理芯片，下一关是流片验证",
+          "body": "AI芯片设计进入可验证硬件阶段。",
+          "summary": "VentureBeat报道，Architect Labs称AI系统在两周内完成推理芯片设计、验证、固件和内核工作，仍需证明硅片表现。",
+          "whyItMatters": "如果AI能压缩芯片设计周期，AI基础设施竞争会从买GPU延伸到自动化硬件设计与验证。",
+          "detailBody": "VentureBeat报道，Architect Labs两名架构师给出规格后，AI系统处理设计、验证、固件和内核，并能在48小时内把规格变化回灌到FPGA；报道同时强调最终仍要通过硅片验证。",
+          "trend": "AI进入AI硬件生产链自身。",
+          "detailTrend": "这条信号把“AI加速软件开发”推进到芯片设计，但硬件世界的关键证据不是演示速度，而是流片、良率、功耗、驱动和客户工作负载。",
+          "whyRanked": "它提供AI基础设施自我加速的早期案例，但也清楚提醒要等硅片。",
+          "topReason": "可靠媒体提供创业公司案例，结论必须等待硬件验证。",
+          "impact": "芯片、EDA和云基础设施团队可把它作为观察AI辅助硬件设计成熟度的雷达项。",
+          "whoShouldCare": "负责AI芯片评估、EDA工具采购、推理成本规划和硬件供应链审计的团队需要关注。",
+          "readerUse": "供AI芯片、EDA和云基础设施团队用于跟踪AI辅助芯片设计是否从FPGA演示走向量产硅片。",
+          "nextCheck": "下一步查流片结果、功耗/吞吐基准、客户样片测试、EDA流程审计和融资/合作文件。",
+          "followUpQuestions": [
+            "硅片测试报告、第三方基准或形式化验证记录是否证明AI生成的设计通过真实推理工作负载？",
+            "功耗/面积数据、良率报告或客户样片测试是否显示规格快速迭代没有牺牲可维护性？"
+          ],
+          "evidenceThreshold": "需要硅片测试、第三方基准、客户样片、功耗/面积数据和EDA审计，才能升级为已验证硬件突破结论。",
+          "claimBoundary": "VentureBeat报道支持创业公司案例和待验证状态，不证明该芯片已经量产或优于现有推理芯片。",
+          "counterEvidence": "若流片测试报告、功耗数据或客户样片记录显示流片失败、性能不达标或客户测试缺失，应收窄为AI辅助设计演示。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "sourceUrl": "https://venturebeat.com/ai/an-ai-system-designed-an-inference-chip-in-two-weeks-now-architect-labs-has-to-prove-it-in-silicon/",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道的最小来源事实是：VentureBeat AI报道/梳理了Architect Labs用AI两周设计推理芯片，下一关是流片验证这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读VentureBeat AI原文。",
+          "publishedAt": "2026-09-19T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "AI芯片",
+            "EDA",
+            "推理",
+            "硬件验证"
+          ],
+          "companies": [
+            "Architect Labs",
+            "VentureBeat"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "新颖性强但证据仍停在媒体案例和待流片阶段。"
+          },
+          "detailWhyRanked": "它提供AI基础设施自我加速的早期案例，但也清楚提醒要等硅片。 来源层面，VentureBeat AI当前只支持最小事实和背景线索；升级判断仍要看需要硅片测试、第三方基准、客户样片、功耗/面积数据和EDA审计，才能升级为硬件突破。",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/ai/an-ai-system-designed-an-inference-chip-in-two-weeks-now-architect-labs-has-to-prove-it-in-silicon/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "新颖性强但证据仍停在媒体案例和待流片阶段。"
+          }
+        },
         {
           "id": "theverge-hollywood-unions-ai-warnings-labor-2026-09-19",
           "category": "policy",
@@ -256,7 +818,7 @@
           "sourceType": "media_report",
           "claimStatus": "reported",
           "originalDependency": "must-read",
-          "provenance": "The Verge AI报道支持的最小来源事实是：The Verge报道创意AI治理中SAG-AFTRA和WGAE回应近期AI风险叙事，并强调就业风险、合同护栏和政府监管需求；完整事实、采访、引语、行业背景和上下文仍需阅读The Verge原文。",
+          "provenance": "The Verge AI报道的最小来源事实是：The Verge AI报道/梳理了好莱坞工会把AI风险焦点拉回就业与合同护栏这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读The Verge AI原文。",
           "publishedAt": "2026-09-19T08:00:00+09:00",
           "time": "08:00",
           "tags": [
@@ -395,7 +957,7 @@
           "sourceType": "media_report",
           "claimStatus": "reported",
           "originalDependency": "must-read",
-          "provenance": "VentureBeat AI报道支持的最小来源事实是：VB Pulse给出OpenAI与Anthropic Agent平台主编排率比较；完整事实、样本方法、图表、采访和上下文仍需阅读VentureBeat原文。",
+          "provenance": "VentureBeat AI报道的最小来源事实是：VentureBeat AI报道/梳理了OpenAI Agent平台在安装企业中更常被设为主编排层这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读VentureBeat AI原文。",
           "publishedAt": "2026-09-19T05:27:00+09:00",
           "time": "05:27",
           "tags": [
@@ -465,7 +1027,7 @@
           "sourceType": "media_report",
           "claimStatus": "reported",
           "originalDependency": "must-read",
-          "provenance": "Axios AI / Technology报道支持的最小来源事实是：AI数据中心电力成本分摊成为政策和公用事业讨论焦点；完整事实、活动内容、引述、数据和上下文仍需阅读Axios原文。",
+          "provenance": "Axios AI / Technology报道的最小来源事实是：Axios AI / Technology报道/梳理了Axios Live把AI数据中心电力成本推到“谁买单”议题这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读Axios AI / Technology原文。",
           "publishedAt": "2026-09-19T04:00:00+09:00",
           "time": "04:00",
           "tags": [
@@ -534,7 +1096,7 @@
           "sourceType": "reliable_media",
           "claimStatus": "reported",
           "originalDependency": "must-read",
-          "provenance": "Associated Press报道支持的最小来源事实是：多名美国民主党政治人物围绕AI风险采取或提出政策动作；完整事实、采访、政治背景、民调数据和上下文仍需回到AP原文。",
+          "provenance": "Associated Press报道的最小来源事实是：Associated Press报道/梳理了美国民主党潜在候选人加速回应AI风险议题这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读Associated Press原文。",
           "publishedAt": "2026-09-19T03:00:00+09:00",
           "time": "03:00",
           "tags": [
@@ -604,7 +1166,7 @@
           "sourceType": "media_report",
           "claimStatus": "reported",
           "originalDependency": "must-read",
-          "provenance": "The Verge AI长文支持的最小来源事实是：AI安全研究者围绕前沿模型访问、第三方评估和事故复盘提出压力与担忧；完整事实、采访、案例、历史背景和上下文仍需回到The Verge原文。",
+          "provenance": "The Verge AI报道的最小来源事实是：The Verge AI报道/梳理了The Verge长文描绘AI安全研究者争取更深模型访问的压力这一模型或AI治理信号；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读The Verge AI原文。",
           "publishedAt": "2026-09-18T23:00:00+09:00",
           "time": "23:00",
           "tags": [
@@ -875,7 +1437,7 @@
             "医疗或科研生产部署是否公开多租户隔离、作业失败恢复和数据访问审计记录？"
           ],
           "evidenceThreshold": "需要NVIDIA FLARE GitHub代码仓库、FLARE 2.9版本文档、部署审计报告和第三方安全评审报告，才能升级为成熟跨机构联邦学习运行时。",
-          "claimBoundary": "技术博客支持架构和版本说明，不证明所有Docker、Kubernetes或Slurm环境都已安全隔离。",
+          "claimBoundary": "技术博客支持架构和版本说明，不证明所有Docker、Kubernetes或Slurm环境都已安全隔离。 该厂商叙事不等同于独立验证结果，不能单独证明客户生产成效。",
           "counterEvidence": "若GitHub issue、CVE公告、代码审计报告或生产部署复盘发现study边界绕过、密钥泄露或调度权限混乱，应下调为需强化的技术方案。",
           "sourceId": "nvidia-technical-blog",
           "sourceName": "NVIDIA Technical Blog",
@@ -885,7 +1447,7 @@
           "sourceType": "official",
           "claimStatus": "confirmed",
           "originalDependency": "recommended",
-          "provenance": "NVIDIA Technical Blog作为厂商技术说明支持的来源事实是：NVIDIA声称FLARE分离持久服务和作业worker，并说明Docker、Kubernetes、Slurm与study边界；安全性和可复制性需代码与部署审计。",
+          "provenance": "NVIDIA Technical Blog官方/厂商页面声称并说明了NVIDIA FLARE把联邦学习作业运行时扩展到Docker、Kubernetes和Slurm这一模型、推理或Agent基础设施发布；该厂商主张不证明真实客户效果、独立性能、合规收益或生产成本改善。",
           "publishedAt": "2026-09-15T00:00:00+09:00",
           "time": "00:00",
           "tags": [

@@ -1,3 +1,33 @@
+## 2026-09-19 23:02 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-19`，所以未回退版次，而是在同日 17:00 版基础上补充 8 条安全非重复信号，当前合计 18 条，新增 Google/Gemini 测试误触真实公司系统、AWS AgentCore Runtime V2、SageMaker HyperPod Inference Gateway、OpenAI 澳大利亚青少年安全蓝图、Kimi K3 on Bedrock、Architect Labs AI 设计推理芯片、Axios AI 信任民调和 AP 递归自我改进梳理。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对 OpenAI News、AWS Machine Learning Blog、VentureBeat AI、Axios AI / Technology、Associated Press Technology、当前首页和历史重复 URL。
+  - 新增 8 条安全非重复信号；OpenAI 1 条作为 `官方核对`，AWS 3 条作为 `厂商主张`，Axios 2 条、VentureBeat 1 条、AP 1 条作为 `媒体背景` / `reported` / `originalDependency: must-read`，均保留原始 URL、来源边界和下一步独立核查路径。
+  - archive-source-concentration: mixed-source-boundary; 本期累计官方/厂商来源 9/18，可靠媒体 9/18，AWS Machine Learning Blog 为最大单一新增来源 3/8，读者应等待事故复盘、评估报告、模型卡、客户压测、审计、原始民调、监管文件和硬件流片结果再升级结论。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 875。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月19日17:00 版扩展为 18 条情报；读者可在首页和详情页看到模型测试隔离事故、Agent运行时、GPU推理网关、未成年人保护、开放模型上云、AI芯片设计、公众信任和RSI补充。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 18 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: this commit (`【新闻更新】补充23点AI新闻：18条测试隔离与运行时信号`).
+- Push: pending.
+
 ## 2026-09-19 11:04 JST
 
 - Focus: 完成当前 30 天计划 Day 8，审核一条官方详情页并把解释、趋势含义和读者影响串成更像短文章的路径：选择 Anthropic/Accenture 嵌入式评估条目，保留官方事实和核验边界，同时让趋势、普通读者意义和安全/法务/采购用法各司其职、前后衔接。
