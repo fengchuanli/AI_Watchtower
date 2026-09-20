@@ -27,6 +27,34 @@ For each important claim, write or verify these four blocks before saving the it
 
 Do not publish a detail page where the fact is long, the impact is vague, the boundary is missing, or the next check says only "继续关注". If a later official page, filing, audit, metric, regulator text, customer record, replication, or third-party test has already answered a previous next check, retire or replace that stale question instead of repeating it as current uncertainty.
 
+## Opening Sentence Choice
+
+Before saving a detail page, choose one field to carry the strongest opening sentence. The goal is for a phone reader to see one clear lead, then supporting interpretation, rather than meeting the same claim in `summary`, `detailBody`, and `detailTrend`.
+
+Use this order:
+
+1. Put the source-backed event in `summary` when the most useful lead is "what happened". Keep it to one mobile-friendly sentence with actor, action, object, and source status.
+2. Put the exact proof object in the first sentence of `detailBody` when the lead depends on a document, filing, release, model card, benchmark, court record, regulator text, code, or dataset. Keep background and source reminders after that sentence.
+3. Put the broader pattern in `detailTrend` only when the reader already understands the fact and the lead needs to explain "why this belongs in today's AI briefing".
+
+After choosing the lead field, demote the other two fields to different jobs: `summary` scans, `detailBody` verifies the minimum fact, and `detailTrend` interprets the direction. Do not begin all three with the same company, metric, lawsuit, benchmark, model, funding, or policy claim. If two fields still read like rewrites of each other, delete the weaker lead and replace it with a reader action, boundary, or next-check sentence in the appropriate field.
+
+Good split:
+
+```text
+summary：Axios报道某AI政策岗位构想仍处早期。
+detailBody：Axios支持的最小事实是，该构想被公开提出，但结构、预算和职责文本尚未出现。
+detailTrend：这类信号说明美国AI治理正在从监管文本扩展到行政组织设计。
+```
+
+Bad split:
+
+```text
+summary：某公司发布新评测工具。
+detailBody：某公司发布新评测工具并称可以改进评测。
+detailTrend：某公司发布新评测工具说明评测工具很重要。
+```
+
 ## Technical Claim Conversion
 
 Use this sequence when rewriting a dense technical sentence.

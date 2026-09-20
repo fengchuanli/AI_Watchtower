@@ -167,6 +167,8 @@ The current feed must not promote stale background material as a new batch. Keep
 - `freshSourceFact`: Optional stale-news exception object for current-feed items whose event `publishedAt` is older than seven days. Use only when a fresh source-specific fact makes the older event newly relevant; include `sourceType`, `sourceUrl`, `publishedAt`, and `fact`, and keep the object tied to the same source tier as the item.
 - `time`: Short display time.
 
+Before publishing, apply the opening-sentence choice from `docs/detail-page-review-guide.md`: use `summary` for the quickest "what happened" lead, the first sentence of `detailBody` for the source-backed proof object, or `detailTrend` for the broader pattern. Only one of those fields should carry the strongest lead. The other two should support different jobs so the same company, product, lawsuit, benchmark, model, funding, or policy claim is not repeated three times on the detail page.
+
 The detail page derives a source-boundary panel from existing item fields rather than adding a separate claim layer. `provenance` is shown as what the linked source can directly support, `detailTrend` is shown as AI Watchtower's interpretation, and `claimBoundary` is shown as what the item still cannot prove. Keep these fields written so a reader can distinguish source-backed facts from editorial judgment without leaving the page. The source reference should read as `source owner + supported source fact + boundary`, not only the source owner.
 
 Use this split test before saving `detailTrend`: if one paragraph answers more than one of these questions, move the extra answer to its dedicated field.

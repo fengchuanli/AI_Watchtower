@@ -1,3 +1,35 @@
+## 2026-09-20 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 9，补充详情页开头句选择规则：在 `summary`、`detailBody` 和 `detailTrend` 之间只选择一个最强开头，避免同一公司、产品、诉讼、基准、模型、融资或政策主张在详情页前三段重复出现。
+- Changed files:
+  - `docs/detail-page-review-guide.md`
+  - `docs/news-data-format.md`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆检查结果、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/detail-page-review-guide.md`、`docs/news-data-format.md`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只更新详情页写作规则和后续优化索引。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 规则要求手机读者先看到一个清楚主句，而不是在 `summary`、`detailBody` 和 `detailTrend` 中重复读同一事实。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - 规则把最小事实、来源证明对象和趋势解释拆开，降低把来源事实写成站内替代文章的风险。
+  - Original source dependency: pass - 本次强化媒体和官方详情页的字段分工，不改变任何原文依赖等级。
+  - Mobile burden: pass - 规则要求只保留一个最强开头，其余字段承担扫描、核验或解释职责，减少手机详情页重复阅读负担。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 无，属于规则/校验/计划更新；后续详情页起草会更少重复开头句，读者间接受益。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, and `tags.js`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: this commit (`【VisionHub网站风格优化】补充详情页开头句规则`).
+- Push: pending.
+
 ## 2026-09-20 08:15 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-20`，发布 10 条安全非重复信号，聚焦 AI 减速反垄断诉讼、AI czar/AI Force 构想、AI 监管冲突、公众风险沟通、Vals 任务型评测、AI 二级市场热度、Google Cloud AI 防御图谱、NVIDIA AIPerf 推理压测和 Google Research MilleMiglia 开放优化基准。
