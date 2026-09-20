@@ -1,3 +1,33 @@
+## 2026-09-21 17:00 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-21`，发布 10 条安全非重复信号，聚焦 AI 数据中心债务/算力承诺、白宫 AI 政策利益边界、中国回应美国减速警告、David Sacks 有限监管路线、AI 数学归属、塔州司法 AI 假引用、能源 OT 安全、DOJ 版权案立场、AI 评估机构和 AWS Agent 式 MLOps。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、The Guardian、The Verge、Axios、AWS Machine Learning Blog 和候选来源页面。
+  - 新增 10 条安全非重复信号；可靠媒体 9/10，官方/厂商来源 1/10。媒体项均标为 `媒体背景` / `reported` / `originalDependency: must-read`，AWS 项标为 `厂商主张` 并要求代码审计、部署日志、成本记录和客户复盘。
+  - archive-source-concentration: reliable-media-radar; The Guardian 为最大单一来源 6/10，读者应等待合同、案卷、财报、监管文本、审计报告、事故复盘、开源代码和客户指标再升级结论。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 899。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月21日17:00 版 10 条情报；读者可在首页和详情页看到AI资本结构、政策利益边界、跨境治理、司法AI幻觉、能源安全、版权诉讼、评估机构和Agent式MLOps更新。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending (planned `【新闻更新】发布17点AI新闻：10条资本政策与责任边界信号`).
+- Push: pending.
+
 ## 2026-09-20 23:08 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-20`，所以未回退版次，而是在同日 17:00 版基础上补充 4 条安全非重复信号，当前合计 14 条，新增 Axios 个人 AI Agent 入口竞争、Google Agent 式基础设施代码安全流水线、Google Research 教育 GenUI 互动学习实验和 Retrieve-for-Train AI 搜索研究。

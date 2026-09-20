@@ -1,8 +1,922 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-20",
-  "totalItems": 889,
+  "updatedAt": "2026-09-21",
+  "totalItems": 899,
   "editions": [
+    {
+      "id": "news-1700-2026-09-21",
+      "date": "2026-09-21",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期10条AI新闻情报，聚焦资本、政策、司法、安全、版权和Agent式MLOps。",
+      "operationalStatus": "已拉取origin/main；核对来源政策、历史URL和10条非重复候选。",
+      "editorialInterpretation": "本期编辑判断：媒体信号显示AI扩张责任边界升温，仍需复核合同、案卷、官方文件、审计和客户指标。",
+      "readerFrame": {
+        "headline": "本期读法：把AI扩张当责任边界核查表",
+        "whyItMatters": "9月21日版把数据中心债务、白宫政策利益、中国回应、Sacks影响、AI数学归属、司法假引用、能源OT安全、版权案政府立场、评估机构和Agent式MLOps放进同一张责任核查表。",
+        "useThisIssueFor": [
+          "财务和平台团队检查AI算力合同、数据中心债务和云成本暴露。",
+          "政策和法务团队核对利益冲突、跨境治理、版权诉讼和司法AI使用。",
+          "安全和工程团队检查关键基础设施AI威胁、评估机构和Agent式部署自动化。"
+        ],
+        "notProvenYet": [
+          "不证明AI泡沫已经破裂、利益冲突成立、中美AI协议失败或任何版权案结果。",
+          "不证明第三方评估已充分独立、能源系统遭遇自治AI攻击，或AWS技术路径已被客户侧独立验证。"
+        ],
+        "mobile": {
+          "headline": "查AI扩张责任边界",
+          "summary": "看资本、监管、司法、版权、安全和MLOps。",
+          "primaryUses": [
+            "财务团队查算力",
+            "法务团队查责任",
+            "安全团队查OT"
+          ],
+          "proofBoundary": "仍需合同、案卷、官方文本、审计、事故复盘和客户指标"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月20日扩展版转向责任与成本核查",
+        "freshFacts": [
+          "本期新增The Guardian对AI数据中心债务、白宫政策利益、中国回应、Sacks影响、AI数学归属和塔州司法AI假引用的报道/分析。",
+          "本期新增The Verge关于能源关键基础设施AI网络风险边界的报道。",
+          "本期新增Axios关于DOJ版权案利益声明和AI安全评估机构争夺可信角色的报道，以及AWS Agent式SageMaker部署技术说明。"
+        ],
+        "repeatedContext": [
+          "延续9月20日AI安全、监管和评测主线，但本期URL均为非重复收录。",
+          "延续既有边界：媒体报道不替代案卷、合同和官方文件，厂商博客不等于客户侧生产验证。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对资本、算力和政策利益",
+          "count": 3,
+          "meaning": "用来检查AI扩张的债务、数据中心成本、政府合同和利益披露。"
+        },
+        {
+          "label": "核对跨境治理、科研归属和司法使用",
+          "count": 3,
+          "meaning": "用来检查中美AI安全叙事、AI数学署名和公共部门AI证据链。"
+        },
+        {
+          "label": "核对安全、版权和评估制度",
+          "count": 3,
+          "meaning": "用来检查能源OT防线、版权案政府立场和第三方AI评估独立性。"
+        },
+        {
+          "label": "验证Agent式MLOps落地",
+          "count": 1,
+          "meaning": "用来检查编码Agent承担模型部署、告警、扩缩和清理流程的证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "可靠媒体主导",
+        "note": "可靠媒体集中9/10，Guardian单一来源偏向6/10；本期是雷达。",
+        "nextCheck": "复核官方文件、案卷、财报、合同、审计和原文报告。"
+      },
+      "sourceConcentration": {
+        "label": "Guardian来源集中",
+        "note": "The Guardian 6/10，构成单一来源集中；它适合作为雷达，不等于官方事实闭环。",
+        "nextCheck": "用法院案卷、政府文件、公司披露、监管文本、Axios/The Verge/AWS及后续媒体交叉核对。"
+      },
+      "overreadBoundary": {
+        "label": "不要把政策雷达读成裁决",
+        "body": "不要把本期读成全市场结论：本期说明AI扩张的资金、政策、司法、版权和基础设施责任正在被集中追问；它不证明泡沫破裂、利益冲突成立、诉讼结果、评估制度充分或部署工具生产有效。",
+        "doNotConclude": "不证明任何违法、违约、外交失败、司法系统性错误或厂商生产效果。",
+        "useInstead": "应该用来核对财报、合同、案卷、官方政策、审计、事故复盘、代码和客户指标。"
+      },
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "政策责任外溢",
+          "note": "跨期看，AI安全争论正在外溢到反垄断、版权、利益冲突、司法AI使用和中美治理。",
+          "boundary": "不证明具体法律结果；下一步查案卷、监管文本、会谈公报和国会材料。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "基础设施账单显性化",
+          "note": "跨期看，数据中心、电力、能源OT和云推理成本正在把AI风险从模型层拉到物理和财务层。",
+          "boundary": "不证明泡沫破裂或能源事故；下一步查财报、债券、合同、监管报告和事故复盘。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "Agent工具进入治理流程",
+          "note": "跨期看，评估机构和编码Agent部署都在把AI能力验证转为可审计流程。",
+          "boundary": "不证明流程可靠；下一步查评估报告、代码审计、部署日志和客户指标。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "监管责任增强",
+          "status": "stronger",
+          "previousPattern": "此前9月20日关注AI Force、反垄断诉讼和监管冲突。",
+          "currentSignal": "本期新增白宫利益边界、中国回应、版权案DOJ立场、司法AI假引用和评估机构争议。",
+          "signalDirection": "增强：治理从口号和诉讼扩展到行政利益、法院文件、公共部门证据链和跨境谈判。",
+          "stillUnproven": "仍需案卷、官方政策、合同披露、会谈公报、审计报告和监管文本。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力和OT责任增强",
+          "status": "stronger",
+          "previousPattern": "此前连续出现数据中心电力成本、AI防御图谱和推理压测。",
+          "currentSignal": "本期新增AI数据中心债务/算力承诺分析和能源关键基础设施AI网络风险报道。",
+          "signalDirection": "增强：基础设施问题从性能与电力扩展到债务、合同、OT防线和公共成本。",
+          "stillUnproven": "仍需财报、债券文件、算力合同、能源监管报告和真实事故复盘。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "评估和部署流程重复但更具体",
+          "status": "stronger",
+          "previousPattern": "此前出现Vals、AIPerf、Google Research和第三方评估访问讨论。",
+          "currentSignal": "本期新增Axios评估机构独立性争议和AWS编码Agent部署SageMaker技术路径。",
+          "signalDirection": "增强：验证问题从模型得分扩展到评估机构治理和MLOps自动化。",
+          "stillUnproven": "仍需评估合同、公开报告、开源代码审计、部署日志和客户侧指标。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "版权、科研和安全评估边界并行",
+          "lastMention": "上期OpenAI连续提及：9月20日出现在个人Agent入口、反垄断和评测/资本背景中。",
+          "whatChanged": "本期OpenAI进入版权案DOJ立场、AI数学归属争议和第三方评估制度讨论。",
+          "stillUnproven": "不证明诉讼结果、数学贡献边界或评估制度充分；仍需案卷、技术报告、同行审查和评估合同。"
+        },
+        {
+          "company": "Google",
+          "label": "跨境、数学、能源和云工程多线出现",
+          "lastMention": "上期Google连续提及：9月20日出现在政策诉讼、防御图谱、代码安全和研究基准中。",
+          "whatChanged": "本期Google进入AI数据中心债务分析、中国AI竞争语境、数学归属争议、能源AI安全背景和AWS外的工程自动化对照。",
+          "stillUnproven": "不证明任何债务风险、地缘结果或安全成效；仍需财报、合同、官方回应、监管材料和事故复盘。"
+        },
+        {
+          "company": "AWS",
+          "label": "Agent式部署自动化",
+          "lastMention": "上期AWS连续提及：9月19日以AgentCore Runtime、HyperPod Inference Gateway和Kimi K3上Bedrock出现。",
+          "whatChanged": "本期新增AWS用编码Agent部署Hugging Face模型到SageMaker的技术路径。",
+          "stillUnproven": "不证明生产可靠性；仍需代码审计、部署日志、成本记录、告警效果和客户复盘。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 9,
+          "role": "可靠媒体用于捕捉资本、政策、司法、版权、安全和评估制度变化；完整事实仍回到原文和案卷。"
+        },
+        {
+          "family": "official",
+          "label": "官方/厂商来源",
+          "count": 1,
+          "role": "官方来源用于核对AWS发布事实；效果仍需外部信号、代码审计和客户指标。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "AI政策、版权、司法和跨境治理",
+          "count": 6,
+          "itemIds": [
+            "guardian-trump-ai-policy-financial-interest-2026-09-21",
+            "guardian-china-pushback-us-ai-warnings-2026-09-21",
+            "guardian-david-sacks-limited-ai-regulation-2026-09-21",
+            "guardian-tasmania-ai-fake-citation-parole-2026-09-21",
+            "axios-doj-openai-nyt-copyright-filing-2026-09-21",
+            "axios-trusted-ai-cops-evaluators-2026-09-21"
+          ],
+          "meaning": "用来检查AI规则由谁制定、谁监督、谁承担司法和版权后果。",
+          "whyNow": "AI安全争论已经进入法院、行政部门、公共部门和跨境政策。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "AI资本结构与关键基础设施安全",
+          "count": 2,
+          "itemIds": [
+            "guardian-ai-bubble-datacenter-debt-2026-09-21",
+            "theverge-ai-cyber-energy-human-risk-2026-09-21"
+          ],
+          "meaning": "用来检查算力扩张的财务承诺和能源OT防线。",
+          "whyNow": "AI扩张越来越依赖数据中心债务、电力系统和关键基础设施防护。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "Agent式MLOps部署",
+          "count": 1,
+          "itemIds": [
+            "aws-huggingface-sagemaker-coding-agents-2026-09-21"
+          ],
+          "meaning": "用来检查编码Agent是否能承担可审计的模型上线步骤。",
+          "whyNow": "企业需要把Agent从代码生成推进到部署、告警、扩缩和清理流程。"
+        },
+        {
+          "id": "model",
+          "label": "AI科研贡献和归属边界",
+          "count": 1,
+          "itemIds": [
+            "guardian-ai-mathematicians-attribution-2026-09-21"
+          ],
+          "meaning": "用来检查AI科研成果是否有清楚证明、贡献链和同行审查。",
+          "whyNow": "AI能力展示越接近科学发现，署名、引用和验证边界越重要。"
+        }
+      ],
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "guardian-ai-bubble-datacenter-debt-2026-09-21",
+          "category": "funding",
+          "label": "资本",
+          "title": "Guardian：AI数据中心债务和算力承诺成为泡沫风险",
+          "body": "AI泡沫讨论转向债务和算力合同。",
+          "summary": "The Guardian分析称，AI减速之外，超大规模云厂商的数据中心债务、token价格下行和未来算力承诺可能成为更早出现的金融压力。",
+          "whyItMatters": "如果AI收入追不上数据中心和算力合同，风险会从模型安全扩展到债务、云资本开支和客户采购预算。",
+          "detailBody": "The Guardian Technology报道/分析AI数据中心债务、单位经济和未来算力承诺风险。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI基础设施叙事从供给扩张转向现金流和合同压力。",
+          "detailTrend": "这条信号把AI泡沫的验证点从估值转向可观察现金流：云厂商融资、实验室算力合同、token价格和客户付费意愿会一起决定扩张是否可持续。",
+          "whyRanked": "它把当天AI风险讨论从安全扩展到金融结构。",
+          "topReason": "媒体分析支持资本压力线索，需用债券、合同和财报验证。",
+          "impact": "CFO、采购和云平台团队应检查AI项目的长期算力锁定、推理成本和收入覆盖能力。",
+          "whoShouldCare": "负责AI预算、云采购、资本开支、数据中心和投资风控的财务/平台团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供财务、采购和平台团队更新AI算力合同、单位经济、债务暴露和供应商集中度清单。",
+          "nextCheck": "下一步查云厂商债券发行、数据中心合同、OpenAI/Anthropic融资文件、客户付费指标和季度财报。",
+          "followUpQuestions": [
+            "云厂商财报或债券文件是否披露AI数据中心相关债务和到期成本？",
+            "OpenAI、Anthropic或客户合同是否披露take-or-pay算力承诺和收入覆盖率？"
+          ],
+          "evidenceThreshold": "需要债券文件、财报、合同披露、客户付费指标和审计材料，才能升级为确认的AI基础设施金融风险判断。",
+          "claimBoundary": "该文是媒体经济分析，不证明AI泡沫已经破裂，也不证明任何单家公司违约。",
+          "counterEvidence": "若财报、债券文件和客户续约指标显示AI收入覆盖算力承诺、债务期限可控，应收窄为融资压力背景。",
+          "sourceId": "guardian-technology",
+          "sourceName": "The Guardian Technology",
+          "source": "The Guardian Technology",
+          "sourceUrl": "https://www.theguardian.com/business/2026/sep/20/ai-slowdown-calls-collapse-of-bubble-datacentre-tech-firms",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Guardian Technology报道AI数据中心债务和算力合同压力：AI数据中心债务和算力承诺成为泡沫风险；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:09:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "AI泡沫",
+            "数据中心",
+            "算力合同",
+            "云资本开支"
+          ],
+          "companies": [
+            "Google",
+            "Amazon",
+            "Microsoft",
+            "Meta",
+            "Oracle",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：系统性风险高，但依赖媒体分析和后续文件核查。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：系统性风险高，但依赖媒体分析和后续文件核查。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theguardian.com/business/2026/sep/20/ai-slowdown-calls-collapse-of-bubble-datacentre-tech-firms",
+          "detailWhyRanked": "它把当天AI风险讨论从安全扩展到金融结构。 来源层面，The Guardian Technology支持最小报道事实；升级判断仍要看需要债券文件、财报、合同披露、客户付费指标和审计材料，才能升级为确认的AI基础设施金融风险判断。"
+        },
+        {
+          "id": "guardian-trump-ai-policy-financial-interest-2026-09-21",
+          "category": "policy",
+          "label": "政策",
+          "title": "Guardian：白宫AI放松监管与相关财务利益并行",
+          "body": "AI政策争议叠加利益冲突审视。",
+          "summary": "The Guardian报道，特朗普政府继续保护AI扩张路线，同时特朗普家族和盟友在AI基础设施、防务技术和数据中心生态中有财务利益。",
+          "whyItMatters": "当AI监管、数据中心成本和政府合同放在同一张图上，政策判断需要同时核对公共利益、竞争政策和利益冲突。",
+          "detailBody": "The Guardian Technology报道/分析白宫AI政策、数据中心成本投票和相关财务利益争议。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI监管正在从安全抽象争论进入政府合同、伦理审查和基础设施账单。",
+          "detailTrend": "这条信号说明，AI政策可信度不只看是否支持创新，还要看政策制定者、承包商、数据中心和纳税人之间的利益边界是否透明，并能否被合同、披露和调查文件复核。",
+          "whyRanked": "它解释了监管阻力背后的政治经济维度。",
+          "topReason": "媒体报道支持利益冲突线索，需用合同、披露和调查确认。",
+          "impact": "政策、公共事务和合规团队应把AI监管立场与政府合同、财务披露、数据中心成本承担放在一起核查。",
+          "whoShouldCare": "跟踪AI监管、政府采购、数据中心选址和政治风险的法务/公共事务团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供法务和公共事务团队建立AI政策利益冲突、政府合同、数据中心成本和伦理调查观察表。",
+          "nextCheck": "下一步查SEC披露、五角大楼合同、国会调查文件、白宫AI政策文本和州/地方数据中心成本规定。",
+          "followUpQuestions": [
+            "相关AI基础设施或防务合同是否在政府采购数据库、SEC文件或伦理披露中出现？",
+            "国会听证记录、监管问询或伦理审查文件是否确认AI政策利益冲突安排？"
+          ],
+          "evidenceThreshold": "需要合同文件、SEC披露、伦理审查、国会调查材料和官方政策文本，才能升级为确认的利益冲突或政策影响判断。",
+          "claimBoundary": "该报道不证明财务利益直接决定白宫政策，也不证明任何合同违法。",
+          "counterEvidence": "若SEC披露、合同文件或伦理审查记录显示已回避决策、合同无关联或调查未发现利益冲突，应下调为政治风险背景。",
+          "sourceId": "guardian-technology",
+          "sourceName": "The Guardian Technology",
+          "source": "The Guardian Technology",
+          "sourceUrl": "https://www.theguardian.com/us-news/2026/sep/20/trump-ai-policy-financial-interest",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Guardian Technology报道白宫AI政策与财务利益边界：白宫AI放松监管与相关财务利益并行；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:08:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "AI监管",
+            "利益冲突",
+            "数据中心",
+            "政府合同"
+          ],
+          "companies": [
+            "Trump Organization",
+            "Dominari Holdings",
+            "Dell"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "取舍：政策影响大，但核心因果需官方文件确认。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "取舍：政策影响大，但核心因果需官方文件确认。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theguardian.com/us-news/2026/sep/20/trump-ai-policy-financial-interest",
+          "detailWhyRanked": "它解释了监管阻力背后的政治经济维度。 来源层面，The Guardian Technology支持最小报道事实；升级判断仍要看需要合同文件、SEC披露、伦理审查、国会调查材料和官方政策文本，才能升级为确认的利益冲突或政策影响判断。"
+        },
+        {
+          "id": "guardian-china-pushback-us-ai-warnings-2026-09-21",
+          "category": "policy",
+          "label": "政策",
+          "title": "Guardian：中国反击美国AI减速警告",
+          "body": "中美AI安全叙事继续分叉。",
+          "summary": "The Guardian报道，中国把美国AI减速警告视为遏制技术追赶的一部分，同时继续推进自身安全框架、产业落地和主权AI路线。",
+          "whyItMatters": "AI安全合作若被解读为竞争工具，中美之间的模型评估、出口管制和国际协议都会更难落地。",
+          "detailBody": "The Guardian Technology报道/分析中国对美国AI减速和安全警告的回应及政策语境。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI治理正在变成主权、产业竞争和安全风险之间的谈判。",
+          "detailTrend": "这条信号说明，全球AI治理的难点不是有没有风险共识，而是各国是否相信安全机制不会变成技术封锁、模型准入或市场排除工具；会谈公报和监管文本才是升级依据。",
+          "whyRanked": "它给本周美国AI政策争论补上中国回应。",
+          "topReason": "媒体报道支持地缘政策背景，需等待中美会谈或官方文本。",
+          "impact": "政策和跨境业务团队应把AI安全合作与出口管制、模型准入、数据合规和中国本土监管一起评估。",
+          "whoShouldCare": "负责中美AI政策、出口管制、模型准入和跨境数据合规的战略/法务团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供战略和法务团队检查中美AI安全对话、出口管制、主权AI和本土化部署风险。",
+          "nextCheck": "下一步查中美领导人会谈公报、中国AI安全框架、美国出口管制文件和双方监管机构说明。",
+          "followUpQuestions": [
+            "中美会谈公报是否出现AI shared risks、模型评估或出口管制相关措辞？",
+            "中国监管文件是否新增递归自我改进、网络安全或情感依赖类AI风险要求？"
+          ],
+          "evidenceThreshold": "需要中美官方会谈文件、监管文本、出口管制规则和企业合规指引，才能升级为确认的跨境AI治理变化。",
+          "claimBoundary": "该报道支持政策立场背景，不证明中美已经形成或拒绝具体AI安全协议。",
+          "counterEvidence": "若会谈形成可执行评估机制、热线或共同风险文本，应上调为政策合作信号；若双方文件回避AI，应下调为外交背景。",
+          "sourceId": "guardian-technology",
+          "sourceName": "The Guardian Technology",
+          "source": "The Guardian Technology",
+          "sourceUrl": "https://www.theguardian.com/world/2026/sep/20/why-china-is-pushing-back-on-us-warnings-over-rapid-ai-development",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Guardian Technology报道中国回应美国AI治理和减速警告：中国反击美国AI减速警告；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:07:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "中美AI",
+            "AI安全",
+            "出口管制",
+            "主权AI"
+          ],
+          "companies": [
+            "Anthropic",
+            "OpenAI",
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：地缘影响高，但需官方会谈文件升级。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：地缘影响高，但需官方会谈文件升级。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theguardian.com/world/2026/sep/20/why-china-is-pushing-back-on-us-warnings-over-rapid-ai-development",
+          "detailWhyRanked": "它给本周美国AI政策争论补上中国回应。 来源层面，The Guardian Technology支持最小报道事实；升级判断仍要看需要中美官方会谈文件、监管文本、出口管制规则和企业合规指引，才能升级为确认的跨境AI治理变化。"
+        },
+        {
+          "id": "guardian-david-sacks-limited-ai-regulation-2026-09-21",
+          "category": "policy",
+          "label": "政策",
+          "title": "Guardian：David Sacks推动有限AI监管路线受质疑",
+          "body": "AI政策顾问角色受到更多审视。",
+          "summary": "The Guardian报道，David Sacks继续影响特朗普政府有限AI监管路线，批评者认为其投资和政策立场让AI安全争议更政治化。",
+          "whyItMatters": "AI监管路线会受顾问网络、投资关系和产业叙事影响，企业不能只看白宫口径，还要追踪谁在塑造规则。",
+          "detailBody": "The Guardian Technology报道/分析David Sacks在美国AI政策和有限监管路线中的影响争议。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI政策从技术风险争论转向顾问网络和产业游说透明度。",
+          "detailTrend": "这条信号说明，AI治理的执行边界往往由少数顾问、投资者和机构接口塑造；如果任命文件、披露和会议记录不清楚，透明度不足会削弱安全政策的公共信任。",
+          "whyRanked": "它补充了AI Force之外的政策执行人物线索。",
+          "topReason": "媒体画像支持政策影响线索，需查任命、披露和白宫文件。",
+          "impact": "公共事务团队应跟踪AI政策顾问、利益披露、行政命令和行业游说之间的关系。",
+          "whoShouldCare": "负责AI政策监测、政府关系、合规和声誉风险的公共事务团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供公共事务和合规团队更新AI政策人物、游说网络、利益披露和行政命令追踪表。",
+          "nextCheck": "下一步查白宫PCAST文件、顾问任命记录、财务披露、行政令和国会质询。",
+          "followUpQuestions": [
+            "白宫或PCAST文件是否正式列明Sacks在AI政策、AI Force或数据中心政策中的职责？",
+            "财务披露或国会质询是否确认相关AI投资、回避安排或政策影响路径？"
+          ],
+          "evidenceThreshold": "需要任命文件、财务披露、国会材料、行政令和会议记录，才能升级为确认的政策影响判断。",
+          "claimBoundary": "该报道不证明单一顾问控制AI政策，也不证明其行为违法。",
+          "counterEvidence": "若官方文件显示职责有限、存在回避安排或政策由多部门主导，应收窄为人物背景。",
+          "sourceId": "guardian-technology",
+          "sourceName": "The Guardian Technology",
+          "source": "The Guardian Technology",
+          "sourceUrl": "https://www.theguardian.com/us-news/2026/sep/20/david-sacks-trump-ai-czar",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Guardian Technology报道David Sacks影响AI治理边界：David Sacks推动有限AI监管路线受质疑；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:06:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "AI政策",
+            "David Sacks",
+            "监管",
+            "白宫"
+          ],
+          "companies": [
+            "Craft Ventures",
+            "White House"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "取舍：人物线索重要，但需任命和披露材料确认影响范围。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "取舍：人物线索重要，但需任命和披露材料确认影响范围。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theguardian.com/us-news/2026/sep/20/david-sacks-trump-ai-czar",
+          "detailWhyRanked": "它补充了AI Force之外的政策执行人物线索。 来源层面，The Guardian Technology支持最小报道事实；升级判断仍要看需要任命文件、财务披露、国会材料、行政令和会议记录，才能升级为确认的政策影响判断。"
+        },
+        {
+          "id": "guardian-ai-mathematicians-attribution-2026-09-21",
+          "category": "research",
+          "label": "研究",
+          "title": "Guardian：AI数学成果争议凸显人类归属和验证问题",
+          "body": "AI科研能力再次遇到署名和验证边界。",
+          "summary": "The Guardian社论围绕OpenAI数学成果争议指出，AI在数学中的应用仍依赖人类研究、归属、补偿和同行验证。",
+          "whyItMatters": "科研AI如果不能清楚区分模型贡献、人类先验成果和可验证证明，能力展示会转化为信任和知识产权风险。",
+          "detailBody": "The Guardian Technology报道/分析OpenAI数学成果争议、人类研究归属和AI科研伦理讨论。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI科研竞争从能否给出答案，转向答案背后的署名、材料来源和同行可审查性。",
+          "detailTrend": "这条信号说明，AI在数学和科学中的价值不只取决于解题速度，还取决于是否尊重人类贡献、公开证明材料和同行审查路径，并避免把模型输出包装成独立发现；对研究机构来说，贡献链和可复核证明本身就是可信度的一部分。",
+          "whyRanked": "它把AI科研能力争议转成可操作的归属和验证问题。",
+          "topReason": "媒体社论支持伦理争议背景，需查论文、证明和当事方回应。",
+          "impact": "研究团队应要求AI辅助成果记录输入材料、贡献链、证明审查和作者/数据归属。",
+          "whoShouldCare": "负责AI科研、论文署名、知识产权和学术合作的研究/法务团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供研究、法务和出版团队检查AI辅助证明、数据来源、署名规则和同行评审要求。",
+          "nextCheck": "下一步查OpenAI技术说明、数学论文、研究者回应、审稿意见和期刊/会议AI署名政策。",
+          "followUpQuestions": [
+            "OpenAI或相关研究者是否发布完整证明、依赖材料清单和贡献说明？",
+            "期刊政策文件、会议指南或数学团体声明是否更新AI辅助证明的署名、引用和审查规则？"
+          ],
+          "evidenceThreshold": "需要技术报告、完整证明、同行评审、研究者回应和出版政策，才能升级为确认的AI数学贡献判断。",
+          "claimBoundary": "该社论不证明OpenAI错误使用任何特定研究，也不证明AI独立完成数学突破。",
+          "counterEvidence": "若完整证明、引用记录和独立审查显示贡献边界清楚，应收窄为AI科研伦理讨论。",
+          "sourceId": "guardian-technology",
+          "sourceName": "The Guardian Technology",
+          "source": "The Guardian Technology",
+          "sourceUrl": "https://www.theguardian.com/commentisfree/2026/sep/20/the-guardian-view-on-ai-v-mathematicians-humans-are-still-vital-to-the-field-but-tech-firms-refuse-to-see-that",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Guardian Technology讨论AI数学研究归属和论文验证：AI数学成果争议凸显人类归属和验证问题；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:05:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "AI科研",
+            "数学",
+            "归属",
+            "知识产权"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "取舍：科研信任问题突出，但事实升级依赖技术材料。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "取舍：科研信任问题突出，但事实升级依赖技术材料。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theguardian.com/commentisfree/2026/sep/20/the-guardian-view-on-ai-v-mathematicians-humans-are-still-vital-to-the-field-but-tech-firms-refuse-to-see-that",
+          "detailWhyRanked": "它把AI科研能力争议转成可操作的归属和验证问题。 来源层面，The Guardian Technology支持最小报道事实；升级判断仍要看需要技术报告、完整证明、同行评审、研究者回应和出版政策，才能升级为确认的AI数学贡献判断。"
+        },
+        {
+          "id": "guardian-tasmania-ai-fake-citation-parole-2026-09-21",
+          "category": "policy",
+          "label": "政策",
+          "title": "Guardian：塔州假案例引用触发假释AI使用审查",
+          "body": "AI幻觉进入司法决定链。",
+          "summary": "The Guardian报道，塔斯马尼亚司法部门将审查假释决定中可能使用AI的范围，此前一项假释条件被发现依赖AI辅助文件和不存在的判例。",
+          "whyItMatters": "AI幻觉如果进入司法、假释或行政决定，会直接影响个人自由，并迫使机构建立引用核验和人工责任链。",
+          "detailBody": "The Guardian Technology报道/分析塔斯马尼亚假释决定中的AI辅助文件和不存在判例引用审查。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI治理正在从模型政策走向公共部门日常决定的证据链审计。",
+          "detailTrend": "这条信号说明，公共部门使用AI的关键不是是否用了工具，而是每一条法律引用、事实依据和限制性条件能否被人工复核、记录在案并在错误发生后追责。",
+          "whyRanked": "它把AI幻觉风险落到司法行政的真实后果。",
+          "topReason": "媒体报道支持审查事实，需等司法部门和假释委员会文件。",
+          "impact": "政府、法律科技和合规团队应要求AI辅助文件保留提示、来源、人工复核人和引用核验记录。",
+          "whoShouldCare": "负责公共部门AI、司法科技、法律合规和模型风险审计的团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供公共部门和法律团队检查AI辅助决定中的引用核验、人工复核、审计日志和救济路径。",
+          "nextCheck": "下一步查塔州司法部门审查结果、假释委员会说明、法院判决文本和公共部门AI使用指引。",
+          "followUpQuestions": [
+            "司法部门审查报告是否列出AI使用范围、受影响决定数量和纠正措施？",
+            "法院判决或假释委员会文件是否要求保留提示词、来源和人工核验记录？"
+          ],
+          "evidenceThreshold": "需要审查报告、法院判决、假释委员会文件和公共部门AI指引，才能升级为确认的制度性AI司法风险。",
+          "claimBoundary": "该报道支持单案和审查事实，不证明所有假释决定都使用AI或存在错误。",
+          "counterEvidence": "若司法部门审查报告和假释委员会记录显示AI使用仅限单案且已建立强制引用核验，应收窄为个案警示。",
+          "sourceId": "guardian-technology",
+          "sourceName": "The Guardian Technology",
+          "source": "The Guardian Technology",
+          "sourceUrl": "https://www.theguardian.com/australia-news/2026/sep/19/tasmania-justice-department-review-ai-artificial-intelligence-fake-citation-murderer-parole-decision-ntwnfb",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Guardian Technology报道塔州假释AI文档和虚假判例审查：塔州假案例引用触发假释AI使用审查；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:04:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "AI幻觉",
+            "司法",
+            "假释",
+            "公共部门"
+          ],
+          "companies": [],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：公共部门后果直接，证据质量高于一般评论。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "取舍：公共部门后果直接，证据质量高于一般评论。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theguardian.com/australia-news/2026/sep/19/tasmania-justice-department-review-ai-artificial-intelligence-fake-citation-murderer-parole-decision-ntwnfb",
+          "detailWhyRanked": "它把AI幻觉风险落到司法行政的真实后果。 来源层面，The Guardian Technology支持最小报道事实；升级判断仍要看需要审查报告、法院判决、假释委员会文件和公共部门AI指引，才能升级为确认的制度性AI司法风险。"
+        },
+        {
+          "id": "theverge-ai-cyber-energy-human-risk-2026-09-21",
+          "category": "policy",
+          "label": "政策",
+          "title": "The Verge：能源系统AI网络风险仍以人为主",
+          "body": "关键基础设施风险来自人类攻击者使用AI。",
+          "summary": "The Verge报道，能源系统专家认为当前关键基础设施的主要风险仍是人类攻击者借助生成式AI放大能力，而不是失控AI自行攻击。",
+          "whyItMatters": "这把AI安全讨论从末日场景拉回运营技术、补丁、人工接管和小型公用事业资源不足等现实防线。",
+          "detailBody": "The Verge AI报道/分析AI、网络攻击和能源关键基础设施风险边界。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI网络安全正在从模型自治恐惧转向人类攻击者、老旧OT系统和防御责任分配。",
+          "detailTrend": "这条信号说明，关键基础设施的AI风险治理应先处理现实暴露面：资产盘点、隔离、补丁窗口、手动运行能力和AI工具责任，而不是只讨论失控模型。后续要用监管指南和事故复盘校准等级。",
+          "whyRanked": "它给AI安全周的基础设施风险提供现实校准。",
+          "topReason": "媒体报道支持专家风险边界，需查事故数据和监管指南。",
+          "impact": "能源、云安全和政府团队应把AI威胁模型写进OT资产清单、手动覆盖流程和事件演练。",
+          "whoShouldCare": "负责能源OT安全、关键基础设施防护、AI红队和监管合规的安全/运营团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供能源和安全团队检查OT隔离、补丁、人工接管、AI攻防演练和供应商责任。",
+          "nextCheck": "下一步查能源监管指南、CISA/DOE通报、真实攻击案例、红队报告和公用事业事故复盘。",
+          "followUpQuestions": [
+            "CISA、DOE或能源监管指南文件是否发布AI辅助攻击的OT防护要求？",
+            "真实事故复盘报告或红队数据是否显示生成式AI降低了攻击门槛或改变了攻击链？"
+          ],
+          "evidenceThreshold": "需要监管指南、事故复盘、红队报告、攻击样本和运营指标，才能升级为确认的能源AI网络风险判断。",
+          "claimBoundary": "该报道不证明失控AI不会成为风险，也不证明所有能源系统都具备人工兜底能力。",
+          "counterEvidence": "若监管报告、事故复盘或红队数据未发现AI改变攻击链，应下调为传统OT安全背景；若出现自治AI攻击链，应上调风险等级。",
+          "sourceId": "theverge-ai",
+          "sourceName": "The Verge AI",
+          "source": "The Verge AI",
+          "sourceUrl": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Verge AI报道能源OT系统AI网络风险边界：能源系统AI网络风险仍以人为主；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:03:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "关键基础设施",
+            "能源安全",
+            "AI网络攻击",
+            "OT安全"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "取舍：现实防线价值高，但需事故和监管材料升级。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "取舍：现实防线价值高，但需事故和监管材料升级。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
+          "detailWhyRanked": "它给AI安全周的基础设施风险提供现实校准。 来源层面，The Verge AI支持最小报道事实；升级判断仍要看需要监管指南、事故复盘、红队报告、攻击样本和运营指标，才能升级为确认的能源AI网络风险判断。"
+        },
+        {
+          "id": "axios-doj-openai-nyt-copyright-filing-2026-09-21",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：DOJ支持OpenAI/Microsoft版权立场令关键机构意外",
+          "body": "AI版权诉讼中的政府立场更复杂。",
+          "summary": "Axios报道，美国司法部在纽约时报诉OpenAI和Microsoft案中提交支持性利益声明，令USPTO和版权办公室等关键机构感到意外。",
+          "whyItMatters": "政府诉讼立场可能影响AI训练、合理使用、媒体授权和跨机构版权政策，即使法院并不必须采纳。",
+          "detailBody": "Axios AI / Technology报道/分析DOJ在纽约时报诉OpenAI/Microsoft版权案中的利益声明及机构反应。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI版权战正在从公司诉讼扩展到行政部门之间的政策协调。",
+          "detailTrend": "这条信号说明，AI版权规则不会只由法院和公司谈判决定；政府部门如何协调竞争、创新和创作者保护，也会改变诉讼预期、许可谈判和训练数据风险定价。",
+          "whyRanked": "它补上AI版权诉讼中的政府介入维度。",
+          "topReason": "Axios支持政府立场线索，需查法院文件和机构回应。",
+          "impact": "媒体、AI平台和法务团队应追踪政府利益声明、法院采纳范围和版权机构后续表态。",
+          "whoShouldCare": "负责AI训练数据、媒体授权、版权诉讼和政策沟通的法务/内容团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供法务和内容授权团队检查DOJ文件、法院程序、版权办公室口径和许可谈判风险。",
+          "nextCheck": "下一步查法院案卷、DOJ声明原文、USPTO/版权办公室回应、法官裁定和双方后续动议。",
+          "followUpQuestions": [
+            "法院是否在后续裁定中引用或限制DOJ利益声明的论点？",
+            "USPTO文件、版权办公室声明或国会听证记录是否补充AI训练合理使用意见？"
+          ],
+          "evidenceThreshold": "需要法院案卷、DOJ声明原文、版权机构回应和裁定文本，才能升级为确认的AI版权政策变化。",
+          "claimBoundary": "Axios报道不证明法院会采纳DOJ立场，也不证明OpenAI或Microsoft胜诉。",
+          "counterEvidence": "若法院裁定文本拒绝DOJ论点或版权机构文件公开反对，应下调为政府内部协调争议。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/19/justice-department-openai-new-york-times",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道DOJ提交AI版权案治理文件和机构反应：DOJ支持OpenAI/Microsoft版权立场令关键机构意外；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:02:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "AI版权",
+            "DOJ",
+            "纽约时报诉OpenAI",
+            "合理使用"
+          ],
+          "companies": [
+            "OpenAI",
+            "Microsoft",
+            "The New York Times"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：法律影响高，但需案卷和机构原文确认。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "取舍：法律影响高，但需案卷和机构原文确认。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/19/justice-department-openai-new-york-times",
+          "detailWhyRanked": "它补上AI版权诉讼中的政府介入维度。 来源层面，Axios AI / Technology支持最小报道事实；升级判断仍要看需要法院案卷、DOJ声明原文、版权机构回应和裁定文本，才能升级为确认的AI版权政策变化。"
+        },
+        {
+          "id": "axios-trusted-ai-cops-evaluators-2026-09-21",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：可信AI评估机构争夺监管角色",
+          "body": "AI安全评估者的独立性受到审视。",
+          "summary": "Axios报道，在联邦监管迟缓背景下，行业、白宫和第三方评估机构正争夺AI安全评估的可信角色，METR等机构的独立性也受到质疑。",
+          "whyItMatters": "如果AI监管依赖自律和第三方评估，谁有访问权、谁付费、谁公开结果会决定评估是否可信。",
+          "detailBody": "Axios AI / Technology报道/分析AI安全评估机构、白宫自律框架和第三方独立性争议。本站只保留最小来源事实，并把完整采访、引述、数据、图表和上下文留给原文。",
+          "trend": "AI安全治理正从原则讨论转向评估机构的授权、利益冲突和公开标准。",
+          "detailTrend": "这条信号说明，第三方评估不天然等于公共监督；评估访问、资助关系、样本公开、失败披露和政府采纳方式，才是判断评估可信度的核心证据。没有章程、合同和公开报告，评估容易停留在行业自律口号。",
+          "whyRanked": "它连接OpenAI披露框架和嵌入式评估的执行问题。",
+          "topReason": "媒体报道支持评估生态线索，需查章程、合同和报告。",
+          "impact": "安全、法务和采购团队应要求AI供应商说明第三方评估者、访问范围、结果披露和利益冲突安排。",
+          "whoShouldCare": "负责AI安全评估、模型采购、监管沟通和供应商审计的安全/法务团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供安全和采购团队检查评估机构独立性、红队访问、披露义务和合同审计条款。",
+          "nextCheck": "下一步查METR等机构章程、评估合同、公开报告、白宫框架和中美模型审查提案。",
+          "followUpQuestions": [
+            "第三方评估报告是否披露访问范围、样本、失败案例和资助关系？",
+            "白宫或国际会谈是否把自愿评估转化为可执行的报告或审计要求？"
+          ],
+          "evidenceThreshold": "需要评估章程、合同、公开报告、政府框架和审计结果，才能升级为确认的AI安全评估制度变化。",
+          "claimBoundary": "该报道不证明任何评估机构不独立，也不证明行业自律足以替代监管。",
+          "counterEvidence": "若评估报告、合同文件和资助披露显示方法不公开或利益隔离不足，应下调为行业自律不足；若公开完整方法和失败披露，应上调制度化信号。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/18/ai-safety-evaluators-metr-white-house-trump",
+          "sourceRole": "媒体背景",
+          "sourceType": "media_report",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道AI模型评估机构和独立性争议：可信AI评估机构争夺监管角色；完整事实、采访、引述、数据、图表、技术细节和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-21T17:01:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "AI评估",
+            "METR",
+            "自律监管",
+            "模型安全"
+          ],
+          "companies": [
+            "METR",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "取舍：治理执行价值高，但需章程和报告确认。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "取舍：治理执行价值高，但需章程和报告确认。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/18/ai-safety-evaluators-metr-white-house-trump",
+          "detailWhyRanked": "它连接OpenAI披露框架和嵌入式评估的执行问题。 来源层面，Axios AI / Technology支持最小报道事实；升级判断仍要看需要评估章程、合同、公开报告、政府框架和审计结果，才能升级为确认的AI安全评估制度变化。"
+        },
+        {
+          "id": "aws-huggingface-sagemaker-coding-agents-2026-09-21",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：用编码Agent部署Hugging Face模型到SageMaker",
+          "body": "模型部署开始被拆成可复用Agent技能。",
+          "summary": "AWS Machine Learning Blog发布技术说明，介绍用六个开源Agent技能把Hugging Face模型部署到SageMaker实时端点，并配置容器、自动扩缩和CloudWatch告警。",
+          "whyItMatters": "这说明AI部署自动化正在从生成代码进入基础设施决策、区域镜像、实例选择、告警和清理路径。",
+          "detailBody": "AWS Machine Learning Blog发布技术说明，介绍用编码Agent部署Hugging Face模型到SageMaker AI的技术路径。本站把它作为厂商技术路径信号，而不是独立效果证明。",
+          "trend": "AI工程自动化正在把模型上线步骤封装为可审计、可重复的Agent技能。",
+          "detailTrend": "这条信号说明，编码Agent价值不只在写应用代码，也在把易错的MLOps决策固化为技能、检查表和可回滚的基础设施流程；真正的生产价值要看日志、成本和故障复盘。",
+          "whyRanked": "它给政策密集批次补上可执行的工程自动化信号。",
+          "topReason": "AWS证明技术说明发布，效果需客户部署指标验证。",
+          "impact": "平台团队可用它检查自家模型部署流程是否有区域镜像、成本、告警、回滚和端点清理标准。",
+          "whoShouldCare": "负责MLOps、平台工程、模型部署和云成本治理的工程团队需要负责核对、评估或治理该信号。",
+          "readerUse": "供MLOps和平台团队评估编码Agent是否能安全承担模型部署、告警、扩缩和清理流程。",
+          "nextCheck": "下一步查GitHub技能代码、SageMaker部署日志、CloudWatch告警效果、成本记录和客户侧故障率。",
+          "followUpQuestions": [
+            "开源Agent技能仓库是否提供测试、权限边界、回滚路径和版本记录？",
+            "客户部署日志是否显示端点创建、自动扩缩、告警和清理流程稳定可复现？"
+          ],
+          "evidenceThreshold": "需要开源代码审计、部署日志、成本记录、CloudWatch告警数据和客户复盘，才能升级为独立验证的Agent式MLOps能力。",
+          "claimBoundary": "AWS页面只证明厂商发布了技术路径，不证明编码Agent在所有模型和区域都能可靠部署。",
+          "counterEvidence": "若GitHub代码审计、部署日志或CloudWatch告警数据显示权限过宽、部署失败率高或清理不完整，应下调为技术演示而非生产模式。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "AWS Machine Learning Blog厂商主张说明用编码Agent部署Hugging Face模型代码到SageMaker；这是厂商主张和技术说明，效果、成本和可靠性仍需客户侧指标、审计或第三方复测。",
+          "publishedAt": "2026-09-21T17:00:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "MLOps",
+            "Hugging Face",
+            "SageMaker",
+            "编码Agent"
+          ],
+          "companies": [
+            "AWS",
+            "Hugging Face"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "取舍：工程实用性强，但生产效果需日志和客户复盘。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 19,
+            "note": "取舍：工程实用性强，但生产效果需日志和客户复盘。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents/",
+          "detailWhyRanked": "它给政策密集批次补上可执行的工程自动化信号。 来源层面，AWS Machine Learning Blog证明厂商发布了这一路径；升级判断仍要看需要开源代码审计、部署日志、成本记录、CloudWatch告警数据和客户复盘，才能升级为独立验证的Agent式MLOps能力。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-20",
       "date": "2026-09-20",
