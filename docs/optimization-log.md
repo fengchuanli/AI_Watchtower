@@ -1,3 +1,33 @@
+## 2026-09-20 23:08 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-20`，所以未回退版次，而是在同日 17:00 版基础上补充 4 条安全非重复信号，当前合计 14 条，新增 Axios 个人 AI Agent 入口竞争、Google Agent 式基础设施代码安全流水线、Google Research 教育 GenUI 互动学习实验和 Retrieve-for-Train AI 搜索研究。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、Axios AI / Technology、Google Cloud Blog 和 Google Research Blog。
+  - 新增 4 条安全非重复信号；Axios 作为 `媒体背景` / `reported` / `originalDependency: must-read`，Google Cloud 作为 `厂商主张`，Google Research 两条作为 `研究原文`，均保留原始 URL、来源边界和下一步独立核查路径。
+  - archive-source-concentration: mixed-source-boundary; 本期累计可靠媒体 8/14、官方/厂商/研究来源 6/14，最大单一来源为 Google Research Blog 3/14，读者应等待案卷、官方产品文件、隐私政策、客户指标、GitHub 代码、论文、试点数据和第三方复测再升级结论。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 889。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月20日17:00 版扩展为 14 条情报；读者可在首页和详情页看到个人 AI Agent 入口、Agent 式代码安全、教育 GenUI、AI 搜索推理成本、政策法律边界、评测、防御和资本热度补充。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: this commit (`【新闻更新】补充23点AI新闻：14条Agent入口与安全研究信号`).
+- Push: pending.
+
 ## 2026-09-20 11:02 JST
 
 - Focus: 完成当前 30 天计划 Day 9，补充详情页开头句选择规则：在 `summary`、`detailBody` 和 `detailTrend` 之间只选择一个最强开头，避免同一公司、产品、诉讼、基准、模型、融资或政策主张在详情页前三段重复出现。
