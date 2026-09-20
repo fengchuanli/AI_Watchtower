@@ -27,8 +27,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: this commit (`【VisionHub网站风格优化】补充详情页开头句规则`).
-- Push: pending.
+- Commit: `d229ecd` (`【VisionHub网站风格优化】补充详情页开头句规则`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` to `origin/main`.
 
 ## 2026-09-20 08:15 JST
 
