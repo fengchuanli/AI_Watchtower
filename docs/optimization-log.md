@@ -25,7 +25,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: pending.
+- Commit: `2155c27` (`【新闻更新】发布17点AI新闻：10条标准入口与算力成本信号`).
 
 ## 2026-09-21 23:09 JST
 
