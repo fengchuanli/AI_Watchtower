@@ -1,3 +1,39 @@
+## 2026-09-21 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 10，审核 `whoShouldCare`、`readerUse` 和 `impact` 的重叠问题；选择当前首页首条 Guardian AI 数据中心债务条目，把详情页读者路径改成“为什么重要 -> 谁先看 -> 怎么用”的清楚分工。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只重写当前与最新归档中同一媒体背景条目的 `impact`、`whoShouldCare` 和 `readerUse`，并重新生成派生数据。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏结构。
+  - TOP3 reader use: pass - 当前首条 TOP3 的读者用途从重复“财务/采购/平台团队”改为具体核对表。
+  - Source boundary visible: pass - `detailBody`、`claimBoundary`、`provenance`、`nextCheck` 和 `evidenceThreshold` 未被削弱，仍说明这是媒体经济分析，完整事实需读原文。
+  - Original source dependency: pass - 媒体来源仍为 `originalDependency: must-read`。
+  - Mobile burden: pass - 详情页三个相邻字段不再反复命名同一团队，手机读者可更快看到行动路径。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: Guardian「AI数据中心债务和算力承诺」详情页的影响、适读对象和读者用法更清楚；首页 TOP3、全部新闻和归档中的同一条目也同步使用新的行动清单。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: this commit (`【VisionHub网站风格优化】拆分详情页读者行动路径`).
+- Push: pending.
+
 ## 2026-09-21 17:00 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-21`，发布 10 条安全非重复信号，聚焦 AI 数据中心债务/算力承诺、白宫 AI 政策利益边界、中国回应美国减速警告、David Sacks 有限监管路线、AI 数学归属、塔州司法 AI 假引用、能源 OT 安全、DOJ 版权案立场、AI 评估机构和 AWS Agent 式 MLOps。
