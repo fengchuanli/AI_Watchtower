@@ -25,7 +25,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `b8ebfc2` (`【新闻更新】补充23点AI新闻：15条治理与Agent训练信号`).
+- Commit: `79f8960` (`【新闻更新】补充23点AI新闻：15条治理与Agent训练信号`).
 
 ## 2026-09-21 11:02 JST
 
