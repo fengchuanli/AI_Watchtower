@@ -31,8 +31,8 @@
   - Ran `node scripts/validate-pages.mjs`.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: this commit (`【VisionHub网站风格优化】拆分详情页读者行动路径`).
-- Push: pending.
+- Commit: `14a9a44` (`【VisionHub网站风格优化】拆分详情页读者行动路径`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` to `origin/main`.
 
 ## 2026-09-21 17:00 JST
 

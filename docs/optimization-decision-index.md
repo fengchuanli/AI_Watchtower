@@ -27,7 +27,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 7 | Complete | `0030d96` | The TechCrunch-backed Agent-supervision detail page now keeps `detailBody` to a minimal reported signal and sends interviews, case detail, investigation background, and context back to the original article; current, latest archive, and derived today data are aligned. |
 | Day 8 | Complete | `15386aa` | The Anthropic/Accenture official detail page now links trend meaning, ordinary reader impact, and safety/legal/procurement use into one clearer article path while keeping the official-source boundary and next-check artifacts visible. |
 | Day 9 | Complete | `d229ecd` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now require editors to choose one strongest opening sentence across `summary`, `detailBody`, and `detailTrend`, so detail pages do not repeat the same claim three times before reaching interpretation and proof boundaries. |
-| Day 10 | Complete | this commit | The Guardian data-center debt detail item now separates `impact`, `whoShouldCare`, and `readerUse`: impact explains the capital-structure risk, audience names budget/contract owners, and reader use becomes a concrete checklist instead of repeating the same finance/platform group. |
+| Day 10 | Complete | `14a9a44` | The Guardian data-center debt detail item now separates `impact`, `whoShouldCare`, and `readerUse`: impact explains the capital-structure risk, audience names budget/contract owners, and reader use becomes a concrete checklist instead of repeating the same finance/platform group. |
 
 ## Historical Guard Anchors
 
