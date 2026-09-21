@@ -1,3 +1,32 @@
+## 2026-09-21 23:09 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-21`，所以未回退版次，而是在同日 17:00 版基础上补充 5 条安全非重复信号，当前合计 15 条，新增美中 AI 事故通报机制、AI 产业链金融闭环风险、AI Force / AI Czar 政策构想、Google Research EnvHarness Agent 训练环境和世界模型商业化不透明。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、AP、Axios AI / Technology、The Verge AI、EnvHarness / Google Research、TechCrunch AI 和候选来源页面。
+  - 新增 5 条安全非重复信号；AP、Axios、The Verge、TechCrunch 均作为 `媒体背景` / `reported` / `originalDependency: must-read`，EnvHarness 作为 `研究原文`，均保留原始 URL、来源边界和下一步独立核查路径。
+  - archive-source-concentration: reliable-media-radar; 本期累计可靠媒体 13/15、官方/研究来源 2/15，最大单一来源为 The Guardian Technology 6/15，读者应等待官方文件、案卷、财报、合同、审计、代码复现、原始报告和客户指标再升级结论。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 904。
+- 网站可见变化: 首页 TOP3 仍保持当前责任边界主线，更多新闻 feed、全部新闻列表、归档页和详情页新增 5 条补充情报；读者可在首页和详情页看到美中 AI 事故通报、AI 金融闭环、AI Force、EnvHarness 和世界模型商业化证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 15 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `b8ebfc2` (`【新闻更新】补充23点AI新闻：15条治理与Agent训练信号`).
+
 ## 2026-09-21 11:02 JST
 
 - Focus: 完成当前 30 天计划 Day 10，审核 `whoShouldCare`、`readerUse` 和 `impact` 的重叠问题；选择当前首页首条 Guardian AI 数据中心债务条目，把详情页读者路径改成“为什么重要 -> 谁先看 -> 怎么用”的清楚分工。
