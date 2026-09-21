@@ -1,3 +1,32 @@
+## 2026-09-22 08:11 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-22`，发布 10 条安全非重复信号，聚焦 OpenAI 前沿AI国际标准、数学咨询小组、Academy角色化学习路径、代表性语言数据集、Googlebook AI硬件入口、Meta Muse购物Agent平台冲突、AI数据中心通胀叙事、NScale IPO、Jev审批模型提示注入风险和Climate Week数据中心能源不确定性。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、OpenAI News、Google Keyword AI、AP、Axios AI / Technology 和 VentureBeat AI。
+  - 新增 10 条安全非重复信号；官方来源 4/10，可靠媒体 6/10。OpenAI 与 Google 项作为 `官方核对` / `confirmed`，AP、Axios、VentureBeat 项作为 `媒体背景` / `reported` / `originalDependency: must-read`，均保留原始 URL、来源边界和下一步独立核查路径。
+  - archive-source-concentration: mixed-source-boundary; 最大单一来源为 Axios AI / Technology 3/10，未超过集中阈值，但资金、Agent商业和宏观项仍按媒体雷达处理，读者应等待政府/标准机构文本、论文复核、基金会公告、平台政策、招股书、电网数据、代码补丁、审计和客户指标再升级结论。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 914。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月22日17:00 版 10 条情报；读者可在首页和详情页看到AI标准、科研披露、组织学习、低资源语言数据、Googlebook、Agent购物授权、算力通胀、NScale IPO、Agent审批安全和能源政策更新。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending.
+
 ## 2026-09-21 23:09 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-21`，所以未回退版次，而是在同日 17:00 版基础上补充 5 条安全非重复信号，当前合计 15 条，新增美中 AI 事故通报机制、AI 产业链金融闭环风险、AI Force / AI Czar 政策构想、Google Research EnvHarness Agent 训练环境和世界模型商业化不透明。
