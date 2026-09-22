@@ -1,3 +1,36 @@
+## 2026-09-22 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 11，补充详情页结尾规则，让 `nextCheck`、后续核对问题和来源链接收束成清楚的核验路径，而不是在页面底部重复趋势判断或媒体原文提醒。
+- Changed files:
+  - `docs/detail-page-review-guide.md`
+  - `docs/news-data-format.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/detail-page-review-guide.md`、`docs/news-data-format.md`、`news-detail.js`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只更新详情页写作规则和静态校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - 规则要求页面结尾从边界、确认门槛、降级信号移动到下一步核对和来源链接。
+  - Original source dependency: pass - 媒体来源仍要求完整事实回到原文，未削弱 `must-read` 边界。
+  - Mobile burden: pass - 手机读者可在页面结尾看到一个优先核对动作和来源入口，而不是重复读趋势段落。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 无，属于规则/校验/计划更新；后续详情页结尾会更清楚地收束到下一步核对和来源链接。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `56b56d6` (`【VisionHub网站风格优化】补充详情页结尾核验规则`).
+- Push: Pending.
+
 ## 2026-09-22 08:11 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-22`，发布 10 条安全非重复信号，聚焦 OpenAI 前沿AI国际标准、数学咨询小组、Academy角色化学习路径、代表性语言数据集、Googlebook AI硬件入口、Meta Muse购物Agent平台冲突、AI数据中心通胀叙事、NScale IPO、Jev审批模型提示注入风险和Climate Week数据中心能源不确定性。
