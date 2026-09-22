@@ -25,7 +25,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit note: 准备提交 `【新闻更新】发布17点AI新闻：10条外交治理与Agent安全信号`。
+- Commit: `ad9063e` (`【新闻更新】发布17点AI新闻：10条外交治理与Agent安全信号`).
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` through `ad9063e` to `origin/main`.
 
 ## 2026-09-22 23:08 JST
 
