@@ -1,3 +1,32 @@
+## 2026-09-23 08:13 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-23`，发布 10 条安全非重复信号，聚焦美中AI外交和事故通报、联合国AI叙事、英国AI定位、RSI安全概念、Microsoft全球AI扩散、Grok 4.6进入Bedrock、Benchling多租户Agent安全和EXL医疗IDP。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、AP、Axios AI / Technology、Microsoft On the Issues 和 AWS Machine Learning Blog 候选。
+  - 新增 10 条安全非重复信号；可靠媒体 6/10，官方/厂商来源 4/10。AP 与 Axios 项作为 `媒体背景` / `reported` / `originalDependency: must-read`；Microsoft 与 AWS 项作为官方/厂商来源并要求方法数据、模型卡、价格页、客户指标、审计或第三方测试再升级结论。
+  - archive-source-concentration: mixed-source-boundary; AP为最大单一来源4/10，未达到三分之二集中阈值，但政策项仍按媒体雷达处理。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 929。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月23日17:00 版 10 条情报；读者可在首页和详情页看到AI外交、事故通报、RSI、全球AI扩散、Bedrock模型目录、Agent安全和医疗IDP的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-data.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: 准备提交 `【新闻更新】发布17点AI新闻：10条外交治理与Agent安全信号`。
+
 ## 2026-09-22 23:08 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已经是 `news-1700-2026-09-22`，所以未回退版次，而是在同日 17:00 版基础上补充 5 条安全非重复信号，当前合计 15 条，新增 Alibaba AI芯片与模型计划、AI安全与速度悖论、Palo Alto 多模型AI防御服务、Xiaomi MiMo开放权重模型和 DeepSeek 联合国安理会AI风险简报信号。
