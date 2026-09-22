@@ -1074,11 +1074,16 @@ if (
   ) ||
   !/Follow-Up Question Specificity/.test(detailPageReviewGuide) ||
   !/Source-Fact Label Test/.test(detailPageReviewGuide) ||
+  !/Article Ending Rule/.test(detailPageReviewGuide) ||
   !/Question 1 asks whether the source-of-record artifact has appeared/.test(detailPageReviewGuide) ||
   !/Question 2 asks whether that artifact changes the editorial status/.test(detailPageReviewGuide) ||
   !/是否已有独立来源确认\[公司\]的核心事实/.test(detailPageReviewGuide) ||
   !/provenance` names the supported source fact/.test(detailPageReviewGuide) ||
   !/source owner \+ supported source fact \+ boundary/.test(newsDataFormat) ||
+  !/final verification path should move from `claimBoundary` \/ `evidenceThreshold` \/ `counterEvidence` to one concrete `nextCheck`/.test(
+    newsDataFormat,
+  ) ||
+  !/先做这一件/.test(detailPageReviewGuide) ||
   !/function validateDetailSourceFactLabel\(item, context\)/.test(validateDataJs) ||
   !/exact source fact the detail-page reference supports/.test(validateDataJs) ||
   !/source artifact, observable result, or status change/.test(newsDataFormat) ||

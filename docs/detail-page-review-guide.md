@@ -111,6 +111,17 @@ Use this shape:
 
 Avoid bare labels such as `VentureBeat AI 只支持最小报道事实`, `官方来源`, `source link`, or `original article` when the reader cannot tell which fact the source supports. If one item has multiple support paths, name the source-of-record fact first and put upgrade or downgrade proof in `evidenceThreshold`, `counterEvidence`, or `followUpQuestions`.
 
+## Article Ending Rule
+
+The final third of a detail page should close the reader's verification path, not reopen the whole story. After the interpretation and trend sections, keep this sequence:
+
+1. `claimBoundary`, `evidenceThreshold`, and `counterEvidence` explain what the page still cannot prove and which evidence would change the status.
+2. `nextCheck` gives the first concrete thing to check next.
+3. `followUpQuestions` add at most two sharper editorial questions, each naming the source artifact, observable result, or status change to look for.
+4. The source link list names the original source, source role, date, and AI Watchtower archive context so readers can verify the claim without treating the link block as another article section.
+
+Do not end by repeating `detailTrend`, `impact`, or the same media-original caveat in longer form. If the ending needs a reminder, use one short sentence that tells readers which complete facts still belong in the original source. A good ending should let a phone reader stop after "先做这一件" plus the source link list and still know exactly where to verify the item.
+
 ## Counter-Evidence Downgrade Test
 
 When reviewing `counterEvidence`, first ask whether later evidence would refute the central reading or only make it smaller.
