@@ -2,15 +2,15 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-09-23",
-  "totalItems": 929,
+  "totalItems": 939,
   "editions": [
     {
       "id": "news-1700-2026-09-23",
       "date": "2026-09-23",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "17:00 JST 发布",
+      "archiveLabel": "17:00 JST 发布，23:00补充",
       "archiveStatus": "published",
-      "itemCount": 10,
+      "itemCount": 20,
       "items": [
         {
           "id": "ap-trump-un-super-intelligence-ai-rename-2026-09-23",
@@ -93,6 +93,86 @@
           "sourceCaveat": "AP报道支持AI进入美中会晤背景，不证明双方已经达成AI协议或监管安排。"
         },
         {
+          "id": "huggingface-transformers-gguf-llama-cpp-quants-2026-09-23",
+          "title": "Hugging Face：Transformers开始直接运行llama.cpp量化模型",
+          "category": "tool",
+          "label": "工具",
+          "time": "11:30",
+          "publishedAt": "2026-09-22T11:30:00+09:00",
+          "body": "Hugging Face发布Transformers运行GGUF量化模型的能力，先聚焦Apple Silicon本地推理。",
+          "impact": "开发者和平台团队可评估用Transformers加载GGUF做质量评测、原型实验和本地OpenAI兼容服务。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "Hugging Face博客支持工具能力和当前限制，不证明所有GGUF模型都能高效运行。"
+        },
+        {
+          "id": "mistral-vibe-work-unified-experience-2026-09-23",
+          "title": "Mistral：Vibe Work把聊天、任务、表格和小应用合并进同一工作面",
+          "category": "product",
+          "label": "产品",
+          "time": "11:00",
+          "publishedAt": "2026-09-22T11:00:00+09:00",
+          "body": "Mistral文档发布Vibe Work更新，把Chat与Work合并，并新增表格、小应用和知识库能力。",
+          "impact": "产品和IT团队应比较不同AI工作台在知识库透明度、文件处理、表格准确性和小应用分享边界上的差异。",
+          "source": "Mistral Docs",
+          "sourceId": "mistral-news",
+          "sourceUrl": "https://docs.mistral.ai/resources/release-notes",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "Mistral release notes支持功能发布事实，不证明这些功能已达到业务关键流程质量。"
+        },
+        {
+          "id": "aws-agentcore-harness-lifecycle-hooks-2026-09-23",
+          "title": "AWS：AgentCore Harness加入生命周期钩子和自定义OpenAI兼容端点",
+          "category": "tool",
+          "label": "工具",
+          "time": "10:30",
+          "publishedAt": "2026-09-22T10:30:00+09:00",
+          "body": "AWS文档更新显示AgentCore Harness支持生命周期钩子和自定义OpenAI兼容端点。",
+          "impact": "平台和安全团队可评估在工具调用前设置deny规则、在调用后发审计事件，并通过兼容端点接入内部模型网关。",
+          "source": "AWS Documentation",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "AWS文档支持功能发布说明，不证明所有生产Agent已默认采用这些控制点。"
+        },
+        {
+          "id": "aws-tata-elxsi-iris-industrial-safety-2026-09-23",
+          "title": "AWS：Tata Elxsi把工业安全检测推向边缘视觉流水线",
+          "category": "product",
+          "label": "产品",
+          "time": "10:20",
+          "publishedAt": "2026-09-22T10:20:00+09:00",
+          "body": "AWS发布Tata Elxsi IRIS工业安全平台案例，强调边缘过滤和实时告警。",
+          "impact": "制造、园区安全和合规团队应把边缘过滤、模型注册、告警SLA和隐私留存写进视觉AI方案要求。",
+          "source": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-tata-elxsi-detects-industrial-safety-risks-in-seconds-on-aws/",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "AWS案例支持IRIS架构和厂商报告指标，不独立证明所有工厂场景能复现结果。 厂商叙事不证明客户ROI、生产稳定性、安全效果或可复制收益。"
+        },
+        {
+          "id": "aws-trane-agentcore-building-insights-2026-09-23",
+          "title": "AWS：Trane用AgentCore把楼宇诊断压缩到对话式洞察",
+          "category": "product",
+          "label": "产品",
+          "time": "10:10",
+          "publishedAt": "2026-09-22T10:10:00+09:00",
+          "body": "AWS发布Trane Technologies用Amazon Bedrock AgentCore做楼宇洞察的案例。",
+          "impact": "设施运营和工业软件团队应复核Agent如何访问实时数据、知识库和工单系统，并记录每次建议来源。",
+          "source": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-trane-gets-building-insights-60x-faster-with-amazon-bedrock-agentcore/",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "AWS案例支持架构和厂商报告结果，不独立证明所有设施运维场景都有60x收益。 厂商叙事不证明客户ROI、生产稳定性、安全效果或可复制收益。"
+        },
+        {
           "id": "ap-us-china-agreements-ai-notification-2026-09-23",
           "title": "AP：美中既有协议履约不均，AI通报机制进入议程",
           "category": "policy",
@@ -109,6 +189,86 @@
           "sourceCaveat": "AP报道支持AI通报议题和履约背景，不证明机制可执行或双方信任基础已经改善。"
         },
         {
+          "id": "aws-reactiv-agentcore-mobile-commerce-2026-09-23",
+          "title": "AWS：Reactiv把移动电商更新交给多Agent调度器",
+          "category": "tool",
+          "label": "工具",
+          "time": "10:00",
+          "publishedAt": "2026-09-22T10:00:00+09:00",
+          "body": "AWS发布Reactiv在Amazon Bedrock AgentCore上构建AI Scheduler的客户案例。",
+          "impact": "SaaS、移动电商和平台团队应检查Agent修改生产配置时的授权、日志、回滚和商户隔离。",
+          "source": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-reactiv-automates-mobile-commerce-80-faster-with-amazon-bedrock-agentcore/",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "AWS案例支持Reactiv方案和厂商报告指标，不独立证明所有商户都会获得相同效率提升。 厂商叙事不证明客户ROI、生产稳定性、安全效果或可复制收益。"
+        },
+        {
+          "id": "anthropic-claude-opus-55-cost-safety-2026-09-23",
+          "title": "Anthropic：Claude Opus 5.5把高端模型竞争转向安全与效率",
+          "category": "model",
+          "label": "模型",
+          "time": "09:30",
+          "publishedAt": "2026-09-22T09:30:00+09:00",
+          "body": "Anthropic发布Claude Opus 5.5，强调更低运行成本、外部评估和安全防护。",
+          "impact": "采用Claude的工程和合规团队应复核模型迁移收益、验证计划、受限领域访问和安全边界。",
+          "source": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "Anthropic公告支持发布、价格和评估安排，不证明所有榜单优势可泛化到读者任务。"
+        },
+        {
+          "id": "openai-third-party-assessment-principles-2026-09-23",
+          "title": "OpenAI：第三方评估原则把安全声明推向独立证据",
+          "category": "policy",
+          "label": "政策",
+          "time": "09:20",
+          "publishedAt": "2026-09-22T09:20:00+09:00",
+          "body": "OpenAI发布第三方AI安全评估的优先领域和原则。",
+          "impact": "法务、采购和安全团队可把第三方评估原则转化为供应商问卷和模型上线门槛。",
+          "source": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/priorities-principles-third-party-assessments/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "OpenAI文件支持其原则和优先级，不证明所有未来模型已通过独立评估。"
+        },
+        {
+          "id": "openai-gpt-6-prompt-caching-agent-economics-2026-09-23",
+          "title": "OpenAI：GPT-6提示缓存把长期Agent成本变成可观测指标",
+          "category": "tool",
+          "label": "工具",
+          "time": "09:10",
+          "publishedAt": "2026-09-22T09:10:00+09:00",
+          "body": "OpenAI发布GPT-6提示缓存改进、缓存仪表盘和诊断工具。",
+          "impact": "Agent应用、开发者平台和成本治理团队应把缓存命中率、miss原因和工具schema变更纳入发布检查。",
+          "source": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/better-prompt-caching-for-gpt-6/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "OpenAI公告证明缓存能力和工具存在，不证明每个Agent都会达到公开案例中的节省幅度。"
+        },
+        {
+          "id": "openai-gpt-6-sol-luna-cost-curve-2026-09-23",
+          "title": "OpenAI：GPT-6 Sol与Luna把前沿模型拉到成本曲线竞争",
+          "category": "model",
+          "label": "模型",
+          "time": "09:00",
+          "publishedAt": "2026-09-22T09:00:00+09:00",
+          "body": "OpenAI发布GPT-6 Sol和Luna，并把API价格相对GPT-5.6促销价下调50%。",
+          "impact": "开发者平台、AI应用和企业采购团队应复核模型路由、预算阈值、评测集和失败兜底策略。",
+          "source": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "OpenAI公告支持模型发布、价格和可用性事实，不独立证明其榜单优势适用于所有企业任务。"
+        },
+        {
           "id": "microsoft-global-ai-diffusion-q2-2026-2026-09-23",
           "title": "Microsoft：二季度全球生成式AI使用率升至18.8%",
           "category": "research",
@@ -122,7 +282,7 @@
           "sourceUrl": "https://blogs.microsoft.com/on-the-issues/2026/09/21/the-continued-state-of-global-ai-diffusion-in-2026/",
           "sourceRole": "厂商主张",
           "trustLevel": "official",
-          "sourceCaveat": "Microsoft官方报告支持其遥测和调整口径下的扩散指标，不证明所有AI工具或所有国家的真实使用率。"
+          "sourceCaveat": "Microsoft官方报告支持其遥测和调整口径下的扩散指标，不证明所有AI工具或所有国家的真实使用率。 厂商叙事不证明客户ROI、生产稳定性、安全效果或可复制收益。"
         },
         {
           "id": "aws-grok-46-bedrock-model-catalog-2026-09-23",
@@ -138,7 +298,7 @@
           "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/xais-grok-4-6-is-now-available-in-amazon-bedrock/",
           "sourceRole": "厂商主张",
           "trustLevel": "official",
-          "sourceCaveat": "AWS官方页面确认Bedrock可用性和接口包装，不证明Grok 4.6能力、成本或稳定性优于其他模型。"
+          "sourceCaveat": "AWS官方页面确认Bedrock可用性和接口包装，不证明Grok 4.6能力、成本或稳定性优于其他模型。 厂商叙事不证明客户ROI、生产稳定性、安全效果或可复制收益。"
         },
         {
           "id": "aws-benchling-agentcore-multitenant-security-2026-09-23",
@@ -154,7 +314,7 @@
           "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/",
           "sourceRole": "厂商主张",
           "trustLevel": "official",
-          "sourceCaveat": "AWS案例支持Benchling采用该架构的厂商叙述，不证明所有多租户Agent都能达到同等安全水平。"
+          "sourceCaveat": "AWS案例支持Benchling采用该架构的厂商叙述，不证明所有多租户Agent都能达到同等安全水平。 厂商叙事不证明客户ROI、生产稳定性、安全效果或可复制收益。"
         },
         {
           "id": "aws-exl-medical-idp-claims-review-2026-09-23",
@@ -170,7 +330,7 @@
           "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/reducing-medical-claims-review-time-with-ai-on-aws-the-exl-medical-idp-solution/",
           "sourceRole": "厂商主张",
           "trustLevel": "official",
-          "sourceCaveat": "AWS案例支持EXL方案和架构描述，不证明所有医疗支付方都能取得同等效率或准确率。"
+          "sourceCaveat": "AWS案例支持EXL方案和架构描述，不证明所有医疗支付方都能取得同等效率或准确率。 厂商叙事不证明客户ROI、生产稳定性、安全效果或可复制收益。"
         }
       ]
     },

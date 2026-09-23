@@ -1,3 +1,32 @@
+## 2026-09-23 23:18 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已是 `news-1700-2026-09-23`，本次不回退版次，在同日 17:00 版基础上补充 10 条安全非重复官方/文档信号，使当前版增至 20 条，聚焦 GPT-6 Sol/Luna、GPT-6 提示缓存、第三方评估原则、Claude Opus 5.5、AgentCore 行业案例、AgentCore Harness、Mistral Vibe Work 和 Transformers GGUF。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、OpenAI News、Anthropic Newsroom、AWS Machine Learning Blog、AWS AgentCore docs、Mistral Docs 和 Hugging Face Blog 候选。
+  - 新增 10 条安全非重复信号；补充项全部来自官方或文档入口。官方/厂商来源增至 14/20、可靠媒体 6/20，因此新增 `overreadBoundary`，提醒读者不要把本期读成全市场结论。
+  - OpenAI、Anthropic、AWS Docs、Mistral Docs、Hugging Face 项作为 `官方核对`；AWS Reactiv、Trane、Tata Elxsi 案例作为 `厂商主张`，明确厂商叙事不证明客户 ROI、生产稳定性、安全效果或可复制收益。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - 最新 `data/news-history.json` 归档镜像同步当前首页版次，`data/news-index.json` 和 `data/news-today.json` 已重新生成，total history items 更新为 939。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月23日补充后的 20 条情报；读者可在首页和详情页看到模型成本、提示缓存、第三方评估、Claude Opus 5.5、AgentCore 控制面、Vibe Work 和 GGUF 本地推理的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 20 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】补充23点AI新闻：20条模型成本与Agent控制面信号`.
+
 ## 2026-09-23 11:01 JST
 
 - Focus: 完成当前 30 天计划 Day 12，执行一个小型详情页移动端可读性 QA；选择最小但读者可见的标签密度问题，把详情页六项页内目录在 620px 以下改成单行横向滑动，避免它在手机上换行成高块、插在「先看这四点」和正文之间。
