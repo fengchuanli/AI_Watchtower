@@ -1,3 +1,33 @@
+## 2026-09-24 08:11 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-24`，发布 10 条安全非重复信号，聚焦 Anthropic/Claude 生命科学实验、OpenAI 联合国安理会治理发言、乌克兰 Daybreak 网络防御、Grab 东南亚 AI 技能、Airbnb GPT-6 Astra 企业接入、NVIDIA SWE-Serve、GPU 集群就绪度、FLUX 3 Action、Ema 企业 Agent 融资和 Snorkel AI 训练数据融资。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、OpenAI News、NVIDIA Technical Blog、TechCrunch AI、VentureBeat AI 和 Anthropic 相关候选。
+  - 新增 10 条安全非重复信号；官方/厂商来源 6/10，可靠媒体 4/10。OpenAI 与 NVIDIA 项用于确认发布事实或厂商技术主张；TechCrunch/VentureBeat 项均按 `媒体背景` / `reported` / `originalDependency: must-read` 处理。
+  - 新增 OpenAI News 单一来源集中说明（4/10，未达三分之二阈值）和 overread boundary：不要把本期读成全市场结论，先查论文、实验数据、政府记录、客户日志、合同、审计和第三方复测。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+  - Archive diff: skipped-one-edition - 2026-09-24 目前只有一个同日归档版次。
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月24日17:00 版 10 条情报；读者可在首页和详情页看到生命科学AI、联合国治理、网络防御、企业模型接入、编码Agent评测、GPU集群验证、机器人模型、企业Agent融资和训练数据供应链的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条科学治理与生产验证信号`.
+
 ## 2026-09-23 23:18 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已是 `news-1700-2026-09-23`，本次不回退版次，在同日 17:00 版基础上补充 10 条安全非重复官方/文档信号，使当前版增至 20 条，聚焦 GPT-6 Sol/Luna、GPT-6 提示缓存、第三方评估原则、Claude Opus 5.5、AgentCore 行业案例、AgentCore Harness、Mistral Vibe Work 和 Transformers GGUF。
