@@ -29,7 +29,7 @@
   - Ran `git diff --check`.
   - Tried `python3 scripts/check_layout.py`; it could not run because Playwright is not installed in this workspace.
 - Commit: `d1ca805` (`【VisionHub网站风格优化】压缩详情页移动目录密度`).
-- Push: pending.
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` through `9e1e341` to `origin/main`.
 
 ## 2026-09-23 08:13 JST
 
