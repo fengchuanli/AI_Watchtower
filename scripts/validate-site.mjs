@@ -690,6 +690,12 @@ if (
   errors.push("News detail narrative sections must split long prose into readable chunks without truncating the fact article.");
 }
 if (
+  !/@media \(max-width: 620px\)\s*\{[\s\S]*?\.incident-jump-nav\s*\{[^}]*flex-wrap:\s*nowrap;[^}]*overflow-x:\s*auto;[^}]*scroll-snap-type:\s*x proximity;/s.test(styles) ||
+  !/\.incident-jump-nav a\s*\{[^}]*flex:\s*0 0 auto;[^}]*white-space:\s*nowrap;[^}]*scroll-snap-align:\s*start;/s.test(styles)
+) {
+  errors.push("News detail mobile jump navigation must stay horizontally scrollable so section labels do not add a tall pre-article block.");
+}
+if (
   !/class="feed-expand"/.test(appJs) ||
   !/feed-extra/.test(appJs) ||
   !/getItemSummary\(item\)/.test(appJs) ||

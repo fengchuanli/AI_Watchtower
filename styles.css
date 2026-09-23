@@ -2901,6 +2901,24 @@ h3 {
     gap: 8px;
   }
 
+  .incident-jump-nav {
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin-inline: -4px;
+    padding: 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scroll-snap-type: x proximity;
+  }
+
+  .incident-jump-nav a {
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 8px 10px;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+
   .compact-feed-card {
     padding: 16px;
   }
