@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 2, Detail-Page Article Quality
-- Last indexed run: 2026-09-22 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; sandboxed push also hit GitHub DNS, and the network-authorized retry pushed through `9afd1f1` to `origin/main`.
+- Last indexed run: 2026-09-23 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
 
@@ -29,6 +29,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 9 | Complete | `d229ecd` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now require editors to choose one strongest opening sentence across `summary`, `detailBody`, and `detailTrend`, so detail pages do not repeat the same claim three times before reaching interpretation and proof boundaries. |
 | Day 10 | Complete | `14a9a44` | The Guardian data-center debt detail item now separates `impact`, `whoShouldCare`, and `readerUse`: impact explains the capital-structure risk, audience names budget/contract owners, and reader use becomes a concrete checklist instead of repeating the same finance/platform group. |
 | Day 11 | Complete | `56b56d6` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now define the article ending rule: close with boundary, upgrade/downgrade proof, one concrete `nextCheck`, artifact-specific follow-up questions, and source/archive links instead of restating trend or long media caveats. |
+| Day 12 | Complete | `d1ca805` | Detail-page mobile jump navigation now stays in one horizontally scrollable row below 620px, so the six section labels do not create a tall pre-article block between the proof path and the article body. `scripts/validate-site.mjs` guards this mobile-density behavior. |
 
 ## Historical Guard Anchors
 
@@ -80,7 +81,7 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 12: run a small detail-page mobile QA pass and fix the smallest paragraph-density or label-density issue that affects article readability.
+- Continue with Day 13: review the candidate intake to news handoff and mark the shortest path an editor should follow during a normal 08:00 or 17:00 run.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 12.
 - If Day 12 is already complete, continue with the first useful unfinished task from the current plan.
 

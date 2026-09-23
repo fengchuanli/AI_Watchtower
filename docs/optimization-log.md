@@ -1,3 +1,36 @@
+## 2026-09-23 11:01 JST
+
+- Focus: 完成当前 30 天计划 Day 12，执行一个小型详情页移动端可读性 QA；选择最小但读者可见的标签密度问题，把详情页六项页内目录在 620px 以下改成单行横向滑动，避免它在手机上换行成高块、插在「先看这四点」和正文之间。
+- Changed files:
+  - `styles.css`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/detail-page-review-guide.md`、`news-detail.js`、`styles.css`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只调整详情页移动端目录密度，并增加静态校验防止回退。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - 详情页来源、边界、下一步核对和原文入口顺序未改变。
+  - Original source dependency: pass - 媒体来源 `must-read` 提醒与原文链接仍保留。
+  - Mobile burden: pass - 手机读者经过四点 proof path 后，页内目录不再换行堆成多行标签块，可直接横向滑动选择章节。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 详情页手机端「本页目录」变成横向滑动的一行，读者从「先看这四点」进入正文时少遇到一块标签密集的中断。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+  - Tried `python3 scripts/check_layout.py`; it could not run because Playwright is not installed in this workspace.
+- Commit: `d1ca805` (`【VisionHub网站风格优化】压缩详情页移动目录密度`).
+- Push: pending.
+
 ## 2026-09-23 08:13 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-23`，发布 10 条安全非重复信号，聚焦美中AI外交和事故通报、联合国AI叙事、英国AI定位、RSI安全概念、Microsoft全球AI扩散、Grok 4.6进入Bedrock、Benchling多租户Agent安全和EXL医疗IDP。
