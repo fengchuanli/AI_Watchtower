@@ -1,8 +1,942 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24",
-  "totalItems": 955,
+  "updatedAt": "2026-09-25",
+  "totalItems": 965,
   "editions": [
+    {
+      "id": "news-1700-2026-09-25",
+      "date": "2026-09-25",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期10条AI新闻情报，聚焦Agent事故问责、AI工厂交付风险、个人Agent硬件、端侧模型、内容推荐和企业Agent生产栈。",
+      "operationalStatus": "已拉取origin/main；完成历史URL去重；核对TechCrunch、Meta、YouTube、PrismML、NVIDIA、AWS和Google Cloud候选。",
+      "editorialInterpretation": "本期读成AI控制面升级：来源能确认发布事实、媒体报道或厂商主张，但责任、交付、ROI、安全和医疗价值仍需外部证据。",
+      "readerFrame": {
+        "headline": "本期读法：查Agent问责、AI工厂交付和入口权限",
+        "whyItMatters": "9月25日17:00版把OpenAI Agent公共系统调查、Oracle/Stargate数据中心风险、Meta Muse硬件、PrismML端侧VLM、YouTube AI推荐购物和企业Agent栈放进同一张核查表。",
+        "useThisIssueFor": [
+          "安全和合规团队核对Agent访问授权、日志、事故通知和政府调查路径。",
+          "基础设施和采购团队核对AI数据中心能源、许可、交付、成本和合同边界。",
+          "产品和平台团队核对AI硬件、推荐、购物、编码Agent、MCP和云栈的权限与指标。"
+        ],
+        "notProvenYet": [
+          "不证明OpenAI事件违法已经成立，也不证明Stargate项目确定延期。",
+          "不证明Muse硬件、YouTube AI推荐、PrismML端侧模型、NVIDIA医疗VLM或AWS/Google案例已经产生可复制ROI或安全效果。"
+        ],
+        "mobile": {
+          "headline": "查Agent问责与AI入口权限",
+          "summary": "看OpenAI调查、Stargate、Muse、YouTube推荐和企业Agent。",
+          "primaryUses": [
+            "安全团队查日志",
+            "基础设施团队查许可",
+            "产品团队查权限"
+          ],
+          "proofBoundary": "仍需政府文件、项目合同、权限文档、实机评测、客户指标和第三方复测"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月24日补充版推进到问责、交付和入口控制",
+        "freshFacts": [
+          "新增澳大利亚政府调查OpenAI模型进入健康数据网站的法律后果报道。",
+          "新增Oracle对新墨西哥Stargate数据中心项目发出不可抗力通知的基础设施风险报道。",
+          "新增Meta、YouTube、PrismML、NVIDIA、AWS和Google Cloud官方/技术信号。"
+        ],
+        "repeatedContext": [
+          "延续9月24日的Agent越权和AI硬件背景，但不重复昨日Axios和Meta Muse Charm媒体URL。",
+          "延续既有边界：官方/厂商来源确认发布或主张，媒体背景仍需源文件、日志、合同、客户指标或第三方材料升级。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对Agent事故和政府问责",
+          "count": 1,
+          "meaning": "用来检查公共系统授权、通知时滞、法律责任和事故复盘。"
+        },
+        {
+          "label": "核对AI工厂和端侧硬件",
+          "count": 3,
+          "meaning": "用来检查数据中心能源许可、个人Agent硬件和眼镜端侧模型是否有真实交付证据。"
+        },
+        {
+          "label": "核对内容推荐与企业Agent栈",
+          "count": 6,
+          "meaning": "用来检查YouTube AI推荐、医疗VLM、MCP、编码Agent和云AI栈的权限、指标和客户证据。"
+        }
+      ],
+      "overreadBoundary": {
+        "label": "官方/厂商来源占多数",
+        "body": "不要把本期读成全市场结论：8/10来自官方或厂商技术来源，能确认发布事实和作者主张，但不能单独证明效果、ROI、安全、医疗价值或可复制采用。",
+        "doNotConclude": "不能得出Agent事故责任、Stargate延期、AI硬件成功、YouTube推荐改善、医疗VLM临床可用或企业Agent ROI已经被独立验证。",
+        "useInstead": "先把本期作为核查清单，用来查政府文件、项目合同、权限文档、实机评测、客户指标、审计和第三方复测。"
+      },
+      "sourceRisk": {
+        "label": "官方技术主张与可靠媒体背景混合",
+        "note": "官方/厂商来源8/10，官方来源家族占比集中；它能确认公告、模型和厂商主张，但事故责任、交付风险、效果和采用仍需外部材料。",
+        "nextCheck": "下一步用政府调查文件、Oracle/Blue Owl合同材料、权限文档、客户侧指标、模型卡和第三方评测复核。"
+      },
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "Agent问责",
+          "note": "跨期看，Agent风险正从沙盒评估、越界报道反复推进到公共系统和政府问责。",
+          "boundary": "不证明违法或数据外泄已成立；仍需政府文件、OpenAI复盘和站点日志。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "交付约束",
+          "note": "跨期看，AI基础设施信号正从GPU和集群验证反复扩展到能源、许可、合同和地方阻力。",
+          "boundary": "不证明项目延期；仍需合同、许可和工期文件。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "入口控制",
+          "note": "跨期看，AI入口竞争反复从聊天框扩展到硬件、推荐页、音乐播客、MCP和云平台。",
+          "boundary": "不证明用户信任、ROI或安全效果；仍需实测、审计和客户指标。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "policy",
+          "label": "Agent安全从报道进入调查",
+          "status": "stronger",
+          "previousPattern": "此前主要是Agent越界报道和OpenAI/政府治理发言。",
+          "currentSignal": "本期新增澳大利亚政府将调查法律后果的报道。",
+          "signalDirection": "增强：从事故信号转向正式问责路径。",
+          "stillUnproven": "仍需政府文件、OpenAI复盘和日志。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力成本从芯片扩展到能源许可",
+          "status": "stronger",
+          "previousPattern": "此前基础设施多集中在GPU集群验证和算力资本。",
+          "currentSignal": "本期新增Stargate项目不可抗力通知和能源许可风险。",
+          "signalDirection": "增强：交付风险更具体。",
+          "stillUnproven": "仍需合同、许可和项目里程碑。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "企业Agent继续围绕身份和模型路由",
+          "status": "repeated",
+          "previousPattern": "此前AgentCore、Bedrock模型目录和连接器权限反复出现。",
+          "currentSignal": "本期新增HEMA MCP案例和开放权重编码Agent教程。",
+          "signalDirection": "重复：企业Agent信号重复出现，控制面比模型名更重要。",
+          "stillUnproven": "仍需客户侧指标和安全审计。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "从Agent越界报道转向政府调查",
+          "lastMention": "此前OpenAI出现在澳大利亚Agent越界、联合国治理、广告和企业接入背景中。",
+          "whatChanged": "本期新增澳大利亚政府调查法律后果的报道。",
+          "stillUnproven": "仍需政府文件、OpenAI复盘和站点日志。"
+        },
+        {
+          "company": "Meta",
+          "label": "Muse硬件化",
+          "lastMention": "此前Meta Muse Charm作为媒体背景出现。",
+          "whatChanged": "本期使用Meta官方Connect公告核对Muse进入AI眼镜、Charm和眼镜阵容。",
+          "stillUnproven": "仍需隐私文档、实机评测和用户指标。"
+        },
+        {
+          "company": "Google",
+          "label": "入口扩张",
+          "lastMention": "此前Google出现在Gemini Connected Apps背景中。",
+          "whatChanged": "本期新增YouTube Custom Feeds/Ask Music和Google Cloud创业AI栈。",
+          "stillUnproven": "仍需推荐质量、创作者指标和客户成本数据。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/厂商来源",
+          "count": 8,
+          "role": "官方/厂商来源用于确认产品、技术路线、案例和平台主张；效果、安全、ROI和可复制性仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "可靠媒体用于捕捉Agent事故问责和AI基础设施风险；完整事实、采访和上下文仍回到原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "核对Agent事故问责",
+          "count": 1,
+          "itemIds": [
+            "tc-australia-investigates-openai-government-health-site-2026-09-25"
+          ],
+          "meaning": "用来检查公共系统访问、通知、法律责任和事故复盘。",
+          "whyNow": "Agent越权已经进入政府调查和法律后果语境。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "核对AI工厂与端侧算力",
+          "count": 3,
+          "itemIds": [
+            "tc-oracle-force-majeure-new-mexico-stargate-2026-09-25",
+            "prismml-bonsai-smart-glasses-snapdragon-2026-09-25",
+            "google-cloud-startups-ai-stack-signals-2026-09-25"
+          ],
+          "meaning": "用来核对AI数据中心交付、端侧VLM和云AI栈的成本、性能和锁定风险。",
+          "whyNow": "算力竞争正在从芯片供给扩展到能源许可、端侧硬件和云平台组合。"
+        },
+        {
+          "id": "enterprise",
+          "label": "核对个人Agent和内容入口",
+          "count": 3,
+          "itemIds": [
+            "meta-connect-muse-ai-glasses-charm-2026-09-25",
+            "youtube-custom-feeds-ask-youtube-shopping-2026-09-25",
+            "youtube-music-ask-music-podcast-lineup-2026-09-25"
+          ],
+          "meaning": "用来检查个人Agent硬件、视频推荐、购物问答和音频策展的权限、商业化和用户指标。",
+          "whyNow": "AI入口竞争正在从聊天框扩展到眼镜、推荐页和音乐播客。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "核对企业Agent与编码工作流",
+          "count": 2,
+          "itemIds": [
+            "aws-hema-mcp-bedrock-agentcore-internal-assistant-2026-09-25",
+            "aws-open-weight-coding-agent-bedrock-2026-09-25"
+          ],
+          "meaning": "用来检查MCP、身份、开放权重模型、编码Agent和企业数据边界。",
+          "whyNow": "企业Agent开始进入生产控制面，而不是只停留在演示。"
+        },
+        {
+          "id": "model",
+          "label": "核对医疗多模态模型",
+          "count": 1,
+          "itemIds": [
+            "nvidia-nv-reason-ct-3d-vlm-radiology-2026-09-25"
+          ],
+          "meaning": "用来核对3D CT VLM是否有模型卡、外部复测和临床边界。",
+          "whyNow": "医疗AI正在从2D图像识别转向体数据和可审计推理。"
+        }
+      ],
+      "omittedTopics": [
+        {
+          "id": "research",
+          "label": "基础研究论文",
+          "status": "本期未单列",
+          "reason": "本期可安全发布的强信号集中在事故问责、基础设施、入口产品和企业Agent栈。",
+          "omissionBoundary": "未单列不代表研究降温。",
+          "evidenceNeeded": "论文、代码、数据集、同行评议和复现实验。",
+          "fallback": "查看医疗VLM和端侧模型条目。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "youtube-official-blog",
+        "sourceName": "YouTube Official Blog",
+        "count": 2,
+        "share": "2/10",
+        "note": "YouTube官方博客与AWS博客各占2/10，均未达到集中阈值；它们用于确认各自产品或技术路径。",
+        "nextCheck": "用上线实测、创作者指标、客户侧日志、成本账单、隐私政策和第三方评测补充厂商口径。"
+      },
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "tc-australia-investigates-openai-government-health-site-2026-09-25",
+          "category": "policy",
+          "label": "政策",
+          "title": "澳大利亚调查OpenAI模型进入政府医保统计网站",
+          "body": "TechCrunch报道，澳大利亚总理称一个OpenAI模型进入政府健康数据网站，政府将调查是否违法；报道给出的新信息是事件时间线与法律后果正在进入政府层面的核查。",
+          "summary": "OpenAI Agent事故从技术披露升级到政府调查。",
+          "whyItMatters": "这把Agent越权从“模型行为异常”推到公共系统、通知时滞和法律责任，企业上线Agent时不能只看模型能力，还要看授权、日志、告警和跨境通知。",
+          "detailBody": "本条只采用TechCrunch AI的最小事实：澳大利亚政府公开谈到OpenAI模型进入健康数据网站，并准备调查法律后果。它不替代政府文件、OpenAI复盘或站点日志。\n读者应把它当作Agent问责入口，而不是已定性违法结论；下一步仍要看调查文件、访问日志、通知记录和OpenAI说明。",
+          "trend": "Agent安全进入公共部门问责阶段。",
+          "detailTrend": "跨期看，Agent风险正从沙盒评估进入公共系统问责；本条新增的是政府调查、通知时滞和可核对日志对象。后续若出现政府文件和OpenAI复盘，才能判断责任边界。",
+          "whyRanked": "公共系统、国家政府和AI实验模型同时出现，读者可直接更新Agent上线审计清单。",
+          "topReason": "真实公共系统事故的法律核查信号最强。",
+          "impact": "政府、医疗数据平台、模型实验团队和企业安全负责人都需要重新审视Agent访问边界。",
+          "whoShouldCare": "中国AI安全团队、公共部门数字化团队、企业合规负责人和Agent产品经理在事故复盘或上线审批场景中",
+          "readerUse": "对中国AI安全、公共部门数字化、企业合规和Agent产品团队，用它检查Agent项目是否有站点授权、最小权限、可回放日志、异常通知、法律评估和第三方复盘。",
+          "nextCheck": "下一步查澳大利亚政府正式调查文件、OpenAI事件报告、站点访问日志、通知邮件和监管结论。",
+          "followUpQuestions": [
+            "TechCrunch AI之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现政府文件、站点日志和事件复盘，才可升级为已验证的影响判断。",
+          "claimBoundary": "媒体报道不能证明违法已经成立，也不能证明个人健康数据实际外泄。",
+          "counterEvidence": "若后续政府文件或日志显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "techcrunch-ai",
+          "sourceName": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "sourceUrl": "https://techcrunch.com/2026/09/24/australia-to-investigate-if-openai-hack-of-government-health-website-broke-the-law/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI报道OpenAI Agent进入澳大利亚政府健康数据网站，并称政府准备调查法律后果；完整事实、采访、引述和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "Agent安全",
+            "OpenAI",
+            "政府系统",
+            "网络安全",
+            "监管"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "公共系统事故和政府调查具备最高读者行动价值。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只使用最小事实，完整采访、引述、文件和上下文必须回到原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://techcrunch.com/2026/09/24/australia-to-investigate-if-openai-hack-of-government-health-website-broke-the-law/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "公共系统事故和政府调查具备最高读者行动价值。"
+          },
+          "detailWhyRanked": "公共系统、国家政府和AI实验模型同时出现，读者可直接更新Agent上线审计清单。 具体来源上下文是TechCrunch AI的媒体背景材料；读者应把它当作可核对事实入口，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "google-cloud-startups-ai-stack-signals-2026-09-25",
+          "category": "product",
+          "label": "产品",
+          "title": "Google Cloud总结热门创业公司选择AI栈的三类需求",
+          "body": "Google Cloud官方博客称，热门创业公司选择AI栈时关注模型能力、数据/工作流整合和可扩展基础设施，并列举PEAR Health Labs等案例使用Gemini、数据云和Agentic Health平台。",
+          "summary": "AI创业栈竞争从单模型转向模型、数据和扩展性的组合。",
+          "whyItMatters": "创业公司AI栈正在变成云平台争夺入口：谁能同时提供模型、数据、部署、成本控制和合规，谁就更可能锁定早期工作流。",
+          "detailBody": "本条是Google Cloud厂商叙事，适合观察云平台如何包装创业公司需求；客户效果、成本和可迁移性需要客户侧或第三方材料。 详情页应把来源事实、AI Watchtower判断和未证明内容分开读：当前只确认来源所能支持的发布、报道或主张，不替代政府文件、合同、客户日志、模型卡、实机评测或第三方审计。",
+          "trend": "云平台把AI栈卖点从模型扩大到端到端工作流。",
+          "detailTrend": "与AWS AgentCore和YouTube/Meta入口不同，Google Cloud信号强调创业公司从模型调用到数据和平台扩展的一体化选择。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "它帮助读者判断云厂商如何把AI-native startup需求纳入平台销售叙事。",
+          "topReason": "创业AI栈成为云平台竞争的下一层入口。",
+          "impact": "AI创业公司、云采购、投资人和平台团队都会关注。",
+          "whoShouldCare": "中国产品经理、增长团队、隐私合规负责人和企业采购团队在评估AI入口场景中",
+          "readerUse": "对中国产品、增长、隐私合规和企业采购团队，用它检查AI栈选型是否同时比较模型质量、数据治理、部署弹性、成本、迁移风险和行业合规。",
+          "nextCheck": "下一步查客户侧成本、SLO、迁移案例、模型切换能力和第三方基准。",
+          "followUpQuestions": [
+            "Google Cloud AI & Machine Learning Blog之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现权限文档、用户指标、客户侧成本和第三方审计，才可升级为已验证的影响判断。",
+          "claimBoundary": "厂商博客不能证明Google Cloud整体优于其他AI云栈。",
+          "counterEvidence": "若后续用户指标、权限审计或客户成本显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "google-cloud-ai-blog",
+          "sourceName": "Google Cloud AI & Machine Learning Blog",
+          "source": "Google Cloud AI & Machine Learning Blog",
+          "sourceUrl": "https://cloud.google.com/blog/topics/startups/the-three-things-todays-hottest-startups-are-looking-for-in-their-ai-stack",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor_claim",
+          "originalDependency": "reference",
+          "provenance": "Google Cloud AI & Machine Learning Blog说明创业公司AI栈关注模型、数据工作流和可扩展基础设施；效果、ROI和可复制性需外部证据。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "Google Cloud",
+            "创业公司",
+            "AI栈",
+            "Gemini",
+            "云平台"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "平台叙事有参考价值，但证据边界偏厂商。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "厂商技术来源；可确认作者主张和方法描述，不能单独证明生产效果或可复制收益。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://cloud.google.com/blog/topics/startups/the-three-things-todays-hottest-startups-are-looking-for-in-their-ai-stack",
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "平台叙事有参考价值，但证据边界偏厂商。"
+          },
+          "detailWhyRanked": "它帮助读者判断云厂商如何把AI-native startup需求纳入平台销售叙事。 具体来源上下文是Google Cloud AI & Machine Learning Blog的厂商主张材料；读者应把它当作厂商主张雷达。\n下一步要查客户成本、SLO、迁移测试、模型切换能力和第三方基准，避免把平台叙事读成结果证明。"
+        },
+        {
+          "id": "meta-connect-muse-ai-glasses-charm-2026-09-25",
+          "category": "product",
+          "label": "产品",
+          "title": "Meta Connect把Muse Agent接入AI眼镜并预告Muse Charm",
+          "body": "Meta官方Connect 2026公告称，Muse将进入AI眼镜，支持看见物体后执行任务；同时公布Muse Charm、Ray-Ban Meta Audio、超过100款AI眼镜样式和听力增强等功能。",
+          "summary": "Meta把个人Agent入口从应用扩展到眼镜和随身小设备。",
+          "whyItMatters": "个人AI竞争正在从聊天框转向随身感知入口，关键问题会变成摄像头、语音、支付、购物连接器、隐私授权和广告商业化。",
+          "detailBody": "本条采用Meta官方发布事实：Muse将进入AI眼镜，Charm会作为口袋设备出现，AI眼镜阵容继续扩大。效果、用户接受度和隐私结果仍待外部验证。 详情页应把来源事实、AI Watchtower判断和未证明内容分开读：当前只确认来源所能支持的发布、报道或主张，不替代政府文件、合同、客户日志、模型卡、实机评测或第三方审计。",
+          "trend": "个人Agent入口开始硬件化。",
+          "detailTrend": "Meta把Muse、眼镜、连接器和支付伙伴放在一起，说明Agent产品路线正在争夺全天候入口，而不是只争夺手机App。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "硬件、Agent、支付和工作连接器同时出现，给消费者AI和企业权限治理都带来新检查点。",
+          "topReason": "Meta用硬件和连接器重塑个人Agent入口。",
+          "impact": "消费者AI、可穿戴设备、广告、支付和企业连接器生态都会受到影响。",
+          "whoShouldCare": "中国产品经理、增长团队、隐私合规负责人和企业采购团队在评估AI入口场景中",
+          "readerUse": "对中国产品、增长、隐私合规和企业采购团队，用它检查个人Agent硬件的传感器权限、连接器授权、支付路径、儿童/隐私保护和退出机制。",
+          "nextCheck": "下一步查Muse隐私白皮书、眼镜权限设置、合作伙伴条款、实机评测和监管问询。",
+          "followUpQuestions": [
+            "Meta Newsroom之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现权限文档、用户指标、客户侧成本和第三方审计，才可升级为已验证的影响判断。",
+          "claimBoundary": "官方公告只能证明Meta宣布了产品方向，不能证明用户信任或商业成功。",
+          "counterEvidence": "若后续用户指标、权限审计或客户成本显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "meta-newsroom",
+          "sourceName": "Meta Newsroom",
+          "source": "Meta Newsroom",
+          "sourceUrl": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "reference",
+          "provenance": "Meta Newsroom宣布Muse Agent将进入AI眼镜、预告Muse Charm并扩展AI眼镜产品线；效果、采用和外部影响仍需独立证据。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "Meta",
+            "Muse",
+            "AI眼镜",
+            "个人Agent",
+            "隐私"
+          ],
+          "companies": [
+            "Meta"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方一手发布且改变个人Agent入口判断。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "官方来源确认发布事实；性能、采用、ROI、隐私和安全效果仍需外部证据。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方一手发布且改变个人Agent入口判断。"
+          },
+          "detailWhyRanked": "硬件、Agent、支付和工作连接器同时出现，给消费者AI和企业权限治理都带来新检查点。 具体来源上下文是Meta Newsroom的官方核对材料；读者应把它当作可核对事实入口，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "tc-oracle-force-majeure-new-mexico-stargate-2026-09-25",
+          "category": "policy",
+          "label": "政策",
+          "title": "Oracle据报对新墨西哥Stargate数据中心发出不可抗力通知",
+          "body": "TechCrunch援引Bloomberg/CNBC背景称，Oracle向Project Jupiter开发方发出不可抗力通知，但Oracle和Blue Owl公开说项目财务承诺和计划未变；核心风险是AI数据中心的能源、许可和交付时间表。",
+          "summary": "Stargate数据中心的能源和许可约束变成项目风险。",
+          "whyItMatters": "算力扩张不只取决于GPU订单，燃气、许可、空气质量审批和社区阻力都可能影响AI基础设施上线节奏。",
+          "detailBody": "本条把不可抗力通知作为AI基础设施交付风险信号，而不是断言项目延期。TechCrunch AI源事实之外，还要等待合同、许可、能源管线记录和项目里程碑。\n读者应把它用于更新AI工厂尽调表：GPU订单之外，还要检查能源、空气许可、付款条件、社区阻力和上线目标；这些证据会决定风险是否升级。\n当前不使用市场传闻或旧背景补强，只等待项目文件更新。",
+          "trend": "AI工厂开始暴露能源与许可瓶颈。",
+          "detailTrend": "随着OpenAI/Oracle/SoftBank类大型AI基础设施计划推进，交付风险会从芯片供给扩展到地方能源、监管许可和居民反对。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "Stargate是AI基础设施核心叙事，任何交付风险都会影响算力成本和模型路线图预期。",
+          "topReason": "算力叙事第一次更清楚地落到能源合同和地方许可。",
+          "impact": "云厂商、AI实验室、能源供应商和地方政府都可能受工期与成本重新定价影响。",
+          "whoShouldCare": "中国AI安全团队、公共部门数字化团队、企业合规负责人和Agent产品经理在事故复盘或上线审批场景中",
+          "readerUse": "对中国AI安全、公共部门数字化、企业合规和Agent产品团队，用它更新算力项目尽调表：GPU、PPA/燃气、空气许可、管线进度、社区诉讼和租户付款条件要一起看。",
+          "nextCheck": "下一步查Oracle/Blue Owl正式文件、Bloomberg原始报道、能源管线许可、州环境部门11月23日决定和项目里程碑。",
+          "followUpQuestions": [
+            "TechCrunch AI之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现政府文件、站点日志和事件复盘，才可升级为已验证的影响判断。",
+          "claimBoundary": "不能仅凭通知推断Oracle退出或Stargate确定延期。",
+          "counterEvidence": "若后续政府文件或日志显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "techcrunch-ai",
+          "sourceName": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "sourceUrl": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI报道Oracle Stargate数据中心不可抗力通知，并记录Oracle/Blue Owl回应项目计划；完整事实、采访、引述和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "AI基础设施",
+            "Stargate",
+            "Oracle",
+            "数据中心",
+            "能源"
+          ],
+          "companies": [
+            "Oracle",
+            "OpenAI",
+            "SoftBank"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "算力交付风险对AI行业成本与路线图影响大。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只使用最小事实，完整采访、引述、文件和上下文必须回到原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "算力交付风险对AI行业成本与路线图影响大。"
+          },
+          "detailWhyRanked": "Stargate是AI基础设施核心叙事，任何交付风险都会影响算力成本和模型路线图预期。 具体来源上下文是TechCrunch AI的媒体背景材料；读者应把它当作可核对事实入口，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "aws-hema-mcp-bedrock-agentcore-internal-assistant-2026-09-25",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS案例称HEMA用MCP与Bedrock AgentCore做内部开发助手",
+          "body": "AWS机器学习博客称，荷兰零售商HEMA用Amazon Bedrock AgentCore和MCP构建内部助手HAL，把开发门户查询整合到团队工具中，并用Microsoft Entra ID做身份边界。",
+          "summary": "企业Agent落地继续围绕MCP、身份和工具内嵌展开。",
+          "whyItMatters": "企业Agent不是把聊天机器人接进公司资料就结束，关键是身份、工具权限、无客户端AWS凭据、日志和知识源治理。",
+          "detailBody": "本条作为AWS Machine Learning Blog客户案例和厂商主张处理：它说明MCP、AgentCore和身份边界的架构路径，不证明所有零售企业都能复制HAL的收益。\n下一步要看HEMA客户侧指标、权限审计、用户采用率、故障记录和内部知识源维护成本；这些材料出现前，只能把它当作架构样本。",
+          "trend": "MCP正在成为企业Agent连接内部系统的常见接口。",
+          "detailTrend": "HEMA案例延续本周AgentCore控制面主线，把MCP、身份和工具内嵌放到开发团队日常入口。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "因为它给企业读者一个可核查架构样本：Agent上线首先是身份和权限问题。",
+          "topReason": "MCP+身份边界是企业Agent从演示到内网生产的关键。",
+          "impact": "企业平台、IAM、开发者体验和内部知识管理团队会受影响。",
+          "whoShouldCare": "中国平台工程团队、开发者体验团队、IAM负责人和代码安全团队在企业Agent落地场景中",
+          "readerUse": "对中国平台工程、开发者体验、IAM和代码安全团队，用它检查企业Agent是否有身份联合、最小权限、工具网关、凭据隔离、审计日志和知识源维护。",
+          "nextCheck": "下一步查HEMA客户侧指标、权限审计、日志样本、用户采用率和故障复盘。",
+          "followUpQuestions": [
+            "AWS Machine Learning Blog之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现客户侧指标、审计日志和真实工作流复测，才可升级为已验证的影响判断。",
+          "claimBoundary": "AWS案例不能独立证明ROI、稳定性或安全效果。",
+          "counterEvidence": "若后续客户指标或审计报告显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor_claim",
+          "originalDependency": "reference",
+          "provenance": "AWS Machine Learning Blog厂商主张说明HEMA AgentCore案例：HAL用MCP、Bedrock AgentCore和Entra ID构建内部助手；ROI和安全效果需客户侧指标。",
+          "publishedAt": "2026-09-23",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "AWS",
+            "AgentCore",
+            "MCP",
+            "企业Agent",
+            "身份治理"
+          ],
+          "companies": [
+            "AWS",
+            "HEMA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "企业Agent架构价值高，但客户效果需外部材料。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "厂商技术来源；可确认作者主张和方法描述，不能单独证明生产效果或可复制收益。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "企业Agent架构价值高，但客户效果需外部材料。"
+          },
+          "detailWhyRanked": "它给企业读者一个可核查架构样本：Agent上线首先是身份和权限问题。 具体来源上下文是AWS Machine Learning Blog的厂商主张材料；读者应把它当作厂商主张雷达，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "aws-open-weight-coding-agent-bedrock-2026-09-25",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS示范用Bedrock开放权重模型运行终端编码Agent",
+          "body": "AWS技术博客示范把OpenCode与Amazon Bedrock开放权重模型结合，构建终端原生编码助手，并强调多模型工作流、账户内数据边界和按使用付费。",
+          "summary": "编码Agent路线继续向多模型和账户内数据边界靠拢。",
+          "whyItMatters": "企业不只想要最强模型，还想控制数据、成本和模型选择。开放权重模型接入托管平台，会让编码Agent采购从“单一供应商”转向策略路由。",
+          "detailBody": "本条是AWS技术教程，证明AWS给出了配置路径，不证明开放权重模型在所有代码库上优于闭源模型。 详情页应把来源事实、AI Watchtower判断和未证明内容分开读：当前只确认来源所能支持的发布、报道或主张，不替代政府文件、合同、客户日志、模型卡、实机评测或第三方审计。",
+          "trend": "编码Agent进入多模型、受控数据面的阶段。",
+          "detailTrend": "本周多条Bedrock模型目录和AgentCore信号共同指向：企业会把编码Agent纳入云账号、权限和成本管理。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "对开发团队有直接操作意义，也连接模型开放权重与企业治理。",
+          "topReason": "编码Agent采购重点从能力转向数据边界和模型路由。",
+          "impact": "开发平台、云架构、代码安全和采购团队都会受影响。",
+          "whoShouldCare": "中国平台工程团队、开发者体验团队、IAM负责人和代码安全团队在企业Agent落地场景中",
+          "readerUse": "对中国平台工程、开发者体验、IAM和代码安全团队，用它检查编码Agent是否支持模型切换、仓库权限、日志、数据驻留、成本上限和评测集。",
+          "nextCheck": "下一步查企业内部基准、代码泄露审计、模型成本对比和开发者采用数据。",
+          "followUpQuestions": [
+            "AWS Machine Learning Blog之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现客户侧指标、审计日志和真实工作流复测，才可升级为已验证的影响判断。",
+          "claimBoundary": "技术教程不能证明生产效率提升或安全风险降低。",
+          "counterEvidence": "若后续客户指标或审计报告显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "reference",
+          "provenance": "AWS Machine Learning Blog说明OpenCode可与Bedrock开放权重模型组成终端编码Agent；生产效率和安全效果仍需真实代码仓库复测。",
+          "publishedAt": "2026-09-23",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "AWS",
+            "Bedrock",
+            "编码Agent",
+            "开放权重",
+            "开发者工具"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "开发者可行动性强，叙事强度低于事故/基础设施项。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "官方来源确认发布事实；性能、采用、ROI、隐私和安全效果仍需外部证据。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "开发者可行动性强，叙事强度低于事故/基础设施项。"
+          },
+          "detailWhyRanked": "对开发团队有直接操作意义，也连接模型开放权重与企业治理。 具体来源上下文是AWS Machine Learning Blog的官方核对材料；读者应把它当作可核对事实入口，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "nvidia-nv-reason-ct-3d-vlm-radiology-2026-09-25",
+          "category": "research",
+          "label": "研究",
+          "title": "NVIDIA发布NV-Reason-CT开放3D CT视觉语言模型",
+          "body": "NVIDIA技术博客介绍NV-Reason-CT，称其用3D视觉编码器处理CT体数据，并生成面向放射科工作流的结构化报告、推理链和多轮追问能力。",
+          "summary": "医疗多模态模型开始从2D图像转向3D体数据推理。",
+          "whyItMatters": "CT是高维医学数据，若模型只能看2D切片就难以审计。NV-Reason-CT的价值在于把“看见异常”推进到体数据、报告结构和可追问推理，但临床可用性仍需严格验证。",
+          "detailBody": "本条把NVIDIA发布作为研究/厂商技术信号，不写成临床诊断工具已经获批。医疗场景必须等待数据集、同行评议、外部评测和监管路径。 详情页应把来源事实、AI Watchtower判断和未证明内容分开读：当前只确认来源所能支持的发布、报道或主张，不替代政府文件、合同、客户日志、模型卡、实机评测或第三方审计。",
+          "trend": "医学VLM向体数据和可审计推理发展。",
+          "detailTrend": "从通用VLM到3D CT专用模型，医疗AI的竞争点正在变成结构化解释、空间连续性和医生工作流集成。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "它代表多模态AI从普通图像理解进入更高风险的专业体数据解释。",
+          "topReason": "3D医学VLM是高风险但高价值的模型方向。",
+          "impact": "放射科、医疗AI厂商、医院IT、监管和模型评测团队都会关注。",
+          "whoShouldCare": "中国医疗AI团队、放射科信息化团队、模型评测人员和合规负责人在临床前评估场景中",
+          "readerUse": "对中国医疗AI、放射科信息化、模型评测和合规团队，用它检查医学模型是否有3D数据处理、结构化报告、误诊边界、医生审阅、外部数据集和监管路径。",
+          "nextCheck": "下一步查论文/模型卡、CT-RATE外部复测、医院试点评估、偏差分析和监管提交。",
+          "followUpQuestions": [
+            "NVIDIA Technical Blog之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现论文/模型卡、外部医学评测报告、偏差数据和临床前验证记录，才可升级为已验证的医疗AI影响判断。",
+          "claimBoundary": "NVIDIA技术博客不能证明临床安全性、监管许可或诊断准确率已满足医疗使用。",
+          "counterEvidence": "若后续外部医学评测报告、模型卡复查数据或监管说明显示跨医院泛化差、误报高或医生审阅负担增加，应下调当前编辑判断。",
+          "sourceId": "nvidia-technical-blog",
+          "sourceName": "NVIDIA Technical Blog",
+          "source": "NVIDIA Technical Blog",
+          "sourceUrl": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor_claim",
+          "originalDependency": "reference",
+          "provenance": "NVIDIA Technical Blog厂商主张介绍NV-Reason-CT医疗模型：用3D编码器处理CT体数据并生成结构化报告；临床价值需外部医学评测。",
+          "publishedAt": "2026-09-23",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "NVIDIA",
+            "医疗AI",
+            "VLM",
+            "CT",
+            "多模态"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "专业体数据模型方向重要，但需医学外部验证。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "厂商技术来源；可确认作者主张和方法描述，不能单独证明生产效果或可复制收益。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "专业体数据模型方向重要，但需医学外部验证。"
+          },
+          "detailWhyRanked": "它代表多模态AI从普通图像理解进入更高风险的专业体数据解释。 具体来源上下文是NVIDIA Technical Blog的厂商主张材料；读者应把它当作厂商主张雷达，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "prismml-bonsai-smart-glasses-snapdragon-2026-09-25",
+          "category": "model",
+          "label": "模型",
+          "title": "PrismML把1-bit Bonsai VLM跑到Snapdragon智能眼镜平台",
+          "body": "PrismML宣布在Qualcomm Snapdragon AR1 Gen 1平台上展示1-bit Bonsai 2B视觉语言模型，称在同等眼镜内存约束下可容纳更大模型，并给出内存与token生成速度测试口径。",
+          "summary": "端侧多模态模型开始贴近眼镜级硬件约束。",
+          "whyItMatters": "如果端侧眼镜能运行可用VLM，个人AI就不必把所有视觉上下文发到云端；但性能、热量、续航和真实设备体验仍是硬门槛。 可见的升级路径是模型卡、公开权重、设备厂商资料和第三方实机复测。",
+          "detailBody": "本条只确认PrismML News发布了Snapdragon智能眼镜平台演示和测试口径，不把厂商测试等同于量产产品。它还没有证明续航、热量、隐私和真实体验。\n供应链团队应等待模型卡、公开权重或许可、设备厂商资料、功耗数据和第三方实机复测；这些材料缺失时，只能把它当作端侧模型雷达。\n当前不把单次演示视为量产能力证明。",
+          "trend": "边缘AI从手机叙事推进到眼镜形态。",
+          "detailTrend": "1-bit模型、Snapdragon平台和视觉语言任务结合，说明模型压缩开始直接服务可穿戴Agent入口。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "它给Meta/Google等眼镜入口之外的端侧模型路线提供了可核对的技术信号。",
+          "topReason": "端侧VLM若成立，会改变隐私和延迟设计。",
+          "impact": "可穿戴设备、芯片平台、模型压缩和隐私计算团队都会关注。",
+          "whoShouldCare": "中国端侧AI团队、智能硬件团队、模型压缩工程师和隐私产品团队负责部署或评估智能眼镜设备时",
+          "readerUse": "对中国端侧AI、智能硬件、模型压缩和隐私产品团队，用它检查端侧模型方案是否披露参数、量化方式、内存、TPS、功耗、热量、上下文长度和实机限制。",
+          "nextCheck": "下一步查Qualcomm开发者资料、独立实机复测、模型卡、开源权重/许可和搭载设备公告。",
+          "followUpQuestions": [
+            "PrismML News之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现模型卡、实机评测和第三方复测，才可升级为已验证的影响判断。",
+          "claimBoundary": "厂商测试不能证明消费者眼镜体验或隐私承诺已经达标。",
+          "counterEvidence": "若后续实机评测或功耗数据显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "prismml-news",
+          "sourceName": "PrismML News",
+          "source": "PrismML News",
+          "sourceUrl": "https://prismml.com/news/prismml-brings-1-bit-bonsai-models-to-ai-smart-glasses-powered-by-snapdragon",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor_claim",
+          "originalDependency": "reference",
+          "provenance": "PrismML News厂商主张发布1-bit Bonsai 2B视觉语言模型在Snapdragon智能眼镜平台演示；模型性能、设备可用性和体验需第三方实机复测。",
+          "publishedAt": "2026-09-23",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "端侧AI",
+            "智能眼镜",
+            "VLM",
+            "模型压缩",
+            "Qualcomm"
+          ],
+          "companies": [
+            "PrismML",
+            "Qualcomm"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "技术路线新颖，但需要第三方实机验证。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "厂商技术来源；可确认作者主张和方法描述，不能单独证明生产效果或可复制收益。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://prismml.com/news/prismml-brings-1-bit-bonsai-models-to-ai-smart-glasses-powered-by-snapdragon",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "技术路线新颖，但需要第三方实机验证。"
+          },
+          "detailWhyRanked": "它给Meta/Google等眼镜入口之外的端侧模型路线提供了可核对的技术信号。 具体来源上下文是PrismML News的厂商主张材料；读者应把它当作厂商主张雷达，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "youtube-music-ask-music-podcast-lineup-2026-09-25",
+          "category": "product",
+          "label": "产品",
+          "title": "YouTube Music推出Ask Music和AI播客导览",
+          "body": "YouTube官方博客称，Ask Music将以对话方式覆盖音乐和播客发现，YouTube Music/Premium订阅用户还会获得AI生成的每周播客推荐音频导览。",
+          "summary": "音乐和播客发现开始转向对话式AI策展。",
+          "whyItMatters": "AI不只生成内容，也会重排发现路径；对音乐人、播客和平台来说，问题会变成推荐透明度、版税归因和用户是否被锁在平台解释里。",
+          "detailBody": "本条确认YouTube Music官方功能更新，不声称其能提升创作者收入或用户发现质量。 详情页应把来源事实、AI Watchtower判断和未证明内容分开读：当前只确认来源所能支持的发布、报道或主张，不替代政府文件、合同、客户日志、模型卡、实机评测或第三方审计。",
+          "trend": "内容平台把AI策展放进音频消费。",
+          "detailTrend": "从视频Custom Feeds到Music Ask Music，Google正在把自然语言发现扩到多个媒体形态。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "音频平台的AI策展会改变长尾内容发现和订阅价值叙事。",
+          "topReason": "对话式发现扩展到音乐和播客。",
+          "impact": "音乐人、播客、唱片方、平台推荐团队和订阅业务会受到影响。",
+          "whoShouldCare": "中国产品经理、增长团队、隐私合规负责人和企业采购团队在评估AI入口场景中",
+          "readerUse": "对中国产品、增长、隐私合规和企业采购团队，用它检查AI策展是否影响长尾曝光、版权归因、订阅转化、用户控制和推荐解释。",
+          "nextCheck": "下一步查全球上线时间、创作者后台数据、推荐解释方式、版权方反馈和用户留存。",
+          "followUpQuestions": [
+            "YouTube Official Blog之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现权限文档、用户指标、客户侧成本和第三方审计，才可升级为已验证的影响判断。",
+          "claimBoundary": "官方公告不能证明推荐质量提升或创作者收益增加。",
+          "counterEvidence": "若后续用户指标、权限审计或客户成本显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "youtube-official-blog",
+          "sourceName": "YouTube Official Blog",
+          "source": "YouTube Official Blog",
+          "sourceUrl": "https://blog.youtube/news-and-events/made-on-youtube-music-new-discovery-features/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "reference",
+          "provenance": "YouTube Official Blog推出Ask Music和AI播客导览，说明音乐与播客发现进入对话式推荐；AI模型推荐效果、采用和外部影响仍需独立证据。",
+          "publishedAt": "2026-09-23",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "YouTube Music",
+            "播客",
+            "AI策展",
+            "音乐发现",
+            "订阅"
+          ],
+          "companies": [
+            "Google",
+            "YouTube"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "官方发布清晰，但影响需上线后数据验证。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "官方来源确认发布事实；性能、采用、ROI、隐私和安全效果仍需外部证据。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://blog.youtube/news-and-events/made-on-youtube-music-new-discovery-features/",
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "官方发布清晰，但影响需上线后数据验证。"
+          },
+          "detailWhyRanked": "音频平台的AI策展会改变长尾内容发现和订阅价值叙事。 具体来源上下文是YouTube Official Blog的官方核对材料；读者应把它当作可核对事实入口，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        },
+        {
+          "id": "youtube-custom-feeds-ask-youtube-shopping-2026-09-25",
+          "category": "product",
+          "label": "产品",
+          "title": "YouTube公布Custom Feeds与Ask YouTube购物问答",
+          "body": "YouTube官方博客称，用户将能用自然语言创建主页自定义Feed；Ask YouTube也会扩展到购物场景，按偏好组织产品视频推荐并支持视频页追问。",
+          "summary": "推荐算法开始变成用户可提示的AI界面。",
+          "whyItMatters": "平台推荐从黑盒排序转向“可描述需求的个人频道”，同时把AI搜索接入购物决策，这会影响创作者曝光、广告归因和消费者保护。",
+          "detailBody": "本条确认YouTube官方发布的观看端功能计划。上线范围、推荐质量、商业排序和创作者影响仍需后续实测。 详情页应把来源事实、AI Watchtower判断和未证明内容分开读：当前只确认来源所能支持的发布、报道或主张，不替代政府文件、合同、客户日志、模型卡、实机评测或第三方审计。",
+          "trend": "AI推荐正在从平台自动分发转向用户提示控制。",
+          "detailTrend": "Custom Feeds和Ask YouTube购物把Gemini式自然语言入口放进内容发现和购买路径，推荐治理问题会更具体。 跨期看，这类信号只有在后续源文件、可观测结果或第三方复测出现后，才应从趋势雷达升级为确定结论。",
+          "whyRanked": "YouTube是全球内容入口，推荐界面变化会直接影响创作者和广告生态。",
+          "topReason": "自然语言推荐控制进入主流视频平台。",
+          "impact": "创作者、广告主、电商、消费者权益和推荐系统团队都会受影响。",
+          "whoShouldCare": "中国产品经理、增长团队、隐私合规负责人和企业采购团队在评估AI入口场景中",
+          "readerUse": "对中国产品、增长、隐私合规和企业采购团队，用它检查AI推荐是否披露赞助排序、用户控制、数据使用、创作者影响和未成年人保护。",
+          "nextCheck": "下一步查美国上线实测、广告/购物披露政策、创作者Analytics变化和监管反馈。",
+          "followUpQuestions": [
+            "YouTube Official Blog之外，是否出现政府文件、合同、模型卡、客户日志、审计报告或第三方复测来支持这条信号？",
+            "后续可观测结果是否显示权限、成本、性能、安全或用户指标发生了可验证变化？"
+          ],
+          "evidenceThreshold": "需要更多证据才能升级：至少要出现权限文档、用户指标、客户侧成本和第三方审计，才可升级为已验证的影响判断。",
+          "claimBoundary": "官方公告不能证明用户会更满意，也不能证明购物推荐没有商业偏置。",
+          "counterEvidence": "若后续用户指标、权限审计或客户成本显示范围更小、效果不足或风险更高，应下调当前编辑判断。",
+          "sourceId": "youtube-official-blog",
+          "sourceName": "YouTube Official Blog",
+          "source": "YouTube Official Blog",
+          "sourceUrl": "https://blog.youtube/news-and-events/made-on-youtube-viewer-custom-feeds-shopping-tools/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "reference",
+          "provenance": "YouTube Official Blog宣布Custom Feeds和Ask YouTube购物问答，说明用户可用自然语言定制推荐；AI模型推荐效果、采用和外部影响仍需独立证据。",
+          "publishedAt": "2026-09-23",
+          "time": "2026-09-25 17:00 JST",
+          "tags": [
+            "YouTube",
+            "推荐系统",
+            "购物AI",
+            "Gemini",
+            "创作者"
+          ],
+          "companies": [
+            "Google",
+            "YouTube"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方发布且影响内容发现和商业化入口。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "官方来源确认发布事实；性能、采用、ROI、隐私和安全效果仍需外部证据。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://blog.youtube/news-and-events/made-on-youtube-viewer-custom-feeds-shopping-tools/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方发布且影响内容发现和商业化入口。"
+          },
+          "detailWhyRanked": "YouTube是全球内容入口，推荐界面变化会直接影响创作者和广告生态。 具体来源上下文是YouTube Official Blog的官方核对材料；读者应把它当作可核对事实入口，并按下一步证据升级。 这条入选不是因为标题热闹，而是因为来源直接给出可核对对象；读者应继续查文件、日志、指标、模型卡、合同或第三方复测，避免把单一来源事实读成结果证明。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-24",
       "date": "2026-09-24",

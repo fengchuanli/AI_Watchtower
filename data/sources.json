@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12",
+  "updatedAt": "2026-09-25",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1414,7 +1414,39 @@
       "hasRss": false,
       "language": "en",
       "notes": "官方威胁情报入口，用于核对Google/Mandiant对AI滥用、供应链攻击和威胁活动的观察；攻击规模、客户影响和防御效果仍需报告、样本或第三方复核。"
+    },
+    {
+      "id": "youtube-official-blog",
+      "name": "YouTube Official Blog",
+      "url": "https://blog.youtube/",
+      "feedUrl": null,
+      "category": [
+        "product",
+        "creator",
+        "media",
+        "commerce"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方核对 YouTube、YouTube Music、创作者工具、推荐、购物和AI功能发布；采用、转化、创作者收益和安全效果仍需用户指标、政策文件或第三方研究。"
+    },
+    {
+      "id": "prismml-news",
+      "name": "PrismML News",
+      "url": "https://prismml.com/news",
+      "feedUrl": null,
+      "category": [
+        "model",
+        "edge",
+        "hardware",
+        "open_model"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方核对 PrismML 模型、边缘推理和硬件合作发布；性能、设备可用性和实际体验需第三方评测、公开模型卡、设备厂商资料或实机复测。"
     }
   ],
-  "sourceCount": 90
+  "sourceCount": 92
 }
