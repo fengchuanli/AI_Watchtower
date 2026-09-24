@@ -30,7 +30,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 10 | Complete | `14a9a44` | The Guardian data-center debt detail item now separates `impact`, `whoShouldCare`, and `readerUse`: impact explains the capital-structure risk, audience names budget/contract owners, and reader use becomes a concrete checklist instead of repeating the same finance/platform group. |
 | Day 11 | Complete | `56b56d6` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now define the article ending rule: close with boundary, upgrade/downgrade proof, one concrete `nextCheck`, artifact-specific follow-up questions, and source/archive links instead of restating trend or long media caveats. |
 | Day 12 | Complete | `d1ca805` | Detail-page mobile jump navigation now stays in one horizontally scrollable row below 620px, so the six section labels do not create a tall pre-article block between the proof path and the article body. `scripts/validate-site.mjs` guards this mobile-density behavior. |
-| Day 13 | Complete | `pending` | `docs/candidate-to-news-handoff.md` now marks the normal 08:00 / 17:00 shortest path: plain-language note, source gate, duplicate report, short intake, priority/mix check, field mapping, homepage/archive preflight, derived-data rebuild, validation, commit, and push status. `scripts/validate-site.mjs` guards the path. |
+| Day 13 | Complete | `8e1126f` | `docs/candidate-to-news-handoff.md` now marks the normal 08:00 / 17:00 shortest path: plain-language note, source gate, duplicate report, short intake, priority/mix check, field mapping, homepage/archive preflight, derived-data rebuild, validation, commit, and push status. `scripts/validate-site.mjs` guards the path. |
 
 ## Historical Guard Anchors
 

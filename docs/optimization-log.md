@@ -28,7 +28,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: Pending.
+- Commit: `8e1126f` (`【VisionHub网站风格优化】标出候选到新闻最短路径`).
 - Push: Pending.
 
 ## 2026-09-24 08:11 JST
