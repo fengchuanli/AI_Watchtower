@@ -4,6 +4,20 @@ Use this checklist after a candidate has passed `docs/candidate-source-checklist
 
 This is a drafting checklist, not a new content source. If the intake record cannot answer a row below, return the candidate to `hold` and update `decisionReason` with a code from `docs/candidate-hold-reject-reasons.md`.
 
+## Normal 08:00 / 17:00 Shortest Path
+
+During a normal news update, use this as the shortest editor path from candidate scan to public copy:
+
+1. Write the plain-language note from `docs/candidate-workflow-plain-language-guide.md`: what happened, why it matters, what is unproven, safest source, batch safety, and `draft` / `hold` / `reject`.
+2. Apply `docs/candidate-source-checklist.md` as the hard source gate for source role, timestamp, copyright/paywall safety, duplicate risk, original-source need, and concentration risk.
+3. Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists; otherwise record a manual current/history URL and near-title check.
+4. Fill `docs/candidate-intake-format.md` only for surviving candidates, keeping `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, and `draftingDecision` short.
+5. Rank only draftable candidates with `docs/candidate-priority-rubric.md`; use `docs/source-diversity-triage-note.md` when one owner, source family, evidence mode, company, geography, or narrative angle dominates the safe set.
+6. Draft `data/news.json` from the field mapping below, then apply `docs/editorial-checklist.md`, `docs/homepage-edition-preflight.md`, and `docs/current-to-history-publication-checklist.md`.
+7. Rebuild derived data and run validation from `docs/update-run-checklist.md` before commit and push status logging.
+
+Stop the shortest path rather than drafting when a candidate still needs a stronger original source, has unresolved duplicate status, depends on media article structure, lacks a concrete next check, or would only pad a weak batch.
+
 ## Pre-Draft Gate
 
 Draft only when all of these are true:

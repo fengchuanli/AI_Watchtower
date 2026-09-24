@@ -959,6 +959,12 @@ if (
 
 if (
   !/Candidate To News Handoff Checklist/.test(candidateToNewsHandoff) ||
+  !/Normal 08:00 \/ 17:00 Shortest Path/.test(candidateToNewsHandoff) ||
+  !/plain-language note/.test(candidateToNewsHandoff) ||
+  !/source gate/.test(candidateToNewsHandoff) ||
+  !/report-duplicate-candidates\.mjs/.test(candidateToNewsHandoff) ||
+  !/Rank only draftable candidates/.test(candidateToNewsHandoff) ||
+  !/Rebuild derived data/.test(candidateToNewsHandoff) ||
   !/Pre-Draft Gate/.test(candidateToNewsHandoff) ||
   !/Field Mapping/.test(candidateToNewsHandoff) ||
   !/Intake field/.test(candidateToNewsHandoff) ||
@@ -976,7 +982,8 @@ if (
   !/Stop Conditions/.test(candidateToNewsHandoff) ||
   !/candidate-to-news-handoff\.md/.test(candidateIntakeFormat) ||
   !/candidate-to-news-handoff\.md/.test(candidateSourceChecklist) ||
-  !/candidate-to-news-handoff\.md/.test(readme)
+  !/candidate-to-news-handoff\.md/.test(readme) ||
+  !/shortest candidate-to-news path/.test(updateRunChecklist)
 ) {
   errors.push("Candidate gathering must include a candidate-to-news handoff checklist that maps intake fields to data/news.json without duplicating source article text.");
 }

@@ -4,6 +4,8 @@ Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update
 
 This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, use `docs/partial-batch-publication-guide.md` to decide whether to publish a short batch with a clear reason, continue searching, or hold the update instead of padding the homepage with weak, repeated, or copyright-risk items.
 
+For a normal 08:00 or 17:00 run, the shortest candidate-to-news path is recorded in `docs/candidate-to-news-handoff.md`: plain-language note, source gate, duplicate report, short intake, priority/mix check, field mapping into `data/news.json`, homepage/archive preflight, derived-data rebuild, validation, commit, and push status.
+
 ## Automation health
 
 Before investigating source or data issues, confirm the scheduled task itself is still valid. Check `docs/automation-health-check.md` when a run was missed, especially for stale `UNTIL` dates that can stop an `ACTIVE` cron automation from firing.

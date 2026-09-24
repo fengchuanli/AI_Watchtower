@@ -1,3 +1,36 @@
+## 2026-09-24 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 13，复查候选采集到新闻发布的交接链路，并在 `docs/candidate-to-news-handoff.md` 标出普通 08:00 / 17:00 新闻更新的最短编辑路径，避免未来运行在多个候选文档之间来回跳转。
+- Changed files:
+  - `docs/candidate-to-news-handoff.md`
+  - `docs/update-run-checklist.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、候选工作流文档、`docs/update-run-checklist.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只更新候选到新闻交接规则和静态校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - 最短路径要求先写来源证明与未证明内容，再进入 public copy。
+  - Original source dependency: pass - 路径保留媒体原始来源替换判断、`must-read` 和版权安全停机条件。
+  - Mobile burden: not applicable - 本次不改移动端 UI。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 无，属于规则/校验/计划更新；后续 08:00 / 17:00 新闻更新会有更短的候选到新闻交接路径。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: Pending.
+- Push: Pending.
+
 ## 2026-09-24 08:11 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-24`，发布 10 条安全非重复信号，聚焦 Anthropic/Claude 生命科学实验、OpenAI 联合国安理会治理发言、乌克兰 Daybreak 网络防御、Grab 东南亚 AI 技能、Airbnb GPT-6 Astra 企业接入、NVIDIA SWE-Serve、GPU 集群就绪度、FLUX 3 Action、Ema 企业 Agent 融资和 Snorkel AI 训练数据融资。
