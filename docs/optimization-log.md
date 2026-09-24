@@ -29,7 +29,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: `8e1126f` (`【VisionHub网站风格优化】标出候选到新闻最短路径`).
-- Push: Pending.
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` through `8aaf488` to `origin/main`.
 
 ## 2026-09-24 08:11 JST
 
