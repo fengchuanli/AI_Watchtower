@@ -1,3 +1,31 @@
+## 2026-09-24 23:30 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已是 `news-1700-2026-09-24`，本次不回退版次，在同日 17:00 版基础上补充 6 条安全非重复信号，使当前版增至 16 条，聚焦 OpenAI Agent 越界报道、ChatGPT Ads 东南亚/台湾扩张、OpenAI Academy 培训员计划、Google Gemini Connected Apps、Meta Muse Charm 和 Microsoft AI at Work/Copilot USL。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、OpenAI News、Axios Technology、Google Keyword AI、Microsoft AI Blog 和 Meta/AI 硬件候选。
+  - 新增 6 条安全非重复信号；当前版官方/厂商来源 10/16，可靠媒体 6/16。OpenAI、Google、Microsoft 项用于确认官方发布事实；Axios 项均按 `媒体背景` / `reported` / `originalDependency: must-read` 处理。
+  - TOP3 调整为 Claude 生命科学发现、OpenAI Agent 越界报道、ChatGPT Ads 区域扩张；新增 source risk 提醒读者继续查政府文件、Transluce 原文、OpenAI 日志、权限文档、客户指标和第三方审计。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL 或弱证据补量。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月24日补充后的 16 条情报；读者可在首页和详情页看到 Agent 越界、AI广告商业化、Gemini连接器、Meta AI硬件和企业Copilot系统的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 16 current news items against 90 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】补充23点AI新闻：16条Agent安全与商业化入口信号`.
+
 ## 2026-09-24 11:02 JST
 
 - Focus: 完成当前 30 天计划 Day 13，复查候选采集到新闻发布的交接链路，并在 `docs/candidate-to-news-handoff.md` 标出普通 08:00 / 17:00 新闻更新的最短编辑路径，避免未来运行在多个候选文档之间来回跳转。
