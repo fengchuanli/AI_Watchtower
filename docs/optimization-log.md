@@ -1,3 +1,33 @@
+## 2026-09-25 23:11 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已是 `news-1700-2026-09-25`，本次不回退版次，在同日 17:00 版基础上补充 6 条安全非重复信号，使当前版增至 16 条，聚焦 Microsoft Foundry Routines GA、Agent Framework 交互/记忆/恢复执行、Hosted Agent 出站边界预览、Copilot Autopilot、编码 Agent / monorepo 失陷半径和 AI 基础设施融资压力。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、Microsoft Developer / Foundry Blog、VentureBeat AI / Security / Technology、Axios Technology、TechCrunch AI 和 AWS / Google / Meta 等候选。
+  - 新增注册官方来源 `microsoft-foundry-blog`；source count 从 92 增至 93。
+  - 新增 6 条安全非重复信号；当前版官方/厂商来源 11/16，可靠媒体 5/16。Microsoft 项作为 `官方核对`，VentureBeat / Axios 项作为 `媒体背景` / `reported` / `originalDependency: must-read` 处理。
+  - 跳过历史已收录的 VentureBeat / Black Forest Labs FLUX 3 Action URL，以及社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL、赞助内容或弱证据补量。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, and item order.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月25日补充后的 16 条情报；读者可在首页和详情页看到 Agent 问责、Microsoft Agent 控制面、Copilot Autopilot、编码 Agent 安全、AI工厂融资、个人Agent硬件、端侧模型、YouTube推荐购物、医疗VLM和企业Agent栈的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 16 current news items against 93 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】补充23点AI新闻：16条Agent控制面与融资风险信号`.
+
 ## 2026-09-25 11:01 JST
 
 - Focus: 完成当前 30 天计划 Day 14，把新闻发布前的派生数据重建从普通提醒提升为发布关口；后续 08:00 / 17:00 新闻更新必须在 `data/news.json` 与最新 `data/news-history.json` 镜像最终确定后，先重建并检查 `data/news-index.json` 与 `data/news-today.json`，再进入数据和站点校验。
