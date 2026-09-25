@@ -4,6 +4,17 @@ Use this checklist during every 08:00 JST and 17:00 JST news publication after `
 
 This is a publication check, not a license to republish old material as new. If the current homepage intentionally advances to a new edition, create or update the newest history edition for that same batch. If the current batch is only a correction, keep the same edition ID and record what changed in the optimization log.
 
+## Derived Data Publication Gate
+
+After the mirror fields below are correct, regenerate the reader-facing derived files before any validation or commit:
+
+1. Run `node scripts/build-derived-data.mjs` after the final `data/news.json` and newest `data/news-history.json` changes are saved.
+2. Confirm both `data/news-index.json` and `data/news-today.json` changed or remained identical for the right reason. `data/news-index.json` feeds all-news, tag, and archive scanning; `data/news-today.json` feeds the same-day homepage/detail support path.
+3. Run `node scripts/build-derived-data.mjs --check` before `node scripts/validate-data.mjs`. Treat either derived-file mismatch as a publication blocker, not a cleanup task after commit.
+4. Record a compact log note such as `Derived data: done - rebuilt data/news-index.json and data/news-today.json after archive mirror; --check passed.`
+
+Do not run the rebuild before the archive mirror is final and then forget to rerun it. The derived files must reflect the committed current/history pair.
+
 ## When To Run
 
 Run this checklist whenever any of these files changes:
@@ -46,11 +57,12 @@ The newest `data/news-history.json` edition should match the current `data/news.
 2. Copy the completed current edition into the newest `data/news-history.json` entry, keeping the current item order unchanged.
 3. Update `data/news-history.json` `updatedAt` and `totalItems` after the newest edition is correct.
 4. Check that no older history edition repeats a current `sourceUrl` or near-duplicate title unless the current item has a valid `freshSourceFact`.
-5. Run `node scripts/validate-data.mjs` and treat any archive-readiness mismatch as a publication blocker.
-6. Open or parse `archive.html`, `all-news.html`, and `news-detail.html` when page behavior changed or when an archived detail link was affected.
-7. For 17:00 JST editions, check whether `docs/archive-diff-summary-format.md` should produce a morning/evening comparison or a skipped reason. For correction-only updates, apply its correction-only decision before deciding whether the reader-facing story changed.
-8. Record in `docs/optimization-log.md` whether the latest history edition was mirrored, created, corrected, or intentionally left unchanged with a reason.
-9. If a correction removes or demotes a bad current item, also record the rollback shape from `docs/bad-data-rollback-note.md` so future runs know whether the issue reached draft, commit, or push.
+5. Run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, so `data/news-index.json` and `data/news-today.json` reflect the final current/history pair.
+6. Run `node scripts/validate-data.mjs` and treat any archive-readiness or derived-data mismatch as a publication blocker.
+7. Open or parse `archive.html`, `all-news.html`, and `news-detail.html` when page behavior changed or when an archived detail link was affected.
+8. For 17:00 JST editions, check whether `docs/archive-diff-summary-format.md` should produce a morning/evening comparison or a skipped reason. For correction-only updates, apply its correction-only decision before deciding whether the reader-facing story changed.
+9. Record in `docs/optimization-log.md` whether the latest history edition was mirrored, created, corrected, or intentionally left unchanged with a reason, plus whether the derived-data rebuild/check passed.
+10. If a correction removes or demotes a bad current item, also record the rollback shape from `docs/bad-data-rollback-note.md` so future runs know whether the issue reached draft, commit, or push.
 
 ## Stop Conditions
 
@@ -62,6 +74,7 @@ Do not commit the publication until the drift is resolved when:
 - A current item has different `claimBoundary`, `provenance`, `originalDependency`, `nextCheck`, `evidenceThreshold`, or `counterEvidence` in history.
 - The archive would show an older batch as the newest edition after the homepage has advanced.
 - A repeated current/history URL is being used as fresh news without a concrete `freshSourceFact`.
+- `data/news-index.json` or `data/news-today.json` was not rebuilt and checked after the final current/history mirror.
 
 ## Compact Log Note
 

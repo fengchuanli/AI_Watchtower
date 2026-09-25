@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 3, News Update Workflow Friction
-- Last indexed run: 2026-09-24 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; sandboxed push also hit GitHub DNS, and the network-authorized retry pushed through `8aaf488` to `origin/main`.
+- Last indexed run: 2026-09-25 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
 
@@ -31,6 +31,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 11 | Complete | `56b56d6` | `docs/detail-page-review-guide.md` and `docs/news-data-format.md` now define the article ending rule: close with boundary, upgrade/downgrade proof, one concrete `nextCheck`, artifact-specific follow-up questions, and source/archive links instead of restating trend or long media caveats. |
 | Day 12 | Complete | `d1ca805` | Detail-page mobile jump navigation now stays in one horizontally scrollable row below 620px, so the six section labels do not create a tall pre-article block between the proof path and the article body. `scripts/validate-site.mjs` guards this mobile-density behavior. |
 | Day 13 | Complete | `8e1126f` | `docs/candidate-to-news-handoff.md` now marks the normal 08:00 / 17:00 shortest path: plain-language note, source gate, duplicate report, short intake, priority/mix check, field mapping, homepage/archive preflight, derived-data rebuild, validation, commit, and push status. `scripts/validate-site.mjs` guards the path. |
+| Day 14 | Complete | `pending` | `docs/current-to-history-publication-checklist.md`, `docs/update-run-checklist.md`, and `docs/candidate-to-news-handoff.md` now make the derived-data rebuild a publication gate: after current/history mirror is final, run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, then validation so `data/news-index.json` and `data/news-today.json` cannot lag the homepage/archive pair. |
 
 ## Historical Guard Anchors
 
@@ -75,14 +76,14 @@ These compact anchors keep validation and future automation aware of the most im
 - Candidate source gate: `docs/candidate-source-checklist.md` gates semi-automated candidates by source identity, role, minimum evidence, copyright/paywall safety, duplicates, and concentration before drafting.
 - Candidate priority: `docs/candidate-priority-rubric.md` ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
 - Duplicate reporting: `scripts/report-duplicate-candidates.mjs` reports repeated candidate URLs and near-matching titles before drafting.
-- Archive mirror: `docs/current-to-history-publication-checklist.md` keeps the newest history edition aligned with `data/news.json`.
+- Archive mirror: `docs/current-to-history-publication-checklist.md` keeps the newest history edition aligned with `data/news.json`, then requires the derived-data rebuild gate for `data/news-index.json` and `data/news-today.json`.
 - Continuity review: `docs/company-continuity-review-note.md`, `docs/topic-continuity-review-note.md`, and `docs/monthly-continuity-snapshot.md` classify repeated signals without treating repetition as stronger proof.
 - Vendor promotion: `docs/vendor-narrative-promotion-rule.md` blocks vendor narratives from TOP3 unless first-screen card copy names the independent proof path.
 - Remote sync: `docs/remote-sync-log-convention.md` standardizes blocked-dns, blocked-auth, conflict, push, and pull wording.
 
 ## Next Useful Task
 
-- Continue with Day 14: add or refine a pre-publication checklist step for regenerating and validating `data/news-index.json` and `data/news-today.json` after current/history changes.
+- Continue with Day 15: review duplicate-candidate output against recent runs and make the report easier to act on when a candidate has a fresh source fact but a similar title.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 12.
 - If Day 12 is already complete, continue with the first useful unfinished task from the current plan.
 

@@ -1184,12 +1184,16 @@ if (
 
 if (
   !/Current To History Publication Checklist/.test(currentToHistoryPublicationChecklist) ||
+  !/Derived Data Publication Gate/.test(currentToHistoryPublicationChecklist) ||
   !/Mirror Fields/.test(currentToHistoryPublicationChecklist) ||
   !/Publication Steps/.test(currentToHistoryPublicationChecklist) ||
   !/Stop Conditions/.test(currentToHistoryPublicationChecklist) ||
   !/Compact Log Note/.test(currentToHistoryPublicationChecklist) ||
   !/data\/news\.json/.test(currentToHistoryPublicationChecklist) ||
   !/data\/news-history\.json/.test(currentToHistoryPublicationChecklist) ||
+  !/data\/news-index\.json/.test(currentToHistoryPublicationChecklist) ||
+  !/data\/news-today\.json/.test(currentToHistoryPublicationChecklist) ||
+  !/build-derived-data\.mjs --check/.test(currentToHistoryPublicationChecklist) ||
   !/edition\.id/.test(currentToHistoryPublicationChecklist) ||
   !/readerFrame/.test(currentToHistoryPublicationChecklist) ||
   !/changeSummary/.test(currentToHistoryPublicationChecklist) ||
@@ -1200,13 +1204,19 @@ if (
   !/item count/.test(currentToHistoryPublicationChecklist) ||
   !/item order/.test(currentToHistoryPublicationChecklist) ||
   !/validate-data\.mjs/.test(currentToHistoryPublicationChecklist) ||
+  !/Derived data/.test(updateRunChecklist) ||
+  !/data\/news-index\.json/.test(updateRunChecklist) ||
+  !/data\/news-today\.json/.test(updateRunChecklist) ||
+  !/build-derived-data\.mjs --check/.test(updateRunChecklist) ||
+  !/derived-data rebuild gate/.test(candidateToNewsHandoff) ||
   !/current-to-history-publication-checklist\.md/.test(updateRunChecklist) ||
   !/current-to-history-publication-checklist\.md/.test(candidateToNewsHandoff) ||
   !/current-to-history-publication-checklist\.md/.test(newsDataFormat) ||
   !/current-to-history-publication-checklist\.md/.test(readme) ||
-  !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex)
+  !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex) ||
+  !/Day 14[\s\S]*data\/news-index\.json[\s\S]*data\/news-today\.json/.test(optimizationDecisionIndex)
 ) {
-  errors.push("News publication workflow must include a current-to-history checklist so the newest archive edition cannot drift from the homepage edition.");
+  errors.push("News publication workflow must mirror current/history and then rebuild/check derived news-index and news-today data before validation.");
 }
 
 if (

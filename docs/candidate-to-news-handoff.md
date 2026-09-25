@@ -14,7 +14,7 @@ During a normal news update, use this as the shortest editor path from candidate
 4. Fill `docs/candidate-intake-format.md` only for surviving candidates, keeping `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, and `draftingDecision` short.
 5. Rank only draftable candidates with `docs/candidate-priority-rubric.md`; use `docs/source-diversity-triage-note.md` when one owner, source family, evidence mode, company, geography, or narrative angle dominates the safe set.
 6. Draft `data/news.json` from the field mapping below, then apply `docs/editorial-checklist.md`, `docs/homepage-edition-preflight.md`, and `docs/current-to-history-publication-checklist.md`.
-7. Rebuild derived data and run validation from `docs/update-run-checklist.md` before commit and push status logging.
+7. Rebuild derived data through the derived-data rebuild gate from `docs/update-run-checklist.md`: after the current edition and newest history mirror are final, run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, then the normal validators before commit and push status logging.
 
 Stop the shortest path rather than drafting when a candidate still needs a stronger original source, has unresolved duplicate status, depends on media article structure, lacks a concrete next check, or would only pad a weak batch.
 
