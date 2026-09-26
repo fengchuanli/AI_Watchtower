@@ -1,3 +1,33 @@
+## 2026-09-26 15:15 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报更新；首页推进为 `news-0800-2026-09-26`，发布 10 条安全非重复信号，聚焦 OpenAI Agent 活动清点与用户图像泄露、多站点 Agent 调查、企业高风险 Agent 隔离缺口、Anthropic 政府采购限制、Microsoft EvilTokens AI 网络犯罪打击、Stanford/NVIDIA CLM-8B 动作缓存、Gemini Live Avatar、Private AI Compute 安全服务器端记忆、Gemini 3.8 TTS 和 AI 安全政策话语权争议。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、Reuters/Investing 转载、TechCrunch AI、VentureBeat AI / Security / Technology、Ars Technica、Microsoft Digital Crimes Unit、Google Keyword AI 和 Google DeepMind Blog 候选。
+  - 新增注册来源 `ars-technica-ai` 与 `microsoft-dcu`；source count 从 93 增至 95。
+  - 发布 10 条安全非重复信号；可靠媒体 6/10，官方来源 4/10。Reuters、TechCrunch、VentureBeat、Ars 项作为 `媒体背景` / `reported` / `originalDependency: must-read` 处理；Microsoft DCU 与 Google 项作为 `官方核对` 处理。
+  - 跳过历史已收录的 OpenAI/Airbnb GPT-6 Astra URL，以及社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、旧稿、重复 URL、赞助内容或弱证据补量。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, source count, categories, deep briefing, and item order.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月26日08:00 版 10 条情报；读者可在首页和详情页看到 Agent 事故清点、政府采购边界、AI网络犯罪、多模态Gemini入口、私有记忆、TTS和Agent决策成本的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 95 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布08点AI新闻：10条Agent事故与多模态入口信号`.
+
 ## 2026-09-26 11:02 JST
 
 - Focus: 完成当前 30 天计划 Day 15，复查候选重复报告在 near-title / fresh-source-fact 场景里的可操作性；让 `scripts/report-duplicate-candidates.mjs` 不只提示相似标题，还直接给出 repeated URL、near-title review、fresh-source-fact 清理的编辑动作。
