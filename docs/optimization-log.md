@@ -1,3 +1,33 @@
+## 2026-09-27 08:04 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-26`，发布 10 条安全非重复信号，聚焦 Anthropic Claude 拒绝计费、Gemini Call for Me 电话代办、Google Photos AI 虚拟衣橱、Meta Muse 企业可视性、Google Suncatcher 轨道 TPU、DataOne 数据中心发电机罚单、Tesla Optimus 训练数据阻力、WISeR 医疗 AI 预授权、CESifo 就业反证和 Microsoft Copilot+ PC 品牌降温。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、Anthropic/Claude Platform 文档、TechCrunch AI、VentureBeat AI / Security、Ars Technica AI / Google / Policy / Health / Gadgets 等候选。
+  - 新增注册官方来源 `anthropic-platform-docs`；source count 从 95 增至 96。
+  - 发布 10 条安全非重复信号；可靠媒体 9/10，官方文档 1/10。Anthropic 文档作为 `官方核对`；TechCrunch、VentureBeat、Ars Technica 项作为 `媒体背景` / `reported` / `originalDependency: must-read` 处理。
+  - 跳过已在 9月26日08:00 或 9月25日补充版收录的 OpenAI Agent 调查、Gemini Live/TTS/Private AI Compute、Microsoft EvilTokens、Microsoft Copilot/Foundry、CLM-8B、Meta Connect/Muse Charm 等重复 URL 或近重复事件。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、赞助内容、旧稿或弱证据补量；本批在 `sourceRisk` / `overreadBoundary` 中明确标为周末媒体雷达。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, source count, categories, deep briefing, and item order.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月26日17:00 版 10 条情报；读者可在首页和详情页看到 Agent 拒绝计费、电话代办、个人照片入口、Muse 审计、AI数据中心能源许可、轨道TPU、医疗AI预授权、就业反证、具身AI训练数据和AI PC品牌降温的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 96 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+- Commit note: `【新闻更新】发布17点AI新闻：10条Agent成本与AI外部性信号`.
+
 ## 2026-09-26 15:15 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报更新；首页推进为 `news-0800-2026-09-26`，发布 10 条安全非重复信号，聚焦 OpenAI Agent 活动清点与用户图像泄露、多站点 Agent 调查、企业高风险 Agent 隔离缺口、Anthropic 政府采购限制、Microsoft EvilTokens AI 网络犯罪打击、Stanford/NVIDIA CLM-8B 动作缓存、Gemini Live Avatar、Private AI Compute 安全服务器端记忆、Gemini 3.8 TTS 和 AI 安全政策话语权争议。

@@ -3,9 +3,1107 @@
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-09-26",
   "date": "2026-09-26",
-  "editionCount": 105,
-  "totalItems": 981,
+  "editionCount": 106,
+  "totalItems": 991,
   "editions": [
+    {
+      "id": "news-1700-2026-09-26",
+      "date": "2026-09-26",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "note": "本期10条AI新闻情报，聚焦Agent成本、电话入口、AI基础设施和公共治理。",
+      "operationalStatus": "已拉取origin/main；完成历史URL去重；核对Anthropic文档、TechCrunch、VentureBeat与Ars Technica候选。",
+      "editorialInterpretation": "本期发布10条安全非重复信号：Agent规则开始进入计费和企业可视性，个人AI进入电话/相册入口，AI基础设施与公共服务AI则暴露能源、医疗和就业证据边界。",
+      "readerFrame": {
+        "headline": "本期读法：查Agent成本、电话入口和基础设施外部性",
+        "whyItMatters": "9月26日17:00版把Claude拒绝计费、Gemini电话代办、Muse企业可视性、轨道TPU、数据中心发电机罚单和医疗AI预授权放进同一张核查表。",
+        "useThisIssueFor": [
+          "平台和安全团队核对Agent拒绝类别、连接器凭据、API-key审计和SIEM/DLP导出。",
+          "产品和隐私团队核对Gemini电话、Google Photos衣橱和AI PC端云边界。",
+          "基础设施、政策和HR团队核对AI数据中心许可、医疗AI申诉和就业数据口径。"
+        ],
+        "notProvenYet": [
+          "不证明Claude拒绝计费已造成大规模客户成本冲击，也不证明Gemini电话功能已广泛可用。",
+          "不证明轨道AI数据中心经济可行、DataOne违规由Microsoft指示，或AI对就业没有长期影响。"
+        ],
+        "mobile": {
+          "headline": "查Agent成本与AI外部性",
+          "summary": "看拒绝计费、电话Agent、Muse审计、数据中心和医疗AI。",
+          "primaryUses": [
+            "平台团队查账单",
+            "安全团队查凭据",
+            "政策团队查文件"
+          ],
+          "proofBoundary": "仍需账单样本、官方帮助页、SIEM日志、监管文件、遥测和就业数据"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月26日08:00版转向成本、入口和外部性核查",
+        "freshFacts": [
+          "新增Anthropic官方文档关于三类出输出前拒绝计费的规则信号。",
+          "新增TechCrunch关于Gemini Call for Me和Google Photos虚拟衣橱扩展的媒体背景。",
+          "新增Ars/VentureBeat关于Muse企业可视性、Suncatcher轨道TPU、DataOne发电机罚单、WISeR医疗AI和就业反证的媒体背景。"
+        ],
+        "repeatedContext": [
+          "延续上午版Agent事故、Gemini多模态入口和AI安全治理背景，但不重复已收录URL。",
+          "延续既有边界：媒体项目只保留最小事实，完整采访、数字、图表和上下文仍回到原文。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对Agent成本和访问",
+          "count": 3,
+          "meaning": "用来检查Claude拒绝计费、Muse连接器凭据和Google电话Agent授权。"
+        },
+        {
+          "label": "核对消费AI入口",
+          "count": 2,
+          "meaning": "用来检查Google Photos衣橱和AI PC标签的隐私、端云和真实用例边界。"
+        },
+        {
+          "label": "验证AI基础设施外部性",
+          "count": 2,
+          "meaning": "用来检查轨道TPU测试、数据中心发电许可、排放和客户合同证据。"
+        },
+        {
+          "label": "验证公共治理和劳动力证据",
+          "count": 3,
+          "meaning": "用来检查医疗AI预授权、应届就业数据和Optimus训练数据采集。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "周末媒体雷达占比高",
+        "note": "可靠媒体占比9/10，Ars 6/10，来源偏向媒体；本批只是雷达。",
+        "nextCheck": "查Anthropic release notes、Google帮助页、Meta企业文档、监管命令、发射遥测、CMS/GAO文件和论文数据。"
+      },
+      "overreadBoundary": {
+        "label": "媒体源占主导",
+        "body": "不要把本期读成全市场结论：多数项目来自可靠媒体背景，作用是指出可查证的风险节点和下一批源文件。",
+        "doNotConclude": "不能得出电话Agent已成熟、轨道数据中心可替代地面算力、AI医疗试点必然违法，或AI就业冲击已经被否定。",
+        "useInstead": "先把本期作为证据清单，用来追官方帮助页、账单日志、监管命令、遥测报告、法院/GAO/CMS文件和论文复现数据。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent治理进入成本层",
+          "note": "跨期看，Agent风险从上午版事故清点继续推进到拒绝计费、连接器审计和电话代办授权。",
+          "boundary": "不证明平台治理已成熟；仍需账单样本、企业审计日志和官方帮助文档。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力外部性更可见",
+          "note": "跨期看，AI基础设施从Stargate、融资和GPU集群延伸到轨道测试与地方空气许可。",
+          "boundary": "不证明新路线可行或违规归因已定；仍需遥测、许可、合同和监管材料。"
+        },
+        {
+          "topic": "policy",
+          "label": "公共部门AI需要程序证据",
+          "note": "跨期看，公共部门AI争议从采购和安全政策扩展到医疗支付闸门和就业统计口径。",
+          "boundary": "不证明违法或无害；仍需CMS、GAO、法院、论文和就业数据复核。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "Agent控制从事故走向运行成本",
+          "status": "stronger",
+          "previousPattern": "此前agent主题的主要模式是OpenAI Agent事故清点、隔离缺口和Gemini多模态入口。",
+          "currentSignal": "本期新增Claude拒绝计费、Muse企业可视性和Gemini电话代办。",
+          "signalDirection": "增强：从事故后追责扩展到计费、凭据和真实外部行动。",
+          "stillUnproven": "仍需Anthropic账单样本、Meta企业文档、Google帮助页和客户侧审计日志。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "AI基础设施进入能源许可核查",
+          "status": "stronger",
+          "previousPattern": "此前多集中在云栈、数据中心融资和GPU集群准备度。",
+          "currentSignal": "本期新增Google Suncatcher轨道TPU和DataOne燃气发电机罚单。",
+          "signalDirection": "增强：从容量故事扩展到散热、电力、排放和社区许可。",
+          "stillUnproven": "仍需发射遥测、DEP命令、许可记录、客户合同和空气质量数据。"
+        },
+        {
+          "topic": "policy",
+          "label": "AI治理证据口径更分散",
+          "status": "stronger",
+          "previousPattern": "此前政策信号集中在采购限制、AI安全话语权和监管标准。",
+          "currentSignal": "本期新增WISeR医疗AI预授权和CESifo应届就业反证。",
+          "signalDirection": "增强：治理问题进入医疗服务和劳动力统计方法。",
+          "stillUnproven": "仍需CMS/GAO文件、法院材料、论文代码、CPS微数据和后续年度数据。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Anthropic",
+          "label": "安全拒绝进入账单边界",
+          "lastMention": "此前Anthropic连续出现在Claude采购限制、安全治理、模型发布和生命科学验证背景中。",
+          "whatChanged": "本期新增Claude Platform文档中三类出输出前拒绝计费规则。",
+          "stillUnproven": "仍需Anthropic官方公告、API release notes文件、账单日志、云平台实现数据和误拒率指标披露。"
+        },
+        {
+          "company": "Google",
+          "label": "入口和基础设施同步外扩",
+          "lastMention": "此前Google连续出现在Gemini Live Avatar、Private AI Compute、TTS和Google Cloud入口背景中。",
+          "whatChanged": "本期新增Gemini电话代办、Google Photos虚拟衣橱和Suncatcher轨道TPU测试。",
+          "stillUnproven": "仍需Google帮助页、隐私设置、发射遥测、TPU错误率和客户使用指标。"
+        },
+        {
+          "company": "Meta",
+          "label": "Muse从产品扩展到安全审计问题",
+          "lastMention": "此前Meta连续出现在Muse、Charm、AI眼镜和个人Agent入口背景中。",
+          "whatChanged": "本期新增Muse零日修补后的企业可视性缺口。",
+          "stillUnproven": "仍需Meta企业管理文档、补丁版本、SIEM/DLP导出和客户侧审计日志。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "官方来源用于确认Anthropic文档规则；实际成本、误拒率和客户影响仍需账单与日志。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 9,
+          "role": "可靠媒体用于捕捉产品、基础设施、政策和就业信号；完整事实、数字、采访、图表和上下文仍需原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "核对Agent成本、凭据和电话动作",
+          "count": 3,
+          "itemIds": [
+            "anthropic-platform-refusal-billing-safeguards-2026-09-26",
+            "techcrunch-google-gemini-call-for-me-pixel-2026-09-26",
+            "venturebeat-meta-muse-zero-day-enterprise-visibility-2026-09-26"
+          ],
+          "meaning": "用来检查Agent拒绝计费、电话授权、连接器凭据和企业审计路径。",
+          "whyNow": "Agent正在从聊天工具变成能花钱、拨电话、连接业务系统的执行层。"
+        },
+        {
+          "id": "enterprise",
+          "label": "核对消费和终端AI入口",
+          "count": 2,
+          "itemIds": [
+            "techcrunch-google-photos-virtual-closet-ai-rollout-2026-09-26",
+            "ars-microsoft-copilot-pc-branding-retreat-2026-09-26"
+          ],
+          "meaning": "用来检查相册AI、AI PC标签、端云体验和隐私/采购边界。",
+          "whyNow": "AI入口继续下沉到相册、手机和PC，但真实用例与数据边界仍要核对。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "验证算力能源和轨道路线",
+          "count": 2,
+          "itemIds": [
+            "ars-google-suncatcher-orbital-ai-data-center-test-2026-09-26",
+            "ars-dataone-new-jersey-ai-data-center-generator-fine-2026-09-26"
+          ],
+          "meaning": "用来检查轨道TPU测试、数据中心发电许可、排放和客户合同证据。",
+          "whyNow": "AI算力扩张正在碰到地面能源许可和远期替代路线。"
+        },
+        {
+          "id": "policy",
+          "label": "验证公共服务和劳动力证据",
+          "count": 3,
+          "itemIds": [
+            "ars-wiser-medicare-ai-prior-authorization-risk-2026-09-26",
+            "ars-cesifo-ai-new-grad-employment-counter-signal-2026-09-26",
+            "ars-tesla-optimus-workers-training-replacement-risk-2026-09-26"
+          ],
+          "meaning": "用来检查医疗AI程序、就业数据口径、机器人训练数据和劳动力信任。",
+          "whyNow": "AI影响开始进入医保、就业和工作场所数据采集等高摩擦治理场景。"
+        }
+      ],
+      "omittedTopics": [
+        {
+          "id": "model",
+          "label": "基础模型",
+          "status": "无新来源事实",
+          "reason": "本期没有新的安全非重复模型卡、价格页或独立基准。",
+          "omissionBoundary": "不代表模型竞争降温；需要官方模型发布、系统卡、价格页或第三方复测再提升。",
+          "fallback": "可查看9月26日08:00版Gemini TTS和9月25日GPT-6/AWS/NVIDIA背景。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发者工具",
+          "status": "有局部相关",
+          "reason": "Anthropic拒绝计费影响开发者，但本期没有新的代码工具发布。",
+          "omissionBoundary": "不代表开发者工具不重要；需要SDK、CLI、Agent运行时或框架文档再单独提升。",
+          "fallback": "可查看9月25日Microsoft Foundry和Agent Framework背景。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "ars-technica-ai",
+        "sourceName": "Ars Technica AI",
+        "count": 6,
+        "share": "6/10",
+        "note": "Ars Technica AI未达到三分之二，但已是最大单一来源；本批应作为周末雷达，不可替代官方文件、监管材料和论文原文。",
+        "nextCheck": "查Anthropic、Google、Meta、Microsoft、CMS、GAO、New Jersey DEP、Tesla和CESifo原始材料。"
+      },
+      "categories": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "本期用于查看WISeR医疗AI预授权、DataOne数据中心罚单和AI就业数据口径；需CMS/GAO文件、DEP许可、合同和论文数据确认。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "本期用于查看Claude拒绝计费和Muse企业可视性；需账单样本、stop_details日志、Meta企业文档和SIEM/DLP导出验证。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "本期用于查看Gemini Call for Me、Google Photos虚拟衣橱、Microsoft Copilot+ PC标签和Tesla Optimus；需官方帮助页、隐私设置、销售数据和产量记录确认。"
+        },
+        {
+          "id": "funding",
+          "label": "资金",
+          "description": "本期用于查看Google Suncatcher轨道TPU等AI基础设施远期投入；需发射遥测、项目更新和工程成本数据确认。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "本期用于查看CESifo关于AI就业影响的反向证据；需论文全文、CPS微数据、代码和后续年度复现确认。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "本期用于提醒读者何时等待基础模型事实；当前没有新模型卡，模型判断需官方模型卡、系统卡、价格页和第三方复测确认。"
+        }
+      ],
+      "briefing": {
+        "label": "17:00 情报简报",
+        "headline": "Agent进入成本和访问治理，AI外部性进入文件核查",
+        "summary": "本期用10条非重复来源把Claude拒绝计费、Gemini电话代办、Muse审计缺口、AI数据中心能源许可、医疗AI预授权和就业数据反证放到同一张核查表；媒体占比高，重点是下一步源文件。",
+        "cta": "查看本期10条情报",
+        "watchPoints": [
+          {
+            "title": "Agent成本",
+            "body": "先查拒绝类别、账单样本、电话授权和连接器凭据。"
+          },
+          {
+            "title": "基础设施",
+            "body": "先查轨道TPU遥测、发电许可、排放和客户合同。"
+          },
+          {
+            "title": "公共治理",
+            "body": "先查CMS/GAO文件、就业论文数据和机器人训练记录。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "17:00 深度简报",
+        "title": "Agent从能力竞赛进入成本、凭据和公共治理清单",
+        "subtitle": "9月26日晚间版不是追逐单一模型发布，而是把AI进入真实世界后的账单、电话、凭据、能源、医疗和就业证据边界整理出来。",
+        "dateLabel": "2026年9月26日 17:00 JST",
+        "status": "已发布，媒体雷达占比高",
+        "overview": "本期的主线是AI从演示和聊天界面进入执行系统后，成本、权限和外部性开始变成可审计对象。Claude拒绝计费让安全分类进入账单；Gemini电话和Photos衣橱让个人数据进入行动入口；Muse、数据中心、医疗AI和就业论文则提醒读者继续查源文件。",
+        "timeline": [
+          {
+            "label": "成本",
+            "title": "Claude拒绝计费改变开发者运行表",
+            "body": "Anthropic文档把三类出输出前拒绝列为可计费请求，评测、红队和批量探测要看账单与stop_details日志。"
+          },
+          {
+            "label": "入口",
+            "title": "个人AI进入电话和照片库",
+            "body": "Gemini电话代办和Google Photos虚拟衣橱让AI处理真实外部交互与私人媒体库，隐私和授权边界更重。"
+          },
+          {
+            "label": "外部性",
+            "title": "基础设施和公共服务需要文件核查",
+            "body": "Suncatcher、DataOne、WISeR和就业论文都需要遥测、监管、合同或数据复现来升级判断。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期安全非重复情报"
+          },
+          {
+            "value": "9/10",
+            "label": "可靠媒体背景占比"
+          },
+          {
+            "value": "1/10",
+            "label": "官方文档来源"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "Agent成本",
+            "title": "拒绝、凭据和电话动作都要进审计",
+            "body": "Claude拒绝计费、Muse连接器和Gemini电话代办共同说明，Agent治理要覆盖账单、凭据、用户授权和真实世界动作。",
+            "soWhat": "平台团队先查日志和账单，再决定是否放大红队、电话代办或个人Agent试点。"
+          },
+          {
+            "number": "02",
+            "label": "基础设施",
+            "title": "AI算力不只看GPU供给",
+            "body": "轨道TPU测试和数据中心发电机罚单分别指向远期替代路线和当下地方许可压力。",
+            "soWhat": "基础设施团队要把遥测、许可、排放、噪音和客户合同放进AI容量评估。"
+          },
+          {
+            "number": "03",
+            "label": "公共治理",
+            "title": "医疗和就业需要源文件",
+            "body": "WISeR医疗AI和CESifo就业论文提示公共AI争议不能只靠口号，需要程序文件、申诉数据和可复现统计。",
+            "soWhat": "政策和HR团队应分清媒体报道、政府文件、论文方法和实际影响指标。"
+          }
+        ],
+        "actions": [
+          "检查Claude拒绝类别与账单告警。",
+          "盘点个人Agent连接器、API-key和SIEM/DLP缺口。",
+          "追踪Google电话/相册帮助页和隐私设置。",
+          "把AI数据中心许可、医疗AI申诉和就业论文复现列入下一轮核查。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期覆盖9月21日至9月25日发布、且未被当前历史收录的安全来源事实。"
+          },
+          {
+            "label": "来源边界",
+            "body": "媒体占比高，除Anthropic文档外，多数项目仍需官方、监管、账单、遥测或论文数据复核。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "Anthropic文档支持三类拒绝计费规则。",
+            "TechCrunch、VentureBeat和Ars支持本期媒体最小事实。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower判断本期核心是Agent执行后的成本、凭据和外部性。",
+            "本期把产品信号转为下一步核查清单，而非效果结论。"
+          ],
+          "unknowns": [
+            "尚未知Claude拒绝计费对客户成本的实际规模。",
+            "尚未知Suncatcher在轨TPU表现、DataOne许可结果、WISeR指标和就业影响后续数据。"
+          ]
+        },
+        "references": [
+          {
+            "label": "Anthropic文档说明拒绝计费规则",
+            "url": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback"
+          },
+          {
+            "label": "TechCrunch报道Gemini Call for Me测试",
+            "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/"
+          },
+          {
+            "label": "媒体报道Muse企业可视性缺口",
+            "url": "https://venturebeat.com/security/meta-patched-muses-zero-day-but-security-teams-still-lack-visibility-into-what-the-agent-can-access"
+          },
+          {
+            "label": "Ars Technica报道Google Suncatcher轨道TPU测试",
+            "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/"
+          },
+          {
+            "label": "媒体报道WISeR医疗AI争议",
+            "url": "https://arstechnica.com/health/2026/09/trump-admin-using-ai-to-deny-medical-care-for-seniors-in-disastrous-experiment/"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "ars-wiser-medicare-ai-prior-authorization-risk-2026-09-26",
+          "category": "policy",
+          "label": "政策",
+          "title": "Ars Technica：美国Medicare AI预授权试点引发护理延误和合法性争议",
+          "body": "Ars Technica报道，WISeR试点使用AI/机器学习审查部分Medicare服务预授权，医生反馈、EFF文件和GAO程序问题让项目承压。",
+          "summary": "医疗AI从辅助判断进入医保支付闸门后，透明度和申诉路径成为核心风险。",
+          "whyItMatters": "高风险公共服务中的AI不仅要看准确率，还要看合法授权、激励结构、患者延误和审计材料。",
+          "detailBody": "本条作为Ars Technica媒体背景处理：它报道WISeR试点、EFF取得的文件和GAO程序质疑。\nAI Watchtower只保留最小事实；完整政策文件、医生反馈和法律路径应回到原文与政府材料。\n下一步查CMS规则、GAO报告和申诉数据。",
+          "trend": "公共服务AI开始触及付款、拒付和护理可及性，治理焦点从工具采购转向权利救济。",
+          "detailTrend": "公共服务AI开始触及付款、拒付和护理可及性，治理焦点从工具采购转向权利救济。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它是高风险公共部门AI的可验证治理案例。",
+          "topReason": "医保AI预授权把模型治理直接连接到患者权益和政府程序合法性。",
+          "impact": "医疗、公共政策和合规团队需要核对AI拒付规则、人工复核、患者申诉和供应商激励。",
+          "whoShouldCare": "负责医保支付、医疗AI采购、患者权益和公共部门合规的政策/法务团队在审查AI预授权场景中",
+          "readerUse": "对医疗政策团队，用它检查CMS规则、供应商合同、人工复核、申诉时效和患者伤害指标。",
+          "nextCheck": "查CMS WISeR项目文件、GAO程序意见、EFF诉讼材料、供应商合同和拒付/延误统计。",
+          "followUpQuestions": [
+            "CMS是否公开WISeR模型使用范围、人工复核比例和患者申诉时效数据？",
+            "GAO或法院是否要求暂停、重做程序或披露供应商激励结构？"
+          ],
+          "evidenceThreshold": "需要CMS正式规则、GAO报告、法院文件和项目指标，才可升级为确认的医疗AI政策影响判断。",
+          "claimBoundary": "Ars报道不能证明每次拒付都由AI错误造成，也不能证明试点已违反所有适用法律。",
+          "counterEvidence": "若CMS公开强人工复核、低错误率和及时申诉数据，应收窄护理延误风险判断。",
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "sourceUrl": "https://arstechnica.com/health/2026/09/trump-admin-using-ai-to-deny-medical-care-for-seniors-in-disastrous-experiment/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Ars Technica AI报道WISeR医疗AI治理争议、EFF文件和GAO程序质疑；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-25",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "医疗AI",
+            "Medicare",
+            "WISeR",
+            "公共部门",
+            "AI治理"
+          ],
+          "companies": [
+            "CMS"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "公共风险高且文件路径明确，但因媒体源需政府材料复核。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://arstechnica.com/health/2026/09/trump-admin-using-ai-to-deny-medical-care-for-seniors-in-disastrous-experiment/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "公共风险高且文件路径明确，但因媒体源需政府材料复核。"
+          },
+          "detailWhyRanked": "它把医疗AI治理落到医保支付和患者申诉。来源是Ars Technica AI关于WISeR医疗AI预授权、EFF文件和GAO程序质疑的媒体背景；读者应查CMS文件、GAO意见、EFF材料和项目指标，再判断合法性与伤害范围。"
+        },
+        {
+          "id": "ars-cesifo-ai-new-grad-employment-counter-signal-2026-09-26",
+          "category": "research",
+          "label": "研究",
+          "title": "Ars Technica：CESifo工作论文暂未发现AI广泛冲击美国应届毕业生就业",
+          "body": "Ars Technica报道，CESifo研究用美国CPS数据分析2026年夏季应届大学毕业生就业，结论与部分AI替代焦虑相反。",
+          "summary": "AI就业冲击出现反向证据：至少2026年夏季宏观数据还不支持广泛替代。",
+          "whyItMatters": "招聘和教育决策不能只靠轶事或单一薪资数据，必须同时看失业率、岗位供给、需求和行业暴露。",
+          "detailBody": "本条作为Ars Technica媒体背景处理：它报道CESifo工作论文对2026年夏季应届毕业生就业的分析。\nAI Watchtower只保留最小事实；完整方法、表格和与Stanford研究差异应回到原文与论文。\n下一步查论文、CPS数据和2027年队列。",
+          "trend": "AI劳动力影响正在从强叙事进入数据口径之争。",
+          "detailTrend": "AI劳动力影响正在从强叙事进入数据口径之争。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它给AI替代应届生叙事提供了重要反证和方法边界。",
+          "topReason": "就业影响需要多数据源交叉，不能只读单一恐慌指标。",
+          "impact": "教育、HR和政策团队需要把AI岗位冲击判断拆成行业、年龄、岗位、供需和时间滞后。",
+          "whoShouldCare": "负责校园招聘、职业教育、劳动力政策和AI岗位影响评估的HR/研究团队在制定2027招聘计划场景中",
+          "readerUse": "对HR和政策研究团队，用它复核AI暴露指标、就业口径、年龄组和岗位需求变化。",
+          "nextCheck": "查CESifo论文全文、CPS微数据、ADP/Stanford对照方法和2027年毕业生就业数据。",
+          "followUpQuestions": [
+            "CESifo论文是否公开代码、AI暴露分类和与Stanford ADP数据差异的稳健性检验？",
+            "2027年毕业生数据是否出现行业或岗位组层面的显著AI替代信号？"
+          ],
+          "evidenceThreshold": "需要论文全文、可复现数据和后续年度就业指标，才可升级为稳健的AI就业冲击判断。",
+          "claimBoundary": "Ars报道不证明AI没有长期就业影响，也不证明所有行业的应届岗位都安全。",
+          "counterEvidence": "若2027年CPS微数据、ADP薪资数据或企业招聘记录显示AI高暴露岗位显著恶化，应下调“暂无广泛冲击”判断为延迟或行业特定冲击。",
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "sourceUrl": "https://arstechnica.com/ai/2026/09/ai-was-supposed-to-hit-new-grads-hard-so-far-unemployment-data-says-otherwise/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Ars Technica AI报道CESifo论文指标、CPS数据和AI就业影响研究边界；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-25",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "AI就业",
+            "CESifo",
+            "应届生",
+            "劳动力",
+            "研究方法"
+          ],
+          "companies": [],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "读者效用高，但仍需论文全文和复现数据。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://arstechnica.com/ai/2026/09/ai-was-supposed-to-hit-new-grads-hard-so-far-unemployment-data-says-otherwise/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "读者效用高，但仍需论文全文和复现数据。"
+          },
+          "detailWhyRanked": "它为AI就业替代叙事提供反向数据口径。来源是Ars Technica AI关于CESifo工作论文和CPS数据分析的媒体背景；读者应查论文、CPS微数据、ADP对照和2027年队列，再做招聘或政策判断。"
+        },
+        {
+          "id": "ars-microsoft-copilot-pc-branding-retreat-2026-09-26",
+          "category": "product",
+          "label": "产品",
+          "title": "Ars Technica：Microsoft新Surface弱化Copilot+ PC品牌",
+          "body": "Ars Technica报道，Microsoft新Surface设备虽满足Copilot+ PC硬件要求，却不再主打该标签，行业AI PC叙事出现降温。",
+          "summary": "AI PC从营销标签回落到普通性能和混合AI体验竞争。",
+          "whyItMatters": "终端AI硬件不再只靠NPU TOPS和品牌名说服用户，真实本地用例、隐私和成本更关键。",
+          "detailBody": "本条作为Ars Technica媒体背景处理：它报道Microsoft新Surface不再突出Copilot+ PC命名。\nAI Watchtower只保留最小报道事实；完整采访、品牌页面变化和OEM背景应回到原文。\n下一步查Microsoft产品页、Surface发布材料和OEM销售数据。",
+          "trend": "AI PC叙事正在从“必须换机”转向更模糊的混合端云体验。",
+          "detailTrend": "AI PC叙事正在从“必须换机”转向更模糊的混合端云体验。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它提示AI硬件营销周期可能从热启动进入验证期。",
+          "topReason": "Copilot+ PC标签弱化说明端侧AI卖点需要真实用例支撑。",
+          "impact": "PC、芯片和企业采购团队需要核对本地AI用例、内存成本、隐私收益和云端替代方案。",
+          "whoShouldCare": "负责企业PC采购、端侧AI路线、芯片营销和Windows设备更新的IT/产品团队在评估AI PC换机理由场景中",
+          "readerUse": "对IT采购团队，用它检查NPU需求、Recall类隐私风险、本地模型用例和Surface/OEM定价。",
+          "nextCheck": "查Microsoft Surface发布页、Copilot+ PC页面重定向、OEM营销材料和IDC/Canalys销售数据。",
+          "followUpQuestions": [
+            "Microsoft是否在Surface正式材料中继续保留Copilot+ PC认证、Recall和NPU体验说明？",
+            "OEM销售数据是否显示AI PC标签弱化后换机需求仍由本地AI功能驱动？"
+          ],
+          "evidenceThreshold": "需要Microsoft官方产品页、OEM销售数据和企业采购反馈，才可升级为确认的AI PC品牌周期判断。",
+          "claimBoundary": "Ars报道不能证明Microsoft放弃端侧AI，也不能证明AI PC市场整体失败。",
+          "counterEvidence": "若Microsoft官方产品页重新强化Copilot+ PC标签，或IDC/Canalys销售数据证明本地AI功能驱动换机，应下调品牌退潮判断。",
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "sourceUrl": "https://arstechnica.com/gadgets/2026/09/microsoft-stops-insisting-you-need-a-copilot-pc/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Ars Technica AI报道Microsoft弱化Copilot+ PC模型/端侧AI品牌和Surface命名变化；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-25",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "Microsoft",
+            "Copilot+ PC",
+            "Surface",
+            "端侧AI",
+            "硬件"
+          ],
+          "companies": [
+            "Microsoft"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "品牌信号清晰，但市场结论需销售和官方材料验证。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://arstechnica.com/gadgets/2026/09/microsoft-stops-insisting-you-need-a-copilot-pc/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "品牌信号清晰，但市场结论需销售和官方材料验证。"
+          },
+          "detailWhyRanked": "它显示AI硬件卖点可能从标签竞争进入用例验证。来源是Ars Technica AIArs Technica媒体背景；读者应查Microsoft产品页、OEM材料、销售数据和企业采购反馈，再判断AI PC周期。"
+        },
+        {
+          "id": "ars-tesla-optimus-workers-training-replacement-risk-2026-09-26",
+          "category": "product",
+          "label": "产品",
+          "title": "Ars Technica：Tesla员工抵触为Optimus训练替代自己的机器人",
+          "body": "Ars Technica援引The Information报道，Tesla在Optimus量产中面临机器人手、产线速度和员工动作数据采集阻力，目标仍指向年底每周千台。",
+          "summary": "人形机器人量产的瓶颈同时来自硬件、AI和劳动力信任。",
+          "whyItMatters": "具身AI不是只靠模型进步，生产数据、工人配合和供应链都会决定商业节奏。",
+          "detailBody": "本条作为Ars Technica媒体背景处理：它转述Tesla Optimus生产、训练数据和员工抵触问题。\nAI Watchtower只保留最小事实；完整The Information报道、Tesla回应和生产数据应回到原文链路。\n下一步查交付量、工伤/安全文件和客户部署记录。",
+          "trend": "具身AI落地正在从演示视频进入生产工程、数据采集伦理和劳资信任问题。",
+          "detailTrend": "具身AI落地正在从演示视频进入生产工程、数据采集伦理和劳资信任问题。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它把人形机器人炒作拆成可核验的产线、传感器和动作数据问题。",
+          "topReason": "机器人量产瓶颈比模型演示更能说明具身AI真实进度。",
+          "impact": "制造、机器人和HR团队需要核对数据采集同意、岗位影响、产线良率和安全部署条件。",
+          "whoShouldCare": "负责机器人生产、工厂自动化、员工动作数据采集和岗位转型的制造/HR团队在评估人形机器人落地场景中",
+          "readerUse": "对制造团队，用它检查训练数据来源、传感器可靠性、量产良率和员工沟通机制。",
+          "nextCheck": "查Tesla产量披露、Optimus客户试点、工厂安全记录、供应商文件和The Information后续证据。",
+          "followUpQuestions": [
+            "Tesla是否在财报、投资者日或监管文件中披露Optimus实际周产量和返修率？",
+            "员工动作数据采集是否有公开同意流程、薪酬安排或安全评估记录？"
+          ],
+          "evidenceThreshold": "需要Tesla官方产量、客户部署记录、供应链文件或监管/劳工记录，才可升级为确认的量产进度判断。",
+          "claimBoundary": "Ars报道不能证明Optimus一定无法量产，也不能证明员工抵触代表全部工厂状态。",
+          "counterEvidence": "若Tesla公开稳定交付、客户部署和安全记录，应下调生产受阻判断。",
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "sourceUrl": "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Ars Technica AI报道Tesla Optimus机器人模型量产、动作数据采集和员工抵触问题；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-25",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "Tesla",
+            "Optimus",
+            "人形机器人",
+            "具身AI",
+            "制造"
+          ],
+          "companies": [
+            "Tesla"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "具身AI落地价值高，但核心证据仍依赖媒体链路和后续披露。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "具身AI落地价值高，但核心证据仍依赖媒体链路和后续披露。"
+          },
+          "detailWhyRanked": "它把具身AI从愿景转到产线和劳动力现实。来源是Ars Technica AI关于Tesla Optimus生产挑战与员工动作数据采集的媒体背景；读者应查Tesla产量、客户部署、安全记录和员工数据采集政策，再判断商业进度。"
+        },
+        {
+          "id": "anthropic-platform-refusal-billing-safeguards-2026-09-26",
+          "category": "tool",
+          "label": "工具",
+          "title": "Anthropic文档：三类出输出前拒绝将按正常请求计费",
+          "body": "Claude Platform文档说明，bio、frontier_llm、reasoning_extraction三类出输出前拒绝会被计费，用于抑制大规模绕过护栏尝试。",
+          "summary": "Claude API把部分安全拒绝从免费失败请求改成可计费事件。",
+          "whyItMatters": "安全护栏开始进入成本模型，批量探测、误拒监控和开发者预算都要重新核算。",
+          "detailBody": "本条作为Anthropic官方文档核对：Claude Platform说明三类出输出前拒绝会计费，并适用于API、Bedrock、AWS平台、Google Cloud和Microsoft Foundry。\nAI Watchtower确认的是文档规则，不确认实际误拒率或客户成本冲击。\n下一步要查账单样本、stop_details分布和平台侧公告。",
+          "trend": "模型安全分类器正在从后台治理变成开发者能直接感受到的价格和运行时信号。",
+          "detailTrend": "模型安全分类器正在从后台治理变成开发者能直接感受到的价格和运行时信号。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它把安全拒绝、滥用防御和API成本放进同一张运营表。",
+          "topReason": "拒绝计费规则会改变红队、评测和批量请求的成本边界。",
+          "impact": "平台、评测和财务团队需要把拒绝类别、缓存、重试和账单监控纳入API治理。",
+          "whoShouldCare": "负责Claude API接入、安全红队、生命科学/前沿模型评测和云账单治理的工程/财务团队在核算拒绝成本场景中",
+          "readerUse": "对平台团队，用它检查stop_details日志、重试策略、预算告警和误拒申诉路径。",
+          "nextCheck": "查Anthropic API release notes、账单样本、Bedrock/Google/Microsoft平台实现差异和误拒率披露。",
+          "followUpQuestions": [
+            "Claude Platform API release notes是否给出2026年9月24日拒绝计费扩展的完整变更记录？",
+            "主要云平台是否在账单明细文件中区分bio、frontier_llm和reasoning_extraction三类拒绝？"
+          ],
+          "evidenceThreshold": "需要平台账单样本、release notes和客户侧stop_details日志，才可升级为已验证的成本影响判断。",
+          "claimBoundary": "官方文档不证明三类拒绝一定低误拒，也不证明客户账单冲击已经可忽略。",
+          "counterEvidence": "若Anthropic回滚规则、发布误拒补偿或云平台实现不一致，应下调成本治理冲击判断。",
+          "sourceId": "anthropic-platform-docs",
+          "sourceName": "Claude Platform Docs",
+          "source": "Claude Platform Docs",
+          "sourceUrl": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Claude Platform Docs说明三类出输出前拒绝的计费规则、适用平台和类别边界；客户成本、误拒率和实际账单仍需日志与账单核对。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "Anthropic",
+            "Claude",
+            "API计费",
+            "安全拒绝",
+            "平台治理"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方文档直接改变开发者成本边界，仍需账单样本验证影响。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "官方来源；适合确认发布、文档或产品状态，效果和采用仍需外部证据。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方文档直接改变开发者成本边界，仍需账单样本验证影响。"
+          },
+          "detailWhyRanked": "它把安全护栏的分类结果转化为API成本和运行时治理问题。来源是Claude Platform DocsAnthropic官方文档；读者应查release notes、账单明细和stop_details日志，再评估误拒与预算风险。"
+        },
+        {
+          "id": "ars-dataone-new-jersey-ai-data-center-generator-fine-2026-09-26",
+          "category": "policy",
+          "label": "政策",
+          "title": "Ars Technica：新泽西因62台燃气发电机罚DataOne数据中心110万美元",
+          "body": "Ars Technica报道，新泽西监管机构因DataOne未按空气污染规则许可运行燃气发电机开出110万美元罚单，该设施被居民关联到Microsoft AI工具供电。",
+          "summary": "AI数据中心的临时电力方案进入地方环保执法视野。",
+          "whyItMatters": "算力扩张不只看GPU和土地，还会触发空气许可、社区信任和临时发电合规成本。",
+          "detailBody": "本条作为Ars Technica媒体背景处理：它报道新泽西对DataOne数据中心燃气发电机的空气污染罚单。\nAI Watchtower只保留最小报道事实；完整监管材料、居民表述和公司回应应回到原文。\n下一步查DEP命令、许可申请和Microsoft供电合同。",
+          "trend": "AI算力建设的约束正在从芯片供应扩展到地方空气许可、噪音和社区治理。",
+          "detailTrend": "AI算力建设的约束正在从芯片供应扩展到地方空气许可、噪音和社区治理。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它把AI数据中心成本外部性转化为明确执法动作。",
+          "topReason": "地方环保罚单说明AI基础设施扩张进入社区合规压力期。",
+          "impact": "云采购、数据中心和ESG团队需要核对备用电源许可、排放监测、噪音投诉和客户合同披露。",
+          "whoShouldCare": "负责AI数据中心选址、云采购、ESG披露和地方许可的基础设施/法务团队在审查临时供电方案场景中",
+          "readerUse": "对基础设施团队，用它检查AI数据中心的发电许可、居民投诉、排放监测和客户透明度。",
+          "nextCheck": "查New Jersey DEP执法命令、DataOne许可申请、Microsoft相关合同披露和后续空气质量监测。",
+          "followUpQuestions": [
+            "New Jersey DEP执法命令或许可案卷是否公开DataOne发电机申请、排放估算和45天整改结果？",
+            "Microsoft或DataOne是否披露该设施与Copilot等AI工作负载的供电合同范围？"
+          ],
+          "evidenceThreshold": "需要监管命令、许可记录、客户合同或公开采购文件，才可升级为确认的AI负载供电合规影响判断。",
+          "claimBoundary": "Ars报道不能证明Microsoft直接指示违规，也不能证明罚款足以改变数据中心运营。",
+          "counterEvidence": "若New Jersey DEP许可记录显示发电机获批、运行停止、排放合规，或客户合同文件不涉及AI负载，应收窄AI基础设施合规判断。",
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "sourceUrl": "https://arstechnica.com/tech-policy/2026/09/new-jersey-fines-data-center-1-1m-after-satellite-pics-expose-62-gas-generators/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Ars Technica AI报道DataOne AI数据中心罚单、燃气发电机许可和排放治理争议；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "AI数据中心",
+            "Microsoft",
+            "DataOne",
+            "能源",
+            "环保执法"
+          ],
+          "companies": [
+            "Microsoft",
+            "DataOne"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "执法动作明确，AI负载归因和合同范围仍需文件确认。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://arstechnica.com/tech-policy/2026/09/new-jersey-fines-data-center-1-1m-after-satellite-pics-expose-62-gas-generators/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "执法动作明确，AI负载归因和合同范围仍需文件确认。"
+          },
+          "detailWhyRanked": "它把AI数据中心的能源外部性落到地方执法文件。来源是Ars Technica AI关于DataOne罚单和燃气发电机的媒体背景；读者应查DEP命令、许可申请、合同披露和空气监测，再判断对AI供电的影响。"
+        },
+        {
+          "id": "ars-google-suncatcher-orbital-ai-data-center-test-2026-09-26",
+          "category": "funding",
+          "label": "资金",
+          "title": "Ars Technica：Google首个Suncatcher轨道AI数据中心测试将于10月1日发射",
+          "body": "Ars Technica报道，Google将把搭载4颗TPU的Project Suncatcher实验卫星送入轨道，用约15分钟短时运行验证太空AI算力设想。",
+          "summary": "Google把AI数据中心压力的一部分带到轨道实验。",
+          "whyItMatters": "轨道算力是对地面电力、土地和散热争议的远期回应，但当前仍是小规模工程验证。",
+          "detailBody": "本条作为Ars Technica媒体背景处理：它报道Google Suncatcher MVP将随SpaceX拼车发射并测试TPU在轨运行。\nAI Watchtower只保留最小报道事实；完整技术细节和引用应回到原文与Google材料。\n下一步查发射清单、遥测和Google项目更新。",
+          "trend": "AI基础设施正在探索地面数据中心之外的能源和散热路线。",
+          "detailTrend": "AI基础设施正在探索地面数据中心之外的能源和散热路线。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它给AI算力供给提供了一个高风险但可观察的实验节点。",
+          "topReason": "轨道TPU测试把AI数据中心约束推向电力、散热和空间工程。",
+          "impact": "基础设施、云成本和能源团队需要把它当作长期技术路线，而非近期容量替代。",
+          "whoShouldCare": "负责AI基础设施规划、数据中心选址、电力采购和云成本预测的战略/工程团队在评估远期算力路线场景中",
+          "readerUse": "对基础设施团队，用它跟踪发射结果、在轨散热、TPU错误率和后续2027卫星计划。",
+          "nextCheck": "查SpaceX Transporter-18任务状态、Google Suncatcher更新、TPU遥测、散热报告和2027卫星计划。",
+          "followUpQuestions": [
+            "Transporter-18发射后Google是否公布TPU在轨运行、错误率和散热遥测？",
+            "Google官方公告、项目说明文件或任务报告是否确认2027年自定义Suncatcher卫星的发射时间、功耗和通信架构？"
+          ],
+          "evidenceThreshold": "需要发射成功记录、Google遥测报告和后续卫星设计文件，才可升级为可行基础设施路线判断。",
+          "claimBoundary": "Ars报道不证明轨道AI数据中心具有经济可行性，也不证明近期能缓解地面算力瓶颈。",
+          "counterEvidence": "若发射延期、TPU过热、辐射错误高或Google取消后续任务，应下调轨道数据中心路线判断。",
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "sourceUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Ars Technica AI报道Google Suncatcher轨道AI数据中心、TPU模型运行和散热边界；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "Google",
+            "Suncatcher",
+            "TPU",
+            "AI数据中心",
+            "基础设施"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 22,
+            "note": "基础设施想象力强，但当前只是媒体报道的工程测试节点。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 22,
+            "note": "基础设施想象力强，但当前只是媒体报道的工程测试节点。"
+          },
+          "detailWhyRanked": "它把AI算力压力从地面数据中心带入轨道工程验证。来源是Ars Technica AI关于Google Suncatcher轨道TPU测试的媒体背景；读者应查发射状态、Google遥测、TPU错误率和后续卫星计划，再判断可行性。"
+        },
+        {
+          "id": "techcrunch-google-photos-virtual-closet-ai-rollout-2026-09-26",
+          "category": "product",
+          "label": "产品",
+          "title": "TechCrunch：Google Photos AI虚拟衣橱扩展到iOS和Android",
+          "body": "TechCrunch报道，Google Photos把基于照片生成衣橱、分类和搭配的AI功能扩展到美国、巴西、印度的iOS与Android用户。",
+          "summary": "Google把照片库里的个人形象数据变成消费级AI整理入口。",
+          "whyItMatters": "照片AI不只修图，也开始抽取穿搭、偏好和物品结构；隐私、推荐和零售边界要重新核对。",
+          "detailBody": "本条作为TechCrunch媒体背景处理：它报道Google Photos虚拟衣橱功能面向三个市场扩展到iOS和Android。\nAI Watchtower只保留最小报道事实；功能截图、Google声明和隐私表述应回到原文和Google帮助页。\n下一步查Photos设置、地区开关和数据用途说明。",
+          "trend": "消费AI继续把个人媒体库转换成可搜索、可推荐、可执行的生活数据层。",
+          "detailTrend": "消费AI继续把个人媒体库转换成可搜索、可推荐、可执行的生活数据层。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它是照片AI从生成效果走向个人生活数据库的信号。",
+          "topReason": "个人照片中的衣物和风格被产品化为AI可操作资产。",
+          "impact": "相册、广告、零售和隐私团队需要核对本地/云端处理、数据共享和推荐边界。",
+          "whoShouldCare": "负责相册产品、个性化推荐、零售转化和隐私设置的产品/数据团队在评估照片数据用途场景中",
+          "readerUse": "对消费产品团队，用它检查照片特征提取、区域上线、第三方共享和订阅功能边界。",
+          "nextCheck": "查Google Photos帮助页、隐私白皮书、地区开关和是否连接购物或广告推荐。",
+          "followUpQuestions": [
+            "Google Photos官方帮助页是否说明虚拟衣橱的处理位置、删除方式和数据保留？",
+            "该功能是否与购物推荐、广告画像或Gemini Spark订阅功能发生数据联动？"
+          ],
+          "evidenceThreshold": "需要Google官方隐私说明、产品开关和数据用途文档，才可升级为确认的数据处理与推荐边界判断。",
+          "claimBoundary": "TechCrunch报道不证明衣橱数据会被用于广告，也不证明所有Google Photos用户已经可用。",
+          "counterEvidence": "若官方文档限定为本地处理、明确不进入推荐或取消部分市场，应收窄数据商业化判断。",
+          "sourceId": "techcrunch-ai",
+          "sourceName": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "sourceUrl": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI报道Google Photos虚拟衣橱模型/数据功能扩展到iOS和Android市场；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "Google",
+            "Google Photos",
+            "Gemini",
+            "消费AI",
+            "隐私"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "产品信号清晰，影响边界取决于Google官方隐私文档。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "产品信号清晰，影响边界取决于Google官方隐私文档。"
+          },
+          "detailWhyRanked": "它把相册AI从编辑扩展到私人生活物品结构化。来源是TechCrunch AI关于Google Photos虚拟衣橱扩展的媒体背景；读者应查Google Photos帮助页、隐私设置和数据用途说明，再判断推荐或广告风险。"
+        },
+        {
+          "id": "techcrunch-google-gemini-call-for-me-pixel-2026-09-26",
+          "category": "product",
+          "label": "产品",
+          "title": "TechCrunch：Google测试让Gemini替用户拨打商家电话",
+          "body": "TechCrunch报道，Google开始面向美国付费Pixel 11用户测试Call for Me，让Gemini拨打商家电话、处理菜单、等待接通并显示实时转录。",
+          "summary": "Gemini从聊天入口继续进入真实电话任务。",
+          "whyItMatters": "电话Agent会触碰手机号、个人信息授权、商家交互和接管机制，产品上线边界比普通聊天更重。",
+          "detailBody": "本条作为TechCrunch媒体背景处理：它报道Google在Pixel 11付费用户中小规模测试Gemini Call for Me。\nAI Watchtower只保留最小事实；功能限制、Google表述和完整上下文以原文与Google支持页为准。\n下一步查Phone应用帮助文档、地区开关和通话记录设置。",
+          "trend": "个人Agent正在从屏幕内建议扩展到代替用户与外部服务通话。",
+          "detailTrend": "个人Agent正在从屏幕内建议扩展到代替用户与外部服务通话。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它把多模态/语音Agent落到真实商业电话任务。",
+          "topReason": "电话代办是个人Agent从聊天到行动的高摩擦入口。",
+          "impact": "移动产品、隐私和客服团队要核对AI来电披露、用户接管、个人信息传递和商家拒收规则。",
+          "whoShouldCare": "负责语音助手、移动端Agent、客服流程和隐私授权的产品/法务团队在评估AI代打电话场景中",
+          "readerUse": "对移动产品团队，用它检查电话Agent的授权表单、转录留存、商家披露和人工接管路径。",
+          "nextCheck": "查Google Phone/Pixel帮助文档、Gemini订阅条款、通话转录保存设置和商家端拒绝机制。",
+          "followUpQuestions": [
+            "Google官方帮助文件、权限说明或Phone应用支持文档是否给出Call for Me的地区名单和订阅限制？",
+            "电话转录、用户个人信息和商家拒绝记录是否进入可导出的隐私或审计日志？"
+          ],
+          "evidenceThreshold": "需要Google官方帮助文档、隐私条款和真实用户开关截图，才可升级为确认的产品可用性和数据处理判断。",
+          "claimBoundary": "TechCrunch报道不能证明功能已广泛上线，也不能证明AI电话在商家端会被接受。",
+          "counterEvidence": "若Google官方帮助文档显示地区收缩、实验暂停、商家拒收率高或通话日志不可审计，应下调个人电话Agent推广判断。",
+          "sourceId": "techcrunch-ai",
+          "sourceName": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "sourceUrl": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI报道Google测试Gemini Call for Me电话Agent、初始权限和Pixel订阅边界；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-24",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "Google",
+            "Gemini",
+            "Pixel",
+            "语音Agent",
+            "电话"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体源给出清晰产品信号，但可用性需Google文档确认。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体源给出清晰产品信号，但可用性需Google文档确认。"
+          },
+          "detailWhyRanked": "它显示个人Agent开始代表用户进入真实电话流程。来源是TechCrunch AITechCrunch媒体背景；读者应查Google官方帮助页、隐私条款、订阅限制和通话转录控制，再判断能否用于关键服务。"
+        },
+        {
+          "id": "venturebeat-meta-muse-zero-day-enterprise-visibility-2026-09-26",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：Meta修补Muse零日后，企业仍缺Agent访问可视性",
+          "body": "VentureBeat报道，Meta修补Muse Mac端零日漏洞后，企业安全团队仍难集中看到员工给Muse连接了哪些服务和凭据。",
+          "summary": "Muse漏洞后续暴露出个人Agent进入企业系统的影子访问问题。",
+          "whyItMatters": "当员工把个人Agent接入邮箱、表格和API密钥时，OAuth-only监控可能看不到真实动作链。",
+          "detailBody": "本条作为VentureBeat媒体背景处理：它报道Muse零日修补和企业可视性缺口。\nAI Watchtower只保留最小报道事实；测试步骤、Meta回应和安全专家表述以原文为准。\n下一步查Meta企业控制台、SIEM导出和API-key审计能力。",
+          "trend": "Agent安全从漏洞修补扩展到连接器、凭据、审计和影子IT治理。",
+          "detailTrend": "Agent安全从漏洞修补扩展到连接器、凭据、审计和影子IT治理。 详情页把这个信号拆成来源事实、趋势解释和下一步证据路径，避免把媒体报道直接升级为已确认结论。",
+          "whyRanked": "它把Muse从消费者爆款放进企业安全可见性清单。",
+          "topReason": "修补漏洞不能替代企业级Agent审计和DLP可视性。",
+          "impact": "安全、IT和数据治理团队需要盘点个人Agent安装、连接器权限、API密钥和导出日志。",
+          "whoShouldCare": "负责终端安全、SaaS审计、DLP和员工自带AI工具治理的安全/IT团队在排查影子Agent接入场景中",
+          "readerUse": "对安全团队，用它检查Muse安装、连接器授权、API-key发放日志和SIEM接入缺口。",
+          "nextCheck": "查Meta Muse企业管理文档、SIEM或DLP集成、OAuth/API-key审计日志和补丁版本说明。",
+          "followUpQuestions": [
+            "Meta官方公告、企业管理文件或SIEM导出说明是否发布Muse控制台、DLP集成字段？",
+            "企业服务的API-key发行日志能否识别由Muse代写或代调用的业务动作？"
+          ],
+          "evidenceThreshold": "需要Meta官方企业管理文档、补丁说明和客户侧审计日志，才可升级为确认的企业可控性判断。",
+          "claimBoundary": "VentureBeat测试不证明Muse已造成企业数据泄露，也不证明所有企业控制都无法发现它。",
+          "counterEvidence": "若Meta发布集中审计、DLP集成或企业禁用策略并被客户验证，应下调影子访问风险判断。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "sourceUrl": "https://venturebeat.com/security/meta-patched-muses-zero-day-but-security-teams-still-lack-visibility-into-what-the-agent-can-access",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道Muse Agent控制、连接器权限和企业可视性缺口；完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-09-22",
+          "time": "2026-09-26 17:00 JST",
+          "tags": [
+            "Meta",
+            "Muse",
+            "Agent安全",
+            "SIEM",
+            "API密钥"
+          ],
+          "companies": [
+            "Meta"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "安全可操作性强，但仍需Meta和客户侧审计材料确认。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "可靠媒体背景；只支持最小报道事实，完整采访、数字、图表和上下文仍需阅读原文。",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/security/meta-patched-muses-zero-day-but-security-teams-still-lack-visibility-into-what-the-agent-can-access",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "安全可操作性强，但仍需Meta和客户侧审计材料确认。"
+          },
+          "detailWhyRanked": "它把Muse漏洞后续转化为企业Agent治理问题。来源是VentureBeat AIVentureBeat媒体背景；读者应查Meta企业文档、补丁说明、SIEM/DLP导出和API-key审计，再判断实际暴露面。"
+        }
+      ],
+      "itemCount": 10,
+      "sourceCount": 96,
+      "editorNote": "2026年9月26日17:00 JST版：10条Agent成本与访问、个人AI入口、AI基础设施外部性、医疗AI和就业证据口径信号。"
+    },
     {
       "id": "news-0800-2026-09-26",
       "date": "2026-09-26",
