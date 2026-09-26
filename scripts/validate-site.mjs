@@ -1352,8 +1352,13 @@ if (
   !/near-title-review/.test(candidateSourceChecklist) ||
   !/fresh-source-fact/.test(candidateSourceChecklist) ||
   !/manual-clear/.test(candidateSourceChecklist) ||
+  !/Review actions/.test(candidateSourceChecklist) ||
+  !/same page was materially updated/.test(candidateSourceChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
   !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
+  !/Review actions: repeated-url usually rejects/.test(duplicateCandidateReportJs) ||
+  !/Candidate sourceBackedFact/.test(duplicateCandidateReportJs) ||
+  !/hold-duplicate-review until the exact source-backed fact is compared/.test(duplicateCandidateReportJs) ||
   !/getTitleSimilarity/.test(duplicateCandidateReportJs) ||
   !/data\/news-history\.json/.test(duplicateCandidateReportJs) ||
   !/process\.exit\(report\.sourceMatches\.length \|\| report\.titleMatches\.length \? 1 : 0\)/.test(

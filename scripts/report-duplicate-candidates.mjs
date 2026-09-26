@@ -81,6 +81,7 @@ function getCandidateItems(candidatePayload) {
       sourceUrl,
       source: candidate.source || candidate.sourceName || "",
       publishedAt: candidate.publishedAt || candidate.date || "",
+      sourceBackedFact: candidate.sourceBackedFact || candidate.freshSourceFact || "",
     };
   });
 }
@@ -124,6 +125,7 @@ function makeRecord(item, kind) {
     sourceKey: normalizeSourceKey(item.sourceUrl || item.originalUrl),
     source: item.source || "",
     publishedAt: item.publishedAt || "",
+    sourceBackedFact: item.sourceBackedFact || item.freshSourceFact || "",
     editionId: item.editionId || "",
   };
 }
@@ -202,9 +204,14 @@ function printReport(report) {
 
   console.log("# Duplicate Candidate Report");
   console.log("");
+  console.log(
+    "Review actions: repeated-url usually rejects unless the same page has a clearly updated source-backed fact; near-title-review must be held until the editor names the fresh source action; fresh-source-fact can draft only when sourceBackedFact states that new action and proofBoundary keeps the remaining uncertainty visible.",
+  );
+  console.log("");
 
   if (!duplicateCount) {
     console.log("No repeated source URLs or near-matching titles found.");
+    console.log("Action: mark duplicateStatus as manual-clear if current/history were also checked.");
     return;
   }
 
@@ -213,6 +220,12 @@ function printReport(report) {
     for (const match of report.sourceMatches) {
       console.log(`- ${describeRecord(match.candidate)} matches ${describeRecord(match.record)}`);
       console.log(`  URL: ${match.candidate.sourceUrl}`);
+      if (match.candidate.sourceBackedFact) {
+        console.log(`  Candidate sourceBackedFact: ${match.candidate.sourceBackedFact}`);
+      }
+      console.log(
+        "  Action: set duplicateStatus=repeated-url; reject-repeated-source-fact unless the page itself was materially updated and the new source action can be named.",
+      );
     }
     console.log("");
   }
@@ -227,6 +240,12 @@ function printReport(report) {
       );
       console.log(`  Candidate: ${match.candidate.title}`);
       console.log(`  Existing: ${match.record.title}`);
+      if (match.candidate.sourceBackedFact) {
+        console.log(`  Candidate sourceBackedFact: ${match.candidate.sourceBackedFact}`);
+      }
+      console.log(
+        "  Action: set duplicateStatus=near-title-review; hold-duplicate-review until the exact source-backed fact is compared. Clear as fresh-source-fact only when the candidate names a new official announcement, filing, audit result, model card, customer metric, regulator text, paper revision, or independent benchmark.",
+      );
     }
   }
 }
