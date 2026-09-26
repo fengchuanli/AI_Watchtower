@@ -31,7 +31,7 @@
   - `python3 -m py_compile scripts/check_layout.py` first failed because macOS tried to write bytecode under `/Users/zhangxiaoying/Library/Caches/...` outside the sandbox; reran successfully with `PYTHONPYCACHEPREFIX=/private/tmp/ai-watchtower-pycache`.
   - Ran `git diff --check`.
 - Commit: `e462c01` (`【网站优化】强化候选重复报告动作提示`).
-- Push: pending.
+- Push: sandboxed `git push origin main` failed on GitHub DNS resolution; network-authorized retry succeeded and pushed `main` through `6af87b7` to `origin/main`.
 
 ## 2026-09-25 23:11 JST
 
