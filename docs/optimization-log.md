@@ -1,3 +1,38 @@
+## 2026-09-26 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 15，复查候选重复报告在 near-title / fresh-source-fact 场景里的可操作性；让 `scripts/report-duplicate-candidates.mjs` 不只提示相似标题，还直接给出 repeated URL、near-title review、fresh-source-fact 清理的编辑动作。
+- Changed files:
+  - `scripts/report-duplicate-candidates.mjs`
+  - `docs/candidate-source-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、候选交接/ intake 文档、重复报告脚本和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只更新候选重复审查工具、流程说明和静态校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - near-title 候选现在必须先说明新的来源动作，再允许从 `near-title-review` 清理为 `fresh-source-fact`。
+  - Original source dependency: pass - 未改变媒体原文依赖规则；重复报告反而提醒编辑不要用相似标题或改写稿替代新的来源事实。
+  - Mobile burden: not applicable - 本次不改移动端 UI。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 无，属于规则/校验/计划更新；后续 08:00 / 17:00 新闻更新会在候选重复报告中看到更明确的 hold / reject / fresh-source-fact 动作提示。
+- Verification:
+  - Ran `node scripts/report-duplicate-candidates.mjs /private/tmp/duplicate-candidate-test.json`; expected exit 1 for a deliberate near-title match, and the output included `Review actions`, `Candidate sourceBackedFact`, and `hold-duplicate-review` guidance.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/report-duplicate-candidates.mjs`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 16 current news items against 93 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - `python3 -m py_compile scripts/check_layout.py` first failed because macOS tried to write bytecode under `/Users/zhangxiaoying/Library/Caches/...` outside the sandbox; reran successfully with `PYTHONPYCACHEPREFIX=/private/tmp/ai-watchtower-pycache`.
+  - Ran `git diff --check`.
+- Commit: `e462c01` (`【网站优化】强化候选重复报告动作提示`).
+- Push: pending.
+
 ## 2026-09-25 23:11 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报补充更新；当前首页已是 `news-1700-2026-09-25`，本次不回退版次，在同日 17:00 版基础上补充 6 条安全非重复信号，使当前版增至 16 条，聚焦 Microsoft Foundry Routines GA、Agent Framework 交互/记忆/恢复执行、Hosted Agent 出站边界预览、Copilot Autopilot、编码 Agent / monorepo 失陷半径和 AI 基础设施融资压力。
