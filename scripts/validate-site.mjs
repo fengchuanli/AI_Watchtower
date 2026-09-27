@@ -53,6 +53,7 @@ const archiveDiffSummaryFormat = readFileSync("docs/archive-diff-summary-format.
 const badDataRollbackNote = readFileSync("docs/bad-data-rollback-note.md", "utf8");
 const partialBatchPublicationGuide = readFileSync("docs/partial-batch-publication-guide.md", "utf8");
 const remoteSyncLogConvention = readFileSync("docs/remote-sync-log-convention.md", "utf8");
+const failureStatusWordingGuide = readFileSync("docs/failure-status-wording-guide.md", "utf8");
 const editorialChecklist = readFileSync("docs/editorial-checklist.md", "utf8");
 const editorialValidatorLimits = readFileSync("docs/editorial-validator-limits.md", "utf8");
 const optimizationPlan = readFileSync("docs/optimization-plan.md", "utf8");
@@ -1293,6 +1294,30 @@ if (
   !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex)
 ) {
   errors.push("Remote sync failures must use a shared optimization-log convention for pull and push status.");
+}
+
+if (
+  !/Failure Status Wording Guide/.test(failureStatusWordingGuide) ||
+  !/Compact Shape/.test(failureStatusWordingGuide) ||
+  !/Status Values By Stage/.test(failureStatusWordingGuide) ||
+  !/Pull/.test(failureStatusWordingGuide) ||
+  !/Validation/.test(failureStatusWordingGuide) ||
+  !/Commit/.test(failureStatusWordingGuide) ||
+  !/Push/.test(failureStatusWordingGuide) ||
+  !/Publication/.test(failureStatusWordingGuide) ||
+  !/blocked-validation/.test(failureStatusWordingGuide) ||
+  !/blocked-derived-data/.test(failureStatusWordingGuide) ||
+  !/blocked-archive-drift/.test(failureStatusWordingGuide) ||
+  !/blocked-source-boundary/.test(failureStatusWordingGuide) ||
+  !/blocked-short-batch/.test(failureStatusWordingGuide) ||
+  !/not-attempted-with-reason/.test(failureStatusWordingGuide) ||
+  !/failure-status-wording-guide\.md/.test(updateRunChecklist) ||
+  !/failure-status-wording-guide\.md/.test(candidateToNewsHandoff) ||
+  !/failure-status-wording-guide\.md/.test(remoteSyncLogConvention) ||
+  !/failure-status-wording-guide\.md/.test(readme) ||
+  !/Day 16[\s\S]*failure-status-wording-guide\.md/.test(optimizationDecisionIndex)
+) {
+  errors.push("Optimization and news logs must use a compact failure-status wording guide for pull, validation, commit, push, and publication blockers.");
 }
 
 if (

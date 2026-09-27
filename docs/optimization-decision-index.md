@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 3, News Update Workflow Friction
-- Last indexed run: 2026-09-26 20:00 JST
+- Last indexed run: 2026-09-27 20:00 JST
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
@@ -33,6 +33,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 13 | Complete | `8e1126f` | `docs/candidate-to-news-handoff.md` now marks the normal 08:00 / 17:00 shortest path: plain-language note, source gate, duplicate report, short intake, priority/mix check, field mapping, homepage/archive preflight, derived-data rebuild, validation, commit, and push status. `scripts/validate-site.mjs` guards the path. |
 | Day 14 | Complete | `e99bb37` | `docs/current-to-history-publication-checklist.md`, `docs/update-run-checklist.md`, and `docs/candidate-to-news-handoff.md` now make the derived-data rebuild a publication gate: after current/history mirror is final, run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, then validation so `data/news-index.json` and `data/news-today.json` cannot lag the homepage/archive pair. |
 | Day 15 | Complete | `e462c01` | `scripts/report-duplicate-candidates.mjs` now prints review actions for repeated URLs, near-title matches, and fresh-source-fact clearance; candidate files may pass `sourceBackedFact` so editors can hold or reject similar-title items unless the new source action is explicit. `docs/candidate-source-checklist.md`, `docs/update-run-checklist.md`, and `scripts/validate-site.mjs` guard the behavior. |
+| Day 16 | Complete | `pending` | `docs/failure-status-wording-guide.md` now gives optimization and news logs compact Pull, Validation, Commit, Push, and Publication blocker wording; `docs/update-run-checklist.md`, `docs/candidate-to-news-handoff.md`, `docs/remote-sync-log-convention.md`, `README.md`, and `scripts/validate-site.mjs` keep the guide discoverable and guarded. |
 
 ## Historical Guard Anchors
 
@@ -84,9 +85,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 16: add a compact failure-status wording guide for pull, validation, commit, push, and publication blockers in optimization and news logs.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 16.
-- If Day 16 is already complete, continue with the first useful unfinished task from the current plan.
+- Continue with Day 17: review `data/sources.json` growth and add a small rule for when to merge, rename, or clarify source labels without losing source-role precision.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 17.
+- If Day 17 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

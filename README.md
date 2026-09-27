@@ -46,6 +46,7 @@ npx serve .
 │   ├── bad-data-rollback-note.md
 │   ├── partial-batch-publication-guide.md
 │   ├── remote-sync-log-convention.md
+│   ├── failure-status-wording-guide.md
 │   ├── original-source-replacement-guide.md
 │   ├── source-diversity-triage-note.md
 │   ├── source-concentration-archive-review-note.md
@@ -109,6 +110,7 @@ npx serve .
 - 错误数据回滚说明：`docs/bad-data-rollback-note.md`
 - 定时任务健康检查：`docs/automation-health-check.md`
 - 远程同步日志约定：`docs/remote-sync-log-convention.md`
+- 失败状态写法：`docs/failure-status-wording-guide.md`
 - 新闻数据：`data/news.json`
 - 来源使用规则：`docs/source-policy.md`
 - 编辑核对清单：`docs/editorial-checklist.md`

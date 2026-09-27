@@ -1,6 +1,6 @@
 # Remote Sync Log Convention
 
-Use this convention whenever an optimization or news update run attempts to pull from or push to `origin main`. Its purpose is to make GitHub sync state readable in `docs/optimization-log.md` without hiding whether local data, archive data, and public GitHub state may have diverged.
+Use this convention whenever an optimization or news update run attempts to pull from or push to `origin main`. Its purpose is to make GitHub sync state readable in `docs/optimization-log.md` without hiding whether local data, archive data, and public GitHub state may have diverged. For validation, commit, and reader-visible publication blockers, pair these pull/push values with `docs/failure-status-wording-guide.md`.
 
 This is a logging convention, not a reason to skip validation. If network sync fails, still finish the local content improvement only when the local branch can be validated and committed safely.
 
