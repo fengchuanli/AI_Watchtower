@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26",
+  "updatedAt": "2026-09-27",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1508,7 +1508,38 @@
       "hasRss": false,
       "language": "en",
       "notes": "官方核对 Claude API、计费、拒绝、模型能力和平台行为文档；只确认文档说明，客户成本、误拒率和安全效果仍需日志或外部审计。"
+    },
+    {
+      "id": "openai-alignment",
+      "name": "OpenAI Alignment Reports",
+      "url": "https://alignment.openai.com/",
+      "feedUrl": null,
+      "category": [
+        "safety",
+        "research",
+        "agent"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方核对OpenAI对模型失配、Agent越界和安全事件的技术报告；只证明OpenAI披露的实验事实和处置口径，外部影响仍需第三方或受影响方材料。"
+    },
+    {
+      "id": "microsoft-official-blog",
+      "name": "Official Microsoft Blog",
+      "url": "https://blogs.microsoft.com/blog/",
+      "feedUrl": null,
+      "category": [
+        "product",
+        "enterprise",
+        "developer",
+        "agent"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方核对Microsoft公司级产品、Copilot、企业AI和平台策略公告；采用效果、客户价值和安全成效仍需客户侧指标、审计或独立评测。"
     }
   ],
-  "sourceCount": 92
+  "sourceCount": 98
 }

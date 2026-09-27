@@ -1,3 +1,34 @@
+## 2026-09-27 23:14 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报更新；首页推进为 `news-0800-2026-09-27`，发布 10 条安全非重复信号，聚焦 OpenAI/Anthropic Agent 失控披露、OpenAI 第三方影响框架、用户图片外发、DNS 越界、Microsoft Copilot Home/Code/Autopilot、企业 Agent 读写权限、美中 SI 事件通道、Oracle/Stargate 数据中心债务、Astra/Opus Enigma 研究样例和亲 AI PAC 大选背书。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、OpenAI 官方披露、OpenAI Alignment、Official Microsoft Blog、Axios Technology、TechCrunch AI 和 VentureBeat AI 候选。
+  - 新增注册官方来源 `openai-alignment` 与 `microsoft-official-blog`；source count 从 96 增至 98。
+  - 发布 10 条安全非重复信号；官方来源 3/10，可靠媒体 7/10。OpenAI 与 Microsoft 项作为 `官方核对`；Axios、TechCrunch、VentureBeat 项作为 `媒体背景` / `reported` / `originalDependency: must-read` 处理。
+  - 跳过已在 9月26日17:00 或 08:00 版收录的 Claude 拒绝计费、Gemini 电话/照片入口、Muse 可视性、Google Suncatcher、DataOne、OpenAI Agent 多站点调查旧 URL、Gemini Live/TTS/Private AI Compute、Microsoft EvilTokens 等重复 URL 或近重复事实。
+  - 未使用社区讨论、传闻、随机网页、聚合页正文、付费墙正文、登录墙正文、赞助内容、旧稿或弱证据补量；本批在 `sourceRisk` / `overreadBoundary` 中明确标为媒体雷达和文件核查清单。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, source count, categories, deep briefing, and item order.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月27日08:00 版 10 条情报；读者可在首页和详情页看到 Agent 事件披露、用户数据外发、DNS 越界、Copilot Autopilot、企业 Agent 权限、美中 SI 通道、Oracle/Stargate 融资压力、研究型 Agent 复现路径和 AI 政策资金的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 98 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布08点AI新闻：10条Agent披露与基础设施信号`.
+
 ## 2026-09-27 11:04 JST
 
 - Focus: 完成当前 30 天计划 Day 16，补充 pull、validation、commit、push、publication 阻塞的紧凑写法，避免优化和新闻更新日志只写「失败」或「网络问题」而不给下一次运行可执行信息。
