@@ -1,3 +1,38 @@
+## 2026-09-27 11:04 JST
+
+- Focus: 完成当前 30 天计划 Day 16，补充 pull、validation、commit、push、publication 阻塞的紧凑写法，避免优化和新闻更新日志只写「失败」或「网络问题」而不给下一次运行可执行信息。
+- Changed files:
+  - `docs/failure-status-wording-guide.md`
+  - `docs/update-run-checklist.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `docs/remote-sync-log-convention.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/update-run-checklist.md`、`docs/remote-sync-log-convention.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只更新日志/发布阻塞写法、新闻交接引用、README 入口和静态校验锚点。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - publication blocker 现在要求明确 `blocked-source-boundary`、`blocked-archive-drift` 或 `blocked-derived-data`，减少来源边界或归档漂移被含糊带过的风险。
+  - Original source dependency: pass - 未改变媒体原文依赖规则；失败状态指南只要求把阻塞原因和下一步动作写清楚。
+  - Mobile burden: not applicable - 本次不改移动端 UI。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 无，属于规则/校验/计划更新；后续优化和 08:00 / 17:00 新闻更新日志会用更一致的 pull、validation、commit、push、publication 阻塞写法。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 96 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `1d8d39c` (`【网站优化】补充失败状态写法指南`).
+- Push: will be attempted after this log/index update commit.
+
 ## 2026-09-27 08:04 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-26`，发布 10 条安全非重复信号，聚焦 Anthropic Claude 拒绝计费、Gemini Call for Me 电话代办、Google Photos AI 虚拟衣橱、Meta Muse 企业可视性、Google Suncatcher 轨道 TPU、DataOne 数据中心发电机罚单、Tesla Optimus 训练数据阻力、WISeR 医疗 AI 预授权、CESifo 就业反证和 Microsoft Copilot+ PC 品牌降温。
