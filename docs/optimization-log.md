@@ -31,7 +31,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: `1d8d39c` (`【网站优化】补充失败状态写法指南`).
-- Push: will be attempted after this log/index update commit.
+- Push: blocked-auth - sandboxed `git push origin main` failed because `github.com` could not be resolved; network-authorized retry was rejected by the app safety review because it would push local commits directly to shared `main` without explicit trusted user approval. Local `main` has validated commits ready for a later approved push.
 
 ## 2026-09-27 08:04 JST
 
