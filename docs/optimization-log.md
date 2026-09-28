@@ -1,3 +1,32 @@
+## 2026-09-29 08:12 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-29`，发布 10 条安全非重复信号，聚焦 CASP 自动化 AI 研发/智能爆炸报告、NVIDIA Open Agent Safety Platform、NVIDIA OpenShell 0.1.0、Microsoft run-assert-eval、Microsoft Defender ISOC、NASA Earth/Hydrology Copilot、Google Cloud Gemini RLFT、Google Cloud Agent Factory Harness、Oracle AI 数据中心合同风险和 9月29日美国 AI 高层会议。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、CASP、NVIDIA Newsroom / Technical Blog、Microsoft Source / Security Blog / Command Line、Google Cloud Blog 和 Axios 候选。
+  - 新增注册来源 `microsoft-source` 与 `casp-ai-policy`；source count 从 99 增至 101。
+  - 发布 10 条安全非重复信号；官方来源 7/10、研究原文 1/10、可靠媒体 2/10。NVIDIA / Microsoft / Google 项作为 `官方核对` 或 `厂商主张`；CASP 项作为 `研究原文`；Axios 项作为 `媒体背景` / `reported` / `originalDependency: must-read` 处理。
+  - 跳过社区讨论、随机网页、聚合页正文、重复 URL、近重复事实簇、付费/登录墙正文、旧稿和弱证据补量；本批在 `sourceRisk`、`sourceConcentration` 和 `overreadBoundary` 中明确提示官方来源集中只证明发布事实，效果仍需代码、日志、合同、客户指标和第三方审计。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, source count, categories, deep briefing, and item order.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月29日17:00 版 10 条情报；读者可在首页和详情页看到 Agent 运行时安全、AI 研发自动化政策窗口、Agent 风险评测、Agentic SOC、科学数据 Copilot、Gemini RLFT、Agent Harness、AI 数据中心合同风险和美国 AI 政策会谈的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 101 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, and `scripts/validate-site.mjs`.
+  - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条Agent安全与研发自动化信号`.
+
 ## 2026-09-28 23:13 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 新闻情报更新（延后运行）；首页推进为 `news-0800-2026-09-28`，发布 10 条安全非重复信号，聚焦 OpenAI 最新模型训练暂停、OpenAI/Anthropic 安全叙事监管定义权、Meta Muse 增长与早期访问、Meta AI 眼镜、AI 医疗索赔成本、Synthesia 交互式数字分身、Nscale IPO 前融资、Lightspeed 印度 AI 基金和生产 RAG 可靠性。

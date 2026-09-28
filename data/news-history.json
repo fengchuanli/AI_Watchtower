@@ -1,8 +1,921 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28",
-  "totalItems": 1021,
+  "updatedAt": "2026-09-29",
+  "totalItems": 1031,
   "editions": [
+    {
+      "id": "news-1700-2026-09-29",
+      "date": "2026-09-29",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "itemCount": 10,
+      "note": "本期10条AI新闻情报，聚焦Agent安全、研发自动化和企业落地。",
+      "operationalStatus": "已拉取origin/main；核对官方、研究和可靠媒体；跳过重复与弱信号。",
+      "editorialInterpretation": "本期10条信号显示：Agent治理进入运行时和复测阶段，研发自动化、企业数据与基建交付都需要源文件验证。",
+      "readerFrame": {
+        "headline": "本期读法：先查Agent边界，再看研发自动化和交付风险",
+        "whyItMatters": "9月29日17:00版把CASP智能爆炸报告、NVIDIA Agent安全平台、Microsoft评测/安全运营工具、Google Gemini定制和Axios政策/基建风险放在同一张核查表。",
+        "useThisIssueFor": [
+          "安全和平台团队核对Agent运行时、权限、审计和复测闭环。",
+          "政策和研究团队核对AI研发自动化、会议日程和监管可见性。",
+          "企业和采购团队核对AI数据、工厂案例和数据中心交付风险。"
+        ],
+        "notProvenYet": [
+          "不证明智能爆炸已经发生，也不证明硬件隔离能解决所有Agent风险。",
+          "不证明客户案例、RLFT方法或AI数据中心项目已经产生可独立验证的长期效果。"
+        ],
+        "mobile": {
+          "headline": "查Agent边界和政策窗口",
+          "summary": "看运行时安全、研发自动化、企业数据和基建交付。",
+          "primaryUses": [
+            "安全团队查边界",
+            "政策团队查窗口",
+            "采购团队查交付"
+          ],
+          "proofBoundary": "仍需代码复现、官方日程、合同文件、客户指标和独立审计"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月28日08:00版转向运行时安全、AI研发自动化和交付证明",
+        "freshFacts": [
+          "新增CASP关于自动化AI研发与智能爆炸的研究原文。",
+          "新增NVIDIA Open Agent Safety Platform与OpenShell 0.1.0官方发布。",
+          "新增Microsoft run-assert-eval、Defender ISOC、NASA Copilot和Google Cloud Agent/Gemini工程信号。"
+        ],
+        "repeatedContext": [
+          "延续9月28日Agent安全和生产RAG主题，但不重复已收录URL。",
+          "延续AI基础设施资本压力背景，把关注点转到合同、供电和会议后正式文件。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对Agent安全边界",
+          "count": 4,
+          "meaning": "用来检查运行时控制、硬件隔离、风险评测和安全运营控制面。"
+        },
+        {
+          "label": "验证研发与模型证据",
+          "count": 3,
+          "meaning": "用来检查自动化AI研发、Gemini RLFT和Agent Harness是否有可复现证据。"
+        },
+        {
+          "label": "核对企业政策交付",
+          "count": 3,
+          "meaning": "用来检查NASA数据入口、AI数据中心合同风险和美国政策会议后续。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源集中发布",
+        "note": "官方来源7/10集中，证明发布事实强，效果仍待验证。",
+        "nextCheck": "查代码、客户指标、监管文件、合同和第三方审计。"
+      },
+      "overreadBoundary": {
+        "label": "不要过度解读发布潮",
+        "body": "不要把本期读成全市场结论：官方来源集中，适合作为Agent安全和企业AI工具箱雷达，不代表效果已被独立验证。",
+        "doNotConclude": "不能得出智能爆炸已开始、Agent硬件隔离已成熟、ISOC已提升SOC指标，或Oracle项目已延误。",
+        "useInstead": "应该先把代码、官方文件、合同、客户指标和第三方复核作为下一步证据。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent安全从提示词走向运行时",
+          "note": "跨期看，9月下旬从Agent越界、训练暂停扩展到NVIDIA OpenShell、Microsoft ASSERT/ACS和Defender ISOC。",
+          "boundary": "不证明控制成熟；仍需代码复现、生产日志、第三方测试和客户指标。"
+        },
+        {
+          "topic": "policy",
+          "label": "AI研发自动化成为监管对象",
+          "note": "跨期看，安全叙事从事故和暂停延伸到CASP对自动化AI研发可见性的政策建议。",
+          "boundary": "不证明智能爆炸会发生；仍需实验室披露、监管文本和独立审计。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "AI基础设施进入交付风险核查",
+          "note": "跨期看，Oracle、Nscale、Akamai和数据中心供电问题持续把AI资本叙事拉回合同执行。",
+          "boundary": "不证明项目违约；仍需合同、许可、供电和交付公告。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "控制栈竞赛",
+          "status": "stronger",
+          "previousPattern": "此前Agent主题集中在DNS越界、训练暂停、生产RAG和权限可见性。",
+          "currentSignal": "本期新增NVIDIA全栈Agent安全平台、OpenShell运行时控制和Microsoft run-assert-eval。",
+          "signalDirection": "增强：来源从媒体事故扩展到官方运行时、安全运营和评测工具。",
+          "stillUnproven": "仍需开源代码、复现实验、客户生产日志和第三方安全评测。"
+        },
+        {
+          "topic": "policy",
+          "label": "研发自动化进入政策议程",
+          "status": "stronger",
+          "previousPattern": "此前政策主题集中在AI安全窗口、美国高层会议和实验室安全承诺。",
+          "currentSignal": "本期新增CASP智能爆炸研究原文和9月29日AI会议时间锚点。",
+          "signalDirection": "增强：从政策争论扩展到AI研发自动化可见性与正式会议日程。",
+          "stillUnproven": "仍需官方议程、监管文本、实验室披露和审计制度。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "算力交付风险继续显性化",
+          "status": "repeated",
+          "previousPattern": "此前基础设施主题集中在Stargate、Oracle、Anthropic/Akamai和AI云融资。",
+          "currentSignal": "本期新增Axios关于Oracle不可抗力通知的合同风险报道。",
+          "signalDirection": "重复但更具体：从资本压力延伸到项目合同和能源审批。",
+          "stillUnproven": "仍需合同文件、能源许可、交付公告和公司披露。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "NVIDIA",
+          "label": "从算力供应转向Agent安全控制层",
+          "lastMention": "此前NVIDIA出现在GPU集群就绪、SWE-Serve、医疗VLM和AI基础设施背景中。",
+          "whatChanged": "本期新增Open Agent Safety Platform和OpenShell运行时控制。",
+          "stillUnproven": "仍需开源代码、第三方测试、伙伴部署和客户日志。"
+        },
+        {
+          "company": "Microsoft",
+          "label": "把Agent治理放进开发和安全运营",
+          "lastMention": "此前Microsoft出现在Copilot、Foundry、MDASH和企业AI转型背景中。",
+          "whatChanged": "本期新增run-assert-eval、Defender ISOC和NASA数据Copilot案例。",
+          "stillUnproven": "仍需仓库复现、Defender试点指标、NASA官方材料和客户审计。"
+        },
+        {
+          "company": "Google",
+          "label": "云工程方法",
+          "lastMention": "此前Google出现在Gemini连接器、Beam、Suncatcher和Workspace AI背景中。",
+          "whatChanged": "本期新增Gemini RLFT实践和Agent Factory Harness方法论。",
+          "stillUnproven": "仍需Google官方文档、客户指标、第三方评测数据和迁移案例。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 7,
+          "role": "官方来源用于核对NVIDIA、Microsoft和Google发布事实；效果、客户收益和安全强度仍需外部证明。"
+        },
+        {
+          "family": "research",
+          "label": "研究原文",
+          "count": 1,
+          "role": "研究原文用于核对CASP报告和政策建议；预测结论仍需后续证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "Axios用于政策日程和基础设施合同风险雷达；完整事实、背景和评论仍需读原文并查源文件。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "核对Agent安全和控制栈",
+          "count": 4,
+          "itemIds": [
+            "nvidia-open-agent-safety-platform-2026-09-28",
+            "nvidia-openshell-runtime-controls-2026-09-28",
+            "microsoft-run-assert-eval-agent-risk-loop-2026-09-25",
+            "microsoft-defender-isoc-agentic-soc-2026-09-23"
+          ],
+          "meaning": "用来更新Agent运行时、策略、审计、评测和SOC控制面检查表。",
+          "whyNow": "Agent越界和长周期任务已经把安全问题推到执行层。"
+        },
+        {
+          "id": "policy",
+          "label": "核对政策会谈和研发自动化",
+          "count": 2,
+          "itemIds": [
+            "casp-ai-rd-intelligence-explosion-report-2026-09-28",
+            "axios-trump-johnson-tech-ceo-ai-meeting-2026-09-24"
+          ],
+          "meaning": "用来检查研发自动化、监管可见性和美国高层AI议程清单。",
+          "whyNow": "前沿AI安全争论正在从声明进入报告、会议和制度设计。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "验证模型定制和Agent工程方法",
+          "count": 2,
+          "itemIds": [
+            "google-cloud-gemini-rlft-best-practices-2026-09-25",
+            "google-cloud-agent-factory-harness-recap-2026-09-25"
+          ],
+          "meaning": "用来检查RLFT、Agent Harness、工具上下文和评测样本。",
+          "whyNow": "模型能力提升后，企业瓶颈转向可迁移工具和可评分目标。"
+        },
+        {
+          "id": "enterprise",
+          "label": "检查科学数据与生产案例",
+          "count": 1,
+          "itemIds": [
+            "microsoft-nasa-earth-hydrology-copilot-2026-09-28"
+          ],
+          "meaning": "用来检查专业数据自然语言入口和公共部门AI证据边界。",
+          "whyNow": "AI落地越来越依赖旧数据、专业流程和人类复核。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "核对算力项目合同风险",
+          "count": 1,
+          "itemIds": [
+            "axios-oracle-ai-buildout-force-majeure-risk-2026-09-24"
+          ],
+          "meaning": "用来检查AI数据中心的供电、许可、合同和融资文件。",
+          "whyNow": "AI算力承诺正在进入交付、能源和融资约束阶段。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "microsoft-source",
+        "sourceName": "Microsoft Source",
+        "count": 3,
+        "share": "3/10",
+        "note": "单一Microsoft Source占3/10，需防止官方案例集中误读。",
+        "nextCheck": "查NASA、客户、第三方审计和其他官方原文。"
+      },
+      "items": [
+        {
+          "id": "nvidia-openshell-runtime-controls-2026-09-28",
+          "category": "tool",
+          "label": "工具",
+          "title": "NVIDIA OpenShell 0.1.0把Agent访问权限做成可审计运行时控制",
+          "body": "NVIDIA技术博客介绍OpenShell 0.1.0：用沙盒、受控服务访问、凭据管理和形式化策略分析限制Agent能访问的系统和数据。",
+          "summary": "NVIDIA技术博客介绍OpenShell 0.1.0：用沙盒、受控服务访问、凭据管理和形式化策略分析限制Agent能访问的系统和数据。",
+          "whyItMatters": "这给开发团队一个比“相信Agent会听话”更工程化的上线检查点。",
+          "detailBody": "NVIDIA技术博客说明OpenShell Gateway、Supervisor和Sandbox等组件，并描述对HTTP、GraphQL、MCP请求的策略检查。该文支持技术设计和版本发布事实，不等于第三方安全认证。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "Agent工程正在把权限、凭据和网络出口控制前移到执行环境，而不是只在提示词里写规则。",
+          "detailTrend": "Agent工程正在把权限、凭据和网络出口控制前移到执行环境，而不是只在提示词里写规则。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它把NVIDIA平台发布拆成开发者可以检查的控制点。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "OpenShell让Agent边界更可执行。，方便读者定位本期核查重点。",
+          "impact": "开发者和安全团队应测试Agent在文件、网络、凭据和MCP工具上的最小权限策略。",
+          "whoShouldCare": "正在把Codex、Claude Code、OpenCode或自建Agent接入企业工具链的开发者/安全团队。",
+          "readerUse": "开发者和平台安全团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查OpenShell GitHub、迁移说明、OCSF日志、MCP策略样例和第三方复现实验。",
+          "followUpQuestions": [
+            "OpenShell 0.1.0仓库是否提供可运行quickstart和策略验证样例，对应的官方公告、代码、日志、指标或审计报告是什么？",
+            "企业能否把OpenShell审计日志接入现有SIEM并复现越权阻断？"
+          ],
+          "evidenceThreshold": "至少需要OpenShell GitHub、迁移说明、OCSF日志、MCP策略样例和第三方复现实验。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "技术博客证明NVIDIA描述了OpenShell能力，不证明所有Agent框架都已无缝兼容。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "nvidia-technical-blog",
+          "sourceName": "NVIDIA Technical Blog",
+          "source": "NVIDIA Technical Blog",
+          "sourceUrl": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "NVIDIA Technical Blog介绍NVIDIA OpenShell 0.1.0把Agent访问权限做成可审计运行时控制这一AI治理、Agent、模型或数据中心信号；来源支持发布事实，效果和外部影响仍需独立验证。",
+          "publishedAt": "2026-09-28T21:10:00+09:00",
+          "time": "21:10",
+          "tags": [
+            "OpenShell",
+            "Agent治理",
+            "开发者工具"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "开发者效用高，属于官方技术说明，仍需复现实验。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "开发者效用高，属于官方技术说明，仍需复现实验。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它把NVIDIA平台发布拆成开发者可以检查的控制点。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：NVIDIA Technical Blog的来源事实只支持“NVIDIA OpenShell 0.1.0把Agent访问权限做成可审计运行时控制”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "nvidia-open-agent-safety-platform-2026-09-28",
+          "category": "tool",
+          "label": "工具",
+          "title": "NVIDIA发布Open Agent Safety Platform，把Agent治理推到软硬件全栈",
+          "body": "NVIDIA宣布Open Agent Safety Platform，由OpenShell运行时和Sentry参考设计组成，用于从测试到部署监控和约束AI Agent。",
+          "summary": "NVIDIA宣布Open Agent Safety Platform，由OpenShell运行时和Sentry参考设计组成，用于从测试到部署监控和约束AI Agent。",
+          "whyItMatters": "Agent安全正在从提示词和应用层控制，进入运行时边界、DPU监控和硬件隔离。",
+          "detailBody": "NVIDIA新闻稿宣布Open Agent Safety Platform，并称OpenShell提供运行时边界、Sentry提供基于BlueField-4 DPU的带外监控。该来源证明NVIDIA的发布和产品定位，不证明所有伙伴已完成生产部署。\n这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "Agent治理正在变成基础设施问题：谁能在模型之外执行权限、观测和隔离，谁就能影响企业Agent标准。",
+          "detailTrend": "Agent治理正在变成基础设施问题：谁能在模型之外执行权限、观测和隔离，谁就能影响企业Agent标准。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它直接回应近期Agent越界事件，并给出软硬件结合的控制路线。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "Agent安全下沉到运行时和硬件。，方便读者定位本期核查重点。",
+          "impact": "企业安全、平台和基础设施团队应评估Agent是否需要独立运行时、审计轨迹和带外隔离。",
+          "whoShouldCare": "负责让编码、运维、客服或机器人Agent访问真实系统的安全/平台/基础设施团队。",
+          "readerUse": "安全和基础设施团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查OpenShell代码、Sentry参考设计细节、伙伴落地说明、第三方安全测试和客户部署日志。",
+          "followUpQuestions": [
+            "OpenShell仓库是否公开策略语法、审计格式和可复现实验？",
+            "NVIDIA伙伴名单中哪些企业披露了生产部署、隔离效果或安全审计？"
+          ],
+          "evidenceThreshold": "至少需要OpenShell代码、Sentry参考设计文件、第三方测试报告和客户部署日志，才能升级为已验证的Agent安全平台结论。",
+          "claimBoundary": "新闻稿证明NVIDIA发布平台和组件，不证明硬件监控能覆盖所有Agent越界路径。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "nvidia-newsroom",
+          "sourceName": "NVIDIA Newsroom",
+          "source": "NVIDIA Newsroom",
+          "sourceUrl": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "NVIDIA Newsroom介绍NVIDIA发布Open Agent Safety Platform，把Agent治理推到软硬件全栈这一AI治理、Agent、模型或数据中心信号；来源支持发布事实，效果和外部影响仍需独立验证。",
+          "publishedAt": "2026-09-28T21:00:00+09:00",
+          "time": "21:00",
+          "tags": [
+            "Agent安全",
+            "运行时治理",
+            "NVIDIA"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方发布清晰且关联近期安全主线，效果仍待独立验证。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方发布清晰且关联近期安全主线，效果仍待独立验证。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它直接回应近期Agent越界事件，并给出软硬件结合的控制路线。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：NVIDIA Newsroom的来源事实只支持“NVIDIA发布Open Agent Safety Platform，把Agent治理推到软硬件全栈”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "casp-ai-rd-intelligence-explosion-report-2026-09-28",
+          "category": "policy",
+          "label": "政策",
+          "title": "CASP报告：自动化AI研发可能触发“智能爆炸”政策窗口",
+          "body": "Cambridge CASP发布报告，评估AI自动化自身研发是否会把多年进展压缩到数月，并要求政策制定者提高可见性、约束速度和准备应急方案。",
+          "summary": "Cambridge CASP发布报告，评估AI自动化自身研发是否会把多年进展压缩到数月，并要求政策制定者提高可见性、约束速度和准备应急方案。",
+          "whyItMatters": "它把递归自我改进从口号变成可核查的政策问题：政府需要知道AI研发自动化到了哪一步。",
+          "detailBody": "CASP报告由多位AI研究和政策作者署名，讨论AI系统自动化AI研发的证据、潜在影响和政策响应。报告支持的事实是研究团队发布了这一风险评估与政策建议，不证明智能爆炸已经开始。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "AI治理焦点从模型发布审批扩展到“研发自动化率”和AI实验室内部可见性。",
+          "detailTrend": "AI治理焦点从模型发布审批扩展到“研发自动化率”和AI实验室内部可见性。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "这是本期最强政策原文信号，能连接最近的Agent事故、训练暂停和安全评测争论。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "AI研发自动化成为可监管对象。，方便读者定位本期核查重点。",
+          "impact": "政策、安全和实验室治理团队应把AI研发自动化率、事故报告和暂停机制列入观察项。",
+          "whoShouldCare": "负责前沿AI监管、实验室安全承诺和自动化研发风险评估的政策/安全/研究团队。",
+          "readerUse": "政策和安全研究团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查报告PDF、作者后续说明、政府听证材料、实验室自动化研发披露和独立评估制度。",
+          "followUpQuestions": [
+            "CASP报告的建议是否进入美国、英国、欧盟或AI安全机构的正式议程？",
+            "OpenAI、Anthropic、Microsoft或Meta是否披露AI参与内部研发的可审计指标？"
+          ],
+          "evidenceThreshold": "至少需要报告PDF、作者后续说明、政府听证材料、实验室自动化研发披露和独立评估制度。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "报告证明专家团队发布了风险框架和政策建议，不证明智能爆炸会发生或已有具体时间表。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "casp-ai-policy",
+          "sourceName": "Cambridge Programme on AI Science & Policy",
+          "source": "Cambridge Programme on AI Science & Policy",
+          "sourceUrl": "https://casp.ac/reports/intelligence-explosion",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Cambridge Programme on AI Science & Policy发布自动化AI研发可能触发“智能爆炸”政策窗口这一AI治理、Agent、模型或数据中心信号；来源支持发布事实，效果和外部影响仍需独立验证。",
+          "publishedAt": "2026-09-28T20:00:00+09:00",
+          "time": "20:00",
+          "tags": [
+            "AI治理",
+            "递归自我改进",
+            "政策"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Microsoft",
+            "Meta"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "研究原文影响和读者效用都高，但预测性结论必须保持不确定边界。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "research",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://casp.ac/reports/intelligence-explosion",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "研究原文影响和读者效用都高，但预测性结论必须保持不确定边界。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "这是本期最强政策原文信号，能连接最近的Agent事故、训练暂停和安全评测争论。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Cambridge Programme on AI Science & Policy的来源事实只支持“CASP报告：自动化AI研发可能触发“智能爆炸”政策窗口”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "microsoft-nasa-earth-hydrology-copilot-2026-09-28",
+          "category": "product",
+          "label": "产品",
+          "title": "Microsoft Source：NASA用Earth与Hydrology Copilot打开多年地球科学数据",
+          "body": "Microsoft Source报道，NASA与Microsoft合作开发Earth Copilot和Hydrology Copilot，让用户用自然语言访问复杂地球与水文数据。",
+          "summary": "Microsoft Source报道，NASA与Microsoft合作开发Earth Copilot和Hydrology Copilot，让用户用自然语言访问复杂地球与水文数据。",
+          "whyItMatters": "它提示公共部门和科研团队可用AI打开长期数据资产，但客户指标、NASA原文和误差报告仍是升级证据。",
+          "detailBody": "报道介绍NASA使用AI处理多年地球科学数据、边缘处理卫星数据以及让非专家查询水文条件。该来源是Microsoft报道的客户/合作案例，支持项目存在和叙事边界，成效需NASA侧资料补强。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "科学AI正在从模型论文走向“让非专家访问复杂数据”的工作流产品。",
+          "detailTrend": "科学AI正在从模型论文走向“让非专家访问复杂数据”的工作流产品。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它给企业和公共部门一个“AI把旧数据变成新入口”的落地样本。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "科学数据入口从专家工具转向自然语言。，方便读者定位本期核查重点。",
+          "impact": "公共部门、科研数据和灾害响应团队应关注自然语言数据接口的权限、误差和可解释性。",
+          "whoShouldCare": "负责把地球科学、水文、灾害响应和公共数据平台接入AI查询界面的科研/政府/数据团队。",
+          "readerUse": "科研数据和公共部门团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查NASA项目页、模型卡、数据源说明、误差评估和真实灾害响应使用记录。",
+          "followUpQuestions": [
+            "NASA是否公开Earth Copilot或Hydrology Copilot的访问方式、模型说明和数据来源？",
+            "这些工具在洪水、干旱或天气预测中的误差和人工复核流程是什么，对应的官方公告、代码、日志、指标或审计报告是什么？"
+          ],
+          "evidenceThreshold": "至少需要NASA项目页、模型卡、数据源说明、误差评估和真实灾害响应使用记录。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "Microsoft报道支持合作案例，不证明工具已覆盖所有NASA数据或能替代专家判断。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "microsoft-source",
+          "sourceName": "Microsoft Source",
+          "source": "Microsoft Source",
+          "sourceUrl": "https://news.microsoft.com/source/features/digital-transformation/at-nasa-ai-is-helping-scientists-unlock-discoveries-hidden-in-decades-of-data/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Microsoft Source以厂商主张形式报道NASA用Earth与Hydrology Copilot打开多年地球科学数据这一AI数据、模型或治理案例；来源支持项目叙事和披露事实，不等同于独立成效证明。",
+          "publishedAt": "2026-09-28T10:00:00+09:00",
+          "time": "10:00",
+          "tags": [
+            "科学AI",
+            "NASA",
+            "数据入口"
+          ],
+          "companies": [
+            "Microsoft",
+            "NASA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "公共部门案例有解释价值，但属于厂商叙事，需NASA源材料补强。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://news.microsoft.com/source/features/digital-transformation/at-nasa-ai-is-helping-scientists-unlock-discoveries-hidden-in-decades-of-data/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "公共部门案例有解释价值，但属于厂商叙事，需NASA源材料补强。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它给企业和公共部门一个“AI把旧数据变成新入口”的落地样本。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Microsoft Source的来源事实只支持“Microsoft Source：NASA用Earth与Hydrology Copilot打开多年地球科学数据”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "google-cloud-agent-factory-harness-recap-2026-09-25",
+          "category": "tool",
+          "label": "工具",
+          "title": "Google Cloud Agent Factory强调Agent Harness和“向左移动”工具上下文",
+          "body": "Google Cloud发布Agent Factory回顾，强调Agent Harness、工具与上下文比自建僵硬框架更能释放前沿模型能力。",
+          "summary": "Google Cloud发布Agent Factory回顾，强调Agent Harness、工具与上下文比自建僵硬框架更能释放前沿模型能力。",
+          "whyItMatters": "这把Agent落地重点从“选哪个模型”转向“工具、上下文、记忆和执行边界如何设计”。",
+          "detailBody": "Google Cloud博客用Agent Factory访谈回顾说明agent harness概念，并讨论把干预前移、减少能力过剩和避免过度脚手架。该来源支持Google Cloud的开发者观点，不是独立基准。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "Agent工程正在形成一套中间层语言：harness、context、tooling、memory和enforcement会比单次提示更重要。",
+          "detailTrend": "Agent工程正在形成一套中间层语言：harness、context、tooling、memory和enforcement会比单次提示更重要。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它补足本期安全工具之外的Agent产品工程视角。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "Agent竞争转向harness设计。，方便读者定位本期核查重点。",
+          "impact": "平台和开发团队应把工具接口、上下文注入和执行边界作为Agent架构核心资产。",
+          "whoShouldCare": "负责自治编码、云运维、企业流程Agent和内部开发平台落地的工程团队。",
+          "readerUse": "Agent平台工程团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查Google Antigravity、Gemini工具接口、客户案例和Agent任务完成率评测。",
+          "followUpQuestions": [
+            "Google是否公开Agent Harness相关SDK、参考架构或评测样本？",
+            "企业客户能否在模型升级后保留同一工具/上下文层并提升完成率？"
+          ],
+          "evidenceThreshold": "至少需要Google Cloud参考架构、SDK文档、任务评测指标和客户迁移报告，才能升级为已验证的Agent架构模式。",
+          "claimBoundary": "博客支持开发者方法论，不证明Google Cloud Agent方案优于其他框架。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "google-cloud-ai-blog",
+          "sourceName": "Google Cloud AI & Machine Learning Blog",
+          "source": "Google Cloud AI & Machine Learning Blog",
+          "sourceUrl": "https://cloud.google.com/blog/topics/developers-practitioners/agent-factory-recap-agent-harnesses-shifting-left-and-autonomous-coding",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Google Cloud AI & Machine Learning Blog介绍Google Cloud Agent Factory强调Agent Harness和“向左移动”工具上下文这一AI治理、Agent、模型或数据中心信号；来源支持发布事实，效果和外部影响仍需独立验证。",
+          "publishedAt": "2026-09-25T09:30:00+09:00",
+          "time": "09:30",
+          "tags": [
+            "Agent Harness",
+            "Google Cloud",
+            "开发者工具"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "方法论价值明确，但属于官方开发者内容。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://cloud.google.com/blog/topics/developers-practitioners/agent-factory-recap-agent-harnesses-shifting-left-and-autonomous-coding",
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "方法论价值明确，但属于官方开发者内容。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它补足本期安全工具之外的Agent产品工程视角。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Google Cloud AI & Machine Learning Blog的来源事实只支持“Google Cloud Agent Factory强调Agent Harness和“向左移动”工具上下文”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "google-cloud-gemini-rlft-best-practices-2026-09-25",
+          "category": "tool",
+          "label": "工具",
+          "title": "Google Cloud把Gemini RL微调写成托管服务最佳实践",
+          "body": "Google Cloud发布Gemini强化学习微调指南，说明用户可提供提示和奖励函数，由托管RLFT服务处理训练基础设施。",
+          "summary": "Google Cloud发布Gemini强化学习微调指南，说明用户可提供提示和奖励函数，由托管RLFT服务处理训练基础设施。",
+          "whyItMatters": "企业定制模型正在从标注答案走向“定义可评分目标”，但奖励设计会成为新治理点。",
+          "detailBody": "Google Cloud博客介绍Gemini RL fine-tuning service的适用场景、SFT与RLFT组合方式和业务可评分任务。该来源支持服务方法说明，不证明每个客户任务都适合RL。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "模型定制从“给示例”扩展到“给奖励函数”，让产品指标、格式合规和风格约束进入训练环节。",
+          "detailTrend": "模型定制从“给示例”扩展到“给奖励函数”，让产品指标、格式合规和风格约束进入训练环节。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它让非实验室团队也能考虑把RL作为模型定制工具。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "Gemini定制进入托管RLFT阶段。，方便读者定位本期核查重点。",
+          "impact": "开发者和数据团队应先确认任务能否稳定评分，再决定用SFT、RLFT或两阶段调优。",
+          "whoShouldCare": "模型定制和数据团队，尤其是在把AI系统接入真实数据、工具、合同或监管流程时。",
+          "readerUse": "模型定制和数据团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查Google Cloud RLFT文档、价格、地区、客户案例和独立评测。",
+          "followUpQuestions": [
+            "Gemini RLFT服务是否公开支持的模型、地区、价格和限制，对应的官方公告、代码、日志、指标或审计报告是什么？",
+            "早期客户是否披露RLFT相对SFT的稳定评测提升？"
+          ],
+          "evidenceThreshold": "至少需要Google Cloud RLFT文档、价格、地区、客户案例和独立评测。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "博客证明Google Cloud提供方法和实践建议，不证明RLFT总优于SFT。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "google-cloud-ai-blog",
+          "sourceName": "Google Cloud AI & Machine Learning Blog",
+          "source": "Google Cloud AI & Machine Learning Blog",
+          "sourceUrl": "https://cloud.google.com/blog/topics/developers-practitioners/best-practices-guide-for-customizing-gemini-models",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Google Cloud AI & Machine Learning Blog介绍Google Cloud把Gemini RL微调写成托管服务最佳实践这一AI治理、Agent、模型或数据中心信号；来源支持发布事实，效果和外部影响仍需独立验证。",
+          "publishedAt": "2026-09-25T09:00:00+09:00",
+          "time": "09:00",
+          "tags": [
+            "Gemini",
+            "RLFT",
+            "模型定制"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "开发者实用性高，叙事强度中等。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://cloud.google.com/blog/topics/developers-practitioners/best-practices-guide-for-customizing-gemini-models",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "开发者实用性高，叙事强度中等。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它让非实验室团队也能考虑把RL作为模型定制工具。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Google Cloud AI & Machine Learning Blog的来源事实只支持“Google Cloud把Gemini RL微调写成托管服务最佳实践”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "microsoft-run-assert-eval-agent-risk-loop-2026-09-25",
+          "category": "tool",
+          "label": "工具",
+          "title": "Microsoft推出run-assert-eval，把Agent风险发现、修复和复测串成一条链",
+          "body": "Microsoft Command Line介绍run-assert-eval：从VS Code里发现Agent风险、生成评测、生成运行时策略，并用同一评测复查修复效果。",
+          "summary": "Microsoft Command Line介绍run-assert-eval：从VS Code里发现Agent风险、生成评测、生成运行时策略，并用同一评测复查修复效果。",
+          "whyItMatters": "Agent安全开始像CI测试一样可重复，而不是一次性人工红队笔记。",
+          "detailBody": "Microsoft文章说明run-assert-eval连接Clarity、ASSERT和Agent Control Specification，并用账单支持Agent示例展示违规率对比。该来源支持工具发布和示例结果，不证明所有领域都能同等改善。\n这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "Agent治理正在从“写要求”转向“发现未写出的风险，再把控制效果复测出来”。",
+          "detailTrend": "Agent治理正在从“写要求”转向“发现未写出的风险，再把控制效果复测出来”。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它把Agent安全从原则变成开发流程，读者可以直接更新工程检查表。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "Agent安全进入可复测发布门槛。，方便读者定位本期核查重点。",
+          "impact": "AI平台、应用安全和合规团队可用它设计Agent上线前的评测-控制-复测循环。",
+          "whoShouldCare": "应用安全和评测团队，尤其是在把AI系统接入真实数据、工具、合同或监管流程时。",
+          "readerUse": "应用安全和评测团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查ASSERT仓库、ACS策略、示例域、VS Code技能可用性和第三方复测结果。",
+          "followUpQuestions": [
+            "run-assert-eval是否在ASSERT仓库中公开七个领域和14个风险套件，对应的官方公告、代码、日志、指标或审计报告是什么？",
+            "第三方团队能否用同一测试集复现违规率下降且不牺牲有用性？"
+          ],
+          "evidenceThreshold": "至少需要ASSERT仓库、ACS策略、示例域、VS Code技能可用性和第三方复测结果。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "文章证明Microsoft发布技能和示例结果，不证明所有Agent风险都能自动发现或自动修复。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "microsoft-source",
+          "sourceName": "Microsoft Source",
+          "source": "Microsoft Source",
+          "sourceUrl": "https://commandline.microsoft.com/run-assert-eval-responsible-ai-agent-risk-discovery-at-runtime/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Microsoft Source介绍Microsoft推出run-assert-eval，把Agent风险发现、修复和复测串成一条链这一AI治理、Agent、模型或数据中心信号；来源支持发布事实，效果和外部影响仍需独立验证。",
+          "publishedAt": "2026-09-25T09:00:00+09:00",
+          "time": "09:00",
+          "tags": [
+            "Agent评测",
+            "运行时策略",
+            "Microsoft"
+          ],
+          "companies": [
+            "Microsoft"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方开发者工具信号强，效果边界需复现。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://commandline.microsoft.com/run-assert-eval-responsible-ai-agent-risk-discovery-at-runtime/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方开发者工具信号强，效果边界需复现。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它把Agent安全从原则变成开发流程，读者可以直接更新工程检查表。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Microsoft Source的来源事实只支持“Microsoft推出run-assert-eval，把Agent风险发现、修复和复测串成一条链”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "axios-oracle-ai-buildout-force-majeure-risk-2026-09-24",
+          "category": "funding",
+          "label": "资本",
+          "title": "Axios：Oracle用不可抗力通知对冲AI数据中心交付风险",
+          "body": "Axios报道，Oracle就新墨西哥Project Jupiter数据中心向Blue Owl旗下Stack Infrastructure发出不可抗力通知，以保留项目延误下的合同权利。",
+          "summary": "Axios报道，Oracle就新墨西哥Project Jupiter数据中心向Blue Owl旗下Stack Infrastructure发出不可抗力通知，以保留项目延误下的合同权利。",
+          "whyItMatters": "AI算力不是只看订单金额，能源、许可、融资文件和合同风险会决定容量能否按时上线。",
+          "detailBody": "Axios报道Oracle围绕Project Jupiter数据中心交付风险采取不可抗力通知，背景是能源和监管阻力。该媒体来源只支持报道事实和市场背景，完整合同、评论和金融细节需读原文。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "AI基础设施进入合同执行阶段后，风险从“谁签了大单”转为“谁能供电、获批、融资并按期交付”。",
+          "detailTrend": "AI基础设施进入合同执行阶段后，风险从“谁签了大单”转为“谁能供电、获批、融资并按期交付”。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它给近期Oracle/Stargate和数据中心资本压力提供了新的合同风险切面。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "AI数据中心风险进入合同条款层。，方便读者定位本期核查重点。",
+          "impact": "投资、云采购和基础设施团队应追踪AI数据中心的能源审批、不可抗力条款和交付时间表。",
+          "whoShouldCare": "云采购和基础设施财务团队，尤其是在把AI系统接入真实数据、工具、合同或监管流程时。",
+          "readerUse": "云采购和基础设施财务团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查Oracle、Blue Owl/Stack、项目文件、能源许可、融资文件和后续交付公告。",
+          "followUpQuestions": [
+            "Project Jupiter是否公开项目进度、能源接入许可或修订后的交付时间表，对应的官方公告、代码、日志、指标或审计报告是什么？",
+            "Oracle或Blue Owl后续文件是否说明不可抗力通知对付款和容量承诺的影响？"
+          ],
+          "evidenceThreshold": "至少需要Oracle、Blue Owl/Stack、项目文件、能源许可、融资文件和后续交付公告。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "Axios报道支持合同风险信号，不证明项目已经取消或OpenAI容量必然受影响。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/24/oracle-force-majeure-blue-owl-openai",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道Oracle用不可抗力通知对冲AI数据中心交付风险这一AI政策、Agent治理、模型、数据中心或资本信号；AI Watchtower只保留最小事实，完整事实、采访、图表、数据和上下文仍需读原文。",
+          "publishedAt": "2026-09-24T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "Oracle",
+            "AI数据中心",
+            "算力资本"
+          ],
+          "companies": [
+            "Oracle",
+            "OpenAI",
+            "Blue Owl",
+            "Stack Infrastructure"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "媒体报道叙事强，需合同和监管文件补强。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/24/oracle-force-majeure-blue-owl-openai",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "媒体报道叙事强，需合同和监管文件补强。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它给近期Oracle/Stargate和数据中心资本压力提供了新的合同风险切面。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Axios AI / Technology的来源事实只支持“Axios：Oracle用不可抗力通知对冲AI数据中心交付风险”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "axios-trump-johnson-tech-ceo-ai-meeting-2026-09-24",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：特朗普、Johnson与科技CEO计划9月29日讨论AI",
+          "body": "Axios报道，特朗普、众议长Mike Johnson和科技CEO计划在9月29日举行AI会议，背景是前沿AI监管压力上升。",
+          "summary": "Axios报道，特朗普、众议长Mike Johnson和科技CEO计划在9月29日举行AI会议，背景是前沿AI监管压力上升。",
+          "whyItMatters": "AI安全、监管和竞速争论正在进入白宫与国会领导层的同桌议程。",
+          "detailBody": "Axios报道称相关AI会议安排来自知情人士，会议日期为9月29日。该来源支持会议计划这一媒体事实，不证明会议结果、参会名单或政策方向。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "美国AI政策正在从公开演讲、国会信件和实验室声明，转向高层闭门协调。",
+          "detailTrend": "美国AI政策正在从公开演讲、国会信件和实验室声明，转向高层闭门协调。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它给9月29日之后的政策跟踪提供明确时间锚点。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "AI监管压力进入高层会谈日程。，方便读者定位本期核查重点。",
+          "impact": "政策、合规和公共事务团队应准备跟踪会后声明、行政动作和国会议程。",
+          "whoShouldCare": "负责美国AI监管跟踪、实验室游说和政策风险预案的法务/政策团队。",
+          "readerUse": "政策和公共事务团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查白宫日程、会后声明、参会公司确认、国会后续议程和行政命令草案。",
+          "followUpQuestions": [
+            "9月29日会议是否按计划举行，白宫或国会是否发布正式参会名单，对应的官方公告、代码、日志、指标或审计报告是什么？",
+            "会后是否出现AI安全、算力、出口、评测或采购相关政策文件？"
+          ],
+          "evidenceThreshold": "至少需要白宫日程、会后声明、参会公司确认、国会后续议程和行政命令草案。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "Axios报道支持会议计划，不证明具体政策已经形成。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/24/trump-johnson-meeting-september-29",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道特朗普、Johnson与科技CEO计划9月29日讨论AI这一AI政策、Agent治理、模型、数据中心或资本信号；AI Watchtower只保留最小事实，完整事实、采访、图表、数据和上下文仍需读原文。",
+          "publishedAt": "2026-09-24T22:00:00+09:00",
+          "time": "22:00",
+          "tags": [
+            "AI政策",
+            "美国监管",
+            "白宫"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Microsoft",
+            "Meta"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "政策时间锚点清晰，但目前仍是媒体计划报道。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/24/trump-johnson-meeting-september-29",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "政策时间锚点清晰，但目前仍是媒体计划报道。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它给9月29日之后的政策跟踪提供明确时间锚点。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Axios AI / Technology的来源事实只支持“Axios：特朗普、Johnson与科技CEO计划9月29日讨论AI”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        },
+        {
+          "id": "microsoft-defender-isoc-agentic-soc-2026-09-23",
+          "category": "product",
+          "label": "产品",
+          "title": "Microsoft Defender预览ISOC，把安全运营改造成Agentic SOC底座",
+          "body": "Microsoft Security Blog称，Defender中的Integrated Security Operations Center把SIEM和威胁防护合成一个面向人和Agent的安全运营基础。",
+          "summary": "Microsoft Security Blog称，Defender中的Integrated Security Operations Center把SIEM和威胁防护合成一个面向人和Agent的安全运营基础。",
+          "whyItMatters": "AI攻击和AI防御都在加速，安全团队需要同一套信号、上下文和动作接口。",
+          "detailBody": "Microsoft宣布ISOC in Microsoft Defender处于预览，强调把信号、上下文和控制连接为集成防护循环。该来源支持产品预览和官方定位，不证明客户已获得更好检测结果。 这条详情页只保留来源可直接支持的最小事实，并把未验证的影响、适用范围和后续证据路径单独写出，避免把发布稿或媒体报道改写成完整替代阅读。",
+          "trend": "安全运营正在从“Copilot辅助分析师”转向“人和Agent共享同一个SOC控制面”。",
+          "detailTrend": "安全运营正在从“Copilot辅助分析师”转向“人和Agent共享同一个SOC控制面”。 这说明本期AI变化正在进入更可审计的工程阶段：同一个信号要同时看发布事实、控制边界和后续证据。",
+          "whyRanked": "它把Agent治理落在安全运营的组织流程里，而不只是开发者工具。 这能帮助读者把注意力放到可核查的下一步证据。",
+          "topReason": "SOC控制面开始按Agent速度重构。，方便读者定位本期核查重点。",
+          "impact": "CISO和SOC负责人应核对AI Agent是否拥有统一上下文、可审计动作和人工优先级控制。",
+          "whoShouldCare": "负责SOC、SIEM/XDR整合、Security Copilot和AI威胁响应的安全负责人。",
+          "readerUse": "SOC和CISO团队可用它更新当前项目、采购或政策核查清单，先确认来源支持的事实，再等待下一步证据。",
+          "nextCheck": "查Defender预览范围、白皮书、客户试点、误报率、响应时间和人工审批日志。",
+          "followUpQuestions": [
+            "ISOC预览是否公开支持的Defender/Sentinel功能边界和地区，对应的官方公告、代码、日志、指标或审计报告是什么？",
+            "客户试点是否披露检测质量、响应时间或人工确认比例变化？"
+          ],
+          "evidenceThreshold": "至少需要Defender预览范围、白皮书、客户试点、误报率、响应时间和人工审批日志。等文件、日志、指标或报告，才能升级为已验证的事实结论。",
+          "claimBoundary": "官方博客证明Microsoft发布ISOC预览，不证明企业已实现全自动安全运营。",
+          "counterEvidence": "如果后续官方文件、客户日志、审计报告或可观测指标否定核心事实，应下调或收窄本条判断。",
+          "sourceId": "microsoft-source",
+          "sourceName": "Microsoft Source",
+          "source": "Microsoft Source",
+          "sourceUrl": "https://www.microsoft.com/en-us/security/blog/2026/09/23/reimagining-the-soc-for-the-agentic-era-in-microsoft-defender/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Microsoft Source介绍Microsoft Defender预览ISOC，把安全运营改造成Agentic SOC底座这一AI治理、Agent、模型或数据中心信号；来源支持发布事实，效果和外部影响仍需独立验证。",
+          "publishedAt": "2026-09-23T08:00:00+09:00",
+          "time": "08:00",
+          "tags": [
+            "SOC",
+            "安全Agent",
+            "Microsoft Defender"
+          ],
+          "companies": [
+            "Microsoft"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "产品预览有组织影响，但实际效果仍待试点数据。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.microsoft.com/en-us/security/blog/2026/09/23/reimagining-the-soc-for-the-agentic-era-in-microsoft-defender/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "产品预览有组织影响，但实际效果仍待试点数据。 编辑取舍：先发布为核查信号，等待独立证据升级。"
+          },
+          "detailWhyRanked": "它把Agent治理落在安全运营的组织流程里，而不只是开发者工具。 这能帮助读者把注意力放到可核查的下一步证据。\n详情页进一步说明：Microsoft Source的来源事实只支持“Microsoft Defender预览ISOC，把安全运营改造成Agentic SOC底座”这一发布、研究或报道动作；是否能升级为稳定产品效果、监管变化、客户收益或项目延误，还要看官方文件、客户日志、第三方审计、合同或后续公告。"
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-09-28",
       "date": "2026-09-28",

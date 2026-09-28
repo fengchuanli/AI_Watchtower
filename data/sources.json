@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28",
+  "updatedAt": "2026-09-29",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1555,7 +1555,39 @@
       "hasRss": true,
       "language": "en",
       "notes": "AWS 开源项目和规范原文，用于核对 Agent 工具、协议、安全组件和代码发布事实；项目采用、效果和安全强度仍需代码审计、第三方测试或用户侧证据。"
+    },
+    {
+      "id": "microsoft-source",
+      "name": "Microsoft Source",
+      "url": "https://news.microsoft.com/source/",
+      "feedUrl": null,
+      "category": [
+        "product",
+        "enterprise",
+        "policy",
+        "security",
+        "ai_adoption"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "微软官方新闻与案例入口，用于核对 Microsoft 产品、安全、AI采用和客户案例发布事实；客户成效、ROI和长期影响仍需客户侧指标或独立审计。"
+    },
+    {
+      "id": "casp-ai-policy",
+      "name": "Cambridge Programme on AI Science & Policy",
+      "url": "https://casp.ac/reports/intelligence-explosion",
+      "feedUrl": null,
+      "category": [
+        "policy",
+        "research",
+        "safety"
+      ],
+      "trustLevel": "research",
+      "hasRss": false,
+      "language": "en",
+      "notes": "AI科学与政策研究原文入口，用于核对高风险AI治理、自动化研发和政策建议；预测性结论仍需后续实证、审计和监管采纳情况。"
     }
   ],
-  "sourceCount": 98
+  "sourceCount": 101
 }
