@@ -1,3 +1,37 @@
+## 2026-09-28 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 17，复查 `data/sources.json` 增长到 99 个来源后的标签治理方式；新增 merge / rename / clarify 规则，避免新闻更新为了保存每个 URL 路径而制造近重复来源标签，同时保留官方、研究、媒体、厂商主张等 source-role 精度。
+- Changed files:
+  - `docs/source-policy.md`
+  - `docs/news-data-format.md`
+  - `docs/candidate-source-checklist.md`
+  - `docs/update-run-checklist.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/source-policy.md`、`docs/candidate-source-checklist.md`、`docs/news-data-format.md`、`docs/update-run-checklist.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只更新来源注册与新闻更新流程规则、静态校验锚点和最近决策索引。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - 新增来源标签治理规则要求新增来源前先判断 `create-separate-label`、`merge-under-existing-label`、`rename-misleading-label` 或 `clarify-source-notes`，减少来源角色被泛化或重复标签稀释。
+  - Original source dependency: pass - 规则要求精确文章 URL 继续留在 `items[].sourceUrl`，来源注册标签只承担 source-role 导航，不替代原文入口。
+  - Mobile burden: not applicable - 本次不改移动端 UI。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 无，属于规则/校验/计划更新；后续 08:00 / 17:00 新闻更新会在新增来源时先做来源标签 review，避免同一 owner 的普通 section、tag、localized copy、repost 或一次性文章路径挤占来源表。
+- Verification:
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 99 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `2be033f` (`【网站优化】补充来源标签治理规则`).
+- Push: pending - implementation commit is local; push will be attempted after this log entry commit.
+
 ## 2026-09-28 08:19 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新（延后运行）；首页推进为 `news-1700-2026-09-27`，发布 10 条安全非重复信号，聚焦 Google Gemini/AI Mode 内 Flipkart 购买测试、Anthropic/Akamai 云基础设施承诺、Crusoe/Boom AI 数据中心能源方案变化、Inkitt AI 视频 harness、OpenAI MentalHealthBench、Google Beam 扩展、AWS TOLAP、AWS/Agentforce 公共部门证据架构、C2C 多模型 KV cache 交接和 Novo AI 药物研发合作。
