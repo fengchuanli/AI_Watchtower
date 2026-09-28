@@ -1321,6 +1321,26 @@ if (
 }
 
 if (
+  !/Source Label Stewardship/.test(sourcePolicy) ||
+  !/merge \/ rename \/ clarify rule/.test(sourcePolicy) ||
+  !/distinct source role, trust level, feed cadence, or source-of-record responsibility/.test(sourcePolicy) ||
+  !/Merge under an existing label/.test(sourcePolicy) ||
+  !/Rename a label/.test(sourcePolicy) ||
+  !/Clarify `sources\[\]\.notes`/.test(sourcePolicy) ||
+  !/Source label stewardship/.test(newsDataFormat) ||
+  !/merge \/ rename \/ clarify rule/.test(newsDataFormat) ||
+  !/docs\/source-policy\.md/.test(candidateSourceChecklist) ||
+  !/source-label stewardship rule/.test(candidateSourceChecklist) ||
+  !/Source label review/.test(updateRunChecklist) ||
+  !/create-separate-label/.test(updateRunChecklist) ||
+  !/merge-under-existing-label/.test(updateRunChecklist) ||
+  !/rename-misleading-label/.test(updateRunChecklist) ||
+  !/clarify-source-notes/.test(updateRunChecklist)
+) {
+  errors.push("Source registry growth must use a merge, rename, or clarify rule so labels stay precise without multiplying near-duplicate entries.");
+}
+
+if (
   !/Commit And Push Message Wording/.test(remoteSyncLogConvention) ||
   !/【新闻更新】/.test(remoteSyncLogConvention) ||
   !/【网站优化】/.test(remoteSyncLogConvention) ||

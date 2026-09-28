@@ -23,6 +23,7 @@ Before a semi-automated gathering run drafts item fields, use `docs/candidate-so
 - `policy`: Chinese source-use guidance. It should remind editors to prefer official/original pages, keep original links as verification entrances, and label rumors or community discussion as unconfirmed signals.
 - `trustLevels`: Chinese descriptions for `official`, `research`, `reliable_media`, and `community_signal`. Each description should state what that source tier can support and what still needs external evidence.
 - `sources[].notes`: Chinese role note for the individual source. Avoid generic English instructions such as `Use for...`; name the safest editorial use and the boundary, for example whether performance, adoption, customer outcome, paywalled context, or community popularity still needs independent proof.
+- Source label stewardship: before adding a new `sources[]` entry, apply the merge / rename / clarify rule in `docs/source-policy.md`. Create a separate label only when the page has a distinct source role, trust level, feed cadence, or source-of-record responsibility; merge section/tag/localized/repost paths under the existing owner label while keeping the exact URL in `items[].sourceUrl`; rename only when the current label misstates owner or role; clarify `sources[].notes` when same-owner entries must stay separate because they verify different facts.
 
 ## Edition Fields
 

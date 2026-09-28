@@ -34,6 +34,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 14 | Complete | `e99bb37` | `docs/current-to-history-publication-checklist.md`, `docs/update-run-checklist.md`, and `docs/candidate-to-news-handoff.md` now make the derived-data rebuild a publication gate: after current/history mirror is final, run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, then validation so `data/news-index.json` and `data/news-today.json` cannot lag the homepage/archive pair. |
 | Day 15 | Complete | `e462c01` | `scripts/report-duplicate-candidates.mjs` now prints review actions for repeated URLs, near-title matches, and fresh-source-fact clearance; candidate files may pass `sourceBackedFact` so editors can hold or reject similar-title items unless the new source action is explicit. `docs/candidate-source-checklist.md`, `docs/update-run-checklist.md`, and `scripts/validate-site.mjs` guard the behavior. |
 | Day 16 | Complete | `1d8d39c` | `docs/failure-status-wording-guide.md` now gives optimization and news logs compact Pull, Validation, Commit, Push, and Publication blocker wording; `docs/update-run-checklist.md`, `docs/candidate-to-news-handoff.md`, `docs/remote-sync-log-convention.md`, `README.md`, and `scripts/validate-site.mjs` keep the guide discoverable and guarded. |
+| Day 17 | Complete | `pending` | `docs/source-policy.md` now defines source-label stewardship for `data/sources.json`: create a separate source label only for distinct source role, trust level, feed cadence, or source-of-record duty; merge ordinary sections/tags/localized copies/reposts under existing owner labels; rename misleading labels; clarify `sources[].notes` when same-owner entries stay separate. `docs/news-data-format.md`, `docs/candidate-source-checklist.md`, `docs/update-run-checklist.md`, and `scripts/validate-site.mjs` guard the rule. |
 
 ## Historical Guard Anchors
 
@@ -85,7 +86,7 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 17: review `data/sources.json` growth and add a small rule for when to merge, rename, or clarify source labels without losing source-role precision.
+- Continue with Day 18: simplify the must-read document path for a normal news update so editors do not need to scan every historical optimization rule before drafting.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 17.
 - If Day 17 is already complete, continue with the first useful unfinished task from the current plan.
 

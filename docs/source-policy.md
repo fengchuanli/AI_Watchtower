@@ -62,6 +62,19 @@ Low-priority items should be skipped or kept in source notes when they are routi
 - Mark uncertain items as signals instead of confirmed news.
 - Follow `docs/copyright-safety.md` before publishing or expanding any item from a media source.
 
+## Source Label Stewardship
+
+As `data/sources.json` grows, treat source labels as an editor-facing navigation system, not a trophy shelf of every URL ever visited. Before adding a new source entry, decide whether the page needs a separate label, should live under an existing owner/source-family label, or only needs clearer notes on an existing entry.
+
+Use this merge / rename / clarify rule:
+
+- **Create a separate source label** when the page has a distinct source role, trust level, feed cadence, or source-of-record responsibility. Examples: a company newsroom, a developer changelog, a research report feed, a regulator docket, or a security response page that supports different evidence than the parent site.
+- **Merge under an existing label** when the page is only a section, campaign page, tag page, localized copy, search result, repost, or one-off article path whose facts are already covered by the parent source entry. Keep the exact article URL in `items[].sourceUrl`; do not create a new registry label just to preserve a path.
+- **Rename a label** only when the current name misleads editors about the owner or source role. Prefer owner + surface names such as `Microsoft Foundry Blog` or `OpenAI Alignment Reports`; avoid names that sound broader than the page can support.
+- **Clarify `sources[].notes`** when two entries share an owner but support different claims. The note should say which facts the label can verify and which outcomes still need independent evidence, so role precision is preserved without multiplying near-duplicate labels.
+
+If a normal news run adds more than two same-owner source entries in one batch, pause for a source-label review before drafting: confirm whether those entries actually differ by role, trust level, or source-of-record duty. If not, merge the candidate under the strongest existing label and record the exact URL on the news item.
+
 ## Narrative Event Sources
 
 VisionHub-style incident briefings work best when an item has a clear storyline: who acted, what changed, why there is tension, and what the reader should watch next. Narrative strength is useful for selection, but it must not lower the evidence bar.

@@ -17,6 +17,7 @@ If a run has only one minute for candidate triage, do not skip directly to publi
 
 - Record the candidate URL, source name, source owner, source type, publication time, and discovery route.
 - Match the source to `data/sources.json` before drafting. If it is not registered, add or skip the source deliberately instead of using a vague fallback.
+- Before adding a new registry entry, apply the source-label stewardship rule in `docs/source-policy.md`: create a separate label only for a distinct role, trust level, feed cadence, or source-of-record duty; merge ordinary sections, tags, localized copies, reposts, or one-off article paths under the existing owner label; rename only if the label misstates owner or role; clarify `sources[].notes` when same-owner labels remain separate.
 - Prefer the exact article, announcement, paper, filing, changelog, or policy page over a source homepage or search result.
 - Reject candidates that require paywall, login-wall, private channel, scraped screenshot, or unverifiable social repost access for the central fact. Use `reject-paywall-body-dependent` or `reject-unverifiable-or-community-only` from `docs/candidate-hold-reject-reasons.md` when recording the decision.
 
