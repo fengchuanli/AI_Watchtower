@@ -1,3 +1,30 @@
+## 2026-09-28 23:13 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 新闻情报更新（延后运行）；首页推进为 `news-0800-2026-09-28`，发布 10 条安全非重复信号，聚焦 OpenAI 最新模型训练暂停、OpenAI/Anthropic 安全叙事监管定义权、Meta Muse 增长与早期访问、Meta AI 眼镜、AI 医疗索赔成本、Synthesia 交互式数字分身、Nscale IPO 前融资、Lightspeed 印度 AI 基金和生产 RAG 可靠性。
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页和近期历史 URL，避开 9月27日08:00 / 17:00 版已收录事实簇。
+  - 核对 AP / Associated Press、TechCrunch AI、VentureBeat AI 候选；未新增来源标签，source count 维持 99，仅将 `data/sources.json` 日期更新到当前发布日。
+  - 发布 10 条安全非重复信号；本批 10/10 为可靠媒体，且 TechCrunch 7/10，已在 `sourceRisk`、`sourceConcentration` 和 `overreadBoundary` 中明确标为媒体雷达与核查清单。
+  - 跳过社区讨论、聚合页、随机网页、重复 URL、近重复事实簇、付费/登录墙正文、播客复述、旧稿和弱证据补量。
+  - Archive mirror: done - newest `data/news-history.json` edition matches `data/news.json` for edition metadata, reader/source framing, item count, source count, categories, deep briefing, and item order.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页和详情页同步显示 9月28日08:00 版 10 条情报；读者可在首页和详情页看到 Agent 训练暂停、AI 安全监管定义权、Muse/AI 眼镜入口、医疗 AI 成本、数字分身、AI 云融资、区域 AI 基金和生产 RAG 的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check scripts/publish-2026-09-28-0800.mjs` before removing the temporary generation script.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 99 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+- Commit note: `【新闻更新】发布08点AI新闻：10条Agent闸门与AI入口信号`.
+
 ## 2026-09-28 11:02 JST
 
 - Focus: 完成当前 30 天计划 Day 17，复查 `data/sources.json` 增长到 99 个来源后的标签治理方式；新增 merge / rename / clarify 规则，避免新闻更新为了保存每个 URL 路径而制造近重复来源标签，同时保留官方、研究、媒体、厂商主张等 source-role 精度。
