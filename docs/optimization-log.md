@@ -30,7 +30,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: `2be033f` (`【网站优化】补充来源标签治理规则`).
-- Push: pending - implementation commit is local; push will be attempted after this log entry commit.
+- Push: pushed - sandboxed `git push origin main` failed because `github.com` could not be resolved; network-authorized retry succeeded and pushed `main` through `201d022` to `origin/main`.
 
 ## 2026-09-28 08:19 JST
 
