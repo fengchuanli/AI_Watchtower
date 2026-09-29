@@ -29,8 +29,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `bf53f18` (`【VisionHub网站风格优化】简化新闻更新必读路径`).
-- Push: pending.
+- Commit: `bf53f18` (`【VisionHub网站风格优化】简化新闻更新必读路径`) and `4c8054a` (`【网站优化】记录新闻更新路径优化`).
+- Push: blocked-auth - sandboxed `git push origin main` failed because `github.com` could not be resolved; network-authorized retry was rejected by app safety review because pushing local commits directly to shared `main` requires explicit trusted user approval.
 
 ## 2026-09-29 08:12 JST
 

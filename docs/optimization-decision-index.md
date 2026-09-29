@@ -8,7 +8,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 3, News Update Workflow Friction
 - Last indexed run: 2026-09-29 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push retry was blocked by app safety review because shared `origin/main` publication needs explicit trusted user approval.
 
 ## Recent Plan-Day Decisions
 
