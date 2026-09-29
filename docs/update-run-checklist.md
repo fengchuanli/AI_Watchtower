@@ -1,10 +1,23 @@
 # Update Run Checklist
 
-Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether held-but-promising candidates were recorded with `docs/held-candidate-review-note.md`, whether duplicates were checked, whether `docs/homepage-edition-preflight.md` confirmed the reader question, TOP3 use, source boundary, mobile scan path, proof boundary, and archive mirror, whether `docs/partial-batch-publication-guide.md` was needed for a one- or two-item safe batch, whether `docs/current-to-history-publication-checklist.md` kept the latest archive aligned with the homepage, whether `docs/archive-diff-summary-format.md` should summarize the same-day morning/evening change, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording, commit title prefixes, and the required `网站可见变化` note; use `docs/failure-status-wording-guide.md` whenever pull, validation, commit, push, or publication is blocked. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
+Use this checklist for every 08:00 JST and 17:00 JST AI news intelligence update before changing `data/news.json`. Its purpose is to make the run state visible: what was searched, which candidates were held or drafted, whether duplicates were checked, whether homepage/archive publication gates passed, which validators passed, and whether GitHub sync succeeded. Use `docs/remote-sync-log-convention.md` for exact pull/push status wording, commit title prefixes, and the required `网站可见变化` note; use `docs/failure-status-wording-guide.md` whenever pull, validation, commit, push, or publication is blocked. If validation, archive mirroring, source role, duplicate, or copyright checks reveal bad current data, switch to `docs/bad-data-rollback-note.md` before republishing.
 
 This checklist sits after the candidate workflow docs and before the final optimization log entry. It does not replace source judgment. If a step produces too few safe candidates, use `docs/partial-batch-publication-guide.md` to decide whether to publish a short batch with a clear reason, continue searching, or hold the update instead of padding the homepage with weak, repeated, or copyright-risk items.
 
 For a normal 08:00 or 17:00 run, the shortest candidate-to-news path is recorded in `docs/candidate-to-news-handoff.md`: plain-language note, source gate, duplicate report, short intake, priority/mix check, field mapping into `data/news.json`, homepage/archive preflight, derived-data rebuild gate, validation, commit, and push status.
+
+## Normal News Update Must-Read Path
+
+For an ordinary 08:00 or 17:00 news update, read these documents in this order and do not scan older optimization logs or every historical rule before drafting:
+
+1. `docs/candidate-workflow-plain-language-guide.md` for the first human judgment: what happened, why it matters, what is unproven, safest source, batch safety, and draft/hold/reject.
+2. `docs/candidate-source-checklist.md` for the hard source, copyright, duplicate, source-label, original-source, and concentration gate.
+3. `docs/candidate-intake-format.md` only for surviving candidates, keeping intake fields short enough to map into public copy.
+4. `docs/candidate-to-news-handoff.md` for the normal shortest path and field mapping into `data/news.json`.
+5. `docs/homepage-edition-preflight.md` and `docs/current-to-history-publication-checklist.md` after drafting, so the homepage reader frame and newest archive mirror are aligned before derived data is rebuilt.
+6. This checklist's status rows for derived data, validation, commit, push, and `网站可见变化`.
+
+Open conditional documents only when their trigger appears: `docs/held-candidate-review-note.md` for promising holds, `docs/original-source-replacement-guide.md` for media-started candidates that may have a stronger primary source, `docs/source-diversity-triage-note.md` when one owner/source family/evidence mode dominates, `docs/partial-batch-publication-guide.md` when fewer than 10 safe items remain, `docs/archive-diff-summary-format.md` for 17:00 same-day morning/evening comparisons, and `docs/bad-data-rollback-note.md` when current or archive data is already wrong.
 
 ## Automation health
 

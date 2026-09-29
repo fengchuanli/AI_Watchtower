@@ -1,3 +1,37 @@
+## 2026-09-29 11:05 JST
+
+- Focus: 完成当前 30 天计划 Day 18，简化普通 08:00 / 17:00 新闻更新的必读文档路径，让编辑先按 6 步核心路径完成候选判断、来源门槛、短 intake、字段交接、首页/归档发布门槛和验证状态，而不是在起草前扫描所有历史优化规则。
+- Changed files:
+  - `docs/update-run-checklist.md`
+  - `docs/candidate-to-news-handoff.md`
+  - `README.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/update-run-checklist.md`、`docs/candidate-to-news-handoff.md`、`docs/news-data-format.md`、`README.md` 和本日志顶部条目。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只更新普通新闻更新的必读路径、条件分支说明、README 入口、静态校验锚点和最近决策索引。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改首页 TOP3 卡片。
+  - Source boundary visible: pass - 必读路径仍把 `docs/candidate-source-checklist.md` 作为硬门槛，并保留来源标签、原始来源、重复、版权和来源集中判断。
+  - Original source dependency: pass - 条件分支明确媒体候选需要时再打开原始来源替换指南，媒体来源仍必须保留 `must-read` 与最小事实边界。
+  - Mobile burden: not applicable - 本次不改移动端 UI。
+  - Continuity use: not applicable - 本次未新增连续观察组件。
+  - Visual aid purpose: not applicable - 未新增视觉组件。
+- 网站可见变化: 无，属于规则/校验/计划更新；后续 08:00 / 17:00 新闻更新会从 `docs/update-run-checklist.md` 的 `Normal News Update Must-Read Path` 进入，减少起草前的文档扫描负担。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 101 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: pending.
+- Push: pending.
+
 ## 2026-09-29 08:12 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-29`，发布 10 条安全非重复信号，聚焦 CASP 自动化 AI 研发/智能爆炸报告、NVIDIA Open Agent Safety Platform、NVIDIA OpenShell 0.1.0、Microsoft run-assert-eval、Microsoft Defender ISOC、NASA Earth/Hydrology Copilot、Google Cloud Gemini RLFT、Google Cloud Agent Factory Harness、Oracle AI 数据中心合同风险和 9月29日美国 AI 高层会议。

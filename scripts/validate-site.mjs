@@ -961,6 +961,8 @@ if (
 if (
   !/Candidate To News Handoff Checklist/.test(candidateToNewsHandoff) ||
   !/Normal 08:00 \/ 17:00 Shortest Path/.test(candidateToNewsHandoff) ||
+  !/must-read path/.test(candidateToNewsHandoff) ||
+  !/conditional docs only at the branch point/.test(candidateToNewsHandoff) ||
   !/plain-language note/.test(candidateToNewsHandoff) ||
   !/source gate/.test(candidateToNewsHandoff) ||
   !/report-duplicate-candidates\.mjs/.test(candidateToNewsHandoff) ||
@@ -984,7 +986,14 @@ if (
   !/candidate-to-news-handoff\.md/.test(candidateIntakeFormat) ||
   !/candidate-to-news-handoff\.md/.test(candidateSourceChecklist) ||
   !/candidate-to-news-handoff\.md/.test(readme) ||
-  !/shortest candidate-to-news path/.test(updateRunChecklist)
+  !/shortest candidate-to-news path/.test(updateRunChecklist) ||
+  !/Normal News Update Must-Read Path/.test(updateRunChecklist) ||
+  !/do not scan older optimization logs/.test(updateRunChecklist) ||
+  !/Open conditional documents only when their trigger appears/.test(updateRunChecklist) ||
+  !/普通 08:00 \/ 17:00 新闻更新必读路径/.test(readme) ||
+  !/Day 18[\s\S]*Normal News Update Must-Read Path[\s\S]*candidate-to-news handoff[\s\S]*conditional/.test(
+    optimizationDecisionIndex,
+  )
 ) {
   errors.push("Candidate gathering must include a candidate-to-news handoff checklist that maps intake fields to data/news.json without duplicating source article text.");
 }

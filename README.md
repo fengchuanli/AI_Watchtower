@@ -85,6 +85,7 @@ npx serve .
 
 - 产品目标与优化基准：`docs/product-principles.md`
 - 版权安全规则：`docs/copyright-safety.md`
+- 普通 08:00 / 17:00 新闻更新必读路径：`docs/update-run-checklist.md` 的 `Normal News Update Must-Read Path`，先按最短路径读 6 个核心步骤，再只在触发条件出现时打开暂缓、原始来源替换、来源多样性、短批次、归档差异或回滚文档
 - 情报源列表：`data/sources.json`
 - 候选入口顺序：先读 `docs/candidate-workflow-plain-language-guide.md`，再用 `docs/candidate-source-checklist.md` 做硬门槛，通过后才填 `docs/candidate-intake-format.md`
 - 候选暂缓/拒绝原因词表：`docs/candidate-hold-reject-reasons.md`
