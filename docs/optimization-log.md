@@ -25,7 +25,8 @@
   - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
   - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit note: pending commit `【新闻更新】发布17点AI新闻：10条DevDay与Agent治理信号`.
+- Commit: `2499ed4` (`【新闻更新】发布17点AI新闻：10条DevDay与Agent治理信号`).
+- Push: pushed to `origin/main` after sandboxed DNS push failed and network-authorized retry succeeded.
 
 ## 2026-09-29 23:10 JST
 
