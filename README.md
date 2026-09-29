@@ -63,6 +63,7 @@ npx serve .
 │   ├── optimization-plan.md
 │   ├── product-principles.md
 │   └── source-policy.md
+├── rag/                 # AI Watchtower RAG Assistant（结构和命令见 rag/README.md）
 ├── scripts/
 │   ├── build-derived-data.mjs
 │   ├── check_layout.py

@@ -4,3 +4,12 @@ dist/
 .env
 .env.local
 Claude outputs/
+
+# Python
+__pycache__/
+*.pyc
+
+# RAG: large generated files (regenerate with rag/scripts)
+rag/data/embedding_cache.jsonl
+rag/data/vectorized_azure_search_docs.jsonl
+rag/data/azure_search_upload_actions.jsonl
