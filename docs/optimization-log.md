@@ -1,3 +1,32 @@
+## 2026-09-30 08:11 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-30`，发布 10 条安全非重复信号，聚焦 OpenAI DevDay 后 Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Plugin Extensions、ChatGPT Space、白宫AI自愿协议、GPT-6.1 Astra延后和OpenAI ARR媒体披露。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 使用 `data/sources.json` 与 `docs/source-policy.md`；核对当前首页、历史重复 URL、OpenAI DevDay官方 recap、OpenAI Dots / GPT-6.1 Sol / Agents API / ChatGPT Space / Developers文档、AP Technology 和 Axios AI 候选。
+  - 未新增来源标签，source count 维持 101；使用已注册的 `openai-news`、`openai-developers-rss`、`ap-technology` 和 `axios-ai`。
+  - 发布 10 条安全非重复信号；官方/开发者来源 7/10，可靠媒体 3/10。OpenAI项作为 `官方核对`；AP/Axios项作为 `媒体背景` / `reported` / `must-read`，完整事实、引述、数字、采访和上下文留在原文。
+  - 跳过社区讨论、Reddit情绪、重复DevDay直播预告、已收录NVIDIA/Anthropic Sonnet 5.5事实、弱转载和无法回到源文件的说法；本批在 `sourceRisk`、`sourceConcentration` 和 `overreadBoundary` 中明确提示OpenAI官方集中只能证明发布事实，效果仍需系统卡、管理员文档、审计日志、客户指标、第三方复测、白宫协议和财务文件。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json` and `data/news-today.json`; total history items is now 1046.
+- 网站可见变化: 首页 TOP3、更多新闻 feed、全部新闻列表、归档页、today index 和详情页同步显示 9月30日17:00 版 10 条情报；读者可在首页和详情页看到 OpenAI DevDay 产品落地、Agent权限/审计边界、模型成本分层、白宫治理协议和ARR资本数字的证据边界。
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 101 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, and `tags.js`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: pending commit `【新闻更新】发布17点AI新闻：10条DevDay与Agent治理信号`.
+
 ## 2026-09-29 23:10 JST
 
 - Focus: Completed the 08:00 JST automation pass as a same-day supplement because the current homepage was already `news-1700-2026-09-29`; expanded the active edition from 10 to 15 safe non-duplicate AI signals instead of downgrading the edition clock.

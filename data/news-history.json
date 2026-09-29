@@ -1,8 +1,1085 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29",
-  "totalItems": 1036,
+  "updatedAt": "2026-09-30",
+  "totalItems": 1046,
   "editions": [
+    {
+      "id": "news-1700-2026-09-30",
+      "date": "2026-09-30",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "itemCount": 10,
+      "note": "本期10条AI新闻情报，聚焦DevDay落地、Agent治理和资本核查。",
+      "operationalStatus": "已拉取origin/main；核对OpenAI官方、开发者文档、AP和Axios来源；跳过社区讨论和重复DevDay预告。",
+      "editorialInterpretation": "本期显示OpenAI把Agent、模型、隐私、安全和工作区产品一次性推入商业化；证据边界是官方来源只证明发布事实，政策和收入影响仍要回到系统卡、审计和财务文件。",
+      "readerFrame": {
+        "headline": "本期读法：先查DevDay源文件，再核对安全协议和商业数字",
+        "whyItMatters": "9月30日版把Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Plugin Extensions、ChatGPT Space、白宫协议、Astra延后和OpenAI ARR报道放在同一张证据表。",
+        "useThisIssueFor": [
+          "产品和IT团队核对Agent常驻、团队空间、插件面板和跨应用权限。",
+          "平台和安全团队核对模型成本、ZDR/PSP、电脑使用、云端Codex和审计日志。",
+          "政策、法务和投资团队核对白宫协议、Astra延后和ARR媒体数字的源文件。"
+        ],
+        "notProvenYet": [
+          "不证明Dots或Space已适合所有企业后台任务，也不证明GPT-6.1 Sol在所有负载降本。",
+          "不证明白宫自愿协议有法律强制力，也不证明Axios ARR数字已被审计公开确认。"
+        ],
+        "mobile": {
+          "headline": "查DevDay产品、安全和资本证据",
+          "summary": "看Agent入口、模型成本、隐私审查、白宫协议和收入数字边界。",
+          "primaryUses": [
+            "产品团队查入口",
+            "安全团队查审计",
+            "法务团队查协议"
+          ],
+          "proofBoundary": "仍需系统卡、管理员文档、白宫协议全文、审计报告和财务文件"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月29日17:00版从预告转向DevDay落地和协议核查",
+        "freshFacts": [
+          "新增OpenAI DevDay后Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Plugin Extensions和ChatGPT Space源文件。",
+          "新增AP关于白宫AI自愿协议和OpenAI延后GPT-6.1 Astra的报道。",
+          "新增Axios关于OpenAI ARR接近700亿美元的媒体披露。"
+        ],
+        "repeatedContext": [
+          "延续9月29日Agent安全和模型成本主题，但不重复NVIDIA、Anthropic Sonnet 5.5和DevDay直播预告。",
+          "延续AI资本披露背景，把重点从Anthropic IPO报道扩展到OpenAI收入与成本核查。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对Agent产品入口",
+          "count": 3,
+          "meaning": "用来检查Dots、ChatGPT Space和插件面板是否改变团队协作与应用分发清单。"
+        },
+        {
+          "label": "验证模型和平台控制",
+          "count": 4,
+          "meaning": "用来检查GPT-6.1 Sol、Private Intelligence、Agents API和Codex Cloud的文档、价格、权限和审计。"
+        },
+        {
+          "label": "核对政策与资本文件",
+          "count": 3,
+          "meaning": "用来检查白宫协议、Astra延后和ARR报道是否有系统卡、协议全文和财务文件补证。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "OpenAI官方集中",
+        "note": "官方来源7/10构成来源家族集中，能较强证明发布事实；AP/Axios 3/10仍是政策和资本媒体雷达。",
+        "nextCheck": "查系统卡、管理员文档、白宫协议全文、审计报告、第三方复测和财务文件。"
+      },
+      "sourceConcentration": {
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "count": 4,
+        "share": "4/10",
+        "note": "OpenAI News同一官方来源4/10，适合核对发布事实，不证明效果。",
+        "nextCheck": "查开发者文档、系统卡、客户日志、第三方复测和外部审计。"
+      },
+      "overreadBoundary": {
+        "label": "不要把DevDay读成效果证明",
+        "body": "不要把本期读成全市场结论：它适合作为OpenAI产品和治理核查表，不代表Agent安全、模型成本、隐私计算、团队协作或收入质量已经完成独立验证。",
+        "doNotConclude": "不能得出Dots已安全接管长期任务、Sol 6.1普遍降本、白宫协议有效监管，或ARR数字等于健康现金流。",
+        "useInstead": "应该先把系统卡、价格页、管理员文档、白宫协议全文、审计报告、客户日志和财务文件作为下一步证据。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent进入常驻工作层",
+          "note": "跨期看，NVIDIA/Microsoft运行时安全之后，OpenAI把Dots、Agents API、Codex Cloud和Space推向用户工作流。",
+          "boundary": "不证明长期自治已经安全；仍需系统卡、权限日志、客户试点和第三方红队。"
+        },
+        {
+          "topic": "model",
+          "label": "模型竞争转向成本和发布闸门",
+          "note": "跨期看，Claude Sonnet 5.5和GPT-6.1 Sol都强调成本分层，同时GPT-6.1 Astra延后显示安全闸门影响路线图。",
+          "boundary": "不证明降本适用于所有负载；仍需价格页、系统卡、第三方基准和发布状态。"
+        },
+        {
+          "topic": "policy",
+          "label": "安全协议开始文件化",
+          "note": "跨期看，AI安全争论从UN发言、州级诉讼和NVIDIA安全平台延伸到白宫自愿协议。",
+          "boundary": "不证明协议可执行；仍需白宫全文、签署方清单、审计规则和监管行动。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "常驻Agent从预告变成产品",
+          "status": "stronger",
+          "previousPattern": "此前Agent主题集中在运行时安全、Muse小企业入口和DevDay预告。",
+          "currentSignal": "本期新增Dots、Agents API、Codex Cloud、Plugin Extensions和ChatGPT Space源文件。",
+          "signalDirection": "增强：同一主题从媒体预告进入官方产品和开发者文档。",
+          "stillUnproven": "仍需系统卡、权限日志、客户试点、第三方红队和管理员控制文档。"
+        },
+        {
+          "topic": "model",
+          "label": "成本分层与安全闸门并行",
+          "status": "stronger",
+          "previousPattern": "此前模型主题集中在Claude Sonnet 5.5和Gemini定制。",
+          "currentSignal": "本期新增GPT-6.1 Sol官方发布和AP关于GPT-6.1 Astra延后的报道。",
+          "signalDirection": "增强：模型路线同时出现低成本下放和旗舰延后。",
+          "stillUnproven": "仍需系统卡、价格页、发布状态、第三方基准和客户迁移数据。"
+        },
+        {
+          "topic": "policy",
+          "label": "自愿治理进入白宫会议",
+          "status": "stronger",
+          "previousPattern": "此前政策主题集中在CASP报告、Florida诉讼和AI高层会议预告。",
+          "currentSignal": "本期新增AP关于白宫AI自愿协议的报道。",
+          "signalDirection": "增强：预告会谈转为协议与审计承诺的文件核查问题。",
+          "stillUnproven": "仍需协议全文、签署方清单、外部审计权限和执行机制。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "发布会落地与安全延后同时出现",
+          "lastMention": "此前OpenAI出现在DevDay直播预告、Florida诉讼、Agent越界和GPT-6路线背景中。",
+          "whatChanged": "本期新增Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Space、Astra延后和ARR报道。",
+          "stillUnproven": "仍需系统卡、价格页、管理员文档、白宫协议、审计文件和财务披露。"
+        },
+        {
+          "company": "Amazon",
+          "label": "AWS托管Agent",
+          "lastMention": "此前AWS出现在AgentCore、公共部门证据架构和开放工具权限背景中。",
+          "whatChanged": "本期新增OpenAI与Amazon Bedrock Managed Agents合作说明。",
+          "stillUnproven": "仍需AWS官方文档、区域可用性、权限日志和客户部署指标。"
+        },
+        {
+          "company": "Microsoft",
+          "label": "Agent治理与企业工作入口继续连接",
+          "lastMention": "此前Microsoft出现在run-assert-eval、Defender ISOC和NASA Copilot背景中。",
+          "whatChanged": "本期Dots页面提到specialist dots与Microsoft Agent 365治理控制集成方向。",
+          "stillUnproven": "仍需Microsoft Agent 365文档、企业管理员控制和审计集成证据。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 7,
+          "role": "官方来源用于核对OpenAI产品、模型和开发者能力发布事实；效果、成本和安全强度仍需外部证明。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 3,
+          "role": "AP和Axios用于政策、安全和商业雷达；完整事实、引述、数字和上下文仍需读原文并查源文件。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "核对常驻Agent和工作区",
+          "count": 4,
+          "itemIds": [
+            "openai-dots-always-on-agents-2026-09-29",
+            "openai-agents-api-computer-use-bedrock-2026-09-29",
+            "openai-codex-cloud-shared-environments-2026-09-29",
+            "chatgpt-space-team-agent-workspace-2026-09-29"
+          ],
+          "meaning": "用来检查Agent后台任务、云端执行、团队空间、权限、日志和交接流程。",
+          "whyNow": "DevDay把Agent从预告推到用户、开发者和团队协作入口。"
+        },
+        {
+          "id": "model",
+          "label": "核对模型成本和发布闸门",
+          "count": 2,
+          "itemIds": [
+            "openai-gpt-6-1-sol-cost-coding-2026-09-29",
+            "ap-openai-delays-gpt-6-1-astra-safety-2026-09-29"
+          ],
+          "meaning": "用来检查Sol 6.1成本分层、Astra延后、系统卡、价格页和第三方复测。",
+          "whyNow": "模型路线同时出现能力下放和安全延后，影响采购和发布节奏。"
+        },
+        {
+          "id": "enterprise",
+          "label": "验证隐私与控制架构",
+          "count": 1,
+          "itemIds": [
+            "openai-private-intelligence-zdr-psp-2026-09-29"
+          ],
+          "meaning": "用来检查ZDR、Private Safety Processing、加密存储和企业审计边界。",
+          "whyNow": "长周期Agent让隐私、保留和安全监测之间的张力更具体。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "验证插件和开发者生态",
+          "count": 1,
+          "itemIds": [
+            "openai-plugin-extensions-sidebar-panels-2026-09-29"
+          ],
+          "meaning": "用来检查插件侧边栏、交互面板、文件查看器、提交审核和权限体验。",
+          "whyNow": "ChatGPT插件开始从工具调用变成可视化应用界面。"
+        },
+        {
+          "id": "policy",
+          "label": "核对白宫协议和治理文件",
+          "count": 1,
+          "itemIds": [
+            "ap-trump-ai-self-policing-accord-2026-09-29"
+          ],
+          "meaning": "用来检查AI自愿协议全文、签署方、外部审计和执行机制。",
+          "whyNow": "AI安全争论进入白宫会议和自愿协议叙事。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "验证收入和算力压力",
+          "count": 1,
+          "itemIds": [
+            "axios-openai-arr-nears-70b-2026-09-29"
+          ],
+          "meaning": "用来检查OpenAI收入媒体数字、云义务、招股书和审计财报。",
+          "whyNow": "AI资本叙事需要同时核对收入增长和基础设施成本。"
+        }
+      ],
+      "sourceCount": 101,
+      "categories": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "本期用于查看白宫AI自愿协议和GPT-6.1 Astra延后；需协议全文、系统卡、审计规则和发布状态确认。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "本期用于理解GPT-6.1 Sol成本分层；需系统卡、价格页、第三方基准和客户日志确认。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "本期用于查看Private Intelligence、Agents API、Codex Cloud和插件扩展；需开发文档、权限审计和生产日志验证。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "本期用于查看Dots、ChatGPT Space和插件界面化；需管理员文档、权限日志、系统卡和客户试点验证。"
+        },
+        {
+          "id": "funding",
+          "label": "资本",
+          "description": "本期用于查看OpenAI ARR媒体披露；需审计财报、招股书、云合同和现金流数据验证。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "本期研究分类用于提醒读者复核模型和Agent评测方法；需论文、基准和复现实验确认。"
+        }
+      ],
+      "briefing": {
+        "label": "今日简报",
+        "headline": "DevDay落地把Agent、模型成本和治理文件拉到同一张表",
+        "summary": "本期发布10条信号：OpenAI官方源文件覆盖Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Plugin Extensions和Space；AP/Axios补充白宫协议、Astra延后和ARR报道。",
+        "cta": "查看本期10条信号",
+        "watchPoints": [
+          {
+            "title": "常驻Agent",
+            "body": "Dots、Space和Codex Cloud把后台任务、团队知识和云端代码执行推到前台。"
+          },
+          {
+            "title": "安全与隐私",
+            "body": "Private Intelligence、Astra延后和白宫协议要求读者查系统卡、审计和协议全文。"
+          },
+          {
+            "title": "成本与资本",
+            "body": "GPT-6.1 Sol和ARR报道都需要价格页、客户日志、财务文件和云合同补证。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "17:00 JST更新",
+        "title": "OpenAI DevDay落地，Agent控制和资本核查同步升温",
+        "subtitle": "9月30日版显示，AI平台竞争正从发布会口号进入常驻Agent、模型成本、隐私架构、云端开发、白宫协议和收入质量的证据核查。",
+        "dateLabel": "2026年9月30日",
+        "status": "已发布，OpenAI官方集中需继续核对效果",
+        "overview": "本期不是把DevDay做成链接清单，而是把每个发布拆成读者可执行的核查对象：Dots看权限和后台任务，Sol看成本和基准，Private Intelligence看隐私审查，Agents API/Codex看部署边界，Space和插件看协作入口；AP/Axios则提醒政策和商业数字仍要回到源文件。",
+        "timeline": [
+          {
+            "label": "发布会落地",
+            "title": "OpenAI公布Dots、Sol 6.1和Space等源文件",
+            "body": "官方页面把常驻Agent、成本分层和团队工作区变成可核对条目。"
+          },
+          {
+            "label": "安全压力",
+            "title": "AP报道Astra延后与白宫自愿协议",
+            "body": "模型安全和行业自我监管同时进入发布节奏与政策文件。"
+          },
+          {
+            "label": "资本核查",
+            "title": "Axios报道OpenAI ARR接近700亿美元",
+            "body": "收入增长需要和云义务、毛利、现金流与客户集中度一起验证。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期安全非重复信号"
+          },
+          {
+            "value": "7/10",
+            "label": "官方或开发者来源条目"
+          },
+          {
+            "value": "3/10",
+            "label": "可靠媒体雷达条目"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "入口",
+            "title": "常驻Agent开始占据工作入口",
+            "body": "Dots、Space、Plugin Extensions和Codex Cloud把AI从对话扩展到后台任务、团队知识、插件UI和云端代码执行。",
+            "soWhat": "读者应先检查权限、日志、审批和数据保留，而不是只看演示。"
+          },
+          {
+            "number": "02",
+            "label": "成本",
+            "title": "模型分层和旗舰延后并存",
+            "body": "GPT-6.1 Sol强调以较低成本接近Astra任务能力，而Astra延后说明安全门槛也能改变发布节奏。",
+            "soWhat": "平台团队应把价格页、自有任务日志、系统卡和第三方基准放在一起看。"
+          },
+          {
+            "number": "03",
+            "label": "文件",
+            "title": "治理和商业数字都要回到源文件",
+            "body": "白宫协议和ARR报道是强雷达，但协议效力、审计权限、毛利和云义务都还不能从标题推出。",
+            "soWhat": "法务和投资团队应等待协议全文、审计报告、招股书和云合同。"
+          }
+        ],
+        "actions": [
+          "产品和IT团队先为Dots、Space和插件面板列出权限、审批、日志和退出机制。",
+          "模型平台团队用Sol 6.1重跑自有代码、PDF、电脑使用和科学工作流基准。",
+          "政策、法务和投资团队等待白宫协议全文、OpenAI系统卡、审计报告和财务文件。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "官方限制",
+            "body": "OpenAI官方来源7/10，能证明发布事实和文档口径，但不能单独证明效果、成本收益或安全成熟度。"
+          },
+          {
+            "label": "媒体限制",
+            "body": "AP和Axios条目只作政策、安全和资本雷达，完整引述、数字、采访和背景仍在原文或后续源文件。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI页面支持Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Plugin Extensions和Space发布事实。",
+            "AP支持白宫AI自愿协议和GPT-6.1 Astra延后报道事实。",
+            "Axios支持OpenAI ARR接近700亿美元的媒体披露事实。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower判断本期主线是OpenAI把Agent工作入口和企业控制面集中推向商业化。",
+            "AI Watchtower把政策和收入条目保持为文件核查雷达，不把媒体数字写成审计结果。"
+          ],
+          "unknowns": [
+            "Dots、Space、Codex Cloud和Plugin Extensions的生产安全与客户收益仍缺第三方审计和客户日志。",
+            "GPT-6.1 Sol降本幅度、Astra延后原因和Private Intelligence合规适配仍需系统卡、价格页和架构文件。",
+            "白宫协议效力和OpenAI ARR质量仍需协议全文、审计报告、财务文件、云合同和客户留存数据。"
+          ]
+        },
+        "references": [
+          {
+            "label": "OpenAI发布Dots官方说明",
+            "url": "https://openai.com/index/introducing-dots/"
+          },
+          {
+            "label": "OpenAI发布GPT-6.1 Sol官方说明",
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+          },
+          {
+            "label": "AP报道白宫AI自愿协议",
+            "url": "https://apnews.com/article/595796511f110fc006cca0d01329733e"
+          },
+          {
+            "label": "Axios报道OpenAI ARR接近700亿美元",
+            "url": "https://www.axios.com/2026/09/29/scoop-openais-annual-recurring-revenue-nears-70b"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "chatgpt-space-team-agent-workspace-2026-09-29",
+          "category": "product",
+          "label": "产品",
+          "title": "ChatGPT Space把团队、页面和Agent协作放进同一工作区",
+          "body": "OpenAI推出ChatGPT Space，定位为团队、ChatGPT和dot共享知识并协作推进项目的工作区。",
+          "summary": "OpenAI推出ChatGPT Space，定位为团队、ChatGPT和dot共享知识并协作推进项目的工作区。",
+          "whyItMatters": "AI工作入口正在从单人对话转向团队空间、共享页面、任务和权限治理。",
+          "detailBody": "OpenAI推出ChatGPT Space，定位为团队、ChatGPT和dot共享知识并协作推进项目的工作区。 对ChatGPT Business管理员团队、企业知识管理团队和协作工具治理团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "知识库、项目协作和Agent执行开始在同一个AI工作区里合流。",
+          "detailTrend": "知识库、项目协作和Agent执行开始在同一个AI工作区里合流。 下一步要核对管理员控制、数据保留文档、权限日志和团队试点结果，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它让企业协作工具竞争进入AI原生工作区阶段。",
+          "topReason": "它让企业协作工具竞争进入AI原生工作区阶段。",
+          "impact": "企业IT和协作工具团队应核对空间权限、页面共享、移动端限制和数据保留策略。",
+          "whoShouldCare": "ChatGPT Business管理员团队、企业知识管理团队和协作工具治理团队。",
+          "readerUse": "ChatGPT Business管理员团队、企业知识管理团队和协作工具治理团队。可用它检查AI工作区是否会替代部分项目主页、文档和会议后续流程。",
+          "nextCheck": "查Space帮助文档、管理员控制、数据保留、移动端功能和团队试点指标。",
+          "followUpQuestions": [
+            "Space管理员文档是否说明共享知识能按项目、角色和外部协作者隔离？",
+            "Pages、Slides和team tasks是否进入同一审计与保留策略？"
+          ],
+          "evidenceThreshold": "至少需要管理员文档、数据保留说明、权限日志和团队试点指标，才能升级为协作平台迁移结论。",
+          "claimBoundary": "产品页面证明Space发布，不证明它已替代现有协作系统。",
+          "counterEvidence": "如果管理员控制、移动端编辑或审计能力不足，应收窄为团队协作入口试点。 后续应以管理员控制、数据保留文档、权限日志和团队试点结果为可观察证据。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "sourceUrl": "https://chatgpt.com/features/space/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News支持这条来源事实：ChatGPT Space官方页面说明团队、ChatGPT和dot在Agent工作区共享知识与协作文档。",
+          "publishedAt": "2026-09-30T02:30:00+09:00",
+          "time": "02:30",
+          "tags": [
+            "ChatGPT Space",
+            "团队协作",
+            "Dots"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://chatgpt.com/features/space/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "detailWhyRanked": "它让企业协作工具竞争进入AI原生工作区阶段。\n详情页进一步说明：OpenAI News支持这条来源事实：ChatGPT Space官方页面说明团队、ChatGPT和dot在Agent工作区共享知识与协作文档。；升级判断仍要看管理员控制、数据保留文档、权限日志和团队试点结果。"
+        },
+        {
+          "id": "openai-plugin-extensions-sidebar-panels-2026-09-29",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI开放Plugin Extensions，让插件拥有侧边栏和交互面板",
+          "body": "OpenAI Developers文档显示Plugin Extensions可为ChatGPT插件提供侧边栏主页、交互面板和文件查看器。",
+          "summary": "OpenAI Developers文档显示Plugin Extensions可为ChatGPT插件提供侧边栏主页、交互面板和文件查看器。",
+          "whyItMatters": "插件不再只是对话里的工具调用，正在变成ChatGPT内的可视化应用界面。",
+          "detailBody": "OpenAI Developers文档显示Plugin Extensions可为ChatGPT插件提供侧边栏主页、交互面板和文件查看器。 对正在接入ChatGPT插件的产品团队、内部工具开发团队和工作区应用团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "ChatGPT生态会从连接器目录扩展到带UI、权限和工作区状态的轻应用。",
+          "detailTrend": "ChatGPT生态会从连接器目录扩展到带UI、权限和工作区状态的轻应用。 下一步要核对插件审核规则、权限模型、目录分发数据和第三方上线案例，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它改变第三方产品进入ChatGPT的呈现方式。",
+          "topReason": "它改变第三方产品进入ChatGPT的呈现方式。",
+          "impact": "SaaS团队应评估插件主页、面板权限、文件查看器和用户授权体验。",
+          "whoShouldCare": "正在接入ChatGPT插件的产品团队、内部工具开发团队和工作区应用团队。",
+          "readerUse": "正在接入ChatGPT插件的产品团队、内部工具开发团队和工作区应用团队。可用它判断插件是否需要从纯工具升级为可视化工作界面。",
+          "nextCheck": "查Plugin Extensions文档、提交规则、权限模型、审核反馈和上线案例。",
+          "followUpQuestions": [
+            "插件面板能否清楚显示数据来源、权限和操作后果？",
+            "目录排名数据、审核反馈和上线案例是否显示企业插件分发受影响？"
+          ],
+          "evidenceThreshold": "至少需要开发文档、审核规则、权限说明和上线插件案例，才能升级为生态入口变化结论。",
+          "claimBoundary": "开发者文档证明能力开放，不证明第三方插件会获得稳定分发。",
+          "counterEvidence": "如果审核、发现或权限限制收紧，应收窄为开发者预览能力。 后续应以插件审核规则、权限模型、目录分发数据和第三方上线案例为可观察证据。",
+          "sourceId": "openai-developers-rss",
+          "sourceName": "OpenAI Developers RSS",
+          "source": "OpenAI Developers RSS",
+          "sourceUrl": "https://developers.openai.com/plugins/build/extensions",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI Developers RSS支持这条来源事实：OpenAI Developers文档说明Plugin Extensions的侧边栏、权限面板和文件查看器能力。",
+          "publishedAt": "2026-09-30T02:25:00+09:00",
+          "time": "02:25",
+          "tags": [
+            "OpenAI",
+            "Plugins",
+            "ChatGPT应用"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://developers.openai.com/plugins/build/extensions",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "detailWhyRanked": "它改变第三方产品进入ChatGPT的呈现方式。\n详情页进一步说明：OpenAI Developers RSS支持这条来源事实：OpenAI Developers文档说明Plugin Extensions的侧边栏、权限面板和文件查看器能力。；升级判断仍要看插件审核规则、权限模型、目录分发数据和第三方上线案例。"
+        },
+        {
+          "id": "openai-codex-cloud-shared-environments-2026-09-29",
+          "category": "tool",
+          "label": "工具",
+          "title": "Codex Cloud让开发任务脱离本机，团队共享环境成为新控制面",
+          "body": "OpenAI文档显示Codex可在云端运行，并支持可复用开发环境和跨设备启动、监控任务。",
+          "summary": "OpenAI文档显示Codex可在云端运行，并支持可复用开发环境和跨设备启动、监控任务。",
+          "whyItMatters": "代码Agent的关键约束从本机上下文转向环境模板、权限、队列和审计。",
+          "detailBody": "OpenAI文档显示Codex可在云端运行，并支持可复用开发环境和跨设备启动、监控任务。 对负责部署Codex云任务的工程团队、云开发环境平台团队和AI代码审查团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "软件开发Agent正在被包装成可配置、可共享、可审计的云工作台。",
+          "detailTrend": "软件开发Agent正在被包装成可配置、可共享、可审计的云工作台。 下一步要核对环境配置文档、权限审计、PR质量和开发者使用指标，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它改变开发者把长任务交给AI的基础设施位置。",
+          "topReason": "它改变开发者把长任务交给AI的基础设施位置。",
+          "impact": "工程平台团队应检查环境镜像、秘密管理、依赖缓存、PR权限和任务交接流程。",
+          "whoShouldCare": "负责部署Codex云任务的工程团队、云开发环境平台团队和AI代码审查团队。",
+          "readerUse": "负责部署Codex云任务的工程团队、云开发环境平台团队和AI代码审查团队。可用它更新AI开发环境模板、权限和代码审查门槛。",
+          "nextCheck": "查Codex Cloud文档、环境配置、权限审计、日志留存和企业管理员控制。",
+          "followUpQuestions": [
+            "共享开发环境是否能锁定依赖、网络和凭据权限？",
+            "手机或远程启动任务是否进入同一审计链？"
+          ],
+          "evidenceThreshold": "至少需要Codex Cloud文档、企业权限说明和真实PR日志，才能升级为成熟开发控制面。",
+          "claimBoundary": "文档证明云端运行能力，不证明所有团队可直接替换本地流程。",
+          "counterEvidence": "如果环境隔离文档、凭据管理记录或审计日志不足，应收窄为云端开发便利性更新。 后续应以环境配置文档、权限审计、PR质量和开发者使用指标为可观察证据。",
+          "sourceId": "openai-developers-rss",
+          "sourceName": "OpenAI Developers RSS",
+          "source": "OpenAI Developers RSS",
+          "sourceUrl": "https://learn.chatgpt.com/docs/cloud",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI Developers RSS支持这条来源事实：ChatGPT Learn文档说明Codex Cloud和共享开发环境能力。",
+          "publishedAt": "2026-09-30T02:20:00+09:00",
+          "time": "02:20",
+          "tags": [
+            "Codex",
+            "云开发",
+            "AI coding"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://learn.chatgpt.com/docs/cloud",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "detailWhyRanked": "它改变开发者把长任务交给AI的基础设施位置。\n详情页进一步说明：OpenAI Developers RSS支持这条来源事实：ChatGPT Learn文档说明Codex Cloud和共享开发环境能力。；升级判断仍要看环境配置文档、权限审计、PR质量和开发者使用指标。"
+        },
+        {
+          "id": "openai-agents-api-computer-use-bedrock-2026-09-29",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI扩展Agents API到电脑使用，并接入AWS Bedrock Managed Agents",
+          "body": "OpenAI在DevDay说明Agents API支持computer use，并与Amazon合作让OpenAI agents可在AWS内运行。",
+          "summary": "OpenAI在DevDay说明Agents API支持computer use，并与Amazon合作让OpenAI agents可在AWS内运行。",
+          "whyItMatters": "Agent平台竞争开始进入云厂商托管、电脑操作和企业资源边界。",
+          "detailBody": "OpenAI在DevDay说明Agents API支持computer use，并与Amazon合作让OpenAI agents可在AWS内运行。 对正在AWS和ChatGPT Work部署Agent的AWS平台团队、Codex工程团队和自建应用团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "开发者工具正在从单次API调用转向托管环境、沙箱、工具调用和云内权限模型。",
+          "detailTrend": "开发者工具正在从单次API调用转向托管环境、沙箱、工具调用和云内权限模型。 下一步要核对API文档、AWS文档、权限审计和生产部署指标，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它影响Agent应用的部署位置和云内治理方式。",
+          "topReason": "它影响Agent应用的部署位置和云内治理方式。",
+          "impact": "工程和云平台团队应核对沙箱生命周期、工具权限、AWS集成和计费边界。",
+          "whoShouldCare": "正在AWS和ChatGPT Work部署Agent的AWS平台团队、Codex工程团队和自建应用团队。",
+          "readerUse": "正在AWS和ChatGPT Work部署Agent的AWS平台团队、Codex工程团队和自建应用团队。可用它检查Agent平台选型是否需要云内运行、电脑使用和多Agent能力。",
+          "nextCheck": "查Agents API文档、Bedrock Managed Agents说明、AWS权限模型和客户试点日志。",
+          "followUpQuestions": [
+            "Bedrock Managed Agents是否把OpenAI代理日志和AWS资源权限分开审计？",
+            "computer use能力是否披露沙箱、文件和网络边界？"
+          ],
+          "evidenceThreshold": "至少需要API文档、AWS服务说明、权限模型和生产日志，才能升级为可部署平台结论。",
+          "claimBoundary": "官方页面证明能力发布，不证明所有云内合规要求都已覆盖。",
+          "counterEvidence": "如果AWS区域、权限或日志能力受限，应收窄为早期托管Agent能力。 后续应以API文档、AWS文档、权限审计和生产部署指标为可观察证据。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "sourceUrl": "https://developers.openai.com/api/docs/guides/tools-computer-use",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News支持这条来源事实：OpenAI说明Agents API支持computer use、工具能力和Bedrock Managed Agents合作。",
+          "publishedAt": "2026-09-30T02:15:00+09:00",
+          "time": "02:15",
+          "tags": [
+            "OpenAI",
+            "Agents API",
+            "AWS Bedrock"
+          ],
+          "companies": [
+            "OpenAI",
+            "Amazon"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://developers.openai.com/api/docs/guides/tools-computer-use",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "detailWhyRanked": "它影响Agent应用的部署位置和云内治理方式。\n详情页进一步说明：OpenAI News支持这条来源事实：OpenAI说明Agents API支持computer use、工具能力和Bedrock Managed Agents合作。；升级判断仍要看API文档、AWS文档、权限审计和生产部署指标。"
+        },
+        {
+          "id": "ap-trump-ai-self-policing-accord-2026-09-29",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：白宫称AI公司签署自我监管协议，外部审查成政治焦点",
+          "body": "AP报道特朗普称多家AI公司领导人与白宫签署自愿协议，将包含内部和外部审查。",
+          "summary": "AP报道特朗普称多家AI公司领导人与白宫签署自愿协议，将包含内部和外部审查。",
+          "whyItMatters": "AI安全治理从企业声明进入白宫会议和董事会/审计承诺叙事。",
+          "detailBody": "AP报道特朗普称多家AI公司领导人与白宫签署自愿协议，将包含内部和外部审查。 对负责评估AI治理协议的政策团队、企业法务团队、模型风险团队和公共事务团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "美国AI政策正在用自愿协议、外部评估和数据中心政治来回应安全压力。",
+          "detailTrend": "美国AI政策正在用自愿协议、外部评估和数据中心政治来回应安全压力。 下一步要核对白宫协议全文、签署方清单、审计规则和执行报告，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它把前几日的AI安全争论变成可追踪的政策文件问题。",
+          "topReason": "它把前几日的AI安全争论变成可追踪的政策文件问题。",
+          "impact": "政策、法务和安全团队应等待协议文本、签署方清单、审计责任和执行机制。",
+          "whoShouldCare": "负责评估AI治理协议的政策团队、企业法务团队、模型风险团队和公共事务团队。",
+          "readerUse": "负责评估AI治理协议的政策团队、企业法务团队、模型风险团队和公共事务团队。可用它建立白宫AI协议的源文件、审计和执行核查表。",
+          "nextCheck": "查白宫协议全文、签署方名单、董事会审查要求、外部评估机构和后续行政命令。",
+          "followUpQuestions": [
+            "白宫是否公布协议文件、签署方清单和每家公司具体承诺？",
+            "外部审查机构是否具备独立性、访问权限和公开报告义务？"
+          ],
+          "evidenceThreshold": "至少需要白宫原文、签署方清单、审计规则和执行机制，才能升级为有效监管结论。",
+          "claimBoundary": "AP报道证明白宫和企业发布协议说法，不证明协议具有法律强制力。",
+          "counterEvidence": "如果协议文件、签署方清单或独立审计报告缺席，应下调为政治姿态和行业协调信号。 后续应以白宫协议全文、签署方清单、审计规则和执行报告为可观察证据。",
+          "sourceId": "ap-technology",
+          "sourceName": "AP Technology",
+          "source": "AP Technology",
+          "sourceUrl": "https://apnews.com/article/595796511f110fc006cca0d01329733e",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "AP Technology报道这条来源事实：特朗普称AI企业签署自愿AI治理协议，并提到内部和外部审查。；完整事实、引述、数字、采访和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-30T02:10:48+09:00",
+          "time": "02:10",
+          "tags": [
+            "白宫",
+            "AI治理",
+            "自愿协议"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "Google",
+            "Meta",
+            "Microsoft",
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整数字、采访和上下文仍需读原文并查源文件。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/595796511f110fc006cca0d01329733e",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整数字、采访和上下文仍需读原文并查源文件。"
+          },
+          "detailWhyRanked": "它把前几日的AI安全争论变成可追踪的政策文件问题。\n详情页进一步说明：AP Technology报道这条来源事实：特朗普称AI企业签署自愿AI治理协议，并提到内部和外部审查。；完整事实、引述、数字、采访和上下文仍需阅读原文。；升级判断仍要看白宫协议全文、签署方清单、审计规则和执行报告。"
+        },
+        {
+          "id": "openai-private-intelligence-zdr-psp-2026-09-29",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI推出Private Intelligence，试图同时解决ZDR和安全审查",
+          "body": "OpenAI在DevDay提出Private Intelligence，并用开发者文档说明ZDR with Private Safety Processing的处理方式。",
+          "summary": "OpenAI在DevDay提出Private Intelligence，并用开发者文档说明ZDR with Private Safety Processing的处理方式。",
+          "whyItMatters": "企业采用前沿模型的核心矛盾正在变成：敏感数据不外泄，同时还能做跨轮次安全监测。",
+          "detailBody": "OpenAI在DevDay提出Private Intelligence，并用开发者文档说明ZDR with Private Safety Processing的处理方式。 对负责处理源代码和客户数据的安全团队、医疗金融合规团队和科研平台团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "AI平台会把隐私计算、安全审查和可验证控制做成企业采购条件。",
+          "detailTrend": "AI平台会把隐私计算、安全审查和可验证控制做成企业采购条件。 下一步要核对架构白皮书、DPA、第三方审计和客户侧合规测试，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它把数据保护从合同承诺推进到架构和文档核查。",
+          "topReason": "它把数据保护从合同承诺推进到架构和文档核查。",
+          "impact": "安全、法务和平台团队应把ZDR、PSP、加密存储、元数据和取样策略分开评审。",
+          "whoShouldCare": "负责处理源代码和客户数据的安全团队、医疗金融合规团队和科研平台团队。",
+          "readerUse": "负责处理源代码和客户数据的安全团队、医疗金融合规团队和科研平台团队。可用它更新企业AI数据流、保留策略和安全审查例外清单。",
+          "nextCheck": "查Private Safety Processing文档、DPA、审计报告、客户控制面和Private Inference预览细节。",
+          "followUpQuestions": [
+            "客户是否能审计PSP取样、加密存储和元数据索引？",
+            "Private Inference是否披露可验证的机密计算证明和限制？"
+          ],
+          "evidenceThreshold": "至少需要架构文档、企业合同、审计报告和客户侧测试，才能升级为可信隐私推理结论。",
+          "claimBoundary": "官方文档证明方案存在，不证明每类企业数据都满足监管或审计要求。",
+          "counterEvidence": "如果第三方审计报告、客户控制台日志或区域可用性文档缺失，应收窄为架构预览信号。 后续应以架构白皮书、DPA、第三方审计和客户侧合规测试为可观察证据。",
+          "sourceId": "openai-developers-rss",
+          "sourceName": "OpenAI Developers RSS",
+          "source": "OpenAI Developers RSS",
+          "sourceUrl": "https://developers.openai.com/api/docs/guides/private-safety-processing",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI Developers RSS支持这条来源事实：OpenAI开发者文档说明ZDR with Private Safety Processing的安全审查架构。",
+          "publishedAt": "2026-09-30T02:10:00+09:00",
+          "time": "02:10",
+          "tags": [
+            "OpenAI",
+            "Private Intelligence",
+            "ZDR"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://developers.openai.com/api/docs/guides/private-safety-processing",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "detailWhyRanked": "它把数据保护从合同承诺推进到架构和文档核查。\n详情页进一步说明：OpenAI Developers RSS支持这条来源事实：OpenAI开发者文档说明ZDR with Private Safety Processing的安全审查架构。；升级判断仍要看架构白皮书、DPA、第三方审计和客户侧合规测试。"
+        },
+        {
+          "id": "openai-gpt-6-1-sol-cost-coding-2026-09-29",
+          "category": "model",
+          "label": "模型",
+          "title": "OpenAI发布GPT-6.1 Sol，把近Astra能力下放到低成本层",
+          "body": "OpenAI发布GPT-6.1 Sol，称其在Agentic coding、computer use和专业任务上接近Astra且价格更低。",
+          "summary": "OpenAI发布GPT-6.1 Sol，称其在Agentic coding、computer use和专业任务上接近Astra且价格更低。",
+          "whyItMatters": "模型竞争开始把能力、价格、缓存成本和任务路由放在同一张采购表里。",
+          "detailBody": "OpenAI发布GPT-6.1 Sol，称其在Agentic coding、computer use和专业任务上接近Astra且价格更低。 对负责模型路由评估的模型平台团队、成本治理团队、开发者工具团队和企业AI采购团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "前沿模型不只拼峰值能力，也在用中高端模型分层争夺日常企业工作负载。",
+          "detailTrend": "前沿模型不只拼峰值能力，也在用中高端模型分层争夺日常企业工作负载。 下一步要核对系统卡、公开价格页、第三方复测和客户任务日志，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它直接影响开发者和企业的模型路由成本。",
+          "topReason": "它直接影响开发者和企业的模型路由成本。",
+          "impact": "平台团队可把Sol 6.1列入代码、文档、电脑使用和科学任务的A/B路由候选。",
+          "whoShouldCare": "负责模型路由评估的模型平台团队、成本治理团队、开发者工具团队和企业AI采购团队。",
+          "readerUse": "负责模型路由评估的模型平台团队、成本治理团队、开发者工具团队和企业AI采购团队。可用它更新模型路由、缓存策略和内部benchmark计划。",
+          "nextCheck": "查系统卡、价格页、API可用性、DeepSWE/GDP.pdf/OSWorld/Terminal-Bench复测。",
+          "followUpQuestions": [
+            "Sol 6.1在本地代码库和业务PDF任务上的单位成本是否低于现有路由？",
+            "第三方基准是否复现OpenAI的成本和能力差距？"
+          ],
+          "evidenceThreshold": "至少需要系统卡、价格页、第三方基准和客户侧任务日志，才能升级为确认的降本增效结论。",
+          "claimBoundary": "官方页面证明模型发布和厂商评测口径，不证明所有工作负载都会降本。",
+          "counterEvidence": "如果第三方复测显示成本、延迟或质量优势不稳定，应下调为特定任务可选模型。 后续应以系统卡、公开价格页、第三方复测和客户任务日志为可观察证据。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News支持这条来源事实：OpenAI发布GPT-6.1 Sol模型、说明价格口径、可用范围和厂商评测指标。",
+          "publishedAt": "2026-09-30T02:05:00+09:00",
+          "time": "02:05",
+          "tags": [
+            "OpenAI",
+            "GPT-6.1 Sol",
+            "模型成本"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://openai.com/index/introducing-gpt-6-1-sol/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "detailWhyRanked": "它直接影响开发者和企业的模型路由成本。\n详情页进一步说明：OpenAI News支持这条来源事实：OpenAI发布GPT-6.1 Sol模型、说明价格口径、可用范围和厂商评测指标。；升级判断仍要看系统卡、公开价格页、第三方复测和客户任务日志。"
+        },
+        {
+          "id": "openai-dots-always-on-agents-2026-09-29",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI发布Dots，把个人Agent做成常驻工作入口",
+          "body": "OpenAI在DevDay发布Dots，称其可在ChatGPT、Slack和Teams中持续处理任务，并通过应用连接器工作。",
+          "summary": "OpenAI在DevDay发布Dots，称其可在ChatGPT、Slack和Teams中持续处理任务，并通过应用连接器工作。",
+          "whyItMatters": "这把Agent竞争从聊天窗口推进到后台任务、权限审批和跨应用上下文。",
+          "detailBody": "OpenAI在DevDay发布Dots，称其可在ChatGPT、Slack和Teams中持续处理任务，并通过应用连接器工作。 对ChatGPT管理员团队、协作工具安全团队和采购个人Agent的企业团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "个人Agent正在变成带身份、设备、审批和活动日志的常驻工作层。",
+          "detailTrend": "个人Agent正在变成带身份、设备、审批和活动日志的常驻工作层。 下一步要核对系统卡、管理员文档、审计日志和第三方红队结果，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它是DevDay后最直接改变用户工作流的发布。",
+          "topReason": "它是DevDay后最直接改变用户工作流的发布。",
+          "impact": "产品、安全和IT团队应先检查连接器权限、后台任务、审批和日志保留策略。",
+          "whoShouldCare": "ChatGPT管理员团队、协作工具安全团队和采购个人Agent的企业团队。",
+          "readerUse": "ChatGPT管理员团队、协作工具安全团队和采购个人Agent的企业团队。可用它建立个人Agent上线前的权限、审批、日志和退出机制清单。",
+          "nextCheck": "查Dots系统卡、帮助中心、企业管理员文档、区域可用性和真实任务日志。",
+          "followUpQuestions": [
+            "Dots系统卡是否披露后台任务暂停、阻断和人工批准规则？",
+            "企业管理员文档是否按应用、角色和动作级别限制Dots权限？"
+          ],
+          "evidenceThreshold": "至少需要系统卡、管理员文档、权限日志和客户侧任务指标，才能升级为可靠个人Agent落地结论。",
+          "claimBoundary": "OpenAI页面证明Dots发布和设计边界，不证明长期后台任务已经足够安全。",
+          "counterEvidence": "如果系统卡显示高风险动作依赖人工补救或区域/计划限制扩大，应收窄为早期产品入口信号。 后续应以系统卡、管理员文档、审计日志和第三方红队结果为可观察证据。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "sourceUrl": "https://openai.com/index/introducing-dots/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News支持这条来源事实：OpenAI发布Dots、列出可用计划、跨应用入口和安全控制说明。",
+          "publishedAt": "2026-09-30T02:00:00+09:00",
+          "time": "02:00",
+          "tags": [
+            "OpenAI",
+            "Dots",
+            "个人Agent"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://openai.com/index/introducing-dots/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布事实；编辑取舍是把效果和客户收益留给后续复测。"
+          },
+          "detailWhyRanked": "它是DevDay后最直接改变用户工作流的发布。\n详情页进一步说明：OpenAI News支持这条来源事实：OpenAI发布Dots、列出可用计划、跨应用入口和安全控制说明。；升级判断仍要看系统卡、管理员文档、审计日志和第三方红队结果。"
+        },
+        {
+          "id": "axios-openai-arr-nears-70b-2026-09-29",
+          "category": "funding",
+          "label": "资本",
+          "title": "Axios：OpenAI年化经常性收入接近700亿美元，IPO前成本仍待核查",
+          "body": "Axios援引知情人士称OpenAI年化经常性收入接近700亿美元，企业销售较7月以来翻倍。",
+          "summary": "Axios援引知情人士称OpenAI年化经常性收入接近700亿美元，企业销售较7月以来翻倍。",
+          "whyItMatters": "AI商业化速度和算力开支压力必须一起看，单看收入容易忽略成本和合同义务。",
+          "detailBody": "Axios援引知情人士称OpenAI年化经常性收入接近700亿美元，企业销售较7月以来翻倍。 对负责评估AI收入质量的投资研究团队、企业采购团队和云合同风险管理团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "前沿实验室竞争正在从模型能力延伸到收入质量、云成本和上市披露。",
+          "detailTrend": "前沿实验室竞争正在从模型能力延伸到收入质量、云成本和上市披露。 下一步要核对审计财报、招股书、云合同、客户留存和现金流数据，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它把OpenAI与Anthropic的资本叙事放进同一张核查表。",
+          "topReason": "它把OpenAI与Anthropic的资本叙事放进同一张核查表。",
+          "impact": "投资、采购和平台团队应等待审计财报、招股书、合同义务和客户集中度数据。",
+          "whoShouldCare": "负责评估AI收入质量的投资研究团队、企业采购团队和云合同风险管理团队。",
+          "readerUse": "负责评估AI收入质量的投资研究团队、企业采购团队和云合同风险管理团队。可用它跟踪OpenAI商业规模，但不要把媒体数字当成审计结果。",
+          "nextCheck": "查OpenAI公开财务文件、审计报表、IPO招股书、云合同和企业客户留存指标。",
+          "followUpQuestions": [
+            "OpenAI是否会在融资或IPO文件中披露ARR、毛利和云义务？",
+            "企业销售增长是否伴随客户集中度、折扣或算力成本上升？"
+          ],
+          "evidenceThreshold": "至少需要审计财报、招股书、云合同和客户留存数据，才能升级为确认的商业质量结论。",
+          "claimBoundary": "Axios报道支持媒体获悉的收入数字，不证明利润、现金流或合同义务健康。",
+          "counterEvidence": "如果公开文件显示毛利、现金流或义务压力更重，应下调为高增长高成本信号。 后续应以审计财报、招股书、云合同、客户留存和现金流数据为可观察证据。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "sourceUrl": "https://www.axios.com/2026/09/29/scoop-openais-annual-recurring-revenue-nears-70b",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道这条来源事实：Axios援引知情人士披露OpenAI收入ARR接近700亿美元且企业销售增长。；完整事实、引述、数字、采访和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-29T23:15:40+09:00",
+          "time": "23:15",
+          "tags": [
+            "OpenAI",
+            "ARR",
+            "IPO"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整数字、采访和上下文仍需读原文并查源文件。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/09/29/scoop-openais-annual-recurring-revenue-nears-70b",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整数字、采访和上下文仍需读原文并查源文件。"
+          },
+          "detailWhyRanked": "它把OpenAI与Anthropic的资本叙事放进同一张核查表。\n详情页进一步说明：Axios AI / Technology报道这条来源事实：Axios援引知情人士披露OpenAI收入ARR接近700亿美元且企业销售增长。；完整事实、引述、数字、采访和上下文仍需阅读原文。；升级判断仍要看审计财报、招股书、云合同、客户留存和现金流数据。"
+        },
+        {
+          "id": "ap-openai-delays-gpt-6-1-astra-safety-2026-09-29",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：OpenAI因安全顾虑延后GPT-6.1 Astra发布",
+          "body": "AP报道OpenAI延后GPT-6.1 Astra发布，称研究人员对安全和未授权行为风险提出顾虑。",
+          "summary": "AP报道OpenAI延后GPT-6.1 Astra发布，称研究人员对安全和未授权行为风险提出顾虑。",
+          "whyItMatters": "前沿模型发布节奏开始被Agent越界、安全评测和政治压力共同牵引。",
+          "detailBody": "AP报道OpenAI延后GPT-6.1 Astra发布，称研究人员对安全和未授权行为风险提出顾虑。 对正在评估Astra级模型路线的开发者团队、企业平台团队和安全评估团队。，这条详情页只保留来源可直接支持的事实，并把效果、覆盖范围和外部影响留给后续证据。",
+          "trend": "模型路线图不再只看能力指标，安全门槛可能改变发布窗口和DevDay叙事。",
+          "detailTrend": "模型路线图不再只看能力指标，安全门槛可能改变发布窗口和DevDay叙事。 下一步要核对OpenAI正式说明、系统卡、发布状态和第三方评估，再判断它是稳定能力、早期试点还是市场信号。",
+          "whyRanked": "它解释了DevDay发布组合中缺席旗舰模型的背景。",
+          "topReason": "它解释了DevDay发布组合中缺席旗舰模型的背景。",
+          "impact": "模型采购和产品路线团队应把延后原因、系统卡和替代模型能力分开评估。",
+          "whoShouldCare": "正在评估Astra级模型路线的开发者团队、企业平台团队和安全评估团队。",
+          "readerUse": "正在评估Astra级模型路线的开发者团队、企业平台团队和安全评估团队。可用它跟踪旗舰模型发布前的安全门槛、替代路线和客户迁移风险。",
+          "nextCheck": "查OpenAI正式安全说明、Astra系统卡、发布状态页、第三方评估和受影响客户通知。",
+          "followUpQuestions": [
+            "OpenAI是否公布GPT-6.1 Astra模型卡和未达标的具体安全评测类别？",
+            "延后是否改变企业客户的Astra路线、价格或替代模型建议？"
+          ],
+          "evidenceThreshold": "至少需要OpenAI正式说明、系统卡、评测结果和发布状态，才能升级为确认的路线图变化。",
+          "claimBoundary": "AP报道证明延后说法和安全顾虑，不证明模型具体风险类别已公开。",
+          "counterEvidence": "如果OpenAI迅速发布系统卡并说明风险已解决，应收窄为短期发布节奏调整。 后续应以OpenAI正式说明、系统卡、发布状态和第三方评估为可观察证据。",
+          "sourceId": "ap-technology",
+          "sourceName": "AP Technology",
+          "source": "AP Technology",
+          "sourceUrl": "https://apnews.com/article/5afb865b2cddc439efdcf31ebdc406a5",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "AP Technology报道这条来源事实：OpenAI延后GPT-6.1 Astra模型，并把安全评估顾虑作为报道核心背景。；完整事实、引述、数字、采访和上下文仍需阅读原文。",
+          "publishedAt": "2026-09-29T10:45:14+09:00",
+          "time": "10:45",
+          "tags": [
+            "OpenAI",
+            "GPT-6.1 Astra",
+            "安全评测"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整数字、采访和上下文仍需读原文并查源文件。"
+          },
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/5afb865b2cddc439efdcf31ebdc406a5",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整数字、采访和上下文仍需读原文并查源文件。"
+          },
+          "detailWhyRanked": "它解释了DevDay发布组合中缺席旗舰模型的背景。\n详情页进一步说明：AP Technology报道这条来源事实：OpenAI延后GPT-6.1 Astra模型，并把安全评估顾虑作为报道核心背景。；完整事实、引述、数字、采访和上下文仍需阅读原文。；升级判断仍要看OpenAI正式说明、系统卡、发布状态和第三方评估。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-29",
       "date": "2026-09-29",
