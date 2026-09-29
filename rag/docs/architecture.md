@@ -122,6 +122,7 @@ Future: backend-agnostic evaluation
 | Embedding Cache Build | `rag/scripts/build_embedding_cache.py` | `rag/data/chunks.jsonl`, Azure env vars | `rag/data/embedding_cache.jsonl` | cache miss の chunk だけを 16 件ずつ Azure OpenAI に送り、batch ごとに保存する。途中失敗しても再実行で続きから処理できる |
 | Vectorized Azure Search Docs | `rag/docs/azure/vectorized-azure-search-docs.md`, `rag/scripts/prepare_vectorized_azure_search_docs.py` | Azure Search payload, embedding cache | vectorized docs report or JSONL | cache にある検証済み vector だけを `content_vector` に反映し、欠損 vector を report する |
 | Azure Search Upload Actions | `rag/docs/azure/azure-search-upload-actions.md`, `rag/scripts/prepare_azure_search_upload_actions.py` | vectorized docs | local upload action JSONL | Azure upsert 前に required fields、非空 vector、dimension を検証して `@search.action` を付ける |
+| Azure Search Index | `rag/scripts/azure_search_index.py`, `rag/tests/test_azure_search_index.py` | index schema, upload actions | Azure AI Search index `ai-watchtower-chunks` | schema 通りに index を作成（1536 dim / cosine / HNSW）し、100 件ずつ upload、件数確認と vector / hybrid 検索テストを行う |
 | Azure Search Retriever Contract | `rag/docs/azure/azure-search-retriever-contract.md`, `rag/scripts/azure_search_retriever.py` | query vector, Azure Search response | citation-ready retrieved chunks | `vectorQueries` payload を作り、Azure response を既存 RAG の chunk contract に正規化する |
 | Retriever Abstraction and Ask Pipeline | `rag/docs/design/retriever-abstraction-ask-pipeline.md`, `rag/scripts/retrievers.py`, `rag/scripts/ask_pipeline.py` | question, retriever backend | citation-aware answer draft | local / Azure contract retriever を同じ interface に揃え、ContextBuilder と AnswerGenerator を再利用する |
 | Azure OpenAI Embedding Readiness | `rag/docs/azure/azure-openai-embedding-readiness.md`, `rag/scripts/check_azure_openai_embedding_readiness.py` | env vars, Azure Search payload | readiness report | 実 Azure embedding の前に設定、payload、secret boundary、失敗時の停止条件を確認する |
@@ -1162,6 +1163,8 @@ local vector demo を本物の semantic embedding に置き換える。
 - cosine similarity または Azure AI Search vector search
 
 ### Phase 2: Azure AI Search
+
+状態（2026-09-29）: Free 層の検索サービス `srch-ai-watchtower-20260929`（Japan East）を作成済み。`azure_search_index.py` で index 作成・upload を行う。
 
 目的:
 
