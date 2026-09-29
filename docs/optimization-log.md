@@ -1,3 +1,29 @@
+## 2026-09-29 23:10 JST
+
+- Focus: Completed the 08:00 JST automation pass as a same-day supplement because the current homepage was already `news-1700-2026-09-29`; expanded the active edition from 10 to 15 safe non-duplicate AI signals instead of downgrading the edition clock.
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source review:
+  - Read automation memory, pulled `origin/main` after sandbox DNS failed and elevated `git pull --ff-only origin main` confirmed the branch was already up to date.
+  - Used `data/sources.json` and `docs/source-policy.md`; added 5 current signals from Anthropic official, OpenAI DevDay official, Axios, and Reuters-via-MarketScreener while skipping duplicate NVIDIA/Agent commentary, community threads, paywall-dependent analysis, weak reprints, and unverified rumors.
+  - New items: Claude Sonnet 5.5, OpenAI DevDay 2026 livestream/source-file checkpoint, Florida temporary-injunction request against OpenAI/ChatGPT, Meta Muse for Small Business, and Anthropic IPO prospectus cost/risk reporting.
+  - Kept official items as `官方核对`; kept Axios/Reuters items as `媒体背景` / `reported` / `must-read`, with next checks pointing to system cards, keynote docs,法院案卷, Meta official docs, public prospectus, contracts, audits, and customer metrics.
+- Archive mirror: newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json` and `data/news-today.json`; total history items is now 1036.
+- 网站可见变化: homepage news flow and 今日 TOP3 candidate pool now show 15 items; more-news feed, all-news list, archive page, today index, and detail pages include the five same-day supplemental signals.
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/sources.json` with `JSON.parse`.
+  - Ran `node scripts/validate-data.mjs`, `node scripts/validate-site.mjs`, and `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit note: pending commit `【新闻更新】补充23点AI新闻：15条模型成本与治理文件信号`.
+
 ## 2026-09-29 11:05 JST
 
 - Focus: 完成当前 30 天计划 Day 18，简化普通 08:00 / 17:00 新闻更新的必读文档路径，让编辑先按 6 步核心路径完成候选判断、来源门槛、短 intake、字段交接、首页/归档发布门槛和验证状态，而不是在起草前扫描所有历史优化规则。
