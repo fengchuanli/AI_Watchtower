@@ -29,7 +29,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: pending.
+- Commit: `bf53f18` (`【VisionHub网站风格优化】简化新闻更新必读路径`).
 - Push: pending.
 
 ## 2026-09-29 08:12 JST
