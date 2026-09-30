@@ -1,3 +1,33 @@
+## 2026-09-30 23:08 JST
+
+- Focus: Supplemented the current 17:00 JST AI news edition for the 08:00 automation run without downgrading the same-day edition.
+- Changed files:
+  - `data/sources.json`
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read automation memory first and pulled `origin/main` before editing; sandboxed pull failed on GitHub DNS, elevated pull succeeded and confirmed the branch was already up to date.
+  - Used `data/sources.json` and `docs/source-policy.md`; checked current item URLs to avoid duplicate DevDay, AP and Axios fact clusters.
+  - Added 4 safe non-duplicate supplemental signals to the existing 17:00 JST edition: Axios on Dots safety promises, Axios on the White House AI constitution framing, White House Presidential Actions on the Super Intelligence/SI terminology directive, and OpenAI Deployment Safety Hub on the GPT-6 Astra system-card dots appendix.
+  - Added source labels `openai-deployment-safety` and `whitehouse-presidential-actions`, raising source count to 103.
+  - Kept Axios items as `媒体背景` / `reported` / `originalDependency: must-read`; kept OpenAI and White House items as `官方核对`, with explicit boundaries requiring system cards, administrator docs, third-party red-team reports, agreement text, agency guidance, audit reports and financial files before upgrading conclusions.
+- Verification:
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs`.
+  - Ran `node scripts/validate-site.mjs`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页和详情页现在显示 14 条 9月30日补充信号，并新增 Agent 安全卡与白宫政策文本核查路径。
+- Commit note: `【新闻更新】补充23点AI新闻：14条Agent安全与政策文本信号`.
+- Push: blocked-auth - sandboxed `git push origin main` failed because `github.com` could not be resolved; network-authorized retry was rejected by app safety review because it would publish the pre-existing local RAG commit plus this news update directly to shared `origin/main` without explicit user approval.
+
 ## 2026-09-30 11:05 JST
 
 - Focus: 完成当前 30 天计划 Day 19，设计并上线轻量 public continuity component shape；首页深度简报区域新增 `本期连续观察`，只从现有 `edition.topicContinuity` 与 `edition.companyContinuity` 字段派生，不新增事实层。
