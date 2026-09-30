@@ -69,3 +69,46 @@ def combine_filter_expressions(*expressions: Optional[str]) -> Optional[str]:
     if len(active) == 1:
         return active[0]
     return " and ".join(f"({expression})" for expression in active)
+
+
+# ---------------------------------------------------------------------------
+# Question routing: guess which source types a question should search.
+# Rule-based on purpose (explainable, no API cost). Returns None when unsure,
+# which means "search everything".
+# ---------------------------------------------------------------------------
+
+DOC_ROUTE_KEYWORDS = (
+    "AI Watchtower", "规则", "规范", "政策", "流程", "字段", "格式", "清单",
+    "核对", "核验", "编辑", "可信度", "来源可信", "怎么判断", "如何判断",
+    "policy", "format", "checklist", "rule",
+)
+NEWS_ROUTE_KEYWORDS = (
+    "最新", "最近", "今天", "本周", "新闻", "发布", "宣布", "推出", "上线",
+    "权重", "融资", "收购", "模型", "报道",
+)
+CURRENT_NEWS_KEYWORDS = ("最新", "最近", "今天", "本周")
+# Questions about how the site's data or rules work are docs questions,
+# even when they mention "新闻" (e.g. "新闻数据有哪些必须字段").
+DOC_PRIORITY_KEYWORDS = ("字段", "格式", "规则", "规范", "流程", "清单", "policy", "format", "checklist", "schema")
+
+
+def route_source_types(question: str) -> Optional[Tuple[str, ...]]:
+    """Guess source types from the question text.
+
+    - rules / policy / data-format questions -> docs
+    - news-like questions -> current + history news (current only for "最新/最近/今天")
+    - both or neither -> None (search all sources)
+    """
+    text = question.lower()
+    if any(keyword.lower() in text for keyword in DOC_PRIORITY_KEYWORDS):
+        return ("docs",)
+    wants_docs = any(keyword.lower() in text for keyword in DOC_ROUTE_KEYWORDS)
+    wants_news = any(keyword.lower() in text for keyword in NEWS_ROUTE_KEYWORDS)
+
+    if wants_docs and not wants_news:
+        return ("docs",)
+    if wants_news and not wants_docs:
+        if any(keyword in question for keyword in CURRENT_NEWS_KEYWORDS):
+            return ("current_news",)
+        return ("current_news", "history_news")
+    return None

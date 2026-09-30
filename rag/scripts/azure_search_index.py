@@ -224,23 +224,33 @@ def cmd_query(args) -> None:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from azure_search_retriever import build_vector_search_payload, normalize_azure_search_results
     from embedding_providers import AzureOpenAIEmbeddingConfig, AzureOpenAIEmbeddingProvider
+    from source_filters import build_source_type_filter, expand_query_for_source_types, route_source_types
 
     config = SearchConfig(dict(os.environ))
     provider = AzureOpenAIEmbeddingProvider(
         AzureOpenAIEmbeddingConfig.from_env(dict(os.environ), expected_dimension=VECTOR_DIMENSIONS)
     )
+    if args.source_type:
+        source_types = [args.source_type]
+    elif args.auto_route:
+        routed = route_source_types(args.question)
+        source_types = list(routed) if routed else None
+    else:
+        source_types = None
+
     query_vector = provider.embed_text(args.question)
     payload = build_vector_search_payload(
         query_vector,
         top_k=args.top_k,
-        search_text=args.question if args.hybrid else "",
-        filter_expression=f"source_type eq '{args.source_type}'" if args.source_type else None,
+        search_text=expand_query_for_source_types(args.question, source_types) if args.hybrid else "",
+        filter_expression=build_source_type_filter(source_types),
     )
     result = request(config, "POST", f"/indexes('{config.index_name}')/docs/search", payload)
     chunks = normalize_azure_search_results(result)
 
     print(f"Query: {args.question}")
     print(f"Mode: {'hybrid (keyword + vector)' if args.hybrid else 'vector'}")
+    print(f"Source types: {source_types or 'all'}{' (auto-routed)' if args.auto_route and not args.source_type else ''}")
     for rank, chunk in enumerate(chunks, start=1):
         preview = " ".join(chunk.text.split())[:120]
         print(f"\n#{rank} score={chunk.score:.4f} [{chunk.source_type}]")
@@ -275,6 +285,7 @@ def main() -> None:
     p.add_argument("--top-k", type=int, default=5)
     p.add_argument("--hybrid", action="store_true", help="Combine keyword search with vector search.")
     p.add_argument("--source-type", choices=["docs", "current_news", "history_news"], default=None)
+    p.add_argument("--auto-route", action="store_true", help="Guess the source type from the question.")
     p.set_defaults(func=cmd_query)
 
     args = parser.parse_args()

@@ -46,9 +46,13 @@ python3 rag/scripts/prepare_azure_search_upload_actions.py --action mergeOrUploa
 python3 rag/scripts/azure_search_index.py create-index   # index 作成（schema は docs/azure/azure-search-schema.md）
 python3 rag/scripts/azure_search_index.py upload         # 1273 件を upload
 python3 rag/scripts/azure_search_index.py status         # 件数・容量を確認
-python3 rag/scripts/azure_search_index.py query "来源可信度怎么判断" --hybrid
+python3 rag/scripts/azure_search_index.py query "来源可信度怎么判断" --hybrid --auto-route
 
-# 5. テスト
+# 5. 評価（ローカル vs Azure、source 種別の指定方法ごと）
+python3 rag/scripts/evaluate_demo.py --retriever compare --routing auto   # 4 backend を比較
+python3 rag/scripts/evaluate_demo.py --retriever all --routing none      # ローカルのみ（Azure 不要）
+
+# 6. テスト
 python3 -m unittest discover -s rag/tests
 ```
 
@@ -60,13 +64,13 @@ python3 -m unittest discover -s rag/tests
 | 分割 | `chunk_docs.py` | 文書を chunk に分割して `data/chunks.jsonl` に保存 |
 | 検索 | `search_chunks.py` | キーワード検索 |
 | 検索 | `vector_search_demo.py` | ローカル向量（単語頻度）による vector search demo |
-| 検索 | `source_filters.py` | docs / 最新ニュース / 過去ニュースの絞り込み |
+| 検索 | `source_filters.py` | docs / 最新ニュース / 過去ニュースの絞り込み、質問から source 種別を推定（`route_source_types`） |
 | 検索 | `retrievers.py` | ローカル・Azure の retriever を同じ interface に揃える |
 | 検索 | `azure_search_retriever.py` | Azure AI Search の request / response 変換 |
 | 回答 | `build_context.py` | 検索結果に citation 番号を付けて context を作る |
 | 回答 | `answer_demo.py` | context の範囲だけで保守的な回答草稿を作る |
 | 回答 | `ask_pipeline.py` | 質問 → 検索 → context → 回答 を 1 本にまとめる |
-| 評価 | `evaluate_demo.py` | `data/eval_questions.json` で source hit rate などを評価 |
+| 評価 | `evaluate_demo.py` | `data/eval_questions.json` で評価。`--retriever` でローカル / Azure、`--routing hint/auto/none` で source 種別の決め方を切り替え |
 | Embedding | `embedding_providers.py` | Azure OpenAI embedding の呼び出し（key は表示しない） |
 | Embedding | `check_azure_openai_embedding_readiness.py` | 環境変数と payload の事前チェック（API は呼ばない） |
 | Embedding | `azure_openai_embedding_smoke_test.py` | 1 件だけ実 API に送って疎通確認 |
@@ -100,6 +104,7 @@ python3 -m unittest discover -s rag/tests
 | `design/` | `embedding-cache-file.md` | cache ファイルの実装 |
 | `design/` | `retriever-abstraction-ask-pipeline.md` | retriever の抽象化と ask pipeline |
 | `design/` | `source-aware-retrieval.md` | source 種別による絞り込み |
+| `design/` | `question-routing.md` | 質問から検索対象の種別を推定するルールと評価モード |
 | `azure/` | `azure-openai-embedding-provider.md` | Azure OpenAI embedding provider |
 | `azure/` | `azure-openai-embedding-readiness.md` | 実 API 前の準備チェック |
 | `azure/` | `azure-openai-embedding-smoke-test.md` | 1 件疎通テスト |

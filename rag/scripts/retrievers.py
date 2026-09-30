@@ -10,6 +10,7 @@ from search_chunks import search_chunks
 from source_filters import (
     build_source_type_filter,
     combine_filter_expressions,
+    expand_query_for_source_types,
     infer_source_type,
 )
 from vector_search_demo import vector_search
@@ -92,6 +93,7 @@ class AzureSearchRetrieverContract:
     search_client: Optional[SearchClient] = None
     vector_field: str = "content_vector"
     filter_expression: Optional[str] = None
+    hybrid: bool = False
     name: str = "azure-search-contract"
 
     def retrieve(
@@ -116,9 +118,44 @@ class AzureSearchRetrieverContract:
             top_k=top_k,
             vector_field=self.vector_field,
             filter_expression=filter_expression,
+            search_text=expand_query_for_source_types(question, source_types) if self.hybrid else "",
         )
         response = self.search_client(payload)
         return normalize_azure_search_results(response)
+
+
+def create_azure_retriever(hybrid: bool = False) -> Retriever:
+    """Live Azure AI Search retriever (needs AZURE_OPENAI_* and AZURE_SEARCH_* env vars)."""
+    import os
+
+    from azure_search_index import SearchConfig, VECTOR_DIMENSIONS, request
+    from embedding_providers import AzureOpenAIEmbeddingConfig, AzureOpenAIEmbeddingProvider
+
+    env = dict(os.environ)
+    search_config = SearchConfig(env)
+    provider = AzureOpenAIEmbeddingProvider(
+        AzureOpenAIEmbeddingConfig.from_env(env, expected_dimension=VECTOR_DIMENSIONS)
+    )
+
+    def search_client(payload: Dict) -> Dict:
+        return request(search_config, "POST", f"/indexes('{search_config.index_name}')/docs/search", payload)
+
+    return AzureSearchRetrieverContract(
+        query_vector_provider=provider.embed_text,
+        search_client=search_client,
+        hybrid=hybrid,
+        name="azure-hybrid" if hybrid else "azure-vector",
+    )
+
+
+def create_retriever(name: str) -> Retriever:
+    if name in ("keyword", "vector"):
+        return create_local_retriever(name)
+    if name == "azure-vector":
+        return create_azure_retriever(hybrid=False)
+    if name == "azure-hybrid":
+        return create_azure_retriever(hybrid=True)
+    raise ValueError(f"Unknown retriever: {name}")
 
 
 def create_local_retriever(mode: str) -> Retriever:

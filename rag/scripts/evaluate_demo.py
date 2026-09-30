@@ -7,7 +7,8 @@ from typing import Dict, List, Optional, Tuple
 
 from answer_demo import build_answer
 from build_context import DEFAULT_MAX_CHARS_PER_CHUNK, build_citations
-from retrievers import Retriever, create_local_retriever, to_scored_context_items
+from retrievers import Retriever, create_retriever, to_scored_context_items
+from source_filters import route_source_types
 
 ROOT = Path(__file__).resolve().parents[2]
 EVAL_QUESTIONS_FILE = ROOT / "rag" / "data" / "eval_questions.json"
@@ -18,7 +19,18 @@ DEFAULT_MIN_SCORE = 0.08
 DEFAULT_INSUFFICIENT_MAX_SCORES = {
     "local-vector": 0.2,
     "local-keyword": 9.0,
+    # Azure thresholds are provisional; calibrate them from the printed top_score values.
+    # azure-vector: cosine-based @search.score (higher = closer).
+    "azure-vector": 0.70,
+    # azure-hybrid: RRF fusion score (about 0.01-0.033); not a relevance measure by itself.
+    "azure-hybrid": 0.03,
 }
+# Minimum score for a chunk to be cited in the answer draft, per backend.
+DEFAULT_MIN_SCORES = {
+    "azure-vector": 0.50,
+    "azure-hybrid": 0.01,
+}
+ROUTING_CHOICES = ("hint", "auto", "none")
 
 
 @dataclass(frozen=True)
@@ -83,10 +95,24 @@ def default_insufficient_max_score(retriever: Retriever) -> float:
     return DEFAULT_INSUFFICIENT_MAX_SCORES.get(retriever.name, 0.2)
 
 
-def evaluate_case(case: Dict, retriever: Retriever, config: EvaluationConfig) -> Dict:
+def resolve_case_source_types(case: Dict, routing: str):
+    """hint: use source_types written in eval_questions.json (upper bound).
+    auto: guess from the question with route_source_types (realistic).
+    none: search every source."""
+    if routing == "hint":
+        return case.get("source_types")
+    if routing == "auto":
+        routed = route_source_types(case["question"])
+        return list(routed) if routed else None
+    if routing == "none":
+        return None
+    raise ValueError(f"unknown routing: {routing}")
+
+
+def evaluate_case(case: Dict, retriever: Retriever, config: EvaluationConfig, routing: str = "hint") -> Dict:
     question = case["question"]
     expected_sources = case.get("expected_sources", [])
-    source_types = case.get("source_types")
+    source_types = resolve_case_source_types(case, routing)
     retrieved_chunks = retriever.retrieve(question, config.top_k, source_types)
     citations = build_citations(
         to_scored_context_items(retrieved_chunks),
@@ -153,8 +179,9 @@ def run_evaluation(
     eval_questions: List[Dict],
     retriever: Retriever,
     config: EvaluationConfig,
+    routing: str = "hint",
 ) -> Tuple[List[Dict], EvaluationSummary]:
-    results = [evaluate_case(case, retriever, config) for case in eval_questions]
+    results = [evaluate_case(case, retriever, config, routing) for case in eval_questions]
     return results, summarize_results(retriever.name, results)
 
 
@@ -210,7 +237,12 @@ def print_comparison(summaries: List[EvaluationSummary]) -> None:
 
 def resolve_retriever_names(retriever: str, legacy_mode: Optional[str]) -> List[str]:
     selected = legacy_mode or retriever
-    return ["vector", "keyword"] if selected == "all" else [selected]
+    groups = {
+        "all": ["vector", "keyword"],
+        "azure": ["azure-vector", "azure-hybrid"],
+        "compare": ["vector", "keyword", "azure-vector", "azure-hybrid"],
+    }
+    return groups.get(selected, [selected])
 
 
 def main() -> None:
@@ -219,9 +251,10 @@ def main() -> None:
     )
     parser.add_argument(
         "--retriever",
-        choices=["vector", "keyword", "all"],
+        choices=["vector", "keyword", "azure-vector", "azure-hybrid", "all", "azure", "compare"],
         default=DEFAULT_RETRIEVER,
-        help="Retriever backend to evaluate; use all for a comparison.",
+        help="Backend to evaluate. all = local vector+keyword, azure = azure-vector+azure-hybrid, "
+        "compare = all four (azure needs .env loaded).",
     )
     parser.add_argument(
         "--mode",
@@ -230,7 +263,13 @@ def main() -> None:
         help="Backward-compatible alias for --retriever.",
     )
     parser.add_argument("--top-k", type=int, default=DEFAULT_TOP_K)
-    parser.add_argument("--min-score", type=float, default=DEFAULT_MIN_SCORE)
+    parser.add_argument("--min-score", type=float, default=None, help="Override the per-backend citation threshold.")
+    parser.add_argument(
+        "--routing",
+        choices=ROUTING_CHOICES,
+        default="hint",
+        help="hint = source_types from eval file, auto = guess from question, none = search everything.",
+    )
     parser.add_argument(
         "--insufficient-max-score",
         type=float,
@@ -244,7 +283,7 @@ def main() -> None:
     summaries = []
 
     for index, retriever_name in enumerate(retriever_names):
-        retriever = create_local_retriever(retriever_name)
+        retriever = create_retriever(retriever_name)
         insufficient_max_score = (
             args.insufficient_max_score
             if args.insufficient_max_score is not None
@@ -252,14 +291,14 @@ def main() -> None:
         )
         config = EvaluationConfig(
             top_k=args.top_k,
-            min_score=args.min_score,
+            min_score=args.min_score if args.min_score is not None else DEFAULT_MIN_SCORES.get(retriever.name, DEFAULT_MIN_SCORE),
             insufficient_max_score=insufficient_max_score,
         )
-        results, summary = run_evaluation(eval_questions, retriever, config)
+        results, summary = run_evaluation(eval_questions, retriever, config, args.routing)
         summaries.append(summary)
 
         if len(retriever_names) > 1:
-            print(f"=== {retriever.name} ===")
+            print(f"=== {retriever.name} (routing: {args.routing}) ===")
         for result in results:
             print_case_result(result)
         print_summary(summary, insufficient_max_score)
