@@ -32,7 +32,7 @@
   - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
 - Commit: `3fcec5e` (`【VisionHub网站风格优化】公开连续观察简报`).
-- Push: pending - will attempt after this log and decision-index record are committed.
+- Push: blocked-auth - sandboxed `git push origin main` failed because `github.com` could not be resolved; network-authorized retry was rejected by app safety review because pushing local commits directly to shared `main` requires explicit trusted user approval.
 
 ## 2026-09-30 08:11 JST
 
