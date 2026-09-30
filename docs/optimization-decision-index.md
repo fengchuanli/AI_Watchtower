@@ -6,9 +6,9 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
-- Current phase: Phase 3, News Update Workflow Friction
-- Last indexed run: 2026-09-29 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push retry was blocked by app safety review because shared `origin/main` publication needs explicit trusted user approval.
+- Current phase: Phase 4, Reader-Visible Continuity
+- Last indexed run: 2026-09-30 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization; push status is recorded in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
 
@@ -36,6 +36,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 16 | Complete | `1d8d39c` | `docs/failure-status-wording-guide.md` now gives optimization and news logs compact Pull, Validation, Commit, Push, and Publication blocker wording; `docs/update-run-checklist.md`, `docs/candidate-to-news-handoff.md`, `docs/remote-sync-log-convention.md`, `README.md`, and `scripts/validate-site.mjs` keep the guide discoverable and guarded. |
 | Day 17 | Complete | `2be033f` | `docs/source-policy.md` now defines source-label stewardship for `data/sources.json`: create a separate source label only for distinct source role, trust level, feed cadence, or source-of-record duty; merge ordinary sections/tags/localized copies/reposts under existing owner labels; rename misleading labels; clarify `sources[].notes` when same-owner entries stay separate. `docs/news-data-format.md`, `docs/candidate-source-checklist.md`, `docs/update-run-checklist.md`, and `scripts/validate-site.mjs` guard the rule. |
 | Day 18 | Complete | `bf53f18` | `docs/update-run-checklist.md` now has a `Normal News Update Must-Read Path`: candidate workflow plain-language note, source checklist, intake format, candidate-to-news handoff, homepage/archive publication gates, then derived-data/validation/commit/push status. `docs/candidate-to-news-handoff.md`, `README.md`, and `scripts/validate-site.mjs` keep specialized docs conditional instead of mandatory for every ordinary run. |
+| Day 19 | Complete | `3fcec5e` | Homepage deep briefing now renders a public `本期连续观察` strip from existing `edition.topicContinuity` and `edition.companyContinuity` fields only, showing up to two topic cards and two company cards with status, current change, and still-needed proof. `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and `scripts/validate-site.mjs` guard the derived-only shape. |
 
 ## Historical Guard Anchors
 
@@ -87,7 +88,7 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 19: design a lightweight public continuity component shape for recurring companies or topics, using only existing current/history fields.
+- Continue with Day 20: review recent `companyContinuity` notes and identify which repeated-company signals would be useful to readers rather than only editors.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 18.
 - If Day 18 is already complete, continue with the first useful unfinished task from the current plan.
 

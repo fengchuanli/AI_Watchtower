@@ -1,3 +1,39 @@
+## 2026-09-30 11:05 JST
+
+- Focus: 完成当前 30 天计划 Day 19，设计并上线轻量 public continuity component shape；首页深度简报区域新增 `本期连续观察`，只从现有 `edition.topicContinuity` 与 `edition.companyContinuity` 字段派生，不新增事实层。
+- Changed files:
+  - `index.html`
+  - `app.js`
+  - `styles.css`
+  - `docs/news-data-format.md`
+  - `docs/homepage-edition-preflight.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/homepage-edition-preflight.md` 和 `docs/news-data-format.md`。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；公开连续观察卡片只显示现有主题/公司连续观察中的强弱状态、本期变化和仍需核验证据。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: partial - 本次不改 hero/TOP3，但把跨期连续观察从折叠编辑记录前移到深度简报的读者路径。
+  - TOP3 reader use: not applicable - 本次不改 TOP3 卡片。
+  - Source boundary visible: pass - 每张连续观察卡都保留 `仍需核验`，并由现有 `stillUnproven` 字段提供下一步证据。
+  - Original source dependency: pass - 不新增媒体事实层，不替代原始来源；卡片只重排当前/历史字段。
+  - Mobile burden: pass - 连续观察在桌面四列、平板两列、手机一列显示，避免折叠说明里的长记录成为唯一入口。
+  - Continuity use: pass - 读者可直接看到主题或公司信号是增强、重复还是仍待证明。
+  - Visual aid purpose: pass - 新组件用于解释跨期连续性，不是装饰。
+- 网站可见变化: 首页深度简报的覆盖边界下方新增 `本期连续观察` 卡片区；读者可直接看到本期 recurring topics/companies 的变化、强弱状态和仍需核验证据，不必展开 `本期编辑说明` 才能理解连续观察。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 101 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `3fcec5e` (`【VisionHub网站风格优化】公开连续观察简报`).
+- Push: pending - will attempt after this log and decision-index record are committed.
+
 ## 2026-09-30 08:11 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-09-30`，发布 10 条安全非重复信号，聚焦 OpenAI DevDay 后 Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Plugin Extensions、ChatGPT Space、白宫AI自愿协议、GPT-6.1 Astra延后和OpenAI ARR媒体披露。
