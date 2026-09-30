@@ -1754,6 +1754,18 @@ if (
 }
 
 if (
+  !/id="continuityBrief"/.test(html) ||
+  !/const continuityBrief = document\.querySelector\("#continuityBrief"\);/.test(appJs) ||
+  !/function updateContinuityBrief/.test(appJs) ||
+  !/topicContinuity[\s\S]*companyContinuity/.test(appJs) ||
+  !/\.continuity-brief-grid/.test(styles) ||
+  !/public continuity brief derives from `topicContinuity` and `companyContinuity` only/.test(newsDataFormat) ||
+  !/publicContinuityBrief/.test(homepageEditionPreflight)
+) {
+  errors.push("Day 19 public continuity brief must render from existing topic/company continuity fields and keep its docs/guard anchors.");
+}
+
+if (
   !/谁该关心/.test(detailJs) ||
   !/item\.whoShouldCare/.test(detailJs) ||
   !/function validateWhoShouldCare/.test(validateDataJs) ||

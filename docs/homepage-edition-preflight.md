@@ -17,7 +17,8 @@ Answer these in Chinese before publication:
 7. `omittedTopicFallback`: For each planned topic omitted from `edition.topicGroups`, does the fallback tell readers whether to use archive, tag-page, historical, or already-selected related items as background without adding a new claim?
 8. `mobileScanPath`: Can a phone reader understand the edition from `readerFrame.mobile`, TOP3 titles, summaries, and source labels in 1 to 3 minutes?
 9. `proofBoundary`: Do `sourceRisk`, `overreadBoundary`, `trendNotes`, `topicContinuity`, and promoted cards name the official, filing, audit, metric, benchmark, regulator, customer-side, or third-party evidence needed next?
-10. `archiveMirror`: Will the newest history edition preserve the same reader frame, source boundary, item count, item order, and archive label?
+10. `publicContinuityBrief`: If recurring topics or companies appear, can the homepage continuity brief use only `topicContinuity` and `companyContinuity` to show what changed and what still needs proof, without adding a new fact layer?
+11. `archiveMirror`: Will the newest history edition preserve the same reader frame, source boundary, item count, item order, and archive label?
 
 ## Compact Note Shape
 
@@ -34,6 +35,7 @@ Short batch note: done - 少于 10 条时说明这是质量门槛结果，并列
 Omitted topic fallback: done - 未入选主题只指向归档、标签或本期相关背景，不补写新事实。
 Mobile scan path: done - readerFrame.mobile、TOP3 摘要和来源标签可在 1 到 3 分钟内扫完。
 Proof boundary: done - 下一步证据指向官方、filing、审计、指标、benchmark、监管、客户侧或第三方材料。
+Public continuity brief: done - 连续观察只来自 topicContinuity/companyContinuity，说明本期变化和仍需核验证据。
 Archive mirror: done - 最新历史版与首页版次 framing 和 item order 对齐。
 ```
 
@@ -51,6 +53,7 @@ Do not publish the edition as-is when:
 - An omitted planned topic tells readers a new event happened, implies confirmation or rollout, or gives no archive, tag-page, historical, or already-selected related reading path.
 - The mobile scan path requires reading the long `deepBriefing` before the reader can tell what changed.
 - Proof-boundary copy repeats the same vague sentence across several fields instead of naming a concrete next evidence type.
+- The public continuity brief introduces a fact that is not already present in `topicContinuity`, `companyContinuity`, or the current/history item fields.
 - The latest archive snapshot would keep an older reader frame, item order, or source caveat after the homepage changes.
 
 ## Relationship To Existing Checks

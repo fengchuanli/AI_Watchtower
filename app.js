@@ -39,6 +39,7 @@ const deepTimeline = document.querySelector("#deepTimeline");
 const deepSections = document.querySelector("#deepSections");
 const deepActions = document.querySelector("#deepActions");
 const deepLimits = document.querySelector("#deepLimits");
+const continuityBrief = document.querySelector("#continuityBrief");
 const deepReferences = document.querySelector("#deepReferences");
 const todayKeyText = document.querySelector("#todayKeyText");
 const todayKeyLink = document.querySelector("#todayKeyLink");
@@ -175,6 +176,7 @@ async function loadNews() {
     updateTopStories(dailyTopItems);
     updateCategoryHighlights(news);
     updateDeepBriefing(data.deepBriefing);
+    updateContinuityBrief(data.edition);
     updateHeroStats(data);
     updateArchiveStats(data, history);
     updateNewsMeta(data);
@@ -185,6 +187,7 @@ async function loadNews() {
     updateTodayKey();
     updateTopStories([]);
     updateCategoryHighlights([]);
+    updateContinuityBrief();
     updateArchiveStats();
     updateNewsMeta({ statusLabel: "数据未加载", editorNote: "新闻数据暂时无法读取，请稍后重试。" });
     updateCategoryMeta();
@@ -676,6 +679,65 @@ function renderSourceFrame(sourceFrame) {
     .join("");
 }
 
+function updateContinuityBrief(edition = {}) {
+  if (!continuityBrief) {
+    return;
+  }
+
+  const topicCards = (edition.topicContinuity || []).slice(0, 2).map((note) => ({
+    type: "主题",
+    label: note.label,
+    status: getContinuityStatusLabel(note.status),
+    change: note.signalDirection || note.currentSignal,
+    proof: note.stillUnproven,
+  }));
+  const companyCards = (edition.companyContinuity || []).slice(0, 2).map((note) => ({
+    type: "公司",
+    label: note.company,
+    status: note.label,
+    change: note.whatChanged,
+    proof: note.stillUnproven,
+  }));
+  const cards = [...topicCards, ...companyCards].filter((card) => card.change && card.proof);
+
+  if (!cards.length) {
+    continuityBrief.innerHTML = "";
+    return;
+  }
+
+  continuityBrief.innerHTML = `
+    <div class="continuity-brief-heading">
+      <p class="eyebrow">Continuity</p>
+      <h3>本期连续观察</h3>
+      <p>只使用当前版次和历史版次已有字段，帮助读者区分信号变强、重复还是仍待核验。</p>
+    </div>
+    <div class="continuity-brief-grid">
+      ${cards
+        .map(
+          (card) => `
+            <article>
+              <span>${escapeHtml(card.type)} · ${escapeHtml(card.status)}</span>
+              <h4>${escapeHtml(card.label)}</h4>
+              <p>${escapeHtml(card.change)}</p>
+              <em>仍需核验：${escapeHtml(card.proof)}</em>
+            </article>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function getContinuityStatusLabel(status) {
+  const labels = {
+    stronger: "信号增强",
+    weaker: "信号减弱",
+    repeated: "仅是重复",
+  };
+
+  return labels[status] || status || "连续观察";
+}
+
 function renderFeedMetaDetails(label, body, isOpen = false) {
   if (!body) {
     return "";
@@ -955,17 +1017,11 @@ function renderTopicContinuity(notes) {
     return "";
   }
 
-  const statusLabels = {
-    stronger: "信号增强",
-    weaker: "信号减弱",
-    repeated: "仅是重复",
-  };
-
   return notes
     .map(
       (note) => `
         <span>
-          <strong>${escapeHtml(note.label)} · ${escapeHtml(statusLabels[note.status] || note.status)}</strong>
+          <strong>${escapeHtml(note.label)} · ${escapeHtml(getContinuityStatusLabel(note.status))}</strong>
           ${escapeHtml(note.previousPattern)}
           <em>本期主题变化</em>
           ${escapeHtml(note.currentSignal)}
