@@ -1,8 +1,1074 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30",
-  "totalItems": 1050,
+  "updatedAt": "2026-10-01",
+  "totalItems": 1060,
   "editions": [
+    {
+      "id": "news-1700-2026-10-01",
+      "date": "2026-10-01",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 发布",
+      "itemCount": 10,
+      "note": "本期10条AI新闻情报，聚焦模型安全、Agent治理、监管和数据授权。",
+      "operationalStatus": "已拉取origin/main；核对OpenAI、Google、AP和VentureBeat等来源，跳过社区讨论、重复DevDay条目、弱转载和无源文件说法。",
+      "editorialInterpretation": "本期显示发布会后的核心问题转向安全证据、监管问询和Agent控制面；官方材料证明披露与发布事实，媒体材料只作企业落地雷达。",
+      "readerFrame": {
+        "headline": "本期读法：把前沿模型发布放进安全、监管和Agent控制面核对",
+        "whyItMatters": "10月1日17:00版把OpenAI蒸馏披露、Sol系统卡、Google Gemini 4 Argon、FTC调查、OpenClaw控制面、Agent凭证共享和训练数据付费采购放在同一张证据表。",
+        "useThisIssueFor": [
+          "安全团队核对推理抽取、系统卡、Agent身份、隔离和误拒绝路径。",
+          "平台和模型团队核对Gemini 4 Argon、GPT-6.1 Sol和OpenClaw的可用性与部署边界。",
+          "法务、采购和内容团队核对FTC调查、数据授权试点和AI文本检测证据。"
+        ],
+        "notProvenYet": [
+          "不证明Gemini 4 Argon已经广泛可用，也不证明官方基准能转化为生产效果。",
+          "不证明FTC已有违法结论，也不证明媒体调查样本代表所有企业。"
+        ],
+        "mobile": {
+          "headline": "查模型安全、监管和Agent控制面",
+          "summary": "查蒸馏披露、Sol系统卡、Gemini 4、FTC调查和Agent身份。",
+          "primaryUses": [
+            "安全团队查攻击面",
+            "平台团队查模型路由",
+            "法务团队查监管"
+          ],
+          "proofBoundary": "仍需系统卡全文、API文档、FTC文件、代码审计、客户日志和独立复测。"
+        }
+      },
+      "changeSummary": {
+        "headline": "较9月30日补充版新增10条安全与治理信号",
+        "freshFacts": [
+          "新增OpenAI 9月30日模型蒸馏活动披露。",
+          "新增Google Gemini 4 Argon官方模型页和受限发布信号。",
+          "新增AP关于FTC调查OpenAI、Anthropic等AI公司安全风险的报道。",
+          "新增VentureBeat关于Agent身份、OpenClaw控制面、数据授权和安全误拒绝的企业侧报道。"
+        ],
+        "repeatedContext": [
+          "延续DevDay后的Agent安全主题，但不重复Dots、Space和插件发布链接。",
+          "延续白宫AI自愿协议背景，但本期重点转向FTC调查和企业控制面证据。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对模型安全证据",
+          "count": 4,
+          "meaning": "用来检查OpenAI蒸馏披露、Sol系统卡、训练安全案例和Gemini 4 Argon的安全/发布边界。"
+        },
+        {
+          "label": "验证Agent治理控制",
+          "count": 3,
+          "meaning": "用来检查OpenClaw控制面、Agent凭证共享和开发者误拒绝对企业部署的影响。"
+        },
+        {
+          "label": "核对监管与数据授权",
+          "count": 3,
+          "meaning": "用来核对FTC调查、Google内容采购和AI文本检测方法是否需要更新法务、采购和内容清单。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方与企业媒体各占一半",
+        "note": "官方来源4/10能证明发布和披露事实；媒体来源6/10用于监管、企业部署和内容方法雷达。",
+        "nextCheck": "查系统卡PDF、API文档、FTC文件、源代码审计、客户日志、调查方法和第三方复测。"
+      },
+      "sourceConcentration": {
+        "sourceId": "venturebeat-ai",
+        "sourceName": "VentureBeat AI",
+        "count": 5,
+        "share": "5/10",
+        "note": "VentureBeat是最大单一媒体来源，适合观察企业AI部署摩擦，不代表全市场结论。",
+        "nextCheck": "查原始调查方法、项目源代码、客户审计、供应商文档和其他媒体/官方补证。"
+      },
+      "overreadBoundary": {
+        "label": "不要把雷达信号读成全市场结论",
+        "body": "不要把本期读成全市场结论：本期适合作为模型安全、Agent治理和监管核查表，不代表Gemini 4 Argon已经普遍可用、Agent控制面成熟、FTC已有违法结论或数据授权市场已经稳定。",
+        "doNotConclude": "不能得出某家模型已全面领先、所有企业Agent都共享凭证、FTC必然执法，或AI文本检测已经可靠。",
+        "useInstead": "应该先核对系统卡、API状态、FTC文书、代码仓库、安全审计、客户日志、调查样本和复现实验。"
+      },
+      "trendNotes": [
+        {
+          "topic": "agent",
+          "label": "Agent控制面前移",
+          "note": "跨期看，Dots、Agents API和Codex Cloud之后，本期出现OpenClaw控制面、共享凭证调查和开发者误拒绝摩擦。",
+          "boundary": "不证明控制面成熟；仍需代码审计、客户日志、身份遥测和安全事故复盘。"
+        },
+        {
+          "topic": "model",
+          "label": "模型竞争转向安全卡和受限发布",
+          "note": "跨期看，GPT-6.1 Sol和Gemini 4 Argon都把能力、价格、系统卡和受限访问放在同一竞争面。",
+          "boundary": "不证明官方基准等于生产效果；仍需API可用性、价格页、系统卡、第三方基准和客户任务日志。"
+        },
+        {
+          "topic": "policy",
+          "label": "自愿协议旁边出现监管调查",
+          "note": "跨期看，白宫协议和SI术语之后，AP报道FTC调查把AI安全从行业自律拉向消费者保护程序。",
+          "boundary": "不证明违法结论；仍需FTC正式文件、公司回应、听证材料和执法动作。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "developer-tooling",
+          "label": "Agent治理从发布事实转向控制证据",
+          "status": "stronger",
+          "previousPattern": "此前Agent主题集中在Dots、Agents API、Codex Cloud、Space和白宫自愿协议。",
+          "currentSignal": "本期新增OpenClaw控制面、Agent共享凭证调查和开发者安全拦截摩擦。",
+          "signalDirection": "增强：同一主题从产品入口推进到身份、隔离、审计和可用性成本。",
+          "stillUnproven": "仍需代码审计、身份遥测、客户部署日志、供应商文档和事故复盘。"
+        },
+        {
+          "topic": "model",
+          "label": "模型安全闸门",
+          "status": "stronger",
+          "previousPattern": "此前模型主题集中在GPT-6.1 Sol成本、Astra延后和Claude Sonnet 5.5成本分层。",
+          "currentSignal": "本期新增Sol系统卡附录、Gemini 4 Argon官方页和OpenAI训练安全案例。",
+          "signalDirection": "增强：模型竞争新增系统卡、受限测试和训练安全论证。",
+          "stillUnproven": "仍需系统卡全文、API状态、价格页、第三方基准、客户迁移数据和外部红队。"
+        },
+        {
+          "topic": "policy",
+          "label": "监管压力从协议文本进入调查程序",
+          "status": "stronger",
+          "previousPattern": "此前政策主题集中在白宫Super Intelligence协议、SI术语和AI constitution叙事。",
+          "currentSignal": "本期新增AP关于FTC调查OpenAI、Anthropic等AI公司消费者风险的报道。",
+          "signalDirection": "增强：行业自愿承诺之外出现监管调查路径。",
+          "stillUnproven": "仍需FTC正式文书、CID或6(b)命令文件、调查范围记录、公司回应文件、听证材料和执法结果。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "发布会后进入安全披露和监管核查",
+          "lastMention": "此前OpenAI出现在Dots、GPT-6.1 Sol、Private Intelligence、Agents API、Codex Cloud、Astra延后和ARR背景中。",
+          "whatChanged": "本期新增模型蒸馏披露、Sol系统卡附录、训练安全案例、FTC调查和开发者安全摩擦。",
+          "stillUnproven": "仍需第三方复测、系统卡PDF、FTC文书、客户日志、云伙伴公告和安全审计。"
+        },
+        {
+          "company": "Google",
+          "label": "Gemini旗舰回归与数据采购并行",
+          "lastMention": "此前Google出现在白宫协议签署方、Gemini定制、Private AI Compute和AI Impact背景中。",
+          "whatChanged": "本期新增Gemini 4 Argon官方模型页和Google扩大Content Offer Pilot媒体报道。",
+          "stillUnproven": "仍需API文档、系统卡、价格页、试点合同、参与者案例和第三方基准。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "监管调查与内容特征研究同框",
+          "lastMention": "此前Anthropic出现在Sonnet 5.5、Opus 5.5、IPO报道和安全治理背景中。",
+          "whatChanged": "本期新增AP关于FTC调查的报道和Graphite/ VentureBeat对Opus 5.5写作特征的研究报道。",
+          "stillUnproven": "仍需FTC文件、公司回应、Graphite数据集、复现实验和人工评审。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 4,
+          "role": "官方来源用于核对OpenAI安全披露、Sol系统卡、训练安全案例和Google Gemini 4 Argon模型页；效果仍需外部复测。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 6,
+          "role": "AP和VentureBeat用于监管、企业部署、安全身份和内容方法雷达；完整事实和样本方法仍需读原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "policy",
+          "label": "核对安全披露和监管程序",
+          "count": 3,
+          "itemIds": [
+            "openai-model-distillation-campaign-2026-09-30",
+            "ap-ftc-openai-anthropic-ai-safety-probe-2026-09-30",
+            "openai-frontier-training-safety-cases-2026-09-28"
+          ],
+          "meaning": "用来检查推理抽取披露、FTC调查和训练安全案例是否改变合规/安全问询。",
+          "whyNow": "DevDay之后，安全问题从产品承诺转为披露、监管和训练闸门材料。"
+        },
+        {
+          "id": "model",
+          "label": "验证前沿模型和系统卡",
+          "count": 2,
+          "itemIds": [
+            "google-gemini-4-argon-limited-release-2026-09-30",
+            "openai-gpt-6-1-sol-safety-addendum-2026-09-29"
+          ],
+          "meaning": "用来检查Gemini 4 Argon访问边界、GPT-6.1 Sol系统卡、价格和第三方基准。",
+          "whyNow": "模型竞争同时出现旗舰回归、低成本分层和安全附录。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "检查Agent控制面和开发摩擦",
+          "count": 3,
+          "itemIds": [
+            "venturebeat-openclaw-enterprise-control-plane-2026-09-29",
+            "venturebeat-developer-safeguards-friction-2026-09-30",
+            "venturebeat-ai-agent-credential-sharing-survey-2026-09-30"
+          ],
+          "meaning": "用来检查持久Agent的身份、凭证、隔离、审计、误拒绝和自托管控制面。",
+          "whyNow": "Agent从聊天入口进入企业基础设施，控制面和身份治理变成上线门槛。"
+        },
+        {
+          "id": "enterprise",
+          "label": "核对数据授权和内容治理",
+          "count": 2,
+          "itemIds": [
+            "venturebeat-google-content-offer-pilot-2026-09-30",
+            "venturebeat-claude-opus-writing-tells-2026-09-30"
+          ],
+          "meaning": "用来检查训练数据授权、内容资产估值、AI文风检测和品牌编辑流程。",
+          "whyNow": "模型训练和内容生成都在进入可谈判、可审计的企业流程。"
+        }
+      ],
+      "sourceCount": 103,
+      "categories": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "本期用于查看OpenAI蒸馏披露、训练安全案例和FTC调查；需FTC文书、系统卡、外部审计和公司回应确认。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "本期用于理解Gemini 4 Argon受限发布和GPT-6.1 Sol安全附录；需API文档、价格页、系统卡和第三方基准确认。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "本期用于检查OpenClaw控制面、Agent身份凭证和开发者安全拦截；需代码审计、客户日志、供应商文档和身份遥测确认。"
+        },
+        {
+          "id": "funding",
+          "label": "资金",
+          "description": "本期用于查看Google付费内容试点和训练数据采购；需合同样本、付款范围、授权条款和参与者案例确认。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "本期用于查看Graphite对Opus 5.5写作特征的样本研究；需公开数据、复现实验和人工评审确认。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "本期没有单独产品入口；可从模型和工具筛选查看当前批次的产品化影响，证据边界是不能把历史产品发布误读为新事实。"
+        }
+      ],
+      "briefing": {
+        "label": "17:00 JST 情报简报",
+        "headline": "模型安全、Agent身份和监管调查成为发布会后的主线",
+        "summary": "本期把OpenAI蒸馏披露、Sol系统卡、Google Gemini 4 Argon、FTC调查和企业Agent控制面信号放在一起看：前沿模型竞争仍在加速，但可审计安全证据、身份治理和监管问询正在成为上线条件。",
+        "cta": "查看本期10条新闻",
+        "watchPoints": [
+          {
+            "title": "推理抽取",
+            "body": "关注OpenAI披露后的技术缓解、行业共享和其他实验室回应。"
+          },
+          {
+            "title": "受限模型",
+            "body": "关注Gemini 4 Argon何时进入API、价格页和系统卡。"
+          },
+          {
+            "title": "Agent控制",
+            "body": "关注共享凭证、隔离、审计和控制面是否进入真实客户部署。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "深度简报",
+        "title": "前沿模型进入“安全证据优先”的发布周期",
+        "subtitle": "10月1日版显示，模型发布不再只比能力和价格；系统卡、训练闸门、FTC调查、Agent身份和数据授权正在决定谁能被企业安全采用。",
+        "dateLabel": "2026年10月1日 17:00 JST",
+        "status": "已发布 · 官方与可靠媒体混合核验",
+        "overview": "本期10条信号可以读成同一条线：AI公司继续推出更强模型和Agent基础设施，但每个能力入口都被安全、监管、身份和数据来源问题包围。官方来源证明发布和披露事实，媒体来源帮助发现企业落地摩擦。",
+        "timeline": [
+          {
+            "label": "9月28日",
+            "title": "训练安全案例前移",
+            "body": "OpenAI把前沿训练风险论证写成安全案例框架。"
+          },
+          {
+            "label": "9月29日",
+            "title": "Sol系统卡补齐发布证据",
+            "body": "GPT-6.1 Sol附录披露健康、Agent、网络安全和Preparedness评估。"
+          },
+          {
+            "label": "9月30日",
+            "title": "监管和企业控制面同日升温",
+            "body": "OpenAI披露蒸馏活动，AP报道FTC调查，Google推出Gemini 4 Argon，VentureBeat跟进Agent身份与控制面。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "本期安全非重复信号"
+          },
+          {
+            "value": "4/10",
+            "label": "官方来源条目"
+          },
+          {
+            "value": "5/10",
+            "label": "VentureBeat企业落地雷达"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "安全披露",
+            "title": "推理抽取和系统卡成为模型竞争的硬证据",
+            "body": "OpenAI的蒸馏披露和Sol系统卡说明，前沿模型的安全证明正在覆盖隐藏推理、Agent行为、健康场景和内部部署模拟。",
+            "soWhat": "采购和平台团队应把系统卡、红队复测和事件披露纳入模型上线门槛。"
+          },
+          {
+            "number": "02",
+            "label": "模型路线",
+            "title": "Google回到旗舰竞争，但先走受限发布",
+            "body": "Gemini 4 Argon官方页给出能力和安全定位，Axios等媒体补充受限网络防御伙伴测试背景。",
+            "soWhat": "读者应先查API状态、价格、系统卡和外部基准，再把它视为可用替代项。"
+          },
+          {
+            "number": "03",
+            "label": "Agent治理",
+            "title": "控制面、身份和误拒绝决定Agent能否进生产",
+            "body": "OpenClaw、共享凭证调查和开发者安全拦截报道共同指向同一问题：Agent越持久，越需要身份、权限、隔离和升级路径。",
+            "soWhat": "企业应把Agent当作有生命周期的工作负载管理，而不是只当聊天工具。"
+          }
+        ],
+        "actions": [
+          "把OpenAI蒸馏披露加入模型供应商安全问卷。",
+          "为GPT-6.1 Sol和Gemini 4 Argon建立系统卡、API状态和外部基准追踪。",
+          "检查生产Agent是否共享凭证、是否隔离运行、是否能按Agent撤销访问。",
+          "审阅训练数据授权和AI文本检测规则，避免用过时直觉替代证据。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "时间边界",
+            "body": "本期覆盖9月28日至10月1日JST可核对的新鲜信号，未重复已收录DevDay产品条目。"
+          },
+          {
+            "label": "证据边界",
+            "body": "官方来源证明发布和披露事实；媒体来源只作为监管和企业落地雷达，不替代原文和源文件。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI和Google官方页面可核对安全披露、系统卡、训练安全案例和Gemini 4 Argon模型定位。",
+            "AP和VentureBeat可核对FTC调查报道、Agent身份调查、OpenClaw发布、数据采购和AI文本特征研究的最小事实。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower判断本期主线是发布会后安全证据、监管问询和Agent治理控制面同时前移。",
+            "本期不把官方基准、媒体调查样本或厂商项目描述升级为生产效果证明。"
+          ],
+          "unknowns": [
+            "Gemini 4 Argon的广泛API可用性、价格、系统卡和外部基准仍待核对。",
+            "FTC调查范围、OpenClaw生产成熟度、Google数据试点合同和Graphite研究复现仍待后续证据。"
+          ]
+        },
+        "references": [
+          {
+            "label": "OpenAI披露协同模型蒸馏活动",
+            "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/"
+          },
+          {
+            "label": "Google DeepMind展示Gemini 4 Argon模型页",
+            "url": "https://deepmind.google/models/gemini/"
+          },
+          {
+            "label": "AP报道FTC调查OpenAI、Anthropic等AI公司",
+            "url": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1"
+          },
+          {
+            "label": "媒体报道OpenClaw Agent控制面",
+            "url": "https://venturebeat.com/orchestration/openclaw-launches-free-enterprise-control-plane-for-persistent-ai-agents-backed-by-openai-red-hat-and-nvidia"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "venturebeat-google-content-offer-pilot-2026-09-30",
+          "category": "funding",
+          "label": "资金",
+          "title": "Google扩大付费内容试点，向开发者购买私有代码与数据",
+          "body": "VentureBeat报道Google扩大Content Offer Pilot，让开发者和小企业提交专有代码、离线内容等非公开材料并协商价格。",
+          "summary": "VentureBeat报道Google扩大Content Offer Pilot，让开发者和小企业提交专有代码、离线内容等非公开材料并协商价格。",
+          "whyItMatters": "训练数据获取正在从公开网页转向付费私有内容市场，代码所有者要重新评估数据授权、价格和保密边界。",
+          "detailBody": "VentureBeat称Google向其确认扩大Content Offer Pilot，并引用Google门户和公司说明，显示开发者和小企业可提交非公开材料并协商价格。该报道支持试点事实，具体价格、权利范围和产品用途仍未披露。",
+          "trend": "高质量训练数据正在变成可谈判资产，而不是默认可抓取资源。",
+          "detailTrend": "高质量训练数据正在变成可谈判资产，而不是默认可抓取资源。模型公司对专有代码和离线数据的需求，让小团队也可能成为数据供应商，同时要面对权利范围、保密和竞争优势损耗。",
+          "whyRanked": "它把AI训练数据争议从版权诉讼扩展到主动付费采购。",
+          "topReason": "它把AI训练数据争议从版权诉讼扩展到主动付费采购。",
+          "impact": "创业公司和开发者应在提交前核对许可范围、排他性、保密条款、价格和撤回机制。",
+          "whoShouldCare": "正在评估是否把私有代码仓库、专业文档或教育内容写进训练数据授权合同的创业公司创始人、开发者和法务团队。",
+          "readerUse": "创业公司、开发者和法务团队可用它建立训练数据授权和报价前的权利清单。",
+          "nextCheck": "查Google Content Offer Pilot条款、合同样本、付款范围、数据使用限制、参与者案例和监管/版权后续回应。",
+          "followUpQuestions": [
+            "Google是否披露试点合同中的权利范围、保留期限和模型使用限制？",
+            "参与开发者是否公开付款凭证、授权合同条款或退出经验？"
+          ],
+          "evidenceThreshold": "需要合同条款、参与者公开案例、付款数据或监管文件，才能升级为成熟数据采购市场结论。",
+          "claimBoundary": "当前证明媒体报道和Google试点存在，不证明付款公平、用途透明或参与者收益稳定。",
+          "counterEvidence": "若合同显示权利让渡过宽、付款有限或试点规模收缩，应下调为小规模数据采购实验。后续以合同样本和参与者案例核对。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://venturebeat.com/data/exclusive-google-expands-pilot-program-that-pays-developers-and-small-businesses-for-proprietary-offline-code-and-other-data",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI支持这条来源事实：Google扩大Content Offer Pilot，让开发者和小企业提交专有代码、离线内容等非公开材料并协商价格。 AI Watchtower只保留最小事实和中文解释，完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-10-01T19:00:00+09:00",
+          "time": "19:00",
+          "tags": [
+            "训练数据",
+            "Google",
+            "代码授权"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/data/exclusive-google-expands-pilot-program-that-pays-developers-and-small-businesses-for-proprietary-offline-code-and-other-data",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "detailWhyRanked": "它把AI训练数据争议从版权诉讼扩展到主动付费采购。\n来源支持：VentureBeat AI核对“Google扩大付费内容试点，向开发者购买私有代码与数据”的最小事实；升级判断仍要看Google Content Offer Pilot条款、合同样本、付款范围。"
+        },
+        {
+          "id": "venturebeat-claude-opus-writing-tells-2026-09-30",
+          "category": "research",
+          "label": "研究",
+          "title": "VentureBeat：Graphite称Opus 5.5减少显眼AI文风但仍有大量写作特征",
+          "body": "VentureBeat报道Graphite更新AI Tells研究，称Claude Opus 5.5总体更接近人类文章样本，但仍保留数千个高频写作特征。",
+          "summary": "VentureBeat报道Graphite更新AI Tells研究，称Claude Opus 5.5总体更接近人类文章样本，但仍保留数千个高频写作特征。",
+          "whyItMatters": "内容团队不能靠破折号等单一特征判断AI文本，模型版本变化会迅速改变可见文风。",
+          "detailBody": "VentureBeat报道Graphite对模型文章样本的比较，称Opus 5.5在若干统计特征上更接近人类样本，但仍保留大量高频表达，并说明样本、提示词、旧网页对照和方法限制。该研究是方法限定的数据点，不证明单篇文本可被可靠归因，读者应回到Graphite数据与原文核对。",
+          "trend": "AI文本检测正在从固定“口头禅”转向版本化、任务化和样本化评估。",
+          "detailTrend": "AI文本检测正在从固定口头禅转向版本化、任务化和样本化评估。当模型和人类都在适应AI味标签，内容治理更需要事实核查、语气评审和跨模型复测，而不是依赖单个标点或短语。",
+          "whyRanked": "它给模型能力之外的内容治理和AI检测提供了当前样本。",
+          "topReason": "它给模型能力之外的内容治理和AI检测提供了当前样本。",
+          "impact": "内容、营销和合规团队应重新评估AI文本检测规则，并保留人工编辑和事实核查流程。",
+          "whoShouldCare": "负责营销文案、支持知识库、AI内容检测和品牌语气治理的内容/合规团队。",
+          "readerUse": "用它更新AI生成内容检测、品牌语气审查和人工编辑指南。",
+          "nextCheck": "查Graphite完整数据集、方法说明、其他模型复测、人工评审结果和不同提示词下的对照实验。",
+          "followUpQuestions": [
+            "Graphite是否公开完整样本、特征列表和复现实验脚本？",
+            "不同提示词、人类编辑记录和不同文体对照实验是否会改变Opus 5.5的写作特征结论？"
+          ],
+          "evidenceThreshold": "需要公开数据集、复现实验、人工评审和跨任务测试，才能升级为可靠AI文本识别结论。",
+          "claimBoundary": "当前只说明Graphite样本中的统计差异，不证明某篇文章是否由AI生成。",
+          "counterEvidence": "若复现实验或人工评审显示特征不稳定，应下调为单研究信号。后续以公开数据和复测核对。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://venturebeat.com/data/claude-opus-5-5-uses-em-dashes-99-less-often-and-sounds-more-human-but-still-exhibits-2-548-ai-writing-tells",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道Graphite更新AI Tells研究并比较Claude Opus 5.5、Opus 5和其他模型文本特征；完整数据和方法仍需读原文与研究页面。 AI Watchtower只保留最小事实和中文解释，完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-10-01T17:00:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "Claude Opus 5.5",
+            "AI文本检测",
+            "内容治理"
+          ],
+          "companies": [
+            "Anthropic",
+            "Graphite",
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/data/claude-opus-5-5-uses-em-dashes-99-less-often-and-sounds-more-human-but-still-exhibits-2-548-ai-writing-tells",
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "detailWhyRanked": "它给模型能力之外的内容治理和AI检测提供了当前样本。\n来源支持：VentureBeat AI核对“VentureBeat：Graphite称Opus 5.5减少显眼AI文风但仍有大量写作特征”的最小事实；升级判断仍要看Graphite完整数据集、方法说明、其他模型复测。"
+        },
+        {
+          "id": "venturebeat-openclaw-enterprise-control-plane-2026-09-29",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenClaw推出企业Agent控制面，瞄准持久Agent治理",
+          "body": "VentureBeat报道OpenClaw Enterprise以MIT许可推出，主打多租户、权限、隔离、审计和自托管Agent控制面。",
+          "summary": "VentureBeat报道OpenClaw Enterprise以MIT许可推出，主打多租户、权限、隔离、审计和自托管Agent控制面。",
+          "whyItMatters": "Dots和持久Agent把“谁能控制一队Agent”变成平台问题，开源控制面可能成为企业自建Agent治理层。",
+          "detailBody": "VentureBeat报道OpenClaw Enterprise的发布、架构定位、MIT许可和OpenAI/Red Hat/Nvidia相关背景，并描述其多租户、权限、隔离与审计目标。AI Watchtower保留最小事实，生产成熟度仍需代码和部署验证。",
+          "trend": "Agent生态正在形成应用层、运行时隔离层和企业控制面三层分工。",
+          "detailTrend": "Agent生态正在形成应用层、运行时隔离层和企业控制面三层分工。企业不只需要一个会做事的Agent，还需要能统一部署、授权、审计和隔离Agent舰队的基础设施。",
+          "whyRanked": "它把本周持久Agent发布潮落到企业治理基础设施上。",
+          "topReason": "它把本周持久Agent发布潮落到企业治理基础设施上。",
+          "impact": "平台团队应评估控制面是否支持Kubernetes、自托管、独立身份、审计日志和替换模型能力。",
+          "whoShouldCare": "准备在Kubernetes、自托管代码库、CI系统或内部插件环境中运行多Agent并审计其权限的企业平台/DevSecOps团队。",
+          "readerUse": "企业平台和DevSecOps团队可用它比较OpenClaw Enterprise、Runlayer、OpenShell和自建Kubernetes隔离方案。",
+          "nextCheck": "查OpenClaw GitHub仓库、1.0路线图、参考架构、安全审计、OpenAI/Red Hat试点说明和生产部署案例。",
+          "followUpQuestions": [
+            "OpenClaw是否发布参考架构和安全边界说明，解释权限、审计和沙箱如何配合？",
+            "OpenAI、Red Hat或外部企业是否披露可验证的试点部署指标？"
+          ],
+          "evidenceThreshold": "需要源码审阅、安全审计、参考架构和客户部署日志，才能升级为可生产采用的基础设施结论。",
+          "claimBoundary": "当前证明媒体报道和项目发布，不证明OCE已是成熟生产平台。",
+          "counterEvidence": "若仓库活跃度不足、安全审计缺失或试点方不确认部署，应收窄为早期项目观察。后续以代码、审计和客户日志核对。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://venturebeat.com/orchestration/openclaw-launches-free-enterprise-control-plane-for-persistent-ai-agents-backed-by-openai-red-hat-and-nvidia",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道OpenClaw Enterprise发布、控制面定位、许可证和相关试点背景；完整上下文仍需读原文并查代码。 AI Watchtower只保留最小事实和中文解释，完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-10-01T10:25:00+09:00",
+          "time": "10:25",
+          "tags": [
+            "OpenClaw",
+            "Agent控制面",
+            "开源"
+          ],
+          "companies": [
+            "OpenClaw",
+            "OpenAI",
+            "Red Hat",
+            "Nvidia"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/orchestration/openclaw-launches-free-enterprise-control-plane-for-persistent-ai-agents-backed-by-openai-red-hat-and-nvidia",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "detailWhyRanked": "它把本周持久Agent发布潮落到企业治理基础设施上。\n来源支持：VentureBeat AI核对“OpenClaw推出企业Agent控制面，瞄准持久Agent治理”的最小事实；升级判断仍要看OpenClaw GitHub仓库、1.0路线图、参考架构。"
+        },
+        {
+          "id": "venturebeat-developer-safeguards-friction-2026-09-30",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：开发者称前沿模型安全拦截影响常规工作",
+          "body": "VentureBeat采访开发者称，OpenAI和Anthropic模型在航天仿真、机器人和安全审查等常规任务中可能触发拦截或额外授权。",
+          "summary": "VentureBeat采访开发者称，OpenAI和Anthropic模型在航天仿真、机器人和安全审查等常规任务中可能触发拦截或额外授权。",
+          "whyItMatters": "安全栈从后台合规问题变成开发者体验成本；企业要在防误用和可用性之间设置可解释升级路径。",
+          "detailBody": "VentureBeat报道多名开发者在航天仿真、机器人和安全审查任务中遇到安全拦截或额外授权，并引用OpenAI对合法工作被减速的回应，还列出开放模型和本地模型作为替代路径。该条是采访信号，不代表所有开发者体验，需用供应商文档和工单数据核对。",
+          "trend": "前沿模型发布后，误拒绝、降级和可信访问将成为开发工具采购指标。",
+          "detailTrend": "前沿模型发布后，误拒绝、降级和可信访问将成为开发工具采购指标。安全策略若不能区分合法双用途工作，开发者会转向开放模型、本地模型或可信访问通道，企业也需要记录被拦截任务类型。",
+          "whyRanked": "它补足系统卡之外的真实使用摩擦，帮助读者理解安全措施的操作成本。",
+          "topReason": "它补足系统卡之外的真实使用摩擦，帮助读者理解安全措施的操作成本。",
+          "impact": "开发平台团队应建立授权工作流、可信访问、任务分级和误拒绝反馈通道。",
+          "whoShouldCare": "在机器人、航天仿真、防御安全审查或开源代码审计中使用AI编码工具的工程/安全团队。",
+          "readerUse": "工程平台和安全团队可用它检查供应商是否提供可信访问、误拒绝申诉和可审计的安全降级说明。",
+          "nextCheck": "查OpenAI Daybreak Access文档、Anthropic安全路由说明、企业客户工单数据、IDE遥测和开发者调查。",
+          "followUpQuestions": [
+            "供应商是否公布误拒绝率报告、申诉路径文档和可信访问资格标准？",
+            "企业IDE或代码平台遥测是否显示安全拦截造成可量化工时损失？"
+          ],
+          "evidenceThreshold": "需要供应商文档、工单数据、IDE遥测或独立开发者调查，才能升级为普遍开发效率结论。",
+          "claimBoundary": "当前是媒体采访和供应商回应，不证明所有安全拦截都过度或所有用户受影响。",
+          "counterEvidence": "若供应商误拒绝率报告、企业工单数据或IDE遥测显示影响很低，或可信访问解决大多数合法任务，应收窄为特定领域摩擦。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://venturebeat.com/technology/developers-say-openai-and-anthropic-safeguards-are-flagging-routine-work-and-costing-them-time",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道“developers say OpenAI and Anthropic safeguards are flagging routine work and costing them time”这一来源事实：开发者称模型安全拦截影响航天仿真、机器人代码和安全审查。 AI Watchtower只保留最小事实和中文解释，完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-10-01T06:30:00+09:00",
+          "time": "06:30",
+          "tags": [
+            "开发者体验",
+            "安全拦截",
+            "双用途"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/technology/developers-say-openai-and-anthropic-safeguards-are-flagging-routine-work-and-costing-them-time",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "detailWhyRanked": "它补足系统卡之外的真实使用摩擦，帮助读者理解安全措施的操作成本。\n来源支持：VentureBeat AI核对“VentureBeat：开发者称前沿模型安全拦截影响常规工作”的最小事实；升级判断仍要看OpenAI Daybreak Access文档、Anthropic安全路由说明、企业客户工单数据。"
+        },
+        {
+          "id": "venturebeat-ai-agent-credential-sharing-survey-2026-09-30",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：多数已设权限的企业Agent仍共享凭证",
+          "body": "VentureBeat报道，在其8月Agentic Security and Identity调查中，37家同时有运行时权限和生产Agent的组织里有22家仍存在Agent共享凭证。",
+          "summary": "VentureBeat报道，在其8月Agentic Security and Identity调查中，37家同时有运行时权限和生产Agent的组织里有22家仍存在Agent共享凭证。",
+          "whyItMatters": "Agent治理不能只看权限规则；没有独立身份和隔离，审计、撤销和责任追踪都会变弱。",
+          "detailBody": "VentureBeat基于VB Pulse调查报道Agent共享凭证、隔离和近失事件数据，并说明样本是137名合格受访者的自选调查。该调查为企业安全雷达，不代表所有企业。 这条详情页只保留来源可直接支持的最小事实，并把未验证的效果、适用范围和后续证据路径单独写出。",
+          "trend": "企业Agent安全正在从“能否限制动作”转向“能否识别哪个Agent做了动作”。",
+          "detailTrend": "企业Agent安全正在从能否限制动作转向能否识别哪个Agent做了动作。当Agent开始触碰API、服务账号和内部数据，身份生命周期、撤销路径和隔离半径会成为比提示词更硬的控制层。",
+          "whyRanked": "它给Agent身份治理提供了可核查的企业侧数据点。",
+          "topReason": "它给Agent身份治理提供了可核查的企业侧数据点。",
+          "impact": "安全团队应检查每个Agent是否有唯一身份、可撤销凭证、最小权限、隔离运行和审计链路。",
+          "whoShouldCare": "正在把Agent接入生产系统、API、服务账号和内部数据的安全架构/身份治理团队。",
+          "readerUse": "企业安全架构和身份治理团队可用它复查Agent身份、凭证复用、隔离和审计日志成熟度。",
+          "nextCheck": "查VB Pulse完整方法、原始问卷、后续月度样本、客户审计案例和身份厂商部署数据。",
+          "followUpQuestions": [
+            "后续VB Pulse样本是否继续显示共享凭证和低隔离率？",
+            "企业客户审计报告是否证明每个生产Agent都有独立身份与撤销路径？"
+          ],
+          "evidenceThreshold": "需要完整调查方法、独立样本、客户审计报告或身份平台遥测，才能升级为代表性企业安全结论。",
+          "claimBoundary": "当前是自选调查和媒体分析，不代表所有企业的普遍比例。",
+          "counterEvidence": "若更大独立调查报告、身份平台遥测数据或客户审计报告显示共享凭证比例显著更低，应下调为早期样本信号。",
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://venturebeat.com/security/22-of-37-surveyed-companies-that-enforce-ai-agent-permissions-still-have-agents-sharing-credentials",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "VentureBeat AI报道VB Pulse Agentic Security and Identity调查中的Agent共享凭证和隔离数据；完整方法和上下文仍需阅读原文。 AI Watchtower只保留最小事实和中文解释，完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-10-01T05:27:00+09:00",
+          "time": "05:27",
+          "tags": [
+            "Agent身份",
+            "凭证",
+            "企业安全"
+          ],
+          "companies": [
+            "VentureBeat",
+            "OpenAI",
+            "Microsoft",
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://venturebeat.com/security/22-of-37-surveyed-companies-that-enforce-ai-agent-permissions-still-have-agents-sharing-credentials",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "detailWhyRanked": "它给Agent身份治理提供了可核查的企业侧数据点。\n来源支持：VentureBeat AI核对“VentureBeat：多数已设权限的企业Agent仍共享凭证”的最小事实；升级判断仍要看VB Pulse完整方法、原始问卷、后续月度样本。"
+        },
+        {
+          "id": "google-gemini-4-argon-limited-release-2026-09-30",
+          "category": "model",
+          "label": "模型",
+          "title": "Google发布Gemini 4 Argon，先给网络防御伙伴测试",
+          "body": "Google DeepMind页面显示Gemini 4 Argon面向软件工程、企业知识工作和网络防御，强调长任务、1M上下文段能力和发布前安全防护。",
+          "summary": "Google DeepMind页面显示Gemini 4 Argon面向软件工程、企业知识工作和网络防御，强调长任务、1M上下文段能力和发布前安全防护。",
+          "whyItMatters": "Gemini旗舰线重新回到前沿模型竞争，但先以网络防御和受限测试进入市场，采购团队要区分官方基准与真实可用性。",
+          "detailBody": "Google DeepMind官方模型页列出Gemini 4 Argon的能力、基准和安全方向；Axios补充称它先向少量网络防御伙伴开放。当前可核对的是模型页发布、能力定位、受限访问和安全防护方向。 这条详情页只保留来源可直接支持的最小事实，并把未验证的效果、适用范围和后续证据路径单独写出。",
+          "trend": "前沿模型发布正在从“全面开放”转向“高风险能力先进入受控测试”。",
+          "detailTrend": "前沿模型发布正在从全面开放转向高风险能力先进入受控测试。Google把旗舰模型、网络防御能力和发布前安全流程绑定，读者要把榜单、访问资格和系统卡一起审阅。",
+          "whyRanked": "它给OpenAI/Anthropic之外的模型竞争带来新的官方参照，并改变本周模型路线图。",
+          "topReason": "它给OpenAI/Anthropic之外的模型竞争带来新的官方参照，并改变本周模型路线图。",
+          "impact": "模型评估团队应先看访问资格、价格、系统卡、评测方法和第三方实测，再决定是否纳入路由。",
+          "whoShouldCare": "负责模型选型、网络防御自动化、法律/金融长任务和供应商评估的企业AI平台团队。",
+          "readerUse": "企业模型评估团队可用它把Gemini 4 Argon列入受限测试、基准复核和安全文档观察清单。",
+          "nextCheck": "查Google博客全文、Gemini API文档、价格页、系统卡、受信测试名单、第三方基准复测和客户试点日志。",
+          "followUpQuestions": [
+            "Gemini 4 Argon何时进入Gemini API、AI Studio或企业订阅，并披露价格与配额？",
+            "Google是否发布系统卡、评测方法和受限网络防御测试的外部复测结果？"
+          ],
+          "evidenceThreshold": "需要系统卡、API文档、价格页、独立基准和客户试点日志，才能升级为可采购的模型效果结论。",
+          "claimBoundary": "官方页证明Google发布和定位，不证明外部开发者已可广泛使用或基准能转化为生产效果。",
+          "counterEvidence": "若开放时间推迟、API文档不含Argon，或第三方复测显著低于官方榜单，应下调为发布预告。后续以API状态、系统卡和外部基准核对。",
+          "sourceId": "google-deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "source": "Google DeepMind Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceUrl": "https://deepmind.google/models/gemini/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Google DeepMind Blog支持这条来源事实：Google DeepMind模型页展示Gemini 4 Argon定位、能力、基准表和安全防护方向。",
+          "publishedAt": "2026-10-01T05:00:00+09:00",
+          "time": "05:00",
+          "tags": [
+            "Google",
+            "Gemini 4 Argon",
+            "前沿模型"
+          ],
+          "companies": [
+            "Google",
+            "Google DeepMind"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://deepmind.google/models/gemini/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "detailWhyRanked": "它给OpenAI/Anthropic之外的模型竞争带来新的官方参照，并改变本周模型路线图。\n来源支持：Google DeepMind Blog核对“Google发布Gemini 4 Argon，先给网络防御伙伴测试”的最小事实；升级判断仍要看Google博客全文、Gemini API文档、价格页。"
+        },
+        {
+          "id": "ap-ftc-openai-anthropic-ai-safety-probe-2026-09-30",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：FTC调查OpenAI、Anthropic等AI安全消费者风险",
+          "body": "AP报道FTC已调查OpenAI、Anthropic和其他AI公司，焦点是其产品可能给消费者带来的风险。",
+          "summary": "AP报道FTC已调查OpenAI、Anthropic和其他AI公司，焦点是其产品可能给消费者带来的风险。",
+          "whyItMatters": "美国监管从自愿协议旁边伸出执法触角，企业不能只看白宫行业自律，还要跟踪消费者保护、信息要求和证词。",
+          "detailBody": "AP报道称FTC已调查OpenAI、Anthropic和其他AI公司，并把背景放在近期AI安全和Agent失控担忧中。AI Watchtower仅保留调查启动这一最小报道事实，完整引述、涉事范围和监管语境仍需读AP原文。",
+          "trend": "AI安全议题正在从行业自律进入消费者保护和调查程序。",
+          "detailTrend": "AI安全议题正在从行业自律进入消费者保护和调查程序。白宫协议仍是政治与行业框架，FTC调查则提示企业要准备产品安全说明、事件记录和用户告知证据。",
+          "whyRanked": "它把本周AI安全争论从企业承诺推进到美国监管调查。",
+          "topReason": "它把本周AI安全争论从企业承诺推进到美国监管调查。",
+          "impact": "法务和安全负责人应准备产品安全说明、事件响应记录、用户告知材料和高风险Agent控制证据。",
+          "whoShouldCare": "负责AI产品合规、消费者保护、事件披露和监管问询响应的法务/安全治理团队。",
+          "readerUse": "企业法务和安全治理团队可用它把FTC调查加入监管雷达，并核对本公司是否能解释AI产品风险控制。",
+          "nextCheck": "查FTC正式信息要求、调查范围、公司回应、听证材料、法院或行政文件和后续执法动作。",
+          "followUpQuestions": [
+            "FTC是否公布Civil Investigative Demand、6(b)命令、信息请求文件或证词安排？",
+            "OpenAI、Anthropic及其他被调查公司是否提交正式回应或披露整改措施？"
+          ],
+          "evidenceThreshold": "需要FTC文件、公司正式回应、听证记录或执法文书，才能升级为确认的监管范围和责任判断。",
+          "claimBoundary": "AP报道支持调查已启动的媒体事实，不证明FTC已有违法结论。",
+          "counterEvidence": "若FTC文件显示调查范围更窄或公司正式回应排除核心风险，应收窄为早期监管问询。后续以FTC文件和公司回应核对。",
+          "sourceId": "ap-technology",
+          "sourceName": "Associated Press Technology",
+          "source": "Associated Press Technology",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Associated Press Technology报道“FTC is investigating OpenAI and Anthropic over possible risks to consumers”这一来源事实：FTC调查OpenAI、Anthropic及其他AI公司的模型产品安全风险。 AI Watchtower只保留最小事实和中文解释，完整事实、采访、数字、图表、引述和上下文仍以原文为准。",
+          "publishedAt": "2026-10-01T04:27:51+09:00",
+          "time": "04:27",
+          "tags": [
+            "FTC",
+            "OpenAI",
+            "Anthropic",
+            "监管"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic",
+            "FTC"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 24,
+            "note": "可靠媒体支持最小报道事实；完整事实、采访、数字和上下文仍需读原文。"
+          },
+          "detailWhyRanked": "它把本周AI安全争论从企业承诺推进到美国监管调查。\n来源支持：Associated Press Technology核对“AP：FTC调查OpenAI、Anthropic等AI安全消费者风险”的最小事实；升级判断仍要看FTC正式信息要求、调查范围、公司回应。"
+        },
+        {
+          "id": "openai-model-distillation-campaign-2026-09-30",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI披露并打断协同模型蒸馏活动",
+          "body": "OpenAI披露一场试图提取受保护推理的协同活动，称已限制相关账号、加强监测并向行业伙伴共享线索。",
+          "summary": "OpenAI披露一场试图提取受保护推理的协同活动，称已限制相关账号、加强监测并向行业伙伴共享线索。",
+          "whyItMatters": "前沿模型竞争开始进入“推理抽取与能力复制”安全战，模型提供商和企业部署方都要检查隐藏推理、日志与合作云部署的防护。",
+          "detailBody": "OpenAI官方安全文章披露，相关活动最早出现在7月，并在7月下旬出现高量请求；文章还说明账号限制、技术控制、伙伴共享和归因边界。该页支持披露、响应和边界事实，不证明所有尝试成功。 这条详情页只保留来源可直接支持的最小事实，并把未验证的效果、适用范围和后续证据路径单独写出。",
+          "trend": "模型安全从越狱和提示注入扩展到对受保护推理的规模化抽取。",
+          "detailTrend": "模型安全从越狱和提示注入扩展到对受保护推理的规模化抽取。能力越强，推理记录、工具输出和合作部署越需要跨组织防护，企业也要把蒸馏风险放进供应商问卷。",
+          "whyRanked": "它是本期最明确的一手安全事件披露，直接影响模型平台、云伙伴和红队清单。",
+          "topReason": "它是本期最明确的一手安全事件披露，直接影响模型平台、云伙伴和红队清单。",
+          "impact": "安全团队应检查推理可见性、流式输出拦截、账号风控、第三方部署和行业情报共享流程。",
+          "whoShouldCare": "负责模型平台安全、云上部署、红队响应和企业AI供应商审查的安全/平台团队。",
+          "readerUse": "模型平台安全团队可用它更新受保护推理、蒸馏防护、账号风控和合作云部署检查表。",
+          "nextCheck": "查后续技术缓解说明、Frontier Model Forum共享材料、云伙伴公告、研究者复测和政府信息共享文件。",
+          "followUpQuestions": [
+            "OpenAI是否发布可复现的攻击类别、检测指标或合作伙伴缓解清单？",
+            "云伙伴和其他前沿实验室是否确认类似推理抽取风险并披露防护状态？"
+          ],
+          "evidenceThreshold": "需要技术白皮书、第三方复测、合作伙伴公告或政府/行业共享文件，才能升级为已验证的跨行业攻击态势。",
+          "claimBoundary": "当前证明OpenAI披露并处置了相关活动，不证明所有请求成功，也不证明归因已被外部确认。",
+          "counterEvidence": "若第三方复测无法复现攻击路径，或合作伙伴公告显示影响范围显著更窄，应收窄为单平台事件。后续应以技术指标、复测报告和伙伴公告核对。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News支持这条来源事实：OpenAI发布并说明协同模型蒸馏活动、响应措施、归因边界和后续防护方向。",
+          "publishedAt": "2026-10-01T04:00:00+09:00",
+          "time": "04:00",
+          "tags": [
+            "OpenAI",
+            "模型蒸馏",
+            "安全"
+          ],
+          "companies": [
+            "OpenAI",
+            "Moonshot AI"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 5,
+            "narrativeStrength": 5,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 25,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "detailWhyRanked": "它是本期最明确的一手安全事件披露，直接影响模型平台、云伙伴和红队清单。\n来源支持：OpenAI News核对“OpenAI披露并打断协同模型蒸馏活动”的最小事实；升级判断仍要看后续技术缓解说明、Frontier Model Forum共享材料、云伙伴公告。"
+        },
+        {
+          "id": "openai-gpt-6-1-sol-safety-addendum-2026-09-29",
+          "category": "model",
+          "label": "模型",
+          "title": "OpenAI发布GPT-6.1 Sol系统卡附录，披露安全评估",
+          "body": "OpenAI Deployment Safety Hub发布GPT-6.1 Sol系统卡附录，说明安全指标、Agent评估、健康基准和网络安全能力分级。",
+          "summary": "OpenAI Deployment Safety Hub发布GPT-6.1 Sol系统卡附录，说明安全指标、Agent评估、健康基准和网络安全能力分级。",
+          "whyItMatters": "Sol不只是低成本模型，系统卡把它放进Critical网络安全与High生化能力的防护栈，企业应先看安全条件再迁移。",
+          "detailBody": "OpenAI Deployment Safety Hub页面披露GPT-6.1 Sol的系统卡附录和多类评估，覆盖安全、鲁棒性、健康、对齐、监控和Preparedness内容。该页支持模型安全披露事实，不等于独立安全认证。 这条详情页只保留来源可直接支持的最小事实，并把未验证的效果、适用范围和后续证据路径单独写出。",
+          "trend": "模型发布越来越需要同步公开安全附录、Agent行为评估和部署模拟。",
+          "detailTrend": "模型发布越来越需要同步公开安全附录、Agent行为评估和部署模拟。低成本模型一旦具备强Agent与网络能力，采购讨论就不能只看价格和速度，还要看Preparedness阈值、误用防护和外部复测。",
+          "whyRanked": "它补齐9月30日Sol发布后的安全证据链，是企业迁移前的关键文档。",
+          "topReason": "它补齐9月30日Sol发布后的安全证据链，是企业迁移前的关键文档。",
+          "impact": "模型平台团队应把Sol迁移与系统卡、风险阈值、健康场景、Agent权限和监控策略绑定。",
+          "whoShouldCare": "正在把GPT-6.1 Sol接入Codex编码代理、客服自动化、健康辅助或浏览器Agent生产流程的产品经理、平台工程和安全评审团队。",
+          "readerUse": "模型平台和安全团队可用它建立Sol上线前的模型卡审阅、红队和路由准入清单。",
+          "nextCheck": "查完整PDF、价格页、生产限制、客户日志、第三方红队、独立健康/网络安全评测和OpenAI后续勘误。",
+          "followUpQuestions": [
+            "Sol系统卡PDF是否披露各项Agent、健康和网络安全评测的完整方法？",
+            "第三方红队或客户部署日志是否确认Sol在生产任务中保持相同安全表现？"
+          ],
+          "evidenceThreshold": "需要完整系统卡、第三方红队、客户部署日志和独立基准复测，才能升级为生产安全结论。",
+          "claimBoundary": "当前证明OpenAI发布了安全附录和评估结果，不证明外部环境中一定同样安全。",
+          "counterEvidence": "若第三方红队、客户日志或事故披露显示Sol在高风险Agent任务中失败率更高，应下调迁移建议。后续以外部评测和生产日志核对。",
+          "sourceId": "openai-deployment-safety",
+          "sourceName": "OpenAI Deployment Safety Hub",
+          "source": "OpenAI Deployment Safety Hub",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI Deployment Safety Hub发布GPT-6.1 Sol系统卡附录，披露模型安全、鲁棒性、健康、对齐和Preparedness评估。",
+          "publishedAt": "2026-09-29T17:00:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "GPT-6.1 Sol",
+            "系统卡",
+            "模型安全"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "detailWhyRanked": "它补齐9月30日Sol发布后的安全证据链，是企业迁移前的关键文档。\n来源支持：OpenAI Deployment Safety Hub核对“OpenAI发布GPT-6.1 Sol系统卡附录，披露安全评估”的最小事实；升级判断仍要看完整PDF、价格页、生产限制。"
+        },
+        {
+          "id": "openai-frontier-training-safety-cases-2026-09-28",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI提出前沿训练安全案例，把训练闸门文件化",
+          "body": "OpenAI发布“frontier AI training safety cases”文章，说明如何在训练阶段组织风险论证、证据和决策门槛。",
+          "summary": "OpenAI发布“frontier AI training safety cases”文章，说明如何在训练阶段组织风险论证、证据和决策门槛。",
+          "whyItMatters": "本周模型延后和监管调查都指向同一问题：训练阶段的风险决策需要可审计证据，而不只是发布后系统卡。",
+          "detailBody": "OpenAI官方安全文章讨论前沿训练安全案例，说明如何在训练阶段组织风险论证、证据和决策门槛，并把训练继续/暂停的依据前移到发布前。该页支持OpenAI提出框架这一事实，不证明行业已采用或监管认可，下一步要看模板、外部评审和监管回应。",
+          "trend": "前沿模型治理正在从发布卡片前移到训练前和训练中的证据门槛。",
+          "detailTrend": "前沿模型治理正在从发布卡片前移到训练前和训练中的证据门槛。企业和监管方未来可能要求模型公司解释为什么继续训练、谁审查证据，以及哪些风险会触发暂停。",
+          "whyRanked": "它给FTC调查、Astra延后和Sol系统卡提供了上游治理背景。",
+          "topReason": "它给FTC调查、Astra延后和Sol系统卡提供了上游治理背景。",
+          "impact": "政策和安全团队应关注训练阶段的风险论证、停止条件、外部审查和证据保留方式。",
+          "whoShouldCare": "负责前沿模型治理、供应商尽调、AI安全审计和监管沟通的政策/安全团队。",
+          "readerUse": "政策和安全审计团队可用它把训练前安全案例加入模型供应商尽调问题。",
+          "nextCheck": "查OpenAI后续模板、外部专家评审、监管回应、其他实验室采纳情况和独立审计材料。",
+          "followUpQuestions": [
+            "OpenAI是否公布具体训练安全案例模板、外部审查流程文档或审计样例？",
+            "监管机构或其他实验室是否把训练安全案例纳入正式治理文件？"
+          ],
+          "evidenceThreshold": "需要公开模板、外部评审、监管文本或实验室采用记录，才能升级为行业治理标准趋势。",
+          "claimBoundary": "当前证明OpenAI提出框架，不证明该框架已被监管采纳或足以控制训练风险。",
+          "counterEvidence": "若后续事故报告、审计材料或训练暂停记录显示安全案例未触发有效暂停或审查，应下调框架有效性判断。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceUrl": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News发布“Towards safety cases for frontier AI training”这一来源事实：OpenAI提出用safety cases组织前沿模型训练阶段的风险论证、证据和决策门槛。",
+          "publishedAt": "2026-09-28T17:00:00+09:00",
+          "time": "17:00",
+          "tags": [
+            "训练安全",
+            "前沿模型",
+            "治理"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方来源支持发布、文档或披露事实；效果和外部影响仍需第三方证据。"
+          },
+          "detailWhyRanked": "它给FTC调查、Astra延后和Sol系统卡提供了上游治理背景。\n来源支持：OpenAI News核对“OpenAI提出前沿训练安全案例，把训练闸门文件化”的最小事实；升级判断仍要看OpenAI后续模板、外部专家评审、监管回应。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-09-30",
       "date": "2026-09-30",
