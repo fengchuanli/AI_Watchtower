@@ -109,7 +109,7 @@ class SearchConfig:
         return f"{self.endpoint}{path}?api-version={SEARCH_API_VERSION}"
 
 
-def request(config: SearchConfig, method: str, path: str, body: Optional[Dict] = None, timeout: float = 60.0) -> Dict:
+def request(config: SearchConfig, method: str, path: str, body: Optional[Dict] = None, timeout: float = 120.0) -> Dict:
     data = json.dumps(body, ensure_ascii=False).encode("utf-8") if body is not None else None
     req = urllib.request.Request(
         config.url(path),
@@ -131,6 +131,11 @@ def request(config: SearchConfig, method: str, path: str, body: Optional[Dict] =
         raise SystemExit(f"HTTP {error.code}: {hint}\n{detail[:800]}")
     except urllib.error.URLError as error:
         raise SystemExit(f"Network error: {error.reason}")
+    except (TimeoutError, OSError) as error:
+        raise SystemExit(
+            f"Timed out or connection lost ({error.__class__.__name__}). Azure may still be processing.\n"
+            "Wait 1-2 minutes, run 'status', then retry. create-index and upload are safe to re-run."
+        )
 
 
 def load_jsonl(path: Path) -> Iterable[Dict]:
