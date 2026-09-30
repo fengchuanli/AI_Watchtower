@@ -21,7 +21,8 @@
   - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 103 sources.
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
-- Commit note: pending `【新闻更新】发布17点AI新闻：10条模型安全与Agent治理信号`.
+- Commit: `49f89b2` (`【新闻更新】发布17点AI新闻：10条模型安全与Agent治理信号`).
+- Push: pushed to `origin/main` after sandboxed DNS push failed and network-authorized retry succeeded.
 
 ## 2026-09-30 23:08 JST
 
