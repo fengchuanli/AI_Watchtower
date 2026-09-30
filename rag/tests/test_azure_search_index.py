@@ -30,6 +30,13 @@ class AzureSearchIndexDefinitionTest(unittest.TestCase):
         profiles = {p["name"] for p in self.definition["vectorSearch"]["profiles"]}
         self.assertIn(vector["vectorSearchProfile"], profiles)
 
+    def test_vector_is_compressed_and_not_stored(self):
+        vector = self.fields["content_vector"]
+        self.assertFalse(vector["stored"])
+        profile = self.definition["vectorSearch"]["profiles"][0]
+        compressions = {c["name"]: c for c in self.definition["vectorSearch"]["compressions"]}
+        self.assertEqual(compressions[profile["compression"]]["kind"], "scalarQuantization")
+
     def test_citation_fields_are_retrievable(self):
         for name in ["source", "title", "document_id", "chunk_index", "text"]:
             self.assertTrue(self.fields[name]["retrievable"], name)

@@ -115,3 +115,4 @@ python3 -m unittest discover -s rag/tests
 - `.env`（Azure の endpoint / key）は Git 管理外です。key を表示・commit しないでください。
 - Azure OpenAI のネットワークは自宅の IP のみ許可しています。別のネットワークからは 403 になります。
 - Azure AI Search は Free 層（`srch-ai-watchtower-20260929`、50MB、index 3 個まで）。書き込みには管理者キーが必要です。
+  vector は int8 圧縮・`stored=false` で容量を節約しています（`docs/azure/azure-search-schema.md` 参照）。index の作り直しは `delete-index --yes <index名>` → `create-index` → `upload`。

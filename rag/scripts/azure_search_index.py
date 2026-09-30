@@ -4,6 +4,7 @@ Subcommands (run from the repository root after `set -a; source .env; set +a`):
   python3 rag/scripts/azure_search_index.py create-index [--dry-run]
   python3 rag/scripts/azure_search_index.py upload [--limit N] [--batch-size 100]
   python3 rag/scripts/azure_search_index.py status
+  python3 rag/scripts/azure_search_index.py delete-index --yes <index-name>
   python3 rag/scripts/azure_search_index.py query "来源可信度怎么判断" [--top-k 5] [--hybrid]
 
 Required env vars:
@@ -29,6 +30,7 @@ SEARCH_API_VERSION = "2024-07-01"
 VECTOR_DIMENSIONS = 1536
 VECTOR_PROFILE = "chunk-vector-profile"
 VECTOR_ALGORITHM = "chunk-hnsw"
+VECTOR_COMPRESSION = "chunk-int8"
 
 
 def build_index_definition(index_name: str, dimensions: int = VECTOR_DIMENSIONS) -> Dict:
@@ -61,6 +63,9 @@ def build_index_definition(index_name: str, dimensions: int = VECTOR_DIMENSIONS)
                 "type": "Collection(Edm.Single)",
                 "searchable": True,
                 "retrievable": False,
+                # stored=False: do not keep an extra retrievable copy of the vector.
+                # The original vectors stay in rag/data/embedding_cache.jsonl.
+                "stored": False,
                 "dimensions": dimensions,
                 "vectorSearchProfile": VECTOR_PROFILE,
             },
@@ -73,7 +78,20 @@ def build_index_definition(index_name: str, dimensions: int = VECTOR_DIMENSIONS)
             "algorithms": [
                 {"name": VECTOR_ALGORITHM, "kind": "hnsw", "hnswParameters": {"metric": "cosine"}}
             ],
-            "profiles": [{"name": VECTOR_PROFILE, "algorithm": VECTOR_ALGORITHM}],
+            # Scalar quantization (float32 -> int8) shrinks the vector index to about 1/4.
+            # Results are re-ranked with full-precision vectors to keep accuracy.
+            "compressions": [
+                {
+                    "name": VECTOR_COMPRESSION,
+                    "kind": "scalarQuantization",
+                    "scalarQuantizationParameters": {"quantizedDataType": "int8"},
+                    "rerankWithOriginalVectors": True,
+                    "defaultOversampling": 4,
+                }
+            ],
+            "profiles": [
+                {"name": VECTOR_PROFILE, "algorithm": VECTOR_ALGORITHM, "compression": VECTOR_COMPRESSION}
+            ],
         },
     }
 
@@ -134,6 +152,18 @@ def cmd_create_index(args) -> None:
     print(f"Index ready: {config.index_name}")
     print(f"- fields: {len(definition['fields'])}")
     print(f"- vector field: content_vector ({VECTOR_DIMENSIONS} dim, cosine, HNSW)")
+
+
+def cmd_delete_index(args) -> None:
+    config = SearchConfig(dict(os.environ))
+    if args.yes != config.index_name:
+        raise SystemExit(
+            f"This deletes index '{config.index_name}' and all its documents in Azure.\n"
+            f"Local files are not touched. To confirm, run:\n"
+            f"  python3 rag/scripts/azure_search_index.py delete-index --yes {config.index_name}"
+        )
+    request(config, "DELETE", f"/indexes('{config.index_name}')")
+    print(f"Index deleted: {config.index_name}")
 
 
 def cmd_upload(args) -> None:
@@ -221,6 +251,10 @@ def main() -> None:
     p = sub.add_parser("create-index", help="Create or update the index schema.")
     p.add_argument("--dry-run", action="store_true", help="Print the index definition only.")
     p.set_defaults(func=cmd_create_index)
+
+    p = sub.add_parser("delete-index", help="Delete the index (Azure side only).")
+    p.add_argument("--yes", default="", help="Type the index name to confirm.")
+    p.set_defaults(func=cmd_delete_index)
 
     p = sub.add_parser("upload", help="Upload vectorized chunks.")
     p.add_argument("--input-file", type=Path, default=UPLOAD_ACTIONS_FILE)

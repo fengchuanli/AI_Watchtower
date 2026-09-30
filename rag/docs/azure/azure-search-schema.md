@@ -273,3 +273,16 @@ Designed an Azure AI Search index schema for chunk-level vector retrieval while 
 ```text
 Azure AI Search の index には、検索用の text と content_vector だけでなく、回答の根拠を追跡するための source、title、document_id、chunk_index も保存する設計にしました。
 ```
+
+## Vector Storage Optimization（2026-09-30 追加）
+
+Free 層（50MB）で最初に作成した index は、1273 chunk で 47.6MB（うち vector index 22.6MB）を使い、ほぼ上限に達しました。毎日ニュースが増えるため、次の 2 点で容量を削減しています。
+
+| 設定 | 内容 | 効果 |
+|---|---|---|
+| Scalar quantization（`chunk-int8`） | vector を float32 から int8 に圧縮して検索用構造を作る。上位候補は元の精度の vector で再スコアリング（`rerankWithOriginalVectors`、oversampling 4） | vector index を約 1/4 に縮小しつつ精度低下を抑える |
+| `content_vector.stored = false` | 検索結果として返すための vector のコピーを保存しない | 元の vector は `rag/data/embedding_cache.jsonl` にあるので不要 |
+
+schema の変更は既存 index に適用できないため、`azure_search_index.py delete-index` → `create-index` → `upload` で作り直します。embedding は cache から再利用するので Azure OpenAI の再呼び出しは不要です。
+
+面接用: 「Free 層の容量上限に近づいたため、scalar quantization と stored=false で vector の保存コストを削減しました。精度は元の vector での再スコアリングで補っています。」
