@@ -32,8 +32,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commit: `155b54e` (`【VisionHub网站风格优化】标注公司连续观察读者用途`).
-- Push: pending - will push after the log/index record commit.
+- Commits: `155b54e` (`【VisionHub网站风格优化】标注公司连续观察读者用途`) and `7f70f4a` (`【网站优化】记录公司连续观察用途优化`).
+- Push: pushed to `origin/main` after sandboxed DNS push failed and network-authorized retry succeeded.
 
 ## 2026-10-01 08:15 JST
 
