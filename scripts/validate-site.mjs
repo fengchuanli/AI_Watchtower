@@ -1757,9 +1757,13 @@ if (
   !/id="continuityBrief"/.test(html) ||
   !/const continuityBrief = document\.querySelector\("#continuityBrief"\);/.test(appJs) ||
   !/function updateContinuityBrief/.test(appJs) ||
+  !/function getCompanyContinuityReaderUse/.test(appJs) ||
+  !/continuity-reader-use/.test(appJs) ||
   !/topicContinuity[\s\S]*companyContinuity/.test(appJs) ||
   !/\.continuity-brief-grid/.test(styles) ||
+  !/\.continuity-reader-use/.test(styles) ||
   !/public continuity brief derives from `topicContinuity` and `companyContinuity` only/.test(newsDataFormat) ||
+  !/Company cards should also expose a compact reader-use cue/.test(newsDataFormat) ||
   !/publicContinuityBrief/.test(homepageEditionPreflight)
 ) {
   errors.push("Day 19 public continuity brief must render from existing topic/company continuity fields and keep its docs/guard anchors.");
@@ -1844,9 +1848,16 @@ if (
   !/stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(companyContinuityReviewNote) ||
   !/continuityStatus: stronger \/ weaker \/ repeated \/ resolved/.test(companyContinuityReviewNote) ||
   !/Repetition is not evidence strength/.test(companyContinuityReviewNote) ||
+  !/Reader-Useful Company Signals/.test(companyContinuityReviewNote) ||
+  !/Safety or regulatory check[\s\S]*Product or model check[\s\S]*Adoption evidence check[\s\S]*Research evidence check[\s\S]*Archive background only/.test(
+    companyContinuityReviewNote,
+  ) ||
   !/companyContinuity/.test(companyContinuityReviewNote) ||
   !/docs\/company-continuity-review-note\.md/.test(newsDataFormat) ||
   !/stronger, weaker, repeated, or resolved/.test(newsDataFormat) ||
+  !/safety\/regulatory check, product\/model check, adoption-evidence check, research-evidence check, or archive-background note/.test(
+    newsDataFormat,
+  ) ||
   !/docs\/company-continuity-review-note\.md/.test(currentToHistoryPublicationChecklist) ||
   !/Day 21[\s\S]*company-continuity-review-note\.md[\s\S]*stronger[\s\S]*weaker[\s\S]*repeated[\s\S]*resolved/.test(
     optimizationDecisionIndex,

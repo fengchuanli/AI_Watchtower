@@ -53,6 +53,18 @@ Keep public notes short and source-bounded.
 - `stillUnproven` must name the next evidence object or say what smaller uncertainty remains after a resolved check.
 - Do not introduce a new source fact in `companyContinuity`; the fact must already exist in the current item fields.
 
+## Reader-Useful Company Signals
+
+The public company continuity card is useful only when a reader can tell what to do with the repeated company name. Before promoting a company note into the homepage continuity brief, classify the reader use from existing `whatChanged` and `stillUnproven` text:
+
+- Safety or regulatory check: use when the note names FTC, regulators, courts, government agreements, safety files, audits, or official responses.
+- Product or model check: use when the note names APIs, model/system cards, pricing, documentation, benchmarks, or third-party retests.
+- Adoption evidence check: use when the note names customers, contracts, deployment logs, partner announcements, usage metrics, or cloud availability.
+- Research evidence check: use when the note names datasets, replication, experiments, papers, benchmarks, or human review.
+- Archive background only: use when the repeated company name has no new source-backed artifact or proof object.
+
+Do not write a public continuity note just because the company appears often. If the note cannot point to one of these reader uses from existing fields, keep it as archive/tag background until a stronger source object appears.
+
 Good shapes:
 
 ```text

@@ -697,6 +697,7 @@ function updateContinuityBrief(edition = {}) {
     status: note.label,
     change: note.whatChanged,
     proof: note.stillUnproven,
+    readerUse: getCompanyContinuityReaderUse(note),
   }));
   const cards = [...topicCards, ...companyCards].filter((card) => card.change && card.proof);
 
@@ -719,6 +720,7 @@ function updateContinuityBrief(edition = {}) {
               <span>${escapeHtml(card.type)} · ${escapeHtml(card.status)}</span>
               <h4>${escapeHtml(card.label)}</h4>
               <p>${escapeHtml(card.change)}</p>
+              ${card.readerUse ? `<p class="continuity-reader-use">怎么用：${escapeHtml(card.readerUse)}</p>` : ""}
               <em>仍需核验：${escapeHtml(card.proof)}</em>
             </article>
           `,
@@ -736,6 +738,28 @@ function getContinuityStatusLabel(status) {
   };
 
   return labels[status] || status || "连续观察";
+}
+
+function getCompanyContinuityReaderUse(note = {}) {
+  const text = `${note.label || ""} ${note.whatChanged || ""} ${note.stillUnproven || ""}`;
+
+  if (/FTC|监管|法院|政府|协议|文书|文件|审计|安全/.test(text)) {
+    return "把它当作安全/监管核查清单，先等文书、系统卡、审计或官方回应。";
+  }
+
+  if (/API|模型|系统卡|价格页|文档|基准|复测/.test(text)) {
+    return "把它当作产品能力核查清单，先等API文档、系统卡、价格页和第三方复测。";
+  }
+
+  if (/合同|客户|部署|日志|指标|伙伴|云/.test(text)) {
+    return "把它当作采用证据核查清单，先等客户侧日志、合同、部署指标或伙伴公告。";
+  }
+
+  if (/数据集|研究|复现|实验|评审|论文/.test(text)) {
+    return "把它当作研究证据核查清单，先等数据集、复现实验、论文或人工评审。";
+  }
+
+  return "把它当作归档背景入口，只在下一步证据出现后再升级判断。";
 }
 
 function renderFeedMetaDetails(label, body, isOpen = false) {
