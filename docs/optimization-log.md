@@ -25,7 +25,8 @@
   - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
   - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
   - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
-- Commit note: `【新闻更新】发布17点AI新闻：10条企业AI与Agent控制面信号`.
+- Commit: `4687b3d` (`【新闻更新】发布17点AI新闻：10条企业AI与Agent控制面信号`).
+- Push: pushed to `origin/main` after sandboxed DNS push failed and network-authorized retry succeeded.
 
 ## 2026-10-01 23:10 JST
 
