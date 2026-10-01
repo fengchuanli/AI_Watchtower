@@ -1,3 +1,32 @@
+## 2026-10-02 08:14 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-02`，发布 10 条安全非重复信号，聚焦企业 AI 部署、Agent 控制面、数据入口和桌面隐私权限。
+- Changed files:
+  - `data/news.json`
+  - `data/news-history.json`
+  - `data/news-index.json`
+  - `data/news-today.json`
+  - `docs/optimization-log.md`
+- Source posture:
+  - Read automation memory first and pulled `origin/main` before editing; sandboxed pull failed on GitHub DNS, network-authorized retry succeeded and confirmed the branch was already up to date.
+  - Used `data/sources.json` and `docs/source-policy.md`; checked current homepage and latest history for duplicate OpenAI/Gemini/FTC/OpenClaw/Autoheal/Graphite clusters.
+  - Published official/vendor-source signals from OpenAI News, Anthropic Newsroom, and AWS Machine Learning Blog: OpenAI/Albertsons Safeway shopping in ChatGPT, Anthropic/Barclays Claude rollout, AWS Quick live governed data apps, AWS AgentCore ambient agents, and Amazon Payments contextual-bandit case.
+  - Published reliable-media background from VentureBeat AI and TechCrunch AI: Strands Decider 2B, Google/Virginia Tech WikiSkill, Reddit RSS/API shutdown, OpenAI Decisions API/Jev-style agent supervision, and Meta Muse Messages permission dispute.
+  - Did not add source labels; source count remains 103. Kept media items as `媒体背景` / `reported` / `originalDependency: must-read`; kept vendor cases with explicit customer-side, document, log, benchmark, audit, or independent proof paths before upgrading conclusions.
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json` and `data/news-today.json`; total history items is now 1075.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index 和详情页同步显示 2026年10月2日17:00 版 10 条情报；读者可在首页与详情页看到零售/金融企业 AI 部署、受治理数据应用、事件触发 Agent、决策模型、Agent 记忆、Reddit 数据入口和 Muse 隐私权限边界。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 103 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条企业AI与Agent控制面信号`.
+
 ## 2026-10-01 23:10 JST
 
 - Focus: 执行 AI Watchtower 08:00 自动化的同日补充新闻情报更新；当前首页已是 `news-1700-2026-10-01`，本次不回退版本，而是在同一版补充 5 条安全非重复信号，把当日 feed 扩展为 15 条，新增 OpenAI DevDay 2026 Recap、Autoheal 编码 Agent 后处理、Meta 企业 AI 平台、OpenAI 澳大利亚回应和 Lenfest 地方新闻 AI 项目支持。
