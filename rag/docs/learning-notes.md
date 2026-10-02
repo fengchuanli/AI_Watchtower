@@ -3101,3 +3101,104 @@ Day26 不需要 Azure 环境。Day27 正式开始 Azure 移植，需要 Azure Op
 ```text
 Added source-aware query routing across local and Azure-ready retrievers and improved the local vector evaluation from 60% to 100% while preserving conservative insufficient-evidence behavior.
 ```
+
+## Day 27: 真实 Azure OpenAI Embedding 生成
+
+### 今天完成了什么
+
+- 注册 Azure、创建资源组 `rg-ai-watchtower-dev`、Azure OpenAI `aoai-ai-watchtower-20260929`（Japan East）
+- 部署 `text-embedding-3-small`（Global Standard，按量计费，1536 维）
+- 网络只允许自家 IP（「選択したネットワーク」），`.env` 保存 endpoint / key（不进 Git）
+- one-text smoke test 通过：返回 1536 维向量
+- 新增 `rag/scripts/build_embedding_cache.py`：只对缓存里没有的 chunk 调 API，每 16 条一批，每批存盘
+- 先 20 条验证保存和复用（第二次 cache hits: 20），再生成全部 1273 条（约 170 秒，费用几日元）
+- 每月 ¥1,000 预算提醒（实际 80% / 预测 100% 发邮件）
+
+### 学到的要点
+
+- embedding = 用 1536 个数字表示一段文本的意思，意思越近数字串越近
+- deployment name 是自己在 Azure 起的名字，不一定等于模型名
+- 403 `Public access is disabled` = 网络设置问题，不是 key 的问题
+- 新版 Foundry 门户会自动创建资源，查看部署用 `oai.azure.com`
+
+### 作品集写法
+
+```text
+Generated real Azure OpenAI embeddings (text-embedding-3-small, 1536 dim) for all 1,273 chunks with an incremental cache keyed by chunk ID, text hash, deployment and API version.
+```
+
+### 日文面试表达
+
+```text
+chunk ID・テキストのハッシュ・デプロイ名・API バージョンをキャッシュキーにして、変更のない chunk は再 embedding しない仕組みにしました。バッチ単位で保存するので、途中で失敗しても再実行で続きから処理できます。
+```
+
+## Day 28: Azure AI Search 构建与容量优化
+
+### 今天完成了什么
+
+- `rag/` 目录整理：scripts / tests / data / docs，入口是 `rag/README.md`
+- 创建 Azure AI Search `srch-ai-watchtower-20260929`（Free 层，$0，50MB）
+- 新增 `rag/scripts/azure_search_index.py`：create-index / delete-index / upload / status / query
+- index `ai-watchtower-chunks`：11 个字段，向量 1536 维、cosine、HNSW；上传 1273 条全部成功
+- 第一版占 47.6MB（快满了）→ int8 标量量化 + `stored=false` 重建 → 17.0MB（-64%），检索结果和压缩前完全一样
+
+### 学到的要点
+
+- 向量检索的 HNSW 结构本身很占空间（22.6MB → 压缩后 5.8MB）
+- 压缩后用原始精度重新打分（rerankWithOriginalVectors），所以精度不降
+- `status` 的统计数字有几分钟延迟，实时数量用 `$count`
+- hybrid 的分数是 RRF（按排名合并），数值很小（0.01〜0.033），只能看排名
+
+### 作品集写法
+
+```text
+Built an Azure AI Search vector index and reduced its size by 64% (47.6MB to 17.0MB) with int8 scalar quantization and non-stored vectors, verifying identical search results before and after.
+```
+
+### 日文面试表达
+
+```text
+Free 層の容量上限に近づいたため、scalar quantization（int8）と stored=false を適用し、index サイズを 47.6MB から 17.0MB へ約 64% 削減しました。圧縮前後で同じ質問の検索結果が一致することも確認しています。
+```
+
+## Day 29: 质问路由与 本地 vs Azure 评测对比
+
+### 今天完成了什么
+
+- `source_filters.route_source_types`：根据问题里的关键词判断搜 docs / 新闻 / 全部（规则式，不花钱，可解释）
+- `retrievers.create_azure_retriever`：真实 Azure 检索（vector / hybrid）接到同一个评测
+- `evaluate_demo.py --retriever compare --routing auto|none|hint`
+
+### 评测结果（5 题）
+
+| 检索方式 | 不筛选 | 自动判断 |
+|---|---|---|
+| 本地向量（词频） | 60% | 100% |
+| 本地关键词 | 40% | 40% |
+| Azure 向量 | 100% | 100% |
+| Azure hybrid | 80% | 80% |
+
+### 学到的要点
+
+- 测试 = 带标准答案的考卷。前 5 条里有标准答案就 PASS；没有答案的题要回答「资料不足」才算 PASS
+- 本地词频向量只看字面，要靠自动判断帮忙；Azure 真实 embedding 看意思，不筛选也全对 → 换成真实 embedding 是最大的提升
+- hybrid 排名最好（source-policy 排第 1），但 RRF 分数分不出「资料不足」
+- Azure 向量：资料不足题 0.637〜0.642，有答案题 0.679〜0.716，差距只有 0.04，阈值还定不准
+- 路由规则是看着这 5 题写的，100% 偏乐观 → 需要增加题目
+
+### 作品集写法
+
+```text
+Compared local and Azure retrievers on the same evaluation set and showed that real semantic embeddings removed the need for source routing (60% to 100% without routing), while identifying remaining gaps in insufficient-evidence detection for hybrid search.
+```
+
+### 日文面试表达
+
+```text
+同じ評価セットでローカル検索と Azure 検索を比較し、実 embedding に切り替えるとソース種別の絞り込みなしでも正解率が 60% から 100% に上がることを確認しました。一方で hybrid 検索のスコアでは「根拠不足」を判定できないことも分かり、次の改善点にしています。
+```
+
+### 下一步（Day 30）
+
+评测题从 5 道扩到 20 道左右，校准「资料不足」的阈值，并给 hybrid 加上用向量分数判断资料是否足够。
