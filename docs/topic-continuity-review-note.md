@@ -53,6 +53,20 @@ Keep public notes short and source-bounded.
 - `stillUnproven` must name the next evidence object or the smaller uncertainty that remains.
 - Do not introduce a new source fact in `topicContinuity`; the fact must already exist in the current item fields.
 
+## Reader-Useful Topic Signals
+
+The public topic continuity card is useful only when readers can tell what to do with the repeated theme. Before promoting a topic note into the homepage continuity brief, classify the reader use from existing `status`, `topic`, `currentSignal`, `signalDirection`, and `stillUnproven` text:
+
+- Enterprise adoption evidence: use when the note names customers, contracts, deployments, transaction flow, ROI, usage metrics, audits, or business logs.
+- Agent-control proof: use when the note names actions, permissions, tool calls, audit logs, red-team results, production incidents, decision layers, or human review.
+- Policy or data-boundary proof: use when the note names regulation, platform terms, APIs, privacy permissions, data access, government files, or developer migration evidence.
+- Infrastructure evidence: use when the note names compute, data centers, GPUs, power, cloud capacity, cost, delivery, or third-party capacity data.
+- Model-capability evidence: use when the note names model/system cards, benchmarks, datasets, replication, third-party retests, or research artifacts.
+- Downgrade check: use when the note is `weaker` because later evidence narrows, delays, disputes, cancels, corrects, or fails to replicate the older reading.
+- Archive background only: use when the note is `repeated` or the current source does not add a new evidence object.
+
+Do not write a public topic card just because a theme appears often. If the note cannot point to one of these reader uses from existing fields, keep it as archive background until a stronger or clearly weaker source object appears.
+
 Good shapes:
 
 ```text

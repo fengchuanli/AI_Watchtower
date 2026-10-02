@@ -1757,13 +1757,16 @@ if (
   !/id="continuityBrief"/.test(html) ||
   !/const continuityBrief = document\.querySelector\("#continuityBrief"\);/.test(appJs) ||
   !/function updateContinuityBrief/.test(appJs) ||
+  !/function getTopicContinuityReaderUse/.test(appJs) ||
   !/function getCompanyContinuityReaderUse/.test(appJs) ||
   !/continuity-reader-use/.test(appJs) ||
   !/topicContinuity[\s\S]*companyContinuity/.test(appJs) ||
   !/\.continuity-brief-grid/.test(styles) ||
   !/\.continuity-reader-use/.test(styles) ||
   !/public continuity brief derives from `topicContinuity` and `companyContinuity` only/.test(newsDataFormat) ||
+  !/Topic cards should expose a compact reader-use cue/.test(newsDataFormat) ||
   !/Company cards should also expose a compact reader-use cue/.test(newsDataFormat) ||
+  !/Reader-Useful Topic Signals/.test(topicContinuityReviewNote) ||
   !/publicContinuityBrief/.test(homepageEditionPreflight)
 ) {
   errors.push("Day 19 public continuity brief must render from existing topic/company continuity fields and keep its docs/guard anchors.");

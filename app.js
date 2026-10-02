@@ -690,6 +690,7 @@ function updateContinuityBrief(edition = {}) {
     status: getContinuityStatusLabel(note.status),
     change: note.signalDirection || note.currentSignal,
     proof: note.stillUnproven,
+    readerUse: getTopicContinuityReaderUse(note),
   }));
   const companyCards = (edition.companyContinuity || []).slice(0, 2).map((note) => ({
     type: "公司",
@@ -760,6 +761,40 @@ function getCompanyContinuityReaderUse(note = {}) {
   }
 
   return "把它当作归档背景入口，只在下一步证据出现后再升级判断。";
+}
+
+function getTopicContinuityReaderUse(note = {}) {
+  const text = `${note.topic || ""} ${note.label || ""} ${note.status || ""} ${note.currentSignal || ""} ${note.signalDirection || ""} ${note.stillUnproven || ""}`;
+
+  if (note.status === "repeated" || /重复|媒体|报道次数|同一叙事/.test(text)) {
+    return "把它当作归档背景入口，不把报道次数当作趋势确认。";
+  }
+
+  if (note.status === "weaker" || /减弱|收窄|延迟|取消|纠正|未复现|争议/.test(text)) {
+    return "把它当作降级核查清单，先找收窄范围、复现失败或官方修正文档。";
+  }
+
+  if (/enterprise|企业|客户|合同|部署|交易|业务|ROI|指标|采用/.test(text)) {
+    return "把它当作企业采用证据清单，先等客户侧公告、合同、日志和业务指标。";
+  }
+
+  if (/agent|Agent|动作|权限|审计|日志|红队|控制|决策|工具调用/.test(text)) {
+    return "把它当作Agent控制面清单，先等权限日志、审计、红队结果和生产复盘。";
+  }
+
+  if (/policy|政策|监管|数据|隐私|API|条款|权限|平台/.test(text)) {
+    return "把它当作政策/数据边界清单，先等官方条款、监管文本、权限日志和开发者反馈。";
+  }
+
+  if (/infrastructure|基础设施|算力|数据中心|GPU|电力|云|容量/.test(text)) {
+    return "把它当作基础设施核查清单，先等合同、容量、成本、交付和第三方数据。";
+  }
+
+  if (/model|模型|系统卡|benchmark|基准|复测|研究|数据集/.test(text)) {
+    return "把它当作模型能力核查清单，先等系统卡、基准、第三方复测和数据集说明。";
+  }
+
+  return "把它当作跨期阅读线索，先看下一步证据再升级判断。";
 }
 
 function renderFeedMetaDetails(label, body, isOpen = false) {
