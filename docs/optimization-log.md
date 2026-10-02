@@ -18,6 +18,7 @@
   - Python HTML parse: `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, `404.html`
   - `git diff --check`
 - Commit note: `【新闻更新】补充23点AI新闻：15条Agent训练与治理信号`.
+- Push: pushed to `origin/main` (`beb9c6b`).
 - 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index 和详情页同步显示 2026年10月2日23:00 补充版 15 条情报；读者可在首页与详情页看到新增的 Agent 训练数据闭环、州级 AI 监管、研究员治理摩擦、AI 执行经济叙事和开放 MoE 训练基础设施信号。
 
 ## 2026-10-02 11:03 JST
