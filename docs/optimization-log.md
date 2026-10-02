@@ -1,3 +1,28 @@
+## 2026-10-03 08:14 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-03`，发布 10 条安全非重复信号，聚焦 Agent 权限、云治理、AI 法律责任、政策命名、消费购物入口、安全评测、Agent 安全融资、Google 轨道 TPU 测试和官方月报索引。
+- Changed files:
+  - `data/sources.json`: 新增 `apple-developer-news` 与 `aws-news-blog`，用于区分 Apple 开发者权限公告和 AWS 服务发布公告；来源计数更新为 106。
+  - `data/news.json`: 当前首页更新为 2026年10月3日17:00 JST 版 10 条情报。
+  - `data/news-history.json`: 最新归档镜像同步当前 10 条版。
+  - `data/news-index.json`, `data/news-today.json`: 重新生成派生索引和今日数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 Apple Developer News、AWS News Blog、White House Presidential Actions、Google Keyword AI 官方来源，以及 TechCrunch AI、Axios AI / Technology 媒体来源。TechCrunch/Axios 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、数字、图表和上下文仍归原文；官方条目只核对公告、预览、政策或月报发布事实，不升级为效果结论。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json` and `data/news-today.json`; total history items is now 1090.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index 和详情页同步显示 2026年10月3日17:00 版 10 条情报；读者可在首页与详情页看到 Apple Full Disk Access / AI Agent 权限边界、AWS Well-Architected Agent、White House SI 命名、Axios AI 法律责任、ChatGPT 虚拟试穿、Circuit Breaker 安全评测、Armadin agent swarm 融资、Google Suncatcher 轨道 TPU、Google 9月AI月报和 .si 域名外溢信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 106 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条Agent权限与法律责任信号`.
+- Push: pending.
+
 ## 2026-10-02 23:10 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-02`，因此未回退版次，而是在 17:00 版基础上扩展为 15 条安全非重复信号，补充 Agent 训练闭环、州级监管、研究员治理摩擦、AI 执行经济叙事和开放 MoE 训练基础设施。
