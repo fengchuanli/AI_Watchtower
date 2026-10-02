@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 4, Reader-Visible Continuity
-- Last indexed run: 2026-10-01 20:00 JST
+- Last indexed run: 2026-10-02 20:00 JST
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization. Push status should be checked in `docs/optimization-log.md`.
 
 ## Recent Plan-Day Decisions
@@ -38,6 +38,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 18 | Complete | `bf53f18` | `docs/update-run-checklist.md` now has a `Normal News Update Must-Read Path`: candidate workflow plain-language note, source checklist, intake format, candidate-to-news handoff, homepage/archive publication gates, then derived-data/validation/commit/push status. `docs/candidate-to-news-handoff.md`, `README.md`, and `scripts/validate-site.mjs` keep specialized docs conditional instead of mandatory for every ordinary run. |
 | Day 19 | Complete | `3fcec5e` | Homepage deep briefing now renders a public `本期连续观察` strip from existing `edition.topicContinuity` and `edition.companyContinuity` fields only, showing up to two topic cards and two company cards with status, current change, and still-needed proof. `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and `scripts/validate-site.mjs` guard the derived-only shape. |
 | Day 20 | Complete | `155b54e` | Company continuity public cards now add a derived `怎么用` cue so repeated-company signals become reader-use checks: safety/regulatory, product/model, adoption evidence, research evidence, or archive background only. `docs/company-continuity-review-note.md`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and `scripts/validate-site.mjs` guard the shape. |
+| Day 21 | Complete | `d420585` | Topic continuity public cards now add a derived `怎么用` cue so recurring-topic signals become reader-use checks: enterprise adoption evidence, Agent-control proof, policy/data-boundary proof, infrastructure evidence, model-capability evidence, downgrade check, or archive background only. `docs/topic-continuity-review-note.md`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and `scripts/validate-site.mjs` guard the shape. |
 
 ## Historical Guard Anchors
 
@@ -89,9 +90,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 21: review recent `topicContinuity` notes and separate real stronger/weaker signals from repeated media radar in reader-facing language.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 21.
-- If Day 21 is already complete, continue with the first useful unfinished task from the current plan.
+- Continue with Day 22: add a rule for displaying resolved or retired checks without making old uncertainty look current.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 22.
+- If Day 22 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

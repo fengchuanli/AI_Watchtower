@@ -1,3 +1,39 @@
+## 2026-10-02 11:03 JST
+
+- Focus: 完成当前 30 天计划 Day 21，复查近期 `topicContinuity` 公开呈现方式，把 recurring-topic 信号从“主题又出现了/信号增强”改成读者可用的核查路径；首页 `本期连续观察` 的主题卡片新增 `怎么用` 行，只从现有 `status`、`topic`、`currentSignal`、`signalDirection` 与 `stillUnproven` 字段派生。
+- Changed files:
+  - `app.js`
+  - `docs/topic-continuity-review-note.md`
+  - `docs/news-data-format.md`
+  - `docs/homepage-edition-preflight.md`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/topic-continuity-review-note.md`、`docs/homepage-edition-preflight.md` 和 `docs/news-data-format.md`。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；主题连续观察的读者用途只把现有 proof objects 映射为企业采用证据、Agent 控制面、政策/数据边界、基础设施、模型能力、降级核查或归档背景。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: partial - 本次不改 hero/TOP3，但让深度简报里的主题连续观察更快回答“我该拿这个主题信号核对什么”。
+  - TOP3 reader use: not applicable - 本次不改 TOP3 卡片。
+  - Source boundary visible: pass - `仍需核验` 保留在卡片上，新增 `怎么用` 不替代证据边界。
+  - Original source dependency: pass - 不新增事实层，也不把媒体/官方来源内容扩写成替代阅读。
+  - Mobile burden: pass - 主题卡片在既有响应式网格内增加一行短用途，不增加新的折叠区域或长说明。
+  - Continuity use: pass - recurring-topic 信号现在先转成读者核查路径，并把重复媒体雷达留在归档背景而不是趋势确认。
+  - Visual aid purpose: pass - 新行用于解释连续观察的行动用途，不是装饰。
+- 网站可见变化: 首页深度简报 `本期连续观察` 的主题卡片新增 `怎么用` 行；读者可直接判断企业、Agent、政策/数据边界等重复主题应当作为采用证据、控制面证明、政策边界、降级核查或归档背景来阅读。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, and `scripts/validate-site.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 103 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `archive.html`, `news-detail.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commit: `d420585` (`【VisionHub网站风格优化】标注主题连续观察读者用途`).
+- Push: pending - will push after this log commit.
+
 ## 2026-10-02 08:14 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-02`，发布 10 条安全非重复信号，聚焦企业 AI 部署、Agent 控制面、数据入口和桌面隐私权限。
