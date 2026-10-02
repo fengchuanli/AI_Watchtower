@@ -1,3 +1,25 @@
+## 2026-10-02 23:10 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-02`，因此未回退版次，而是在 17:00 版基础上扩展为 15 条安全非重复信号，补充 Agent 训练闭环、州级监管、研究员治理摩擦、AI 执行经济叙事和开放 MoE 训练基础设施。
+- Changed files:
+  - `data/sources.json`: 新增 `ai2-blog` 研究来源标签，并同步来源计数。
+  - `data/news.json`: 当前版更新为 `23:00 JST 补充`，新增 5 条补充情报：Axios 马萨诸塞州 AI 监管现场、Axios 前沿 AI 研究员基层反弹、ServiceNow/Hugging Face AutoSynthData、OpenAI `The eternal complement`、Ai2 `Olmo-core 3`。
+  - `data/news-history.json`: 最新归档镜像同步当前 15 条补充版。
+  - `data/news-index.json`, `data/news-today.json`: 重新生成派生索引和今日数据。
+- Source work: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 OpenAI、Hugging Face、Ai2 官方/研究原文与 Axios 报道，跳过重复、社区讨论、弱转载、随机页面和无源文件说法。Axios 条目保持 `媒体背景` / `reported` / `must-read`，完整事实仍归原文；OpenAI/Hugging Face/Ai2 条目保留官方或研究原文边界。
+- Verification:
+  - `node scripts/build-derived-data.mjs`
+  - `node scripts/build-derived-data.mjs --check`
+  - `node scripts/validate-data.mjs`
+  - `node scripts/validate-site.mjs`
+  - `node scripts/validate-pages.mjs`
+  - `node --check app.js all-news.js news-detail.js archive.js tags.js scripts/validate-data.mjs scripts/validate-site.mjs scripts/validate-pages.mjs`
+  - JSON parse: `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`
+  - Python HTML parse: `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, `404.html`
+  - `git diff --check`
+- Commit note: `【新闻更新】补充23点AI新闻：15条Agent训练与治理信号`.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index 和详情页同步显示 2026年10月2日23:00 补充版 15 条情报；读者可在首页与详情页看到新增的 Agent 训练数据闭环、州级 AI 监管、研究员治理摩擦、AI 执行经济叙事和开放 MoE 训练基础设施信号。
+
 ## 2026-10-02 11:03 JST
 
 - Focus: 完成当前 30 天计划 Day 21，复查近期 `topicContinuity` 公开呈现方式，把 recurring-topic 信号从“主题又出现了/信号增强”改成读者可用的核查路径；首页 `本期连续观察` 的主题卡片新增 `怎么用` 行，只从现有 `status`、`topic`、`currentSignal`、`signalDirection` 与 `stillUnproven` 字段派生。

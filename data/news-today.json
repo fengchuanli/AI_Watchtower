@@ -4,108 +4,120 @@
   "updatedAt": "2026-10-02",
   "date": "2026-10-02",
   "editionCount": 113,
-  "totalItems": 1075,
+  "totalItems": 1080,
   "editions": [
     {
       "id": "news-1700-2026-10-02",
       "date": "2026-10-02",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00 JST",
-      "itemCount": 10,
-      "note": "本期10条AI新闻情报，聚焦企业AI部署、Agent控制面和数据入口。",
-      "operationalStatus": "已拉取origin/main；核对OpenAI、Anthropic、AWS官方页与TechCrunch/VentureBeat报道，跳过重复、社区讨论、弱转载和无源文件说法。",
-      "editorialInterpretation": "本期从模型安全延伸到AI进入零售、金融、BI应用、事件触发Agent和决策模型；官方材料证明发布/案例叙述，媒体材料只作企业与平台风险雷达。",
+      "archiveLabel": "23:00 JST 补充",
+      "itemCount": 15,
+      "note": "本期15条AI新闻情报，在17:00版基础上补充Agent训练、州级监管、组织治理和开放训练基础设施。",
+      "operationalStatus": "已拉取origin/main；核对OpenAI、Hugging Face、Ai2官方/研究原文与Axios报道，跳过重复、社区讨论、弱转载和无源文件说法。",
+      "editorialInterpretation": "本期判断：企业部署、Agent训练闭环、州级监管和开放MoE训练栈是补充信号；官方/研究原文核对发布事实，媒体来源只作背景，效果仍需复核边界。",
       "readerFrame": {
-        "headline": "本期读法：看企业AI入口和Agent控制面是否可验证",
-        "whyItMatters": "OpenAI/Albertsons、Anthropic/Barclays和AWS案例说明AI进入交易、银行运营和内部应用；TechCrunch/VentureBeat则提示Agent决策、安全、隐私和数据入口开始成为硬约束。",
+        "headline": "本期读法：把企业AI入口、Agent训练和监管边界放在一起核对",
+        "whyItMatters": "OpenAI/Albertsons、Anthropic/Barclays和AWS案例说明AI进入交易、金融和数据应用；AutoSynthData、Olmo-core 3和Axios补充了训练闭环、开放基础设施、州级监管和组织治理边界。",
         "useThisIssueFor": [
           "企业平台团队核对AI应用是否继承数据权限、审计、实时指标和人工闸门。",
-          "安全团队核对Agent工具调用、身份、决策模型、桌面权限和社区数据入口。",
-          "增长、零售和金融团队核对供应商案例中的采用数字、转化指标和客户侧证据。"
+          "Agent团队核对训练任务、验证器、记忆、决策模型和动作审批是否可复现。",
+          "法务、政策和战略团队核对州级监管、研究员治理摩擦和AI执行经济叙事。"
         ],
         "notProvenYet": [
           "不证明Albertsons、Barclays或Amazon Payments案例已经带来可独立验证的ROI。",
-          "不证明决策模型已经能稳定替代人工审批，也不证明Muse争议已有技术结论。"
+          "不证明AutoSynthData、Olmo-core 3或决策模型已经在外部环境稳定复现。",
+          "不证明州级AI法案已经通过，也不证明研究员反弹等于公司治理变化。"
         ],
         "mobile": {
-          "headline": "查企业AI入口与Agent控制面",
-          "summary": "查零售/金融部署、AI生成应用、事件触发Agent、决策模型、隐私和数据入口。",
+          "headline": "查AI入口、训练闭环与监管边界",
+          "summary": "查企业部署、Agent控制、训练数据闭环、州级监管、组织治理和开放训练栈。",
           "primaryUses": [
             "平台团队查权限",
-            "安全团队查Agent动作",
-            "业务团队查采用证据"
+            "Agent团队查验证器",
+            "政策团队查法案"
           ],
-          "proofBoundary": "仍需客户指标、权限日志、模型仓库和独立复测。"
+          "proofBoundary": "仍需客户指标、权限日志、代码复现、法案文本和独立审计。"
         }
       },
       "changeSummary": {
-        "headline": "较10月1日补充版新增企业部署和Agent决策层",
+        "headline": "较17:00版新增Agent训练、政策治理和开放训练栈",
         "freshFacts": [
-          "新增OpenAI/Albertsons零售购物入口和Anthropic/Barclays金融部署合作页。",
-          "新增AWS Quick实时受治理数据、AgentCore ambient agents和SageMaker bandit案例。",
-          "新增VentureBeat关于Strands Decider 2B和WikiSkill的Agent决策/记忆报道。",
-          "新增TechCrunch关于Reddit RSS/API关闭、OpenAI Decisions API和Meta Muse隐私争议报道。"
+          "新增ServiceNow/Hugging Face AutoSynthData，用目标模型失败和教师成功轨迹生成企业Agent训练任务。",
+          "新增Axios关于马萨诸塞州AI监管现场和前沿AI研究员基层反弹的政策/组织治理信号。",
+          "新增OpenAI “The eternal complement” 对AI执行能力和制度补足的经济框架。",
+          "新增Ai2 Olmo-core 3开放MoE训练基础设施和万亿参数级系统测试信号。"
         ],
         "repeatedContext": [
-          "10月1日已收录OpenAI模型蒸馏、Gemini 4 Argon、FTC调查和Agent身份治理，本期只作为背景延续。",
-          "不重复已归档的OpenClaw、Autoheal、Google Content Offer Pilot和Graphite/Opus写作特征事实。"
+          "17:00版的OpenAI/Albertsons、Anthropic/Barclays、AWS Quick/AgentCore/SageMaker和TechCrunch/VentureBeat Agent控制面信号，本期作为延续背景。",
+          "不重复已归档的DevDay、模型蒸馏、FTC调查、OpenClaw、Autoheal和Reddit/Muse事实簇。"
         ]
       },
       "coverageMix": [
         {
           "label": "核对企业AI部署证据",
-          "count": 3,
-          "meaning": "用来检查零售、金融和个性化增长案例中的客户侧指标、授权流程、ROI和长期效果。"
-        },
-        {
-          "label": "验证Agent控制面",
           "count": 4,
-          "meaning": "用来检查实时数据应用、ambient agents、决策模型和技能记忆是否具备权限、审计、校准和复现证据。"
+          "meaning": "用来检查零售、金融、数据应用和增长案例中的客户侧指标、授权流程、ROI和长期效果。"
         },
         {
-          "label": "核对数据与隐私入口",
-          "count": 3,
-          "meaning": "用来检查Reddit数据入口、OpenAI动作决策和Meta桌面权限争议对产品和合规清单的影响。"
+          "label": "验证Agent控制与训练闭环",
+          "count": 5,
+          "meaning": "用来检查事件触发、人审、决策模型、技能记忆和合成训练任务是否具备权限、审计、校准和复现证据。"
+        },
+        {
+          "label": "核对监管与组织治理",
+          "count": 4,
+          "meaning": "用来检查州级法案、研究员安全反弹、数据入口、桌面权限和AI经济叙事对治理清单的影响。"
+        },
+        {
+          "label": "核对开放训练复现证据",
+          "count": 2,
+          "meaning": "用来检查开放模型生态是否公开训练栈、系统报告、代码和第三方复现路径。"
         }
       ],
       "sourceRisk": {
-        "label": "官方案例与企业媒体混合",
-        "note": "官方来源5/10能证明发布和案例叙述事实；媒体来源5/10用于Agent决策模型、隐私和数据入口雷达。",
-        "nextCheck": "查客户侧公告、产品文档、权限日志、模型仓库、独立benchmark、审计材料、平台条款和监管反馈。"
+        "label": "官方/研究原文与媒体政策信号混合",
+        "note": "官方和研究原文8/15能证明发布、案例、观点或方法存在；媒体来源7/15用于Agent决策、隐私、数据入口、监管和组织治理雷达。",
+        "nextCheck": "查客户侧公告、产品文档、权限日志、模型仓库、代码复现、法案文本、监管记录、审计材料和第三方benchmark。"
       },
       "sourceConcentration": {
         "sourceId": "aws-machine-learning-blog",
         "sourceName": "AWS Machine Learning Blog",
         "count": 3,
-        "share": "3/10",
-        "note": "AWS是本期最大单一官方来源，适合核对功能和案例叙述，不代表企业AI控制面已经成熟。",
+        "share": "3/15",
+        "note": "AWS仍是最大单一官方来源，适合核对功能和案例叙述，不代表企业AI控制面已经成熟。",
         "nextCheck": "查AWS产品文档、示例代码、客户日志、第三方复测、成本指标和安全审计。"
       },
       "overreadBoundary": {
-        "label": "不要把案例和雷达读成成熟结论",
-        "body": "不要把本期读成全市场结论：它适合作为企业AI入口、Agent控制面和数据/隐私边界核查表，不代表供应商案例已经完成ROI验证或决策模型已可替代人审。",
-        "doNotConclude": "不能得出零售/金融AI已规模成熟、Agent决策模型已优于人工审批、Reddit数据生态已完全封闭，或Muse争议已有最终技术结论。",
-        "useInstead": "应该先核对客户侧指标、官方文档、产品日志、权限记录、模型仓库、独立benchmark、合同条款和安全复现。"
+        "label": "不要把补充雷达读成成熟结论",
+        "body": "不要把本期读成全市场结论：它适合作为企业AI入口、Agent控制/训练闭环、政策治理和开放训练栈核查表，不代表供应商案例、研究系统或州级监管已经完成验证。",
+        "doNotConclude": "不能得出零售/金融AI已规模成熟、AutoSynthData或Olmo-core 3已被外部稳定复现、州级AI法案已通过，或研究员反弹已有组织治理结论。",
+        "useInstead": "应该先核对客户侧指标、官方文档、产品日志、权限记录、模型仓库、代码复现、法案文本、监管记录和安全审计。"
       },
       "trendNotes": [
         {
           "topic": "enterprise",
           "label": "企业入口扩展",
-          "note": "跨期看，ChatGPT Work、Meta企业平台、OpenAI/Albertsons和Anthropic/Barclays都把AI放进更具体的业务流程。",
+          "note": "跨期看，ChatGPT Work、Meta企业平台、OpenAI/Albertsons、Anthropic/Barclays和AWS Quick都把AI放进更具体的业务流程。",
           "boundary": "不证明商业效果；仍需客户侧指标、合同条款、交易数据、审计材料和监管反馈。"
         },
         {
           "topic": "agent",
-          "label": "Agent动作治理",
-          "note": "跨期看，OpenClaw、Autoheal、Agent凭证、AWS ambient agents、Decisions API、Strands Decider和WikiSkill都在补Agent控制面。",
+          "label": "Agent控制与训练闭环",
+          "note": "跨期看，OpenClaw、Autoheal、Agent凭证、AWS ambient agents、Decisions API、Strands Decider、WikiSkill和AutoSynthData都在补Agent控制/学习链路。",
           "boundary": "不证明控制面成熟；仍需权限日志、代码审计、benchmark复测、红队结果和生产事故复盘。"
         },
         {
           "topic": "policy",
-          "label": "数据权限收紧",
-          "note": "跨期看，Google数据采购、Reddit关闭开放入口和Meta Muse权限争议都说明AI数据获取与本机访问正在收紧。",
-          "boundary": "不证明所有平台都会封闭；仍需官方条款、API政策、权限日志、独立安全分析和开发者迁移案例。"
+          "label": "治理边界前移",
+          "note": "跨期看，FTC调查、Reddit入口关闭、Meta Muse权限争议、马萨诸塞州法案讨论和研究员反弹都说明AI治理正在前移到数据、组织和地方规则。",
+          "boundary": "不证明法规已定型；仍需官方条款、法案文本、监管指南、权限日志和独立安全分析。"
+        },
+        {
+          "topic": "research",
+          "label": "开放复现从权重走向训练栈",
+          "note": "跨期看，Hugging Face评测/数据、Ai2 Olmo-core 3和多个Agent训练研究都把开放AI竞争推向训练基础设施和复现实验。",
+          "boundary": "不证明外部可复现；仍需代码、日志、硬件配置、第三方训练结果和模型质量评测。"
         }
       ],
       "topicContinuity": [
@@ -114,71 +126,93 @@
           "label": "企业证据更具体",
           "status": "stronger",
           "previousPattern": "此前企业主题集中在ChatGPT Work、Meta企业AI平台、OpenClaw和媒体合作。",
-          "currentSignal": "本期新增OpenAI/Albertsons、Anthropic/Barclays、AWS Quick和Amazon Payments案例。",
+          "currentSignal": "本期保留OpenAI/Albertsons、Anthropic/Barclays、AWS Quick和Amazon Payments案例。",
           "signalDirection": "增强：场景从平台入口扩展到零售交易、银行运营、受治理数据应用和获客实验。",
           "stillUnproven": "仍需客户侧公告、交易指标、审计材料、实验报告、监管反馈和长期业务数据。"
         },
         {
           "topic": "agent",
-          "label": "Agent控制扩展",
+          "label": "Agent控制扩展到训练闭环",
           "status": "stronger",
           "previousPattern": "此前Agent主题集中在DevDay接口、OpenClaw控制面、Autoheal后处理和凭证共享。",
-          "currentSignal": "本期新增AWS ambient agents、OpenAI Decisions API、Strands Decider 2B和Google WikiSkill。",
-          "signalDirection": "增强：控制点从身份/隔离推进到事件触发、动作审批、决策模型和技能演化。",
-          "stillUnproven": "仍需模型仓库、官方文档、第三方benchmark、权限日志、红队结果和真实生产日志。"
+          "currentSignal": "本期新增AWS ambient agents、OpenAI Decisions API、Strands Decider 2B、Google WikiSkill和AutoSynthData。",
+          "signalDirection": "增强：控制点从身份/隔离推进到事件触发、动作审批、决策模型、技能演化和训练任务生成。",
+          "stillUnproven": "仍需模型仓库、官方文档、代码复现、第三方benchmark、权限日志和真实生产日志。"
         },
         {
           "topic": "policy",
-          "label": "数据边界收紧",
+          "label": "治理从数据边界走向地方监管和组织摩擦",
           "status": "stronger",
           "previousPattern": "此前政策主题集中在FTC调查、训练数据授权、地区回应和模型安全披露。",
-          "currentSignal": "本期新增Reddit RSS/API关闭和Meta Muse消息权限争议。",
-          "signalDirection": "增强：治理问题从模型训练和监管扩展到平台数据入口与桌面Agent权限。",
-          "stillUnproven": "仍需Reddit正式条款、Meta安全文档、权限日志、独立复现和开发者影响报告。"
+          "currentSignal": "本期保留Reddit入口关闭和Muse权限争议，并新增马萨诸塞州监管讨论、研究员基层反弹和OpenAI执行经济观点。",
+          "signalDirection": "增强：治理问题从模型训练和平台入口扩展到州级规则、组织协调和经济叙事。",
+          "stillUnproven": "仍需法案文本、公司治理文件、员工公开材料、权限日志、独立复现和监管反馈。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "开放基础设施证据增加",
+          "status": "stronger",
+          "previousPattern": "此前研究主题多集中在Agent记忆、决策模型和企业案例实验。",
+          "currentSignal": "本期新增ServiceNow AutoSynthData和Ai2 Olmo-core 3。",
+          "signalDirection": "增强：研究信号从单个Agent行为扩展到训练数据生成和MoE训练系统透明度。",
+          "stillUnproven": "仍需代码、数据、训练日志、持出评测、硬件复现和第三方结果。"
         }
       ],
       "companyContinuity": [
         {
           "company": "OpenAI",
-          "label": "从模型安全延伸到零售入口和决策API",
-          "lastMention": "此前OpenAI出现在模型蒸馏披露、Sol系统卡、训练安全案例、DevDay、澳大利亚回应和Lenfest合作中。",
-          "whatChanged": "本期新增Albertsons/Safeway购物入口和TechCrunch对Decisions API的Agent动作监督解读。",
-          "stillUnproven": "仍需Safeway产品页、交易指标、OpenAI Decisions API文档、价格、第三方测试和Agent审计日志。"
+          "label": "零售入口与执行经济",
+          "lastMention": "此前OpenAI出现在模型蒸馏披露、Sol系统卡、训练安全案例、DevDay、澳大利亚回应、Lenfest合作和Albertsons入口中。",
+          "whatChanged": "本期补充The eternal complement观点文章，并保留Albertsons/Safeway购物入口和Decisions API监督解读。",
+          "stillUnproven": "仍需Safeway产品页、交易指标、OpenAI Decisions API文档、经济研究、第三方测试和Agent审计日志。"
         },
         {
           "company": "Anthropic",
-          "label": "金融企业采用叙述更具体",
-          "lastMention": "此前Anthropic出现在Sonnet/Opus模型、Agent安全、FTC调查和Claude写作特征背景中。",
-          "whatChanged": "本期Anthropic发布Barclays扩展Claude合作，给出知识助手、邮件处理和开发者采用目标。",
-          "stillUnproven": "仍需Barclays侧公告、年报/技术报告、审计材料、错误率、客户服务指标和监管反馈。"
+          "label": "金融采用与州级政策",
+          "lastMention": "此前Anthropic出现在Sonnet/Opus模型、Agent安全、FTC调查、Claude写作特征和Barclays合作中。",
+          "whatChanged": "本期新增Axios记录Anthropic北美政府事务负责人支持马萨诸塞州AI监管提案的活动信号。",
+          "stillUnproven": "仍需Barclays侧公告、法案文本、Anthropic书面意见、审计材料、错误率和监管反馈。"
         },
         {
           "company": "AWS",
-          "label": "Agent与AI应用控制面加密集",
+          "label": "Agent控制面密集",
           "lastMention": "此前AWS出现在Bedrock、AgentCore、TOLAP、OpenSearch Agent和Agentforce/BDA/MCP证据架构中。",
-          "whatChanged": "本期新增Quick实时数据应用、AgentCore ambient agents、SageMaker bandit案例和Strands Decider 2B报道。",
+          "whatChanged": "本期保留Quick实时数据应用、AgentCore ambient agents、SageMaker bandit案例和Strands Decider 2B报道。",
           "stillUnproven": "仍需产品文档、示例代码、客户部署日志、成本/延迟指标、独立benchmark和安全审计。"
         },
         {
-          "company": "Meta",
-          "label": "Muse从企业平台扩展到桌面隐私争议",
-          "lastMention": "此前Meta出现在Muse、企业AI平台、开放模型和AI硬件入口背景中。",
-          "whatChanged": "本期TechCrunch记录Muse读取Messages权限争议与Meta否认。",
-          "stillUnproven": "仍需Meta安全架构页、权限日志、记者复现材料、Bug bounty结果和独立安全分析。"
+          "company": "ServiceNow",
+          "label": "Agent训练闭环",
+          "lastMention": "此前ServiceNow不是本日主线公司。",
+          "whatChanged": "本期通过Hugging Face发布AutoSynthData，提出用失败诊断、教师轨迹和验证器生成企业Agent训练任务。",
+          "stillUnproven": "仍需代码、数据、跨环境复现、真实企业任务迁移和安全审计。"
+        },
+        {
+          "company": "Ai2",
+          "label": "开放训练栈",
+          "lastMention": "此前Ai2不是本日主线公司。",
+          "whatChanged": "本期发布Olmo-core 3开放MoE训练系统，并披露技术报告、代码入口和万亿参数级系统测试。",
+          "stillUnproven": "仍需外部硬件复现、训练日志、模型质量评测和第三方训练结果。"
         }
       ],
       "sourceFamilies": [
         {
           "family": "official",
-          "label": "官方来源",
-          "count": 5,
-          "role": "官方来源用于核对OpenAI/Albertsons、Anthropic/Barclays和AWS Quick、AgentCore、SageMaker案例的发布事实；采用效果、成本收益和客户影响仍需外部证据。"
+          "label": "官方/平台原文",
+          "count": 7,
+          "role": "OpenAI、Anthropic、AWS和Hugging Face/ServiceNow用于核对企业案例、观点文章、平台方法和Agent控制事实；采用效果、经济预测和客户影响仍需外部证据。"
+        },
+        {
+          "family": "research",
+          "label": "研究机构原文",
+          "count": 1,
+          "role": "Ai2用于核对Olmo-core 3开放训练基础设施发布和系统测试描述；训练效果、可复现性和模型质量仍需技术报告、代码和第三方结果。"
         },
         {
           "family": "reliable_media",
           "label": "可靠媒体",
-          "count": 5,
-          "role": "TechCrunch和VentureBeat用于观察Agent决策模型、隐私争议、数据入口关闭和研究框架；完整事实、采访、图表和上下文仍需读原文。"
+          "count": 7,
+          "role": "TechCrunch、VentureBeat和Axios用于观察Agent决策、隐私争议、数据入口、监管和组织治理；完整事实、采访、图表和上下文仍需读原文。"
         }
       ],
       "topicGroups": [
@@ -197,45 +231,58 @@
         },
         {
           "id": "agent",
-          "label": "验证Agent动作控制和记忆",
-          "count": 4,
+          "label": "验证Agent动作控制和训练闭环",
+          "count": 5,
           "itemIds": [
             "aws-ambient-agentcore-human-loop-2026-10-01",
             "venturebeat-strands-decider-2b-2026-10-01",
             "venturebeat-google-wikiskill-agent-memory-2026-10-01",
-            "techcrunch-openai-decisions-api-jev-clone-2026-09-30"
+            "techcrunch-openai-decisions-api-jev-clone-2026-09-30",
+            "huggingface-servicenow-autosynthdata-agent-training-2026-10-02"
           ],
-          "meaning": "用来检查Agent是否具备事件触发、人审、低成本决策、技能演化和可复现的验证门槛。",
-          "whyNow": "Agent越接近生产动作，低成本监督、权限边界、失败记忆和审计日志越像基础设施。"
+          "meaning": "用来检查Agent是否具备事件触发、人审、低成本决策、技能演化、训练任务生成和可复现验证门槛。",
+          "whyNow": "Agent越接近生产动作，训练数据、验证器、权限边界和审计日志越像基础设施。"
         },
         {
           "id": "policy",
-          "label": "检查数据入口和隐私权限",
-          "count": 2,
+          "label": "检查监管、数据入口和组织治理",
+          "count": 4,
           "itemIds": [
+            "axios-massachusetts-ai-guardrails-2026-10-02",
+            "axios-ai-researchers-grassroots-rebellion-2026-10-02",
             "techcrunch-reddit-rss-api-ai-bots-2026-09-30",
             "techcrunch-meta-muse-messages-privacy-dispute-2026-09-30"
           ],
-          "meaning": "用来检查社区数据、公共API、桌面消息权限和消费者Agent信任边界。",
-          "whyNow": "AI抓取和桌面Agent访问正在把平台规则、系统权限和用户信任推到同一张核查表上。"
+          "meaning": "用来检查州级AI规则、研究员治理摩擦、社区数据、公共API、桌面消息权限和消费者Agent信任边界。",
+          "whyNow": "AI治理正在把地方立法、组织安全文化、平台规则、系统权限和用户信任推到同一张核查表上。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "核对开放训练与AI经济证据",
+          "count": 2,
+          "itemIds": [
+            "openai-eternal-complement-next-economy-2026-10-01",
+            "ai2-olmo-core-3-open-moe-training-2026-10-01"
+          ],
+          "meaning": "用来检查AI价值是否来自执行能力、制度协调和可复现训练基础设施，而不只是单个模型输出。",
+          "whyNow": "开放模型和AGI经济叙事都在提醒读者，真正瓶颈可能是训练系统、实验吞吐和组织执行。"
         }
       ],
-      "sourceCount": 103,
       "categories": [
         {
           "id": "policy",
           "label": "政策",
-          "description": "本期用于查看Reddit数据入口关闭和Meta Muse隐私争议；需官方条款、权限日志、独立复现和开发者影响报告确认。"
+          "description": "本期用于查看马萨诸塞州监管讨论、研究员基层反弹、Reddit入口关闭、Meta Muse隐私争议和OpenAI执行经济叙事；需法案文本、公司治理文件、权限日志和独立分析确认。"
         },
         {
           "id": "model",
           "label": "模型",
-          "description": "本期用于判断是否有新的模型发布事实；目前只把模型相关内容作为Agent决策层背景，仍需官方模型仓库、模型卡或第三方评测确认。"
+          "description": "本期用于判断是否有新的模型发布事实；目前把Olmo-core 3、Strands Decider 2B和WikiSkill作为训练/决策层背景，仍需模型仓库、模型卡或第三方评测确认。"
         },
         {
           "id": "tool",
           "label": "工具",
-          "description": "本期用于检查Quick实时数据应用、AgentCore ambient agents、Strands Decider 2B和OpenAI Decisions API；需文档、代码、benchmark和日志确认。"
+          "description": "本期用于检查Quick实时数据应用、AgentCore ambient agents、AutoSynthData、Strands Decider 2B和OpenAI Decisions API；需文档、代码、benchmark和日志确认。"
         },
         {
           "id": "funding",
@@ -245,148 +292,355 @@
         {
           "id": "research",
           "label": "研究",
-          "description": "本期用于查看WikiSkill和SageMaker bandit案例；需论文、代码、实验设计、统计显著性和复现确认。"
+          "description": "本期用于查看AutoSynthData、Olmo-core 3、WikiSkill和SageMaker bandit案例；需论文、代码、实验设计、统计显著性和复现确认。"
         },
         {
           "id": "product",
           "label": "产品",
-          "description": "本期用于查看OpenAI/Albertsons、Anthropic/Barclays等企业AI入口；需客户侧公告、产品文档、指标和审计确认。"
+          "description": "本期用于查看OpenAI/Albertsons、Anthropic/Barclays和AWS Quick等企业AI入口；需客户侧公告、产品文档、指标和审计确认。"
         }
       ],
       "briefing": {
-        "label": "17:00 JST 简报",
-        "headline": "企业AI入口和Agent控制面成为今天的主线",
-        "summary": "本期10条信号把AI Watchtower从模型安全延伸到零售交易、金融运营、受治理数据应用、事件触发Agent、决策模型、社区数据入口和桌面隐私权限；读者应把它当作核查清单，而不是成熟度结论。",
-        "cta": "查看本期10条新闻",
+        "label": "23:00 JST 补充简报",
+        "headline": "Agent训练、政策治理和开放训练栈补强今天主线",
+        "summary": "本期15条信号把17:00版的企业AI入口和Agent控制面，扩展到企业Agent训练数据闭环、州级监管、研究员治理摩擦、AI经济执行叙事和开放MoE训练基础设施；读者应把它当作核查清单，而不是成熟度结论。",
+        "cta": "查看本期15条新闻",
         "watchPoints": [
           {
-            "title": "企业指标",
-            "body": "关注零售、金融和增长案例是否出现客户侧采用、交易、错误率和长期业务指标。"
+            "title": "训练闭环",
+            "body": "关注Agent训练任务是否绑定真实环境、工具权限、验证器和持出评测。"
           },
           {
-            "title": "Agent控制",
-            "body": "关注每步动作审批、决策模型校准、人审、权限和审计日志是否可复现。"
+            "title": "政策治理",
+            "body": "关注州级法案、员工安全叙事、平台数据入口和桌面权限是否改变上线门槛。"
           },
           {
-            "title": "数据权限",
-            "body": "关注RSS/API关闭、桌面消息访问和平台连接器是否改变AI产品的数据来源。"
+            "title": "开放训练",
+            "body": "关注开放模型项目是否同步公开训练栈、技术报告、代码和复现日志。"
           }
         ]
       },
       "deepBriefing": {
-        "kicker": "今日深读",
-        "title": "AI进入业务系统后，真正的竞争变成控制面",
-        "subtitle": "10月2日17:00版把零售、金融、BI、Agent和隐私放在同一张核查表里：能生成只是起点，能被授权、审计、复现和回滚才是生产门槛。",
-        "dateLabel": "2026年10月2日 17:00 JST",
-        "status": "已发布，保留来源边界",
-        "overview": "本期信号显示，AI正在进入购物车、银行邮件、实时数据应用和后台事件流。与此同步，Agent动作审批、技能记忆、社区数据入口和桌面权限争议，让控制面成为企业采用前必须验证的部分。",
-        "timeline": [
-          {
-            "label": "入口扩展",
-            "title": "AI从办公助手走向交易和金融运营",
-            "body": "OpenAI/Albertsons和Anthropic/Barclays给出零售与银行案例，但效果仍要看客户侧指标。"
-          },
-          {
-            "label": "控制补强",
-            "title": "Agent开始需要事件、人审和决策模型",
-            "body": "AWS ambient agents、OpenAI Decisions API和Strands Decider 2B都指向每步动作可审查。"
-          },
-          {
-            "label": "边界收紧",
-            "title": "数据入口和桌面权限变成信任问题",
-            "body": "Reddit关闭开放入口和Meta Muse权限争议提醒团队核对数据来源和本机访问。"
-          }
-        ],
+        "label": "23:00 JST 深读",
+        "title": "AI进入业务系统后，训练闭环和治理边界开始补位",
+        "subtitle": "10月2日23:00补充版把企业部署、Agent控制、训练数据、州级监管和开放训练栈放在同一张核查表里：能生成只是起点，能被训练、授权、审计、复现和治理才是生产门槛。",
+        "dateLabel": "2026年10月2日 23:00 JST",
+        "status": "已补充发布，保留来源边界",
+        "overview": "本期信号显示，AI正在进入购物车、银行邮件、实时数据应用和后台事件流；补充信号进一步说明，Agent要可训练、可验证、可监管，开放模型也要公开训练基础设施。",
         "keyNumbers": [
           {
-            "value": "10",
+            "value": "15",
             "label": "本期安全非重复信号"
           },
           {
-            "value": "5/10",
-            "label": "官方或厂商原始来源"
+            "value": "8/15",
+            "label": "官方或研究原文来源"
           },
           {
-            "value": "3/10",
-            "label": "Agent决策与记忆信号"
-          }
-        ],
-        "sections": [
-          {
-            "number": "01",
-            "label": "企业入口",
-            "title": "零售和金融案例要用客户侧指标复核",
-            "body": "Albertsons、Barclays和Amazon Payments案例让AI更接近交易、客服和获客漏斗，但来源仍主要是供应商叙述。",
-            "soWhat": "读者应先找上线范围、采用率、错误率、转化和长期留存，而不是只看合作名称。"
-          },
-          {
-            "number": "02",
-            "label": "Agent控制",
-            "title": "每步动作审批正在形成新工具层",
-            "body": "ambient agents、Decisions API、Strands Decider和WikiSkill都在处理Agent何时行动、如何记住失败以及如何把风险交给人。",
-            "soWhat": "平台团队要把校准、误拦截、权限、审计和回退写成上线要求。"
-          },
-          {
-            "number": "03",
-            "label": "数据边界",
-            "title": "开放Web和桌面权限都在重新谈判",
-            "body": "Reddit关闭RSS/API和Muse消息权限争议说明AI访问数据的路径越来越依赖合同、连接器和系统权限。",
-            "soWhat": "数据团队需要替代来源和授权记录，消费AI团队需要可解释的权限日志。"
+            "value": "5/15",
+            "label": "Agent控制与训练信号"
           }
         ],
         "actions": [
           "把供应商案例拆成发布事实、客户侧指标和待验证成效三层。",
-          "为Agent工具调用建立低成本判定、人审升级、审计日志和回滚策略。",
-          "盘点依赖Reddit、桌面消息、通知或本机文件权限的数据/产品路径。"
+          "为Agent工具调用建立训练任务、验证器、人审升级、审计日志和回滚策略。",
+          "盘点州级AI法案、员工安全叙事、开放训练栈和平台数据入口对部署清单的影响。"
         ],
-        "coverageLimits": [
-          {
-            "label": "案例边界",
-            "body": "OpenAI、Anthropic和AWS页面能证明发布和案例叙述，不独立证明ROI、客户满意度或长期安全性。"
-          },
-          {
-            "label": "媒体边界",
-            "body": "TechCrunch和VentureBeat条目只保留最小报道事实；完整采访、图表、更新和上下文仍在原文。"
-          }
-        ],
-        "sourceFrame": {
-          "sourceFacts": [
-            "OpenAI、Anthropic和AWS发布了零售、金融、BI应用、AgentCore和SageMaker相关材料。",
-            "TechCrunch/VentureBeat报道了Reddit入口关闭、Muse权限争议、决策模型和WikiSkill研究信号。"
-          ],
-          "editorialJudgment": [
-            "本期更适合作为企业AI控制面核查表，而不是判断哪家公司领先。",
-            "Agent上线门槛正在从会生成答案转向能否被授权、监督、审计和复现。"
-          ],
-          "unknowns": [
-            "客户侧ROI、错误率、留存和监管反馈仍未独立验证。",
-            "决策模型、技能演化和桌面权限争议仍需代码、文档、日志和第三方复现。"
-          ]
-        },
         "references": [
           {
-            "label": "OpenAI Albertsons合作和Safeway购物入口",
-            "url": "https://openai.com/index/albertsons-reimagining-retail/"
+            "label": "ServiceNow AutoSynthData企业Agent训练数据",
+            "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
           },
           {
-            "label": "Anthropic Barclays扩展Claude合作",
-            "url": "https://www.anthropic.com/news/barclays-scales-claude"
+            "label": "Ai2 Olmo-core 3开放MoE训练基础设施",
+            "url": "https://allenai.org/blog/olmocore3"
           },
           {
-            "label": "官方博客发布Quick实时数据应用",
-            "url": "https://aws.amazon.com/blogs/machine-learning/serve-live-governed-data-in-ai-built-apps-with-amazon-quick/"
+            "label": "OpenAI The eternal complement",
+            "url": "https://openai.com/index/the-eternal-complement/"
           },
           {
-            "label": "TechCrunch Reddit RSS/API关闭报道",
-            "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/"
+            "label": "Axios马萨诸塞州AI监管现场",
+            "url": "https://www.axios.com/2026/10/02/axios-live-massachusetts-lawmaker-says-ai-growth-and-guardrails-can-coexist"
           },
           {
-            "label": "媒体报道Strands Decider 2B发布",
-            "url": "https://venturebeat.com/technology/amazon-unveils-a-free-fast-open-source-jev-killer-strands-decider-2b-makes-decisions-in-fractions-of-a-second"
+            "label": "Axios前沿AI研究员基层反弹报道",
+            "url": "https://www.axios.com/2026/10/02/openai-anthropic-ai-researchers-rebellion"
           }
         ]
       },
+      "sourceCount": 104,
       "items": [
+        {
+          "id": "axios-massachusetts-ai-guardrails-2026-10-02",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios Live记录马萨诸塞州AI监管与增长并行框架",
+          "body": "Axios Live报道马萨诸塞州议员称AI增长和护栏可以并存，并记录Anthropic北美政府事务负责人解释该公司支持州参议院AI监管提案。",
+          "summary": "Axios Live报道马萨诸塞州议员称AI增长和护栏可以并存，并记录Anthropic北美政府事务负责人解释该公司支持州参议院AI监管提案。",
+          "whyItMatters": "州级监管正在从抽象安全争论进入具体法案和企业背书，影响模型上线、审计和合规成本。",
+          "detailBody": "Axios Live记录马萨诸塞州AI增长与护栏并行讨论，并提到Anthropic政府事务负责人对州参议院监管提案的支持说明；该条属于媒体活动记录，不能替代法案文本。读者应核对原文、官方文档、客户侧材料、后续记录和可观察结果；站内摘要只保留最小事实、解释角度和下一步核查路径及边界。",
+          "trend": "AI监管开始进入州级可执行规则和企业政策协调。",
+          "detailTrend": "AI监管开始进入州级可执行规则和企业政策协调。与联邦安全调查相比，州法案更接近采购、部署和本地执法，企业公开支持也会改变合规叙事。",
+          "whyRanked": "它给企业法务和政策团队一个州级AI护栏的具体观察点。",
+          "topReason": "它给企业法务和政策团队一个州级AI护栏的具体观察点。",
+          "impact": "企业公共政策、法务和产品上线团队应准备跟踪州法案文本、适用范围和审计义务。",
+          "whoShouldCare": "在美国多州运营并部署生成式AI、Agent或高风险自动化决策系统的法务、合规、公共政策和产品负责人。",
+          "readerUse": "美国多州运营的法务和政策团队可用它建立州级AI法案雷达，区分企业表态、活动讨论和正式法律义务。",
+          "nextCheck": "查马萨诸塞州参议院法案文本、委员会记录、修正案、Anthropic书面意见、行业协会回应和执法指南。",
+          "followUpQuestions": [
+            "马萨诸塞州参议院法案文本或委员会记录是否明确覆盖通用模型、企业Agent和自动化决策系统？",
+            "Anthropic或其他模型公司是否提交正式书面意见，并承诺可审计的实施路径？"
+          ],
+          "evidenceThreshold": "需要正式法案文本、监管解释、企业书面意见和执法时间表，才能升级为可执行合规变化。",
+          "claimBoundary": "当前证明Axios记录该场讨论和企业政策表态，不证明法案已经通过或监管义务已经确定。",
+          "counterEvidence": "若州议会记录显示法案搁置、条款大幅削弱或企业撤回支持，应下调为政策讨论背景。后续以州议会记录核对。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://www.axios.com/2026/10/02/axios-live-massachusetts-lawmaker-says-ai-growth-and-guardrails-can-coexist",
+          "sourceRole": "媒体背景",
+          "sourceType": "media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology原文报道并记录Axios Live现场的AI治理边界讨论、马萨诸塞州议员的增长/护栏并行框架，以及Anthropic北美政府事务负责人的政策表态；完整事实、采访和上下文以原文为准。",
+          "publishedAt": "2026-10-02T20:02:00+09:00",
+          "time": "20:02",
+          "tags": [
+            "州级监管",
+            "Anthropic",
+            "AI护栏"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "媒体活动记录有政策信号；正式义务需法案文本补证。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/10/02/axios-live-massachusetts-lawmaker-says-ai-growth-and-guardrails-can-coexist",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "媒体活动记录有政策信号；正式义务需法案文本补证。"
+          },
+          "detailWhyRanked": "它给企业法务和政策团队一个州级AI护栏的具体观察点。\n来源支持：Axios AI / Technology核对“Axios Live记录马萨诸塞州AI监管与增长并行框架”的最小事实；升级判断仍要看查马萨诸塞州参议院法案文本、委员会记录、修正案、Anthropic书面意见、行业协会回应和执法指南。。"
+        },
+        {
+          "id": "axios-ai-researchers-grassroots-rebellion-2026-10-02",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios称前沿AI研究员基层反弹正在影响政策叙事",
+          "body": "Axios报道OpenAI、Anthropic等前沿AI公司内部和周边研究员的基层反弹，让外部政策制定者更难判断这些公司在AI监管上的一致立场。",
+          "summary": "Axios报道OpenAI、Anthropic等前沿AI公司内部和周边研究员的基层反弹，让外部政策制定者更难判断这些公司在AI监管上的一致立场。",
+          "whyItMatters": "前沿模型治理不只由公司公告决定，研究员公开行动和离职叙事也会影响监管窗口和企业信任。",
+          "detailBody": "Axios称OpenAI、Anthropic等前沿AI公司的研究员基层反弹正在改变政策沟通，并让监管者感到公司立场前后不一；该条属于媒体背景，不能当作内部事实全貌。读者应核对原文、官方文档、客户侧材料、后续记录和可观察结果；站内摘要只保留最小事实、解释角度和下一步核查路径及边界。",
+          "trend": "AI安全争论正在从实验室内部扩散到政策和雇主品牌层面。",
+          "detailTrend": "AI安全争论正在从实验室内部扩散到政策和雇主品牌层面。研究员、政策团队和公司管理层若对风险叙事不同步，会影响监管谈判、招聘和客户采购信任。",
+          "whyRanked": "它提示读者把AI治理看成组织协调问题，而不只是模型技术问题。",
+          "topReason": "它提示读者把AI治理看成组织协调问题，而不只是模型技术问题。",
+          "impact": "政策、HR和企业采购团队应核对供应商安全承诺是否有内部治理、红队和外部审计支撑。",
+          "whoShouldCare": "跟踪前沿模型安全、采购大模型服务、制定AI治理沟通或负责技术人才风险的政策、法务、采购和HR团队。",
+          "readerUse": "采购、政策和HR团队可用它检查供应商安全承诺是否经得起员工、监管者和客户三方同时追问。",
+          "nextCheck": "查公司正式政策、员工公开信、监管听证记录、离职声明、红队报告、董事会治理文件和第三方审计。",
+          "followUpQuestions": [
+            "员工公开信、监管提交材料或听证记录是否显示研究员反弹形成正式诉求？",
+            "OpenAI、Anthropic等公司是否用治理文件回应安全立场不一致问题？"
+          ],
+          "evidenceThreshold": "需要公开文件、公司回应、监管记录或多方报道，才能升级为明确组织治理变化。",
+          "claimBoundary": "当前证明Axios报道了这一政策叙事和摩擦，不证明具体公司内部立场或人数规模。",
+          "counterEvidence": "若公司发布可审计的一致治理安排、监管记录不支持该摩擦，或Axios后续修正，应下调为单篇媒体观察。后续以正式文件和多方报道核对。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://www.axios.com/2026/10/02/openai-anthropic-ai-researchers-rebellion",
+          "sourceRole": "媒体背景",
+          "sourceType": "media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology原文报道OpenAI、Anthropic等前沿AI模型公司研究员基层反弹和政策治理沟通摩擦；完整事实、采访、引述和上下文以原文为准，本站只保留趋势判断和核查路径。",
+          "publishedAt": "2026-10-02T18:30:00+09:00",
+          "time": "18:30",
+          "tags": [
+            "AI安全",
+            "组织治理",
+            "政策叙事"
+          ],
+          "companies": [
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "政策影响大但依赖媒体报道；需公开文件和公司回应补证。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://www.axios.com/2026/10/02/openai-anthropic-ai-researchers-rebellion",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "政策影响大但依赖媒体报道；需公开文件和公司回应补证。"
+          },
+          "detailWhyRanked": "它提示读者把AI治理看成组织协调问题，而不只是模型技术问题。\n来源支持：Axios AI / Technology核对“Axios称前沿AI研究员基层反弹正在影响政策叙事”的最小事实；升级判断仍要看查公司正式政策、员工公开信、监管听证记录、离职声明、红队报告、董事会治理文件和第三方审计。。"
+        },
+        {
+          "id": "huggingface-servicenow-autosynthdata-agent-training-2026-10-02",
+          "category": "research",
+          "label": "研究",
+          "title": "ServiceNow在Hugging Face发布AutoSynthData训练企业Agent",
+          "body": "ServiceNow CoreAI在Hugging Face发布AutoSynthData，描述用目标模型失败和强教师成功轨迹生成、验证并迭代企业Agent训练任务。",
+          "summary": "ServiceNow CoreAI在Hugging Face发布AutoSynthData，描述用目标模型失败和强教师成功轨迹生成、验证并迭代企业Agent训练任务。",
+          "whyItMatters": "企业Agent的瓶颈正在从调用工具转向可执行任务、验证器和持续训练数据闭环。",
+          "detailBody": "Hugging Face上的ServiceNow CoreAI文章介绍AutoSynthData：把目标模型失败转成能力规格卡，再生成含系统规格、用户请求和验证器的任务，并用教师模型轨迹做训练样本；该页是项目原文，效果仍需代码、数据和复测补证。读者应核对原文、官方文档、客户侧材料、后续记录和可观察结果；站内摘要只保留最小事实、解释角度和下一步核查路径及边界。",
+          "trend": "Agent训练正在从通用指令微调走向环境绑定的失败闭环。",
+          "detailTrend": "Agent训练正在从通用指令微调走向环境绑定的失败闭环。AutoSynthData强调可执行环境、验证器和动态课程，说明企业Agent能力提升越来越依赖可检验任务，而不是单纯扩大语料。这说明AI系统正在从单点功能走向跨系统流程，竞争焦点也转向谁能把能力稳定嵌入真实工作。",
+          "whyRanked": "它把企业Agent训练数据问题落到失败诊断、任务生成和验证器三件事上。",
+          "topReason": "它把企业Agent训练数据问题落到失败诊断、任务生成和验证器三件事上。",
+          "impact": "Agent平台和企业AI团队应优先建设沙盒环境、状态验证器、失败分类和回归评测集。",
+          "whoShouldCare": "正在为ITSM、内部运营、工单、ERP或多工具Agent做后训练、评测和数据生成的平台工程、研究和MLOps团队。",
+          "readerUse": "Agent平台和MLOps团队可用它检查Agent后训练数据是否真实绑定环境状态、工具权限和成功验证。",
+          "nextCheck": "查AutoSynthData代码、EnterpriseOps Gym数据、训练配置、消融实验、持出集设计、第三方复现和企业真实任务迁移结果。",
+          "followUpQuestions": [
+            "AutoSynthData是否公开完整代码、任务生成器、验证器和训练样本审计？",
+            "第三方复现实验或真实企业迁移报告是否显示该方法在非ServiceNow环境中保持提升？"
+          ],
+          "evidenceThreshold": "需要代码、数据、消融、持出评测和第三方复现，才能升级为可复用企业Agent训练基础设施。",
+          "claimBoundary": "当前证明ServiceNow CoreAI发布了方法和实验结果，不证明该方法能直接迁移到所有企业Agent场景。",
+          "counterEvidence": "若第三方复现实验报告、持出集审计记录或真实企业迁移指标显示提升依赖特定环境、验证器泄漏或任务模板重叠，应下调为单环境研究信号。",
+          "sourceId": "huggingface-blog",
+          "sourceName": "Hugging Face Blog",
+          "source": "Hugging Face Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceUrl": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog原文发布ServiceNow CoreAI的AutoSynthData方法和EnterpriseOps Gym实验描述；它能核对方法框架和披露结果，效果仍需代码、数据和第三方复测。",
+          "publishedAt": "2026-10-02T17:20:00+09:00",
+          "time": "17:20",
+          "tags": [
+            "AutoSynthData",
+            "企业Agent",
+            "合成数据"
+          ],
+          "companies": [
+            "ServiceNow",
+            "Hugging Face"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "研究原文有方法细节；工程可复用性需代码和跨环境复测。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "研究原文有方法细节；工程可复用性需代码和跨环境复测。"
+          },
+          "detailWhyRanked": "它把企业Agent训练数据问题落到失败诊断、任务生成和验证器三件事上。\n来源支持：Hugging Face Blog核对“ServiceNow在Hugging Face发布AutoSynthData训练企业Agent”的最小事实；升级判断仍要看查AutoSynthData代码、EnterpriseOps Gym数据、训练配置、消融实验、持出集设计、第三方复现和企业真实任务迁移结果。。"
+        },
+        {
+          "id": "openai-eternal-complement-next-economy-2026-10-01",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI新经济文章把AI价值框定为执行能力补足",
+          "body": "OpenAI发布“The eternal complement”，提出AI可能把大量价值投入单调的执行、机构协调和实验支持，而不只是在前沿洞见上替代人类。",
+          "summary": "OpenAI发布“The eternal complement”，提出AI可能把大量价值投入单调的执行、机构协调和实验支持，而不只是在前沿洞见上替代人类。",
+          "whyItMatters": "这给企业采用和政策讨论提供了新读法：AI瓶颈可能是执行系统、物理实验和组织流程，而不是单个模型答案。",
+          "detailBody": "OpenAI发布“The eternal complement”，把AI未来价值放在创意洞见与执行能力互补关系中讨论，并区分“深度文明”和“宽度文明”两条路径；该页是观点文章，不是产品发布或可验证预测。读者应核对原文、官方文档、客户侧材料、后续记录和可观察结果；站内摘要只保留最小事实、解释角度和下一步核查路径及边界。",
+          "trend": "AI战略叙事从智能本身转向执行、实验和制度能力。",
+          "detailTrend": "AI战略叙事从智能本身转向执行、实验和制度能力。文章把AGI后的瓶颈放在现实实验、供应链、组织和官僚流程上，和本期企业AI控制面主题形成呼应。这说明AI系统正在从单点功能走向跨系统流程，竞争焦点也转向谁能把能力稳定嵌入真实工作。",
+          "whyRanked": "它解释了为什么企业AI价值可能首先出现在重复执行和协调流程。",
+          "topReason": "它解释了为什么企业AI价值可能首先出现在重复执行和协调流程。",
+          "impact": "战略、运营和政策团队可用它重估AI投资是否补足实验、流程、供应链和组织执行瓶颈。",
+          "whoShouldCare": "负责AI战略、科研自动化、运营转型、政策叙事和长期资本规划的高管、研究管理者和政策观察者。",
+          "readerUse": "战略、运营和政策团队可用它把AI路线图拆成洞见生成、实验执行、组织协调和物理约束四层。",
+          "nextCheck": "查OpenAI后续经济研究、客户案例、科研自动化指标、实验室生产率数据、资本开支和独立经济学评估。",
+          "followUpQuestions": [
+            "OpenAI后续经济研究或客户案例是否量化AI对执行型工作的边际贡献？",
+            "客户指标、实验室生产率数据或独立经济学评估是否证明流程协调比单点任务自动化更有价值？"
+          ],
+          "evidenceThreshold": "需要经济研究、客户指标、生产率数据和第三方评估，才能把观点升级为可验证市场判断。",
+          "claimBoundary": "当前证明OpenAI发布了该战略观点，不证明其预测路径或经济效果已经发生。",
+          "counterEvidence": "若后续客户指标、生产率数据或独立研究显示瓶颈仍主要在模型能力或监管许可，应下调为战略观点背景。后续以数据和案例核对。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceUrl": "https://openai.com/index/the-eternal-complement/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News原文发布并提出The eternal complement关于AI模型价值、执行能力和制度治理互补的观点文章；它能核对文章存在和核心框架，不能证明预测路径或经济效果已经发生。",
+          "publishedAt": "2026-10-02T09:00:00+09:00",
+          "time": "09:00",
+          "tags": [
+            "AI经济",
+            "执行能力",
+            "战略叙事"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "官方观点有战略价值；预测性质需经济数据补证。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://openai.com/index/the-eternal-complement/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "官方观点有战略价值；预测性质需经济数据补证。"
+          },
+          "detailWhyRanked": "它解释了为什么企业AI价值可能首先出现在重复执行和协调流程。\n来源支持：OpenAI News核对“OpenAI新经济文章把AI价值框定为执行能力补足”的最小事实；升级判断仍要看查OpenAI后续经济研究、客户案例、科研自动化指标、实验室生产率数据、资本开支和独立经济学评估。。"
+        },
         {
           "id": "aws-sagemaker-contextual-bandits-payments-2026-10-01",
           "category": "research",
@@ -859,6 +1113,73 @@
             "note": "官方页面证明合作和入口事实；效果仍需客户侧指标。"
           },
           "detailWhyRanked": "它把AI应用从企业内部效率推进到面向消费者的交易入口。\n来源支持：OpenAI News核对“OpenAI与Albertsons把Safeway购物流程接入ChatGPT”的最小事实；升级判断仍要看查Safeway实际产品页、Albertsons侧公告、用户授权流程、交易指标、广告条款和独立客户反馈。"
+        },
+        {
+          "id": "ai2-olmo-core-3-open-moe-training-2026-10-01",
+          "category": "research",
+          "label": "研究",
+          "title": "Ai2发布Olmo-core 3开放MoE训练基础设施",
+          "body": "Ai2发布Olmo-core 3，称新训练栈面向大规模MoE模型，在B300 GPU上测试过万亿参数级配置，并公开技术报告和代码入口。",
+          "summary": "Ai2发布Olmo-core 3，称新训练栈面向大规模MoE模型，在B300 GPU上测试过万亿参数级配置，并公开技术报告和代码入口。",
+          "whyItMatters": "开放模型竞争不只看权重，训练基础设施、路由、并行和低精度策略也决定小团队能否复现前沿路线。",
+          "detailBody": "Ai2发布Olmo-core 3，介绍用于下一代Olmo的开放MoE训练系统、专家并行、流水并行、GPU驻留路由和MXFP8等优化，并披露万亿参数级系统测试；该页是研究机构原文，模型质量和持续训练效果仍需技术报告和代码复测。读者应核对原文、官方文档、客户侧材料、后续记录和可观察结果；站内摘要只保留最小事实、解释角度和下一步核查路径及边界。",
+          "trend": "开放模型生态正在把透明度从权重推进到训练系统。",
+          "detailTrend": "开放模型生态正在把透明度从权重推进到训练系统。Olmo-core 3把MoE训练吞吐、专家路由和并行权衡公开化，给研究团队提供了检验大模型训练工程的材料。这说明AI系统正在从单点功能走向跨系统流程，竞争焦点也转向谁能把能力稳定嵌入真实工作。",
+          "whyRanked": "它把开放AI的可复现边界从模型文件推进到训练基础设施。",
+          "topReason": "它把开放AI的可复现边界从模型文件推进到训练基础设施。",
+          "impact": "开放模型、研究工程和基础设施团队应核对MoE训练栈是否能在自身硬件、数据和评测下复现效率收益。",
+          "whoShouldCare": "正在训练开放模型、部署MoE系统、评估GPU集群效率、审计研究复现或规划透明AI基础设施项目的训练工程、平台运维和资助评审团队。",
+          "readerUse": "开放模型研究工程团队可用它检查项目是否同时公开权重、训练代码、系统报告和失败经验。",
+          "nextCheck": "查Olmo-core 3代码、技术报告、训练日志、复现实验、硬件配置、模型质量评测和第三方训练结果。",
+          "followUpQuestions": [
+            "外部复现实验是否能在不同GPU集群上重现Olmo-core 3的吞吐改进？",
+            "下一代Olmo的模型卡、训练日志或第三方评测是否显示训练栈效率转化为实际模型质量提升？"
+          ],
+          "evidenceThreshold": "需要代码可运行、技术报告完整、第三方复测和模型质量结果，才能升级为成熟开放训练基础设施。",
+          "claimBoundary": "当前证明Ai2发布训练栈和系统测试，不证明外部团队已完成稳定复现或模型效果已提升。",
+          "counterEvidence": "若代码难以复现、吞吐依赖特定硬件或模型质量无改善，应下调为系统设计信号。后续以开源复测核对。",
+          "sourceId": "ai2-blog",
+          "sourceName": "Ai2 Blog",
+          "source": "Ai2 Blog",
+          "trustLevel": "research",
+          "sourceReliability": "high",
+          "sourceUrl": "https://allenai.org/blog/olmocore3",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Ai2 Blog发布Olmo-core 3训练系统、技术报告和代码入口；系统性能和模型效果仍需外部复现。",
+          "publishedAt": "2026-10-01T23:00:00+09:00",
+          "time": "23:00",
+          "tags": [
+            "Olmo-core 3",
+            "MoE训练",
+            "开放模型"
+          ],
+          "companies": [
+            "Ai2"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "研究机构原文有技术细节；需要代码复现和模型质量验证。"
+          },
+          "verificationStatus": "已核验",
+          "originalUrl": "https://allenai.org/blog/olmocore3",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "研究机构原文有技术细节；需要代码复现和模型质量验证。"
+          },
+          "detailWhyRanked": "它把开放AI的可复现边界从模型文件推进到训练基础设施。\n来源支持：Ai2 Blog核对“Ai2发布Olmo-core 3开放MoE训练基础设施”的最小事实；升级判断仍要看查Olmo-core 3代码、技术报告、训练日志、复现实验、硬件配置、模型质量评测和第三方训练结果。。"
         },
         {
           "id": "techcrunch-openai-decisions-api-jev-clone-2026-09-30",
