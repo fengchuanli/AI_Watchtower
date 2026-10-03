@@ -34,6 +34,22 @@ When a stale prompt is retired, update the smallest necessary fields:
 - `counterEvidence`: if later evidence weakened the premise, say whether the story is `降级`, `下调`, `削弱`, `收窄`, or `限定`.
 - `companyContinuity` / `topicContinuity`: summarize that a previous check was resolved, replaced, downgraded, or remains open without presenting archive background as a new alert.
 
+## Public Display Rule
+
+Resolved or retired checks should not look like live uncertainty on the homepage. When a continuity card includes a resolved, replaced, downgraded, or retired old question, public copy must:
+
+- Name the old question as answered or retired before naming the remaining gap.
+- Use a label such as `已回答旧问题`, `已回答后仍需看`, or `旧问题已退休` instead of only `仍需核验`.
+- Keep the remaining check smaller than the retired question: artifact, metric, region, customer, date, regulator step, third-party test, or execution record.
+- Avoid wording like `继续观察` when the old uncertainty has already been answered; say what is still unknown now.
+- Keep resolved/retired notes as continuity or archive context unless the current edition has a new source-backed item.
+
+Good public shape:
+
+```text
+已回答旧问题：此前等待正式政策文本；本期已有文件。已回答后仍需看执行记录、监管反馈和客户侧日志。
+```
+
 ## Good Shapes
 
 ```text

@@ -1888,11 +1888,13 @@ if (
   !/docs\/topic-continuity-review-note\.md/.test(readme) ||
   !/Topic Continuity Review Note/.test(topicContinuityReviewNote) ||
   !/stronger[\s\S]*weaker[\s\S]*repeated/.test(topicContinuityReviewNote) ||
-  !/continuityStatus: stronger \/ weaker \/ repeated/.test(topicContinuityReviewNote) ||
+  !/continuityStatus: stronger \/ weaker \/ repeated \/ resolved/.test(topicContinuityReviewNote) ||
   !/Repetition is not evidence strength/.test(topicContinuityReviewNote) ||
   !/媒体多次报道已经证明/.test(topicContinuityReviewNote) ||
   !/topicContinuity/.test(topicContinuityReviewNote) ||
   !/docs\/topic-continuity-review-note\.md/.test(newsDataFormat) ||
+  !/stronger, weaker, repeated, or resolved/.test(newsDataFormat) ||
+  !/resolved-check archive entry/.test(topicContinuityReviewNote) ||
   !/several media reports/.test(newsDataFormat) ||
   !/repeated media coverage as stronger evidence/.test(validateDataJs) ||
   !/docs\/topic-continuity-review-note\.md/.test(currentToHistoryPublicationChecklist) ||
@@ -1907,6 +1909,13 @@ if (
 if (
   !/docs\/next-check-retirement-note\.md/.test(readme) ||
   !/Next Check Retirement Note/.test(nextCheckRetirementNote) ||
+  !/Public Display Rule/.test(nextCheckRetirementNote) ||
+  !/已回答后仍需看/.test(nextCheckRetirementNote) ||
+  !/function getContinuityProofLabel/.test(appJs) ||
+  !/已回答旧问题/.test(appJs) ||
+  !/resolved\/retired-check archive entry/.test(newsDataFormat) ||
+  !/resolved\/retired 旧问题先标明已回答/.test(homepageEditionPreflight) ||
+  !/resolved-check label/.test(currentToHistoryPublicationChecklist) ||
   !/retire-resolved[\s\S]*retire-replaced[\s\S]*retire-downgraded[\s\S]*keep-open/.test(
     nextCheckRetirementNote,
   ) ||

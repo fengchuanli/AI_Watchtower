@@ -1,6 +1,6 @@
 # Topic Continuity Review Note
 
-Use this note when a current edition mentions a topic that has appeared in earlier AI Watchtower editions. Its purpose is to help editors decide whether the latest topic signal is stronger, weaker, or repeated before writing `edition.topicContinuity`.
+Use this note when a current edition mentions a topic that has appeared in earlier AI Watchtower editions. Its purpose is to help editors decide whether the latest topic signal is stronger, weaker, repeated, or resolved before writing `edition.topicContinuity`.
 
 This is a cross-edition review aid, not a new reporting surface. Use only current and archived AI Watchtower fields, plus the source already being reviewed for the current item. Do not add fresh claims, hidden media details, or broad trend conclusions just because several articles point at the same theme.
 
@@ -23,6 +23,7 @@ Choose one status for the editorial scratch note before writing public copy.
 | `stronger` | The current source adds a new official artifact, research result, filing, contract, audit, benchmark, regulator text, deployment log, customer metric, dataset, model/system card, or concrete scope expansion beyond the earlier topic mention. | `currentSignal` names the new evidence object; `signalDirection` says why the evidence is stronger; `stillUnproven` names the proof still missing. |
 | `weaker` | The current source narrows, delays, disputes, corrects, fails to replicate, cancels, or lowers the earlier topic reading. | `signalDirection` says the older interpretation should be downgraded or narrowed, not merely "继续观察". |
 | `repeated` | The current source repeats a similar media angle, vendor framing, product claim, or broad topic label without a new source-backed action. | Use archive context only; do not write it as trend confirmation or evidence strengthening. |
+| `resolved` | Later source-of-record evidence answers an older topic-level `nextCheck`, `evidenceThreshold`, or `followUpQuestions` prompt. | Say which old question was answered, then move the public card to the smaller evidence gap that still needs checking. |
 
 Do not mark a topic `stronger` only because several media reports, newsletters, podcasts, or secondary summaries repeat the same storyline. Repetition is not evidence strength unless the later source changes the artifact, actor, scope, metric, date, or accountable owner.
 
@@ -35,7 +36,7 @@ Topic continuity review
 topic:
 currentItemIds:
 priorContext: archive edition, topic group, trend note, or prior topicContinuity note used as background
-continuityStatus: stronger / weaker / repeated
+continuityStatus: stronger / weaker / repeated / resolved
 whatChanged: exact current source-backed action, evidence object, scope change, correction, or repeated angle
 readerMeaning: how a Chinese reader should use the topic movement
 stillUnproven: official file, research artifact, filing, contract, audit, log, regulator text, dataset, benchmark, replication, or customer evidence still needed
@@ -49,8 +50,8 @@ Keep public notes short and source-bounded.
 - `topic` must match a current `topicGroups[].id`.
 - `previousPattern` should name prior archive or continuity context without retelling old items.
 - `currentSignal` should name the current source-backed fact or explicitly say it is a repeated angle.
-- `signalDirection` should match the selected status: `增强`, `减弱`, or `重复`.
-- `stillUnproven` must name the next evidence object or the smaller uncertainty that remains.
+- `signalDirection` should match the selected status: `增强`, `减弱`, `重复`, or `已回答`.
+- `stillUnproven` must name the next evidence object or the smaller uncertainty that remains after a resolved check.
 - Do not introduce a new source fact in `topicContinuity`; the fact must already exist in the current item fields.
 
 ## Reader-Useful Topic Signals
@@ -63,6 +64,7 @@ The public topic continuity card is useful only when readers can tell what to do
 - Infrastructure evidence: use when the note names compute, data centers, GPUs, power, cloud capacity, cost, delivery, or third-party capacity data.
 - Model-capability evidence: use when the note names model/system cards, benchmarks, datasets, replication, third-party retests, or research artifacts.
 - Downgrade check: use when the note is `weaker` because later evidence narrows, delays, disputes, cancels, corrects, or fails to replicate the older reading.
+- Resolved-check archive entry: use when the note is `resolved` because later source-of-record evidence answered the old question; public copy should say the old question was answered before naming the smaller remaining gap. Keep the literal resolved-check archive entry category discoverable for validators and future editors.
 - Archive background only: use when the note is `repeated` or the current source does not add a new evidence object.
 
 Do not write a public topic card just because a theme appears often. If the note cannot point to one of these reader uses from existing fields, keep it as archive background until a stronger or clearly weaker source object appears.
@@ -73,6 +75,7 @@ Good shapes:
 stronger: 此前 policy 主题包含安全评测和数据治理背景；本期新增 system card、透明度报告或监管文件后，才能写成证据增强。仍需审计、执行记录和第三方复核确认效果。
 repeated: 如果本期只是多家媒体继续讨论数据中心阻力，应写成重复背景；不能把报道次数当作政策趋势确认。
 weaker: 如果后续监管文本缩小适用范围，`signalDirection` 应写成减弱或收窄，而不是继续沿用此前趋势判断。
+resolved: 如果此前等待正式政策文本，而本期已有监管文件，就先写旧问题已回答，再把 `stillUnproven` 缩小到执行记录、客户侧日志或第三方评估。
 ```
 
 ## Stop Conditions
@@ -90,5 +93,5 @@ Hold or downgrade the continuity note when:
 Use this wording when the check is applied in a publication or optimization run:
 
 ```text
-Topic continuity review: done - recurring topics were classified as stronger, weaker, or repeated before public continuity copy was written.
+Topic continuity review: done - recurring topics were classified as stronger, weaker, repeated, or resolved before public continuity copy was written.
 ```

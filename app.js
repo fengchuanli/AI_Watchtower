@@ -722,7 +722,7 @@ function updateContinuityBrief(edition = {}) {
               <h4>${escapeHtml(card.label)}</h4>
               <p>${escapeHtml(card.change)}</p>
               ${card.readerUse ? `<p class="continuity-reader-use">怎么用：${escapeHtml(card.readerUse)}</p>` : ""}
-              <em>仍需核验：${escapeHtml(card.proof)}</em>
+              <em>${escapeHtml(getContinuityProofLabel(card))}：${escapeHtml(card.proof)}</em>
             </article>
           `,
         )
@@ -731,11 +731,22 @@ function updateContinuityBrief(edition = {}) {
   `;
 }
 
+function getContinuityProofLabel(card = {}) {
+  const text = `${card.status || ""} ${card.change || ""} ${card.proof || ""}`;
+
+  if (/已解决|已回答|已退休|已退役|resolved|retired|retire-/.test(text)) {
+    return "已回答后仍需看";
+  }
+
+  return "仍需核验";
+}
+
 function getContinuityStatusLabel(status) {
   const labels = {
     stronger: "信号增强",
     weaker: "信号减弱",
     repeated: "仅是重复",
+    resolved: "已回答旧问题",
   };
 
   return labels[status] || status || "连续观察";
@@ -743,6 +754,10 @@ function getContinuityStatusLabel(status) {
 
 function getCompanyContinuityReaderUse(note = {}) {
   const text = `${note.label || ""} ${note.whatChanged || ""} ${note.stillUnproven || ""}`;
+
+  if (/已解决|已回答|已退休|已退役|resolved|retire-/.test(text)) {
+    return "把它当作旧问题已回答的归档入口，只跟进缩小后的新证据缺口。";
+  }
 
   if (/FTC|监管|法院|政府|协议|文书|文件|审计|安全/.test(text)) {
     return "把它当作安全/监管核查清单，先等文书、系统卡、审计或官方回应。";
@@ -765,6 +780,10 @@ function getCompanyContinuityReaderUse(note = {}) {
 
 function getTopicContinuityReaderUse(note = {}) {
   const text = `${note.topic || ""} ${note.label || ""} ${note.status || ""} ${note.currentSignal || ""} ${note.signalDirection || ""} ${note.stillUnproven || ""}`;
+
+  if (note.status === "resolved" || /已解决|已回答|已退休|已退役|resolved|retire-/.test(text)) {
+    return "把它当作旧问题已回答的归档入口，只跟进缩小后的新证据缺口。";
+  }
 
   if (note.status === "repeated" || /重复|媒体|报道次数|同一叙事/.test(text)) {
     return "把它当作归档背景入口，不把报道次数当作趋势确认。";

@@ -893,7 +893,7 @@ function validateTopicContinuity(notes, topicGroups = [], context) {
 
   const currentTopics = new Set((topicGroups || []).map((topic) => topic.id).map(String));
   const seenTopics = new Set();
-  const allowedStatuses = new Set(["stronger", "weaker", "repeated"]);
+  const allowedStatuses = new Set(["stronger", "weaker", "repeated", "resolved"]);
 
   for (const [index, note] of notes.entries()) {
     if (!note || typeof note !== "object" || Array.isArray(note)) {
@@ -918,7 +918,7 @@ function validateTopicContinuity(notes, topicGroups = [], context) {
     }
 
     if (note.status && !allowedStatuses.has(note.status)) {
-      errors.push(`${context} topicContinuity[${index}].status must be stronger, weaker, or repeated.`);
+      errors.push(`${context} topicContinuity[${index}].status must be stronger, weaker, repeated, or resolved.`);
     }
 
     if (note.label && (note.label.trim().length < 4 || note.label.trim().length > 18)) {
@@ -933,8 +933,8 @@ function validateTopicContinuity(notes, topicGroups = [], context) {
       errors.push(`${context} topicContinuity[${index}].currentSignal must state what this edition adds or repeats.`);
     }
 
-    if (!/增强|减弱|重复/.test(note.signalDirection || "")) {
-      errors.push(`${context} topicContinuity[${index}].signalDirection must say whether the signal is stronger, weaker, or repeated.`);
+    if (!/增强|减弱|重复|解决|回答|退休|退役/.test(note.signalDirection || "")) {
+      errors.push(`${context} topicContinuity[${index}].signalDirection must say whether the signal is stronger, weaker, repeated, or resolved.`);
     }
 
     if (!/不证明|不能|仍未|尚未|仍需/.test(note.stillUnproven || "")) {
