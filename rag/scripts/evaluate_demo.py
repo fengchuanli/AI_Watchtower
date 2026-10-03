@@ -87,6 +87,22 @@ def has_expected_source(retrieved_sources: List[str], expected_sources: List[str
     return False
 
 
+def first_hit_rank(retrieved_sources: List[str], expected_sources: List[str]) -> Optional[int]:
+    """1-based rank of the first retrieved source that matches an expected source."""
+    for rank, retrieved_source in enumerate(retrieved_sources, start=1):
+        if any(source_matches(retrieved_source, expected) for expected in expected_sources):
+            return rank
+    return None
+
+
+def mean_reciprocal_rank(results: List[Dict]) -> float:
+    """MRR over answerable cases: rank 1 -> 1.0, rank 2 -> 0.5, rank 3 -> 0.33, not found -> 0."""
+    answerable = [r for r in results if r["expected_sources"]]
+    if not answerable:
+        return 0.0
+    return sum(1.0 / r["hit_rank"] if r.get("hit_rank") else 0.0 for r in answerable) / len(answerable)
+
+
 def has_citation_marker(answer: str) -> bool:
     return bool(re.search(r"\[\d+\]", answer))
 
@@ -138,6 +154,8 @@ def evaluate_case(case: Dict, retriever: Retriever, config: EvaluationConfig, ro
 
     return {
         "id": case["id"],
+        "category": case.get("category", ""),
+        "hit_rank": first_hit_rank(retrieved_sources, expected_sources) if expected_sources else None,
         "backend": retriever.name,
         "question": question,
         "expected_sources": expected_sources,
@@ -223,15 +241,36 @@ def print_failed_cases(results: List[Dict]) -> None:
             print(f"- {result['id']}: {result['reason']}")
 
 
-def print_comparison(summaries: List[EvaluationSummary]) -> None:
+def print_comparison(summaries: List[EvaluationSummary], mrrs: Optional[List[float]] = None) -> None:
     print("Backend comparison:")
-    print("backend | passed | pass_rate | source_hit_rate | insufficient_evidence")
-    print("--- | --- | --- | --- | ---")
-    for summary in summaries:
+    print("backend | passed | pass_rate | source_hit_rate | MRR | insufficient_evidence")
+    print("--- | --- | --- | --- | --- | ---")
+    for index, summary in enumerate(summaries):
+        mrr = f"{mrrs[index]:.2f}" if mrrs else "-"
         print(
             f"{summary.backend} | {summary.passed}/{summary.total} | "
-            f"{summary.pass_rate:.1f}% | {summary.source_hit_rate:.1f}% | "
+            f"{summary.pass_rate:.1f}% | {summary.source_hit_rate:.1f}% | {mrr} | "
             f"{summary.insufficient_passed}/{summary.insufficient_cases}"
+        )
+
+
+def print_category_breakdown(results: List[Dict]) -> None:
+    categories: Dict[str, List[Dict]] = {}
+    for result in results:
+        categories.setdefault(result.get("category") or "-", []).append(result)
+    print("By category: " + ", ".join(
+        f"{name} {sum(r['passed'] for r in items)}/{len(items)}" for name, items in categories.items()
+    ))
+
+
+def print_score_ranges(results: List[Dict]) -> None:
+    """Top scores of answerable vs no-answer questions, for calibrating the insufficient-evidence threshold."""
+    answerable = [r["top_score"] for r in results if r["expected_sources"]]
+    no_answer = [r["top_score"] for r in results if not r["expected_sources"]]
+    if answerable and no_answer:
+        print(
+            f"Top score ranges: answerable {min(answerable):.4f}-{max(answerable):.4f}, "
+            f"no-answer {min(no_answer):.4f}-{max(no_answer):.4f}"
         )
 
 
@@ -270,6 +309,7 @@ def main() -> None:
         default="hint",
         help="hint = source_types from eval file, auto = guess from question, none = search everything.",
     )
+    parser.add_argument("--quiet", action="store_true", help="Print summaries only (no per-question details).")
     parser.add_argument(
         "--insufficient-max-score",
         type=float,
@@ -281,6 +321,7 @@ def main() -> None:
     eval_questions = load_eval_questions(EVAL_QUESTIONS_FILE)
     retriever_names = resolve_retriever_names(args.retriever, args.mode)
     summaries = []
+    mrrs = []
 
     for index, retriever_name in enumerate(retriever_names):
         retriever = create_retriever(retriever_name)
@@ -296,12 +337,17 @@ def main() -> None:
         )
         results, summary = run_evaluation(eval_questions, retriever, config, args.routing)
         summaries.append(summary)
+        mrrs.append(mean_reciprocal_rank(results))
 
         if len(retriever_names) > 1:
             print(f"=== {retriever.name} (routing: {args.routing}) ===")
-        for result in results:
-            print_case_result(result)
-        print_summary(summary, insufficient_max_score)
+        if not args.quiet:
+            for result in results:
+                print_case_result(result)
+            print_summary(summary, insufficient_max_score)
+        print_category_breakdown(results)
+        print_score_ranges(results)
+        print(f"MRR: {mrrs[-1]:.2f}")
         print_failed_cases(results)
 
         if index < len(retriever_names) - 1:
@@ -309,7 +355,7 @@ def main() -> None:
 
     if len(summaries) > 1:
         print()
-        print_comparison(summaries)
+        print_comparison(summaries, mrrs)
 
 
 if __name__ == "__main__":

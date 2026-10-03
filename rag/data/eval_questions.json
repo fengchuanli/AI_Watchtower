@@ -2,30 +2,258 @@
   {
     "id": "source-policy",
     "question": "AI Watchtower 如何判断来源可信度？",
-    "expected_sources": ["docs/source-policy.md"],
-    "source_types": ["docs"]
+    "expected_sources": [
+      "docs/source-policy.md"
+    ],
+    "source_types": [
+      "docs"
+    ],
+    "category": "original"
   },
   {
     "id": "news-format",
     "question": "新闻数据有哪些必须字段？",
-    "expected_sources": ["docs/news-data-format.md"],
-    "source_types": ["docs"]
+    "expected_sources": [
+      "docs/news-data-format.md"
+    ],
+    "source_types": [
+      "docs"
+    ],
+    "category": "original"
   },
   {
     "id": "kimi-risk",
     "question": "Kimi K3 权重发布有什么风险？",
-    "expected_sources": ["data/news.json#venturebeat-kimi-k3-full-weights-2026-07-28"],
-    "source_types": ["current_news"]
+    "expected_sources": [
+      "data/news.json#venturebeat-kimi-k3-full-weights-2026-07-28"
+    ],
+    "source_types": [
+      "current_news"
+    ],
+    "category": "original"
   },
   {
     "id": "agent-security",
     "question": "Agent 安全风险包括什么？",
-    "expected_sources": ["data/news.json#venturebeat-agent-security-gap-2026-07-25"],
-    "source_types": ["current_news"]
+    "expected_sources": [
+      "data/news.json#venturebeat-agent-security-gap-2026-07-25"
+    ],
+    "source_types": [
+      "current_news"
+    ],
+    "category": "original"
   },
   {
     "id": "insufficient-evidence",
     "question": "AI Watchtower 预测 2030 年哪家公司会赢？",
+    "expected_sources": [],
+    "category": "insufficient"
+  },
+  {
+    "id": "p-source-trust",
+    "category": "paraphrase",
+    "question": "怎么判断一条消息的出处靠不靠谱？",
+    "expected_sources": [
+      "docs/source-policy.md",
+      "docs/editorial-checklist.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "p-copyright",
+    "category": "paraphrase",
+    "question": "能不能把媒体文章的图片和全文直接搬到网站上？",
+    "expected_sources": [
+      "docs/copyright-safety.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "p-hold-reject",
+    "category": "paraphrase",
+    "question": "候选新闻为什么会被搁置或者拒绝？",
+    "expected_sources": [
+      "docs/candidate-hold-reject-reasons.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "p-rollback",
+    "category": "paraphrase",
+    "question": "已经发布的新闻数据出错了要怎么处理？",
+    "expected_sources": [
+      "docs/bad-data-rollback-note.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "p-archive",
+    "category": "paraphrase",
+    "question": "把当前新闻放进历史归档之前要检查什么？",
+    "expected_sources": [
+      "docs/current-to-history-publication-checklist.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "p-ghpages",
+    "category": "paraphrase",
+    "question": "网站发布到 GitHub Pages 之前需要确认哪些事项？",
+    "expected_sources": [
+      "docs/github-pages-readiness.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "en-source",
+    "category": "english",
+    "question": "How does AI Watchtower decide whether a source is reliable?",
+    "expected_sources": [
+      "docs/source-policy.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "en-fields",
+    "category": "english",
+    "question": "What fields are required for a news item?",
+    "expected_sources": [
+      "docs/news-data-format.md"
+    ],
+    "source_types": [
+      "docs"
+    ]
+  },
+  {
+    "id": "en-kimi",
+    "category": "english",
+    "question": "What are the risks of the Kimi K3 open-weight release?",
+    "expected_sources": [
+      "data/news.json#venturebeat-kimi-k3-full-weights-2026-07-28"
+    ],
+    "source_types": [
+      "current_news"
+    ]
+  },
+  {
+    "id": "en-mcp",
+    "category": "english",
+    "question": "What changed in the latest MCP update for AI agents?",
+    "expected_sources": [
+      "data/news.json#venturebeat-mcp-update-agents-2026-07-28"
+    ],
+    "source_types": [
+      "current_news"
+    ]
+  },
+  {
+    "id": "n-gdp",
+    "category": "news",
+    "question": "为什么说 AI 投资对经济增长的拉动没有看起来那么大？",
+    "expected_sources": [
+      "data/news.json#axios-ai-imports-gdp-2026-07-28"
+    ],
+    "source_types": [
+      "current_news"
+    ]
+  },
+  {
+    "id": "n-compute",
+    "category": "news",
+    "question": "企业买 AI 算力时，成本管理跟得上吗？",
+    "expected_sources": [
+      "data/news.json#venturebeat-ai-compute-gap-2026-07-25"
+    ],
+    "source_types": [
+      "current_news"
+    ]
+  },
+  {
+    "id": "n-mit",
+    "category": "news",
+    "question": "哪些 AI 风险被认为最可能造成灾难性后果？",
+    "expected_sources": [
+      "data/news.json#axios-mit-ai-catastrophic-risks-2026-07-27"
+    ],
+    "source_types": [
+      "current_news"
+    ]
+  },
+  {
+    "id": "n-governance",
+    "category": "news",
+    "question": "企业部署 Agent 时治理上有什么问题？",
+    "expected_sources": [
+      "data/news.json#venturebeat-agent-governance-gap-2026-07-24"
+    ],
+    "source_types": [
+      "current_news"
+    ]
+  },
+  {
+    "id": "n-patents",
+    "category": "news",
+    "question": "AI Agent 专利有什么新趋势？",
+    "expected_sources": [
+      "data/news.json#axios-ai-agent-patents-2026-07-28"
+    ],
+    "source_types": [
+      "current_news"
+    ]
+  },
+  {
+    "id": "x-open-weights",
+    "category": "cross",
+    "question": "开放权重模型最近有哪些争议？",
+    "expected_sources": [
+      "data/news.json#venturebeat-kimi-k3-full-weights-2026-07-28",
+      "data/news-history.json#news-1700-2026-07-27/techcrunch-kimi-open-weight-panic-2026-07-26",
+      "data/news-history.json#news-1700-2026-07-28/businessinsider-anthropic-open-weight-backlash-2026-07-27",
+      "data/news-history.json#news-1700-2026-07-28/anthropic-open-weights-position-2026-07-27",
+      "data/news-history.json#news-1700-2026-07-25/microsoft-open-weights-american-ai-leadership-2026-07-24",
+      "data/news-history.json#news-1700-2026-07-27/reuters-open-source-ai-letter-2026-07-24"
+    ],
+    "source_types": [
+      "current_news",
+      "history_news"
+    ]
+  },
+  {
+    "id": "i-bitcoin",
+    "category": "insufficient",
+    "question": "明天比特币价格会涨吗？",
+    "expected_sources": []
+  },
+  {
+    "id": "i-weather",
+    "category": "insufficient",
+    "question": "东京明天天气怎么样？",
+    "expected_sources": []
+  },
+  {
+    "id": "i-server-cost",
+    "category": "insufficient",
+    "question": "AI Watchtower 网站的服务器每月要花多少钱？",
+    "expected_sources": []
+  },
+  {
+    "id": "i-pytorch",
+    "category": "insufficient",
+    "question": "怎么用 PyTorch 从零训练一个图像识别模型？",
     "expected_sources": []
   }
 ]

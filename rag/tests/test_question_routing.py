@@ -68,5 +68,21 @@ class AzureHybridPayloadTest(unittest.TestCase):
         self.assertEqual(payload["filter"], "source_type eq 'docs'")
 
 
+
+class RankingMetricTest(unittest.TestCase):
+    def test_first_hit_rank_and_mrr(self):
+        from evaluate_demo import first_hit_rank, mean_reciprocal_rank
+
+        self.assertEqual(first_hit_rank(["a", "docs/x.md", "b"], ["docs/x.md"]), 2)
+        self.assertIsNone(first_hit_rank(["a"], ["docs/x.md"]))
+        results = [
+            {"expected_sources": ["x"], "hit_rank": 1},
+            {"expected_sources": ["y"], "hit_rank": 2},
+            {"expected_sources": ["z"], "hit_rank": None},
+            {"expected_sources": [], "hit_rank": None},  # no-answer case is ignored
+        ]
+        self.assertAlmostEqual(mean_reciprocal_rank(results), (1 + 0.5 + 0) / 3)
+
+
 if __name__ == "__main__":
     unittest.main()
