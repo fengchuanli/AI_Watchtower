@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-04",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1665,6 +1665,38 @@
       "hasRss": false,
       "language": "en",
       "notes": "官方核对 AWS 服务发布、预览、区域和功能上线事实；性能、成本、安全和客户效果仍需文档、日志、第三方测试或客户侧证据。"
+    },
+    {
+      "id": "microsoft-security-blog",
+      "name": "Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/",
+      "feedUrl": null,
+      "category": [
+        "security",
+        "agent",
+        "enterprise",
+        "policy"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方核对Microsoft安全产品、威胁报告、Agent安全和企业防御建议；攻击趋势、产品效果和客户成效仍需报告数据、租户日志或第三方证据。"
+    },
+    {
+      "id": "microsoft-inside-track",
+      "name": "Microsoft Inside Track",
+      "url": "https://www.microsoft.com/insidetrack/blog/",
+      "feedUrl": null,
+      "category": [
+        "enterprise",
+        "product",
+        "agent",
+        "workplace"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "Microsoft内部IT和AI/Copilot实践博客，用于核对微软自用流程、员工支持Agent和企业采用经验；外部适用性仍需客户指标和独立部署证据。"
     }
   ],
   "sourceCount": 104

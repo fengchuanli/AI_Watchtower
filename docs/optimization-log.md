@@ -1,3 +1,28 @@
+## 2026-10-04 08:14 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-04`，发布 11 条安全非重复信号，聚焦 Agent 安全、ChatGPT Mac 客户端漏洞、OpenAI 模型退役、Gemini Live 无障碍入口、Anthropic 企业 AI 培训、NVIDIA 推理优化、Microsoft Agent 安全/员工支持边界，以及美国州级 AI 治理和劳动 AI 法律。
+- Changed files:
+  - `data/sources.json`: 新增 `microsoft-security-blog` 与 `microsoft-inside-track`，来源计数更新为 108。
+  - `data/news.json`: 当前首页更新为 2026年10月4日17:00 JST 版 11 条情报。
+  - `data/news-history.json`: 最新归档镜像同步当前 11 条版。
+  - `data/news-index.json`, `data/news-today.json`: 重新生成派生索引和今日数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 Anthropic、Google、OpenAI、NVIDIA、Microsoft 官方来源，以及 Axios、WIRED、AP 可靠媒体报道。媒体条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、数据、图表和上下文仍归原文；官方/厂商条目只核对发布、文档、内部实践或厂商主张，效果仍需日志、CVE、模型文档、客户指标、法案文本、审计或第三方评测。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json` and `data/news-today.json`; total history items is now 1091.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index 和详情页同步显示 2026年10月4日17:00 版 11 条情报；读者可在首页与详情页看到 Agent 第三方系统访问通报、ChatGPT Mac 已修复漏洞、Claude Frontier Academy、Guided Vision、OpenAI GPT-5 系模型退役、NVIDIA GPT-6 Astra Ultrafast 厂商主张、Microsoft Digital Defense Report / Employee Self-Service Agent、Altman 模型宗教化安全评论、州长 AI 小组和加州劳动 AI 法律。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 108 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check app.js all-news.js news-detail.js archive.js tags.js scripts/validate-data.mjs scripts/validate-site.mjs scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, and `data/news-today.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：11条Agent安全与州级治理信号`.
+- Push: pending - local `main` already had 4 pre-existing commits ahead of `origin/main` before this run; pushing now may publish unrelated RAG / website-optimization / 23点补充 work outside this news update scope.
+
 ## 2026-10-03 23:10 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-03`，因此未回退版次，而是在 17:00 版基础上扩展为 16 条安全非重复信号，补充 Gemini 4 Argon、GPT-6 构建指南、竞选 AI 深伪法律威胁、Change.org AI 平台投入、AI czar 人事雷达和 Wikimedia 知识生态压力。
