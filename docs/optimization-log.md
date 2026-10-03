@@ -1,3 +1,42 @@
+## 2026-10-03 11:04 JST
+
+- Focus: 完成当前 30 天计划 Day 22，给 resolved / retired 旧核验问题补上公开呈现规则，避免首页连续观察卡片把已经回答的问题继续写成当前不确定性。
+- Changed files:
+  - `app.js`
+  - `docs/next-check-retirement-note.md`
+  - `docs/news-data-format.md`
+  - `docs/homepage-edition-preflight.md`
+  - `docs/current-to-history-publication-checklist.md`
+  - `docs/topic-continuity-review-note.md`
+  - `scripts/validate-data.mjs`
+  - `scripts/validate-site.mjs`
+  - `docs/optimization-decision-index.md`
+  - `docs/optimization-log.md`
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/next-check-retirement-note.md`、`docs/topic-continuity-review-note.md`、`docs/news-data-format.md` 和 `docs/homepage-edition-preflight.md`。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只调整旧核验问题在连续观察里的呈现规则和未来校验。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: partial - 本次不改当前新闻数据，但未来 resolved/retired 连续观察卡片会先说明旧问题已回答，再显示当前还缺什么。
+  - TOP3 reader use: not applicable - 本次不改 TOP3 卡片。
+  - Source boundary visible: pass - `已回答后仍需看` 只用于缩小后的证据缺口，不把旧问题重新包装成新不确定性。
+  - Original source dependency: pass - 不新增事实层，不替代原始来源或媒体文章。
+  - Mobile burden: pass - 只替换短标签和读者用途句，不增加新的页面模块。
+  - Continuity use: pass - resolved/retired 旧问题现在有明确公开规则，避免归档不确定性继续冒充当前风险。
+  - Visual aid purpose: pass - 连续观察卡片的标签承担核验状态说明，不是装饰。
+- 网站可见变化: 首页深度简报 `本期连续观察` 后续遇到 resolved/retired 旧问题时，会显示 `已回答后仍需看` 和缩小后的新证据缺口；当前 2026年10月3日17:00 版没有 resolved/retired 连续观察卡片，因此本次主要是规则/校验更新。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 106 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commits: `9fa747b` (`【VisionHub网站风格优化】区分已回答连续观察证据缺口`).
+- Push: held - local `main` already had unrelated commit `35e745e` (`【RAG】评测集扩充到 25 题，增加 MRR、分类统计和分数区间`) ahead of `origin/main` before this run; pushing now would publish unrelated work outside this optimization scope.
+
 ## 2026-10-03 08:14 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-03`，发布 10 条安全非重复信号，聚焦 Agent 权限、云治理、AI 法律责任、政策命名、消费购物入口、安全评测、Agent 安全融资、Google 轨道 TPU 测试和官方月报索引。
