@@ -70,14 +70,47 @@ function flattenHistory(history) {
     throw new Error("News history must include editions.");
   }
 
+  const latestEdition = getLatestEdition(history);
+
   return history.editions.flatMap((edition) =>
     (edition.items || []).map((item) => ({
       ...item,
       editionId: edition.id,
       editionLabel: edition.archiveLabel,
       editionDate: edition.date,
+      batchStatus: getEditionBatchStatus(edition, latestEdition),
     })),
   );
+}
+
+function sortEditions(editions) {
+  return [...editions].sort((a, b) => {
+    const dateDiff = Date.parse(b.date) - Date.parse(a.date);
+
+    if (dateDiff) {
+      return dateDiff;
+    }
+
+    return String(b.archiveLabel).localeCompare(String(a.archiveLabel), "zh-CN");
+  });
+}
+
+function getEditionKey(edition) {
+  return `${edition.id}::${edition.archiveLabel}`;
+}
+
+function getLatestEdition(history) {
+  return sortEditions(history.editions)[0];
+}
+
+function getEditionBatchStatus(edition, latestEdition) {
+  const isCurrentHomepageBatch = getEditionKey(edition) === getEditionKey(latestEdition);
+
+  return {
+    label: isCurrentHomepageBatch ? "当前首页批次" : "历史背景",
+    tone: isCurrentHomepageBatch ? "latest" : "archived",
+    note: isCurrentHomepageBatch ? "先看这批最新首页信号" : "只作公司脉络回看",
+  };
 }
 
 function sortItems(items) {
@@ -135,7 +168,11 @@ function renderTagResults(history, selectedTagId) {
 
       return `
         <article class="tag-result-card">
-          <span>${escapeHtml(item.editionDate)} · ${escapeHtml(item.editionLabel)}</span>
+          <div class="tag-result-meta">
+            <span class="tag-batch-status ${escapeHtml(item.batchStatus.tone)}">${escapeHtml(item.batchStatus.label)}</span>
+            <span>${escapeHtml(item.editionDate)} · ${escapeHtml(item.editionLabel)}</span>
+            <span>${escapeHtml(item.batchStatus.note)}</span>
+          </div>
           <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
           <p><strong>当期简述</strong>${escapeHtml(item.body)}</p>
           <p>${escapeHtml(item.impact)}</p>

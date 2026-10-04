@@ -495,11 +495,16 @@ if (
   !/收录线索/.test(tagsJs) ||
   !/最近期次/.test(tagsJs) ||
   !/历史背景/.test(tagsJs) ||
+  !/function getEditionBatchStatus\(edition, latestEdition\)/.test(tagsJs) ||
+  !/当前首页批次/.test(tagsJs) ||
+  !/只作公司脉络回看/.test(tagsJs) ||
+  !/class="tag-batch-status \$\{escapeHtml\(item\.batchStatus\.tone\)\}"/.test(tagsJs) ||
   !/来源边界/.test(tagsJs) ||
   !/sourceCaveat/.test(tagsJs) ||
   !/item\.claimBoundary \|\| item\.provenance \|\| item\.nextCheck/.test(buildDerivedDataJs) ||
   !/class="tag-signal-list"/.test(tagsJs) ||
   !/class="tag-source-note"/.test(tagsJs) ||
+  !/class="tag-result-meta"/.test(tagsJs) ||
   !/Company tag pages derive OpenAI, Anthropic, Google, and Meta views/.test(newsDataFormat) ||
   !/most recent captured line/.test(newsDataFormat) ||
   !/last-seen edition date/.test(newsDataFormat) ||
@@ -508,7 +513,10 @@ if (
   !/历史背景/.test(newsDataFormat) ||
   !/\.tag-context\s*\{[\s\S]*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/.test(styles) ||
   !/\.tag-signal-list\s*\{[\s\S]*gap:\s*10px;/.test(styles) ||
-  !/\.tag-source-note\s*\{[\s\S]*border-top:\s*1px solid var\(--line\);/.test(styles)
+  !/\.tag-source-note\s*\{[\s\S]*border-top:\s*1px solid var\(--line\);/.test(styles) ||
+  !/\.tag-result-meta\s*\{[\s\S]*flex-wrap: wrap;/.test(styles) ||
+  !/\.tag-batch-status\.latest/.test(styles) ||
+  !/\.tag-batch-status\.archived/.test(styles)
 ) {
   errors.push("Company tag pages must render focus, recent captured context, last-seen date, and source-boundary context without making archive items sound current.");
 }

@@ -936,6 +936,32 @@ h3 {
   font-weight: 800;
 }
 
+.tag-result-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tag-batch-status {
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.tag-batch-status.latest {
+  color: var(--accent-fg);
+  background: var(--accent);
+}
+
+.tag-batch-status.archived {
+  color: var(--ink);
+  background: var(--bg-inset);
+}
+
 .tag-result-card h3 a {
   border-bottom: 2px solid transparent;
 }
