@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 4, Reader-Visible Continuity
-- Last indexed run: 2026-10-03 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization. Push was held because local `main` already contained an unrelated RAG commit ahead of `origin/main`; pushing would publish work outside this optimization scope.
+- Last indexed run: 2026-10-04 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization. Push was held because local `main` already contained pre-existing unrelated commits ahead of `origin/main`; pushing would publish work outside this optimization scope.
 
 ## Recent Plan-Day Decisions
 
@@ -40,6 +40,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 20 | Complete | `155b54e` | Company continuity public cards now add a derived `怎么用` cue so repeated-company signals become reader-use checks: safety/regulatory, product/model, adoption evidence, research evidence, or archive background only. `docs/company-continuity-review-note.md`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and `scripts/validate-site.mjs` guard the shape. |
 | Day 21 | Complete | `d420585` | Topic continuity public cards now add a derived `怎么用` cue so recurring-topic signals become reader-use checks: enterprise adoption evidence, Agent-control proof, policy/data-boundary proof, infrastructure evidence, model-capability evidence, downgrade check, or archive background only. `docs/topic-continuity-review-note.md`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, and `scripts/validate-site.mjs` guard the shape. |
 | Day 22 | Complete | `9fa747b` | Resolved or retired continuity checks now have a public display rule: old questions must be named as answered before the remaining smaller evidence gap, and homepage continuity cards can render `已回答后仍需看` instead of making stale uncertainty look current. `docs/next-check-retirement-note.md`, `docs/news-data-format.md`, `docs/homepage-edition-preflight.md`, `docs/current-to-history-publication-checklist.md`, `docs/topic-continuity-review-note.md`, `app.js`, `scripts/validate-data.mjs`, and `scripts/validate-site.mjs` guard the shape. |
+| Day 23 | Complete | `98d50ec` | Company tag result rows now mirror all-news batch status: each OpenAI / Anthropic / Google / Meta history card shows `当前首页批次` for the latest homepage edition or `历史背景` with `只作公司脉络回看` for older editions. `docs/news-data-format.md`, `tags.js`, `styles.css`, and `scripts/validate-site.mjs` guard this latest-versus-background cue. |
 
 ## Historical Guard Anchors
 
@@ -91,9 +92,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 23: review all-news and tag pages for cross-edition continuity cues that help readers understand "latest" versus "background".
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 22.
-- If Day 22 is already complete, continue with the first useful unfinished task from the current plan.
+- Continue with Day 24: add a compact monthly continuity handoff shape that can feed a future public component without inventing new claims.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 23.
+- If Day 23 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

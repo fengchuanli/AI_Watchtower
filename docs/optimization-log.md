@@ -1,3 +1,37 @@
+## 2026-10-04 11:05 JST
+
+- Focus: 完成当前 30 天计划 Day 23，复查 all-news 与公司标签页的跨期次连续阅读提示；all-news 已有 `当前首页批次` / `历史背景` 行级标签，本次把同样的最新-versus-背景 cue 补到 OpenAI / Anthropic / Google / Meta 公司标签结果卡片。
+- Changed files:
+  - `tags.js`: 从 `data/news-index.json` 的最新 edition 推导每条公司标签结果的批次状态，显示 `当前首页批次`、`历史背景`、`先看这批最新首页信号` 或 `只作公司脉络回看`。
+  - `styles.css`: 新增公司标签结果卡片的批次状态行和 latest / archived 小标签样式。
+  - `docs/news-data-format.md`: 记录公司标签结果行必须沿用 all-news 的批次状态区分，避免把历史公司脉络写成当前警报。
+  - `scripts/validate-site.mjs`: 增加静态守卫，确保 tag 页面继续显示最新批次与历史背景的区别。
+  - `docs/optimization-decision-index.md`: 标记 Day 23 完成，并把下一步交接到 Day 24。
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/news-data-format.md` 和 all-news/tag 页面实现。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只复用现有 history edition 元数据生成页面阅读状态。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: partial - 本次不改首页首屏，但标签页读者能更快判断某条公司线索是否属于当前首页批次。
+  - TOP3 reader use: not applicable - 本次不改 TOP3 卡片。
+  - Source boundary visible: pass - 历史公司结果被明确标为背景，不升级为新警报或新事实。
+  - Original source dependency: pass - 不新增事实层，不替代原始来源或媒体文章。
+  - Mobile burden: pass - 只在既有卡片头部增加一行紧凑状态，不新增长段落。
+  - Continuity use: pass - 公司标签页现在和 all-news 一样区分 latest 与 background，适合作为跨期次连续观察入口。
+  - Visual aid purpose: pass - 小标签承担阅读状态说明，不是装饰。
+- 网站可见变化: 公司标签页每条结果卡片顶部会显示 `当前首页批次` 或 `历史背景`，并提示是优先阅读最新首页信号还是只作公司脉络回看；读者在 OpenAI / Anthropic / Google / Meta 标签页可直接区分当前批次与旧背景。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 108 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commits: `98d50ec` (`【VisionHub网站风格优化】标注公司标签批次状态`).
+- Push: held - local `main` already had 5 pre-existing commits ahead of `origin/main` before this run; pushing now would also publish unrelated RAG / news / prior website-optimization work outside this optimization scope.
+
 ## 2026-10-04 08:14 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-04`，发布 11 条安全非重复信号，聚焦 Agent 安全、ChatGPT Mac 客户端漏洞、OpenAI 模型退役、Gemini Live 无障碍入口、Anthropic 企业 AI 培训、NVIDIA 推理优化、Microsoft Agent 安全/员工支持边界，以及美国州级 AI 治理和劳动 AI 法律。
