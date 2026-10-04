@@ -1,8 +1,538 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-04",
-  "totalItems": 1094,
+  "updatedAt": "2026-10-05",
+  "totalItems": 1097,
   "editions": [
+    {
+      "id": "news-1700-2026-10-05",
+      "date": "2026-10-05",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST 短批次",
+      "itemCount": 3,
+      "note": "本期3条AI新闻情报，聚焦生命科学模型、短信Agent和科学叙事核查。",
+      "operationalStatus": "已拉取origin/main；核对OpenAI官方页面、TechCrunch与The Atlantic报道，并跳过重复、旧稿和弱来源。",
+      "editorialInterpretation": "本期发布 3 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复事实、弱证据或营销凑数。",
+      "readerFrame": {
+        "headline": "本期读法：少量信号，重点查工作流入口和证据边界",
+        "whyItMatters": "OpenAI、TechCrunch和The Atlantic共同指向一个问题：AI能力要进入真实工作流，必须同时回答访问、授权、审计、复现和外部验证。",
+        "useThisIssueFor": [
+          "科研和药研平台团队核对生命科学模型的定价、准入、插件权限和专家复核。",
+          "消费Agent产品和安全团队核对短信入口、身份、付款、撤销和日志。",
+          "科学传播和投资尽调团队核对AI科学发现的新颖性、数据来源和复现实验。"
+        ],
+        "notProvenYet": [
+          "不证明GPT-Rosalind已经带来可验证药物发现效果或客户ROI。",
+          "不证明短信Agent已经规模化留存，也不证明消息入口天然安全。",
+          "不证明Anthropic科学发现无价值或存在数据不当使用；只说明外部争议仍需核验。"
+        ],
+        "mobile": {
+          "headline": "查准入、权限和复核",
+          "summary": "少量安全更新，重点是准入、权限和外部复核。",
+          "primaryUses": [
+            "科研团队查模型准入",
+            "产品团队查短信Agent",
+            "尽调团队查科学证据"
+          ],
+          "proofBoundary": "仍需价格页、准入条款、平台政策、审计日志、论文、复现和专家审查。"
+        }
+      },
+      "changeSummary": {
+        "headline": "较10月4日补充版新增生命科学、消费Agent和科学复核信号",
+        "freshFacts": [
+          "本期新增OpenAI页面节点：GPT-Rosalind公开定价在10月5日生效。",
+          "本期新增TechCrunch梳理：多款AI Agent正在通过短信或聊天应用触达用户。",
+          "本期新增The Atlantic报道：Anthropic的Claude科学发现叙事受到外部科学家质疑。"
+        ],
+        "repeatedContext": [
+          "10月4日已入库的Reflection开放权重、Jay Clayton联邦AI任务小组、Agent责任法案和ChatGPT Mac漏洞不重复发布。",
+          "本期延续Agent权限、生命科学AI和模型验证主题，但只纳入新的安全非重复来源事实。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对模型准入和科学证据",
+          "count": 2,
+          "meaning": "用来检查GPT-Rosalind价格、可信访问、插件权限、Claude科学叙事、论文、复现和专家审查。"
+        },
+        {
+          "label": "核对短信Agent权限入口",
+          "count": 1,
+          "meaning": "用来检查消费级Agent在消息线程里的身份、授权、付款、日志、撤销和平台规则。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "一条官方，两条媒体背景",
+        "note": "OpenAI页面核对访问和定价节点；TechCrunch和The Atlantic提供产品/科学争议雷达，不替代原文、平台政策、论文、复现或客户记录。",
+        "nextCheck": "下一步优先核对GPT-Rosalind价格页、可信访问条款、Agent隐私/权限文档、平台规则、Anthropic论文、复现实验和专家审查。"
+      },
+      "overreadBoundary": {
+        "label": "不要把短批次读成全市场覆盖",
+        "body": "不要把本期读成全市场结论：这是周末后少量安全非重复信号，适合作为生命科学模型、短信Agent入口和AI科学叙事的核查表，不代表当天AI市场完整覆盖。",
+        "doNotConclude": "不能得出生命科学AI已被验证、短信Agent已规模化、Anthropic科学发现无效、或消费Agent权限问题已有统一平台规则。",
+        "useInstead": "应该先核对价格页、准入合同、隐私政策、权限日志、平台政策、论文、实验数据、独立复现和专家评审。"
+      },
+      "trendNotes": [
+        {
+          "topic": "model",
+          "label": "生命科学模型进入采购核查",
+          "note": "跨期看，Claude生命科学发现、GPT-Rosalind可信访问和外部科学质疑把AI科学从演示推向采购、准入和复核现场。",
+          "boundary": "不证明科研效果；仍需论文、实验记录、复现、客户指标和专家审查。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent入口继续贴近日常消息",
+          "note": "跨期看，Agent从桌面权限、企业控制面和责任法案延伸到短信、邮箱、电话和支付身份。",
+          "boundary": "不证明留存或安全；仍需平台规则、权限文档、日志、审计和用户指标。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "model",
+          "label": "生命科学AI证据边界更具体",
+          "status": "stronger",
+          "previousPattern": "此前生命科学主题包括Claude发现、企业培训和模型能力叙事。",
+          "currentSignal": "本期新增GPT-Rosalind公开定价节点和The Atlantic对Claude科学发现叙事的外部质疑。",
+          "signalDirection": "增强：读者可以把模型能力、访问资格、价格、论文和复现实验放到同一张核查表。",
+          "stillUnproven": "仍需价格页、准入合同、论文、实验数据、客户记录、外部复现和专家审查。"
+        },
+        {
+          "topic": "agent",
+          "label": "消费Agent权限问题更贴近用户入口",
+          "status": "stronger",
+          "previousPattern": "此前Agent主题集中在OS权限、企业安全、第三方系统访问和责任立法。",
+          "currentSignal": "本期新增TechCrunch对短信和聊天入口AI Agent的产品梳理。",
+          "signalDirection": "增强：Agent风险从企业控制面延伸到用户日常消息、邮箱、日历、付款和电话身份。",
+          "stillUnproven": "仍需产品权限文档、平台政策、审计日志、留存指标、投诉记录和第三方安全测试。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "生命科学模型进入定价核查",
+          "lastMention": "此前OpenAI出现在模型退役、GPT-6工程指南、Agent安全和ChatGPT购物中。",
+          "whatChanged": "本期新增GPT-Rosalind公开定价生效和可信访问结构，关注点从通用模型迁移转向受控生命科学工作流。",
+          "stillUnproven": "仍需价格页、准入条款、客户侧实验记录、插件日志、专家审查和第三方基准。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "科学发现叙事被外部复核",
+          "lastMention": "此前Anthropic出现在Claude企业培训、生命科学发现和前沿模型采用中。",
+          "whatChanged": "本期The Atlantic把Claude科学发现叙事放入外部科学家质疑和新颖性争议中。",
+          "stillUnproven": "仍需Anthropic论文、数据说明、外部复现、同行评议、实验室优先权材料和训练数据政策。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/平台原文",
+          "count": 1,
+          "role": "OpenAI用于核对GPT-Rosalind访问、插件和定价节点；科研效果仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "TechCrunch和The Atlantic用于观察产品入口和科学争议雷达；完整事实和上下文仍需读原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "model",
+          "label": "核对生命科学模型和科学证据",
+          "count": 2,
+          "itemIds": [
+            "openai-gpt-rosalind-pricing-trusted-access-2026-10-05",
+            "atlantic-anthropic-claude-science-scrutiny-2026-10-04"
+          ],
+          "meaning": "用来检查生命科学模型准入、价格、论文、复现、训练数据边界和专家审查。"
+        },
+        {
+          "id": "agent",
+          "label": "检查短信Agent权限入口",
+          "count": 1,
+          "itemIds": [
+            "techcrunch-text-message-ai-agents-2026-10-03"
+          ],
+          "meaning": "用来检查消费级Agent在消息入口里的身份、授权、付款、日志、撤销和平台规则。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "openai-news",
+        "sourceName": "OpenAI News",
+        "count": 1,
+        "share": "1/3",
+        "note": "短批次中没有单一来源占多数，但任一单条都不应被读成完整市场覆盖；需警惕少量来源样本带来的判断集中。",
+        "nextCheck": "继续查其他官方来源、独立媒体、论文、第三方复现和客户侧记录。"
+      },
+      "categories": [
+        {
+          "id": "policy",
+          "label": "政策",
+          "description": "本期用于回看10月4日联邦任务小组、Agent责任法案和州级AI治理；读者可筛选政策脉络，仍需官方文件、法案文本和监管材料确认。"
+        },
+        {
+          "id": "tool",
+          "label": "工具",
+          "description": "本期用于回看模型迁移、Agent安全和开发者工具信号；读者可筛选工具与控制面脉络，仍需文档、日志、审计和客户指标确认。"
+        },
+        {
+          "id": "product",
+          "label": "产品",
+          "description": "本期用于检查短信和聊天入口里的消费级AI Agent；读者可核对身份、授权、付款、撤销和人工兜底，仍需产品权限文档、平台政策、日志和留存指标确认。"
+        },
+        {
+          "id": "research",
+          "label": "研究",
+          "description": "本期用于查看GPT-Rosalind生命科学模型准入与Anthropic科学发现争议；读者可核对论文、实验数据、复现和专家审查，仍不能据此确认药物发现效果。"
+        },
+        {
+          "id": "funding",
+          "label": "资金",
+          "description": "本期用于回看AI资本和算力投入脉络；读者可筛选融资背景，仍需公司公告、融资文件、监管披露或可靠媒体补证。"
+        },
+        {
+          "id": "model",
+          "label": "模型",
+          "description": "本期用于核对生命科学专用模型的准入、定价和科学证据边界；读者可筛选价格页、可信访问、论文、复现和客户记录，仍不能据此确认科研效果。"
+        }
+      ],
+      "briefing": {
+        "label": "17:00 JST短批次",
+        "headline": "生命科学AI、短信Agent和科学证据边界",
+        "summary": "本期只发布3条安全非重复信号：OpenAI生命科学模型进入定价/可信访问核查，消费级Agent继续贴近消息入口，Anthropic科学发现叙事受到外部科学家质疑。",
+        "cta": "查看本期新闻",
+        "watchPoints": [
+          {
+            "title": "模型准入",
+            "body": "GPT-Rosalind下一步看价格页、可信访问条款、插件权限和客户侧实验记录。"
+          },
+          {
+            "title": "Agent权限",
+            "body": "短信Agent下一步看身份隔离、授权撤销、付款边界、任务日志和平台规则。"
+          },
+          {
+            "title": "科学复核",
+            "body": "Anthropic科学叙事下一步看论文、复现实验、训练数据政策和专家审查。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "短批次说明",
+        "title": "AI进入工作流后，证据边界变得更重要",
+        "subtitle": "10月5日17:00 JST更新只收3条安全非重复信号，重点不是数量，而是把模型准入、Agent权限和科学复核拆成可核查问题。",
+        "dateLabel": "2026年10月5日 17:00 JST",
+        "status": "已发布；短批次",
+        "overview": "本期信号显示，AI产品正在从能力展示走向真实工作流。生命科学模型要面对准入、价格和实验复核；消费Agent要面对消息入口里的身份、授权和付款；AI科学发现要面对外部科学共同体的验证。",
+        "timeline": [
+          {
+            "label": "10月5日",
+            "title": "GPT-Rosalind定价节点",
+            "body": "OpenAI页面注明公开定价于10月5日生效，适合核对生命科学模型采购和治理入口。"
+          },
+          {
+            "label": "10月3日",
+            "title": "短信Agent入口梳理",
+            "body": "TechCrunch梳理多款通过短信或聊天应用触达用户的AI Agent，显示消费入口正在贴近日常消息。"
+          },
+          {
+            "label": "10月4日",
+            "title": "科学叙事遭遇外部质疑",
+            "body": "The Atlantic报道Anthropic生命科学发现叙事受到外部科学家质疑，下一步看论文和复现。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "3",
+            "label": "本期安全非重复信号"
+          },
+          {
+            "value": "1/3",
+            "label": "官方来源占比"
+          },
+          {
+            "value": "2/3",
+            "label": "可靠媒体背景占比"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "生命科学模型",
+            "title": "先查准入和价格，再谈科研效果",
+            "body": "GPT-Rosalind的关键不是单个榜单，而是可信访问、插件工作流、价格和实验记录能否形成可审计科研流程。",
+            "soWhat": "科研和采购团队应先核对资格、数据边界和专家复核，再判断是否进入真实项目。"
+          },
+          {
+            "number": "02",
+            "label": "消费Agent",
+            "title": "消息入口降低摩擦，也抬高权限风险",
+            "body": "短信Agent把日历、邮箱、付款、电话和购物任务放进同一入口，用户体验更轻，但授权和撤销更难忽视。",
+            "soWhat": "产品团队应把日志、撤销、人工接管和平台政策作为首屏设计问题。"
+          },
+          {
+            "number": "03",
+            "label": "科学复核",
+            "title": "AI科学发布必须经得起外部共同体追问",
+            "body": "Anthropic相关争议说明，模型辅助数据分析、真正新颖发现和可产业化成果不是同一层证据。",
+            "soWhat": "传播和投资判断应等待论文、复现、优先权材料和专家审查。"
+          }
+        ],
+        "actions": [
+          "把生命科学AI评估拆成价格、准入、数据、插件、实验记录和专家复核。",
+          "把消费Agent评估拆成入口、身份、授权、付款、撤销、日志和人工兜底。",
+          "把AI科学发现评估拆成新颖性、训练数据边界、论文、复现和同行评议。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "短批次边界",
+            "body": "本期只有3条安全非重复信号，不代表10月5日AI市场完整覆盖。"
+          },
+          {
+            "label": "媒体边界",
+            "body": "TechCrunch和The Atlantic提供背景雷达，完整事实和上下文仍需读原文。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI页面支持GPT-Rosalind访问、插件和10月5日定价节点。",
+            "TechCrunch支持短信/聊天入口AI Agent的产品梳理事实。",
+            "The Atlantic支持Anthropic科学发现叙事遭遇外部质疑的报道事实。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower判断本期重点是工作流入口和证据边界，而不是模型能力排名。",
+            "AI Watchtower建议读者优先核对价格、权限、平台政策、论文和复现材料。"
+          ],
+          "unknowns": [
+            "GPT-Rosalind真实科研效果、客户采用和生物安全评估仍未由外部材料确认。",
+            "短信Agent真实留存、安全表现和平台政策边界仍需更多公开证据。",
+            "Anthropic科学发现的新颖性和数据边界仍需论文、复现和专家审查。"
+          ]
+        },
+        "references": [
+          {
+            "label": "OpenAI页面支持GPT-Rosalind可信访问与10月5日定价节点",
+            "url": "https://openai.com/ml-IN/index/introducing-new-capabilities-to-gpt-rosalind/"
+          },
+          {
+            "label": "TechCrunch报道短信和聊天入口里的AI Agent产品形态",
+            "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/"
+          },
+          {
+            "label": "The Atlantic报道Anthropic科学发现叙事的外部质疑",
+            "url": "https://www.theatlantic.com/science/2026/10/anthropic-artificial-intelligence-science-biology/688878/"
+          }
+        ]
+      },
+      "sourceCount": 109,
+      "items": [
+        {
+          "id": "atlantic-anthropic-claude-science-scrutiny-2026-10-04",
+          "category": "research",
+          "label": "研究",
+          "title": "The Atlantic：Anthropic的Claude科学发现叙事遭遇外部质疑",
+          "body": "The Atlantic报道，Anthropic关于Claude发现类似CRISPR酶系统的叙事受到多位科学家质疑，争议集中在新颖性、意义和训练数据边界。",
+          "summary": "The Atlantic报道，Anthropic围绕Claude科学发现的叙事受到外部科学家质疑，新颖性和意义仍需论文与复核。",
+          "whyItMatters": "这提醒AI科学发现不能只看厂商发布和名人背书，必须分清模型辅助数据筛选、真正的新发现、论文优先权和训练数据边界。",
+          "detailBody": "The Atlantic报道，多位科学家质疑Anthropic对Claude生命科学发现的表述，争议包括该酶系统是否真正新颖、是否足够重要，以及外部实验室交互数据边界。该条只保留最小报道事实，完整事实、采访、数据、图表和上下文仍需阅读原文。",
+          "trend": "AI科学叙事正进入“外部科学共同体验证”阶段，厂商发布会被论文、实验室优先权、训练数据政策和复现实验重新校准。",
+          "detailTrend": "AI科学发现的可信度不只取决于模型能力，还取决于新颖性定义、数据来源、实验复现和同行评议能否支撑厂商叙事。外部科学共同体的质疑会把发布口径重新拉回论文、优先权和可复查实验；这也是AI科学从公关叙事进入研究规范的必经阶段。",
+          "whyRanked": "它给生命科学AI热潮降温：同一事件可能既是有用的数据分析能力，也是被过度包装的科学突破。",
+          "topReason": "它提示AI科学发现需要外部共同体验证。下一步要看论文、实验复现、优先权说明和训练数据政策。",
+          "impact": "科研、药企、投资和传播团队应把AI科学发布拆成能力、发现、新颖性、数据来源和临床/产业价值五个层级核查。",
+          "whoShouldCare": "负责AI科研评估、药物发现合作、科学传播、投资尽调和数据治理的中文读者应关注。",
+          "readerUse": "科研和尽调团队可用它更新AI科学发现审查表：原始论文、外部复现、实验室优先权、训练数据政策和专家反驳。",
+          "nextCheck": "查Anthropic论文或数据说明、相关实验室回应、同行评议、独立复现实验、训练数据政策和专家审查。",
+          "followUpQuestions": [
+            "Anthropic是否发布论文、数据说明、训练数据政策或外部专家评审，对应公告、文档、日志、报告或指标是什么？",
+            "被报道提及的外部实验室或独立研究者是否给出优先权、复现结果或正式反驳材料？"
+          ],
+          "evidenceThreshold": "需要论文、实验数据、外部复现、同行评议或实验室优先权材料，才能升级为已验证的新科学发现。",
+          "claimBoundary": "媒体报道不证明Anthropic存在数据不当使用，也不证明Claude发现没有科研价值；它只说明外部科学界仍有重要争议。",
+          "counterEvidence": "若同行评议确认新颖性、独立实验复现有效且数据政策排除交互数据来源争议，应收窄为传播口径争议。需要用论文、复现实验、政策文件或专家审查作为降级依据。",
+          "sourceId": "the-atlantic-science",
+          "sourceName": "The Atlantic Science",
+          "source": "The Atlantic Science",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceUrl": "https://www.theatlantic.com/science/2026/10/anthropic-artificial-intelligence-science-biology/688878/",
+          "originalUrl": "https://www.theatlantic.com/science/2026/10/anthropic-artificial-intelligence-science-biology/688878/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "The Atlantic Science报道Anthropic生命科学发现叙事受到外部科学家质疑，并呈现新颖性、意义和数据边界争议。该条只保留最小报道事实，完整事实、采访、数据、图表和上下文仍需阅读原文。",
+          "publishedAt": "2026-10-04T11:56:28-04:00",
+          "time": "10月5日",
+          "tags": [
+            "AI科学",
+            "生命科学",
+            "来源边界"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "可靠媒体补充外部科学质疑，适合给生命科学AI叙事加来源边界。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "可靠媒体补充外部科学质疑，适合给生命科学AI叙事加来源边界。"
+          },
+          "detailWhyRanked": "它给生命科学AI热潮降温：同一事件可能既是有用的数据分析能力，也是被过度包装的科学突破。 来源侧可核对的是The Atlantic Science支持的具体事实；升级判断仍需查Anthropic论文或数据说明、相关实验室回应、同行评议、独立复现实验、训练数据政策和专家审查。。"
+        },
+        {
+          "id": "openai-gpt-rosalind-pricing-trusted-access-2026-10-05",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI：GPT-Rosalind进入可信访问与定价生效节点",
+          "body": "OpenAI页面显示，面向生命科学的GPT-Rosalind已向合格组织全球开放可信访问，并注明公开定价于10月5日生效。",
+          "summary": "OpenAI页面显示，GPT-Rosalind面向合格生命科学组织的可信访问继续扩大，公开定价在10月5日生效。",
+          "whyItMatters": "生命科学模型开始从研究预览转向可采购、可治理的企业入口，采购、法务和科研团队需要同步检查访问资格、插件工作流和生物安全边界。",
+          "detailBody": "OpenAI页面称GPT-Rosalind面向生命科学研究工作流，结合模型能力、Codex插件和可信访问结构；页面还注明公开定价于10月5日生效，并提到合格组织、治理要求和Novo Nordisk案例。下一步要查价格页、准入条款、客户侧实验记录和外部评测。",
+          "trend": "生命科学AI竞争正在从“模型能否发现线索”转向“谁能把受控访问、工具执行、证据溯源和采购计费放进同一套工作流”。",
+          "detailTrend": "生命科学AI竞争正在从单点能力展示转向受控科研工作流：模型能力只是入口，插件执行、访问资格、定价方式和组织治理会共同决定它能否进入真实研发流程。这个阶段也让专用模型更像受监管的研究基础设施，而不是普通聊天模型的行业版本。",
+          "whyRanked": "它给生命科学AI一个明确采购和治理节点：不是只看模型声明，还要看定价、准入、插件、日志和外部复核。",
+          "topReason": "它把生命科学模型推进到可信访问和定价核查阶段。下一步要查价格页、准入条款、客户实验记录和独立评测。",
+          "impact": "生命科学、药研平台、数据治理和采购团队应把它当作模型准入检查表，而不是已验证药物发现效果。",
+          "whoShouldCare": "负责生命科学AI采购、药研数据平台、实验工作流和模型风险审查的中文科研/法务/平台团队应关注。",
+          "readerUse": "科研平台团队可用它更新生命科学AI准入清单：价格、合格组织标准、插件权限、数据留存、实验记录和专家复核。",
+          "nextCheck": "查GPT-Rosalind价格页、可信访问条款、Codex生命科学插件文档、客户侧实验记录、第三方基准和生物安全审查材料。",
+          "followUpQuestions": [
+            "OpenAI是否更新GPT-Rosalind价格页、可信访问资格和数据使用条款，对应公告、文档、日志、报告或指标是什么？",
+            "Novo Nordisk或其他合格组织是否公布客户侧实验记录、审计材料、专家复核或真实科研产出？"
+          ],
+          "evidenceThreshold": "需要价格页、准入合同、客户侧实验记录、第三方基准或专家审查，才能升级为已验证的生命科学工作流采用或科研效果结论。",
+          "claimBoundary": "OpenAI页面只能证明该公司发布访问、评测和定价安排，不能证明药物发现效果、临床价值或客户ROI。",
+          "counterEvidence": "若价格页未按期生效、准入范围收窄、客户实验无法复现或外部专家否定评测代表性，应下调为厂商研究入口信号。需要用价格页、客户记录、评测复跑或专家审查作为降级依据。",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceUrl": "https://openai.com/ml-IN/index/introducing-new-capabilities-to-gpt-rosalind/",
+          "originalUrl": "https://openai.com/ml-IN/index/introducing-new-capabilities-to-gpt-rosalind/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News说明GPT-Rosalind模型能力更新、可信访问扩大、生命科学插件工作流和“公开定价于10月5日生效”这一来源事实；效果、采用和科研结论仍需外部证据。",
+          "publishedAt": "2026-10-05T00:00:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "生命科学AI",
+            "模型定价",
+            "可信访问"
+          ],
+          "companies": [
+            "OpenAI",
+            "Novo Nordisk"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源给出明确访问和定价节点，但科研效果仍需外部证据。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方来源给出明确访问和定价节点，但科研效果仍需外部证据。"
+          },
+          "detailWhyRanked": "它给生命科学AI一个明确采购和治理节点：不是只看模型声明，还要看定价、准入、插件、日志和外部复核。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查GPT-Rosalind价格页、可信访问条款、Codex生命科学插件文档、客户侧实验记录、第三方基准和生物安全审查材料。。"
+        },
+        {
+          "id": "techcrunch-text-message-ai-agents-2026-10-03",
+          "category": "product",
+          "label": "产品",
+          "title": "TechCrunch：短信入口正在成为消费级AI Agent竞争场",
+          "body": "TechCrunch梳理多款可通过短信、iMessage、WhatsApp或RCS使用的AI Agent，显示个人助理正从独立App转向消息线程。",
+          "summary": "TechCrunch梳理一批可通过短信或聊天应用使用的AI Agent，显示消费级Agent正在进入消息入口。",
+          "whyItMatters": "当Agent拥有邮箱、电话、支付卡或日程权限时，产品团队需要把身份、授权、撤销和审计设计放到消息体验之前。",
+          "detailBody": "TechCrunch报道，多款个人或家庭AI Agent可通过短信、iMessage、WhatsApp、Telegram或RCS触达，并连接日历、邮件、购物、旅行和提醒等任务。该条只保留最小报道事实，完整事实、采访、数据、图表和上下文仍需阅读原文。",
+          "trend": "消费级Agent不再只争夺App首页，而是在用户已有消息线程里争夺长期记忆、服务连接和代办执行权。",
+          "detailTrend": "消费级Agent正在把消息线程变成操作界面；当用户把日程、邮箱、旅行、购物和家庭事务都交给同一个对话入口，产品竞争会从“谁的聊天更自然”转向“谁能长期承接生活中的待办关系”。这种迁移会让Agent更像个人服务层，而不是单次问答工具。",
+          "whyRanked": "它把分散的消费级Agent产品放到一个共同入口观察：短信化降低获客摩擦，也放大权限和责任问题。",
+          "topReason": "它提示消费级Agent入口从App迁移到消息线程。下一步要看权限授权、审计日志、隐私政策和真实留存。",
+          "impact": "消费应用、家庭助理、旅行和生产力团队应检查Agent是否能在消息入口内清楚说明权限、身份、付款和人为接管。",
+          "whoShouldCare": "负责消费级Agent、家庭助理、旅行服务、个人生产力和移动消息集成的产品/安全/合规团队应关注。",
+          "readerUse": "产品团队可用它更新短信Agent设计清单：OAuth权限、专属身份、付款边界、人工兜底、任务日志、撤销入口和通知频率。",
+          "nextCheck": "查各产品的隐私政策、权限说明、SOC 2或安全白皮书、用户留存、投诉记录、应用商店政策和消息平台规则。",
+          "followUpQuestions": [
+            "这些短信Agent是否公开权限范围、撤销路径、任务日志和人工接管机制，对应公告、文档、日志、报告或指标是什么？",
+            "Apple、Google、Meta或运营商是否发布Messages/RCS/WhatsApp中Agent账号、付款和自动化任务规则，对应平台政策、审核记录、API文档或违规处理数据是什么？"
+          ],
+          "evidenceThreshold": "需要产品安全文档、平台政策、留存/投诉指标、审计材料或第三方安全评测，才能升级为已验证的消费级Agent采用趋势。",
+          "claimBoundary": "这是一篇产品梳理，不证明 listed 服务都有规模化采用，也不证明短信入口比原生App更安全或更高留存。",
+          "counterEvidence": "若平台政策限制Agent账号、用户投诉集中在越权任务、或留存指标低于普通App入口，应下调为早期入口实验。需要用平台规则、投诉数据、留存指标或审计报告作为降级依据。",
+          "sourceId": "techcrunch-ai",
+          "sourceName": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceUrl": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+          "originalUrl": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI报道短信和聊天入口里的消费级AI Agent产品形态，并列出连接服务、执行任务和部分商业化状态。该条只保留最小报道事实，完整事实、采访、数据、图表和上下文仍需阅读原文。",
+          "publishedAt": "2026-10-03T07:00:00-07:00",
+          "time": "10月3日",
+          "tags": [
+            "消费级Agent",
+            "短信入口",
+            "权限治理"
+          ],
+          "companies": [
+            "Instinct",
+            "Caddy",
+            "Fambot"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体梳理显示入口迁移，适合产品和安全团队做权限核查。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "媒体梳理显示入口迁移，适合产品和安全团队做权限核查。"
+          },
+          "detailWhyRanked": "它把分散的消费级Agent产品放到一个共同入口观察：短信化降低获客摩擦，也放大权限和责任问题。 来源侧可核对的是TechCrunch AI支持的具体事实；升级判断仍需查各产品的隐私政策、权限说明、SOC 2或安全白皮书、用户留存、投诉记录、应用商店政策和消息平台规则。。"
+        }
+      ],
+      "statusLabel": "已发布"
+    },
     {
       "id": "news-1700-2026-10-04",
       "date": "2026-10-04",
