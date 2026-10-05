@@ -24,12 +24,21 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 BASELINE = ROOT / "scripts" / "layout-baseline.json"
 PORT = 8788
 
+def _sample_detail_id():
+    """详情页的样本条目从当前期次取，避免基线脚本钉死一个已归档的 id
+    （钉死会让它去下载整份归档，测出来的体积不代表真实访问）。"""
+    feed = json.loads((ROOT / "data" / "news.json").read_text(encoding="utf-8"))
+    return feed["items"][0]["id"]
+
+
+SAMPLE_DETAIL_ID = _sample_detail_id()
+
 PAGES = [
     ("index.html", ["#top3", "#feed", "#newsGrid"]),
     ("all-news.html", ["#historyList"]),
     ("tags.html", ["#tagResults"]),
     ("archive.html", ["#archiveEditionGrid"]),
-    ("news-detail.html?id=anthropic-alignment-cybersecurity-incidents-2026-09-09", []),
+    (f"news-detail.html?id={SAMPLE_DETAIL_ID}", []),
     ("404.html", []),
 ]
 VIEWPORTS = [("desktop", 1440, 900), ("mobile", 375, 812)]

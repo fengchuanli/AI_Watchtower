@@ -393,7 +393,193 @@
         "total": 22,
         "note": "可靠媒体补充外部科学质疑，适合给生命科学AI叙事加来源边界。"
       },
-      "detailWhyRanked": "它给生命科学AI热潮降温：同一事件可能既是有用的数据分析能力，也是被过度包装的科学突破。 来源侧可核对的是The Atlantic Science支持的具体事实；升级判断仍需查Anthropic论文或数据说明、相关实验室回应、同行评议、独立复现实验、训练数据政策和专家审查。。"
+      "detailWhyRanked": "它给生命科学AI热潮降温：同一事件可能既是有用的数据分析能力，也是被过度包装的科学突破。 来源侧可核对的是The Atlantic Science支持的具体事实；升级判断仍需查Anthropic论文或数据说明、相关实验室回应、同行评议、独立复现实验、训练数据政策和专家审查。。",
+      "keyFacts": [
+        {
+          "value": "10月4日",
+          "label": "报道日",
+          "note": "The Atlantic Science 发布"
+        },
+        {
+          "value": "二手",
+          "label": "来源位置",
+          "note": "媒体报道，不是论文或官方数据说明"
+        },
+        {
+          "value": "3 项",
+          "label": "争议焦点",
+          "note": "新颖性、科学意义、训练数据边界"
+        },
+        {
+          "value": "待补",
+          "label": "论文与复现",
+          "note": "论文、同行评议、独立复现都未进入本期"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "发布时",
+          "title": "Anthropic 提出 Claude 的生命科学发现叙事",
+          "body": "称 Claude 发现了类似 CRISPR 的酶系统。",
+          "tone": "official"
+        },
+        {
+          "date": "10月4日",
+          "title": "The Atlantic 报道外部科学家质疑",
+          "body": "争议集中在该酶系统是否真正新颖、是否足够重要，以及外部实验室交互数据的边界。",
+          "tone": "media"
+        },
+        {
+          "date": "10月5日",
+          "title": "AI Watchtower 收录为媒体背景信号",
+          "body": "只保留最小报道事实，不认定任何一方成立。",
+          "tone": "dispute"
+        },
+        {
+          "date": "待补",
+          "title": "论文、复现与同行评议",
+          "body": "这些材料出现之前，这条停留在「存在争议」，不能升级为「发现被推翻」或「发现被确认」。",
+          "tone": "neutral"
+        }
+      ],
+      "comparison": {
+        "caption": "三个争议焦点分别卡在不同的证据上——不要用其中一个的结论去回答另一个。",
+        "columns": [
+          "争议焦点",
+          "厂商叙事",
+          "外部质疑",
+          "升级为结论需要"
+        ],
+        "rows": [
+          [
+            "新颖性",
+            "Claude 发现了类 CRISPR 酶系统",
+            "该酶系统是否真正新颖",
+            "论文与数据说明"
+          ],
+          [
+            "科学意义",
+            "属于可报道的科学发现",
+            "是否足够重要",
+            "独立复现与同行评议"
+          ],
+          [
+            "数据边界",
+            "由模型能力得出",
+            "外部实验室交互数据的边界存疑",
+            "实验室优先权与训练数据政策"
+          ]
+        ]
+      },
+      "relationGraph": {
+        "caption": "左边是主张方和质疑方，中间是三个争议点，右边是让争议落地所需要的材料。",
+        "nodes": [
+          {
+            "id": "anthropic",
+            "label": "Anthropic",
+            "layer": 0,
+            "kind": "claim"
+          },
+          {
+            "id": "scientists",
+            "label": "多位外部科学家",
+            "layer": 0,
+            "kind": "dispute"
+          },
+          {
+            "id": "novelty",
+            "label": "新颖性",
+            "layer": 1,
+            "kind": "subject"
+          },
+          {
+            "id": "significance",
+            "label": "科学意义",
+            "layer": 1,
+            "kind": "subject"
+          },
+          {
+            "id": "data",
+            "label": "训练数据边界",
+            "layer": 1,
+            "kind": "subject"
+          },
+          {
+            "id": "paper",
+            "label": "论文与数据说明",
+            "layer": 2,
+            "kind": "evidence"
+          },
+          {
+            "id": "review",
+            "label": "复现与同行评议",
+            "layer": 2,
+            "kind": "evidence"
+          },
+          {
+            "id": "priority",
+            "label": "实验室优先权",
+            "layer": 2,
+            "kind": "evidence"
+          }
+        ],
+        "edges": [
+          {
+            "from": "anthropic",
+            "to": "novelty",
+            "label": "主张"
+          },
+          {
+            "from": "scientists",
+            "to": "novelty",
+            "label": "质疑"
+          },
+          {
+            "from": "scientists",
+            "to": "significance",
+            "label": "质疑"
+          },
+          {
+            "from": "scientists",
+            "to": "data",
+            "label": "质疑"
+          },
+          {
+            "from": "novelty",
+            "to": "paper",
+            "label": "需要"
+          },
+          {
+            "from": "significance",
+            "to": "review",
+            "label": "需要"
+          },
+          {
+            "from": "data",
+            "to": "priority",
+            "label": "需要"
+          }
+        ]
+      },
+      "beforeAfter": {
+        "caption": "同一条消息，读到外部质疑前后应该停在不同的结论上。",
+        "before": {
+          "label": "只看厂商发布时",
+          "points": [
+            "AI 已经做出新的科学发现",
+            "模型能力可以直接换算成科研产出",
+            "发布口径等于已验证结果"
+          ]
+        },
+        "after": {
+          "label": "读到外部质疑后",
+          "points": [
+            "目前只能确认：外部科学界对新颖性和意义仍有争议",
+            "模型辅助数据筛选 ≠ 新发现",
+            "需要论文、复现、同行评议和数据政策才能升级"
+          ]
+        }
+      }
     },
     {
       "id": "openai-gpt-rosalind-pricing-trusted-access-2026-10-05",
@@ -461,7 +647,182 @@
         "total": 22,
         "note": "官方来源给出明确访问和定价节点，但科研效果仍需外部证据。"
       },
-      "detailWhyRanked": "它给生命科学AI一个明确采购和治理节点：不是只看模型声明，还要看定价、准入、插件、日志和外部复核。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查GPT-Rosalind价格页、可信访问条款、Codex生命科学插件文档、客户侧实验记录、第三方基准和生物安全审查材料。。"
+      "detailWhyRanked": "它给生命科学AI一个明确采购和治理节点：不是只看模型声明，还要看定价、准入、插件、日志和外部复核。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查GPT-Rosalind价格页、可信访问条款、Codex生命科学插件文档、客户侧实验记录、第三方基准和生物安全审查材料。。",
+      "keyFacts": [
+        {
+          "value": "10月5日",
+          "label": "公开定价生效",
+          "note": "OpenAI 页面标注的生效日"
+        },
+        {
+          "value": "全球",
+          "label": "可信访问范围",
+          "note": "面向合格生命科学组织"
+        },
+        {
+          "value": "一手",
+          "label": "来源位置",
+          "note": "OpenAI News 官方页面"
+        },
+        {
+          "value": "0 项",
+          "label": "已验证科研效果",
+          "note": "页面不含药物发现效果或客户 ROI"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "此前",
+          "title": "GPT-Rosalind 处于研究预览阶段",
+          "body": "关注点是模型能不能找出线索。",
+          "tone": "official"
+        },
+        {
+          "date": "10月5日",
+          "title": "可信访问扩大，公开定价生效",
+          "body": "面向合格生命科学组织全球开放，并给出 Codex 生命科学插件工作流。",
+          "tone": "official"
+        },
+        {
+          "date": "待补",
+          "title": "价格页、准入合同与客户实验记录",
+          "body": "这些材料出现之前，这条是采购与治理节点，不是科研效果结论。",
+          "tone": "neutral"
+        }
+      ],
+      "comparison": {
+        "caption": "官方页面给了采购侧的事实，没有给效果侧的证据——两边分开看。",
+        "columns": [
+          "采购检查项",
+          "OpenAI 页面是否给出",
+          "还需要什么"
+        ],
+        "rows": [
+          [
+            "访问资格与准入",
+            "给出：面向合格生命科学组织",
+            "准入合同与资格条款"
+          ],
+          [
+            "公开定价",
+            "给出：10 月 5 日生效",
+            "价格页与计费样例"
+          ],
+          [
+            "插件工作流",
+            "给出：Codex 生命科学插件",
+            "插件文档与客户侧实验记录"
+          ],
+          [
+            "药物发现效果",
+            "未给出",
+            "第三方基准与客户实验记录"
+          ],
+          [
+            "生物安全边界",
+            "未给出",
+            "生物安全审查材料与专家审查"
+          ]
+        ]
+      },
+      "relationGraph": {
+        "caption": "官方页面发布了三件事，每一件各自对应一份还没到手的核对材料。",
+        "nodes": [
+          {
+            "id": "openai",
+            "label": "OpenAI",
+            "layer": 0,
+            "kind": "claim"
+          },
+          {
+            "id": "access",
+            "label": "可信访问扩大",
+            "layer": 1,
+            "kind": "subject"
+          },
+          {
+            "id": "pricing",
+            "label": "公开定价生效",
+            "layer": 1,
+            "kind": "subject"
+          },
+          {
+            "id": "plugin",
+            "label": "生命科学插件",
+            "layer": 1,
+            "kind": "subject"
+          },
+          {
+            "id": "contract",
+            "label": "准入合同与资格条款",
+            "layer": 2,
+            "kind": "evidence"
+          },
+          {
+            "id": "pricepage",
+            "label": "价格页与计费样例",
+            "layer": 2,
+            "kind": "evidence"
+          },
+          {
+            "id": "records",
+            "label": "客户实验记录与基准",
+            "layer": 2,
+            "kind": "evidence"
+          }
+        ],
+        "edges": [
+          {
+            "from": "openai",
+            "to": "access",
+            "label": "发布"
+          },
+          {
+            "from": "openai",
+            "to": "pricing",
+            "label": "发布"
+          },
+          {
+            "from": "openai",
+            "to": "plugin",
+            "label": "发布"
+          },
+          {
+            "from": "access",
+            "to": "contract",
+            "label": "需核对"
+          },
+          {
+            "from": "pricing",
+            "to": "pricepage",
+            "label": "需核对"
+          },
+          {
+            "from": "plugin",
+            "to": "records",
+            "label": "需核对"
+          }
+        ]
+      },
+      "beforeAfter": {
+        "caption": "官方发布改变的是采购判断，不是科研效果判断。",
+        "before": {
+          "label": "只看发布标题",
+          "points": [
+            "生命科学模型已经能做药物发现",
+            "定价生效等于产品成熟",
+            "官方发布等于效果验证"
+          ]
+        },
+        "after": {
+          "label": "读完来源边界",
+          "points": [
+            "能确认的是访问、评测与定价安排已公布",
+            "药物发现效果、临床价值、客户 ROI 都不在这页里",
+            "升级判断要等价格页、准入合同、客户实验记录与第三方基准"
+          ]
+        }
+      }
     },
     {
       "id": "techcrunch-text-message-ai-agents-2026-10-03",
@@ -530,7 +891,155 @@
         "total": 21,
         "note": "媒体梳理显示入口迁移，适合产品和安全团队做权限核查。"
       },
-      "detailWhyRanked": "它把分散的消费级Agent产品放到一个共同入口观察：短信化降低获客摩擦，也放大权限和责任问题。 来源侧可核对的是TechCrunch AI支持的具体事实；升级判断仍需查各产品的隐私政策、权限说明、SOC 2或安全白皮书、用户留存、投诉记录、应用商店政策和消息平台规则。。"
+      "detailWhyRanked": "它把分散的消费级Agent产品放到一个共同入口观察：短信化降低获客摩擦，也放大权限和责任问题。 来源侧可核对的是TechCrunch AI支持的具体事实；升级判断仍需查各产品的隐私政策、权限说明、SOC 2或安全白皮书、用户留存、投诉记录、应用商店政策和消息平台规则。。",
+      "keyFacts": [
+        {
+          "value": "10月3日",
+          "label": "报道日",
+          "note": "TechCrunch AI"
+        },
+        {
+          "value": "4 类",
+          "label": "覆盖入口",
+          "note": "短信 / iMessage / WhatsApp / RCS"
+        },
+        {
+          "value": "二手",
+          "label": "来源位置",
+          "note": "产品梳理报道，不是平台或厂商公告"
+        },
+        {
+          "value": "0 项",
+          "label": "采用规模证据",
+          "note": "报道不含留存、投诉或审计数据"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "此前",
+          "title": "消费级 Agent 以独立 App 为主要入口",
+          "body": "争夺的是应用商店和首页位置。",
+          "tone": "neutral"
+        },
+        {
+          "date": "10月3日",
+          "title": "TechCrunch 梳理：入口转向消息线程",
+          "body": "一批 Agent 可通过短信、iMessage、WhatsApp 或 RCS 使用。",
+          "tone": "media"
+        },
+        {
+          "date": "待补",
+          "title": "平台规则、留存与投诉数据",
+          "body": "这些数据出现之前，这条是入口形态观察，不是采用趋势结论。",
+          "tone": "neutral"
+        }
+      ],
+      "comparison": {
+        "caption": "报道列出了 Agent 能拿到哪些权限；每一项权限对应一件上线前必须先定下来的事。",
+        "columns": [
+          "Agent 拿到的权限",
+          "报道中出现",
+          "上线前要核对"
+        ],
+        "rows": [
+          [
+            "邮箱",
+            "是",
+            "身份绑定与撤销路径"
+          ],
+          [
+            "电话",
+            "是",
+            "号码验证与人为接管规则"
+          ],
+          [
+            "支付卡",
+            "是",
+            "授权范围与争议处理"
+          ],
+          [
+            "日程",
+            "是",
+            "写入权限与审计日志"
+          ]
+        ]
+      },
+      "relationGraph": {
+        "caption": "消息入口降低了获客摩擦，同时把权限问题提前到了产品体验之前。",
+        "nodes": [
+          {
+            "id": "entry",
+            "label": "消息入口（短信 / iMessage / WhatsApp / RCS）",
+            "layer": 0,
+            "kind": "claim"
+          },
+          {
+            "id": "perms",
+            "label": "Agent 获得的权限：邮箱、电话、支付卡、日程",
+            "layer": 1,
+            "kind": "subject"
+          },
+          {
+            "id": "identity",
+            "label": "身份与授权说明",
+            "layer": 2,
+            "kind": "evidence"
+          },
+          {
+            "id": "revoke",
+            "label": "撤销与人为接管",
+            "layer": 2,
+            "kind": "evidence"
+          },
+          {
+            "id": "audit",
+            "label": "审计与投诉记录",
+            "layer": 2,
+            "kind": "evidence"
+          }
+        ],
+        "edges": [
+          {
+            "from": "entry",
+            "to": "perms",
+            "label": "降低摩擦"
+          },
+          {
+            "from": "perms",
+            "to": "identity",
+            "label": "先定"
+          },
+          {
+            "from": "perms",
+            "to": "revoke",
+            "label": "先定"
+          },
+          {
+            "from": "perms",
+            "to": "audit",
+            "label": "先定"
+          }
+        ]
+      },
+      "beforeAfter": {
+        "caption": "产品梳理能改变你对入口形态的认识，不能改变你对采用规模的判断。",
+        "before": {
+          "label": "只看产品列表",
+          "points": [
+            "短信入口的 Agent 已经成熟",
+            "能连服务就等于能托付",
+            "获客摩擦低等于留存好"
+          ]
+        },
+        "after": {
+          "label": "加上来源边界",
+          "points": [
+            "只能确认存在这一批产品形态",
+            "不证明规模化采用，也不证明比原生 App 更安全或留存更高",
+            "要看隐私政策、平台规则、留存与投诉数据"
+          ]
+        }
+      }
     }
   ]
 }

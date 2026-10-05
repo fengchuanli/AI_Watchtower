@@ -203,3 +203,24 @@ node scripts/validate-data.mjs
 ```
 
 The validator checks source-count metadata, concise edition metadata without repeated explanations, homepage caveat-copy duplication across `readerFrame`, `sourceRisk`, and `trendNotes`, topic continuity notes that classify recurring themes as stronger, weaker, repeated, or resolved, company continuity notes that say what changed and what remains unproven, action-oriented coverage labels and topic meanings, coverageMix tiny-bucket merging, source-family and source-owner concentration notes, category definitions and label consistency, deep-briefing coverage limits and source-fact reference labels, archive readiness between the current edition and latest history snapshot, newest-first sorting, stale current items with source-specific `freshSourceFact` exceptions, repeated current-vs-history coverage, repeated source URLs and near-duplicate titles across history, current and historical item fields including dedicated detail-page explanations, current/latest promoted detail paragraph length, promoted-item concrete-audience wording, promoted-item incident briefing readiness, selection scores, reader-use notes, editorial follow-up questions, evidence thresholds, claim boundaries, vendor-claim next checks with independent evidence, downgrade signals with concrete follow-up artifacts, source ID references, and URL shape.
+
+## 详情页结构化字段（可选）
+
+这些字段是可选的：填了就在详情页渲染出对应区块，没填整块不出现，旧条目不受影响。
+目的是让详情页能像 visionhub 日次幻灯页一样承载图表和对照，而不是只有几段散文。
+
+| 字段 | 形状 | 渲染成什么 | 填写要求 |
+| --- | --- | --- | --- |
+| `keyFacts` | `[{value,label,note}]` | hero 下的关键事实条 | 3–5 条；`value` 要短（日期、数量、"一手/二手"） |
+| `timeline` | `[{date,title,body,tone}]` | 时间线；`tone` 取 `official`/`media`/`dispute`/`neutral` | 至少 2 条，未发生的用 `待补` 标注 |
+| `comparison` | `{caption,columns[],rows[][]}` | 对比表，首列自动作行头 | 每行必须能回指来源字段，不能是推测 |
+| `beforeAfter` | `{caption,before:{label,points[]},after:{label,points[]}}` | 前后判断对照 | `before` 写容易被误读的结论，`after` 写加上来源边界后应停的位置 |
+| `relationGraph` | `{caption,nodes:[{id,label,layer,kind}],edges:[{from,to,label}]}` | SVG 关系图 | `layer` 从 0 开始分列；`kind` 取 `claim`/`dispute`/`subject`/`evidence`；边标签不超过 4 字 |
+
+硬规则：**这些字段只能重组条目里已有的事实**（`body`、`provenance`、`claimBoundary`、
+`evidenceThreshold`、`nextCheck`、`counterEvidence` 等），不得引入来源里没有的内容。
+无法从已有字段推出的格子写「未给出」，不要留空也不要补写。
+
+趋势图不在这里填：它由 `scripts/build-derived-data.mjs` 从归档统计出
+`data/trends.json`（按 ISO 周统计每家公司/每个标签的收录数），详情页按条目的
+`companies` / `tags` 自动匹配，匹配不到就不渲染。

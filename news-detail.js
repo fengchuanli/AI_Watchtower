@@ -1,4 +1,5 @@
 const detailShell = document.querySelector("#detailShell");
+let detailTrends = null;
 const requiredDetailFields = [
   "label",
   "title",
@@ -83,7 +84,16 @@ async function loadDetail() {
   }
 
   try {
-    const currentFeed = await fetchJson("./data/news.json");
+    const [currentFeed] = await Promise.all([
+      fetchJson("./data/news.json"),
+      fetchJson("./data/trends.json")
+        .then((trends) => {
+          detailTrends = trends;
+        })
+        .catch(() => {
+          detailTrends = null;
+        }),
+    ]);
     validateDetailFeed(currentFeed);
     const currentContext = toDetailContext(currentFeed);
     const currentItem = (!editionId || editionId === currentFeed.edition.id)
@@ -707,6 +717,397 @@ function renderMetricList(metrics) {
     .join("");
 }
 
+
+/* ============================================================
+   结构化可视区块：有数据才渲染，没有就整块不出现
+   keyFacts / timeline / comparison / beforeAfter / relationGraph
+   趋势图不手写，由 data/trends.json 的归档统计生成
+   ============================================================ */
+
+const RELATION_KIND_COLORS = {
+  claim: "#c08a15",
+  dispute: "#4f8ed9",
+  evidence: "#49a86b",
+};
+
+const RELATION_KIND_LABELS = {
+  claim: "主张方",
+  dispute: "质疑方",
+  evidence: "证据要求",
+  subject: "争议对象",
+};
+
+function renderVisualSection(id, eyebrow, heading, note, body) {
+  if (!body) {
+    return "";
+  }
+
+  return `
+    <section class="detail-visual" id="${id}">
+      <div class="detail-visual-head">
+        <p class="eyebrow">${escapeHtml(eyebrow)}</p>
+        <h2>${escapeHtml(heading)}</h2>
+        ${note ? `<p class="detail-board-note">${escapeHtml(note)}</p>` : ""}
+      </div>
+      ${body}
+    </section>
+  `;
+}
+
+function renderKeyFacts(item) {
+  const facts = Array.isArray(item.keyFacts) ? item.keyFacts.filter((fact) => fact?.value) : [];
+
+  if (!facts.length) {
+    return "";
+  }
+
+  return `
+    <dl class="key-facts" aria-label="这条信号的关键事实">
+      ${facts
+        .map(
+          (fact) => `
+            <div>
+              <dt>${escapeHtml(fact.value)}</dt>
+              <dd>${escapeHtml(fact.label)}</dd>
+              ${fact.note ? `<small>${escapeHtml(fact.note)}</small>` : ""}
+            </div>
+          `,
+        )
+        .join("")}
+    </dl>
+  `;
+}
+
+function renderTimeline(item) {
+  const steps = Array.isArray(item.timeline) ? item.timeline.filter((step) => step?.title) : [];
+
+  if (steps.length < 2) {
+    return "";
+  }
+
+  const body = `
+    <ol class="detail-timeline-rail">
+      ${steps
+        .map(
+          (step) => `
+            <li class="tone-${escapeHtml(step.tone || "neutral")}">
+              <time>${escapeHtml(step.date || "")}</time>
+              <strong>${escapeHtml(step.title)}</strong>
+              ${step.body ? `<p>${escapeHtml(step.body)}</p>` : ""}
+            </li>
+          `,
+        )
+        .join("")}
+    </ol>
+  `;
+
+  return renderVisualSection("detail-timeline", "Timeline", "事情是怎么走到今天的", item.timelineNote, body);
+}
+
+function renderComparison(item) {
+  const table = item.comparison;
+
+  if (!table || !Array.isArray(table.columns) || !Array.isArray(table.rows) || !table.rows.length) {
+    return "";
+  }
+
+  const body = `
+    <div class="detail-table-scroll">
+      <table class="detail-compare-table">
+        ${table.caption ? `<caption>${escapeHtml(table.caption)}</caption>` : ""}
+        <thead>
+          <tr>${table.columns.map((column) => `<th scope="col">${escapeHtml(column)}</th>`).join("")}</tr>
+        </thead>
+        <tbody>
+          ${table.rows
+            .map(
+              (row) =>
+                `<tr>${row
+                  .map((cell, index) =>
+                    index === 0
+                      ? `<th scope="row">${escapeHtml(cell)}</th>`
+                      : `<td>${escapeHtml(cell)}</td>`,
+                  )
+                  .join("")}</tr>`,
+            )
+            .join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  return renderVisualSection("detail-comparison", "Comparison", "同一件事，不同说法摆在一起", item.comparisonNote, body);
+}
+
+function renderBeforeAfter(item) {
+  const pair = item.beforeAfter;
+
+  if (!pair?.before?.points?.length || !pair?.after?.points?.length) {
+    return "";
+  }
+
+  const column = (side, tone) => `
+    <article class="before-after-col tone-${tone}">
+      <span>${escapeHtml(side.label)}</span>
+      <ul>${side.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
+    </article>
+  `;
+
+  const body = `
+    <div class="before-after">
+      ${column(pair.before, "before")}
+      <div class="before-after-arrow" aria-hidden="true">→</div>
+      ${column(pair.after, "after")}
+    </div>
+  `;
+
+  return renderVisualSection("detail-before-after", "Before / After", "这条消息改变了什么判断", pair.caption, body);
+}
+
+function wrapGraphLabel(label, perLine = 9) {
+  const text = String(label);
+  const lines = [];
+
+  for (let index = 0; index < text.length; index += perLine) {
+    lines.push(text.slice(index, index + perLine));
+
+    if (lines.length === 3) {
+      break;
+    }
+  }
+
+  if (text.length > perLine * 3) {
+    lines[2] = `${lines[2].slice(0, perLine - 1)}…`;
+  }
+
+  return lines;
+}
+
+function renderRelationGraph(item) {
+  const graph = item.relationGraph;
+  const nodes = Array.isArray(graph?.nodes) ? graph.nodes : [];
+  const edges = Array.isArray(graph?.edges) ? graph.edges : [];
+
+  if (nodes.length < 2) {
+    return "";
+  }
+
+  const BOX_W = 172;
+  const BOX_H = 74;
+  const COL_GAP = 78;
+  const ROW_GAP = 26;
+  const PAD = 12;
+
+  const layers = [...new Set(nodes.map((node) => Number(node.layer) || 0))].sort((a, b) => a - b);
+  const byLayer = layers.map((layer) => nodes.filter((node) => (Number(node.layer) || 0) === layer));
+  const maxRows = Math.max(...byLayer.map((column) => column.length));
+
+  const width = layers.length * BOX_W + (layers.length - 1) * COL_GAP + PAD * 2;
+  const height = maxRows * BOX_H + (maxRows - 1) * ROW_GAP + PAD * 2;
+
+  const position = new Map();
+
+  byLayer.forEach((column, columnIndex) => {
+    const columnHeight = column.length * BOX_H + (column.length - 1) * ROW_GAP;
+    const offsetY = PAD + (height - PAD * 2 - columnHeight) / 2;
+
+    column.forEach((node, rowIndex) => {
+      position.set(node.id, {
+        x: PAD + columnIndex * (BOX_W + COL_GAP),
+        y: offsetY + rowIndex * (BOX_H + ROW_GAP),
+        node,
+      });
+    });
+  });
+
+  const edgePaths = edges
+    .map((edge) => {
+      const from = position.get(edge.from);
+      const to = position.get(edge.to);
+
+      if (!from || !to) {
+        return "";
+      }
+
+      const x1 = from.x + BOX_W;
+      const y1 = from.y + BOX_H / 2;
+      const x2 = to.x;
+      const y2 = to.y + BOX_H / 2;
+      const midX = (x1 + x2) / 2;
+      const path = `M ${x1} ${y1} C ${midX} ${y1}, ${midX} ${y2}, ${x2 - 7} ${y2}`;
+      const labelWidth = String(edge.label || "").length * 11 + 10;
+
+      return `
+        <path d="${path}" class="graph-edge" marker-end="url(#graphArrow)" />
+        ${
+          edge.label
+            ? `<rect x="${midX - labelWidth / 2}" y="${(y1 + y2) / 2 - 10}" width="${labelWidth}" height="20" rx="10" class="graph-edge-label-bg" />
+               <text x="${midX}" y="${(y1 + y2) / 2 + 4}" class="graph-edge-label">${escapeHtml(edge.label)}</text>`
+            : ""
+        }
+      `;
+    })
+    .join("");
+
+  const nodeBoxes = [...position.values()]
+    .map(({ x, y, node }) => {
+      const color = RELATION_KIND_COLORS[node.kind] || "#6b7a94";
+      const kindLabel = RELATION_KIND_LABELS[node.kind] || "";
+      const lines = wrapGraphLabel(node.label);
+      const startY = y + BOX_H / 2 - (lines.length - 1) * 9 + (kindLabel ? 4 : 0);
+
+      return `
+        <g class="graph-node">
+          <rect x="${x}" y="${y}" width="${BOX_W}" height="${BOX_H}" rx="10" class="graph-node-box" />
+          <rect x="${x}" y="${y}" width="4" height="${BOX_H}" rx="2" fill="${color}" />
+          ${kindLabel ? `<text x="${x + 16}" y="${y + 18}" class="graph-node-kind">${escapeHtml(kindLabel)}</text>` : ""}
+          ${lines
+            .map(
+              (line, index) =>
+                `<text x="${x + 16}" y="${startY + index * 18}" class="graph-node-label">${escapeHtml(line)}</text>`,
+            )
+            .join("")}
+        </g>
+      `;
+    })
+    .join("");
+
+  const body = `
+    <div class="detail-graph-scroll">
+      <svg
+        class="relation-graph"
+        viewBox="0 0 ${width} ${height}"
+        width="${width}"
+        height="${height}"
+        role="img"
+        aria-label="${escapeHtml(graph.caption || "关系图")}"
+      >
+        <defs>
+          <marker id="graphArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" class="graph-arrow" />
+          </marker>
+        </defs>
+        ${edgePaths}
+        ${nodeBoxes}
+      </svg>
+    </div>
+    <ul class="graph-legend" aria-hidden="true">
+      ${[...new Set(nodes.map((node) => node.kind).filter((kind) => RELATION_KIND_LABELS[kind]))]
+        .map(
+          (kind) =>
+            `<li><i style="background:${RELATION_KIND_COLORS[kind] || "#6b7a94"}"></i>${escapeHtml(RELATION_KIND_LABELS[kind])}</li>`,
+        )
+        .join("")}
+    </ul>
+  `;
+
+  return renderVisualSection("detail-relation", "Who claims what", "谁在主张、谁在质疑、还缺什么证据", graph.caption, body);
+}
+
+function renderTrendChart(item, trends) {
+  if (!trends?.weeks?.length) {
+    return "";
+  }
+
+  const company = (item.companies || []).find((name) => trends.companies?.[name]);
+  const tag = (item.tags || []).find((name) => trends.tags?.[name]);
+  const subject = company || tag;
+  const series = company ? trends.companies[company] : tag ? trends.tags[tag] : null;
+
+  if (!series) {
+    return "";
+  }
+
+  let lastFilled = series.length - 1;
+
+  while (lastFilled >= 0 && series[lastFilled] === 0) {
+    lastFilled -= 1;
+  }
+
+  if (lastFilled < 0) {
+    return "";
+  }
+
+  const visible = series.slice(Math.max(0, lastFilled - 11), lastFilled + 1);
+  const weeks = trends.weeks.slice(Math.max(0, lastFilled - 11), lastFilled + 1);
+  const peak = Math.max(...visible);
+
+  if (!peak) {
+    return "";
+  }
+
+  const W = 640;
+  const H = 180;
+  const PAD_L = 34;
+  const PAD_B = 28;
+  const PAD_T = 16;
+  const plotW = W - PAD_L - 12;
+  const plotH = H - PAD_B - PAD_T;
+  const slot = plotW / visible.length;
+  const barW = Math.min(30, slot - 6);
+  const lastIndex = visible.length - 1;
+  const peakIndex = visible.indexOf(peak);
+
+  const gridValues = [0, Math.round(peak / 2), peak].filter((value, index, list) => list.indexOf(value) === index);
+
+  const bars = visible
+    .map((value, index) => {
+      const barH = Math.max(value > 0 ? 3 : 0, (value / peak) * plotH);
+      const x = PAD_L + index * slot + (slot - barW) / 2;
+      const y = PAD_T + plotH - barH;
+      const showLabel = index === peakIndex || index === lastIndex;
+
+      return `
+        <g class="trend-bar">
+          <rect x="${x}" y="${y}" width="${barW}" height="${barH}" rx="4" />
+          ${showLabel && value > 0 ? `<text x="${x + barW / 2}" y="${y - 6}" class="trend-value">${value}</text>` : ""}
+          <title>${escapeHtml(weeks[index])} 当周 · ${value} 条</title>
+          <rect x="${PAD_L + index * slot}" y="${PAD_T}" width="${slot}" height="${plotH}" class="trend-hit" />
+        </g>
+      `;
+    })
+    .join("");
+
+  const axis = gridValues
+    .map((value) => {
+      const y = PAD_T + plotH - (value / peak) * plotH;
+      return `
+        <line x1="${PAD_L}" y1="${y}" x2="${W - 12}" y2="${y}" class="trend-grid" />
+        <text x="${PAD_L - 8}" y="${y + 4}" class="trend-axis" text-anchor="end">${value}</text>
+      `;
+    })
+    .join("");
+
+  const ticks = weeks
+    .map((week, index) =>
+      index % 3 === 0 || index === lastIndex
+        ? `<text x="${PAD_L + index * slot + slot / 2}" y="${H - 8}" class="trend-axis" text-anchor="middle">${week.slice(5)}</text>`
+        : "",
+    )
+    .join("");
+
+  const total = visible.reduce((sum, value) => sum + value, 0);
+  const body = `
+    <div class="detail-chart-scroll">
+      <svg class="trend-chart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img"
+        aria-label="${escapeHtml(`${subject} 近 12 周在站内归档中的信号数，合计 ${total} 条`)}">
+        ${axis}
+        ${bars}
+        ${ticks}
+      </svg>
+    </div>
+    <p class="detail-chart-note">近 12 周合计 ${total} 条；数据来自站内归档 <code>data/trends.json</code>，按发布周统计，不是外部热度指标。</p>
+  `;
+
+  return renderVisualSection(
+    "detail-trend",
+    "Trend",
+    `${subject}：最近 12 周站内信号数`,
+    "每一根柱子是那一周被 AI Watchtower 收录的相关条目数量，用来看这家公司/这个主题是不是在持续出现。",
+    body,
+  );
+}
+
 function renderError(title, message, canRetry = false) {
   detailShell.innerHTML = `
     <p class="eyebrow">News Explainer</p>
@@ -754,6 +1155,8 @@ function renderDetail(item, data) {
       <p class="detail-source-reminder">${escapeHtml(sourceReminder)}</p>
     </div>
 
+    ${renderKeyFacts(item)}
+
     <section class="quick-summary" id="quick-summary" aria-label="速览">
       <div>
         <p class="eyebrow">30 秒速览</p>
@@ -798,6 +1201,8 @@ function renderDetail(item, data) {
           ${renderReadingNote("这一段的边界", item.provenance)}
         </section>
 
+        ${renderTimeline(item)}
+
         <section class="detail-block incident-block detail-primary-section" id="incident-analysis">
           <span>02 · 这件事怎么理解</span>
           <h2>为什么这条值得占用你的时间</h2>
@@ -809,6 +1214,9 @@ function renderDetail(item, data) {
           <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
         </section>
 
+        ${renderRelationGraph(item)}
+        ${renderComparison(item)}
+
         <section class="detail-block incident-block detail-primary-section" id="incident-trend">
           <span>03 · 可能带来的变化</span>
           <h2>如果后续被证实，会改变什么</h2>
@@ -818,6 +1226,9 @@ function renderDetail(item, data) {
           </div>
           <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
         </section>
+
+        ${renderBeforeAfter(item)}
+        ${renderTrendChart(item, detailTrends)}
 
         <section class="detail-block incident-block source-verification-block detail-secondary-context" id="incident-source">
           <span>04 · 来源与核验边界</span>
