@@ -4,7 +4,7 @@ from typing import Dict, Iterable, List, Optional
 
 from answer_demo import DEFAULT_MIN_SCORE, build_answer, format_sources
 from build_context import DEFAULT_MAX_CHARS_PER_CHUNK, DEFAULT_TOP_K, build_citations, build_context_text
-from retrievers import Retriever, create_local_retriever, to_scored_context_items
+from retrievers import Retriever, create_local_retriever, create_retriever, to_scored_context_items
 
 
 @dataclass
@@ -24,12 +24,20 @@ def run_ask_pipeline(
     max_chars_per_chunk: int = DEFAULT_MAX_CHARS_PER_CHUNK,
     min_score: float = DEFAULT_MIN_SCORE,
     source_types: Optional[Iterable[str]] = None,
+    generator=None,
 ) -> AskPipelineResult:
     retrieved_chunks = retriever.retrieve(question, top_k, source_types)
     citations = build_citations(to_scored_context_items(retrieved_chunks), max_chars_per_chunk)
     context = build_context_text(question, citations, retriever.name)
-    answer = build_answer(question, citations, min_score)
-    sources = format_sources(citations)
+    if generator is None:
+        answer = build_answer(question, citations, min_score)
+        sources = format_sources(citations)
+    else:
+        from llm_answer import format_grounded_answer
+
+        grounded = generator.generate(question, citations)
+        answer = format_grounded_answer(grounded, citations)
+        sources = f"(retrieved {len(citations)} chunks; tokens in/out: {grounded.prompt_tokens}/{grounded.completion_tokens})"
     return AskPipelineResult(
         question=question,
         retriever_name=retriever.name,
@@ -67,9 +75,15 @@ def main() -> None:
     parser.add_argument("--min-score", type=float, default=DEFAULT_MIN_SCORE)
     parser.add_argument(
         "--retriever",
-        choices=["vector", "keyword"],
+        choices=["vector", "keyword", "azure-vector", "azure-hybrid"],
         default="vector",
-        help="Local retrieval backend used by the unified ask pipeline.",
+        help="Retrieval backend (azure-* need .env loaded).",
+    )
+    parser.add_argument(
+        "--generator",
+        choices=["template", "azure"],
+        default="template",
+        help="template = local rule-based draft, azure = Azure OpenAI chat model (grounded, with citations).",
     )
     parser.add_argument("--include-context", action="store_true")
     parser.add_argument(
@@ -83,11 +97,12 @@ def main() -> None:
 
     result = run_ask_pipeline(
         question=args.question,
-        retriever=create_local_retriever(args.retriever),
+        retriever=create_retriever(args.retriever),
         top_k=args.top_k,
         max_chars_per_chunk=args.max_chars_per_chunk,
         min_score=args.min_score,
         source_types=args.source_types,
+        generator=None if args.generator == "template" else __import__("llm_answer").create_answer_generator(),
     )
     print_pipeline_result(result, include_context=args.include_context)
 

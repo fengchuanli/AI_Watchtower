@@ -39,6 +39,7 @@ class EvaluationConfig:
     min_score: float = DEFAULT_MIN_SCORE
     insufficient_max_score: float = 0.2
     max_chars_per_chunk: int = DEFAULT_MAX_CHARS_PER_CHUNK
+    generator: object = None  # None = template answer; otherwise an LLM answer generator
 
 
 @dataclass(frozen=True)
@@ -136,6 +137,47 @@ def evaluate_case(case: Dict, retriever: Retriever, config: EvaluationConfig, ro
     )
     retrieved_sources = get_retrieved_sources(citations)
     top_score = float(citations[0]["score"]) if citations else 0.0
+
+    if config.generator is not None:
+        grounded = config.generator.generate(question, citations)
+        answer = grounded.answer
+        cited_hit = has_expected_source(grounded.cited_sources, expected_sources) if expected_sources else None
+        if expected_sources:
+            source_hit = has_expected_source(retrieved_sources, expected_sources)
+            citation_ok = grounded.grounded
+            insufficient_ok = None
+            passed = source_hit and grounded.answerable and citation_ok
+            reason = (
+                "answered with citations from retrieved context"
+                if passed
+                else "model said insufficient, or answered without valid citations, or retrieval missed"
+            )
+        else:
+            source_hit = None
+            insufficient_ok = not grounded.answerable
+            citation_ok = not grounded.cited_ids
+            passed = insufficient_ok
+            reason = "model refused to answer without evidence" if passed else "model answered a question the sources cannot support"
+        return {
+            "id": case["id"],
+            "category": case.get("category", ""),
+            "hit_rank": first_hit_rank(retrieved_sources, expected_sources) if expected_sources else None,
+            "backend": retriever.name,
+            "question": question,
+            "expected_sources": expected_sources,
+            "source_types": source_types,
+            "retrieved_sources": retrieved_sources,
+            "top_score": top_score,
+            "answer": answer,
+            "source_hit": source_hit,
+            "citation_ok": citation_ok,
+            "cited_expected": cited_hit,
+            "answerable": grounded.answerable,
+            "insufficient_ok": insufficient_ok,
+            "passed": passed,
+            "reason": reason,
+        }
+
     answer_min_score = config.insufficient_max_score if not expected_sources else config.min_score
     answer = build_answer(question, citations, answer_min_score)
 
@@ -311,6 +353,13 @@ def main() -> None:
     )
     parser.add_argument("--quiet", action="store_true", help="Print summaries only (no per-question details).")
     parser.add_argument(
+        "--generator",
+        choices=["template", "azure"],
+        default="template",
+        help="azure = judge answers with the Azure OpenAI chat model (answerability + citations).",
+    )
+    parser.add_argument("--show-answers", action="store_true", help="Print each model answer (with --generator azure).")
+    parser.add_argument(
         "--insufficient-max-score",
         type=float,
         default=None,
@@ -322,6 +371,11 @@ def main() -> None:
     retriever_names = resolve_retriever_names(args.retriever, args.mode)
     summaries = []
     mrrs = []
+    generator = None
+    if args.generator == "azure":
+        from llm_answer import create_answer_generator
+
+        generator = create_answer_generator()
 
     for index, retriever_name in enumerate(retriever_names):
         retriever = create_retriever(retriever_name)
@@ -334,6 +388,7 @@ def main() -> None:
             top_k=args.top_k,
             min_score=args.min_score if args.min_score is not None else DEFAULT_MIN_SCORES.get(retriever.name, DEFAULT_MIN_SCORE),
             insufficient_max_score=insufficient_max_score,
+            generator=generator,
         )
         results, summary = run_evaluation(eval_questions, retriever, config, args.routing)
         summaries.append(summary)
@@ -348,6 +403,15 @@ def main() -> None:
         print_category_breakdown(results)
         print_score_ranges(results)
         print(f"MRR: {mrrs[-1]:.2f}")
+        if generator is not None:
+            answerable_cases = [r for r in results if r["expected_sources"]]
+            cited = sum(1 for r in answerable_cases if r.get("cited_expected"))
+            print(f"Answers citing an expected source: {cited}/{len(answerable_cases)}")
+            if args.show_answers:
+                for r in results:
+                    print(f"\n[{r['id']}] {'PASS' if r['passed'] else 'FAIL'} answerable={r.get('answerable')}")
+                    print(f"Q: {r['question']}")
+                    print(f"A: {r['answer']}")
         print_failed_cases(results)
 
         if index < len(retriever_names) - 1:
@@ -356,6 +420,12 @@ def main() -> None:
     if len(summaries) > 1:
         print()
         print_comparison(summaries, mrrs)
+    if generator is not None:
+        print()
+        print(
+            f"Chat tokens: input {generator.total_prompt_tokens}, output {generator.total_completion_tokens}, "
+            f"estimated cost ${generator.estimated_cost_usd():.4f} (about {generator.estimated_cost_usd() * 150:.1f} JPY)"
+        )
 
 
 if __name__ == "__main__":

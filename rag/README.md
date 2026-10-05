@@ -48,11 +48,14 @@ python3 rag/scripts/azure_search_index.py upload         # 1273 件を upload
 python3 rag/scripts/azure_search_index.py status         # 件数・容量を確認
 python3 rag/scripts/azure_search_index.py query "来源可信度怎么判断" --hybrid --auto-route
 
-# 5. 評価（ローカル vs Azure、source 種別の指定方法ごと）
+# 5. 質問 → 根拠付き回答（Azure AI Search + gpt-5.4-mini）
+python3 rag/scripts/ask_pipeline.py "怎么判断一条消息的出处靠不靠谱？" --retriever azure-vector --generator azure
+
+# 6. 評価（ローカル vs Azure、source 種別の指定方法ごと）
 python3 rag/scripts/evaluate_demo.py --retriever compare --routing auto   # 4 backend を比較
 python3 rag/scripts/evaluate_demo.py --retriever all --routing none      # ローカルのみ（Azure 不要）
 
-# 6. テスト
+# 7. テスト
 python3 -m unittest discover -s rag/tests
 ```
 
@@ -70,6 +73,7 @@ python3 -m unittest discover -s rag/tests
 | 回答 | `build_context.py` | 検索結果に citation 番号を付けて context を作る |
 | 回答 | `answer_demo.py` | context の範囲だけで保守的な回答草稿を作る |
 | 回答 | `ask_pipeline.py` | 質問 → 検索 → context → 回答 を 1 本にまとめる |
+| 回答 | `llm_answer.py` | Azure OpenAI（gpt-5.4-mini）で context だけを根拠に回答。引用番号を検証し、根拠がなければ「資料不足」と返す |
 | 評価 | `evaluate_demo.py` | `data/eval_questions.json` で評価。`--retriever` でローカル / Azure、`--routing hint/auto/none` で source 種別の決め方を切り替え |
 | Embedding | `embedding_providers.py` | Azure OpenAI embedding の呼び出し（key は表示しない） |
 | Embedding | `check_azure_openai_embedding_readiness.py` | 環境変数と payload の事前チェック（API は呼ばない） |
