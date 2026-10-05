@@ -1,3 +1,37 @@
+## 2026-10-05 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 24，补上月度连续观察快照到未来公开组件之间的交接形状；未来若要做公开月度连续观察模块，必须先把候选卡片分成 `ready`、`needs-current-edition`、`archive-only` 和 `do-not-publish`，并写明支撑字段、读者用途和证据边界。
+- Changed files:
+  - `docs/monthly-continuity-snapshot.md`: 新增 `publicContinuityHandoff` 结构，要求候选公开卡片列出 `sourceFields`、`readerUse`、`proofBoundary` 和 `publicStatus`，并把只能作背景或不可公开的模式单独放入 archive-only / do-not-publish。
+  - `docs/news-data-format.md`: 记录月度连续观察交接只能作为未来公开 UI 的候选输入，不能生成新的月度事实层。
+  - `docs/update-run-checklist.md`: 要求临近计划窗口末尾时，如考虑公开连续观察组件，先做 `publicContinuityHandoff` 分流。
+  - `scripts/validate-site.mjs`: 增加静态守卫，确保月度连续观察快照继续保留公开交接字段和安全边界。
+  - `docs/optimization-decision-index.md`: 标记 Day 24 完成，并把下一步交接到 Day 25。
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/monthly-continuity-snapshot.md`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md` 和 `docs/update-run-checklist.md`。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只把已有 current/history 字段能否转成未来公开组件的交接规则写清楚。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改 TOP3 卡片。
+  - Source boundary visible: pass - 公开候选卡片必须列出 `sourceFields` 与 `proofBoundary`，缺失时只能留作 archive-only 或 do-not-publish。
+  - Original source dependency: pass - 不新增事实层，不替代原始来源或媒体文章。
+  - Mobile burden: pass - 没有新增页面文案；未来组件上线前会先筛掉不够短、不够清楚的候选。
+  - Continuity use: pass - 月度连续观察现在有从内部快照到未来公开模块的安全交接形状。
+  - Visual aid purpose: pass - 交接规则要求未来公开卡片必须服务读者用途和证据边界，而不是装饰性月度总结。
+- 网站可见变化：无，属于规则/校验/计划更新；后续维护者可在 `docs/monthly-continuity-snapshot.md` 看到月度连续观察到未来公开组件的交接形状。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 3 current news items against 109 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commits: `d0b5aba` (`【VisionHub网站风格优化】补充月度连续观察公开交接`).
+- Push: pending until this log/index record is committed, then push to `origin/main`.
+
 ## 2026-10-05 08:09 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；因周末后安全非重复来源有限，首页推进为 `news-1700-2026-10-05` 短批次，发布 3 条信号：OpenAI GPT-Rosalind 可信访问 / 10月5日定价节点、TechCrunch 短信入口 AI Agent 产品梳理、The Atlantic 对 Anthropic / Claude 科学发现叙事的外部质疑。
