@@ -40,7 +40,10 @@ python3 rag/scripts/azure_openai_embedding_smoke_test.py --expected-dimension 15
 python3 rag/scripts/build_embedding_cache.py            # 新規・変更 chunk だけ embedding
 python3 rag/scripts/inspect_embedding_cache.py          # hit / miss を確認
 
-# 4. Azure AI Search（vector 入り payload を作ってから）
+# 4. Azure AI Search を作り直す（下の手順を 1 コマンドで。ログは rag/data/logs/）
+bash rag/scripts/rebuild_azure_index.sh          # --no-push / --no-eval も可
+
+# 4'. 個別に実行する場合（vector 入り payload を作ってから）
 python3 rag/scripts/prepare_vectorized_azure_search_docs.py --expected-dimension 1536
 python3 rag/scripts/prepare_azure_search_upload_actions.py --action mergeOrUpload --expected-dimension 1536
 python3 rag/scripts/azure_search_index.py create-index   # index 作成（schema は docs/azure/azure-search-schema.md）
@@ -84,6 +87,7 @@ python3 -m unittest discover -s rag/tests
 | Azure Search | `prepare_azure_search_docs.py` | chunks → `data/azure_search_docs.jsonl`（vector は空） |
 | Azure Search | `prepare_vectorized_azure_search_docs.py` | cache の vector を `content_vector` に反映 |
 | Azure Search | `prepare_azure_search_upload_actions.py` | upload 用 `@search.action` を付けて検証 |
+| Azure Search | `rebuild_azure_index.sh` | embedding → upload データ → index 削除・再作成・upload → 評価 → git push を一括実行 |
 | Azure Search | `azure_search_index.py` | index 作成・upload・件数確認・vector / hybrid 検索のテスト |
 
 ## data/
