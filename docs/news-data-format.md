@@ -224,3 +224,33 @@ The validator checks source-count metadata, concise edition metadata without rep
 趋势图不在这里填：它由 `scripts/build-derived-data.mjs` 从归档统计出
 `data/trends.json`（按 ISO 周统计每家公司/每个标签的收录数），详情页按条目的
 `companies` / `tags` 自动匹配，匹配不到就不渲染。
+
+### `deepSections`：逐节拆解
+
+这是让详情页达到参考站（visionhub 日次幻灯页）信息密度的字段，也是唯一需要**读原文**才能写的字段。
+没有它，详情页只能停在摘要层。
+
+```jsonc
+"deepSections": [{
+  "label": "WHAT SHIPPED",        // 小标签，英文，对应参考站的 01 WHAT SHIPPED
+  "navLabel": "发布了什么",        // 目录里显示的短名
+  "heading": "一句完整的判断句",    // 不是「发布内容」这种标签
+  "sourceStatus": {"tag": "一手｜OpenAI 官方页面", "note": "以下为页面原文事实，非本站测量"},
+  "body": ["段落一", "段落二"],
+  "list":  {"title": "...", "items": ["..."]},                  // 可选
+  "table": {"caption": "...", "columns": [], "rows": [[]]},     // 可选
+  "note":  {"label": "读法", "body": "..."},                     // 可选
+  "sourceLine": "出处：…（读取日期）"
+}]
+```
+
+写作规则：
+
+1. **每一节必须标出这段话来自哪里**。`sourceStatus.tag` 用 `一手｜…` / `二手｜…` /
+   `本站整理｜…` / `本站判断｜…` / `核验边界｜…`，不要省略。
+2. **编辑判断必须和来源事实分开成段**，并在 `note.label` 里写明「本站判断（不是来源表述）」。
+3. **最后一节固定写「来源没有主张什么」**，列出转述时最容易被加上的内容。参考站的
+   「公式も書いていない」就是这个作用，也是本站最该保留的习惯。
+4. 数字必须带出处和对照基准。只写「提升 50%」而不写「相对谁、谁测的」等于没写。
+5. **读不到原文时不要编**。来源有付费墙或拒绝抓取时，写一节说明读不到、以及补齐需要什么，
+   不要把摘要扩写成段落。

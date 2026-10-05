@@ -754,6 +754,95 @@ function renderVisualSection(id, eyebrow, heading, note, body) {
   `;
 }
 
+/* 逐节拆解：参照 visionhub 日次幻灯页的分节结构。
+   每节自带「这段是谁说的」标签和出处行，可带表格、清单和读法提示。
+   字段缺失时整块不渲染。 */
+function renderDeepSectionBlock(section, index) {
+  const number = String(index + 1).padStart(2, "0");
+  const bodyParagraphs = (Array.isArray(section.body) ? section.body : [section.body])
+    .filter(Boolean)
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
+
+  const list = section.list?.items?.length
+    ? `
+      <div class="deep-list">
+        ${section.list.title ? `<strong>${escapeHtml(section.list.title)}</strong>` : ""}
+        <ul>${section.list.items.map((entry) => `<li>${escapeHtml(entry)}</li>`).join("")}</ul>
+      </div>
+    `
+    : "";
+
+  const table = section.table?.rows?.length
+    ? `
+      <div class="detail-table-scroll">
+        <table class="detail-compare-table">
+          ${section.table.caption ? `<caption>${escapeHtml(section.table.caption)}</caption>` : ""}
+          <thead>
+            <tr>${section.table.columns.map((column) => `<th scope="col">${escapeHtml(column)}</th>`).join("")}</tr>
+          </thead>
+          <tbody>
+            ${section.table.rows
+              .map(
+                (row) =>
+                  `<tr>${row
+                    .map((cell, cellIndex) =>
+                      cellIndex === 0 ? `<th scope="row">${escapeHtml(cell)}</th>` : `<td>${escapeHtml(cell)}</td>`,
+                    )
+                    .join("")}</tr>`,
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    `
+    : "";
+
+  return `
+    <section class="deep-section" id="deep-${number}">
+      <p class="deep-section-index">${number} · ${escapeHtml(section.label || "")}</p>
+      <h3>${escapeHtml(section.heading)}</h3>
+      ${
+        section.sourceStatus
+          ? renderSourceStatus(section.sourceStatus.tag, section.sourceStatus.note || "")
+          : ""
+      }
+      <div class="detail-prose">${bodyParagraphs}</div>
+      ${list}
+      ${table}
+      ${section.note ? renderReadingNote(section.note.label, section.note.body) : ""}
+      ${section.sourceLine ? `<p class="deep-section-source">${escapeHtml(section.sourceLine)}</p>` : ""}
+    </section>
+  `;
+}
+
+function renderDeepSections(item) {
+  const sections = Array.isArray(item.deepSections) ? item.deepSections.filter((entry) => entry?.heading) : [];
+
+  if (!sections.length) {
+    return "";
+  }
+
+  return `
+    <section class="detail-deep" id="detail-deep" aria-label="逐节拆解">
+      <div class="detail-visual-head">
+        <p class="eyebrow">Breakdown</p>
+        <h2>逐节拆解</h2>
+        <p class="detail-board-note">按原始来源的结构逐节展开。每一节都标出这段话来自哪里，以及来源在这一节里没有说什么。</p>
+      </div>
+      <nav class="deep-section-nav" aria-label="逐节拆解目录">
+        ${sections
+          .map(
+            (section, index) =>
+              `<a href="#deep-${String(index + 1).padStart(2, "0")}"><i>${String(index + 1).padStart(2, "0")}</i>${escapeHtml(section.navLabel || section.label || "")}</a>`,
+          )
+          .join("")}
+      </nav>
+      ${sections.map(renderDeepSectionBlock).join("")}
+    </section>
+  `;
+}
+
 function renderKeyFacts(item) {
   const facts = Array.isArray(item.keyFacts) ? item.keyFacts.filter((fact) => fact?.value) : [];
 
@@ -1201,6 +1290,7 @@ function renderDetail(item, data) {
           ${renderReadingNote("这一段的边界", item.provenance)}
         </section>
 
+        ${renderDeepSections(item)}
         ${renderTimeline(item)}
 
         <section class="detail-block incident-block detail-primary-section" id="incident-analysis">

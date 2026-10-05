@@ -579,7 +579,27 @@
             "需要论文、复现、同行评议和数据政策才能升级"
           ]
         }
-      }
+      },
+      "deepSections": [
+        {
+          "label": "SOURCE LIMIT",
+          "navLabel": "为什么这条薄",
+          "heading": "这一条没有逐节拆解，因为站内读不到原文",
+          "sourceStatus": {
+            "tag": "站内说明｜非来源内容",
+            "note": "抓取被来源方限制"
+          },
+          "body": [
+            "The Atlantic 对自动抓取设限，站内只拿到标题与摘要层的事实，没有读到正文。因此这条新闻只保留争议结构、来源边界和核验路径，不做逐节展开——把读不到的内容补写成段落，等于编造。",
+            "同一期的另外两条（OpenAI 官方页面、TechCrunch 报道）原文可读，所以它们有完整的逐节拆解。页面深度的差距来自来源可读性，不是编辑投入。"
+          ],
+          "note": {
+            "label": "要补齐这条需要",
+            "body": "人工打开原文（可能需订阅）后按 docs/news-data-format.md 的字段补写；或等 Anthropic 发布论文与数据说明，届时一手来源可读，可直接展开。"
+          },
+          "sourceLine": "出处：The Atlantic Science（2026-10-04，站内未读取正文）"
+        }
+      ]
     },
     {
       "id": "openai-gpt-rosalind-pricing-trusted-access-2026-10-05",
@@ -650,24 +670,24 @@
       "detailWhyRanked": "它给生命科学AI一个明确采购和治理节点：不是只看模型声明，还要看定价、准入、插件、日志和外部复核。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查GPT-Rosalind价格页、可信访问条款、Codex生命科学插件文档、客户侧实验记录、第三方基准和生物安全审查材料。。",
       "keyFacts": [
         {
+          "value": "63.2%",
+          "label": "LabWorkBench 最高分",
+          "note": "官方自测，GPT-5.5 为 55.8%"
+        },
+        {
+          "value": "3 组",
+          "label": "官方基准",
+          "note": "全部为 OpenAI 自测，无独立评测"
+        },
+        {
           "value": "10月5日",
           "label": "公开定价生效",
-          "note": "OpenAI 页面标注的生效日"
+          "note": "费率在单独价格页，本站未核对"
         },
         {
-          "value": "全球",
-          "label": "可信访问范围",
-          "note": "面向合格生命科学组织"
-        },
-        {
-          "value": "一手",
-          "label": "来源位置",
-          "note": "OpenAI News 官方页面"
-        },
-        {
-          "value": "0 项",
-          "label": "已验证科研效果",
-          "note": "页面不含药物发现效果或客户 ROI"
+          "value": "3 项",
+          "label": "准入条件",
+          "note": "公共利益、治理监督、企业级安全；判定标准未公开"
         }
       ],
       "timeline": [
@@ -822,7 +842,171 @@
             "升级判断要等价格页、准入合同、客户实验记录与第三方基准"
           ]
         }
-      }
+      },
+      "deepSections": [
+        {
+          "label": "WHAT SHIPPED",
+          "navLabel": "发布了什么",
+          "heading": "官方页面同时发布的是三层东西，不要混着读",
+          "sourceStatus": {
+            "tag": "一手｜OpenAI 官方页面",
+            "note": "以下为页面原文事实，非本站测量"
+          },
+          "body": [
+            "GPT-Rosalind 被定位为面向生命科学研究的专用模型，页面表述是把 GPT-5.5 的 agentic 编码与工具调用能力，和医药化学、基因组学方向的专项能力结合起来。",
+            "本次更新的落点是：医药化学、基因组学与定量生物学的生物推理能力增强；两个用于可重复工作流的插件；以及序列、比对、结构文件的交互式查看器。页面把证据检索、生物学解读和生物信息执行描述为放进同一个工作区。"
+          ],
+          "list": {
+            "title": "同一条公告里其实有三层，升级程度不同",
+            "items": [
+              "模型层：GPT-Rosalind 本身的生物推理能力",
+              "插件层：Life Sciences Research 与 Life Sciences NGS Analysis，运行在 Codex 平台上",
+              "界面层：序列 / 比对 / 结构文件的原生查看器"
+            ]
+          },
+          "note": {
+            "label": "读法",
+            "body": "「模型更强」和「插件可用」不是一回事。采购时要分别确认你拿到的是哪一层，以及插件是否随账户类型提供。"
+          },
+          "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+        },
+        {
+          "label": "BENCHMARKS",
+          "navLabel": "基准数字",
+          "heading": "三组基准都在涨，但绝对分数很低，省 token 比涨分明显",
+          "sourceStatus": {
+            "tag": "一手｜官方自测",
+            "note": "页面未提供独立评测或同行评议"
+          },
+          "body": [
+            "页面给出三组基准，均为 OpenAI 自己的测量，对照组是 GPT-5.5。"
+          ],
+          "table": {
+            "caption": "三组基准的分数、差值与 token 用量变化（数值取自官方页面）",
+            "columns": [
+              "基准",
+              "GPT-Rosalind",
+              "GPT-5.5",
+              "准确率差",
+              "token 用量"
+            ],
+            "rows": [
+              [
+                "MedChemBench",
+                "27.5%",
+                "25.1%",
+                "+2.4 个百分点",
+                "少 7.2%"
+              ],
+              [
+                "GeneBench",
+                "21.6%",
+                "20.4%",
+                "+1.2 个百分点",
+                "少 31%"
+              ],
+              [
+                "LabWorkBench",
+                "63.2%",
+                "55.8%",
+                "+7.4 个百分点",
+                "少 5.3%"
+              ]
+            ]
+          },
+          "note": {
+            "label": "本站判断（不是来源表述）",
+            "body": "MedChemBench 和 GeneBench 的绝对分数只有 27.5% 和 21.6%——「比 GPT-5.5 强」是相对值，不等于「可以直接用于生产」。三组里涨幅最大的是 LabWorkBench（+7.4 点），省 token 最多的是 GeneBench（少 31%），两者不是同一组。"
+          },
+          "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+        },
+        {
+          "label": "ACCESS",
+          "navLabel": "谁能拿到",
+          "heading": "面向「合格组织」全球开放，但合格的判定标准没有公开",
+          "sourceStatus": {
+            "tag": "一手｜准入条款表述",
+            "note": "页面给出条件，未给出判定流程"
+          },
+          "body": [
+            "页面说明 GPT-Rosalind 通过 trusted-access 部署结构向全球合格组织开放，并为没有 Enterprise 账户的合格组织提供 OpenAI 托管工作区。"
+          ],
+          "list": {
+            "title": "页面列出的三项准入条件",
+            "items": [
+              "从事具有明确公共利益的正当科学研究",
+              "具备强治理与安全监督",
+              "具备企业级安全"
+            ]
+          },
+          "note": {
+            "label": "确认点",
+            "body": "这三条都没有给出可核对的判定标准——由谁认定、按什么流程、被拒后能否申诉，页面均未说明。采购前需要向销售索取准入合同与资格条款原文。"
+          },
+          "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+        },
+        {
+          "label": "PRICE",
+          "navLabel": "价格",
+          "heading": "定价 10 月 5 日生效，但发布页正文里没有数字",
+          "sourceStatus": {
+            "tag": "一手｜仅给出生效日",
+            "note": "费率在单独的价格页，本站未抓取"
+          },
+          "body": [
+            "页面说明公开定价自 2026 年 10 月 5 日生效，并给出价格页链接；发布页正文本身没有列出任何费率。"
+          ],
+          "note": {
+            "label": "这一节的边界",
+            "body": "本站没有抓取价格页，所以单价、计费单位、是否按 token 计费、插件是否单独计费，全部未核对。看到「定价生效」不要直接推出「成本可测算」。"
+          },
+          "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+        },
+        {
+          "label": "SAFETY",
+          "navLabel": "安全说明",
+          "heading": "安全部分停在名称层，没有具体控制措施",
+          "sourceStatus": {
+            "tag": "一手｜页面最薄的一节",
+            "note": "仅有项目名称与原则性表述"
+          },
+          "body": [
+            "页面提到 Rosalind Biodefense 项目和 trusted-access 部署模型，并表示会与合格组织共同评估、提供「适当的保障措施」。",
+            "除「企业级安全」这一表述外，页面没有给出具体技术控制措施，也没有说明数据保留期限、隐私保护方式或审计机制。"
+          ],
+          "note": {
+            "label": "读法",
+            "body": "生命科学模型的风险点恰好在生物安全与数据边界上，而这正是本页信息最少的部分。把它当作需要补材料的缺口，不是已经解决的问题。"
+          },
+          "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+        },
+        {
+          "label": "NOT CLAIMED",
+          "navLabel": "没有主张什么",
+          "heading": "官方没有说的四件事，恰好是转述时最容易加上的",
+          "sourceStatus": {
+            "tag": "核验边界｜本节最关键",
+            "note": "以下是页面明确未主张的内容"
+          },
+          "body": [
+            "读完整页后，下面四项在官方表述里都不存在。媒体转述和内部汇报时最容易把它们当成已经成立。"
+          ],
+          "list": {
+            "title": "页面未主张的内容",
+            "items": [
+              "真实世界的临床结果或已验证疗效",
+              "独立的同行评议验证",
+              "具体的技术安全机制",
+              "超出「企业级安全」的数据保留、隐私保护或审计说明"
+            ]
+          },
+          "note": {
+            "label": "怎么用这一节",
+            "body": "把它直接贴进采购问卷：这四项要求供应商补充材料，而不是引用这份公告作为答案。"
+          },
+          "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+        }
+      ]
     },
     {
       "id": "techcrunch-text-message-ai-agents-2026-10-03",
@@ -894,19 +1078,19 @@
       "detailWhyRanked": "它把分散的消费级Agent产品放到一个共同入口观察：短信化降低获客摩擦，也放大权限和责任问题。 来源侧可核对的是TechCrunch AI支持的具体事实；升级判断仍需查各产品的隐私政策、权限说明、SOC 2或安全白皮书、用户留存、投诉记录、应用商店政策和消息平台规则。。",
       "keyFacts": [
         {
-          "value": "10月3日",
-          "label": "报道日",
-          "note": "TechCrunch AI"
+          "value": "17 个",
+          "label": "报道覆盖产品",
+          "note": "TechCrunch 一次性梳理"
         },
         {
-          "value": "4 类",
-          "label": "覆盖入口",
-          "note": "短信 / iMessage / WhatsApp / RCS"
+          "value": "$0–100",
+          "label": "月费区间",
+          "note": "多数仍在免费 beta"
         },
         {
-          "value": "二手",
-          "label": "来源位置",
-          "note": "产品梳理报道，不是平台或厂商公告"
+          "value": "10 亿美元",
+          "label": "最大一笔融资",
+          "note": "Instinct C 轮，估值 100 亿"
         },
         {
           "value": "0 项",
@@ -1039,7 +1223,251 @@
             "要看隐私政策、平台规则、留存与投诉数据"
           ]
         }
-      }
+      },
+      "deepSections": [
+        {
+          "label": "THE LIST",
+          "navLabel": "17 个产品",
+          "heading": "报道一次性列出 17 个住在消息线程里的 Agent",
+          "sourceStatus": {
+            "tag": "二手｜产品梳理报道",
+            "note": "以下为报道列出的内容，本站未逐个试用"
+          },
+          "body": [
+            "这篇文章的价值不在单个产品，而在于把分散的消费级 Agent 放进同一张表里看——入口、连接的服务、价格带和融资状况一次可比。"
+          ],
+          "table": {
+            "caption": "报道中出现的全部产品（入口、连接服务、价格、融资或归属）",
+            "columns": [
+              "产品",
+              "入口",
+              "连接的服务",
+              "价格",
+              "融资 / 归属"
+            ],
+            "rows": [
+              [
+                "Caddy",
+                "iMessage / RCS",
+                "日历、会话",
+                "免费（beta）",
+                "未披露"
+              ],
+              [
+                "Fambot",
+                "短信 / App / 网页",
+                "Gmail、Google 日历",
+                "beta 免费，后续约等于一份 Netflix",
+                "350 万美元 pre-seed"
+              ],
+              [
+                "Folk",
+                "iMessage / WhatsApp / Telegram",
+                "多种服务",
+                "免费；Pro 8.33 美元/月",
+                "未披露"
+              ],
+              [
+                "Instinct",
+                "短信 / 语音",
+                "邮箱、日历、Google Workspace",
+                "私有 beta",
+                "10 亿美元 C 轮，估值 100 亿"
+              ],
+              [
+                "Iris",
+                "iMessage",
+                "用户已连接的应用",
+                "未披露",
+                "未披露"
+              ],
+              [
+                "Martin",
+                "短信 / 电话 / WhatsApp / 邮件 / Slack / iOS",
+                "日历、邮件、任务",
+                "21 美元/月起",
+                "未披露"
+              ],
+              [
+                "Miso",
+                "iMessage",
+                "航班与差旅系统",
+                "未披露",
+                "未披露"
+              ],
+              [
+                "Ohai",
+                "App / 语音",
+                "日历、邮件",
+                "基础免费；9.99 美元/月起，按家庭规模",
+                "未披露"
+              ],
+              [
+                "Ollie",
+                "短信",
+                "邮件、日历、任务列表",
+                "免费档；25–100 美元/月（150–1000 条消息）",
+                "未披露"
+              ],
+              [
+                "Orbits",
+                "App / 短信",
+                "日历、清单、会话",
+                "未披露",
+                "a16z、N49P、Garage Capital"
+              ],
+              [
+                "Pally",
+                "未明确",
+                "WhatsApp、Gmail、日历、Google Drive",
+                "免费（每月 15 分钟通话）；25 / 100 美元/月",
+                "未披露"
+              ],
+              [
+                "Poke",
+                "短信",
+                "日历、健康健身、智能家居、照片",
+                "未披露",
+                "被 Cognition 收购（低九位数）"
+              ],
+              [
+                "Rene",
+                "iMessage / Telegram / WhatsApp",
+                "浏览、编码、购物",
+                "未披露",
+                "未披露"
+              ],
+              [
+                "Skye",
+                "iPhone 主屏",
+                "已连接服务",
+                "未披露",
+                "约 360 万美元种子（2025）"
+              ],
+              [
+                "Stanley",
+                "iMessage / Telegram / 网页",
+                "Instagram",
+                "未披露",
+                "未披露"
+              ],
+              [
+                "Tomo",
+                "iMessage（可加入群聊）",
+                "日历、邮件、网页",
+                "19.99 美元/月起",
+                "未披露"
+              ],
+              [
+                "Town",
+                "WhatsApp 等",
+                "邮件、日历、文档、Slack",
+                "未披露",
+                "5500 万美元 A 轮（a16z、Forerunner）"
+              ],
+              [
+                "Wajo",
+                "未明确",
+                "独立邮箱、电话、银行卡",
+                "免费档 + Pro",
+                "2025 年 9 月公开上线"
+              ]
+            ]
+          },
+          "note": {
+            "label": "读法",
+            "body": "表里大量「未披露」本身就是信息：这批产品多数还没有公开定价或用户规模，属于早期入口实验，不是已成规模的品类。"
+          },
+          "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+        },
+        {
+          "label": "ENTRY POINTS",
+          "navLabel": "入口分布",
+          "heading": "iMessage 是出现最多的入口，其次是 WhatsApp 和纯短信",
+          "sourceStatus": {
+            "tag": "本站整理｜基于上表",
+            "note": "按报道给出的入口归类，不是市场份额"
+          },
+          "body": [
+            "iMessage 出现在 Caddy、Folk、Iris、Miso、Rene、Stanley、Tomo；WhatsApp 出现在 Folk、Martin、Pally、Rene、Town；纯短信入口有 Fambot、Instinct、Ollie、Orbits、Poke。",
+            "少数产品不走消息线程：Skye 做的是 iPhone 主屏，Ohai 以 App 和语音为主。"
+          ],
+          "note": {
+            "label": "为什么这件事重要",
+            "body": "入口决定了谁掌握分发规则。走 iMessage 和 WhatsApp 意味着产品要受平台政策约束，而平台是否允许 Agent 账号、是否会限制自动化消息，报道里没有给出答案。"
+          },
+          "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+        },
+        {
+          "label": "PERMISSIONS",
+          "navLabel": "权限层级",
+          "heading": "同样叫「助理」，拿到的权限差了一个风险量级",
+          "sourceStatus": {
+            "tag": "本站整理｜基于上表",
+            "note": "权限按报道描述归类"
+          },
+          "body": [
+            "只读类的连接是日历和会话（Caddy、Orbits）；读写类进入邮箱、文档和 Slack（Town、Pally）；执行类则直接代为行动——Wajo 用独立的邮箱、电话和银行卡打电话、下单、加入群聊，Martin 可以代打电话。"
+          ],
+          "list": {
+            "title": "三个风险层级",
+            "items": [
+              "读：日历、会话、照片——泄露风险为主",
+              "写：邮箱、文档、Slack——可对外发出内容，需要撤销路径",
+              "执行：电话、支付卡、预订——产生不可撤销的现实后果，需要人为接管和争议处理"
+            ]
+          },
+          "note": {
+            "label": "上线前要定的事",
+            "body": "第三层的产品必须先定下身份绑定、授权范围、撤销路径和审计日志，再谈消息体验。报道没有给出任何一家的这类文档。"
+          },
+          "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+        },
+        {
+          "label": "MONEY",
+          "navLabel": "价格与融资",
+          "heading": "价格带从免费到 100 美元/月，融资差距超过 200 倍",
+          "sourceStatus": {
+            "tag": "二手｜报道整理的公开信息",
+            "note": "本站未向任何一方核实"
+          },
+          "body": [
+            "已公开价格的产品集中在三档：8.33–9.99 美元（Folk、Ohai）、19.99–25 美元（Tomo、Martin、Ollie、Pally）、以及按用量上探到 100 美元/月（Ollie、Pally）。多数产品仍在免费 beta。",
+            "融资规模差距极大：Instinct 10 亿美元 C 轮、估值 100 亿美元；Town 5500 万美元 A 轮；Fambot 350 万美元 pre-seed；Skye 约 360 万美元种子；Poke 被 Cognition 以低九位数收购。"
+          ],
+          "note": {
+            "label": "本站判断（不是来源表述）",
+            "body": "按用量计费（Pally 按通话分钟、Ollie 按消息条数）的产品，成本会随 Agent 越勤快而上升——这和「订阅制助理」的成本直觉相反，试用时要先测单位成本。"
+          },
+          "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+        },
+        {
+          "label": "NOT SHOWN",
+          "navLabel": "报道没给的",
+          "heading": "这是一份产品清单，不是一份采用证据",
+          "sourceStatus": {
+            "tag": "核验边界｜本节最关键",
+            "note": "以下内容报道中均未出现"
+          },
+          "body": [
+            "报道能证明这批产品形态存在，并给出各自的入口、连接和价格；它不能证明任何一家已被规模化使用，也不能证明消息入口比原生 App 更安全或留存更高。"
+          ],
+          "list": {
+            "title": "报道未给出的内容",
+            "items": [
+              "用户规模与留存数据",
+              "投诉记录与越权事故",
+              "SOC 2、安全白皮书或第三方审计",
+              "iMessage / WhatsApp / RCS 平台对 Agent 账号的政策态度"
+            ]
+          },
+          "note": {
+            "label": "怎么用这一节",
+            "body": "把它当作入口形态的观察起点：先去各产品的隐私政策和平台开发者条款里找上面四项，再决定要不要把权限交出去。"
+          },
+          "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+        }
+      ]
     }
   ]
 }
