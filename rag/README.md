@@ -1,7 +1,7 @@
 # AI Watchtower RAG Assistant
 
 AI Watchtower の記事（`docs/*.md`）と最新・過去ニュース（`data/news.json`, `data/news-history.json`）を知識ベースにした RAG プロトタイプです。
-全体の設計は [`docs/architecture.md`](docs/architecture.md)、学習記録は [`docs/learning-notes.md`](docs/learning-notes.md) を見てください。
+全体の構成図は [`docs/system-design.html`](docs/system-design.html)（ブラウザで開く）、設計の詳細は [`docs/architecture.md`](docs/architecture.md)、学習記録は [`docs/learning-notes.md`](docs/learning-notes.md) を見てください。
 
 ## ディレクトリ構成
 
@@ -93,7 +93,7 @@ python3 -m unittest discover -s rag/tests
 | `corpus.jsonl` | 読み込んだ文書（265 件） | 管理する |
 | `chunks.jsonl` | chunk（1181 件。docs は見出し単位、ニュースは固定長） | 管理する |
 | `azure_search_docs.jsonl` | Azure AI Search 用 payload（vector 空） | 管理する |
-| `eval_questions.json` | 評価用の質問と期待 source | 管理する |
+| `eval_questions.json` | 評価用の 25 問（質問・正解の出典・カテゴリ） | 管理する |
 | `embedding_cache.jsonl` | 実 embedding（1273 件 × 1536 次元、約 40MB） | **管理しない**（`build_embedding_cache.py` で再生成） |
 | `vectorized_azure_search_docs.jsonl` / `azure_search_upload_actions.jsonl` | vector 入り payload | **管理しない**（再生成可能） |
 
@@ -102,6 +102,7 @@ python3 -m unittest discover -s rag/tests
 | フォルダ | ファイル | 内容 |
 |---|---|---|
 | `docs/` | `architecture.md` | 全体構成・コンポーネントの責務・Azure roadmap |
+| `docs/` | `system-design.html` | 全体構成図（ローカルと Azure、建索引と質問の 2 つの流れ） |
 | `docs/` | `learning-notes.md` | Day ごとの学習ノート |
 | `design/` | `embedding-provider-design.md` | embedding provider の境界設計 |
 | `design/` | `embedding-cache-design.md` | cache と batch indexing の設計 |

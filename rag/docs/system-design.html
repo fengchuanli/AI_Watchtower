@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Watchtower RAG 设计图</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; the big diagram scrolls sideways on phones; two zones = your Mac (sand) vs Azure (blue) */
+:root {
+  --bg: #f6f7f8;
+  --surface: #ffffff;
+  --fg: #1d2430;
+  --muted: #5d6675;
+  --line: #d3d8df;
+  --local: #b0782a;        /* index flow + local zone */
+  --local-soft: #f5ecdd;
+  --azure: #1f6fb2;        /* question flow + Azure zone */
+  --azure-soft: #e4eef8;
+  --ok: #2e7d4f;
+  --todo: #8a8f98;
+  --f-display: "Noto Serif SC", "Songti SC", serif;
+  --f-body: "Noto Sans SC", "PingFang SC", "Hiragino Sans", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161c; --surface: #1a2029; --fg: #e6e9ee; --muted: #9aa3b1; --line: #313a47;
+    --local: #d9a352; --local-soft: #2a2319; --azure: #6aa9e4; --azure-soft: #172432;
+    --ok: #63c08a; --todo: #7d8592; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161c; --surface: #1a2029; --fg: #e6e9ee; --muted: #9aa3b1; --line: #313a47;
+  --local: #d9a352; --local-soft: #2a2319; --azure: #6aa9e4; --azure-soft: #172432;
+  --ok: #63c08a; --todo: #7d8592; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.7; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 16px; padding-block: 32px 64px; display: grid; gap: 40px; }
+header { display: grid; gap: 8px; max-width: 68ch; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; color: var(--muted); }
+h1 { font-family: var(--f-display); font-size: clamp(26px, 4vw, 36px); line-height: 1.25; margin: 0; text-wrap: balance; }
+h2 { font-size: 19px; margin: 0 0 12px; text-wrap: balance; }
+p { margin: 0; }
+.lede { color: var(--muted); }
+code, .mono { font-family: var(--f-mono); font-size: .88em; }
+section { display: grid; gap: 14px; min-width: 0; }
+
+/* diagram */
+.diagram-scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+.diagram-scroll svg { display: block; width: 100%; min-width: 760px; height: auto; }
+svg text { fill: var(--fg); font-family: var(--f-body); }
+svg .t-title { font-size: 16px; font-weight: 700; }
+svg .t-sub { font-size: 12px; fill: var(--muted); }
+svg .t-box { font-size: 14px; font-weight: 700; }
+svg .t-line { font-size: 12px; fill: var(--muted); }
+svg .t-mono { font-family: var(--f-mono); font-size: 12px; fill: var(--muted); }
+svg .t-lane-local { font-size: 13px; font-weight: 700; fill: var(--local); }
+svg .t-lane-azure { font-size: 13px; font-weight: 700; fill: var(--azure); }
+svg .zone-local { fill: var(--local-soft); stroke: var(--local); stroke-width: 1.5; }
+svg .zone-azure { fill: var(--azure-soft); stroke: var(--azure); stroke-width: 1.5; }
+svg .box { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+svg .box-azure { fill: var(--surface); stroke: var(--azure); stroke-width: 1.5; }
+svg .box-dashed { fill: var(--surface); stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 5 4; }
+svg .ar-local { stroke: var(--local); stroke-width: 2; fill: none; }
+svg .ar-azure { stroke: var(--azure); stroke-width: 2; fill: none; }
+svg .head-local { fill: var(--local); }
+svg .head-azure { fill: var(--azure); }
+svg .badge-local { fill: var(--local); }
+svg .badge-azure { fill: var(--azure); }
+svg .badge-text { fill: var(--surface); font-size: 12px; font-weight: 700; font-family: var(--f-mono); }
+
+/* legend of the two flows */
+.flows { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.flow { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 10px; min-width: 0; }
+.flow h3 { margin: 0; font-size: 16px; }
+.flow.local h3 { color: var(--local); }
+.flow.azure h3 { color: var(--azure); }
+.flow .when { font-size: 13px; color: var(--muted); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.steps li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; }
+.mark { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-mono); font-size: 12px; font-weight: 600; color: var(--surface); margin-top: 3px; }
+.local .mark { background: var(--local); }
+.azure .mark { background: var(--azure); }
+.steps b { font-weight: 700; }
+.steps .cmd { display: block; font-family: var(--f-mono); font-size: 12px; color: var(--muted); word-break: break-all; }
+
+/* numbers */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.stat { border-top: 2px solid var(--line); padding-top: 8px; display: grid; gap: 2px; }
+.stat .v { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat .k { font-size: 13px; color: var(--muted); }
+
+/* table */
+.table-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; letter-spacing: .06em; color: var(--muted); font-weight: 500; }
+td.where { white-space: nowrap; font-weight: 500; }
+.pill { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.pill.yes { color: var(--ok); }
+.pill.no { color: var(--local); }
+.pill.na { color: var(--todo); }
+
+/* phases */
+.phases { display: grid; gap: 10px; }
+.phase { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.phase .st { font-size: 13px; font-weight: 700; }
+.phase.done .st { color: var(--ok); }
+.phase.next .st { color: var(--azure); }
+.phase h3 { margin: 0 0 4px; font-size: 15px; }
+.phase p { color: var(--muted); font-size: 14px; }
+.future { font-family: var(--f-mono); font-size: 12.5px; color: var(--fg); background: var(--azure-soft); border-radius: 8px; padding: 10px 12px; margin-top: 8px; overflow-x: auto; white-space: pre; }
+
+.decisions { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; max-width: 76ch; }
+.decisions li::marker { color: var(--azure); }
+@media (max-width: 520px) { .phase { grid-template-columns: 1fr; gap: 4px; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">AI WATCHTOWER RAG ASSISTANT · 2026-10</div>
+    <h1>AI Watchtower RAG 设计图</h1>
+    <p class="lede">从你的 Mac 到 Azure 的整体结构。黄色是「把资料放进搜索库」的流程，蓝色是「提问 → 得到带引用的回答」的流程。图上的字母和数字，对应下面的步骤说明。</p>
+  </header>
+
+  <section aria-labelledby="h-arch">
+    <h2 id="h-arch">整体结构</h2>
+    <div class="diagram-scroll">
+      <svg viewBox="0 0 1000 560" role="img" aria-labelledby="svg-title svg-desc">
+        <title id="svg-title">本地与 Azure 的整体结构</title>
+        <desc id="svg-desc">左侧是你的 Mac，右侧是 Azure。建索引流程把资料切分、生成向量后上传到 Azure AI Search；提问流程把问题变成向量、在 AI Search 检索前 5 条资料，再交给 gpt-5.4-mini 生成带引用的回答。</desc>
+        <defs>
+          <marker id="m-local" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="head-local"/></marker>
+          <marker id="m-azure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="head-azure"/></marker>
+        </defs>
+
+        <!-- zones -->
+        <rect x="16" y="16" width="528" height="528" rx="14" class="zone-local"/>
+        <text x="36" y="46" class="t-title">你的 Mac · ai-watchtower 仓库</text>
+        <text x="36" y="66" class="t-sub">Python 脚本在这里运行 · key 放在 .env（不进 Git）</text>
+
+        <rect x="568" y="16" width="416" height="528" rx="14" class="zone-azure"/>
+        <text x="588" y="46" class="t-title">Azure · Japan East</text>
+        <text x="588" y="66" class="t-sub">资源组 rg-ai-watchtower-dev · 只允许你家的 IP 访问</text>
+
+        <!-- lane labels -->
+        <text x="36" y="90" class="t-lane-local">① 建索引 · 新闻更新后跑一次</text>
+        <text x="36" y="318" class="t-lane-azure">② 提问 · 每次提问都走这条路</text>
+
+        <!-- lane 1 boxes -->
+        <rect x="36" y="100" width="148" height="72" rx="8" class="box"/>
+        <text x="48" y="124" class="t-box">知识来源</text>
+        <text x="48" y="144" class="t-line">docs 规则文档 29 份</text>
+        <text x="48" y="161" class="t-line">最新 + 历史新闻 236 条</text>
+
+        <rect x="204" y="100" width="148" height="72" rx="8" class="box"/>
+        <text x="216" y="124" class="t-box">切分</text>
+        <text x="216" y="144" class="t-mono">chunks.jsonl</text>
+        <text x="216" y="161" class="t-line">1273 个 chunk</text>
+
+        <rect x="372" y="100" width="148" height="72" rx="8" class="box"/>
+        <text x="384" y="124" class="t-box">向量缓存</text>
+        <text x="384" y="144" class="t-mono">embedding_cache</text>
+        <text x="384" y="161" class="t-line">1273 × 1536 维</text>
+
+        <rect x="204" y="196" width="236" height="60" rx="8" class="box"/>
+        <text x="216" y="220" class="t-box">上传到 AI Search</text>
+        <text x="216" y="240" class="t-mono">azure_search_index.py upload</text>
+
+        <path d="M184,136 L202,136" class="ar-local" marker-end="url(#m-local)"/>
+        <path d="M352,136 L370,136" class="ar-local" marker-end="url(#m-local)"/>
+        <path d="M420,172 L420,194" class="ar-local" marker-end="url(#m-local)"/>
+
+        <!-- lane 2 boxes -->
+        <rect x="36" y="336" width="140" height="72" rx="8" class="box"/>
+        <text x="48" y="360" class="t-box">提问</text>
+        <text x="48" y="380" class="t-line">「出处靠不靠谱？」</text>
+        <text x="48" y="397" class="t-line">中文或英文都可以</text>
+
+        <rect x="200" y="328" width="180" height="88" rx="8" class="box"/>
+        <text x="212" y="352" class="t-box">ask_pipeline.py</text>
+        <text x="212" y="372" class="t-line">把检索和回答串起来</text>
+        <text x="212" y="389" class="t-line">llm_answer.py 检查引用</text>
+        <text x="212" y="406" class="t-line">编号是否真实存在</text>
+
+        <rect x="200" y="448" width="180" height="72" rx="8" class="box"/>
+        <text x="212" y="472" class="t-box">回答 + 引用 [1][2]</text>
+        <text x="212" y="492" class="t-line">没有依据时显示</text>
+        <text x="212" y="509" class="t-line">【资料不足】</text>
+
+        <rect x="36" y="448" width="140" height="72" rx="8" class="box-dashed"/>
+        <text x="48" y="472" class="t-box">评测</text>
+        <text x="48" y="492" class="t-mono">evaluate_demo.py</text>
+        <text x="48" y="509" class="t-line">25 题考卷打分</text>
+
+        <path d="M176,372 L198,372" class="ar-azure" marker-end="url(#m-azure)"/>
+
+        <!-- Azure boxes -->
+        <rect x="588" y="100" width="376" height="72" rx="8" class="box-azure"/>
+        <text x="602" y="124" class="t-box">text-embedding-3-small</text>
+        <text x="602" y="144" class="t-line">Azure OpenAI 模型部署 · 文本 → 1536 个数字</text>
+        <text x="602" y="161" class="t-line">建索引时只给缓存里没有的 chunk 生成</text>
+
+        <rect x="588" y="212" width="376" height="84" rx="8" class="box-azure"/>
+        <text x="602" y="236" class="t-box">Azure AI Search（Free）</text>
+        <text x="602" y="256" class="t-mono">index: ai-watchtower-chunks</text>
+        <text x="602" y="274" class="t-line">1273 条 · 17 / 50 MB · int8 压缩 · 余弦相似度</text>
+
+        <rect x="588" y="330" width="376" height="80" rx="8" class="box-azure"/>
+        <text x="602" y="354" class="t-box">gpt-5.4-mini</text>
+        <text x="602" y="374" class="t-line">Azure OpenAI 模型部署 · 只根据给它的资料写回答</text>
+        <text x="602" y="391" class="t-line">按 JSON 返回：能否回答 / 回答 / 引用编号</text>
+
+        <rect x="588" y="440" width="376" height="72" rx="8" class="box-dashed"/>
+        <text x="602" y="464" class="t-box">预算提醒 ¥1,000 / 月</text>
+        <text x="602" y="484" class="t-line">Cost Management · 实际 80%、预测 100% 时发邮件</text>
+        <text x="602" y="501" class="t-line">只提醒，不会自动停止扣费</text>
+
+        <!-- index flow arrows A, B -->
+        <path d="M522,130 L586,130" class="ar-local" marker-end="url(#m-local)"/>
+        <path d="M586,146 L522,146" class="ar-local" marker-end="url(#m-local)"/>
+        <circle cx="554" cy="114" r="11" class="badge-local"/><text x="554" y="118" text-anchor="middle" class="badge-text">A</text>
+
+        <path d="M440,226 L586,248" class="ar-local" marker-end="url(#m-local)"/>
+        <circle cx="512" cy="221" r="11" class="badge-local"/><text x="512" y="225" text-anchor="middle" class="badge-text">B</text>
+
+        <!-- question flow arrows 1-4 -->
+        <path d="M380,340 L586,166" class="ar-azure" marker-end="url(#m-azure)"/>
+        <circle cx="462" cy="270" r="11" class="badge-azure"/><text x="462" y="274" text-anchor="middle" class="badge-text">1</text>
+
+        <path d="M380,360 L586,276" class="ar-azure" marker-end="url(#m-azure)"/>
+        <circle cx="462" cy="327" r="11" class="badge-azure"/><text x="462" y="331" text-anchor="middle" class="badge-text">2</text>
+
+        <path d="M380,382 L586,372" class="ar-azure" marker-end="url(#m-azure)"/>
+        <circle cx="490" cy="377" r="11" class="badge-azure"/><text x="490" y="381" text-anchor="middle" class="badge-text">3</text>
+
+        <path d="M588,398 L382,482" class="ar-azure" marker-end="url(#m-azure)"/>
+        <circle cx="504" cy="432" r="11" class="badge-azure"/><text x="504" y="436" text-anchor="middle" class="badge-text">4</text>
+      </svg>
+    </div>
+
+    <div class="flows">
+      <div class="flow local">
+        <h3>① 建索引：把资料放进搜索库</h3>
+        <p class="when">什么时候跑：第一次搭建时、Codex 更新了新闻之后。不跑的话，新新闻搜不到。</p>
+        <ol class="steps">
+          <li><span class="mark">→</span><div><b>读资料并切分。</b>规则文档和新闻合成 265 篇，切成 1273 个约 800 字的 chunk。<span class="cmd">rag/scripts/ingest_docs.py → chunk_docs.py</span></div></li>
+          <li><span class="mark">A</span><div><b>生成向量。</b>把每个 chunk 发给 text-embedding-3-small，拿回 1536 个数字，存进缓存。已经生成过的不再调用，所以每天只处理新增的部分。<span class="cmd">build_embedding_cache.py</span></div></li>
+          <li><span class="mark">B</span><div><b>上传到 Azure AI Search。</b>chunk 正文、出处（source / title）和向量一起上传，检索结果才能标出处。<span class="cmd">prepare_vectorized_azure_search_docs.py → azure_search_index.py upload</span></div></li>
+        </ol>
+      </div>
+      <div class="flow azure">
+        <h3>② 提问：得到带引用的回答</h3>
+        <p class="when">每次提问大约 1〜2 秒，费用约 0.3 日元。</p>
+        <ol class="steps">
+          <li><span class="mark">1</span><div><b>问题变向量。</b>用同一个 embedding 模型把问题也变成 1536 个数字。必须用同一个模型，否则无法比较。</div></li>
+          <li><span class="mark">2</span><div><b>向量检索。</b>在 AI Search 里找和问题意思最接近的前 5 个 chunk。不做来源筛选，纯向量检索（25 题评测里效果最好）。</div></li>
+          <li><span class="mark">3</span><div><b>交给 gpt-5.4-mini。</b>把 5 段资料编号 [1]〜[5]，规定「只能用这些资料、每句标引用、没有依据就说资料不足」。</div></li>
+          <li><span class="mark">4</span><div><b>检查后返回。</b>程序删掉模型编造的引用编号，再把回答和出处显示出来。<span class="cmd">ask_pipeline.py --retriever azure-vector --generator azure</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-num">
+    <h2 id="h-num">关键数字</h2>
+    <div class="stats">
+      <div class="stat"><span class="v">1273</span><span class="k">chunk 数（265 篇资料）</span></div>
+      <div class="stat"><span class="v">1536 维</span><span class="k">每个 chunk 的向量长度</span></div>
+      <div class="stat"><span class="v">17 / 50 MB</span><span class="k">AI Search 用量（压缩后 -64%）</span></div>
+      <div class="stat"><span class="v">22 / 25</span><span class="k">回答评测通过（资料不足 5/5）</span></div>
+      <div class="stat"><span class="v">约 9 日元</span><span class="k">跑一次 25 题评测的费用</span></div>
+      <div class="stat"><span class="v">¥1,000</span><span class="k">每月预算提醒</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-where">
+    <h2 id="h-where">东西放在哪里</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>位置</th><th>放什么</th><th>进 Git</th></tr></thead>
+        <tbody>
+          <tr><td class="where">rag/scripts/</td><td>全部 Python 脚本（切分、生成向量、上传、检索、回答、评测）</td><td><span class="pill yes">进</span></td></tr>
+          <tr><td class="where">rag/data/</td><td>corpus / chunks / 上传前的数据 / 25 题考卷</td><td><span class="pill yes">进</span></td></tr>
+          <tr><td class="where">rag/data/（大文件）</td><td>向量缓存、带向量的上传数据，各约 40 MB，随时可以重新生成</td><td><span class="pill no">不进</span></td></tr>
+          <tr><td class="where">rag/docs/</td><td>架构说明、学习笔记、设计文档、评测报告；入口是 rag/README.md</td><td><span class="pill yes">进</span></td></tr>
+          <tr><td class="where">.env</td><td>Azure 的地址、API key、模型部署名</td><td><span class="pill no">不进</span></td></tr>
+          <tr><td class="where">Azure OpenAI</td><td>两个模型部署：text-embedding-3-small、gpt-5.4-mini</td><td><span class="pill na">云上</span></td></tr>
+          <tr><td class="where">Azure AI Search</td><td>index ai-watchtower-chunks（chunk 正文 + 出处 + 向量）</td><td><span class="pill na">云上</span></td></tr>
+          <tr><td class="where">GitHub</td><td>代码和文档的远程仓库（你在 Mac 上 git push）</td><td><span class="pill na">远程</span></td></tr>
+          <tr><td class="where">Codex 自动化</td><td>每天更新 data/news.json；新闻要进搜索库，还需要再跑一次 ①</td><td><span class="pill na">外部</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-phase">
+    <h2 id="h-phase">做到哪一步了</h2>
+    <div class="phases">
+      <div class="phase done">
+        <div class="st">完成</div>
+        <div><h3>Phase 1 · 本地 RAG</h3><p>切分、关键词检索、本地模拟向量检索、带引用的模板回答、评测。全部在 Mac 上运行，不花钱。</p></div>
+      </div>
+      <div class="phase done">
+        <div class="st">完成</div>
+        <div><h3>Phase 2 · Azure 化</h3><p>真实 embedding、Azure AI Search（压缩后 17 MB）、gpt-5.4-mini 生成回答。25 题评测通过 22 题，没有答案的 5 题全部回答「资料不足」。</p></div>
+      </div>
+      <div class="phase next">
+        <div class="st">下一阶段</div>
+        <div>
+          <h3>Phase 3 · 网页提问界面</h3>
+          <p>在 AI Watchtower 网站上加一个提问框。API key 不能放在浏览器里，所以中间要加一层 API，把 key 保管在 Azure 上。</p>
+          <div class="future">浏览器（提问框） → Azure Functions（API，保管 key） → ② 的流程（向量检索 + gpt-5.4-mini） → 回答 + 引用</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-dec">
+    <h2 id="h-dec">做过的设计决定</h2>
+    <ul class="decisions">
+      <li><b>检索用纯向量，不用 hybrid。</b>25 题评测里纯向量 MRR 0.87，hybrid 0.78。新闻里的固定字段（「来源:」「可信层级:」）干扰了关键词检索。</li>
+      <li><b>不做来源类型的自动筛选。</b>规则会把「已经发布的新闻数据出错了」这类问题误判成新闻题，正确文档被筛掉（100% → 84%）。</li>
+      <li><b>「资料不足」交给模型判断。</b>只看相似度分数时，有答案和没答案的题分数重叠；改由 gpt-5.4-mini 判断后，5 题全对。</li>
+      <li><b>向量 int8 压缩、不保存副本。</b>Free 层 50 MB 快满了，压缩后 47.6 → 17.0 MB，检索结果不变。</li>
+      <li><b>安全。</b>key 只放在 .env，不进 Git；Azure OpenAI 只允许你家的 IP 访问；模型只能引用真实存在的资料编号。</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>
