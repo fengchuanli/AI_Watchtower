@@ -1,169 +1,202 @@
 {
   "version": 1,
   "updatedAt": "2026-10-05",
-  "totalItems": 1097,
+  "totalItems": 1104,
   "editions": [
     {
       "id": "news-1700-2026-10-05",
       "date": "2026-10-05",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00 JST 短批次",
-      "itemCount": 3,
-      "note": "本期3条AI新闻情报，聚焦生命科学模型、短信Agent和科学叙事核查。",
-      "operationalStatus": "已拉取origin/main；核对OpenAI官方页面、TechCrunch与The Atlantic报道，并跳过重复、旧稿和弱来源。",
-      "editorialInterpretation": "本期发布 3 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复事实、弱证据或营销凑数。",
+      "archiveLabel": "17:00 JST 补充",
+      "itemCount": 10,
+      "note": "本期10条AI新闻情报，聚焦Agent治理、生命科学模型、训练数据和企业控制面。",
+      "operationalStatus": "已拉取origin/main；核对Axios、OpenAI、TechCrunch、The Atlantic与AWS官方博客。",
+      "editorialInterpretation": "本期发布10条安全非重复信号；未用旧稿、播客、付费墙、登录墙、社区讨论、重复事实、弱证据或营销凑数。",
       "readerFrame": {
-        "headline": "本期读法：少量信号，重点查工作流入口和证据边界",
-        "whyItMatters": "OpenAI、TechCrunch和The Atlantic共同指向一个问题：AI能力要进入真实工作流，必须同时回答访问、授权、审计、复现和外部验证。",
+        "headline": "本期读法：把Agent入口热潮拆成权限、证据和责任链",
+        "whyItMatters": "10条信号共同指向同一件事：AI正在进入医疗、消费入口、桌面工具、合规判定、训练数据和长期记忆，读者需要同时检查能力、授权、日志、复核和外部证据。",
         "useThisIssueFor": [
-          "科研和药研平台团队核对生命科学模型的定价、准入、插件权限和专家复核。",
-          "消费Agent产品和安全团队核对短信入口、身份、付款、撤销和日志。",
-          "科学传播和投资尽调团队核对AI科学发现的新颖性、数据来源和复现实验。"
+          "安全和合规团队核对医疗、桌面、合规Agent的授权和审计。",
+          "产品和战略团队核对Agent入口、分发、切换成本和用户委托关系。",
+          "工程和数据团队核对MTRL训练、专家数据、向量记忆和确定性边界。"
         ],
         "notProvenYet": [
-          "不证明GPT-Rosalind已经带来可验证药物发现效果或客户ROI。",
-          "不证明短信Agent已经规模化留存，也不证明消息入口天然安全。",
-          "不证明Anthropic科学发现无价值或存在数据不当使用；只说明外部争议仍需核验。"
+          "不证明任何Agent入口已经形成不可替代的平台锁定。",
+          "不证明AWS技术样例已经在客户生产中通过审计或复测。",
+          "不证明专家数据或生命科学模型已经带来可验证科研效果。"
         ],
         "mobile": {
-          "headline": "查准入、权限和复核",
-          "summary": "少量安全更新，重点是准入、权限和外部复核。",
+          "headline": "查权限、证据、责任",
+          "summary": "10条补充信号，重点检查Agent授权和外部证明。",
           "primaryUses": [
-            "科研团队查模型准入",
-            "产品团队查短信Agent",
-            "尽调团队查科学证据"
+            "安全团队查权限",
+            "产品团队查入口",
+            "工程团队查训练"
           ],
-          "proofBoundary": "仍需价格页、准入条款、平台政策、审计日志、论文、复现和专家审查。"
+          "proofBoundary": "仍需官方文件、日志、审计、指标和第三方复核。"
         }
       },
       "changeSummary": {
-        "headline": "较10月4日补充版新增生命科学、消费Agent和科学复核信号",
+        "headline": "较10月5日短批次补上Agent治理和企业控制面",
         "freshFacts": [
-          "本期新增OpenAI页面节点：GPT-Rosalind公开定价在10月5日生效。",
-          "本期新增TechCrunch梳理：多款AI Agent正在通过短信或聊天应用触达用户。",
-          "本期新增The Atlantic报道：Anthropic的Claude科学发现叙事受到外部科学家质疑。"
+          "本期新增Axios医疗Agent风险报道，补上未授权部署、调查数字和医疗责任边界。",
+          "本期新增Axios对Mercor专家数据和Agent经济的报道/评论，补上训练数据与入口竞争框架。",
+          "本期新增AWS四条官方技术样例，补上合规问答、桌面搜索、多轮RL和Agent记忆控制面。"
         ],
         "repeatedContext": [
-          "10月4日已入库的Reflection开放权重、Jay Clayton联邦AI任务小组、Agent责任法案和ChatGPT Mac漏洞不重复发布。",
-          "本期延续Agent权限、生命科学AI和模型验证主题，但只纳入新的安全非重复来源事实。"
+          "仍是10月5日同日版次补充，不重复10月4日Reflection、联邦任务小组和Agent责任法案事实簇。",
+          "延续生命科学模型、短信Agent和科学复核主题，但把本期重心扩展到权限、日志和训练数据。"
         ]
       },
       "coverageMix": [
         {
-          "label": "核对模型准入和科学证据",
-          "count": 2,
-          "meaning": "用来检查GPT-Rosalind价格、可信访问、插件权限、Claude科学叙事、论文、复现和专家审查。"
+          "label": "核对Agent权限与治理",
+          "count": 4,
+          "meaning": "用来更新医疗、消费入口、桌面搜索和合规Agent的授权、日志、撤销、规则和审计清单。"
         },
         {
-          "label": "核对短信Agent权限入口",
-          "count": 1,
-          "meaning": "用来检查消费级Agent在消息线程里的身份、授权、付款、日志、撤销和平台规则。"
+          "label": "核对训练数据与模型证据",
+          "count": 3,
+          "meaning": "用来检查专家数据、GPT-Rosalind准入、Claude科学叙事、论文、复现和财务/合同证据。"
+        },
+        {
+          "label": "核对企业Agent基础设施",
+          "count": 3,
+          "meaning": "用来评估多轮RL训练、持久记忆、确定性规则引擎和生产控制面的证据边界。"
         }
       ],
       "sourceRisk": {
-        "label": "一条官方，两条媒体背景",
-        "note": "OpenAI页面核对访问和定价节点；TechCrunch和The Atlantic提供产品/科学争议雷达，不替代原文、平台政策、论文、复现或客户记录。",
-        "nextCheck": "下一步优先核对GPT-Rosalind价格页、可信访问条款、Agent隐私/权限文档、平台规则、Anthropic论文、复现实验和专家审查。"
+        "label": "三条媒体，五条官方/厂商原文",
+        "note": "Axios等媒体提供雷达；AWS样例只证明厂商技术路径，不证明生产效果。",
+        "nextCheck": "优先查官方文档、调查原文、日志、客户指标、审计和第三方复核。"
       },
       "overreadBoundary": {
-        "label": "不要把短批次读成全市场覆盖",
-        "body": "不要把本期读成全市场结论：这是周末后少量安全非重复信号，适合作为生命科学模型、短信Agent入口和AI科学叙事的核查表，不代表当天AI市场完整覆盖。",
-        "doNotConclude": "不能得出生命科学AI已被验证、短信Agent已规模化、Anthropic科学发现无效、或消费Agent权限问题已有统一平台规则。",
-        "useInstead": "应该先核对价格页、准入合同、隐私政策、权限日志、平台政策、论文、实验数据、独立复现和专家评审。"
+        "label": "不要把样例读成落地证明",
+        "body": "不要把本期读成全市场结论：AWS同源技术样例较多，适合用来拆控制面和实验清单，不适合直接当作市场采用或安全成熟结论。",
+        "doNotConclude": "不能据此断言Agent医疗治理已完善、企业桌面Agent已安全、MTRL已普遍优于大模型提示，或S3 Vectors是唯一记忆后端。",
+        "useInstead": "应该用来列出官方文档、样例代码、权限日志、审计记录、客户指标、监管文件和第三方复核的下一步证据。"
       },
       "trendNotes": [
         {
-          "topic": "model",
-          "label": "生命科学模型进入采购核查",
-          "note": "跨期看，Claude生命科学发现、GPT-Rosalind可信访问和外部科学质疑把AI科学从演示推向采购、准入和复核现场。",
-          "boundary": "不证明科研效果；仍需论文、实验记录、复现、客户指标和专家审查。"
+          "topic": "agent",
+          "label": "Agent治理从入口走向责任链",
+          "note": "跨期看，Agent从短信入口、桌面权限和企业控制面，连续延伸到医疗、合规判定和授权网关。",
+          "boundary": "不证明安全已成熟；仍需官方文档、日志、审计、监管数据和第三方复核。"
         },
         {
-          "topic": "agent",
-          "label": "Agent入口继续贴近日常消息",
-          "note": "跨期看，Agent从桌面权限、企业控制面和责任法案延伸到短信、邮箱、电话和支付身份。",
-          "boundary": "不证明留存或安全；仍需平台规则、权限文档、日志、审计和用户指标。"
+          "topic": "model",
+          "label": "训练和科学证据同时被追问",
+          "note": "跨期看，生命科学模型、专家训练数据和MTRL方法连续把AI能力拉回论文、数据和复测。",
+          "boundary": "不证明科研或训练效果；仍需论文、复现、财务文件、指标数据和第三方评测。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "企业控制面变得更具体",
+          "note": "跨期看，Agent记忆、网关、MCP固定工具和规则引擎连续把生产AI推向可审计架构。",
+          "boundary": "不证明生产稳定；仍需部署日志、客户指标、审计报告和故障数据。"
         }
       ],
       "topicContinuity": [
         {
-          "topic": "model",
-          "label": "生命科学AI证据边界更具体",
+          "topic": "agent",
+          "label": "Agent权限更贴近高风险系统",
           "status": "stronger",
-          "previousPattern": "此前生命科学主题包括Claude发现、企业培训和模型能力叙事。",
-          "currentSignal": "本期新增GPT-Rosalind公开定价节点和The Atlantic对Claude科学发现叙事的外部质疑。",
-          "signalDirection": "增强：读者可以把模型能力、访问资格、价格、论文和复现实验放到同一张核查表。",
-          "stillUnproven": "仍需价格页、准入合同、论文、实验数据、客户记录、外部复现和专家审查。"
+          "previousPattern": "此前Agent主题集中在短信入口、桌面权限、企业安全和责任立法。",
+          "currentSignal": "本期新增医疗未授权Agent、Agent经济、Claude Desktop搜索授权和合规问答样例。",
+          "signalDirection": "增强：同一权限问题进入医疗、消费、桌面和合规四个工作面。",
+          "stillUnproven": "仍需官方文档、医院政策、权限日志、审计报告、监管文件和用户指标。"
         },
         {
-          "topic": "agent",
-          "label": "消费Agent权限问题更贴近用户入口",
+          "topic": "model",
+          "label": "模型证据转向数据供应链",
           "status": "stronger",
-          "previousPattern": "此前Agent主题集中在OS权限、企业安全、第三方系统访问和责任立法。",
-          "currentSignal": "本期新增TechCrunch对短信和聊天入口AI Agent的产品梳理。",
-          "signalDirection": "增强：Agent风险从企业控制面延伸到用户日常消息、邮箱、日历、付款和电话身份。",
-          "stillUnproven": "仍需产品权限文档、平台政策、审计日志、留存指标、投诉记录和第三方安全测试。"
+          "previousPattern": "此前生命科学AI和Claude科学发现争议已经要求论文、复现和专家审查。",
+          "currentSignal": "本期新增Mercor专家数据报道和SageMaker MTRL训练方法说明。",
+          "signalDirection": "增强：训练数据、奖励轨迹和科学复核开始被放在同一证据链里。",
+          "stillUnproven": "仍需财务文件、客户合同、训练日志、评测数据、论文和第三方复测报告。"
         }
       ],
       "companyContinuity": [
         {
           "company": "OpenAI",
-          "label": "生命科学模型进入定价核查",
-          "lastMention": "此前OpenAI出现在模型退役、GPT-6工程指南、Agent安全和ChatGPT购物中。",
-          "whatChanged": "本期新增GPT-Rosalind公开定价生效和可信访问结构，关注点从通用模型迁移转向受控生命科学工作流。",
-          "stillUnproven": "仍需价格页、准入条款、客户侧实验记录、插件日志、专家审查和第三方基准。"
+          "label": "入口和生命科学并行",
+          "lastMention": "此前OpenAI出现在GPT-Rosalind、dots、模型退役和Agent安全脉络中。",
+          "whatChanged": "本期新增Axios对Agent经济的入口框架，OpenAI dots被放入企业Agent竞争语境。",
+          "stillUnproven": "仍需官方文档、权限政策、客户指标、价格页、合同和审计数据。"
+        },
+        {
+          "company": "AWS",
+          "label": "控制面样例集中出现",
+          "lastMention": "历史归档中AWS多次出现在AgentCore、Quick、SageMaker和企业AI样例中。",
+          "whatChanged": "本期新增四条AWS官方技术样例，从合规判定、桌面搜索、MTRL训练到Agent记忆。",
+          "stillUnproven": "仍需客户部署报告、日志、审计记录、成本指标、故障数据和第三方复测。"
         },
         {
           "company": "Anthropic",
-          "label": "科学发现叙事被外部复核",
-          "lastMention": "此前Anthropic出现在Claude企业培训、生命科学发现和前沿模型采用中。",
-          "whatChanged": "本期The Atlantic把Claude科学发现叙事放入外部科学家质疑和新颖性争议中。",
-          "stillUnproven": "仍需Anthropic论文、数据说明、外部复现、同行评议、实验室优先权材料和训练数据政策。"
+          "label": "Claude进入工具与科学复核",
+          "lastMention": "此前Anthropic出现在Claude科学发现争议、企业培训和生命科学能力脉络中。",
+          "whatChanged": "本期新增Claude Desktop经AWS AgentCore接Web Search的技术样例，同时保留科学叙事复核。",
+          "stillUnproven": "仍需官方文档、论文、复现、权限日志、平台政策和第三方审查。"
         }
       ],
       "sourceFamilies": [
         {
           "family": "official",
           "label": "官方/平台原文",
-          "count": 1,
-          "role": "OpenAI用于核对GPT-Rosalind访问、插件和定价节点；科研效果仍需外部证据。"
+          "count": 5,
+          "role": "OpenAI和AWS用于核对模型准入、定价节点、技术样例和控制面路径；效果仍需外部证据。"
         },
         {
           "family": "reliable_media",
           "label": "可靠媒体",
-          "count": 2,
-          "role": "TechCrunch和The Atlantic用于观察产品入口和科学争议雷达；完整事实和上下文仍需读原文。"
+          "count": 5,
+          "role": "Axios、TechCrunch和The Atlantic用于观察入口、医疗风险、训练数据和科学争议；完整事实仍需原文。"
         }
       ],
       "topicGroups": [
         {
-          "id": "model",
-          "label": "核对生命科学模型和科学证据",
-          "count": 2,
+          "id": "agent",
+          "label": "检查Agent权限与入口",
+          "count": 4,
           "itemIds": [
+            "axios-health-unauthorized-ai-agents-2026-10-05",
+            "axios-agent-economy-post-app-2026-10-05",
+            "techcrunch-text-message-ai-agents-2026-10-03",
+            "aws-agentcore-claude-desktop-secure-web-search-2026-10-02"
+          ],
+          "meaning": "用来检查医疗、消费、短信和桌面Agent的身份、授权、付款、搜索、日志和撤销。"
+        },
+        {
+          "id": "model",
+          "label": "核对训练数据与科研证据",
+          "count": 3,
+          "itemIds": [
+            "axios-mercor-human-expert-data-2026-10-05",
             "openai-gpt-rosalind-pricing-trusted-access-2026-10-05",
             "atlantic-anthropic-claude-science-scrutiny-2026-10-04"
           ],
-          "meaning": "用来检查生命科学模型准入、价格、论文、复现、训练数据边界和专家审查。"
+          "meaning": "用来检查专家数据、生命科学模型、论文、复现、训练数据边界和专家审查。"
         },
         {
-          "id": "agent",
-          "label": "检查短信Agent权限入口",
-          "count": 1,
+          "id": "infrastructure",
+          "label": "核对企业控制面",
+          "count": 3,
           "itemIds": [
-            "techcrunch-text-message-ai-agents-2026-10-03"
+            "aws-quick-adjudicated-query-compliance-2026-10-02",
+            "aws-sagemaker-multi-turn-rl-search-agent-2026-10-02",
+            "aws-nemo-s3-vectors-agent-memory-2026-10-01"
           ],
-          "meaning": "用来检查消费级Agent在消息入口里的身份、授权、付款、日志、撤销和平台规则。"
+          "meaning": "用来评估规则引擎、多轮强化学习、持久记忆、样例代码、审计和部署日志。"
         }
       ],
       "sourceConcentration": {
-        "sourceId": "openai-news",
-        "sourceName": "OpenAI News",
-        "count": 1,
-        "share": "1/3",
-        "note": "短批次中没有单一来源占多数，但任一单条都不应被读成完整市场覆盖；需警惕少量来源样本带来的判断集中。",
-        "nextCheck": "继续查其他官方来源、独立媒体、论文、第三方复现和客户侧记录。"
+        "sourceId": "aws-machine-learning-blog",
+        "sourceName": "AWS Machine Learning Blog",
+        "count": 4,
+        "share": "4/10",
+        "note": "AWS同源较多，说明控制面样例集中出现；不能当作独立市场采用证明。",
+        "nextCheck": "查客户指标、审计记录、第三方复测、监管文件和非AWS实现。"
       },
       "categories": [
         {
@@ -327,6 +360,397 @@
       "sourceCount": 109,
       "items": [
         {
+          "id": "axios-health-unauthorized-ai-agents-2026-10-05",
+          "category": "policy",
+          "label": "政策",
+          "title": "Axios：医疗机构正面对未经授权AI Agent风险",
+          "body": "Axios报道，医疗系统的未授权AI Agent部署正在放大安全、隐私和临床责任风险。",
+          "summary": "Axios报道，医疗机构的未授权AI Agent部署正在放大隐私、HIPAA和临床工作流风险。",
+          "whyItMatters": "医疗场景把Agent权限问题推到高风险环境：同一个系统可能触达病历、账单、医嘱和沟通渠道。",
+          "detailBody": "Axios报道，医疗系统正在把AI Agent用于临床和行政流程，但安全团队担心这些Agent可能在缺少正式批准、限定凭证和行为审计时访问或改动敏感系统。该条只保留最小报道事实，完整事实、调查方法、案例和引述仍需阅读原文。",
+          "trend": "Agent治理正在从企业通用权限管理进入医疗、隐私和临床安全交叉区。",
+          "detailTrend": "医疗AI Agent把身份、授权、任务范围和临床责任绑在一起，说明Agent安全不再只是IT控制问题，而是患者隐私、医嘱完整性和法律责任共同约束的治理问题。",
+          "whyRanked": "它把Agent权限风险落到医疗系统，影响隐私、合规、医嘱和责任链。",
+          "topReason": "它把Agent权限风险落到医疗系统，影响隐私、合规、医嘱和责任链。",
+          "impact": "医疗机构、安全团队和合规负责人应重新检查影子AI、临时凭证、病历访问、医嘱改动和事件响应。",
+          "whoShouldCare": "负责医疗AI上线、医院网络安全、HIPAA合规、临床系统采购和风险审计的团队需要关注。",
+          "readerUse": "医疗安全和合规团队可用来更新Agent准入清单：正式审批、限时凭证、最小权限、任务日志、医嘱保护和人工兜底。",
+          "nextCheck": "查Imprivata调查原文、医院部署政策、HIPAA合规说明、审计日志样例、监管通报和医疗机构事故记录。",
+          "followUpQuestions": [
+            "Imprivata是否发布完整调查报告、样本结构、问题设计和行业分布数据？",
+            "医疗机构是否公开AI Agent审批政策、权限日志、医嘱改动记录或监管回应？"
+          ],
+          "evidenceThreshold": "至少需要调查原文、医院政策文件、审计日志或监管报告，才能升级为已确认的行业性医疗Agent治理缺口。",
+          "claimBoundary": "媒体报道不证明所有医疗Agent都违规，也不证明具体患者数据已被泄露；它只说明高风险部署和治理缺口值得核查。",
+          "counterEvidence": "如果调查样本偏窄、医院政策文件显示完整审批和日志覆盖，或监管报告否认相关风险，应下调为单一调查背景信号。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceUrl": "https://www.axios.com/2026/10/05/ai-agents-hospital-risks",
+          "originalUrl": "https://www.axios.com/2026/10/05/ai-agents-hospital-risks",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道医疗AI Agent未授权部署和治理风险，并引用Imprivata调查数字。该条只保留最小报道事实，完整事实、调查方法、案例、引述和上下文仍需阅读原文。",
+          "publishedAt": "2026-10-05T19:00:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "医疗AI",
+            "Agent治理",
+            "隐私合规"
+          ],
+          "companies": [
+            "Imprivata"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "医疗高风险场景让Agent权限边界具备直接决策价值。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 23,
+            "note": "医疗高风险场景让Agent权限边界具备直接决策价值。"
+          },
+          "detailWhyRanked": "它把Agent权限风险落到医疗系统，影响隐私、合规、医嘱和责任链。 来源侧可核对的是Axios AI / Technology支持的具体事实；升级判断仍需查Imprivata调查原文、医院部署政策、HIPAA合规说明、审计日志样例、监管通报和医疗机构事故记录。。",
+          "keyFacts": [
+            {
+              "value": "72%",
+              "label": "未批准部署",
+              "note": "Axios引用Imprivata调查"
+            },
+            {
+              "value": "250",
+              "label": "调查对象",
+              "note": "医疗安全和AI策略官员"
+            },
+            {
+              "value": "28%",
+              "label": "生产使用",
+              "note": "调查称已有Agentic AI进生产"
+            },
+            {
+              "value": "待查",
+              "label": "独立证据",
+              "note": "需要调查全文和医院日志"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "Axios发布医疗Agent风险报道",
+              "body": "聚焦未授权部署、隐私和临床系统边界。",
+              "tone": "media"
+            },
+            {
+              "date": "报道中",
+              "title": "调查显示影子AI问题",
+              "body": "医疗领导者称正式IT批准跟不上部署。",
+              "tone": "reported"
+            },
+            {
+              "date": "待补",
+              "title": "等待原始调查和监管材料",
+              "body": "决定能否升级为行业性治理缺口。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条只证明风险雷达，不证明具体医院违规",
+              "sourceStatus": {
+                "tag": "媒体背景",
+                "note": "可靠媒体背景，需回到调查原文和医疗机构记录。"
+              },
+              "body": [
+                "这条适合放进医疗Agent治理清单，而不是写成普遍违规结论。",
+                "下一步证据必须从调查全文、医院政策、日志和监管材料补齐。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要调查原文、医院政策文件、审计日志或监管报告，才能升级为已确认的行业性医疗Agent治理缺口。"
+              },
+              "sourceLine": "出处：Axios — Health care's emerging risk: unauthorized AI agents（2026-10-05）"
+            }
+          ]
+        },
+        {
+          "id": "axios-agent-economy-post-app-2026-10-05",
+          "category": "product",
+          "label": "产品",
+          "title": "Axios：Agent经济正在把应用入口改写为委托入口",
+          "body": "Axios C-Suite称，消费和企业AI Agent正在把应用操作改写为任务委托。",
+          "summary": "Axios把Muse、Copilot、OpenAI dots等放在同一框架下，提示Agent入口竞争正从界面转向分发、权限和数据沉淀。",
+          "whyItMatters": "如果用户和企业把日历、邮箱、支付、购物和内部流程交给同一Agent，切换成本和平台锁定会迅速上升。",
+          "detailBody": "Axios C-Suite评论把消费Agent和企业Agent放在同一趋势中：用户不再逐个操作应用，而是向Agent授权并委托任务。该条是媒体框架和趋势判断，完整事实、案例、引述和上下文仍需阅读原文。",
+          "trend": "AI入口竞争正在从聊天框和App图标转向“谁掌握长期委托关系”。",
+          "detailTrend": "Agent入口的核心不只是模型能力，而是分发、权限、企业数据和任务记忆能否长期留住用户，并让切换成本从界面习惯转向授权关系、历史数据和默认工作流。",
+          "whyRanked": "它把本周多个产品发布串成读者可用的入口竞争框架。",
+          "topReason": "它把本周多个产品发布串成读者可用的入口竞争框架。",
+          "impact": "产品、战略和平台团队应重新评估Agent身份、数据迁移、默认入口、第三方工具权限和退出成本。",
+          "whoShouldCare": "负责消费AI产品、企业Agent平台、客户关系、渠道分发和数据策略的团队需要关注。",
+          "readerUse": "产品和战略团队可用来核对Agent产品路线：入口位置、授权范围、长期记忆、数据可携带性、默认分发和商业化。",
+          "nextCheck": "查Muse、Copilot、OpenAI dots官方文档、权限页面、企业管理策略、用户留存指标和平台迁移规则。",
+          "followUpQuestions": [
+            "相关Agent产品是否公开权限模型、撤销流程、企业管理文档和数据导出规则？",
+            "是否有留存指标、客户案例、付费转化或第三方评测支持“一个主Agent”判断？"
+          ],
+          "evidenceThreshold": "至少需要官方产品文档、权限政策、客户指标、迁移规则或第三方数据，才能升级为已确认的平台锁定趋势。",
+          "claimBoundary": "媒体评论不证明用户会只保留一个Agent，也不证明任何单一厂商已胜出；它只提供入口竞争框架。",
+          "counterEvidence": "如果用户指标显示多Agent并存、权限迁移顺畅或平台政策限制锁定，应下调为评论框架而非市场结论。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios C-Suite",
+          "source": "Axios C-Suite",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceUrl": "https://www.axios.com/2026/10/05/ai-agents-consumers-business",
+          "originalUrl": "https://www.axios.com/2026/10/05/ai-agents-consumers-business",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios C-Suite报道和评论消费/企业Agent入口经济，提到Muse、Copilot、OpenAI dots等产品框架。该条只保留最小报道事实，完整事实、案例、引述和上下文仍需阅读原文。",
+          "publishedAt": "2026-10-05T18:30:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "Agent经济",
+            "入口竞争",
+            "平台分发"
+          ],
+          "companies": [
+            "Meta",
+            "Microsoft",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "有助于把多个Agent发布理解成入口和分发竞争。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "有助于把多个Agent发布理解成入口和分发竞争。"
+          },
+          "detailWhyRanked": "它把本周多个产品发布串成读者可用的入口竞争框架。 来源侧可核对的是Axios C-Suite支持的具体事实；升级判断仍需查Muse、Copilot、OpenAI dots官方文档、权限页面、企业管理策略、用户留存指标和平台迁移规则。。",
+          "keyFacts": [
+            {
+              "value": "消费",
+              "label": "入口一",
+              "note": "短信、购物、日历和支付委托"
+            },
+            {
+              "value": "企业",
+              "label": "入口二",
+              "note": "Copilot、dots和小企业Agent"
+            },
+            {
+              "value": "分发",
+              "label": "关键变量",
+              "note": "平台触达决定切换成本"
+            },
+            {
+              "value": "待证",
+              "label": "市场结论",
+              "note": "需要留存和迁移数据"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "本周",
+              "title": "多款Agent产品进入视野",
+              "body": "消费和企业入口同时升温。",
+              "tone": "media"
+            },
+            {
+              "date": "10月5日",
+              "title": "Axios提出Agent经济框架",
+              "body": "从App操作转向任务委托。",
+              "tone": "analysis"
+            },
+            {
+              "date": "待补",
+              "title": "等待官方权限和留存数据",
+              "body": "决定入口锁定是否成立。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "入口框架有用，但不是胜负判决",
+              "sourceStatus": {
+                "tag": "媒体背景",
+                "note": "媒体评论，需用产品文档和用户数据补证。"
+              },
+              "body": [
+                "这条适合帮助读者理解本周Agent发布的共同方向。",
+                "它不能替代各产品的权限、数据迁移和企业管理文档。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要官方产品文档、权限政策、客户指标、迁移规则或第三方数据，才能升级为已确认的平台锁定趋势。"
+              },
+              "sourceLine": "出处：Axios C-Suite — The AI agent economy unfolds（2026-10-05）"
+            }
+          ]
+        },
+        {
+          "id": "axios-mercor-human-expert-data-2026-10-05",
+          "category": "research",
+          "label": "研究",
+          "title": "Axios：Mercor把专家劳动力推到模型训练数据前台",
+          "body": "Axios报道，CBS《60 Minutes》展示Mercor用多领域自由职业者训练AI模型。",
+          "summary": "Axios报道Mercor的专家数据劳动力规模和收入跃升，提示模型训练竞争正从网页语料转向人类专业知识。",
+          "whyItMatters": "当模型需要更高质量的专业数据，数据供应链、专家劳动定价、训练合规和内容归属都会成为竞争变量。",
+          "detailBody": "Axios报道《60 Minutes》节目展示Mercor如何组织十万级自由职业者为模型提供专业训练数据，并提到公司人员和收入增长。该条只保留最小报道事实，完整节目、采访、财务口径和上下文仍需阅读原文或CBS材料。",
+          "trend": "AI数据竞争转向专家知识采购。",
+          "detailTrend": "专家数据平台的价值上升，说明模型训练瓶颈正在转向任务设计、专业审核和劳动供应链治理，采购方需要把数据质量、劳动合规和合同授权放进同一套尽调流程。",
+          "whyRanked": "它解释了为什么模型公司和数据公司会继续争夺高质量人类专业输入。",
+          "topReason": "它解释了为什么模型公司和数据公司会继续争夺高质量人类专业输入。",
+          "impact": "模型团队、数据采购和法务团队应审查专家合同、训练用途授权、质量评估、报酬结构和数据保留政策。",
+          "whoShouldCare": "负责模型训练数据采购、专家标注项目、AI供应链尽调和内容授权合规的团队需要关注。",
+          "readerUse": "数据采购和模型训练团队可用来核对专家数据供应商：样本质量、合同授权、领域资质、审计记录、收入口径和客户依赖。",
+          "nextCheck": "查CBS完整访谈、Mercor公开材料、客户合同、财务披露、标注质量指标和劳动合规文件。",
+          "followUpQuestions": [
+            "CBS是否发布完整文字稿、采访视频、训练样例和Mercor口径说明？",
+            "Mercor是否公开客户结构、合同授权、质量控制报告、劳动合规文件或财务审计材料？"
+          ],
+          "evidenceThreshold": "至少需要CBS原始节目、Mercor文件、客户合同、财务记录或质量指标，才能升级为已验证的数据供应链优势。",
+          "claimBoundary": "媒体报道不证明Mercor收入口径已审计，也不证明专家数据一定改善模型效果；它只说明专业数据劳动力正在被推到前台。",
+          "counterEvidence": "如果财务记录、客户文件或质量复测不支持增长和效果主张，应下调为媒体曝光和市场叙事信号。",
+          "sourceId": "axios-ai",
+          "sourceName": "Axios AI / Technology",
+          "source": "Axios AI / Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceUrl": "https://www.axios.com/2026/10/05/60-minutes-how-humans-make-ai-smarter",
+          "originalUrl": "https://www.axios.com/2026/10/05/60-minutes-how-humans-make-ai-smarter",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "Axios AI / Technology报道CBS《60 Minutes》展示Mercor的AI模型训练数据工作流和公司增长口径。该条只保留最小报道事实，完整事实、节目片段、采访、数字和上下文仍需阅读原文。",
+          "publishedAt": "2026-10-05T18:00:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "训练数据",
+            "专家劳动力",
+            "模型供应链"
+          ],
+          "companies": [
+            "Mercor",
+            "Runway"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "专家数据供应链影响模型训练质量和采购合规。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "专家数据供应链影响模型训练质量和采购合规。"
+          },
+          "detailWhyRanked": "它解释了为什么模型公司和数据公司会继续争夺高质量人类专业输入。 来源侧可核对的是Axios AI / Technology支持的具体事实；升级判断仍需查CBS完整访谈、Mercor公开材料、客户合同、财务披露、标注质量指标和劳动合规文件。。",
+          "keyFacts": [
+            {
+              "value": "100,000+",
+              "label": "专家劳动力",
+              "note": "Axios转述节目口径"
+            },
+            {
+              "value": "400",
+              "label": "全职员工",
+              "note": "报道称当前员工规模"
+            },
+            {
+              "value": "24个月",
+              "label": "收入跃升窗口",
+              "note": "仍需财务文件核对"
+            },
+            {
+              "value": "CBS",
+              "label": "原始节目",
+              "note": "下一步应查完整文字稿"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "Axios转述CBS节目",
+              "body": "Mercor专家数据训练链条进入公众视野。",
+              "tone": "media"
+            },
+            {
+              "date": "节目中",
+              "title": "多领域专家参与训练",
+              "body": "金融、建筑、医学和创作等任务被纳入训练流程。",
+              "tone": "reported"
+            },
+            {
+              "date": "待补",
+              "title": "等待合同和质量证据",
+              "body": "收入和效果仍需文件核对。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "专家数据是方向，不是自动成立的护城河",
+              "sourceStatus": {
+                "tag": "媒体背景",
+                "note": "可靠媒体背景，完整节目和公司文件仍是关键。"
+              },
+              "body": [
+                "这条的价值在于提示模型训练数据正在专业化，而不是替Mercor证明收入或模型效果。",
+                "采购方应把专家资质、合同授权、质量指标和客户集中度分开核查。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要CBS原始节目、Mercor文件、客户合同、财务记录或质量指标，才能升级为已验证的数据供应链优势。"
+              },
+              "sourceLine": "出处：Axios — 60 Minutes: How humans make AI smarter（2026-10-05）"
+            }
+          ]
+        },
+        {
           "id": "atlantic-anthropic-claude-science-scrutiny-2026-10-04",
           "category": "research",
           "label": "研究",
@@ -391,7 +815,213 @@
             "total": 22,
             "note": "可靠媒体补充外部科学质疑，适合给生命科学AI叙事加来源边界。"
           },
-          "detailWhyRanked": "它给生命科学AI热潮降温：同一事件可能既是有用的数据分析能力，也是被过度包装的科学突破。 来源侧可核对的是The Atlantic Science支持的具体事实；升级判断仍需查Anthropic论文或数据说明、相关实验室回应、同行评议、独立复现实验、训练数据政策和专家审查。。"
+          "detailWhyRanked": "它给生命科学AI热潮降温：同一事件可能既是有用的数据分析能力，也是被过度包装的科学突破。 来源侧可核对的是The Atlantic Science支持的具体事实；升级判断仍需查Anthropic论文或数据说明、相关实验室回应、同行评议、独立复现实验、训练数据政策和专家审查。。",
+          "keyFacts": [
+            {
+              "value": "10月4日",
+              "label": "报道日",
+              "note": "The Atlantic Science 发布"
+            },
+            {
+              "value": "二手",
+              "label": "来源位置",
+              "note": "媒体报道，不是论文或官方数据说明"
+            },
+            {
+              "value": "3 项",
+              "label": "争议焦点",
+              "note": "新颖性、科学意义、训练数据边界"
+            },
+            {
+              "value": "待补",
+              "label": "论文与复现",
+              "note": "论文、同行评议、独立复现都未进入本期"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "发布时",
+              "title": "Anthropic 提出 Claude 的生命科学发现叙事",
+              "body": "称 Claude 发现了类似 CRISPR 的酶系统。",
+              "tone": "official"
+            },
+            {
+              "date": "10月4日",
+              "title": "The Atlantic 报道外部科学家质疑",
+              "body": "争议集中在该酶系统是否真正新颖、是否足够重要，以及外部实验室交互数据的边界。",
+              "tone": "media"
+            },
+            {
+              "date": "10月5日",
+              "title": "AI Watchtower 收录为媒体背景信号",
+              "body": "只保留最小报道事实，不认定任何一方成立。",
+              "tone": "dispute"
+            },
+            {
+              "date": "待补",
+              "title": "论文、复现与同行评议",
+              "body": "这些材料出现之前，这条停留在「存在争议」，不能升级为「发现被推翻」或「发现被确认」。",
+              "tone": "neutral"
+            }
+          ],
+          "comparison": {
+            "caption": "三个争议焦点分别卡在不同的证据上——不要用其中一个的结论去回答另一个。",
+            "columns": [
+              "争议焦点",
+              "厂商叙事",
+              "外部质疑",
+              "升级为结论需要"
+            ],
+            "rows": [
+              [
+                "新颖性",
+                "Claude 发现了类 CRISPR 酶系统",
+                "该酶系统是否真正新颖",
+                "论文与数据说明"
+              ],
+              [
+                "科学意义",
+                "属于可报道的科学发现",
+                "是否足够重要",
+                "独立复现与同行评议"
+              ],
+              [
+                "数据边界",
+                "由模型能力得出",
+                "外部实验室交互数据的边界存疑",
+                "实验室优先权与训练数据政策"
+              ]
+            ]
+          },
+          "relationGraph": {
+            "caption": "左边是主张方和质疑方，中间是三个争议点，右边是让争议落地所需要的材料。",
+            "nodes": [
+              {
+                "id": "anthropic",
+                "label": "Anthropic",
+                "layer": 0,
+                "kind": "claim"
+              },
+              {
+                "id": "scientists",
+                "label": "多位外部科学家",
+                "layer": 0,
+                "kind": "dispute"
+              },
+              {
+                "id": "novelty",
+                "label": "新颖性",
+                "layer": 1,
+                "kind": "subject"
+              },
+              {
+                "id": "significance",
+                "label": "科学意义",
+                "layer": 1,
+                "kind": "subject"
+              },
+              {
+                "id": "data",
+                "label": "训练数据边界",
+                "layer": 1,
+                "kind": "subject"
+              },
+              {
+                "id": "paper",
+                "label": "论文与数据说明",
+                "layer": 2,
+                "kind": "evidence"
+              },
+              {
+                "id": "review",
+                "label": "复现与同行评议",
+                "layer": 2,
+                "kind": "evidence"
+              },
+              {
+                "id": "priority",
+                "label": "实验室优先权",
+                "layer": 2,
+                "kind": "evidence"
+              }
+            ],
+            "edges": [
+              {
+                "from": "anthropic",
+                "to": "novelty",
+                "label": "主张"
+              },
+              {
+                "from": "scientists",
+                "to": "novelty",
+                "label": "质疑"
+              },
+              {
+                "from": "scientists",
+                "to": "significance",
+                "label": "质疑"
+              },
+              {
+                "from": "scientists",
+                "to": "data",
+                "label": "质疑"
+              },
+              {
+                "from": "novelty",
+                "to": "paper",
+                "label": "需要"
+              },
+              {
+                "from": "significance",
+                "to": "review",
+                "label": "需要"
+              },
+              {
+                "from": "data",
+                "to": "priority",
+                "label": "需要"
+              }
+            ]
+          },
+          "beforeAfter": {
+            "caption": "同一条消息，读到外部质疑前后应该停在不同的结论上。",
+            "before": {
+              "label": "只看厂商发布时",
+              "points": [
+                "AI 已经做出新的科学发现",
+                "模型能力可以直接换算成科研产出",
+                "发布口径等于已验证结果"
+              ]
+            },
+            "after": {
+              "label": "读到外部质疑后",
+              "points": [
+                "目前只能确认：外部科学界对新颖性和意义仍有争议",
+                "模型辅助数据筛选 ≠ 新发现",
+                "需要论文、复现、同行评议和数据政策才能升级"
+              ]
+            }
+          },
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "为什么这条薄",
+              "heading": "这一条没有逐节拆解，因为站内读不到原文",
+              "sourceStatus": {
+                "tag": "站内说明｜非来源内容",
+                "note": "抓取被来源方限制"
+              },
+              "body": [
+                "The Atlantic 对自动抓取设限，站内只拿到标题与摘要层的事实，没有读到正文。因此这条新闻只保留争议结构、来源边界和核验路径，不做逐节展开——把读不到的内容补写成段落，等于编造。",
+                "同一期的另外两条（OpenAI 官方页面、TechCrunch 报道）原文可读，所以它们有完整的逐节拆解。页面深度的差距来自来源可读性，不是编辑投入。"
+              ],
+              "note": {
+                "label": "要补齐这条需要",
+                "body": "人工打开原文（可能需订阅）后按 docs/news-data-format.md 的字段补写；或等 Anthropic 发布论文与数据说明，届时一手来源可读，可直接展开。"
+              },
+              "sourceLine": "出处：The Atlantic Science（2026-10-04，站内未读取正文）"
+            }
+          ]
         },
         {
           "id": "openai-gpt-rosalind-pricing-trusted-access-2026-10-05",
@@ -459,7 +1089,346 @@
             "total": 22,
             "note": "官方来源给出明确访问和定价节点，但科研效果仍需外部证据。"
           },
-          "detailWhyRanked": "它给生命科学AI一个明确采购和治理节点：不是只看模型声明，还要看定价、准入、插件、日志和外部复核。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查GPT-Rosalind价格页、可信访问条款、Codex生命科学插件文档、客户侧实验记录、第三方基准和生物安全审查材料。。"
+          "detailWhyRanked": "它给生命科学AI一个明确采购和治理节点：不是只看模型声明，还要看定价、准入、插件、日志和外部复核。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查GPT-Rosalind价格页、可信访问条款、Codex生命科学插件文档、客户侧实验记录、第三方基准和生物安全审查材料。。",
+          "keyFacts": [
+            {
+              "value": "63.2%",
+              "label": "LabWorkBench 最高分",
+              "note": "官方自测，GPT-5.5 为 55.8%"
+            },
+            {
+              "value": "3 组",
+              "label": "官方基准",
+              "note": "全部为 OpenAI 自测，无独立评测"
+            },
+            {
+              "value": "10月5日",
+              "label": "公开定价生效",
+              "note": "费率在单独价格页，本站未核对"
+            },
+            {
+              "value": "3 项",
+              "label": "准入条件",
+              "note": "公共利益、治理监督、企业级安全；判定标准未公开"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "此前",
+              "title": "GPT-Rosalind 处于研究预览阶段",
+              "body": "关注点是模型能不能找出线索。",
+              "tone": "official"
+            },
+            {
+              "date": "10月5日",
+              "title": "可信访问扩大，公开定价生效",
+              "body": "面向合格生命科学组织全球开放，并给出 Codex 生命科学插件工作流。",
+              "tone": "official"
+            },
+            {
+              "date": "待补",
+              "title": "价格页、准入合同与客户实验记录",
+              "body": "这些材料出现之前，这条是采购与治理节点，不是科研效果结论。",
+              "tone": "neutral"
+            }
+          ],
+          "comparison": {
+            "caption": "官方页面给了采购侧的事实，没有给效果侧的证据——两边分开看。",
+            "columns": [
+              "采购检查项",
+              "OpenAI 页面是否给出",
+              "还需要什么"
+            ],
+            "rows": [
+              [
+                "访问资格与准入",
+                "给出：面向合格生命科学组织",
+                "准入合同与资格条款"
+              ],
+              [
+                "公开定价",
+                "给出：10 月 5 日生效",
+                "价格页与计费样例"
+              ],
+              [
+                "插件工作流",
+                "给出：Codex 生命科学插件",
+                "插件文档与客户侧实验记录"
+              ],
+              [
+                "药物发现效果",
+                "未给出",
+                "第三方基准与客户实验记录"
+              ],
+              [
+                "生物安全边界",
+                "未给出",
+                "生物安全审查材料与专家审查"
+              ]
+            ]
+          },
+          "relationGraph": {
+            "caption": "官方页面发布了三件事，每一件各自对应一份还没到手的核对材料。",
+            "nodes": [
+              {
+                "id": "openai",
+                "label": "OpenAI",
+                "layer": 0,
+                "kind": "claim"
+              },
+              {
+                "id": "access",
+                "label": "可信访问扩大",
+                "layer": 1,
+                "kind": "subject"
+              },
+              {
+                "id": "pricing",
+                "label": "公开定价生效",
+                "layer": 1,
+                "kind": "subject"
+              },
+              {
+                "id": "plugin",
+                "label": "生命科学插件",
+                "layer": 1,
+                "kind": "subject"
+              },
+              {
+                "id": "contract",
+                "label": "准入合同与资格条款",
+                "layer": 2,
+                "kind": "evidence"
+              },
+              {
+                "id": "pricepage",
+                "label": "价格页与计费样例",
+                "layer": 2,
+                "kind": "evidence"
+              },
+              {
+                "id": "records",
+                "label": "客户实验记录与基准",
+                "layer": 2,
+                "kind": "evidence"
+              }
+            ],
+            "edges": [
+              {
+                "from": "openai",
+                "to": "access",
+                "label": "发布"
+              },
+              {
+                "from": "openai",
+                "to": "pricing",
+                "label": "发布"
+              },
+              {
+                "from": "openai",
+                "to": "plugin",
+                "label": "发布"
+              },
+              {
+                "from": "access",
+                "to": "contract",
+                "label": "需核对"
+              },
+              {
+                "from": "pricing",
+                "to": "pricepage",
+                "label": "需核对"
+              },
+              {
+                "from": "plugin",
+                "to": "records",
+                "label": "需核对"
+              }
+            ]
+          },
+          "beforeAfter": {
+            "caption": "官方发布改变的是采购判断，不是科研效果判断。",
+            "before": {
+              "label": "只看发布标题",
+              "points": [
+                "生命科学模型已经能做药物发现",
+                "定价生效等于产品成熟",
+                "官方发布等于效果验证"
+              ]
+            },
+            "after": {
+              "label": "读完来源边界",
+              "points": [
+                "能确认的是访问、评测与定价安排已公布",
+                "药物发现效果、临床价值、客户 ROI 都不在这页里",
+                "升级判断要等价格页、准入合同、客户实验记录与第三方基准"
+              ]
+            }
+          },
+          "deepSections": [
+            {
+              "label": "WHAT SHIPPED",
+              "navLabel": "发布了什么",
+              "heading": "官方页面同时发布的是三层东西，不要混着读",
+              "sourceStatus": {
+                "tag": "一手｜OpenAI 官方页面",
+                "note": "以下为页面原文事实，非本站测量"
+              },
+              "body": [
+                "GPT-Rosalind 被定位为面向生命科学研究的专用模型，页面表述是把 GPT-5.5 的 agentic 编码与工具调用能力，和医药化学、基因组学方向的专项能力结合起来。",
+                "本次更新的落点是：医药化学、基因组学与定量生物学的生物推理能力增强；两个用于可重复工作流的插件；以及序列、比对、结构文件的交互式查看器。页面把证据检索、生物学解读和生物信息执行描述为放进同一个工作区。"
+              ],
+              "list": {
+                "title": "同一条公告里其实有三层，升级程度不同",
+                "items": [
+                  "模型层：GPT-Rosalind 本身的生物推理能力",
+                  "插件层：Life Sciences Research 与 Life Sciences NGS Analysis，运行在 Codex 平台上",
+                  "界面层：序列 / 比对 / 结构文件的原生查看器"
+                ]
+              },
+              "note": {
+                "label": "读法",
+                "body": "「模型更强」和「插件可用」不是一回事。采购时要分别确认你拿到的是哪一层，以及插件是否随账户类型提供。"
+              },
+              "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+            },
+            {
+              "label": "BENCHMARKS",
+              "navLabel": "基准数字",
+              "heading": "三组基准都在涨，但绝对分数很低，省 token 比涨分明显",
+              "sourceStatus": {
+                "tag": "一手｜官方自测",
+                "note": "页面未提供独立评测或同行评议"
+              },
+              "body": [
+                "页面给出三组基准，均为 OpenAI 自己的测量，对照组是 GPT-5.5。"
+              ],
+              "table": {
+                "caption": "三组基准的分数、差值与 token 用量变化（数值取自官方页面）",
+                "columns": [
+                  "基准",
+                  "GPT-Rosalind",
+                  "GPT-5.5",
+                  "准确率差",
+                  "token 用量"
+                ],
+                "rows": [
+                  [
+                    "MedChemBench",
+                    "27.5%",
+                    "25.1%",
+                    "+2.4 个百分点",
+                    "少 7.2%"
+                  ],
+                  [
+                    "GeneBench",
+                    "21.6%",
+                    "20.4%",
+                    "+1.2 个百分点",
+                    "少 31%"
+                  ],
+                  [
+                    "LabWorkBench",
+                    "63.2%",
+                    "55.8%",
+                    "+7.4 个百分点",
+                    "少 5.3%"
+                  ]
+                ]
+              },
+              "note": {
+                "label": "本站判断（不是来源表述）",
+                "body": "MedChemBench 和 GeneBench 的绝对分数只有 27.5% 和 21.6%——「比 GPT-5.5 强」是相对值，不等于「可以直接用于生产」。三组里涨幅最大的是 LabWorkBench（+7.4 点），省 token 最多的是 GeneBench（少 31%），两者不是同一组。"
+              },
+              "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+            },
+            {
+              "label": "ACCESS",
+              "navLabel": "谁能拿到",
+              "heading": "面向「合格组织」全球开放，但合格的判定标准没有公开",
+              "sourceStatus": {
+                "tag": "一手｜准入条款表述",
+                "note": "页面给出条件，未给出判定流程"
+              },
+              "body": [
+                "页面说明 GPT-Rosalind 通过 trusted-access 部署结构向全球合格组织开放，并为没有 Enterprise 账户的合格组织提供 OpenAI 托管工作区。"
+              ],
+              "list": {
+                "title": "页面列出的三项准入条件",
+                "items": [
+                  "从事具有明确公共利益的正当科学研究",
+                  "具备强治理与安全监督",
+                  "具备企业级安全"
+                ]
+              },
+              "note": {
+                "label": "确认点",
+                "body": "这三条都没有给出可核对的判定标准——由谁认定、按什么流程、被拒后能否申诉，页面均未说明。采购前需要向销售索取准入合同与资格条款原文。"
+              },
+              "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+            },
+            {
+              "label": "PRICE",
+              "navLabel": "价格",
+              "heading": "定价 10 月 5 日生效，但发布页正文里没有数字",
+              "sourceStatus": {
+                "tag": "一手｜仅给出生效日",
+                "note": "费率在单独的价格页，本站未抓取"
+              },
+              "body": [
+                "页面说明公开定价自 2026 年 10 月 5 日生效，并给出价格页链接；发布页正文本身没有列出任何费率。"
+              ],
+              "note": {
+                "label": "这一节的边界",
+                "body": "本站没有抓取价格页，所以单价、计费单位、是否按 token 计费、插件是否单独计费，全部未核对。看到「定价生效」不要直接推出「成本可测算」。"
+              },
+              "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+            },
+            {
+              "label": "SAFETY",
+              "navLabel": "安全说明",
+              "heading": "安全部分停在名称层，没有具体控制措施",
+              "sourceStatus": {
+                "tag": "一手｜页面最薄的一节",
+                "note": "仅有项目名称与原则性表述"
+              },
+              "body": [
+                "页面提到 Rosalind Biodefense 项目和 trusted-access 部署模型，并表示会与合格组织共同评估、提供「适当的保障措施」。",
+                "除「企业级安全」这一表述外，页面没有给出具体技术控制措施，也没有说明数据保留期限、隐私保护方式或审计机制。"
+              ],
+              "note": {
+                "label": "读法",
+                "body": "生命科学模型的风险点恰好在生物安全与数据边界上，而这正是本页信息最少的部分。把它当作需要补材料的缺口，不是已经解决的问题。"
+              },
+              "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+            },
+            {
+              "label": "NOT CLAIMED",
+              "navLabel": "没有主张什么",
+              "heading": "官方没有说的四件事，恰好是转述时最容易加上的",
+              "sourceStatus": {
+                "tag": "核验边界｜本节最关键",
+                "note": "以下是页面明确未主张的内容"
+              },
+              "body": [
+                "读完整页后，下面四项在官方表述里都不存在。媒体转述和内部汇报时最容易把它们当成已经成立。"
+              ],
+              "list": {
+                "title": "页面未主张的内容",
+                "items": [
+                  "真实世界的临床结果或已验证疗效",
+                  "独立的同行评议验证",
+                  "具体的技术安全机制",
+                  "超出「企业级安全」的数据保留、隐私保护或审计说明"
+                ]
+              },
+              "note": {
+                "label": "怎么用这一节",
+                "body": "把它直接贴进采购问卷：这四项要求供应商补充材料，而不是引用这份公告作为答案。"
+              },
+              "sourceLine": "出处：OpenAI — Introducing new capabilities to GPT-Rosalind（官方页面，2026-10-05 读取）"
+            }
+          ]
         },
         {
           "id": "techcrunch-text-message-ai-agents-2026-10-03",
@@ -528,7 +1497,917 @@
             "total": 21,
             "note": "媒体梳理显示入口迁移，适合产品和安全团队做权限核查。"
           },
-          "detailWhyRanked": "它把分散的消费级Agent产品放到一个共同入口观察：短信化降低获客摩擦，也放大权限和责任问题。 来源侧可核对的是TechCrunch AI支持的具体事实；升级判断仍需查各产品的隐私政策、权限说明、SOC 2或安全白皮书、用户留存、投诉记录、应用商店政策和消息平台规则。。"
+          "detailWhyRanked": "它把分散的消费级Agent产品放到一个共同入口观察：短信化降低获客摩擦，也放大权限和责任问题。 来源侧可核对的是TechCrunch AI支持的具体事实；升级判断仍需查各产品的隐私政策、权限说明、SOC 2或安全白皮书、用户留存、投诉记录、应用商店政策和消息平台规则。。",
+          "keyFacts": [
+            {
+              "value": "17 个",
+              "label": "报道覆盖产品",
+              "note": "TechCrunch 一次性梳理"
+            },
+            {
+              "value": "$0–100",
+              "label": "月费区间",
+              "note": "多数仍在免费 beta"
+            },
+            {
+              "value": "10 亿美元",
+              "label": "最大一笔融资",
+              "note": "Instinct C 轮，估值 100 亿"
+            },
+            {
+              "value": "0 项",
+              "label": "采用规模证据",
+              "note": "报道不含留存、投诉或审计数据"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "此前",
+              "title": "消费级 Agent 以独立 App 为主要入口",
+              "body": "争夺的是应用商店和首页位置。",
+              "tone": "neutral"
+            },
+            {
+              "date": "10月3日",
+              "title": "TechCrunch 梳理：入口转向消息线程",
+              "body": "一批 Agent 可通过短信、iMessage、WhatsApp 或 RCS 使用。",
+              "tone": "media"
+            },
+            {
+              "date": "待补",
+              "title": "平台规则、留存与投诉数据",
+              "body": "这些数据出现之前，这条是入口形态观察，不是采用趋势结论。",
+              "tone": "neutral"
+            }
+          ],
+          "comparison": {
+            "caption": "报道列出了 Agent 能拿到哪些权限；每一项权限对应一件上线前必须先定下来的事。",
+            "columns": [
+              "Agent 拿到的权限",
+              "报道中出现",
+              "上线前要核对"
+            ],
+            "rows": [
+              [
+                "邮箱",
+                "是",
+                "身份绑定与撤销路径"
+              ],
+              [
+                "电话",
+                "是",
+                "号码验证与人为接管规则"
+              ],
+              [
+                "支付卡",
+                "是",
+                "授权范围与争议处理"
+              ],
+              [
+                "日程",
+                "是",
+                "写入权限与审计日志"
+              ]
+            ]
+          },
+          "relationGraph": {
+            "caption": "消息入口降低了获客摩擦，同时把权限问题提前到了产品体验之前。",
+            "nodes": [
+              {
+                "id": "entry",
+                "label": "消息入口（短信 / iMessage / WhatsApp / RCS）",
+                "layer": 0,
+                "kind": "claim"
+              },
+              {
+                "id": "perms",
+                "label": "Agent 获得的权限：邮箱、电话、支付卡、日程",
+                "layer": 1,
+                "kind": "subject"
+              },
+              {
+                "id": "identity",
+                "label": "身份与授权说明",
+                "layer": 2,
+                "kind": "evidence"
+              },
+              {
+                "id": "revoke",
+                "label": "撤销与人为接管",
+                "layer": 2,
+                "kind": "evidence"
+              },
+              {
+                "id": "audit",
+                "label": "审计与投诉记录",
+                "layer": 2,
+                "kind": "evidence"
+              }
+            ],
+            "edges": [
+              {
+                "from": "entry",
+                "to": "perms",
+                "label": "降低摩擦"
+              },
+              {
+                "from": "perms",
+                "to": "identity",
+                "label": "先定"
+              },
+              {
+                "from": "perms",
+                "to": "revoke",
+                "label": "先定"
+              },
+              {
+                "from": "perms",
+                "to": "audit",
+                "label": "先定"
+              }
+            ]
+          },
+          "beforeAfter": {
+            "caption": "产品梳理能改变你对入口形态的认识，不能改变你对采用规模的判断。",
+            "before": {
+              "label": "只看产品列表",
+              "points": [
+                "短信入口的 Agent 已经成熟",
+                "能连服务就等于能托付",
+                "获客摩擦低等于留存好"
+              ]
+            },
+            "after": {
+              "label": "加上来源边界",
+              "points": [
+                "只能确认存在这一批产品形态",
+                "不证明规模化采用，也不证明比原生 App 更安全或留存更高",
+                "要看隐私政策、平台规则、留存与投诉数据"
+              ]
+            }
+          },
+          "deepSections": [
+            {
+              "label": "THE LIST",
+              "navLabel": "17 个产品",
+              "heading": "报道一次性列出 17 个住在消息线程里的 Agent",
+              "sourceStatus": {
+                "tag": "二手｜产品梳理报道",
+                "note": "以下为报道列出的内容，本站未逐个试用"
+              },
+              "body": [
+                "这篇文章的价值不在单个产品，而在于把分散的消费级 Agent 放进同一张表里看——入口、连接的服务、价格带和融资状况一次可比。"
+              ],
+              "table": {
+                "caption": "报道中出现的全部产品（入口、连接服务、价格、融资或归属）",
+                "columns": [
+                  "产品",
+                  "入口",
+                  "连接的服务",
+                  "价格",
+                  "融资 / 归属"
+                ],
+                "rows": [
+                  [
+                    "Caddy",
+                    "iMessage / RCS",
+                    "日历、会话",
+                    "免费（beta）",
+                    "未披露"
+                  ],
+                  [
+                    "Fambot",
+                    "短信 / App / 网页",
+                    "Gmail、Google 日历",
+                    "beta 免费，后续约等于一份 Netflix",
+                    "350 万美元 pre-seed"
+                  ],
+                  [
+                    "Folk",
+                    "iMessage / WhatsApp / Telegram",
+                    "多种服务",
+                    "免费；Pro 8.33 美元/月",
+                    "未披露"
+                  ],
+                  [
+                    "Instinct",
+                    "短信 / 语音",
+                    "邮箱、日历、Google Workspace",
+                    "私有 beta",
+                    "10 亿美元 C 轮，估值 100 亿"
+                  ],
+                  [
+                    "Iris",
+                    "iMessage",
+                    "用户已连接的应用",
+                    "未披露",
+                    "未披露"
+                  ],
+                  [
+                    "Martin",
+                    "短信 / 电话 / WhatsApp / 邮件 / Slack / iOS",
+                    "日历、邮件、任务",
+                    "21 美元/月起",
+                    "未披露"
+                  ],
+                  [
+                    "Miso",
+                    "iMessage",
+                    "航班与差旅系统",
+                    "未披露",
+                    "未披露"
+                  ],
+                  [
+                    "Ohai",
+                    "App / 语音",
+                    "日历、邮件",
+                    "基础免费；9.99 美元/月起，按家庭规模",
+                    "未披露"
+                  ],
+                  [
+                    "Ollie",
+                    "短信",
+                    "邮件、日历、任务列表",
+                    "免费档；25–100 美元/月（150–1000 条消息）",
+                    "未披露"
+                  ],
+                  [
+                    "Orbits",
+                    "App / 短信",
+                    "日历、清单、会话",
+                    "未披露",
+                    "a16z、N49P、Garage Capital"
+                  ],
+                  [
+                    "Pally",
+                    "未明确",
+                    "WhatsApp、Gmail、日历、Google Drive",
+                    "免费（每月 15 分钟通话）；25 / 100 美元/月",
+                    "未披露"
+                  ],
+                  [
+                    "Poke",
+                    "短信",
+                    "日历、健康健身、智能家居、照片",
+                    "未披露",
+                    "被 Cognition 收购（低九位数）"
+                  ],
+                  [
+                    "Rene",
+                    "iMessage / Telegram / WhatsApp",
+                    "浏览、编码、购物",
+                    "未披露",
+                    "未披露"
+                  ],
+                  [
+                    "Skye",
+                    "iPhone 主屏",
+                    "已连接服务",
+                    "未披露",
+                    "约 360 万美元种子（2025）"
+                  ],
+                  [
+                    "Stanley",
+                    "iMessage / Telegram / 网页",
+                    "Instagram",
+                    "未披露",
+                    "未披露"
+                  ],
+                  [
+                    "Tomo",
+                    "iMessage（可加入群聊）",
+                    "日历、邮件、网页",
+                    "19.99 美元/月起",
+                    "未披露"
+                  ],
+                  [
+                    "Town",
+                    "WhatsApp 等",
+                    "邮件、日历、文档、Slack",
+                    "未披露",
+                    "5500 万美元 A 轮（a16z、Forerunner）"
+                  ],
+                  [
+                    "Wajo",
+                    "未明确",
+                    "独立邮箱、电话、银行卡",
+                    "免费档 + Pro",
+                    "2025 年 9 月公开上线"
+                  ]
+                ]
+              },
+              "note": {
+                "label": "读法",
+                "body": "表里大量「未披露」本身就是信息：这批产品多数还没有公开定价或用户规模，属于早期入口实验，不是已成规模的品类。"
+              },
+              "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+            },
+            {
+              "label": "ENTRY POINTS",
+              "navLabel": "入口分布",
+              "heading": "iMessage 是出现最多的入口，其次是 WhatsApp 和纯短信",
+              "sourceStatus": {
+                "tag": "本站整理｜基于上表",
+                "note": "按报道给出的入口归类，不是市场份额"
+              },
+              "body": [
+                "iMessage 出现在 Caddy、Folk、Iris、Miso、Rene、Stanley、Tomo；WhatsApp 出现在 Folk、Martin、Pally、Rene、Town；纯短信入口有 Fambot、Instinct、Ollie、Orbits、Poke。",
+                "少数产品不走消息线程：Skye 做的是 iPhone 主屏，Ohai 以 App 和语音为主。"
+              ],
+              "note": {
+                "label": "为什么这件事重要",
+                "body": "入口决定了谁掌握分发规则。走 iMessage 和 WhatsApp 意味着产品要受平台政策约束，而平台是否允许 Agent 账号、是否会限制自动化消息，报道里没有给出答案。"
+              },
+              "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+            },
+            {
+              "label": "PERMISSIONS",
+              "navLabel": "权限层级",
+              "heading": "同样叫「助理」，拿到的权限差了一个风险量级",
+              "sourceStatus": {
+                "tag": "本站整理｜基于上表",
+                "note": "权限按报道描述归类"
+              },
+              "body": [
+                "只读类的连接是日历和会话（Caddy、Orbits）；读写类进入邮箱、文档和 Slack（Town、Pally）；执行类则直接代为行动——Wajo 用独立的邮箱、电话和银行卡打电话、下单、加入群聊，Martin 可以代打电话。"
+              ],
+              "list": {
+                "title": "三个风险层级",
+                "items": [
+                  "读：日历、会话、照片——泄露风险为主",
+                  "写：邮箱、文档、Slack——可对外发出内容，需要撤销路径",
+                  "执行：电话、支付卡、预订——产生不可撤销的现实后果，需要人为接管和争议处理"
+                ]
+              },
+              "note": {
+                "label": "上线前要定的事",
+                "body": "第三层的产品必须先定下身份绑定、授权范围、撤销路径和审计日志，再谈消息体验。报道没有给出任何一家的这类文档。"
+              },
+              "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+            },
+            {
+              "label": "MONEY",
+              "navLabel": "价格与融资",
+              "heading": "价格带从免费到 100 美元/月，融资差距超过 200 倍",
+              "sourceStatus": {
+                "tag": "二手｜报道整理的公开信息",
+                "note": "本站未向任何一方核实"
+              },
+              "body": [
+                "已公开价格的产品集中在三档：8.33–9.99 美元（Folk、Ohai）、19.99–25 美元（Tomo、Martin、Ollie、Pally）、以及按用量上探到 100 美元/月（Ollie、Pally）。多数产品仍在免费 beta。",
+                "融资规模差距极大：Instinct 10 亿美元 C 轮、估值 100 亿美元；Town 5500 万美元 A 轮；Fambot 350 万美元 pre-seed；Skye 约 360 万美元种子；Poke 被 Cognition 以低九位数收购。"
+              ],
+              "note": {
+                "label": "本站判断（不是来源表述）",
+                "body": "按用量计费（Pally 按通话分钟、Ollie 按消息条数）的产品，成本会随 Agent 越勤快而上升——这和「订阅制助理」的成本直觉相反，试用时要先测单位成本。"
+              },
+              "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+            },
+            {
+              "label": "NOT SHOWN",
+              "navLabel": "报道没给的",
+              "heading": "这是一份产品清单，不是一份采用证据",
+              "sourceStatus": {
+                "tag": "核验边界｜本节最关键",
+                "note": "以下内容报道中均未出现"
+              },
+              "body": [
+                "报道能证明这批产品形态存在，并给出各自的入口、连接和价格；它不能证明任何一家已被规模化使用，也不能证明消息入口比原生 App 更安全或留存更高。"
+              ],
+              "list": {
+                "title": "报道未给出的内容",
+                "items": [
+                  "用户规模与留存数据",
+                  "投诉记录与越权事故",
+                  "SOC 2、安全白皮书或第三方审计",
+                  "iMessage / WhatsApp / RCS 平台对 Agent 账号的政策态度"
+                ]
+              },
+              "note": {
+                "label": "怎么用这一节",
+                "body": "把它当作入口形态的观察起点：先去各产品的隐私政策和平台开发者条款里找上面四项，再决定要不要把权限交出去。"
+              },
+              "sourceLine": "出处：TechCrunch — All the AI agents that can live in your text messages（2026-10-03）"
+            }
+          ]
+        },
+        {
+          "id": "aws-quick-adjudicated-query-compliance-2026-10-02",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：Adjudicated Query把合规问答拆成AI界面与确定性规则引擎",
+          "body": "AWS介绍Amazon Quick合规问答样例。",
+          "summary": "AWS发布合规问答参考架构：AI负责自然语言入口，确定性规则引擎负责完整性收据和正式判定。",
+          "whyItMatters": "高风险AI应用的关键不是让模型直接下判定，而是把可审计决定放到可证明的规则和数据层。",
+          "detailBody": "AWS博客介绍一个租约合规样例：Amazon Quick承接自然语言问题，MCP服务暴露固定操作，规则引擎计算完整性收据和判定。该条是厂商技术样例，不等同于客户生产部署效果。",
+          "trend": "高风险AI正在拆分聊天入口和正式判定。",
+          "detailTrend": "合规类Agent需要确定性边界，说明RAG和文本转SQL在高责任场景里必须让位给可审计操作，并把完整性证明留在数据库、规则层和审计记录里。",
+          "whyRanked": "它给出了高风险Agent从自然语言入口到审计收据的具体架构边界。",
+          "topReason": "它给出了高风险Agent从自然语言入口到审计收据的具体架构边界。",
+          "impact": "合规、法务、审计和工程团队可用它检查模型是否被允许写查询、定总体或替代规则引擎。",
+          "whoShouldCare": "负责合规自动化、法务科技、企业RAG治理、MCP接入和审计系统上线的团队需要关注。",
+          "readerUse": "合规和工程团队可用来核对合规Agent设计：固定工具、规则版本、完整性收据、不可跳过记录和仪表盘追溯。",
+          "nextCheck": "查AWS样例仓库、客户部署报告、审计验收记录、法律团队评估、错误率数据和第三方复测。",
+          "followUpQuestions": [
+            "AWS样例仓库是否包含验收测试、规则版本记录、完整性收据和失败路径日志？",
+            "是否有客户部署报告、审计通过文件、法律团队评估或第三方复测确认该模式可靠？"
+          ],
+          "evidenceThreshold": "至少需要样例代码、验收报告、审计记录、客户部署指标或第三方复测，才能升级为已验证的合规Agent模式。",
+          "claimBoundary": "厂商样例不证明Amazon Quick已在真实租约组合中通过审计，也不证明该模式适合所有合规领域。",
+          "counterEvidence": "如果样例代码缺少测试、审计记录未通过或客户部署指标显示误判，应下调为参考架构而非成熟方案。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "recommended-read",
+          "provenance": "AWS Machine Learning Blog发布Amazon Quick合规Agent控制面厂商技术样例，介绍MCP固定操作、规则引擎和完整性收据。",
+          "publishedAt": "2026-10-02T23:30:00+09:00",
+          "time": "10月2日",
+          "tags": [
+            "合规Agent",
+            "MCP",
+            "可审计AI"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方技术样例清晰呈现高风险Agent的可审计边界。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方技术样例清晰呈现高风险Agent的可审计边界。"
+          },
+          "detailWhyRanked": "它给出了高风险Agent从自然语言入口到审计收据的具体架构边界。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查AWS样例仓库、客户部署报告、审计验收记录、法律团队评估、错误率数据和第三方复测。。",
+          "keyFacts": [
+            {
+              "value": "6",
+              "label": "固定工具",
+              "note": "博客列出MCP操作面"
+            },
+            {
+              "value": "0",
+              "label": "模型判定",
+              "note": "正式合规判定不交给模型"
+            },
+            {
+              "value": "10,800",
+              "label": "示例规模",
+              "note": "示例中提到仪表盘承载大结果集"
+            },
+            {
+              "value": "待验",
+              "label": "生产效果",
+              "note": "需要客户和审计证据"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月2日",
+              "title": "AWS发布合规问答样例",
+              "body": "把聊天入口和确定性规则引擎分离。",
+              "tone": "official"
+            },
+            {
+              "date": "样例中",
+              "title": "MCP固定操作限制模型路径",
+              "body": "模型不能自由写SQL或决定总体。",
+              "tone": "technical"
+            },
+            {
+              "date": "待补",
+              "title": "等待客户和审计证据",
+              "body": "决定是否可视为成熟生产模式。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "厂商样例支持架构事实，不支持生产效果结论",
+              "sourceStatus": {
+                "tag": "厂商主张",
+                "note": "AWS官方技术博客，仍需外部部署证据。"
+              },
+              "body": [
+                "这条最有价值的是边界：自然语言只负责入口，正式判定留给规则和数据库。",
+                "不要把样例等同于真实客户在监管审计中已经通过。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要样例代码、验收报告、审计记录、客户部署指标或第三方复测，才能升级为已验证的合规Agent模式。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Sweep thousands of leases for compliance using Amazon Quick（2026-10-02）"
+            }
+          ]
+        },
+        {
+          "id": "aws-agentcore-claude-desktop-secure-web-search-2026-10-02",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：用AgentCore Gateway给Claude Desktop接入带授权的Web Search",
+          "body": "AWS机器学习博客介绍Claude Desktop通过AgentCore Gateway接入Web Search。",
+          "summary": "AWS发布Claude Desktop安全Web Search样例，重点是把桌面Agent工具调用放进JWT授权链。",
+          "whyItMatters": "企业桌面Agent接入外部搜索时，真正难点是身份、授权、工具边界和审计，而不是简单加一个搜索按钮。",
+          "detailBody": "AWS博客介绍Claude Desktop通过AgentCore Gateway调用Web Search工具的配置路径，并强调IAM Identity Center、Amazon Cognito和JWT授权链。该条是厂商技术样例，不等同于企业已完成安全部署。",
+          "trend": "桌面Agent正在被纳入企业身份系统，工具调用需要像API一样被授权和记录。",
+          "detailTrend": "当Claude Desktop等本地入口连接企业工具时，Agent网关会成为身份、授权和审计的前置控制面，把联网能力纳入企业策略、日志和撤销流程，而非个人配置。",
+          "whyRanked": "它把桌面AI助手接外部网络的治理点落在具体授权链上。",
+          "topReason": "它把桌面AI助手接外部网络的治理点落在具体授权链上。",
+          "impact": "IT、安全和平台团队应检查桌面Agent工具注册、JWT授权、网关日志、用户身份映射和撤销流程。",
+          "whoShouldCare": "负责企业桌面AI接入、Claude部署、身份管理、网关安全和工具审计的工程安全团队需要关注。",
+          "readerUse": "IT和安全团队可用来核对桌面Agent接网设计：身份联合、JWT校验、工具发现、日志、撤销和最小权限。",
+          "nextCheck": "查AWS配置文档、企业部署日志、Claude Desktop策略、网关审计记录、渗透测试和用户权限样例。",
+          "followUpQuestions": [
+            "企业是否公开AgentCore Gateway日志、JWT校验失败路径、撤销流程和工具注册记录？",
+            "Claude Desktop接入Web Search后是否有渗透测试报告、DLP策略或用户权限样例？"
+          ],
+          "evidenceThreshold": "至少需要配置文档、部署日志、审计记录、渗透测试报告或客户上线说明，才能升级为已验证的企业安全接入模式。",
+          "claimBoundary": "厂商样例不证明所有Claude Desktop搜索接入都安全，也不证明企业数据不会被外部搜索路径暴露。",
+          "counterEvidence": "如果部署日志缺失、JWT策略绕过或渗透测试报告否认隔离效果，应下调为配置教程而非安全方案。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "recommended-read",
+          "provenance": "AWS Machine Learning Blog发布Claude Desktop接入AgentCore Gateway和Web Search的厂商技术样例，说明IAM Identity Center、Cognito和JWT授权链。",
+          "publishedAt": "2026-10-02T22:50:00+09:00",
+          "time": "10月2日",
+          "tags": [
+            "Claude Desktop",
+            "AgentCore",
+            "企业身份"
+          ],
+          "companies": [
+            "AWS",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "桌面Agent联网能力需要身份和网关治理，读者可直接转成检查项。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "桌面Agent联网能力需要身份和网关治理，读者可直接转成检查项。"
+          },
+          "detailWhyRanked": "它把桌面AI助手接外部网络的治理点落在具体授权链上。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查AWS配置文档、企业部署日志、Claude Desktop策略、网关审计记录、渗透测试和用户权限样例。。",
+          "keyFacts": [
+            {
+              "value": "JWT",
+              "label": "入站授权",
+              "note": "博客说明授权链"
+            },
+            {
+              "value": "Gateway",
+              "label": "工具入口",
+              "note": "AgentCore承接Web Search工具"
+            },
+            {
+              "value": "Desktop",
+              "label": "使用端",
+              "note": "Claude Desktop配置样例"
+            },
+            {
+              "value": "待验",
+              "label": "企业安全",
+              "note": "需要日志和测试"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月2日",
+              "title": "AWS发布安全Web Search样例",
+              "body": "Claude Desktop通过AgentCore Gateway调用搜索工具。",
+              "tone": "official"
+            },
+            {
+              "date": "配置中",
+              "title": "引入JWT授权链",
+              "body": "IAM Identity Center到Cognito再到JWT。",
+              "tone": "technical"
+            },
+            {
+              "date": "待补",
+              "title": "等待部署与审计证据",
+              "body": "验证企业安全边界。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "授权链是事实，安全效果仍需验证",
+              "sourceStatus": {
+                "tag": "厂商主张",
+                "note": "AWS官方技术博客，仍需企业日志和测试。"
+              },
+              "body": [
+                "这条说明桌面Agent接工具时需要企业身份和网关控制。",
+                "它不能替代真实组织的权限、DLP和审计验证。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要配置文档、部署日志、审计记录、渗透测试报告或客户上线说明，才能升级为已验证的企业安全接入模式。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Add secure Web Search to Claude Desktop（2026-10-02）"
+            }
+          ]
+        },
+        {
+          "id": "aws-sagemaker-multi-turn-rl-search-agent-2026-10-02",
+          "category": "research",
+          "label": "研究",
+          "title": "AWS：SageMaker用多轮强化学习微调搜索Agent",
+          "body": "AWS机器学习博客介绍用SageMaker AI多轮强化学习训练搜索Agent。",
+          "summary": "AWS展示MTRL训练搜索Agent的路径：以最终检索质量作为奖励，优化完整多轮轨迹而非单步回答。",
+          "whyItMatters": "如果小模型能通过环境内强化学习获得可靠工具行为，企业Agent成本和延迟结构会被重新评估。",
+          "detailBody": "AWS博客介绍SageMaker AI MTRL如何用多轮rollout、轨迹收集、PPO/CISPO等算法和MLflow观测来训练搜索Agent。该条是厂商方法说明，不等同于独立基准或客户效果。",
+          "trend": "Agent训练转向多轮轨迹优化。",
+          "detailTrend": "多轮强化学习把Agent可靠性问题前移到训练阶段，说明工具使用不必完全依赖更大的通用模型，也可以通过任务奖励、轨迹观测和离线评测被系统化改进。",
+          "whyRanked": "它给开发者一个可核查方向：用任务奖励训练Agent，而不是只堆提示词。",
+          "topReason": "它给开发者一个可核查方向：用任务奖励训练Agent，而不是只堆提示词。",
+          "impact": "AI平台、搜索、客服和内部知识库团队应评估小模型微调成本、奖励设计、轨迹观测和离线评测。",
+          "whoShouldCare": "负责搜索Agent、SageMaker训练、模型成本优化、工具调用可靠性和评测平台的工程团队需要关注。",
+          "readerUse": "搜索和模型平台团队可用来更新Agent训练实验：多轮奖励、rollout采样、MLflow轨迹、离线评测、端点成本和失败样本。",
+          "nextCheck": "查AWS实验配置、代码仓库、reward定义、评测数据、模型大小、延迟成本和第三方复测报告。",
+          "followUpQuestions": [
+            "AWS是否公开训练配置、reward函数、评测数据、模型规格、成本和失败案例？",
+            "是否有第三方在相同搜索任务上复测MTRL相对SFT、RLVR和大模型提示的收益？"
+          ],
+          "evidenceThreshold": "至少需要实验配置、评测数据、模型日志、成本记录或第三方复测报告，才能升级为已验证的Agent训练优势。",
+          "claimBoundary": "厂商方法说明不证明MTRL普遍优于SFT或大模型提示，也不证明所有搜索Agent都能降低成本。",
+          "counterEvidence": "如果复测报告显示收益只在样例环境成立、成本更高或失败率未下降，应下调为训练方法探索。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "recommended-read",
+          "provenance": "AWS Machine Learning Blog发布SageMaker AI MTRL厂商方法说明，介绍用多轮强化学习微调搜索Agent并观察检索质量。",
+          "publishedAt": "2026-10-02T22:10:00+09:00",
+          "time": "10月2日",
+          "tags": [
+            "多轮强化学习",
+            "搜索Agent",
+            "SageMaker"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "Agent可靠性训练路线清晰，适合工程团队设计复测。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "Agent可靠性训练路线清晰，适合工程团队设计复测。"
+          },
+          "detailWhyRanked": "它给开发者一个可核查方向：用任务奖励训练Agent，而不是只堆提示词。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查AWS实验配置、代码仓库、reward定义、评测数据、模型大小、延迟成本和第三方复测报告。。",
+          "keyFacts": [
+            {
+              "value": "MTRL",
+              "label": "训练方法",
+              "note": "多轮强化学习"
+            },
+            {
+              "value": "MLflow",
+              "label": "轨迹观测",
+              "note": "博客说明可观察训练过程"
+            },
+            {
+              "value": "PPO/CISPO",
+              "label": "算法库",
+              "note": "官方列出的选项"
+            },
+            {
+              "value": "待复测",
+              "label": "泛化效果",
+              "note": "需要外部评测"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月2日",
+              "title": "AWS发布MTRL搜索Agent方法",
+              "body": "用多轮轨迹奖励训练工具行为。",
+              "tone": "official"
+            },
+            {
+              "date": "方法中",
+              "title": "观察完整轨迹",
+              "body": "用MLflow查看Agent每轮行为。",
+              "tone": "technical"
+            },
+            {
+              "date": "待补",
+              "title": "等待外部复测",
+              "body": "判断收益是否超出样例任务。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "训练方法可借鉴，效果不能直接外推",
+              "sourceStatus": {
+                "tag": "厂商主张",
+                "note": "AWS官方方法说明，缺少独立复测。"
+              },
+              "body": [
+                "这条适合工程团队做实验设计参考。",
+                "是否真的省钱、省延迟、提可靠性，要看相同任务的复测和成本记录。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要实验配置、评测数据、模型日志、成本记录或第三方复测报告，才能升级为已验证的Agent训练优势。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Fine-tune a search agent with multi-turn RL（2026-10-02）"
+            }
+          ]
+        },
+        {
+          "id": "aws-nemo-s3-vectors-agent-memory-2026-10-01",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：用S3 Vectors给NVIDIA NeMo Agent Toolkit接持久记忆",
+          "body": "AWS机器学习博客介绍用S3 Vectors给NVIDIA NeMo Agent Toolkit接持久记忆。",
+          "summary": "AWS展示Agent记忆实现路线：S3 Vectors承接语义检索、元数据、一致性和弹性规模，NeMo Agent Toolkit承接多Agent运行。",
+          "whyItMatters": "多Agent系统要从演示走向生产，必须解决跨会话记忆、元数据过滤、权限和运营控制。",
+          "detailBody": "AWS博客介绍S3 Vectors如何作为NVIDIA NeMo Agent Toolkit的自定义记忆后端，支持多Agent投资研究样例在EKS上运行。该条是厂商实现样例，不等同于生产稳定性或客户ROI。",
+          "trend": "Agent记忆正在变成独立数据层。",
+          "detailTrend": "持久记忆成为多Agent系统的基础设施问题，说明记忆质量、权限和生命周期会影响长期任务可靠性，也会决定错误信息是否跨会话、跨Agent传播。",
+          "whyRanked": "它把Agent记忆从概念落到云存储、向量检索和多Agent框架集成。",
+          "topReason": "它把Agent记忆从概念落到云存储、向量检索和多Agent框架集成。",
+          "impact": "平台工程、数据治理和Agent团队应检查记忆存储、元数据、隔离、清除策略、成本和错误传播。",
+          "whoShouldCare": "负责多Agent平台、长期任务自动化、向量存储治理、EKS运维和企业AI记忆设计的团队需要关注。",
+          "readerUse": "多Agent平台和数据治理团队可用来核对Agent记忆层设计：语义检索、元数据、权限隔离、生命周期、成本和跨会话污染。",
+          "nextCheck": "查AWS样例代码、NVIDIA文档、EKS部署记录、权限策略、成本指标、故障日志和第三方复测。",
+          "followUpQuestions": [
+            "样例是否公开记忆写入、检索、删除、权限隔离和跨会话污染测试记录？",
+            "是否有客户部署指标、成本数据、故障日志或第三方复测说明S3 Vectors适合长期Agent记忆？"
+          ],
+          "evidenceThreshold": "至少需要样例代码、权限策略、部署日志、成本指标、故障记录或第三方复测，才能升级为已验证的生产记忆方案。",
+          "claimBoundary": "厂商样例不证明S3 Vectors是所有Agent记忆的最佳后端，也不证明多Agent长期任务不会积累错误记忆。",
+          "counterEvidence": "如果复测报告显示检索污染、权限隔离不足、成本失控或EKS运维复杂度过高，应下调为实现参考。",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "medium",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "claimStatus": "vendor-claim",
+          "originalDependency": "recommended-read",
+          "provenance": "AWS Machine Learning Blog发布S3 Vectors与NVIDIA NeMo Agent Toolkit集成的厂商实现样例，介绍多Agent持久记忆层。",
+          "publishedAt": "2026-10-01T23:50:00+09:00",
+          "time": "10月1日",
+          "tags": [
+            "Agent记忆",
+            "向量存储",
+            "NeMo"
+          ],
+          "companies": [
+            "AWS",
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "多Agent记忆层是生产部署关键基础设施，样例具备工程参考价值。"
+          },
+          "verificationStatus": "已核验",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "多Agent记忆层是生产部署关键基础设施，样例具备工程参考价值。"
+          },
+          "detailWhyRanked": "它把Agent记忆从概念落到云存储、向量检索和多Agent框架集成。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查AWS样例代码、NVIDIA文档、EKS部署记录、权限策略、成本指标、故障日志和第三方复测。。",
+          "keyFacts": [
+            {
+              "value": "S3 Vectors",
+              "label": "记忆后端",
+              "note": "官方样例选择"
+            },
+            {
+              "value": "NAT",
+              "label": "Agent框架",
+              "note": "NVIDIA NeMo Agent Toolkit"
+            },
+            {
+              "value": "EKS",
+              "label": "运行环境",
+              "note": "样例部署位置"
+            },
+            {
+              "value": "待测",
+              "label": "长期可靠性",
+              "note": "需要复测和日志"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月1日",
+              "title": "AWS发布Agent记忆实现样例",
+              "body": "S3 Vectors接入NeMo Agent Toolkit。",
+              "tone": "official"
+            },
+            {
+              "date": "样例中",
+              "title": "多Agent共享持久记忆",
+              "body": "研究、分析和综合Agent复用历史信息。",
+              "tone": "technical"
+            },
+            {
+              "date": "待补",
+              "title": "等待长期运行证据",
+              "body": "验证记忆污染、成本和权限边界。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "记忆层是基础设施，不是自动可靠的长期智能",
+              "sourceStatus": {
+                "tag": "厂商主张",
+                "note": "AWS官方实现样例，仍需长期运行数据。"
+              },
+              "body": [
+                "这条让Agent记忆的工程边界更具体：存储、检索、元数据和运行环境都要被治理。",
+                "真实价值仍取决于权限、清除、污染控制和成本。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要样例代码、权限策略、部署日志、成本指标、故障记录或第三方复测，才能升级为已验证的生产记忆方案。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Build agent memory with NVIDIA NeMo Agent Toolkit and Amazon S3 Vectors（2026-10-01）"
+            }
+          ]
         }
       ],
       "statusLabel": "已发布"

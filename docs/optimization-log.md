@@ -1,3 +1,27 @@
+## 2026-10-05 23:11 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-05` 短批次，因此未回退版次，而是在 17:00 版基础上扩展为 10 条安全非重复信号，补充 Axios 医疗未授权 AI Agent、Mercor 专家训练数据、Agent 经济入口框架，以及 AWS 官方技术样例中的合规问答、Claude Desktop 安全 Web Search、SageMaker 多轮 RL 搜索 Agent 和 S3 Vectors / NVIDIA NeMo Agent 记忆层。
+- Changed files:
+  - `data/news.json`: 当前版更新为 `17:00 JST 补充`，新增 7 条补充情报并按 `publishedAt` 倒序重排为 10 条。
+  - `data/news-history.json`: 最新归档镜像同步当前 10 条补充版，总历史项目更新为 1104。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 Axios AI / Technology、Axios C-Suite、AWS Machine Learning Blog、OpenAI、TechCrunch 与 The Atlantic。Axios / TechCrunch / The Atlantic 条目保持 `媒体背景` / `reported` / `must-read`；OpenAI 与 AWS 条目分别保持官方核对或厂商主张边界。AWS 同源超过两条，已在版次层明确源集中风险：技术样例只证明厂商路径，不证明客户生产效果、ROI、安全成熟度或独立采用。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1104.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月5日17:00 补充版 10 条情报；读者可在首页与详情页看到医疗未授权 AI Agent、Mercor 专家训练数据、Agent 经济入口、AWS 合规问答、Claude Desktop 安全搜索、SageMaker MTRL 和 Agent 记忆层补充信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 109 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】补充23点AI新闻：10条Agent治理与控制面信号`.
+- Push: blocked - sandbox push failed on GitHub DNS; network-authorized retry was rejected by app safety review because it would directly update shared `origin/main` without explicit user approval. Local commit remains ready to push.
+
 ## 2026-10-05 11:02 JST
 
 - Focus: 完成当前 30 天计划 Day 24，补上月度连续观察快照到未来公开组件之间的交接形状；未来若要做公开月度连续观察模块，必须先把候选卡片分成 `ready`、`needs-current-edition`、`archive-only` 和 `do-not-publish`，并写明支撑字段、读者用途和证据边界。
