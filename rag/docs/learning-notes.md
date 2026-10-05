@@ -3202,3 +3202,49 @@ Compared local and Azure retrievers on the same evaluation set and showed that r
 ### 下一步（Day 30）
 
 评测题从 5 道扩到 20 道左右，校准「资料不足」的阈值，并给 hybrid 加上用向量分数判断资料是否足够。
+
+## Day 30: 评测集扩充到 25 题
+
+### 今天完成了什么
+
+- 评测题 5 → 25：原题 4、换个说法 6、英文 4、新闻 5、跨最新/历史 1、没有答案 5（标准答案都核对过确实在知识库里）
+- 评测报告增加：MRR（排名分）、按题型统计、有答案/没答案题的分数区间、`--quiet`
+- 路由规则没有针对新题修改（公平比较）
+
+### 结果（25 题）
+
+| 检索方式 | 不筛选 | 自动判断 |
+|---|---|---|
+| 本地向量 | 68%（MRR 0.55） | 72%（MRR 0.56） |
+| 本地关键词 | 52%（MRR 0.37） | 52%（MRR 0.36） |
+| **Azure 向量** | **100%（MRR 0.87）** | 84%（MRR 0.74） |
+| Azure hybrid | 92%（MRR 0.78） | 76%（MRR 0.75） |
+
+### 学到的要点
+
+1. **5 题的结论被推翻了**：之前「自动判断 + 本地向量 = 100%」，25 题只剩 72%。题少就会过度乐观。
+2. **自动判断会伤害 Azure**：换说法的 6 题从 6/6 掉到 2/6。失败的 4 题都是问规则文档，但问题里带「新闻」「发布」（如「已经发布的新闻数据出错了要怎么处理？」），被误判成新闻，把正确的文档筛掉了。→ 规则式的硬筛选，对强检索有害。
+3. **Azure 向量不筛选最好**：25/25、MRR 0.87。hybrid 排名反而不如纯向量（0.78）。5 题时「hybrid 排名更好」的印象也被推翻。
+4. **只靠分数判断「资料不足」做不到**：Azure 向量有答案题最低 0.647，没答案题最高 0.666，**两者重叠**，找不到一条完美的分界线。hybrid（RRF）分数更分不开（3/5）。
+
+### 决定
+
+- Azure 检索默认**不做来源筛选**（`--routing none`），自动判断只作为参考或本地 demo 用
+- 主检索方式用 **Azure 向量**
+- 「资料不足」改在**回答生成阶段**判断：让 Azure OpenAI 的 chat 模型只根据检索到的资料回答，资料里没有就明确说不知道（下一阶段）
+
+### 作品集写法
+
+```text
+Expanded the evaluation set from 5 to 25 questions (paraphrases, English, cross-source, no-answer cases), which overturned earlier conclusions: rule-based source routing hurt the semantic retriever (100% to 84%), and similarity scores alone could not separate answerable from unanswerable questions, motivating LLM-based answerability checks.
+```
+
+### 日文面试表达
+
+```text
+評価セットを 5 問から 25 問に増やしたところ、少ない問題で得た結論が覆りました。ルールベースの絞り込みは実 embedding の検索ではむしろ精度を下げ、類似度スコアだけでは「回答できる質問」と「根拠がない質問」を分けられないことも分かりました。そのため、根拠不足の判定は LLM による回答生成の段階で行う方針にしました。
+```
+
+### 下一步（Day 31）
+
+部署 Azure OpenAI 的 chat 模型，实现「只根据检索资料回答 + 带引用 + 资料不足就说不知道」的回答生成，并用这 25 题评测回答质量。
