@@ -5,7 +5,7 @@ from typing import Dict, List, Tuple
 from retrievers import create_local_retriever, to_scored_context_items
 
 DEFAULT_TOP_K = 5
-DEFAULT_MAX_CHARS_PER_CHUNK = 700
+DEFAULT_MAX_CHARS_PER_CHUNK = 1300  # docs chunks are up to 1200 chars (Day 32)
 
 
 def compact_text(text: str) -> str:

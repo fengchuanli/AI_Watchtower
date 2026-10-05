@@ -91,7 +91,7 @@ python3 -m unittest discover -s rag/tests
 | ファイル | 内容 | Git |
 |---|---|---|
 | `corpus.jsonl` | 読み込んだ文書（265 件） | 管理する |
-| `chunks.jsonl` | chunk（1273 件） | 管理する |
+| `chunks.jsonl` | chunk（1181 件。docs は見出し単位、ニュースは固定長） | 管理する |
 | `azure_search_docs.jsonl` | Azure AI Search 用 payload（vector 空） | 管理する |
 | `eval_questions.json` | 評価用の質問と期待 source | 管理する |
 | `embedding_cache.jsonl` | 実 embedding（1273 件 × 1536 次元、約 40MB） | **管理しない**（`build_embedding_cache.py` で再生成） |

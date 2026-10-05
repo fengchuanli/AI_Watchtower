@@ -39,6 +39,21 @@ class ParseOutputTest(unittest.TestCase):
         self.assertFalse(result.answerable)
 
 
+class Day32RulesTest(unittest.TestCase):
+    def test_answer_language_follows_question(self):
+        from llm_answer import answer_language
+
+        self.assertEqual(answer_language("What fields are required?"), "English")
+        self.assertEqual(answer_language("新闻数据有哪些必须字段？"), "Chinese (Simplified)")
+        self.assertEqual(answer_language("必須フィールドは何ですか？"), "Japanese")
+        self.assertIn("Answer language: English", build_user_message("What?", CITATIONS))
+
+    def test_refusal_drops_citations(self):
+        result = parse_model_output('{"answerable": false, "answer": "没有天气信息 [1][2]", "citations": [1, 2]}', CITATIONS)
+        self.assertEqual(result.cited_ids, [])
+        self.assertNotIn("[1]", result.answer)
+
+
 class GeneratorTest(unittest.TestCase):
     def test_context_is_numbered_and_marked_as_data(self):
         message = build_user_message("Q", CITATIONS)

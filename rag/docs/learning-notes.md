@@ -3248,3 +3248,56 @@ Expanded the evaluation set from 5 to 25 questions (paraphrases, English, cross-
 ### 下一步（Day 31）
 
 部署 Azure OpenAI 的 chat 模型，实现「只根据检索资料回答 + 带引用 + 资料不足就说不知道」的回答生成，并用这 25 题评测回答质量。
+
+## Day 31: 用 gpt-5.4-mini 生成带引用的回答
+
+### 今天完成了什么
+
+- 部署 Azure OpenAI 对话模型 `gpt-5.4-mini`（Global Standard，按量计费，退役日 2027-09-21）
+- 新增 `rag/scripts/llm_answer.py`：只把检索到的 5 段资料编号交给模型，要求 JSON 返回 `answerable / answer / citations`
+- 程序侧删掉不存在的引用编号；没有引用的回答不算「有依据」
+- `ask_pipeline.py --retriever azure-vector --generator azure` 可以直接提问
+- `evaluate_demo.py --generator azure`：用模型判断「能否回答」，并显示 token 数和费用
+
+### 结果（25 题，Azure 向量 + gpt-5.4-mini）
+
+- 22/25 通过（88%），没有答案的 5 题全部回答「资料不足」（之前只用分数时 hybrid 只有 3/5）
+- 一次评测约 48,000 输入 token + 4,900 输出 token，约 9 日元
+- 失败 3 题：必须字段 2 题（字段清单被切碎、上下文只截 700 字）、MCP 1 题（资料本身没写更新内容，模型判断正确，是题目出错）
+
+### 学到的要点
+
+- 检索负责「找资料」，模型负责「判断能否回答 + 写回答」，这样分工后资料不足的判断变准了
+- 模型不一定遵守所有规则（英文问题用中文回答、拒答时也加引用）→ 规则要尽量在程序里检查
+- 评测失败不一定是系统的错，也可能是题目或数据有问题
+
+### 作品集写法
+
+```text
+Added grounded answer generation with Azure OpenAI gpt-5.4-mini: the model answers only from retrieved passages, returns JSON with answerability and citation IDs, and invalid citations are removed in code. All 5 no-answer questions were correctly declined (vs. 3/5 with score thresholds), at about 9 JPY per 25-question evaluation.
+```
+
+### 日文面试表达
+
+```text
+回答生成では、検索結果だけを根拠として gpt-5.4-mini に渡し、「回答可能か・回答・引用番号」を JSON で返させています。存在しない引用番号はプログラム側で除去し、根拠のない質問 5 問はすべて回答を控えることを確認しました。
+```
+
+## Day 32: 按标题切分 + 回答规则加强
+
+### 今天完成了什么
+
+- 规则文档改成按标题（`##` / `###`）切分；长的小节按行再切，最长 1200 字；每段开头加【文档名 › 小节名】
+  - 例：「Required Fields」一节 9,400 字 → 10 段，每段都带【News Data Format › Required Fields】
+  - 新闻不变（本来就短）。chunk 总数 1273 → 1181（文档部分去掉了重叠）
+- 交给模型的每段资料从 700 字放宽到 1300 字
+- 回答语言由程序判断（中文 / 日文 / 英文）并明确告诉模型
+- 回答「资料不足」时，程序删除引用编号
+- 修正 MCP 题：改问资料里实际写了的内容（要检查什么），并在题目里记录修改理由
+- 新增切分测试 `test_chunk_docs.py`，测试共 72 个
+
+### 注意
+
+- 这次没有重新运行 `ingest_docs.py`：新闻会每天变化，评测题的标准答案绑定在当前这份知识库快照上
+
+（Azure 上的结果待重新上传后补充）

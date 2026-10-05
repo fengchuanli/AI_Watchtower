@@ -37,6 +37,8 @@ def infer_document_type(source_type: str) -> str:
 
 
 def infer_heading(chunk: Dict) -> str:
+    if chunk.get("heading"):
+        return str(chunk["heading"]).strip()
     text = str(chunk.get("text", ""))
     for line in text.splitlines():
         stripped = line.strip()
