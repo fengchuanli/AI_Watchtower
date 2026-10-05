@@ -1,3 +1,28 @@
+## 2026-10-06 08:13 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-06`，发布 8 条安全非重复信号，聚焦纽约市 AI 安全听证、参议员致 Anthropic 风险叙事公开信、Cohere North 2 / PwC 企业 AI 联盟，以及 VentureBeat Intelligence 的企业 Agent 安全、上下文、生产门禁和平台采购调查。
+- Changed files:
+  - `data/sources.json`: 新增 `cohere-blog` 来源标签，来源计数更新为 110。
+  - `data/news.json`: 当前首页更新为 2026年10月6日17:00 JST 版 8 条情报。
+  - `data/news-history.json`: 最新归档镜像同步当前 8 条版，总历史项目更新为 1112。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 AP Technology、Axios AI / Technology、Cohere 官方博客和 VentureBeat AI。AP / Axios / VentureBeat 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、数字、图表、调查方法和上下文仍归原文；Cohere 条目保持 `官方核对`，只确认 North 2 产品发布和 PwC 合作宣布，采用效果、ROI、安全效果和客户指标仍需外部证据。VentureBeat 单一来源占 4/8，已写入 `sourceConcentration` 和 overread 边界；调查数字只作企业检查表，不外推为全市场结论。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1112.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月6日17:00 版 8 条情报；读者可在首页与详情页看到纽约市 AI 安全听证、Anthropic 风险叙事政治压力、Cohere North 2 / PwC 联盟、企业 Agent 安全、上下文错误、生产门禁和 AI 平台采购调查信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 110 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：8条Agent治理与控制面信号`.
+- Push: pending - local `main` already had 1 pre-existing commit ahead of `origin/main` before this run; pushing now may publish unrelated work outside this 17:00 news update scope.
+
 ## 2026-10-05 23:11 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-05` 短批次，因此未回退版次，而是在 17:00 版基础上扩展为 10 条安全非重复信号，补充 Axios 医疗未授权 AI Agent、Mercor 专家训练数据、Agent 经济入口框架，以及 AWS 官方技术样例中的合规问答、Claude Desktop 安全 Web Search、SageMaker 多轮 RL 搜索 Agent 和 S3 Vectors / NVIDIA NeMo Agent 记忆层。
