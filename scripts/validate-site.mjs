@@ -948,6 +948,12 @@ if (
   !/unresolvedClaims/.test(monthlyContinuitySnapshot) ||
   !/resolvedChecks/.test(monthlyContinuitySnapshot) ||
   !/standingRuleCandidates/.test(monthlyContinuitySnapshot) ||
+  !/publicContinuityHandoff/.test(monthlyContinuitySnapshot) ||
+  !/candidateCards/.test(monthlyContinuitySnapshot) ||
+  !/sourceFields/.test(monthlyContinuitySnapshot) ||
+  !/publicStatus: ready \/ needs-current-edition \/ archive-only/.test(monthlyContinuitySnapshot) ||
+  !/doNotPublish/.test(monthlyContinuitySnapshot) ||
+  !/ready, needs-current-edition, archive-only, and do-not-publish/.test(monthlyContinuitySnapshot) ||
   !/not a new reporting surface/.test(monthlyContinuitySnapshot) ||
   !/Do not add fresh facts/.test(monthlyContinuitySnapshot) ||
   !/Count appearances from AI Watchtower archive fields/.test(monthlyContinuitySnapshot) ||
@@ -957,7 +963,11 @@ if (
   !/most repeated companies, topics, unresolved claims, resolved checks, and standing-rule candidates/.test(
     newsDataFormat,
   ) ||
+  !/publicContinuityHandoff/.test(newsDataFormat) ||
+  !/Only `publicStatus: ready` cards may feed future public UI/.test(newsDataFormat) ||
   !/docs\/monthly-continuity-snapshot\.md/.test(updateRunChecklist) ||
+  !/publicContinuityHandoff/.test(updateRunChecklist) ||
+  !/ready cards from `archive-only` and `do-not-publish` patterns/.test(updateRunChecklist) ||
   !/Day 27[\s\S]*monthly-continuity-snapshot\.md[\s\S]*repeated companies[\s\S]*unresolved claims[\s\S]*resolved checks/.test(
     optimizationDecisionIndex,
   ) ||
