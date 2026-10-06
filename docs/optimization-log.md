@@ -1,3 +1,37 @@
+## 2026-10-06 11:04 JST
+
+- Focus: 完成当前 30 天计划 Day 25，为当前 VisionHub 风格首页简报评分卡补上最小运行时校验；`scripts/validate-site.mjs` 现在会检查当前 `data/news.json` 的 Today Briefing 是否短、中文、适合首屏扫描，并检查 TOP3 是否具备具体读者、读者用途、来源角色、声明状态、证据边界和下一步核验证据路径。
+- Changed files:
+  - `scripts/validate-site.mjs`: 新增 VisionHub briefing scorecard runtime guard，直接读取当前首页数据，保护 Today Briefing 与 TOP3 首屏信息质量。
+  - `docs/visionhub-briefing-scorecard.md`: 记录评分卡现在是 live homepage contract，不只是一份优化前自查表。
+  - `docs/news-data-format.md`: 在 Briefing 字段中说明首页简报和 TOP3 可见字段必须满足运行时守卫。
+  - `docs/editorial-validator-limits.md`: 记录该守卫的刻意严格边界，避免后续误删。
+  - `docs/optimization-decision-index.md`: 标记 Day 25 完成，并把下一步交接到 Day 26。
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/visionhub-briefing-scorecard.md`、`docs/homepage-edition-preflight.md`、`docs/news-data-format.md` 和 `docs/editorial-validator-limits.md`。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只把现有 homepage briefing / TOP3 首屏质量要求转成校验。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - Today Briefing headline/summary/CTA 和 3 个 watch points 现在由运行时守卫检查，避免首屏只剩结构而缺少当天读法。
+  - TOP3 reader use: pass - 守卫要求 TOP3 可见字段包含具体中文读者、读者用途和 nextCheck 证据路径。
+  - Source boundary visible: pass - 守卫要求 TOP3 暴露 `sourceRole`、`claimStatus` 和证据边界措辞。
+  - Original source dependency: pass - 守卫要求 `nextCheck` 指向原文、文件、调查方法、日志、合同、审计、第三方评测等可核验证据，不新增替代性事实层。
+  - Mobile burden: pass - Today Briefing headline、summary 和 watch points 增加长度上限，优先保护手机首屏扫读。
+  - Continuity use: not applicable - 本次不改连续观察组件。
+  - Visual aid purpose: not applicable - 本次不新增视觉组件。
+- 网站可见变化：无，属于规则/校验/计划更新；后续维护者可在 `scripts/validate-site.mjs` 和 `docs/visionhub-briefing-scorecard.md` 看到首页简报评分卡运行时守卫。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 110 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-pages.mjs`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commits: `e9d19de` (`【VisionHub网站风格优化】守住首页简报评分卡`).
+- Push: pending - log/index commit and remote sync status to be recorded after final verification.
+
 ## 2026-10-06 08:13 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-06`，发布 8 条安全非重复信号，聚焦纽约市 AI 安全听证、参议员致 Anthropic 风险叙事公开信、Cohere North 2 / PwC 企业 AI 联盟，以及 VentureBeat Intelligence 的企业 Agent 安全、上下文、生产门禁和平台采购调查。
