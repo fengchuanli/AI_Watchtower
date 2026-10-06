@@ -1,3 +1,27 @@
+## 2026-10-07 08:14 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-07`，发布 10 条安全非重复信号，聚焦 OpenAI/Atlassian 企业上下文、ChatGPT 视觉广告测试、AP 对 RFK Jr. 医疗 AI 政策争议的报道，以及 AWS Bedrock / AgentCore / SageMaker / Quick 的 Agent 工程控制面更新。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月7日17:00 JST 版 10 条情报，并保留原始来源 URL、来源角色、证据边界、下一步核查和 TOP3 说明。
+  - `data/news-history.json`: 最新归档镜像同步当前首页版次；总历史项目更新为 1125。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 AP Technology、OpenAI News、AWS News Blog 和 AWS Machine Learning Blog。AP 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、医学专家意见、政治语境、数据和上下文仍归原文；OpenAI / AWS 条目保持官方核对或厂商技术路径边界，只确认发布、预览、工具和方案事实，不确认客户 ROI、安全效果、合规通过或生产成熟度。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1125.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月7日17:00 版 10 条情报；读者可在首页与详情页看到 RFK Jr. 医疗 AI 政策争议、OpenAI / Atlassian 企业上下文、ChatGPT 视觉广告测试、Bedrock Managed Agents powered by OpenAI、GLM 5.3 on Bedrock、Claude Code GovCloud、SageMaker 推理技能、Amazon Quick 跨账号迁移、Bedrock agentic retrieval 和 AgentCore Evaluations 信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 110 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, and `nav.js`.
+  - Parsed `data/news.json` and `data/news-history.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条Agent控制面与AI入口信号`.
+- Push: pending - commit will be pushed after verification commit succeeds and network access allows.
+
 ## 2026-10-06 23:01 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-06`，因此未回退版次，而是在当天活动版基础上更新为 `news-2300-2026-10-06`，发布 11 条安全非重复信号，补充 Axios 对特朗普 AI 任务组 / Scott Kupor 的采访、Axios 对 Reflection / Mistral 开放权重模型竞争的报道，以及 AP 对 Meloni 声音商标 / AI 深伪治理的报道。

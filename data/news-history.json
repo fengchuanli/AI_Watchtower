@@ -1,8 +1,1639 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06",
-  "totalItems": 1115,
+  "updatedAt": "2026-10-07",
+  "totalItems": 1125,
   "editions": [
+    {
+      "id": "news-1700-2026-10-07",
+      "date": "2026-10-07",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "2026年10月7日17:00 JST版",
+      "itemCount": 10,
+      "note": "10月7日17:00 JST官方工程与治理雷达",
+      "operationalStatus": "已拉取origin/main；检查OpenAI、AP、AWS官方/可靠来源；跳过重复、社区、弱证明和登录/付费正文。",
+      "editorialInterpretation": "本期发布10条安全非重复信号，偏向官方工程发布和一条可靠媒体政策报道；少于更广泛市场覆盖是质量门槛结果，没有用旧文章、社区讨论、聚合页或弱证明材料补量。",
+      "readerFrame": {
+        "headline": "把AI入口、企业Agent和云控制面放进同一张核查表",
+        "whyItMatters": "OpenAI和AWS的更新显示，Agent正在进入广告、企业上下文、受监管开发、RAG和评估流水线，但多数仍需要客户侧日志、评测和审计补证。",
+        "useThisIssueFor": [
+          "企业平台团队检查Agent权限、上下文、运行时和审计日志。",
+          "医疗/公共部门团队核对AI政策表态是否已经进入文件、采购或临床证据。",
+          "广告和产品团队检查ChatGPT商业化的标注、测量和回答独立性。"
+        ],
+        "notProvenYet": [
+          "本期不证明AWS教程里的方案已经在生产环境普遍成功。",
+          "本期不证明ChatGPT广告不会影响用户决策或回答信任。",
+          "本期不证明医疗AI政策已经形成新的可执行规则。"
+        ],
+        "mobile": {
+          "headline": "Agent控制面加厚",
+          "summary": "10条信号看OpenAI入口、Atlassian上下文、AWS工程路径。",
+          "primaryUses": [
+            "平台团队查权限",
+            "广告团队查标注",
+            "医疗团队查文件"
+          ],
+          "proofBoundary": "仍需客户日志、第三方评测和监管文件核验。"
+        }
+      },
+      "changeSummary": {
+        "headline": "从10月6日政策/模型补充转向10月7日工程控制面",
+        "freshFacts": [
+          "本批新增OpenAI官方Atlassian合作扩大公告。",
+          "本批新增OpenAI官方ChatGPT视觉广告和测量更新。",
+          "本批新增AWS官方Bedrock、AgentCore、SageMaker与Quick工程路径。"
+        ],
+        "repeatedContext": [
+          "开放模型、Agent治理和企业AI采用是10月6日以来的重复背景。",
+          "AWS Bedrock、Quick和AgentCore是近期重复背景，本批只记录新官方页面。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对AI入口与企业上下文",
+          "count": 3,
+          "meaning": "用来检查ChatGPT广告、Atlassian工作流和医疗/公共政策里的信任边界。"
+        },
+        {
+          "label": "验证云端Agent运行时",
+          "count": 3,
+          "meaning": "用来检查Bedrock/OpenAI Agent预览、Claude Code GovCloud和Quick跨账号迁移治理。"
+        },
+        {
+          "label": "评估模型、RAG与质量门禁",
+          "count": 4,
+          "meaning": "用来更新GLM 5.3、SageMaker推理技能、agentic retrieval和多Agent评估清单。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源集中",
+        "note": "官方/公司原文占9/10，source family高度集中；适合核对发布和技术路径，不适合外推客户采用、ROI、安全效果或监管结论。",
+        "nextCheck": "查客户侧指标、审计日志、第三方基准、监管/合规文件、价格页和生产事故复盘。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期多数信号由OpenAI和AWS官方页面支持，能证明发布和方案说明，但不能证明生产成熟、独立性能、用户接受或合规通过。",
+        "doNotConclude": "不能据此认定企业Agent已经普遍可生产自治，或广告、医疗AI风险已经解决。",
+        "useInstead": "用来建立试点核查表：先查权限、日志、价格、模型卡、评测、客户指标、监管文件和第三方审计。"
+      },
+      "trendNotes": [
+        {
+          "topic": "Agent控制面",
+          "label": "连续增强",
+          "note": "本期延续近期Agent治理主题，但新增证据转向AWS运行时、迁移、检索和评估工具链。",
+          "boundary": "仍不能证明真实生产事故率下降；需要客户日志、审计和事故复盘。"
+        },
+        {
+          "topic": "AI入口商业化",
+          "label": "进入测试",
+          "note": "连续观察：AI入口商业化从此前购物、Agent入口和广告讨论，延伸到本期OpenAI视觉广告测试。",
+          "boundary": "仍不能证明回答独立性已被外部审计；需要政策、用户控制、监管反馈和第三方报告。"
+        },
+        {
+          "topic": "受监管AI开发",
+          "label": "合规试点",
+          "note": "连续观察：受监管AI开发从此前安全和企业部署话题，延伸到本期Claude Code/GovCloud路径。",
+          "boundary": "仍不能证明所有合规要求满足；需要模型认证状态、组织安全评估和审计记录。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "更偏工程门禁",
+          "status": "stronger",
+          "previousPattern": "此前批次多关注Agent安全、上下文错误、控制面和企业调查。",
+          "currentSignal": "本期新增AWS BMA预览、Quick迁移、agentic retrieval和AgentCore评估等可执行工程路径。",
+          "signalDirection": "增强：本期新增可执行云端控制面和质量门禁路径。",
+          "stillUnproven": "仍需客户审计日志、生产轨迹、成本记录和事故复盘证明风险下降。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "上下文成为竞争点",
+          "status": "stronger",
+          "previousPattern": "此前企业AI信号集中在Cohere、PwC、VentureBeat调查和工作流采用。",
+          "currentSignal": "本期新增OpenAI/Atlassian官方合作公告，重复企业上下文和工作流控制主题。",
+          "signalDirection": "增强：本期由官方合作页面补强企业上下文证据。",
+          "stillUnproven": "仍需Atlassian文档、客户指标、权限模型和审计日志证明成效。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "入口与企业上下文双线",
+          "lastMention": "上次相关脉络：10月6日OpenAI出现在开放权重竞争、任务组政策和Agent安全调查背景。",
+          "whatChanged": "本期OpenAI官方新增ChatGPT广告格式/测量和Atlassian企业上下文合作。",
+          "stillUnproven": "仍需广告审计、用户控制、Atlassian权限文档和客户侧成效指标。"
+        },
+        {
+          "company": "AWS",
+          "label": "AWS控制面加厚",
+          "lastMention": "上次相关脉络：近期批次多次出现AWS Quick、AgentCore、Bedrock和SageMaker Agent路径。",
+          "whatChanged": "本期AWS新增OpenAI Agent预览、GLM 5.3、Claude Code GovCloud、SageMaker技能、Quick迁移、RAG和评估路径。",
+          "stillUnproven": "仍需GA状态、价格页、客户日志、第三方评测和生产事故复盘。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方/公司原文",
+          "count": 9,
+          "role": "OpenAI和AWS用于核对发布、预览、技术路径和产品可用性；效果、采用、ROI和安全结论仍需外部证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 1,
+          "role": "AP用于观察健康政策和医学信任争议；完整采访、政治语境和后续文件仍需原文及官方材料。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "检查Agent控制面",
+          "count": 6,
+          "itemIds": [
+            "aws-bedrock-managed-agents-openai-preview-2026-10-07",
+            "aws-claude-code-govcloud-regulated-workloads-2026-10-07",
+            "aws-amazon-quick-cross-account-mcp-promotion-2026-10-07",
+            "aws-bedrock-agentic-retrieval-langchain-knowledge-bases-2026-10-07",
+            "aws-agentcore-evaluations-multi-agent-explainability-2026-10-07",
+            "openai-atlassian-enterprise-context-action-2026-10-07"
+          ],
+          "meaning": "用来检查运行时、权限、迁移、检索、评估和企业上下文是否能进入审计流程。"
+        },
+        {
+          "id": "enterprise",
+          "label": "核对企业上下文与合规",
+          "count": 4,
+          "itemIds": [
+            "openai-atlassian-enterprise-context-action-2026-10-07",
+            "aws-claude-code-govcloud-regulated-workloads-2026-10-07",
+            "aws-amazon-quick-cross-account-mcp-promotion-2026-10-07",
+            "aws-agentcore-evaluations-multi-agent-explainability-2026-10-07"
+          ],
+          "meaning": "用来更新企业工作系统、受监管开发、跨账号发布和多Agent质量门禁。"
+        },
+        {
+          "id": "model",
+          "label": "验证模型与商业入口",
+          "count": 2,
+          "itemIds": [
+            "aws-glm-5-3-bedrock-agentic-coding-2026-10-07",
+            "openai-chatgpt-visual-ads-measurement-2026-10-07"
+          ],
+          "meaning": "用来核对模型上架、许可、基准、广告标注和AI入口商业化。"
+        },
+        {
+          "id": "policy",
+          "label": "核对医疗与广告治理",
+          "count": 2,
+          "itemIds": [
+            "ap-rfk-jr-ai-health-policy-maha-2026-10-07",
+            "openai-chatgpt-visual-ads-measurement-2026-10-07"
+          ],
+          "meaning": "用来检查医疗AI证据、公共政策、广告独立性和监管反馈。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "评估开发者工具链",
+          "count": 3,
+          "itemIds": [
+            "aws-sagemaker-ai-ml-skill-coding-agent-inference-2026-10-07",
+            "aws-claude-code-govcloud-regulated-workloads-2026-10-07",
+            "openai-atlassian-enterprise-context-action-2026-10-07"
+          ],
+          "meaning": "用来调整编码Agent、推理优化、Codex连接和开发审计策略。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "aws-machine-learning-blog",
+        "sourceName": "AWS Machine Learning Blog",
+        "count": 6,
+        "share": "6/10",
+        "note": "AWS Machine Learning Blog是本期最大单一来源，但未超过三分之二；这些条目适合核对技术路径，不适合证明客户成效。",
+        "nextCheck": "查AWS文档、价格页、客户部署日志、第三方评测和生产事故复盘。"
+      },
+      "briefing": {
+        "label": "今日简报",
+        "headline": "Agent进入云控制面，AI入口进入信任审计",
+        "summary": "10月7日17:00版集中记录OpenAI入口/企业上下文、AWS Bedrock与AgentCore工程路径，以及医疗AI政策争议。多数事实来自官方发布，读者应把它当作试点核查表，而非采用效果证明。",
+        "cta": "查看全部10条信号",
+        "watchPoints": [
+          {
+            "title": "入口商业化",
+            "body": "ChatGPT广告需要核对标注、测量、用户控制和回答独立性。"
+          },
+          {
+            "title": "Agent控制面",
+            "body": "AWS把运行时、迁移、检索和评估路径继续拉进Bedrock/AgentCore。"
+          },
+          {
+            "title": "政策证据",
+            "body": "医疗AI表态要等政府文件、临床评估和监管材料。"
+          }
+        ]
+      },
+      "deepBriefing": {
+        "kicker": "今日AI雷达",
+        "title": "从模型发布到可审计Agent：10月7日的主线是控制面",
+        "subtitle": "OpenAI和AWS的新信号都指向同一个问题：AI系统进入真实工作流后，谁掌握上下文、权限、广告边界、日志和评估门禁。",
+        "dateLabel": "2026年10月7日",
+        "status": "已发布 / 来源边界已标注",
+        "overview": "本期不是一个单一大发布，而是一组工程和治理信号：OpenAI扩展Atlassian上下文并测试ChatGPT视觉广告；AWS把OpenAI Agent、GLM 5.3、Claude Code GovCloud、SageMaker推理技能、Quick迁移、RAG规划和多Agent评估串进Bedrock/AgentCore；AP补充医疗AI政策争议。读者应把它用作试点核查表。",
+        "timeline": [
+          {
+            "label": "10月5日",
+            "title": "AWS集中发布Agent与Bedrock工程路径",
+            "body": "GLM 5.3、Claude Code GovCloud、SageMaker技能、Quick迁移、agentic retrieval和AgentCore评估进入官方说明。"
+          },
+          {
+            "label": "10月6日",
+            "title": "OpenAI扩展入口和企业上下文",
+            "body": "ChatGPT广告测试和Atlassian合作扩大同时指向商业化与工作系统连接。"
+          },
+          {
+            "label": "10月7日",
+            "title": "医疗AI政策争议进入可靠媒体雷达",
+            "body": "AP报道RFK Jr.支持AI引发健康政策阵营内部对证据和信任的争议。"
+          }
+        ],
+        "keyNumbers": [
+          {
+            "value": "10",
+            "label": "安全非重复信号"
+          },
+          {
+            "value": "9/10",
+            "label": "官方/公司原文"
+          },
+          {
+            "value": "6/10",
+            "label": "AWS ML Blog单一来源"
+          },
+          {
+            "value": "1",
+            "label": "可靠媒体政策报道"
+          }
+        ],
+        "sections": [
+          {
+            "number": "01",
+            "label": "入口",
+            "title": "ChatGPT广告把信任问题产品化",
+            "body": "广告格式、测量和品牌安全不再只是商业问题，也会影响用户如何理解AI回答是否独立。",
+            "soWhat": "广告和隐私团队要先看标注、控制、数据流和第三方审计。"
+          },
+          {
+            "number": "02",
+            "label": "企业",
+            "title": "Atlassian合作强调上下文图谱",
+            "body": "模型进入Jira、Confluence、Bitbucket和Rovo后，价值来自企业知识，也带来权限和审计压力。",
+            "soWhat": "平台团队应核对MCP权限、日志、数据保留和人类复核。"
+          },
+          {
+            "number": "03",
+            "label": "云控制面",
+            "title": "AWS把Agent运行、迁移、检索和评估做成工具链",
+            "body": "Bedrock/AgentCore相关更新显示，企业Agent需要环境提升、RAG路由、质量评估和合规端点。",
+            "soWhat": "不要只测demo，要测真实轨迹、成本、权限和故障处理。"
+          }
+        ],
+        "actions": [
+          "为每个Agent试点补一列：权限、日志、成本、回滚和人工复核。",
+          "为ChatGPT广告和AI入口补一列：标注、测量、回答独立性和用户控制。",
+          "为医疗AI或受监管AI补一列：官方文件、认证状态、临床/安全评估和审计样例。"
+        ],
+        "coverageLimits": [
+          {
+            "label": "来源限制",
+            "body": "官方发布占多数，能核对发布和技术路径，不能证明客户侧效果。"
+          },
+          {
+            "label": "时间限制",
+            "body": "本期覆盖10月5日至10月7日可安全核验信号，没有使用社区讨论或聚合页补量。"
+          },
+          {
+            "label": "结论限制",
+            "body": "Agent控制面变厚不等于自治风险已解决，仍需生产日志和第三方评估。"
+          }
+        ],
+        "sourceFrame": {
+          "sourceFacts": [
+            "OpenAI发布Atlassian合作扩大和ChatGPT广告更新。",
+            "AWS发布多条Bedrock、AgentCore、SageMaker和Quick相关技术路径。",
+            "AP报道RFK Jr.支持AI引发部分健康盟友和医学专家困惑。"
+          ],
+          "editorialJudgment": [
+            "AI Watchtower判断本期主线是Agent控制面和AI入口信任审计。",
+            "官方工程信号适合做试点清单，不适合直接当作市场采用证明。"
+          ],
+          "unknowns": [
+            "真实客户是否能降低成本、事故率或交付周期仍未知。",
+            "广告、医疗AI和受监管开发的监管/合规结果仍需后续文件。"
+          ]
+        },
+        "references": [
+          {
+            "label": "AP报道RFK Jr.医疗AI争议",
+            "url": "https://apnews.com/article/c46134f39189049047b5c37d208e1e47"
+          },
+          {
+            "label": "OpenAI发布Atlassian合作扩大",
+            "url": "https://openai.com/index/atlassian-partnership/"
+          },
+          {
+            "label": "OpenAI发布ChatGPT广告更新",
+            "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+          },
+          {
+            "label": "AWS News Blog确认BMA OpenAI预览",
+            "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-managed-agents-powered-by-openai-q3-service-availability-updates-kiro-workflows-and-more-october-5-2026/"
+          },
+          {
+            "label": "AWS官方博客发布GLM 5.3模型",
+            "url": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock/"
+          },
+          {
+            "label": "AWS官方博客发布Claude Code GovCloud",
+            "url": "https://aws.amazon.com/blogs/machine-learning/supercharge-regulated-workloads-with-claude-code-and-amazon-bedrock/"
+          },
+          {
+            "label": "AWS官方博客发布SageMaker技能",
+            "url": "https://aws.amazon.com/blogs/machine-learning/new-agent-skill-amazon-sagemaker-optimized-generative-ai-inference-for-your-coding-agent/"
+          },
+          {
+            "label": "AWS官方博客发布Quick迁移",
+            "url": "https://aws.amazon.com/blogs/machine-learning/making-amazon-quick-enterprise-ready-automated-auditable-cross-account-resource-promotion/"
+          },
+          {
+            "label": "AWS官方博客发布RAG规划检索",
+            "url": "https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-with-langchain-and-amazon-bedrock-knowledge-bases/"
+          },
+          {
+            "label": "AWS官方博客发布AgentCore评估",
+            "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-multi-agent-systems-for-explainability-and-helpfulness-with-amazon-bedrock-agentcore/"
+          }
+        ]
+      },
+      "items": [
+        {
+          "sourceId": "ap-technology",
+          "sourceName": "Associated Press Technology",
+          "source": "Associated Press Technology",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "verificationStatus": "已核验",
+          "id": "ap-rfk-jr-ai-health-policy-maha-2026-10-07",
+          "category": "policy",
+          "label": "政策",
+          "title": "AP：RFK Jr.拥抱AI让部分健康盟友和医学专家困惑",
+          "body": "AP报道，RFK Jr.近期公开支持AI，与MAHA阵营部分盟友和医学专家的风险担忧形成张力。",
+          "summary": "AP报道，RFK Jr.对AI的支持让健康政策阵营内部出现新的信任和监管张力。",
+          "whyItMatters": "健康、公共部门和医疗AI团队要把“AI能加速服务”与“医学证据、监管边界和公众信任”分开核对。",
+          "detailBody": "AP报道，RFK Jr.近期支持AI产业，但部分MAHA盟友和医学专家担心医疗与公共健康场景里的证据、责任和安全边界。该条只保留最小报道事实，完整采访和政治语境仍需阅读AP原文。",
+          "trend": "AI治理正在从科技监管扩散到公共健康信任、医疗证据和政府采购叙事。",
+          "detailTrend": "这条信号说明，医疗AI不只考验模型能力，也考验政府角色、专业共识、患者信任和公共沟通。健康政策一旦把AI纳入解决方案，证据等级、责任主体、申诉机制和采购透明度都会成为同一套治理问题。",
+          "whyRanked": "它把AI政策争议带入健康治理和医疗信任场景。",
+          "topReason": "它把AI政策争议带入健康治理和医疗信任场景。",
+          "impact": "医疗AI项目应先定义证据等级、使用边界、责任主体和面向公众的解释机制。",
+          "whoShouldCare": "负责医疗AI采购、公共健康政策、临床风控和政府数字服务的团队需要关注。",
+          "readerUse": "医疗和公共部门团队可用来检查AI项目是否具备医学证据、审计、申诉和公众沟通路径。",
+          "nextCheck": "查HHS或相关机构文件、医学协会声明、采购合同、临床评估和监管听证记录。",
+          "followUpQuestions": [
+            "HHS或相关卫生机构是否发布AI采购、临床试点或安全评估文件？",
+            "医学协会声明、医院系统评估、监管听证记录或临床安全报告是否给出可执行证据标准？"
+          ],
+          "evidenceThreshold": "至少需要政府文件、临床评估、采购合同或监管文本，才能升级为已确认的医疗AI政策变化。",
+          "claimBoundary": "AP报道不证明RFK Jr.已经改变具体医疗AI规则，也不证明AI方案已通过医学效果验证。",
+          "counterEvidence": "如果官方文件没有落地、医学机构公开反对、临床评估失败或采购范围被收窄，应下调政策推进判断。",
+          "provenance": "Associated Press Technology报道RFK Jr.支持AI引发部分MAHA盟友和医学专家困惑这一具体事实；AI Watchtower只保留最小报道事实和中文趋势判断，完整事实、采访、医学专家意见、政治语境、数据和上下文仍需阅读AP原文。",
+          "publishedAt": "2026-10-07T00:48:45+09:00",
+          "time": "10月7日",
+          "tags": [
+            "医疗AI",
+            "公共政策",
+            "监管"
+          ],
+          "companies": [
+            "HHS",
+            "OpenAI",
+            "Anthropic",
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "公共健康场景影响大，但目前仍是媒体报道和政策雷达。"
+          },
+          "keyFacts": [
+            {
+              "value": "10月7日",
+              "label": "报道时间",
+              "note": "AP"
+            },
+            {
+              "value": "健康政策",
+              "label": "争议场景",
+              "note": "需官方文件"
+            },
+            {
+              "value": "医学证据",
+              "label": "核查重点",
+              "note": "需临床材料"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月7日",
+              "title": "AP报道健康阵营分歧",
+              "body": "AI支持与医学风险担忧并存。",
+              "tone": "media"
+            },
+            {
+              "date": "下一步",
+              "title": "查政府文件",
+              "body": "看是否进入采购或监管文本。",
+              "tone": "neutral"
+            },
+            {
+              "date": "落地前",
+              "title": "查临床证据",
+              "body": "用评估和审计限定用途。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明健康政策争议升温，不证明医疗AI规则已经改变",
+              "sourceStatus": {
+                "tag": "媒体背景",
+                "note": "媒体报道可做雷达，结论要等源文件或官方材料。"
+              },
+              "body": [
+                "适合更新医疗AI治理和公众沟通检查表。",
+                "下一步看政府文件、医学组织声明、临床评估和采购记录。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要政府文件、临床评估、采购合同或监管文本，才能升级为已确认的医疗AI政策变化。"
+              },
+              "sourceLine": "出处：Associated Press Technology — RFK Jr.'s embrace of AI confounds some MAHA allies and medical experts（2026-10-07）"
+            }
+          ],
+          "sourceUrl": "https://apnews.com/article/c46134f39189049047b5c37d208e1e47",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "公共健康场景影响大，但目前仍是媒体报道和政策雷达。"
+          },
+          "originalUrl": "https://apnews.com/article/c46134f39189049047b5c37d208e1e47",
+          "detailWhyRanked": "它把AI政策争议带入健康治理和医疗信任场景。 来源侧可核对的是Associated Press Technology支持的具体事实；升级判断仍需查HHS或相关机构文件、医学协会声明、采购合同、临床评估和监管听证记录。"
+        },
+        {
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "openai-atlassian-enterprise-context-action-2026-10-07",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI与Atlassian扩大合作，把企业知识接入行动流",
+          "body": "OpenAI宣布扩大Atlassian合作，GPT-6系列模型将进入Atlassian平台和Rovo。",
+          "summary": "OpenAI与Atlassian把前沿模型、Rovo和企业上下文连接到计划、开发和交付流程。",
+          "whyItMatters": "企业Agent的价值越来越取决于能否安全读取项目、文档、代码和决策关系，而不是只在聊天框里回答问题。",
+          "detailBody": "OpenAI宣布扩大Atlassian合作，将GPT-6家族模型用于Atlassian平台和Rovo，并让ChatGPT、Codex通过Atlassian上下文进入团队工作流。该条核对合作和集成方向，不证明客户生产效果。",
+          "trend": "企业AI正在从模型调用走向“上下文图谱+工作系统+人类复核”的工作流控制面。",
+          "detailTrend": "这条信号把企业知识图谱推到Agent落地中心：模型越来越接近真实项目、代码、会议和责任人。企业AI竞争因此从单次问答扩展到组织记忆、项目关系、代码仓库和决策记录。",
+          "whyRanked": "它展示企业Agent竞争从模型能力转向工作系统上下文。",
+          "topReason": "它展示企业Agent竞争从模型能力转向工作系统上下文。",
+          "impact": "CIO和平台团队应核对Atlassian连接器、MCP权限、Codex工作区范围、审计日志和数据保留规则。",
+          "whoShouldCare": "使用Jira、Confluence、Bitbucket、Rovo、ChatGPT或Codex推进研发协作的企业平台/安全团队需要关注。",
+          "readerUse": "企业平台团队可用来检查Agent是否能在项目系统里读上下文、写回进度并保留人工复核。",
+          "nextCheck": "查Atlassian官方文档、MCP权限模型、Rovo可用范围、客户审计日志和实际部署指标。",
+          "followUpQuestions": [
+            "Atlassian是否发布Rovo、MCP和Codex连接器的权限、日志和数据保留文档？",
+            "联合客户是否披露项目周期、代码质量、审计通过率或人类复核指标？"
+          ],
+          "evidenceThreshold": "至少需要产品文档、权限模型、审计日志样例和客户侧部署指标，才能升级为已验证的企业Agent工作流成效。",
+          "claimBoundary": "官方合作公告不证明所有Atlassian客户已可用，也不证明Agent能独立完成复杂研发流程。",
+          "counterEvidence": "如果集成只限少数客户、权限模型不清、审计日志缺失或客户指标未改善，应收窄企业落地判断。",
+          "provenance": "OpenAI News发布并支持核对OpenAI与Atlassian扩大合作并把模型接入Atlassian平台、Rovo、ChatGPT和Codex。AI Watchtower只保留最小事实和中文趋势判断；完整细节、数字、配置、限制和上下文仍需查看原文。",
+          "publishedAt": "2026-10-07T00:00:00+09:00",
+          "time": "10月7日",
+          "tags": [
+            "企业AI",
+            "Agent",
+            "Atlassian"
+          ],
+          "companies": [
+            "OpenAI",
+            "Atlassian"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "企业工作流影响高，官方证据清楚，但成效仍需客户侧数据。"
+          },
+          "keyFacts": [
+            {
+              "value": "GPT-6",
+              "label": "模型家族",
+              "note": "官方公告"
+            },
+            {
+              "value": "Rovo",
+              "label": "企业入口",
+              "note": "需看权限"
+            },
+            {
+              "value": "MCP",
+              "label": "上下文连接",
+              "note": "需审计"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月6日",
+              "title": "OpenAI发布合作公告",
+              "body": "模型进入Atlassian平台和Rovo。",
+              "tone": "official"
+            },
+            {
+              "date": "可用阶段",
+              "title": "核对连接器",
+              "body": "看ChatGPT、Codex和MCP边界。",
+              "tone": "neutral"
+            },
+            {
+              "date": "部署后",
+              "title": "查客户指标",
+              "body": "验证交付和审计效果。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明合作扩大，不证明企业生产成效已经被独立验证",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新企业Agent上下文和权限清单。",
+                "下一步看Atlassian文档、审计日志和客户侧指标。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要产品文档、权限模型、审计日志样例和客户侧部署指标，才能升级为已验证的企业Agent工作流成效。"
+              },
+              "sourceLine": "出处：OpenAI News — Atlassian and OpenAI expand partnership to turn enterprise knowledge into action（2026-10-06）"
+            }
+          ],
+          "sourceUrl": "https://openai.com/index/atlassian-partnership/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "企业工作流影响高，官方证据清楚，但成效仍需客户侧数据。"
+          },
+          "originalUrl": "https://openai.com/index/atlassian-partnership/",
+          "detailWhyRanked": "它展示企业Agent竞争从模型能力转向工作系统上下文。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查Atlassian官方文档、MCP权限模型、Rovo可用范围、客户审计日志和实际部署指标。"
+        },
+        {
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "source": "OpenAI News",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "openai-chatgpt-visual-ads-measurement-2026-10-07",
+          "category": "product",
+          "label": "产品",
+          "title": "OpenAI将在ChatGPT图像生成场景测试视觉广告",
+          "body": "OpenAI宣布新的ChatGPT视觉广告格式、测量工具和合作伙伴，初期将在美国图像生成场景测试。",
+          "summary": "ChatGPT广告从入口商业化进入图像生成与测量能力测试阶段。",
+          "whyItMatters": "当AI助手同时承担搜索、创作和购买建议，广告标注、回答独立性、转化测量和品牌安全会成为产品信任核心。",
+          "detailBody": "OpenAI宣布测试新的视觉广告格式，并扩展测量工具、合作伙伴和品牌适配能力；公告称广告会标注且不影响ChatGPT回答。该条核对的是OpenAI发布的广告产品方向，不证明用户接受度或收入效果。",
+          "trend": "AI入口商业化正在从订阅扩展到广告和归因测量，信任边界会变成产品功能的一部分。",
+          "detailTrend": "这条信号说明，AI平台商业模式正在进入“回答独立性如何被看见”的阶段。广告支持免费使用，但也会把隐私、标注、测量、品牌安全和推荐偏差变成产品架构问题，而不只是销售策略。",
+          "whyRanked": "它直接改变ChatGPT作为消费者入口的商业化和信任检查表。",
+          "topReason": "它直接改变ChatGPT作为消费者入口的商业化和信任检查表。",
+          "impact": "产品和广告团队应核对广告标注、答案独立性、转化数据流、品牌安全和用户控制设置。",
+          "whoShouldCare": "负责AI搜索、广告投放、隐私合规、品牌安全和消费者AI产品的团队需要关注。",
+          "readerUse": "广告、隐私和产品团队可用来检查AI入口商业化是否把标注、测量和回答独立性写进规则。",
+          "nextCheck": "查OpenAI广告政策、测量文档、美国测试名单、用户控制设置、监管反馈和第三方品牌安全报告。",
+          "followUpQuestions": [
+            "OpenAI是否发布视觉广告测试的展示规则、关闭选项、数据流和第三方测量文档？",
+            "监管机构、品牌安全伙伴或广告客户是否披露测试效果、投诉或独立审计结果？"
+          ],
+          "evidenceThreshold": "至少需要广告政策、测量文档、用户控制说明、监管反馈和第三方审计，才能升级为已验证的广告信任机制判断。",
+          "claimBoundary": "OpenAI公告不证明广告不会影响用户行为，也不证明商业化收入目标可以实现。",
+          "counterEvidence": "如果广告政策文档、第三方审计报告、监管投诉记录或用户控制日志显示标注不清、回答独立性无法证明或投诉增加，应下调信任边界判断。",
+          "provenance": "OpenAI News发布并支持核对OpenAI宣布ChatGPT视觉广告格式、测量工具和美国测试计划。AI Watchtower只保留最小事实和中文趋势判断；完整细节、数字、配置、限制和上下文仍需查看原文。",
+          "publishedAt": "2026-10-06T23:30:00+09:00",
+          "time": "10月6日",
+          "tags": [
+            "ChatGPT",
+            "广告",
+            "商业化"
+          ],
+          "companies": [
+            "OpenAI",
+            "DoubleVerify",
+            "Hightouch",
+            "Tealium",
+            "LiveRamp"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "商业化影响高，官方证据强，但用户影响和收入效果未验证。"
+          },
+          "keyFacts": [
+            {
+              "value": "视觉广告",
+              "label": "新增格式",
+              "note": "官方公告"
+            },
+            {
+              "value": "图像生成",
+              "label": "初始场景",
+              "note": "美国测试"
+            },
+            {
+              "value": "测量伙伴",
+              "label": "数据链路",
+              "note": "需审计"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "OpenAI发布广告更新",
+              "body": "视觉格式和测量能力进入测试。",
+              "tone": "official"
+            },
+            {
+              "date": "本月稍后",
+              "title": "美国测试启动",
+              "body": "观察标注和控制选项。",
+              "tone": "neutral"
+            },
+            {
+              "date": "测试后",
+              "title": "查审计和反馈",
+              "body": "看品牌安全和监管反应。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明ChatGPT广告测试扩大，不证明回答独立性已被外部审计",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新AI入口商业化和隐私合规清单。",
+                "下一步看广告政策、用户控制、监管反馈和第三方测量报告。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要广告政策、测量文档、用户控制说明、监管反馈和第三方审计，才能升级为已验证的广告信任机制判断。"
+              },
+              "sourceLine": "出处：OpenAI News — Building advertising for the way people use AI（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "商业化影响高，官方证据强，但用户影响和收入效果未验证。"
+          },
+          "originalUrl": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/",
+          "detailWhyRanked": "它直接改变ChatGPT作为消费者入口的商业化和信任检查表。 来源侧可核对的是OpenAI News支持的具体事实；升级判断仍需查OpenAI广告政策、测量文档、美国测试名单、用户控制设置、监管反馈和第三方品牌安全报告。"
+        },
+        {
+          "sourceId": "aws-news-blog",
+          "sourceName": "AWS News Blog",
+          "source": "AWS News Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "aws-bedrock-managed-agents-openai-preview-2026-10-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS周报确认Bedrock Managed Agents powered by OpenAI预览",
+          "body": "AWS周报称，Amazon Bedrock Managed Agents powered by OpenAI已进入公开预览，可在AWS治理环境里运行OpenAI模型Agent。",
+          "summary": "AWS把OpenAI模型Agent包装进Bedrock与AgentCore运行时，主打AWS原生身份、权限和治理。",
+          "whyItMatters": "这让企业在不离开AWS控制面的情况下试验OpenAI Agent，但预览限制、费用和执行环境边界必须先核对。",
+          "detailBody": "AWS周报介绍Bedrock Managed Agents powered by OpenAI公开预览，说明其基于定制OpenAI Agents API、可连接AWS资源并选择自托管或AgentCore Runtime执行环境。该条核对的是预览状态，不证明生产成熟度。",
+          "trend": "模型提供商和云平台正在把Agent运行时、身份、权限和工具执行重新打包到云控制面。",
+          "detailTrend": "这条信号说明企业Agent部署正在靠近云治理栈：模型、会话、工具、IAM角色、执行环境和事件流被放进同一控制面。预览期的意义在于把运行边界和治理接口公开给试点团队。",
+          "whyRanked": "它把OpenAI Agent能力放入AWS治理和运行时语境。",
+          "topReason": "它把OpenAI Agent能力放入AWS治理和运行时语境。",
+          "impact": "云平台团队应先核对预览区域、endpoint、IAM动作、执行环境、费用和清理流程。",
+          "whoShouldCare": "在AWS上构建OpenAI Agent、内部工具自动化或多步骤文档/代码处理的云平台/安全团队需要关注。",
+          "readerUse": "AWS平台团队可用来评估是否把OpenAI Agent试点纳入Bedrock、IAM和AgentCore治理。",
+          "nextCheck": "查AWS Bedrock Managed Agents文档、预览限制、IAM策略、区域可用性、价格页和生产SLA。",
+          "followUpQuestions": [
+            "AWS BMA文档、预览限制页或价格页是否显示GA、SLA、跨区域支持和清理费用变化？",
+            "客户是否披露BMA在代码、文档或内部工具场景里的审计日志、成本和故障记录？"
+          ],
+          "evidenceThreshold": "至少需要GA文档、SLA、价格页、IAM样例、客户审计日志和故障记录，才能升级为可生产采用判断。",
+          "claimBoundary": "AWS周报和文档不证明BMA已适合关键生产系统，也不证明费用或权限风险已解决。",
+          "counterEvidence": "如果预览限制长期不变、区域/模型受限、成本不可控或客户故障记录增多，应下调生产可用判断。",
+          "provenance": "AWS News Blog发布并支持核对AWS周报确认Bedrock Managed Agents powered by OpenAI公开预览。AI Watchtower只保留最小事实和中文趋势判断；完整细节、数字、配置、限制和上下文仍需查看原文。",
+          "publishedAt": "2026-10-06T09:00:00+09:00",
+          "time": "10月6日",
+          "tags": [
+            "AWS",
+            "OpenAI",
+            "Agent运行时"
+          ],
+          "companies": [
+            "AWS",
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "云Agent控制面影响高，但预览状态要求保守解读。"
+          },
+          "keyFacts": [
+            {
+              "value": "Preview",
+              "label": "发布状态",
+              "note": "AWS周报"
+            },
+            {
+              "value": "AgentCore",
+              "label": "执行环境",
+              "note": "需看费用"
+            },
+            {
+              "value": "IAM",
+              "label": "治理入口",
+              "note": "需策略"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "AWS周报列出预览",
+              "body": "BMA进入公开预览视野。",
+              "tone": "official"
+            },
+            {
+              "date": "试点前",
+              "title": "查限制文档",
+              "body": "核对区域、endpoint和IAM。",
+              "tone": "neutral"
+            },
+            {
+              "date": "生产前",
+              "title": "等待GA证据",
+              "body": "看SLA、价格和客户日志。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明AWS/OpenAI Agent预览存在，不证明生产可用",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新AWS Agent试点和权限清单。",
+                "下一步看BMA文档、限制、价格、IAM和客户审计。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要GA文档、SLA、价格页、IAM样例、客户审计日志和故障记录，才能升级为可生产采用判断。"
+              },
+              "sourceLine": "出处：AWS News Blog — AWS Weekly Roundup: Amazon Bedrock Managed Agents powered by OpenAI（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-managed-agents-powered-by-openai-q3-service-availability-updates-kiro-workflows-and-more-october-5-2026/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "云Agent控制面影响高，但预览状态要求保守解读。"
+          },
+          "originalUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-managed-agents-powered-by-openai-q3-service-availability-updates-kiro-workflows-and-more-october-5-2026/",
+          "detailWhyRanked": "它把OpenAI Agent能力放入AWS治理和运行时语境。 来源侧可核对的是AWS News Blog支持的具体事实；升级判断仍需查AWS Bedrock Managed Agents文档、预览限制、IAM策略、区域可用性、价格页和生产SLA。"
+        },
+        {
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "aws-glm-5-3-bedrock-agentic-coding-2026-10-07",
+          "category": "model",
+          "label": "模型",
+          "title": "AWS：GLM 5.3进入Amazon Bedrock，面向编码和长程Agent任务",
+          "body": "AWS宣布Z.ai的GLM 5.3可在Amazon Bedrock使用，强调753B MoE、编码、长程Agent和安全测试场景。",
+          "summary": "GLM 5.3进入Bedrock，让开放权重模型竞争延伸到托管云API和Agent工作流。",
+          "whyItMatters": "企业不只比较模型分数，还要比较托管API、缓存、跨区域推理、权限和安全测试链路。",
+          "detailBody": "AWS宣布GLM 5.3在Bedrock可用，页面说明其面向编码、长程Agent任务、OpenAI兼容API、提示缓存和Strix安全测试示例。该条核对的是AWS上架和厂商能力说明，不证明独立性能领先。 页面还说明OpenAI兼容API、提示缓存、跨区域推理和Strix安全测试示例，适合核对托管平台能力边界。",
+          "trend": "开放/开放权重模型正在通过云托管进入企业Agent栈，部署便利性和治理能力会影响采用。",
+          "detailTrend": "这条信号说明，模型竞争不只发生在权重仓库，也发生在云平台如何把模型接进缓存、区域、API兼容和安全测试工具链。采购团队要把模型能力和平台约束一起看。 这条信号说明，模型竞争不只发生在权重仓库，也发生在云平台如何把模型接进缓存、区域、API兼容、安全测试和成本层级。",
+          "whyRanked": "它把中国开放模型、AWS托管和Agent编码工作流放在同一条线上。",
+          "topReason": "它把中国开放模型、AWS托管和Agent编码工作流放在同一条线上。",
+          "impact": "模型平台团队应核对GLM 5.3模型卡、Bedrock可用区域、API兼容、缓存成本和第三方基准。",
+          "whoShouldCare": "负责开放模型评估、AWS Bedrock选型、代码Agent和安全测试工具链的平台/安全团队需要关注。",
+          "readerUse": "模型平台团队可用来比较开放模型在托管云中的能力、成本、区域和治理边界。",
+          "nextCheck": "查Z.ai模型卡、Hugging Face权重/许可、Bedrock价格页、第三方编码/安全基准和客户部署日志。",
+          "followUpQuestions": [
+            "Z.ai是否发布GLM 5.3完整模型卡、训练边界、权重许可和安全评测？",
+            "第三方是否复测AWS页面提到的编码、CyberGym、安全测试和缓存成本表现？"
+          ],
+          "evidenceThreshold": "至少需要模型卡、许可、可复现实验、第三方基准和客户部署日志，才能升级为已验证的模型竞争力判断。",
+          "claimBoundary": "AWS官方页面不证明GLM 5.3在真实企业代码库或安全任务中优于其他模型。",
+          "counterEvidence": "如果第三方基准弱于厂商叙述、许可限制收紧、Bedrock区域受限或客户日志显示成本过高，应下调采用判断。",
+          "provenance": "AWS Machine Learning Blog发布并支持核对GLM 5.3在Amazon Bedrock可用、面向编码/长程Agent任务并支持OpenAI兼容API和提示缓存的页面事实；能力领先仍需模型卡、许可和第三方基准。",
+          "publishedAt": "2026-10-05T23:30:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "Bedrock",
+            "开放模型",
+            "编码Agent"
+          ],
+          "companies": [
+            "AWS",
+            "Z.ai",
+            "Zhipu AI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "模型与平台信号清楚，但核心能力是厂商/平台主张。"
+          },
+          "keyFacts": [
+            {
+              "value": "753B MoE",
+              "label": "模型口径",
+              "note": "厂商说明"
+            },
+            {
+              "value": "Bedrock",
+              "label": "托管入口",
+              "note": "官方公告"
+            },
+            {
+              "value": "Strix",
+              "label": "安全测试",
+              "note": "需复测"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "AWS发布GLM 5.3上架",
+              "body": "支持Bedrock托管API。",
+              "tone": "official"
+            },
+            {
+              "date": "试用前",
+              "title": "核对许可和区域",
+              "body": "查模型卡与价格。",
+              "tone": "neutral"
+            },
+            {
+              "date": "评测后",
+              "title": "看第三方基准",
+              "body": "验证编码和安全任务。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明GLM 5.3上架Bedrock，不证明性能已经独立领先",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新开放模型和Bedrock模型选型表。",
+                "下一步看模型卡、许可、第三方基准和客户成本日志。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要模型卡、许可、可复现实验、第三方基准和客户部署日志，才能升级为已验证的模型竞争力判断。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Introducing GLM 5.3 on Amazon Bedrock（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "模型与平台信号清楚，但核心能力是厂商/平台主张。"
+          },
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock/",
+          "detailWhyRanked": "它把中国开放模型、AWS托管和Agent编码工作流放在同一条线上。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查Z.ai模型卡、Hugging Face权重/许可、Bedrock价格页、第三方编码/安全基准和客户部署日志。"
+        },
+        {
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "aws-claude-code-govcloud-regulated-workloads-2026-10-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：Claude Code可通过Bedrock进入GovCloud受监管开发场景",
+          "body": "AWS介绍Claude Opus 5.5与Sonnet 5.5在AWS GovCloud (US) 的Bedrock可用，并用于Claude Code受监管开发工作流。",
+          "summary": "Claude Code进入GovCloud语境，让受监管软件开发也开始评估Agent式编码。",
+          "whyItMatters": "政府、国防和受监管行业采用编码Agent时，模型能力之外还要核对FedRAMP、IL4/IL5、日志、Guardrails和本地开发机风险。",
+          "detailBody": "AWS介绍在GovCloud (US) 用Amazon Bedrock运行Claude Code的路径，强调Claude Opus 5.5、Sonnet 5.5、bedrock-runtime/bedrock-mantle端点和审计/Guardrails差异。该条核对的是AWS方案说明，不证明合规适用于所有机构。",
+          "trend": "编码Agent开始进入合规环境，评估重点扩展到端点、日志和本地工具风险。",
+          "detailTrend": "这条信号说明，受监管行业正在把Agent式编码纳入更正式的部署工程。模型端点、版本固定、审计能力、本地工具权限和组织安全评估，会共同决定编码Agent能进入哪些敏感环境，以及它在开发生命周期中的角色边界。",
+          "whyRanked": "它把编码Agent从普通开发工具推进到受监管工作负载检查表。",
+          "topReason": "它把编码Agent从普通开发工具推进到受监管工作负载检查表。",
+          "impact": "安全和平台团队应核对GovCloud区域、模型认证状态、endpoint差异、Claude Code本地权限和调用日志。",
+          "whoShouldCare": "负责政府、国防、ITAR、金融或医疗软件开发环境的安全/平台/合规团队需要关注。",
+          "readerUse": "受监管行业团队可用来设计编码Agent试点前的端点、日志、权限和合规检查。",
+          "nextCheck": "查AWS模型合规页、FedRAMP/DoD授权状态、组织安全评估、Claude Code配置和审计日志样例。",
+          "followUpQuestions": [
+            "AWS模型合规页、FedRAMP授权材料或DoD IL4/IL5记录是否持续列出Claude Opus 5.5和Sonnet 5.5状态？",
+            "受监管客户是否披露Claude Code部署的权限边界、审计日志和安全评估结果？"
+          ],
+          "evidenceThreshold": "至少需要模型合规页、授权文件、组织安全评估、审计日志样例和客户部署记录，才能升级为可合规生产采用判断。",
+          "claimBoundary": "AWS技术博客不替代客户自己的合规判断，也不证明Claude Code适合所有受监管工作流。",
+          "counterEvidence": "如果模型认证状态变化、审计日志不足、本地工具权限过宽或客户安全评估未通过，应下调合规采用判断。",
+          "provenance": "AWS Machine Learning Blog发布并支持核对Claude Code结合Amazon Bedrock/GovCloud用于受监管工作负载的方案说明、端点差异和合规提示；AI Watchtower只保留最小发布事实，具体合规适用仍需查模型合规页和组织评估。",
+          "publishedAt": "2026-10-05T23:20:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "Claude Code",
+            "GovCloud",
+            "合规"
+          ],
+          "companies": [
+            "AWS",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "合规开发影响明确，但适用性取决于机构评估。"
+          },
+          "keyFacts": [
+            {
+              "value": "GovCloud",
+              "label": "区域场景",
+              "note": "AWS"
+            },
+            {
+              "value": "Claude Code",
+              "label": "开发入口",
+              "note": "需评估"
+            },
+            {
+              "value": "FedRAMP",
+              "label": "认证线索",
+              "note": "查模型页"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "AWS发布方案",
+              "body": "Claude Code进入GovCloud说明。",
+              "tone": "official"
+            },
+            {
+              "date": "试点前",
+              "title": "查认证状态",
+              "body": "核对模型级合规页。",
+              "tone": "neutral"
+            },
+            {
+              "date": "上线前",
+              "title": "做安全评估",
+              "body": "检查本地权限和审计。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明受监管方案路径，不证明自动满足所有合规要求",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新编码Agent合规试点清单。",
+                "下一步看模型合规页、组织安全评估和审计日志。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要模型合规页、授权文件、组织安全评估、审计日志样例和客户部署记录，才能升级为可合规生产采用判断。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Supercharge regulated workloads with Claude Code and Amazon Bedrock（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/supercharge-regulated-workloads-with-claude-code-and-amazon-bedrock/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "合规开发影响明确，但适用性取决于机构评估。"
+          },
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/supercharge-regulated-workloads-with-claude-code-and-amazon-bedrock/",
+          "detailWhyRanked": "它把编码Agent从普通开发工具推进到受监管工作负载检查表。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查AWS模型合规页、FedRAMP/DoD授权状态、组织安全评估、Claude Code配置和审计日志样例。"
+        },
+        {
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "aws-sagemaker-ai-ml-skill-coding-agent-inference-2026-10-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS推出aws-ai-ml技能，让编码Agent生成SageMaker推理优化代码",
+          "body": "AWS宣布aws-ai-ml技能，可让编码Agent生成SageMaker推理优化代码和基准建议。",
+          "summary": "SageMaker把推理优化知识做成Agent技能，试图把模型部署调优交给可审查代码流。",
+          "whyItMatters": "推理成本和延迟已经成为Agent生产化瓶颈，工具若能生成可读代码，比黑盒推荐更容易进入企业审核。",
+          "detailBody": "AWS宣布aws-ai-ml技能通过Agent Toolkit for AWS提供，面向SageMaker AI推理优化，可让编码Agent生成Python SDK v3代码、基准和部署配置建议。该条核对工具发布，不证明推荐一定最优。",
+          "trend": "云厂商正在把专家知识打包成Agent技能，让开发者用自然语言生成可审查的基础设施代码。",
+          "detailTrend": "这条信号说明，Agent技能正在从写业务代码走向生成基础设施和成本优化代码。关键边界是每一步是否可读、可复现、可回滚，而不是Agent是否“自动完成”。 这条信号说明，Agent技能正在从写业务代码走向生成基础设施和成本优化代码。可读、可复现、可回滚的代码输出会比黑盒建议更容易进入企业流程。",
+          "whyRanked": "它把推理成本优化变成编码Agent可调用的专业技能。",
+          "topReason": "它把推理成本优化变成编码Agent可调用的专业技能。",
+          "impact": "ML平台团队应测试生成代码、权限范围、基准可复现性、成本估算和删除资源流程。",
+          "whoShouldCare": "负责SageMaker部署、推理成本、模型基准和编码Agent工具链的ML平台/DevOps团队需要关注。",
+          "readerUse": "ML平台团队可用来评估是否把推理优化、基准和部署建议纳入Agent辅助开发流程。",
+          "nextCheck": "查Agent Toolkit安装文档、SageMaker生成代码、基准任务日志、成本记录和人工代码审查结果。",
+          "followUpQuestions": [
+            "aws-ai-ml技能生成的SageMaker代码是否能在真实模型和成本约束下复现推荐结果？",
+            "团队是否记录人工审查、回滚、资源清理和权限最小化结果？"
+          ],
+          "evidenceThreshold": "至少需要可复现基准、生成代码审查、成本记录和生产部署复盘，才能升级为已验证的推理优化效率判断。",
+          "claimBoundary": "AWS博客不证明Agent生成的配置总是最低成本或最佳延迟，也不免除人工审查。",
+          "counterEvidence": "如果生成代码审查记录、基准日志、成本记录或资源清理报告显示不可复现、成本偏差大、权限过宽或清理失败，应下调效率和安全判断。",
+          "provenance": "AWS Machine Learning Blog发布并支持核对AWS发布aws-ai-ml Agent技能用于SageMaker生成式AI推理优化。AI Watchtower只保留最小事实和中文趋势判断；完整细节、数字、配置、限制和上下文仍需查看原文。",
+          "publishedAt": "2026-10-05T23:10:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "SageMaker",
+            "Agent技能",
+            "推理优化"
+          ],
+          "companies": [
+            "AWS",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "工具实用性明确，但效率结论需团队基准验证。"
+          },
+          "keyFacts": [
+            {
+              "value": "aws-ai-ml",
+              "label": "技能名称",
+              "note": "AWS"
+            },
+            {
+              "value": "Python SDK v3",
+              "label": "代码输出",
+              "note": "需审查"
+            },
+            {
+              "value": "MCP",
+              "label": "接入方式",
+              "note": "Agent Toolkit"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "AWS发布技能",
+              "body": "编码Agent可生成推理优化代码。",
+              "tone": "official"
+            },
+            {
+              "date": "试用时",
+              "title": "跑基准",
+              "body": "验证建议和成本。",
+              "tone": "neutral"
+            },
+            {
+              "date": "上线前",
+              "title": "做代码审查",
+              "body": "核对权限和清理。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明Agent技能发布，不证明推理建议总是最优",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新SageMaker推理优化和Agent技能清单。",
+                "下一步看生成代码、基准日志、成本记录和人工审查。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要可复现基准、生成代码审查、成本记录和生产部署复盘，才能升级为已验证的推理优化效率判断。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — New agent skill: Amazon SageMaker optimized generative AI inference for your coding agent（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/new-agent-skill-amazon-sagemaker-optimized-generative-ai-inference-for-your-coding-agent/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "工具实用性明确，但效率结论需团队基准验证。"
+          },
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/new-agent-skill-amazon-sagemaker-optimized-generative-ai-inference-for-your-coding-agent/",
+          "detailWhyRanked": "它把推理成本优化变成编码Agent可调用的专业技能。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查Agent Toolkit安装文档、SageMaker生成代码、基准任务日志、成本记录和人工代码审查结果。"
+        },
+        {
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "aws-amazon-quick-cross-account-mcp-promotion-2026-10-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：Amazon Quick资源可用MCP服务器做跨账号可审计提升",
+          "body": "AWS发布Quick Resource Migrator示例，用MCP服务器迁移Quick Agent资源。",
+          "summary": "Amazon Quick开始补齐从开发账号到生产账号的Agent资源迁移和审计链路。",
+          "whyItMatters": "企业Agent不只要会搭建，还要能像应用一样跨环境提升、保留权限、预览差异并留下审计记录。",
+          "detailBody": "AWS介绍Quick Resource Migrator示例MCP服务器，可在Amazon Bedrock AgentCore运行，按资源类型或space迁移Quick资源，并做幂等更新、预览、备份和权限重放。该条核对示例方案。",
+          "trend": "企业Agent平台开始补齐Dev/Test/Prod流程，把配置和权限纳入交付治理。",
+          "detailTrend": "这条信号说明，Agent生产化难点常在环境提升和权限复制，而不只是聊天能力。把迁移做成MCP工具，意味着Agent平台开始吸收软件交付里的幂等、预览、备份和审计语义。",
+          "whyRanked": "它把企业Agent治理落到跨账号迁移、幂等和审计。",
+          "topReason": "它把企业Agent治理落到跨账号迁移、幂等和审计。",
+          "impact": "Quick和AWS平台团队应核对迁移预览、权限重放、备份、回滚和删除保护。",
+          "whoShouldCare": "负责Amazon Quick、业务Agent、知识库、连接器和多账号AWS治理的平台/审计团队需要关注。",
+          "readerUse": "平台团队可用来检查Agent资源是否具备开发到生产的可审计迁移路径。",
+          "nextCheck": "查aws-samples源码、Quick API权限、迁移日志、S3备份、回滚演练和生产账号审计记录。",
+          "followUpQuestions": [
+            "aws-samples源码、迁移日志、S3备份记录和权限重放报告是否覆盖实际Quick agent、connector、knowledge base、flow和space？",
+            "迁移日志、S3备份和权限重放结果是否能通过安全审计和回滚演练？"
+          ],
+          "evidenceThreshold": "至少需要源码审查、迁移日志、备份/回滚演练和生产账号审计记录，才能升级为已验证的Agent资源发布治理判断。",
+          "claimBoundary": "AWS博客展示的是示例迁移器，不证明所有Quick资源都能无风险跨账号提升。",
+          "counterEvidence": "如果迁移日志、S3备份记录、权限重放报告或回滚演练显示配置丢失、预览不完整、回滚失败或漂移，应下调治理成熟度判断。",
+          "provenance": "AWS Machine Learning Blog发布并支持核对Quick Resource Migrator MCP服务器示例、跨账号资源提升、幂等更新、预览、备份和权限重放这些页面事实；生产成熟度仍需源码审查和审计记录。",
+          "publishedAt": "2026-10-05T23:00:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "Amazon Quick",
+            "MCP",
+            "Agent治理"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "治理价值明确，但示例方案需要生产验证。"
+          },
+          "keyFacts": [
+            {
+              "value": "MCP Server",
+              "label": "迁移工具",
+              "note": "示例"
+            },
+            {
+              "value": "AgentCore",
+              "label": "运行环境",
+              "note": "AWS"
+            },
+            {
+              "value": "S3备份",
+              "label": "回滚线索",
+              "note": "需演练"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "AWS发布迁移方案",
+              "body": "Quick资源可跨账号提升。",
+              "tone": "official"
+            },
+            {
+              "date": "试点前",
+              "title": "审查源码",
+              "body": "核对资源覆盖和权限。",
+              "tone": "neutral"
+            },
+            {
+              "date": "生产前",
+              "title": "演练回滚",
+              "body": "验证备份和日志。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明迁移示例出现，不证明Quick原生发布流程已完整",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新企业Agent Dev/Test/Prod治理清单。",
+                "下一步看源码、迁移日志、备份、回滚和审计记录。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要源码审查、迁移日志、备份/回滚演练和生产账号审计记录，才能升级为已验证的Agent资源发布治理判断。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Making Amazon Quick enterprise-ready: Automated, auditable cross-account resource promotion（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/making-amazon-quick-enterprise-ready-automated-auditable-cross-account-resource-promotion/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "治理价值明确，但示例方案需要生产验证。"
+          },
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/making-amazon-quick-enterprise-ready-automated-auditable-cross-account-resource-promotion/",
+          "detailWhyRanked": "它把企业Agent治理落到跨账号迁移、幂等和审计。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查aws-samples源码、Quick API权限、迁移日志、S3备份、回滚演练和生产账号审计记录。"
+        },
+        {
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "aws-bedrock-agentic-retrieval-langchain-knowledge-bases-2026-10-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：Bedrock Knowledge Bases加入Agentic retrieval的LangChain路径",
+          "body": "AWS展示Bedrock Knowledge Bases的agentic retrieval，可为复杂问题做检索规划。",
+          "summary": "RAG从一次向量检索转向可规划的Agentic retrieval，但成本和延迟也要重新测量。",
+          "whyItMatters": "企业知识问答常失败在多问题、多证据和上下文不足；规划式检索有用，但不能无差别替代便宜的单次检索。",
+          "detailBody": "AWS展示Bedrock Managed Knowledge Bases与LangChain的agentic retrieval路径，可把复杂问题拆成子查询并流式返回计划痕迹，同时对比标准检索的成本和适用场景。该条核对技术路径。",
+          "trend": "RAG生产化正在从“拿回若干chunk”走向查询规划、证据充分性判断和成本路由。",
+          "detailTrend": "这条信号说明，知识库Agent的核心不是多搜几次，而是判断什么时候需要规划、什么时候一次检索足够。企业要把查询类型、成本和召回质量放进路由策略。 这条信号说明，知识库Agent的核心不是多搜几次，而是把问题拆解、证据充分性判断和检索成本路由放进同一套架构。",
+          "whyRanked": "它把RAG质量问题拆成规划、证据和成本路由。",
+          "topReason": "它把RAG质量问题拆成规划、证据和成本路由。",
+          "impact": "知识库团队应按查询类型测试agentic retrieval的召回、延迟、成本、trace和权限。",
+          "whoShouldCare": "负责企业RAG、客服知识库、内部搜索和LangChain/AWS集成的数据/平台团队需要关注。",
+          "readerUse": "RAG团队可用来决定哪些多跳问题进入规划式检索，哪些继续用单次检索。",
+          "nextCheck": "查Bedrock trace事件、LangChain集成代码、查询集评测、成本日志、召回指标和用户反馈。",
+          "followUpQuestions": [
+            "真实查询集评测、Bedrock trace事件、成本日志和召回指标是否比较agentic retrieval与标准检索？",
+            "Bedrock trace事件是否能支持错误分析、权限审计和检索策略调优？"
+          ],
+          "evidenceThreshold": "至少需要真实查询集、召回/准确率评测、成本和延迟日志、trace审计，才能升级为已验证的RAG质量提升判断。",
+          "claimBoundary": "AWS示例不证明所有知识库问题都应使用agentic retrieval，也不证明成本一定可控。",
+          "counterEvidence": "如果真实查询集评测、成本日志、延迟记录或Bedrock trace事件显示召回提升有限、成本过高、trace不可审计或权限策略不完整，应收窄采用范围。",
+          "provenance": "AWS Machine Learning Blog发布并支持核对AWS发布LangChain与Bedrock Knowledge Bases agentic retrieval技术 walkthrough。AI Watchtower只保留最小事实和中文趋势判断；完整细节、数字、配置、限制和上下文仍需查看原文。",
+          "publishedAt": "2026-10-05T22:50:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "RAG",
+            "LangChain",
+            "Bedrock"
+          ],
+          "companies": [
+            "AWS",
+            "LangChain"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "技术路径实用，但效果必须按查询集评测。"
+          },
+          "keyFacts": [
+            {
+              "value": "AgenticRetrieveStream",
+              "label": "检索API",
+              "note": "AWS"
+            },
+            {
+              "value": "trace events",
+              "label": "可观测性",
+              "note": "需审计"
+            },
+            {
+              "value": "成本路由",
+              "label": "采用边界",
+              "note": "需日志"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "AWS发布walkthrough",
+              "body": "展示标准与规划式检索。",
+              "tone": "official"
+            },
+            {
+              "date": "测试时",
+              "title": "跑查询集",
+              "body": "比较召回、成本和延迟。",
+              "tone": "neutral"
+            },
+            {
+              "date": "上线后",
+              "title": "看trace",
+              "body": "用于错误分析和审计。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明Bedrock规划式检索路径，不证明所有RAG场景都该切换",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新RAG检索路由和评测清单。",
+                "下一步看真实查询集、trace、成本和召回指标。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要真实查询集、召回/准确率评测、成本和延迟日志、trace审计，才能升级为已验证的RAG质量提升判断。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Agentic retrieval with LangChain and Amazon Bedrock Knowledge Bases（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-with-langchain-and-amazon-bedrock-knowledge-bases/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "技术路径实用，但效果必须按查询集评测。"
+          },
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-with-langchain-and-amazon-bedrock-knowledge-bases/",
+          "detailWhyRanked": "它把RAG质量问题拆成规划、证据和成本路由。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查Bedrock trace事件、LangChain集成代码、查询集评测、成本日志、召回指标和用户反馈。"
+        },
+        {
+          "sourceId": "aws-machine-learning-blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "source": "AWS Machine Learning Blog",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "verificationStatus": "已核验",
+          "id": "aws-agentcore-evaluations-multi-agent-explainability-2026-10-07",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS：AgentCore Evaluations面向多Agent系统解释性与有用性评估",
+          "body": "AWS展示用Amazon Bedrock AgentCore Evaluations评估多Agent供应链决策系统，关注工具选择、约束遵守、解释性和业务正确性。",
+          "summary": "多Agent系统评估正在从“回答好不好”走向工作流、约束、工具和解释性的综合质量门禁。",
+          "whyItMatters": "Agent进入生产后，企业需要证明它选对工具、遵守业务约束并能解释决策，而不只是生成流畅文本。",
+          "detailBody": "AWS展示一个Strands多Agent供应链决策示例，并用AgentCore Evaluations的内置和自定义评估器检查有用性、任务成功、指令遵守、约束满足和解释性。该条核对的是评估框架示例，不证明该方案适合所有行业。 页面还展示内置评估器和自定义评估器如何覆盖任务成功、指令遵守、约束满足、解释性和生产抽样。",
+          "trend": "企业Agent治理正在把评估、Guardrails、观测和业务约束连接成上线前后的质量门禁。",
+          "detailTrend": "这条信号说明，多Agent系统的风险常藏在工具选择、流程执行和业务约束里。评估体系需要用真实轨迹和自定义规则看Agent为什么这么做，而不是只看最后一句话。 这条信号说明，多Agent系统的风险常藏在工具选择、流程执行和业务约束里。评估体系开始从结果文本扩展到轨迹、决策理由和领域规则。",
+          "whyRanked": "它把多Agent生产门禁从文本质量扩展到工作流和解释性。",
+          "topReason": "它把多Agent生产门禁从文本质量扩展到工作流和解释性。",
+          "impact": "Agent平台团队应设计任务成功、工具选择、约束满足、解释性和在线抽样评估。",
+          "whoShouldCare": "负责多Agent业务流程、供应链/金融/客服自动化和Agent质量门禁的平台/风控团队需要关注。",
+          "readerUse": "Agent团队可用来设计上线前评估和生产抽样，不只依赖人工体验测试。",
+          "nextCheck": "查AgentCore Evaluations文档、样例源码、真实轨迹、评估器定义、生产抽样率和人工复核结果。",
+          "followUpQuestions": [
+            "团队是否把工具选择、业务约束、SQL正确性或解释性写成可复用评估器？",
+            "生产环境是否记录Agent轨迹、抽样评估结果、人工复核和降级处理记录？"
+          ],
+          "evidenceThreshold": "至少需要评估器定义文件、真实执行轨迹、人工复核结果、生产抽样记录和事故复盘，才能升级为已验证的Agent质量门禁判断。",
+          "claimBoundary": "AWS示例不证明所有多Agent系统已经可解释，也不证明评估器能覆盖全部业务风险。",
+          "counterEvidence": "如果真实执行轨迹、评估器输出、人工复核记录或事故复盘显示工具选择错误、约束违规、解释无法追溯或结果频繁被推翻，应下调质量门禁判断。",
+          "provenance": "AWS Machine Learning Blog发布并支持核对AWS发布用AgentCore Evaluations评估多Agent系统解释性和有用性的示例。AI Watchtower只保留最小事实和中文趋势判断；完整细节、数字、配置、限制和上下文仍需查看原文。",
+          "publishedAt": "2026-10-05T22:40:00+09:00",
+          "time": "10月5日",
+          "tags": [
+            "Agent评估",
+            "多Agent",
+            "治理"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "Agent治理价值明确，需真实轨迹验证。"
+          },
+          "keyFacts": [
+            {
+              "value": "Evaluations",
+              "label": "评估能力",
+              "note": "AWS"
+            },
+            {
+              "value": "custom evaluators",
+              "label": "业务规则",
+              "note": "需定义"
+            },
+            {
+              "value": "trace",
+              "label": "生产证据",
+              "note": "需复核"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月5日",
+              "title": "AWS发布评估示例",
+              "body": "多Agent供应链场景用于说明。",
+              "tone": "official"
+            },
+            {
+              "date": "试点前",
+              "title": "定义评估器",
+              "body": "覆盖业务约束和工具选择。",
+              "tone": "neutral"
+            },
+            {
+              "date": "上线后",
+              "title": "做抽样复核",
+              "body": "用真实轨迹检验质量。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE LIMIT",
+              "navLabel": "来源边界",
+              "heading": "这条证明多Agent评估框架示例，不证明所有Agent已可解释",
+              "sourceStatus": {
+                "tag": "官方核对",
+                "note": "官方页面可核对发布事实，效果和采用仍需外部证据。"
+              },
+              "body": [
+                "适合更新多Agent上线质量门禁。",
+                "下一步看评估器、真实轨迹、人工复核和生产抽样。"
+              ],
+              "note": {
+                "label": "升级这条需要",
+                "body": "至少需要评估器定义、真实执行轨迹、人工复核结果、生产抽样和事故复盘，才能升级为已验证的Agent质量门禁判断。"
+              },
+              "sourceLine": "出处：AWS Machine Learning Blog — Evaluating multi-agent systems for explainability and helpfulness with Amazon Bedrock AgentCore（2026-10-05）"
+            }
+          ],
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/evaluating-multi-agent-systems-for-explainability-and-helpfulness-with-amazon-bedrock-agentcore/",
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "Agent治理价值明确，需真实轨迹验证。"
+          },
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/evaluating-multi-agent-systems-for-explainability-and-helpfulness-with-amazon-bedrock-agentcore/",
+          "detailWhyRanked": "它把多Agent生产门禁从文本质量扩展到工作流和解释性。 来源侧可核对的是AWS Machine Learning Blog支持的具体事实；升级判断仍需查AgentCore Evaluations文档、样例源码、真实轨迹、评估器定义、生产抽样率和人工复核结果。"
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-06",
       "date": "2026-10-06",
