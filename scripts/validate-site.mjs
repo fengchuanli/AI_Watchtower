@@ -80,6 +80,10 @@ const htmlPages = new Map([
 ]);
 
 const currentDominantSourceFamily = (currentNewsData.edition?.sourceFamilies || []).find((family) => Number.isInteger(family.count) && family.count >= Math.ceil((currentNewsData.items || []).length * 0.67));
+const visionhubProofPathPattern =
+  /官方|原文|公告|文件|法案|公开信|听证|监管|审计|指标|日志|合同|客户|第三方|调查方法|报告|论文|评测|复核|数据|benchmark|基准|记录|回应|披露/;
+const visionhubAudiencePattern = /团队|读者|用户|负责人|采购|法务|合规|政策|工程|产品|审计|安全|研发|平台|传播|运营/;
+const visionhubBoundaryPattern = /不证明|不能|仍需|边界|待验证|待核对|完整事实|原文|尚待|缺少|如果|若/;
 
 if (
   currentDominantSourceFamily &&
@@ -90,6 +94,62 @@ if (
 if (/不当成本期新增事实|本期新增事实/.test(appJs)) {
   errors.push("planned topic fallbacks must not contain phrases that app.js rejects at runtime.");
 }
+
+function validateVisionhubBriefingRuntimeData() {
+  const briefing = currentNewsData.briefing || {};
+  const items = Array.isArray(currentNewsData.items) ? currentNewsData.items : [];
+  const promotedItems = items.slice(0, Math.min(items.length, 3));
+  const briefingSummary = [briefing.headline, briefing.summary, briefing.cta].filter(Boolean).join("\n");
+
+  if (
+    !hasChineseText(briefingSummary) ||
+    String(briefing.headline || "").length > 42 ||
+    String(briefing.summary || "").length > 150 ||
+    !Array.isArray(briefing.watchPoints) ||
+    briefing.watchPoints.length !== 3
+  ) {
+    errors.push(
+      "VisionHub briefing scorecard runtime guard requires a compact Chinese today briefing with one headline, summary, CTA, and exactly three watch points.",
+    );
+  }
+
+  for (const [index, point] of (briefing.watchPoints || []).entries()) {
+    if (
+      !hasChineseText(point?.title) ||
+      !hasChineseText(point?.body) ||
+      String(point?.title || "").length > 28 ||
+      String(point?.body || "").length > 90
+    ) {
+      errors.push(
+        `VisionHub briefing scorecard runtime guard requires briefing.watchPoints[${index}] to stay compact and Chinese-readable.`,
+      );
+    }
+  }
+
+  for (const item of promotedItems) {
+    const itemLabel = `VisionHub briefing scorecard TOP3 item ${item.id || "unknown item"}`;
+    const visibleCardText = [item.title, item.summary, item.whyItMatters, item.whyRanked, item.readerUse].join("\n");
+    const boundaryText = [item.sourceRole, item.claimStatus, item.originalDependency, item.claimBoundary, item.nextCheck].join("\n");
+
+    if (!hasChineseText(visibleCardText) || !visionhubAudiencePattern.test([item.whoShouldCare, item.readerUse].join("\n"))) {
+      errors.push(`${itemLabel} must keep visible card copy tied to a concrete Chinese reader audience and use.`);
+    }
+
+    if (!item.sourceRole || !item.claimStatus || !visionhubBoundaryPattern.test(boundaryText)) {
+      errors.push(`${itemLabel} must expose source role, claim status, and a clear proof boundary for first-screen readers.`);
+    }
+
+    if (!visionhubProofPathPattern.test(String(item.nextCheck || ""))) {
+      errors.push(`${itemLabel} nextCheck must name the concrete source artifact or evidence path readers should verify next.`);
+    }
+  }
+}
+
+function hasChineseText(value) {
+  return /\p{Script=Han}/u.test(String(value || ""));
+}
+
+validateVisionhubBriefingRuntimeData();
 
 const requiredMetaTags = [
   ["name", "description"],
@@ -1553,6 +1613,8 @@ if (
   !/mobileBurden/.test(visionhubBriefingScorecard) ||
   !/continuityUse/.test(visionhubBriefingScorecard) ||
   !/visualAidPurpose/.test(visionhubBriefingScorecard) ||
+  !/Runtime Guard/.test(visionhubBriefingScorecard) ||
+  !/live homepage contract/.test(visionhubBriefingScorecard) ||
   !/docs\/homepage-edition-preflight\.md/.test(visionhubBriefingScorecard) ||
   !/docs\/detail-page-review-guide\.md/.test(visionhubBriefingScorecard) ||
   !/Day 0[\s\S]*visionhub-briefing-scorecard\.md/.test(optimizationDecisionIndex)

@@ -42,6 +42,7 @@ The validators protect the product goal: Chinese readers should get a clear, sou
 - `scripts/validate-site.mjs` expects the homepage section order to stay `hero -> today briefing -> TOP3 -> deep briefing -> compact feed`.
 - This is intentionally strict because the VisionHub-style direction depends on readers seeing today's change and ranked items before workflow notes, dense metadata, archives, or source machinery.
 - The guard also checks that the today briefing is data-backed, TOP3 is selected from same-day ranked items, and the compact feed excludes items already shown in TOP3.
+- The VisionHub scorecard runtime guard also checks the live `data/news.json` first-screen copy: Today Briefing must stay compact and Chinese-readable, and each TOP3 item must expose a concrete audience, reader use, source role, claim status, proof-boundary wording, and a next-check evidence path.
 - If a future redesign changes markup names or moves sections, update the validator only after the new first screen still answers what changed today, why it matters, and what to read next on mobile.
 
 ### Chinese readability and mobile length checks

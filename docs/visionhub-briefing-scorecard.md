@@ -50,3 +50,9 @@ Do not ship a VisionHub-style homepage or detail-page change when:
 - Use `docs/copyright-safety.md` before editing news copy, source framing, article structure, or future optimization plans.
 - Use `docs/homepage-edition-preflight.md` for edition-level reader questions, TOP3 use, source mix boundary, mobile scan path, and archive mirror checks.
 - Use `docs/detail-page-review-guide.md` for item-level article structure, proof path, source reminders, and next-check clarity.
+
+## Runtime Guard
+
+`scripts/validate-site.mjs` now treats this scorecard as a live homepage contract, not only a documentation checklist. The guard checks that the current `data/news.json` Today Briefing has compact Chinese headline/summary/CTA copy and exactly three short watch points, and that each visible TOP3 item carries Chinese reader-use copy, a concrete audience, source role, claim status, proof-boundary wording, and a `nextCheck` that names the source artifact or evidence path readers should verify next.
+
+This guard still cannot judge source truth by itself. It only blocks regressions where the homepage shape would satisfy the markup order but fail the scorecard's first-screen jobs: what changed today, who should care, what boundary applies, and where to verify.

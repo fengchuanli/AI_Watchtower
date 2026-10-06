@@ -65,6 +65,8 @@ The optional top-level `briefing` object powers the homepage Today Briefing sect
 - `cta`: Short link text pointing readers toward the feed.
 - `watchPoints`: Exactly three Chinese observation objects, each with `title` and `body`.
 
+The VisionHub briefing scorecard runtime guard in `scripts/validate-site.mjs` treats this block as first-screen scan copy. Keep `headline` and `summary` compact, keep all three `watchPoints` short enough for mobile, and make sure the current TOP3 items expose reader audience, reader use, source role, claim status, proof boundary, and a concrete `nextCheck` evidence path in their visible fields.
+
 ## Deep Briefing Fields
 
 The required top-level `deepBriefing` object powers the homepage long-form explanation section. It should make the news understandable inside AI Watchtower, using original links only as references.
