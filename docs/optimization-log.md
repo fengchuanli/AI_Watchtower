@@ -29,8 +29,8 @@
   - Ran `node scripts/validate-pages.mjs`.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commits: `e9d19de` (`【VisionHub网站风格优化】守住首页简报评分卡`).
-- Push: pending - log/index commit and remote sync status to be recorded after final verification.
+- Commits: `e9d19de` (`【VisionHub网站风格优化】守住首页简报评分卡`), `9ff768a` (`【网站优化】记录首页评分卡守卫优化`).
+- Push: pushed - `e9d19de` and `9ff768a` were pushed to `origin/main`; this follow-up entry records the successful remote sync.
 
 ## 2026-10-06 08:13 JST
 
