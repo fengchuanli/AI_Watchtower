@@ -1,3 +1,38 @@
+## 2026-10-07 11:07 JST
+
+- Focus: 完成当前 30 天计划 Day 26，为详情页文章可读性补上最小运行时校验；`scripts/validate-data.mjs` 现在会检查 `detailBody`、`detailTrend`、`detailWhyRanked` 里重复开头的句子，避免手机读者在详情页连续看到同一叙事起点。
+- Changed files:
+  - `scripts/validate-data.mjs`: 新增 `validateDetailSentenceUniqueness`，覆盖当前首页条目和最新归档 promoted 条目，和既有 180 字段落上限、detailTrend 拆分规则一起保护详情页阅读节奏。
+  - `scripts/validate-site.mjs`: 增加静态锚点，防止后续误删详情页句首去重守卫及对应文档说明。
+  - `docs/news-data-format.md`, `docs/editorial-validator-limits.md`: 记录详情页叙事字段不应在同一字段内重复句首；需要合并重复句或移到读者用途、证据边界、下一步核验字段。
+  - `data/news.json`, `data/news-history.json`, `data/news-today.json`: 清理 2026-10-07 当前版和最新归档镜像中 4 条 AWS 详情页 `detailTrend` 重复句，重新生成今日派生数据。
+  - `docs/optimization-decision-index.md`: 标记 Day 26 完成，并把下一步交接到 Day 27。
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/detail-page-review-guide.md`、`docs/news-data-format.md` 和 `docs/editorial-validator-limits.md`。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只清理已有详情页解读中的重复表达，并把可读性规则转为校验。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: not applicable - 本次不改首页首屏。
+  - TOP3 reader use: not applicable - 本次不改 TOP3 卡片。
+  - Source boundary visible: pass - 不改来源角色、声明状态、provenance、claimBoundary 或 nextCheck。
+  - Original source dependency: pass - 不新增替代性事实层；媒体/官方/厂商来源边界保持原样。
+  - Mobile burden: pass - 详情页 `detailTrend` 重复句被合并，新增守卫避免当前和最新归档 promoted 条目再次出现重复叙事开头。
+  - Continuity use: not applicable - 本次不改连续观察组件。
+  - Visual aid purpose: not applicable - 本次不新增视觉组件。
+- 网站可见变化：详情页更少重复；读者打开 2026年10月7日17:00 版中 GLM 5.3、SageMaker 推理技能、Bedrock agentic retrieval、AgentCore Evaluations 4 条详情页时，会看到更紧凑的趋势解释。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 110 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
+  - Ran `git diff --check`.
+- Commits: `661f72c` (`【VisionHub网站风格优化】守住详情页叙事去重`).
+- Push: pending - log/decision-index update not committed or pushed yet.
+
 ## 2026-10-07 08:14 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-07`，发布 10 条安全非重复信号，聚焦 OpenAI/Atlassian 企业上下文、ChatGPT 视觉广告测试、AP 对 RFK Jr. 医疗 AI 政策争议的报道，以及 AWS Bedrock / AgentCore / SageMaker / Quick 的 Agent 工程控制面更新。

@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 5, Validation, QA, And Next Cycle
-- Last indexed run: 2026-10-06 20:00 JST
+- Last indexed run: 2026-10-07 20:00 JST
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization. Push status should be checked after the log commit because local `main` gained scoped optimization commits during this run.
 
 ## Recent Plan-Day Decisions
@@ -43,6 +43,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 23 | Complete | `98d50ec` | Company tag result rows now mirror all-news batch status: each OpenAI / Anthropic / Google / Meta history card shows `当前首页批次` for the latest homepage edition or `历史背景` with `只作公司脉络回看` for older editions. `docs/news-data-format.md`, `tags.js`, `styles.css`, and `scripts/validate-site.mjs` guard this latest-versus-background cue. |
 | Day 24 | Complete | `d0b5aba` | `docs/monthly-continuity-snapshot.md` now has a `publicContinuityHandoff` shape that separates future public continuity component candidates into `ready`, `needs-current-edition`, `archive-only`, and `do-not-publish` groups, with `sourceFields`, `readerUse`, and `proofBoundary` required before any card can become public UI. `docs/news-data-format.md`, `docs/update-run-checklist.md`, and `scripts/validate-site.mjs` guard the handoff. |
 | Day 25 | Complete | `e9d19de` | `scripts/validate-site.mjs` now treats the VisionHub briefing scorecard as a live homepage data guard: Today Briefing must stay compact and Chinese-readable, and each TOP3 item must expose concrete audience/use, source role, claim status, proof-boundary wording, and a next-check evidence path. `docs/visionhub-briefing-scorecard.md`, `docs/news-data-format.md`, and `docs/editorial-validator-limits.md` document the guard. |
+| Day 26 | Complete | `661f72c` | `scripts/validate-data.mjs` now rejects repeated sentence leads inside `detailBody`, `detailTrend`, and `detailWhyRanked` for current items and latest promoted archive items. The current 2026-10-07 detail pages had four AWS trend paragraphs tightened so mobile readers do not see duplicate narrative copy. |
 
 ## Historical Guard Anchors
 
@@ -94,9 +95,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 26: add or refine the smallest validation guard that protects detail-page article readability or source-original dependency.
+- Continue with Day 27: review validator limits after the new guards and document any expected false positives or human-review gaps.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 26.
-- If Day 26 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 27 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 
