@@ -1,3 +1,26 @@
+## 2026-10-07 23:09 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-07`，因此未回退版次，而是在当天活动版基础上扩展为 `news-2300-2026-10-07`，发布 14 条安全非重复信号，补充 Anthropic Cyber Verification Program 扩大、Axios 对 National Compute Grid 和 Zuckerberg Biohub/Google/美国政府 AI 细胞图谱合作的报道，以及 AP 对 IMF 总裁 AI 监管/债务/不平等提醒的报道。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月7日23:00 JST 补充版 14 条情报，并按 `publishedAt` 倒序重排。
+  - `data/news-history.json`: 最新归档镜像同步当前 14 条补充版，总历史项目更新为 1129。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 Anthropic Newsroom、AP Technology、Axios AI / Technology、OpenAI News、AWS News Blog 和 AWS Machine Learning Blog。Anthropic / OpenAI / AWS 条目保持官方核对边界，只确认发布、预览、项目扩大、工具和方案事实，不确认客户 ROI、安全效果、生产成熟度或科学/合规成效；AP / Axios 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、数字、项目细节、讲话和上下文仍归原文。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1129.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月7日23:00 补充版 14 条情报；读者可在首页与详情页看到 Anthropic 网络能力分级访问、National Compute Grid 共享算力、Zuckerberg Biohub/Google AI 细胞图谱和 AP/IMF 宏观监管提醒，与原有 OpenAI / AWS Agent 控制面信号同版呈现。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 14 current news items against 110 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, `nav.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】补充23点AI新闻：14条算力科学与安全治理信号`.
+
 ## 2026-10-07 11:07 JST
 
 - Focus: 完成当前 30 天计划 Day 26，为详情页文章可读性补上最小运行时校验；`scripts/validate-data.mjs` 现在会检查 `detailBody`、`detailTrend`、`detailWhyRanked` 里重复开头的句子，避免手机读者在详情页连续看到同一叙事起点。
