@@ -30,8 +30,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's HTML parser.
   - Ran `git diff --check`.
-- Commits: `661f72c` (`【VisionHub网站风格优化】守住详情页叙事去重`).
-- Push: pending - log/decision-index update not committed or pushed yet.
+- Commits: `661f72c` (`【VisionHub网站风格优化】守住详情页叙事去重`), `db6e135` (`【网站优化】记录详情页叙事去重优化`).
+- Push: pushed - `661f72c` and `db6e135` were pushed to `origin/main`; this follow-up entry records the successful remote sync.
 
 ## 2026-10-07 08:14 JST
 
