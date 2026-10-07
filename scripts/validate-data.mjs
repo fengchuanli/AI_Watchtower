@@ -516,6 +516,46 @@ function validateDetailParagraphLength(item, context) {
   }
 }
 
+function normalizeDetailSentencePrefix(sentence) {
+  return String(sentence || "")
+    .replace(/[\s，,。！？；:：、（）()「」『』“”"'`]/g, "")
+    .slice(0, 16);
+}
+
+function validateDetailSentenceUniqueness(item, context) {
+  const detailFields = ["detailBody", "detailTrend", "detailWhyRanked"];
+
+  for (const field of detailFields) {
+    const seenPrefixes = new Map();
+    const sentences = String(item[field] || "")
+      .split(/(?<=[。！？；])/u)
+      .map((sentence) => sentence.trim())
+      .filter(Boolean);
+
+    for (const [index, sentence] of sentences.entries()) {
+      const compactSentence = sentence.replace(/\s+/g, "");
+
+      if (compactSentence.length < 18) {
+        continue;
+      }
+
+      const prefix = normalizeDetailSentencePrefix(sentence);
+
+      if (!prefix) {
+        continue;
+      }
+
+      if (seenPrefixes.has(prefix)) {
+        errors.push(
+          `${context} ${item.id || "unknown item"} ${field} repeats a detail-page sentence lead near sentences ${seenPrefixes.get(prefix)} and ${index + 1}; merge or split the idea so mobile readers do not see duplicate narrative copy.`,
+        );
+      } else {
+        seenPrefixes.set(prefix, index + 1);
+      }
+    }
+  }
+}
+
 function validateDetailTrendSplit(item, context) {
   const detailTrend = String(item.detailTrend || "").trim();
 
@@ -1943,6 +1983,7 @@ for (const item of newsFeed.items || []) {
   validateCounterEvidenceSpecificity(item, "data/news.json item");
   validateDetailSourceFactLabel(item, "data/news.json item");
   validateDetailParagraphLength(item, "data/news.json item");
+  validateDetailSentenceUniqueness(item, "data/news.json item");
   validateDetailTrendSplit(item, "data/news.json item");
 
   validateVendorClaimBoundary(item, "data/news.json item");
@@ -2072,6 +2113,7 @@ if (!Array.isArray(newsHistory.editions) || !newsHistory.editions.length) {
         validateCounterEvidenceSpecificity(item, "data/news-history.json latest promoted item");
         validateDetailSourceFactLabel(item, "data/news-history.json latest item");
         validateDetailParagraphLength(item, "data/news-history.json latest promoted item");
+        validateDetailSentenceUniqueness(item, "data/news-history.json latest promoted item");
         validateDetailTrendSplit(item, "data/news-history.json latest item");
         validateMediaSourceReminder(item, "data/news-history.json latest item");
         validatePromotedVendorNarrativeCard(item, "data/news-history.json latest promoted item");

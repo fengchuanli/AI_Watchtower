@@ -1202,6 +1202,10 @@ if (
   !/Keep it to one core trend meaning/.test(newsDataFormat) ||
   !/function validateDetailTrendSplit\(item, context\)/.test(validateDataJs) ||
   !/detailTrend mixes trend meaning, reader action, and proof work/.test(validateDataJs) ||
+  !/function validateDetailSentenceUniqueness\(item, context\)/.test(validateDataJs) ||
+  !/repeats a detail-page sentence lead/.test(validateDataJs) ||
+  !/repeated detail-page sentence leads/.test(newsDataFormat) ||
+  !/Detail-page narrative fields reject repeated sentence leads/.test(editorialValidatorLimits) ||
   !/official file, customer metric, audit, benchmark, dataset, replication, contract, filing, regulator text, logs, deployment status, or third-party test/.test(
     detailPageReviewGuide,
   ) ||

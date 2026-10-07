@@ -48,6 +48,7 @@ The validators protect the product goal: Chinese readers should get a clear, sou
 ### Chinese readability and mobile length checks
 
 - Detail paragraphs over 180 Chinese characters are rejected for mobile reading. Split or tighten the paragraph rather than hiding important context.
+- Detail-page narrative fields reject repeated sentence leads inside `detailBody`, `detailTrend`, or `detailWhyRanked`. If two sentences begin from the same idea, merge them or move the second job into the dedicated reader-use, proof-boundary, or next-check field.
 - Some English product names are allowed, but visible structural labels should stay Chinese-readable unless the English phrase is the actual product or source name.
 - Metadata line-length limits are intentionally conservative so homepage source context remains glanceable.
 
