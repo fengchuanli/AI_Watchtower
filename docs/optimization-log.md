@@ -1,3 +1,26 @@
+## 2026-10-08 23:10 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-08`，因此未回退版次，而是在当天活动版基础上扩展为 `news-2300-2026-10-08`，发布 16 条安全非重复信号，补充 AP-NORC AI 发展速度民意、Axios 数据中心电力规则，以及 AWS 关于 Agent ROI、Qlik 企业答案层、Cornerstone 运维 Agent 和 AI builders 能力建设的官方/厂商叙事。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月8日23:00 JST 补充版 16 条情报，并按 `publishedAt` 倒序重排。
+  - `data/news-history.json`: 最新归档镜像同步当前 16 条补充版，总历史项目更新为 1145。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 AP Technology、Axios AI / Technology、AWS Machine Learning Blog，并检查 NVIDIA、Hugging Face、OpenAI、Anthropic 等候选来源。AP / Axios 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、数字、问卷、案卷和上下文仍归原文或原始文件；AWS 新增条目保持 `厂商主张`，只确认 AWS 发布了框架或客户案例，不确认 ROI、采用、安全效果、生产成熟度或培训成效。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1145.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月8日23:00 补充版 16 条情报；读者可在首页与详情页看到 AP-NORC AI 民意、Axios 数据中心电力规则、AWS Agent ROI、Qlik Answers、Cornerstone Orion AI 和 AI builders 能力建设信号，与原有 GPT-6 / AWS Agent / AI 政策资本信号同版呈现。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 16 current news items against 110 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, `nav.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】补充23点AI新闻：16条Agent验收与电力治理信号`.
+
 ## 2026-10-08 11:02 JST
 
 - Focus: 完成当前 30 天计划 Day 27，复盘 Day 25 首页 VisionHub 简报评分卡守卫和 Day 26 详情页叙事去重守卫，把预期误报、可接受的词表扩展场景、详情页句首重复复核规则，以及仍需人工判断的来源/版权/移动阅读缺口写入校验说明。
