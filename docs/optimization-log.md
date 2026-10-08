@@ -27,7 +27,7 @@
   - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 110 sources.
   - Ran `node scripts/build-derived-data.mjs --check`.
   - Ran `git diff --check`.
-- Commits: `a6b7213` (`【VisionHub网站风格优化】记录校验守卫误报边界`), `07eee0c` (`【网站优化】记录校验守卫边界复盘`).
+- Commits: `a6b7213` (`【VisionHub网站风格优化】记录校验守卫误报边界`), `cf2bc74` (`【网站优化】记录校验守卫边界复盘`).
 - Push: held - local `main` already had unpushed 17:00 news-run commits before this optimization pass, so pushing now would publish work outside this scoped 20:00 optimization without explicit user approval.
 
 ## 2026-10-08 08:16 JST
