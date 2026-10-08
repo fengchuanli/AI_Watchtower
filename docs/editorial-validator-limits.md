@@ -52,6 +52,26 @@ The validators protect the product goal: Chinese readers should get a clear, sou
 - Some English product names are allowed, but visible structural labels should stay Chinese-readable unless the English phrase is the actual product or source name.
 - Metadata line-length limits are intentionally conservative so homepage source context remains glanceable.
 
+## Current Guard Review (2026-10-08)
+
+The Day 25 and Day 26 guards are intentionally narrow because they protect the most reader-visible VisionHub-style regressions from this cycle: homepage first-screen understanding and detail-page narrative repetition. Keep the guards unless the failure is a vocabulary or threshold mismatch rather than a missing editorial job.
+
+Expected false positives:
+
+- Today Briefing copy can fail when a natural Chinese headline or watch point is slightly longer than the current limit. Tighten first; only raise the limit if a phone reader still sees the daily change, TOP3 path, and CTA before source/process notes.
+- TOP3 proof-path checks can fail when `nextCheck` uses a valid new evidence noun that is not in the accepted vocabulary. Add the noun only if it names a concrete artifact, owner, metric, document, log, filing, audit, benchmark, dataset, replication, regulator text, customer-side record, or third-party test.
+- Audience checks can fail on precise but uncommon reader labels. Expand `visionhubAudiencePattern` only when the phrase names a real Chinese reader group and work setting, not a generic "industry observer" audience.
+- Repeated detail-page sentence-lead checks can flag two sentences that must begin with the same product, company, or policy name. Prefer rewriting the second sentence around its editorial job; loosen the prefix logic only if both sentences carry different facts and cannot be made clearer by moving one job into `readerUse`, `claimBoundary`, `evidenceThreshold`, or `nextCheck`.
+- The 180-character detail paragraph limit can reject a legitimate explanation that needs more context. Split it across the existing article blocks instead of deleting source boundary, downgrade, or next-check context.
+
+Human-review gaps:
+
+- Validators cannot confirm that a source actually supports the stated fact, boundary, trend interpretation, or reader-use cue. Editors still need to open the original source, especially for media-backed and `must-read` items.
+- Validators cannot judge copyright substitution risk from prose style alone. If a media-backed detail page reads like a Chinese replacement for the article, shorten source facts even when every field passes.
+- Validators cannot decide whether a new source is independently stronger than repeated coverage from the same owner, wire service, vendor ecosystem, or newsletter chain.
+- Validators cannot see real mobile layout comfort, scroll rhythm, or whether a visual component genuinely helps understanding. Use browser or screenshot QA when changing layout, ranking cards, detail article structure, or visual briefing components.
+- Validators cannot determine whether a fresh daily batch is editorially worth publishing. A valid short batch may still be held if it lacks reader utility, source diversity, or a clear "why today" path.
+
 ### Source-reference labels
 
 - Deep-briefing references must name both the source or source family and the source fact. This may reject elegant labels that are too short.

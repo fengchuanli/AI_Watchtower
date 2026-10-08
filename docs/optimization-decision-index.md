@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 5, Validation, QA, And Next Cycle
-- Last indexed run: 2026-10-07 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization. Push status should be checked after the log commit because local `main` gained scoped optimization commits during this run.
+- Last indexed run: 2026-10-08 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled `origin/main` successfully after network authorization. Push is held because local `main` already had unpushed 17:00 news-run commits before this optimization pass; do not publish those unrelated commits without explicit user approval.
 
 ## Recent Plan-Day Decisions
 
@@ -44,6 +44,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 24 | Complete | `d0b5aba` | `docs/monthly-continuity-snapshot.md` now has a `publicContinuityHandoff` shape that separates future public continuity component candidates into `ready`, `needs-current-edition`, `archive-only`, and `do-not-publish` groups, with `sourceFields`, `readerUse`, and `proofBoundary` required before any card can become public UI. `docs/news-data-format.md`, `docs/update-run-checklist.md`, and `scripts/validate-site.mjs` guard the handoff. |
 | Day 25 | Complete | `e9d19de` | `scripts/validate-site.mjs` now treats the VisionHub briefing scorecard as a live homepage data guard: Today Briefing must stay compact and Chinese-readable, and each TOP3 item must expose concrete audience/use, source role, claim status, proof-boundary wording, and a next-check evidence path. `docs/visionhub-briefing-scorecard.md`, `docs/news-data-format.md`, and `docs/editorial-validator-limits.md` document the guard. |
 | Day 26 | Complete | `661f72c` | `scripts/validate-data.mjs` now rejects repeated sentence leads inside `detailBody`, `detailTrend`, and `detailWhyRanked` for current items and latest promoted archive items. The current 2026-10-07 detail pages had four AWS trend paragraphs tightened so mobile readers do not see duplicate narrative copy. |
+| Day 27 | Complete | pending | `docs/editorial-validator-limits.md` now has a 2026-10-08 guard review for the Day 25 homepage scorecard guard and Day 26 detail narrative guard: expected false positives, accepted vocabulary-expansion cases, detail sentence-lead review rules, and human-review gaps that validators cannot replace. `scripts/validate-site.mjs` guards this note. |
 
 ## Historical Guard Anchors
 
@@ -95,9 +96,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 27: review validator limits after the new guards and document any expected false positives or human-review gaps.
+- Continue with Day 28: run a final mobile and HTML QA pass for the most reader-visible homepage/detail-page path touched this cycle.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 26.
-- If Day 27 is already complete, continue with the first useful unfinished task from the current plan.
+- If Day 28 is already complete, continue with the first useful unfinished task from the current plan.
 
 ## Update Rules
 

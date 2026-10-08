@@ -1766,10 +1766,16 @@ if (
   !/Promoted-item briefing checks/.test(editorialValidatorLimits) ||
   !/Chinese readability and mobile length checks/.test(editorialValidatorLimits) ||
   !/Source-reference labels/.test(editorialValidatorLimits) ||
+  !/Current Guard Review \(2026-10-08\)/.test(editorialValidatorLimits) ||
+  !/Expected false positives/.test(editorialValidatorLimits) ||
+  !/Human-review gaps/.test(editorialValidatorLimits) ||
   !/When To Change A Validator/.test(editorialValidatorLimits) ||
   !/freshSourceFact/.test(editorialValidatorLimits) ||
   !/sourceConcentration/.test(editorialValidatorLimits) ||
   !/厂商主张/.test(editorialValidatorLimits) ||
+  !/visionhubAudiencePattern/.test(editorialValidatorLimits) ||
+  !/Repeated detail-page sentence-lead checks/.test(editorialValidatorLimits) ||
+  !/copyright substitution risk/.test(editorialValidatorLimits) ||
   !/180 Chinese characters/.test(editorialValidatorLimits) ||
   !/docs\/source-policy\.md/.test(editorialValidatorLimits) ||
   !/docs\/copyright-safety\.md/.test(editorialValidatorLimits)
