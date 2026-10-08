@@ -1,3 +1,35 @@
+## 2026-10-08 11:02 JST
+
+- Focus: 完成当前 30 天计划 Day 27，复盘 Day 25 首页 VisionHub 简报评分卡守卫和 Day 26 详情页叙事去重守卫，把预期误报、可接受的词表扩展场景、详情页句首重复复核规则，以及仍需人工判断的来源/版权/移动阅读缺口写入校验说明。
+- Changed files:
+  - `docs/editorial-validator-limits.md`: 新增 `Current Guard Review (2026-10-08)`，说明 Today Briefing 长度、TOP3 证据词、读者人群词、详情页重复句首和 180 字段落上限的误报处理方式，并列出校验器无法替代的人工复核边界。
+  - `scripts/validate-site.mjs`: 增加静态守卫，确保后续不会误删当前校验守卫复盘、误报说明和人工复核缺口。
+  - `docs/optimization-decision-index.md`: 标记 Day 27 完成，并把下一步交接到 Day 28 的移动与 HTML QA。
+- Source posture:
+  - 按要求先读取自动化记忆并执行 `git pull --ff-only origin main`；首次因 GitHub DNS 解析失败，网络授权后成功并确认 `origin/main` 已是最新。
+  - 已阅读 `docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/editorial-validator-limits.md` 和相关校验代码。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只记录已有校验守卫的误报边界和人工复核缺口。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 保留 Day 25 首页首屏守卫，并说明只有在手机首屏仍能看清当天变化、TOP3 路径和 CTA 时才可放宽长度阈值。
+  - TOP3 reader use: pass - 记录 TOP3 证据路径词表扩展条件，避免用空泛词绕过 `nextCheck` 守卫。
+  - Source boundary visible: pass - 人工复核缺口明确要求仍需打开原始来源确认事实、边界、趋势解释和读者用途。
+  - Original source dependency: pass - 记录校验器无法单靠字段判断版权替代风险，媒体来源详情页即使通过校验也要避免读完本站即可替代原文。
+  - Mobile burden: pass - 记录 180 字段落上限和重复句首守卫的处理方式，优先拆分或移动字段职责，而不是删除必要核验边界。
+  - Continuity use: not applicable - 本次不改连续观察组件。
+  - Visual aid purpose: not applicable - 本次不新增视觉组件。
+- 网站可见变化：无，属于规则/校验/计划更新；后续维护者可在 `docs/editorial-validator-limits.md` 看到 Day 25 / Day 26 校验守卫的误报边界与人工复核缺口。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 110 sources.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `git diff --check`.
+- Commits: `a6b7213` (`【VisionHub网站风格优化】记录校验守卫误报边界`), `07eee0c` (`【网站优化】记录校验守卫边界复盘`).
+- Push: held - local `main` already had unpushed 17:00 news-run commits before this optimization pass, so pushing now would publish work outside this scoped 20:00 optimization without explicit user approval.
+
 ## 2026-10-08 08:16 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-08`，发布 10 条安全非重复信号，聚焦 OpenAI GPT-6 / Intelligent UI / ChatGPT for Teens，AWS Claude Haiku 5.5、RAG 实时 ACL 和 DevOps Agent 人审修复，以及 AP/Axios 对 AI 语音监管、AI 科学峰会、AI PC 和国家安全 AI 基金的报道。
