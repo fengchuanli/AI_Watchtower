@@ -1,3 +1,26 @@
+## 2026-10-09 08:12 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-09`，发布 10 条安全非重复信号，聚焦 OpenAI 假前台影响行动、Anthropic Usage Policy / Cyber Mission、Google Gemini agent、NVIDIA 科学算力承诺、Goodfire Agent 监控、Vesta 房贷 Agent、AI 风险政策语言、AI VC 集中和微软人才政策张力。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月9日17:00 JST 版 10 条情报，并保留原始来源 URL、来源角色、证据边界、下一步核查和 TOP3 说明。
+  - `data/news-history.json`: 最新归档镜像同步当前首页版次；总历史项目更新为 1155。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 OpenAI News、Anthropic Newsroom、Google Cloud AI & Machine Learning Blog、NVIDIA Newsroom、Associated Press Technology、Axios AI / Technology 和 TechCrunch AI。OpenAI / Anthropic / Google 条目保持 `官方核对`，只确认披露、政策、计划和产品发布事实；NVIDIA 条目保持 `厂商主张`，不确认交付或科研效果；AP / Axios / TechCrunch 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、数字、方法、图表、政治语境和后续更正仍归原文或原始报告。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1155.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月9日17:00 版 10 条情报；读者可在首页与详情页看到 OpenAI false front 影响行动、Anthropic 使用政策和 Cyber Mission、Google Gemini agent、NVIDIA 10亿美元科学承诺、Goodfire inside-out Agent 监控、Vesta 房贷 Agent、AI 风险圆桌、AI VC 集中和微软人才政策张力。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 110 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated the GitHub Pages 404 fallback.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, `nav.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条Agent治理与安全资本信号`.
+
 ## 2026-10-08 23:10 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-08`，因此未回退版次，而是在当天活动版基础上扩展为 `news-2300-2026-10-08`，发布 16 条安全非重复信号，补充 AP-NORC AI 发展速度民意、Axios 数据中心电力规则，以及 AWS 关于 Agent ROI、Qlik 企业答案层、Cornerstone 运维 Agent 和 AI builders 能力建设的官方/厂商叙事。
