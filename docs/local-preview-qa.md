@@ -54,6 +54,14 @@ Use the keyboard only:
 
 Also enable reduced motion in the browser or OS and confirm smooth scrolling is disabled.
 
+## Lightweight Static Fallback
+
+When Playwright or a browser preview is unavailable, still complete a constrained Day 28-style HTML and mobile-readiness pass before committing.
+
+- Run `node scripts/validate-pages.mjs`; it checks `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, and `404.html` for balanced static shells, `zh-CN`, responsive viewport metadata, dark color-scheme metadata, project-site-safe relative links, skip/main landmarks, and the reader-path containers needed by the homepage, detail, history, tag, archive, and recovery pages.
+- Treat this as a fallback only. It cannot prove rendered spacing, contrast, overflow, sticky-header behavior, or real interaction quality, so record any missing Playwright/browser coverage in the optimization log.
+- If the fallback fails, fix the static shell or reader-path anchor before touching data or copy. A broken shell makes the Chinese briefing path unusable even when the JSON validates.
+
 ## Publish Readiness
 
 Before committing, run:

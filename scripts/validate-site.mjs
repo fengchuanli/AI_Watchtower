@@ -16,6 +16,7 @@ const buildDerivedDataJs = readFileSync("scripts/build-derived-data.mjs", "utf8"
 const archiveJs = readFileSync("archive.js", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 const validateDataJs = readFileSync("scripts/validate-data.mjs", "utf8");
+const validatePagesJs = readFileSync("scripts/validate-pages.mjs", "utf8");
 const duplicateCandidateReportJs = readFileSync("scripts/report-duplicate-candidates.mjs", "utf8");
 const newsDataFormat = readFileSync("docs/news-data-format.md", "utf8");
 const sourcePolicy = readFileSync("docs/source-policy.md", "utf8");
@@ -1637,11 +1638,35 @@ if (
   !/公司标签/.test(localPreviewQa) ||
   !/data\/news\.json/.test(localPreviewQa) ||
   !/data\/news-history\.json/.test(localPreviewQa) ||
+  !/Lightweight Static Fallback/.test(localPreviewQa) ||
+  !/index\.html[\s\S]*news-detail\.html[\s\S]*all-news\.html[\s\S]*tags\.html[\s\S]*archive\.html[\s\S]*404\.html/.test(
+    localPreviewQa,
+  ) ||
+  !/balanced static shells/.test(localPreviewQa) ||
   !/skip link/.test(localPreviewQa) ||
   !/reduced motion/.test(localPreviewQa) ||
   (!/GitHub Pages/.test(localPreviewQa) && !/Publish Readiness/.test(localPreviewQa))
 ) {
   errors.push("Local preview QA docs must cover core viewports, reader paths, loading failures, accessibility, and publishing readiness.");
+}
+
+if (
+  !/const pageChecks = \[/.test(validatePagesJs) ||
+  !/"index\.html"/.test(validatePagesJs) ||
+  !/"news-detail\.html"/.test(validatePagesJs) ||
+  !/"all-news\.html"/.test(validatePagesJs) ||
+  !/"tags\.html"/.test(validatePagesJs) ||
+  !/"archive\.html"/.test(validatePagesJs) ||
+  !/"404\.html"/.test(validatePagesJs) ||
+  !/checkBalancedTags/.test(validatePagesJs) ||
+  !/width=device-width, initial-scale=1/.test(validatePagesJs) ||
+  !/must not use root-absolute asset links/.test(validatePagesJs) ||
+  !/detailShell/.test(validatePagesJs) ||
+  !/historyList/.test(validatePagesJs) ||
+  !/tagResults/.test(validatePagesJs) ||
+  !/archiveEditionGrid/.test(validatePagesJs)
+) {
+  errors.push("Page validation must cover the static homepage/detail/history/tag/archive/404 shells and mobile-ready reader anchors.");
 }
 
 if (

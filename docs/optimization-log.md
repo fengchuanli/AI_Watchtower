@@ -1,3 +1,36 @@
+## 2026-10-09 11:04 JST
+
+- Focus: 完成当前 30 天计划 Day 28，给最容易被手机读者碰到的首页 -> TOP3 详情页 -> 全部新闻 -> 公司标签 -> 归档 / 404 恢复路径补上轻量 HTML QA 守卫；当 Playwright 视觉基线不可用时，仍能验证静态页面壳、移动 viewport 元信息、相对路径、跳转锚点和关键动态容器没有断。
+- Changed files:
+  - `scripts/validate-pages.mjs`: 从只检查 `404.html` 扩展为检查 `index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, `404.html` 六个静态页面壳；新增简易标签平衡检查、`zh-CN`、UTF-8、viewport、dark color-scheme、项目站相对链接、站点 header、skip/main landmark、详情页 `detailShell`、历史列表、标签结果、归档网格和 404 恢复链接守卫。
+  - `docs/local-preview-qa.md`: 新增 `Lightweight Static Fallback`，说明在缺少 Playwright / 浏览器预览时，仍要跑 `node scripts/validate-pages.mjs`，并明确它只能覆盖静态 HTML 与读者路径锚点，不能替代真实渲染、对比度、横向溢出、sticky header 和交互检查。
+  - `scripts/validate-site.mjs`: 增加静态守卫，确保本次 Day 28 的六页 HTML QA fallback、页面清单和关键 reader-path 容器不会被后续误删。
+- Source posture:
+  - 已先读取自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/local-preview-qa.md` 和相关校验脚本。
+  - `git pull --ff-only origin main` 首次因 sandbox GitHub DNS 失败；网络授权后成功并确认 `origin/main` 已是最新。本次基于远端已有 `68be236` 的详情页结构与技术选题配额改动继续 QA。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只加固移动/HTML QA 路径。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 首页首屏结构未改，静态页守卫确保 `#today`、`#deep-briefing`、`#feed`、`#explore` 等首页读者路径锚点仍存在。
+  - TOP3 reader use: pass - 不改 TOP3 文案；详情页 shell 的 `detailShell` 与返回最新新闻流路径现在由 `validate-pages.mjs` 保护。
+  - Source boundary visible: pass - 不改来源边界或 claim status；只验证详情页/恢复页壳不会破坏站内核验入口。
+  - Original source dependency: pass - 不新增替代性事实层；外部来源仍作为核验入口。
+  - Mobile burden: pass - 新守卫覆盖 responsive viewport、skip/main landmark、reader-path 容器和项目站相对链接，降低手机读者遇到空壳、断锚或错误恢复路径的风险。
+  - Continuity use: pass - 公司标签页 `tagResults` 和归档页批次网格现在进入静态 shell QA。
+  - Visual aid purpose: partial - Playwright 视觉基线因本环境缺少 Playwright 未运行；已记录 fallback 边界，真实渲染仍需浏览器/Playwright 复核。
+- 网站可见变化：无，属于规则/校验/计划更新；后续读者路径的可见页面壳更不容易因 HTML、相对链接或关键容器回归而中断。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `PYTHONPYCACHEPREFIX=/private/tmp/ai-watchtower-pycache python3 scripts/check_layout.py`; blocked by missing Playwright dependency, so no browser visual baseline was available in this environment.
+  - Ran `node --check app.js`, `all-news.js`, `news-detail.js`, `archive.js`, `tags.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-data.mjs` and validated 10 news items against 120 sources.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commits: `92a3a7a` (`【VisionHub网站风格优化】守住移动HTML读者路径`).
+- Push: pending.
+
 ## 2026-10-09 08:12 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-09`，发布 10 条安全非重复信号，聚焦 OpenAI 假前台影响行动、Anthropic Usage Policy / Cyber Mission、Google Gemini agent、NVIDIA 科学算力承诺、Goodfire Agent 监控、Vesta 房贷 Agent、AI 风险政策语言、AI VC 集中和微软人才政策张力。
