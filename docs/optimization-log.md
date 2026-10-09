@@ -28,7 +28,7 @@
   - Ran `node scripts/build-derived-data.mjs --check`.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
   - Ran `git diff --check`.
-- Commits: `92a3a7a` (`【VisionHub网站风格优化】守住移动HTML读者路径`).
+- Commits: `fb662b4` (`【VisionHub网站风格优化】守住移动HTML读者路径`).
 - Push: pending.
 
 ## 2026-10-09 08:12 JST
