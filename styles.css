@@ -4895,3 +4895,130 @@ h3 {
     font-size: var(--text-lg);
   }
 }
+
+/* ============================================================
+   架构对比图：旧做法 → 新做法
+   结构用中性描边，只有「这次真正改掉的那一步」用强调色
+   ============================================================ */
+
+.tech-diagram {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.tech-flow {
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.tech-flow-after {
+  background: var(--tint-warn);
+  border-color: var(--tint-warn-border);
+}
+
+.tech-flow figcaption {
+  margin-bottom: var(--space-4);
+  text-align: left;
+}
+
+.tech-flow figcaption span {
+  display: block;
+  color: var(--fg-primary);
+  font-size: var(--text-base);
+  font-weight: 800;
+}
+
+.tech-flow-after figcaption span {
+  color: var(--accent-soft);
+}
+
+.tech-flow figcaption small {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+
+.tech-flow svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.tech-flow .tech-box {
+  fill: var(--bg-raised);
+  stroke: var(--border-strong);
+  stroke-width: 1;
+}
+
+.tech-flow .tech-box.is-key {
+  fill: rgb(240 180 41 / 14%);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.tech-flow .tech-box-kind {
+  fill: var(--fg-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.tech-flow .tech-box-label {
+  fill: var(--fg-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tech-flow .tech-arrow {
+  stroke: var(--border-strong);
+  stroke-width: 2;
+}
+
+.tech-flow .tech-arrow-head {
+  fill: var(--fg-muted);
+}
+
+.tech-flow .tech-arrow-label {
+  fill: var(--fg-secondary);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tech-diagram-divider {
+  align-self: center;
+  display: grid;
+  gap: var(--space-2);
+  justify-items: center;
+}
+
+.tech-diagram-divider span {
+  padding: var(--space-2) var(--space-3);
+  color: var(--accent-fg);
+  background: var(--accent);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.tech-delta-table .is-after {
+  color: var(--accent-soft);
+  font-weight: 800;
+}
+
+@media (max-width: 920px) {
+  .tech-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-diagram-divider span {
+    display: inline-block;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-09",
   "policy": {
     "primaryRule": "优先使用官方、论文、监管、文件或 RSS 原始入口；媒体用于背景和市场动向；社区只作为发现线索，不能直接当作事实发布。",
     "language": "站内摘要和编辑判断写成中文，保留原始链接作为事实核对入口。",
@@ -1728,7 +1728,155 @@
       "hasRss": false,
       "language": "en",
       "notes": "官方核对 Cohere 模型、North 平台、企业合作和产品发布事实；采用效果、ROI 和客户结果仍需客户指标、合同、审计或第三方证据。"
+    },
+    {
+      "id": "openai-research",
+      "name": "OpenAI Research",
+      "url": "https://openai.com/research/",
+      "feedUrl": null,
+      "category": [
+        "research",
+        "model",
+        "safety"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "机制级官方来源：方法、system card 与评测设定。用于补足发布公告看不到的技术细节；效果结论仍需外部复现和独立证据确认。"
+    },
+    {
+      "id": "anthropic-engineering",
+      "name": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering",
+      "feedUrl": null,
+      "category": [
+        "research",
+        "developer",
+        "agent"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方工程实现说明：Agent 构建、上下文管理、工具调用的具体做法。适合抽取架构对比图的「改了哪一步」；实际效果仍需客户侧证据核对。"
+    },
+    {
+      "id": "google-deepmind-research",
+      "name": "Google DeepMind Research",
+      "url": "https://deepmind.google/research/publications/",
+      "feedUrl": null,
+      "category": [
+        "research",
+        "model",
+        "science"
+      ],
+      "trustLevel": "research",
+      "hasRss": false,
+      "language": "en",
+      "notes": "论文与技术报告索引。用于核对厂商科学叙事是否有对应论文；只收有论文或技术报告的条目。"
+    },
+    {
+      "id": "pytorch-blog",
+      "name": "PyTorch Blog",
+      "url": "https://pytorch.org/blog/",
+      "feedUrl": "https://pytorch.org/feed.xml",
+      "hasRss": true,
+      "category": [
+        "developer",
+        "infrastructure",
+        "open_source"
+      ],
+      "trustLevel": "official",
+      "language": "en",
+      "notes": "官方训练与推理栈的机制变化：编译、分布式、量化。技术情报的主要缺口之一，发布公告类来源覆盖不到；性能主张需第三方基准核对。"
+    },
+    {
+      "id": "huggingface-papers",
+      "name": "Hugging Face Daily Papers",
+      "url": "https://huggingface.co/papers",
+      "feedUrl": null,
+      "category": [
+        "research",
+        "model",
+        "open_model"
+      ],
+      "trustLevel": "research",
+      "hasRss": false,
+      "language": "en",
+      "notes": "每日论文榜。只作发现入口，入选必须回到 arXiv 原文核对，不以榜单热度作为证据。"
+    },
+    {
+      "id": "github-releases-openai",
+      "name": "GitHub Releases · OpenAI",
+      "url": "https://github.com/openai",
+      "feedUrl": null,
+      "category": [
+        "developer",
+        "tool",
+        "open_source"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "各仓库 releases.atom 是机制变化最早可核对的出口（API 变更、破坏性更新）。抓取时按仓库订阅，不订阅整个组织。"
+    },
+    {
+      "id": "github-releases-anthropic",
+      "name": "GitHub Releases · Anthropic",
+      "url": "https://github.com/anthropics",
+      "feedUrl": null,
+      "category": [
+        "developer",
+        "tool",
+        "agent"
+      ],
+      "trustLevel": "official",
+      "hasRss": false,
+      "language": "en",
+      "notes": "官方发布记录：SDK 与 Agent 工具链的实际变更，比博客更早也更具体。只作变更事实核对入口，不作效果证据。"
+    },
+    {
+      "id": "arxiv-lg",
+      "name": "arXiv cs.LG",
+      "url": "https://arxiv.org/list/cs.LG/recent",
+      "feedUrl": "https://export.arxiv.org/rss/cs.LG",
+      "hasRss": true,
+      "category": [
+        "research",
+        "model"
+      ],
+      "trustLevel": "research",
+      "language": "en",
+      "notes": "机器学习主分类，补足已有的 cs.AI / cs.CL / cs.CV。预印本不等于已验证结论，入选需说明证据等级。"
+    },
+    {
+      "id": "arxiv-ma",
+      "name": "arXiv cs.MA",
+      "url": "https://arxiv.org/list/cs.MA/recent",
+      "feedUrl": "https://export.arxiv.org/rss/cs.MA",
+      "hasRss": true,
+      "category": [
+        "research",
+        "agent"
+      ],
+      "trustLevel": "research",
+      "language": "en",
+      "notes": "多智能体系统。当前 Agent 类条目大量来自厂商公告，这里提供同一主题的研究侧对照。"
+    },
+    {
+      "id": "semianalysis",
+      "name": "SemiAnalysis",
+      "url": "https://semianalysis.com/",
+      "feedUrl": null,
+      "category": [
+        "infrastructure",
+        "hardware",
+        "analysis"
+      ],
+      "trustLevel": "reliable_media",
+      "hasRss": false,
+      "language": "en",
+      "notes": "媒体侧的算力与芯片工程拆解。付费墙部分不可抓取，只收公开文章，并标注为二手分析而非一手数据；关键数字仍需原文核对。"
     }
   ],
-  "sourceCount": 104
+  "sourceCount": 120
 }

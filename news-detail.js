@@ -1093,6 +1093,142 @@ function renderRelationGraph(item) {
   return renderVisualSection("detail-relation", "Who claims what", "谁在主张、谁在质疑、还缺什么证据", graph.caption, body);
 }
 
+/* 架构对比图：把「原来怎么做」和「新做法怎么做」画成两条流程并排，
+   每一步标出它是模型、数据、监控还是动作，箭头上写清楚发生了什么。
+   差异数字单独列表，不塞进图里。 */
+const TECH_STEP_KINDS = {
+  model: "模型",
+  data: "数据",
+  monitor: "监控",
+  action: "动作",
+  service: "服务",
+  cost: "成本",
+};
+
+function renderTechFlow(side, variant) {
+  const steps = Array.isArray(side?.steps) ? side.steps : [];
+
+  if (!steps.length) {
+    return "";
+  }
+
+  const BOX_W = 250;
+  const BOX_H = 62;
+  const GAP = 52;
+  const PAD = 10;
+  const width = BOX_W + PAD * 2;
+  const height = steps.length * BOX_H + (steps.length - 1) * GAP + PAD * 2;
+  const arrows = Array.isArray(side.arrows) ? side.arrows : [];
+
+  const parts = steps
+    .map((step, index) => {
+      const y = PAD + index * (BOX_H + GAP);
+      const lines = wrapGraphLabel(step.label, 13);
+      const startY = y + BOX_H / 2 - (lines.length - 1) * 9 + 4;
+      const kind = TECH_STEP_KINDS[step.kind] ? escapeHtml(TECH_STEP_KINDS[step.kind]) : "";
+      const boxClass = step.highlight ? "tech-box is-key" : "tech-box";
+
+      const arrow =
+        index < steps.length - 1
+          ? `
+            <line x1="${PAD + BOX_W / 2}" y1="${y + BOX_H}" x2="${PAD + BOX_W / 2}" y2="${y + BOX_H + GAP - 9}"
+              class="tech-arrow" marker-end="url(#techArrow)" />
+            ${
+              arrows[index]
+                ? `<text x="${PAD + BOX_W / 2 + 10}" y="${y + BOX_H + GAP / 2 + 4}" class="tech-arrow-label">${escapeHtml(arrows[index])}</text>`
+                : ""
+            }
+          `
+          : "";
+
+      return `
+        <g>
+          <rect x="${PAD}" y="${y}" width="${BOX_W}" height="${BOX_H}" rx="10" class="${boxClass}" />
+          ${kind ? `<text x="${PAD + 14}" y="${y + 17}" class="tech-box-kind">${kind}</text>` : ""}
+          ${lines
+            .map(
+              (line, lineIndex) =>
+                `<text x="${PAD + 14}" y="${startY + lineIndex * 17}" class="tech-box-label">${escapeHtml(line)}</text>`,
+            )
+            .join("")}
+        </g>
+        ${arrow}
+      `;
+    })
+    .join("");
+
+  return `
+    <figure class="tech-flow tech-flow-${variant}">
+      <figcaption>
+        <span>${escapeHtml(side.label)}</span>
+        ${side.note ? `<small>${escapeHtml(side.note)}</small>` : ""}
+      </figcaption>
+      <svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img"
+        aria-label="${escapeHtml(`${side.label}：${steps.map((step) => step.label).join(" → ")}`)}">
+        <defs>
+          <marker id="techArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" class="tech-arrow-head" />
+          </marker>
+        </defs>
+        ${parts}
+      </svg>
+    </figure>
+  `;
+}
+
+function renderTechDiagram(item) {
+  const diagram = item.techDiagram;
+
+  if (!diagram?.before?.steps?.length || !diagram?.after?.steps?.length) {
+    return "";
+  }
+
+  const deltas = Array.isArray(diagram.deltas) ? diagram.deltas : [];
+
+  const deltaTable = deltas.length
+    ? `
+      <div class="detail-table-scroll">
+        <table class="detail-compare-table tech-delta-table">
+          <caption>${escapeHtml(diagram.deltaCaption || "两种做法的可比数字")}</caption>
+          <thead>
+            <tr>
+              <th scope="col">指标</th>
+              <th scope="col">${escapeHtml(diagram.before.label)}</th>
+              <th scope="col">${escapeHtml(diagram.after.label)}</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${deltas
+              .map(
+                (delta) =>
+                  `<tr><th scope="row">${escapeHtml(delta.label)}</th><td>${escapeHtml(delta.before)}</td><td class="is-after">${escapeHtml(delta.after)}</td></tr>`,
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    `
+    : "";
+
+  const body = `
+    <div class="tech-diagram">
+      ${renderTechFlow(diagram.before, "before")}
+      <div class="tech-diagram-divider" aria-hidden="true"><span>改成</span></div>
+      ${renderTechFlow(diagram.after, "after")}
+    </div>
+    ${deltaTable}
+    ${diagram.note ? renderReadingNote(diagram.note.label || "读图", diagram.note.body) : ""}
+  `;
+
+  return renderVisualSection(
+    "detail-tech",
+    "How it works",
+    diagram.heading || "原来怎么做，新做法改了哪一步",
+    diagram.caption,
+    body,
+  );
+}
+
 function renderTrendChart(item, trends) {
   if (!trends?.weeks?.length) {
     return "";
@@ -1229,6 +1365,67 @@ function renderDetail(item, data) {
   const sourceEntries = getSourceEntries(item, data);
   const isMedia = isMediaSourcedItem(item);
 
+  // 有真正的逐节拆解时走精简结构：概览只出现一次，边界只出现一次，不再三处重复。
+  // 没有时回退到通用结构，保证旧条目照常渲染。
+  const deepSectionCount = Array.isArray(item.deepSections)
+    ? item.deepSections.filter((section) => section?.heading).length
+    : 0;
+  const hasDepth = deepSectionCount >= 3;
+
+  const classicOverview = `
+        <section class="detail-block incident-block detail-primary-section" id="incident-overview">
+          <span>01 · 事件简述</span>
+          <h2>${escapeHtml(sourceName)}具体说了什么</h2>
+          ${renderSourceStatus(isMedia ? "二手｜媒体报道" : "一手｜来源原文", `${sourceName} · ${String(item.publishedAt || "").slice(0, 10) || item.time}`)}
+          <div class="detail-prose article-prose">
+            ${renderDetailProse(getDetailFactArticle(item))}
+          </div>
+          ${renderReadingNote("这一段的边界", item.provenance)}
+        </section>`;
+
+  const classicAnalysis = `
+        <section class="detail-block incident-block detail-primary-section" id="incident-analysis">
+          <span>02 · 这件事怎么理解</span>
+          <h2>为什么这条值得占用你的时间</h2>
+          ${renderSourceStatus("本站判断｜不是来源原话", "以下是 AI Watchtower 的编辑解读，来源没有这样表述。")}
+          <div class="detail-prose">
+            ${renderDetailProse(item.detailWhyRanked)}
+          </div>
+          ${item.whoShouldCare ? `<p class="detail-so-what"><strong>谁该关心</strong>${escapeHtml(item.whoShouldCare)}</p>` : ""}
+          <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
+        </section>`;
+
+  const classicTrendSection = `
+        <section class="detail-block incident-block detail-primary-section" id="incident-trend">
+          <span>03 · 可能带来的变化</span>
+          <h2>如果后续被证实，会改变什么</h2>
+          ${renderSourceStatus("趋势推断｜尚未被证据锁定", "这是对走向的推断，不是已经发生的事实。")}
+          <div class="detail-prose">
+            ${renderDetailProse(item.detailTrend)}
+          </div>
+          <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
+        </section>`;
+
+  const takeawayBlock = `
+    <section class="detail-takeaway" aria-label="一句话结论">
+      <p class="eyebrow">Takeaway</p>
+      <p class="takeaway-headline">${escapeHtml(takeaway.headline)}</p>
+      <p class="takeaway-boundary">但目前还证明不了：${escapeHtml(takeaway.boundary)}</p>
+      <p class="takeaway-step"><b>先做这一件</b>${escapeHtml(takeaway.firstStep)}</p>
+    </section>`;
+
+  // 主图：技术类条目优先画架构对比，其次是关系图。两者都没有就不出现。
+  const leadFigure = renderTechDiagram(item) || renderRelationGraph(item);
+
+  const navItems = [
+    ["#quick-summary", "01", "速览"],
+    hasDepth ? ["#detail-deep", "02", "逐节拆解"] : ["#incident-overview", "02", "来源说了什么"],
+    leadFigure ? ["#detail-tech", "03", "结构怎么变"] : null,
+    ["#incident-source", "04", "证明到哪一步"],
+    ["#incident-next", "05", "自己怎么核对"],
+    ["#detail-sources", "06", "来源与日期"],
+  ].filter(Boolean);
+
   detailShell.innerHTML = `
     <div class="incident-hero simplified-detail-hero">
       <p class="eyebrow">Incident Briefing · ${escapeHtml(item.label)}</p>
@@ -1258,6 +1455,9 @@ function renderDetail(item, data) {
 
     ${renderMediaOriginalCallout(mediaOriginalCallout)}
 
+    ${hasDepth
+      ? ""
+      : `
     <section class="canonical-briefing detail-scan-briefing" aria-label="事实、影响、边界和下一步核对速览">
       <div>
         <p class="eyebrow">Proof Path</p>
@@ -1267,63 +1467,27 @@ function renderDetail(item, data) {
       <div class="canonical-briefing-grid">
         ${renderCanonicalBriefingBlocks(getCanonicalBriefingBlocks(item))}
       </div>
-    </section>
+    </section>`}
 
     <nav class="incident-jump-nav" aria-label="本页目录">
-      <a href="#incident-overview"><i>01</i>来源说了什么</a>
-      <a href="#incident-analysis"><i>02</i>为什么值得看</a>
-      <a href="#incident-trend"><i>03</i>会改变什么</a>
-      <a href="#incident-source"><i>04</i>证明到哪一步</a>
-      <a href="#incident-next"><i>05</i>自己怎么核对</a>
-      <a href="#incident-editorial"><i>06</i>编辑判断</a>
+      ${navItems.map(([href, index, label]) => `<a href="${href}"><i>${index}</i>${escapeHtml(label)}</a>`).join("")}
     </nav>
 
     <section class="detail-grid simplified-detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
-        <section class="detail-block incident-block detail-primary-section" id="incident-overview">
-          <span>01 · 事件简述</span>
-          <h2>${escapeHtml(sourceName)}具体说了什么</h2>
-          ${renderSourceStatus(isMedia ? "二手｜媒体报道" : "一手｜来源原文", `${sourceName} · ${String(item.publishedAt || "").slice(0, 10) || item.time}`)}
-          <div class="detail-prose article-prose">
-            ${renderDetailProse(getDetailFactArticle(item))}
-          </div>
-          ${renderReadingNote("这一段的边界", item.provenance)}
-        </section>
-
+        ${hasDepth ? "" : classicOverview}
         ${renderDeepSections(item)}
-        ${renderTimeline(item)}
-
-        <section class="detail-block incident-block detail-primary-section" id="incident-analysis">
-          <span>02 · 这件事怎么理解</span>
-          <h2>为什么这条值得占用你的时间</h2>
-          ${renderSourceStatus("本站判断｜不是来源原话", "以下是 AI Watchtower 的编辑解读，来源没有这样表述。")}
-          <div class="detail-prose">
-            ${renderDetailProse(item.detailWhyRanked)}
-          </div>
-          ${item.whoShouldCare ? `<p class="detail-so-what"><strong>谁该关心</strong>${escapeHtml(item.whoShouldCare)}</p>` : ""}
-          <p class="detail-so-what"><strong>读者用法</strong>${escapeHtml(item.readerUse)}</p>
-        </section>
-
-        ${renderRelationGraph(item)}
-        ${renderComparison(item)}
-
-        <section class="detail-block incident-block detail-primary-section" id="incident-trend">
-          <span>03 · 可能带来的变化</span>
-          <h2>如果后续被证实，会改变什么</h2>
-          ${renderSourceStatus("趋势推断｜尚未被证据锁定", "这是对走向的推断，不是已经发生的事实。")}
-          <div class="detail-prose">
-            ${renderDetailProse(item.detailTrend)}
-          </div>
-          <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
-        </section>
-
+        ${leadFigure}
         ${renderBeforeAfter(item)}
-        ${renderTrendChart(item, detailTrends)}
+        ${renderTimeline(item)}
+        ${hasDepth ? "" : classicAnalysis}
+        ${hasDepth ? "" : renderComparison(item)}
+        ${hasDepth ? "" : classicTrendSection}
 
         <section class="detail-block incident-block source-verification-block detail-secondary-context" id="incident-source">
           <span>04 · 来源与核验边界</span>
           <h2>这条来源能证明到哪一步</h2>
-          ${renderSourceStatus("核验边界｜本页最关键的一节", "看完上面三段，先确认哪些还只是「报道了」，不是「证实了」。")}
+          ${renderSourceStatus("核验边界｜本页最关键的一节", "先确认哪些还只是「报道了」，不是「证实了」。")}
           <div class="detail-boundary-grid">
             <article class="boundary-can">
               <span>来源能支持</span>
@@ -1343,26 +1507,11 @@ function renderDetail(item, data) {
             </article>
           </div>
           <dl class="source-verification-list">
-            <div>
-              <dt>来源</dt>
-              <dd>${escapeHtml(sourceName)}</dd>
-            </div>
-            <div>
-              <dt>来源类型</dt>
-              <dd>${escapeHtml(getDetailSourceTypeLabel(item))}</dd>
-            </div>
-            <div>
-              <dt>发布时间</dt>
-              <dd><time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time></dd>
-            </div>
-            <div>
-              <dt>核验状态</dt>
-              <dd>${escapeHtml(getDetailClaimStatusLabel(item))}</dd>
-            </div>
-            <div>
-              <dt>原文依赖</dt>
-              <dd>${escapeHtml(getDetailOriginalDependencyLabel(item))}</dd>
-            </div>
+            <div><dt>来源</dt><dd>${escapeHtml(sourceName)}</dd></div>
+            <div><dt>来源类型</dt><dd>${escapeHtml(getDetailSourceTypeLabel(item))}</dd></div>
+            <div><dt>发布时间</dt><dd><time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.time)}</time></dd></div>
+            <div><dt>核验状态</dt><dd>${escapeHtml(getDetailClaimStatusLabel(item))}</dd></div>
+            <div><dt>原文依赖</dt><dd>${escapeHtml(getDetailOriginalDependencyLabel(item))}</dd></div>
           </dl>
           <a class="button secondary source-button" href="${escapeHtml(originalUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${sourceName}（在新窗口打开）`)}">查看原文</a>
         </section>
@@ -1376,10 +1525,12 @@ function renderDetail(item, data) {
           </ol>
         </section>
 
+        ${renderTrendChart(item, detailTrends)}
+
         <section class="detail-block incident-block detail-editorial-section" id="incident-editorial">
           <span>06 · 编辑判断</span>
           <h2>本站为什么把它排进这一期</h2>
-          <details class="detail-editor-details" open>
+          <details class="detail-editor-details">
             <summary>编辑评分与入选理由</summary>
             <p><strong>为什么入选</strong>${escapeHtml(getDetailTopReason(item))}</p>
             ${renderDetailSelectionScore(getDetailEditorScore(item))}
@@ -1389,14 +1540,9 @@ function renderDetail(item, data) {
       </div>
     </section>
 
-    <section class="detail-takeaway" aria-label="一句话结论">
-      <p class="eyebrow">Takeaway</p>
-      <p class="takeaway-headline">${escapeHtml(takeaway.headline)}</p>
-      <p class="takeaway-boundary">但目前还证明不了：${escapeHtml(takeaway.boundary)}</p>
-      <p class="takeaway-step"><b>先做这一件</b>${escapeHtml(takeaway.firstStep)}</p>
-    </section>
+    ${hasDepth ? "" : takeawayBlock}
 
-    <section class="detail-sources" aria-label="情报来源与日期">
+    <section class="detail-sources" id="detail-sources" aria-label="情报来源与日期">
       <div>
         <p class="eyebrow">Sources</p>
         <h2>情报来源与日期</h2>

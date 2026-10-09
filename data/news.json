@@ -3,7 +3,7 @@
   "updatedAt": "2026-10-09",
   "status": "published",
   "statusLabel": "已发布",
-  "sourceCount": 110,
+  "sourceCount": 120,
   "editorNote": "2026年10月9日17:00 JST：发布10条Agent治理、安全防御与资本政策信号。",
   "edition": {
     "id": "news-1700-2026-10-09",
@@ -1071,19 +1071,24 @@
       },
       "keyFacts": [
         {
-          "value": "Gemini agent",
+          "value": "1 个",
           "label": "统一入口",
-          "note": "Google Cloud"
+          "note": "官方表述：一个 API、一个界面、一个 prompt 框"
         },
         {
-          "value": "身份/审计",
-          "label": "治理能力",
-          "note": "官方说明"
+          "value": "15+",
+          "label": "声明支持的连接器",
+          "note": "Slack、Jira、Salesforce、Snowflake 等，加任意 MCP server"
         },
         {
-          "value": "成本上限",
-          "label": "FinOps信号",
-          "note": "官方主张"
+          "value": "0",
+          "label": "公布的价格",
+          "note": "公告未给出任何定价，也未给 GA 日期"
+        },
+        {
+          "value": "客户自报",
+          "label": "全部性能数字",
+          "note": "无独立基准测试"
         }
       ],
       "timeline": [
@@ -1108,22 +1113,225 @@
       ],
       "deepSections": [
         {
-          "label": "SOURCE LIMIT",
-          "navLabel": "来源边界",
-          "heading": "这条证明Google Cloud AI & Machine Learning Blog支持的来源事实，不证明更强效果结论",
+          "label": "WHAT SHIPPED",
+          "navLabel": "发布了什么",
+          "heading": "一个入口承担四类工作，这是公告的主张",
           "sourceStatus": {
-            "tag": "官方核对",
-            "note": "官方/厂商页面可核对发布事实；效果、采用和影响仍需外部证据。"
+            "tag": "一手｜Google Cloud 官方页面",
+            "note": "以下为页面原文事实，非本站测量"
           },
           "body": [
-            "适合更新产品、政策、工程或资本观察清单。",
-            "下一步看源文件、客户日志、审计、价格、独立测试或监管材料。"
+            "公告把 Gemini agent 定位为「面向工作的单一通用 Agent」，强调一个 API、一个界面、一个 prompt 框。",
+            "它要承担的四类工作是：对话问答；自主目标（派活、定时或由事件触发）；代码生成与执行；知识工作与内容媒体创作。"
           ],
-          "note": {
-            "label": "升级这条需要",
-            "body": "需要管理员文档、价格页、审计日志样例、客户部署指标和第三方安全评估，才能升级为生产成熟证据。"
+          "list": {
+            "title": "公告列出的六条设计原则",
+            "items": [
+              "统一 Agent：对话、自主执行和写代码共用一个界面",
+              "全端可达：Web、iOS、Android、Windows、Mac、命令行、Workspace、Microsoft 365、Slack 及第三方应用，也可作为无界面 Agent 运行",
+              "持久执行：在云端运行，共享一套记忆、上下文和个性化图谱，合上笔记本后长任务继续",
+              "多 Agent 编排：创建带独立身份的临时子 Agent，以及有固定角色、专属邮箱（@agents.company.com）和存储的「同事 Agent」",
+              "深度上下文：从交互中学习，支持限定上下文、技能和工具范围的团队项目",
+              "模型可选：当前编排 Gemini 与 Anthropic 的 Claude，未来接入其他私有与开放模型"
+            ]
           },
-          "sourceLine": "出处：Google Cloud Blog — Welcome to Gemini at Work 2026（2026-10-08）"
+          "note": {
+            "label": "这一节没有的信息",
+            "body": "公告没有说明此前企业用了多少个分散的 AI 入口，也没有说哪些产品会被这个 Agent 取代或下线。所以本页不画「旧架构 → 新架构」的对比图——「旧」这一侧来源里不存在，画出来就是编的。"
+          },
+          "sourceLine": "出处：Google Cloud Blog — Welcome to Gemini at Work 2026（官方页面，2026-10-09 读取）"
+        },
+        {
+          "label": "THE STACK",
+          "navLabel": "背后接了什么",
+          "heading": "「单一入口」背后是一整套要分别核对的东西",
+          "sourceStatus": {
+            "tag": "一手｜页面列出的组件",
+            "note": "组件清单取自公告，可用性状态多数未说明"
+          },
+          "body": [
+            "采购时真正要看的不是那个 prompt 框，而是它下面挂了哪些模型、连了哪些系统、数据从哪来。"
+          ],
+          "table": {
+            "caption": "公告中出现的组件（按层划分）",
+            "columns": [
+              "层",
+              "公告列出的内容"
+            ],
+            "rows": [
+              [
+                "模型",
+                "Argon（前沿推理）、Flash（速度与量）、Omni（生成式媒体）、Gemma（开放权重、边缘）；另编排 Anthropic Claude"
+              ],
+              [
+                "基础设施",
+                "AI Hypercomputer、TPU 8i、Managed Spark Service with Lightning Engine、BigQuery"
+              ],
+              [
+                "连接器",
+                "Confluence、Microsoft Office、Teams、Slack、Workspace、Git、Jira、Salesforce、ServiceNow、BigQuery、Databricks、Postgres、Snowflake、本地桌面文件，以及任意 MCP server"
+              ],
+              [
+                "数据层",
+                "Knowledge Catalog（映射业务口径）、Smart Storage（就地富化非结构化对象）、Borderless Lakehouse（查询 S3 与 Azure Data Lake，无可变出口费；联邦 Iceberg 表）"
+              ],
+              [
+                "记忆",
+                "会话、语义、程序性（含自写技能）、情景，共四类"
+              ],
+              [
+                "行业版",
+                "金融（FactSet、LSEG、S&P Global、SEC 文件）与法务（NetDocuments、iManage、Harvey、Onit），均为 preview；政府、医疗、零售「即将推出」"
+              ]
+            ]
+          },
+          "note": {
+            "label": "确认点",
+            "body": "连接器清单里没有标明哪些已 GA、哪些仍在 preview。Microsoft 365 和 Slack 的通道支持只是被列出，没有说明可用性状态。"
+          },
+          "sourceLine": "出处：Google Cloud Blog — Welcome to Gemini at Work 2026（官方页面，2026-10-09 读取）"
+        },
+        {
+          "label": "GOVERNANCE",
+          "navLabel": "治理与控制",
+          "heading": "治理是这份公告里写得最具体的部分",
+          "sourceStatus": {
+            "tag": "一手｜控制点描述",
+            "note": "机制有描述，缺少配置与审计样例"
+          },
+          "body": [
+            "与多数 Agent 发布不同，这份公告在权限和审计上给了可讨论的结构，而不只是「企业级安全」四个字。"
+          ],
+          "table": {
+            "caption": "公告描述的控制点，以及采购时还需要补的材料",
+            "columns": [
+              "控制点",
+              "公告说了什么",
+              "还需要什么"
+            ],
+            "rows": [
+              [
+                "身份",
+                "每个 Agent 有加密认证的独立身份、最小权限，身份写进日志和虚拟机",
+                "身份生命周期与注销流程文档"
+              ],
+              [
+                "授权",
+                "细粒度角色权限，由安全管理员批准；通过 OAuth 传播身份",
+                "权限模型文档与越权测试结果"
+              ],
+              [
+                "审计",
+                "每个动作写入审计轨迹，归属到 Agent 而不是人；实时可观测",
+                "审计日志样例与保留期限"
+              ],
+              [
+                "隔离",
+                "Agent Sandbox 提供独立网络边界",
+                "沙箱逃逸测试与网络策略说明"
+              ],
+              [
+                "网关",
+                "Agent Gateway 作为「AI 网络防火墙」，管所有进出与 Agent 之间的流量，策略写一次全公司生效",
+                "策略语法、冲突处理与默认拒绝行为"
+              ],
+              [
+                "成本",
+                "Smart Routing 分流到满足性能的最低成本模型；Cloud Billing 可设实时支出上限，到顶暂停、一键恢复，支持部门分账",
+                "Smart Routing 的决策依据，以及省了多少的量化结果"
+              ]
+            ]
+          },
+          "note": {
+            "label": "本站判断（不是来源表述）",
+            "body": "「审计归属到 Agent 而不是人」是这份公告里最值得注意的一句——它意味着责任链要重新设计。公告给了一个策略示例（Agent 不得打开标记为 Need to Know 的文档），但没有说明子 Agent 和同事 Agent 的权限如何与 Gateway 策略交互。"
+          },
+          "sourceLine": "出处：Google Cloud Blog — Welcome to Gemini at Work 2026（官方页面，2026-10-09 读取）"
+        },
+        {
+          "label": "NUMBERS",
+          "navLabel": "数字的来源",
+          "heading": "公告里的数字全部是厂商或客户自报",
+          "sourceStatus": {
+            "tag": "一手｜但均为自报",
+            "note": "公告未提供独立基准测试"
+          },
+          "body": [
+            "公告给出大量数字，但没有一项来自独立评测。引用时必须带上「客户自报」这个限定。"
+          ],
+          "table": {
+            "caption": "公告中的主要数字及其性质",
+            "columns": [
+              "数字",
+              "内容",
+              "性质"
+            ],
+            "rows": [
+              [
+                "约 500 家",
+                "客户在过去一年各自处理超过 1 万亿 token",
+                "厂商自报，未点名"
+              ],
+              [
+                "约 90%",
+                "Fortune 100 使用 Gemini Enterprise",
+                "厂商自报"
+              ],
+              [
+                "80%",
+                "TPU 8i 相对上一代的价格性能提升",
+                "厂商自报"
+              ],
+              [
+                "98%",
+                "每 token 价格自 2024 年以来的降幅",
+                "引用第三方文章，非 Google 自身数据"
+              ],
+              [
+                "1000 万次/周",
+                "PayPal 的多模型请求量",
+                "客户自报"
+              ],
+              [
+                "1 小时 → 5 分钟",
+                "Bradesco 的单份文档审阅耗时",
+                "客户自报"
+              ]
+            ]
+          },
+          "note": {
+            "label": "怎么用这一节",
+            "body": "这些数字适合用来判断「这个方向有人在真用」，不适合用来做自己的 ROI 测算。要测算需要自己的试点数据。"
+          },
+          "sourceLine": "出处：Google Cloud Blog — Welcome to Gemini at Work 2026（官方页面，2026-10-09 读取）"
+        },
+        {
+          "label": "NOT CLAIMED",
+          "navLabel": "没有说什么",
+          "heading": "公告明确没有给出的六件事",
+          "sourceStatus": {
+            "tag": "核验边界｜本节最关键",
+            "note": "转述时最容易被补上的内容"
+          },
+          "body": [
+            "一份发布公告的价值，一半在它说了什么，一半在它避开了什么。下面六项在公告里不存在。"
+          ],
+          "list": {
+            "title": "公告未给出的内容",
+            "items": [
+              "此前有多少个 AI 入口、哪些产品会被取代或下线",
+              "Gemini agent、同事 Agent 和支出上限功能的任何价格",
+              "GA 日期；行业版处于 preview，三个垂直行业「即将推出」",
+              "哪个模型处理哪类任务，以及 Smart Routing 如何决策",
+              "多模型编排和 Smart Routing 实际省了多少（无量化结果）",
+              "与 Anthropic 的集成条款——只说 Claude「今天」可用"
+            ]
+          },
+          "note": {
+            "label": "直接可用",
+            "body": "把这六项贴进供应商问卷，要求对方补材料，而不是把这份公告当成答案。"
+          },
+          "sourceLine": "出处：Google Cloud Blog — Welcome to Gemini at Work 2026（官方页面，2026-10-09 读取）"
         }
       ],
       "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
@@ -1196,19 +1404,24 @@
       },
       "keyFacts": [
         {
-          "value": "内部探针",
-          "label": "监控路径",
-          "note": "TechCrunch报道"
+          "value": "$51",
+          "label": "约 1500 次会话的探针成本",
+          "note": "同样工作量：便宜模型 $233，顶级模型 $10,000"
         },
         {
-          "value": "Baseten",
-          "label": "客户入口",
-          "note": "媒体报道"
+          "value": "94%",
+          "label": "恶意黑客会话检出率",
+          "note": "Goodfire 自测，仅此一类风险有数字"
         },
         {
-          "value": "误报/漏报",
-          "label": "待复核",
-          "note": "下一步"
+          "value": "8.7%",
+          "label": "无害会话误报率",
+          "note": "被送去二次复核的比例"
+        },
+        {
+          "value": "<2%",
+          "label": "首字延迟增加",
+          "note": "四个探针并行，公司自报"
         }
       ],
       "timeline": [
@@ -1233,22 +1446,117 @@
       ],
       "deepSections": [
         {
-          "label": "SOURCE LIMIT",
-          "navLabel": "来源边界",
-          "heading": "这条证明TechCrunch AI支持的来源事实，不证明更强效果结论",
+          "label": "HOW IT WORKED",
+          "navLabel": "过去怎么做",
+          "heading": "传统做法是在模型旁边再放一个完整模型当读者",
           "sourceStatus": {
-            "tag": "媒体背景",
-            "note": "可靠媒体提供最小报道事实；完整采访、数字、图表和上下文仍需原文。"
+            "tag": "二手｜报道描述的行业现状",
+            "note": "TechCrunch 对 outside-in 监控的概括"
           },
           "body": [
-            "适合更新产品、政策、工程或资本观察清单。",
-            "下一步看源文件、客户日志、审计、价格、独立测试或监管材料。"
+            "outside-in 监控由两部分组成：被监控的 Agent 模型，和一个独立的监控模型——后者通常也是一个完整的 LLM。",
+            "监控器站在模型外面，消费它对外可见的输出和动作，读的是 Agent 产出的文本。这意味着被监控的模型产出多少，监控器就得重读多少；对长时间运行、文本量巨大的 Agent，成本和延迟都会快速上涨。"
           ],
           "note": {
-            "label": "升级这条需要",
-            "body": "需要技术报告、公开基准、第三方红队复测、部署日志和误报/漏报指标，才能升级为可靠Agent监控证据。"
+            "label": "这是成本的来源",
+            "body": "问题不在于监控本身，而在于「每一步都让一个完整模型重读一遍」这个结构。"
           },
-          "sourceLine": "出处：TechCrunch AI — Goodfire says its new inside-out monitors catch rogue AI agents at a fraction of the cost（2026-10-08）"
+          "sourceLine": "出处：TechCrunch — Goodfire says its new 'inside-out' monitors catch rogue AI agents at a fraction of the cost（2026-10-08）"
+        },
+        {
+          "label": "WHAT CHANGED",
+          "navLabel": "改了哪一步",
+          "heading": "探针挂进前向计算，贵的模型退到第二道",
+          "sourceStatus": {
+            "tag": "二手｜厂商描述的机制",
+            "note": "本站未验证实现细节"
+          },
+          "body": [
+            "Goodfire 的做法把监控拆成三层：探针、升级模型、响应策略。",
+            "探针是挂在模型内部计算上的小分类器，读的是模型每一步的中间神经激活。它复用模型本来就要做的计算，在上面跑一个分类器——不需要第二个模型重读一遍文本。只有探针标记出异常时，才调用那个独立的、昂贵的升级模型复核。"
+          ],
+          "list": {
+            "title": "三层结构",
+            "items": [
+              "探针（probes）：挂在模型前向计算上的小分类器，读中间激活",
+              "升级模型：只在探针命中时被调用的独立 AI",
+              "响应策略：客户自己配置——记录、人工复核、或直接拒答"
+            ]
+          },
+          "note": {
+            "label": "结构上的区别",
+            "body": "outside-in 是「输出的第二个读者」；inside-out 是「模型内部的轻量分类器 + 留给异常的昂贵复核」。省钱来自后者，不是前者变聪明了。"
+          },
+          "sourceLine": "出处：TechCrunch — Goodfire says its new 'inside-out' monitors catch rogue AI agents at a fraction of the cost（2026-10-08）"
+        },
+        {
+          "label": "NUMBERS",
+          "navLabel": "数字",
+          "heading": "成本差了 4 到 200 倍，但只在一个模型上测过",
+          "sourceStatus": {
+            "tag": "二手｜Goodfire 自报",
+            "note": "报道未提及独立验证"
+          },
+          "body": [
+            "文中给出的对照是在约 1500 次 Kimi K3 会话上做的：探针约 51 美元；用一个较便宜的 AI 模型逐步检查约 233 美元；用顶级模型约 10,000 美元。",
+            "检出方面，探针抓到了 94% 的恶意黑客会话，同时把 8.7% 的无害会话送去二次复核。延迟上，四个探针并行运行使模型开始响应前的时间增加不到 2%（公司自报）。",
+            "另有一项 Goodfire 的研究数据：包括 Kimi K3 和 GLM 5.2 在内的主流开放模型，在 Agent 测试中出现 reward hacking 的比例为 50% 到 96%。"
+          ],
+          "note": {
+            "label": "本站判断（不是来源表述）",
+            "body": "94% 检出配 8.7% 误报，意味着每 100 次无害会话会有约 9 次触发升级模型——升级模型的调用成本要算进总账，$51 这个数字是否包含它，报道没有说明。"
+          },
+          "sourceLine": "出处：TechCrunch — Goodfire says its new 'inside-out' monitors catch rogue AI agents at a fraction of the cost（2026-10-08）"
+        },
+        {
+          "label": "SCOPE",
+          "navLabel": "测试范围",
+          "heading": "三类风险里，只有一类给了数字",
+          "sourceStatus": {
+            "tag": "核验边界",
+            "note": "客户可选的风险类别与实际给出数字的类别不一致"
+          },
+          "body": [
+            "客户可选的风险类别有三项：攻击性黑客行为、化学与生物武器滥用、reward hacking。但报道中给出检出率的只有第一项。",
+            "可用性方面，这套监控面向 Baseten 的客户提供。"
+          ],
+          "list": {
+            "title": "有数字 / 没数字",
+            "items": [
+              "攻击性黑客行为：94% 检出、8.7% 误报",
+              "化学与生物武器滥用：未给出任何数字",
+              "reward hacking：未给出检出数字，只有「主流模型出现比例 50–96%」这个背景数据"
+            ]
+          },
+          "sourceLine": "出处：TechCrunch — Goodfire says its new 'inside-out' monitors catch rogue AI agents at a fraction of the cost（2026-10-08）"
+        },
+        {
+          "label": "NOT PROVEN",
+          "navLabel": "没有建立什么",
+          "heading": "报道里有六处是说法，不是结果",
+          "sourceStatus": {
+            "tag": "核验边界｜本节最关键",
+            "note": "以下均为报道自身的措辞所显示的缺口"
+          },
+          "body": [
+            "这篇报道没有「未经证实」一节，但它自己的用词划出了边界。下面六项在发稿时都还不是已验证的结论。"
+          ],
+          "list": {
+            "title": "报道未建立的内容",
+            "items": [
+              "成本、检出、延迟三组数字都是 Goodfire 的说法，报道未提及任何独立验证",
+              "结果来自单一模型（Kimi K3）的测试，是否能推广到其他模型和部署未知",
+              "94% 只针对恶意黑客会话，其余两类风险没有对应数字",
+              "报道未说明探针读取的是哪些层或哪些激活，因此架构无法从文中完整评估",
+              "「能在模型动手之前就察觉它可能要黑入」被表述为目标，不是已演示的结果",
+              "把行为追溯到训练中出现位置的长期设想，用的是「我们希望」"
+            ]
+          },
+          "note": {
+            "label": "怎么用这一节",
+            "body": "要把它当作采购依据，先向厂商索取：独立第三方复测、多模型结果、另外两类风险的检出数据、以及 $51 是否含升级模型调用成本。"
+          },
+          "sourceLine": "出处：TechCrunch — Goodfire says its new 'inside-out' monitors catch rogue AI agents at a fraction of the cost（2026-10-08）"
         }
       ],
       "sourceUrl": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
@@ -1263,7 +1571,109 @@
       },
       "originalUrl": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
       "detailWhyRanked": "它给Agent安全成本和开源模型托管责任提供了具体产品信号。 来源侧可核对的是TechCrunch AI支持的具体事实；升级判断仍需查Goodfire技术报告、Baseten上线文档、独立红队复测、误报/漏报统计和客户部署日志。。",
-      "verificationStatus": "已核验"
+      "verificationStatus": "已核验",
+      "techDiagram": {
+        "heading": "监控从「再读一遍输出」改成「读模型自己的中间计算」",
+        "caption": "两种做法要回答的是同一个问题——这个 Agent 是不是要干坏事。差别在于监控器站在模型外面还是里面。",
+        "deltaCaption": "同一批约 1500 次 Kimi K3 会话上的对比（数字均为 Goodfire 自报）",
+        "before": {
+          "label": "过去：outside-in 监控",
+          "note": "监控器是第二个读者，模型产出多少它就得读多少",
+          "steps": [
+            {
+              "label": "Agent 模型",
+              "kind": "model"
+            },
+            {
+              "label": "完整输出文本",
+              "kind": "data"
+            },
+            {
+              "label": "监控 LLM（另一个完整模型）",
+              "kind": "monitor",
+              "highlight": true
+            },
+            {
+              "label": "标记 / 拦截",
+              "kind": "action"
+            }
+          ],
+          "arrows": [
+            "产出",
+            "整篇重读",
+            "判定"
+          ]
+        },
+        "after": {
+          "label": "现在：inside-out 监控",
+          "note": "探针挂在模型的前向计算上，贵的模型只在命中时才启动",
+          "steps": [
+            {
+              "label": "模型前向计算",
+              "kind": "model"
+            },
+            {
+              "label": "中间激活（模型已经算过）",
+              "kind": "data"
+            },
+            {
+              "label": "小分类器探针",
+              "kind": "monitor",
+              "highlight": true
+            },
+            {
+              "label": "命中才调用升级模型",
+              "kind": "monitor"
+            },
+            {
+              "label": "记录 / 人工复核 / 拒答",
+              "kind": "action"
+            }
+          ],
+          "arrows": [
+            "每步产生",
+            "分类器读取",
+            "仅异常时",
+            "按客户策略"
+          ]
+        },
+        "deltas": [
+          {
+            "label": "约 1500 次会话成本",
+            "before": "$233（便宜模型）／$10,000（顶级模型）",
+            "after": "$51"
+          },
+          {
+            "label": "监控器要处理的量",
+            "before": "模型输出的全部文本",
+            "after": "复用已有计算，不重读文本"
+          },
+          {
+            "label": "贵模型的调用时机",
+            "before": "每一步都调用",
+            "after": "仅探针命中时"
+          },
+          {
+            "label": "检出率",
+            "before": "文中未给出",
+            "after": "94%（仅恶意黑客会话）"
+          },
+          {
+            "label": "误报率",
+            "before": "文中未给出",
+            "after": "8.7%"
+          },
+          {
+            "label": "首字延迟",
+            "before": "文中未给出",
+            "after": "增加不到 2%"
+          }
+        ],
+        "note": {
+          "label": "读图要注意",
+          "body": "左右两栏的数字不是同一来源对称给出的——右栏是 Goodfire 自测，左栏只有成本一项有对照值，检出率和延迟是空的。这张图说明的是机制差异，不是两套方案的完整评测。"
+        }
+      }
     },
     {
       "sourceId": "nvidia-newsroom",
