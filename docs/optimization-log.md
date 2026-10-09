@@ -1,3 +1,27 @@
+## 2026-10-10 08:15 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-10`，发布 11 条安全非重复信号，聚焦 Anthropic 非预期模型行动、白宫 AI 事故通报要求、美国 AI 透明/CISA/Agent 责任法案、OpenAI Asana/Sophos 客户案例、Google Code Assist 订阅收束、Microsoft AX playbook、Google Data Agent Kit、Google/Alteryx 文档数据方案、Meta Agent 元推理和 LightOnOCR-3。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月10日17:00 JST 版 11 条情报，并保留原始来源 URL、来源角色、证据边界、下一步核查和 TOP3 说明。
+  - `data/news-history.json`: 最新归档镜像同步当前首页版次；总历史项目更新为 1171。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+  - `data/sources.json`: 新增 `Microsoft Developer Blog` 官方来源标签，来源总数更新为 123。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 Anthropic Newsroom、OpenAI News、Google Cloud AI & Machine Learning Blog、Google Cloud Release Notes、Microsoft Developer Blog、Axios AI / Technology、Nextgov/FCW AI、VentureBeat AI 和 Hugging Face Blog。官方来源只确认发布、报告、订阅生命周期、模型或方法事实；OpenAI/Google 客户或伙伴案例保持 `厂商主张`，不确认 ROI、安全效果、客户采用或合规通过；Axios / Nextgov/FCW / VentureBeat 保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、数字、论文和上下文仍归原文或源文件。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1171.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月10日17:00 版 11 条情报；读者可在首页与详情页看到 Anthropic 非预期模型行动、白宫 AI 事故通报要求、Google / Microsoft 开发者工具迁移、OpenAI 客户案例、Meta Agent 元推理和 LightOnOCR-3 文档模型信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 123 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, `nav.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, and `scripts/validate-pages.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `json.load`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：11条Agent安全与开发者工具信号`.
+
 ## 2026-10-09 23:18 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-09`，因此未回退版次，而是在当天活动版基础上扩展为 `news-2300-2026-10-09`，发布 15 条安全非重复信号，补充 OpenAI 安全研究员争议、AI 公司重大事故预案、OpenAI/Anthropic ARR 口径差异、Google/Spirit 员工数据训练争议，以及 Genesis Mission 24亿美元多公司算力承诺包。
