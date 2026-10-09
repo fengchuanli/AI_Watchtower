@@ -29,7 +29,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
   - Ran `git diff --check`.
 - Commits: `fb662b4` (`【VisionHub网站风格优化】守住移动HTML读者路径`).
-- Push: pending.
+- Push: pushed - `fb662b4` and `afdf947` were pushed to `origin/main`; this follow-up entry records the successful remote sync.
 
 ## 2026-10-09 08:12 JST
 
