@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-09-11 through 2026-10-10
 - Current phase: Phase 5, Validation, QA, And Next Cycle
-- Last indexed run: 2026-10-09 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled and pushed successfully after network authorization. Day 28 QA guard is synced to `origin/main`.
+- Last indexed run: 2026-10-10 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` was already ahead of `origin/main` by 2 news-update commits before this optimization pass, so push should be held unless the user explicitly approves publishing those pending commits.
 
 ## Recent Plan-Day Decisions
 
@@ -46,6 +46,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 26 | Complete | `661f72c` | `scripts/validate-data.mjs` now rejects repeated sentence leads inside `detailBody`, `detailTrend`, and `detailWhyRanked` for current items and latest promoted archive items. The current 2026-10-07 detail pages had four AWS trend paragraphs tightened so mobile readers do not see duplicate narrative copy. |
 | Day 27 | Complete | `a6b7213` | `docs/editorial-validator-limits.md` now has a 2026-10-08 guard review for the Day 25 homepage scorecard guard and Day 26 detail narrative guard: expected false positives, accepted vocabulary-expansion cases, detail sentence-lead review rules, and human-review gaps that validators cannot replace. `scripts/validate-site.mjs` guards this note. |
 | Day 28 | Complete | `fb662b4` | `scripts/validate-pages.mjs` now covers the six static reader-path shells (`index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, `404.html`) instead of only 404: balanced tags, mobile viewport metadata, project-site-safe links, skip/main landmarks, and key dynamic containers. `docs/local-preview-qa.md` records this as the lightweight static fallback when Playwright/browser QA is unavailable, and `scripts/validate-site.mjs` guards the fallback. |
+| Day 29 | Complete | `pending` | `docs/monthly-optimization-summary.md` now summarizes the 2026-09-11 to 2026-10-10 cycle: VisionHub-style homepage briefing, TOP3 proof boundaries, detail-page article path, workflow friction, reader-visible continuity, validation guards, and remaining weaknesses around mobile density, visual briefing, manual source judgment, continuity views, and remote sync boundaries. |
 
 ## Historical Guard Anchors
 
@@ -97,9 +98,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 29: summarize what improved during this 30-day cycle and list remaining weaknesses.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 29.
-- If Day 29 is already complete, continue with Day 30 and write the next 30-day optimization plan before making further daily improvements.
+- Continue with Day 30: write the next 30-day optimization plan before making further daily improvements.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 30.
+- If Day 30 is already complete, continue with the first useful task from the new plan.
 
 ## Update Rules
 

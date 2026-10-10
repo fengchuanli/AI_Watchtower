@@ -1687,7 +1687,7 @@ if (
 if (
   !/docs\/monthly-optimization-summary\.md/.test(readme) ||
   !/月度优化总结/.test(monthlyOptimizationSummary) ||
-  !/2026-08-10 至 2026-09-08/.test(monthlyOptimizationSummary) ||
+  !/2026-09-11 至 2026-10-10/.test(monthlyOptimizationSummary) ||
   !/已改善的方向/.test(monthlyOptimizationSummary) ||
   !/仍然薄弱的地方/.test(monthlyOptimizationSummary) ||
   !/下一步优先级/.test(monthlyOptimizationSummary) ||
@@ -1700,7 +1700,8 @@ if (
   !/中文读者理解成本/.test(monthlyOptimizationSummary) ||
   !/vendor-narrative-promotion-rule\.md/.test(monthlyOptimizationSummary) ||
   !/stronger、weaker、repeated 或 resolved/.test(monthlyOptimizationSummary) ||
-  !/媒体 must-read/.test(monthlyOptimizationSummary)
+  !/媒体 must-read/.test(monthlyOptimizationSummary) ||
+  !/本地 `main` 已领先 `origin\/main`/.test(monthlyOptimizationSummary)
 ) {
   errors.push("Monthly optimization summary must stay discoverable and cover improvements, weaknesses, and next priorities.");
 }
