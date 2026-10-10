@@ -1,3 +1,37 @@
+## 2026-10-10 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 29，总结 2026-09-11 至 2026-10-10 这一轮 AI Watchtower 优化中已经改善的 VisionHub-style 首页简报、TOP3 证据边界、详情页文章路径、新闻更新工作流、读者可见连续观察、静态/数据校验守卫，并列出下一轮仍要处理的手机信息负担、视觉 briefing、人工事实判断、月度连续观察公开形态和远程同步边界。
+- Changed files:
+  - `docs/monthly-optimization-summary.md`: 改写为当前 2026-09-11 至 2026-10-10 周期总结，记录已改善方向、仍然薄弱的地方、Day 30 下一轮计划优先级和后续维护规则。
+  - `docs/optimization-decision-index.md`: 标记 Day 29 完成，把下一步交接给 Day 30 的下一轮 30 天计划，并记录本次 pull 成功但 push 应因本地已有未推送新闻提交而暂缓。
+  - `scripts/validate-site.mjs`: 更新月度总结静态守卫，确保总结对应当前周期、保留 Day 30 handoff、人工事实判断、媒体 must-read、vendor narrative、blocked-dns 和本地领先远程的推送边界。
+- Source posture:
+  - 已先读取自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/monthly-optimization-summary.md` 和 `docs/optimization-log.md` 顶部条目。
+  - `git pull --ff-only origin main` 首次因 sandbox GitHub DNS 失败；网络授权后成功并确认 `origin/main` 已是最新。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只做当前周期复盘和下一轮计划交接。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 总结明确本轮首页已把 hero、今日简报、TOP3、按目的阅读、深度简报和紧凑 feed 串成更顺的首屏路径。
+  - TOP3 reader use: pass - 总结记录 TOP3 证据边界、读者用途、source role、claim status 和 nextCheck 已进入排名卡前置判断。
+  - Source boundary visible: pass - 总结把媒体 must-read、sourceRole/claimStatus、source-of-record、vendor narrative 独立证据和人工事实判断列为下一轮继续守住的边界。
+  - Original source dependency: pass - 本次不改新闻正文；总结继续强调本站不是原文中文版替代品。
+  - Mobile burden: partial - 总结将 dense edition 下的手机 1 到 3 分钟阅读负担列为下一轮首要弱点。
+  - Continuity use: partial - 总结记录本期连续观察已有首页入口和交接形状，但仍缺读者可见跨期/月度页面或模块。
+  - Visual aid purpose: partial - 总结把 TOP3 视觉 briefing 组件列为下一轮待补方向。
+- 网站可见变化：无，属于规则/校验/计划更新；后续维护者可在 `docs/monthly-optimization-summary.md` 看到本轮已改善方向、仍然薄弱的地方和 Day 30 下一轮计划重点。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 123 sources.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commits: `b84cc97` (`【VisionHub网站风格优化】总结本轮简报体验改进`).
+- Push: held - local `main` already had unpushed 17:00 news-run commits `0e3af72` and `f2a407d` before this optimization pass, so pushing now would also publish unrelated work outside the scoped 20:00 optimization without explicit user approval.
+
 ## 2026-10-10 08:15 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-10`，发布 11 条安全非重复信号，聚焦 Anthropic 非预期模型行动、白宫 AI 事故通报要求、美国 AI 透明/CISA/Agent 责任法案、OpenAI Asana/Sophos 客户案例、Google Code Assist 订阅收束、Microsoft AX playbook、Google Data Agent Kit、Google/Alteryx 文档数据方案、Meta Agent 元推理和 LightOnOCR-3。
