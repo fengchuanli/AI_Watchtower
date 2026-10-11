@@ -20,8 +20,8 @@
   - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: pending.
-- Push: pending.
+- Commit: `b0a4f78` (`【新闻更新】补充23点AI新闻：14条Agent隐私与评测治理信号`).
+- Push: pushed to `origin/main`; remote advanced from `af18f93` to `b0a4f78`, including the previously local 17:00 news and 20:00 optimization commits.
 
 ## 2026-10-11 20:00 JST
 
