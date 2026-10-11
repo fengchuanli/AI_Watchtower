@@ -2,15 +2,16 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-10-11",
-  "totalItems": 1186,
+  "totalItems": 1190,
   "editions": [
     {
-      "id": "news-1700-2026-10-11",
+      "id": "news-2300-2026-10-11",
       "date": "2026-10-11",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "2026年10月11日17:00 JST版",
+      "archiveLabel": "2026年10月11日23:00 JST补充版",
       "archiveStatus": "published",
-      "itemCount": 10,
+      "itemCount": 14,
+      "statusLabel": "已发布",
       "items": [
         {
           "id": "ap-anthropic-claude-false-police-tip-2026-10-11",
@@ -27,6 +28,54 @@
           "sourceRole": "媒体背景",
           "trustLevel": "media",
           "sourceCaveat": "AP报道和双方确认只能证明这次误提交和垃圾标记处理，不证明Claude或其他Agent在所有表单场景中都有同类风险。"
+        },
+        {
+          "id": "microsoft-cmu-agent-evaluation-governance-workshop-2026-10-11",
+          "title": "Microsoft Research与CMU将召开Agent评测治理工作坊",
+          "category": "policy",
+          "label": "政策",
+          "time": "10月11日 00:00 JST",
+          "publishedAt": "2026-10-10T15:00:00Z",
+          "body": "Microsoft Research页面称，其将与CMU AIMSEC在10月22日至23日召集120名学界、产业、政府和民间社会参与者，讨论AI Agent评测框架、工具和治理标准。",
+          "impact": "政策、采购、安全和研究团队应关注工作坊是否产出开放问题清单、评测工具和领域化要求。",
+          "source": "Microsoft Research Blog",
+          "sourceId": "microsoft-research-blog",
+          "sourceUrl": "https://www.microsoft.com/en-us/research/event/advancing-the-science-of-ai-agent-evaluation/",
+          "sourceRole": "研究原文",
+          "trustLevel": "research",
+          "sourceCaveat": "活动页只证明会议计划和目标，不证明跨部门已经达成共识，也不证明任何评测框架有效。"
+        },
+        {
+          "id": "theverge-agent-privacy-promises-openai-meta-2026-10-11",
+          "title": "The Verge：Agent隐私竞争从功能承诺转向可审计架构",
+          "category": "policy",
+          "label": "政策",
+          "time": "10月10日 22:00 JST",
+          "publishedAt": "2026-10-10T13:00:00Z",
+          "body": "The Verge报道，OpenAI Dots与Meta Muse都把隐私和安全作为Agent卖点，但用户数据隔离、企业零数据保留、默认训练和可验证访问控制仍需外部证据。",
+          "impact": "CISO、法务和采购团队应要求Agent厂商交付数据访问矩阵、ZDR条件、日志导出、隔离边界和默认训练设置。",
+          "source": "The Verge AI",
+          "sourceId": "theverge-ai",
+          "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
+          "sourceRole": "媒体背景",
+          "trustLevel": "media",
+          "sourceCaveat": "The Verge报道能说明行业隐私叙事和公开争议，不证明任一Agent已经发生新的数据泄露，也不证明某一方案更安全。"
+        },
+        {
+          "id": "acm-shiksha-copilot-teacher-ai-collaboration-2026-10-11",
+          "title": "ACM论文给Shiksha Copilot补上千名教师实证样本",
+          "category": "research",
+          "label": "研究",
+          "time": "10月10日 18:00 JST",
+          "publishedAt": "2026-10-10T09:00:00Z",
+          "body": "ACM PACMHCI论文研究Shiksha Copilot在印度卡纳塔克邦低资源学校的应用，涉及1043名教师和23名策展人员，描述LLM与人工策展共同生成英语/卡纳达语教案的流程。",
+          "impact": "教育机构和EdTech团队应把AI教案系统设计成人审、双语、本地课程和教师可定制的流程，而不是只给通用提示模板。",
+          "source": "ACM PACMHCI",
+          "sourceId": "acm-pacmhci",
+          "sourceUrl": "https://doi.org/10.1145/3788074",
+          "sourceRole": "研究原文",
+          "trustLevel": "research",
+          "sourceCaveat": "ACM论文支持系统设计和教师使用研究，不证明学生学习结果改善，也不证明所有低资源学校可直接迁移。"
         },
         {
           "id": "google-embeddinggemma-2-multimodal-embeddings-2026-10-11",
@@ -75,6 +124,22 @@
           "sourceRole": "厂商主张",
           "trustLevel": "official",
           "sourceCaveat": "Meta文章只能证明公司对水电就业争议的回应，不证明所有项目都无公共成本或环境压力。"
+        },
+        {
+          "id": "microsoft-cabra-code-understanding-benchmark-2026-10-11",
+          "title": "Microsoft CABRA把代码理解列为Coding Agent瓶颈",
+          "category": "tool",
+          "label": "工具",
+          "time": "10月08日 00:00 JST",
+          "publishedAt": "2026-10-07T15:00:00Z",
+          "body": "Microsoft Research列表和GitHub仓库显示，CABRA用6840个合成代码编辑任务评估8个LLM和6种Copilot Agent配置，聚焦函数遍历、搜索、运行时解析和指令遵循。",
+          "impact": "工程平台团队可用CABRA思路给内部Coding Agent建立函数搜索、运行时解析和指令遵循的回归测试。",
+          "source": "Microsoft Research Blog / GitHub",
+          "sourceId": "microsoft-research-blog",
+          "sourceUrl": "https://github.com/microsoft/CABRA",
+          "sourceRole": "研究原文",
+          "trustLevel": "research",
+          "sourceCaveat": "GitHub与Microsoft列表支持CABRA存在和评测设计，不证明其任务能代表所有企业代码库，也不证明某个Agent生产可用。"
         },
         {
           "id": "microsoft-agent-lightning-v1-rl-framework-2026-10-11",
