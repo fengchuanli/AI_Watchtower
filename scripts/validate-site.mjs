@@ -1536,11 +1536,13 @@ if (
   errors.push("News gathering rules must target 10+ qualified items per run and define TOP3 as a same-day ranking, not the latest batch first three items.");
 }
 if (
-  !/2026-09-11 through 2026-10-10/.test(optimizationPlan) ||
-  !/Homepage Briefing Clarity/.test(optimizationPlan) ||
-  !/Detail-Page Article Quality/.test(optimizationPlan) ||
-  !/News Update Workflow Friction/.test(optimizationPlan) ||
-  !/Reader-Visible Continuity/.test(optimizationPlan) ||
+  !/2026-10-11 through 2026-11-09/.test(optimizationPlan) ||
+  !/Mobile First-Screen Relief/.test(optimizationPlan) ||
+  !/TOP3 Visual Briefing/.test(optimizationPlan) ||
+  !/Detail-Page Article Consistency/.test(optimizationPlan) ||
+  !/Publishing Path And Remote Sync/.test(optimizationPlan) ||
+  !/Reader-Visible Continuity And Next Cycle/.test(optimizationPlan) ||
+  !/local-ahead, blocked DNS, approval-required push/.test(optimizationPlan) ||
   !/create the next 30-day plan/.test(optimizationPlan) ||
   !/Do not stop daily optimization/.test(optimizationPlan)
 ) {

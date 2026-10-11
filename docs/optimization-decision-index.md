@@ -5,9 +5,9 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 ## Current Plan Window
 
 - Plan: `docs/optimization-plan.md`
-- Window: 2026-09-11 through 2026-10-10
-- Current phase: Phase 5, Validation, QA, And Next Cycle
-- Last indexed run: 2026-10-10 20:00 JST
+- Window: 2026-10-11 through 2026-11-09
+- Current phase: Phase 1, Mobile First-Screen Relief
+- Last indexed run: 2026-10-11 20:00 JST
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` was already ahead of `origin/main` by 2 news-update commits before this optimization pass, so push should be held unless the user explicitly approves publishing those pending commits.
 
 ## Recent Plan-Day Decisions
@@ -47,12 +47,14 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 27 | Complete | `a6b7213` | `docs/editorial-validator-limits.md` now has a 2026-10-08 guard review for the Day 25 homepage scorecard guard and Day 26 detail narrative guard: expected false positives, accepted vocabulary-expansion cases, detail sentence-lead review rules, and human-review gaps that validators cannot replace. `scripts/validate-site.mjs` guards this note. |
 | Day 28 | Complete | `fb662b4` | `scripts/validate-pages.mjs` now covers the six static reader-path shells (`index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, `404.html`) instead of only 404: balanced tags, mobile viewport metadata, project-site-safe links, skip/main landmarks, and key dynamic containers. `docs/local-preview-qa.md` records this as the lightweight static fallback when Playwright/browser QA is unavailable, and `scripts/validate-site.mjs` guards the fallback. |
 | Day 29 | Complete | `b84cc97` | `docs/monthly-optimization-summary.md` now summarizes the 2026-09-11 to 2026-10-10 cycle: VisionHub-style homepage briefing, TOP3 proof boundaries, detail-page article path, workflow friction, reader-visible continuity, validation guards, and remaining weaknesses around mobile density, visual briefing, manual source judgment, continuity views, and remote sync boundaries. |
+| Day 30 | Complete | `a2e2452` | `docs/optimization-plan.md` now covers 2026-10-11 through 2026-11-09 and turns the monthly summary weaknesses into the next cycle: mobile first-screen relief, TOP3 visual briefing, detail-page article consistency, publishing-path and remote-sync simplification, reader-visible continuity, and the next rollover. |
 
 ## Historical Guard Anchors
 
 These compact anchors keep validation and future automation aware of the most important completed workflow documents from recent cycles without repeating the full log.
 
 - Previous cycle window: 2026-08-10 through 2026-09-08. Previous phase: Phase 5, Validation, QA, And Next Cycle. Historical handoff before rollover: Continue with Day 30. Current handoff is Day 1.
+- Completed cycle window: 2026-09-11 through 2026-10-10. Completed phase: Phase 5, Validation, QA, And Next Cycle. Day 30 rollover created the 2026-10-11 through 2026-11-09 plan.
 - Previous Day 27: `docs/vendor-narrative-promotion-rule.md` blocks vivid vendor narratives from TOP3 unless first-screen card copy names the independent proof path.
 - Previous Day 28: `docs/vendor-narrative-promotion-rule.md` has a validator guard for source-role, first-screen field list, evidence-quality floor, stop conditions, and independent proof examples.
 - Previous Day 30: `docs/optimization-plan.md` covered the 2026-08-10 through 2026-09-08 plan before this rollover.
@@ -98,9 +100,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 30: write the next 30-day optimization plan before making further daily improvements.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 30.
-- If Day 30 is already complete, continue with the first useful task from the new plan.
+- Continue with Day 0 of the 2026-10-11 through 2026-11-09 plan: audit the current homepage first-screen order on phone and mark which modules belong before or after the first TOP3 decision.
+- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 0.
+- If Day 0 is already complete, continue with Day 1: tighten `briefing.summary`, watch points, or `readerFrame.mobile` so phone readers get one calmer 1 to 3 minute path before the deep briefing.
 
 ## Update Rules
 

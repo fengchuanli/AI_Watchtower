@@ -1,3 +1,37 @@
+## 2026-10-11 20:00 JST
+
+- Focus: 完成当前 30 天计划 Day 30，把 `docs/optimization-plan.md` 从 2026-09-11 至 2026-10-10 周期滚动到 2026-10-11 至 2026-11-09 周期；新计划根据 2026-10-10 月度总结，把手机首屏减负、TOP3 视觉 briefing、详情页文章语气一致性、新闻发布路径与远程同步边界、读者可见连续观察和下一轮复盘列为优先方向。
+- Changed files:
+  - `docs/optimization-plan.md`: 重写为 2026-10-11 至 2026-11-09 的 30 天计划，继续把 VisionHub-style 中文简报体验作为 UI / 内容结构优先级，并按 Day 0 至 Day 30 安排手机首屏、TOP3 视觉提示、详情页一致性、发布流水线、远程同步和 continuity 工作。
+  - `docs/optimization-decision-index.md`: 标记 Day 30 完成，更新当前计划窗口、当前阶段和下一次有用任务；下一次应从 Day 0 开始，审计手机首页首屏顺序，确认哪些模块应在第一次 TOP3 判断前后出现。
+  - `scripts/validate-site.mjs`: 更新优化计划静态守卫，使校验器保护新周期的计划窗口、阶段名称、TOP3 visual briefing、remote-sync hygiene 和下一轮计划延续规则。
+- Source posture:
+  - 已先读取自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md`、`docs/monthly-optimization-summary.md` 和 `docs/optimization-log.md` 顶部条目。
+  - `git pull --ff-only origin main` 首次因 sandbox GitHub DNS 失败；网络授权后成功并确认 `origin/main` 已是最新。
+  - 本次没有新增新闻事实、来源 URL、媒体正文改写或外部结论；只做下一轮计划、决策索引和计划校验守卫更新。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 新计划 Day 0 至 Day 6 直接围绕手机首屏减负、TOP3 前后模块顺序、简报摘要、编辑说明和分类导航展开。
+  - TOP3 reader use: pass - 新计划 Day 7 至 Day 12 把 TOP3 视觉 briefing、来源角色、证据边界、reader use、next-check artifact 和 unsupported certainty guard 列为主线。
+  - Source boundary visible: pass - 新计划继续要求 `docs/copyright-safety.md`、sourceRole / claimStatus、media `must-read`、vendor-claim boundary 和 source-of-record 判断优先于内容扩张。
+  - Original source dependency: pass - 本次不改新闻正文；新计划明确 TOP3 媒体卡的 visual cue 必须强化 `must-read` 原文依赖，而不是替代原文。
+  - Mobile burden: pass - 下一轮第一阶段专门处理手机 1 到 3 分钟阅读路径和 dense edition 的首页信息负担。
+  - Continuity use: partial - 新计划把 Day 25 至 Day 28 留给读者可见跨期/月度 continuity，但尚未实现公开组件。
+  - Visual aid purpose: partial - 新计划为 TOP3 visual briefing 排出 Day 7 至 Day 12，但本次只完成规划和守卫，不改可见 UI。
+- 网站可见变化：无，属于规则/校验/计划更新；后续维护者可在 `docs/optimization-plan.md` 看到 2026-10-11 至 2026-11-09 的下一轮 VisionHub-style 手机简报优化方向。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check app.js`.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 123 sources.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: `a2e2452` (`【VisionHub网站风格优化】规划下一轮手机简报优化`).
+- Push: held - local `main` already had unpushed news-run commits `91c6af9` and `43c881d` before this optimization pass, so pushing now would also publish unrelated work outside the scoped 20:00 optimization without explicit user approval.
+
 ## 2026-10-11 08:17 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-11`，发布 10 条安全非重复信号，聚焦 Claude 误向费城警方网站提交线索、OpenAI 欧盟文本水印、Google Research Agent 隐私安全框架、EmbeddingGemma 2、Carbon-A、生物/公共卫生 AI、Microsoft Agent Lightning、OpenAI/Ironclad 合同 Agent，以及 Meta 数据中心公共账本核查。
