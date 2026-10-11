@@ -1,2087 +1,1225 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-12",
   "status": "published",
   "statusLabel": "已发布",
   "sourceCount": 124,
-  "editorNote": "23:00 JST补充版：14条非重复信号追踪Agent误提交、隐私承诺、评测治理、Coding Agent基准、教育AI实证与AI科学。",
+  "editorNote": "2026年10月12日17:00 JST短批次：6条安全非重复信号，聚焦Agent控制层、编码Agent产出瓶颈、AI算力外部性、生成式AI规则和SynthID内容溯源。",
   "edition": {
-    "id": "news-2300-2026-10-11",
-    "date": "2026-10-11",
+    "id": "news-1700-2026-10-12",
+    "date": "2026-10-12",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "2026年10月11日23:00 JST补充版",
-    "itemCount": 14,
-    "note": "10月11日23:00 JST Agent隐私、评测治理与教育AI补充雷达",
-    "operationalStatus": "已拉取origin/main；核对官方/研究/AP/The Verge来源并去重。可安全新增4条，未强行补满10条。",
-    "editorialInterpretation": "14条信号在17:00版Agent安全、文本溯源和AI科学基础上，补入个人Agent隐私、Agent评测治理、Coding Agent能力基准和教育AI实证。",
+    "archiveLabel": "17:00 JST短批次",
+    "itemCount": 6,
+    "note": "17点短批次：Agent控制、编码瓶颈与内容规则",
+    "operationalStatus": "已拉取origin/main并检查来源索引；发布6条安全非重复信号，未用弱来源补数量。",
+    "editorialInterpretation": "本期发布 6 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复或弱证据补数量。",
     "readerFrame": {
-      "headline": "把Agent事故、隐私承诺和评测标准放在同一张核查表",
-      "whyItMatters": "17:00版已经覆盖Agent误提交、文本水印和AI科学；本次补充把问题推进到隐私证明、评测标准、代码Agent诊断和教育AI实证，帮助读者从事故复盘转向采购与验收。",
+      "headline": "把这期当作Agent与内容治理的短批次复核清单",
+      "whyItMatters": "这批信号数量较少，但每条都能对应一个可执行核查：Agent守卫位置、多Agent trace、编码Agent评审瓶颈、AI算力连续性、AI影像规则和SynthID检测边界。",
       "useThisIssueFor": [
-        "安全/隐私团队检查个人Agent的数据访问、ZDR、默认训练和审计日志。",
-        "平台/工程团队检查Agent评测标准、Coding Agent能力拆解和真实harness训练。",
-        "教育/公共部门团队检查AI教案系统是否有人审、本地语言和长期成效证据。"
+        "企业架构/安全团队用来复查Agent权限、trace、状态和终止条件。",
+        "研发效能/采购团队用来调整编码Agent ROI指标，而不是只看代码量。",
+        "编辑/法务/平台团队用来更新AI内容溯源与生成式AI影像规则。"
       ],
       "notProvenYet": [
-        "本期不证明OpenAI或Meta的个人Agent隐私承诺已经通过独立审计。",
-        "本期不证明CABRA或Agent评测工作坊已经成为行业标准。",
-        "本期不证明Shiksha Copilot改善了学生长期学习结果。"
+        "不能证明任何Agent控制层已经带来客户侧安全改善或成本下降。",
+        "不证明编码Agent在所有团队中都没有产出增益，仍需复现和企业日志。",
+        "不证明SynthID或赛事AI规则足以解决所有内容真实性问题。"
       ],
       "mobile": {
-        "headline": "Agent隐私和评测补上证据表",
-        "summary": "14条信号看Agent事故、隐私承诺、代码评测和教育AI。",
+        "headline": "短批次复核表",
+        "summary": "6条信号聚焦Agent控制、编码瓶颈和内容规则。",
         "primaryUses": [
-          "安全团队查隐私",
-          "工程团队查评测",
-          "教育团队查成效"
+          "安全团队查Agent权限",
+          "研发团队查ROI指标",
+          "编辑团队查AI规则"
         ],
-        "proofBoundary": "仍需管理员文档、日志、第三方审计、论文复现和长期研究。"
+        "proofBoundary": "不能证明工具效果已被独立验证或可全场景复用"
       }
     },
     "changeSummary": {
-      "headline": "从10月11日17:00版补充到23:00版",
+      "headline": "相较10月11日23点版，本期转向工程控制和规则复核",
       "freshFacts": [
-        "新增The Verge对OpenAI Dots与Meta Muse隐私承诺的并列核查。",
-        "新增Microsoft Research与CMU Agent评测治理工作坊信号。",
-        "新增CABRA Coding Agent代码理解基准和Shiksha Copilot教育AI论文。"
+        "本期新增VentureBeat关于企业Agent守卫位置和多Agent评测控制层的两条工程信号。",
+        "本期新增Ars关于编码Agent研究、Yandex AI数据中心受损和Nikon AI规则取消获奖的三条媒体信号。",
+        "本期新增Google SynthID Detector全球英文开放的官方溯源工具信号。"
       ],
       "repeatedContext": [
-        "Agent安全延续17:00版AP Claude误提交、Google Agent隐私安全和Microsoft Agent Lightning主题。",
-        "AI采用延续此前OpenAI Work at the Frontier和企业Agent采用脉络，但本期新增教育低资源场景论文证据。"
+        "Agent误提交、OpenAI文本水印和Google Agent隐私安全仍是旧背景，不在本期重复发布。",
+        "AI数据中心水电、就业和资本外部性延续旧主线，本期只新增物理冲突风险。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对Agent安全与隐私清单",
-        "count": 4,
-        "meaning": "用来更新误提交、文本水印、Agent上下文隐私和个人Agent隐私承诺核查清单。"
+        "label": "核对Agent控制层",
+        "count": 2,
+        "meaning": "用来更新企业Agent权限、trace、handoff和状态管理检查清单。"
       },
       {
-        "label": "验证Agent评测与训练证据",
-        "count": 4,
-        "meaning": "用来检查Microsoft Agent Lightning、CABRA、Agent评测治理和企业合同Agent的验收证据。"
+        "label": "验证工程产出与算力风险",
+        "count": 2,
+        "meaning": "用来检查编码Agent ROI指标和AI数据中心连续性风险。"
       },
       {
-        "label": "复查AI科学与教育成效",
-        "count": 5,
-        "meaning": "用来复查数学披露、Earth AI、EmbeddingGemma 2、生物注释和Shiksha Copilot的论文/复现证据。"
-      },
-      {
-        "label": "核对算力公共文件",
-        "count": 1,
-        "meaning": "用来核对AI数据中心水、电、就业和公共文件证据。"
+        "label": "查内容规则与溯源",
+        "count": 2,
+        "meaning": "用来核对AI影像规则、源文件审查和水印检测工具边界。"
       }
     ],
     "sourceRisk": {
-      "label": "官方与研究来源集中",
-      "note": "官方/研究来源能确认发布、论文和活动事实，但不能直接证明生产效果。",
-      "nextCheck": "查第三方审计报告、管理员日志、论文复现、客户记录、公共文件和会后公开报告。"
+      "label": "媒体与官方混合短批次",
+      "note": "可靠媒体4条、官方1条、媒体观点1条偏向工程/规则雷达；适合列复核清单，不适合升级为效果结论。",
+      "nextCheck": "下一步看官方文件、研究原文、客户日志、审计报告、第三方复测和伙伴公告。"
     },
     "sourceConcentration": {
-      "sourceId": "microsoft-research-blog",
-      "sourceName": "Microsoft Research Blog / Microsoft Research相关来源",
+      "sourceId": "ars-technica-ai",
+      "sourceName": "Ars Technica AI",
       "count": 3,
-      "share": "3/14",
-      "note": "Microsoft相关研究来源新增较多，但未占多数。",
-      "nextCheck": "查论文、GitHub复现、会后报告和第三方评测。"
+      "share": "3/6",
+      "note": "同一媒体来源占半数但未达三分之二集中阈值；仍需其他媒体、官方或原文复核。",
+      "nextCheck": "优先查其他可靠媒体、官方说明、研究原文和第三方复现。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期多数来源只证明报告、论文、活动或媒体分析存在，不能替代独立审计、生产日志和长期结果。",
-      "doNotConclude": "不能据此认定个人Agent隐私可靠、Coding Agent评测完备、教育AI改善学习结果或Agent事故已解决。",
-      "useInstead": "用来建立核查清单：先找权限日志、ZDR条款、审计报告、论文代码、会后报告和真实部署数据。"
+      "body": "本期是少量高边界信号的雷达，不是Agent、编码、算力或内容治理的全市场判断。",
+      "doNotConclude": "不能据此认为某类Agent架构、编码工具或水印检测已经被独立验证。",
+      "useInstead": "适合先把官方文件、原文论文、客户日志、benchmark和第三方复核列入下一轮检查。"
     },
     "trendNotes": [
       {
-        "topic": "Agent隐私",
-        "label": "承诺进入采购核查",
-        "note": "跨期观察：从Dots、Muse、文本水印和Agent误提交一路看，个人Agent的竞争正在从功能发布反复转向隐私承诺和可审计数据边界。",
-        "boundary": "仍需管理员文档、日志导出、隔离证明、ZDR条款和第三方审计报告。"
+        "topic": "Agent治理",
+        "label": "跨期继续收紧",
+        "note": "跨期看，Agent主题从误提交事故延续到控制层、trace和系统记录位置。",
+        "boundary": "不证明Agent平台已成熟，仍需客户日志、审计记录和第三方复测。"
       },
       {
-        "topic": "Agent评测",
-        "label": "事故复盘走向测量科学",
-        "note": "跨期观察：从Anthropic非预期行动、Google Agent隐私框架、Microsoft Agent Lightning到CABRA和Microsoft/CMU工作坊，评测正在反复拆成标准、工具和能力维度。",
-        "boundary": "仍需会后公开报告、工具仓库、论文代码、benchmark复现和真实工作负载验证。"
-      },
-      {
-        "topic": "AI采用",
-        "label": "公共场景补长期证据",
-        "note": "跨期观察：此前OpenAI工作采用研究和企业Agent案例之后，Shiksha Copilot把AI采用证据推进到低资源学校、多语言和人审策展流程。",
-        "boundary": "仍需学生学习结果、纵向追踪数据、部署成本记录和其他地区第三方复现。"
+        "topic": "内容真实性",
+        "label": "规则走向可执行",
+        "note": "连续几期内容溯源从OpenAI文本水印延续到Google SynthID和Nikon影像规则。",
+        "boundary": "不证明检测器可靠或规则完备，仍需误报漏报数据、规则文件和专家评估。"
       }
     ],
     "topicContinuity": [
       {
         "topic": "agent",
-        "label": "Agent行为证据更具体",
+        "label": "从事故转向控制层",
         "status": "stronger",
-        "previousPattern": "此前批次关注Anthropic非预期行动、白宫通报要求、Postman生产Agent和AgentCore支付。",
-        "currentSignal": "本期新增AP误提交警方线索、Google Agent隐私安全框架、Ironclad合同Agent和Microsoft Agent Lightning。",
-        "signalDirection": "增强：从报告和架构延伸到公共机构事件、上下文策略、企业知识图谱和训练框架。",
-        "stillUnproven": "仍需工具日志、机构记录、管理员权限矩阵、代码、评测环境和第三方审计。"
+        "previousPattern": "此前归档连续记录Agent误提交、隐私安全和外部网站副作用。",
+        "currentSignal": "本期新增Agent守卫位置和多Agent评测方法。",
+        "signalDirection": "本期增强为工程控制清单，而非只重复事故背景。",
+        "stillUnproven": "仍需客户日志、代码、benchmark、审计报告或第三方复测证明控制层有效。"
       },
       {
-        "topic": "policy",
-        "label": "AI合规边界从事故扩展到文本",
+        "topic": "developer-tooling",
+        "label": "编码ROI被重新计量",
         "status": "stronger",
-        "previousPattern": "此前批次关注事故通报、政府透明和AI自律路线。",
-        "currentSignal": "本期新增OpenAI欧盟文本水印方案，AP误提交报道也强化了事故与机构通知边界。",
-        "signalDirection": "增强：合规问题从事故报告扩展到文本标识、检测器准入和公共机构误操作。",
-        "stillUnproven": "仍需欧盟监管解释、技术报告、误报数据、机构日志和审计记录。"
-      },
-      {
-        "topic": "model",
-        "label": "开放模型线进入基础组件和科学任务",
-        "status": "stronger",
-        "previousPattern": "此前批次关注文档OCR、开放模型和算力调度治理。",
-        "currentSignal": "本期新增EmbeddingGemma 2多模态嵌入和Carbon-A基因组注释信号。",
-        "signalDirection": "增强：开放生态从通用模型扩展到底层嵌入和科学注释任务。",
-        "stillUnproven": "仍需模型卡、权重代码、许可文件、benchmark报告、专家复核和实验验证。"
+        "previousPattern": "此前多期关注编码Agent模型、平台和开发者工具发布。",
+        "currentSignal": "本期新增研究报道，把代码量提升与review瓶颈放在同一张表里。",
+        "signalDirection": "本期增强为交付指标复核，而非只重复工具发布。",
+        "stillUnproven": "仍需研究原文、企业日志、缺陷率指标和新版Agent复测数据。"
       }
     ],
     "companyContinuity": [
       {
-        "company": "Anthropic",
-        "label": "行为报告进入公共机构样本",
-        "lastMention": "上次相关脉络：10月10日Anthropic出现在非预期模型行动报告和白宫通报要求。",
-        "whatChanged": "本期AP报道把Claude误提交表单落到费城警方网站这个可核查机构场景。",
-        "stillUnproven": "仍需Anthropic修复记录、工具权限说明、警方审计和其他机构反馈。"
-      },
-      {
-        "company": "OpenAI",
-        "label": "治理与商业化同时推进",
-        "lastMention": "上次相关脉络：10月10日OpenAI出现在客户案例和安全运营案例。",
-        "whatChanged": "本期新增文本水印、数学结果披露和Ironclad合同Agent案例。",
-        "stillUnproven": "仍需技术报告、专家复核、客户日志、评测集和权限矩阵。"
-      },
-      {
         "company": "Google",
-        "label": "研究与开放模型扩展",
-        "lastMention": "上次相关脉络：10月10日Google出现在Data Agent Kit、Code Assist和BigQuery文档AI。",
-        "whatChanged": "本期新增Agent隐私安全研究、Earth AI公共卫生案例和EmbeddingGemma 2。",
-        "stillUnproven": "仍需论文复现、模型卡、代码、第三方benchmark和部署记录。"
+        "label": "溯源工具补证",
+        "lastMention": "此前归档已连续记录Google Agent隐私、EmbeddingGemma和Earth AI信号。",
+        "whatChanged": "本期新增官方SynthID Detector全球英文开放，属于内容透明度工具链补充。",
+        "stillUnproven": "仍需误报漏报数据、伙伴公告、检测日志和第三方评测。"
+      },
+      {
+        "company": "Yandex",
+        "label": "算力风险新出现",
+        "lastMention": "此前归档未把Yandex列为本周重点公司。",
+        "whatChanged": "本期新增AI训练数据中心受损报道，把算力连续性纳入地缘风险。",
+        "stillUnproven": "仍需Yandex官方说明、卫星图像、服务可用性记录和训练资源恢复指标。"
       }
     ],
     "sourceFamilies": [
       {
-        "family": "official",
-        "label": "官方/厂商原文",
-        "count": 8,
-        "role": "OpenAI、Google、Google DeepMind、Meta和Hugging Face等来源用于核对发布、产品计划和厂商回应；效果与外部影响需独立证据。"
-      },
-      {
-        "family": "research",
-        "label": "研究原文",
-        "count": 4,
-        "role": "Microsoft Research、ACM和相关代码仓库用于核对研究/工具入口；结论需代码、论文、模型卡和复现。"
-      },
-      {
         "family": "reliable_media",
         "label": "可靠媒体",
-        "count": 2,
-        "role": "AP和The Verge用于核对公共机构误提交报道与Agent隐私竞争背景；完整事实、采访和上下文仍归原文。"
+        "count": 5,
+        "role": "来源用于发现工程、研究和规则信号；完整事实仍需原文与后续文件核对。"
+      },
+      {
+        "family": "official",
+        "label": "官方来源",
+        "count": 1,
+        "role": "官方来源用于核对SynthID发布事实；工具效果仍需第三方证据。"
       }
     ],
     "topicGroups": [
       {
         "id": "agent",
-        "label": "核对Agent行为、隐私与评测",
-        "count": 7,
-        "itemIds": [
-          "ap-anthropic-claude-false-police-tip-2026-10-11",
-          "theverge-agent-privacy-promises-openai-meta-2026-10-11",
-          "microsoft-cmu-agent-evaluation-governance-workshop-2026-10-11",
-          "microsoft-cabra-code-understanding-benchmark-2026-10-11",
-          "google-research-agentic-privacy-security-contextual-integrity-2026-10-11",
-          "microsoft-agent-lightning-v1-rl-framework-2026-10-11",
-          "openai-ironclad-computer-use-contracting-agent-2026-10-11"
-        ],
-        "meaning": "用来检查Agent表单副作用、隐私承诺、评测标准、代码理解、上下文安全、训练框架和合同系统权限。"
-      },
-      {
-        "id": "policy",
-        "label": "检查文本与数据治理",
+        "label": "Agent治理",
         "count": 2,
         "itemIds": [
-          "openai-eu-text-provenance-watermarking-2026-10-11",
-          "theverge-agent-privacy-promises-openai-meta-2026-10-11"
+          "venturebeat-workday-agent-guardrails-platform-2026-10-12",
+          "venturebeat-multi-agent-control-layer-evals-2026-10-11"
         ],
-        "meaning": "用来更新文本水印、检测准入、个人Agent隐私和企业数据边界。"
-      },
-      {
-        "id": "model",
-        "label": "验证模型、科学与教育工具",
-        "count": 5,
-        "itemIds": [
-          "google-earth-ai-public-health-pdfm-2026-10-11",
-          "openai-mathematics-progress-github-lean-2026-10-11",
-          "google-embeddinggemma-2-multimodal-embeddings-2026-10-11",
-          "huggingface-carbon-a-genome-annotation-2026-10-11",
-          "acm-shiksha-copilot-teacher-ai-collaboration-2026-10-11"
-        ],
-        "meaning": "用来核对开放嵌入、数学披露、公共卫生预测、生物注释和教育AI实证。"
-      }
-    ],
-    "omittedTopics": [
-      {
-        "id": "enterprise",
-        "label": "企业",
-        "status": "已由Agent/工具覆盖",
-        "reason": "本期企业信号集中在Ironclad合同Agent和嵌入模型，已归入Agent、tool和model扫描。",
-        "omissionBoundary": "这不代表企业AI不重要；只是本期没有独立企业采用证据可单独成组。",
-        "evidenceNeeded": "客户部署日志、合同、审计和独立ROI指标。",
-        "fallback": "查看本期Agent与policy分组，或回看10月10日生产Agent控制面。"
+        "meaning": "用来更新Agent权限、trace、交接和状态管理复核清单。"
       },
       {
         "id": "developer-tooling",
         "label": "开发者工具",
-        "status": "并入Agent",
-        "reason": "Microsoft Agent Lightning和OpenAI Ironclad信号已进入Agent分组。",
-        "omissionBoundary": "这不代表开发者工具缺席；只是本期工具变化与Agent训练/企业上下文重合。",
-        "evidenceNeeded": "代码、管理员文档、权限矩阵和第三方复现。",
-        "fallback": "查看Agent分组里的训练框架和企业知识图谱条目。"
+        "count": 1,
+        "itemIds": [
+          "ars-ai-coding-agent-review-bottleneck-study-2026-10-10"
+        ],
+        "meaning": "用来检查编码Agent从代码量到软件产出的指标转换。"
+      },
+      {
+        "id": "infrastructure",
+        "label": "基础设施",
+        "count": 1,
+        "itemIds": [
+          "ars-yandex-ai-data-center-strikes-2026-10-10"
+        ],
+        "meaning": "用来核对AI数据中心连续性、冗余和地缘风险。"
+      },
+      {
+        "id": "policy",
+        "label": "政策治理",
+        "count": 2,
+        "itemIds": [
+          "ars-nikon-small-world-ai-disqualification-2026-10-10",
+          "google-synthid-detector-global-access-2026-10-07"
+        ],
+        "meaning": "用来更新AI影像规则、内容溯源和平台披露边界。"
       }
-    ]
+    ],
+    "omittedTopics": {
+      "model": {
+        "status": "无新来源事实",
+        "reason": "本期没有新的安全非重复模型发布。",
+        "omissionBoundary": "不代表模型竞争降温，只说明本时间窗没有通过来源门槛的新模型项。",
+        "fallback": "读者可回看10月11日EmbeddingGemma、Carbon-A和OpenAI数学信号。"
+      },
+      "enterprise": {
+        "status": "已有Agent企业项覆盖",
+        "reason": "企业主题并入Agent控制层和编码ROI。",
+        "omissionBoundary": "不代表企业采用证据充分，仍需客户日志和审计指标。",
+        "fallback": "用Agent治理和开发者工具分组作为企业读者入口。"
+      }
+    }
   },
   "categories": [
     {
       "id": "model",
       "label": "模型",
-      "description": "本期读者可用EmbeddingGemma和Carbon更新开放模型候选；仍需模型卡、代码和独立benchmark。"
+      "description": "本期读者用来确认无新的安全非重复模型项；仍需后续官方公告或论文验证，不能据此判断模型线停更。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期读者用来确认无新的安全非重复产品项；仍需后续公告验证，不能据此判断产品线停更。"
+      "description": "本期读者可用Google SynthID核对AI内容溯源入口；仍需误报漏报数据和伙伴公告验证。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期读者用来借Google、Earth和OpenAI建立AI科学与治理复核清单；仍需论文、专家复核和复现。"
+      "description": "本期读者可用Ars编码Agent研究报道检查研发ROI；仍需研究原文、复现和企业日志。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期读者可用Microsoft、OpenAI和Ironclad检查训练/合同工具；仍需代码、真实harness和客户日志。"
+      "description": "本期读者可用VentureBeat Agent控制层文章更新工程评审；仍需客户日志、代码和benchmark验证。"
     },
     {
       "id": "funding",
       "label": "融资",
-      "description": "本期读者用来借Meta核查AI基础设施资本支出外部性；仍需公共许可、合同和审计。"
+      "description": "本期读者用来借Yandex数据中心报道核查AI算力外部性；仍需官方说明、卫星图和服务指标。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期读者可用AP和OpenAI核对事故与合规边界；仍需机构记录、监管解释和技术报告。"
+      "description": "本期读者可用Nikon生成式AI规则事件检查内容治理；仍需规则文件、源文件和专家评估。"
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "17点：Agent误提交把文本溯源和AI科学拉进核查表",
-    "summary": "本期10条信号从AP报道的Claude误提交出发，延伸到OpenAI文本水印、Google Agent安全与Earth AI、开放嵌入和AI科学工具。",
-    "cta": "查看全部10条信号",
+    "headline": "17点：Agent控制层、编码瓶颈和AI内容规则进入复核表",
+    "summary": "本期发布6条安全非重复信号，重点不是追热点数量，而是把Agent执行治理、编码Agent产出、AI算力物理风险和内容真实性规则补进核查表。",
+    "cta": "查看6条短批次信号",
     "watchPoints": [
       {
-        "title": "Agent误提交",
-        "body": "先查工具日志、机构记录和修复说明。"
+        "title": "Agent控制层",
+        "body": "看守卫是否贴近系统记录与执行权限。"
       },
       {
-        "title": "文本溯源",
-        "body": "水印要看误报、漏报和独立评估。"
+        "title": "编码ROI",
+        "body": "把代码量和PR数放回评审瓶颈里看。"
       },
       {
-        "title": "AI科学",
-        "body": "数学、公共卫生和生物模型都要等复现。"
+        "title": "内容规则",
+        "body": "水印、AI影像和源文件审查要分开核对。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "17:00 JST 深度简报",
-    "title": "Agent安全从报告走向公共机构事件",
-    "subtitle": "本期把Claude误提交、OpenAI文本水印、Google Research上下文安全和AI科学工具放在一张证据表里。",
-    "dateLabel": "2026年10月11日",
-    "status": "已发布，来源边界已标注",
-    "overview": "10月11日17点版显示，AI Watchtower的核心问题正在从“模型能做什么”转向“Agent行动、文本标识和科学结果如何被审计”。AP误提交报道提供了真实副作用样本，OpenAI与Google给出治理和研究路径，开放模型与AI科学条目则提醒读者继续看模型卡、代码和复现。",
+    "kicker": "17点短批次",
+    "title": "Agent控制层、编码瓶颈和AI内容规则进入同一张复核表",
+    "subtitle": "本期6条信号数量不大，但都能落到下一步证据：权限日志、trace、review指标、数据中心恢复记录、AI影像规则和水印检测评测。",
+    "dateLabel": "2026年10月12日 17:00 JST",
+    "status": "已发布｜短批次质量门槛",
+    "overview": "10月11日23点版已经覆盖多数强新闻后，本期只发布通过非重复、来源角色和版权边界的6条信号。它们共同指向一个判断：AI Watchtower现在更需要把Agent、编码工具、基础设施和内容真实性放进可复核清单，而不是用弱材料扩充数量。",
     "timeline": [
       {
-        "label": "事故样本",
-        "title": "AP报道Claude误提交警方线索",
-        "body": "公共机构表单让Agent执行边界变得可核查。"
+        "label": "04:00",
+        "title": "企业Agent守卫位置进入讨论",
+        "body": "VentureBeat署名文章把上下文、政策和执行权限放回系统记录附近。"
       },
       {
-        "label": "合规产品",
-        "title": "OpenAI公布文本水印路径",
-        "body": "文本溯源进入ChatGPT、Codex和API的区域化治理。"
+        "label": "06:05",
+        "title": "多Agent评测转向协作边界",
+        "body": "另一篇VentureBeat文章要求观察交接、共享状态、死锁和模型同质化。"
       },
       {
-        "label": "研究验证",
-        "title": "Google/OpenAI/HF发布AI科学与安全信号",
-        "body": "真正升级仍依赖论文、模型卡、代码和复现。"
+        "label": "本期",
+        "title": "工程与规则信号合并发布",
+        "body": "Ars与Google信号补上编码ROI、数据中心风险、AI影像规则和SynthID检测。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "10",
-        "label": "本期安全非重复信号"
+        "value": "6",
+        "label": "安全非重复信号"
       },
       {
-        "value": "8/10",
-        "label": "官方/研究/厂商来源"
+        "value": "5/6",
+        "label": "可靠媒体背景"
       },
       {
-        "value": "1",
-        "label": "可靠媒体公共机构事件"
+        "value": "1/6",
+        "label": "官方发布事实"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "Agent安全",
-        "title": "误提交让执行权限成为焦点",
-        "body": "Claude误向警方网站提交线索，把网页任务测试的副作用带到公共机构场景。",
-        "soWhat": "先检查禁止提交、人审、日志和通知流程。"
+        "label": "Agent控制",
+        "title": "Agent守卫要贴近执行系统",
+        "body": "两条VentureBeat信号都指向同一件事：Agent控制不能只在提示词或外部网关里存在，必须能被trace、权限、状态和终止条件复核。",
+        "soWhat": "企业上线Agent前先问守卫跑在哪里、谁签发权限、日志能否审计。"
       },
       {
         "number": "02",
-        "label": "文本治理",
-        "title": "水印是辅助信号，不是裁决工具",
-        "body": "OpenAI的EU文本水印方案同时公布上线路径和检测限制。",
-        "soWhat": "合规团队要设计误报、漏报和申诉边界。"
+        "label": "编码ROI",
+        "title": "代码生成不是软件交付",
+        "body": "Ars报道的研究把编码Agent的增量放回review队列，提醒团队用issue关闭、评审时长和缺陷率衡量价值。",
+        "soWhat": "采购和研发效能团队应避免把LOC和PR当作最终ROI。"
       },
       {
         "number": "03",
-        "label": "AI科学",
-        "title": "公开入口不等于科学结论已成立",
-        "body": "数学、公共卫生和生物模型都有发布入口，但都要交给专家和第三方复现。",
-        "soWhat": "科研读者应优先查论文、代码、模型卡和验证记录。"
+        "label": "内容规则",
+        "title": "内容真实性需要规则和检测双线推进",
+        "body": "Nikon事件说明AI影像规则会改变结果，Google SynthID说明检测入口在扩展，但两者都需要误报、源文件和第三方评估。",
+        "soWhat": "编辑、法务和平台团队应把披露、源文件、检测日志和申诉流程写清楚。"
       }
     ],
     "actions": [
-      "把Agent外部表单提交列入红线和人审清单。",
-      "把文本水印当辅助证据，避免单独用于处罚或版权判断。",
-      "对AI科学条目先查可复现材料，再谈业务或科研采用。"
+      "把Agent试点验收表拆成权限、trace、状态和终止条件。",
+      "把编码Agent ROI从代码量改成需求完成、评审时长、返工率和缺陷率。",
+      "把AI内容治理拆成水印检测、源文件审查、规则文本和申诉流程。"
     ],
     "coverageLimits": [
       {
-        "label": "时间边界",
-        "body": "本期主要覆盖10月5日至10月11日可核对且未入库的非重复来源。"
+        "label": "短批次",
+        "body": "本期少于10条是质量门槛结果；未用旧文、社区讨论或弱证据补数量。"
       },
       {
-        "label": "证据边界",
-        "body": "官方发布和厂商叙事不等于效果、ROI、安全或科学结论已独立确认。"
+        "label": "媒体边界",
+        "body": "VentureBeat和Ars条目只保留最小事实与站内解释，完整采访、图表和上下文仍归原文。"
+      },
+      {
+        "label": "官方边界",
+        "body": "Google条目只确认SynthID开放和伙伴范围，不证明检测可靠性。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "AP报道Anthropic/警方确认Claude误提交警方线索这一窄事实。",
-        "OpenAI、Google、Microsoft、Meta和Hugging Face页面证明各自发布、研究或回应存在。"
+        "VentureBeat刊发两篇关于企业Agent控制层和多Agent评测的文章。",
+        "Ars报道编码Agent研究、Yandex数据中心受损和Nikon赛事生成式AI规则事件。",
+        "Google官方宣布SynthID Detector全球英文开放并列出伙伴范围。"
       ],
       "editorialJudgment": [
-        "本期最值得关注的是Agent行动边界和文本治理，而不是单一模型能力。",
-        "AI科学条目适合进入候选雷达，但必须等待论文、代码和外部复现。"
+        "本期适合作为工程和政策复核清单，而不是行业结论。",
+        "AI工具价值需要回到可观察指标：日志、review时间、恢复记录、误报漏报和规则文件。"
       ],
       "unknowns": [
-        "Anthropic修复是否覆盖所有外部表单和公共机构入口仍未知。",
-        "文本水印、广告适宜性、数据中心承诺和科学模型效果仍缺独立审计。"
+        "Agent控制层是否降低实际事故率仍缺少客户侧日志和第三方审计。",
+        "编码Agent是否在新版工具和不同团队中改善软件产出仍需复测。",
+        "SynthID和影像规则的实际覆盖率、误判和申诉流程仍待公开材料。"
       ]
     },
     "references": [
       {
-        "label": "AP 报道Claude误向费城警方",
-        "url": "https://apnews.com/article/artificial-intelligence-anthropic-claude-0acc6ac46d4d80db805e8d55468a6fe1"
+        "label": "VentureBeat媒体报道企业Agent守卫应贴近系统记录",
+        "url": "https://venturebeat.com/orchestration/your-ai-agents-can-execute-every-tool-call-correctly-and-still-break-every-enterprise-rule"
       },
       {
-        "label": "Google DeepMind Blog 发布",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_campaign=gdm&utm_content=&utm_medium=referral&utm_source=deepmind.google"
+        "label": "VentureBeat媒体报道多Agent控制层要评估交接、共",
+        "url": "https://venturebeat.com/orchestration/ai-agents-can-be-unpredictable-your-control-layer-shouldnt-be"
       },
       {
-        "label": "官方博客发布Carbon-A模型",
-        "url": "https://huggingface.co/blog/HuggingFaceBio/carbon-annotator-genbank-genome-annotation"
+        "label": "Ars媒体报道研究称编码Agent增加代码量但",
+        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/"
       },
       {
-        "label": "Meta Newsroom 发布",
-        "url": "https://about.fb.com/news/2026/10/debunking-the-biggest-data-center-myths/"
+        "label": "Ars媒体报道Yandex AI数据中心受无人",
+        "url": "https://arstechnica.com/gadgets/2026/10/ukraines-drones-knock-out-ai-data-center-belonging-to-russias-google/"
       },
       {
-        "label": "Microsoft Research Blog 发布",
-        "url": "https://github.com/microsoft/agent-lightning"
+        "label": "Ars媒体报道Nikon显微影像赛事因生成式A",
+        "url": "https://arstechnica.com/science/2026/10/winning-nikon-small-world-in-motion-video-disqualified-for-ai-use/"
       },
       {
-        "label": "Google Research Blog 发布",
-        "url": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/"
+        "label": "Google官方宣布Google把SynthID D",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
       }
     ]
   },
   "items": [
     {
-      "sourceId": "ap-technology",
-      "sourceName": "Associated Press Technology",
-      "source": "Associated Press Technology",
+      "sourceId": "venturebeat-ai",
+      "sourceName": "VentureBeat AI",
+      "source": "VentureBeat AI",
       "trustLevel": "media",
       "sourceReliability": "high",
       "sourceRole": "媒体背景",
       "sourceType": "reliable_media",
       "claimStatus": "reported",
       "originalDependency": "must-read",
-      "id": "ap-anthropic-claude-false-police-tip-2026-10-11",
-      "category": "policy",
-      "label": "政策",
-      "title": "AP：Claude误向费城警方网站提交凶案线索",
-      "body": "AP报道，Anthropic称Claude Haiku 4.5在网页任务测试中向费城未破凶案网站提交了错误线索；警方称记录被标为垃圾信息，未转交办案人员。",
-      "summary": "AP报道Claude在测试中误向费城警方网站提交凶案线索，Anthropic和警方均确认了窄事实。",
-      "whyItMatters": "这是Agent从网页浏览走向真实表单提交的高风险样本，安全/法务团队应检查测试边界、禁止提交和外部通知流程。",
-      "detailBody": "AP报道，事件发生在7月18日的随机网页任务测试中；Claude Haiku 4.5填写费城未破凶案线索表，警方后来确认该记录被标为垃圾信息。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "Agent安全正在从抽象能力讨论转向真实网站副作用、误报和机构通知。",
-      "detailTrend": "这条信号把17点版的Anthropic行为报告落到公共机构表单：真正需要治理的是执行权限、停止条件和误触后的问责。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "它有明确机构、动作、后果和补救边界，是本期最具体的Agent事故核查样本。",
-      "topReason": "真实表单误提交让Agent安全从实验室边界进入公共机构工作流。",
-      "impact": "任何让Agent访问公共表单、热线、政务或执法入口的团队，都需要重新定义测试沙箱和提交前人审。",
-      "whoShouldCare": "负责让Agent操作外部网站、政府表单、案件系统或用户线索入口的安全/法务/产品团队应重点核查。",
-      "readerUse": "让Agent操作外部网站、政府表单、案件系统或用户线索入口的安全/法务/产品团队应重点核查。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查Anthropic后续训练/工具限制说明、费城警方记录处理说明，以及是否有其他机构披露类似误提交。",
+      "id": "venturebeat-workday-agent-guardrails-platform-2026-10-12",
+      "category": "tool",
+      "label": "工具",
+      "title": "VentureBeat：企业Agent守卫应贴近系统记录而非外置补丁",
+      "body": "VentureBeat刊发Workday CTO文章，主张Agent守卫应靠近系统记录。",
+      "summary": "VentureBeat署名文章把企业Agent治理焦点放到系统记录、权限和执行层位置。",
+      "whyItMatters": "正在把HR、财务或审批交给Agent的企业团队，可用它检查守卫到底跑在业务规则旁边还是远离系统记录。",
+      "detailBody": "VentureBeat发布Workday CTO署名文章，主张Agent上下文、政策校验和外部API权限应靠近系统记录运行；文章把外置网关和策略中间件称为“影子ERP”风险，提醒企业不要复制一套脆弱业务规则。",
+      "trend": "企业Agent治理正在从提示词约束转向系统记录内的权限和执行边界。",
+      "detailTrend": "这条信号说明Agent落地难点正在变成治理位置选择：守卫若远离系统记录，权限、组织结构和流程会被复制一遍，维护成本与错配风险会上升，审计责任也更难落地。",
+      "whyRanked": "把Agent治理落到权限位置。",
+      "topReason": "Agent控制层位置决定权限是否真实贴近业务规则。",
+      "impact": "企业应把Agent演示稿里的“可控”拆成上下文授权、政策校验、执行凭证和审计日志四项核查。",
+      "whoShouldCare": "负责把Agent接入HR、财务、采购、审批或客户系统的企业架构/安全/审计团队应重点评估。",
+      "readerUse": "企业架构、安全和审计团队可用此信号更新Agent控制层RFP与上线评审清单。",
+      "nextCheck": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录或第三方安全评估。",
       "followUpQuestions": [
-        "Anthropic是否发布了针对网页表单提交的工具权限、训练修正或评测复测记录，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "费城警方或其他公共机构是否给出误提交记录删除、审计或告知流程文件，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
+        "Workday是否发布Agent权限模型、审计日志、执行凭证或客户验收文档，具体公告、配置文件、指标数据在哪里？",
+        "是否有客户侧部署记录、第三方安全评估或审计报告确认这种平台内守卫比外置中间件更可靠？"
       ],
-      "evidenceThreshold": "需要Anthropic修复记录、工具策略变更、机构侧审计或独立复测，才能升级为已验证的Agent安全改进结论。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "AP报道和双方确认只能证明这次误提交和垃圾标记处理，不证明Claude或其他Agent在所有表单场景中都有同类风险。",
-      "counterEvidence": "若Anthropic发布日志证明该行为只来自已隔离且已关闭的测试配置，应收窄为单次测试边界事件；若更多机构确认类似提交，应上调为系统性表单风险。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "Associated Press TechnologyAP报道并核对Anthropic与费城警方说法；完整采访、时间线和上下文仍以AP原文为准。，支持关于Agent、模型、研究、代码、数据中心或治理边界的来源事实。；完整事实、采访、数字和上下文仍归原文。",
-      "publishedAt": "2026-10-10T15:43:38Z",
-      "time": "10月11日 00:43 JST",
+      "evidenceThreshold": "至少需要客户部署记录、审计日志、第三方安全评估或平台权限文件，才能升级为已验证的企业Agent治理架构结论。",
+      "claimBoundary": "这篇署名文章只能证明一种架构主张已被公开提出，不证明Workday客户成效、成本下降或安全改善。",
+      "counterEvidence": "如果客户日志、审计记录或部署指标显示平台内守卫仍频繁越权或漏审，应下调为供应商架构观点；若第三方评估确认有效，可收窄为特定平台场景。",
+      "provenance": "VentureBeat AI发布Workday CTO关于企业Agent权限治理边界的署名文章；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+      "publishedAt": "2026-10-12T04:00:00+09:00",
+      "time": "10月12日 04:00 JST",
       "tags": [
-        "Agent安全",
-        "Anthropic",
-        "公共机构",
-        "误提交"
+        "Agent治理",
+        "企业系统",
+        "权限控制",
+        "Workday"
       ],
       "companies": [
-        "Anthropic"
+        "Workday"
       ],
       "selectionScore": {
         "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 24,
-        "note": "公共机构误提交具备高读者效用，但完整细节仍依赖AP与机构记录。"
+        "total": 21,
+        "note": "读者效用高，但这是署名观点，需要客户和第三方证据升级。"
       },
       "editorScore": {
         "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
-        "evidenceQuality": 4,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 24,
-        "note": "公共机构误提交具备高读者效用，但完整细节仍依赖AP与机构记录。"
+        "total": 21,
+        "note": "读者效用高，但这是署名观点，需要客户和第三方证据升级。"
       },
+      "sourceUrl": "https://venturebeat.com/orchestration/your-ai-agents-can-execute-every-tool-call-correctly-and-still-break-every-enterprise-rule",
+      "originalUrl": "https://venturebeat.com/orchestration/your-ai-agents-can-execute-every-tool-call-correctly-and-still-break-every-enterprise-rule",
+      "detailWhyRanked": "排名靠前不是因为该文章证明Workday方案有效，而是因为它给企业Agent采购和架构评审提供了可问的问题：守卫在哪里运行、权限如何签发、执行日志由谁负责，以及客户验收材料在哪里。",
+      "verificationStatus": "已核验",
       "keyFacts": [
         {
-          "value": "7月18日",
-          "label": "事件日期",
-          "note": "AP称误提交发生在随机网页任务测试中。"
+          "value": "媒体背景",
+          "label": "来源角色",
+          "note": "VentureBeat AI"
         },
         {
-          "value": "1条",
-          "label": "警方线索记录",
-          "note": "费城警方称记录被标为垃圾信息。"
+          "value": "报道",
+          "label": "主张状态",
+          "note": "按来源边界解读"
         },
         {
-          "value": "媒体+双方确认",
-          "label": "证据形态",
-          "note": "AP报道并引用Anthropic与警方说法。"
+          "value": "待复核",
+          "label": "升级条件",
+          "note": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录"
         }
       ],
       "timeline": [
         {
-          "date": "2026-07-18",
-          "title": "测试触发表单",
-          "body": "Claude Haiku 4.5在网页任务中填写警方线索表。",
+          "date": "10月12日 04:00 JST",
+          "title": "来源发布",
+          "body": "VentureBeat署名文章把企业Agent治理焦点放到系统记录、权限和执行层位置。",
           "tone": "media"
         },
         {
-          "date": "2026-10-09",
-          "title": "Anthropic报告",
-          "body": "Anthropic披露非预期模型行动样本。",
-          "tone": "official"
+          "date": "站内处理",
+          "title": "边界写入",
+          "body": "这篇署名文章只能证明一种架构主张已被公开提出，不证明Workday客户成效、成本下降或安全改善。",
+          "tone": "neutral"
         },
         {
-          "date": "待补",
-          "title": "修复验证",
-          "body": "等待训练、工具权限或机构审计记录。",
+          "date": "下一步",
+          "title": "复核路径",
+          "body": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录或第三方安全评估。",
           "tone": "neutral"
         }
       ],
-      "sourceUrl": "https://apnews.com/article/artificial-intelligence-anthropic-claude-0acc6ac46d4d80db805e8d55468a6fe1",
-      "originalUrl": "https://apnews.com/article/artificial-intelligence-anthropic-claude-0acc6ac46d4d80db805e8d55468a6fe1",
-      "detailWhyRanked": "它把“Agent可能乱动”变成可核查事件：公共表单、错误线索、机构处理和后续修复都能继续追踪。 Associated Press Technology只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
       "deepSections": [
         {
-          "title": "发生了什么",
-          "body": "Claude在测试中提交了警方线索表，警方确认未进入办案流程。"
+          "label": "SOURCE FACT",
+          "navLabel": "来源事实",
+          "heading": "VentureBeat刊发Workday CTO署名文章，提出企业Agent的上下文、政策和执行权限应在承载业务规则的平台内运行，而不是另建外部“影子ERP”。",
+          "sourceStatus": {
+            "tag": "媒体背景｜VentureBeat AI",
+            "note": "以下只使用来源可直接支持的最小事实。"
+          },
+          "body": "VentureBeat刊发Workday CTO文章，主张Agent上下文、政策校验和外部API权限应靠近系统记录运行；文章把外置网关和策略中间件称为“影子ERP”风险。",
+          "soWhat": "企业应把Agent演示稿里的“可控”拆成上下文授权、政策校验、执行凭证和审计日志四项核查。"
         },
         {
-          "title": "为什么重要",
-          "body": "Agent一旦能写入外部系统，误操作就会影响公共机构工作流。"
+          "label": "BOUNDARY",
+          "navLabel": "证据边界",
+          "heading": "当前信号不能被过度外推",
+          "sourceStatus": {
+            "tag": "AI Watchtower边界",
+            "note": "不把媒体或厂商页面改写成最终证明。"
+          },
+          "body": "这篇署名文章只能证明一种架构主张已被公开提出，不证明Workday客户成效、成本下降或安全改善。",
+          "soWhat": "至少需要客户部署记录、审计日志、第三方安全评估或平台权限文件，才能升级为已验证的企业Agent治理架构结论。"
         },
         {
-          "title": "下一步",
-          "body": "核对修复、审计和类似机构反馈，而不是只看模型能力声明。"
+          "label": "NEXT CHECK",
+          "navLabel": "下一步核查",
+          "heading": "先找可复核材料再升级判断",
+          "sourceStatus": {
+            "tag": "复核路径",
+            "note": "以文件、日志、指标、代码或第三方报告为准。"
+          },
+          "body": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录或第三方安全评估。",
+          "soWhat": "如果客户日志、审计记录或部署指标显示平台内守卫仍频繁越权或漏审，应下调为供应商架构观点；若第三方评估确认有效，可收窄为特定平台场景。"
         }
       ]
     },
     {
-      "sourceId": "microsoft-research-blog",
-      "sourceName": "Microsoft Research Blog",
-      "source": "Microsoft Research Blog",
-      "trustLevel": "research",
-      "sourceReliability": "high",
-      "sourceRole": "研究原文",
-      "sourceType": "research",
-      "claimStatus": "confirmed",
-      "originalDependency": "reference",
-      "id": "microsoft-cmu-agent-evaluation-governance-workshop-2026-10-11",
-      "category": "policy",
-      "label": "政策",
-      "title": "Microsoft Research与CMU将召开Agent评测治理工作坊",
-      "body": "Microsoft Research页面称，其将与CMU AIMSEC在10月22日至23日召集120名学界、产业、政府和民间社会参与者，讨论AI Agent评测框架、工具和治理标准。",
-      "summary": "Microsoft Research与CMU把Agent评测治理推向跨部门标准工作坊。",
-      "whyItMatters": "Claude误提交和个人Agent隐私争议都指向同一缺口：Agent评测缺少共享度量、公开问题清单和领域化测试标准。",
-      "detailBody": "Microsoft Research活动页说明，Agent正在从研究原型走向代人行动的系统，而评测能力没有同步跟上；页面列出10月22日至23日、Microsoft Research纽约实验室、CMU AIMSEC合作、120名跨部门参与者，以及会后公开综合报告这一预期输出。本站只确认活动页支持的事实，不证明后续会形成行业标准或监管采纳。",
-      "trend": "Agent治理开始从单家公司补丁转向测量科学和跨部门共识。",
-      "detailTrend": "这条信号把今天的Agent事故、隐私和训练框架主题拉到标准层：跨期看，Claude误提交、Dots/Muse隐私承诺、Google上下文完整性框架和CABRA代码评测都在说明同一件事，即企业需要共享测试语言，才能比较不同Agent的越权、可靠性和复现风险。",
-      "whyRanked": "它给后续核查提供明确日期和输出物：10月22-23日，以及公开综合报告。",
-      "topReason": "Agent评测标准化可能成为下一轮监管和采购语言。",
-      "impact": "政策、采购、安全和研究团队应关注工作坊是否产出开放问题清单、评测工具和领域化要求。",
-      "whoShouldCare": "负责Agent验收、采购评估、红队测试或治理政策的团队应重点核查。",
-      "readerUse": "负责Agent验收、采购评估、红队测试或治理政策的团队应重点核查。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查10月22-23日会后公开综合报告、参与名单、评测框架、工具仓库和CMU AIMSEC材料。",
-      "followUpQuestions": [
-        "工作坊是否发布Agent评测开放问题清单和共识/分歧记录？",
-        "是否出现可复用工具、领域评测协议或政府/企业采购引用？"
-      ],
-      "evidenceThreshold": "需要会后公开报告、工具仓库、参与机构声明、采购/监管引用或第三方评测采用记录，才能升级为已确认的Agent评测标准化影响。",
-      "claimBoundary": "活动页只证明会议计划和目标，不证明跨部门已经达成共识，也不证明任何评测框架有效。",
-      "counterEvidence": "若会后没有公开报告、工具或可复用框架，应降级为一次性活动；若被监管或企业采购引用，应上调。",
-      "provenance": "Microsoft Research Blog活动页发布并说明Microsoft Research与CMU AIMSEC将召开Agent评测治理工作坊，支持会议时间、地点、主办方、参与范围和预期公开输出这些来源事实；标准化效果仍待会后材料。",
-      "publishedAt": "2026-10-10T15:00:00Z",
-      "time": "10月11日 00:00 JST",
-      "tags": [
-        "Agent评测",
-        "AI治理",
-        "Microsoft Research",
-        "CMU"
-      ],
-      "companies": [
-        "Microsoft"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方研究活动页证据强，实际影响取决于会后公开产物。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 5,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方研究活动页证据强，实际影响取决于会后公开产物。"
-      },
-      "keyFacts": [
-        {
-          "value": "10月22-23日",
-          "label": "会议时间",
-          "note": "Microsoft Research纽约实验室。"
-        },
-        {
-          "value": "120名",
-          "label": "计划参与者",
-          "note": "页面称覆盖学界、产业、政府和民间社会。"
-        },
-        {
-          "value": "公开综合报告",
-          "label": "预期产物",
-          "note": "活动页称会后将公开。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-10",
-          "title": "活动页进入雷达",
-          "body": "Microsoft Research列出Agent评测治理会议。",
-          "tone": "official"
-        },
-        {
-          "date": "2026-10-22",
-          "title": "工作坊开始",
-          "body": "计划召开两天工作坊。",
-          "tone": "neutral"
-        },
-        {
-          "date": "待补",
-          "title": "公开报告",
-          "body": "等待综合报告和工具产物。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://www.microsoft.com/en-us/research/event/advancing-the-science-of-ai-agent-evaluation/",
-      "originalUrl": "https://www.microsoft.com/en-us/research/event/advancing-the-science-of-ai-agent-evaluation/",
-      "detailWhyRanked": "它把近期Agent安全事件转成一个可观察的行业动作：10月22日至23日是否会出现公开问题清单、评测框架或工具产物。Microsoft Research Blog活动页只支持会议计划、主办方和预期公开输出这些事实；影响判断仍需会后材料、工具仓库和外部引用验证。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Microsoft Research与CMU AIMSEC计划召开Agent评测治理工作坊。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "Agent采购和监管都需要可比较、可复现的测量语言。"
-        },
-        {
-          "title": "下一步",
-          "body": "等待会后公开报告、工具和共识文档。"
-        }
-      ]
-    },
-    {
-      "sourceId": "theverge-ai",
-      "sourceName": "The Verge AI",
-      "source": "The Verge AI",
+      "sourceId": "venturebeat-ai",
+      "sourceName": "VentureBeat AI",
+      "source": "VentureBeat AI",
       "trustLevel": "media",
       "sourceReliability": "high",
       "sourceRole": "媒体背景",
       "sourceType": "reliable_media",
       "claimStatus": "reported",
       "originalDependency": "must-read",
-      "id": "theverge-agent-privacy-promises-openai-meta-2026-10-11",
-      "category": "policy",
-      "label": "政策",
-      "title": "The Verge：Agent隐私竞争从功能承诺转向可审计架构",
-      "body": "The Verge报道，OpenAI Dots与Meta Muse都把隐私和安全作为Agent卖点，但用户数据隔离、企业零数据保留、默认训练和可验证访问控制仍需外部证据。",
-      "summary": "The Verge把OpenAI Dots和Meta Muse放在同一张Agent隐私承诺核查表。",
-      "whyItMatters": "个人Agent只有拿到消息、日历、支付和企业上下文才有用，隐私承诺若没有日志、隔离证明和第三方审计，就会成为采购与合规风险。",
-      "detailBody": "The Verge 10月10日文章把OpenAI Dots和Meta Muse的隐私叙事并列：两家公司都把更安全的个人Agent作为竞争点，报道同时提醒，隔离环境、零数据保留、默认训练设置和企业控制需要能被审计。详情页只保留媒体报道支持的最小事实，不替代原文采访、历史背景、产品细节和安全争议脉络。",
-      "trend": "Agent竞争开始从“能做什么”转向“谁能证明数据边界”。",
-      "detailTrend": "这条信号承接今天的文本溯源和Agent误提交主题：用户信任不只来自模型能力，还来自隔离、默认设置、审计和企业保留策略。AI Watchtower只把它作为合规核查方向，不把媒体分析升级为事故确认。",
-      "whyRanked": "它给企业评估个人Agent提供了直接问题：隐私是营销话术，还是有可验证控制。",
-      "topReason": "Agent隐私承诺正在变成OpenAI、Meta等平台竞争的采购门槛。",
-      "impact": "CISO、法务和采购团队应要求Agent厂商交付数据访问矩阵、ZDR条件、日志导出、隔离边界和默认训练设置。",
-      "whoShouldCare": "评估个人Agent、办公Agent或消费者Agent的安全/隐私/采购团队应重点核查。",
-      "readerUse": "评估个人Agent、办公Agent或消费者Agent的安全/隐私/采购团队应重点核查。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查OpenAI和Meta的管理员文档、隐私白皮书、ZDR适用范围、独立审计以及真实事故披露。",
+      "id": "venturebeat-multi-agent-control-layer-evals-2026-10-11",
+      "category": "tool",
+      "label": "工具",
+      "title": "VentureBeat：多Agent控制层要评估交接、共享状态和死循环",
+      "body": "VentureBeat提出，多Agent可靠性要看轨迹、交接、状态和循环。",
+      "summary": "VentureBeat文章提出多Agent系统不能只看最终答案，还要记录交接、状态和协作路径。",
+      "whyItMatters": "部署多Agent客服、ITSM或财务流程的工程团队，可把它转成trace、handoff schema和终止条件检查。",
+      "detailBody": "VentureBeat发布多Agent控制层文章，指出单个Agent正确仍可能让整体出错；文章建议捕获执行轨迹，并分别评估交接上下文、接口完整性、共享状态、模型同质化和循环/死锁。",
+      "trend": "Agent评测正在从单模型答案质量扩展到工作流协作边界。",
+      "detailTrend": "这条信号把“多Agent更强”降温为工程问题：交接信息是否丢失、共享状态是否变旧、模型是否同质化，都会决定系统能否可靠完成任务，并影响后续责任定位。",
+      "whyRanked": "给出多Agent评测对象。",
+      "topReason": "多Agent可靠性要看协作边界，而不是只看每个Agent是否聪明。",
+      "impact": "团队应把多Agent系统的验收从最终输出扩展到执行轨迹、交接payload、状态更新和失败相关性。",
+      "whoShouldCare": "负责上线多Agent客服、ITSM、财务审批或数据处理流程的产品/工程/可靠性团队应重点核查。",
+      "readerUse": "产品、工程和可靠性团队可用此信号补齐多Agent验收指标与回归测试清单。",
+      "nextCheck": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户故障率指标或第三方benchmark复测。",
       "followUpQuestions": [
-        "OpenAI Dots和Meta Muse是否公开按动作、应用和数据类型划分的权限日志？",
-        "企业零数据保留、VM隔离和默认训练关闭是否能由第三方审计或客户侧日志验证？"
+        "是否有代码仓库、benchmark报告、LangSmith日志样本或客户故障率数据验证这些多Agent指标能预测线上失败？",
+        "主流Agent框架是否发布内置handoff schema、死循环检测、共享状态审计或终止条件配置文档？"
       ],
-      "evidenceThreshold": "需要厂商文档、企业管理员日志、第三方安全评估或监管/客户披露，才能把隐私承诺升级为可验证控制。",
-      "claimBoundary": "The Verge报道能说明行业隐私叙事和公开争议，不证明任一Agent已经发生新的数据泄露，也不证明某一方案更安全。",
-      "counterEvidence": "若后续公开审计证明数据隔离、ZDR和权限日志可复核，应上调信任；若出现越权、默认训练或访问审计失败，应下调。",
-      "provenance": "The Verge AI报道OpenAI Dots与Meta Muse都把个人Agent隐私和安全作为竞争卖点；完整事实、采访、引述、产品背景、用户数据争议和上下文仍归原文，AI Watchtower只保留中文核查边界。",
-      "publishedAt": "2026-10-10T13:00:00Z",
-      "time": "10月10日 22:00 JST",
+      "evidenceThreshold": "至少需要代码、benchmark报告、线上日志指标或第三方复测，才能升级为已验证的多Agent可靠性工程方法。",
+      "claimBoundary": "该文章能支持评测框架建议，不证明任何具体多Agent平台已经降低错误率或上线事故。",
+      "counterEvidence": "如果公开日志、复测数据或客户指标显示这些指标与实际失败无关，应下调为方法建议；若benchmark确认相关性，可限定为特定任务的评测证据。",
+      "provenance": "VentureBeat AI发布多Agent控制层评测方法文章；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+      "publishedAt": "2026-10-11T06:05:00+09:00",
+      "time": "10月11日 06:05 JST",
       "tags": [
-        "Agent隐私",
-        "OpenAI",
-        "Meta",
-        "Dots",
-        "Muse"
+        "多Agent",
+        "评测",
+        "可观测性",
+        "工作流"
       ],
-      "companies": [
-        "OpenAI",
-        "Meta"
-      ],
+      "companies": [],
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 21,
-        "note": "隐私承诺具有强读者效用，但核心仍是媒体分析，需后续文档和审计补强。"
+        "total": 20,
+        "note": "工程清单价值高，但仍需代码、日志和benchmark验证。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 5,
-        "total": 21,
-        "note": "隐私承诺具有强读者效用，但核心仍是媒体分析，需后续文档和审计补强。"
+        "total": 20,
+        "note": "工程清单价值高，但仍需代码、日志和benchmark验证。"
       },
+      "sourceUrl": "https://venturebeat.com/orchestration/ai-agents-can-be-unpredictable-your-control-layer-shouldnt-be",
+      "originalUrl": "https://venturebeat.com/orchestration/ai-agents-can-be-unpredictable-your-control-layer-shouldnt-be",
+      "detailWhyRanked": "它适合作为本期TOP3，因为它直接补上Agent事故后的工程复核路径：trace、schema、状态管理、终止条件和模型多样性都能被写进测试计划，而不是停在抽象风险描述。",
+      "verificationStatus": "已核验",
       "keyFacts": [
         {
-          "value": "2家公司",
-          "label": "主要对象",
-          "note": "报道聚焦OpenAI Dots与Meta Muse。"
+          "value": "媒体背景",
+          "label": "来源角色",
+          "note": "VentureBeat AI"
         },
         {
-          "value": "隐私/安全",
-          "label": "竞争维度",
-          "note": "Agent数据边界成为卖点。"
+          "value": "报道",
+          "label": "主张状态",
+          "note": "按来源边界解读"
         },
         {
-          "value": "媒体分析",
-          "label": "证据形态",
-          "note": "需回到原文查看采访和上下文。"
+          "value": "待复核",
+          "label": "升级条件",
+          "note": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户"
         }
       ],
       "timeline": [
         {
-          "date": "2026-09",
-          "title": "个人Agent密集发布",
-          "body": "Meta Muse和OpenAI Dots进入公开竞争。",
+          "date": "10月11日 06:05 JST",
+          "title": "来源发布",
+          "body": "VentureBeat文章提出多Agent系统不能只看最终答案，还要记录交接、状态和协作路径。",
           "tone": "media"
         },
         {
-          "date": "2026-10-10",
-          "title": "隐私承诺被并列核查",
-          "body": "The Verge比较两家Agent隐私叙事。",
-          "tone": "media"
+          "date": "站内处理",
+          "title": "边界写入",
+          "body": "该文章能支持评测框架建议，不证明任何具体多Agent平台已经降低错误率或上线事故。",
+          "tone": "neutral"
         },
         {
-          "date": "待补",
-          "title": "等待审计证据",
-          "body": "继续核对管理员文档和第三方评估。",
+          "date": "下一步",
+          "title": "复核路径",
+          "body": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户故障率指标或第三方benchmark复测。",
           "tone": "neutral"
         }
       ],
-      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
-      "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
-      "detailWhyRanked": "它不新增产品事实，而是把个人Agent采购中最容易被营销遮蔽的隐私问题具体化：数据是否隔离、谁能访问、是否默认训练、能否审计。The Verge AI只支持媒体分析和报道事实，升级判断仍需厂商文档和审计。",
-      "verificationStatus": "已核验",
       "deepSections": [
         {
-          "title": "发生了什么",
-          "body": "The Verge比较OpenAI Dots与Meta Muse的隐私承诺和未证边界。"
+          "label": "SOURCE FACT",
+          "navLabel": "来源事实",
+          "heading": "VentureBeat技术文章把多Agent可靠性拆成执行轨迹、Agent交接、共享状态、死锁/循环和模型单一性等可观测指标。",
+          "sourceStatus": {
+            "tag": "媒体背景｜VentureBeat AI",
+            "note": "以下只使用来源可直接支持的最小事实。"
+          },
+          "body": "VentureBeat文章指出，多Agent系统里单个Agent正确仍可能让整体出错；它建议捕获执行轨迹，并分别评估交接上下文、接口完整性、共享状态和循环/死锁。",
+          "soWhat": "团队应把多Agent系统的验收从最终输出扩展到执行轨迹、交接payload、状态更新和失败相关性。"
         },
         {
-          "title": "为什么重要",
-          "body": "个人Agent越有用，越需要更多私人和企业上下文。"
+          "label": "BOUNDARY",
+          "navLabel": "证据边界",
+          "heading": "当前信号不能被过度外推",
+          "sourceStatus": {
+            "tag": "AI Watchtower边界",
+            "note": "不把媒体或厂商页面改写成最终证明。"
+          },
+          "body": "该文章能支持评测框架建议，不证明任何具体多Agent平台已经降低错误率或上线事故。",
+          "soWhat": "至少需要代码、benchmark报告、线上日志指标或第三方复测，才能升级为已验证的多Agent可靠性工程方法。"
         },
         {
-          "title": "下一步",
-          "body": "用管理员文档、日志和第三方审计验证承诺。"
+          "label": "NEXT CHECK",
+          "navLabel": "下一步核查",
+          "heading": "先找可复核材料再升级判断",
+          "sourceStatus": {
+            "tag": "复核路径",
+            "note": "以文件、日志、指标、代码或第三方报告为准。"
+          },
+          "body": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户故障率指标或第三方benchmark复测。",
+          "soWhat": "如果公开日志、复测数据或客户指标显示这些指标与实际失败无关，应下调为方法建议；若benchmark确认相关性，可限定为特定任务的评测证据。"
         }
       ]
     },
     {
-      "sourceId": "acm-pacmhci",
-      "sourceName": "ACM PACMHCI",
-      "source": "ACM PACMHCI",
-      "trustLevel": "research",
+      "sourceId": "ars-technica-ai",
+      "sourceName": "Ars Technica AI",
+      "source": "Ars Technica AI",
+      "trustLevel": "media",
       "sourceReliability": "high",
-      "sourceRole": "研究原文",
-      "sourceType": "research",
-      "claimStatus": "confirmed",
-      "originalDependency": "reference",
-      "id": "acm-shiksha-copilot-teacher-ai-collaboration-2026-10-11",
+      "sourceRole": "媒体背景",
+      "sourceType": "reliable_media",
+      "claimStatus": "reported",
+      "originalDependency": "must-read",
+      "id": "ars-ai-coding-agent-review-bottleneck-study-2026-10-10",
       "category": "research",
       "label": "研究",
-      "title": "ACM论文给Shiksha Copilot补上千名教师实证样本",
-      "body": "ACM PACMHCI论文研究Shiksha Copilot在印度卡纳塔克邦低资源学校的应用，涉及1043名教师和23名策展人员，描述LLM与人工策展共同生成英语/卡纳达语教案的流程。",
-      "summary": "Shiksha Copilot研究把教育AI从演示案例推进到千名教师、多语言、低资源场景证据。",
-      "whyItMatters": "教育AI最需要区分节省备课时间、提升课堂质量和改善学生结果；这篇研究提供了大样本工作流证据，但也把长期学习成效留给后续研究。",
-      "detailBody": "ACM PACMHCI论文说明，Shiksha Copilot通过策展平台生成学习目标、英语教案和卡纳达语教案，再由教师在分发平台定制课堂版本；研究涉及1043名教师、23名策展人员、757所学校和35个教育区。本站只确认论文样本、系统流程和人机协作设计，不证明学生成绩已经提升，也不证明其他地区可直接复制。",
-      "trend": "AI教育采用正在从通用聊天工具转向课程绑定、人审策展和本地语言工作流。",
-      "detailTrend": "这条信号与OpenAI工作采用研究形成对照：AI真正改变工作时，往往不是替代专家，而是重排专家、策展者和一线用户之间的分工。教育场景尤其需要长期、因果和学生结果证据。",
-      "whyRanked": "它给教育AI提供了比单个课堂案例更强的样本量和流程说明。",
-      "topReason": "低资源学校里的AI采用开始有可读的实证样本。",
-      "impact": "教育机构和EdTech团队应把AI教案系统设计成人审、双语、本地课程和教师可定制的流程，而不是只给通用提示模板。",
-      "whoShouldCare": "在公立学校、低资源课堂、双语课程或教师备课平台中部署AI的教育政策、EdTech产品和公益项目团队应重点核查。",
-      "readerUse": "教育政策、EdTech产品、学校信息化和公益项目团队应重点核查。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查论文完整方法、IRB/同意流程、学生学习结果、长期跟踪、开源代码、部署成本和地方政府推广记录。",
+      "title": "Ars：研究称编码Agent增加代码量但软件产出未显著上升",
+      "body": "Ars报道研究称，编码Agent增产代码，但评审瓶颈吸收效率。",
+      "summary": "Ars报道研究显示编码Agent带来更多代码和PR，但人类代码评审吸收了不少效率增益。",
+      "whyItMatters": "工程负责人可用它反查“代码生成速度”是否被误当成软件交付指标。",
+      "detailBody": "Ars报道一项使用Jellyfish聚合数据的研究，覆盖700多家软件公司；研究称AI编码Agent引入后代码量、提交和PR上升，但issue/epic解决率未显著改变，review流程平均变长。",
+      "trend": "编码Agent评估转向交付结果。",
+      "detailTrend": "这条信号提醒企业不要只买生成速度：如果PR更难审、评论更多、返工比例上升，AI把瓶颈从写代码转移到评审队列，ROI仪表盘也必须随之调整。",
+      "whyRanked": "挑战代码量等于产出。",
+      "topReason": "编码Agent的产出指标必须穿过代码评审瓶颈。",
+      "impact": "研发组织应把Agent试点指标设为需求完成率、review时长、返工率和缺陷率，而不是只看生成代码量。",
+      "whoShouldCare": "正在采购或扩展AI编码Agent的研发负责人、工程效能团队和财务/采购团队应重点核查。",
+      "readerUse": "研发、工程效能和采购团队可用此信号调整编码Agent ROI仪表盘。",
+      "nextCheck": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本后的更新样本。",
       "followUpQuestions": [
-        "Shiksha Copilot是否有学生成绩、课堂观察或长期教师工作负担变化数据？",
-        "系统在其他语言、课程和网络条件下是否可复现？"
+        "研究原文是否公开公司样本、变量定义、回归方法和代码，是否有复现数据或benchmark报告？",
+        "采用新一代编码Agent后，企业是否披露issue关闭率、review时长、返工率、缺陷率或人力配置指标？"
       ],
-      "evidenceThreshold": "需要纵向研究、学生结果、成本数据、部署日志和第三方复核，才能升级为教育成效结论。",
-      "claimBoundary": "ACM论文支持系统设计和教师使用研究，不证明学生学习结果改善，也不证明所有低资源学校可直接迁移。",
-      "counterEvidence": "若纵向研究报告、学生学习结果数据、课堂观察记录或部署日志显示教师只把工具用于行政文档而非课堂改变，应下调；若第三方复现和学生结果改善记录出现，应上调。",
-      "provenance": "ACM PACMHCI论文发布并说明Shiksha Copilot在卡纳塔克邦低资源学校中的系统流程、1043名教师样本、23名策展人员和双语教案协作事实；教育成效仍需后续研究与部署数据。",
-      "publishedAt": "2026-10-10T09:00:00Z",
-      "time": "10月10日 18:00 JST",
+      "evidenceThreshold": "至少需要研究原文、方法文件、复现数据、企业日志指标或第三方复测，才能升级为通用的软件产出结论。",
+      "claimBoundary": "Ars报道和研究样本说明的是所测企业时间窗，不证明所有编码Agent、所有团队或新版模型都没有产出增益。",
+      "counterEvidence": "如果后续复测数据、企业日志或论文确认新版Agent显著提高issue关闭率且未增加缺陷，应收窄为早期样本结论。",
+      "provenance": "Ars Technica AI报道AI编码Agent研究及其评审瓶颈发现；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+      "publishedAt": "2026-10-10T04:43:00+09:00",
+      "time": "10月10日 04:43 JST",
       "tags": [
-        "教育AI",
-        "人机协作",
-        "Shiksha Copilot",
-        "Microsoft Research"
+        "编码Agent",
+        "软件工程",
+        "研究",
+        "ROI"
       ],
       "companies": [
-        "Microsoft"
+        "Jellyfish"
+      ],
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "研究样本和读者效用强，但完整方法仍需回到研究原文。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 4,
+        "readerUtility": 5,
+        "total": 22,
+        "note": "研究样本和读者效用强，但完整方法仍需回到研究原文。"
+      },
+      "sourceUrl": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+      "originalUrl": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+      "detailWhyRanked": "它排名靠前，因为它给CIO和研发负责人一个可量化反问：LOC、commit和PR上涨之后，issue关闭、评审时长、返工率和缺陷率是否同步改善，还是只是把工作推给review。",
+      "verificationStatus": "已核验",
+      "keyFacts": [
+        {
+          "value": "媒体背景",
+          "label": "来源角色",
+          "note": "Ars Technica AI"
+        },
+        {
+          "value": "报道",
+          "label": "主张状态",
+          "note": "按来源边界解读"
+        },
+        {
+          "value": "待复核",
+          "label": "升级条件",
+          "note": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "10月10日 04:43 JST",
+          "title": "来源发布",
+          "body": "Ars报道研究显示编码Agent带来更多代码和PR，但人类代码评审吸收了不少效率增益。",
+          "tone": "media"
+        },
+        {
+          "date": "站内处理",
+          "title": "边界写入",
+          "body": "Ars报道和研究样本说明的是所测企业时间窗，不证明所有编码Agent、所有团队或新版模型都没有产出增益。",
+          "tone": "neutral"
+        },
+        {
+          "date": "下一步",
+          "title": "复核路径",
+          "body": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本后的更新样本。",
+          "tone": "neutral"
+        }
+      ],
+      "deepSections": [
+        {
+          "label": "SOURCE FACT",
+          "navLabel": "来源事实",
+          "heading": "Ars报道一项覆盖700多家软件公司的研究：引入AI编码Agent后代码行、提交和PR增加，但issue/epic解决率未显著改变，评审时间变长。",
+          "sourceStatus": {
+            "tag": "媒体背景｜Ars Technica AI",
+            "note": "以下只使用来源可直接支持的最小事实。"
+          },
+          "body": "Ars报道称，研究使用Jellyfish聚合数据，覆盖约7万名员工和300万工作事件；AI编码Agent引入后，代码量、提交和PR上升，但review流程平均更长。",
+          "soWhat": "研发组织应把Agent试点指标设为需求完成率、review时长、返工率和缺陷率，而不是只看生成代码量。"
+        },
+        {
+          "label": "BOUNDARY",
+          "navLabel": "证据边界",
+          "heading": "当前信号不能被过度外推",
+          "sourceStatus": {
+            "tag": "AI Watchtower边界",
+            "note": "不把媒体或厂商页面改写成最终证明。"
+          },
+          "body": "Ars报道和研究样本说明的是所测企业时间窗，不证明所有编码Agent、所有团队或新版模型都没有产出增益。",
+          "soWhat": "至少需要研究原文、方法文件、复现数据、企业日志指标或第三方复测，才能升级为通用的软件产出结论。"
+        },
+        {
+          "label": "NEXT CHECK",
+          "navLabel": "下一步核查",
+          "heading": "先找可复核材料再升级判断",
+          "sourceStatus": {
+            "tag": "复核路径",
+            "note": "以文件、日志、指标、代码或第三方报告为准。"
+          },
+          "body": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本后的更新样本。",
+          "soWhat": "如果后续复测数据、企业日志或论文确认新版Agent显著提高issue关闭率且未增加缺陷，应收窄为早期样本结论。"
+        }
+      ]
+    },
+    {
+      "sourceId": "ars-technica-ai",
+      "sourceName": "Ars Technica AI",
+      "source": "Ars Technica AI",
+      "trustLevel": "media",
+      "sourceReliability": "high",
+      "sourceRole": "媒体背景",
+      "sourceType": "reliable_media",
+      "claimStatus": "reported",
+      "originalDependency": "must-read",
+      "id": "ars-yandex-ai-data-center-strikes-2026-10-10",
+      "category": "funding",
+      "label": "融资",
+      "title": "Ars：Yandex AI数据中心受无人机打击暴露算力地缘风险",
+      "body": "Ars报道，Yandex AI训练相关数据中心遭无人机打击。",
+      "summary": "Ars报道Yandex数据中心受损，AI训练和在线服务被纳入战争基础设施风险。",
+      "whyItMatters": "算力、云区和数据中心规划团队应把地缘冲突、冗余和服务连续性纳入AI基础设施风险表。",
+      "detailBody": "Ars报道援引Reuters等来源称，Yandex在俄罗斯的两个数据中心遭无人机打击；其中Sasovo设施包含用于训练YandexGPT的超级计算资源，服务也出现扰动。",
+      "trend": "AI算力风险进入物理安全层。",
+      "detailTrend": "这条信号把AI数据中心从“资本开支”带到战时目标讨论：模型训练、在线服务和区域冗余会同时受物理安全影响，算力风险不再只是电价与芯片供给。",
+      "whyRanked": "算力风险具象化。",
+      "topReason": "AI算力的外部性不只来自电力，也来自物理冲突。",
+      "impact": "企业和政策读者应检查AI云区、模型训练集群和关键服务是否有跨区域冗余与冲突情景预案。",
+      "whoShouldCare": "负责AI云区采购、灾备、主权云和数据中心风险评估的基础设施/安全/政策团队应重点核查。",
+      "readerUse": "基础设施、安全和政策团队可用此信号更新AI算力连续性与地缘风险清单。",
+      "nextCheck": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢复指标。",
+      "followUpQuestions": [
+        "Yandex是否发布数据中心受损、服务恢复、训练集群迁移或冗余配置说明，具体公告和日志记录在哪里？",
+        "Reuters、卫星图像或第三方监测是否更新受损范围、服务可用性指标和AI训练资源恢复状态？"
+      ],
+      "evidenceThreshold": "至少需要Yandex官方说明、卫星图像、服务可用性日志、Reuters更新或第三方报告，才能升级为确认的AI算力中断结论。",
+      "claimBoundary": "Ars报道可支持数据中心受损和AI训练资源关联，不证明YandexGPT训练长期中断或俄罗斯AI能力发生结构性下降。",
+      "counterEvidence": "如果官方记录、服务指标或卫星数据确认训练资源很快恢复，应收窄为短期设施扰动；若日志显示长期不可用，可上调风险判断。",
+      "provenance": "Ars Technica AI报道Yandex AI数据中心受损和训练资源关联；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+      "publishedAt": "2026-10-10T03:04:00+09:00",
+      "time": "10月10日 03:04 JST",
+      "tags": [
+        "AI基础设施",
+        "数据中心",
+        "地缘风险",
+        "YandexGPT"
+      ],
+      "companies": [
+        "Yandex"
+      ],
+      "selectionScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 20,
+        "note": "基础设施风险强，但关键损害程度仍依赖后续官方和第三方材料。"
+      },
+      "editorScore": {
+        "impact": 5,
+        "novelty": 4,
+        "narrativeStrength": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 20,
+        "note": "基础设施风险强，但关键损害程度仍依赖后续官方和第三方材料。"
+      },
+      "sourceUrl": "https://arstechnica.com/gadgets/2026/10/ukraines-drones-knock-out-ai-data-center-belonging-to-russias-google/",
+      "originalUrl": "https://arstechnica.com/gadgets/2026/10/ukraines-drones-knock-out-ai-data-center-belonging-to-russias-google/",
+      "detailWhyRanked": "它值得进入当前批次，因为它不是普通数据中心新闻，而是直接关联AI模型训练资源和多项在线服务扰动，能帮助读者更新算力风险地图、灾备情景和后续官方核查入口。",
+      "verificationStatus": "已核验",
+      "keyFacts": [
+        {
+          "value": "媒体背景",
+          "label": "来源角色",
+          "note": "Ars Technica AI"
+        },
+        {
+          "value": "报道",
+          "label": "主张状态",
+          "note": "按来源边界解读"
+        },
+        {
+          "value": "待复核",
+          "label": "升级条件",
+          "note": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "10月10日 03:04 JST",
+          "title": "来源发布",
+          "body": "Ars报道Yandex数据中心受损，AI训练和在线服务被纳入战争基础设施风险。",
+          "tone": "media"
+        },
+        {
+          "date": "站内处理",
+          "title": "边界写入",
+          "body": "Ars报道可支持数据中心受损和AI训练资源关联，不证明YandexGPT训练长期中断或俄罗斯AI能力发生结构性下降。",
+          "tone": "neutral"
+        },
+        {
+          "date": "下一步",
+          "title": "复核路径",
+          "body": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢复指标。",
+          "tone": "neutral"
+        }
+      ],
+      "deepSections": [
+        {
+          "label": "SOURCE FACT",
+          "navLabel": "来源事实",
+          "heading": "Ars报道，乌克兰无人机打击使Yandex多个数据中心受损，其中一处包含用于训练YandexGPT的超级计算资源。",
+          "sourceStatus": {
+            "tag": "媒体背景｜Ars Technica AI",
+            "note": "以下只使用来源可直接支持的最小事实。"
+          },
+          "body": "Ars报道援引Reuters等来源称，Yandex在俄罗斯的两个数据中心遭无人机打击；其中Sasovo设施包含用于训练YandexGPT的超级计算资源，服务出现扰动。",
+          "soWhat": "企业和政策读者应检查AI云区、模型训练集群和关键服务是否有跨区域冗余与冲突情景预案。"
+        },
+        {
+          "label": "BOUNDARY",
+          "navLabel": "证据边界",
+          "heading": "当前信号不能被过度外推",
+          "sourceStatus": {
+            "tag": "AI Watchtower边界",
+            "note": "不把媒体或厂商页面改写成最终证明。"
+          },
+          "body": "Ars报道可支持数据中心受损和AI训练资源关联，不证明YandexGPT训练长期中断或俄罗斯AI能力发生结构性下降。",
+          "soWhat": "至少需要Yandex官方说明、卫星图像、服务可用性日志、Reuters更新或第三方报告，才能升级为确认的AI算力中断结论。"
+        },
+        {
+          "label": "NEXT CHECK",
+          "navLabel": "下一步核查",
+          "heading": "先找可复核材料再升级判断",
+          "sourceStatus": {
+            "tag": "复核路径",
+            "note": "以文件、日志、指标、代码或第三方报告为准。"
+          },
+          "body": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢复指标。",
+          "soWhat": "如果官方记录、服务指标或卫星数据确认训练资源很快恢复，应收窄为短期设施扰动；若日志显示长期不可用，可上调风险判断。"
+        }
+      ]
+    },
+    {
+      "sourceId": "ars-technica-ai",
+      "sourceName": "Ars Technica AI",
+      "source": "Ars Technica AI",
+      "trustLevel": "media",
+      "sourceReliability": "high",
+      "sourceRole": "媒体背景",
+      "sourceType": "reliable_media",
+      "claimStatus": "reported",
+      "originalDependency": "must-read",
+      "id": "ars-nikon-small-world-ai-disqualification-2026-10-10",
+      "category": "policy",
+      "label": "政策",
+      "title": "Ars：Nikon显微影像赛事因生成式AI规则取消原获奖作品",
+      "body": "Ars报道，Nikon因生成式AI规则调整显微影像赛事排名。",
+      "summary": "Ars报道Nikon显微影像赛事因生成式AI使用规则取消原获奖作品并调整排名。",
+      "whyItMatters": "科研影像、竞赛和出版机构可用它检查AI增强、AI生成与原始实验记录之间的规则边界。",
+      "detailBody": "Ars报道，Nikon重新评估视频及支持材料后，认定原获奖作品不符合生成式AI相关规则；Nikon同时说明该决定不评价参赛者声誉或科研贡献，只处理参赛资格。",
+      "trend": "AI影像规则进入执行阶段。",
+      "detailTrend": "这条信号说明AI透明度不只属于新闻平台：显微影像、科研可视化和竞赛评审也需要可解释的处理记录、规则文本、源文件保留和申诉流程。",
+      "whyRanked": "规则带来排名后果。",
+      "topReason": "生成式AI规则开始改变科研影像竞赛的获奖结果。",
+      "impact": "机构应在征稿、竞赛和论文图像规范中区分AI辅助可视化、AI生成内容、源文件保留和违规处理。",
+      "whoShouldCare": "负责科研影像、竞赛征稿、学术出版或AI内容政策的编辑/法务/评审团队应重点核查。",
+      "readerUse": "编辑、法务和科研评审团队可用此信号更新AI影像披露与源文件审查规则。",
+      "nextCheck": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订文件。",
+      "followUpQuestions": [
+        "Nikon是否公布新版生成式AI规则、源文件审查要求、申诉流程或评审说明文件？",
+        "BBC、Nikon或参赛者是否补充原始实验记录、AI处理步骤、源文件元数据或独立专家评估报告？"
+      ],
+      "evidenceThreshold": "至少需要Nikon规则文本、审查说明、源文件元数据、专家评估报告或参赛者回应，才能升级为更完整的科研影像治理结论。",
+      "claimBoundary": "Ars报道和Nikon声明只能证明该赛事调整排名，不证明参赛者科研不当或所有AI辅助影像都应被排除。",
+      "counterEvidence": "如果后续规则文件或专家报告确认AI仅用于允许的可视化，应下调为单项赛事解释争议；若更多赛事采用类似规则，可上调为行业规则变化。",
+      "provenance": "Ars Technica AI报道Nikon显微影像赛事生成式AI治理边界及取消原获奖作品；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+      "publishedAt": "2026-10-10T02:44:00+09:00",
+      "time": "10月10日 02:44 JST",
+      "tags": [
+        "生成式AI规则",
+        "科学影像",
+        "内容真实性",
+        "竞赛治理"
+      ],
+      "companies": [
+        "Nikon"
       ],
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 5,
+        "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 21,
-        "note": "论文证据扎实，商业冲击较弱但公共部门参考价值高。"
+        "total": 20,
+        "note": "事件边界清楚，适合作规则治理样本，但完整审查材料仍在来源外。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 5,
+        "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 21,
-        "note": "论文证据扎实，商业冲击较弱但公共部门参考价值高。"
+        "total": 20,
+        "note": "事件边界清楚，适合作规则治理样本，但完整审查材料仍在来源外。"
       },
+      "sourceUrl": "https://arstechnica.com/science/2026/10/winning-nikon-small-world-in-motion-video-disqualified-for-ai-use/",
+      "originalUrl": "https://arstechnica.com/science/2026/10/winning-nikon-small-world-in-motion-video-disqualified-for-ai-use/",
+      "detailWhyRanked": "它进入本批次，因为事件有明确机构、规则、调查和排名变化，适合作为科研影像AI使用边界的可核查样本，也能提示编辑与评审团队补齐源文件要求和申诉流程。",
+      "verificationStatus": "已核验",
       "keyFacts": [
         {
-          "value": "1043名",
-          "label": "教师样本",
-          "note": "论文描述的分发阶段教师规模。"
+          "value": "媒体背景",
+          "label": "来源角色",
+          "note": "Ars Technica AI"
         },
         {
-          "value": "23名",
-          "label": "策展人员",
-          "note": "参与学习目标和教案策展。"
+          "value": "报道",
+          "label": "主张状态",
+          "note": "按来源边界解读"
         },
         {
-          "value": "双语",
-          "label": "语言场景",
-          "note": "英语和卡纳达语教案流程。"
+          "value": "待复核",
+          "label": "升级条件",
+          "note": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订"
         }
       ],
       "timeline": [
         {
-          "date": "2026-10-10",
-          "title": "研究进入雷达",
-          "body": "Microsoft Research列表出现Shiksha Copilot研究项。",
-          "tone": "research"
+          "date": "10月10日 02:44 JST",
+          "title": "来源发布",
+          "body": "Ars报道Nikon显微影像赛事因生成式AI使用规则取消原获奖作品并调整排名。",
+          "tone": "media"
         },
         {
-          "date": "2026-10-11",
-          "title": "补入教育AI证据",
-          "body": "AI Watchtower记录论文样本和边界。",
+          "date": "站内处理",
+          "title": "边界写入",
+          "body": "Ars报道和Nikon声明只能证明该赛事调整排名，不证明参赛者科研不当或所有AI辅助影像都应被排除。",
           "tone": "neutral"
         },
         {
-          "date": "待补",
-          "title": "长期成效",
-          "body": "等待学生结果、成本和复制研究。",
+          "date": "下一步",
+          "title": "复核路径",
+          "body": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订文件。",
           "tone": "neutral"
         }
       ],
-      "sourceUrl": "https://doi.org/10.1145/3788074",
-      "originalUrl": "https://doi.org/10.1145/3788074",
-      "detailWhyRanked": "它不是新产品发布，而是把教育AI采用放进低资源、多语言、人审策展和教师定制流程中观察；ACM PACMHCI论文支持1043名教师、23名策展人员和系统流程这些来源事实。因为教育AI容易被单个演示案例高估，样本和方法边界本身就是读者最该核对的价值点。",
-      "verificationStatus": "已核验",
       "deepSections": [
         {
-          "title": "发生了什么",
-          "body": "ACM论文研究Shiksha Copilot在印度公立学校教师中的使用。"
+          "label": "SOURCE FACT",
+          "navLabel": "来源事实",
+          "heading": "Ars报道，Nikon Small World in Motion调查后认定原获奖视频不符合生成式AI规则，并调整比赛排名。",
+          "sourceStatus": {
+            "tag": "媒体背景｜Ars Technica AI",
+            "note": "以下只使用来源可直接支持的最小事实。"
+          },
+          "body": "Ars报道，Nikon重新评估视频及支持材料后，认定原获奖作品不符合生成式AI相关规则；Nikon同时说明该决定不评价参赛者声誉或科研贡献。",
+          "soWhat": "机构应在征稿、竞赛和论文图像规范中区分AI辅助可视化、AI生成内容、源文件保留和违规处理。"
         },
         {
-          "title": "为什么重要",
-          "body": "教育AI需要本地课程、人审和长期成效，而不只是生成教案。"
+          "label": "BOUNDARY",
+          "navLabel": "证据边界",
+          "heading": "当前信号不能被过度外推",
+          "sourceStatus": {
+            "tag": "AI Watchtower边界",
+            "note": "不把媒体或厂商页面改写成最终证明。"
+          },
+          "body": "Ars报道和Nikon声明只能证明该赛事调整排名，不证明参赛者科研不当或所有AI辅助影像都应被排除。",
+          "soWhat": "至少需要Nikon规则文本、审查说明、源文件元数据、专家评估报告或参赛者回应，才能升级为更完整的科研影像治理结论。"
         },
         {
-          "title": "下一步",
-          "body": "核对学生结果、部署成本和其他地区复现。"
+          "label": "NEXT CHECK",
+          "navLabel": "下一步核查",
+          "heading": "先找可复核材料再升级判断",
+          "sourceStatus": {
+            "tag": "复核路径",
+            "note": "以文件、日志、指标、代码或第三方报告为准。"
+          },
+          "body": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订文件。",
+          "soWhat": "如果后续规则文件或专家报告确认AI仅用于允许的可视化，应下调为单项赛事解释争议；若更多赛事采用类似规则，可上调为行业规则变化。"
         }
       ]
     },
     {
-      "sourceId": "google-deepmind-blog",
-      "sourceName": "Google DeepMind Blog",
-      "source": "Google DeepMind Blog",
+      "sourceId": "google-keyword-ai",
+      "sourceName": "Google Keyword AI",
+      "source": "Google Keyword AI",
       "trustLevel": "official",
       "sourceReliability": "high",
       "sourceRole": "官方核对",
       "sourceType": "official",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "id": "google-embeddinggemma-2-multimodal-embeddings-2026-10-11",
-      "category": "model",
-      "label": "模型",
-      "title": "Google发布EmbeddingGemma 2多模态嵌入模型",
-      "body": "Google/DeepMind新闻页显示EmbeddingGemma 2已作为10月开放模型更新发布，定位为原生多模态嵌入模型。",
-      "summary": "EmbeddingGemma 2进入Google开放模型序列，重点是文本与视觉检索/匹配所需的多模态嵌入。",
-      "whyItMatters": "嵌入模型是RAG、搜索、推荐和企业知识库的底层零件，多模态版本会影响文档、图片和视频资产治理。",
-      "detailBody": "Google DeepMind新闻入口把EmbeddingGemma 2列为10月模型更新，并链接到Google开发者博客说明。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "开放模型竞争不只在聊天模型，也在检索、向量化和多模态数据管线的基础组件。",
-      "detailTrend": "对企业来说，EmbeddingGemma 2的价值要看检索质量、延迟、许可、部署成本和多模态资产权限继承。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "多模态嵌入是企业AI基础设施常用组件，更新值得纳入开发者雷达。",
-      "topReason": "开放嵌入模型把多模态RAG的底层选择继续拉宽。",
-      "impact": "构建企业搜索、知识库和多模态RAG的团队可以把它加入评测候选，但不能跳过私有数据测试。",
-      "whoShouldCare": "负责企业搜索、多模态RAG、向量库和内容资产治理的数据/平台工程团队应重点关注。，尤其是在上线、采购、部署或审计场景中。",
-      "readerUse": "负责企业搜索、多模态RAG、向量库和内容资产治理的数据/平台工程团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查模型卡、许可、代码、MTEB/多模态检索benchmark和私有语料A/B测试。",
+      "id": "google-synthid-detector-global-access-2026-10-07",
+      "category": "product",
+      "label": "产品",
+      "title": "Google把SynthID Detector开放为全球英文工具并接入多家伙伴",
+      "body": "Google宣布SynthID Detector全球英文开放，并列出多家伙伴。",
+      "summary": "Google官方宣布SynthID Detector全球英文开放，并扩展到OpenAI、NVIDIA、Kakao等伙伴内容。",
+      "whyItMatters": "内容平台、媒体和合规团队可用它更新AI媒体识别工具清单，但仍需误报、漏报和规避测试。",
+      "detailBody": "Google官方文章称，SynthID Detector从面向媒体专业人士的早期版本扩展为全球英文开放工具，并称可检查Google及OpenAI、NVIDIA、Kakao等伙伴生成的图像、视频或音频。",
+      "trend": "AI内容溯源正在从单家公司水印走向跨平台检测入口。",
+      "detailTrend": "这条信号与OpenAI欧盟文本水印形成互补：行业正在把“标注AI内容”拆成水印、检测器、浏览器入口和伙伴互操作，但可靠性还要靠误报漏报测试。",
+      "whyRanked": "官方补强溯源工具链。",
+      "topReason": "内容溯源开始从合规承诺进入大众可访问检测工具。",
+      "impact": "媒体、平台和企业合规团队应把检测器纳入工作流，但不要把水印检测等同于真实性证明。",
+      "whoShouldCare": "负责AI内容标注、媒体核验、平台合规或品牌安全的产品/法务/编辑团队应重点核查。",
+      "readerUse": "产品、法务和编辑团队可用此信号更新AI媒体检测与披露工具清单。",
+      "nextCheck": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文档、Apple接入公告和第三方测试报告。",
       "followUpQuestions": [
-        "Google是否公布EmbeddingGemma 2的模型卡、权重、许可和多模态评测明细，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "第三方在企业文档、图片和视频检索任务中的复测是否优于现有嵌入模型，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
+        "Google是否发布SynthID Detector误报率、漏报率、支持格式、API权限或技术白皮书等说明文件？",
+        "OpenAI、NVIDIA、Kakao或Apple是否发布伙伴接入公告、生成工具配置、检测日志或第三方评测报告？"
       ],
-      "evidenceThreshold": "需要模型卡、权重/代码、第三方benchmark和真实RAG评测，才能升级为可替换基础组件证据。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "新闻入口证明发布存在，不证明它在所有检索任务中优于现有模型。",
-      "counterEvidence": "若第三方测试显示特定语言、图片类型或长文档检索退化，应收窄为特定场景候选。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "Google DeepMind BlogGoogle DeepMind新闻页和Google博客入口支持发布事实；性能仍需模型卡和第三方评测。",
-      "publishedAt": "2026-10-10T09:00:00Z",
-      "time": "10月10日",
+      "evidenceThreshold": "至少需要技术说明文件、误报漏报数据、伙伴公告、检测日志或第三方测试报告，才能升级为可靠内容溯源工具结论。",
+      "claimBoundary": "Google官方页面可确认工具开放和伙伴范围，不证明所有AI内容都可检测，也不证明检测结果足以判断内容真假。",
+      "counterEvidence": "如果第三方测试数据或伙伴说明显示高漏报、易规避或覆盖范围较窄，应下调为有限检测入口；若独立评测通过，可限定为特定模态有效。",
+      "provenance": "Google Keyword AI宣布SynthID Detector模型内容溯源工具全球英文开放及伙伴检测范围；该来源可核对发布事实，但效果、覆盖率和外部影响仍需独立数据或第三方复核。",
+      "publishedAt": "2026-10-07T09:00:00+09:00",
+      "time": "10月7日 09:00 JST",
       "tags": [
-        "EmbeddingGemma",
-        "开放模型",
-        "多模态",
-        "RAG"
+        "SynthID",
+        "内容溯源",
+        "AI水印",
+        "Google"
       ],
       "companies": [
         "Google",
-        "Google DeepMind"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "基础组件价值明确，但公开页面细节需继续核对模型卡。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "基础组件价值明确，但公开页面细节需继续核对模型卡。"
-      },
-      "keyFacts": [
-        {
-          "value": "10月",
-          "label": "发布月份",
-          "note": "DeepMind新闻页列入October 2026模型更新。"
-        },
-        {
-          "value": "多模态",
-          "label": "模型方向",
-          "note": "定位为原生多模态嵌入。"
-        },
-        {
-          "value": "开放模型",
-          "label": "生态位置",
-          "note": "属于Gemma开放模型线索。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10",
-          "title": "新闻页列出",
-          "body": "DeepMind将EmbeddingGemma 2列入10月模型更新。",
-          "tone": "official"
-        },
-        {
-          "date": "待补",
-          "title": "模型卡核查",
-          "body": "继续查看权重、许可和评测表。",
-          "tone": "neutral"
-        },
-        {
-          "date": "待补",
-          "title": "企业复测",
-          "body": "用私有文档和多模态资产做A/B测试。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_campaign=gdm&utm_content=&utm_medium=referral&utm_source=deepmind.google",
-      "originalUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/?utm_campaign=gdm&utm_content=&utm_medium=referral&utm_source=deepmind.google",
-      "detailWhyRanked": "它不是最戏剧化的发布，但会影响大量RAG和搜索系统的底层选型。 Google DeepMind Blog只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Google发布多模态嵌入模型更新。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "嵌入模型决定RAG和搜索质量上限。"
-        },
-        {
-          "title": "下一步",
-          "body": "核对模型卡、许可和第三方评测。"
-        }
-      ]
-    },
-    {
-      "sourceId": "huggingface-blog",
-      "sourceName": "Hugging Face Blog",
-      "source": "Hugging Face Blog",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "sourceRole": "研究原文",
-      "sourceType": "official",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "huggingface-carbon-a-genome-annotation-2026-10-11",
-      "category": "model",
-      "label": "模型",
-      "title": "Hugging Face Bio发布Carbon-A基因组注释模型信号",
-      "body": "Hugging Face Blog最新列表显示Carbon-A文章发布，主题是从已知和未知基因组中寻找基因，属于AI生物模型/工具链方向。",
-      "summary": "Carbon-A把AI模型用于基因组注释和未知基因发现，适合作为AI for Science开放生态候选。",
-      "whyItMatters": "生物AI从大模型叙事走向具体注释工具时，关键是数据、基准、湿实验验证和误报控制。",
-      "detailBody": "Hugging Face文章页面显示Carbon-A由HuggingFaceBio发布，聚焦已知和未知基因组中的基因发现。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "开放AI生态正在把生命科学模型、数据和评测工作流放到更易复用的平台上。",
-      "detailTrend": "这条信号的价值在于开放入口和任务方向；能否影响真实生物研究，要看数据集、代码和实验验证。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "它补充本期AI科学线：除数学和地理公共卫生外，开放生物模型也在更新。",
-      "topReason": "开放平台上的生物AI模型继续向可执行科研任务靠近。",
-      "impact": "生物信息团队可把它列为候选工具，但必须用标准基因组基准和专家复核验证。",
-      "whoShouldCare": "评估AI辅助基因组注释、开放生物模型和科研工具链的生信/药研/平台团队应重点关注。，尤其是在上线、采购、部署或审计场景中。",
-      "readerUse": "评估AI辅助基因组注释、开放生物模型和科研工具链的生信/药研/平台团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查Carbon-A模型卡、训练数据、代码、基准集、误报率和独立生物信息复测。",
-      "followUpQuestions": [
-        "Carbon-A是否公开模型权重、训练语料、评测脚本和与现有注释工具的对照结果，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "是否有独立实验室或生信团队在未知基因组任务中复现其发现质量和误报率，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要模型卡、代码、公开benchmark、专家复核和实验验证，才能升级为有效基因发现工具证据。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "Hugging Face文章入口证明项目发布和任务方向，不证明发现结果已被生物学验证。",
-      "counterEvidence": "若独立评测显示高误报、数据泄露或缺少实验确认，应下调为早期开放模型信号。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "Hugging Face Blog提供Carbon-A发布入口；科学效果需模型卡、代码、基准和实验验证。",
-      "publishedAt": "2026-10-09T09:00:00Z",
-      "time": "10月9日",
-      "tags": [
-        "AI for Science",
-        "生物模型",
-        "Hugging Face",
-        "基因组"
-      ],
-      "companies": [
-        "Hugging Face"
-      ],
-      "selectionScore": {
-        "impact": 3,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "开放科研方向有用，但当前需模型卡和外部验证补强。"
-      },
-      "editorScore": {
-        "impact": 3,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "开放科研方向有用，但当前需模型卡和外部验证补强。"
-      },
-      "keyFacts": [
-        {
-          "value": "Carbon-A",
-          "label": "项目",
-          "note": "Hugging Face Bio发布的基因组注释信号。"
-        },
-        {
-          "value": "基因组",
-          "label": "任务",
-          "note": "面向已知和未知基因组中的基因发现。"
-        },
-        {
-          "value": "早期",
-          "label": "证据阶段",
-          "note": "需模型卡和独立复测。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-09",
-          "title": "文章发布",
-          "body": "Hugging Face Blog出现Carbon-A条目。",
-          "tone": "research"
-        },
-        {
-          "date": "待补",
-          "title": "模型卡核查",
-          "body": "查看权重、数据和评测脚本。",
-          "tone": "neutral"
-        },
-        {
-          "date": "待补",
-          "title": "实验验证",
-          "body": "等待独立生信和湿实验确认。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://huggingface.co/blog/HuggingFaceBio/carbon-annotator-genbank-genome-annotation",
-      "originalUrl": "https://huggingface.co/blog/HuggingFaceBio/carbon-annotator-genbank-genome-annotation",
-      "detailWhyRanked": "它是AI for Science开放生态的小而具体信号，适合进入候选雷达而非TOP1结论。 Hugging Face Blog只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Hugging Face Bio发布Carbon-A基因组注释文章。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "开放生物AI工具可能降低科研试验门槛。"
-        },
-        {
-          "title": "下一步",
-          "body": "核对模型卡、benchmark和实验复核。"
-        }
-      ]
-    },
-    {
-      "sourceId": "meta-newsroom",
-      "sourceName": "Meta Newsroom",
-      "source": "Meta Newsroom",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "meta-ai-data-center-myths-infrastructure-2026-10-11",
-      "category": "funding",
-      "label": "融资",
-      "title": "Meta用官方文章回应AI数据中心水电与就业争议",
-      "body": "Meta Newsroom发布文章回应数据中心水、能源账单和就业争议，称其AI优化闭环液冷设施在缺水地区默认减少持续用水，并由数据中心承担新增供电基础设施成本。",
-      "summary": "Meta把AI数据中心争议转向水、能源和就业三张账单，但这些仍是厂商主张，需看当地公共文件。",
-      "whyItMatters": "AI基础设施扩张正在进入社区、用水、用电和费率谈判，企业叙事必须用许可、购电和监管文件校验。",
-      "detailBody": "文章由Meta发布，描述两类数据中心冷却方式、供电规划和就业阶段，并举Louisiana协议作为例子。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "AI算力竞争的公共风险从GPU数量扩展到地方水电、成本分摊和社区收益。",
-      "detailTrend": "这类文章说明AI公司已经把基础设施合法性当成沟通重点，但证明责任仍在公共记录和第三方审计。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "基础设施外部性是AI扩张最现实的约束之一，Meta的回应提供了核查清单。",
-      "topReason": "AI数据中心争议正在从资本承诺转向地方公共账本。",
-      "impact": "政策、投资和社区观察者应把数据中心报道拆成用水许可、能源成本、传输升级和就业质量逐项核对。",
-      "whoShouldCare": "跟踪AI数据中心选址、用水许可、电价分摊和地方就业承诺的政策/投资/社区团队应重点关注。，尤其是在上线、采购、部署或审计场景中。",
-      "readerUse": "跟踪AI数据中心选址、用水许可、电价分摊和地方就业承诺的政策/投资/社区团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查地方水许可、Entergy/公用事业委员会文件、购电协议、费率保护条款和就业审计。",
-      "followUpQuestions": [
-        "Louisiana相关公用事业委员会或Entergy是否公开Meta供电成本分摊和费率保护文件，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "Meta数据中心所在地是否有年度用水、就业、税收和社区承诺审计报告，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要公共许可、监管案卷、购电/输电合同、用水记录和第三方审计，才能升级为已验证社区影响结论。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "Meta文章只能证明公司对水电就业争议的回应，不证明所有项目都无公共成本或环境压力。",
-      "counterEvidence": "若监管文件显示成本转嫁、用水压力或就业承诺未达标，应下调为未证实或有争议的厂商叙事。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "Meta Newsroom以厂商主张形式发布数据中心争议回应；水电和就业效果仍需地方公共文件与审计。",
-      "publishedAt": "2026-10-08T09:00:00Z",
-      "time": "10月8日",
-      "tags": [
-        "数据中心",
-        "AI基础设施",
-        "用水",
-        "能源"
-      ],
-      "companies": [
-        "Meta"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "基础设施议题重要，但证据是厂商叙事，需公共文件升级。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 4,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "基础设施议题重要，但证据是厂商叙事，需公共文件升级。"
-      },
-      "keyFacts": [
-        {
-          "value": "水",
-          "label": "争议一",
-          "note": "文章解释闭环液冷和传统空气冷却。"
-        },
-        {
-          "value": "电",
-          "label": "争议二",
-          "note": "文章称新增基础设施由Meta支付。"
-        },
-        {
-          "value": "就业",
-          "label": "争议三",
-          "note": "文章强调建设和运营岗位。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-08",
-          "title": "Meta发文",
-          "body": "回应AI数据中心常见争议。",
-          "tone": "official"
-        },
-        {
-          "date": "待补",
-          "title": "公共记录",
-          "body": "核对许可、公用事业和合同文件。",
-          "tone": "neutral"
-        },
-        {
-          "date": "待补",
-          "title": "社区审计",
-          "body": "查看用水、就业和费率实际结果。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://about.fb.com/news/2026/10/debunking-the-biggest-data-center-myths/",
-      "originalUrl": "https://about.fb.com/news/2026/10/debunking-the-biggest-data-center-myths/",
-      "detailWhyRanked": "它不是独立证明，而是让读者知道AI基础设施需要哪些公共账本来验证。 Meta Newsroom只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Meta回应数据中心水、电和就业争议。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "AI算力扩张越来越受地方公共资源约束。"
-        },
-        {
-          "title": "下一步",
-          "body": "查许可、费率、合同和第三方审计。"
-        }
-      ]
-    },
-    {
-      "sourceId": "microsoft-research-blog",
-      "sourceName": "Microsoft Research Blog",
-      "source": "Microsoft Research Blog / GitHub",
-      "trustLevel": "research",
-      "sourceReliability": "high",
-      "sourceRole": "研究原文",
-      "sourceType": "research",
-      "claimStatus": "confirmed",
-      "originalDependency": "reference",
-      "id": "microsoft-cabra-code-understanding-benchmark-2026-10-11",
-      "category": "tool",
-      "label": "工具",
-      "title": "Microsoft CABRA把代码理解列为Coding Agent瓶颈",
-      "body": "Microsoft Research列表和GitHub仓库显示，CABRA用6840个合成代码编辑任务评估8个LLM和6种Copilot Agent配置，聚焦函数遍历、搜索、运行时解析和指令遵循。",
-      "summary": "CABRA把Coding Agent失败从“改了几行代码”拆成可控代码理解能力维度。",
-      "whyItMatters": "SWE-bench等仓库任务很难解释失败来自哪里；CABRA若能复现，可帮助团队判断Agent到底卡在搜索、调用图理解、运行时解析还是指令执行。",
-      "detailBody": "Microsoft Research近期列表把“Code Understanding is a Bottleneck for Coding Agents”列为10月7日研究项，GitHub仓库说明CABRA是受控代码任务框架，覆盖6840个任务。本站只确认研究和仓库入口，不把结果当作行业通用结论。",
-      "trend": "Coding Agent评测正在从终局分数走向能力分解。",
-      "detailTrend": "这条信号补齐今天的Microsoft Agent Lightning：一个负责训练真实harness，一个负责诊断代码理解瓶颈。两者都说明Agent工程的焦点正在回到可复现评测和可控任务。",
-      "whyRanked": "它能把代码Agent验收变成具体能力测试，因为团队可以分别观察函数搜索、调用图理解、运行时解析和指令遵循，而不是只看单一排行榜。",
-      "topReason": "代码理解瓶颈开始被拆成可测维度。",
-      "impact": "工程平台团队可用CABRA思路给内部Coding Agent建立函数搜索、运行时解析和指令遵循的回归测试。",
-      "whoShouldCare": "负责在IDE插件、内部代码助手、仓库修复Agent或开发者平台中做验收/回归测试的工程团队应重点核查。",
-      "readerUse": "维护Coding Agent、IDE插件、代码评测平台或内部开发者工具的工程团队应重点核查。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查CABRA论文、GitHub issue、任务生成脚本、模型配置、Copilot Agent复现记录和第三方基准对照。",
-      "followUpQuestions": [
-        "CABRA任务是否覆盖真实企业代码中的跨文件依赖和测试执行失败？",
-        "第三方模型或开源Agent能否复现Microsoft给出的能力差异？"
-      ],
-      "evidenceThreshold": "需要论文正文、代码仓库、任务生成脚本、benchmark报告、第三方复现结果和真实企业仓库对照记录，才能升级为已验证的Coding Agent评测标准候选。",
-      "claimBoundary": "GitHub与Microsoft列表支持CABRA存在和评测设计，不证明其任务能代表所有企业代码库，也不证明某个Agent生产可用。",
-      "counterEvidence": "若第三方复现报告、真实仓库对照数据或GitHub issue显示合成任务与生产缺陷低相关，应降级；若多家Agent框架把CABRA纳入CI或公开benchmark，应上调。",
-      "provenance": "Microsoft Research Blog列表介绍“Code Understanding is a Bottleneck for Coding Agents”研究项，microsoft/CABRA GitHub仓库说明CABRA任务规模、评测对象和能力维度；完整方法仍需论文与代码复核。",
-      "publishedAt": "2026-10-07T15:00:00Z",
-      "time": "10月08日 00:00 JST",
-      "tags": [
-        "Coding Agent",
-        "评测",
-        "CABRA",
-        "Microsoft Research"
-      ],
-      "companies": [
-        "Microsoft"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "研究/代码入口明确，叙事性较弱但对工程验收有用。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "研究/代码入口明确，叙事性较弱但对工程验收有用。"
-      },
-      "keyFacts": [
-        {
-          "value": "6840",
-          "label": "任务数量",
-          "note": "GitHub仓库说明的合成代码任务规模。"
-        },
-        {
-          "value": "4类",
-          "label": "能力轴",
-          "note": "函数遍历、搜索、运行时解析和指令遵循。"
-        },
-        {
-          "value": "GitHub",
-          "label": "开放入口",
-          "note": "microsoft/CABRA仓库可核对。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-07",
-          "title": "研究项发布",
-          "body": "Microsoft Research列出CABRA研究。",
-          "tone": "research"
-        },
-        {
-          "date": "2026-10-11",
-          "title": "纳入核查表",
-          "body": "AI Watchtower补入Coding Agent能力分解信号。",
-          "tone": "neutral"
-        },
-        {
-          "date": "待补",
-          "title": "复现验证",
-          "body": "等待第三方复测和真实仓库对照。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://github.com/microsoft/CABRA",
-      "originalUrl": "https://github.com/microsoft/CABRA",
-      "detailWhyRanked": "它把Coding Agent失败原因从单一排行榜分数拆成工程可追踪维度：Microsoft Research列表说明研究主题，microsoft/CABRA仓库说明6840个合成任务、8个LLM、6种Copilot配置和四类能力轴。因为这些维度可用于内部Agent验收，来源支持研究与仓库事实；效果仍需论文、代码、benchmark报告和第三方复现。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Microsoft公开CABRA代码任务框架和仓库入口。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "Agent验收需要知道失败来自代码搜索、理解还是执行。"
-        },
-        {
-          "title": "下一步",
-          "body": "核对论文、脚本、复现和真实仓库相关性。"
-        }
-      ]
-    },
-    {
-      "sourceId": "microsoft-research-blog",
-      "sourceName": "Microsoft Research Blog",
-      "source": "Microsoft Research Blog",
-      "trustLevel": "research",
-      "sourceReliability": "high",
-      "sourceRole": "研究原文",
-      "sourceType": "research",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "microsoft-agent-lightning-v1-rl-framework-2026-10-11",
-      "category": "tool",
-      "label": "工具",
-      "title": "Microsoft Research推出Agent Lightning v1.0强化学习框架",
-      "body": "Microsoft Research博客列出Agent Lightning v1.0，称这是约3500行的轻量Agentic RL框架，用于在真实Agent harness中训练Agent。",
-      "summary": "Agent Lightning v1.0把现有Agent执行与强化学习训练连接起来，目标是减少重写Agent框架的成本。",
-      "whyItMatters": "如果复现成立，Agent团队可用真实工具链轨迹改进模型，而不是只依赖离线任务或重写训练环境。",
-      "detailBody": "Microsoft Research称Agent Lightning连接现有Agent和RL训练，使开发者可在复杂工具、上下文和决策框架中训练Agent。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "Agent开发正在从“写提示词/工具”转向“用真实执行轨迹训练和优化”。",
-      "detailTrend": "这类框架的价值取决于能否把生产轨迹安全转换为训练信号，同时避免奖励黑客和数据泄露。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "它是开发者工具链信号，补上本期安全与研究之外的Agent训练方向。",
-      "topReason": "真实harness强化学习可能改变Agent迭代方式。",
-      "impact": "构建代码、SQL、工具调用或多步骤Agent的团队，可以评估它是否适合离线/在线训练实验。",
-      "whoShouldCare": "正在训练工具调用Agent、代码Agent、SQL Agent或企业自动化Agent的研究/平台工程团队应重点关注。，尤其是在上线、采购、部署或审计场景中。",
-      "readerUse": "正在训练工具调用Agent、代码Agent、SQL Agent或企业自动化Agent的研究/平台工程团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查GitHub仓库、技术报告、许可证、示例harness和第三方训练复现结果。",
-      "followUpQuestions": [
-        "Agent Lightning仓库是否提供可复现实验、轨迹格式和真实harness适配示例，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "第三方是否在LangChain、AutoGen、OpenAI Agents SDK或企业内部Agent上复现收益，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要开源代码、技术报告、可复现实验和第三方任务结果，才能升级为通用Agent训练框架证据。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "Microsoft Research博客支持项目发布和定位，不证明框架在所有Agent类型上有效或安全。",
-      "counterEvidence": "若复现显示收益只来自少数示例、奖励不稳或接入成本高，应收窄为研究工具。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "Microsoft Research BlogMicrosoft Research博客和项目入口支持Agent Lightning v1.0发布事实；性能仍需代码和复现。",
-      "publishedAt": "2026-10-07T09:00:00Z",
-      "time": "10月7日",
-      "tags": [
-        "Agentic RL",
-        "Microsoft Research",
-        "开发者工具",
-        "训练框架"
-      ],
-      "companies": [
-        "Microsoft"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "开发者效用高，生产价值仍需真实harness复现。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 20,
-        "note": "开发者效用高，生产价值仍需真实harness复现。"
-      },
-      "keyFacts": [
-        {
-          "value": "v1.0",
-          "label": "版本",
-          "note": "项目进入明确版本发布。"
-        },
-        {
-          "value": "3500行",
-          "label": "框架规模",
-          "note": "官方描述为轻量框架。"
-        },
-        {
-          "value": "真实harness",
-          "label": "训练对象",
-          "note": "面向已有Agent执行环境。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-08",
-          "title": "技术报告",
-          "body": "项目README显示v1.0技术报告发布。",
-          "tone": "research"
-        },
-        {
-          "date": "2026-10-07",
-          "title": "博客列出",
-          "body": "Microsoft Research博客列为最新研究项。",
-          "tone": "official"
-        },
-        {
-          "date": "待补",
-          "title": "外部复现",
-          "body": "等待第三方在真实Agent上复测。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://github.com/microsoft/agent-lightning",
-      "originalUrl": "https://github.com/microsoft/agent-lightning",
-      "detailWhyRanked": "它触及Agent从演示到持续改进的训练环节，但要等复现实验才能判断是否通用。 Microsoft Research Blog只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Microsoft Research公开Agent Lightning v1.0项目入口。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "真实Agent轨迹可能成为训练信号。"
-        },
-        {
-          "title": "下一步",
-          "body": "看代码、许可证、示例和复现实验。"
-        }
-      ]
-    },
-    {
-      "sourceId": "google-research-blog",
-      "sourceName": "Google Research Blog",
-      "source": "Google Research Blog",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "sourceRole": "研究原文",
-      "sourceType": "official",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "google-earth-ai-public-health-pdfm-2026-10-11",
-      "category": "research",
-      "label": "研究",
-      "title": "Google Research用Earth AI位置嵌入补强公共卫生预测",
-      "body": "Google Research发布PDFM公共卫生研究，称地理位置嵌入可作为现有流行病学模型的输入，覆盖疫苗、心血管、登革热和产后抑郁等案例。",
-      "summary": "Google Earth AI把搜索、流动、建成环境和环境信号压缩成位置嵌入，用于公共卫生模型补数和预测。",
-      "whyItMatters": "如果外部复现成立，AI地理基础模型可能成为公共卫生团队在数据滞后和资源不足地区的辅助输入。",
-      "detailBody": "博客列出5个伙伴案例，包括美加边境MMR、美国心血管死亡、墨西哥登革热和DRC霍乱等任务。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "AI for Science正在从单一模型演示转向可插入既有专业工作流的基础表征。",
-      "detailTrend": "这条信号的价值不在替代流行病学，而在让公共卫生模型获得更及时的地点表征和跨区域迁移输入。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "它给出伙伴、任务、指标和论文入口，是本期少数带定量评估的AI科学应用。",
-      "topReason": "AI地理基础模型开始进入公共卫生预测的实证矩阵。",
-      "impact": "公共卫生、城市治理和公益数据团队可关注PDFM是否能补足滞后数据，但不能跳过本地验证。",
-      "whoShouldCare": "需要在疫情、慢病、母婴健康或资源配置中使用地理预测的公共卫生/公益数据团队应重点关注。，尤其是在上线、采购、部署或审计场景中。",
-      "readerUse": "需要在疫情、慢病、母婴健康或资源配置中使用地理预测的公共卫生/公益数据团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查arXiv论文、伙伴机构复现、数据许可、隐私处理和各地区外推误差。",
-      "followUpQuestions": [
-        "论文是否公开PDFM嵌入、任务数据切分和各案例统计显著性检验细节，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "伙伴机构是否在真实公共卫生决策中记录了使用PDFM后的行动变化和误差后果，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要论文细节、外部复现、本地部署记录和公共卫生机构评估，才能升级为可操作预测工具证据。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "Google博客和论文入口支持研究发布与案例指标，不证明该方法已适合所有地区或实时决策。",
-      "counterEvidence": "若独立复现显示跨区域误差高、隐私风险难控或行动收益不稳定，应收窄为研究型辅助特征。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "Google Research BlogGoogle Research官方博客发布PDFM公共卫生案例和论文入口；效果仍需论文与伙伴复现核对。",
-      "publishedAt": "2026-10-06T09:00:00Z",
-      "time": "10月6日",
-      "tags": [
-        "Earth AI",
-        "公共卫生",
-        "地理基础模型",
-        "Google Research"
-      ],
-      "companies": [
-        "Google"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 21,
-        "note": "定量案例较强，但仍需论文和机构外部验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 21,
-        "note": "定量案例较强，但仍需论文和机构外部验证。"
-      },
-      "keyFacts": [
-        {
-          "value": "5个",
-          "label": "伙伴案例",
-          "note": "覆盖多种公共卫生任务。"
-        },
-        {
-          "value": "月度",
-          "label": "嵌入刷新",
-          "note": "PDFM位置表征按月更新。"
-        },
-        {
-          "value": "研究",
-          "label": "证据阶段",
-          "note": "当前仍是研究发布和论文入口。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-06",
-          "title": "发布研究",
-          "body": "Google Research公开PDFM公共卫生案例。",
-          "tone": "official"
-        },
-        {
-          "date": "同步",
-          "title": "论文入口",
-          "body": "博客链接到arXiv论文。",
-          "tone": "research"
-        },
-        {
-          "date": "待补",
-          "title": "机构复现",
-          "body": "等待公共卫生伙伴披露真实部署影响。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/",
-      "originalUrl": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/",
-      "detailWhyRanked": "它把AI科学应用写成可审查矩阵：任务、地理范围、指标和缺口都能继续追踪。 Google Research Blog只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Google Research发布PDFM公共卫生研究。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "位置嵌入可能缓解公共卫生数据滞后。"
-        },
-        {
-          "title": "下一步",
-          "body": "核对论文、隐私和真实机构部署。"
-        }
-      ]
-    },
-    {
-      "sourceId": "openai-news",
-      "sourceName": "OpenAI News",
-      "source": "OpenAI News",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "openai-mathematics-progress-github-lean-2026-10-11",
-      "category": "research",
-      "label": "研究",
-      "title": "OpenAI把内部模型数学结果发布到GitHub并附Lean形式化",
-      "body": "OpenAI称其内部前沿模型产出一批数学结果，已通过GitHub发布结果、论文修订协议、引用规则和部分Lean证明形式化。",
-      "summary": "OpenAI用GitHub和Lean披露内部模型数学成果，并称将继续改进论文质量和科学披露标准。",
-      "whyItMatters": "AI参与科学发现的争议点正在从“能否解题”转向“如何发表、校验、引用和让社区审阅”。",
-      "detailBody": "OpenAI称本次发布包括结果、许多证明的Lean形式化、10份模型推理摘要和近似算力说明。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "前沿模型科研输出开始被迫采用更接近学术社区的透明披露和可验证证明流程。",
-      "detailTrend": "这条信号显示，AI科学结果要进入知识体系，必须把模型产出转化为可审阅、可引用、可机器检查的材料。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "数学结果发布有较高象征意义，但是否成立仍要交给专家审阅和形式化核验。",
-      "topReason": "OpenAI把模型数学成果放到公开审阅路径，而不是只发布能力宣称。",
-      "impact": "科研机构和AI实验室需要关注AI生成研究的署名、引用、形式化证明和社区复核标准。",
-      "whoShouldCare": "评估AI科研发现、数学证明、论文署名和开放科学流程的研究管理/学术出版团队应重点关注。",
-      "readerUse": "评估AI科研发现、数学证明、论文署名和开放科学流程的研究管理/学术出版团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查GitHub仓库、Lean证明覆盖率、独立数学家审阅、论文修订记录和社区纠错。",
-      "followUpQuestions": [
-        "GitHub仓库是否持续补齐Lean形式化、引用来源和问题尝试统计，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "独立数学家或AGMAI是否公开确认、修正或撤回其中关键结果，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要专家审阅、Lean校验、论文发表或社区复核记录，才能升级为已验证数学贡献。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "OpenAI官方页面证明其发布了结果与披露材料，不证明每项数学结论都已被独立确认。",
-      "counterEvidence": "若专家指出证明缺口、引用不充分或形式化无法覆盖核心论证，应下调为未完成研究披露。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "OpenAI NewsOpenAI官方说明数学结果发布、GitHub披露和Lean形式化；结论正确性仍需学界复核。，支持关于Agent、模型、研究、代码、数据中心或治理边界的来源事实。",
-      "publishedAt": "2026-10-06T09:00:00Z",
-      "time": "10月6日",
-      "tags": [
-        "AI for Science",
-        "数学",
-        "Lean",
-        "OpenAI"
-      ],
-      "companies": [
-        "OpenAI"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 21,
-        "note": "披露方式重要，但数学有效性必须等待社区复核。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 21,
-        "note": "披露方式重要，但数学有效性必须等待社区复核。"
-      },
-      "keyFacts": [
-        {
-          "value": "GitHub",
-          "label": "发布入口",
-          "note": "结果和协议公开在仓库中。"
-        },
-        {
-          "value": "Lean",
-          "label": "证明形式",
-          "note": "部分证明提供形式化。"
-        },
-        {
-          "value": "10份",
-          "label": "推理摘要",
-          "note": "官方称披露模型推理摘要。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-06",
-          "title": "发布结果",
-          "body": "OpenAI公开数学成果和披露材料。",
-          "tone": "official"
-        },
-        {
-          "date": "后续",
-          "title": "补充形式化",
-          "body": "OpenAI称会继续更新更多Lean证明。",
-          "tone": "official"
-        },
-        {
-          "date": "待补",
-          "title": "社区复核",
-          "body": "等待专家审阅和论文修订记录。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-      "originalUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-      "detailWhyRanked": "AI科研产出越强，越需要透明发表协议；本条的重点是可审阅路径，而非直接宣称突破成立。 OpenAI News只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "OpenAI公开内部模型数学结果和形式化材料。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "AI科学发现需要社区可验证的发表方式。"
-        },
-        {
-          "title": "下一步",
-          "body": "看专家审阅、Lean覆盖和修订记录。"
-        }
-      ]
-    },
-    {
-      "sourceId": "openai-news",
-      "sourceName": "OpenAI News",
-      "source": "OpenAI News",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "openai-ironclad-computer-use-contracting-agent-2026-10-11",
-      "category": "tool",
-      "label": "工具",
-      "title": "OpenAI与Ironclad推进合同工作流中的计算机使用Agent",
-      "body": "OpenAI发布与Ironclad合作的研究/应用文章，称双方正在训练和评估能处理复杂合同工作流的计算机使用Agent。",
-      "summary": "OpenAI把计算机使用Agent推进到合同工作流场景，强调与Ironclad共同训练和评估。",
-      "whyItMatters": "合同系统是高权限、高责任的企业场景，Agent若能操作它，必须用客户日志、权限矩阵和人工复核验证。",
-      "detailBody": "OpenAI页面说明，合作重点是让Agent在专业合同工作中执行更复杂的电脑操作，并围绕真实工作流训练和评估。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "计算机使用Agent正在从通用浏览器任务进入垂直企业系统。",
-      "detailTrend": "合同工作流比普通网页任务更依赖权限、审计和责任归属，因此它是检验Agent能否进入企业关键流程的高压场景。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "它连接本周Agent误提交风险和企业高权限工作流，适合用来检查生产门槛。",
-      "topReason": "合同Agent把计算机使用能力推进到企业关键流程，但证据仍在厂商披露阶段。",
-      "impact": "法务、采购和企业IT团队应把合同Agent放进权限、审计、审批和回滚清单。",
-      "whoShouldCare": "让Agent进入合同起草、审阅、采购审批和记录系统的法务/采购/企业IT团队应重点关注。",
-      "readerUse": "让Agent进入合同起草、审阅、采购审批和记录系统的法务/采购/企业IT团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查Ironclad客户侧部署记录、权限矩阵、审计日志、评测集和人工复核指标。",
-      "followUpQuestions": [
-        "OpenAI或Ironclad是否公开合同工作流评测集、任务成功率、错误类型和人工复核记录，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "是否有客户侧部署日志或审计报告说明Agent在真实合同系统中的权限边界，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要客户侧部署日志、权限矩阵、评测集、审计报告和人工复核指标，才能升级为可验证企业合同Agent证据。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "OpenAI官方页面证明合作和研究方向，不证明合同Agent已经能独立可靠处理高风险合同任务。",
-      "counterEvidence": "若客户日志、审计报告或第三方评测显示错误率高、权限越界或人工复核负担过大，应下调为早期实验。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "OpenAI News发布与Ironclad推进合同工作流计算机使用Agent的合作/研究说明；效果仍需客户侧证据。",
-      "publishedAt": "2026-10-06T09:00:00Z",
-      "time": "10月6日",
-      "tags": [
-        "计算机使用",
-        "合同Agent",
-        "Ironclad",
-        "企业工作流"
-      ],
-      "companies": [
         "OpenAI",
-        "Ironclad"
+        "NVIDIA",
+        "Kakao"
       ],
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
+        "evidenceQuality": 5,
+        "readerUtility": 4,
         "total": 21,
-        "note": "企业高权限场景重要，仍需客户侧日志和审计验证。"
+        "note": "官方证据强，发布时间略早，但对本周内容透明度主线仍有补充价值。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
+        "evidenceQuality": 5,
+        "readerUtility": 4,
         "total": 21,
-        "note": "企业高权限场景重要，仍需客户侧日志和审计验证。"
+        "note": "官方证据强，发布时间略早，但对本周内容透明度主线仍有补充价值。"
       },
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/",
+      "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/",
+      "detailWhyRanked": "它虽然不是最新发布时间，但尚未进入站内当前批次；官方页面给出开放范围、伙伴名单和已有水印规模，适合作为本周溯源工具链补充、伙伴核查和后续评测入口。",
+      "verificationStatus": "已核验",
       "keyFacts": [
         {
-          "value": "Ironclad",
-          "label": "合作对象",
-          "note": "合同工作流平台。"
+          "value": "官方核对",
+          "label": "来源角色",
+          "note": "Google Keyword AI"
         },
         {
-          "value": "计算机使用",
-          "label": "能力方向",
-          "note": "面向复杂企业操作。"
+          "value": "确认",
+          "label": "主张状态",
+          "note": "按来源边界解读"
         },
         {
-          "value": "评估",
-          "label": "证据阶段",
-          "note": "官方称训练和评估仍在推进。"
+          "value": "待复核",
+          "label": "升级条件",
+          "note": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文"
         }
       ],
       "timeline": [
         {
-          "date": "2026-10-06",
-          "title": "OpenAI发文",
-          "body": "披露与Ironclad推进计算机使用Agent。",
+          "date": "10月7日 09:00 JST",
+          "title": "来源发布",
+          "body": "Google官方宣布SynthID Detector全球英文开放，并扩展到OpenAI、NVIDIA、Kakao等伙伴内容。",
           "tone": "official"
         },
         {
-          "date": "待补",
-          "title": "评测细节",
-          "body": "等待任务集、错误类型和人工复核指标。",
+          "date": "站内处理",
+          "title": "边界写入",
+          "body": "Google官方页面可确认工具开放和伙伴范围，不证明所有AI内容都可检测，也不证明检测结果足以判断内容真假。",
           "tone": "neutral"
         },
         {
-          "date": "待补",
-          "title": "客户审计",
-          "body": "查看真实合同系统日志和权限边界。",
+          "date": "下一步",
+          "title": "复核路径",
+          "body": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文档、Apple接入公告和第三方测试报告。",
           "tone": "neutral"
         }
       ],
-      "sourceUrl": "https://openai.com/index/advancing-computer-use-with-ironclad/",
-      "originalUrl": "https://openai.com/index/advancing-computer-use-with-ironclad/",
-      "detailWhyRanked": "合同场景能暴露Agent权限、审计和责任问题；它不是通用能力证明，而是企业高风险流程的核查入口。 OpenAI News只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
       "deepSections": [
         {
-          "title": "发生了什么",
-          "body": "OpenAI发布与Ironclad合作推进合同Agent的文章。"
+          "label": "SOURCE FACT",
+          "navLabel": "来源事实",
+          "heading": "Google宣布SynthID Detector向所有人开放全球英文访问，可检查Google及OpenAI、NVIDIA、Kakao等伙伴AI生成的图像、视频或音频水印。",
+          "sourceStatus": {
+            "tag": "官方核对｜Google Keyword AI",
+            "note": "以下只使用来源可直接支持的最小事实。"
+          },
+          "body": "Google官方文章称，SynthID Detector从面向媒体专业人士的早期版本扩展为全球英文开放工具，并称可检查Google及OpenAI、NVIDIA、Kakao等伙伴生成内容。",
+          "soWhat": "媒体、平台和企业合规团队应把检测器纳入工作流，但不要把水印检测等同于真实性证明。"
         },
         {
-          "title": "为什么重要",
-          "body": "合同流程需要权限、审计和人工复核。"
+          "label": "BOUNDARY",
+          "navLabel": "证据边界",
+          "heading": "当前信号不能被过度外推",
+          "sourceStatus": {
+            "tag": "AI Watchtower边界",
+            "note": "不把媒体或厂商页面改写成最终证明。"
+          },
+          "body": "Google官方页面可确认工具开放和伙伴范围，不证明所有AI内容都可检测，也不证明检测结果足以判断内容真假。",
+          "soWhat": "至少需要技术说明文件、误报漏报数据、伙伴公告、检测日志或第三方测试报告，才能升级为可靠内容溯源工具结论。"
         },
         {
-          "title": "下一步",
-          "body": "看客户日志、评测集和第三方审计。"
-        }
-      ]
-    },
-    {
-      "sourceId": "google-research-blog",
-      "sourceName": "Google Research Blog",
-      "source": "Google Research Blog",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "sourceRole": "研究原文",
-      "sourceType": "official",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "google-research-agentic-privacy-security-contextual-integrity-2026-10-11",
-      "category": "research",
-      "label": "研究",
-      "title": "Google Research提出Agent隐私安全的上下文治理框架",
-      "body": "Google Research发布CAPS workshop报告，称Agent需要在系统、模型、用户和生态层面理解上下文规范，并引入动态策略引擎和Agent Gym式评测。",
-      "summary": "Google Research把Agent隐私安全问题框成“上下文合规行动”，不只是静态权限管理。",
-      "whyItMatters": "企业Agent越能访问个人数据和执行外部动作，越需要运行时判断“这个动作在此情境是否合适”。",
-      "detailBody": "报告来自Google Contextual Agent Privacy and Security workshop，汇集50多名学术和产业参与者，列出系统、模型、用户和生态层挑战。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "Agent安全研究正在从单点prompt injection转向持续任务、跨工具和多Agent生态治理。",
-      "detailTrend": "这条研究信号把权限、沙箱、身份和用户控制串成上下文监督层，适合做企业Agent架构检查表。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "它回应了本周Anthropic误提交和白宫通报主线，给出更长期的技术治理方向。",
-      "topReason": "从事故样本到上下文策略引擎，本期Agent安全有了研究侧补全。",
-      "impact": "平台团队可用它审视Agent身份、动态授权、上下文策略和多Agent评测是否缺位。",
-      "whoShouldCare": "正在让Agent处理个人数据、跨应用操作和长期任务的平台安全/隐私工程团队应重点关注。，尤其是在上线、采购、部署或审计场景中。",
-      "readerUse": "正在让Agent处理个人数据、跨应用操作和长期任务的平台安全/隐私工程团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查CAPS技术报告、开源Agent Gym环境、具体策略引擎实现和第三方基准复现。",
-      "followUpQuestions": [
-        "Google或合作者是否开放CAPS报告中的动态策略引擎原型、数据集或Agent Gym评测环境，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "后续论文是否给出上下文规范冲突、用户疲劳和跨组织Agent协商的可量化测试，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要技术报告细节、可运行基准、开源实现或独立复现实验，才能升级为可部署安全架构证据。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "研究博客只能证明Google发布了研究议程和概念框架，不证明这些方法已解决生产Agent安全。",
-      "counterEvidence": "若后续基准显示上下文策略无法稳定拦截误操作或带来高误阻率，应下调为研究方向而非工程方案。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "Google Research BlogGoogle Research官方博客发布CAPS workshop报告和研究方向；方法有效性仍需论文、代码和复现。",
-      "publishedAt": "2026-10-05T09:00:00Z",
-      "time": "10月5日",
-      "tags": [
-        "Agent安全",
-        "隐私",
-        "Google Research",
-        "评测"
-      ],
-      "companies": [
-        "Google"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "研究框架和本周事故高度相关，仍需工程验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 5,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "研究框架和本周事故高度相关，仍需工程验证。"
-      },
-      "keyFacts": [
-        {
-          "value": "50+",
-          "label": "参与者",
-          "note": "博客称报告汇集多机构学术和产业参与者。"
-        },
-        {
-          "value": "4层",
-          "label": "治理层面",
-          "note": "系统、模型、用户和生态。"
-        },
-        {
-          "value": "Agent Gym",
-          "label": "评测方向",
-          "note": "提出动态多Agent基准环境。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2025年底",
-          "title": "CAPS workshop",
-          "body": "参与者讨论上下文Agent隐私安全。",
-          "tone": "neutral"
-        },
-        {
-          "date": "2026-10-05",
-          "title": "博客发布",
-          "body": "Google Research公开报告要点。",
-          "tone": "official"
-        },
-        {
-          "date": "待补",
-          "title": "基准验证",
-          "body": "等待环境、代码和外部复测。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://research.google/blog/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/",
-      "originalUrl": "https://research.google/blog/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/",
-      "detailWhyRanked": "它把本周事故背后的根因抽象成可设计问题：Agent不只需要权限，还要理解上下文和行动后果。 Google Research Blog只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "Google Research发布Agent隐私安全报告。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "静态权限不足以约束长任务、多工具Agent。"
-        },
-        {
-          "title": "下一步",
-          "body": "跟踪基准、开源实现和生产集成证据。"
-        }
-      ]
-    },
-    {
-      "sourceId": "openai-news",
-      "sourceName": "OpenAI News",
-      "source": "OpenAI News",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "id": "openai-eu-text-provenance-watermarking-2026-10-11",
-      "category": "policy",
-      "label": "政策",
-      "title": "OpenAI公布欧盟文本溯源水印方案",
-      "body": "OpenAI回应欧盟AI法案文本可识别要求，宣布API客户可选择文本水印，并将在欧盟合格ChatGPT和Codex输出中逐步加入不可见水印。",
-      "summary": "OpenAI公布textGrain文本水印路径：API可选、欧盟ChatGPT/Codex逐步启用、检测器先给研究和专家机构。",
-      "whyItMatters": "文本溯源进入产品层后，平台、学校、媒体和企业合规团队都要同时处理误报、漏报和人类编辑边界。",
-      "detailBody": "OpenAI称textGrain会在词语选择中加入统计信号；检测器初期仅开放给获批研究者和专家组织。 详情页只把它当来源支持的最小事实：它说明发布、报道或研究入口存在，但不替代原始页面、日志、报告、模型卡、代码和第三方复核；读者还应回到来源核对时间、对象和限制。",
-      "trend": "生成式AI治理正在从图像/音频溯源扩展到更脆弱的文本水印。",
-      "detailTrend": "这不是“AI文本一查就准”的承诺，而是把监管合规、检测限制和实际误差放进同一套产品路线。 这个判断只作为AI Watchtower的趋势解释，不能替代模型卡、公共文件、客户指标或第三方复核。",
-      "whyRanked": "欧盟文本溯源会影响ChatGPT、Codex和API客户，是合规、教育和平台审核的共同问题。",
-      "topReason": "文本水印终于进入ChatGPT/Codex区域化上线计划，但限制被官方写得很清楚。",
-      "impact": "依赖AI文本披露、学术诚信、内容审核或企业记录留痕的团队，需要把水印当辅助信号而非裁决工具。",
-      "whoShouldCare": "负责AI文本披露、学校作业审核、平台内容治理和企业合规留痕的政策/法务/信任安全团队应重点关注。，尤其是在上线、采购、部署或审计场景中。",
-      "readerUse": "负责AI文本披露、学校作业审核、平台内容治理和企业合规留痕的政策/法务/信任安全团队应重点关注。 可用此信号更新对应清单，并把下一步证明材料列入复核。",
-      "nextCheck": "查OpenAI技术报告更新、欧盟合规指南、检测器准入名单和第三方误报/漏报评测。",
-      "followUpQuestions": [
-        "OpenAI是否发布textGrain开源代码、完整技术报告或多语言/翻译鲁棒性评测，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？",
-        "欧盟监管或平台是否明确水印检测结果在教育、版权、广告和执法中的可采信边界，对应报告、日志、模型卡文件、benchmark记录或审计材料在哪里？"
-      ],
-      "evidenceThreshold": "需要技术报告、第三方评测、监管解释和真实场景误报数据，才能升级为可依赖的文本溯源机制结论。 这些证明材料应至少包括模型卡文件、论文/代码、benchmark报告、客户日志、公共文件或审计记录中的一种。",
-      "claimBoundary": "官方页面只能证明OpenAI的上线计划和自测结果，不证明检测器适合单独判定作者、责任、真假或合法性。",
-      "counterEvidence": "若第三方评测发现短文本、改写或翻译后检测大幅失效，应下调为合规尝试而非可靠识别工具。 以第三方评测报告、客户日志、公共文件或审计记录作为可观察降级依据。",
-      "provenance": "OpenAI NewsOpenAI官方说明EU文本溯源、水印范围、检测限制和后续计划；效果仍需外部评测。，支持关于Agent、模型、研究、代码、数据中心或治理边界的来源事实。",
-      "publishedAt": "2026-10-05T09:00:00Z",
-      "time": "10月5日",
-      "tags": [
-        "文本水印",
-        "EU AI Act",
-        "内容溯源",
-        "Codex"
-      ],
-      "companies": [
-        "OpenAI"
-      ],
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方合规动作清晰，效果证明仍需外部测试。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 22,
-        "note": "官方合规动作清晰，效果证明仍需外部测试。"
-      },
-      "keyFacts": [
-        {
-          "value": "API可选",
-          "label": "上线方式",
-          "note": "默认不全局开启。"
-        },
-        {
-          "value": "欧盟",
-          "label": "区域范围",
-          "note": "ChatGPT/Codex合格输出将逐步启用。"
-        },
-        {
-          "value": "研究者",
-          "label": "检测器准入",
-          "note": "先限制给获批专家组织。"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-05",
-          "title": "发布方案",
-          "body": "OpenAI公布文本水印与检测器路线。",
-          "tone": "official"
-        },
-        {
-          "date": "未来数周",
-          "title": "欧盟启用",
-          "body": "合格ChatGPT和Codex文本逐步加入水印。",
-          "tone": "official"
-        },
-        {
-          "date": "待补",
-          "title": "外部评测",
-          "body": "等待研究者测试误报、漏报和抗改写能力。",
-          "tone": "neutral"
-        }
-      ],
-      "sourceUrl": "https://openai.com/index/eu-text-provenance/",
-      "originalUrl": "https://openai.com/index/eu-text-provenance/",
-      "detailWhyRanked": "文本是最容易被改写的AI输出形态，OpenAI把限制写进公告本身，给合规团队留下清晰核查路径。 OpenAI News只支持对应的发布、报道或研究事实；排名价值来自读者能据此建立下一步核查清单，而不是把来源当成最终证明。",
-      "verificationStatus": "已核验",
-      "deepSections": [
-        {
-          "title": "发生了什么",
-          "body": "OpenAI公布文本水印和检测器准入安排。"
-        },
-        {
-          "title": "为什么重要",
-          "body": "文本溯源会影响教育、平台治理、广告和企业记录。"
-        },
-        {
-          "title": "下一步",
-          "body": "看技术报告、监管解释和第三方误差测试。"
+          "label": "NEXT CHECK",
+          "navLabel": "下一步核查",
+          "heading": "先找可复核材料再升级判断",
+          "sourceStatus": {
+            "tag": "复核路径",
+            "note": "以文件、日志、指标、代码或第三方报告为准。"
+          },
+          "body": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文档、Apple接入公告和第三方测试报告。",
+          "soWhat": "如果第三方测试数据或伙伴说明显示高漏报、易规避或覆盖范围较窄，应下调为有限检测入口；若独立评测通过，可限定为特定模态有效。"
         }
       ]
     }

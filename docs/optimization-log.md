@@ -1,3 +1,28 @@
+## 2026-10-12 08:10 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-12`，发布 6 条安全非重复短批次信号，聚焦企业 Agent 控制层、多 Agent 评测、编码 Agent 评审瓶颈、Yandex AI 数据中心物理风险、Nikon 生成式 AI 影像规则，以及 Google SynthID Detector 全球英文开放。少于 10 条是质量门槛结果：10月11日23点版已经覆盖多数强信号，本次未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源、弱证据或营销页补数量。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月12日17:00 JST 短批次 6 条情报，并保留原始来源 URL、来源角色、证据边界、下一步核查和 TOP3 说明。
+  - `data/news-history.json`: 最新归档镜像同步当前首页版次；总历史项目更新为 1196。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 VentureBeat AI、Ars Technica AI 和 Google Keyword AI，并对当前版和历史版做 URL / 主题去重。VentureBeat / Ars 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、引述、图表、数据和上下文仍归原文；Google SynthID 条目保持 `官方核对`，只确认工具开放和伙伴范围，不证明检测可靠性、覆盖率或真实性判断效果。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1196.
+- Archive diff: skipped-one-edition - 2026-10-12 目前只有一个同日归档版次，因此没有 morning/evening 对比。
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月12日17:00 短批次 6 条情报；读者可在首页与详情页看到 Agent 控制层、编码 Agent 评审瓶颈、AI 数据中心物理风险、生成式 AI 影像规则和 SynthID 内容溯源信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 6 current news items against 124 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, `nav.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/build-derived-data.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：6条Agent控制与内容规则信号`.
+- Push: pending - sandboxed `git push origin main` failed with GitHub DNS, and network-authorized push was rejected by the approval reviewer because pushing to shared `origin/main` requires explicit user approval.
+
 ## 2026-10-11 23:10 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-11`，因此未回退版次，而是在当天活动版基础上扩展为 `news-2300-2026-10-11`，发布 14 条安全非重复信号。新增 4 条补充信号，聚焦 The Verge 对 OpenAI Dots / Meta Muse Agent 隐私承诺的核查、Microsoft Research / CMU Agent 评测治理工作坊、Microsoft CABRA Coding Agent 代码理解基准，以及 ACM PACMHCI Shiksha Copilot 教育 AI 实证。少于 10 条新增是质量门槛结果：未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源、弱证据或营销页凑数。

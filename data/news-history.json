@@ -1,8 +1,1053 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11",
-  "totalItems": 1190,
+  "updatedAt": "2026-10-12",
+  "totalItems": 1196,
   "editions": [
+    {
+      "id": "news-1700-2026-10-12",
+      "date": "2026-10-12",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST短批次",
+      "itemCount": 6,
+      "note": "17点短批次：Agent控制、编码瓶颈与内容规则",
+      "operationalStatus": "已拉取origin/main并检查来源索引；发布6条安全非重复信号，未用弱来源补数量。",
+      "editorialInterpretation": "本期发布 6 条安全非重复信号；少于 10 条是质量门槛结果，未用旧稿、播客、付费墙、登录墙、社区讨论、重复或弱证据补数量。",
+      "readerFrame": {
+        "headline": "把这期当作Agent与内容治理的短批次复核清单",
+        "whyItMatters": "这批信号数量较少，但每条都能对应一个可执行核查：Agent守卫位置、多Agent trace、编码Agent评审瓶颈、AI算力连续性、AI影像规则和SynthID检测边界。",
+        "useThisIssueFor": [
+          "企业架构/安全团队用来复查Agent权限、trace、状态和终止条件。",
+          "研发效能/采购团队用来调整编码Agent ROI指标，而不是只看代码量。",
+          "编辑/法务/平台团队用来更新AI内容溯源与生成式AI影像规则。"
+        ],
+        "notProvenYet": [
+          "不能证明任何Agent控制层已经带来客户侧安全改善或成本下降。",
+          "不证明编码Agent在所有团队中都没有产出增益，仍需复现和企业日志。",
+          "不证明SynthID或赛事AI规则足以解决所有内容真实性问题。"
+        ],
+        "mobile": {
+          "headline": "短批次复核表",
+          "summary": "6条信号聚焦Agent控制、编码瓶颈和内容规则。",
+          "primaryUses": [
+            "安全团队查Agent权限",
+            "研发团队查ROI指标",
+            "编辑团队查AI规则"
+          ],
+          "proofBoundary": "不能证明工具效果已被独立验证或可全场景复用"
+        }
+      },
+      "changeSummary": {
+        "headline": "相较10月11日23点版，本期转向工程控制和规则复核",
+        "freshFacts": [
+          "本期新增VentureBeat关于企业Agent守卫位置和多Agent评测控制层的两条工程信号。",
+          "本期新增Ars关于编码Agent研究、Yandex AI数据中心受损和Nikon AI规则取消获奖的三条媒体信号。",
+          "本期新增Google SynthID Detector全球英文开放的官方溯源工具信号。"
+        ],
+        "repeatedContext": [
+          "Agent误提交、OpenAI文本水印和Google Agent隐私安全仍是旧背景，不在本期重复发布。",
+          "AI数据中心水电、就业和资本外部性延续旧主线，本期只新增物理冲突风险。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对Agent控制层",
+          "count": 2,
+          "meaning": "用来更新企业Agent权限、trace、handoff和状态管理检查清单。"
+        },
+        {
+          "label": "验证工程产出与算力风险",
+          "count": 2,
+          "meaning": "用来检查编码Agent ROI指标和AI数据中心连续性风险。"
+        },
+        {
+          "label": "查内容规则与溯源",
+          "count": 2,
+          "meaning": "用来核对AI影像规则、源文件审查和水印检测工具边界。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体与官方混合短批次",
+        "note": "可靠媒体4条、官方1条、媒体观点1条偏向工程/规则雷达；适合列复核清单，不适合升级为效果结论。",
+        "nextCheck": "下一步看官方文件、研究原文、客户日志、审计报告、第三方复测和伙伴公告。"
+      },
+      "sourceConcentration": {
+        "sourceId": "ars-technica-ai",
+        "sourceName": "Ars Technica AI",
+        "count": 3,
+        "share": "3/6",
+        "note": "同一媒体来源占半数但未达三分之二集中阈值；仍需其他媒体、官方或原文复核。",
+        "nextCheck": "优先查其他可靠媒体、官方说明、研究原文和第三方复现。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期是少量高边界信号的雷达，不是Agent、编码、算力或内容治理的全市场判断。",
+        "doNotConclude": "不能据此认为某类Agent架构、编码工具或水印检测已经被独立验证。",
+        "useInstead": "适合先把官方文件、原文论文、客户日志、benchmark和第三方复核列入下一轮检查。"
+      },
+      "trendNotes": [
+        {
+          "topic": "Agent治理",
+          "label": "跨期继续收紧",
+          "note": "跨期看，Agent主题从误提交事故延续到控制层、trace和系统记录位置。",
+          "boundary": "不证明Agent平台已成熟，仍需客户日志、审计记录和第三方复测。"
+        },
+        {
+          "topic": "内容真实性",
+          "label": "规则走向可执行",
+          "note": "连续几期内容溯源从OpenAI文本水印延续到Google SynthID和Nikon影像规则。",
+          "boundary": "不证明检测器可靠或规则完备，仍需误报漏报数据、规则文件和专家评估。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "从事故转向控制层",
+          "status": "stronger",
+          "previousPattern": "此前归档连续记录Agent误提交、隐私安全和外部网站副作用。",
+          "currentSignal": "本期新增Agent守卫位置和多Agent评测方法。",
+          "signalDirection": "本期增强为工程控制清单，而非只重复事故背景。",
+          "stillUnproven": "仍需客户日志、代码、benchmark、审计报告或第三方复测证明控制层有效。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "编码ROI被重新计量",
+          "status": "stronger",
+          "previousPattern": "此前多期关注编码Agent模型、平台和开发者工具发布。",
+          "currentSignal": "本期新增研究报道，把代码量提升与review瓶颈放在同一张表里。",
+          "signalDirection": "本期增强为交付指标复核，而非只重复工具发布。",
+          "stillUnproven": "仍需研究原文、企业日志、缺陷率指标和新版Agent复测数据。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Google",
+          "label": "溯源工具补证",
+          "lastMention": "此前归档已连续记录Google Agent隐私、EmbeddingGemma和Earth AI信号。",
+          "whatChanged": "本期新增官方SynthID Detector全球英文开放，属于内容透明度工具链补充。",
+          "stillUnproven": "仍需误报漏报数据、伙伴公告、检测日志和第三方评测。"
+        },
+        {
+          "company": "Yandex",
+          "label": "算力风险新出现",
+          "lastMention": "此前归档未把Yandex列为本周重点公司。",
+          "whatChanged": "本期新增AI训练数据中心受损报道，把算力连续性纳入地缘风险。",
+          "stillUnproven": "仍需Yandex官方说明、卫星图像、服务可用性记录和训练资源恢复指标。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 5,
+          "role": "来源用于发现工程、研究和规则信号；完整事实仍需原文与后续文件核对。"
+        },
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "官方来源用于核对SynthID发布事实；工具效果仍需第三方证据。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "Agent治理",
+          "count": 2,
+          "itemIds": [
+            "venturebeat-workday-agent-guardrails-platform-2026-10-12",
+            "venturebeat-multi-agent-control-layer-evals-2026-10-11"
+          ],
+          "meaning": "用来更新Agent权限、trace、交接和状态管理复核清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "开发者工具",
+          "count": 1,
+          "itemIds": [
+            "ars-ai-coding-agent-review-bottleneck-study-2026-10-10"
+          ],
+          "meaning": "用来检查编码Agent从代码量到软件产出的指标转换。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "基础设施",
+          "count": 1,
+          "itemIds": [
+            "ars-yandex-ai-data-center-strikes-2026-10-10"
+          ],
+          "meaning": "用来核对AI数据中心连续性、冗余和地缘风险。"
+        },
+        {
+          "id": "policy",
+          "label": "政策治理",
+          "count": 2,
+          "itemIds": [
+            "ars-nikon-small-world-ai-disqualification-2026-10-10",
+            "google-synthid-detector-global-access-2026-10-07"
+          ],
+          "meaning": "用来更新AI影像规则、内容溯源和平台披露边界。"
+        }
+      ],
+      "omittedTopics": {
+        "model": {
+          "status": "无新来源事实",
+          "reason": "本期没有新的安全非重复模型发布。",
+          "omissionBoundary": "不代表模型竞争降温，只说明本时间窗没有通过来源门槛的新模型项。",
+          "fallback": "读者可回看10月11日EmbeddingGemma、Carbon-A和OpenAI数学信号。"
+        },
+        "enterprise": {
+          "status": "已有Agent企业项覆盖",
+          "reason": "企业主题并入Agent控制层和编码ROI。",
+          "omissionBoundary": "不代表企业采用证据充分，仍需客户日志和审计指标。",
+          "fallback": "用Agent治理和开发者工具分组作为企业读者入口。"
+        }
+      },
+      "updatedAt": "2026-10-12",
+      "items": [
+        {
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "id": "venturebeat-workday-agent-guardrails-platform-2026-10-12",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：企业Agent守卫应贴近系统记录而非外置补丁",
+          "body": "VentureBeat刊发Workday CTO文章，主张Agent守卫应靠近系统记录。",
+          "summary": "VentureBeat署名文章把企业Agent治理焦点放到系统记录、权限和执行层位置。",
+          "whyItMatters": "正在把HR、财务或审批交给Agent的企业团队，可用它检查守卫到底跑在业务规则旁边还是远离系统记录。",
+          "detailBody": "VentureBeat发布Workday CTO署名文章，主张Agent上下文、政策校验和外部API权限应靠近系统记录运行；文章把外置网关和策略中间件称为“影子ERP”风险，提醒企业不要复制一套脆弱业务规则。",
+          "trend": "企业Agent治理正在从提示词约束转向系统记录内的权限和执行边界。",
+          "detailTrend": "这条信号说明Agent落地难点正在变成治理位置选择：守卫若远离系统记录，权限、组织结构和流程会被复制一遍，维护成本与错配风险会上升，审计责任也更难落地。",
+          "whyRanked": "把Agent治理落到权限位置。",
+          "topReason": "Agent控制层位置决定权限是否真实贴近业务规则。",
+          "impact": "企业应把Agent演示稿里的“可控”拆成上下文授权、政策校验、执行凭证和审计日志四项核查。",
+          "whoShouldCare": "负责把Agent接入HR、财务、采购、审批或客户系统的企业架构/安全/审计团队应重点评估。",
+          "readerUse": "企业架构、安全和审计团队可用此信号更新Agent控制层RFP与上线评审清单。",
+          "nextCheck": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录或第三方安全评估。",
+          "followUpQuestions": [
+            "Workday是否发布Agent权限模型、审计日志、执行凭证或客户验收文档，具体公告、配置文件、指标数据在哪里？",
+            "是否有客户侧部署记录、第三方安全评估或审计报告确认这种平台内守卫比外置中间件更可靠？"
+          ],
+          "evidenceThreshold": "至少需要客户部署记录、审计日志、第三方安全评估或平台权限文件，才能升级为已验证的企业Agent治理架构结论。",
+          "claimBoundary": "这篇署名文章只能证明一种架构主张已被公开提出，不证明Workday客户成效、成本下降或安全改善。",
+          "counterEvidence": "如果客户日志、审计记录或部署指标显示平台内守卫仍频繁越权或漏审，应下调为供应商架构观点；若第三方评估确认有效，可收窄为特定平台场景。",
+          "provenance": "VentureBeat AI发布Workday CTO关于企业Agent权限治理边界的署名文章；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+          "publishedAt": "2026-10-12T04:00:00+09:00",
+          "time": "10月12日 04:00 JST",
+          "tags": [
+            "Agent治理",
+            "企业系统",
+            "权限控制",
+            "Workday"
+          ],
+          "companies": [
+            "Workday"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "读者效用高，但这是署名观点，需要客户和第三方证据升级。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 21,
+            "note": "读者效用高，但这是署名观点，需要客户和第三方证据升级。"
+          },
+          "sourceUrl": "https://venturebeat.com/orchestration/your-ai-agents-can-execute-every-tool-call-correctly-and-still-break-every-enterprise-rule",
+          "originalUrl": "https://venturebeat.com/orchestration/your-ai-agents-can-execute-every-tool-call-correctly-and-still-break-every-enterprise-rule",
+          "detailWhyRanked": "排名靠前不是因为该文章证明Workday方案有效，而是因为它给企业Agent采购和架构评审提供了可问的问题：守卫在哪里运行、权限如何签发、执行日志由谁负责，以及客户验收材料在哪里。",
+          "verificationStatus": "已核验",
+          "keyFacts": [
+            {
+              "value": "媒体背景",
+              "label": "来源角色",
+              "note": "VentureBeat AI"
+            },
+            {
+              "value": "报道",
+              "label": "主张状态",
+              "note": "按来源边界解读"
+            },
+            {
+              "value": "待复核",
+              "label": "升级条件",
+              "note": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月12日 04:00 JST",
+              "title": "来源发布",
+              "body": "VentureBeat署名文章把企业Agent治理焦点放到系统记录、权限和执行层位置。",
+              "tone": "media"
+            },
+            {
+              "date": "站内处理",
+              "title": "边界写入",
+              "body": "这篇署名文章只能证明一种架构主张已被公开提出，不证明Workday客户成效、成本下降或安全改善。",
+              "tone": "neutral"
+            },
+            {
+              "date": "下一步",
+              "title": "复核路径",
+              "body": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录或第三方安全评估。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE FACT",
+              "navLabel": "来源事实",
+              "heading": "VentureBeat刊发Workday CTO署名文章，提出企业Agent的上下文、政策和执行权限应在承载业务规则的平台内运行，而不是另建外部“影子ERP”。",
+              "sourceStatus": {
+                "tag": "媒体背景｜VentureBeat AI",
+                "note": "以下只使用来源可直接支持的最小事实。"
+              },
+              "body": "VentureBeat刊发Workday CTO文章，主张Agent上下文、政策校验和外部API权限应靠近系统记录运行；文章把外置网关和策略中间件称为“影子ERP”风险。",
+              "soWhat": "企业应把Agent演示稿里的“可控”拆成上下文授权、政策校验、执行凭证和审计日志四项核查。"
+            },
+            {
+              "label": "BOUNDARY",
+              "navLabel": "证据边界",
+              "heading": "当前信号不能被过度外推",
+              "sourceStatus": {
+                "tag": "AI Watchtower边界",
+                "note": "不把媒体或厂商页面改写成最终证明。"
+              },
+              "body": "这篇署名文章只能证明一种架构主张已被公开提出，不证明Workday客户成效、成本下降或安全改善。",
+              "soWhat": "至少需要客户部署记录、审计日志、第三方安全评估或平台权限文件，才能升级为已验证的企业Agent治理架构结论。"
+            },
+            {
+              "label": "NEXT CHECK",
+              "navLabel": "下一步核查",
+              "heading": "先找可复核材料再升级判断",
+              "sourceStatus": {
+                "tag": "复核路径",
+                "note": "以文件、日志、指标、代码或第三方报告为准。"
+              },
+              "body": "查Workday或客户侧是否披露Agent权限日志、审计指标、部署文档、客户验收记录或第三方安全评估。",
+              "soWhat": "如果客户日志、审计记录或部署指标显示平台内守卫仍频繁越权或漏审，应下调为供应商架构观点；若第三方评估确认有效，可收窄为特定平台场景。"
+            }
+          ]
+        },
+        {
+          "sourceId": "venturebeat-ai",
+          "sourceName": "VentureBeat AI",
+          "source": "VentureBeat AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "id": "venturebeat-multi-agent-control-layer-evals-2026-10-11",
+          "category": "tool",
+          "label": "工具",
+          "title": "VentureBeat：多Agent控制层要评估交接、共享状态和死循环",
+          "body": "VentureBeat提出，多Agent可靠性要看轨迹、交接、状态和循环。",
+          "summary": "VentureBeat文章提出多Agent系统不能只看最终答案，还要记录交接、状态和协作路径。",
+          "whyItMatters": "部署多Agent客服、ITSM或财务流程的工程团队，可把它转成trace、handoff schema和终止条件检查。",
+          "detailBody": "VentureBeat发布多Agent控制层文章，指出单个Agent正确仍可能让整体出错；文章建议捕获执行轨迹，并分别评估交接上下文、接口完整性、共享状态、模型同质化和循环/死锁。",
+          "trend": "Agent评测正在从单模型答案质量扩展到工作流协作边界。",
+          "detailTrend": "这条信号把“多Agent更强”降温为工程问题：交接信息是否丢失、共享状态是否变旧、模型是否同质化，都会决定系统能否可靠完成任务，并影响后续责任定位。",
+          "whyRanked": "给出多Agent评测对象。",
+          "topReason": "多Agent可靠性要看协作边界，而不是只看每个Agent是否聪明。",
+          "impact": "团队应把多Agent系统的验收从最终输出扩展到执行轨迹、交接payload、状态更新和失败相关性。",
+          "whoShouldCare": "负责上线多Agent客服、ITSM、财务审批或数据处理流程的产品/工程/可靠性团队应重点核查。",
+          "readerUse": "产品、工程和可靠性团队可用此信号补齐多Agent验收指标与回归测试清单。",
+          "nextCheck": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户故障率指标或第三方benchmark复测。",
+          "followUpQuestions": [
+            "是否有代码仓库、benchmark报告、LangSmith日志样本或客户故障率数据验证这些多Agent指标能预测线上失败？",
+            "主流Agent框架是否发布内置handoff schema、死循环检测、共享状态审计或终止条件配置文档？"
+          ],
+          "evidenceThreshold": "至少需要代码、benchmark报告、线上日志指标或第三方复测，才能升级为已验证的多Agent可靠性工程方法。",
+          "claimBoundary": "该文章能支持评测框架建议，不证明任何具体多Agent平台已经降低错误率或上线事故。",
+          "counterEvidence": "如果公开日志、复测数据或客户指标显示这些指标与实际失败无关，应下调为方法建议；若benchmark确认相关性，可限定为特定任务的评测证据。",
+          "provenance": "VentureBeat AI发布多Agent控制层评测方法文章；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+          "publishedAt": "2026-10-11T06:05:00+09:00",
+          "time": "10月11日 06:05 JST",
+          "tags": [
+            "多Agent",
+            "评测",
+            "可观测性",
+            "工作流"
+          ],
+          "companies": [],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "工程清单价值高，但仍需代码、日志和benchmark验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "工程清单价值高，但仍需代码、日志和benchmark验证。"
+          },
+          "sourceUrl": "https://venturebeat.com/orchestration/ai-agents-can-be-unpredictable-your-control-layer-shouldnt-be",
+          "originalUrl": "https://venturebeat.com/orchestration/ai-agents-can-be-unpredictable-your-control-layer-shouldnt-be",
+          "detailWhyRanked": "它适合作为本期TOP3，因为它直接补上Agent事故后的工程复核路径：trace、schema、状态管理、终止条件和模型多样性都能被写进测试计划，而不是停在抽象风险描述。",
+          "verificationStatus": "已核验",
+          "keyFacts": [
+            {
+              "value": "媒体背景",
+              "label": "来源角色",
+              "note": "VentureBeat AI"
+            },
+            {
+              "value": "报道",
+              "label": "主张状态",
+              "note": "按来源边界解读"
+            },
+            {
+              "value": "待复核",
+              "label": "升级条件",
+              "note": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月11日 06:05 JST",
+              "title": "来源发布",
+              "body": "VentureBeat文章提出多Agent系统不能只看最终答案，还要记录交接、状态和协作路径。",
+              "tone": "media"
+            },
+            {
+              "date": "站内处理",
+              "title": "边界写入",
+              "body": "该文章能支持评测框架建议，不证明任何具体多Agent平台已经降低错误率或上线事故。",
+              "tone": "neutral"
+            },
+            {
+              "date": "下一步",
+              "title": "复核路径",
+              "body": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户故障率指标或第三方benchmark复测。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE FACT",
+              "navLabel": "来源事实",
+              "heading": "VentureBeat技术文章把多Agent可靠性拆成执行轨迹、Agent交接、共享状态、死锁/循环和模型单一性等可观测指标。",
+              "sourceStatus": {
+                "tag": "媒体背景｜VentureBeat AI",
+                "note": "以下只使用来源可直接支持的最小事实。"
+              },
+              "body": "VentureBeat文章指出，多Agent系统里单个Agent正确仍可能让整体出错；它建议捕获执行轨迹，并分别评估交接上下文、接口完整性、共享状态和循环/死锁。",
+              "soWhat": "团队应把多Agent系统的验收从最终输出扩展到执行轨迹、交接payload、状态更新和失败相关性。"
+            },
+            {
+              "label": "BOUNDARY",
+              "navLabel": "证据边界",
+              "heading": "当前信号不能被过度外推",
+              "sourceStatus": {
+                "tag": "AI Watchtower边界",
+                "note": "不把媒体或厂商页面改写成最终证明。"
+              },
+              "body": "该文章能支持评测框架建议，不证明任何具体多Agent平台已经降低错误率或上线事故。",
+              "soWhat": "至少需要代码、benchmark报告、线上日志指标或第三方复测，才能升级为已验证的多Agent可靠性工程方法。"
+            },
+            {
+              "label": "NEXT CHECK",
+              "navLabel": "下一步核查",
+              "heading": "先找可复核材料再升级判断",
+              "sourceStatus": {
+                "tag": "复核路径",
+                "note": "以文件、日志、指标、代码或第三方报告为准。"
+              },
+              "body": "查是否有开源评测harness、LangGraph/LangSmith日志样本、客户故障率指标或第三方benchmark复测。",
+              "soWhat": "如果公开日志、复测数据或客户指标显示这些指标与实际失败无关，应下调为方法建议；若benchmark确认相关性，可限定为特定任务的评测证据。"
+            }
+          ]
+        },
+        {
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "id": "ars-ai-coding-agent-review-bottleneck-study-2026-10-10",
+          "category": "research",
+          "label": "研究",
+          "title": "Ars：研究称编码Agent增加代码量但软件产出未显著上升",
+          "body": "Ars报道研究称，编码Agent增产代码，但评审瓶颈吸收效率。",
+          "summary": "Ars报道研究显示编码Agent带来更多代码和PR，但人类代码评审吸收了不少效率增益。",
+          "whyItMatters": "工程负责人可用它反查“代码生成速度”是否被误当成软件交付指标。",
+          "detailBody": "Ars报道一项使用Jellyfish聚合数据的研究，覆盖700多家软件公司；研究称AI编码Agent引入后代码量、提交和PR上升，但issue/epic解决率未显著改变，review流程平均变长。",
+          "trend": "编码Agent评估转向交付结果。",
+          "detailTrend": "这条信号提醒企业不要只买生成速度：如果PR更难审、评论更多、返工比例上升，AI把瓶颈从写代码转移到评审队列，ROI仪表盘也必须随之调整。",
+          "whyRanked": "挑战代码量等于产出。",
+          "topReason": "编码Agent的产出指标必须穿过代码评审瓶颈。",
+          "impact": "研发组织应把Agent试点指标设为需求完成率、review时长、返工率和缺陷率，而不是只看生成代码量。",
+          "whoShouldCare": "正在采购或扩展AI编码Agent的研发负责人、工程效能团队和财务/采购团队应重点核查。",
+          "readerUse": "研发、工程效能和采购团队可用此信号调整编码Agent ROI仪表盘。",
+          "nextCheck": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本后的更新样本。",
+          "followUpQuestions": [
+            "研究原文是否公开公司样本、变量定义、回归方法和代码，是否有复现数据或benchmark报告？",
+            "采用新一代编码Agent后，企业是否披露issue关闭率、review时长、返工率、缺陷率或人力配置指标？"
+          ],
+          "evidenceThreshold": "至少需要研究原文、方法文件、复现数据、企业日志指标或第三方复测，才能升级为通用的软件产出结论。",
+          "claimBoundary": "Ars报道和研究样本说明的是所测企业时间窗，不证明所有编码Agent、所有团队或新版模型都没有产出增益。",
+          "counterEvidence": "如果后续复测数据、企业日志或论文确认新版Agent显著提高issue关闭率且未增加缺陷，应收窄为早期样本结论。",
+          "provenance": "Ars Technica AI报道AI编码Agent研究及其评审瓶颈发现；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+          "publishedAt": "2026-10-10T04:43:00+09:00",
+          "time": "10月10日 04:43 JST",
+          "tags": [
+            "编码Agent",
+            "软件工程",
+            "研究",
+            "ROI"
+          ],
+          "companies": [
+            "Jellyfish"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "研究样本和读者效用强，但完整方法仍需回到研究原文。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "研究样本和读者效用强，但完整方法仍需回到研究原文。"
+          },
+          "sourceUrl": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+          "originalUrl": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+          "detailWhyRanked": "它排名靠前，因为它给CIO和研发负责人一个可量化反问：LOC、commit和PR上涨之后，issue关闭、评审时长、返工率和缺陷率是否同步改善，还是只是把工作推给review。",
+          "verificationStatus": "已核验",
+          "keyFacts": [
+            {
+              "value": "媒体背景",
+              "label": "来源角色",
+              "note": "Ars Technica AI"
+            },
+            {
+              "value": "报道",
+              "label": "主张状态",
+              "note": "按来源边界解读"
+            },
+            {
+              "value": "待复核",
+              "label": "升级条件",
+              "note": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月10日 04:43 JST",
+              "title": "来源发布",
+              "body": "Ars报道研究显示编码Agent带来更多代码和PR，但人类代码评审吸收了不少效率增益。",
+              "tone": "media"
+            },
+            {
+              "date": "站内处理",
+              "title": "边界写入",
+              "body": "Ars报道和研究样本说明的是所测企业时间窗，不证明所有编码Agent、所有团队或新版模型都没有产出增益。",
+              "tone": "neutral"
+            },
+            {
+              "date": "下一步",
+              "title": "复核路径",
+              "body": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本后的更新样本。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE FACT",
+              "navLabel": "来源事实",
+              "heading": "Ars报道一项覆盖700多家软件公司的研究：引入AI编码Agent后代码行、提交和PR增加，但issue/epic解决率未显著改变，评审时间变长。",
+              "sourceStatus": {
+                "tag": "媒体背景｜Ars Technica AI",
+                "note": "以下只使用来源可直接支持的最小事实。"
+              },
+              "body": "Ars报道称，研究使用Jellyfish聚合数据，覆盖约7万名员工和300万工作事件；AI编码Agent引入后，代码量、提交和PR上升，但review流程平均更长。",
+              "soWhat": "研发组织应把Agent试点指标设为需求完成率、review时长、返工率和缺陷率，而不是只看生成代码量。"
+            },
+            {
+              "label": "BOUNDARY",
+              "navLabel": "证据边界",
+              "heading": "当前信号不能被过度外推",
+              "sourceStatus": {
+                "tag": "AI Watchtower边界",
+                "note": "不把媒体或厂商页面改写成最终证明。"
+              },
+              "body": "Ars报道和研究样本说明的是所测企业时间窗，不证明所有编码Agent、所有团队或新版模型都没有产出增益。",
+              "soWhat": "至少需要研究原文、方法文件、复现数据、企业日志指标或第三方复测，才能升级为通用的软件产出结论。"
+            },
+            {
+              "label": "NEXT CHECK",
+              "navLabel": "下一步核查",
+              "heading": "先找可复核材料再升级判断",
+              "sourceStatus": {
+                "tag": "复核路径",
+                "note": "以文件、日志、指标、代码或第三方报告为准。"
+              },
+              "body": "查研究原文、Jellyfish样本定义、企业复测数据、缺陷率指标和不同Agent版本后的更新样本。",
+              "soWhat": "如果后续复测数据、企业日志或论文确认新版Agent显著提高issue关闭率且未增加缺陷，应收窄为早期样本结论。"
+            }
+          ]
+        },
+        {
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "id": "ars-yandex-ai-data-center-strikes-2026-10-10",
+          "category": "funding",
+          "label": "融资",
+          "title": "Ars：Yandex AI数据中心受无人机打击暴露算力地缘风险",
+          "body": "Ars报道，Yandex AI训练相关数据中心遭无人机打击。",
+          "summary": "Ars报道Yandex数据中心受损，AI训练和在线服务被纳入战争基础设施风险。",
+          "whyItMatters": "算力、云区和数据中心规划团队应把地缘冲突、冗余和服务连续性纳入AI基础设施风险表。",
+          "detailBody": "Ars报道援引Reuters等来源称，Yandex在俄罗斯的两个数据中心遭无人机打击；其中Sasovo设施包含用于训练YandexGPT的超级计算资源，服务也出现扰动。",
+          "trend": "AI算力风险进入物理安全层。",
+          "detailTrend": "这条信号把AI数据中心从“资本开支”带到战时目标讨论：模型训练、在线服务和区域冗余会同时受物理安全影响，算力风险不再只是电价与芯片供给。",
+          "whyRanked": "算力风险具象化。",
+          "topReason": "AI算力的外部性不只来自电力，也来自物理冲突。",
+          "impact": "企业和政策读者应检查AI云区、模型训练集群和关键服务是否有跨区域冗余与冲突情景预案。",
+          "whoShouldCare": "负责AI云区采购、灾备、主权云和数据中心风险评估的基础设施/安全/政策团队应重点核查。",
+          "readerUse": "基础设施、安全和政策团队可用此信号更新AI算力连续性与地缘风险清单。",
+          "nextCheck": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢复指标。",
+          "followUpQuestions": [
+            "Yandex是否发布数据中心受损、服务恢复、训练集群迁移或冗余配置说明，具体公告和日志记录在哪里？",
+            "Reuters、卫星图像或第三方监测是否更新受损范围、服务可用性指标和AI训练资源恢复状态？"
+          ],
+          "evidenceThreshold": "至少需要Yandex官方说明、卫星图像、服务可用性日志、Reuters更新或第三方报告，才能升级为确认的AI算力中断结论。",
+          "claimBoundary": "Ars报道可支持数据中心受损和AI训练资源关联，不证明YandexGPT训练长期中断或俄罗斯AI能力发生结构性下降。",
+          "counterEvidence": "如果官方记录、服务指标或卫星数据确认训练资源很快恢复，应收窄为短期设施扰动；若日志显示长期不可用，可上调风险判断。",
+          "provenance": "Ars Technica AI报道Yandex AI数据中心受损和训练资源关联；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+          "publishedAt": "2026-10-10T03:04:00+09:00",
+          "time": "10月10日 03:04 JST",
+          "tags": [
+            "AI基础设施",
+            "数据中心",
+            "地缘风险",
+            "YandexGPT"
+          ],
+          "companies": [
+            "Yandex"
+          ],
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "基础设施风险强，但关键损害程度仍依赖后续官方和第三方材料。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "基础设施风险强，但关键损害程度仍依赖后续官方和第三方材料。"
+          },
+          "sourceUrl": "https://arstechnica.com/gadgets/2026/10/ukraines-drones-knock-out-ai-data-center-belonging-to-russias-google/",
+          "originalUrl": "https://arstechnica.com/gadgets/2026/10/ukraines-drones-knock-out-ai-data-center-belonging-to-russias-google/",
+          "detailWhyRanked": "它值得进入当前批次，因为它不是普通数据中心新闻，而是直接关联AI模型训练资源和多项在线服务扰动，能帮助读者更新算力风险地图、灾备情景和后续官方核查入口。",
+          "verificationStatus": "已核验",
+          "keyFacts": [
+            {
+              "value": "媒体背景",
+              "label": "来源角色",
+              "note": "Ars Technica AI"
+            },
+            {
+              "value": "报道",
+              "label": "主张状态",
+              "note": "按来源边界解读"
+            },
+            {
+              "value": "待复核",
+              "label": "升级条件",
+              "note": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月10日 03:04 JST",
+              "title": "来源发布",
+              "body": "Ars报道Yandex数据中心受损，AI训练和在线服务被纳入战争基础设施风险。",
+              "tone": "media"
+            },
+            {
+              "date": "站内处理",
+              "title": "边界写入",
+              "body": "Ars报道可支持数据中心受损和AI训练资源关联，不证明YandexGPT训练长期中断或俄罗斯AI能力发生结构性下降。",
+              "tone": "neutral"
+            },
+            {
+              "date": "下一步",
+              "title": "复核路径",
+              "body": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢复指标。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE FACT",
+              "navLabel": "来源事实",
+              "heading": "Ars报道，乌克兰无人机打击使Yandex多个数据中心受损，其中一处包含用于训练YandexGPT的超级计算资源。",
+              "sourceStatus": {
+                "tag": "媒体背景｜Ars Technica AI",
+                "note": "以下只使用来源可直接支持的最小事实。"
+              },
+              "body": "Ars报道援引Reuters等来源称，Yandex在俄罗斯的两个数据中心遭无人机打击；其中Sasovo设施包含用于训练YandexGPT的超级计算资源，服务出现扰动。",
+              "soWhat": "企业和政策读者应检查AI云区、模型训练集群和关键服务是否有跨区域冗余与冲突情景预案。"
+            },
+            {
+              "label": "BOUNDARY",
+              "navLabel": "证据边界",
+              "heading": "当前信号不能被过度外推",
+              "sourceStatus": {
+                "tag": "AI Watchtower边界",
+                "note": "不把媒体或厂商页面改写成最终证明。"
+              },
+              "body": "Ars报道可支持数据中心受损和AI训练资源关联，不证明YandexGPT训练长期中断或俄罗斯AI能力发生结构性下降。",
+              "soWhat": "至少需要Yandex官方说明、卫星图像、服务可用性日志、Reuters更新或第三方报告，才能升级为确认的AI算力中断结论。"
+            },
+            {
+              "label": "NEXT CHECK",
+              "navLabel": "下一步核查",
+              "heading": "先找可复核材料再升级判断",
+              "sourceStatus": {
+                "tag": "复核路径",
+                "note": "以文件、日志、指标、代码或第三方报告为准。"
+              },
+              "body": "查Yandex官方说明、Reuters后续报道、卫星图像、服务可用性记录和训练集群恢复指标。",
+              "soWhat": "如果官方记录、服务指标或卫星数据确认训练资源很快恢复，应收窄为短期设施扰动；若日志显示长期不可用，可上调风险判断。"
+            }
+          ]
+        },
+        {
+          "sourceId": "ars-technica-ai",
+          "sourceName": "Ars Technica AI",
+          "source": "Ars Technica AI",
+          "trustLevel": "media",
+          "sourceReliability": "high",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "id": "ars-nikon-small-world-ai-disqualification-2026-10-10",
+          "category": "policy",
+          "label": "政策",
+          "title": "Ars：Nikon显微影像赛事因生成式AI规则取消原获奖作品",
+          "body": "Ars报道，Nikon因生成式AI规则调整显微影像赛事排名。",
+          "summary": "Ars报道Nikon显微影像赛事因生成式AI使用规则取消原获奖作品并调整排名。",
+          "whyItMatters": "科研影像、竞赛和出版机构可用它检查AI增强、AI生成与原始实验记录之间的规则边界。",
+          "detailBody": "Ars报道，Nikon重新评估视频及支持材料后，认定原获奖作品不符合生成式AI相关规则；Nikon同时说明该决定不评价参赛者声誉或科研贡献，只处理参赛资格。",
+          "trend": "AI影像规则进入执行阶段。",
+          "detailTrend": "这条信号说明AI透明度不只属于新闻平台：显微影像、科研可视化和竞赛评审也需要可解释的处理记录、规则文本、源文件保留和申诉流程。",
+          "whyRanked": "规则带来排名后果。",
+          "topReason": "生成式AI规则开始改变科研影像竞赛的获奖结果。",
+          "impact": "机构应在征稿、竞赛和论文图像规范中区分AI辅助可视化、AI生成内容、源文件保留和违规处理。",
+          "whoShouldCare": "负责科研影像、竞赛征稿、学术出版或AI内容政策的编辑/法务/评审团队应重点核查。",
+          "readerUse": "编辑、法务和科研评审团队可用此信号更新AI影像披露与源文件审查规则。",
+          "nextCheck": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订文件。",
+          "followUpQuestions": [
+            "Nikon是否公布新版生成式AI规则、源文件审查要求、申诉流程或评审说明文件？",
+            "BBC、Nikon或参赛者是否补充原始实验记录、AI处理步骤、源文件元数据或独立专家评估报告？"
+          ],
+          "evidenceThreshold": "至少需要Nikon规则文本、审查说明、源文件元数据、专家评估报告或参赛者回应，才能升级为更完整的科研影像治理结论。",
+          "claimBoundary": "Ars报道和Nikon声明只能证明该赛事调整排名，不证明参赛者科研不当或所有AI辅助影像都应被排除。",
+          "counterEvidence": "如果后续规则文件或专家报告确认AI仅用于允许的可视化，应下调为单项赛事解释争议；若更多赛事采用类似规则，可上调为行业规则变化。",
+          "provenance": "Ars Technica AI报道Nikon显微影像赛事生成式AI治理边界及取消原获奖作品；AI Watchtower只保留最小来源事实，完整事实、采访、引述、图表、数据和上下文仍归原文。",
+          "publishedAt": "2026-10-10T02:44:00+09:00",
+          "time": "10月10日 02:44 JST",
+          "tags": [
+            "生成式AI规则",
+            "科学影像",
+            "内容真实性",
+            "竞赛治理"
+          ],
+          "companies": [
+            "Nikon"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "事件边界清楚，适合作规则治理样本，但完整审查材料仍在来源外。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "事件边界清楚，适合作规则治理样本，但完整审查材料仍在来源外。"
+          },
+          "sourceUrl": "https://arstechnica.com/science/2026/10/winning-nikon-small-world-in-motion-video-disqualified-for-ai-use/",
+          "originalUrl": "https://arstechnica.com/science/2026/10/winning-nikon-small-world-in-motion-video-disqualified-for-ai-use/",
+          "detailWhyRanked": "它进入本批次，因为事件有明确机构、规则、调查和排名变化，适合作为科研影像AI使用边界的可核查样本，也能提示编辑与评审团队补齐源文件要求和申诉流程。",
+          "verificationStatus": "已核验",
+          "keyFacts": [
+            {
+              "value": "媒体背景",
+              "label": "来源角色",
+              "note": "Ars Technica AI"
+            },
+            {
+              "value": "报道",
+              "label": "主张状态",
+              "note": "按来源边界解读"
+            },
+            {
+              "value": "待复核",
+              "label": "升级条件",
+              "note": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月10日 02:44 JST",
+              "title": "来源发布",
+              "body": "Ars报道Nikon显微影像赛事因生成式AI使用规则取消原获奖作品并调整排名。",
+              "tone": "media"
+            },
+            {
+              "date": "站内处理",
+              "title": "边界写入",
+              "body": "Ars报道和Nikon声明只能证明该赛事调整排名，不证明参赛者科研不当或所有AI辅助影像都应被排除。",
+              "tone": "neutral"
+            },
+            {
+              "date": "下一步",
+              "title": "复核路径",
+              "body": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订文件。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE FACT",
+              "navLabel": "来源事实",
+              "heading": "Ars报道，Nikon Small World in Motion调查后认定原获奖视频不符合生成式AI规则，并调整比赛排名。",
+              "sourceStatus": {
+                "tag": "媒体背景｜Ars Technica AI",
+                "note": "以下只使用来源可直接支持的最小事实。"
+              },
+              "body": "Ars报道，Nikon重新评估视频及支持材料后，认定原获奖作品不符合生成式AI相关规则；Nikon同时说明该决定不评价参赛者声誉或科研贡献。",
+              "soWhat": "机构应在征稿、竞赛和论文图像规范中区分AI辅助可视化、AI生成内容、源文件保留和违规处理。"
+            },
+            {
+              "label": "BOUNDARY",
+              "navLabel": "证据边界",
+              "heading": "当前信号不能被过度外推",
+              "sourceStatus": {
+                "tag": "AI Watchtower边界",
+                "note": "不把媒体或厂商页面改写成最终证明。"
+              },
+              "body": "Ars报道和Nikon声明只能证明该赛事调整排名，不证明参赛者科研不当或所有AI辅助影像都应被排除。",
+              "soWhat": "至少需要Nikon规则文本、审查说明、源文件元数据、专家评估报告或参赛者回应，才能升级为更完整的科研影像治理结论。"
+            },
+            {
+              "label": "NEXT CHECK",
+              "navLabel": "下一步核查",
+              "heading": "先找可复核材料再升级判断",
+              "sourceStatus": {
+                "tag": "复核路径",
+                "note": "以文件、日志、指标、代码或第三方报告为准。"
+              },
+              "body": "查Nikon完整规则、支持材料审查流程、BBC后续报道、参赛者回应和未来赛事规则修订文件。",
+              "soWhat": "如果后续规则文件或专家报告确认AI仅用于允许的可视化，应下调为单项赛事解释争议；若更多赛事采用类似规则，可上调为行业规则变化。"
+            }
+          ]
+        },
+        {
+          "sourceId": "google-keyword-ai",
+          "sourceName": "Google Keyword AI",
+          "source": "Google Keyword AI",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "id": "google-synthid-detector-global-access-2026-10-07",
+          "category": "product",
+          "label": "产品",
+          "title": "Google把SynthID Detector开放为全球英文工具并接入多家伙伴",
+          "body": "Google宣布SynthID Detector全球英文开放，并列出多家伙伴。",
+          "summary": "Google官方宣布SynthID Detector全球英文开放，并扩展到OpenAI、NVIDIA、Kakao等伙伴内容。",
+          "whyItMatters": "内容平台、媒体和合规团队可用它更新AI媒体识别工具清单，但仍需误报、漏报和规避测试。",
+          "detailBody": "Google官方文章称，SynthID Detector从面向媒体专业人士的早期版本扩展为全球英文开放工具，并称可检查Google及OpenAI、NVIDIA、Kakao等伙伴生成的图像、视频或音频。",
+          "trend": "AI内容溯源正在从单家公司水印走向跨平台检测入口。",
+          "detailTrend": "这条信号与OpenAI欧盟文本水印形成互补：行业正在把“标注AI内容”拆成水印、检测器、浏览器入口和伙伴互操作，但可靠性还要靠误报漏报测试。",
+          "whyRanked": "官方补强溯源工具链。",
+          "topReason": "内容溯源开始从合规承诺进入大众可访问检测工具。",
+          "impact": "媒体、平台和企业合规团队应把检测器纳入工作流，但不要把水印检测等同于真实性证明。",
+          "whoShouldCare": "负责AI内容标注、媒体核验、平台合规或品牌安全的产品/法务/编辑团队应重点核查。",
+          "readerUse": "产品、法务和编辑团队可用此信号更新AI媒体检测与披露工具清单。",
+          "nextCheck": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文档、Apple接入公告和第三方测试报告。",
+          "followUpQuestions": [
+            "Google是否发布SynthID Detector误报率、漏报率、支持格式、API权限或技术白皮书等说明文件？",
+            "OpenAI、NVIDIA、Kakao或Apple是否发布伙伴接入公告、生成工具配置、检测日志或第三方评测报告？"
+          ],
+          "evidenceThreshold": "至少需要技术说明文件、误报漏报数据、伙伴公告、检测日志或第三方测试报告，才能升级为可靠内容溯源工具结论。",
+          "claimBoundary": "Google官方页面可确认工具开放和伙伴范围，不证明所有AI内容都可检测，也不证明检测结果足以判断内容真假。",
+          "counterEvidence": "如果第三方测试数据或伙伴说明显示高漏报、易规避或覆盖范围较窄，应下调为有限检测入口；若独立评测通过，可限定为特定模态有效。",
+          "provenance": "Google Keyword AI宣布SynthID Detector模型内容溯源工具全球英文开放及伙伴检测范围；该来源可核对发布事实，但效果、覆盖率和外部影响仍需独立数据或第三方复核。",
+          "publishedAt": "2026-10-07T09:00:00+09:00",
+          "time": "10月7日 09:00 JST",
+          "tags": [
+            "SynthID",
+            "内容溯源",
+            "AI水印",
+            "Google"
+          ],
+          "companies": [
+            "Google",
+            "OpenAI",
+            "NVIDIA",
+            "Kakao"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方证据强，发布时间略早，但对本周内容透明度主线仍有补充价值。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 5,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方证据强，发布时间略早，但对本周内容透明度主线仍有补充价值。"
+          },
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/",
+          "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/",
+          "detailWhyRanked": "它虽然不是最新发布时间，但尚未进入站内当前批次；官方页面给出开放范围、伙伴名单和已有水印规模，适合作为本周溯源工具链补充、伙伴核查和后续评测入口。",
+          "verificationStatus": "已核验",
+          "keyFacts": [
+            {
+              "value": "官方核对",
+              "label": "来源角色",
+              "note": "Google Keyword AI"
+            },
+            {
+              "value": "确认",
+              "label": "主张状态",
+              "note": "按来源边界解读"
+            },
+            {
+              "value": "待复核",
+              "label": "升级条件",
+              "note": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文"
+            }
+          ],
+          "timeline": [
+            {
+              "date": "10月7日 09:00 JST",
+              "title": "来源发布",
+              "body": "Google官方宣布SynthID Detector全球英文开放，并扩展到OpenAI、NVIDIA、Kakao等伙伴内容。",
+              "tone": "official"
+            },
+            {
+              "date": "站内处理",
+              "title": "边界写入",
+              "body": "Google官方页面可确认工具开放和伙伴范围，不证明所有AI内容都可检测，也不证明检测结果足以判断内容真假。",
+              "tone": "neutral"
+            },
+            {
+              "date": "下一步",
+              "title": "复核路径",
+              "body": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文档、Apple接入公告和第三方测试报告。",
+              "tone": "neutral"
+            }
+          ],
+          "deepSections": [
+            {
+              "label": "SOURCE FACT",
+              "navLabel": "来源事实",
+              "heading": "Google宣布SynthID Detector向所有人开放全球英文访问，可检查Google及OpenAI、NVIDIA、Kakao等伙伴AI生成的图像、视频或音频水印。",
+              "sourceStatus": {
+                "tag": "官方核对｜Google Keyword AI",
+                "note": "以下只使用来源可直接支持的最小事实。"
+              },
+              "body": "Google官方文章称，SynthID Detector从面向媒体专业人士的早期版本扩展为全球英文开放工具，并称可检查Google及OpenAI、NVIDIA、Kakao等伙伴生成内容。",
+              "soWhat": "媒体、平台和企业合规团队应把检测器纳入工作流，但不要把水印检测等同于真实性证明。"
+            },
+            {
+              "label": "BOUNDARY",
+              "navLabel": "证据边界",
+              "heading": "当前信号不能被过度外推",
+              "sourceStatus": {
+                "tag": "AI Watchtower边界",
+                "note": "不把媒体或厂商页面改写成最终证明。"
+              },
+              "body": "Google官方页面可确认工具开放和伙伴范围，不证明所有AI内容都可检测，也不证明检测结果足以判断内容真假。",
+              "soWhat": "至少需要技术说明文件、误报漏报数据、伙伴公告、检测日志或第三方测试报告，才能升级为可靠内容溯源工具结论。"
+            },
+            {
+              "label": "NEXT CHECK",
+              "navLabel": "下一步核查",
+              "heading": "先找可复核材料再升级判断",
+              "sourceStatus": {
+                "tag": "复核路径",
+                "note": "以文件、日志、指标、代码或第三方报告为准。"
+              },
+              "body": "查Google技术说明、误报/漏报评测、OpenAI/NVIDIA/Kakao伙伴文档、Apple接入公告和第三方测试报告。",
+              "soWhat": "如果第三方测试数据或伙伴说明显示高漏报、易规避或覆盖范围较窄，应下调为有限检测入口；若独立评测通过，可限定为特定模态有效。"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-11",
       "date": "2026-10-11",
