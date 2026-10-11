@@ -29,7 +29,7 @@
   - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: `a2e2452` (`【VisionHub网站风格优化】规划下一轮手机简报优化`).
+- Commit: `eb7bcf7` (`【VisionHub网站风格优化】规划下一轮手机简报优化`).
 - Push: held - local `main` already had unpushed news-run commits `91c6af9` and `43c881d` before this optimization pass, so pushing now would also publish unrelated work outside the scoped 20:00 optimization without explicit user approval.
 
 ## 2026-10-11 08:17 JST
