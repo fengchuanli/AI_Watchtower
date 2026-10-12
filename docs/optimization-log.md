@@ -33,7 +33,7 @@
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
   - Ran `git diff --check`.
   - `python3 scripts/check_layout.py` could not run because Playwright is not installed in this environment.
-- Commit: pending local commit after this log update (`【VisionHub网站风格优化】标清手机首屏TOP3路径`).
+- Commit: `62fd30c` (`【VisionHub网站风格优化】标清手机首屏TOP3路径`); status-log hash update pending after this line.
 - Push: held - local `main` already had unpushed news-run commit `ca2943c` before this optimization pass, so pushing now would also publish unrelated work outside the scoped 20:00 optimization without explicit user approval.
 
 ## 2026-10-12 08:10 JST
