@@ -1,3 +1,24 @@
+## 2026-10-12 23:05 JST
+
+- Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-12`，因此未回退版次，而是在当天活动版基础上扩展为 `news-2300-2026-10-12`，发布 11 条安全非重复信号。新增 5 条补充信号，聚焦 Microsoft Agentic CRM / Copilot Studio 治理、OpenAI GPT-6.1 Sol ultrafast API 服务层、AWS AI Builder 月度平台回顾，以及 NVIDIA KDD 数据 Agent harness 复盘。
+- Changed files:
+  - `data/sources.json`: 新增 `microsoft-copilot-blog` 来源标签，来源总数更新为 125。
+  - `data/news.json`: 当前首页更新为 2026年10月12日23:00 JST 补充版 11 条情报，并保留原始来源 URL、来源角色、证据边界、下一步核查和补充项说明。
+  - `data/news-history.json`: 最新归档镜像同步当前 11 条补充版，总历史项目更新为 1201。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；补查 Microsoft Copilot Blog、OpenAI Developers Changelog、AWS Machine Learning Blog、NVIDIA Technical Blog，并对当前版和历史版做 URL / 主题去重。跳过已入库 Google Gemini agent、AWS DevOps Agent remediation、AWS RAG 权限控制、Anthropic事故和9月底旧信号。Microsoft/OpenAI/AWS/NVIDIA 项保持官方/厂商来源边界，效果、ROI、安全成熟度、延迟收益和通用性仍需配置文档、客户日志、审计报告、代码/trace、第三方复测或SLA/价格文件。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1201.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月12日23:00 补充版 11 条情报；读者可在首页与详情页看到 Agent 控制层、CRM Agent、Copilot Studio hooks/评测/Review门禁、OpenAI ultrafast服务层、AWS平台能力、NVIDIA数据Agent harness、编码Agent评审瓶颈、AI数据中心物理风险、生成式AI影像规则和内容溯源信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 125 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+- Commit note: `【新闻更新】补充23点AI新闻：11条Agent治理与平台能力信号`.
+- Push: pending - final push status recorded after commit attempt.
+
 ## 2026-10-12 20:00 JST
 
 - Focus: 完成 2026-10-11 至 2026-11-09 新周期 Day 0，审计手机首页首屏顺序，并把第一轮 TOP3 判断前后模块标清楚：先读今日重点与 TOP3，再进入按目的阅读、深度简报、更多新闻流和资料库。

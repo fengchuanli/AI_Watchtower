@@ -2,15 +2,15 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-10-12",
-  "totalItems": 1196,
+  "totalItems": 1201,
   "editions": [
     {
-      "id": "news-1700-2026-10-12",
+      "id": "news-2300-2026-10-12",
       "date": "2026-10-12",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "17:00 JST短批次",
+      "archiveLabel": "23:00 JST补充版",
       "archiveStatus": "published",
-      "itemCount": 6,
+      "itemCount": 11,
       "items": [
         {
           "id": "venturebeat-workday-agent-guardrails-platform-2026-10-12",
@@ -93,6 +93,70 @@
           "sourceCaveat": "Ars报道和Nikon声明只能证明该赛事调整排名，不证明参赛者科研不当或所有AI辅助影像都应被排除。"
         },
         {
+          "id": "aws-ai-builders-september-recap-2026-10-09",
+          "title": "AWS汇总9月AI Builder更新：模型选择、AgentCore与知识库同步并进",
+          "category": "tool",
+          "label": "工具",
+          "time": "10月9日 09:00 JST",
+          "publishedAt": "2026-10-09T09:00:00+09:00",
+          "body": "AWS发布9月AI Builder月度回顾，集中梳理Bedrock、AgentCore和Strands更新。",
+          "impact": "平台团队应把供应商月度回顾拆成可验证清单：模型可用性、运行时延迟、评测指标、连接器权限和同步日志。",
+          "source": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-september-2026/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "AWS官方回顾可确认其发布和归纳口径，不证明客户ROI、稳定性、安全成熟度或跨行业采用。"
+        },
+        {
+          "id": "openai-gpt-6-1-sol-ultrafast-api-2026-10-08",
+          "title": "OpenAI API Changelog：GPT-6.1 Sol加入Responses API ultrafast模式",
+          "category": "product",
+          "label": "产品",
+          "time": "10月8日 09:00 JST",
+          "publishedAt": "2026-10-08T09:00:00+09:00",
+          "body": "OpenAI开发者文档记录，GPT-6.1 Sol在Responses API新增ultrafast模式。",
+          "impact": "工程团队应记录ultrafast模式在真实任务中的首token、token间隔、成本、错误率和区域合规差异。",
+          "source": "OpenAI Developers RSS",
+          "sourceId": "openai-developers-rss",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "OpenAI文档可确认功能入口和处理区域说明，不证明端到端任务延迟、可靠性或成本在生产中更优。"
+        },
+        {
+          "id": "microsoft-agentic-crm-copilot-dynamics-2026-10-08",
+          "title": "Microsoft把Dynamics 365 CRM技能接入Copilot与Teams工作流",
+          "category": "product",
+          "label": "产品",
+          "time": "10月8日 08:00 JST",
+          "publishedAt": "2026-10-08T08:00:00+09:00",
+          "body": "Microsoft宣布Copilot、Dynamics 365和Teams的销售/服务Agentic CRM更新。",
+          "impact": "CRM负责人应核对预置技能、MCP工具、Teams上下文、Exchange账号、审批节点和Copilot Credits消耗。",
+          "source": "Microsoft Copilot Blog",
+          "sourceId": "microsoft-copilot-blog",
+          "sourceUrl": "https://www.microsoft.com/en-us/copilot/blog/2026/10/08/bringing-crm-into-the-flow-of-work-and-agents-into-business-processes-for-sales-and-service-teams/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "Microsoft官方页面可确认产品更新和预览/可用性说法，不证明客户销售转化、客服效率或合规成熟度。"
+        },
+        {
+          "id": "nvidia-kdd-data-agent-harness-2026-10-08",
+          "title": "NVIDIA复盘KDD Cup数据分析Agent：缩小harness比放开工具更可靠",
+          "category": "research",
+          "label": "研究",
+          "time": "10月8日 07:00 JST",
+          "publishedAt": "2026-10-08T07:00:00+09:00",
+          "body": "NVIDIA技术博客复盘KDD Cup数据Agent方案，强调窄工具面、trace和人审。",
+          "impact": "数据平台团队应先为Agent设计单一查询界面、答案写入路径、trace日志和held-out评测，再扩大工具权限。",
+          "source": "NVIDIA Technical Blog",
+          "sourceId": "nvidia-technical-blog",
+          "sourceUrl": "https://developer.nvidia.com/blog/building-reliable-data-analytics-agents-lessons-from-the-kdd-cup/",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "NVIDIA文章可支持其团队复盘和竞赛结果，不证明该harness可直接迁移到所有生产BI或文档分析场景。"
+        },
+        {
           "id": "google-synthid-detector-global-access-2026-10-07",
           "title": "Google把SynthID Detector开放为全球英文工具并接入多家伙伴",
           "category": "product",
@@ -107,6 +171,22 @@
           "sourceRole": "官方核对",
           "trustLevel": "official",
           "sourceCaveat": "Google官方页面可确认工具开放和伙伴范围，不证明所有AI内容都可检测，也不证明检测结果足以判断内容真假。"
+        },
+        {
+          "id": "microsoft-copilot-studio-hooks-evals-2026-10-07",
+          "title": "Microsoft Copilot Studio新增hooks、自动化评测和发布前Review面板",
+          "category": "tool",
+          "label": "工具",
+          "time": "10月7日 09:00 JST",
+          "publishedAt": "2026-10-07T09:00:00+09:00",
+          "body": "Microsoft宣布Copilot Studio 9月更新，强化Agent hooks、评测和发布前检查。",
+          "impact": "平台管理员应检查hooks权限、评测标准、Review警告、私有网络知识库和插件注册表是否进入租户治理。",
+          "source": "Microsoft Copilot Blog",
+          "sourceId": "microsoft-copilot-blog",
+          "sourceUrl": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/new-and-improved-build-apps-extend-agents-and-transform-business-processes-in-microsoft-copilot-studio/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "Microsoft官方页面可确认功能更新，不证明这些门禁足以阻止所有越权、错误工具调用或低质量Agent发布。"
         }
       ]
     },
