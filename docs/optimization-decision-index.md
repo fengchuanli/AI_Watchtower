@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 1, Mobile First-Screen Relief
-- Last indexed run: 2026-10-11 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` was already ahead of `origin/main` by 2 news-update commits before this optimization pass, so push should be held unless the user explicitly approves publishing those pending commits.
+- Last indexed run: 2026-10-12 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` was already ahead of `origin/main` by 1 news-update commit before this optimization pass, so push should be held unless the user explicitly approves publishing that pending commit.
 
 ## Recent Plan-Day Decisions
 
@@ -48,6 +48,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 28 | Complete | `fb662b4` | `scripts/validate-pages.mjs` now covers the six static reader-path shells (`index.html`, `news-detail.html`, `all-news.html`, `tags.html`, `archive.html`, `404.html`) instead of only 404: balanced tags, mobile viewport metadata, project-site-safe links, skip/main landmarks, and key dynamic containers. `docs/local-preview-qa.md` records this as the lightweight static fallback when Playwright/browser QA is unavailable, and `scripts/validate-site.mjs` guards the fallback. |
 | Day 29 | Complete | `b84cc97` | `docs/monthly-optimization-summary.md` now summarizes the 2026-09-11 to 2026-10-10 cycle: VisionHub-style homepage briefing, TOP3 proof boundaries, detail-page article path, workflow friction, reader-visible continuity, validation guards, and remaining weaknesses around mobile density, visual briefing, manual source judgment, continuity views, and remote sync boundaries. |
 | Day 30 | Complete | `eb7bcf7` | `docs/optimization-plan.md` now covers 2026-10-11 through 2026-11-09 and turns the monthly summary weaknesses into the next cycle: mobile first-screen relief, TOP3 visual briefing, detail-page article consistency, publishing-path and remote-sync simplification, reader-visible continuity, and the next rollover. |
+| Day 0 | Complete | `pending` | 手机首屏审计把第一轮 TOP3 判断前后分清：header 现在按 `今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流` 排序，Today Briefing 下方有 `手机先读` cue，`docs/homepage-edition-preflight.md` 和 `scripts/validate-site.mjs` 守住 before/TOP3/after 分层。 |
 
 ## Historical Guard Anchors
 
@@ -88,7 +89,7 @@ These compact anchors keep validation and future automation aware of the most im
 - Day 27: `docs/monthly-continuity-snapshot.md` summarizes repeated companies, repeated topics, unresolved claims, and resolved checks.
 - Day 28: `docs/homepage-edition-preflight.md` keeps the First-Screen Reader Order Guard.
 - Day 29: `docs/monthly-optimization-summary.md` records the remaining VisionHub-style weaknesses.
-- Homepage order: `docs/homepage-edition-preflight.md` protects hero -> today briefing -> TOP3 -> deep briefing -> compact feed.
+- Homepage order: `docs/homepage-edition-preflight.md` protects hero -> today briefing -> TOP3 -> purpose navigation -> deep briefing -> compact feed, and the current Day 0 audit keeps the visible header / `手机先读` cue aligned with that split.
 - Detail article path: `docs/detail-page-review-guide.md` converts detail-page technical claims into fact, impact, boundary, and next-check blocks.
 - Candidate source gate: `docs/candidate-source-checklist.md` gates semi-automated candidates by source identity, role, minimum evidence, copyright/paywall safety, duplicates, and concentration before drafting.
 - Candidate priority: `docs/candidate-priority-rubric.md` ranks safe candidates by reader utility, evidence strength, novelty, source diversity, and copyright safety.
@@ -100,9 +101,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 0 of the 2026-10-11 through 2026-11-09 plan: audit the current homepage first-screen order on phone and mark which modules belong before or after the first TOP3 decision.
+- Continue with Day 1 of the 2026-10-11 through 2026-11-09 plan: tighten `briefing.summary`, watch points, or `readerFrame.mobile` so phone readers get one calmer 1 to 3 minute path before the deep briefing.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 0.
-- If Day 0 is already complete, continue with Day 1: tighten `briefing.summary`, watch points, or `readerFrame.mobile` so phone readers get one calmer 1 to 3 minute path before the deep briefing.
+- If Day 1 is already complete, continue with Day 2: review homepage editor notes and move process-heavy boundary text out of the first scan path when a shorter trust cue can do the job.
 
 ## Update Rules
 

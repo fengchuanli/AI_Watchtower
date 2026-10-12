@@ -480,6 +480,8 @@ const homepageFirstScreenSections = [
 const homepageExploreIndex = getHomepageSectionIndex(/<section\b(?=[^>]*\bid="explore")[^>]*>/);
 const homepageTop3Index = homepageFirstScreenSections[2][1];
 const homepageDeepBriefingIndex = homepageFirstScreenSections[3][1];
+const homepageNavOrderPattern =
+  /<a href="#today">今日重点<\/a>[\s\S]*<a href="#top3">今日 TOP3<\/a>[\s\S]*<a href="#explore">按目的阅读<\/a>[\s\S]*<a href="#deep-briefing">深度简报<\/a>[\s\S]*<a href="#feed">最新新闻流<\/a>/;
 
 if (
   homepageFirstScreenSections.some(([, index]) => index < 0) ||
@@ -487,6 +489,13 @@ if (
   homepageFirstScreenSections.some(([, index], position, sections) => position > 0 && index <= sections[position - 1][1]) ||
   homepageExploreIndex <= homepageTop3Index ||
   homepageExploreIndex >= homepageDeepBriefingIndex ||
+  !homepageNavOrderPattern.test(html) ||
+  !/class="first-read-path"/.test(html) ||
+  !/手机先读/.test(html) ||
+  !/先判断[\s\S]*今日重点与 TOP3/.test(html) ||
+  !/再选择[\s\S]*按目的阅读或深度简报/.test(html) ||
+  !/最后补齐[\s\S]*更多新闻流与资料库/.test(html) ||
+  !/\.first-read-path/.test(styles) ||
   !/briefingHeadline/.test(appJs) ||
   !/briefingSummary/.test(appJs) ||
   !/updateTodayBriefing\(data\.briefing\);/.test(appJs) ||
@@ -496,9 +505,13 @@ if (
   !/First-Screen Reader Order Guard/.test(homepageEditionPreflight) ||
   !/hero -> today briefing -> TOP3 -> purpose navigation -> deep briefing -> compact feed/.test(homepageEditionPreflight) ||
   !/purpose navigation should sit after TOP3 and before deep briefing/.test(homepageEditionPreflight) ||
+  !/Day 0 Mobile First-Screen Audit/.test(homepageEditionPreflight) ||
+  !/Before TOP3[\s\S]*hero, 5 秒今日要点, 今日深挖 watch points/.test(homepageEditionPreflight) ||
+  !/After TOP3[\s\S]*按目的阅读, 分类最新, 深度简报, 连续观察, 更多新闻流, 资料库/.test(homepageEditionPreflight) ||
+  !/今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流/.test(homepageEditionPreflight) ||
   !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
-  !/Day 28[\s\S]*First-Screen Reader Order Guard/.test(optimizationDecisionIndex) ||
-  !/Continue with Day 30/.test(optimizationDecisionIndex)
+  !/Day 0[\s\S]*手机首屏/.test(optimizationDecisionIndex) ||
+  !/Current handoff is Day 1/.test(optimizationDecisionIndex)
 ) {
   errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, purpose navigation, deep briefing, then compact non-TOP3 feed.");
 }

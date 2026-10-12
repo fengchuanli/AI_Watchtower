@@ -1,3 +1,41 @@
+## 2026-10-12 20:00 JST
+
+- Focus: 完成 2026-10-11 至 2026-11-09 新周期 Day 0，审计手机首页首屏顺序，并把第一轮 TOP3 判断前后模块标清楚：先读今日重点与 TOP3，再进入按目的阅读、深度简报、更多新闻流和资料库。
+- Changed files:
+  - `index.html`: header 导航新增 `今日 TOP3`，并按 `今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流` 排序；Today Briefing 下方新增 `手机先读` cue，标注先判断、再选择、最后补齐的手机阅读路径。
+  - `styles.css`: 为 `first-read-path` 增加紧凑横排样式，并在 620px 以下改为单列，避免手机上横向挤压。
+  - `docs/homepage-edition-preflight.md`: 新增 Day 0 手机首屏审计表，把 Before TOP3、TOP3 decision、After TOP3 的模块和读者任务写清楚。
+  - `scripts/validate-site.mjs`: 增加 header 顺序、`手机先读` cue、Day 0 审计文档和决策索引守卫，防止后续改版把 TOP3 判断路径藏回深层。
+  - `docs/optimization-decision-index.md`: 标记新周期 Day 0 完成，并把下一次有用任务更新为 Day 1：收紧 `briefing.summary`、watch points 或 `readerFrame.mobile`。
+- Source posture:
+  - 已读取自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和 `docs/optimization-log.md` 顶部条目。
+  - `git pull --ff-only origin main` 首次因 sandbox GitHub DNS 失败；网络授权后成功并确认 `origin/main` 已是最新。
+  - 本次不新增新闻事实、来源 URL、媒体摘要或外部结论；只调整首页阅读路径和对应校验/文档。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - `今日 TOP3` 成为 header 一级入口，`手机先读` cue 把今日重点与 TOP3 放在第一轮判断路径内。
+  - TOP3 reader use: pass - TOP3 前后模块的读者任务在 Day 0 审计表和首页 cue 中分开，避免先跳到深度简报或完整新闻流。
+  - Source boundary visible: pass - 深度简报、连续观察、更多新闻流和资料库明确留在 TOP3 之后，不抢占首屏判断。
+  - Original source dependency: pass - 本次不改新闻正文或来源依赖字段。
+  - Mobile burden: pass - 620px 以下 `手机先读` cue 单列显示，减少手机横向拥挤。
+  - Continuity use: unchanged - 连续观察仍保留在深度简报区，不作为 TOP3 前置负担。
+  - Visual aid purpose: partial - 这是路径提示，不是 TOP3 visual briefing 组件；后续 Day 7-12 仍需处理视觉 briefing。
+- 网站可见变化：首页 header 现在直接提供 `今日 TOP3` 入口，Today Briefing 下方新增 `手机先读` 路径提示；读者能在首页先看到今日重点/TOP3，再决定是否进入按目的阅读、深度简报或更多新闻流。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-data.mjs` and validated 6 current news items against 124 sources.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+  - `python3 scripts/check_layout.py` could not run because Playwright is not installed in this environment.
+- Commit: pending local commit after this log update (`【VisionHub网站风格优化】标清手机首屏TOP3路径`).
+- Push: held - local `main` already had unpushed news-run commit `ca2943c` before this optimization pass, so pushing now would also publish unrelated work outside the scoped 20:00 optimization without explicit user approval.
+
 ## 2026-10-12 08:10 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-12`，发布 6 条安全非重复短批次信号，聚焦企业 Agent 控制层、多 Agent 评测、编码 Agent 评审瓶颈、Yandex AI 数据中心物理风险、Nikon 生成式 AI 影像规则，以及 Google SynthID Detector 全球英文开放。少于 10 条是质量门槛结果：10月11日23点版已经覆盖多数强信号，本次未用旧稿、播客、付费墙、登录墙、社区讨论、重复来源、弱证据或营销页补数量。
