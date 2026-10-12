@@ -1,3 +1,27 @@
+## 2026-10-13 08:16 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-13`，发布 8 条安全非重复短批次信号，聚焦 Meta Muse Wonder 前沿 Agent 模型、WindBorne 美空军 AI 气象数据合同、Microsoft 高层 AI 安全/监管主张、Honeyjar PR 工作流、短信个人 Agent、Google 本地会议 AI 和 AP AI 安全事件时间线。少于 10 条是质量门槛结果：未用旧稿、播客正文、付费墙、登录墙、社区讨论、重复来源、弱证据或常规营销补数量。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月13日17:00 JST 版 8 条情报，并保留原始来源 URL、来源角色、证据边界、下一步核查、媒体集中度和短批次说明。
+  - `data/news-history.json`: 最新归档镜像同步当前首页版次；总历史项目更新为 1209。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 Meta AI Blog、TechCrunch AI 和 AP Technology，并对当前版和历史版做 URL / 主题去重。Meta 条目保持 `官方核对`，只确认模型发布、模型卡范围和安全边界；TechCrunch / AP 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、引述、数据、合同背景、政策上下文和事件描述仍归原文。可靠媒体 7/8、TechCrunch 6/8，已在 `sourceRisk` / `sourceConcentration` / `overreadBoundary` 中标明媒体集中度。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1209.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月13日17:00 版 8 条情报；读者可在首页与详情页看到 Meta Muse Wonder、AI气象数据采购、AI安全紧急刹车、英国AISI监管角色、PR AI工作流、短信个人Agent、本地会议AI和AP安全事件时间线。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 125 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, `nav.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/build-derived-data.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：8条Agent模型与安全入口信号`.
+- Push: pending - not attempted yet in this run.
+
 ## 2026-10-12 23:05 JST
 
 - Focus: 执行 AI Watchtower 08:00 JST 自动化的同日补充更新；当前首页已是 `news-1700-2026-10-12`，因此未回退版次，而是在当天活动版基础上扩展为 `news-2300-2026-10-12`，发布 11 条安全非重复信号。新增 5 条补充信号，聚焦 Microsoft Agentic CRM / Copilot Studio 治理、OpenAI GPT-6.1 Sol ultrafast API 服务层、AWS AI Builder 月度平台回顾，以及 NVIDIA KDD 数据 Agent harness 复盘。
