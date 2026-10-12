@@ -16,8 +16,8 @@
   - Ran `node scripts/validate-data.mjs` and validated 11 current news items against 125 sources.
   - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
   - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
-- Commit note: `【新闻更新】补充23点AI新闻：11条Agent治理与平台能力信号`.
-- Push: pending - final push status recorded after commit attempt.
+- Commit: `dcb2bb4` (`【新闻更新】补充23点AI新闻：11条Agent治理与平台能力信号`).
+- Push: pushed to `origin/main`; remote advanced from `34dda06` to `dcb2bb4`, including the previously local 17:00 news and 20:00 mobile TOP3 path commits.
 
 ## 2026-10-12 20:00 JST
 
