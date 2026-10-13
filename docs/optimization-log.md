@@ -1,3 +1,41 @@
+## 2026-10-13 20:00 JST
+
+- Focus: 完成 2026-10-11 至 2026-11-09 新周期 Day 1，收紧当前首页 `briefing.summary`、三个 watch points 和 `readerFrame.mobile`，让手机读者在进入深度简报前先按同一条路径判断：先查 Agent 能力证据，再查安全刹车，最后查短信/会议/职能 AI 入口权限。
+- Changed files:
+  - `data/news.json`: 将今日简报标题、摘要、三个观察点和 `readerFrame.mobile` 从主题清单改成三步手机阅读路径，并保留媒体集中、生产效果待验证的证据边界。
+  - `data/news-history.json`: 同步最新 2026-10-13 17:00 JST 历史镜像的 `readerFrame.mobile`，避免归档版与首页版次出现不同手机路径。
+  - `data/news-today.json`: 由 `node scripts/build-derived-data.mjs` 重新生成，今日索引同步新的手机阅读路径。
+  - `docs/optimization-decision-index.md`: 标记 Day 1 完成，并将下一次有用任务更新为 Day 2：首页编辑说明与首屏信任提示整理。
+- Source posture:
+  - 已读取自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和 `docs/optimization-log.md` 顶部条目。
+  - `git pull --ff-only origin main` 首次因 sandbox GitHub DNS 失败；网络授权后成功并确认 `origin/main` 已是最新。
+  - 本次不新增新闻事实、来源 URL、媒体摘要或外部结论；只重写当前首页已有字段的读者路径表达，并继续保留官方文件、运行日志和第三方复测边界。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 今日简报标题从产品/议题罗列改为“先看 Agent 能力，再看谁能叫停”。
+  - TOP3 reader use: pass - watch points 与 `readerFrame.mobile.primaryUses` 使用同一三步路径，帮助手机读者在 TOP3 前后保持同一个判断顺序。
+  - Source boundary visible: pass - `readerFrame.mobile.proofBoundary` 明确仍需官方文件、运行日志和第三方复测。
+  - Original source dependency: pass - 本次没有扩写媒体事实，不替代 TechCrunch / AP 原文。
+  - Mobile burden: pass - 摘要从 8 条话题压缩为三件可扫的行动判断。
+  - Continuity use: unchanged - 连续观察仍留在深度简报区，不加入首屏负担。
+  - Visual aid purpose: unchanged - 本次是 Day 1 手机路径文案优化，TOP3 视觉 briefing 仍留给 Day 7-12。
+- 网站可见变化：首页 `今日简报` 和深度简报中的 `本期读者使用框架` 会显示更清晰的手机先读路径：先查 Agent 能力证据，再查安全刹车，最后查入口权限；读者无需先读完整深度简报就能知道本期怎么扫。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 8 current news items against 125 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending after final verification.
+- Push: held - local `main` already has two unrelated unpushed RAG commits (`a092a5f`, `a383fbc`) before this optimization pass, so pushing now would also publish work outside the scoped 20:00 optimization without explicit user approval.
+
 ## 2026-10-13 08:16 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-13`，发布 8 条安全非重复短批次信号，聚焦 Meta Muse Wonder 前沿 Agent 模型、WindBorne 美空军 AI 气象数据合同、Microsoft 高层 AI 安全/监管主张、Honeyjar PR 工作流、短信个人 Agent、Google 本地会议 AI 和 AP AI 安全事件时间线。少于 10 条是质量门槛结果：未用旧稿、播客正文、付费墙、登录墙、社区讨论、重复来源、弱证据或常规营销补数量。

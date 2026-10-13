@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 1, Mobile First-Screen Relief
-- Last indexed run: 2026-10-12 20:00 JST
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` was already ahead of `origin/main` by 1 news-update commit before this optimization pass, so push should be held unless the user explicitly approves publishing that pending commit.
+- Last indexed run: 2026-10-13 20:00 JST
+- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` was already ahead of `origin/main` by 2 unrelated RAG commits before this optimization pass, so push should be held unless the user explicitly approves publishing those pending commits.
 
 ## Recent Plan-Day Decisions
 
@@ -49,6 +49,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 29 | Complete | `b84cc97` | `docs/monthly-optimization-summary.md` now summarizes the 2026-09-11 to 2026-10-10 cycle: VisionHub-style homepage briefing, TOP3 proof boundaries, detail-page article path, workflow friction, reader-visible continuity, validation guards, and remaining weaknesses around mobile density, visual briefing, manual source judgment, continuity views, and remote sync boundaries. |
 | Day 30 | Complete | `eb7bcf7` | `docs/optimization-plan.md` now covers 2026-10-11 through 2026-11-09 and turns the monthly summary weaknesses into the next cycle: mobile first-screen relief, TOP3 visual briefing, detail-page article consistency, publishing-path and remote-sync simplification, reader-visible continuity, and the next rollover. |
 | Day 0 | Complete | `62fd30c` | 手机首屏审计把第一轮 TOP3 判断前后分清：header 现在按 `今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流` 排序，Today Briefing 下方有 `手机先读` cue，`docs/homepage-edition-preflight.md` 和 `scripts/validate-site.mjs` 守住 before/TOP3/after 分层。 |
+| Day 1 | Complete | `pending` | 当前 `news-1700-2026-10-13` 首页把 `briefing.summary`、三个 watch points 和 `readerFrame.mobile` 改成同一条手机阅读路径：先查 Agent 能力证据，再查安全刹车，最后查短信/会议/职能 AI 入口权限；当前首页、最新历史镜像和今日派生数据已对齐。 |
 
 ## Historical Guard Anchors
 
@@ -101,9 +102,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 1 of the 2026-10-11 through 2026-11-09 plan: tighten `briefing.summary`, watch points, or `readerFrame.mobile` so phone readers get one calmer 1 to 3 minute path before the deep briefing.
+- Continue with Day 2 of the 2026-10-11 through 2026-11-09 plan: review homepage editor notes and move process-heavy boundary text out of the first scan path when a shorter trust cue can do the job.
 - Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 0.
-- If Day 1 is already complete, continue with Day 2: review homepage editor notes and move process-heavy boundary text out of the first scan path when a shorter trust cue can do the job.
+- If Day 2 is already complete, continue with Day 3: rebalance TOP3, deep briefing, continuity, and compact feed spacing so dense editions do not feel like one uninterrupted text wall.
 
 ## Update Rules
 
