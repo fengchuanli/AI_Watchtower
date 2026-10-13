@@ -3300,4 +3300,27 @@ Added grounded answer generation with Azure OpenAI gpt-5.4-mini: the model answe
 
 - 这次没有重新运行 `ingest_docs.py`：新闻会每天变化，评测题的标准答案绑定在当前这份知识库快照上
 
-（Azure 上的结果待重新上传后补充）
+### Azure 上的结果（2026-10-13，`rebuild_azure_index.sh` 一次跑完）
+
+| 指标 | Day 31 | Day 32 |
+|---|---|---|
+| 通过 | 22/25 | **23/25** |
+| MRR | 0.87 | **0.90** |
+| 引用了正确来源 | — | 18/20 |
+| 资料不足题正确拒答 | 5/5 | 5/5 |
+| 一次评测费用 | 约 9 日元 | 约 8.5 日元 |
+
+- 上次失败的 `news-format`、`en-fields`、`en-kimi` 三题全部通过：字段清单完整了，英文问题用英文回答了
+- chunk 文字变了（加了【标题 › 小节】），680 段重新算 embedding，约 0.5 日元；没变的 501 段直接用缓存
+- 新失败 2 题：`source-policy`、`en-source`（都是「怎么判断来源可信度」）
+  - 原因推测：`source-policy.md` 的「Priority」小节讲的是来源优先级（官方 > 研究 > 媒体 > 社区），但通篇没有 reliable / 可信度 这些词；
+    按标题切分后，`copyright-safety.md` 里专门讲 `sourceReliability` 字段的小节变成一个独立、主题集中的 chunk，相似度更高
+  - 中文题：模型引用了 copyright-safety.md，回答本身合理，但没提优先级，判为 FAIL
+  - 英文题：模型认为资料不足而拒答
+- 学到的：**切分方式改变会让别的题变好或变坏**，所以每次改都要跑完整评测，看总数而不是只看改过的题；
+  **文档是写给人看的，用户提问的词不一定出现在文档里**（词汇不匹配）
+
+### 后续可选
+
+- 在 `source-policy.md` 开头加一句用「可信度 / reliability」说明优先级的话，或把 copyright-safety.md 也列为这两题的可接受来源
+- 暂不处理，先进入 Phase 3（网页问答）
