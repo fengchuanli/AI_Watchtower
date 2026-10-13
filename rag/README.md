@@ -130,3 +130,16 @@ python3 -m unittest discover -s rag/tests
 - Azure OpenAI のネットワークは自宅の IP のみ許可しています。別のネットワークからは 403 になります。
 - Azure AI Search は Free 層（`srch-ai-watchtower-20260929`、50MB、index 3 個まで）。書き込みには管理者キーが必要です。
   vector は int8 圧縮・`stored=false` で容量を節約しています（`docs/azure/azure-search-schema.md` 参照）。index の作り直しは `delete-index --yes <index名>` → `create-index` → `upload`。
+
+## Ask API（Day 33〜）
+
+Web ページから質問を受け取る API です。処理本体は `scripts/ask_service.py`（Azure Functions とローカル共通）。
+
+```bash
+python3 rag/api/local_server.py      # .env を自動で読み込む → http://localhost:7071/ にテストページ
+curl -s localhost:7071/api/ask -H 'Content-Type: application/json' -d '{"question":"Kimi K3 权重发布有什么风险？"}'
+```
+
+- `POST /api/ask` `{"question": "..."}` → `{answerable, answer, citations[{id,title,source,heading,snippet,...}], usage, latency_ms}`
+- 質問は最大 300 文字。API キーやエラー詳細はレスポンスに出さない（サーバーログのみ）
+- `rag/api/function_app.py` は Azure Functions（Python v2）の入口。デプロイは Day 34

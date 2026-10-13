@@ -37,6 +37,9 @@ def build_citations(results: List[Tuple[float, Dict]], max_chars_per_chunk: int)
                 "title": chunk.get("title", ""),
                 "chunk_index": chunk.get("chunk_index", ""),
                 "text": trim_text(chunk.get("text", ""), max_chars_per_chunk),
+                "source_type": chunk.get("source_type", ""),
+                "heading": chunk.get("heading", ""),
+                "published_at": chunk.get("published_at"),
             }
         )
 

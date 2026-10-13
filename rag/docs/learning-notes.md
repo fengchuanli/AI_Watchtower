@@ -3324,3 +3324,21 @@ Added grounded answer generation with Azure OpenAI gpt-5.4-mini: the model answe
 
 - 在 `source-policy.md` 开头加一句用「可信度 / reliability」说明优先级的话，或把 copyright-safety.md 也列为这两题的可接受来源
 - 暂不处理，先进入 Phase 3（网页问答）
+
+## Day 33：把问答做成 API（/api/ask）
+
+### 做了什么
+
+- `rag/scripts/ask_service.py`：网页用的问答逻辑。收到 `{"question": ...}` → 检查 → 检索 → 生成 → 返回 JSON
+  - 不依赖任何 Web 框架，所以可以用假的检索器和模型做单元测试（新增 9 个，共 81 个）
+- `rag/api/function_app.py`：Azure Functions 的入口，只有几行，调用上面的 `handle_ask`
+- `rag/api/local_server.py`：不用装 Azure 工具就能在 Mac 上跑的本地服务器，带一个简单的测试网页
+
+### 设计要点（面试可以讲）
+
+- **密钥只在服务器端**：浏览器只调用 API，Azure 的 key 永远不会出现在网页里
+- **输入检查**：空问题、不是 JSON、超过 300 字 → 400，不调用 Azure，不花钱
+- **错误不泄露细节**：模型或检索出错 → 502 + 一句通用提示；具体原因只写进服务器日志
+- **只返回被引用的来源**，并保留原来的编号，答案里的 [2] 能对上第 2 条；只返回 160 字摘要，不把整段原文发给浏览器
+- **同一份逻辑两处使用**：本地服务器和 Azure Functions 都调用 `handle_ask`，本地能跑通，部署后也一样
+
