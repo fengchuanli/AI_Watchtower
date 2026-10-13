@@ -33,7 +33,7 @@
   - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: pending after final verification.
+- Commit: `b54eea1` (`【VisionHub网站风格优化】收紧手机今日简报路径`); status-log hash update pending after this line.
 - Push: held - local `main` already has two unrelated unpushed RAG commits (`a092a5f`, `a383fbc`) before this optimization pass, so pushing now would also publish work outside the scoped 20:00 optimization without explicit user approval.
 
 ## 2026-10-13 08:16 JST
