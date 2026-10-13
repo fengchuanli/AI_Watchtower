@@ -62,17 +62,34 @@ def parse_question(body: bytes) -> Tuple[Optional[str], Optional[str]]:
     return question, None
 
 
+SUMMARY_LABELS = ("摘要:", "摘要：", "Summary:")
+
+
+def make_snippet(text: str) -> str:
+    """News chunks start with metadata (标题/分类/发布时间…); show the summary part instead."""
+    text = " ".join(str(text).split())
+    for label in SUMMARY_LABELS:
+        if label in text:
+            text = text.split(label, 1)[1].strip()
+            break
+    return text[:SNIPPET_CHARS] + ("…" if len(text) > SNIPPET_CHARS else "")
+
+
 def public_citation(citation: Dict) -> Dict:
     """Only the fields the browser needs; full chunk text stays on the server."""
-    text = " ".join(str(citation.get("text", "")).split())
+    title = citation.get("title", "")
+    heading = citation.get("heading", "") or ""
+    # News chunks use the title as heading; showing it twice is noise.
+    if heading and (heading in title or title in heading):
+        heading = ""
     return {
         "id": int(citation["citation_id"]),
-        "title": citation.get("title", ""),
+        "title": title,
         "source": citation.get("source", ""),
         "source_type": citation.get("source_type", ""),
-        "heading": citation.get("heading", ""),
+        "heading": heading,
         "published_at": citation.get("published_at"),
-        "snippet": text[:SNIPPET_CHARS] + ("…" if len(text) > SNIPPET_CHARS else ""),
+        "snippet": make_snippet(citation.get("text", "")),
     }
 
 

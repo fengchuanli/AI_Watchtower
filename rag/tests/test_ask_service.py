@@ -61,6 +61,22 @@ class ParseQuestionTest(unittest.TestCase):
         self.assertEqual(question, "Kimi K3 风险？")
 
 
+class PublicCitationTest(unittest.TestCase):
+    def test_news_snippet_uses_summary_and_drops_duplicate_heading(self):
+        from ask_service import public_citation
+
+        c = public_citation({"citation_id": 3, "title": "最新新闻: X 发布", "heading": "最新新闻: X 发布",
+                             "text": "标题: X 发布 分类: 研究 发布时间: 2026 摘要: 这是摘要。"})
+        self.assertEqual(c["heading"], "")
+        self.assertEqual(c["snippet"], "这是摘要。")
+
+    def test_doc_heading_kept(self):
+        from ask_service import public_citation
+
+        c = public_citation({"citation_id": 1, "title": "Source Policy", "heading": "Priority", "text": "Official first."})
+        self.assertEqual(c["heading"], "Priority")
+
+
 class HandleAskTest(unittest.TestCase):
     def test_bad_request_does_not_call_backends(self):
         def boom():

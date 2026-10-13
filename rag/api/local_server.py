@@ -45,15 +45,15 @@ input{width:75%;padding:8px}button{padding:8px 14px}pre{white-space:pre-wrap;bac
 li{margin:6px 0}small{color:#666}</style>
 <h2>Ask Watchtower <small>(local test)</small></h2>
 <form id=f><input id=q placeholder="例：Kimi K3 权重发布有什么风险？" autofocus><button>Ask</button></form>
-<p id=s></p><pre id=a hidden></pre><ol id=c></ol>
+<p id=s></p><pre id=a hidden></pre><ul id=c style="list-style:none;padding:0"></ul>
 <script>
 f.onsubmit=async e=>{e.preventDefault();s.textContent='检索中…';a.hidden=true;c.innerHTML='';
  const r=await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q.value})});
  const d=await r.json(); if(!r.ok){s.textContent='错误 '+r.status+': '+d.error;return}
- s.textContent=(d.answerable?'':'【资料不足】 ')+d.latency_ms+' ms · tokens '+d.usage.prompt_tokens+'/'+d.usage.completion_tokens;
+ s.textContent=(d.answerable?'':'【资料不足】 ')+(d.latency_ms/1000).toFixed(1)+' 秒 · tokens '+d.usage.prompt_tokens+'/'+d.usage.completion_tokens;
  a.textContent=d.answer;a.hidden=false;
- for(const x of d.citations){const li=document.createElement('li');li.value=x.id;
-  li.innerHTML='<b></b><br><small></small>';li.querySelector('b').textContent=x.title+(x.heading?' › '+x.heading:'');
+ for(const x of d.citations){const li=document.createElement('li');
+  li.innerHTML='<b></b><br><small></small>';li.querySelector('b').textContent='['+x.id+'] '+x.title+(x.heading?' › '+x.heading:'');
   li.querySelector('small').textContent=x.source+' — '+x.snippet;c.appendChild(li)}}
 </script>"""
 
