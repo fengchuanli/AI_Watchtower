@@ -101,7 +101,8 @@ def main() -> None:
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     loaded = load_dotenv(REPO / ".env")
-    print(f"Loaded {loaded} variables from .env (values not printed)")
+    ready = [k for k in ("AZURE_OPENAI_API_KEY", "AZURE_SEARCH_API_KEY", "AZURE_OPENAI_CHAT_DEPLOYMENT") if os.getenv(k)]
+    print(f"Loaded {loaded} new variables from .env; required settings present: {len(ready)}/3 (values not printed)")
     print(f"Ask API: http://localhost:{args.port}/api/ask   Test page: http://localhost:{args.port}/")
     ThreadingHTTPServer(("127.0.0.1", args.port), Handler).serve_forever()
 
