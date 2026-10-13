@@ -1,3 +1,26 @@
+## 2026-10-14 08:14 JST
+
+- Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-14`，发布 10 条安全非重复信号，聚焦 Anthropic Agent 评测切网、OpenAI 隐藏录音设备案、OpenAI/Apple 商业秘密案取证、Gemini 4 Argon App/安全说明、Agent 权限控制、企业 Agent 责任缺口、IMF AI 宏观风险、AWS AgentCore payments 和 Arena 评测融资。
+- Changed files:
+  - `data/news.json`: 当前首页更新为 2026年10月14日17:00 JST 版 10 条情报，并保留原始来源 URL、来源角色、证据边界、下一步核查、来源族集中提醒和 TOP3 读者理由。
+  - `data/news-history.json`: 最新归档镜像同步当前首页版次；10月13日23点补充版保留为上一版，避免重复发布旧条目。
+  - `data/news-index.json`, `data/news-today.json`, `data/trends.json`: 重新生成派生索引、今日数据和趋势数据。
+- Source posture: 已拉取 `origin/main`；使用 `data/sources.json` 和 `docs/source-policy.md`；核对 Google Keyword AI、AWS Machine Learning Blog、Associated Press Technology、Axios AI / Technology 和 TechCrunch AI，并对当前版和历史版做 URL / 主题去重。Google / AWS 条目保持 `官方核对`，只确认发布、入口、安全说明和架构事实；AP / Axios / TechCrunch 条目保持 `媒体背景` / `reported` / `must-read`，完整事实、采访、引述、案卷、图表、数据、更新和上下文仍归原文或源文件。可靠媒体 7/10、官方来源 3/10，已在 `sourceRisk` / `sourceConcentration` / `overreadBoundary` 中标明媒体雷达边界。
+- Archive mirror: done - newest `data/news-history.json` edition mirrors current `data/news.json`; regenerated `data/news-index.json`, `data/news-today.json`, and `data/trends.json`; total history items is now 1224.
+- 网站可见变化: 首页 TOP3 / 更多新闻 feed、全部新闻列表、归档页、today index、趋势数据和详情页同步显示 2026年10月14日17:00 版 10 条情报；读者可在首页与详情页看到 Agent 评测切网、OpenAI 内控与诉讼取证、Gemini 4 Argon、Agent 控制、IMF AI 宏观风险、Agent 支付运行时和 Arena 评测资本信号。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node scripts/build-derived-data.mjs`.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 127 sources.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Ran `node --check` for `app.js`, `all-news.js`, `archive.js`, `news-detail.js`, `tags.js`, `nav.js`, `scripts/validate-data.mjs`, `scripts/validate-site.mjs`, `scripts/validate-pages.mjs`, and `scripts/build-derived-data.mjs`.
+  - Parsed `data/sources.json`, `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, and `data/trends.json` with `JSON.parse`.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit note: `【新闻更新】发布17点AI新闻：10条Agent控制与模型安全信号`.
+
 ## 2026-10-13 23:13 JST
 
 - Focus: 执行 AI Watchtower 23:00 JST 同日补充新闻情报更新；当前首页推进为 `news-2300-2026-10-13`，发布 5 条安全非重复补充信号，聚焦 American Express Agent 支付授权、Character.AI Chapter 11、AI 数据中心公共土地、TypeSafe 非文本模型融资和 Blueprints AI 建筑蓝图工作流。少于 10 条是质量门槛结果：未用旧稿、播客正文、付费墙、登录墙、社区讨论、重复来源、弱证据或常规营销补数量。
