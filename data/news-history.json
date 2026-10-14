@@ -1,8 +1,865 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14",
-  "totalItems": 1232,
+  "updatedAt": "2026-10-15",
+  "totalItems": 1242,
   "editions": [
+    {
+      "id": "news-1700-2026-10-15",
+      "date": "2026-10-15",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00 JST版",
+      "itemCount": 10,
+      "note": "十条信号：文档与科学Agent、反诈、音乐披露及云端运行",
+      "operationalStatus": "已拉取origin/main；实际采集于08点JST，按任务生成17点版。未发现同日晨版，以昨日23点版去重；含3条10月13日工程补录。",
+      "editorialInterpretation": "本期发布10条安全非重复信号。官方公告偏多，确认发布与方法，不将厂商测量、媒体报道或计划写成已验证效果。",
+      "readerFrame": {
+        "headline": "把本期当作生成结果与工作流验收的核查表",
+        "whyItMatters": "从文档审查、地理空间和气候模拟，到反诈、音乐披露和云端运行，本期关注谁来核验结果。",
+        "useThisIssueFor": [
+          "研发团队更新Agent与科学模型验收清单。",
+          "内容团队检查音乐标签、过滤和申诉。",
+          "平台团队核对授权账单和性能回归。"
+        ],
+        "notProvenYet": [
+          "不证明自动审查或反诈模型可以替代人工责任。",
+          "不证明标签、过滤和推理优化已经带来普遍收益。"
+        ],
+        "mobile": {
+          "headline": "先查结果怎么验收",
+          "summary": "十条信号聚焦检查、权限和证据；含近两日工程补录。",
+          "primaryUses": [
+            "研发团队查复现",
+            "内容团队查申诉",
+            "平台团队查账单"
+          ],
+          "proofBoundary": "需要独立测试、客户日志和公开规则，不能只看厂商示范。"
+        }
+      },
+      "changeSummary": {
+        "headline": "相较昨日23点版，转向可验证的垂直工作流",
+        "freshFacts": [
+          "新增文档审查、地理空间实验访问、端侧反诈和气候模型发布。",
+          "新增音乐披露与过滤线索，补录近两日AWS授权、模型入口和内核工程更新。"
+        ],
+        "repeatedContext": [
+          "作为重复背景：昨日已记录Run:ai开源、Argon API、区域治理和资本风险，本期不重复发布。",
+          "作为重复背景：上一版AgentCore支付与模型安全控制仍可参考，不作为本期新事实。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对Agent与科学工具",
+          "count": 6,
+          "meaning": "用来更新文档、地理空间、反诈、气候模拟和模型验收清单。"
+        },
+        {
+          "label": "核对音乐披露",
+          "count": 2,
+          "meaning": "用来检查音乐平台标签、过滤与申诉规则。"
+        },
+        {
+          "label": "复查云端运行",
+          "count": 2,
+          "meaning": "用来核对授权账单和推理优化回归清单。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方公告为主",
+        "note": "官方来源8/10，集中于发布方视角；2条媒体仅作线索。",
+        "nextCheck": "核对论文、政府文件、平台规则和客户审计。"
+      },
+      "sourceConcentration": {
+        "sourceId": "aws-machine-learning-blog",
+        "sourceName": "AWS Machine Learning Blog",
+        "count": 3,
+        "share": "3/10",
+        "note": "AWS单一标签3/10；Google跨标签合计4/10。",
+        "nextCheck": "补查独立专家、GovTech、客户日志及第三方复现。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期提供工作流验收入口，来源对发布与方案的证明强于对实际收益的证明。",
+        "doNotConclude": "不能据此认为Agent已可靠自治、AI音乐检测无误或云端优化必然省钱。",
+        "useInstead": "应该把这些信号用于更新复测、数据审计、内容申诉和账单核对清单。"
+      },
+      "trendNotes": [
+        {
+          "topic": "验证工作流",
+          "label": "从生成转向检查",
+          "note": "跨期看，昨日Agent控制与今天文档审查、空间推理相接，责任问题从权限扩展到结果验收。",
+          "boundary": "仍需独立复现与客户日志，不证明错误率已下降。"
+        },
+        {
+          "topic": "运行治理",
+          "label": "把规则落实到界面与账单",
+          "note": "跨期看，昨日平台入口与今天音乐标识、授权管理相接，规则需要变成可见操作和可核对记录。",
+          "boundary": "不能用宣布推出替代第三方客户端测试、申诉记录和实际账单数据。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "验收问题增强",
+          "status": "stronger",
+          "previousPattern": "此前归档已记录Agent安全控制与平台入口。",
+          "currentSignal": "本期增加文档、地理空间、端侧反诈与科学模拟的验收问题。",
+          "signalDirection": "增强：观察点从工具权限扩展到领域数据与独立复现。",
+          "stillUnproven": "仍需专家盲测、第三方审计和客户日志。"
+        },
+        {
+          "topic": "infrastructure",
+          "label": "运行验收增强",
+          "status": "stronger",
+          "previousPattern": "此前归档记录GPU编排开源与模型API入口。",
+          "currentSignal": "本期补录授权自动化和MoE内核工程材料。",
+          "signalDirection": "增强：从入口可用推进到费用生效和性能验收。",
+          "stillUnproven": "仍需实际账单数据、版本记录和第三方复测。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Google",
+          "label": "领域入口增强",
+          "lastMention": "此前归档：昨日已记录Gemini App与Argon企业API。",
+          "whatChanged": "新增文档审查、地理空间实验访问、端侧反诈和音乐标签。",
+          "stillUnproven": "仍需GovTech文件、伙伴评估与独立准确性测试。"
+        },
+        {
+          "company": "AWS",
+          "label": "工程核查补充",
+          "lastMention": "此前归档：昨日已记录AgentCore支付示范。",
+          "whatChanged": "补入10月13日授权、Grok入口和MoE工程指南，属于新增收录而非当日发布。",
+          "stillUnproven": "仍需账单、客户任务日志和相同硬件复现。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 8,
+          "role": "用于核对公告、入口和方法；其中作者测量不等于独立效果证据。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "用于发现反诈和音乐过滤线索，完整事实与上下文回原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "检查Agent与科学工具",
+          "count": 6,
+          "itemIds": [
+            "apate-fraud-intelligence-2026-10-15",
+            "google-deep-review-public-2026-10-15",
+            "google-earth-geospatial-agents-2026-10-15",
+            "deepmind-govtech-device-scam-2026-10-15",
+            "ai2-hiro-acev2-2026-10-15",
+            "aws-grok47-agent-effort-2026-10-15"
+          ],
+          "meaning": "用来更新文档、地理空间、反诈、气候模拟和模型验收清单。"
+        },
+        {
+          "id": "policy",
+          "label": "核对音乐披露",
+          "count": 2,
+          "itemIds": [
+            "deezer-ai-filter-2026-10-15",
+            "youtube-music-ai-labels-2026-10-15"
+          ],
+          "meaning": "用来检查音乐平台标签、过滤与申诉规则。"
+        },
+        {
+          "id": "infrastructure",
+          "label": "复查云端运行",
+          "count": 2,
+          "itemIds": [
+            "aws-bedrock-managed-entitlements-2026-10-15",
+            "aws-moe-kernel-engineering-2026-10-15"
+          ],
+          "meaning": "用来核对授权账单和推理优化回归清单。"
+        }
+      ],
+      "updatedAt": "2026-10-15",
+      "items": [
+        {
+          "id": "apate-fraud-intelligence-2026-10-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "Apate反诈Agent：主动采集线索之后，仍要验证拦截效果",
+          "body": "TechCrunch报道Apate用AI Agent与骗子交谈以收集反诈线索。",
+          "summary": "TechCrunch报道Apate用AI Agent与骗子交谈以收集反诈线索。",
+          "detailBody": "TechCrunch报道Apate用AI Agent与骗子交谈以收集反诈线索。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "trend": "主动交互得到的情报必须能追溯来源，才能进入封禁或账户风险判断。",
+          "detailTrend": "主动交互得到的情报必须能追溯来源，才能进入封禁或账户风险判断。\n本站判断：反诈系统的价值从收到举报后处置，延伸到事前线索采集；但情报数量与实际阻止损失是两个指标，不能直接互换。",
+          "whyItMatters": "主动交互得到的情报必须能追溯来源，才能进入封禁或账户风险判断。",
+          "whyRanked": "它为银行和电信安全团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合银行和电信安全团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对客户银行或电信运营商的拦截日志、误报数据与独立审计报告。",
+          "topReason": "主动交互得到的情报必须能追溯来源，才能进入封禁或账户风险判断。",
+          "impact": "银行和电信安全团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "银行和电信安全团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "银行和电信安全团队可用此条更新验收清单；核对客户银行或电信运营商的拦截日志、误报数据与独立审计报告。",
+          "nextCheck": "核对客户银行或电信运营商的拦截日志、误报数据与独立审计报告。",
+          "followUpQuestions": [
+            "客户银行的拦截日志是否说明了线索转化率与误报处理？",
+            "电信运营商审计报告能否区分Agent贡献与同期其他反诈措施？"
+          ],
+          "evidenceThreshold": "需要客户银行或电信运营商的拦截日志、误报数据与独立审计报告及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "不能把主动采集线索等同于已经减少受害损失；效果和因果关系仍需客户侧证据。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "counterEvidence": "如果客户审计记录显示误报增加或线索无法转化为有效拦截，应下调效果判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+          "originalUrl": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI原文支持的事实：TechCrunch报道Apate用AI Agent与骗子交谈以收集反诈线索。 核验边界：不能把主动采集线索等同于已经减少受害损失；效果和因果关系仍需客户侧证据。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15T03:00:00+09:00",
+          "time": "10月15日 03:00 JST",
+          "tags": [
+            "反诈",
+            "Agent",
+            "安全"
+          ],
+          "companies": [
+            "Apate"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "deezer-ai-filter-2026-10-15",
+          "category": "product",
+          "label": "产品",
+          "title": "Deezer过滤计划：用户选择权需要误判申诉配套",
+          "body": "TechCrunch报道Deezer计划提供AI音乐过滤开关。",
+          "summary": "TechCrunch报道Deezer计划提供AI音乐过滤开关。",
+          "detailBody": "TechCrunch报道Deezer计划提供AI音乐过滤开关。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "trend": "过滤功能会影响内容可见性，检测误判与创作者申诉需要一起设计。",
+          "detailTrend": "过滤功能会影响内容可见性，检测误判与创作者申诉需要一起设计。\n本站判断：内容治理开始提供更细的用户偏好控制；一旦选择影响作品分发，检测错误的成本会转移到创作者与申诉系统。",
+          "whyItMatters": "过滤功能会影响内容可见性，检测误判与创作者申诉需要一起设计。",
+          "whyRanked": "它为音乐平台产品和版权团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合音乐平台产品和版权团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对Deezer正式发布说明、客户端实测、创作者申诉规则和第三方误报测试。",
+          "topReason": "过滤功能会影响内容可见性，检测误判与创作者申诉需要一起设计。",
+          "impact": "音乐平台产品和版权团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "音乐平台产品和版权团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "音乐平台产品和版权团队可用此条更新验收清单；核对Deezer正式发布说明、客户端实测、创作者申诉规则和第三方误报测试。",
+          "nextCheck": "核对Deezer正式发布说明、客户端实测、创作者申诉规则和第三方误报测试。",
+          "followUpQuestions": [
+            "正式发布说明是否明确了过滤开关的可用地区与客户端版本？",
+            "创作者申诉记录是否说明误标后如何恢复内容可见性？"
+          ],
+          "evidenceThreshold": "需要Deezer正式发布说明、客户端实测、创作者申诉规则和第三方误报测试及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "计划不等于已经上线；检测标签也不等于作品权属或创作方式的最终裁定。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "counterEvidence": "如果客户端未上线或第三方复测发现大量误判，应下调可用性判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+          "originalUrl": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI原文支持的事实：TechCrunch报道Deezer计划提供AI音乐过滤开关。 核验边界：计划不等于已经上线；检测标签也不等于作品权属或创作方式的最终裁定。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。 该报道或公告用于核对内容治理变化。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15T00:16:00+09:00",
+          "time": "10月15日 00:16 JST",
+          "tags": [
+            "AI音乐",
+            "内容治理",
+            "用户控制"
+          ],
+          "companies": [
+            "Deezer"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "ai2-hiro-acev2-2026-10-15",
+          "category": "research",
+          "label": "研究",
+          "title": "Ai2发布HiRO-ACEv2，高分辨率气候模拟仍受训练气候限制",
+          "body": "Ai2在Hugging Face介绍HiRO-ACEv2，提供模型与教程，将气候模拟输出细化至3公里。",
+          "summary": "Ai2在Hugging Face介绍HiRO-ACEv2，提供模型与教程，将气候模拟输出细化至3公里。",
+          "detailBody": "Ai2在Hugging Face介绍HiRO-ACEv2，提供模型与教程，将气候模拟输出细化至3公里。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "更细输出能帮助检查局地极端事件，但模型对训练模拟器的依赖需要先量化。",
+          "detailTrend": "更细输出能帮助检查局地极端事件，但模型对训练模拟器的依赖需要先量化。\n本站判断：科学AI正在让高分辨率模拟更易获得；分辨率变细与物理可信度提升并不等价，训练模拟器的偏差可能一起被放大。",
+          "whyItMatters": "更细输出能帮助检查局地极端事件，但模型对训练模拟器的依赖需要先量化。",
+          "whyRanked": "它为气候研究和风险建模团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合气候研究和风险建模团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对论文、模型卡、教程复现以及独立气候研究团队对不同气候分布的评估。",
+          "topReason": "更细输出能帮助检查局地极端事件，但模型对训练模拟器的依赖需要先量化。",
+          "impact": "气候研究和风险建模团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "气候研究和风险建模团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "气候研究和风险建模团队可用此条更新验收清单；核对论文、模型卡、教程复现以及独立气候研究团队对不同气候分布的评估。",
+          "nextCheck": "核对论文、模型卡、教程复现以及独立气候研究团队对不同气候分布的评估。",
+          "followUpQuestions": [
+            "论文与复现报告是否区分同分布极端事件和气候分布迁移？",
+            "模型卡是否明确不适用的未来气候情景及其数据限制？"
+          ],
+          "evidenceThreshold": "需要论文、模型卡、教程复现以及独立气候研究团队对不同气候分布的评估及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "作者报告的成本和精度不是独立验证；当前不能外推到任意未来变暖情景。",
+          "counterEvidence": "如果独立复现数据显示极端事件统计偏差或跨气候失效，应下调应用范围判断。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/allenai/hiro-acev2",
+          "originalUrl": "https://huggingface.co/blog/allenai/hiro-acev2",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog原文支持的事实：Ai2在Hugging Face介绍HiRO-ACEv2，提供模型与教程，将气候模拟输出细化至3公里。 核验边界：这是发布方主张，作者报告的成本和精度不是独立验证；当前不能外推到任意未来变暖情景。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-14",
+          "time": "10月14日（来源仅标日期）",
+          "tags": [
+            "气候模拟",
+            "开源模型",
+            "科学AI"
+          ],
+          "companies": [
+            "Ai2"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "deepmind-govtech-device-scam-2026-10-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "DeepMind与GovTech公布端侧反诈模型，隐私与误报要一起核对",
+          "body": "DeepMind公布与新加坡GovTech合作的端侧诈骗识别模型，使用本地诈骗对话微调Gemma。",
+          "summary": "DeepMind公布与新加坡GovTech合作的端侧诈骗识别模型，使用本地诈骗对话微调Gemma。",
+          "detailBody": "DeepMind公布与新加坡GovTech合作的端侧诈骗识别模型，使用本地诈骗对话微调Gemma。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "把检测放在设备上可改变数据处理路径，但仍需测量权限、耗电和误报。",
+          "detailTrend": "把检测放在设备上可改变数据处理路径，但仍需测量权限、耗电和误报。\n本站判断：端侧检测让安全能力靠近通信发生处；本地化模型与本地处理属于不同层面的设计，二者都不能单独保证识别可靠。",
+          "whyItMatters": "把检测放在设备上可改变数据处理路径，但仍需测量权限、耗电和误报。",
+          "whyRanked": "它为移动端安全和隐私团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合移动端安全和隐私团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对GovTech技术文件、第三方手机耗电测试及本地语言误报审计。",
+          "topReason": "把检测放在设备上可改变数据处理路径，但仍需测量权限、耗电和误报。",
+          "impact": "移动端安全和隐私团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "移动端安全和隐私团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "移动端安全和隐私团队可用此条更新验收清单；核对GovTech技术文件、第三方手机耗电测试及本地语言误报审计。",
+          "nextCheck": "核对GovTech技术文件、第三方手机耗电测试及本地语言误报审计。",
+          "followUpQuestions": [
+            "GovTech技术文件是否明确支持的设备和语言范围？",
+            "第三方手机复测是否同时报告耗电、误报与网络数据流向？"
+          ],
+          "evidenceThreshold": "需要GovTech技术文件、第三方手机耗电测试及本地语言误报审计及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "官方公告确认合作和技术路线；隐私效果、检测覆盖和商用部署范围仍未独立核实。",
+          "counterEvidence": "如果设备审计发现额外数据外传或本地语言测试误报偏高，应下调保护效果判断。",
+          "source": "Google DeepMind Blog",
+          "sourceName": "Google DeepMind Blog",
+          "sourceId": "google-deepmind-blog",
+          "sourceUrl": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+          "originalUrl": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Google DeepMind Blog原文支持的事实：DeepMind公布与新加坡GovTech合作的端侧诈骗识别模型，使用本地诈骗对话微调Gemma。 核验边界：官方公告确认合作和技术路线；隐私效果、检测覆盖和商用部署范围仍未独立核实。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-14",
+          "time": "10月14日（来源仅标日期）",
+          "tags": [
+            "端侧AI",
+            "反诈",
+            "隐私"
+          ],
+          "companies": [
+            "Google",
+            "GovTech Singapore"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "google-earth-geospatial-agents-2026-10-15",
+          "category": "research",
+          "label": "研究",
+          "title": "Earth AI扩展实验访问，地理空间Agent强调规划和数据出处",
+          "body": "Google发布地理空间推理技术报告，并扩大Ask Google Earth与A2A接口的实验访问。",
+          "summary": "Google发布地理空间推理技术报告，并扩大Ask Google Earth与A2A接口的实验访问。",
+          "detailBody": "Google发布地理空间推理技术报告，并扩大Ask Google Earth与A2A接口的实验访问。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "空间分析需要记录坐标、覆盖范围和替代数据选择，答案流畅并不能证明地图计算正确。",
+          "detailTrend": "空间分析需要记录坐标、覆盖范围和替代数据选择，答案流畅并不能证明地图计算正确。\n本站判断：地理空间Agent连接领域模型后，关键变化是分析过程开始成为可检查对象；坐标体系、数据年代与缺失覆盖会影响答案含义。",
+          "whyItMatters": "空间分析需要记录坐标、覆盖范围和替代数据选择，答案流畅并不能证明地图计算正确。",
+          "whyRanked": "它为地理信息和公共服务研发团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合地理信息和公共服务研发团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对技术报告、基准数据、伙伴机构独立评估和跨区域复现实验。",
+          "topReason": "空间分析需要记录坐标、覆盖范围和替代数据选择，答案流畅并不能证明地图计算正确。",
+          "impact": "地理信息和公共服务研发团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "地理信息和公共服务研发团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "地理信息和公共服务研发团队可用此条更新验收清单；核对技术报告、基准数据、伙伴机构独立评估和跨区域复现实验。",
+          "nextCheck": "核对技术报告、基准数据、伙伴机构独立评估和跨区域复现实验。",
+          "followUpQuestions": [
+            "技术报告的基准数据是否覆盖训练地区之外的地理条件？",
+            "伙伴机构的独立评估是否提供失败案例和数据归因记录？"
+          ],
+          "evidenceThreshold": "需要技术报告、基准数据、伙伴机构独立评估和跨区域复现实验及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "实验访问不等于通用可用；伙伴测试与厂商基准不证明任意地区均可靠。",
+          "counterEvidence": "如果跨区域复现或伙伴审计记录显示数据缺口导致结论失真，应下调泛化判断。",
+          "source": "Google Research Blog",
+          "sourceName": "Google Research Blog",
+          "sourceId": "google-research-blog",
+          "sourceUrl": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/",
+          "originalUrl": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Google Research Blog原文支持的事实：Google发布地理空间推理技术报告，并扩大Ask Google Earth与A2A接口的实验访问。 核验边界：实验访问不等于通用可用；伙伴测试与厂商基准不证明任意地区均可靠。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-14",
+          "time": "10月14日（来源仅标日期）",
+          "tags": [
+            "地理空间",
+            "Agent",
+            "数据溯源"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "google-deep-review-public-2026-10-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "Google公开Deep Review，让技术文档进入Agent审查流程",
+          "body": "Google Research宣布公开Deep Review，初期支持PDF和纯文本技术文档审查。",
+          "summary": "Google Research宣布公开Deep Review，初期支持PDF和纯文本技术文档审查。",
+          "detailBody": "Google Research宣布公开Deep Review，初期支持PDF和纯文本技术文档审查。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "生成内容更快后，审查能力成为瓶颈；自动反馈必须能被人工逐项复核。",
+          "detailTrend": "生成内容更快后，审查能力成为瓶颈；自动反馈必须能被人工逐项复核。\n本站判断：自动文档审查把AI从写作辅助推向质量控制环节；问题在于审查报告本身也可能有错，审查权不能直接等同于决定权。",
+          "whyItMatters": "生成内容更快后，审查能力成为瓶颈；自动反馈必须能被人工逐项复核。",
+          "whyRanked": "它为研发和学术审稿团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合研发和学术审稿团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对论文、会议方试点回顾及独立专家盲测，检查错误发现率、误报和保密条款。",
+          "topReason": "生成内容更快后，审查能力成为瓶颈；自动反馈必须能被人工逐项复核。",
+          "impact": "研发和学术审稿团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "研发和学术审稿团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "研发和学术审稿团队可用此条更新验收清单；核对论文、会议方试点回顾及独立专家盲测，检查错误发现率、误报和保密条款。",
+          "nextCheck": "核对论文、会议方试点回顾及独立专家盲测，检查错误发现率、误报和保密条款。",
+          "followUpQuestions": [
+            "会议方试点报告是否区分作者自评与专家盲测结果？",
+            "独立复测是否记录错误发现率和虚构问题的比例？"
+          ],
+          "evidenceThreshold": "需要论文、会议方试点回顾及独立专家盲测，检查错误发现率、误报和保密条款及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "官方页面确认公开入口与功能范围，不证明审查意见正确，更不替代专家审稿。",
+          "counterEvidence": "如果专家盲测数据发现虚构问题或遗漏关键错误，应下调自动审查的可信度。",
+          "source": "Google Research Blog",
+          "sourceName": "Google Research Blog",
+          "sourceId": "google-research-blog",
+          "sourceUrl": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+          "originalUrl": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Google Research Blog原文支持的事实：Google Research宣布公开Deep Review，初期支持PDF和纯文本技术文档审查。 核验边界：官方页面确认公开入口与功能范围，不证明审查意见正确，更不替代专家审稿。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-14",
+          "time": "10月14日（来源仅标日期）",
+          "tags": [
+            "文档审查",
+            "Agent",
+            "评测"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "youtube-music-ai-labels-2026-10-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "YouTube Music推出AI音乐标签，透明披露还需申诉机制",
+          "body": "YouTube宣布在Music播放器推出AI音乐标签，并计划扩展到主应用。",
+          "summary": "YouTube宣布在Music播放器推出AI音乐标签，并计划扩展到主应用。",
+          "detailBody": "YouTube宣布在Music播放器推出AI音乐标签，并计划扩展到主应用。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "可见标签帮助用户形成判断，但披露规则与版权判断必须分开，不能把标签当侵权证明。",
+          "detailTrend": "可见标签帮助用户形成判断，但披露规则与版权判断必须分开，不能把标签当侵权证明。\n本站判断：音乐平台开始把AI参与方式放进用户可见界面；披露可能帮助选择，但标签的可信度取决于清楚的定义和纠错机制。",
+          "whyItMatters": "可见标签帮助用户形成判断，但披露规则与版权判断必须分开，不能把标签当侵权证明。",
+          "whyRanked": "它为音乐平台运营和版权团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合音乐平台运营和版权团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对YouTube帮助中心披露标准、创作者申诉流程与第三方标签准确性测试。",
+          "topReason": "可见标签帮助用户形成判断，但披露规则与版权判断必须分开，不能把标签当侵权证明。",
+          "impact": "音乐平台运营和版权团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "音乐平台运营和版权团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "音乐平台运营和版权团队可用此条更新验收清单；核对YouTube帮助中心披露标准、创作者申诉流程与第三方标签准确性测试。",
+          "nextCheck": "核对YouTube帮助中心披露标准、创作者申诉流程与第三方标签准确性测试。",
+          "followUpQuestions": [
+            "帮助中心文件是否区分部分生成与完全生成的披露标准？",
+            "第三方抽样记录是否量化漏标与误标，申诉规则是否可操作？"
+          ],
+          "evidenceThreshold": "需要YouTube帮助中心披露标准、创作者申诉流程与第三方标签准确性测试及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "公告确认标签推出，不证明检测能覆盖全部AI音乐或准确判定版权归属。",
+          "counterEvidence": "如果第三方抽样数据显示漏标或创作者申诉长期无反馈，应下调透明度改善判断。",
+          "source": "YouTube Official Blog",
+          "sourceName": "YouTube Official Blog",
+          "sourceId": "youtube-official-blog",
+          "sourceUrl": "https://blog.youtube/news-and-events/youtube-music-ai-labels/",
+          "originalUrl": "https://blog.youtube/news-and-events/youtube-music-ai-labels/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "YouTube Official Blog原文支持的事实：YouTube宣布在Music播放器推出AI音乐标签，并计划扩展到主应用。 核验边界：公告确认标签推出，不证明检测能覆盖全部AI音乐或准确判定版权归属。 该报道或公告用于核对内容治理变化。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-14",
+          "time": "10月14日（来源仅标日期）",
+          "tags": [
+            "AI音乐",
+            "内容标签",
+            "透明度"
+          ],
+          "companies": [
+            "Google",
+            "YouTube"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "aws-moe-kernel-engineering-2026-10-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS复盘MoE内核优化，把吞吐与首字延迟落实到版本条件",
+          "body": "AWS介绍SageMaker AI中MoE内核优化，涉及后端路由及减少Triton重复编译。",
+          "summary": "AWS介绍SageMaker AI中MoE内核优化，涉及后端路由及减少Triton重复编译。",
+          "detailBody": "AWS介绍SageMaker AI中MoE内核优化，涉及后端路由及减少Triton重复编译。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "性能改进可能取决于硬件、批量与量化配置；升级前需要固定工作负载做回归。",
+          "detailTrend": "性能改进可能取决于硬件、批量与量化配置；升级前需要固定工作负载做回归。\n本站判断：推理效率的改进越来越依赖软件栈细节；同样硬件上的后端选择和编译行为，会改变吞吐与交互等待时间之间的关系。",
+          "whyItMatters": "性能改进可能取决于硬件、批量与量化配置；升级前需要固定工作负载做回归。",
+          "whyRanked": "它为推理基础设施和性能工程团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合推理基础设施和性能工程团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对vLLM上游提交、容器版本及独立H200负载复测，记录吞吐和尾延迟。",
+          "topReason": "性能改进可能取决于硬件、批量与量化配置；升级前需要固定工作负载做回归。",
+          "impact": "推理基础设施和性能工程团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "推理基础设施和性能工程团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "推理基础设施和性能工程团队可用此条更新验收清单；核对vLLM上游提交、容器版本及独立H200负载复测，记录吞吐和尾延迟。",
+          "nextCheck": "核对vLLM上游提交、容器版本及独立H200负载复测，记录吞吐和尾延迟。",
+          "followUpQuestions": [
+            "上游提交和容器版本记录是否能定位具体优化的生效范围？",
+            "同硬件第三方复测是否同时覆盖吞吐、尾延迟和精度？"
+          ],
+          "evidenceThreshold": "需要vLLM上游提交、容器版本及独立H200负载复测，记录吞吐和尾延迟及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "厂商测量只覆盖其报告配置，不证明其他GPU或混合负载获得同样收益。",
+          "counterEvidence": "如果独立回归记录出现尾延迟恶化或精度下降，应下调升级收益判断。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/mixture-of-experts-kernel-engineering-on-amazon-sagemaker-ai/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/mixture-of-experts-kernel-engineering-on-amazon-sagemaker-ai/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "recommended",
+          "provenance": "AWS Machine Learning Blog原文支持的事实：AWS介绍SageMaker AI中MoE内核优化，涉及后端路由及减少Triton重复编译。 核验边界：这是发布方主张，厂商测量只覆盖其报告配置，不证明其他GPU或混合负载获得同样收益。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-13",
+          "time": "10月13日（来源仅标日期）",
+          "tags": [
+            "MoE",
+            "推理优化",
+            "vLLM"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "aws-bedrock-managed-entitlements-2026-10-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS提供Bedrock授权自动化示例，协议折扣要落实到账单",
+          "body": "AWS发布Bedrock私有报价授权管理指南，展示一次性脚本和事件驱动CDK方案。",
+          "summary": "AWS发布Bedrock私有报价授权管理指南，展示一次性脚本和事件驱动CDK方案。",
+          "detailBody": "AWS发布Bedrock私有报价授权管理指南，展示一次性脚本和事件驱动CDK方案。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "签订私有报价与各账户实际生效是不同环节，需要把授权状态和账单核对接起来。",
+          "detailTrend": "本站判断：企业模型采购正在与授权生命周期绑定，商业协议、组织账户和计费系统之间的衔接决定了谈判成果能否成为真实节省。此前关注模型调用是否成功，现在还需要理解访问许可与价格生效为何是不同状态，避免把已签约误当作所有账户已经享受同一费率。",
+          "whyItMatters": "签订私有报价与各账户实际生效是不同环节，需要把授权状态和账单核对接起来。",
+          "whyRanked": "它为云平台和采购运营团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合云平台和采购运营团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对示例仓库、License Manager授权日志、卖方白名单和客户实际账单。",
+          "topReason": "签订私有报价与各账户实际生效是不同环节，需要把授权状态和账单核对接起来。",
+          "impact": "云平台和采购运营团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "云平台和采购运营团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "云平台和采购运营团队可用此条更新验收清单；核对示例仓库、License Manager授权日志、卖方白名单和客户实际账单。",
+          "nextCheck": "核对示例仓库、License Manager授权日志、卖方白名单和客户实际账单。",
+          "followUpQuestions": [
+            "授权日志是否表明分发范围与合同约定账户完全一致？",
+            "客户账单数据是否显示实际生效费率及生效时间？"
+          ],
+          "evidenceThreshold": "需要示例仓库、License Manager授权日志、卖方白名单和客户实际账单及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "官方教程确认实施路径，不证明所有组织已经获得折扣，也不保证示例适用每种合同。",
+          "counterEvidence": "如果账单数据未体现约定费率或审计发现授权范围过宽，应下调自动化就绪判断。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/manage-private-pricing-offers-for-amazon-bedrock-with-managed-entitlements/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/manage-private-pricing-offers-for-amazon-bedrock-with-managed-entitlements/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "AWS Machine Learning Blog原文支持的事实：AWS发布Bedrock私有报价授权管理指南，展示一次性脚本和事件驱动CDK方案。 核验边界：官方教程确认实施路径，不证明所有组织已经获得折扣，也不保证示例适用每种合同。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-13",
+          "time": "10月13日（来源仅标日期）",
+          "tags": [
+            "Bedrock",
+            "权限",
+            "成本治理"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        },
+        {
+          "id": "aws-grok47-agent-effort-2026-10-15",
+          "category": "model",
+          "label": "模型",
+          "title": "Grok 4.7进入Bedrock：长任务配置要用完成成本验收",
+          "body": "AWS介绍Bedrock上的Grok 4.7，并示范按推理强度评估工具调用任务。",
+          "summary": "AWS介绍Bedrock上的Grok 4.7，并示范按推理强度评估工具调用任务。",
+          "detailBody": "AWS介绍Bedrock上的Grok 4.7，并示范按推理强度评估工具调用任务。\n本站阅读提示：应先区分来源宣布的范围与实际可用结果，再根据自己的工作负载核对。发布事实与效果判断分开；性能、采用和安全收益需要外部验证。",
+          "trend": "增加推理预算不一定改善业务收益，应同时核对正确率、空响应和完成任务的总成本。",
+          "detailTrend": "增加推理预算不一定改善业务收益，应同时核对正确率、空响应和完成任务的总成本。\n本站判断：长任务模型让推理预算成为运行参数；验收单位应从单次调用转向完整任务，因为重试和失败恢复也占用成本。",
+          "whyItMatters": "增加推理预算不一定改善业务收益，应同时核对正确率、空响应和完成任务的总成本。",
+          "whyRanked": "它为Agent平台和模型评测团队提供一个可操作的核查入口。",
+          "detailWhyRanked": "这条信号适合Agent平台和模型评测团队更新检查清单，因为它对应具体工作流中的验收问题。来源确认的是公告或报道层面，效果仍需外部材料。核对Bedrock模型卡、区域与价格文档，以及客户任务集上的第三方复测日志。",
+          "topReason": "增加推理预算不一定改善业务收益，应同时核对正确率、空响应和完成任务的总成本。",
+          "impact": "Agent平台和模型评测团队应评估对现有审批、测试与验收流程的影响，先做小范围核对。",
+          "whoShouldCare": "Agent平台和模型评测团队，尤其是负责新工具接入、验收流程和上线风险评估的业务负责人。",
+          "readerUse": "Agent平台和模型评测团队可用此条更新验收清单；核对Bedrock模型卡、区域与价格文档，以及客户任务集上的第三方复测日志。",
+          "nextCheck": "核对Bedrock模型卡、区域与价格文档，以及客户任务集上的第三方复测日志。",
+          "followUpQuestions": [
+            "客户任务集复测是否统计重试后的完整任务成本？",
+            "模型卡与区域文档是否明确跨区域路由的数据驻留边界？"
+          ],
+          "evidenceThreshold": "需要Bedrock模型卡、区域与价格文档，以及客户任务集上的第三方复测日志及复测报告，才能升级为可验证的应用效果判断。",
+          "claimBoundary": "官方入口和教程不能证明长任务普遍可靠；少量合成任务结果不代表生产成功率。",
+          "counterEvidence": "如果真实任务日志显示重试成本或错误率升高，应下调长期自治能力判断。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "AWS Machine Learning Blog原文支持的事实：AWS介绍Bedrock上的Grok 4.7，并示范按推理强度评估工具调用任务。 核验边界：官方入口和教程不能证明长任务普遍可靠；少量合成任务结果不代表生产成功率。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-13",
+          "time": "10月13日（来源仅标日期）",
+          "tags": [
+            "Grok",
+            "Bedrock",
+            "Agent评测"
+          ],
+          "companies": [
+            "AWS",
+            "xAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-14",
       "date": "2026-10-14",

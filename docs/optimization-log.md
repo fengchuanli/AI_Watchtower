@@ -1,3 +1,17 @@
+## 2026-10-15 08:08 JST
+
+- Focus: 17:00 JST版发布10条安全非重复信号：Deep Review、Earth AI、端侧反诈、YouTube音乐标签、Apate、Deezer、HiRO-ACEv2、AWS授权管理、Grok 4.7入口和MoE工程。
+- Timing: 自动化实际于08点JST触发；页面明确实际采集时间，未声称覆盖尚未发生的17点消息。无同日晨版，以10月14日23点版去重。7条来源发表于10月14日，3条AWS原文发表于10月13日，标为近两日工程补录，不冒充今晨后的新事件。
+- Changed files: `data/news.json`, `data/news-history.json`, `data/news-index.json`, `data/news-today.json`, `data/trends.json`, `docs/optimization-log.md`。
+- Source posture: 编辑前拉取origin/main；沙箱DNS失败，首次网络审批超时，一次重试成功确认已最新。读取来源登记、来源政策、版权规则、候选门槛与归档指南。Google/Hugging Face RSS因浏览工具不支持XML而改读官方索引与原文；另查AWS、DeepMind、TechCrunch。不使用付费/登录墙正文或社区讨论。
+- Candidate intake: 核对身份、日期、事实、AI相关性、证据边界和独立核查路径；10条URL均未在历史出现。YouTube媒体线索替换为官方原文；Ai2和AWS MoE效果保持厂商主张；其余官方只确认发布/方法；Apate与Deezer保持媒体背景、reported、must-read，完整事实与采访归原文。排除已归档Run:ai、Argon、MOU、招聘案，不拆分Research@汇总补数，不用会场观点、社区宣传和活动广告。较早创业公司报道作为背景，优先可核验工程原文。
+- Concentration: 官方8/10、媒体2/10；AWS单标签3/10，Google跨标签4/10，已说明视角集中。仍需GovTech文件、专家评测、客户日志、平台规则与第三方复现。仅标日期的来源不编造发布时间。
+- Archive mirror: done - 最新归档逐项镜像当前版，127期/1242条。Derived data: done - 重建news-index、news-today、trends且--check通过。Archive diff: skipped - 无同日晨版。
+- 网站可见变化: 首页TOP3、更多新闻流、全部新闻列表、归档页及详情页显示10月15日17点版10条新收录信号；详情页说明发生事项、影响、可信度、证据边界和核查问题，运行说明展示08点采集与3条工程补录边界。
+- Verification: `node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`全部通过；HTMLParser解析根目录HTML、JSON解析data文件、`git diff --check`通过。初次检查发现排序/说明字段和固定边界文案差异，已修正数据并重跑；未修改校验器。
+- Commit note: `【新闻更新】发布17点AI新闻：10条工作流核验与云端工程信号`。
+- Push: 沙箱推送遇GitHub DNS失败；继续网络授权重试，最终状态写入自动化记忆。
+
 ## 2026-10-14 23:00 JST
 
 - Focus: 执行 AI Watchtower 23:00 JST 同日补充新闻情报更新；当前首页推进为 `news-2300-2026-10-14`，发布 8 条安全非重复补充信号，聚焦 NVIDIA Run:ai 开源、Anthropic 新加坡 MOU、Google Cloud Gemini 4 Argon API/价格、AI 安全竞选资金、Apple HomeView 家庭 AI、PHTI 医疗 AI 成本风险、VentureBeat Agent 编排调查和 AI 债务融资风险。少于 10 条是质量门槛结果：未用旧稿、付费墙、登录墙、社区讨论、重复 Gemini App/Agent 安全主题、已归档 OpenAI 退役主题、弱证据或常规营销补数量。
