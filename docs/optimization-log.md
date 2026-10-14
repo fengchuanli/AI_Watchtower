@@ -1,3 +1,40 @@
+## 2026-10-14 20:00 JST
+
+- Focus: 完成 2026-10-11 至 2026-11-09 新周期 Day 2，整理首页更多新闻流上方的编辑说明入口：把首屏读者先需要的来源角色、不要误读和下一步核验压成三格 `首屏信任速记`，把范围、运行和编辑判断保留在 `完整运行与编辑记录` 折叠项里。
+- Changed files:
+  - `app.js`: 新增 `renderFirstScanTrustCue`，从现有 `sourceRisk` / `overreadBoundary` 字段派生三条短信任提示，并把原先的运行/编辑详情改名为 `完整运行与编辑记录`。
+  - `index.html`: 将 `本期编辑说明` summary 从“10 项”流程清单改成“先看信任速记，完整记录可展开”。
+  - `styles.css`: 为 `first-scan-trust` 增加三列紧凑卡片样式，620px 以下自动单列，避免手机横向拥挤。
+  - `scripts/validate-site.mjs`: 增加首屏信任速记、完整运行记录和 Day 2 handoff 守卫，防止后续把短信任提示退回流程清单。
+  - `docs/optimization-decision-index.md`: 标记 Day 2 完成，并将下一次有用任务更新为 Day 3：重新平衡 TOP3、深度简报、连续观察和更多新闻流的密度。
+- Source posture:
+  - 已读取自动化记忆、`docs/product-principles.md`、`docs/copyright-safety.md`、`docs/optimization-plan.md`、`docs/optimization-decision-index.md` 和 `docs/optimization-log.md` 顶部条目。
+  - `git pull --ff-only origin main` 首次因 sandbox GitHub DNS 失败；网络授权后成功并确认 `origin/main` 已是最新。
+  - 本次不新增新闻事实、来源 URL、媒体摘要或外部结论；只把已有来源边界与核验路径改成更适合首屏扫描的 UI 文案和布局。
+- VisionHub briefing scorecard: done
+  - Five-second understanding: pass - 更多新闻流上方先出现 `来源角色 / 不要误读 / 下一步查`，读者不用先展开 10 项编辑记录。
+  - TOP3 reader use: unchanged - TOP3 卡片本身未改，仍保留入选理由、读者用途、来源边界和下一步核验。
+  - Source boundary visible: pass - `首屏信任速记` 直接使用当前版 `sourceRisk` 和 `overreadBoundary`，不新增未经支持的判断。
+  - Original source dependency: pass - 本次没有扩写媒体事实，不替代 AP / Axios / TechCrunch 原文或官方材料。
+  - Mobile burden: pass - 620px 以下信任速记自动单列，且完整流程记录仍折叠。
+  - Continuity use: unchanged - 连续观察仍在深度简报和完整编辑说明中，不抢占更多新闻流首屏。
+  - Visual aid purpose: partial - 这是边界信任提示，不是 Day 7-12 的 TOP3 visual briefing。
+- 网站可见变化：首页 `更多新闻流` 上方会先显示三格 `首屏信任速记`，读者能先看到本期来源角色、不要误读和下一步核验，再按需展开完整运行与编辑记录。
+- Verification:
+  - Ran `git pull --ff-only origin main`; sandboxed attempt failed with GitHub DNS, network-authorized retry succeeded and reported already up to date.
+  - Ran `node --check app.js`.
+  - Ran `node --check scripts/validate-site.mjs`.
+  - Ran `node --check scripts/validate-data.mjs`.
+  - Ran `node --check scripts/validate-pages.mjs`.
+  - Ran `node scripts/validate-site.mjs` and validated site metadata, 50 local references, and static page link targets.
+  - Ran `node scripts/validate-data.mjs` and validated 10 current news items against 127 sources.
+  - Ran `node scripts/build-derived-data.mjs --check`.
+  - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
+  - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
+  - Ran `git diff --check`.
+- Commit: pending.
+- Push: pending.
+
 ## 2026-10-14 08:14 JST
 
 - Focus: 执行 AI Watchtower 17:00 JST 新闻情报更新；首页推进为 `news-1700-2026-10-14`，发布 10 条安全非重复信号，聚焦 Anthropic Agent 评测切网、OpenAI 隐藏录音设备案、OpenAI/Apple 商业秘密案取证、Gemini 4 Argon App/安全说明、Agent 权限控制、企业 Agent 责任缺口、IMF AI 宏观风险、AWS AgentCore payments 和 Arena 评测融资。

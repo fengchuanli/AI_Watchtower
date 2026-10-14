@@ -861,6 +861,33 @@ function renderBoundaryDigest(edition = {}) {
   );
 }
 
+function renderFirstScanTrustCue(edition = {}) {
+  const cues = [
+    { label: "来源角色", body: edition.sourceRisk?.label },
+    { label: "不要误读", body: edition.overreadBoundary?.label },
+    { label: "下一步查", body: edition.sourceRisk?.nextCheck || edition.overreadBoundary?.useInstead },
+  ].filter((cue) => cue.body);
+
+  if (!cues.length) {
+    return "";
+  }
+
+  return `
+    <div class="first-scan-trust" aria-label="首屏信任速记">
+      ${cues
+        .map(
+          (cue) => `
+            <span>
+              <strong>${escapeHtml(cue.label)}</strong>
+              ${escapeHtml(cue.body)}
+            </span>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 function updateNewsMeta(data) {
   if (latestCapture) {
     const captureDate = data.edition?.date || data.updatedAt || "等待更新";
@@ -890,7 +917,8 @@ function updateNewsMeta(data) {
 
   newsMeta.innerHTML =
     `<p class="data-status-line">${escapeHtml(headlineParts.join(" · "))}</p>` +
-    renderFeedMetaDetails("本期范围、运行与编辑判断", editionDetailParts.join(""));
+    renderFirstScanTrustCue(data.edition) +
+    renderFeedMetaDetails("完整运行与编辑记录", editionDetailParts.join(""));
 
   if (readerFrame) {
     readerFrame.innerHTML = renderFeedMetaDetails("本期读者使用框架", renderReaderFrame(data.edition?.readerFrame));

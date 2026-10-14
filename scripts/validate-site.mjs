@@ -511,7 +511,7 @@ if (
   !/今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流/.test(homepageEditionPreflight) ||
   !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
   !/Day 0[\s\S]*手机首屏/.test(optimizationDecisionIndex) ||
-  !/Current handoff is Day 1/.test(optimizationDecisionIndex)
+  !/Current handoff is Day 2/.test(optimizationDecisionIndex)
 ) {
   errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, purpose navigation, deep briefing, then compact non-TOP3 feed.");
 }
@@ -1870,6 +1870,9 @@ if (
   !/class="editor-boundary-details"/.test(html) ||
   !/const boundaryDigest = document\.querySelector\("#boundaryDigest"\);/.test(appJs) ||
   !/function renderBoundaryDigest/.test(appJs) ||
+  !/function renderFirstScanTrustCue/.test(appJs) ||
+  !/首屏信任速记/.test(appJs) ||
+  !/完整运行与编辑记录/.test(appJs) ||
   !/阅读边界速览/.test(appJs) ||
   !/const overreadBoundary = document\.querySelector\("#overreadBoundary"\);/.test(appJs) ||
   !/function renderOverreadBoundary/.test(appJs) ||
@@ -1877,6 +1880,8 @@ if (
   !/overreadBoundary/.test(validateDataJs) ||
   !/overread boundary/.test(newsDataFormat) ||
   !/不要把本期读成全市场结论/.test(newsJson) ||
+  !/先看信任速记，完整记录可展开/.test(html) ||
+  !/\.first-scan-trust/.test(styles) ||
   !/\.boundary-digest/.test(styles) ||
   !/\.editor-boundary-details/.test(styles) ||
   !/\.overread-boundary/.test(styles)

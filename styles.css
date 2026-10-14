@@ -3113,6 +3113,33 @@ h3 {
   content: "收起";
 }
 
+.first-scan-trust {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  max-width: 760px;
+  margin-top: 8px;
+}
+
+.first-scan-trust span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px 12px;
+  color: var(--fg-secondary);
+  background: rgb(255 255 255 / 4%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.first-scan-trust strong {
+  color: var(--fg-primary);
+  font-size: 12px;
+}
+
 .feed-meta-details-body {
   display: flex;
   flex-wrap: wrap;
@@ -3176,6 +3203,10 @@ h3 {
 
   .feed-meta-details-body {
     display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .first-scan-trust {
     grid-template-columns: 1fr;
   }
 
