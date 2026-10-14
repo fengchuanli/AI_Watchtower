@@ -32,8 +32,8 @@
   - Ran `node scripts/validate-pages.mjs` and validated 6 static page shells and GitHub Pages recovery links.
   - Parsed `index.html`, `all-news.html`, `news-detail.html`, `archive.html`, `tags.html`, and `404.html` with Python's `HTMLParser`.
   - Ran `git diff --check`.
-- Commit: `f4dac40` (`【VisionHub网站风格优化】前置首页信任速记`); status-log hash update pending after this line.
-- Push: pending.
+- Commit: `f4dac40` (`【VisionHub网站风格优化】前置首页信任速记`) and `81d5a3e` (`【网站优化】记录首页信任速记优化`).
+- Push: pushed to `origin/main`; remote advanced from `1280afe` to `81d5a3e`.
 
 ## 2026-10-14 08:14 JST
 
