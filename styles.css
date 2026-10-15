@@ -5111,3 +5111,78 @@ h3 {
     display: inline-block;
   }
 }
+
+/* 首页阅读节奏：区块之间留停顿，连续观察与紧凑新闻各自成组。 */
+#top3,
+#feed {
+  padding-block: 48px;
+}
+
+#deep-briefing {
+  padding-block: 40px 48px;
+}
+
+.reading-pause {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.reading-pause p {
+  margin: 0;
+  max-width: 52ch;
+}
+
+.reading-pause strong,
+.reading-pause span {
+  display: block;
+}
+
+.reading-pause span {
+  margin-top: 8px;
+  color: var(--fg-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.reading-pause a {
+  flex-shrink: 0;
+  padding-block: 12px;
+}
+
+#deep-briefing .continuity-brief:not(:empty) {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid var(--border-strong);
+}
+
+@media (max-width: 768px) {
+  #top3,
+  #feed {
+    padding-block: 32px;
+  }
+
+  #deep-briefing {
+    padding-block: 32px;
+  }
+
+  #top3 .top-stories {
+    gap: 24px;
+  }
+
+  #feed .news-grid {
+    gap: 12px;
+  }
+
+  .reading-pause {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+}

@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 1, Mobile First-Screen Relief
-- Last indexed run: 2026-10-14 20:00 JST
+- Last indexed run: 2026-10-15 11:04 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Recent Plan-Day Decisions
@@ -51,6 +51,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 0 | Complete | `62fd30c` | 手机首屏审计把第一轮 TOP3 判断前后分清：header 现在按 `今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流` 排序，Today Briefing 下方有 `手机先读` cue，`docs/homepage-edition-preflight.md` 和 `scripts/validate-site.mjs` 守住 before/TOP3/after 分层。 |
 | Day 1 | Complete | `b54eea1` | 当前 `news-1700-2026-10-13` 首页把 `briefing.summary`、三个 watch points 和 `readerFrame.mobile` 改成同一条手机阅读路径：先查 Agent 能力证据，再查安全刹车，最后查短信/会议/职能 AI 入口权限；当前首页、最新历史镜像和今日派生数据已对齐。 |
 | Day 2 | Complete | `f4dac40` | 首页更多新闻流上方现在先显示三格 `首屏信任速记`：来源角色、不要误读、下一步查；原来的范围、运行、编辑判断仍保留在 `完整运行与编辑记录` 折叠项里，`scripts/validate-site.mjs` 守住这个简短信任提示。 |
+
+| Day 3 | Complete | 本次提交（见 optimization-log） | 首页 TOP3、深度简报、连续观察与紧凑新闻流分组留白；深度简报入口增加阅读深度提示和直达新闻流链接。 |
 
 ## Historical Guard Anchors
 
@@ -103,9 +105,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 3 of the 2026-10-11 through 2026-11-09 plan: rebalance TOP3, deep briefing, continuity, and compact feed spacing so dense editions do not feel like one uninterrupted text wall.
-- Before choosing work, still read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 3.
-- If Day 3 is already complete, continue with Day 4: add a small homepage rule for when continuity cards should collapse, summarize, or move below the compact feed on mobile.
+- Continue with Day 4 of the 2026-10-11 through 2026-11-09 plan: add a small homepage rule for when continuity cards should collapse, summarize, or move below the compact feed on mobile.
+- Before choosing work, read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 4.
+- If Day 4 is already complete, continue with Day 5: review category and purpose navigation labels.
 
 ## Update Rules
 
