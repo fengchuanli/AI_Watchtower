@@ -143,3 +143,16 @@ curl -s localhost:7071/api/ask -H 'Content-Type: application/json' -d '{"questio
 - `POST /api/ask` `{"question": "..."}` → `{answerable, answer, citations[{id,title,source,heading,snippet,...}], usage, latency_ms}`
 - 質問は最大 300 文字。API キーやエラー詳細はレスポンスに出さない（サーバーログのみ）
 - `rag/api/function_app.py` は Azure Functions（Python v2）の入口。デプロイは Day 34
+
+### Azure へのデプロイ（Day 34）
+
+```bash
+brew install azure-cli && az login        # 初回のみ
+bash rag/scripts/deploy_ask_api.sh        # 初回：Function App 作成 + 設定 + コード
+bash rag/scripts/deploy_ask_api.sh --code-only   # 2 回目以降：コードだけ更新
+```
+
+- Flex Consumption / Python 3.11 / 最大インスタンス 2（コスト上限）
+- AI Search には読み取り専用の query key を使う（admin key は渡さない）
+- CORS: `https://fengchuanli.github.io`, `http://localhost:8000`
+

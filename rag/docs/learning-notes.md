@@ -3350,3 +3350,19 @@ Added grounded answer generation with Azure OpenAI gpt-5.4-mini: the model answe
 - 发现 3（已修）：新闻的来源显示了两遍标题、摘要显示的是「标题: 分类: 发布时间:」元数据；改成只显示摘要，编号用 [n] 显式写出
 - 公开前要做：知识库增量更新 + 「最近/最新」类问题的时间处理（排进 Day 35–36）
 
+## Day 34：把 API 部署到 Azure Functions
+
+### 做了什么
+
+- `rag/scripts/deploy_ask_api.sh`：一条命令完成创建 → 设置 → 上传代码 → 冒烟测试
+- 只需要 Azure CLI（`az`）：代码打成 zip 上传，Azure 那边安装依赖（remote build），不需要另装 Functions Core Tools
+
+### 设计要点（面试可以讲）
+
+- **Flex Consumption 计划**：用多少付多少，没人用时不花钱；微软目前推荐的新计划
+- **最大实例数 = 2**：就算被刷，也最多同时 2 台在跑，成本有上限
+- **最小权限**：Function 用 AI Search 的 **query key**（只能搜索，不能改/删索引），admin key 只留在自己电脑
+- **密钥放在 App Settings**（服务器的环境变量），不进代码、不进 Git；脚本设置时也不打印
+- **CORS** 只允许自己的网站（GitHub Pages）和本地测试地址从浏览器调用
+- 同一份代码：本地 `local_server.py` 和云上 `function_app.py` 都调用 `handle_ask`
+
