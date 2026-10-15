@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 1, Mobile First-Screen Relief
-- Last indexed run: 2026-10-15 11:04 JST (20:00 scheduled run)
+- Last indexed run: 2026-10-15 11:03:25 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Recent Plan-Day Decisions
@@ -52,7 +52,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 | Day 1 | Complete | `b54eea1` | 当前 `news-1700-2026-10-13` 首页把 `briefing.summary`、三个 watch points 和 `readerFrame.mobile` 改成同一条手机阅读路径：先查 Agent 能力证据，再查安全刹车，最后查短信/会议/职能 AI 入口权限；当前首页、最新历史镜像和今日派生数据已对齐。 |
 | Day 2 | Complete | `f4dac40` | 首页更多新闻流上方现在先显示三格 `首屏信任速记`：来源角色、不要误读、下一步查；原来的范围、运行、编辑判断仍保留在 `完整运行与编辑记录` 折叠项里，`scripts/validate-site.mjs` 守住这个简短信任提示。 |
 
-| Day 3 | Complete | 本次提交（见 optimization-log） | 首页 TOP3、深度简报、连续观察与紧凑新闻流分组留白；深度简报入口增加阅读深度提示和直达新闻流链接。 |
+| Day 3 | Complete | `addd459` | 首页 TOP3、深度简报、连续观察与紧凑新闻流分组留白；深度简报入口增加阅读深度提示和直达新闻流链接。 |
 
 ## Historical Guard Anchors
 

@@ -1,3 +1,16 @@
+## 2026-10-15 11:03:25 JST
+
+- Focus: 20:00 JST 自动化实际于上述时间执行；完成当前周期 Day 3 首页阅读节奏调整。
+- Changed files: `index.html`、`styles.css`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页深度简报前新增“接下来，按需读深一点”提示与“直接看更多新闻”链接；TOP3、深度简报、连续观察和新闻流之间有清楚停顿。768px 以下 TOP3 卡片间距为24px、紧凑新闻为12px，连续观察单独分组。
+- Source posture: 仅调整阅读提示、布局和导航，不更改新闻事实、来源角色、核验边界或原文依赖度。
+- VisionHub briefing scorecard: done。fiveSecondUnderstanding / top3ReaderUse / sourceBoundaryVisible / originalSourceDependency / continuityUse 保持；visualAidPurpose 为 pass（分组与阅读选择）；mobileBurden 编辑前后均记 partial，静态规则改善但未完成视觉实测。
+- Verification: `node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check`、根目录 HTMLParser 解析、`git diff --check` 均通过。`python3 scripts/check_layout.py` 因未安装 Playwright 无法运行，不宣称390px/768px浏览器视觉验收通过。日志首次写入因 Python 缺少 zoneinfo 失败，已使用标准库固定 JST 时区重写。
+- Pull: 沙箱DNS失败；网络授权重试成功，编辑前 main 与 origin/main 同步，工作区干净。
+- Commit: `addd459703ca795796ebfd2aff88c205f7220699`（【VisionHub网站风格优化】分清首页简报阅读节奏）。
+- Push: 内容提交已成功推送 origin/main；本条日志与决策索引哈希作为后续记录提交。
+- Next: Day 4，连续观察在手机上的折叠或摘要规则。
+
 ## 2026-10-15 08:08 JST
 
 - Focus: 17:00 JST版发布10条安全非重复信号：Deep Review、Earth AI、端侧反诈、YouTube音乐标签、Apate、Deezer、HiRO-ACEv2、AWS授权管理、Grok 4.7入口和MoE工程。
