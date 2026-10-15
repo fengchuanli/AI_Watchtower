@@ -1589,7 +1589,9 @@ function renderDetail(item, data) {
       <p class="takeaway-step"><b>先做这一件</b>${escapeHtml(takeaway.firstStep)}</p>
     </section>`;
 
-  // 主图：技术类条目优先画架构对比，其次是关系图。两者都没有就不出现。
+  // 主图：技术类条目优先画架构对比，其次是流程图，再次是关系图。三者都没有就不出现。
+  // 没有逐节拆解时，图排在正文最前面——这类条目的文字都是通用模板，
+  // 图才是这一条真正的内容，不该被压在三屏之下。
   const leadFigure = renderTechDiagram(item) || renderFigure(item) || renderRelationGraph(item);
 
   const navItems = [
@@ -1650,9 +1652,10 @@ function renderDetail(item, data) {
 
     <section class="detail-grid simplified-detail-grid" aria-label="新闻解读主体">
       <div class="detail-main">
+        ${hasDepth ? "" : leadFigure}
         ${hasDepth ? "" : classicOverview}
         ${renderDeepSections(item)}
-        ${leadFigure}
+        ${hasDepth ? leadFigure : ""}
         ${renderBeforeAfter(item)}
         ${renderTimeline(item)}
         ${hasDepth ? "" : classicAnalysis}
