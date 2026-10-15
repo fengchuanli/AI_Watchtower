@@ -1,21 +1,21 @@
 {
   "version": 1,
   "updatedAt": "2026-10-15",
-  "totalItems": 1242,
+  "totalItems": 1246,
   "editions": [
     {
-      "id": "news-1700-2026-10-15",
+      "id": "news-2300-2026-10-15",
       "date": "2026-10-15",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00 JST版",
-      "itemCount": 10,
-      "note": "十条信号：文档与科学Agent、反诈、音乐披露及云端运行",
-      "operationalStatus": "已拉取origin/main；实际采集于08点JST，按任务生成17点版。未发现同日晨版，以昨日23点版去重；含3条10月13日工程补录。",
-      "editorialInterpretation": "本期发布10条安全非重复信号。官方公告偏多，确认发布与方法，不将厂商测量、媒体报道或计划写成已验证效果。",
+      "archiveLabel": "23:00 JST补充版",
+      "itemCount": 14,
+      "note": "保留原版10条，补充4条上下文、个人AI与评测治理信号",
+      "operationalStatus": "已拉取origin/main；08点任务实际23点执行。RSS不支持XML，改核对公开原文；去重后新增4条，保留同日10条。",
+      "editorialInterpretation": "本期14条，含原版10条与新增4条。新增不足10条，未以弱证据补数；官方主张与媒体信号仍需独立复核。Apertus为新说明，权重7月已发布。",
       "readerFrame": {
         "headline": "把本期当作生成结果与工作流验收的核查表",
-        "whyItMatters": "从文档审查、地理空间和气候模拟，到反诈、音乐披露和云端运行，本期关注谁来核验结果。",
+        "whyItMatters": "从领域工具到设计、个人记录和选举信息，重点检查上下文来源、数据权限和可复现证据。",
         "useThisIssueFor": [
           "研发团队更新Agent与科学模型验收清单。",
           "内容团队检查音乐标签、过滤和申诉。",
@@ -27,7 +27,7 @@
         ],
         "mobile": {
           "headline": "先查结果怎么验收",
-          "summary": "十条信号聚焦检查、权限和证据；含近两日工程补录。",
+          "summary": "14条信号：保留10条，补充设计上下文、个人AI、选举防护和评测资料。",
           "primaryUses": [
             "研发团队查复现",
             "内容团队查申诉",
@@ -37,14 +37,14 @@
         }
       },
       "changeSummary": {
-        "headline": "相较昨日23点版，转向可验证的垂直工作流",
+        "headline": "相较同日原版，新增4条证据与控制线索",
         "freshFacts": [
-          "新增文档审查、地理空间实验访问、端侧反诈和气候模型发布。",
-          "新增音乐披露与过滤线索，补录近两日AWS授权、模型入口和内核工程更新。"
+          "本期新增：补入Anthropic选举防护公告、Figma Specs与Bee设备报道。",
+          "本期新增：补入Apertus今日发布说明；不把7月权重发布当作今日事件。"
         ],
         "repeatedContext": [
-          "作为重复背景：昨日已记录Run:ai开源、Argon API、区域治理和资本风险，本期不重复发布。",
-          "作为重复背景：上一版AgentCore支付与模型安全控制仍可参考，不作为本期新事实。"
+          "重复背景：原版10条保留供同日阅读，不计作本次新增。",
+          "重复背景：此前Usage Policy与模型开放主题只作背景；新增需核对本次具体材料。"
         ]
       },
       "coverageMix": [
@@ -62,20 +62,25 @@
           "label": "复查云端运行",
           "count": 2,
           "meaning": "用来核对授权账单和推理优化回归清单。"
+        },
+        {
+          "label": "核对治理与上下文",
+          "count": 4,
+          "meaning": "用来更新设计上下文、个人记录权限、选举防护与评测复现清单。"
         }
       ],
       "sourceRisk": {
-        "label": "官方公告为主",
-        "note": "官方来源8/10，集中于发布方视角；2条媒体仅作线索。",
-        "nextCheck": "核对论文、政府文件、平台规则和客户审计。"
+        "label": "发布方视角为主",
+        "note": "官方登记入口10/14，视角集中于发布方；媒体4/14。",
+        "nextCheck": "核对独立实验室测试、客户日志、审计文件与官方产品文档。"
       },
       "sourceConcentration": {
-        "sourceId": "aws-machine-learning-blog",
-        "sourceName": "AWS Machine Learning Blog",
-        "count": 3,
-        "share": "3/10",
-        "note": "AWS单一标签3/10；Google跨标签合计4/10。",
-        "nextCheck": "补查独立专家、GovTech、客户日志及第三方复现。"
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 4,
+        "share": "4/14",
+        "note": "TechCrunch单一标签4/14；Google跨标签4/14，AWS3/14。新增媒体仅两条，未继续扩大同一媒体占比。",
+        "nextCheck": "优先补Figma和Bee官方文档、第三方测试与客户审计。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
@@ -137,14 +142,14 @@
         {
           "family": "official",
           "label": "官方来源",
-          "count": 8,
-          "role": "用于核对公告、入口和方法；其中作者测量不等于独立效果证据。"
+          "count": 10,
+          "role": "官方与研究作者原文用于核对发布和方法；效果需独立复现。"
         },
         {
           "family": "reliable_media",
           "label": "可靠媒体",
-          "count": 2,
-          "role": "用于发现反诈和音乐过滤线索，完整事实与上下文回原文。"
+          "count": 4,
+          "role": "仅保留最小事实，完整上下文仍归原文。"
         }
       ],
       "topicGroups": [
@@ -181,10 +186,223 @@
             "aws-moe-kernel-engineering-2026-10-15"
           ],
           "meaning": "用来核对授权账单和推理优化回归清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "补充治理与上下文",
+          "count": 4,
+          "itemIds": [
+            "anthropic-midterms-safeguards-2026-10-15",
+            "figma-specs-context-2026-10-15",
+            "bee-personal-devices-2026-10-15",
+            "apertus-eval-release-notes-2026-10-15"
+          ],
+          "meaning": "用来更新设计上下文、个人记录权限、选举防护与评测复现清单。"
         }
       ],
-      "updatedAt": "2026-10-15",
       "items": [
+        {
+          "id": "bee-personal-devices-2026-10-15",
+          "category": "product",
+          "label": "产品",
+          "title": "Bee推出个人AI设备：日常记录进入权限与删除核查",
+          "body": "TechCrunch报道Bee推出两款AI设备。",
+          "summary": "TechCrunch报道Bee推出两款AI设备。",
+          "detailBody": "本站阅读提示：试用个人记录工具时，先用非敏感样本检查告知、暂停、删除和导出，再决定是否接入业务账户。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "trend": "持续记录工具的采用门槛是用户能否控制数据流与后续操作。",
+          "detailTrend": "持续记录工具的采用门槛是用户能否控制数据流与后续操作。\n本站判断：应先定义失败样本和验收条件，再比较工具收益；单次演示或公告不能覆盖真实环境的差异。",
+          "whyItMatters": "持续记录工具的采用门槛是用户能否控制数据流与后续操作。",
+          "whyRanked": "这条信号给个人AI产品与企业采购团队提供了具体的验收问题。",
+          "detailWhyRanked": "这条信号适合个人AI产品与企业采购团队更新采用清单。核对Bee官方隐私文档和第三方设备测试，验证录制提示、删除行为、数据保留及连接账户的权限边界。 在证据补足之前，保持小范围试点与人工复核。",
+          "topReason": "持续记录工具的采用门槛是用户能否控制数据流与后续操作。",
+          "impact": "个人AI产品与企业采购团队应复查权限、数据与验收责任，避免把来源主张直接写入采购承诺。",
+          "whoShouldCare": "个人AI产品与企业采购团队，尤其是负责新工具接入、数据治理、评测验收与业务上线风险的采购或工程负责人。",
+          "readerUse": "个人AI产品与企业采购团队可据此更新试点清单；核对Bee官方隐私文档和第三方设备测试，验证录制提示、删除行为、数据保留及连接账户的权限边界。",
+          "nextCheck": "核对Bee官方隐私文档和第三方设备测试，验证录制提示、删除行为、数据保留及连接账户的权限边界。",
+          "followUpQuestions": [
+            "独立测试是否覆盖以下检查：核对Bee官方隐私文档和第三方设备测试，验证录制提示、删除行为、数据保留及连接账户的权限边界？",
+            "第三方复测是否公开失败样本与版本条件？"
+          ],
+          "evidenceThreshold": "需要第三方测试、客户审计或独立复现与原始记录相互支持，才能升级为效果结论。",
+          "claimBoundary": "媒体报道不构成隐私架构审计，不证明删除彻底或所有集成功能已普遍可用。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "counterEvidence": "如果独立测试发现停止记录后仍上传、删除未生效或账户授权过宽，应暂停扩大试用。 应下调采用价值判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+          "originalUrl": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI原文支持本条发布或报道线索；媒体报道不构成隐私架构审计，不证明删除彻底或所有集成功能已普遍可用。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。 核对Bee官方隐私文档和第三方设备测试，验证录制提示、删除行为、数据保留及连接账户的权限边界。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15T21:00:00+09:00",
+          "time": "10月15日 21:00 JST",
+          "tags": [
+            "个人AI",
+            "隐私",
+            "设备"
+          ],
+          "companies": [
+            "Amazon",
+            "Bee"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
+          }
+        },
+        {
+          "id": "figma-specs-context-2026-10-15",
+          "category": "tool",
+          "label": "工具",
+          "title": "Figma Specs：设计要求进入Agent上下文，仍需验收一致性",
+          "body": "TechCrunch报道Figma推出Specs。",
+          "summary": "TechCrunch报道Figma推出Specs。",
+          "detailBody": "本站阅读提示：设计团队可把需求变更、引用关系和人工批准节点作为试点检查项；不要用文档可读性替代交付质量。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "trend": "设计规范能否被正确引用，应通过变更前后的相同任务对照验证。",
+          "detailTrend": "设计规范能否被正确引用，应通过变更前后的相同任务对照验证。\n本站判断：应先定义失败样本和验收条件，再比较工具收益；单次演示或公告不能覆盖真实环境的差异。",
+          "whyItMatters": "设计规范能否被正确引用，应通过变更前后的相同任务对照验证。",
+          "whyRanked": "这条信号给设计系统与前端团队提供了具体的验收问题。",
+          "detailWhyRanked": "这条信号适合设计系统与前端团队更新采用清单。核对Figma公开产品文档、实际租户可用范围和客户设计系统回归测试，检查规范变更能否传递给Agent。 在证据补足之前，保持小范围试点与人工复核。",
+          "topReason": "设计规范能否被正确引用，应通过变更前后的相同任务对照验证。",
+          "impact": "设计系统与前端团队应复查权限、数据与验收责任，避免把来源主张直接写入采购承诺。",
+          "whoShouldCare": "设计系统与前端团队，尤其是负责新工具接入、数据治理、评测验收与业务上线风险的采购或工程负责人。",
+          "readerUse": "设计系统与前端团队可据此更新试点清单；核对Figma公开产品文档、实际租户可用范围和客户设计系统回归测试，检查规范变更能否传递给Agent。",
+          "nextCheck": "核对Figma公开产品文档、实际租户可用范围和客户设计系统回归测试，检查规范变更能否传递给Agent。",
+          "followUpQuestions": [
+            "独立测试是否覆盖以下检查：核对Figma公开产品文档、实际租户可用范围和客户设计系统回归测试，检查规范变更能否传递给Agent？",
+            "第三方复测是否公开失败样本与版本条件？"
+          ],
+          "evidenceThreshold": "需要第三方测试、客户审计或独立复现与原始记录相互支持，才能升级为效果结论。",
+          "claimBoundary": "媒体报道仅支持产品线索；不能据此断言Agent已遵守品牌规范或交付速度提高。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。",
+          "counterEvidence": "如果客户回归记录显示规范引用错误、版本混用或人工返工增加，应下调采用价值。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+          "originalUrl": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI原文支持本条发布或报道线索；媒体报道仅支持产品线索；不能据此断言Agent已遵守品牌规范或交付速度提高。 完整事实、采访、引述、图表、数据和上下文仍归TechCrunch原文。 核对Figma公开产品文档、实际租户可用范围和客户设计系统回归测试，检查规范变更能否传递给Agent。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15T13:30:00+09:00",
+          "time": "10月15日 13:30 JST",
+          "tags": [
+            "设计",
+            "Agent",
+            "上下文"
+          ],
+          "companies": [
+            "Figma"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
+          }
+        },
+        {
+          "id": "apertus-eval-release-notes-2026-10-15",
+          "category": "research",
+          "label": "研究",
+          "title": "Apertus补充1.5发布说明：把模型分数还原为可复现记录",
+          "body": "Swiss AI发布Apertus 1.5说明，介绍评测卡与训练资料。",
+          "summary": "Swiss AI发布Apertus 1.5说明，介绍评测卡与训练资料。",
+          "detailBody": "10月15日的说明文章补充技术报告、评测配置和训练资料入口；文中明确权重在7月24日已发布。本条记录新说明，不将旧模型再次写成今日发布。\n本站阅读提示：先保存代码版本与评测配置，再在自己的语言和任务样本上复跑；可下载不代表实际收益已经验证。",
+          "trend": "采购与研究团队需要知道谁执行评测、使用什么配置，再决定分数能否横向比较。",
+          "detailTrend": "采购与研究团队需要知道谁执行评测、使用什么配置，再决定分数能否横向比较。\n本站判断：应先定义失败样本和验收条件，再比较工具收益；单次演示或公告不能覆盖真实环境的差异。",
+          "whyItMatters": "采购与研究团队需要知道谁执行评测、使用什么配置，再决定分数能否横向比较。",
+          "whyRanked": "这条信号给开放模型研究与评测团队提供了具体的验收问题。",
+          "detailWhyRanked": "这条信号适合开放模型研究与评测团队更新采用清单。核对独立实验室按公开配置复跑的结果、评测代码版本及数据清单，检查不同阶段检查点的行为变化。 在证据补足之前，保持小范围试点与人工复核。",
+          "topReason": "采购与研究团队需要知道谁执行评测、使用什么配置，再决定分数能否横向比较。",
+          "impact": "开放模型研究与评测团队应复查权限、数据与验收责任，避免把来源主张直接写入采购承诺。",
+          "whoShouldCare": "开放模型研究与评测团队，尤其是负责新工具接入、数据治理、评测验收与业务上线风险的采购或工程负责人。",
+          "readerUse": "开放模型研究与评测团队可据此更新试点清单；核对独立实验室按公开配置复跑的结果、评测代码版本及数据清单，检查不同阶段检查点的行为变化。",
+          "nextCheck": "核对独立实验室按公开配置复跑的结果、评测代码版本及数据清单，检查不同阶段检查点的行为变化。",
+          "followUpQuestions": [
+            "独立测试是否覆盖以下检查：核对独立实验室按公开配置复跑的结果、评测代码版本及数据清单，检查不同阶段检查点的行为变化？",
+            "第三方复测是否公开失败样本与版本条件？"
+          ],
+          "evidenceThreshold": "需要第三方测试、客户审计或独立复现与原始记录相互支持，才能升级为效果结论。",
+          "claimBoundary": "研究团队的发布说明证明资料入口存在，不等于第三方已复现性能或数据许可已完成独立审计。",
+          "counterEvidence": "如果独立复现出现显著分差、配置缺失或数据清单无法追溯，应降低可复现性评价。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+          "originalUrl": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+          "sourceRole": "研究原文",
+          "sourceType": "research",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "provenance": "Hugging Face Blog原文支持本条发布或报道线索；研究团队的发布说明证明资料入口存在，不等于第三方已复现性能或数据许可已完成独立审计。 核对独立实验室按公开配置复跑的结果、评测代码版本及数据清单，检查不同阶段检查点的行为变化。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（原文仅标日期）",
+          "tags": [
+            "开放模型",
+            "评测",
+            "复现"
+          ],
+          "companies": [
+            "Swiss AI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
+          }
+        },
         {
           "id": "apate-fraud-intelligence-2026-10-15",
           "category": "tool",
@@ -444,6 +662,73 @@
               "body": "原文自己写明了边界：HiRO 是跟着 X-SHiELD 学的，所以只能配那一版调校过的 ACE，现在还做不出更暖的未来气候，也做不出 ERA5 那样的历史记录。飓风眼附近的风和气压也仍比 X-SHiELD 更不对称。成本和精度都是发布方自测，没有独立验证。"
             },
             "figcaption": "来源：Ai2 发表于 Hugging Face Blog，2026-10-14。"
+          }
+        },
+        {
+          "id": "anthropic-midterms-safeguards-2026-10-15",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic更新选举防护：多步骤滥用仍需外部测试",
+          "body": "Anthropic公布中期选举防护更新。",
+          "summary": "Anthropic公布中期选举防护更新。",
+          "detailBody": "公告介绍多步骤滥用识别的调整，并说明本月稍后计划接入Democracy Works投票信息。公告日期为10月14日；计划接入不能写成已经完成。",
+          "trend": "安全团队应把连续请求纳入评测，而不能只统计单轮拒答率。",
+          "detailTrend": "安全团队应把连续请求纳入评测，而不能只统计单轮拒答率。\n本站判断：应先定义失败样本和验收条件，再比较工具收益；单次演示或公告不能覆盖真实环境的差异。",
+          "whyItMatters": "安全团队应把连续请求纳入评测，而不能只统计单轮拒答率。",
+          "whyRanked": "这条信号给安全与公共信息团队提供了具体的验收问题。",
+          "detailWhyRanked": "这条信号适合安全与公共信息团队更新采用清单。核对ISD和McCain Institute独立测试方法、失败样本，以及Democracy Works接入后的州级信息准确性。 在证据补足之前，保持小范围试点与人工复核。",
+          "topReason": "安全团队应把连续请求纳入评测，而不能只统计单轮拒答率。",
+          "impact": "安全与公共信息团队应复查权限、数据与验收责任，避免把来源主张直接写入采购承诺。",
+          "whoShouldCare": "安全与公共信息团队，尤其是负责新工具接入、数据治理、评测验收与业务上线风险的采购或工程负责人。",
+          "readerUse": "安全与公共信息团队可据此更新试点清单；核对ISD和McCain Institute独立测试方法、失败样本，以及Democracy Works接入后的州级信息准确性。",
+          "nextCheck": "核对ISD和McCain Institute独立测试方法、失败样本，以及Democracy Works接入后的州级信息准确性。",
+          "followUpQuestions": [
+            "独立测试是否覆盖以下检查：核对ISD和McCain Institute独立测试方法、失败样本，以及Democracy Works接入后的州级信息准确性？",
+            "第三方复测是否公开失败样本与版本条件？"
+          ],
+          "evidenceThreshold": "需要第三方测试、客户审计或独立复现与原始记录相互支持，才能升级为效果结论。",
+          "claimBoundary": "不证明选举滥用已经被阻止，也不证明厂商自报评测等同于现实政治中立。",
+          "counterEvidence": "如果第三方测试仍能通过拆分请求完成有害流程，或投票信息过期，应下调防护效果判断。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/news/2026-us-midterms",
+          "originalUrl": "https://www.anthropic.com/news/2026-us-midterms",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "optional",
+          "provenance": "Anthropic Newsroom原文支持本条发布或报道线索；不证明选举滥用已经被阻止，也不证明厂商自报评测等同于现实政治中立。 核对ISD和McCain Institute独立测试方法、失败样本，以及Democracy Works接入后的州级信息准确性。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-14",
+          "time": "10月14日（原文仅标日期）",
+          "tags": [
+            "选举",
+            "安全",
+            "Agent"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按可操作核查与证据选择；不能把发布或自报效果当作独立验证。"
           }
         },
         {

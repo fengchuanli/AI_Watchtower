@@ -1,3 +1,16 @@
+## 2026-10-15 23:07 JST
+
+- Focus: 08:00自动化实际23点执行；保留同日原版10条，新增4条选举防护、设计上下文、个人AI与评测资料信号，形成23点补充版14条。新增不足10条：排除已归档事件、活动营销、社区推测与尚未完成一手核验的调查报道，不补弱证据。
+- Changed files: `data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页更多新闻流、全部新闻列表、归档页和详情页新增4条；首页简报标明累计14条及本次新增4条，TOP3按同日数据与编辑评分参与排序。详情展示事实、影响、核验边界和下一步检查。
+- Sources: 编辑前git pull --ff-only origin/main成功（沙箱DNS失败后网络授权重试）。Google/Hugging Face RSS因工具不支持XML而改读公开索引；核对Anthropic官方公告、Swiss AI作者原文、TechCrunch两篇公开报道。Figma官方正文不可读取，因此保持媒体背景，不升级为官方核对。未使用付费墙或登录墙正文。
+- Candidate gate: 四条候选URL经report-duplicate-candidates检查无重复或近标题匹配，并人工核对事件。Anthropic只确认防护公告，保留厂商主张；Figma/Bee媒体只留最小事实、reported与must-read；Apertus为10月15日新增说明，明确权重7月24日已发布，不能当今日模型发布。
+- Source concentration: TechCrunch累计4/14，Google跨标签4/14，AWS3/14。新增仅两条来自同一媒体，未继续扩充其创业公司或会场报道；下一步查产品文档、客户回归、独立隐私审计、ISD等研究材料及模型复现。
+- Archive mirror: done - 同日补充版更新最新归档，127期1246条；原版10条保留，未将其计作本次新增。Derived data: done - 重建news-index、news-today、trends且--check通过。
+- Verification: node --check app.js、validate-data.mjs（14条/127来源）、validate-site.mjs、validate-pages.mjs、build-derived-data.mjs --check、data JSON解析、根目录HTMLParser解析和git diff --check全部通过。首次草稿校验发现读者场景及元数据格式不符，修正内容后通过；未改校验器。未做浏览器视觉实测。
+- Commit note: 【新闻更新】补充23点AI新闻：新增4条上下文与评测治理信号。
+- Push: 将按任务授权推送origin main；结果记录于本自动化memory.md。
+
 ## 2026-10-15 11:03:25 JST
 
 - Focus: 20:00 JST 自动化实际于上述时间执行；完成当前周期 Day 3 首页阅读节奏调整。
