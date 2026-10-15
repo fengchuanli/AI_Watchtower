@@ -1,8 +1,637 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-15",
-  "totalItems": 1246,
+  "updatedAt": "2026-10-16",
+  "totalItems": 1253,
   "editions": [
+    {
+      "id": "news-1700-2026-10-16",
+      "date": "2026-10-16",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00任务｜08点采集",
+      "itemCount": 7,
+      "note": "新增7条开放模型、独立评估与Agent入口信号",
+      "operationalStatus": "已拉取origin/main；任务实际08点执行，未覆盖未来17点。RSS解析不支持XML，改核对登记来源公开原文；同日晨版尚不存在。",
+      "editorialInterpretation": "本期发布7条安全非重复信号；少于10条是质量门槛结果，未用旧闻、重复稿、社区讨论或弱证据补数。官方发布与媒体线索均保留效果边界。",
+      "readerFrame": {
+        "headline": "把本期当作模型部署与Agent权限的核验清单",
+        "whyItMatters": "开放模型、独立评估和应用入口同时变化，研发与采购团队需要把可运行、可审计、可撤销分别验收，避免用演示替代交付证据。",
+        "useThisIssueFor": [
+          "研发团队更新本地模型硬件与许可清单。",
+          "安全团队核对评估者权限及独立报告。",
+          "产品团队测试购物、创作与车机的操作边界。"
+        ],
+        "notProvenYet": [
+          "不证明开放模型在所有硬件和任务上都有成本优势。",
+          "不能把评估安排或功能计划当作安全结论和交付证据。"
+        ],
+        "mobile": {
+          "headline": "先查部署与权限",
+          "summary": "7条新增信号：检查开放模型、独立评估和应用入口的可用条件。",
+          "primaryUses": [
+            "研发团队查部署",
+            "安全团队查评估",
+            "产品团队查权限"
+          ],
+          "proofBoundary": "仍需独立测试与交付记录，不能把发布当作效果证明。"
+        }
+      },
+      "changeSummary": {
+        "headline": "相较昨日补充版，新增部署条件与独立监督线索",
+        "freshFacts": [
+          "本期新增：开放权重、模型部署分层与分词优化材料。",
+          "本期新增：METR访问安排、购物入口及两条应用计划线索。"
+        ],
+        "repeatedContext": [
+          "重复背景：昨日已有工作流验收主题，本次不重复收录原文。",
+          "重复背景：车内Agent仍是计划，性能测量仍需第三方复测。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对模型与预处理",
+          "count": 3,
+          "meaning": "用来更新硬件、许可和中文语料复测清单。"
+        },
+        {
+          "label": "核对评估与应用权限",
+          "count": 4,
+          "meaning": "用来检查独立报告、用户确认和回退记录。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方发布视角较多",
+        "note": "官方登记来源5/7，集中于发布方和作者；媒体2/7，均不能替代独立效果证据。",
+        "nextCheck": "核对METR独立报告、第三方基准、商户文档与实际交付记录。"
+      },
+      "sourceConcentration": {
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 2,
+        "share": "2/7",
+        "note": "TechCrunch为最大单一标签，占2/7；其余五个来源各1条。",
+        "nextCheck": "优先核对Bluesky与Rivian官方说明和第三方测试。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期提供部署与审计入口，发布证据强于实际效果证据。",
+        "doNotConclude": "不能认为开放模型必然更便宜或Agent已可安全自治。",
+        "useInstead": "应该用来更新硬件、权限与许可清单，并核对第三方报告和客户日志。"
+      },
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 5,
+          "role": "原文核对发布和作者表述，效果另需复测。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "原文只取最小事实，完整背景仍需阅读来源。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "model",
+          "label": "核对模型与预处理",
+          "count": 3,
+          "itemIds": [
+            "meta-muse-spark-open-2026-10-16",
+            "nvidia-nemotron-super-bolt-2026-10-16",
+            "hf-bert-tokenizer-2026-10-16"
+          ],
+          "meaning": "用来更新硬件、许可和中文语料复测清单。"
+        },
+        {
+          "id": "agent",
+          "label": "核对评估与应用权限",
+          "count": 4,
+          "itemIds": [
+            "bluesky-attie-creation-2026-10-16",
+            "rivian-agent-plans-2026-10-16",
+            "anthropic-metr-access-2026-10-16",
+            "google-universal-cart-2026-10-16"
+          ],
+          "meaning": "用来检查独立报告、用户确认和回退记录。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "model",
+          "label": "部署条件更具体",
+          "note": "跨期看，归档已有开放模型与云端工程，本期增加本地硬件与分词代码验收。",
+          "boundary": "仍需第三方同配置复现，不证明普遍成本下降。"
+        },
+        {
+          "topic": "agent",
+          "label": "监督入口更具体",
+          "note": "跨期看，昨日工作流验收延续到本期评估者权限与应用操作边界。",
+          "boundary": "仍需第三方审计和交付记录，不证明自治已经可靠。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "model",
+          "label": "部署条件更具体",
+          "status": "stronger",
+          "previousPattern": "跨期看，归档已有开放模型与云端工程，本期增加本地硬件与分词代码验收。",
+          "currentSignal": "本期新增：开放权重、分层部署和预处理优化。",
+          "signalDirection": "增强：新增可核对的部署或审计入口。",
+          "stillUnproven": "仍需第三方同配置复现，不证明普遍成本下降。"
+        },
+        {
+          "topic": "agent",
+          "label": "监督入口更具体",
+          "status": "stronger",
+          "previousPattern": "此前归档记录工作流验收，本期延续到评估者权限与应用操作边界。",
+          "currentSignal": "本期新增：独立评估权限及购物、创作与车机入口。",
+          "signalDirection": "增强：新增可核对的部署或审计入口。",
+          "stillUnproven": "仍需独立报告和交付记录，不证明自治已经可靠。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Anthropic",
+          "label": "监督材料增强",
+          "lastMention": "此前归档记录选举防护与内部评测控制。",
+          "whatChanged": "本期新增METR内部访问和发表权限安排。",
+          "stillUnproven": "仍需METR独立审计报告及删改记录验证监督效果。"
+        },
+        {
+          "company": "Google",
+          "label": "购物入口增强",
+          "lastMention": "此前归档记录Gemini应用与领域工作流。",
+          "whatChanged": "本期新增美国Universal Cart上线范围。",
+          "stillUnproven": "仍需商户官方文档和第三方订单测试核对实际可用性。"
+        }
+      ],
+      "items": [
+        {
+          "id": "bluesky-attie-creation-2026-10-16",
+          "category": "product",
+          "label": "产品",
+          "title": "Attie扩展创作入口：生成网站之后还需检查权限",
+          "body": "TechCrunch报道Bluesky扩展Attie创作功能。",
+          "summary": "TechCrunch报道Bluesky扩展Attie创作功能。",
+          "detailBody": "来源事实：TechCrunch报道Bluesky扩展Attie创作功能。\n本站判断：本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
+          "trend": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
+          "detailTrend": "本站判断：本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
+          "whyItMatters": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
+          "whyRanked": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
+          "detailWhyRanked": "社交产品与创作者工具团队可据此更新验收清单。核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
+          "topReason": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
+          "impact": "社交产品与创作者工具团队需要调整上线验收：本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
+          "whoShouldCare": "社交产品与创作者工具团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
+          "readerUse": "社交产品与创作者工具团队可用本条更新试点清单；核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。",
+          "nextCheck": "核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。",
+          "followUpQuestions": [
+            "测试报告是否支持以下核查：核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程？",
+            "第三方测试是否公开失败样本、版本配置与回退记录？"
+          ],
+          "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
+          "claimBoundary": "媒体线索不证明生成应用可安全投入生产。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
+          "counterEvidence": "如果测试记录显示应用越权或无法撤回发布，应下调低门槛创作的采用价值。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+          "originalUrl": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI原文说明：TechCrunch报道Bluesky扩展Attie创作功能。 媒体线索不证明生成应用可安全投入生产。 完整事实、采访、引述、数据和上下文仍归媒体原文。 核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16T03:56:00+09:00",
+          "time": "10月16日 03:56 JST",
+          "tags": [
+            "应用生成",
+            "核验"
+          ],
+          "companies": [
+            "Bluesky"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        },
+        {
+          "id": "rivian-agent-plans-2026-10-16",
+          "category": "product",
+          "label": "产品",
+          "title": "Rivian谈第三方Agent接入，计划尚待交付证据",
+          "body": "TechCrunch报道Rivian提出车内接入第三方Agent的计划。",
+          "summary": "TechCrunch报道Rivian提出车内接入第三方Agent的计划。",
+          "detailBody": "来源事实：TechCrunch报道Rivian提出车内接入第三方Agent的计划。\n本站判断：本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
+          "trend": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
+          "detailTrend": "本站判断：本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
+          "whyItMatters": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
+          "whyRanked": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
+          "detailWhyRanked": "车机软件与汽车产品团队可据此更新验收清单。核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
+          "topReason": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
+          "impact": "车机软件与汽车产品团队需要调整上线验收：本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
+          "whoShouldCare": "车机软件与汽车产品团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
+          "readerUse": "车机软件与汽车产品团队可用本条更新试点清单；核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。",
+          "nextCheck": "核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。",
+          "followUpQuestions": [
+            "测试报告是否支持以下核查：核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退？",
+            "第三方测试是否公开失败样本、版本配置与回退记录？"
+          ],
+          "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
+          "claimBoundary": "计划不等于已交付功能，也不代表第三方Agent可控制驾驶系统。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
+          "counterEvidence": "如果官方发布说明未确认交付或测试记录暴露控制越权，应下调接入成熟度判断。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+          "originalUrl": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI原文说明：TechCrunch报道Rivian提出车内接入第三方Agent的计划。 计划不等于已交付功能，也不代表第三方Agent可控制驾驶系统。 完整事实、采访、引述、数据和上下文仍归媒体原文。 核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16T00:02:00+09:00",
+          "time": "10月16日 00:02 JST",
+          "tags": [
+            "车内Agent",
+            "核验"
+          ],
+          "companies": [
+            "Rivian"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        },
+        {
+          "id": "anthropic-metr-access-2026-10-16",
+          "category": "policy",
+          "label": "政策",
+          "title": "Anthropic向METR开放内部评估权限，独立性还要看公开报告",
+          "body": "Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。",
+          "summary": "Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。",
+          "detailBody": "来源事实：Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。\n本站判断：模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
+          "trend": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
+          "detailTrend": "本站判断：模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
+          "whyItMatters": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
+          "whyRanked": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
+          "detailWhyRanked": "安全审计与模型采购团队可据此更新验收清单。核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
+          "topReason": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
+          "impact": "安全审计与模型采购团队需要调整上线验收：模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
+          "whoShouldCare": "安全审计与模型采购团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
+          "readerUse": "安全审计与模型采购团队可用本条更新试点清单；核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。",
+          "nextCheck": "核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。",
+          "followUpQuestions": [
+            "测试报告是否支持以下核查：核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断？",
+            "第三方测试是否公开失败样本、版本配置与回退记录？"
+          ],
+          "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
+          "claimBoundary": "访问安排不证明模型安全，也不代表所有评估伙伴拥有同等发表权。",
+          "counterEvidence": "如果METR报告披露关键数据不可见或删改阻碍结论，应下调监督有效性判断。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+          "originalUrl": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "supporting",
+          "provenance": "Anthropic Newsroom原文说明：Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。 访问安排不证明模型安全，也不代表所有评估伙伴拥有同等发表权。 核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（来源未提供时区时刻）",
+          "tags": [
+            "独立评估",
+            "核验"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        },
+        {
+          "id": "google-universal-cart-2026-10-16",
+          "category": "product",
+          "label": "产品",
+          "title": "Google在美国推出Universal Cart，购物状态跨入口保存",
+          "body": "Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。",
+          "summary": "Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。",
+          "detailBody": "来源事实：Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。\n本站判断：购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
+          "trend": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
+          "detailTrend": "本站判断：购物助手的竞争开始从推荐内容延伸到保存购物状态和衔接交易。商户、平台与消费者之间的责任关系因此比单轮回答更重要。入口整合可能改变用户回访路径，但平台便利性与订单履约质量仍是不同的问题，不能从发布公告推导转化率或消费者收益。",
+          "whyItMatters": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
+          "whyRanked": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
+          "detailWhyRanked": "电商产品与支付接入团队可据此更新验收清单。核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
+          "topReason": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
+          "impact": "电商产品与支付接入团队需要调整上线验收：购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
+          "whoShouldCare": "电商产品与支付接入团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
+          "readerUse": "电商产品与支付接入团队可用本条更新试点清单；核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。",
+          "nextCheck": "核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。",
+          "followUpQuestions": [
+            "测试报告是否支持以下核查：核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任？",
+            "第三方测试是否公开失败样本、版本配置与回退记录？"
+          ],
+          "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
+          "claimBoundary": "不证明全球可用，也不证明购物车能未经确认自主完成全部采购。",
+          "counterEvidence": "如果商户订单记录与界面价格不一致或撤销无效，应下调流程可靠性判断。",
+          "source": "Google Keyword AI",
+          "sourceName": "Google Keyword AI",
+          "sourceId": "google-keyword-ai",
+          "sourceUrl": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
+          "originalUrl": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "supporting",
+          "provenance": "Google Keyword AI原文说明：Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。 不证明全球可用，也不证明购物车能未经确认自主完成全部采购。 核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（来源未提供时区时刻）",
+          "tags": [
+            "智能购物",
+            "核验"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        },
+        {
+          "id": "hf-bert-tokenizer-2026-10-16",
+          "category": "tool",
+          "label": "工具",
+          "title": "Hugging Face披露BERT分词优化，改动仍在PR阶段",
+          "body": "Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。",
+          "summary": "Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。",
+          "detailBody": "来源事实：Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。\n本站判断：检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
+          "trend": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
+          "detailTrend": "本站判断：检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
+          "whyItMatters": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
+          "whyRanked": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
+          "detailWhyRanked": "检索平台与数据预处理团队可据此更新验收清单。核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
+          "topReason": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
+          "impact": "检索平台与数据预处理团队需要调整上线验收：检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
+          "whoShouldCare": "检索平台与数据预处理团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
+          "readerUse": "检索平台与数据预处理团队可用本条更新试点清单；核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。",
+          "nextCheck": "核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。",
+          "followUpQuestions": [
+            "测试报告是否支持以下核查：核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时？",
+            "第三方测试是否公开失败样本、版本配置与回退记录？"
+          ],
+          "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
+          "claimBoundary": "作者加速测量不等于正式版本能力，也不能外推为整个RAG系统同比提速。",
+          "counterEvidence": "如果复测发现中文收益有限或token ID变化，应收窄性能判断并暂停替换生产版本。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert",
+          "originalUrl": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "supporting",
+          "provenance": "Hugging Face Blog原文说明：Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。 作者加速测量不等于正式版本能力，也不能外推为整个RAG系统同比提速。 核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。 作者性能主张与代码改动仍需独立复测。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（来源未提供时区时刻）",
+          "tags": [
+            "分词优化",
+            "核验"
+          ],
+          "companies": [
+            "Hugging Face"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        },
+        {
+          "id": "meta-muse-spark-open-2026-10-16",
+          "category": "model",
+          "label": "模型",
+          "title": "Meta发布Muse Spark Open权重，本地部署仍有硬件与许可门槛",
+          "body": "Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。",
+          "summary": "Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。",
+          "detailBody": "来源事实：Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。\n本站判断：开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
+          "trend": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
+          "detailTrend": "本站判断：开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
+          "whyItMatters": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
+          "whyRanked": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
+          "detailWhyRanked": "本地模型部署与研发采购团队可据此更新验收清单。核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
+          "topReason": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
+          "impact": "本地模型部署与研发采购团队需要调整上线验收：开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
+          "whoShouldCare": "本地模型部署与研发采购团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
+          "readerUse": "本地模型部署与研发采购团队可用本条更新试点清单；核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。",
+          "nextCheck": "核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。",
+          "followUpQuestions": [
+            "测试报告是否支持以下核查：核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟？",
+            "第三方测试是否公开失败样本、版本配置与回退记录？"
+          ],
+          "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
+          "claimBoundary": "不证明普通笔记本可运行，也不能把厂商排名当作独立性能结论。",
+          "counterEvidence": "如果第三方复测显示任务成功率低或许可限制目标用途，应收窄本地部署价值判断。",
+          "source": "Meta AI Blog",
+          "sourceName": "Meta AI Blog",
+          "sourceId": "meta-ai-blog",
+          "sourceUrl": "https://research.meta.ai/blog/muse-spark-open",
+          "originalUrl": "https://research.meta.ai/blog/muse-spark-open",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "supporting",
+          "provenance": "Meta AI Blog原文说明：Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。 不证明普通笔记本可运行，也不能把厂商排名当作独立性能结论。 核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（来源未提供时区时刻）",
+          "tags": [
+            "开放权重",
+            "核验"
+          ],
+          "companies": [
+            "Meta"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        },
+        {
+          "id": "nvidia-nemotron-super-bolt-2026-10-16",
+          "category": "model",
+          "label": "模型",
+          "title": "NVIDIA扩展Nemotron模型，本地与服务器部署分层",
+          "body": "NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。",
+          "summary": "NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。",
+          "detailBody": "来源事实：NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。\n本站判断：模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
+          "trend": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
+          "detailTrend": "本站判断：服务器与边缘设备拥有不同的内存、延迟和运维约束，模型家族的分层让部署选择更加具体。可定制和可本地运行增加了控制空间，但量化、并发和长任务的代价仍会随环境变化。模型发布扩展的是选择范围，不证明企业已取得普遍性能收益。",
+          "whyItMatters": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
+          "whyRanked": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
+          "detailWhyRanked": "边缘设备与企业推理平台团队可据此更新验收清单。核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
+          "topReason": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
+          "impact": "边缘设备与企业推理平台团队需要调整上线验收：模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
+          "whoShouldCare": "边缘设备与企业推理平台团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
+          "readerUse": "边缘设备与企业推理平台团队可用本条更新试点清单；核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。",
+          "nextCheck": "核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。",
+          "followUpQuestions": [
+            "测试报告是否支持以下核查：核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值？",
+            "第三方测试是否公开失败样本、版本配置与回退记录？"
+          ],
+          "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
+          "claimBoundary": "未发布版本不能视为已可用；厂商吞吐和客户案例不证明普遍收益。",
+          "counterEvidence": "如果第三方复测出现内存溢出或量化后失败率上升，应下调端侧适配判断。",
+          "source": "NVIDIA AI Blog",
+          "sourceName": "NVIDIA AI Blog",
+          "sourceId": "nvidia-blog-ai",
+          "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+          "originalUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "supporting",
+          "provenance": "NVIDIA AI Blog原文说明：NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。 未发布版本不能视为已可用；厂商吞吐和客户案例不证明普遍收益。 核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（来源未提供时区时刻）",
+          "tags": [
+            "端侧模型",
+            "核验"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-15",
       "date": "2026-10-15",

@@ -1,3 +1,16 @@
+## 2026-10-16 08:06 JST
+
+- Focus: 17:00任务实际08点执行，发布7条安全非重复信号：METR评估权限、Muse Spark Open、Nemotron部署分层、Universal Cart、BERT分词优化、Attie创作和Rivian接入计划。未宣称覆盖未来17点；同日晨版不存在，以上一版10月15日23点为去重基线。
+- Changed files: `data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页TOP3参与重新排序，更多新闻流、全部新闻列表、归档页与7条详情展示本期内容；简报明确实际08点采集、部署条件、影响、来源可信度与下一步检查。
+- Sources: 编辑前已拉取origin/main，沙箱DNS失败后网络授权重试成功且已同步。Google RSS因XML不支持改用登记来源公开索引；查阅Anthropic、Meta、Google、NVIDIA、Hugging Face作者原文及TechCrunch公开报道。AWS索引以10月14日资料为主，未为数量补旧工程稿；跳过活动营销、重复Bee/Figma、社区讨论与泛战略访谈。未读取付费墙或登录墙正文。
+- Candidate gate: 7条候选经report-duplicate-candidates检查无重复URL或近标题匹配，人工核对新发布行为。Meta和Google替换为官方原文；HF为作者主张且注明PR阶段；Rivian为计划，未当交付。媒体只留最小事实，reported/must-read。官方来源5/7、媒体2/7，TechCrunch最大单一标签2/7；不新增来源标签。
+- Partial batch: publish-partial-batch - 本期发布7条安全非重复信号；少于10条是来源、时效、去重与证据门槛结果，没有以旧闻、社区推测、营销或重复报道补数。
+- Archive mirror: done - 最新归档完整镜像当前7条及元数据，128期1253条；news-index/news-today/trends重建且--check通过。Archive diff: skipped - 无同日晨版，改在changeSummary对比昨日补充版。
+- Verification: node --check app.js、validate-data.mjs（7条/127来源）、validate-site.mjs、validate-pages.mjs、build-derived-data.mjs --check、data JSON解析、根目录HTMLParser及git diff --check通过。草稿校验发现排序、元数据格式及固定边界文案不符，修正文案后通过；未修改校验器。未做浏览器视觉实测。
+- Commit note: 【新闻更新】发布17点AI新闻：7条开放模型与独立评估信号（实际08点采集）。
+- Push: 按任务明确授权推送origin main；最终结果记录于自动化memory.md。
+
 ## 2026-10-15 23:07 JST
 
 - Focus: 08:00自动化实际23点执行；保留同日原版10条，新增4条选举防护、设计上下文、个人AI与评测资料信号，形成23点补充版14条。新增不足10条：排除已归档事件、活动营销、社区推测与尚未完成一手核验的调查报道，不补弱证据。
