@@ -293,3 +293,44 @@ The validator checks source-count metadata, concise edition metadata without rep
 
 不足 3 节时回退到通用版面，旧条目和 Codex 产出的条目照常渲染。
 所以 Codex 不要生成占位用的单节 `deepSections`，那会让这条既没有深度、又丢掉通用结构。
+
+## `figure`（可选）：分步流程图 / 数字对比图
+
+`techDiagram` 回答「改之前和改之后」。来源只描述了**一条新流程**、没有可对照的旧做法时，
+用 `figure` 画流程本身。两者同时存在时 `techDiagram` 优先，详情页只出一张主图。
+
+```jsonc
+"figure": {
+  "type": "pipeline",                       // 或 "bars"
+  "heading": "一次调用读不完的长文档，被拆成四段来审",
+  "caption": "下面四步是原文给出的流程，不是本站推测。",
+  "contrast": {                             // 可选，一行对照，不是完整对比图
+    "before": "单次 LLM 调用通读全文",
+    "after": "四段式代理流水线"
+  },
+  "steps": [                                // 至少 2 步，建议 4–5 步
+    {"icon": "split", "label": "分段", "note": "一句话说清这一步做什么"},
+    {"icon": "gauge", "label": "按密度分配算力", "highlight": true, "note": "…"}
+  ],
+  "chart": {                                // 可选，挂在流程图下面的数字
+    "title": "三大 AI 会议的投稿量",
+    "series": [{"label": "2023", "value": 23000, "display": "约 23,000"},
+               {"label": "2026", "value": 74000, "display": "超过 74,000", "highlight": true}],
+    "figcaption": "口径和出处写在这里"
+  },
+  "metrics": [                              // 可选，图下方的指标条
+    {"label": "免费额度", "value": "每周 2 份文档", "qualifier": "在什么条件下成立"}
+  ],
+  "note": {"label": "这张图不能说明什么", "body": "边界写在这里"},
+  "figcaption": "来源：…"
+}
+```
+
+`type: "bars"` 时去掉 `steps`，把 `series` 直接放在顶层，其余字段相同。
+
+- `icon` 取 `doc` / `split` / `gauge` / `agents` / `check` / `user` / `brain` /
+  `filter` / `gear` / `shield` / `chart` / `chip` / `bolt` / `clock`，认不出就不画图标
+- `highlight: true` 只标**这次真正改掉或最值得看的那一步**，一张图里不超过 3 个
+- `steps` 不足 2 步、`series` 不足 2 项时整块不渲染，不会出半张图
+- 流程图用的是 HTML 栅格不是整张 SVG，窄屏自动竖排；柱状图宽度有上限，不会被拉满整行
+- **每条规则和 `techDiagram` 一样：只能重排来源已经写明的事实。** 原文没写的步骤不要补

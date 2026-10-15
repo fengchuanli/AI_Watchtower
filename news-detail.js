@@ -1229,6 +1229,181 @@ function renderTechDiagram(item) {
   );
 }
 
+/* 站内插图：Codex 抓到情报后，由本站二次加工选模板、写标签。
+   pipeline = 新流程/新架构的分步拆解；bars = 来源明确给出的一组可比数字。
+   两者都只允许重排来源已经写明的事实；字段缺失时整块不渲染。 */
+const FIGURE_ICONS = {
+  doc: '<path d="M7 3h8l4 4v14H7Z"/><path d="M15 3v4h4"/>',
+  split: '<path d="M4 6h16M4 12h16M4 18h9"/>',
+  gauge: '<path d="M3.5 17a9 9 0 1 1 17 0"/><path d="M12 17l4.4-5.4"/><circle cx="12" cy="17" r="1.6"/>',
+  agents: '<circle cx="6.5" cy="7" r="2.6"/><circle cx="17.5" cy="7" r="2.6"/><circle cx="12" cy="18" r="2.6"/><path d="M8.8 8.8 10.6 15.6M15.2 8.8 13.4 15.6M9.1 7h5.8"/>',
+  check: '<circle cx="12" cy="12" r="8.6"/><path d="M8.2 12.3 11 15l5-5.6"/>',
+  user: '<circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c0-4 3.3-6.4 7.2-6.4S19.2 16 19.2 20"/>',
+  brain: '<path d="M9.5 4.6A3 3 0 0 0 6.3 7.8 3 3 0 0 0 5 12.6a3 3 0 0 0 1.6 4.8 3 3 0 0 0 2.9 2Z"/><path d="M14.5 4.6a3 3 0 0 1 3.2 3.2 3 3 0 0 1 1.3 4.8 3 3 0 0 1-1.6 4.8 3 3 0 0 1-2.9 2Z"/><path d="M12 4.3v15.4"/>',
+  filter: '<path d="M3.5 5h17l-6.6 7.6V20l-3.8 1.6v-9Z"/>',
+  gear: '<circle cx="12" cy="12" r="4.4"/><circle cx="12" cy="12" r="8.2"/><path d="M12 3.8v2.4M12 17.8v2.4M3.8 12h2.4M17.8 12h2.4"/>',
+  shield: '<path d="M12 3 19.4 6v5.8c0 4.7-3.1 7.7-7.4 8.7-4.3-1-7.4-4-7.4-8.7V6Z"/><path d="M8.7 12.1 11 14.5l4.1-4.7"/>',
+  chart: '<path d="M4 20V4M4 20h16"/><path d="M8.2 20v-5.4M12.4 20V8.6M16.6 20v-8.6"/>',
+  chip: '<rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10.4 2.8v4.2M13.6 2.8v4.2M10.4 17v4.2M13.6 17v4.2M2.8 10.4h4.2M2.8 13.6h4.2M17 10.4h4.2M17 13.6h4.2"/>',
+  bolt: '<path d="M13.4 2.8 5.6 13.4h5.4l-.4 7.8 7.8-10.6h-5.4Z"/>',
+  clock: '<circle cx="12" cy="12" r="8.6"/><path d="M12 7.2V12l3.4 2.1"/>',
+};
+
+function renderFigureIcon(name) {
+  const glyph = FIGURE_ICONS[name];
+
+  if (!glyph) {
+    return "";
+  }
+
+  return `<span class="fig-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">${glyph}</svg></span>`;
+}
+
+function renderFigureMetrics(metrics) {
+  const rows = (Array.isArray(metrics) ? metrics : []).filter((metric) => metric?.label && metric?.value);
+
+  if (!rows.length) {
+    return "";
+  }
+
+  return `
+    <dl class="fig-metrics">
+      ${rows
+        .map(
+          (metric) => `
+        <div class="fig-metric">
+          <dt>${escapeHtml(metric.label)}</dt>
+          <dd>${escapeHtml(metric.value)}</dd>
+          ${metric.qualifier ? `<p class="fig-metric-note">${escapeHtml(metric.qualifier)}</p>` : ""}
+        </div>`,
+        )
+        .join("")}
+    </dl>
+  `;
+}
+
+/* 分步流程图。用 HTML 盒子而不是整张 SVG：窄屏时自动竖排，不会出现横向滚动。 */
+function renderPipelineFigure(figure) {
+  const steps = (Array.isArray(figure.steps) ? figure.steps : []).filter((step) => step?.label);
+
+  if (steps.length < 2) {
+    return "";
+  }
+
+  const contrast =
+    figure.contrast?.before && figure.contrast?.after
+      ? `
+      <p class="fig-contrast">
+        <span class="fig-contrast-side is-before">${escapeHtml(figure.contrast.before)}</span>
+        <span class="fig-contrast-arrow">改成</span>
+        <span class="fig-contrast-side is-after">${escapeHtml(figure.contrast.after)}</span>
+      </p>`
+      : "";
+
+  const body = `
+    <figure class="fig-pipeline">
+      ${contrast}
+      <ol class="fig-steps">
+        ${steps
+          .map(
+            (step, index) => `
+          <li class="fig-step${step.highlight ? " is-key" : ""}">
+            ${renderFigureIcon(step.icon)}
+            <b class="fig-step-label"><i>${String(index + 1).padStart(2, "0")}</i>${escapeHtml(step.label)}</b>
+            ${step.note ? `<span class="fig-step-note">${escapeHtml(step.note)}</span>` : ""}
+          </li>`,
+          )
+          .join("")}
+      </ol>
+      ${renderBarsBlock(figure.chart)}
+      ${figure.figcaption ? `<figcaption>${escapeHtml(figure.figcaption)}</figcaption>` : ""}
+    </figure>
+    ${renderFigureMetrics(figure.metrics)}
+    ${figure.note ? renderReadingNote(figure.note.label || "读图", figure.note.body) : ""}
+  `;
+
+  return renderVisualSection("detail-tech", "How it works", figure.heading || "这套流程分几步", figure.caption, body);
+}
+
+/* 单系列横向柱状图。只画来源原文写明的数字，单位和口径写在图注里。
+   既能独立成图，也能挂在流程图下面当「数字出处」。 */
+function renderBarsBlock(chart) {
+  const series = (Array.isArray(chart?.series) ? chart.series : []).filter(
+    (row) => row?.label && Number.isFinite(Number(row.value)),
+  );
+
+  if (series.length < 2) {
+    return "";
+  }
+
+  const LABEL_W = 108;
+  const TRACK_X = LABEL_W + 14;
+  const TRACK_W = 320;
+  const ROW_H = 36;
+  const BAR_H = 18;
+  const WIDTH = TRACK_X + TRACK_W + 108;
+  const HEIGHT = series.length * ROW_H + 10;
+  const max = Math.max(...series.map((row) => Number(row.value)));
+
+  const rows = series
+    .map((row, index) => {
+      const y = 5 + index * ROW_H;
+      const barY = y + (ROW_H - BAR_H) / 2;
+      const width = Math.max(8, Math.round((Number(row.value) / max) * TRACK_W));
+      const path = `M${TRACK_X} ${barY} h${width - 4} a4 4 0 0 1 4 4 v${BAR_H - 8} a4 4 0 0 1 -4 4 h-${width - 4} Z`;
+
+      return `
+        <text x="${LABEL_W}" y="${barY + BAR_H - 4}" class="fig-bar-label">${escapeHtml(row.label)}</text>
+        <path d="${path}" class="fig-bar${row.highlight ? " is-key" : ""}" />
+        <text x="${TRACK_X + width + 12}" y="${barY + BAR_H - 4}" class="fig-bar-value">${escapeHtml(row.display || String(row.value))}</text>
+      `;
+    })
+    .join("");
+
+  return `
+    <figure class="fig-bars">
+      <div class="detail-chart-scroll">
+        <svg viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img"
+          aria-label="${escapeHtml(`${chart.title || "数字对比"}：${series.map((row) => `${row.label} ${row.display || row.value}`).join("，")}`)}">
+          <line x1="${TRACK_X}" y1="5" x2="${TRACK_X}" y2="${HEIGHT - 5}" class="fig-bar-axis" />
+          ${rows}
+        </svg>
+      </div>
+      ${chart.figcaption ? `<figcaption>${escapeHtml(chart.figcaption)}</figcaption>` : ""}
+    </figure>
+  `;
+}
+
+function renderBarsFigure(figure) {
+  const block = renderBarsBlock(figure);
+
+  if (!block) {
+    return "";
+  }
+
+  const body = `
+    ${block}
+    ${renderFigureMetrics(figure.metrics)}
+    ${figure.note ? renderReadingNote(figure.note.label || "读图", figure.note.body) : ""}
+  `;
+
+  return renderVisualSection("detail-tech", "By the numbers", figure.heading || "来源给出的数字", figure.caption, body);
+}
+
+function renderFigure(item) {
+  const figure = item.figure;
+
+  if (figure?.type === "pipeline") {
+    return renderPipelineFigure(figure);
+  }
+
+  if (figure?.type === "bars") {
+    return renderBarsFigure(figure);
+  }
+
+  return "";
+}
+
 function renderTrendChart(item, trends) {
   if (!trends?.weeks?.length) {
     return "";
@@ -1415,7 +1590,7 @@ function renderDetail(item, data) {
     </section>`;
 
   // 主图：技术类条目优先画架构对比，其次是关系图。两者都没有就不出现。
-  const leadFigure = renderTechDiagram(item) || renderRelationGraph(item);
+  const leadFigure = renderTechDiagram(item) || renderFigure(item) || renderRelationGraph(item);
 
   const navItems = [
     ["#quick-summary", "01", "速览"],

@@ -418,6 +418,66 @@
         "readerUtility": 4,
         "total": 19,
         "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+      },
+      "figure": {
+        "type": "pipeline",
+        "heading": "粗网格先跑完，再由另一个模型补细节",
+        "caption": "HiRO-ACE 是两段式：ACE 负责长期演化，HiRO 负责把粗结果放大。v2 换掉的是后半段。",
+        "contrast": {
+          "before": "HiROv1 只能生成降水一个场",
+          "after": "HiROv2 同时生成多个高分辨率场"
+        },
+        "steps": [
+          {
+            "icon": "brain",
+            "label": "ACE 跑 100 km 粗分辨率",
+            "note": "AI 气候模拟器在粗网格上推进长期演化，原文用它跑了 10 年。"
+          },
+          {
+            "icon": "filter",
+            "label": "HiROv2 降尺度到 3 km",
+            "highlight": true,
+            "note": "把粗输出锐化成细节；v2 的训练方式改动提升了对极端值的还原能力。"
+          },
+          {
+            "icon": "chart",
+            "label": "一次输出降水、风、气压",
+            "highlight": true,
+            "note": "v1 只能出降水，所以覆盖不到大部分极端天气；v2 多场同出才谈得上「极端事件」。"
+          },
+          {
+            "icon": "check",
+            "label": "与 X-SHiELD 对照",
+            "note": "用显式模拟风暴的高分辨率大气模式作为参照系，核对统计量是否对得上。"
+          }
+        ],
+        "metrics": [
+          {
+            "label": "分辨率",
+            "value": "100 km → 3 km",
+            "qualifier": "ACE 出粗场，HiROv2 出细场"
+          },
+          {
+            "label": "成本",
+            "value": "约为 X-SHiELD 的 1/300",
+            "qualifier": "全球数据；只要单个区域时还能再省一百倍以上"
+          },
+          {
+            "label": "极端值统计误差",
+            "value": "3% 以内",
+            "qualifier": "喂入粗化后的 X-SHiELD 数据时；罕见到百万分之一的事件也在内"
+          },
+          {
+            "label": "已生成时长",
+            "value": "10 年",
+            "qualifier": "全球 3 km；飓风能量与 X-SHiELD 同期相当"
+          }
+        ],
+        "note": {
+          "label": "这张图不能说明什么",
+          "body": "原文自己写明了边界：HiRO 是跟着 X-SHiELD 学的，所以只能配那一版调校过的 ACE，现在还做不出更暖的未来气候，也做不出 ERA5 那样的历史记录。飓风眼附近的风和气压也仍比 X-SHiELD 更不对称。成本和精度都是发布方自测，没有独立验证。"
+        },
+        "figcaption": "来源：Ai2 发表于 Hugging Face Blog，2026-10-14。"
       }
     },
     {
@@ -620,6 +680,93 @@
         "readerUtility": 4,
         "total": 20,
         "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+      },
+      "figure": {
+        "type": "pipeline",
+        "heading": "一次调用读不完的长文档，被拆成四段来审",
+        "caption": "下面四步是 Google Research 原文给出的流程，不是本站推测。",
+        "contrast": {
+          "before": "单次 LLM 调用通读全文",
+          "after": "四段式代理流水线"
+        },
+        "steps": [
+          {
+            "icon": "split",
+            "label": "分段",
+            "note": "分段代理把文档拆成可重叠的逻辑段（引言、方法、实验等），必须覆盖全文。"
+          },
+          {
+            "icon": "gauge",
+            "label": "按密度分配算力",
+            "highlight": true,
+            "note": "信息密度高的段落（例如数学证明）拿到更多推理预算，引言和相关工作拿得少。"
+          },
+          {
+            "icon": "agents",
+            "label": "并行深度核查",
+            "highlight": true,
+            "note": "多个推理代理同时审各自的段落，但每个都能看到全文上下文，以便追踪交叉引用。"
+          },
+          {
+            "icon": "check",
+            "label": "全局合成与外部取证",
+            "note": "合成代理汇总各段报告，做跨段一致性检查，必要时重跑逻辑校验，并调用外部工具核实事实。"
+          }
+        ],
+        "chart": {
+          "title": "三大 AI 会议的投稿量",
+          "series": [
+            {
+              "label": "2023",
+              "value": 23000,
+              "display": "约 23,000"
+            },
+            {
+              "label": "2024",
+              "value": 32000,
+              "display": "约 32,000"
+            },
+            {
+              "label": "2025",
+              "value": 45000,
+              "display": "约 45,000"
+            },
+            {
+              "label": "2026",
+              "value": 74000,
+              "display": "超过 74,000",
+              "highlight": true
+            }
+          ],
+          "figcaption": "ICLR、NeurIPS、ICML 三家合计的投稿篇数，原文数据。这是「审不过来」这个问题的量级。"
+        },
+        "metrics": [
+          {
+            "label": "已跑过的真实投稿",
+            "value": "16,000+ 篇",
+            "qualifier": "STOC 2026、ICML 2026、NeurIPS 2026、ICLR 2027 四个会议的作者自愿加入"
+          },
+          {
+            "label": "免费额度",
+            "value": "每周 2 份文档",
+            "qualifier": "接自己的 Gemini API key 可提高上限"
+          },
+          {
+            "label": "初期支持格式",
+            "value": "PDF 与纯文本",
+            "qualifier": "多文件输入原文称「即将支持」"
+          },
+          {
+            "label": "文档留存",
+            "value": "1 年",
+            "qualifier": "原文称不用于训练或改进模型，仅用于界面回看"
+          }
+        ],
+        "note": {
+          "label": "这张图不能说明什么",
+          "body": "四段流水线是官方对自己系统的描述，不是第三方复现；16,000 篇只说明跑过的量，不说明审查意见正确。原文自己也写了，高层判断仍然留给人。"
+        },
+        "figcaption": "来源：Google Research Blog，2026-10-14。"
       }
     },
     {
@@ -755,6 +902,67 @@
         "readerUtility": 4,
         "total": 19,
         "note": "按读者用途与证据质量选择；发布或报道事实不等于效果成立。"
+      },
+      "figure": {
+        "type": "pipeline",
+        "heading": "解码这条路没变，变的是其中三个环节",
+        "caption": "亮色的三步是本次改动点，其余环节原文未改。全部数据为 AWS 在 H200 上的自测。",
+        "contrast": {
+          "before": "vLLM 默认内核与后端",
+          "after": "换布局、换后端、去掉重编译"
+        },
+        "steps": [
+          {
+            "icon": "user",
+            "label": "收到解码请求",
+            "note": "解码阶段每次往往只处理 1 个 token，M=1。"
+          },
+          {
+            "icon": "chip",
+            "label": "专家矩阵乘改用 Swap-AB",
+            "highlight": true,
+            "note": "把 A×B 转置成 Bᵀ×Aᵀ，让专家维度 N 去占 WGMMA 固定的 64 行，不再让 Tensor Core 空转。"
+          },
+          {
+            "icon": "gear",
+            "label": "FP8 走 Triton 而非 CUTLASS",
+            "highlight": true,
+            "note": "Triton 把缩放、矩阵乘和专家聚合融成一趟，数据只从 HBM 读一次；原文称这是纯配置改动，没改内核代码。"
+          },
+          {
+            "icon": "bolt",
+            "label": "RoPE+FP8 量化内核不再重编译",
+            "highlight": true,
+            "note": "给变长参数加 do_not_specialize，token 数一变就重新编译的问题消失。"
+          },
+          {
+            "icon": "clock",
+            "label": "多卡同步",
+            "note": "8 卡集群里一张卡重编译会拖住另外七张，这一步因此受益。"
+          }
+        ],
+        "metrics": [
+          {
+            "label": "Swap-AB",
+            "value": "端到端吞吐 +2~4%",
+            "qualifier": "大规模 MoE 模型，H200；vLLM 0.24.0 起"
+          },
+          {
+            "label": "FP8 走 Triton",
+            "value": "端到端吞吐 +10%",
+            "qualifier": "FP8 量化 MoE，H200；AWS LMI v28 容器"
+          },
+          {
+            "label": "去掉 JIT 重编译",
+            "value": "首字延迟 +9%",
+            "qualifier": "H200，8 路张量并行；vLLM 0.22.0 起"
+          }
+        ],
+        "note": {
+          "label": "这张图不能说明什么",
+          "body": "原文没有给出任何绝对值——没有 tokens/s，没有毫秒级 TTFT，也没说用的是哪个模型、多大 batch。三个百分比是不是在同一次测量里取得的，原文也没写。换别的 GPU 或混合负载，不能指望同样的收益。"
+        },
+        "figcaption": "来源：AWS Machine Learning Blog。"
       }
     },
     {
