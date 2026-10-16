@@ -2,16 +2,48 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-10-16",
-  "totalItems": 1253,
+  "totalItems": 1257,
   "editions": [
     {
-      "id": "news-1700-2026-10-16",
+      "id": "news-2300-2026-10-16",
       "date": "2026-10-16",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "17:00任务｜08点采集",
+      "archiveLabel": "23:00补充版",
       "archiveStatus": "published",
-      "itemCount": 7,
+      "itemCount": 11,
       "items": [
+        {
+          "id": "nvidia-indic-pretraining-2026-10-16",
+          "title": "NVIDIA与AI4Bharat预告印度语言语料：先核对发布与数据质量",
+          "category": "research",
+          "label": "研究",
+          "time": "10月16日（原文日期，未披露时分）",
+          "publishedAt": "2026-10-16",
+          "body": "NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。",
+          "impact": "多语言模型与训练数据团队需要补充验收：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "当前说明不等于全量数据已可下载；作者报告的混合训练收益不能单独归因于合成语料。"
+        },
+        {
+          "id": "reflection-beam-2026-10-16",
+          "title": "Reflection Beam开放权重：自建代码Agent增加选择",
+          "category": "model",
+          "label": "模型",
+          "time": "10月16日（原文日期，未披露时分）",
+          "publishedAt": "2026-10-16",
+          "body": "Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。",
+          "impact": "模型平台与代码Agent团队需要补充验收：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/reflection-beam",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "开放权重与接入说明不证明代码任务领先，也不保证长上下文在现有硬件上经济可用。"
+        },
         {
           "id": "bluesky-attie-creation-2026-10-16",
           "title": "Attie扩展创作入口：生成网站之后还需检查权限",
@@ -61,6 +93,22 @@
           "sourceCaveat": "访问安排不证明模型安全，也不代表所有评估伙伴拥有同等发表权。"
         },
         {
+          "id": "flux3-diffusers-2026-10-16",
+          "title": "FLUX.3接入Diffusers：布局控制进入图像工作流",
+          "category": "tool",
+          "label": "工具",
+          "time": "10月15日（原文日期，未披露时分）",
+          "publishedAt": "2026-10-15",
+          "body": "Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。",
+          "impact": "设计工具与图像生成工程团队需要补充验收：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/flux-3",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "接入文档支持功能存在，不能把作者硬件上的速度外推到所有设备，也不证明图像版权风险消失。"
+        },
+        {
           "id": "google-universal-cart-2026-10-16",
           "title": "Google在美国推出Universal Cart，购物状态跨入口保存",
           "category": "product",
@@ -75,6 +123,22 @@
           "sourceRole": "官方核对",
           "trustLevel": "official",
           "sourceCaveat": "不证明全球可用，也不证明购物车能未经确认自主完成全部采购。"
+        },
+        {
+          "id": "ibm-granite-switch-2026-10-16",
+          "title": "Granite Switch 4.1整合多任务：统一端点仍需隔离验收",
+          "category": "model",
+          "label": "模型",
+          "time": "10月15日（原文日期，未披露时分）",
+          "publishedAt": "2026-10-15",
+          "body": "IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。",
+          "impact": "企业模型服务与语音工作流团队需要补充验收：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "作者的性能比较和显存主张不是独立验证；单端点演示不能证明生产负载稳定。"
         },
         {
           "id": "hf-bert-tokenizer-2026-10-16",

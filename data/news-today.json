@@ -4,18 +4,18 @@
   "updatedAt": "2026-10-16",
   "date": "2026-10-16",
   "editionCount": 128,
-  "totalItems": 1253,
+  "totalItems": 1257,
   "editions": [
     {
-      "id": "news-1700-2026-10-16",
+      "id": "news-2300-2026-10-16",
       "date": "2026-10-16",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00任务｜08点采集",
-      "itemCount": 7,
-      "note": "新增7条开放模型、独立评估与Agent入口信号",
-      "operationalStatus": "已拉取origin/main；任务实际08点执行，未覆盖未来17点。RSS解析不支持XML，改核对登记来源公开原文；同日晨版尚不存在。",
-      "editorialInterpretation": "本期发布7条安全非重复信号；少于10条是质量门槛结果，未用旧闻、重复稿、社区讨论或弱证据补数。官方发布与媒体线索均保留效果边界。",
+      "archiveLabel": "23:00补充版",
+      "itemCount": 11,
+      "note": "保留7条，新增4条开放模型、图像工具与多语言数据线索",
+      "operationalStatus": "08:00自动化实际23点执行；已拉取origin/main。保留今天08点采集的7条，新增4条；RSS不支持XML，改核对登记来源公开作者原文。",
+      "editorialInterpretation": "本期累计11条安全非重复信号，本次新增4条。新增少于10条是质量门槛结果，未用重复报道、会场观点、社区讨论或旧闻补数。作者主张与数据预告均保留核验边界。",
       "readerFrame": {
         "headline": "把本期当作模型部署与Agent权限的核验清单",
         "whyItMatters": "开放模型、独立评估和应用入口同时变化，研发与采购团队需要把可运行、可审计、可撤销分别验收，避免用演示替代交付证据。",
@@ -30,7 +30,7 @@
         ],
         "mobile": {
           "headline": "先查部署与权限",
-          "summary": "7条新增信号：检查开放模型、独立评估和应用入口的可用条件。",
+          "summary": "累计11条、本次新增4条：核对开放模型、图像工作流与多语言数据的验收条件。",
           "primaryUses": [
             "研发团队查部署",
             "安全团队查评估",
@@ -40,20 +40,20 @@
         }
       },
       "changeSummary": {
-        "headline": "相较昨日补充版，新增部署条件与独立监督线索",
+        "headline": "相较今日早间采集，补充开放生态的四条工程线索",
         "freshFacts": [
-          "本期新增：开放权重、模型部署分层与分词优化材料。",
-          "本期新增：METR访问安排、购物入口及两条应用计划线索。"
+          "本次新增：Beam开放权重与FLUX.3工具接入说明。",
+          "本次新增：Granite统一端点与印度语言语料预告。"
         ],
         "repeatedContext": [
-          "重复背景：昨日已有工作流验收主题，本次不重复收录原文。",
-          "重复背景：车内Agent仍是计划，性能测量仍需第三方复测。"
+          "重复背景：保留早间7条，未计入本次新增。",
+          "重复背景：发布、预告与演示仍不等于独立效果验证。"
         ]
       },
       "coverageMix": [
         {
-          "label": "核对模型与预处理",
-          "count": 3,
+          "label": "核对模型、数据与工具",
+          "count": 7,
           "meaning": "用来更新硬件、许可和中文语料复测清单。"
         },
         {
@@ -63,17 +63,17 @@
         }
       ],
       "sourceRisk": {
-        "label": "官方发布视角较多",
-        "note": "官方登记来源5/7，集中于发布方和作者；媒体2/7，均不能替代独立效果证据。",
-        "nextCheck": "核对METR独立报告、第三方基准、商户文档与实际交付记录。"
+        "label": "作者发布视角集中",
+        "note": "官方登记来源9/11、媒体2/11；新增4条均来自Hugging Face平台的不同作者，发布视角集中，不代表独立交叉验证。",
+        "nextCheck": "核对第三方测试报告、客户侧运行日志、独立母语评审与数据集许可证。"
       },
       "sourceConcentration": {
-        "sourceId": "techcrunch-ai",
-        "sourceName": "TechCrunch AI",
-        "count": 2,
-        "share": "2/7",
-        "note": "TechCrunch为最大单一标签，占2/7；其余五个来源各1条。",
-        "nextCheck": "优先核对Bluesky与Rivian官方说明和第三方测试。"
+        "sourceId": "huggingface-blog",
+        "sourceName": "Hugging Face Blog",
+        "count": 5,
+        "share": "5/11",
+        "note": "Hugging Face平台占5/11，作者涉及HF、IBM与NVIDIA；平台分发和发布方视角集中，不能当作五个独立证据。",
+        "nextCheck": "核对模型权利方文件、第三方基准及独立数据质量审阅。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
@@ -85,7 +85,7 @@
         {
           "family": "official",
           "label": "官方来源",
-          "count": 5,
+          "count": 9,
           "role": "原文核对发布和作者表述，效果另需复测。"
         },
         {
@@ -98,12 +98,16 @@
       "topicGroups": [
         {
           "id": "model",
-          "label": "核对模型与预处理",
-          "count": 3,
+          "label": "核对模型、数据与工具",
+          "count": 7,
           "itemIds": [
             "meta-muse-spark-open-2026-10-16",
             "nvidia-nemotron-super-bolt-2026-10-16",
-            "hf-bert-tokenizer-2026-10-16"
+            "hf-bert-tokenizer-2026-10-16",
+            "reflection-beam-2026-10-16",
+            "nvidia-indic-pretraining-2026-10-16",
+            "ibm-granite-switch-2026-10-16",
+            "flux3-diffusers-2026-10-16"
           ],
           "meaning": "用来更新硬件、许可和中文语料复测清单。"
         },
@@ -171,6 +175,138 @@
         }
       ],
       "items": [
+        {
+          "id": "nvidia-indic-pretraining-2026-10-16",
+          "category": "research",
+          "label": "研究",
+          "title": "NVIDIA与AI4Bharat预告印度语言语料：先核对发布与数据质量",
+          "body": "NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。",
+          "summary": "NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。",
+          "detailBody": "来源事实：NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。\n本站判断：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
+          "trend": "本站判断：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
+          "detailTrend": "本站判断：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
+          "whyItMatters": "数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
+          "whyRanked": "数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
+          "detailWhyRanked": "多语言模型与训练数据团队可用这条更新技术选型和试点计划。检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
+          "topReason": "检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
+          "impact": "多语言模型与训练数据团队需要补充验收：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
+          "whoShouldCare": "多语言模型与训练数据团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
+          "readerUse": "多语言模型与训练数据团队可用本条制定小规模试点；检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
+          "nextCheck": "检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
+          "followUpQuestions": [
+            "是否有独立报告支持以下检查：检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验？",
+            "第三方是否公开配置、失败样本和原始日志？"
+          ],
+          "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
+          "claimBoundary": "当前说明不等于全量数据已可下载；作者报告的混合训练收益不能单独归因于合成语料。",
+          "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：若母语审阅发现文化信息缺失、翻译偏差或训练测试来源重叠，应下调语料可用性判断。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+          "originalUrl": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog作者原文说明：NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 当前说明不等于全量数据已可下载；作者报告的混合训练收益不能单独归因于合成语料。 检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16",
+          "time": "10月16日（原文日期，未披露时分）",
+          "tags": [
+            "研究",
+            "开放生态"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+          }
+        },
+        {
+          "id": "reflection-beam-2026-10-16",
+          "category": "model",
+          "label": "模型",
+          "title": "Reflection Beam开放权重：自建代码Agent增加选择",
+          "body": "Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。",
+          "summary": "Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。",
+          "detailBody": "来源事实：Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。\n本站判断：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
+          "trend": "本站判断：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
+          "detailTrend": "本站判断：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
+          "whyItMatters": "自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
+          "whyRanked": "自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
+          "detailWhyRanked": "模型平台与代码Agent团队可用这条更新技术选型和试点计划。检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
+          "topReason": "检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
+          "impact": "模型平台与代码Agent团队需要补充验收：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
+          "whoShouldCare": "模型平台与代码Agent团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
+          "readerUse": "模型平台与代码Agent团队可用本条制定小规模试点；检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
+          "nextCheck": "检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
+          "followUpQuestions": [
+            "是否有独立报告支持以下检查：检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志？",
+            "第三方是否公开配置、失败样本和原始日志？"
+          ],
+          "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
+          "claimBoundary": "开放权重与接入说明不证明代码任务领先，也不保证长上下文在现有硬件上经济可用。",
+          "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：第三方复测若出现工具调用失败或长上下文成本失控，应下调自建部署优先级。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/reflection-beam",
+          "originalUrl": "https://huggingface.co/blog/reflection-beam",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog作者原文说明：Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 开放权重与接入说明不证明代码任务领先，也不保证长上下文在现有硬件上经济可用。 检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16",
+          "time": "10月16日（原文日期，未披露时分）",
+          "tags": [
+            "模型",
+            "开放生态"
+          ],
+          "companies": [
+            "Reflection"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+          }
+        },
         {
           "id": "bluesky-attie-creation-2026-10-16",
           "category": "product",
@@ -370,6 +506,72 @@
           }
         },
         {
+          "id": "flux3-diffusers-2026-10-16",
+          "category": "tool",
+          "label": "工具",
+          "title": "FLUX.3接入Diffusers：布局控制进入图像工作流",
+          "body": "Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。",
+          "summary": "Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。",
+          "detailBody": "来源事实：Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。\n本站判断：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
+          "trend": "本站判断：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
+          "detailTrend": "本站判断：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
+          "whyItMatters": "显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
+          "whyRanked": "显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
+          "detailWhyRanked": "设计工具与图像生成工程团队可用这条更新技术选型和试点计划。核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
+          "topReason": "核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
+          "impact": "设计工具与图像生成工程团队需要补充验收：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
+          "whoShouldCare": "设计工具与图像生成工程团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
+          "readerUse": "设计工具与图像生成工程团队可用本条制定小规模试点；核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
+          "nextCheck": "核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
+          "followUpQuestions": [
+            "是否有独立报告支持以下检查：核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟？",
+            "第三方是否公开配置、失败样本和原始日志？"
+          ],
+          "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
+          "claimBoundary": "接入文档支持功能存在，不能把作者硬件上的速度外推到所有设备，也不证明图像版权风险消失。",
+          "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：若固定提示集显示布局偏移、主体变化或量化显著退化，应缩小适用场景。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/flux-3",
+          "originalUrl": "https://huggingface.co/blog/flux-3",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog作者原文说明：Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 接入文档支持功能存在，不能把作者硬件上的速度外推到所有设备，也不证明图像版权风险消失。 核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（原文日期，未披露时分）",
+          "tags": [
+            "工具",
+            "开放生态"
+          ],
+          "companies": [
+            "Black Forest Labs"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+          }
+        },
+        {
           "id": "google-universal-cart-2026-10-16",
           "category": "product",
           "label": "产品",
@@ -433,6 +635,72 @@
             "readerUtility": 4,
             "total": 19,
             "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+          }
+        },
+        {
+          "id": "ibm-granite-switch-2026-10-16",
+          "category": "model",
+          "label": "模型",
+          "title": "Granite Switch 4.1整合多任务：统一端点仍需隔离验收",
+          "body": "IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。",
+          "summary": "IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。",
+          "detailBody": "来源事实：IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。\n本站判断：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
+          "trend": "本站判断：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
+          "detailTrend": "本站判断：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
+          "whyItMatters": "统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
+          "whyRanked": "统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
+          "detailWhyRanked": "企业模型服务与语音工作流团队可用这条更新技术选型和试点计划。查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
+          "topReason": "查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
+          "impact": "企业模型服务与语音工作流团队需要补充验收：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
+          "whoShouldCare": "企业模型服务与语音工作流团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
+          "readerUse": "企业模型服务与语音工作流团队可用本条制定小规模试点；查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
+          "nextCheck": "查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
+          "followUpQuestions": [
+            "是否有独立报告支持以下检查：查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录？",
+            "第三方是否公开配置、失败样本和原始日志？"
+          ],
+          "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
+          "claimBoundary": "作者的性能比较和显存主张不是独立验证；单端点演示不能证明生产负载稳定。",
+          "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：若并发测试出现任务相互阻塞或安全分类误判上升，应重新评估合并服务的收益。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+          "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog作者原文说明：IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 作者的性能比较和显存主张不是独立验证；单端点演示不能证明生产负载稳定。 查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（原文日期，未披露时分）",
+          "tags": [
+            "模型",
+            "开放生态"
+          ],
+          "companies": [
+            "IBM"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 19,
+            "note": "发布与作者说明可追溯，效果仍需第三方复测。"
           }
         },
         {
