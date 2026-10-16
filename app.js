@@ -711,8 +711,14 @@ function updateContinuityBrief(edition = {}) {
     <div class="continuity-brief-heading">
       <p class="eyebrow">Continuity</p>
       <h3>本期连续观察</h3>
-      <p>只使用当前版次和历史版次已有字段，帮助读者区分信号变强、重复还是仍待核验。</p>
+      <p>看本期信号有何变化；重复出现不代表证据更强。</p>
     </div>
+    <details class="continuity-brief-details" ${cards.length <= 1 || !window.matchMedia("(max-width: 768px)").matches ? "open" : ""}>
+      <summary>
+        <strong>查看 ${cards.length} 条连续观察</strong>
+        <span>${cards.map((card) => `${escapeHtml(card.label)} · ${escapeHtml(card.status)}`).join("；")}</span>
+        <small>展开看变化、怎么用与核验边界</small>
+      </summary>
     <div class="continuity-brief-grid">
       ${cards
         .map(
@@ -728,6 +734,7 @@ function updateContinuityBrief(edition = {}) {
         )
         .join("")}
     </div>
+    </details>
   `;
 }
 

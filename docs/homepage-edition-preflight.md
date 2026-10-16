@@ -87,3 +87,10 @@ For the 2026-10-11 through 2026-11-09 cycle, the phone first-screen audit keeps 
 | After TOP3 | 按目的阅读, 分类最新, 深度简报, 连续观察, 更多新闻流, 资料库 | Let readers choose depth, background, source boundaries, continuity, or full history after the first ranking decision. |
 
 The header navigation and the small `手机先读` cue should mirror this split: `今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流`. The cue belongs below the Today Briefing watch points because it marks the path without delaying the TOP3 cards. If future work moves modules, keep the audit table, header order, and visible cue synchronized.
+
+## Continuity Mobile Disclosure Rule
+
+- 连续观察没有有效卡片时不显示；只有一条时默认展开。
+- 首次渲染宽度不超过 768px 且有两条及以上时默认折叠；桌面默认展开。使用原生 details/summary，读者可用键盘或触屏切换。
+- 折叠摘要保留卡片数量、主题/公司及状态，并提示重复出现不代表证据更强；展开后保留变化、读者用途和核验边界。
+- 不随窗口缩放重置读者的展开选择，不移动 DOM 或复制卡片；连续观察仍位于深度简报末尾，新闻流之前。

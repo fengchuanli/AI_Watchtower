@@ -5385,3 +5385,23 @@ h3 {
   font-size: var(--text-xs);
   line-height: 1.6;
 }
+
+/* 连续观察：手机多条默认折叠，摘要保留状态，完整核验边界按需展开。 */
+.continuity-brief-details summary {
+  cursor: pointer;
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 44px;
+}
+.continuity-brief-details summary span,
+.continuity-brief-details summary small {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.continuity-brief-details[open] summary { margin-bottom: 16px; }
+.continuity-brief-details summary:focus-visible {
+  outline: 2px solid var(--state-info);
+  outline-offset: 4px;
+}

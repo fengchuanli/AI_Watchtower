@@ -1,3 +1,16 @@
+## 2026-10-16 11:03:03 JST
+
+- Focus: 20:00计划任务实际于上述时间执行；完成本周期 Day 4 连续观察手机折叠规则。
+- Changed files: `app.js`、`styles.css`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页深度简报末尾“本期连续观察”在768px及以下且有多条卡片时默认折叠，摘要显示数量、主题/公司与状态，并提醒重复不等于证据更强；点击展开可读完整变化、用途与核验边界。单条及桌面默认展开。
+- Source posture: 仅使用既有字段，不改变新闻事实、来源角色或原文依赖度；缩放不重置读者选择，原生details支持键盘展开。
+- VisionHub briefing scorecard: done。fiveSecondUnderstanding / top3ReaderUse / sourceBoundaryVisible / originalSourceDependency 保持；continuityUse、visualAidPurpose pass（状态摘要及按需展开）；mobileBurden partial -> partial，减少默认文字量，但未做浏览器视觉实测。
+- Verification: node --check app.js、validate-data、validate-site、validate-pages、build-derived-data --check、根目录HTMLParser、git diff --check通过。Node VM验证手机/桌面各0、1、2、4条的默认展开状态、卡片数量和边界保留，全部通过。
+- Pull: 沙箱DNS失败后网络授权重试成功，Already up to date；编辑前工作区干净。
+- Commit: 待记录实现提交哈希。
+- Push: 待提交后推送origin/main。
+- Next: Day 5，分类与按目的阅读导航标签。
+
 ## 2026-10-16 08:06 JST
 
 - Focus: 17:00任务实际08点执行，发布7条安全非重复信号：METR评估权限、Muse Spark Open、Nemotron部署分层、Universal Cart、BERT分词优化、Attie创作和Rivian接入计划。未宣称覆盖未来17点；同日晨版不存在，以上一版10月15日23点为去重基线。
