@@ -1,8 +1,504 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-16",
-  "totalItems": 1257,
+  "updatedAt": "2026-10-17",
+  "totalItems": 1262,
   "editions": [
+    {
+      "id": "news-1700-2026-10-17",
+      "date": "2026-10-17",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00新闻版",
+      "itemCount": 5,
+      "note": "5条模型部署、使用统计与Agent治理信号",
+      "operationalStatus": "17:00任务实际08点JST执行；已拉取origin/main。无同日晨版，以昨日23点版去重；未覆盖未来17点。Google RSS不支持XML，改核对登记来源公开原文。",
+      "editorialInterpretation": "本期发布5条安全非重复信号，少于10条是质量门槛结果；未用重复发布、矛盾报道、社区讨论、旧闻或活动营销补数。两条10月15日材料作为近两日治理与统计补录。",
+      "readerFrame": {
+        "headline": "今天哪些模型与Agent变化值得进入验收清单？",
+        "whyItMatters": "部署入口、使用统计和权限治理需要不同证据，研发、采购与安全团队应分别检查运行日志、真实账单和审计记录。",
+        "useThisIssueFor": [
+          "研发团队核对部署与视觉任务失败样本。",
+          "采购团队对照真实账单与网关统计口径。",
+          "安全团队核对通报、权限策略与访问日志。"
+        ],
+        "notProvenYet": [
+          "发布和厂商评测不证明生产效果。",
+          "单一网关统计和媒体线索不能外推全市场。"
+        ],
+        "mobile": {
+          "headline": "先查部署与权限",
+          "summary": "五条线索，分清发布、厂商统计与待核验事件。",
+          "primaryUses": [
+            "研发团队查部署",
+            "采购团队查账单",
+            "安全团队查权限"
+          ],
+          "proofBoundary": "仍需独立测试与客户记录，不能把发布当作效果证明。"
+        }
+      },
+      "changeSummary": {
+        "headline": "相较昨日23点版，增加部署条件与治理证据入口",
+        "freshFacts": [
+          "本期新增：AWS部署路径、Glimpse预览及印度媒体线索。",
+          "本期新增收录：Vercel十月统计与AWS治理框架，原文日期为10月15日。"
+        ],
+        "repeatedContext": [
+          "重复背景：Beam开放权重已归档，本次只增加AWS部署条件。",
+          "重复背景：发布和作者主张仍不等于实际效果。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对部署与使用",
+          "count": 3,
+          "meaning": "用来检查任务、容量与真实账单。"
+        },
+        {
+          "label": "核对权限与治理",
+          "count": 2,
+          "meaning": "用来检查通报、外部策略与审计记录。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "发布方证据占主导",
+        "note": "官方登记来源4/5、媒体1/5；三条为厂商主张，发布方视角不能替代独立验证。发布方证据集中。",
+        "nextCheck": "核对客户账单、第三方复测、监管原文与访问日志。"
+      },
+      "sourceConcentration": {
+        "sourceId": "aws-machine-learning-blog",
+        "sourceName": "AWS Machine Learning Blog",
+        "count": 2,
+        "share": "2/5",
+        "note": "AWS占2/5；部署教程和治理框架来自同一厂商，不是两份独立效果证据。",
+        "nextCheck": "核对客户侧部署记录、第三方红队报告与审计日志。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期是部署与治理核验清单，发布证据强于效果证据。",
+        "doNotConclude": "不能认为开放模型已占全市场优势或Agent已可安全自治。",
+        "useInstead": "应该用来检查容量、账单和权限，并核对第三方报告与客户日志。"
+      },
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 4,
+          "role": "核对发布方声明，效果另需独立验证。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 1,
+          "role": "保留最小媒体线索，仍需通报原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "model",
+          "label": "核对部署与使用",
+          "count": 3,
+          "itemIds": [
+            "beam-aws-2026-10-17",
+            "elorian-glimpse-2026-10-17",
+            "vercel-oct-index-2026-10-17"
+          ],
+          "meaning": "用来检查任务、容量与真实账单。"
+        },
+        {
+          "id": "agent",
+          "label": "核对权限与治理",
+          "count": 2,
+          "itemIds": [
+            "india-agent-report-2026-10-17",
+            "aws-trust-depth-2026-10-17"
+          ],
+          "meaning": "用来检查通报、外部策略与审计记录。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "model",
+          "label": "从发布转向验收",
+          "note": "跨期看，昨日开放权重之后，本期新增云端部署入口与网关统计。",
+          "boundary": "仍需客户侧账单与第三方复测，不证明普遍收益。"
+        },
+        {
+          "topic": "agent",
+          "label": "从监督转向执行",
+          "note": "跨期看，昨日评估权限之后，本期核对治理框架与媒体事件线索。",
+          "boundary": "仍需原始通报和独立审计，不证明风险普遍存在。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "model",
+          "label": "从发布转向验收",
+          "status": "stronger",
+          "previousPattern": "此前归档：跨期看，昨日开放权重之后，本期新增云端部署入口与网关统计。",
+          "currentSignal": "本期新增：部署条件与统计口径。",
+          "signalDirection": "增强：核验入口增加，效果仍未独立验证。",
+          "stillUnproven": "仍需客户侧账单与第三方复测，不证明普遍收益。"
+        },
+        {
+          "topic": "agent",
+          "label": "从监督转向执行",
+          "status": "stronger",
+          "previousPattern": "此前归档：跨期看，昨日评估权限之后，本期核对治理框架与媒体事件线索。",
+          "currentSignal": "本期新增：权限治理及事件线索。",
+          "signalDirection": "增强：核验入口增加，效果仍未独立验证。",
+          "stillUnproven": "仍需原始通报和独立审计，不证明风险普遍存在。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "AWS",
+          "label": "部署与治理继续观察",
+          "lastMention": "此前归档记录云端模型与Agent工程。",
+          "whatChanged": "本期增加Beam部署条件与权限治理框架。",
+          "stillUnproven": "仍需客户日志与独立红队测试验证生产效果。"
+        },
+        {
+          "company": "Reflection",
+          "label": "部署入口增强",
+          "lastMention": "此前归档已记录Beam开放权重。",
+          "whatChanged": "本期新增AWS区域与托管部署说明。",
+          "stillUnproven": "仍需客户侧容量记录和第三方压测核对实际可用性。"
+        }
+      ],
+      "items": [
+        {
+          "id": "india-agent-report-2026-10-17",
+          "category": "policy",
+          "label": "政策",
+          "title": "印度Agent越权活动报道：先查通报与访问日志",
+          "body": "TechCrunch报道印度出现AI Agent越权访问线索。",
+          "summary": "TechCrunch报道印度出现AI Agent越权访问线索。",
+          "detailBody": "来源事实：TechCrunch报道印度出现AI Agent越权访问线索。\n本站判断：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+          "trend": "本站判断：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+          "detailTrend": "本站判断：AI活动的观察范围正在延伸到真实系统边界。工具调用把语言输出变成外部动作，也让权限配置成为能力表现的一部分。事件线索的意义在于提醒组织区分能够访问和获准访问，而不是把单次异常直接解释为普遍的自主意图。 从产业角度看，这也使隔离机制与模型迭代成为需要同步考虑的两条路径；能力的提升和使用范围的扩大不应被视为同一个进程。",
+          "whyItMatters": "AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+          "whyRanked": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+          "detailWhyRanked": "安全运营与企业数据团队可用本条更新试点验收清单。核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+          "topReason": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+          "impact": "安全运营与企业数据团队需要关注：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+          "whoShouldCare": "安全运营与企业数据团队，尤其是负责上线验收、采购和审计的负责人。",
+          "readerUse": "安全运营与企业数据团队可用本条制定核验清单；核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+          "nextCheck": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "本条保留媒体线索，尚未直接核对通报原文；不推断具体责任方、受影响规模或损失。",
+          "counterEvidence": "若通报更正或访问日志否定越权，应下调该风险线索；若仅涉及少量环境，则收窄适用范围。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "originalUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI原文说明：TechCrunch报道印度出现AI Agent越权访问线索。 TechCrunch AI原文用于核对上述最小事实。本条保留媒体线索，尚未直接核对通报原文；不推断具体责任方、受影响规模或损失。完整事实、采访、图表和上下文仍需阅读媒体原文。已核验仅指媒体确有该报道，底层事件仍待原始通报核对。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16T17:52:00Z",
+          "time": "10月16日（原文时间17:52 UTC）",
+          "tags": [
+            "政策",
+            "Agent"
+          ],
+          "companies": [
+            "CERT-In"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          }
+        },
+        {
+          "id": "beam-aws-2026-10-17",
+          "category": "tool",
+          "label": "工具",
+          "title": "Beam增加AWS部署路径：开放权重之后核对区域与容量",
+          "body": "AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。",
+          "summary": "AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。",
+          "detailBody": "来源事实：AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。\n本站判断：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+          "trend": "本站判断：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+          "detailTrend": "本站判断：模型部署正从权重可下载走向运行条件可描述。托管入口与可定制集群提供不同控制程度，也对应不同运维责任。开放生态的价值不只在模型数量，而在能否形成稳定、可重复的服务链；接入方式增加并不自动消除资源约束。",
+          "whyItMatters": "新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+          "whyRanked": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
+          "detailWhyRanked": "云平台与代码Agent研发团队可用本条更新试点验收清单。检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+          "topReason": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
+          "impact": "云平台与代码Agent研发团队需要关注：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+          "whoShouldCare": "云平台与代码Agent研发团队，尤其是负责上线验收、采购和审计的负责人。",
+          "readerUse": "云平台与代码Agent研发团队可用本条制定核验清单；检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
+          "nextCheck": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "教程不能证明容量随时可用，也不证明托管部署在成本或成功率上优于自建。",
+          "counterEvidence": "若客户部署日志显示无法获得容量或成本超出预算，应下调为受限部署入口。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "AWS Machine Learning Blog原文说明：AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。 AWS Machine Learning Blog原文用于核对上述最小事实。教程不能证明容量随时可用，也不证明托管部署在成本或成功率上优于自建。完整方法、配置与原文措辞请回原始来源核对。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16",
+          "time": "10月16日（原文日期，未披露时分）",
+          "tags": [
+            "工具",
+            "部署验收"
+          ],
+          "companies": [
+            "AWS",
+            "Reflection"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          }
+        },
+        {
+          "id": "elorian-glimpse-2026-10-17",
+          "category": "model",
+          "label": "模型",
+          "title": "Glimpse发布视觉推理预览：复看图像不等于可靠理解",
+          "body": "Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。",
+          "summary": "Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。",
+          "detailBody": "来源事实：Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。\n本站判断：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+          "trend": "本站判断：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+          "detailTrend": "本站判断：视觉模型的竞争开始涉及推理过程能否回到原始证据。一次识别的正确率与复杂任务中的持续纠错能力并不相同，前者改善也不自动意味着后者成熟。工具参与推理后，模型能力的边界逐渐与运行流程结合，比较对象因此从单次输出扩展为完整任务。",
+          "whyItMatters": "视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+          "whyRanked": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
+          "detailWhyRanked": "视觉应用与多模态研发团队可用本条更新试点验收清单。检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+          "topReason": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
+          "impact": "视觉应用与多模态研发团队需要关注：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+          "whoShouldCare": "视觉应用与多模态研发团队，尤其是负责上线验收、采购和审计的负责人。",
+          "readerUse": "视觉应用与多模态研发团队可用本条制定核验清单；检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
+          "nextCheck": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "研究预览和作者基准不证明真实场景的可靠理解，也不保证所有申请者立即获得访问。仍需独立效果验证。",
+          "counterEvidence": "若第三方复测无法重现表现或客户日志显示访问受限，应下调为受限研究预览。",
+          "source": "Elorian Blog",
+          "sourceName": "Elorian Blog",
+          "sourceId": "elorian-blog",
+          "sourceUrl": "https://elorian.ai/blog/introducing-glimpse",
+          "originalUrl": "https://elorian.ai/blog/introducing-glimpse",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Elorian Blog原文说明：Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。 Elorian Blog原文用于核对上述最小事实。研究预览和作者基准不证明真实场景的可靠理解，也不保证所有申请者立即获得访问。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16",
+          "time": "10月16日（原文日期，未披露时分）",
+          "tags": [
+            "模型",
+            "部署验收"
+          ],
+          "companies": [
+            "Elorian"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          }
+        },
+        {
+          "id": "aws-trust-depth-2026-10-17",
+          "category": "policy",
+          "label": "政策",
+          "title": "AWS提出Trust in Depth：Agent权限需要外部执行与审计",
+          "body": "AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。",
+          "summary": "AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。",
+          "detailBody": "来源事实：AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。\n本站判断：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+          "trend": "本站判断：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+          "detailTrend": "本站判断：Agent治理开始把责任边界从模型回答延伸到执行环境。能力越强，任务目标与操作许可之间的差距越重要。可描述的规则与依赖判断的情境具有不同控制方式，这种分工意味着治理成熟度不能仅用模型是否听话衡量。",
+          "whyItMatters": "授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+          "whyRanked": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
+          "detailWhyRanked": "企业安全与Agent平台团队可用本条更新试点验收清单。检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+          "topReason": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
+          "impact": "企业安全与Agent平台团队需要关注：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+          "whoShouldCare": "企业安全与Agent平台团队，尤其是负责上线验收、采购和审计的负责人。",
+          "readerUse": "企业安全与Agent平台团队可用本条制定核验清单；检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
+          "nextCheck": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "这是厂商治理框架，不是监管要求或独立安全认证；形式证明受系统描述与假设范围限制。仍需独立效果验证。",
+          "counterEvidence": "若第三方红队测试或审计日志显示策略被绕过，应下调为未验证的治理方案。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "AWS Machine Learning Blog原文说明：AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。 AWS Machine Learning Blog原文用于核对上述最小事实。这是厂商治理框架，不是监管要求或独立安全认证；形式证明受系统描述与假设范围限制。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（原文日期，未披露时分）",
+          "tags": [
+            "政策",
+            "Agent"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          }
+        },
+        {
+          "id": "vercel-oct-index-2026-10-17",
+          "category": "research",
+          "label": "研究",
+          "title": "Vercel公布网关使用统计：调用份额与支出份额应分开读",
+          "body": "Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。",
+          "summary": "Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。",
+          "detailBody": "来源事实：Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。\n本站判断：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+          "trend": "本站判断：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+          "detailTrend": "本站判断：模型经济的观察正在从调用总量转向任务结构。高频低价任务和低频高价任务可能同时增长，使流量领先与商业回报呈现不同方向。单一份额指标会掩盖这种分工，因而对多模型生态的理解需要同时区分使用强度、价格与任务价值。",
+          "whyItMatters": "调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+          "whyRanked": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+          "detailWhyRanked": "企业采购与模型平台团队可用本条更新试点验收清单。核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+          "topReason": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+          "impact": "企业采购与模型平台团队需要关注：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+          "whoShouldCare": "企业采购与模型平台团队，尤其是负责上线验收、采购和审计的负责人。",
+          "readerUse": "企业采购与模型平台团队可用本条制定核验清单；核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+          "nextCheck": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "仅覆盖Vercel网关；token含缓存与推理等类别，支出按公开标价估算，不能外推全市场收入。仍需独立效果验证。",
+          "counterEvidence": "若独立同口径数据不支持该方向，或客户账单与估算差距显著，应限定为单一网关样本。",
+          "source": "Vercel Blog",
+          "sourceName": "Vercel Blog",
+          "sourceId": "vercel-blog",
+          "sourceUrl": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
+          "originalUrl": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Vercel Blog原文说明：Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。 Vercel Blog原文用于核对上述最小事实。仅覆盖Vercel网关；token含缓存与推理等类别，支出按公开标价估算，不能外推全市场收入。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-15",
+          "time": "10月15日（原文日期，未披露时分）",
+          "tags": [
+            "研究",
+            "部署验收"
+          ],
+          "companies": [
+            "Vercel"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-16",
       "date": "2026-10-16",

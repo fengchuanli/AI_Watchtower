@@ -2,1092 +2,667 @@
   "version": 1,
   "status": "published",
   "statusLabel": "已发布",
-  "sourceCount": 127,
+  "sourceCount": 129,
   "categories": [
     {
       "id": "model",
       "label": "模型",
-      "description": "本期核对Meta的模型信号；效果仍需独立测试与原始记录验证。"
+      "description": "本期核对Elorian的模型信号；实际效果仍需第三方复测与审计记录。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期用来核对Google、Attie与Rivian产品入口；交付效果仍需第三方测试。"
+      "description": "本期用于核对产品相关信号；未入选内容可查归档，实际效果仍需独立证据。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期核对NVIDIA多语言训练数据预告；正式发布、许可与质量仍需独立审查。"
+      "description": "本期核对Vercel的研究信号；实际效果仍需第三方复测与审计记录。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期核对Hugging Face的工具信号；效果仍需独立测试与原始记录验证。"
+      "description": "本期核对AWS的工具信号；实际效果仍需第三方复测与审计记录。"
     },
     {
       "id": "funding",
       "label": "融资",
-      "description": "本期无融资条目；用来筛选后续变化，仍需原文与独立证据验证。"
+      "description": "本期用于核对融资相关信号；未入选内容可查归档，实际效果仍需独立证据。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期核对Anthropic的政策信号；效果仍需独立测试与原始记录验证。"
+      "description": "本期核对CERT-In、AWS的政策信号；实际效果仍需第三方复测与审计记录。"
     }
   ],
-  "updatedAt": "2026-10-16",
-  "editorNote": "23点补充：保留7条，新增4条开放生态信号；数据预告与作者效果主张单列边界。",
+  "updatedAt": "2026-10-17",
+  "editorNote": "五条部署与治理线索：分清发布入口、厂商统计和待核验媒体事件。",
   "edition": {
-    "id": "news-2300-2026-10-16",
-    "date": "2026-10-16",
+    "id": "news-1700-2026-10-17",
+    "date": "2026-10-17",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "23:00补充版",
-    "itemCount": 11,
-    "note": "保留7条，新增4条开放模型、图像工具与多语言数据线索",
-    "operationalStatus": "08:00自动化实际23点执行；已拉取origin/main。保留今天08点采集的7条，新增4条；RSS不支持XML，改核对登记来源公开作者原文。",
-    "editorialInterpretation": "本期累计11条安全非重复信号，本次新增4条。新增少于10条是质量门槛结果，未用重复报道、会场观点、社区讨论或旧闻补数。作者主张与数据预告均保留核验边界。",
+    "archiveLabel": "17:00新闻版",
+    "itemCount": 5,
+    "note": "5条模型部署、使用统计与Agent治理信号",
+    "operationalStatus": "17:00任务实际08点JST执行；已拉取origin/main。无同日晨版，以昨日23点版去重；未覆盖未来17点。Google RSS不支持XML，改核对登记来源公开原文。",
+    "editorialInterpretation": "本期发布5条安全非重复信号，少于10条是质量门槛结果；未用重复发布、矛盾报道、社区讨论、旧闻或活动营销补数。两条10月15日材料作为近两日治理与统计补录。",
     "readerFrame": {
-      "headline": "把本期当作模型部署与Agent权限的核验清单",
-      "whyItMatters": "开放模型、独立评估和应用入口同时变化，研发与采购团队需要把可运行、可审计、可撤销分别验收，避免用演示替代交付证据。",
+      "headline": "今天哪些模型与Agent变化值得进入验收清单？",
+      "whyItMatters": "部署入口、使用统计和权限治理需要不同证据，研发、采购与安全团队应分别检查运行日志、真实账单和审计记录。",
       "useThisIssueFor": [
-        "研发团队更新本地模型硬件与许可清单。",
-        "安全团队核对评估者权限及独立报告。",
-        "产品团队测试购物、创作与车机的操作边界。"
+        "研发团队核对部署与视觉任务失败样本。",
+        "采购团队对照真实账单与网关统计口径。",
+        "安全团队核对通报、权限策略与访问日志。"
       ],
       "notProvenYet": [
-        "不证明开放模型在所有硬件和任务上都有成本优势。",
-        "不能把评估安排或功能计划当作安全结论和交付证据。"
+        "发布和厂商评测不证明生产效果。",
+        "单一网关统计和媒体线索不能外推全市场。"
       ],
       "mobile": {
         "headline": "先查部署与权限",
-        "summary": "累计11条、本次新增4条：核对开放模型、图像工作流与多语言数据的验收条件。",
+        "summary": "五条线索，分清发布、厂商统计与待核验事件。",
         "primaryUses": [
           "研发团队查部署",
-          "安全团队查评估",
-          "产品团队查权限"
+          "采购团队查账单",
+          "安全团队查权限"
         ],
-        "proofBoundary": "仍需独立测试与交付记录，不能把发布当作效果证明。"
+        "proofBoundary": "仍需独立测试与客户记录，不能把发布当作效果证明。"
       }
     },
     "changeSummary": {
-      "headline": "相较今日早间采集，补充开放生态的四条工程线索",
+      "headline": "相较昨日23点版，增加部署条件与治理证据入口",
       "freshFacts": [
-        "本次新增：Beam开放权重与FLUX.3工具接入说明。",
-        "本次新增：Granite统一端点与印度语言语料预告。"
+        "本期新增：AWS部署路径、Glimpse预览及印度媒体线索。",
+        "本期新增收录：Vercel十月统计与AWS治理框架，原文日期为10月15日。"
       ],
       "repeatedContext": [
-        "重复背景：保留早间7条，未计入本次新增。",
-        "重复背景：发布、预告与演示仍不等于独立效果验证。"
+        "重复背景：Beam开放权重已归档，本次只增加AWS部署条件。",
+        "重复背景：发布和作者主张仍不等于实际效果。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对模型、数据与工具",
-        "count": 7,
-        "meaning": "用来更新硬件、许可和中文语料复测清单。"
+        "label": "核对部署与使用",
+        "count": 3,
+        "meaning": "用来检查任务、容量与真实账单。"
       },
       {
-        "label": "核对评估与应用权限",
-        "count": 4,
-        "meaning": "用来检查独立报告、用户确认和回退记录。"
+        "label": "核对权限与治理",
+        "count": 2,
+        "meaning": "用来检查通报、外部策略与审计记录。"
       }
     ],
     "sourceRisk": {
-      "label": "作者发布视角集中",
-      "note": "官方登记来源9/11、媒体2/11；新增4条均来自Hugging Face平台的不同作者，发布视角集中，不代表独立交叉验证。",
-      "nextCheck": "核对第三方测试报告、客户侧运行日志、独立母语评审与数据集许可证。"
+      "label": "发布方证据占主导",
+      "note": "官方登记来源4/5、媒体1/5；三条为厂商主张，发布方视角不能替代独立验证。发布方证据集中。",
+      "nextCheck": "核对客户账单、第三方复测、监管原文与访问日志。"
     },
     "sourceConcentration": {
-      "sourceId": "huggingface-blog",
-      "sourceName": "Hugging Face Blog",
-      "count": 5,
-      "share": "5/11",
-      "note": "Hugging Face平台占5/11，作者涉及HF、IBM与NVIDIA；平台分发和发布方视角集中，不能当作五个独立证据。",
-      "nextCheck": "核对模型权利方文件、第三方基准及独立数据质量审阅。"
+      "sourceId": "aws-machine-learning-blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "count": 2,
+      "share": "2/5",
+      "note": "AWS占2/5；部署教程和治理框架来自同一厂商，不是两份独立效果证据。",
+      "nextCheck": "核对客户侧部署记录、第三方红队报告与审计日志。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期提供部署与审计入口，发布证据强于实际效果证据。",
-      "doNotConclude": "不能认为开放模型必然更便宜或Agent已可安全自治。",
-      "useInstead": "应该用来更新硬件、权限与许可清单，并核对第三方报告和客户日志。"
+      "body": "本期是部署与治理核验清单，发布证据强于效果证据。",
+      "doNotConclude": "不能认为开放模型已占全市场优势或Agent已可安全自治。",
+      "useInstead": "应该用来检查容量、账单和权限，并核对第三方报告与客户日志。"
     },
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方来源",
-        "count": 9,
-        "role": "原文核对发布和作者表述，效果另需复测。"
+        "count": 4,
+        "role": "核对发布方声明，效果另需独立验证。"
       },
       {
         "family": "reliable_media",
         "label": "可靠媒体",
-        "count": 2,
-        "role": "原文只取最小事实，完整背景仍需阅读来源。"
+        "count": 1,
+        "role": "保留最小媒体线索，仍需通报原文。"
       }
     ],
     "topicGroups": [
       {
         "id": "model",
-        "label": "核对模型、数据与工具",
-        "count": 7,
+        "label": "核对部署与使用",
+        "count": 3,
         "itemIds": [
-          "meta-muse-spark-open-2026-10-16",
-          "nvidia-nemotron-super-bolt-2026-10-16",
-          "hf-bert-tokenizer-2026-10-16",
-          "reflection-beam-2026-10-16",
-          "nvidia-indic-pretraining-2026-10-16",
-          "ibm-granite-switch-2026-10-16",
-          "flux3-diffusers-2026-10-16"
+          "beam-aws-2026-10-17",
+          "elorian-glimpse-2026-10-17",
+          "vercel-oct-index-2026-10-17"
         ],
-        "meaning": "用来更新硬件、许可和中文语料复测清单。"
+        "meaning": "用来检查任务、容量与真实账单。"
       },
       {
         "id": "agent",
-        "label": "核对评估与应用权限",
-        "count": 4,
+        "label": "核对权限与治理",
+        "count": 2,
         "itemIds": [
-          "bluesky-attie-creation-2026-10-16",
-          "rivian-agent-plans-2026-10-16",
-          "anthropic-metr-access-2026-10-16",
-          "google-universal-cart-2026-10-16"
+          "india-agent-report-2026-10-17",
+          "aws-trust-depth-2026-10-17"
         ],
-        "meaning": "用来检查独立报告、用户确认和回退记录。"
+        "meaning": "用来检查通报、外部策略与审计记录。"
       }
     ],
     "trendNotes": [
       {
         "topic": "model",
-        "label": "部署条件更具体",
-        "note": "跨期看，归档已有开放模型与云端工程，本期增加本地硬件与分词代码验收。",
-        "boundary": "仍需第三方同配置复现，不证明普遍成本下降。"
+        "label": "从发布转向验收",
+        "note": "跨期看，昨日开放权重之后，本期新增云端部署入口与网关统计。",
+        "boundary": "仍需客户侧账单与第三方复测，不证明普遍收益。"
       },
       {
         "topic": "agent",
-        "label": "监督入口更具体",
-        "note": "跨期看，昨日工作流验收延续到本期评估者权限与应用操作边界。",
-        "boundary": "仍需第三方审计和交付记录，不证明自治已经可靠。"
+        "label": "从监督转向执行",
+        "note": "跨期看，昨日评估权限之后，本期核对治理框架与媒体事件线索。",
+        "boundary": "仍需原始通报和独立审计，不证明风险普遍存在。"
       }
     ],
     "topicContinuity": [
       {
         "topic": "model",
-        "label": "部署条件更具体",
+        "label": "从发布转向验收",
         "status": "stronger",
-        "previousPattern": "跨期看，归档已有开放模型与云端工程，本期增加本地硬件与分词代码验收。",
-        "currentSignal": "本期新增：开放权重、分层部署和预处理优化。",
-        "signalDirection": "增强：新增可核对的部署或审计入口。",
-        "stillUnproven": "仍需第三方同配置复现，不证明普遍成本下降。"
+        "previousPattern": "此前归档：跨期看，昨日开放权重之后，本期新增云端部署入口与网关统计。",
+        "currentSignal": "本期新增：部署条件与统计口径。",
+        "signalDirection": "增强：核验入口增加，效果仍未独立验证。",
+        "stillUnproven": "仍需客户侧账单与第三方复测，不证明普遍收益。"
       },
       {
         "topic": "agent",
-        "label": "监督入口更具体",
+        "label": "从监督转向执行",
         "status": "stronger",
-        "previousPattern": "此前归档记录工作流验收，本期延续到评估者权限与应用操作边界。",
-        "currentSignal": "本期新增：独立评估权限及购物、创作与车机入口。",
-        "signalDirection": "增强：新增可核对的部署或审计入口。",
-        "stillUnproven": "仍需独立报告和交付记录，不证明自治已经可靠。"
+        "previousPattern": "此前归档：跨期看，昨日评估权限之后，本期核对治理框架与媒体事件线索。",
+        "currentSignal": "本期新增：权限治理及事件线索。",
+        "signalDirection": "增强：核验入口增加，效果仍未独立验证。",
+        "stillUnproven": "仍需原始通报和独立审计，不证明风险普遍存在。"
       }
     ],
     "companyContinuity": [
       {
-        "company": "Anthropic",
-        "label": "监督材料增强",
-        "lastMention": "此前归档记录选举防护与内部评测控制。",
-        "whatChanged": "本期新增METR内部访问和发表权限安排。",
-        "stillUnproven": "仍需METR独立审计报告及删改记录验证监督效果。"
+        "company": "AWS",
+        "label": "部署与治理继续观察",
+        "lastMention": "此前归档记录云端模型与Agent工程。",
+        "whatChanged": "本期增加Beam部署条件与权限治理框架。",
+        "stillUnproven": "仍需客户日志与独立红队测试验证生产效果。"
       },
       {
-        "company": "Google",
-        "label": "购物入口增强",
-        "lastMention": "此前归档记录Gemini应用与领域工作流。",
-        "whatChanged": "本期新增美国Universal Cart上线范围。",
-        "stillUnproven": "仍需商户官方文档和第三方订单测试核对实际可用性。"
+        "company": "Reflection",
+        "label": "部署入口增强",
+        "lastMention": "此前归档已记录Beam开放权重。",
+        "whatChanged": "本期新增AWS区域与托管部署说明。",
+        "stillUnproven": "仍需客户侧容量记录和第三方压测核对实际可用性。"
       }
     ]
   },
   "items": [
     {
-      "id": "nvidia-indic-pretraining-2026-10-16",
-      "category": "research",
-      "label": "研究",
-      "title": "NVIDIA与AI4Bharat预告印度语言语料：先核对发布与数据质量",
-      "body": "NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。",
-      "summary": "NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。",
-      "detailBody": "来源事实：NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。\n本站判断：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
-      "trend": "本站判断：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
-      "detailTrend": "本站判断：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
-      "whyItMatters": "数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
-      "whyRanked": "数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
-      "detailWhyRanked": "多语言模型与训练数据团队可用这条更新技术选型和试点计划。检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
-      "topReason": "检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
-      "impact": "多语言模型与训练数据团队需要补充验收：数据规模扩张能提供实验入口，但翻译语料不能替代本地知识。团队需要按语言审核样本与来源重叠，再决定训练配比。",
-      "whoShouldCare": "多语言模型与训练数据团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
-      "readerUse": "多语言模型与训练数据团队可用本条制定小规模试点；检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
-      "nextCheck": "检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
+      "id": "india-agent-report-2026-10-17",
+      "category": "policy",
+      "label": "政策",
+      "title": "印度Agent越权活动报道：先查通报与访问日志",
+      "body": "TechCrunch报道印度出现AI Agent越权访问线索。",
+      "summary": "TechCrunch报道印度出现AI Agent越权访问线索。",
+      "detailBody": "来源事实：TechCrunch报道印度出现AI Agent越权访问线索。\n本站判断：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+      "trend": "本站判断：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+      "detailTrend": "本站判断：AI活动的观察范围正在延伸到真实系统边界。工具调用把语言输出变成外部动作，也让权限配置成为能力表现的一部分。事件线索的意义在于提醒组织区分能够访问和获准访问，而不是把单次异常直接解释为普遍的自主意图。 从产业角度看，这也使隔离机制与模型迭代成为需要同步考虑的两条路径；能力的提升和使用范围的扩大不应被视为同一个进程。",
+      "whyItMatters": "AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+      "whyRanked": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+      "detailWhyRanked": "安全运营与企业数据团队可用本条更新试点验收清单。核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+      "topReason": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+      "impact": "安全运营与企业数据团队需要关注：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
+      "whoShouldCare": "安全运营与企业数据团队，尤其是负责上线验收、采购和审计的负责人。",
+      "readerUse": "安全运营与企业数据团队可用本条制定核验清单；核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+      "nextCheck": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
       "followUpQuestions": [
-        "是否有独立报告支持以下检查：检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验？",
-        "第三方是否公开配置、失败样本和原始日志？"
+        "第三方或客户侧记录是否支持上述核验路径？",
+        "原始日志是否披露失败样本与适用范围？"
       ],
-      "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
-      "claimBoundary": "当前说明不等于全量数据已可下载；作者报告的混合训练收益不能单独归因于合成语料。",
-      "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：若母语审阅发现文化信息缺失、翻译偏差或训练测试来源重叠，应下调语料可用性判断。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
-      "originalUrl": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
+      "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+      "claimBoundary": "本条保留媒体线索，尚未直接核对通报原文；不推断具体责任方、受影响规模或损失。",
+      "counterEvidence": "若通报更正或访问日志否定越权，应下调该风险线索；若仅涉及少量环境，则收窄适用范围。",
+      "source": "TechCrunch AI",
+      "sourceName": "TechCrunch AI",
+      "sourceId": "techcrunch-ai",
+      "sourceUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "originalUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "sourceRole": "媒体背景",
+      "sourceType": "reliable_media",
+      "trustLevel": "reliable_media",
       "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog作者原文说明：NVIDIA作者介绍约2.8万亿token、覆盖22种印度语言的预训练语料与开放生成流程；正文称语料即将发布。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 当前说明不等于全量数据已可下载；作者报告的混合训练收益不能单独归因于合成语料。 检查正式数据集卡、许可证及下载状态，并由独立母语审阅者抽样；用固定训练预算复现合成与自然语料的消融实验。",
+      "claimStatus": "reported",
+      "originalDependency": "must-read",
+      "provenance": "TechCrunch AI原文说明：TechCrunch报道印度出现AI Agent越权访问线索。 TechCrunch AI原文用于核对上述最小事实。本条保留媒体线索，尚未直接核对通报原文；不推断具体责任方、受影响规模或损失。完整事实、采访、图表和上下文仍需阅读媒体原文。已核验仅指媒体确有该报道，底层事件仍待原始通报核对。",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-10-16",
-      "time": "10月16日（原文日期，未披露时分）",
+      "publishedAt": "2026-10-16T17:52:00Z",
+      "time": "10月16日（原文时间17:52 UTC）",
       "tags": [
-        "研究",
-        "开放生态"
+        "政策",
+        "Agent"
       ],
       "companies": [
-        "NVIDIA"
+        "CERT-In"
       ],
       "selectionScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       }
     },
     {
-      "id": "reflection-beam-2026-10-16",
-      "category": "model",
-      "label": "模型",
-      "title": "Reflection Beam开放权重：自建代码Agent增加选择",
-      "body": "Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。",
-      "summary": "Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。",
-      "detailBody": "来源事实：Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。\n本站判断：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
-      "trend": "本站判断：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
-      "detailTrend": "本站判断：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
-      "whyItMatters": "自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
-      "whyRanked": "自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
-      "detailWhyRanked": "模型平台与代码Agent团队可用这条更新技术选型和试点计划。检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
-      "topReason": "检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
-      "impact": "模型平台与代码Agent团队需要补充验收：自建模型增加了定制选择，但采购应按完整权重、运行框架和长上下文内存计算，不能用激活参数替代硬件预算。",
-      "whoShouldCare": "模型平台与代码Agent团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
-      "readerUse": "模型平台与代码Agent团队可用本条制定小规模试点；检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
-      "nextCheck": "检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
+      "id": "beam-aws-2026-10-17",
+      "category": "tool",
+      "label": "工具",
+      "title": "Beam增加AWS部署路径：开放权重之后核对区域与容量",
+      "body": "AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。",
+      "summary": "AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。",
+      "detailBody": "来源事实：AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。\n本站判断：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+      "trend": "本站判断：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+      "detailTrend": "本站判断：模型部署正从权重可下载走向运行条件可描述。托管入口与可定制集群提供不同控制程度，也对应不同运维责任。开放生态的价值不只在模型数量，而在能否形成稳定、可重复的服务链；接入方式增加并不自动消除资源约束。",
+      "whyItMatters": "新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+      "whyRanked": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
+      "detailWhyRanked": "云平台与代码Agent研发团队可用本条更新试点验收清单。检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+      "topReason": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
+      "impact": "云平台与代码Agent研发团队需要关注：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
+      "whoShouldCare": "云平台与代码Agent研发团队，尤其是负责上线验收、采购和审计的负责人。",
+      "readerUse": "云平台与代码Agent研发团队可用本条制定核验清单；检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
+      "nextCheck": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
       "followUpQuestions": [
-        "是否有独立报告支持以下检查：检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志？",
-        "第三方是否公开配置、失败样本和原始日志？"
+        "第三方或客户侧记录是否支持上述核验路径？",
+        "原始日志是否披露失败样本与适用范围？"
       ],
-      "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
-      "claimBoundary": "开放权重与接入说明不证明代码任务领先，也不保证长上下文在现有硬件上经济可用。",
-      "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：第三方复测若出现工具调用失败或长上下文成本失控，应下调自建部署优先级。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/reflection-beam",
-      "originalUrl": "https://huggingface.co/blog/reflection-beam",
+      "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+      "claimBoundary": "教程不能证明容量随时可用，也不证明托管部署在成本或成功率上优于自建。",
+      "counterEvidence": "若客户部署日志显示无法获得容量或成本超出预算，应下调为受限部署入口。",
+      "source": "AWS Machine Learning Blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
+      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
       "sourceRole": "官方核对",
       "sourceType": "official",
       "trustLevel": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog作者原文说明：Hugging Face公布Reflection Beam接入说明，列出Apache 2.0许可及代码与Agent用途。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 开放权重与接入说明不证明代码任务领先，也不保证长上下文在现有硬件上经济可用。 检查Reflection模型卡、许可证与第三方同硬件代码任务复测，记录峰值显存、失败任务和工具调用日志。",
+      "provenance": "AWS Machine Learning Blog原文说明：AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。 AWS Machine Learning Blog原文用于核对上述最小事实。教程不能证明容量随时可用，也不证明托管部署在成本或成功率上优于自建。完整方法、配置与原文措辞请回原始来源核对。",
       "verificationStatus": "已核验",
       "publishedAt": "2026-10-16",
       "time": "10月16日（原文日期，未披露时分）",
       "tags": [
-        "模型",
-        "开放生态"
+        "工具",
+        "部署验收"
       ],
       "companies": [
+        "AWS",
         "Reflection"
       ],
       "selectionScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
         "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
-      }
-    },
-    {
-      "id": "bluesky-attie-creation-2026-10-16",
-      "category": "product",
-      "label": "产品",
-      "title": "Attie扩展创作入口：生成网站之后还需检查权限",
-      "body": "TechCrunch报道Bluesky扩展Attie创作功能。",
-      "summary": "TechCrunch报道Bluesky扩展Attie创作功能。",
-      "detailBody": "来源事实：TechCrunch报道Bluesky扩展Attie创作功能。\n本站判断：本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
-      "trend": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
-      "detailTrend": "本站判断：本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
-      "whyItMatters": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
-      "whyRanked": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
-      "detailWhyRanked": "社交产品与创作者工具团队可据此更新验收清单。核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
-      "topReason": "本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
-      "impact": "社交产品与创作者工具团队需要调整上线验收：本站判断：自然语言创作降低起步门槛，但发布权限、数据隔离和维护责任应成为产品验收项。",
-      "whoShouldCare": "社交产品与创作者工具团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
-      "readerUse": "社交产品与创作者工具团队可用本条更新试点清单；核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。",
-      "nextCheck": "核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。",
-      "followUpQuestions": [
-        "测试报告是否支持以下核查：核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程？",
-        "第三方测试是否公开失败样本、版本配置与回退记录？"
-      ],
-      "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
-      "claimBoundary": "媒体线索不证明生成应用可安全投入生产。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
-      "counterEvidence": "如果测试记录显示应用越权或无法撤回发布，应下调低门槛创作的采用价值。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
-      "originalUrl": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "trustLevel": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "provenance": "TechCrunch AI原文说明：TechCrunch报道Bluesky扩展Attie创作功能。 媒体线索不证明生成应用可安全投入生产。 完整事实、采访、引述、数据和上下文仍归媒体原文。 核对Bluesky官方功能文档与第三方应用测试，检查生成应用的权限、导出和撤回发布流程。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-16T03:56:00+09:00",
-      "time": "10月16日 03:56 JST",
-      "tags": [
-        "应用生成",
-        "核验"
-      ],
-      "companies": [
-        "Bluesky"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
         "readerUtility": 4,
         "total": 18,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
-        "evidenceQuality": 3,
+        "evidenceQuality": 4,
         "readerUtility": 4,
         "total": 18,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       }
     },
     {
-      "id": "rivian-agent-plans-2026-10-16",
-      "category": "product",
-      "label": "产品",
-      "title": "Rivian谈第三方Agent接入，计划尚待交付证据",
-      "body": "TechCrunch报道Rivian提出车内接入第三方Agent的计划。",
-      "summary": "TechCrunch报道Rivian提出车内接入第三方Agent的计划。",
-      "detailBody": "来源事实：TechCrunch报道Rivian提出车内接入第三方Agent的计划。\n本站判断：本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
-      "trend": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
-      "detailTrend": "本站判断：本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
-      "whyItMatters": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
-      "whyRanked": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
-      "detailWhyRanked": "车机软件与汽车产品团队可据此更新验收清单。核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
-      "topReason": "本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
-      "impact": "车机软件与汽车产品团队需要调整上线验收：本站判断：车内助手接入更多服务时，必须把便利操作与安全关键控制的授权边界分开验收。",
-      "whoShouldCare": "车机软件与汽车产品团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
-      "readerUse": "车机软件与汽车产品团队可用本条更新试点清单；核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。",
-      "nextCheck": "核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。",
-      "followUpQuestions": [
-        "测试报告是否支持以下核查：核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退？",
-        "第三方测试是否公开失败样本、版本配置与回退记录？"
-      ],
-      "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
-      "claimBoundary": "计划不等于已交付功能，也不代表第三方Agent可控制驾驶系统。 完整事实、采访、引述、数据和上下文仍归媒体原文。",
-      "counterEvidence": "如果官方发布说明未确认交付或测试记录暴露控制越权，应下调接入成熟度判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
-      "originalUrl": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "trustLevel": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "provenance": "TechCrunch AI原文说明：TechCrunch报道Rivian提出车内接入第三方Agent的计划。 计划不等于已交付功能，也不代表第三方Agent可控制驾驶系统。 完整事实、采访、引述、数据和上下文仍归媒体原文。 核对Rivian官方发布说明、实际交付版本和第三方车机测试，检查权限隔离、离线降级与误操作回退。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-16T00:02:00+09:00",
-      "time": "10月16日 00:02 JST",
-      "tags": [
-        "车内Agent",
-        "核验"
-      ],
-      "companies": [
-        "Rivian"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      }
-    },
-    {
-      "id": "anthropic-metr-access-2026-10-16",
-      "category": "policy",
-      "label": "政策",
-      "title": "Anthropic向METR开放内部评估权限，独立性还要看公开报告",
-      "body": "Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。",
-      "summary": "Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。",
-      "detailBody": "来源事实：Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。\n本站判断：模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
-      "trend": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
-      "detailTrend": "本站判断：模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
-      "whyItMatters": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
-      "whyRanked": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
-      "detailWhyRanked": "安全审计与模型采购团队可据此更新验收清单。核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
-      "topReason": "模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
-      "impact": "安全审计与模型采购团队需要调整上线验收：模型采购不能只看系统卡，还应检查评估者能看到什么以及能否自由披露问题。",
-      "whoShouldCare": "安全审计与模型采购团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
-      "readerUse": "安全审计与模型采购团队可用本条更新试点清单；核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。",
-      "nextCheck": "核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。",
-      "followUpQuestions": [
-        "测试报告是否支持以下核查：核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断？",
-        "第三方测试是否公开失败样本、版本配置与回退记录？"
-      ],
-      "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
-      "claimBoundary": "访问安排不证明模型安全，也不代表所有评估伙伴拥有同等发表权。",
-      "counterEvidence": "如果METR报告披露关键数据不可见或删改阻碍结论，应下调监督有效性判断。",
-      "source": "Anthropic Newsroom",
-      "sourceName": "Anthropic Newsroom",
-      "sourceId": "anthropic-news",
-      "sourceUrl": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-      "originalUrl": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "supporting",
-      "provenance": "Anthropic Newsroom原文说明：Anthropic宣布给予METR团队近似员工的内部访问权限，并允许其发布评估。 访问安排不证明模型安全，也不代表所有评估伙伴拥有同等发表权。 核对METR独立报告、删改说明与利益冲突披露，检查访问限制是否影响风险判断。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-15",
-      "time": "10月15日（来源未提供时区时刻）",
-      "tags": [
-        "独立评估",
-        "核验"
-      ],
-      "companies": [
-        "Anthropic"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      }
-    },
-    {
-      "id": "flux3-diffusers-2026-10-16",
-      "category": "tool",
-      "label": "工具",
-      "title": "FLUX.3接入Diffusers：布局控制进入图像工作流",
-      "body": "Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。",
-      "summary": "Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。",
-      "detailBody": "来源事实：Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。\n本站判断：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
-      "trend": "本站判断：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
-      "detailTrend": "本站判断：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
-      "whyItMatters": "显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
-      "whyRanked": "显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
-      "detailWhyRanked": "设计工具与图像生成工程团队可用这条更新技术选型和试点计划。核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
-      "topReason": "核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
-      "impact": "设计工具与图像生成工程团队需要补充验收：显式布局控制有助于把构图要求变成验收条件；实际采用仍要检查多参考图一致性、编辑失败与模型许可。",
-      "whoShouldCare": "设计工具与图像生成工程团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
-      "readerUse": "设计工具与图像生成工程团队可用本条制定小规模试点；核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
-      "nextCheck": "核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
-      "followUpQuestions": [
-        "是否有独立报告支持以下检查：核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟？",
-        "第三方是否公开配置、失败样本和原始日志？"
-      ],
-      "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
-      "claimBoundary": "接入文档支持功能存在，不能把作者硬件上的速度外推到所有设备，也不证明图像版权风险消失。",
-      "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：若固定提示集显示布局偏移、主体变化或量化显著退化，应缩小适用场景。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/flux-3",
-      "originalUrl": "https://huggingface.co/blog/flux-3",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog作者原文说明：Hugging Face发布FLUX.3 Image Klein的Diffusers接入说明，涵盖文生图、多参考图编辑与边界框布局控制。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 接入文档支持功能存在，不能把作者硬件上的速度外推到所有设备，也不证明图像版权风险消失。 核对Black Forest Labs模型卡与许可，并用第三方固定提示集测试布局命中、主体一致性及不同量化配置的显存和延迟。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-15",
-      "time": "10月15日（原文日期，未披露时分）",
-      "tags": [
-        "工具",
-        "开放生态"
-      ],
-      "companies": [
-        "Black Forest Labs"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
-      }
-    },
-    {
-      "id": "google-universal-cart-2026-10-16",
-      "category": "product",
-      "label": "产品",
-      "title": "Google在美国推出Universal Cart，购物状态跨入口保存",
-      "body": "Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。",
-      "summary": "Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。",
-      "detailBody": "来源事实：Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。\n本站判断：购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
-      "trend": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
-      "detailTrend": "本站判断：购物助手的竞争开始从推荐内容延伸到保存购物状态和衔接交易。商户、平台与消费者之间的责任关系因此比单轮回答更重要。入口整合可能改变用户回访路径，但平台便利性与订单履约质量仍是不同的问题，不能从发布公告推导转化率或消费者收益。",
-      "whyItMatters": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
-      "whyRanked": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
-      "detailWhyRanked": "电商产品与支付接入团队可据此更新验收清单。核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
-      "topReason": "购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
-      "impact": "电商产品与支付接入团队需要调整上线验收：购物辅助开始连接发现、保存和支付，商户应核对订单责任和用户确认步骤是否完整。",
-      "whoShouldCare": "电商产品与支付接入团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
-      "readerUse": "电商产品与支付接入团队可用本条更新试点清单；核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。",
-      "nextCheck": "核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。",
-      "followUpQuestions": [
-        "测试报告是否支持以下核查：核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任？",
-        "第三方测试是否公开失败样本、版本配置与回退记录？"
-      ],
-      "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
-      "claimBoundary": "不证明全球可用，也不证明购物车能未经确认自主完成全部采购。",
-      "counterEvidence": "如果商户订单记录与界面价格不一致或撤销无效，应下调流程可靠性判断。",
-      "source": "Google Keyword AI",
-      "sourceName": "Google Keyword AI",
-      "sourceId": "google-keyword-ai",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
-      "originalUrl": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "supporting",
-      "provenance": "Google Keyword AI原文说明：Google宣布Universal Cart在美国Search和Gemini中推出，支持跨商家保存商品及结账入口。 不证明全球可用，也不证明购物车能未经确认自主完成全部采购。 核对商户官方接入文档及第三方结账测试，验证价格同步、撤销操作、订单确认和售后责任。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-15",
-      "time": "10月15日（来源未提供时区时刻）",
-      "tags": [
-        "智能购物",
-        "核验"
-      ],
-      "companies": [
-        "Google"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      }
-    },
-    {
-      "id": "ibm-granite-switch-2026-10-16",
+      "id": "elorian-glimpse-2026-10-17",
       "category": "model",
       "label": "模型",
-      "title": "Granite Switch 4.1整合多任务：统一端点仍需隔离验收",
-      "body": "IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。",
-      "summary": "IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。",
-      "detailBody": "来源事实：IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。\n本站判断：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。 原文用于核对发布范围、版本和限制；实际采用仍需在自己的任务集上验证。",
-      "trend": "本站判断：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
-      "detailTrend": "本站判断：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。 这说明开放生态的竞争正在从单一模型能力扩展到可组合的工程流程。发布材料提供的是选型线索，长期价值取决于组织能否维持稳定服务和明确责任边界；开放本身并不消除运行成本。",
-      "whyItMatters": "统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
-      "whyRanked": "统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
-      "detailWhyRanked": "企业模型服务与语音工作流团队可用这条更新技术选型和试点计划。查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。 本站关注的是可验证的工程变化；来源提供的发布事实与作者主张不能替代读者自身环境的验收。",
-      "topReason": "查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
-      "impact": "企业模型服务与语音工作流团队需要补充验收：统一端点可能简化接入，却也让任务争用与故障影响集中。验收应把吞吐、语音质量和安全判定分别测量。",
-      "whoShouldCare": "企业模型服务与语音工作流团队，尤其是需要明确版本、许可、成本和失败回退条件的研发、采购与测试负责人。",
-      "readerUse": "企业模型服务与语音工作流团队可用本条制定小规模试点；查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
-      "nextCheck": "查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
+      "title": "Glimpse发布视觉推理预览：复看图像不等于可靠理解",
+      "body": "Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。",
+      "summary": "Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。",
+      "detailBody": "来源事实：Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。\n本站判断：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+      "trend": "本站判断：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+      "detailTrend": "本站判断：视觉模型的竞争开始涉及推理过程能否回到原始证据。一次识别的正确率与复杂任务中的持续纠错能力并不相同，前者改善也不自动意味着后者成熟。工具参与推理后，模型能力的边界逐渐与运行流程结合，比较对象因此从单次输出扩展为完整任务。",
+      "whyItMatters": "视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+      "whyRanked": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
+      "detailWhyRanked": "视觉应用与多模态研发团队可用本条更新试点验收清单。检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+      "topReason": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
+      "impact": "视觉应用与多模态研发团队需要关注：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
+      "whoShouldCare": "视觉应用与多模态研发团队，尤其是负责上线验收、采购和审计的负责人。",
+      "readerUse": "视觉应用与多模态研发团队可用本条制定核验清单；检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
+      "nextCheck": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
       "followUpQuestions": [
-        "是否有独立报告支持以下检查：查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录？",
-        "第三方是否公开配置、失败样本和原始日志？"
+        "第三方或客户侧记录是否支持上述核验路径？",
+        "原始日志是否披露失败样本与适用范围？"
       ],
-      "evidenceThreshold": "需要模型或数据集原始文件、许可证、第三方同配置复测与原始日志相互支持，才能升级为效果已验证。",
-      "claimBoundary": "作者的性能比较和显存主张不是独立验证；单端点演示不能证明生产负载稳定。",
-      "counterEvidence": "如果第三方复测记录出现以下问题，应下调采用判断：若并发测试出现任务相互阻塞或安全分类误判上升，应重新评估合并服务的收益。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
-      "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+      "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+      "claimBoundary": "研究预览和作者基准不证明真实场景的可靠理解，也不保证所有申请者立即获得访问。仍需独立效果验证。",
+      "counterEvidence": "若第三方复测无法重现表现或客户日志显示访问受限，应下调为受限研究预览。",
+      "source": "Elorian Blog",
+      "sourceName": "Elorian Blog",
+      "sourceId": "elorian-blog",
+      "sourceUrl": "https://elorian.ai/blog/introducing-glimpse",
+      "originalUrl": "https://elorian.ai/blog/introducing-glimpse",
       "sourceRole": "厂商主张",
       "sourceType": "official",
       "trustLevel": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog作者原文说明：IBM作者介绍Granite Switch 4.1，将对话、决策与语音转写组合到同一服务端点。 这是发布方的模型或数据方案主张，不能替代独立效果验证。 作者的性能比较和显存主张不是独立验证；单端点演示不能证明生产负载稳定。 查IBM模型卡与代码版本，由第三方在相同并发下测试显存、转写错误和安全分类误报，并保留故障隔离记录。",
+      "provenance": "Elorian Blog原文说明：Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。 Elorian Blog原文用于核对上述最小事实。研究预览和作者基准不证明真实场景的可靠理解，也不保证所有申请者立即获得访问。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-10-15",
-      "time": "10月15日（原文日期，未披露时分）",
+      "publishedAt": "2026-10-16",
+      "time": "10月16日（原文日期，未披露时分）",
       "tags": [
         "模型",
-        "开放生态"
+        "部署验收"
       ],
       "companies": [
-        "IBM"
+        "Elorian"
       ],
       "selectionScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 19,
-        "note": "发布与作者说明可追溯，效果仍需第三方复测。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       }
     },
     {
-      "id": "hf-bert-tokenizer-2026-10-16",
-      "category": "tool",
-      "label": "工具",
-      "title": "Hugging Face披露BERT分词优化，改动仍在PR阶段",
-      "body": "Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。",
-      "summary": "Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。",
-      "detailBody": "来源事实：Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。\n本站判断：检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
-      "trend": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
-      "detailTrend": "本站判断：检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
-      "whyItMatters": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
-      "whyRanked": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
-      "detailWhyRanked": "检索平台与数据预处理团队可据此更新验收清单。核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
-      "topReason": "检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
-      "impact": "检索平台与数据预处理团队需要调整上线验收：检索管线的瓶颈可能在预处理；优化评估应覆盖中文和混合文本，而非只比较英文吞吐。",
-      "whoShouldCare": "检索平台与数据预处理团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
-      "readerUse": "检索平台与数据预处理团队可用本条更新试点清单；核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。",
-      "nextCheck": "核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。",
+      "id": "aws-trust-depth-2026-10-17",
+      "category": "policy",
+      "label": "政策",
+      "title": "AWS提出Trust in Depth：Agent权限需要外部执行与审计",
+      "body": "AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。",
+      "summary": "AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。",
+      "detailBody": "来源事实：AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。\n本站判断：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+      "trend": "本站判断：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+      "detailTrend": "本站判断：Agent治理开始把责任边界从模型回答延伸到执行环境。能力越强，任务目标与操作许可之间的差距越重要。可描述的规则与依赖判断的情境具有不同控制方式，这种分工意味着治理成熟度不能仅用模型是否听话衡量。",
+      "whyItMatters": "授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+      "whyRanked": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
+      "detailWhyRanked": "企业安全与Agent平台团队可用本条更新试点验收清单。检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+      "topReason": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
+      "impact": "企业安全与Agent平台团队需要关注：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
+      "whoShouldCare": "企业安全与Agent平台团队，尤其是负责上线验收、采购和审计的负责人。",
+      "readerUse": "企业安全与Agent平台团队可用本条制定核验清单；检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
+      "nextCheck": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
       "followUpQuestions": [
-        "测试报告是否支持以下核查：核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时？",
-        "第三方测试是否公开失败样本、版本配置与回退记录？"
+        "第三方或客户侧记录是否支持上述核验路径？",
+        "原始日志是否披露失败样本与适用范围？"
       ],
-      "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
-      "claimBoundary": "作者加速测量不等于正式版本能力，也不能外推为整个RAG系统同比提速。",
-      "counterEvidence": "如果复测发现中文收益有限或token ID变化，应收窄性能判断并暂停替换生产版本。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert",
-      "originalUrl": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert",
+      "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+      "claimBoundary": "这是厂商治理框架，不是监管要求或独立安全认证；形式证明受系统描述与假设范围限制。仍需独立效果验证。",
+      "counterEvidence": "若第三方红队测试或审计日志显示策略被绕过，应下调为未验证的治理方案。",
+      "source": "AWS Machine Learning Blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
+      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
       "sourceRole": "厂商主张",
       "sourceType": "official",
       "trustLevel": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
-      "originalDependency": "supporting",
-      "provenance": "Hugging Face Blog原文说明：Hugging Face作者介绍跳过ASCII规范化等分词优化，并注明相关改动仍处于PR阶段。 作者加速测量不等于正式版本能力，也不能外推为整个RAG系统同比提速。 核对tokenizers合并记录、发布版本和第三方中文语料复测，同时比对token ID一致性及全链路耗时。 作者性能主张与代码改动仍需独立复测。",
+      "originalDependency": "recommended",
+      "provenance": "AWS Machine Learning Blog原文说明：AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。 AWS Machine Learning Blog原文用于核对上述最小事实。这是厂商治理框架，不是监管要求或独立安全认证；形式证明受系统描述与假设范围限制。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
       "verificationStatus": "已核验",
       "publishedAt": "2026-10-15",
-      "time": "10月15日（来源未提供时区时刻）",
+      "time": "10月15日（原文日期，未披露时分）",
       "tags": [
-        "分词优化",
-        "核验"
+        "政策",
+        "Agent"
       ],
       "companies": [
-        "Hugging Face"
+        "AWS"
       ],
       "selectionScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
         "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 18,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
         "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 18,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       }
     },
     {
-      "id": "meta-muse-spark-open-2026-10-16",
-      "category": "model",
-      "label": "模型",
-      "title": "Meta发布Muse Spark Open权重，本地部署仍有硬件与许可门槛",
-      "body": "Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。",
-      "summary": "Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。",
-      "detailBody": "来源事实：Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。\n本站判断：开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
-      "trend": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
-      "detailTrend": "本站判断：开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。 应用前先设定失败样本和回退条件，仍需独立测试验证。 对团队而言，应把小样本可行与长期稳定分别记录，保留失败任务和人工接管原因，才能判断是否值得扩大部署。",
-      "whyItMatters": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
-      "whyRanked": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
-      "detailWhyRanked": "本地模型部署与研发采购团队可据此更新验收清单。核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
-      "topReason": "开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
-      "impact": "本地模型部署与研发采购团队需要调整上线验收：开放权重增加部署选择，但采购预算需要覆盖整套硬件、运行时和许可审查。",
-      "whoShouldCare": "本地模型部署与研发采购团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
-      "readerUse": "本地模型部署与研发采购团队可用本条更新试点清单；核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。",
-      "nextCheck": "核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。",
+      "id": "vercel-oct-index-2026-10-17",
+      "category": "research",
+      "label": "研究",
+      "title": "Vercel公布网关使用统计：调用份额与支出份额应分开读",
+      "body": "Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。",
+      "summary": "Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。",
+      "detailBody": "来源事实：Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。\n本站判断：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+      "trend": "本站判断：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+      "detailTrend": "本站判断：模型经济的观察正在从调用总量转向任务结构。高频低价任务和低频高价任务可能同时增长，使流量领先与商业回报呈现不同方向。单一份额指标会掩盖这种分工，因而对多模型生态的理解需要同时区分使用强度、价格与任务价值。",
+      "whyItMatters": "调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+      "whyRanked": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+      "detailWhyRanked": "企业采购与模型平台团队可用本条更新试点验收清单。核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
+      "topReason": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+      "impact": "企业采购与模型平台团队需要关注：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
+      "whoShouldCare": "企业采购与模型平台团队，尤其是负责上线验收、采购和审计的负责人。",
+      "readerUse": "企业采购与模型平台团队可用本条制定核验清单；核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+      "nextCheck": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
       "followUpQuestions": [
-        "测试报告是否支持以下核查：核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟？",
-        "第三方测试是否公开失败样本、版本配置与回退记录？"
+        "第三方或客户侧记录是否支持上述核验路径？",
+        "原始日志是否披露失败样本与适用范围？"
       ],
-      "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
-      "claimBoundary": "不证明普通笔记本可运行，也不能把厂商排名当作独立性能结论。",
-      "counterEvidence": "如果第三方复测显示任务成功率低或许可限制目标用途，应收窄本地部署价值判断。",
-      "source": "Meta AI Blog",
-      "sourceName": "Meta AI Blog",
-      "sourceId": "meta-ai-blog",
-      "sourceUrl": "https://research.meta.ai/blog/muse-spark-open",
-      "originalUrl": "https://research.meta.ai/blog/muse-spark-open",
-      "sourceRole": "官方核对",
+      "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+      "claimBoundary": "仅覆盖Vercel网关；token含缓存与推理等类别，支出按公开标价估算，不能外推全市场收入。仍需独立效果验证。",
+      "counterEvidence": "若独立同口径数据不支持该方向，或客户账单与估算差距显著，应限定为单一网关样本。",
+      "source": "Vercel Blog",
+      "sourceName": "Vercel Blog",
+      "sourceId": "vercel-blog",
+      "sourceUrl": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
+      "originalUrl": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
+      "sourceRole": "厂商主张",
       "sourceType": "official",
       "trustLevel": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
-      "originalDependency": "supporting",
-      "provenance": "Meta AI Blog原文说明：Meta发布Muse Spark Open权重，并说明双台M5 Ultra Mac Studio的本地运行方案及有限商业条款。 不证明普通笔记本可运行，也不能把厂商排名当作独立性能结论。 核对模型卡、Muse Model License及第三方同配置复测，记录内存占用、任务成功率和端到端延迟。",
+      "originalDependency": "recommended",
+      "provenance": "Vercel Blog原文说明：Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。 Vercel Blog原文用于核对上述最小事实。仅覆盖Vercel网关；token含缓存与推理等类别，支出按公开标价估算，不能外推全市场收入。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
       "verificationStatus": "已核验",
       "publishedAt": "2026-10-15",
-      "time": "10月15日（来源未提供时区时刻）",
+      "time": "10月15日（原文日期，未披露时分）",
       "tags": [
-        "开放权重",
-        "核验"
+        "研究",
+        "部署验收"
       ],
       "companies": [
-        "Meta"
+        "Vercel"
       ],
       "selectionScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       },
       "editorScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 3,
         "narrativeStrength": 3,
-        "evidenceQuality": 4,
+        "evidenceQuality": 3,
         "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      }
-    },
-    {
-      "id": "nvidia-nemotron-super-bolt-2026-10-16",
-      "category": "model",
-      "label": "模型",
-      "title": "NVIDIA扩展Nemotron模型，本地与服务器部署分层",
-      "body": "NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。",
-      "summary": "NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。",
-      "detailBody": "来源事实：NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。\n本站判断：模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
-      "trend": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
-      "detailTrend": "本站判断：服务器与边缘设备拥有不同的内存、延迟和运维约束，模型家族的分层让部署选择更加具体。可定制和可本地运行增加了控制空间，但量化、并发和长任务的代价仍会随环境变化。模型发布扩展的是选择范围，不证明企业已取得普遍性能收益。",
-      "whyItMatters": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
-      "whyRanked": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
-      "detailWhyRanked": "边缘设备与企业推理平台团队可据此更新验收清单。核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。 本站把这条列为检查入口，是因为它对应具体采购或接入决策；原文无法替代组织自身数据、设备和用户环境中的独立验收。",
-      "topReason": "模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
-      "impact": "边缘设备与企业推理平台团队需要调整上线验收：模型选型开始同时考虑任务质量和设备内存，边缘团队需要在真实负载下比较可用余量。",
-      "whoShouldCare": "边缘设备与企业推理平台团队，尤其是负责接入、采购、测试与部署决策，需要明确风险责任和验收条件的工程负责人。",
-      "readerUse": "边缘设备与企业推理平台团队可用本条更新试点清单；核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。",
-      "nextCheck": "核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。",
-      "followUpQuestions": [
-        "测试报告是否支持以下核查：核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值？",
-        "第三方测试是否公开失败样本、版本配置与回退记录？"
-      ],
-      "evidenceThreshold": "至少需要对应官方文件、独立测试报告及原始日志相互支持，才能升级为效果已验证的结论。",
-      "claimBoundary": "未发布版本不能视为已可用；厂商吞吐和客户案例不证明普遍收益。",
-      "counterEvidence": "如果第三方复测出现内存溢出或量化后失败率上升，应下调端侧适配判断。",
-      "source": "NVIDIA AI Blog",
-      "sourceName": "NVIDIA AI Blog",
-      "sourceId": "nvidia-blog-ai",
-      "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
-      "originalUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "supporting",
-      "provenance": "NVIDIA AI Blog原文说明：NVIDIA宣布Super VL和Bolt 74B-A9B可用；Bolt E4B计划10月23日推出。 未发布版本不能视为已可用；厂商吞吐和客户案例不证明普遍收益。 核对公开模型卡、下载版本及第三方24GB设备测试，检查并发、工具调用失败率和内存峰值。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-15",
-      "time": "10月15日（来源未提供时区时刻）",
-      "tags": [
-        "端侧模型",
-        "核验"
-      ],
-      "companies": [
-        "NVIDIA"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 19,
-        "note": "按读者用途、证据质量和新增变化评分，效果仍需独立验证。"
+        "total": 17,
+        "note": "中心事实可追溯，实际效果仍需独立证据。"
       }
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "模型走向本地，评估与操作权限也要可检查",
-    "summary": "累计11条，本次新增4条，连接模型部署、数据质量与应用权限。",
-    "cta": "查看11条信号",
+    "headline": "模型选择增加，部署、账单与权限要分别验收",
+    "summary": "五条线索连接模型部署、使用统计和Agent治理，保留厂商主张与媒体线索边界。",
+    "cta": "查看5条信号",
     "watchPoints": [
       {
-        "title": "模型能在哪里运行",
-        "body": "核对硬件、许可与真实任务成功率。"
+        "title": "部署是否可复现",
+        "body": "检查区域、配额和视觉任务失败样本。"
       },
       {
-        "title": "评估者能看到什么",
-        "body": "核对访问限制、发表权及独立报告。"
+        "title": "统计代表什么",
+        "body": "将网关token份额与真实支出分开核对。"
       },
       {
-        "title": "操作能否安全撤回",
-        "body": "核对订单、发布和车机的权限边界。"
+        "title": "权限如何执行",
+        "body": "核对通报、工具入口策略和访问日志。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "23点补充采集",
-    "title": "开放生态与Agent入口：十一条核验线索",
-    "subtitle": "分清发布、计划与实测，再决定是否扩大采用。",
-    "dateLabel": "2026年10月16日｜23点补充",
-    "status": "已发布｜累计11条，本次新增4条",
-    "overview": "本期累计11条安全非重复信号，本次新增4条。新增少于10条是质量门槛结果，未用重复报道、会场观点、社区讨论或旧闻补数。作者主张与数据预告均保留核验边界。",
+    "kicker": "17点任务｜实际08点采集",
+    "title": "五条部署与治理核验线索",
+    "subtitle": "把发布事实、作者主张与实际效果分别检查。",
+    "dateLabel": "2026年10月17日｜实际08点采集",
+    "status": "已发布｜5条安全非重复信号",
+    "overview": "本期发布5条安全非重复信号，少于10条是质量门槛结果；未用重复发布、矛盾报道、社区讨论、旧闻或活动营销补数。两条10月15日材料作为近两日治理与统计补录。",
     "timeline": [
       {
         "label": "1",
-        "title": "模型能在哪里运行",
-        "body": "核对硬件、许可与真实任务成功率。"
+        "title": "部署是否可复现",
+        "body": "检查区域、配额和视觉任务失败样本。"
       },
       {
         "label": "2",
-        "title": "评估者能看到什么",
-        "body": "核对访问限制、发表权及独立报告。"
+        "title": "统计代表什么",
+        "body": "将网关token份额与真实支出分开核对。"
       },
       {
         "label": "3",
-        "title": "操作能否安全撤回",
-        "body": "核对订单、发布和车机的权限边界。"
+        "title": "权限如何执行",
+        "body": "核对通报、工具入口策略和访问日志。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "11",
+        "value": "5",
         "label": "安全非重复信号"
       },
       {
-        "value": "9",
+        "value": "4",
         "label": "官方登记来源"
       },
       {
-        "value": "2",
-        "label": "媒体最小事实"
+        "value": "1",
+        "label": "媒体事件线索"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "模型能在哪里运行",
-        "title": "模型能在哪里运行",
-        "body": "核对硬件、许可与真实任务成功率。",
-        "soWhat": "研发团队更新本地模型硬件与许可清单。"
+        "label": "部署是否可复现",
+        "title": "部署是否可复现",
+        "body": "检查区域、配额和视觉任务失败样本。",
+        "soWhat": "研发团队核对部署与视觉任务失败样本。"
       },
       {
         "number": "02",
-        "label": "评估者能看到什么",
-        "title": "评估者能看到什么",
-        "body": "核对访问限制、发表权及独立报告。",
-        "soWhat": "安全团队核对评估者权限及独立报告。"
+        "label": "统计代表什么",
+        "title": "统计代表什么",
+        "body": "将网关token份额与真实支出分开核对。",
+        "soWhat": "采购团队对照真实账单与网关统计口径。"
       },
       {
         "number": "03",
-        "label": "操作能否安全撤回",
-        "title": "操作能否安全撤回",
-        "body": "核对订单、发布和车机的权限边界。",
-        "soWhat": "产品团队测试购物、创作与车机的操作边界。"
+        "label": "权限如何执行",
+        "title": "权限如何执行",
+        "body": "核对通报、工具入口策略和访问日志。",
+        "soWhat": "安全团队核对通报、权限策略与访问日志。"
       }
     ],
     "actions": [
-      "研发团队更新本地模型硬件与许可清单。",
-      "安全团队核对评估者权限及独立报告。",
-      "产品团队测试购物、创作与车机的操作边界。"
+      "研发团队核对部署与视觉任务失败样本。",
+      "采购团队对照真实账单与网关统计口径。",
+      "安全团队核对通报、权限策略与访问日志。"
     ],
     "coverageLimits": [
       {
         "label": "采集范围",
-        "body": "本次实际23点执行，保留早间7条，新增4条；Hugging Face平台来源累计5/11，需外部复测。"
+        "body": "17:00任务实际08点JST执行；已拉取origin/main。无同日晨版，以昨日23点版去重；未覆盖未来17点。Google RSS不支持XML，改核对登记来源公开原文。"
       },
       {
         "label": "证据范围",
-        "body": "发布和作者说明不证明实际收益；媒体只保留最小事实，完整背景回原文。"
+        "body": "官方登记来源4/5、媒体1/5；三条为厂商主张，发布方视角不能替代独立验证。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "9条官方登记来源核对发布与作者表述，包含数据预告与厂商主张。",
-        "2条媒体保留最小事实，详情回原文。"
+        "4条官方登记来源核对发布与作者主张。",
+        "1条媒体线索仍需核对通报。"
       ],
       "editorialJudgment": [
-        "本站判断：部署选择增加，验收标准也应更具体。",
-        "本站判断：计划和PR阶段的变化应进入观察清单，不能提前写入上线承诺。"
+        "本站判断：选型应由榜单转向任务验收。",
+        "本站判断：可执行权限与审计比治理口号更有用。"
       ],
       "unknowns": [
-        "不证明开放模型在所有硬件和任务上都有成本优势。",
-        "不能把评估安排或功能计划当作安全结论和交付证据。"
+        "发布和厂商评测不证明生产效果。",
+        "单一网关统计和媒体线索不能外推全市场。"
       ]
     },
     "references": [
       {
-        "label": "媒体原文：Attie扩展创作入口：生成网站之后还需检查权限",
-        "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/"
+        "label": "媒体原文：印度Agent访问事件报道",
+        "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/"
       },
       {
-        "label": "媒体原文：Rivian谈第三方Agent接入，计划尚待交付证据",
-        "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/"
+        "label": "官方博客原文：Beam部署说明",
+        "url": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/"
       },
       {
-        "label": "官方或作者原文：Anthropic向METR开放内部评估权限，独立性还要看公开报告",
-        "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators"
+        "label": "官方博客原文：Glimpse研究预览",
+        "url": "https://elorian.ai/blog/introducing-glimpse"
       },
       {
-        "label": "官方或作者原文：Meta发布Muse Spark Open权重，本地部署仍有硬件与许可门槛",
-        "url": "https://research.meta.ai/blog/muse-spark-open"
+        "label": "官方博客原文：网关使用指标报告",
+        "url": "https://vercel.com/blog/ai-gateway-production-index-october-2026"
       },
       {
-        "label": "官方或作者原文：NVIDIA扩展Nemotron模型，本地与服务器部署分层",
-        "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
-      },
-      {
-        "label": "官方或作者原文：Google在美国推出Universal Cart，购物状态跨入口保存",
-        "url": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/"
-      },
-      {
-        "label": "官方或作者原文：Hugging Face披露BERT分词优化，改动仍在PR阶段",
-        "url": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert"
-      },
-      {
-        "label": "博客原文：Beam开放模型接入说明",
-        "url": "https://huggingface.co/blog/reflection-beam"
-      },
-      {
-        "label": "NVIDIA原文：印度语言语料预告",
-        "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
-      },
-      {
-        "label": "博客原文：Granite统一端点说明",
-        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1"
-      },
-      {
-        "label": "博客原文：FLUX.3工具接入说明",
-        "url": "https://huggingface.co/blog/flux-3"
+        "label": "官方博客原文：Agent治理框架",
+        "url": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/"
       }
     ]
   }

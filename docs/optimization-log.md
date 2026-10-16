@@ -1,3 +1,17 @@
+## 2026-10-17 08点 JST
+
+- Focus: 17:00任务实际08点执行；发布5条模型部署、使用统计与Agent治理信号。无同日晨版，以昨日23点版去重，不宣称覆盖未来17点。
+- Changed files: data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、data/sources.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3、更多新闻流、全部新闻列表、归档页和5条详情展示本期内容；明确实际采集时间、来源可信度、影响与下一步检查。
+- Sources: 编辑前pull origin/main成功（沙箱DNS失败后网络授权重试）。Google RSS不支持XML；核对Anthropic、HF、Google、AWS和TechCrunch索引，转向Elorian与Vercel官方原文。新增两家独立来源标签，总数129。未读取付费墙或登录墙正文。
+- Candidate gate: 5条URL/近标题重复检查通过。Beam新增AWS部署条件，非重复权重发布；Vercel与AWS治理为10月15日补录。印度仅核验媒体报道存在，底层事件待CERT-In原文。Replit关系报道矛盾，暂不收录。
+- Partial batch: publish-partial-batch；少于10条是质量门槛结果，未用重复报道、旧闻、社区推测或活动营销补数。
+- Homepage preflight / vendor-narrative-promotion: done；官方登记来源4/5、媒体1/5，AWS 2/5；厂商主张首屏点名第三方复测、客户日志与账单。两组阅读路径3+2条，未入选分类回归档。
+- Archive mirror: done；129期1262条，当前版与最新归档字段及顺序一致。无同日晨版，不生成晨晚差异摘要。
+- Verification: node --check app.js、validate-data、validate-site、validate-pages、build-derived-data --check、HTML/JSON解析及git diff --check通过。未修改校验器，未做浏览器视觉实测。
+- Commit note: 【新闻更新】发布17点AI新闻：5条模型部署与Agent治理信号。日志写入首次因解释器编码报错，改用UTF-8文件合并后纳入同一提交。
+- Push: 沙箱DNS失败，将按任务授权重试；最终结果记录于自动化memory.md。
+
 ## 2026-10-16 23:06:00 JST
 
 - Focus: 08:00任务实际23点执行；保留早间7条，新增Beam、Granite Switch 4.1、FLUX.3 Diffusers与印度语言语料方案4条，累计11条。
