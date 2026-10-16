@@ -7,8 +7,8 @@
 - VisionHub briefing scorecard: done。fiveSecondUnderstanding / top3ReaderUse / sourceBoundaryVisible / originalSourceDependency 保持；continuityUse、visualAidPurpose pass（状态摘要及按需展开）；mobileBurden partial -> partial，减少默认文字量，但未做浏览器视觉实测。
 - Verification: node --check app.js、validate-data、validate-site、validate-pages、build-derived-data --check、根目录HTMLParser、git diff --check通过。Node VM验证手机/桌面各0、1、2、4条的默认展开状态、卡片数量和边界保留，全部通过。
 - Pull: 沙箱DNS失败后网络授权重试成功，Already up to date；编辑前工作区干净。
-- Commit: 待记录实现提交哈希。
-- Push: 待提交后推送origin/main。
+- Commit: `2c88e0c`（【VisionHub网站风格优化】折叠手机连续观察并保留状态摘要）。
+- Push: 实现提交已推送origin/main；哈希记录另作日志提交。
 - Next: Day 5，分类与按目的阅读导航标签。
 
 ## 2026-10-16 08:06 JST
