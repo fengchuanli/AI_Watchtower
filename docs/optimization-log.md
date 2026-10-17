@@ -22,8 +22,8 @@
 - VisionHub briefing scorecard: done。fiveSecondUnderstanding / top3ReaderUse / sourceBoundaryVisible / originalSourceDependency / continuityUse / visualAidPurpose 保持；mobileBurden partial，入口语言更具体，尚未做390px/768px浏览器实测，留给Day 6。
 - Verification: node --check app.js、validate-data、validate-site、validate-pages、build-derived-data --check、HTMLParser及git diff --check通过；人工核对目标锚点与全部新闻的分类/排序功能。无新增外部主张。
 - Pull: 沙箱DNS失败后网络授权重试成功，Already up to date；编辑前工作区干净。
-- Commit: 本次实现哈希将在后续日志提交记录。
-- Push: 待提交后推送origin/main。
+- Commit: `fd2b2f1`（【VisionHub网站风格优化】按读者问题明确首页阅读入口）。
+- Push: 实现与日志提交一并推送origin/main；最终结果及日志提交哈希记录于本自动化memory.md。
 - Next: Day 6，390px与768px手机阅读路径QA。
 
 ## 2026-10-16 23:06:00 JST
