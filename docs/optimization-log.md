@@ -1,3 +1,17 @@
+## 2026-10-17 23:04:38 JST
+
+- Focus: 08:00任务实际23点JST执行；保留今日5条，新增1条AWS AgentCore持续质量评估方案，累计6条。
+- Changed files: data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页简报显示累计6条、本次新增1条；更多新闻流、全部新闻列表、23:00归档及新增详情页可读持续评估信号，TOP3仍按同日排序。
+- Sources: 编辑前pull origin/main成功（沙箱DNS失败后网络授权重试）。Google/HF RSS不支持XML，核对登记来源Anthropic、Google、HF、AWS、TechCrunch公开索引及AWS原文；未使用付费墙、登录墙正文或社区推测。
+- Candidate gate: AWS九阶段评估URL与近标题重复报告通过，人工确认区别于已有权限治理框架。Tokenmaxxing BERT、HiRO-ACE、Beam、METR及Glimpse等已有覆盖；Replit矛盾线索、活动营销与泛会场观点未收录。未宣称全网无其他新闻。
+- Partial batch: publish-partial-batch；本次新增1条少于10条是质量门槛结果，不用重复、旧闻或弱证据补数。AWS占本期3/6，已披露集中度；评估效果保持厂商主张，需客户日志、独立人工标注与第三方复测。
+- Homepage preflight / vendor-narrative-promotion: done；首屏理由明确独立证明路径，两组阅读目的3+3条，未收录主题沿用归档入口。
+- Archive mirror: done；129期1263条，当前版与最新历史镜像一致，派生索引/today/trends已重建。
+- Verification: node --check app.js、validate-data、validate-site、validate-pages、HTML/JSON解析通过；最终派生一致性与diff空白检查在提交前执行。未改校验器，未做浏览器视觉实测。草稿已修正日期并列排序及来源事实标签。
+- Commit note: 【新闻更新】补充23点AI新闻：新增1条Agent持续评估信号。
+- Push: 按任务授权推送origin main；最终结果记录于自动化memory.md。
+
 ## 2026-10-17 08点 JST
 
 - Focus: 17:00任务实际08点执行；发布5条模型部署、使用统计与Agent治理信号。无同日晨版，以昨日23点版去重，不宣称覆盖未来17点。

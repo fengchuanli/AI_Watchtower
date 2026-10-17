@@ -4,18 +4,18 @@
   "updatedAt": "2026-10-17",
   "date": "2026-10-17",
   "editionCount": 129,
-  "totalItems": 1262,
+  "totalItems": 1263,
   "editions": [
     {
-      "id": "news-1700-2026-10-17",
+      "id": "news-2300-2026-10-17",
       "date": "2026-10-17",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00新闻版",
-      "itemCount": 5,
-      "note": "5条模型部署、使用统计与Agent治理信号",
-      "operationalStatus": "17:00任务实际08点JST执行；已拉取origin/main。无同日晨版，以昨日23点版去重；未覆盖未来17点。Google RSS不支持XML，改核对登记来源公开原文。",
-      "editorialInterpretation": "本期发布5条安全非重复信号，少于10条是质量门槛结果；未用重复发布、矛盾报道、社区讨论、旧闻或活动营销补数。两条10月15日材料作为近两日治理与统计补录。",
+      "archiveLabel": "23:00补充版",
+      "itemCount": 6,
+      "note": "保留5条，新增1条Agent持续评估信号",
+      "operationalStatus": "08:00任务实际23点JST执行；已同步origin/main。保留今日5条，新增1条10月16日AWS原文信号。Google/HF RSS不支持XML，改核对登记来源公开页面。",
+      "editorialInterpretation": "本期发布6条安全非重复信号，本次新增1条持续评估方案；少于10条是质量门槛结果，未用重复发布、矛盾报道、社区讨论、旧闻或活动营销补数。",
       "readerFrame": {
         "headline": "今天哪些模型与Agent变化值得进入验收清单？",
         "whyItMatters": "部署入口、使用统计和权限治理需要不同证据，研发、采购与安全团队应分别检查运行日志、真实账单和审计记录。",
@@ -30,7 +30,7 @@
         ],
         "mobile": {
           "headline": "先查部署与权限",
-          "summary": "五条线索，分清发布、厂商统计与待核验事件。",
+          "summary": "六条线索，新增持续评估方案，分清发布、厂商统计与媒体线索。",
           "primaryUses": [
             "研发团队查部署",
             "采购团队查账单",
@@ -40,14 +40,14 @@
         }
       },
       "changeSummary": {
-        "headline": "相较昨日23点版，增加部署条件与治理证据入口",
+        "headline": "相较今日早间采集，新增Agent持续质量评估入口",
         "freshFacts": [
-          "本期新增：AWS部署路径、Glimpse预览及印度媒体线索。",
-          "本期新增收录：Vercel十月统计与AWS治理框架，原文日期为10月15日。"
+          "本次新增：AWS披露内部多Agent系统的九阶段持续评估方案。",
+          "新增解读：把答案正确性与在线率分开验收，效果仍需客户日志及第三方复测。"
         ],
         "repeatedContext": [
-          "重复背景：Beam开放权重已归档，本次只增加AWS部署条件。",
-          "重复背景：发布和作者主张仍不等于实际效果。"
+          "重复背景：今日5条部署、统计与权限治理线索保持原有证据边界。",
+          "重复背景：AWS权限治理框架与本次质量评估方案均为厂商主张。"
         ]
       },
       "coverageMix": [
@@ -58,21 +58,21 @@
         },
         {
           "label": "核对权限与治理",
-          "count": 2,
-          "meaning": "用来检查通报、外部策略与审计记录。"
+          "count": 3,
+          "meaning": "用来检查通报、权限策略、答案质量与审计记录。"
         }
       ],
       "sourceRisk": {
         "label": "发布方证据占主导",
-        "note": "官方登记来源4/5、媒体1/5；三条为厂商主张，发布方视角不能替代独立验证。发布方证据集中。",
+        "note": "官方登记来源5/6、媒体1/6；四条为厂商主张，发布方证据集中，不能替代独立验证。",
         "nextCheck": "核对客户账单、第三方复测、监管原文与访问日志。"
       },
       "sourceConcentration": {
         "sourceId": "aws-machine-learning-blog",
         "sourceName": "AWS Machine Learning Blog",
-        "count": 2,
-        "share": "2/5",
-        "note": "AWS占2/5；部署教程和治理框架来自同一厂商，不是两份独立效果证据。",
+        "count": 3,
+        "share": "3/6",
+        "note": "AWS占3/6；部署、治理与评估均来自同一厂商，不是三份独立效果证据。",
         "nextCheck": "核对客户侧部署记录、第三方红队报告与审计日志。"
       },
       "overreadBoundary": {
@@ -85,7 +85,7 @@
         {
           "family": "official",
           "label": "官方来源",
-          "count": 4,
+          "count": 5,
           "role": "核对发布方声明，效果另需独立验证。"
         },
         {
@@ -110,12 +110,13 @@
         {
           "id": "agent",
           "label": "核对权限与治理",
-          "count": 2,
+          "count": 3,
           "itemIds": [
             "india-agent-report-2026-10-17",
-            "aws-trust-depth-2026-10-17"
+            "aws-trust-depth-2026-10-17",
+            "aws-agentcore-quality-loop-2026-10-17"
           ],
-          "meaning": "用来检查通报、外部策略与审计记录。"
+          "meaning": "用来检查通报、权限策略、答案质量与审计记录。"
         }
       ],
       "trendNotes": [
@@ -128,7 +129,7 @@
         {
           "topic": "agent",
           "label": "从监督转向执行",
-          "note": "跨期看，昨日评估权限之后，本期核对治理框架与媒体事件线索。",
+          "note": "跨期看，从评估访问权限到治理框架，本次新增上线后答案质量的持续评估方案。",
           "boundary": "仍需原始通报和独立审计，不证明风险普遍存在。"
         }
       ],
@@ -147,7 +148,7 @@
           "label": "从监督转向执行",
           "status": "stronger",
           "previousPattern": "此前归档：跨期看，昨日评估权限之后，本期核对治理框架与媒体事件线索。",
-          "currentSignal": "本期新增：权限治理及事件线索。",
+          "currentSignal": "本次新增：AWS持续评估方案，把答案质量与运行状态分开。",
           "signalDirection": "增强：核验入口增加，效果仍未独立验证。",
           "stillUnproven": "仍需原始通报和独立审计，不证明风险普遍存在。"
         }
@@ -157,7 +158,7 @@
           "company": "AWS",
           "label": "部署与治理继续观察",
           "lastMention": "此前归档记录云端模型与Agent工程。",
-          "whatChanged": "本期增加Beam部署条件与权限治理框架。",
+          "whatChanged": "本期新增持续质量评估方案，补充今日已有的部署与治理线索。",
           "stillUnproven": "仍需客户日志与独立红队测试验证生产效果。"
         },
         {
@@ -215,6 +216,73 @@
           ],
           "companies": [
             "CERT-In"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "中心事实可追溯，实际效果仍需独立证据。"
+          }
+        },
+        {
+          "id": "aws-agentcore-quality-loop-2026-10-17",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS披露Agent持续评估方案：在线率正常不等于答案正确",
+          "body": "AWS介绍基于AgentCore的九阶段评估框架，用于其内部多Agent系统的持续质量检查。",
+          "summary": "AWS介绍基于AgentCore的九阶段评估框架，用于其内部多Agent系统的持续质量检查。",
+          "detailBody": "来源事实：AWS于10月16日介绍基于AgentCore的九阶段评估框架，用于其内部多Agent系统的持续质量检查。\n本站判断：发布前测试与上线后观察需要共享质量定义。一次演示成功不能排除数据刷新、提示词变化或工具响应改变带来的语义错误。",
+          "trend": "本站判断：Agent运维正在从服务是否在线，转向回答是否持续正确；质量责任也随之贯穿数据、工具和模型版本。",
+          "detailTrend": "本站判断：Agent运维正在从可用性监控转向语义质量管理。一个系统能够稳定响应，并不意味着其回答仍与业务数据保持一致。随着多个子Agent相互传递结果，单点错误可能沿流程累积，持续评估因而成为版本管理和系统维护的一部分。",
+          "whyItMatters": "对企业Agent负责人，验收标准需要同时覆盖运行状态与答案正确性。应先核对客户侧回归日志与第三方复测，再判断框架能否降低漏报。",
+          "whyRanked": "核对客户侧回归日志、人工标注集与第三方复测，判断质量监控是否发现传统在线率指标遗漏的问题。",
+          "detailWhyRanked": "企业Agent负责人可据此检查验收中是否存在只看延迟和错误率的盲区。把业务答案与对应数据版本一起保留，才能定位上线后变化来自模型、工具还是数据；框架名称本身不能替代这些记录。\nAWS将方案用于内部多Agent系统，使本条具备具体使用场景，但读者仍需检查自身任务的错误类型与评测样本是否匹配，不能直接迁移案例中的效果判断。",
+          "topReason": "客户侧回归日志与第三方复测是下一步，不能把AWS内部案例直接当成普遍效果。",
+          "impact": "企业Agent平台与质量团队可把答案正确性纳入验收，分别记录数据刷新、工具变化与模型升级后的失败样本。",
+          "whoShouldCare": "企业Agent平台、数据工程和质量保障团队，尤其是负责上线验收与持续运维的负责人。",
+          "readerUse": "企业Agent质量团队用于检查Agent验收清单是否覆盖答案质量；以客户侧日志和人工标注结果对照自动评分。",
+          "nextCheck": "核对客户侧回归日志和独立人工标注集，再由第三方复测自动评分的漏报与误报。",
+          "followUpQuestions": [
+            "第三方复测报告中，自动评分与独立人工标注的分歧有多大？",
+            "数据刷新后，客户侧日志能否证明质量下降被及时发现？"
+          ],
+          "evidenceThreshold": "需要客户侧带版本的回归日志、独立人工标注与第三方复测相互支持，才可判断持续质量改善。符合上述条件后，才可升级为已验证效果。",
+          "claimBoundary": "这是AWS内部案例与厂商方法说明，不是独立效果验证或通用安全认证；不能外推所有Agent工作负载。",
+          "counterEvidence": "若独立标注显示自动评分漏掉关键错误，或客户日志显示误报导致告警被忽略，应下调方案有效性判断。",
+          "source": "AWS Machine Learning Blog",
+          "sourceName": "AWS Machine Learning Blog",
+          "sourceId": "aws-machine-learning-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
+          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "AWS Machine Learning Blog原文介绍基于AgentCore的九阶段评估框架及内部多Agent系统使用声明，按厂商主张收录。已核验指作者确有上述披露；客户收益、误报率与跨场景效果仍需客户侧日志和第三方复测。完整方法与配置需回原文核对。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16",
+          "time": "10月16日（原文日期，未披露时分）",
+          "tags": [
+            "工具",
+            "Agent",
+            "持续评估"
+          ],
+          "companies": [
+            "AWS"
           ],
           "selectionScore": {
             "impact": 4,
