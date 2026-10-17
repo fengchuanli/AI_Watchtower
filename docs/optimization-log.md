@@ -1,3 +1,16 @@
+## 2026-10-18 08:05:19 JST
+
+- Focus: 17:00任务实际08点执行；新增3条内容权限、内部用工与模型路由信号。无同日晨版，以昨日23点版去重，不宣称覆盖未来17点。
+- Changed files: data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3、更多新闻流、全部新闻列表、归档页及3条详情展示本期中文解读；首屏说明来源可信度、影响、核验边界与下一步检查。
+- Sources: 编辑前pull origin/main成功（沙箱DNS失败后网络授权重试）。HF/AWS RSS不支持XML，核对Anthropic、HF、AWS、TechCrunch公开索引与原文。Anthropic研究替换媒体入口，保持厂商主张；Meta保留最小媒体线索，条款原文尚待补齐。未用付费墙、登录墙或社区内容。
+- Candidate gate: 3条URL与历史去重；Replit更新稿已加入CEO澄清，官方模型选择文档仍列Claude，因此本次收录默认选择这一最小事实，不收录停止合作争议说法。Anthropic为10月16日研究补录；旧模型发布、活动营销及泛观点未收录。
+- Partial batch: publish-partial-batch；少于10条是质量门槛结果。官方1/3、媒体2/3，TechCrunch占2/3已披露。媒体reported/must-read；已核验仅指报道存在，不代表底层事实获独立证实。
+- Homepage preflight: done；两个阅读目的2+1条，厂商首屏理由指向独立企业数据与客户日志；未入选分类回归档。当前与最新归档镜像一致，130期1266条；无同日晨版，不生成晨晚差异摘要。
+- Verification: 数据与页面检查、JS语法、派生一致性、HTML/JSON解析及diff空白检查提交前执行；草稿格式和既有站点固定边界标签已修正。未改校验器，未做浏览器视觉实测。临时Python脚本首次编码失败，加UTF-8声明后正常执行。
+- Commit note: 【新闻更新】发布17点AI新闻：3条组织治理与模型路由信号。
+- Push: 按任务授权推送origin main；最终验证与推送结果记录于自动化memory.md。
+
 ## 2026-10-17 23:04:38 JST
 
 - Focus: 08:00任务实际23点JST执行；保留今日5条，新增1条AWS AgentCore持续质量评估方案，累计6条。

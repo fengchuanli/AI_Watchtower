@@ -1,221 +1,218 @@
 {
   "version": 1,
   "generatedFrom": "data/news-history.json",
-  "updatedAt": "2026-10-17",
-  "date": "2026-10-17",
-  "editionCount": 129,
-  "totalItems": 1263,
+  "updatedAt": "2026-10-18",
+  "date": "2026-10-18",
+  "editionCount": 130,
+  "totalItems": 1266,
   "editions": [
     {
-      "id": "news-2300-2026-10-17",
-      "date": "2026-10-17",
+      "id": "news-1700-2026-10-18",
+      "date": "2026-10-18",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "23:00补充版",
-      "itemCount": 6,
-      "note": "保留5条，新增1条Agent持续评估信号",
-      "operationalStatus": "08:00任务实际23点JST执行；已同步origin/main。保留今日5条，新增1条10月16日AWS原文信号。Google/HF RSS不支持XML，改核对登记来源公开页面。",
-      "editorialInterpretation": "本期发布6条安全非重复信号，本次新增1条持续评估方案；少于10条是质量门槛结果，未用重复发布、矛盾报道、社区讨论、旧闻或活动营销补数。",
+      "archiveLabel": "17:00情报版",
+      "itemCount": 3,
+      "note": "新增3条内容权限、用工与模型路由信号",
+      "operationalStatus": "17点任务实际08点执行；已拉取main，核对登记来源索引与原文。RSS不支持XML，无同日晨版，以昨日23点版去重。",
+      "editorialInterpretation": "本期发布3条安全非重复信号；少于10条是质量门槛结果，未用旧闻、重复报道、社区讨论或活动营销补数。",
       "readerFrame": {
-        "headline": "今天哪些模型与Agent变化值得进入验收清单？",
-        "whyItMatters": "部署入口、使用统计和权限治理需要不同证据，研发、采购与安全团队应分别检查运行日志、真实账单和审计记录。",
+        "headline": "AI进入组织后，内容权限与人工复核应该怎样验收？",
+        "whyItMatters": "本期把注意力放到模型之外：网站内容如何授权、Agent输出由谁评审。这两类变化影响运营与研发责任，但目前证据不足以支持全行业结论。",
         "useThisIssueFor": [
-          "研发团队核对部署与视觉任务失败样本。",
-          "采购团队对照真实账单与网关统计口径。",
-          "安全团队核对通报、权限策略与访问日志。"
+          "网站运营团队留存条款版本与爬虫日志。",
+          "研发管理团队记录评审工时与缺陷。",
+          "开发团队核对默认路由与回退模型。"
         ],
         "notProvenYet": [
-          "发布和厂商评测不证明生产效果。",
-          "单一网关统计和媒体线索不能外推全市场。"
+          "条款报道不证明实际抓取行为改变。",
+          "厂商内部研究不能外推全行业或证明因果。"
         ],
         "mobile": {
-          "headline": "先查部署与权限",
-          "summary": "六条线索，新增持续评估方案，分清发布、厂商统计与媒体线索。",
+          "headline": "先查权限与评审",
+          "summary": "三条治理线索，核对内容权限、人工评审与默认模型路由。",
           "primaryUses": [
-            "研发团队查部署",
-            "采购团队查账单",
-            "安全团队查权限"
+            "运营团队查权限",
+            "研发团队查评审"
           ],
-          "proofBoundary": "仍需独立测试与客户记录，不能把发布当作效果证明。"
+          "proofBoundary": "仍需官方版本与独立企业记录，不能据此推断全行业变化。"
         }
       },
       "changeSummary": {
-        "headline": "相较今日早间采集，新增Agent持续质量评估入口",
+        "headline": "相较昨日部署与评估简报，本期新增内容权限和用工观察",
         "freshFacts": [
-          "本次新增：AWS披露内部多Agent系统的九阶段持续评估方案。",
-          "新增解读：把答案正确性与在线率分开验收，效果仍需客户日志及第三方复测。"
+          "新增媒体线索：Meta条款措辞删改报道。",
+          "新增原始材料：Anthropic内部用工研究，原文日期为10月16日，本次补录。",
+          "新增澄清：Replit默认伙伴说法不代表Claude不可选。"
         ],
         "repeatedContext": [
-          "重复背景：今日5条部署、统计与权限治理线索保持原有证据边界。",
-          "重复背景：AWS权限治理框架与本次质量评估方案均为厂商主张。"
+          "重复背景：昨日Agent质量评估仍需客户记录。",
+          "重复背景：此前Meta开放模型消息不代表内容权限已经明确。"
         ]
       },
       "coverageMix": [
         {
-          "label": "核对部署与使用",
-          "count": 3,
-          "meaning": "用来检查任务、容量与真实账单。"
+          "label": "核对组织责任",
+          "count": 2,
+          "meaning": "用来检查内容权限与人工评审清单。"
         },
         {
-          "label": "核对权限与治理",
-          "count": 3,
-          "meaning": "用来检查通报、权限策略、答案质量与审计记录。"
+          "label": "核对模型路由",
+          "count": 1,
+          "meaning": "用来更新默认模型与回退验收清单。"
         }
       ],
       "sourceRisk": {
-        "label": "发布方证据占主导",
-        "note": "官方登记来源5/6、媒体1/6；四条为厂商主张，发布方证据集中，不能替代独立验证。",
-        "nextCheck": "核对客户账单、第三方复测、监管原文与访问日志。"
+        "label": "媒体线索与厂商观察",
+        "note": "官方登记来源1/3、媒体2/3；厂商内部研究和单一媒体叙事不能代表全市场。",
+        "nextCheck": "核对官方条款版本、独立企业样本与客户侧日志。"
       },
       "sourceConcentration": {
-        "sourceId": "aws-machine-learning-blog",
-        "sourceName": "AWS Machine Learning Blog",
-        "count": 3,
-        "share": "3/6",
-        "note": "AWS占3/6；部署、治理与评估均来自同一厂商，不是三份独立效果证据。",
-        "nextCheck": "核对客户侧部署记录、第三方红队报告与审计日志。"
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 2,
+        "share": "2/3",
+        "note": "TechCrunch占2/3，存在媒体视角集中；两条媒体事实均保留原文依赖。",
+        "nextCheck": "核对Meta官方条款、Replit账号与客户调用日志。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
-        "body": "本期是部署与治理核验清单，发布证据强于效果证据。",
-        "doNotConclude": "不能认为开放模型已占全市场优势或Agent已可安全自治。",
-        "useInstead": "应该用来检查容量、账单和权限，并核对第三方报告与客户日志。"
+        "body": "本期用于安排组织责任核验，不是全行业效果统计。",
+        "doNotConclude": "不能据此认定内容不再被抓取或初级岗位普遍被替代。",
+        "useInstead": "应该核对官方版本、独立招聘数据与客户侧评审日志。"
       },
       "sourceFamilies": [
         {
           "family": "official",
           "label": "官方来源",
-          "count": 5,
-          "role": "核对发布方声明，效果另需独立验证。"
+          "count": 1,
+          "role": "核对厂商研究主张，不证明外部效果。"
         },
         {
           "family": "reliable_media",
           "label": "可靠媒体",
-          "count": 1,
-          "role": "保留最小媒体线索，仍需通报原文。"
+          "count": 2,
+          "role": "保留最小事实，完整背景请读原文。"
         }
       ],
       "topicGroups": [
         {
-          "id": "model",
-          "label": "核对部署与使用",
-          "count": 3,
+          "id": "enterprise",
+          "label": "核对组织责任",
+          "count": 2,
           "itemIds": [
-            "beam-aws-2026-10-17",
-            "elorian-glimpse-2026-10-17",
-            "vercel-oct-index-2026-10-17"
+            "meta-terms-2026-10-18",
+            "anthropic-employment-2026-10-18"
           ],
-          "meaning": "用来检查任务、容量与真实账单。"
+          "meaning": "用来检查组织责任与评审清单。"
         },
         {
-          "id": "agent",
-          "label": "核对权限与治理",
-          "count": 3,
+          "id": "developer-tooling",
+          "label": "核对模型路由",
+          "count": 1,
           "itemIds": [
-            "india-agent-report-2026-10-17",
-            "aws-trust-depth-2026-10-17",
-            "aws-agentcore-quality-loop-2026-10-17"
+            "replit-default-clarification-2026-10-18"
           ],
-          "meaning": "用来检查通报、权限策略、答案质量与审计记录。"
+          "meaning": "用来核对模型路由与回退清单。"
         }
       ],
       "trendNotes": [
         {
-          "topic": "model",
-          "label": "从发布转向验收",
-          "note": "跨期看，昨日开放权重之后，本期新增云端部署入口与网关统计。",
-          "boundary": "仍需客户侧账单与第三方复测，不证明普遍收益。"
+          "topic": "policy",
+          "label": "内容权限待核对",
+          "note": "跨期看，此前归档关注Meta开放模型。本期新增内容条款删改媒体线索。",
+          "boundary": "仍需官方条款版本与网站访问日志，文本变化和执行变化应分别核对。"
         },
         {
           "topic": "agent",
-          "label": "从监督转向执行",
-          "note": "跨期看，从评估访问权限到治理框架，本次新增上线后答案质量的持续评估方案。",
-          "boundary": "仍需原始通报和独立审计，不证明风险普遍存在。"
+          "label": "人工评审需测量",
+          "note": "跨期看，此前归档关注独立评估访问。本期补录内部用工与人工注意力研究。",
+          "boundary": "仍需外部企业的招聘数据和缺陷指标，组织扩张可能影响岗位构成。"
         }
       ],
       "topicContinuity": [
         {
-          "topic": "model",
-          "label": "从发布转向验收",
+          "topic": "developer-tooling",
+          "label": "默认路由待核对",
           "status": "stronger",
-          "previousPattern": "此前归档：跨期看，昨日开放权重之后，本期新增云端部署入口与网关统计。",
-          "currentSignal": "本期新增：部署条件与统计口径。",
-          "signalDirection": "增强：核验入口增加，效果仍未独立验证。",
-          "stillUnproven": "仍需客户侧账单与第三方复测，不证明普遍收益。"
+          "previousPattern": "此前归档关注开放模型与部署入口。",
+          "currentSignal": "本期新增Replit默认模型的澄清报道。",
+          "signalDirection": "增强：核验入口增加，但效果仍未独立验证。",
+          "stillUnproven": "不能证明所有账号配置一致，仍需官方文档与客户日志。"
         },
         {
-          "topic": "agent",
-          "label": "从监督转向执行",
+          "topic": "enterprise",
+          "label": "人工评审需测量",
           "status": "stronger",
-          "previousPattern": "此前归档：跨期看，昨日评估权限之后，本期核对治理框架与媒体事件线索。",
-          "currentSignal": "本次新增：AWS持续评估方案，把答案质量与运行状态分开。",
-          "signalDirection": "增强：核验入口增加，效果仍未独立验证。",
-          "stillUnproven": "仍需原始通报和独立审计，不证明风险普遍存在。"
+          "previousPattern": "此前归档关注独立评估访问。",
+          "currentSignal": "本期补录内部用工与人工注意力研究。",
+          "signalDirection": "增强：核验入口增加，但效果仍未独立验证。",
+          "stillUnproven": "厂商内部研究不能外推全行业或证明因果。仍需第三方审计。"
         }
       ],
       "companyContinuity": [
         {
-          "company": "AWS",
-          "label": "部署与治理继续观察",
-          "lastMention": "此前归档记录云端模型与Agent工程。",
-          "whatChanged": "本期新增持续质量评估方案，补充今日已有的部署与治理线索。",
-          "stillUnproven": "仍需客户日志与独立红队测试验证生产效果。"
+          "company": "Meta",
+          "label": "内容权限待核对",
+          "lastMention": "此前归档关注Meta开放模型。",
+          "whatChanged": "本期新增内容条款删改媒体线索。",
+          "stillUnproven": "条款报道不证明实际抓取行为改变。仍需独立记录。仍需第三方数据与客户日志。"
         },
         {
-          "company": "Reflection",
-          "label": "部署入口增强",
-          "lastMention": "此前归档已记录Beam开放权重。",
-          "whatChanged": "本期新增AWS区域与托管部署说明。",
-          "stillUnproven": "仍需客户侧容量记录和第三方压测核对实际可用性。"
+          "company": "Anthropic",
+          "label": "人工评审需测量",
+          "lastMention": "此前归档关注独立评估访问。",
+          "whatChanged": "本期补录内部用工与人工注意力研究。",
+          "stillUnproven": "厂商内部研究不能外推全行业或证明因果。仍需独立记录。仍需第三方数据与客户日志。"
         }
       ],
       "items": [
         {
-          "id": "india-agent-report-2026-10-17",
+          "id": "meta-terms-2026-10-18",
           "category": "policy",
           "label": "政策",
-          "title": "印度Agent越权活动报道：先查通报与访问日志",
-          "body": "TechCrunch报道印度出现AI Agent越权访问线索。",
-          "summary": "TechCrunch报道印度出现AI Agent越权访问线索。",
-          "detailBody": "来源事实：TechCrunch报道印度出现AI Agent越权访问线索。\n本站判断：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
-          "trend": "本站判断：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
-          "detailTrend": "本站判断：AI活动的观察范围正在延伸到真实系统边界。工具调用把语言输出变成外部动作，也让权限配置成为能力表现的一部分。事件线索的意义在于提醒组织区分能够访问和获准访问，而不是把单次异常直接解释为普遍的自主意图。 从产业角度看，这也使隔离机制与模型迭代成为需要同步考虑的两条路径；能力的提升和使用范围的扩大不应被视为同一个进程。",
-          "whyItMatters": "AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
-          "whyRanked": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
-          "detailWhyRanked": "安全运营与企业数据团队可用本条更新试点验收清单。核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
-          "topReason": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
-          "impact": "安全运营与企业数据团队需要关注：AI测试环境与真实组织系统之间的隔离值得重新检查。企业可以先盘点公开凭据和外部访问路径，不应依据一则报道推断所有模型具有相同行为。",
-          "whoShouldCare": "安全运营与企业数据团队，尤其是负责上线验收、采购和审计的负责人。",
-          "readerUse": "安全运营与企业数据团队可用本条制定核验清单；核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
-          "nextCheck": "核对CERT-In原始通报、相关供应商披露和受影响组织访问日志，再确认事件范围。",
+          "title": "Meta条款删改报道：训练权限仍需核对原文",
+          "body": "TechCrunch报道Meta移除了引发AI训练争议的条款措辞。",
+          "summary": "TechCrunch报道Meta移除了引发AI训练争议的条款措辞。",
+          "detailBody": "来源事实：TechCrunch报道Meta移除了引发AI训练争议的条款措辞。\n本站判断：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "trend": "本站判断：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "detailTrend": "本站判断：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。 这条信号把评估对象从模型本身扩展到组织流程。技术能力、管理安排与外部约束需要分别观察，不能用单一变化代替对整套工作方式的评价。",
+          "whyItMatters": "条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "whyRanked": "核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。",
+          "detailWhyRanked": "出版与网站运营团队可据此调整核验清单。核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。 在证据补齐前，应先保留基线记录与明确的评审责任，再决定是否扩大使用范围。\n来源只能支持上述声明或观察，下一步应先做小范围核验并留下对照材料。",
+          "topReason": "核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。",
+          "impact": "出版与网站运营团队需要关注：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "whoShouldCare": "出版与网站运营团队，尤其是负责企业上线验收、流程治理和审计记录留存的负责人。",
+          "readerUse": "出版与网站运营团队可用本条安排版本留存、基线测量与独立核验。",
+          "nextCheck": "核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。",
           "followUpQuestions": [
             "第三方或客户侧记录是否支持上述核验路径？",
             "原始日志是否披露失败样本与适用范围？"
           ],
           "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
-          "claimBoundary": "本条保留媒体线索，尚未直接核对通报原文；不推断具体责任方、受影响规模或损失。",
-          "counterEvidence": "若通报更正或访问日志否定越权，应下调该风险线索；若仅涉及少量环境，则收窄适用范围。",
+          "claimBoundary": "报道不能证明爬虫已经停止，也不能确定任何网站内容的具体授权状态。",
+          "counterEvidence": "若独立记录与来源表述不符，或关键版本、统计口径无法复核，应下调本信号的判断强度。",
           "source": "TechCrunch AI",
           "sourceName": "TechCrunch AI",
           "sourceId": "techcrunch-ai",
-          "sourceUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
-          "originalUrl": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "sourceUrl": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+          "originalUrl": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
           "sourceRole": "媒体背景",
           "sourceType": "reliable_media",
           "trustLevel": "reliable_media",
           "sourceReliability": "high",
           "claimStatus": "reported",
           "originalDependency": "must-read",
-          "provenance": "TechCrunch AI原文说明：TechCrunch报道印度出现AI Agent越权访问线索。 TechCrunch AI原文用于核对上述最小事实。本条保留媒体线索，尚未直接核对通报原文；不推断具体责任方、受影响规模或损失。完整事实、采访、图表和上下文仍需阅读媒体原文。已核验仅指媒体确有该报道，底层事件仍待原始通报核对。",
+          "provenance": "TechCrunch AI：TechCrunch公开报道仅核对上述最小媒体事实，底层条款变更仍待官方原文。完整事实、采访、原始措辞与上下文请阅读原文。报道不能证明爬虫已经停止，也不能确定任何网站内容的具体授权状态。",
           "verificationStatus": "已核验",
-          "publishedAt": "2026-10-16T17:52:00Z",
-          "time": "10月16日（原文时间17:52 UTC）",
+          "publishedAt": "2026-10-17",
+          "time": "2026-10-17（原文日期）",
           "tags": [
             "政策",
-            "Agent"
+            "组织治理"
           ],
           "companies": [
-            "CERT-In"
+            "Meta"
           ],
           "selectionScore": {
             "impact": 4,
@@ -224,7 +221,7 @@
             "evidenceQuality": 3,
             "readerUtility": 4,
             "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
           },
           "editorScore": {
             "impact": 4,
@@ -233,56 +230,57 @@
             "evidenceQuality": 3,
             "readerUtility": 4,
             "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
           }
         },
         {
-          "id": "aws-agentcore-quality-loop-2026-10-17",
+          "id": "replit-default-clarification-2026-10-18",
           "category": "tool",
           "label": "工具",
-          "title": "AWS披露Agent持续评估方案：在线率正常不等于答案正确",
-          "body": "AWS介绍基于AgentCore的九阶段评估框架，用于其内部多Agent系统的持续质量检查。",
-          "summary": "AWS介绍基于AgentCore的九阶段评估框架，用于其内部多Agent系统的持续质量检查。",
-          "detailBody": "来源事实：AWS于10月16日介绍基于AgentCore的九阶段评估框架，用于其内部多Agent系统的持续质量检查。\n本站判断：发布前测试与上线后观察需要共享质量定义。一次演示成功不能排除数据刷新、提示词变化或工具响应改变带来的语义错误。",
-          "trend": "本站判断：Agent运维正在从服务是否在线，转向回答是否持续正确；质量责任也随之贯穿数据、工具和模型版本。",
-          "detailTrend": "本站判断：Agent运维正在从可用性监控转向语义质量管理。一个系统能够稳定响应，并不意味着其回答仍与业务数据保持一致。随着多个子Agent相互传递结果，单点错误可能沿流程累积，持续评估因而成为版本管理和系统维护的一部分。",
-          "whyItMatters": "对企业Agent负责人，验收标准需要同时覆盖运行状态与答案正确性。应先核对客户侧回归日志与第三方复测，再判断框架能否降低漏报。",
-          "whyRanked": "核对客户侧回归日志、人工标注集与第三方复测，判断质量监控是否发现传统在线率指标遗漏的问题。",
-          "detailWhyRanked": "企业Agent负责人可据此检查验收中是否存在只看延迟和错误率的盲区。把业务答案与对应数据版本一起保留，才能定位上线后变化来自模型、工具还是数据；框架名称本身不能替代这些记录。\nAWS将方案用于内部多Agent系统，使本条具备具体使用场景，但读者仍需检查自身任务的错误类型与评测样本是否匹配，不能直接迁移案例中的效果判断。",
-          "topReason": "客户侧回归日志与第三方复测是下一步，不能把AWS内部案例直接当成普遍效果。",
-          "impact": "企业Agent平台与质量团队可把答案正确性纳入验收，分别记录数据刷新、工具变化与模型升级后的失败样本。",
-          "whoShouldCare": "企业Agent平台、数据工程和质量保障团队，尤其是负责上线验收与持续运维的负责人。",
-          "readerUse": "企业Agent质量团队用于检查Agent验收清单是否覆盖答案质量；以客户侧日志和人工标注结果对照自动评分。",
-          "nextCheck": "核对客户侧回归日志和独立人工标注集，再由第三方复测自动评分的漏报与误报。",
+          "title": "Replit默认模型报道获澄清：默认选择不等于排他供应",
+          "body": "TechCrunch更新报道：Replit CEO称OpenAI成为默认选择，Claude仍可选。",
+          "summary": "TechCrunch更新报道：Replit CEO称OpenAI成为默认选择，Claude仍可选。",
+          "detailBody": "来源事实：TechCrunch更新报道：Replit CEO称OpenAI成为默认选择，Claude仍可选。\n本站判断：默认路由会影响真实账单和依赖程度，可选模型列表则决定迁移余地。采购团队需要分别核对自动选择与人工切换，不能把默认合作伙伴直接理解为排他供应商。",
+          "trend": "本站判断：默认路由会影响真实账单和依赖程度，可选模型列表则决定迁移余地。采购团队需要分别核对自动选择与人工切换，不能把默认合作伙伴直接理解为排他供应商。",
+          "detailTrend": "本站判断：默认路由影响平台与模型商之间的分发关系，而可选模型决定用户保留多少选择空间。两者可以同时存在，因此平台偏好和排他供应并不是同一个概念。模型竞争由单项能力扩展到成本、接入体验与切换摩擦，但一次供应商表态无法说明市场份额已经发生同等幅度的变化。",
+          "whyItMatters": "默认路由会影响真实账单和依赖程度，可选模型列表则决定迁移余地。采购团队需要分别核对自动选择与人工切换，不能把默认合作伙伴直接理解为排他供应商。",
+          "whyRanked": "核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。",
+          "detailWhyRanked": "企业采购与开发团队可据此重新检查服务依赖。核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。 本次增量是对先前争议说法的澄清；供应关系、产品入口与生产流量分布应分开核实，文档存在不保证每个客户已获得同样选项。\n来源只能支持上述声明或观察，下一步应先做小范围核验并留下对照材料。",
+          "topReason": "核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。",
+          "impact": "开发与采购团队需要把默认路由和备用模型分别纳入验收。",
+          "whoShouldCare": "负责代码Agent接入、模型路由回退与供应商采购的企业研发团队及平台负责人。，尤其是负责企业上线验收、流程治理和审计记录留存的负责人。",
+          "readerUse": "开发团队可用本条更新模型回退清单并比较同任务账单。",
+          "nextCheck": "核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。",
           "followUpQuestions": [
-            "第三方复测报告中，自动评分与独立人工标注的分歧有多大？",
-            "数据刷新后，客户侧日志能否证明质量下降被及时发现？"
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
           ],
-          "evidenceThreshold": "需要客户侧带版本的回归日志、独立人工标注与第三方复测相互支持，才可判断持续质量改善。符合上述条件后，才可升级为已验证效果。",
-          "claimBoundary": "这是AWS内部案例与厂商方法说明，不是独立效果验证或通用安全认证；不能外推所有Agent工作负载。",
-          "counterEvidence": "若独立标注显示自动评分漏掉关键错误，或客户日志显示误报导致告警被忽略，应下调方案有效性判断。",
-          "source": "AWS Machine Learning Blog",
-          "sourceName": "AWS Machine Learning Blog",
-          "sourceId": "aws-machine-learning-blog",
-          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
-          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
-          "sourceRole": "厂商主张",
-          "sourceType": "official",
-          "trustLevel": "official",
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "CEO澄清不证明所有账号默认行为相同，也不证明模型性能优劣或双方合同终止。",
+          "counterEvidence": "若独立记录与来源表述不符，或关键版本、统计口径无法复核，应下调本信号的判断强度。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "originalUrl": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
           "sourceReliability": "high",
-          "claimStatus": "confirmed",
-          "originalDependency": "recommended",
-          "provenance": "AWS Machine Learning Blog原文介绍基于AgentCore的九阶段评估框架及内部多Agent系统使用声明，按厂商主张收录。已核验指作者确有上述披露；客户收益、误报率与跨场景效果仍需客户侧日志和第三方复测。完整方法与配置需回原文核对。",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI：TechCrunch AI更新稿用于核对CEO澄清这一最小媒体事实；官方模型选择文档仍列Claude，但不能证明默认流量分布。完整采访、措辞及上下文请读原文。完整事实、采访细节、图表和上下文请阅读TechCrunch AI原文。",
           "verificationStatus": "已核验",
-          "publishedAt": "2026-10-16",
-          "time": "10月16日（原文日期，未披露时分）",
+          "publishedAt": "2026-10-17",
+          "time": "2026-10-17（原文日期）",
           "tags": [
             "工具",
-            "Agent",
-            "持续评估"
+            "模型路由"
           ],
           "companies": [
-            "AWS"
+            "Replit",
+            "OpenAI",
+            "Anthropic"
           ],
           "selectionScore": {
             "impact": 4,
@@ -291,7 +289,7 @@
             "evidenceQuality": 3,
             "readerUtility": 4,
             "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
           },
           "editorScore": {
             "impact": 4,
@@ -300,254 +298,55 @@
             "evidenceQuality": 3,
             "readerUtility": 4,
             "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
           }
         },
         {
-          "id": "beam-aws-2026-10-17",
-          "category": "tool",
-          "label": "工具",
-          "title": "Beam增加AWS部署路径：开放权重之后核对区域与容量",
-          "body": "AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。",
-          "summary": "AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。",
-          "detailBody": "来源事实：AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。\n本站判断：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
-          "trend": "本站判断：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
-          "detailTrend": "本站判断：模型部署正从权重可下载走向运行条件可描述。托管入口与可定制集群提供不同控制程度，也对应不同运维责任。开放生态的价值不只在模型数量，而在能否形成稳定、可重复的服务链；接入方式增加并不自动消除资源约束。",
-          "whyItMatters": "新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
-          "whyRanked": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
-          "detailWhyRanked": "云平台与代码Agent研发团队可用本条更新试点验收清单。检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
-          "topReason": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
-          "impact": "云平台与代码Agent研发团队需要关注：新增的是云端部署条件，模型开放本身已在昨日归档。企业选型应把区域、GPU配额和运维能力计入试点预算。",
-          "whoShouldCare": "云平台与代码Agent研发团队，尤其是负责上线验收、采购和审计的负责人。",
-          "readerUse": "云平台与代码Agent研发团队可用本条制定核验清单；检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
-          "nextCheck": "检查客户侧部署日志、区域配额与第三方同配置压测，记录冷启动、失败率和完整账单。",
-          "followUpQuestions": [
-            "第三方或客户侧记录是否支持上述核验路径？",
-            "原始日志是否披露失败样本与适用范围？"
-          ],
-          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
-          "claimBoundary": "教程不能证明容量随时可用，也不证明托管部署在成本或成功率上优于自建。",
-          "counterEvidence": "若客户部署日志显示无法获得容量或成本超出预算，应下调为受限部署入口。",
-          "source": "AWS Machine Learning Blog",
-          "sourceName": "AWS Machine Learning Blog",
-          "sourceId": "aws-machine-learning-blog",
-          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
-          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
-          "sourceRole": "官方核对",
-          "sourceType": "official",
-          "trustLevel": "official",
-          "sourceReliability": "high",
-          "claimStatus": "confirmed",
-          "originalDependency": "recommended",
-          "provenance": "AWS Machine Learning Blog原文说明：AWS给出Beam的JumpStart与HyperPod部署路径，首发JumpStart区域为美国北弗吉尼亚和俄亥俄。 AWS Machine Learning Blog原文用于核对上述最小事实。教程不能证明容量随时可用，也不证明托管部署在成本或成功率上优于自建。完整方法、配置与原文措辞请回原始来源核对。",
-          "verificationStatus": "已核验",
-          "publishedAt": "2026-10-16",
-          "time": "10月16日（原文日期，未披露时分）",
-          "tags": [
-            "工具",
-            "部署验收"
-          ],
-          "companies": [
-            "AWS",
-            "Reflection"
-          ],
-          "selectionScore": {
-            "impact": 4,
-            "novelty": 3,
-            "narrativeStrength": 3,
-            "evidenceQuality": 4,
-            "readerUtility": 4,
-            "total": 18,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
-          },
-          "editorScore": {
-            "impact": 4,
-            "novelty": 3,
-            "narrativeStrength": 3,
-            "evidenceQuality": 4,
-            "readerUtility": 4,
-            "total": 18,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
-          }
-        },
-        {
-          "id": "elorian-glimpse-2026-10-17",
-          "category": "model",
-          "label": "模型",
-          "title": "Glimpse发布视觉推理预览：复看图像不等于可靠理解",
-          "body": "Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。",
-          "summary": "Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。",
-          "detailBody": "来源事实：Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。\n本站判断：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
-          "trend": "本站判断：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
-          "detailTrend": "本站判断：视觉模型的竞争开始涉及推理过程能否回到原始证据。一次识别的正确率与复杂任务中的持续纠错能力并不相同，前者改善也不自动意味着后者成熟。工具参与推理后，模型能力的边界逐渐与运行流程结合，比较对象因此从单次输出扩展为完整任务。",
-          "whyItMatters": "视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
-          "whyRanked": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
-          "detailWhyRanked": "视觉应用与多模态研发团队可用本条更新试点验收清单。检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
-          "topReason": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
-          "impact": "视觉应用与多模态研发团队需要关注：视觉任务的价值取决于能否发现最初判断中的错误。团队可把遮挡、运动与细小标记加入回归集，而不是仅比较一张总榜。",
-          "whoShouldCare": "视觉应用与多模态研发团队，尤其是负责上线验收、采购和审计的负责人。",
-          "readerUse": "视觉应用与多模态研发团队可用本条制定核验清单；检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
-          "nextCheck": "检查独立视觉评测与失败样本，并由客户侧记录API访问、工具调用成本和任务完成率。",
-          "followUpQuestions": [
-            "第三方或客户侧记录是否支持上述核验路径？",
-            "原始日志是否披露失败样本与适用范围？"
-          ],
-          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
-          "claimBoundary": "研究预览和作者基准不证明真实场景的可靠理解，也不保证所有申请者立即获得访问。仍需独立效果验证。",
-          "counterEvidence": "若第三方复测无法重现表现或客户日志显示访问受限，应下调为受限研究预览。",
-          "source": "Elorian Blog",
-          "sourceName": "Elorian Blog",
-          "sourceId": "elorian-blog",
-          "sourceUrl": "https://elorian.ai/blog/introducing-glimpse",
-          "originalUrl": "https://elorian.ai/blog/introducing-glimpse",
-          "sourceRole": "厂商主张",
-          "sourceType": "official",
-          "trustLevel": "official",
-          "sourceReliability": "high",
-          "claimStatus": "confirmed",
-          "originalDependency": "recommended",
-          "provenance": "Elorian Blog原文说明：Elorian发布Glimpse研究预览，介绍在推理过程中重新检查图像及视频证据的能力。 Elorian Blog原文用于核对上述最小事实。研究预览和作者基准不证明真实场景的可靠理解，也不保证所有申请者立即获得访问。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
-          "verificationStatus": "已核验",
-          "publishedAt": "2026-10-16",
-          "time": "10月16日（原文日期，未披露时分）",
-          "tags": [
-            "模型",
-            "部署验收"
-          ],
-          "companies": [
-            "Elorian"
-          ],
-          "selectionScore": {
-            "impact": 4,
-            "novelty": 3,
-            "narrativeStrength": 3,
-            "evidenceQuality": 3,
-            "readerUtility": 4,
-            "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
-          },
-          "editorScore": {
-            "impact": 4,
-            "novelty": 3,
-            "narrativeStrength": 3,
-            "evidenceQuality": 3,
-            "readerUtility": 4,
-            "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
-          }
-        },
-        {
-          "id": "aws-trust-depth-2026-10-17",
-          "category": "policy",
-          "label": "政策",
-          "title": "AWS提出Trust in Depth：Agent权限需要外部执行与审计",
-          "body": "AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。",
-          "summary": "AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。",
-          "detailBody": "来源事实：AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。\n本站判断：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
-          "trend": "本站判断：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
-          "detailTrend": "本站判断：Agent治理开始把责任边界从模型回答延伸到执行环境。能力越强，任务目标与操作许可之间的差距越重要。可描述的规则与依赖判断的情境具有不同控制方式，这种分工意味着治理成熟度不能仅用模型是否听话衡量。",
-          "whyItMatters": "授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
-          "whyRanked": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
-          "detailWhyRanked": "企业安全与Agent平台团队可用本条更新试点验收清单。检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
-          "topReason": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
-          "impact": "企业安全与Agent平台团队需要关注：授权不能只写在提示词里。团队需要把可验证规则落实到工具入口，并为需要人类判断的情况保留升级处理路径。",
-          "whoShouldCare": "企业安全与Agent平台团队，尤其是负责上线验收、采购和审计的负责人。",
-          "readerUse": "企业安全与Agent平台团队可用本条制定核验清单；检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
-          "nextCheck": "检查客户侧权限策略、第三方红队报告及审计日志，验证多步操作能否绕过边界。",
-          "followUpQuestions": [
-            "第三方或客户侧记录是否支持上述核验路径？",
-            "原始日志是否披露失败样本与适用范围？"
-          ],
-          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
-          "claimBoundary": "这是厂商治理框架，不是监管要求或独立安全认证；形式证明受系统描述与假设范围限制。仍需独立效果验证。",
-          "counterEvidence": "若第三方红队测试或审计日志显示策略被绕过，应下调为未验证的治理方案。",
-          "source": "AWS Machine Learning Blog",
-          "sourceName": "AWS Machine Learning Blog",
-          "sourceId": "aws-machine-learning-blog",
-          "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
-          "originalUrl": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
-          "sourceRole": "厂商主张",
-          "sourceType": "official",
-          "trustLevel": "official",
-          "sourceReliability": "high",
-          "claimStatus": "confirmed",
-          "originalDependency": "recommended",
-          "provenance": "AWS Machine Learning Blog原文说明：AWS介绍Trust in Depth框架，将Agent任务范围、身份、权限边界、观察记录与可证明规则结合。 AWS Machine Learning Blog原文用于核对上述最小事实。这是厂商治理框架，不是监管要求或独立安全认证；形式证明受系统描述与假设范围限制。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
-          "verificationStatus": "已核验",
-          "publishedAt": "2026-10-15",
-          "time": "10月15日（原文日期，未披露时分）",
-          "tags": [
-            "政策",
-            "Agent"
-          ],
-          "companies": [
-            "AWS"
-          ],
-          "selectionScore": {
-            "impact": 4,
-            "novelty": 3,
-            "narrativeStrength": 3,
-            "evidenceQuality": 3,
-            "readerUtility": 4,
-            "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
-          },
-          "editorScore": {
-            "impact": 4,
-            "novelty": 3,
-            "narrativeStrength": 3,
-            "evidenceQuality": 3,
-            "readerUtility": 4,
-            "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
-          }
-        },
-        {
-          "id": "vercel-oct-index-2026-10-17",
+          "id": "anthropic-employment-2026-10-18",
           "category": "research",
           "label": "研究",
-          "title": "Vercel公布网关使用统计：调用份额与支出份额应分开读",
-          "body": "Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。",
-          "summary": "Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。",
-          "detailBody": "来源事实：Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。\n本站判断：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
-          "trend": "本站判断：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
-          "detailTrend": "本站判断：模型经济的观察正在从调用总量转向任务结构。高频低价任务和低频高价任务可能同时增长，使流量领先与商业回报呈现不同方向。单一份额指标会掩盖这种分工，因而对多模型生态的理解需要同时区分使用强度、价格与任务价值。",
-          "whyItMatters": "调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
-          "whyRanked": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
-          "detailWhyRanked": "企业采购与模型平台团队可用本条更新试点验收清单。核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。 本条把来源中的发布或声明与实际采用分开，读者可以据此决定是否安排受控试点。只有在任务、权限和成本条件明确后，才适合把观察线索转为上线计划。",
-          "topReason": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
-          "impact": "企业采购与模型平台团队需要关注：调用量与收入不是同一种指标。采购团队应按工作负载拆账，把廉价高频分类和昂贵复杂任务分开比较，避免用流量占比推断行业赢家。",
-          "whoShouldCare": "企业采购与模型平台团队，尤其是负责上线验收、采购和审计的负责人。",
-          "readerUse": "企业采购与模型平台团队可用本条制定核验清单；核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
-          "nextCheck": "核对报告公开数据及方法，再与客户真实账单、独立网关同口径统计交叉比较。",
+          "title": "Anthropic披露内部用工研究：Agent产出增加后谁来审核",
+          "body": "Anthropic发布内部用工研究，报告初级技术岗位占比下降，并指出人工注意力成为Agent输出的瓶颈。",
+          "summary": "Anthropic发布内部用工研究，报告初级技术岗位占比下降，并指出人工注意力成为Agent输出的瓶颈。",
+          "detailBody": "来源事实：Anthropic发布内部用工研究，报告初级技术岗位占比下降，并指出人工注意力成为Agent输出的瓶颈。\n本站判断：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "trend": "本站判断：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "detailTrend": "本站判断：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。 这条信号把评估对象从模型本身扩展到组织流程。技术能力、管理安排与外部约束需要分别观察，不能用单一变化代替对整套工作方式的评价。",
+          "whyItMatters": "采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "whyRanked": "检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。",
+          "detailWhyRanked": "研发管理与人力团队可据此调整核验清单。检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。 在证据补齐前，应先保留基线记录与明确的评审责任，再决定是否扩大使用范围。\n来源只能支持上述声明或观察，下一步应先做小范围核验并留下对照材料。",
+          "topReason": "检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。",
+          "impact": "研发管理与人力团队需要关注：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "whoShouldCare": "研发管理与人力团队，尤其是负责企业上线验收、流程治理和审计记录留存的负责人。",
+          "readerUse": "研发管理与人力团队可用本条安排版本留存、基线测量与独立核验。",
+          "nextCheck": "检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。",
           "followUpQuestions": [
             "第三方或客户侧记录是否支持上述核验路径？",
             "原始日志是否披露失败样本与适用范围？"
           ],
           "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
-          "claimBoundary": "仅覆盖Vercel网关；token含缓存与推理等类别，支出按公开标价估算，不能外推全市场收入。仍需独立效果验证。",
-          "counterEvidence": "若独立同口径数据不支持该方向，或客户账单与估算差距显著，应限定为单一网关样本。",
-          "source": "Vercel Blog",
-          "sourceName": "Vercel Blog",
-          "sourceId": "vercel-blog",
-          "sourceUrl": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
-          "originalUrl": "https://vercel.com/blog/ai-gateway-production-index-october-2026",
+          "claimBoundary": "单一厂商内部观察不证明AI导致全行业初级岗位减少；非随机采用也不能直接建立因果关系。",
+          "counterEvidence": "若独立记录与来源表述不符，或关键版本、统计口径无法复核，应下调本信号的判断强度。",
+          "source": "Anthropic Research",
+          "sourceName": "Anthropic Research",
+          "sourceId": "anthropic-research",
+          "sourceUrl": "https://www.anthropic.com/research/employment-at-anthropic",
+          "originalUrl": "https://www.anthropic.com/research/employment-at-anthropic",
           "sourceRole": "厂商主张",
           "sourceType": "official",
           "trustLevel": "official",
           "sourceReliability": "high",
           "claimStatus": "confirmed",
           "originalDependency": "recommended",
-          "provenance": "Vercel Blog原文说明：Vercel十月报告称开放权重模型占其网关71.5%的token、23%的估算支出；数据截至九月。 Vercel Blog原文用于核对上述最小事实。仅覆盖Vercel网关；token含缓存与推理等类别，支出按公开标价估算，不能外推全市场收入。完整方法、配置与原文措辞请回原始来源核对。这是厂商主张，不是独立验证。",
+          "provenance": "Anthropic Research：Anthropic研究原文核对报告存在与作者主张；这是厂商主张，不是独立效果验证。单一厂商内部观察不证明AI导致全行业初级岗位减少；非随机采用也不能直接建立因果关系。",
           "verificationStatus": "已核验",
-          "publishedAt": "2026-10-15",
-          "time": "10月15日（原文日期，未披露时分）",
+          "publishedAt": "2026-10-16",
+          "time": "2026-10-16（原文日期）",
           "tags": [
             "研究",
-            "部署验收"
+            "组织治理"
           ],
           "companies": [
-            "Vercel"
+            "Anthropic"
           ],
           "selectionScore": {
             "impact": 4,
@@ -556,7 +355,7 @@
             "evidenceQuality": 3,
             "readerUtility": 4,
             "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
           },
           "editorScore": {
             "impact": 4,
@@ -565,7 +364,7 @@
             "evidenceQuality": 3,
             "readerUtility": 4,
             "total": 17,
-            "note": "中心事实可追溯，实际效果仍需独立证据。"
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
           }
         }
       ]

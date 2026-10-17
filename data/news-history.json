@@ -1,8 +1,371 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-17",
-  "totalItems": 1263,
+  "updatedAt": "2026-10-18",
+  "totalItems": 1266,
   "editions": [
+    {
+      "id": "news-1700-2026-10-18",
+      "date": "2026-10-18",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00情报版",
+      "itemCount": 3,
+      "note": "新增3条内容权限、用工与模型路由信号",
+      "operationalStatus": "17点任务实际08点执行；已拉取main，核对登记来源索引与原文。RSS不支持XML，无同日晨版，以昨日23点版去重。",
+      "editorialInterpretation": "本期发布3条安全非重复信号；少于10条是质量门槛结果，未用旧闻、重复报道、社区讨论或活动营销补数。",
+      "readerFrame": {
+        "headline": "AI进入组织后，内容权限与人工复核应该怎样验收？",
+        "whyItMatters": "本期把注意力放到模型之外：网站内容如何授权、Agent输出由谁评审。这两类变化影响运营与研发责任，但目前证据不足以支持全行业结论。",
+        "useThisIssueFor": [
+          "网站运营团队留存条款版本与爬虫日志。",
+          "研发管理团队记录评审工时与缺陷。",
+          "开发团队核对默认路由与回退模型。"
+        ],
+        "notProvenYet": [
+          "条款报道不证明实际抓取行为改变。",
+          "厂商内部研究不能外推全行业或证明因果。"
+        ],
+        "mobile": {
+          "headline": "先查权限与评审",
+          "summary": "三条治理线索，核对内容权限、人工评审与默认模型路由。",
+          "primaryUses": [
+            "运营团队查权限",
+            "研发团队查评审"
+          ],
+          "proofBoundary": "仍需官方版本与独立企业记录，不能据此推断全行业变化。"
+        }
+      },
+      "changeSummary": {
+        "headline": "相较昨日部署与评估简报，本期新增内容权限和用工观察",
+        "freshFacts": [
+          "新增媒体线索：Meta条款措辞删改报道。",
+          "新增原始材料：Anthropic内部用工研究，原文日期为10月16日，本次补录。",
+          "新增澄清：Replit默认伙伴说法不代表Claude不可选。"
+        ],
+        "repeatedContext": [
+          "重复背景：昨日Agent质量评估仍需客户记录。",
+          "重复背景：此前Meta开放模型消息不代表内容权限已经明确。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对组织责任",
+          "count": 2,
+          "meaning": "用来检查内容权限与人工评审清单。"
+        },
+        {
+          "label": "核对模型路由",
+          "count": 1,
+          "meaning": "用来更新默认模型与回退验收清单。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "媒体线索与厂商观察",
+        "note": "官方登记来源1/3、媒体2/3；厂商内部研究和单一媒体叙事不能代表全市场。",
+        "nextCheck": "核对官方条款版本、独立企业样本与客户侧日志。"
+      },
+      "sourceConcentration": {
+        "sourceId": "techcrunch-ai",
+        "sourceName": "TechCrunch AI",
+        "count": 2,
+        "share": "2/3",
+        "note": "TechCrunch占2/3，存在媒体视角集中；两条媒体事实均保留原文依赖。",
+        "nextCheck": "核对Meta官方条款、Replit账号与客户调用日志。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期用于安排组织责任核验，不是全行业效果统计。",
+        "doNotConclude": "不能据此认定内容不再被抓取或初级岗位普遍被替代。",
+        "useInstead": "应该核对官方版本、独立招聘数据与客户侧评审日志。"
+      },
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方来源",
+          "count": 1,
+          "role": "核对厂商研究主张，不证明外部效果。"
+        },
+        {
+          "family": "reliable_media",
+          "label": "可靠媒体",
+          "count": 2,
+          "role": "保留最小事实，完整背景请读原文。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "enterprise",
+          "label": "核对组织责任",
+          "count": 2,
+          "itemIds": [
+            "meta-terms-2026-10-18",
+            "anthropic-employment-2026-10-18"
+          ],
+          "meaning": "用来检查组织责任与评审清单。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "核对模型路由",
+          "count": 1,
+          "itemIds": [
+            "replit-default-clarification-2026-10-18"
+          ],
+          "meaning": "用来核对模型路由与回退清单。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "policy",
+          "label": "内容权限待核对",
+          "note": "跨期看，此前归档关注Meta开放模型。本期新增内容条款删改媒体线索。",
+          "boundary": "仍需官方条款版本与网站访问日志，文本变化和执行变化应分别核对。"
+        },
+        {
+          "topic": "agent",
+          "label": "人工评审需测量",
+          "note": "跨期看，此前归档关注独立评估访问。本期补录内部用工与人工注意力研究。",
+          "boundary": "仍需外部企业的招聘数据和缺陷指标，组织扩张可能影响岗位构成。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "developer-tooling",
+          "label": "默认路由待核对",
+          "status": "stronger",
+          "previousPattern": "此前归档关注开放模型与部署入口。",
+          "currentSignal": "本期新增Replit默认模型的澄清报道。",
+          "signalDirection": "增强：核验入口增加，但效果仍未独立验证。",
+          "stillUnproven": "不能证明所有账号配置一致，仍需官方文档与客户日志。"
+        },
+        {
+          "topic": "enterprise",
+          "label": "人工评审需测量",
+          "status": "stronger",
+          "previousPattern": "此前归档关注独立评估访问。",
+          "currentSignal": "本期补录内部用工与人工注意力研究。",
+          "signalDirection": "增强：核验入口增加，但效果仍未独立验证。",
+          "stillUnproven": "厂商内部研究不能外推全行业或证明因果。仍需第三方审计。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "Meta",
+          "label": "内容权限待核对",
+          "lastMention": "此前归档关注Meta开放模型。",
+          "whatChanged": "本期新增内容条款删改媒体线索。",
+          "stillUnproven": "条款报道不证明实际抓取行为改变。仍需独立记录。仍需第三方数据与客户日志。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "人工评审需测量",
+          "lastMention": "此前归档关注独立评估访问。",
+          "whatChanged": "本期补录内部用工与人工注意力研究。",
+          "stillUnproven": "厂商内部研究不能外推全行业或证明因果。仍需独立记录。仍需第三方数据与客户日志。"
+        }
+      ],
+      "items": [
+        {
+          "id": "meta-terms-2026-10-18",
+          "category": "policy",
+          "label": "政策",
+          "title": "Meta条款删改报道：训练权限仍需核对原文",
+          "body": "TechCrunch报道Meta移除了引发AI训练争议的条款措辞。",
+          "summary": "TechCrunch报道Meta移除了引发AI训练争议的条款措辞。",
+          "detailBody": "来源事实：TechCrunch报道Meta移除了引发AI训练争议的条款措辞。\n本站判断：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "trend": "本站判断：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "detailTrend": "本站判断：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。 这条信号把评估对象从模型本身扩展到组织流程。技术能力、管理安排与外部约束需要分别观察，不能用单一变化代替对整套工作方式的评价。",
+          "whyItMatters": "条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "whyRanked": "核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。",
+          "detailWhyRanked": "出版与网站运营团队可据此调整核验清单。核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。 在证据补齐前，应先保留基线记录与明确的评审责任，再决定是否扩大使用范围。\n来源只能支持上述声明或观察，下一步应先做小范围核验并留下对照材料。",
+          "topReason": "核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。",
+          "impact": "出版与网站运营团队需要关注：条款文字、爬虫配置与实际访问是三个不同层面。团队应保存版本和访问记录，避免把一则删改报道等同于全部内容不再被使用。",
+          "whoShouldCare": "出版与网站运营团队，尤其是负责企业上线验收、流程治理和审计记录留存的负责人。",
+          "readerUse": "出版与网站运营团队可用本条安排版本留存、基线测量与独立核验。",
+          "nextCheck": "核对Meta商业条款版本差异、官方说明及网站侧爬虫日志，再由专业人员确认适用范围。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "报道不能证明爬虫已经停止，也不能确定任何网站内容的具体授权状态。",
+          "counterEvidence": "若独立记录与来源表述不符，或关键版本、统计口径无法复核，应下调本信号的判断强度。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+          "originalUrl": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI：TechCrunch公开报道仅核对上述最小媒体事实，底层条款变更仍待官方原文。完整事实、采访、原始措辞与上下文请阅读原文。报道不能证明爬虫已经停止，也不能确定任何网站内容的具体授权状态。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-17",
+          "time": "2026-10-17（原文日期）",
+          "tags": [
+            "政策",
+            "组织治理"
+          ],
+          "companies": [
+            "Meta"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
+          }
+        },
+        {
+          "id": "replit-default-clarification-2026-10-18",
+          "category": "tool",
+          "label": "工具",
+          "title": "Replit默认模型报道获澄清：默认选择不等于排他供应",
+          "body": "TechCrunch更新报道：Replit CEO称OpenAI成为默认选择，Claude仍可选。",
+          "summary": "TechCrunch更新报道：Replit CEO称OpenAI成为默认选择，Claude仍可选。",
+          "detailBody": "来源事实：TechCrunch更新报道：Replit CEO称OpenAI成为默认选择，Claude仍可选。\n本站判断：默认路由会影响真实账单和依赖程度，可选模型列表则决定迁移余地。采购团队需要分别核对自动选择与人工切换，不能把默认合作伙伴直接理解为排他供应商。",
+          "trend": "本站判断：默认路由会影响真实账单和依赖程度，可选模型列表则决定迁移余地。采购团队需要分别核对自动选择与人工切换，不能把默认合作伙伴直接理解为排他供应商。",
+          "detailTrend": "本站判断：默认路由影响平台与模型商之间的分发关系，而可选模型决定用户保留多少选择空间。两者可以同时存在，因此平台偏好和排他供应并不是同一个概念。模型竞争由单项能力扩展到成本、接入体验与切换摩擦，但一次供应商表态无法说明市场份额已经发生同等幅度的变化。",
+          "whyItMatters": "默认路由会影响真实账单和依赖程度，可选模型列表则决定迁移余地。采购团队需要分别核对自动选择与人工切换，不能把默认合作伙伴直接理解为排他供应商。",
+          "whyRanked": "核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。",
+          "detailWhyRanked": "企业采购与开发团队可据此重新检查服务依赖。核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。 本次增量是对先前争议说法的澄清；供应关系、产品入口与生产流量分布应分开核实，文档存在不保证每个客户已获得同样选项。\n来源只能支持上述声明或观察，下一步应先做小范围核验并留下对照材料。",
+          "topReason": "核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。",
+          "impact": "开发与采购团队需要把默认路由和备用模型分别纳入验收。",
+          "whoShouldCare": "负责代码Agent接入、模型路由回退与供应商采购的企业研发团队及平台负责人。，尤其是负责企业上线验收、流程治理和审计记录留存的负责人。",
+          "readerUse": "开发团队可用本条更新模型回退清单并比较同任务账单。",
+          "nextCheck": "核对Replit官方模型选择文档、客户账号可用列表与调用账单，确认默认路由和回退行为。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "CEO澄清不证明所有账号默认行为相同，也不证明模型性能优劣或双方合同终止。",
+          "counterEvidence": "若独立记录与来源表述不符，或关键版本、统计口径无法复核，应下调本信号的判断强度。",
+          "source": "TechCrunch AI",
+          "sourceName": "TechCrunch AI",
+          "sourceId": "techcrunch-ai",
+          "sourceUrl": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "originalUrl": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "sourceRole": "媒体背景",
+          "sourceType": "reliable_media",
+          "trustLevel": "reliable_media",
+          "sourceReliability": "high",
+          "claimStatus": "reported",
+          "originalDependency": "must-read",
+          "provenance": "TechCrunch AI：TechCrunch AI更新稿用于核对CEO澄清这一最小媒体事实；官方模型选择文档仍列Claude，但不能证明默认流量分布。完整采访、措辞及上下文请读原文。完整事实、采访细节、图表和上下文请阅读TechCrunch AI原文。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-17",
+          "time": "2026-10-17（原文日期）",
+          "tags": [
+            "工具",
+            "模型路由"
+          ],
+          "companies": [
+            "Replit",
+            "OpenAI",
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
+          }
+        },
+        {
+          "id": "anthropic-employment-2026-10-18",
+          "category": "research",
+          "label": "研究",
+          "title": "Anthropic披露内部用工研究：Agent产出增加后谁来审核",
+          "body": "Anthropic发布内部用工研究，报告初级技术岗位占比下降，并指出人工注意力成为Agent输出的瓶颈。",
+          "summary": "Anthropic发布内部用工研究，报告初级技术岗位占比下降，并指出人工注意力成为Agent输出的瓶颈。",
+          "detailBody": "来源事实：Anthropic发布内部用工研究，报告初级技术岗位占比下降，并指出人工注意力成为Agent输出的瓶颈。\n本站判断：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "trend": "本站判断：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "detailTrend": "本站判断：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。 这条信号把评估对象从模型本身扩展到组织流程。技术能力、管理安排与外部约束需要分别观察，不能用单一变化代替对整套工作方式的评价。",
+          "whyItMatters": "采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "whyRanked": "检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。",
+          "detailWhyRanked": "研发管理与人力团队可据此调整核验清单。检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。 在证据补齐前，应先保留基线记录与明确的评审责任，再决定是否扩大使用范围。\n来源只能支持上述声明或观察，下一步应先做小范围核验并留下对照材料。",
+          "topReason": "检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。",
+          "impact": "研发管理与人力团队需要关注：采购Agent时需要同时预算人工复核与新人培养。输出速度提高后，如果评审能力不变，积压可能转移到检查和协调环节，验收指标应包含返工及交付质量。",
+          "whoShouldCare": "研发管理与人力团队，尤其是负责企业上线验收、流程治理和审计记录留存的负责人。",
+          "readerUse": "研发管理与人力团队可用本条安排版本留存、基线测量与独立核验。",
+          "nextCheck": "检查独立企业样本、招聘统计与客户侧评审工时和缺陷日志，区分业务增长、岗位结构与AI采用的影响。",
+          "followUpQuestions": [
+            "第三方或客户侧记录是否支持上述核验路径？",
+            "原始日志是否披露失败样本与适用范围？"
+          ],
+          "evidenceThreshold": "需要原始文件、客户侧记录与第三方复测或审计相互支持，才能升级为已验证效果。",
+          "claimBoundary": "单一厂商内部观察不证明AI导致全行业初级岗位减少；非随机采用也不能直接建立因果关系。",
+          "counterEvidence": "若独立记录与来源表述不符，或关键版本、统计口径无法复核，应下调本信号的判断强度。",
+          "source": "Anthropic Research",
+          "sourceName": "Anthropic Research",
+          "sourceId": "anthropic-research",
+          "sourceUrl": "https://www.anthropic.com/research/employment-at-anthropic",
+          "originalUrl": "https://www.anthropic.com/research/employment-at-anthropic",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Anthropic Research：Anthropic研究原文核对报告存在与作者主张；这是厂商主张，不是独立效果验证。单一厂商内部观察不证明AI导致全行业初级岗位减少；非随机采用也不能直接建立因果关系。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-16",
+          "time": "2026-10-16（原文日期）",
+          "tags": [
+            "研究",
+            "组织治理"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "来源角色与核验边界明确，实际影响仍需独立记录支持。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-17",
       "date": "2026-10-17",
