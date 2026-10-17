@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 1, Mobile First-Screen Relief
-- Last indexed run: 2026-10-16 11:03:03 JST (20:00 scheduled run)
+- Last indexed run: 2026-10-17 11:02 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Current Cycle Day 4 Completion
@@ -108,11 +108,15 @@ These compact anchors keep validation and future automation aware of the most im
 - Vendor promotion: `docs/vendor-narrative-promotion-rule.md` blocks vendor narratives from TOP3 unless first-screen card copy names the independent proof path.
 - Remote sync: `docs/remote-sync-log-convention.md` standardizes blocked-dns, blocked-auth, conflict, push, and pull wording.
 
+## Current Cycle Day 5 Completion
+
+- Complete: 首页按目的阅读改为“读懂影响 / 核对来源 / 查找往期”，分别对应深度简报、来源覆盖、全部新闻；分类说明交代四类速览和完整分类入口，不承诺目标页没有的搜索功能。
+- Commit: see latest optimization log entry.
+
 ## Next Useful Task
 
-- Continue with Day 5 of the 2026-10-11 through 2026-11-09 plan: review category and purpose navigation labels.
-- Before choosing work, read the latest entries at the top of `docs/optimization-log.md` in case another automation already completed Day 5.
-- If Day 5 is already complete, continue with Day 6: mobile reading-path QA at 390px and 768px.
+- Continue with Day 6: mobile reading-path QA at 390px and 768px, fixing the smallest reader-visible friction.
+- If Day 6 is already complete, continue with Day 7: TOP3 visual briefing shape using existing fields.
 
 ## Update Rules
 

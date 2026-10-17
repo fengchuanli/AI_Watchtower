@@ -12,6 +12,20 @@
 - Commit note: 【新闻更新】发布17点AI新闻：5条模型部署与Agent治理信号。日志写入首次因解释器编码报错，改用UTF-8文件合并后纳入同一提交。
 - Push: 沙箱DNS失败，将按任务授权重试；最终结果记录于自动化memory.md。
 
+
+## 2026-10-17 11:03:01 JST
+
+- Focus: 20:00计划任务实际于上述时间执行；完成本周期 Day 5 分类与阅读目的标签。
+- Changed files: `index.html`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“按目的阅读”以“这件事和我有什么关系 / 消息从哪里来 / 之前有没有相关消息”引导至深度简报、来源覆盖及全部新闻；“分类最新”说明四类速览范围与完整分类入口。纠正原“学核对”链接到新闻列表的承诺错位。
+- Source posture: 不改新闻数据和事实；来源覆盖与单条详情核对区分，历史条目仍标明只作背景。
+- VisionHub briefing scorecard: done。fiveSecondUnderstanding / top3ReaderUse / sourceBoundaryVisible / originalSourceDependency / continuityUse / visualAidPurpose 保持；mobileBurden partial，入口语言更具体，尚未做390px/768px浏览器实测，留给Day 6。
+- Verification: node --check app.js、validate-data、validate-site、validate-pages、build-derived-data --check、HTMLParser及git diff --check通过；人工核对目标锚点与全部新闻的分类/排序功能。无新增外部主张。
+- Pull: 沙箱DNS失败后网络授权重试成功，Already up to date；编辑前工作区干净。
+- Commit: 本次实现哈希将在后续日志提交记录。
+- Push: 待提交后推送origin/main。
+- Next: Day 6，390px与768px手机阅读路径QA。
+
 ## 2026-10-16 23:06:00 JST
 
 - Focus: 08:00任务实际23点执行；保留早间7条，新增Beam、Granite Switch 4.1、FLUX.3 Diffusers与印度语言语料方案4条，累计11条。
