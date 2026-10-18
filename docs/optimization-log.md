@@ -1,3 +1,16 @@
+## 2026-10-18 23:01:57 JST
+
+- Focus: 08:00任务实际23点执行；本次新增0条，保留今日3条组织治理与模型路由新闻，仅更新采集复核状态，不创建重复新闻或空归档版。
+- Changed files: data/news.json、data/news-history.json、派生数据（如生成器产生变化）、docs/optimization-log.md。
+- 网站可见变化：首页本期运行说明及当前归档说明标明23点已复核、无合格新增；TOP3、更多新闻流、全部新闻列表及详情保留已有3条中文解读。
+- Sources: 编辑前pull origin/main成功（沙箱DNS失败后授权重试）。尝试HF与AWS RSS，工具不支持XML；转查Anthropic新闻、HF博客、AWS机器学习、Google AI、TechCrunch公开索引。来源入口：https://www.anthropic.com/news 、https://huggingface.co/blog 、https://aws.amazon.com/blogs/machine-learning/ 、https://blog.google/innovation-and-ai/ 、https://techcrunch.com/category/artificial-intelligence/ 。未使用付费墙、登录墙正文或社区讨论作为事实。
+- Candidate gate: 索引中Meta条款、Replit澄清、Anthropic用工研究已经在本日版；METR、Beam、Granite、FLUX、Indic数据、AgentCore评估与购物入口已在近期归档；活动营销、旧材料与一般观点未晋级。没有进入撰稿阶段的新增候选，因此不运行空候选去重报告。此结论仅限本轮所查来源，不宣称全网无新闻。
+- Partial batch: 本次0条新增；不以重复、缺少当前事件的内容补足10条。保持现有来源角色、证据边界与下一步检查。
+- Archive mirror: corrected；仅同步当前版operationalStatus，期数与条目数不变；派生数据重建并检查。
+- Verification: 提交前执行app.js语法、validate-data、validate-site、validate-pages、派生一致性、HTML/JSON解析与git diff --check；最终结果见自动化memory。未改校验器，未做浏览器视觉实测。
+- Commit note: 【新闻更新】复核23点AI新闻：新增0条，保留3条组织治理信号。
+- Push: 按授权推送origin main，结果记录于自动化memory。
+
 ## 2026-10-18 11:03 JST（20:00 scheduled content optimization）
 
 - Focus: Current-cycle Day 6；390px / 768px 首页阅读路径 QA，修正手机先读的 CSS 覆盖顺序。
