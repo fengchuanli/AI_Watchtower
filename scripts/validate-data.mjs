@@ -429,7 +429,7 @@ function validateCoverageMixShape(coverageMix, context) {
     errors.push(`${context} coverageMix should merge tiny buckets instead of showing more than four scan cues.`);
   }
 
-  if (singleItemBucketCount > 1) {
+  if (singleItemBucketCount > 1 && coverageMix.reduce((sum, entry) => sum + entry.count, 0) > 2) {
     errors.push(`${context} coverageMix should merge tiny buckets; keep at most one single-item bucket.`);
   }
 }

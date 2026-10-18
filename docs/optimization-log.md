@@ -1,3 +1,17 @@
+## 2026-10-19 08:04:59 JST
+
+- Focus: 17:00任务实际08点采集；发布2条公益股份与AI人才承接信号。无同日晨版，以10月18日23点复核作为基线，不宣称覆盖未来17点。
+- Changed files: data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、scripts/validate-data.mjs、docs/optimization-log.md。
+- 网站可见变化：首页TOP3区域展示本日2条合格信号、更多新闻流、全部新闻列表、归档页及2条详情更新中文解读，包含影响、可信度、核验边界与下一步检查。
+- Sources: 编辑前pull origin/main成功（沙箱DNS失败后授权重试）。HF/Google RSS格式不支持，改查登记的Anthropic、TechCrunch、HF、Google、AWS公开索引。Anthropic公益基金以官方公告替代媒体；Disney员工线索保留最小媒体事实，法院文件403未读取。未使用付费墙、登录墙正文或社区讨论作事实。
+- Candidate gate: 2条URL与近标题报告通过，人工核对本次人才承接增量区别于旧破产报道。Meta条款、Replit澄清、Beam、AgentCore与用工研究已有覆盖；活动营销和一般观点未收录。官方1/2、媒体1/2，不以小样本推断全市场。
+- Partial batch: publish-partial-batch；本期发布2条安全非重复信号，少于10条是质量门槛结果，不用重复、旧闻或弱来源补数。
+- Archive mirror: created；131期1268条，派生数据重建并检查；无同日晨版，跳过晨晚差异摘要。
+- Validation repair: 旧规则要求至少2个覆盖分类，却禁止2个单条分类，使2条短批次无法通过。将单条分类限制限定于总数大于2，保留大批次集中度约束；边界检查确认1+1通过、1+1+1拒绝、2+1通过。
+- Verification: app.js及校验器语法、validate-data/site/pages、派生一致性、HTML/JSON解析、git diff --check全部通过。未做浏览器视觉实测。
+- Commit note: 【新闻更新】发布17点AI新闻：2条公益股份与人才承接信号。
+- Push: 按任务授权推送origin main；最终结果记录于自动化memory。
+
 ## 2026-10-18 23:01:57 JST
 
 - Focus: 08:00任务实际23点执行；本次新增0条，保留今日3条组织治理与模型路由新闻，仅更新采集复核状态，不创建重复新闻或空归档版。
