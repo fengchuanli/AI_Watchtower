@@ -2595,14 +2595,6 @@ h3 {
     display: block;
   }
 
-  .first-read-path {
-    grid-template-columns: 1fr;
-  }
-
-  .first-read-path ol {
-    grid-template-columns: 1fr;
-  }
-
   .section,
   .subscribe,
   .detail-page {
@@ -3330,6 +3322,29 @@ h3 {
   margin-top: var(--space-1);
   font-size: var(--text-xs);
   line-height: 1.5;
+}
+
+/* Keep phone overrides after the base reading-path rules. */
+@media (max-width: 620px) {
+  .first-read-path,
+  .first-read-path ol {
+    grid-template-columns: 1fr;
+  }
+
+  .first-read-path li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-3);
+    align-items: baseline;
+  }
+
+  .first-read-path strong {
+    white-space: nowrap;
+  }
+
+  .first-read-path small {
+    margin-top: 0;
+  }
 }
 
 /* 按目的阅读：三条路径 */

@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 1, Mobile First-Screen Relief
-- Last indexed run: 2026-10-17 11:02 JST (20:00 scheduled run)
+- Last indexed run: 2026-10-18 11:03 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Current Cycle Day 4 Completion
@@ -113,10 +113,16 @@ These compact anchors keep validation and future automation aware of the most im
 - Complete: 首页按目的阅读改为“读懂影响 / 核对来源 / 查找往期”，分别对应深度简报、来源覆盖、全部新闻；分类说明交代四类速览和完整分类入口，不承诺目标页没有的搜索功能。
 - Commit: see latest optimization log entry.
 
+## Current Cycle Day 6 Completion
+
+- Complete: 本地 Chrome 在 390px / 768px 检查首页；修正手机先读窄屏规则被通用规则覆盖的问题，390px 三步说明改为完整横行，768px 保留三列。两种宽度均无横向溢出或 JS 报错。
+- Remaining friction: 本期 TOP3 顶部约在 2008px / 1458px，hero 与今日简报仍长；本次优先修正窄列断行，后续需继续压缩前置负担。
+- Commit: see latest optimization log entry.
+
 ## Next Useful Task
 
-- Continue with Day 6: mobile reading-path QA at 390px and 768px, fixing the smallest reader-visible friction.
-- If Day 6 is already complete, continue with Day 7: TOP3 visual briefing shape using existing fields.
+- Continue with Day 7: TOP3 visual briefing shape using existing fields.
+- If Day 7 is already complete, continue with Day 8: implement the smallest comparative TOP3 visual cue.
 
 ## Update Rules
 

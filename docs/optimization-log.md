@@ -1,3 +1,14 @@
+## 2026-10-18 11:03 JST（20:00 scheduled content optimization）
+
+- Focus: Current-cycle Day 6；390px / 768px 首页阅读路径 QA，修正手机先读的 CSS 覆盖顺序。
+- Changed files: styles.css、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：首页今日简报下方“手机先读”在 390px 显示三条完整横行，不再把每步挤进约 79px 的窄列；768px 保留三列。
+- Browser QA: 本机无头 Chrome，通过本地文件路由渲染真实页面。390px 每步宽度 79→324px、高度 61→21px；整个引导区因竖排增加约61px，TOP3 y=1947→2008px。768px 每步205px、TOP3 y=1458px不变。两种宽度横向溢出0、JS错误0，today→top3→explore→deep-briefing→feed顺序正确。剩余摩擦：hero与今日简报仍使TOP3离首屏较远，需后续收紧；未将DOM测量冒充截图视觉审查。
+- VisionHub briefing scorecard: done。fiveSecondUnderstanding partial（前置内容仍长）；top3ReaderUse pass；sourceBoundaryVisible pass；originalSourceDependency pass；mobileBurden partial（窄列可读性修正但总高度略增）；continuityUse pass；visualAidPurpose pass（阅读步骤完整展示）。新闻事实和来源边界未变。
+- Verification: app.js语法、validate-data、validate-site、validate-pages、派生数据一致性、六个HTML解析和git diff --check通过。初次系统Node版本不足，改用已安装运行时；本地服务器绑定受限，改为浏览器本地文件路由。
+- Pull: sandbox DNS失败后授权重试成功，origin/main已是最新。
+- Commit / Push: 待提交并按授权推送；哈希随后补记。
+
 ## 2026-10-18 08:05:19 JST
 
 - Focus: 17:00任务实际08点执行；新增3条内容权限、内部用工与模型路由信号。无同日晨版，以昨日23点版去重，不宣称覆盖未来17点。
