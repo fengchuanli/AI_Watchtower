@@ -94,3 +94,7 @@ The header navigation and the small `手机先读` cue should mirror this split:
 - 首次渲染宽度不超过 768px 且有两条及以上时默认折叠；桌面默认展开。使用原生 details/summary，读者可用键盘或触屏切换。
 - 折叠摘要保留卡片数量、主题/公司及状态，并提示重复出现不代表证据更强；展开后保留变化、读者用途和核验边界。
 - 不随窗口缩放重置读者的展开选择，不移动 DOM 或复制卡片；连续观察仍位于深度简报末尾，新闻流之前。
+
+## Day 7 TOP3 Visual Briefing Shape
+
+Use existing fields only. The eyebrow carries signal type (`label`); the card retains minimum fact, why-now rationale and reader use (`readerUse`). A shared left rule groups source role/status, proof boundary (`claimBoundary`) and next-check artifact (`nextCheck`) into one evidence path. Keep all three text labels visible on mobile; color alone must not convey certainty. Show `originalDependency` beside the source so media-backed full-fact dependency is visible without opening scoring details. Never infer confidence from rank or source type, truncate boundary sentences, or invent an artifact when the field is absent. This initial shape adds one explicit boundary row; Day 8 should review comparative cues without duplicating these sentences.

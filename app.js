@@ -583,11 +583,15 @@ function updateTopStories(items) {
                 <dt>读者用途</dt>
                 <dd>${escapeHtml(readerUse)}</dd>
               </div>
-              <div>
+              <div class="top-proof-step">
                 <dt>来源边界</dt>
-                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)} · ${escapeHtml(claimStatus)}</dd>
+                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)} · ${escapeHtml(claimStatus)}<span class="top-source-dependency">${escapeHtml(getOriginalDependencyLabel(item))}</span></dd>
               </div>
-              <div>
+              <div class="top-proof-step">
+                <dt>尚未证明</dt>
+                <dd>${escapeHtml(item.claimBoundary || "证据边界未标注，请先核对原文。")}</dd>
+              </div>
+              <div class="top-proof-step">
                 <dt>下一步核验</dt>
                 <dd>${escapeHtml(nextCheck)}</dd>
               </div>

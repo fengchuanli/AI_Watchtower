@@ -6,8 +6,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
-- Current phase: Phase 1, Mobile First-Screen Relief
-- Last indexed run: 2026-10-18 11:03 JST (20:00 scheduled run)
+- Current phase: Phase 2, TOP3 Visual Briefing
+- Last indexed run: 2026-10-19 11:02 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Current Cycle Day 4 Completion
@@ -119,10 +119,15 @@ These compact anchors keep validation and future automation aware of the most im
 - Remaining friction: 本期 TOP3 顶部约在 2008px / 1458px，hero 与今日简报仍长；本次优先修正窄列断行，后续需继续压缩前置负担。
 - Commit: see latest optimization log entry.
 
+## Current Cycle Day 7 Completion
+
+- Complete: TOP3 用共同侧线串起来源边界、尚未证明、下一步核验；直接展示既有 claimBoundary 和原文依赖。保留信号类别、读者用途与评分折叠，不新增新闻事实。
+- Commit: see latest optimization log entry.
+
 ## Next Useful Task
 
-- Continue with Day 7: TOP3 visual briefing shape using existing fields.
-- If Day 7 is already complete, continue with Day 8: implement the smallest comparative TOP3 visual cue.
+- Continue with Day 8: implement the smallest comparative TOP3 visual cue.
+- If Day 8 is already complete, continue with Day 9: official-source confirmed facts versus unproven outcomes.
 
 ## Update Rules
 
