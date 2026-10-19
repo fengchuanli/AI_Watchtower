@@ -1,3 +1,17 @@
+## 2026-10-20 08:05:12 JST
+
+- Focus: 17:00任务实际08点采集；新增6条算力工程与Agent治理信号。无同日晨版，以10月19日23点复核为基线；日期精度原文不证明全部事件发生于基线之后，不宣称覆盖未来17点。
+- Changed files: data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、data/sources.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3、更多新闻流、全部新闻列表、归档页与6条详情展示新中文解读，含影响、来源可信度、证据边界及下一步核验。
+- Sources: 编辑前pull origin/main成功（沙箱DNS失败后授权重试）。HF/AWS RSS格式不支持，转查登记的Anthropic、HF、AWS与TechCrunch公开索引及原文；融资与微软线索替换成官方原文，新增Tenstorrent Newsroom来源，共130个标签。OpenCode维持媒体背景/reported/must-read，只保留最小事实；官方完整事件报告未取得。未使用登录墙、付费墙正文、社区事实或媒体图片。
+- Candidate gate: 6条最小事实、AI关联、边界与独立检查路径已记录并映射；相对HEAD基线的URL/近标题报告无重复。首次报告在写入草稿后运行命中自身，改用编辑前HEAD快照复核。NVIDIA Super VL/Bolt已归档；Pegasus文章回顾10月9日上线，拒绝作为新上线；一般观点、活动与弱证据不补数。
+- Balance: draft-with-caveat；官方5/6（其中3条厂商主张）、媒体1/6；AWS直接2/6，连同HF集成生态关联3/6。页面提示不可外推全部市场，需第三方复测、客户审计与投资方文件。
+- Partial batch: publish-partial-batch；6条安全非重复信号，少于10条是质量门槛结果。TorchNeuron保留公开测试预告时态；融资不等于产能，工程测试不等于普适性能，安全报道不确认攻击归因。
+- Archive mirror: 132期1274条；当前版完整镜像并重建索引、当日数据与趋势。无同日晨版，跳过晨晚差异摘要。
+- Verification: app.js语法、validate-data/site/pages、派生一致性、HTML/JSON解析通过；修正排序与文案字段约束，未修改校验器。提交前检查diff空白；未做浏览器视觉实测。
+- Commit note: 【新闻更新】发布17点AI新闻：6条算力工程与Agent治理信号。
+- Push: 按任务授权推送origin main，最终结果写入自动化memory。
+
 ## 2026-10-19 23:02:25 JST
 
 - Focus: 08:00任务实际23点复核；本次新增0条，保留今日2条公益股份与人才承接信号，不创建重复或空归档版。
