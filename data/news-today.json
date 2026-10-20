@@ -4,18 +4,18 @@
   "updatedAt": "2026-10-20",
   "date": "2026-10-20",
   "editionCount": 132,
-  "totalItems": 1274,
+  "totalItems": 1276,
   "editions": [
     {
-      "id": "news-1700-2026-10-20",
+      "id": "news-2300-2026-10-20",
       "date": "2026-10-20",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00情报版",
-      "itemCount": 6,
-      "note": "新增6条算力工程与Agent治理信号",
-      "operationalStatus": "17点任务实际08点采集；无同日晨版，以昨日23点复核为基线。RSS格式受限，检查来源原文后收录6条；重复、旧事件与弱证据未补数。",
-      "editorialInterpretation": "本期发布6条安全非重复信号；少于10条是质量门槛结果，未用重复报道、旧事件、社区讨论与弱证据营销补数。",
+      "archiveLabel": "23:00补充版",
+      "itemCount": 8,
+      "note": "保留6条，新增2条本地AI开发信号",
+      "operationalStatus": "08点任务实际23点执行；保留6条并新增2条。RSS格式受限，检查公开来源原文后不足10条，未用重复或弱证据补数。",
+      "editorialInterpretation": "本期发布8条安全非重复信号；少于10条是质量门槛结果，未用重复报道、旧事件、社区讨论与弱证据营销补数。",
       "readerFrame": {
         "headline": "算力更易部署之后，成本与Agent权限怎样验证？",
         "whyItMatters": "本期把部署便利性、资本供给和授权风险放在同一份验收清单中。读者可区分发布事实与效果主张，明确需要补齐的独立证据。",
@@ -29,7 +29,7 @@
         ],
         "mobile": {
           "headline": "部署与权限分开验收",
-          "summary": "六条信号，核对算力成本、融资执行与Agent授权。",
+          "summary": "八条信号，核对算力、权限及本地AI升级边界。",
           "primaryUses": [
             "工程团队查成本",
             "安全团队查权限"
@@ -40,6 +40,7 @@
       "changeSummary": {
         "headline": "相较昨日资源分配简报，新增算力工程与Agent治理",
         "freshFacts": [
+          "新增：AnyLanguageModel 1.0与PyTorch 2.15 MPS候选版本工程说明。",
           "新增：Hugging Face介绍TorchNeuron原生后端，并预告10月20日起公开测试。",
           "新增：Tenstorrent宣布完成15亿美元E轮融资，投后估值62亿美元。",
           "新增：TechCrunch报道OpenCode遭入侵，并出现用户AI账户异常费用。"
@@ -52,7 +53,7 @@
       "coverageMix": [
         {
           "label": "核对算力与迁移",
-          "count": 4,
+          "count": 6,
           "meaning": "用来检查融资执行、迁移兼容性与推理成本清单。"
         },
         {
@@ -63,7 +64,7 @@
       ],
       "sourceRisk": {
         "label": "官方工程叙述偏多",
-        "note": "来源偏向官方：5/6，其中3条为厂商主张；媒体1/6。AWS直接来源2/6，连同HF集成共3条涉及AWS。",
+        "note": "来源偏向官方：7/8，其中4条厂商主张；媒体1/8。HF平台3/8，须以独立复测补足。",
         "nextCheck": "核对第三方性能复测、客户审计、投资方正式文件与官方事件报告。"
       },
       "overreadBoundary": {
@@ -76,8 +77,8 @@
         {
           "family": "official",
           "label": "官方来源",
-          "count": 5,
-          "role": "公告与工程原文；其中3条为厂商主张，效果未独立证实。"
+          "count": 7,
+          "role": "公告与工程原文；其中4条为厂商主张，效果未独立证实。"
         },
         {
           "family": "reliable_media",
@@ -90,12 +91,14 @@
         {
           "id": "infrastructure",
           "label": "核对算力与迁移",
-          "count": 4,
+          "count": 6,
           "itemIds": [
             "torchneuron-2026-10-20",
             "tenstorrent-series-e-2026-10-20",
             "deepgram-trainium-2026-10-20",
-            "vllm-push-kv-2026-10-20"
+            "vllm-push-kv-2026-10-20",
+            "anylanguagemodel-2026-10-20",
+            "mps-pytorch-2026-10-20"
           ],
           "meaning": "用来检查融资执行、迁移兼容性与推理成本清单。"
         },
@@ -161,14 +164,148 @@
         }
       ],
       "sourceConcentration": {
-        "sourceId": "aws-machine-learning-blog",
-        "sourceName": "AWS Machine Learning Blog",
-        "count": 2,
-        "share": "2/6",
-        "note": "AWS直接来源2/6；另有HF的Trainium集成，相关生态合计3/6，不代表全部算力市场。",
-        "nextCheck": "查看非AWS环境同任务测试、客户账单与独立安全审计。"
+        "sourceId": "huggingface-blog",
+        "sourceName": "Hugging Face Blog",
+        "count": 3,
+        "share": "3/8",
+        "note": "HF平台3/8，新增两条均属本地AI开发；作者材料不能替代独立兼容性与性能测试。",
+        "nextCheck": "核对独立Swift与PyTorch开发者测试日志、网络记录和版本发布文件。"
       },
       "items": [
+        {
+          "id": "anylanguagemodel-2026-10-20",
+          "category": "tool",
+          "label": "工具",
+          "title": "AnyLanguageModel 1.0发布：Swift应用统一选择本地与云端模型",
+          "body": "Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。",
+          "summary": "Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。",
+          "detailBody": "来源事实：Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。\n核验边界：公告确认版本与接口说明，不证明所有提供方行为等价，也不意味着云端调用自动具备本地隐私。",
+          "trend": "统一调用接口使端侧与云端对照实验更容易，但相同API并不保证相同输出与数据边界。",
+          "detailTrend": "统一调用接口使端侧与云端对照实验更容易，但相同API并不保证相同输出与数据边界。 从工程决策看，这提供了新的设备端测试入口。团队仍需固定模型、输入和运行环境，把接口可用、结果正确及实际成本分别验证，避免将开发便利直接等同于部署收益。",
+          "whyItMatters": "统一调用接口使端侧与云端对照实验更容易，但相同API并不保证相同输出与数据边界。",
+          "whyRanked": "由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
+          "detailWhyRanked": "本地AI应用开发团队需要先区分版本公告、接口兼容与实际效果。由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。\n建议保留旧版本作为回归基线，并分别记录首次加载、持续推理、失败路径及联网行为。只有目标设备上的任务结果达到验收标准，才能调整实际部署；来源作者的工程说明提供测试入口，不能替代团队自己的上线记录。",
+          "topReason": "由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
+          "impact": "本地AI应用团队可更新兼容性测试矩阵，先完成目标设备回归，再决定升级与模型路由。",
+          "whoShouldCare": "Swift应用开发者、Mac本地模型维护者，以及负责模型切换、数据边界与设备性能验收的工程团队。",
+          "readerUse": "本地AI工程团队：将候选版本放入独立测试环境，固定模型、设备与输入，保留结果后决定是否进入生产。",
+          "nextCheck": "由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
+          "followUpQuestions": [
+            "独立开发者的同配置复测日志是否支持兼容性判断？",
+            "网络记录是否显示模型切换后发生意外云端请求？"
+          ],
+          "evidenceThreshold": "至少需要独立测试日志与复现代码，才能升级为已验证的兼容性或性能结论。由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
+          "claimBoundary": "公告确认版本与接口说明，不证明所有提供方行为等价，也不意味着云端调用自动具备本地隐私。",
+          "counterEvidence": "核对复测记录时，若模型切换导致工具参数变化、输出验证失败或意外联网，应下调迁移便利性判断。 应下调部署成熟度判断。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/anylanguagemodel-1-0",
+          "originalUrl": "https://huggingface.co/blog/anylanguagemodel-1-0",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog：Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。 这份模型工程说明仅核对作者主张，不证明实际部署收益。公告确认版本与接口说明，不证明所有提供方行为等价，也不意味着云端调用自动具备本地隐私。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-20",
+          "time": "2026-10-20（原文日期）",
+          "tags": [
+            "工具",
+            "本地AI"
+          ],
+          "companies": [
+            "Hugging Face",
+            "Apple"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+          }
+        },
+        {
+          "id": "mps-pytorch-2026-10-20",
+          "category": "tool",
+          "label": "工具",
+          "title": "HF介绍PyTorch 2.15 MPS改进：候选版本仍需同机复测",
+          "body": "Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。",
+          "summary": "Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。",
+          "detailBody": "来源事实：Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。\n核验边界：原文性能数字属贡献团队测试，文内加速表述存在不同口径；不采用统一倍率，也不把2.16预览当成已发布功能。",
+          "trend": "Mac本地AI的可用性取决于算子兼容与内存稳定性；升级前应先做精度回归，再比较速度。",
+          "detailTrend": "Mac本地AI的可用性取决于算子兼容与内存稳定性；升级前应先做精度回归，再比较速度。 从工程决策看，这提供了新的设备端测试入口。团队仍需固定模型、输入和运行环境，把接口可用、结果正确及实际成本分别验证，避免将开发便利直接等同于部署收益。",
+          "whyItMatters": "Mac本地AI的可用性取决于算子兼容与内存稳定性；升级前应先做精度回归，再比较速度。",
+          "whyRanked": "由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
+          "detailWhyRanked": "本地AI应用开发团队需要先区分版本公告、接口兼容与实际效果。由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。\n建议保留旧版本作为回归基线，并分别记录首次加载、持续推理、失败路径及联网行为。只有目标设备上的任务结果达到验收标准，才能调整实际部署；来源作者的工程说明提供测试入口，不能替代团队自己的上线记录。",
+          "topReason": "由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
+          "impact": "本地AI应用团队可更新兼容性测试矩阵，先完成目标设备回归，再决定升级与模型路由。",
+          "whoShouldCare": "Swift应用开发者、Mac本地模型维护者，以及负责模型切换、数据边界与设备性能验收的工程团队。",
+          "readerUse": "本地AI工程团队：将候选版本放入独立测试环境，固定模型、设备与输入，保留结果后决定是否进入生产。",
+          "nextCheck": "由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
+          "followUpQuestions": [
+            "独立开发者的同配置复测日志是否支持兼容性判断？",
+            "网络记录是否显示模型切换后发生意外云端请求？"
+          ],
+          "evidenceThreshold": "至少需要独立测试日志与复现代码，才能升级为已验证的兼容性或性能结论。由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
+          "claimBoundary": "原文性能数字属贡献团队测试，文内加速表述存在不同口径；不采用统一倍率，也不把2.16预览当成已发布功能。 不证明所有Mac工作负载都获得同等收益。",
+          "counterEvidence": "核对复测记录时，若复测出现CPU回退、数值偏差或峰值内存回升，应推迟生产升级并提交最小复现。 应下调部署成熟度判断。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/mps-pytorch-2-15",
+          "originalUrl": "https://huggingface.co/blog/mps-pytorch-2-15",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog：Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。 这份模型工程说明仅核对作者主张，不证明实际部署收益。原文性能数字属贡献团队测试，文内加速表述存在不同口径；不采用统一倍率，也不把2.16预览当成已发布功能。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-20",
+          "time": "2026-10-20（原文日期）",
+          "tags": [
+            "工具",
+            "本地AI"
+          ],
+          "companies": [
+            "Hugging Face",
+            "Apple"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 3,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+          }
+        },
         {
           "id": "microsoft-agentic-insider-2026-10-20",
           "category": "product",

@@ -1,3 +1,13 @@
+## 2026-10-20 23:05 JST
+
+- Focus: 08:00任务实际23点运行；保留今日6条，新增AnyLanguageModel 1.0及PyTorch 2.15 MPS候选版本2条信号，共8条。
+- Changed files: data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页更多新闻流、全部新闻列表、归档页和两条详情新增本地AI开发解读；首页期数说明更新为8条。
+- Sources: 编辑前pull origin/main完成。HF/AWS RSS不支持XML，转查HF、AWS、Anthropic、Google与TechCrunch公开索引；TC返回旧内容，不当成最新覆盖。HF两篇10月20日作者原文通过URL与近标题去重；未使用付费墙、登录墙正文或社区讨论。日期无具体时间，不保证均发表于上次运行之后。
+- Evidence: AnyLanguageModel只确认发布与接口说明；MPS保留厂商主张，原文有候选版本和不同加速口径，不发布统一倍率或把2.16预览当成正式功能。独立测试、网络日志与版本文件为下一步。HF平台占3/8，官方来源7/8，集中度已披露；不足10条不补弱证据。
+- Verification: app.js语法、data/site/pages校验、派生一致性、HTML/JSON解析及diff检查通过；未修改校验器，未做浏览器视觉测试。
+- Commit note: 【新闻更新】补充23点AI新闻：新增2条本地AI开发信号；提交后按任务授权推送origin/main，结果记入自动化memory。
+
 ## 2026-10-20 11:03:13 JST（20:00 scheduled content optimization）
 
 - Focus: Current-cycle Day 8；TOP3 最小类别比较提示。
