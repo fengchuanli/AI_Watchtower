@@ -1,3 +1,14 @@
+## 2026-10-21 08:04 JST｜17点新闻任务
+
+- 焦点：发布5条模型工程与Agent核验信号：TorchTPU、FairStress、Laplace 3B、Agent Registry、X.509身份架构。17点任务实际08点采集，无同日晨版；以10月20日23点版为去重基线，日期精度原文不证明均发生于该基线之后。
+- 来源与筛选：先尝试HF、Google、AWS RSS，解析器不支持XML，转登记公开索引与原文。Anthropic最新事件已收录；Google欧洲科研公告为10月14日旧事件；HF社区热帖未作事实；TechCrunch云合作与收购线索未完成独立原始材料核对，不发布；AWS同类接入教程不继续堆叠。本期发布5条安全非重复信号，少于10条是质量门槛结果，没有用旧闻、重复、付费正文或弱证据补数。
+- 证据：5/5来自登记官方平台，包含1条研究作者原文和3条厂商主张；AWS 3/5、HF平台2/5（其中Ai2为独立作者）。首页理由字段已写独立复测/客户审计路径，未把厂商效果升级为事实。来源登记130项不变。
+- 改动文件：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 归档与派生：新建并镜像news-1700-2026-10-21；133期/1281条。重建派生文件并通过--check。候选重复报告无重复URL/近似标题；TorchTPU精确原文链接更正后对照编辑前HEAD复查无重复。
+- 验证：node --check app.js；validate-data、validate-site、validate-pages；全部data JSON与根目录HTML解析；git diff --check通过。未修改校验器，未作浏览器视觉验收。
+- 网站可见变化：首页TOP3、更多新闻流、全部新闻列表、归档页与5个详情页可见本期中文解释、研究边界及后续核验清单。
+- 提交说明：【新闻更新】发布17点AI新闻：5条模型工程与Agent核验信号。编辑前已pull origin/main（DNS受限后授权重试成功）；提交后推送origin main。
+
 ## 2026-10-20 23:05 JST
 
 - Focus: 08:00任务实际23点运行；保留今日6条，新增AnyLanguageModel 1.0及PyTorch 2.15 MPS候选版本2条信号，共8条。

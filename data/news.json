@@ -7,250 +7,307 @@
     {
       "id": "model",
       "label": "模型",
-      "description": "本期用于核对模型相关信号；实际效果仍需独立记录，未入选内容可查归档。"
+      "description": "本期用于核对AWS相关模型信号；实际效果仍需独立复测。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期核对Microsoft相关产品信号；实际效果仍需独立审计与第三方复测。"
+      "description": "本期用于核对AWS相关产品信号；实际效果仍需独立复测。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期用于核对研究相关信号；实际效果仍需独立记录，未入选内容可查归档。"
+      "description": "本期用于核对Ai2相关研究信号；实际效果仍需独立复测。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期核对AWS相关工具信号；实际效果仍需独立审计与第三方复测。"
+      "description": "本期用于核对AWS相关工具信号；实际效果仍需独立复测。"
     },
     {
       "id": "funding",
       "label": "融资",
-      "description": "本期核对Tenstorrent相关融资信号；实际效果仍需独立审计与第三方复测。"
+      "description": "本期用于核对融资相关融资信号；实际效果仍需独立复测。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期用于核对政策相关信号；实际效果仍需独立记录，未入选内容可查归档。"
+      "description": "本期用于核对政策相关政策信号；实际效果仍需独立复测。"
     }
   ],
-  "updatedAt": "2026-10-20",
-  "editorNote": "八条算力与Agent治理信号：公告、厂商主张和媒体线索分别核验。",
+  "updatedAt": "2026-10-21",
+  "editorNote": "五条模型工程与Agent核验信号：发布事实、研究结论和厂商方案分开阅读。",
   "edition": {
-    "id": "news-2300-2026-10-20",
-    "date": "2026-10-20",
+    "id": "news-1700-2026-10-21",
+    "date": "2026-10-21",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "23:00补充版",
-    "itemCount": 8,
-    "note": "保留6条，新增2条本地AI开发信号",
-    "operationalStatus": "08点任务实际23点执行；保留6条并新增2条。RSS格式受限，检查公开来源原文后不足10条，未用重复或弱证据补数。",
-    "editorialInterpretation": "本期发布8条安全非重复信号；少于10条是质量门槛结果，未用重复报道、旧事件、社区讨论与弱证据营销补数。",
+    "archiveLabel": "17:00任务版",
+    "itemCount": 5,
+    "note": "五条模型工程、评测与Agent身份新信号",
+    "operationalStatus": "已同步origin/main；17点任务实际08点采集，无同日晨版，以昨日23点版去重。RSS解析受限，已核对公开原文；不足10条未补弱来源。",
+    "editorialInterpretation": "本期发布5条安全非重复信号；少于10条是质量门槛结果，未用旧闻、重复事件、社区讨论与同类营销教程补数。",
     "readerFrame": {
-      "headline": "算力更易部署之后，成本与Agent权限怎样验证？",
-      "whyItMatters": "本期把部署便利性、资本供给和授权风险放在同一份验收清单中。读者可区分发布事实与效果主张，明确需要补齐的独立证据。",
+      "headline": "模型能迁移，Agent能连接，下一步怎样验收？",
+      "whyItMatters": "本期把模型兼容性、决策稳定性与调用授权放入验收清单，帮助工程团队区分可用入口和已证实效果。",
       "useThisIssueFor": [
-        "工程团队核对迁移兼容性与同质量成本。",
-        "安全团队核对凭据暴露与Agent授权边界。"
+        "部署团队检查迁移后的正确性与总成本。",
+        "安全与评测团队检查改判、授权和撤销路径。"
       ],
       "notProvenYet": [
-        "融资和集成公告不证明交付或性能优势。",
-        "厂商方案与媒体线索仍需客户记录、独立测试及事件报告。"
+        "集成和架构说明不证明生产收益。",
+        "合成评测不能直接推断真实人群或业务效果。"
       ],
       "mobile": {
-        "headline": "部署与权限分开验收",
-        "summary": "八条信号，核对算力、权限及本地AI升级边界。",
+        "headline": "从接入转向验收",
+        "summary": "五条信号，分别检查模型质量与Agent调用边界。",
         "primaryUses": [
-          "工程团队查成本",
-          "安全团队查权限"
+          "工程团队查迁移",
+          "安全团队查授权"
         ],
-        "proofBoundary": "公告不等于效果，仍需客户审计与独立复测。"
+        "proofBoundary": "集成与参考架构不证明生产效果，仍需独立复测。"
       }
     },
     "changeSummary": {
-      "headline": "相较昨日资源分配简报，新增算力工程与Agent治理",
+      "headline": "相较昨日23点版，增加模型评测与身份核验入口",
       "freshFacts": [
-        "新增：AnyLanguageModel 1.0与PyTorch 2.15 MPS候选版本工程说明。",
-        "新增：Hugging Face介绍TorchNeuron原生后端，并预告10月20日起公开测试。",
-        "新增：Tenstorrent宣布完成15亿美元E轮融资，投后估值62亿美元。",
-        "新增：TechCrunch报道OpenCode遭入侵，并出现用户AI账户异常费用。"
+        "新增：Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
+        "新增：Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
+        "新增：AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
+        "新增：AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
+        "新增：AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。"
       ],
       "repeatedContext": [
-        "重复背景：昨日公益股份和人才承接仍待执行记录。",
-        "重复背景：此前NVIDIA Super VL与Bolt已收录，本期不重复发布。"
+        "重复背景：昨日TorchNeuron和本地AI接口已归档，本期不重复发布。",
+        "重复背景：昨日内部Agent监督仍待客户部署与安全审计。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对算力与迁移",
-        "count": 6,
-        "meaning": "用来检查融资执行、迁移兼容性与推理成本清单。"
+        "label": "核对模型工程与评测",
+        "count": 3,
+        "meaning": "用来检查兼容性、内存与决策稳定性测试清单。"
       },
       {
-        "label": "核对Agent治理",
+        "label": "核对工具发现与身份",
         "count": 2,
-        "meaning": "用来检查凭据风险与授权控制清单。"
+        "meaning": "用来检查审批、凭据、委托与撤销记录。"
       }
     ],
     "sourceRisk": {
-      "label": "官方工程叙述偏多",
-      "note": "来源偏向官方：7/8，其中4条厂商主张；媒体1/8。HF平台3/8，须以独立复测补足。",
-      "nextCheck": "核对第三方性能复测、客户审计、投资方正式文件与官方事件报告。"
+      "label": "工程作者来源集中",
+      "note": "来源偏向官方：5/5；AWS占3/5，HF平台2/5，其中FairStress作者为Ai2。缺少独立效果验证。",
+      "nextCheck": "核对第三方性能与公平性复现、客户调用日志和安全审计。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期偏向官方工程材料，是验收入口而非市场份额或安全效果统计。",
-      "doNotConclude": "不能推断替代芯片普遍更便宜，或新增监督方案已经解决Agent风险。",
-      "useInstead": "应该用同任务测试、投资方文件与客户审计更新判断。"
+      "body": "本期是工程验收入口，来源集中于厂商与研究作者。",
+      "doNotConclude": "不能推断TPU普遍更便宜、模型公平性已解决或Agent身份架构已经全面有效。",
+      "useInstead": "应该用第三方复测数据与客户审计更新部署判断。"
     },
     "sourceFamilies": [
       {
         "family": "official",
-        "label": "官方来源",
-        "count": 7,
-        "role": "公告与工程原文；其中4条为厂商主张，效果未独立证实。"
-      },
-      {
-        "family": "reliable_media",
-        "label": "可靠媒体",
-        "count": 1,
-        "role": "最小事件线索，完整背景与细节请读原文。"
+        "label": "官方与作者原文",
+        "count": 5,
+        "role": "登记来源均属官方平台；包括1条研究作者原文和3条厂商主张。"
       }
     ],
     "topicGroups": [
       {
         "id": "infrastructure",
-        "label": "核对算力与迁移",
-        "count": 6,
+        "label": "核对模型工程与评测",
+        "count": 3,
         "itemIds": [
-          "torchneuron-2026-10-20",
-          "tenstorrent-series-e-2026-10-20",
-          "deepgram-trainium-2026-10-20",
-          "vllm-push-kv-2026-10-20",
-          "anylanguagemodel-2026-10-20",
-          "mps-pytorch-2026-10-20"
+          "torchtpu-2026-10-21",
+          "fairstress-2026-10-21",
+          "laplace-trainium-2026-10-21"
         ],
-        "meaning": "用来检查融资执行、迁移兼容性与推理成本清单。"
+        "meaning": "用来检查兼容性、内存与决策稳定性测试清单。"
       },
       {
         "id": "agent",
-        "label": "核对Agent治理",
+        "label": "核对工具发现与身份",
         "count": 2,
         "itemIds": [
-          "opencode-security-2026-10-20",
-          "microsoft-agentic-insider-2026-10-20"
+          "agent-registry-2026-10-21",
+          "agent-pki-2026-10-21"
         ],
-        "meaning": "用来检查凭据风险与授权控制清单。"
+        "meaning": "用来检查审批、凭据、委托与撤销记录。"
       }
     ],
     "trendNotes": [
       {
         "topic": "infrastructure",
-        "label": "算力与迁移",
-        "note": "跨期看，昨日关注资源安排，本期增加算力与迁移的核验入口。",
-        "boundary": "仍需第三方同任务复测与客户成本数据，不能推断所有迁移都有收益。"
+        "label": "核对模型工程与评测",
+        "note": "跨期看，从昨日部署入口进一步转向核对模型工程与评测。",
+        "boundary": "需独立复测与客户审计，不能仅凭新增说明升级效果结论。"
       },
       {
         "topic": "agent",
-        "label": "Agent治理",
-        "note": "跨期看，昨日关注资源安排，本期增加Agent治理的核验入口。",
-        "boundary": "仍需官方事件报告与独立安全审计，不能推断监督方案已全面有效。"
+        "label": "核对工具发现与身份",
+        "note": "跨期看，从昨日部署入口进一步转向核对工具发现与身份。",
+        "boundary": "授权效果需独立安全审计与撤销日志，不能以发现成功替代调用许可。"
       }
     ],
     "topicContinuity": [
       {
         "topic": "infrastructure",
-        "label": "算力与迁移",
+        "label": "核对模型工程与评测",
         "status": "stronger",
-        "previousPattern": "此前关注模型可用性与组织责任。",
-        "currentSignal": "本期新增算力与迁移原文与核验路径。",
-        "signalDirection": "增强：新增事件入口，未升级效果结论。",
-        "stillUnproven": "仍需独立测试、客户审计和正式文件，不证明行业趋势已经定型。"
+        "previousPattern": "此前关注算力迁移和Agent监督方案。",
+        "currentSignal": "本期新增核对模型工程与评测的原文与测试对象。",
+        "signalDirection": "增强：核验入口更具体，效果尚未升级。",
+        "stillUnproven": "仍需独立代码复现、性能测试与安全审计，不证明生产成熟度。"
       },
       {
         "topic": "agent",
-        "label": "Agent治理",
+        "label": "核对工具发现与身份",
         "status": "stronger",
-        "previousPattern": "此前关注模型可用性与组织责任。",
-        "currentSignal": "本期新增Agent治理原文与核验路径。",
-        "signalDirection": "增强：新增事件入口，未升级效果结论。",
-        "stillUnproven": "仍需独立测试、客户审计和正式文件，不证明行业趋势已经定型。"
+        "previousPattern": "此前关注算力迁移和Agent监督方案。",
+        "currentSignal": "本期新增核对工具发现与身份的原文与测试对象。",
+        "signalDirection": "增强：核验入口更具体，效果尚未升级。",
+        "stillUnproven": "仍需独立代码复现、性能测试与安全审计，不证明生产成熟度。"
       }
     ],
     "companyContinuity": [
       {
         "company": "AWS",
-        "label": "迁移与服务栈",
-        "lastMention": "此前收录Beam部署与AgentCore相关材料。",
-        "whatChanged": "本期新增TorchNeuron、Nova-3迁移及推送式缓存传输。",
-        "stillUnproven": "仍需第三方同配置复现与客户成本数据，不证明所有工作负载收益。"
+        "label": "模型状态与Agent调用",
+        "lastMention": "此前收录Nova-3迁移与KV传输工程。",
+        "whatChanged": "增强：新增Laplace状态内存案例及工具发现、身份控制方案。",
+        "stillUnproven": "仍需客户与第三方测试，不证明迁移收益及安全控制有效。"
       },
       {
-        "company": "Microsoft",
-        "label": "内部Agent控制",
-        "lastMention": "此前关注安全与组织责任讨论。",
-        "whatChanged": "本期增加内部Agent监督方案原文。",
-        "stillUnproven": "仍需客户部署与独立安全审计，不证明方案全面有效。"
+        "company": "Hugging Face",
+        "label": "原生设备后端",
+        "lastMention": "此前发布TorchNeuron及本地模型接口说明。",
+        "whatChanged": "增强：新增TorchTPU集成与兼容性核验入口。",
+        "stillUnproven": "仍需第三方同模型复测，不能推断所有设备与模型行为一致。"
       }
     ],
     "sourceConcentration": {
-      "sourceId": "huggingface-blog",
-      "sourceName": "Hugging Face Blog",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceName": "AWS Machine Learning Blog",
       "count": 3,
-      "share": "3/8",
-      "note": "HF平台3/8，新增两条均属本地AI开发；作者材料不能替代独立兼容性与性能测试。",
-      "nextCheck": "核对独立Swift与PyTorch开发者测试日志、网络记录和版本发布文件。"
+      "share": "3/5",
+      "note": "AWS占3/5，覆盖一个模型案例和两项Agent方案，不能视为跨厂商市场统计。",
+      "nextCheck": "核对独立研究、客户审计和第三方工程复测。"
     }
   },
   "items": [
     {
-      "id": "anylanguagemodel-2026-10-20",
-      "category": "tool",
-      "label": "工具",
-      "title": "AnyLanguageModel 1.0发布：Swift应用统一选择本地与云端模型",
-      "body": "Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。",
-      "summary": "Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。",
-      "detailBody": "来源事实：Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。\n核验边界：公告确认版本与接口说明，不证明所有提供方行为等价，也不意味着云端调用自动具备本地隐私。",
-      "trend": "统一调用接口使端侧与云端对照实验更容易，但相同API并不保证相同输出与数据边界。",
-      "detailTrend": "统一调用接口使端侧与云端对照实验更容易，但相同API并不保证相同输出与数据边界。 从工程决策看，这提供了新的设备端测试入口。团队仍需固定模型、输入和运行环境，把接口可用、结果正确及实际成本分别验证，避免将开发便利直接等同于部署收益。",
-      "whyItMatters": "统一调用接口使端侧与云端对照实验更容易，但相同API并不保证相同输出与数据边界。",
-      "whyRanked": "由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
-      "detailWhyRanked": "本地AI应用开发团队需要先区分版本公告、接口兼容与实际效果。由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。\n建议保留旧版本作为回归基线，并分别记录首次加载、持续推理、失败路径及联网行为。只有目标设备上的任务结果达到验收标准，才能调整实际部署；来源作者的工程说明提供测试入口，不能替代团队自己的上线记录。",
-      "topReason": "由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
-      "impact": "本地AI应用团队可更新兼容性测试矩阵，先完成目标设备回归，再决定升级与模型路由。",
-      "whoShouldCare": "Swift应用开发者、Mac本地模型维护者，以及负责模型切换、数据边界与设备性能验收的工程团队。",
-      "readerUse": "本地AI工程团队：将候选版本放入独立测试环境，固定模型、设备与输入，保留结果后决定是否进入生产。",
-      "nextCheck": "由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
+      "id": "fairstress-2026-10-21",
+      "category": "research",
+      "label": "研究",
+      "title": "Ai2发布FairStress：公平性评测加入受劝说后的决策稳定性",
+      "body": "Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
+      "summary": "Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
+      "detailBody": "来源事实：Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。\n核验边界：作者采用以平等为中心的特定公平定义；合成场景不证明真实招聘或医疗系统的歧视程度。",
+      "trend": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。",
+      "detailTrend": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
+      "whyItMatters": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。",
+      "whyRanked": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
+      "detailWhyRanked": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
+      "topReason": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
+      "impact": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。",
+      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
+      "readerUse": "工程与评测团队：独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
+      "nextCheck": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
       "followUpQuestions": [
-        "独立开发者的同配置复测日志是否支持兼容性判断？",
-        "网络记录是否显示模型切换后发生意外云端请求？"
+        "独立复测或审计记录是否支持该方案在目标任务上使用？",
+        "失败路径与版本变化是否改变原有验收结论？"
       ],
-      "evidenceThreshold": "至少需要独立测试日志与复现代码，才能升级为已验证的兼容性或性能结论。由独立Swift开发者核对1.0发布标签，在断网和联网模式复测工具调用、结构化输出与网络日志。",
-      "claimBoundary": "公告确认版本与接口说明，不证明所有提供方行为等价，也不意味着云端调用自动具备本地隐私。",
-      "counterEvidence": "核对复测记录时，若模型切换导致工具参数变化、输出验证失败或意外联网，应下调迁移便利性判断。 应下调部署成熟度判断。",
+      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
+      "claimBoundary": "作者采用以平等为中心的特定公平定义；合成场景不证明真实招聘或医疗系统的歧视程度。",
+      "counterEvidence": "核对测试记录与审计报告：独立复现数据若显示结论随提示模板或场景抽样反转，应下调跨场景泛化判断。",
       "source": "Hugging Face Blog",
       "sourceName": "Hugging Face Blog",
       "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/anylanguagemodel-1-0",
-      "originalUrl": "https://huggingface.co/blog/anylanguagemodel-1-0",
-      "sourceRole": "官方核对",
+      "sourceUrl": "https://huggingface.co/blog/allenai/fairstress",
+      "originalUrl": "https://huggingface.co/blog/allenai/fairstress",
+      "sourceRole": "研究原文",
+      "sourceType": "official",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "claimStatus": "reported",
+      "originalDependency": "recommended",
+      "provenance": "Hugging Face Blog：Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。 本文为作者发布的模型或Agent说明，仅核对作者主张。作者采用以平等为中心的特定公平定义；合成场景不证明真实招聘或医疗系统的歧视程度。",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-10-20",
+      "time": "2026-10-20（原文日期）",
+      "tags": [
+        "研究",
+        "模型评测"
+      ],
+      "companies": [
+        "Ai2"
+      ],
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+      }
+    },
+    {
+      "id": "agent-registry-2026-10-21",
+      "category": "tool",
+      "label": "工具",
+      "title": "AWS演示运行时发现工具：目录返回连接信息，授权仍须另行处理",
+      "body": "AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
+      "summary": "AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
+      "detailBody": "来源事实：AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。\n核验边界：示例说明连接流程，不证明生产规模收益；发现结果不包含调用凭据，不能视为已获授权。",
+      "trend": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。",
+      "detailTrend": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
+      "whyItMatters": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。",
+      "whyRanked": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
+      "detailWhyRanked": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
+      "topReason": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
+      "impact": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。",
+      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
+      "readerUse": "工程与评测团队：独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
+      "nextCheck": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
+      "followUpQuestions": [
+        "独立复测或审计记录是否支持该方案在目标任务上使用？",
+        "失败路径与版本变化是否改变原有验收结论？"
+      ],
+      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
+      "claimBoundary": "示例说明连接流程，不证明生产规模收益；发现结果不包含调用凭据，不能视为已获授权。",
+      "counterEvidence": "核对测试记录与审计报告：审计日志若显示未审批工具被调用或发现结果误配权限，应下调治理成熟度判断。",
+      "source": "AWS Machine Learning Blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/",
+      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/",
+      "sourceRole": "厂商主张",
       "sourceType": "official",
       "trustLevel": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog：Hugging Face宣布AnyLanguageModel 1.0，提供兼容Foundation Models风格的多后端接口。 这份模型工程说明仅核对作者主张，不证明实际部署收益。公告确认版本与接口说明，不证明所有提供方行为等价，也不意味着云端调用自动具备本地隐私。",
+      "provenance": "AWS Machine Learning Blog：AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。 本文为作者发布的模型或Agent说明，仅核对作者主张。示例说明连接流程，不证明生产规模收益；发现结果不包含调用凭据，不能视为已获授权。",
       "verificationStatus": "已核验",
       "publishedAt": "2026-10-20",
       "time": "2026-10-20（原文日期）",
       "tags": [
         "工具",
-        "本地AI"
+        "Agent治理"
       ],
       "companies": [
-        "Hugging Face",
-        "Apple"
+        "AWS"
       ],
       "selectionScore": {
         "impact": 4,
@@ -259,7 +316,7 @@
         "evidenceQuality": 3,
         "readerUtility": 4,
         "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
       },
       "editorScore": {
         "impact": 4,
@@ -268,613 +325,343 @@
         "evidenceQuality": 3,
         "readerUtility": 4,
         "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
       }
     },
     {
-      "id": "mps-pytorch-2026-10-20",
-      "category": "tool",
-      "label": "工具",
-      "title": "HF介绍PyTorch 2.15 MPS改进：候选版本仍需同机复测",
-      "body": "Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。",
-      "summary": "Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。",
-      "detailBody": "来源事实：Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。\n核验边界：原文性能数字属贡献团队测试，文内加速表述存在不同口径；不采用统一倍率，也不把2.16预览当成已发布功能。",
-      "trend": "Mac本地AI的可用性取决于算子兼容与内存稳定性；升级前应先做精度回归，再比较速度。",
-      "detailTrend": "Mac本地AI的可用性取决于算子兼容与内存稳定性；升级前应先做精度回归，再比较速度。 从工程决策看，这提供了新的设备端测试入口。团队仍需固定模型、输入和运行环境，把接口可用、结果正确及实际成本分别验证，避免将开发便利直接等同于部署收益。",
-      "whyItMatters": "Mac本地AI的可用性取决于算子兼容与内存稳定性；升级前应先做精度回归，再比较速度。",
-      "whyRanked": "由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
-      "detailWhyRanked": "本地AI应用开发团队需要先区分版本公告、接口兼容与实际效果。由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。\n建议保留旧版本作为回归基线，并分别记录首次加载、持续推理、失败路径及联网行为。只有目标设备上的任务结果达到验收标准，才能调整实际部署；来源作者的工程说明提供测试入口，不能替代团队自己的上线记录。",
-      "topReason": "由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
-      "impact": "本地AI应用团队可更新兼容性测试矩阵，先完成目标设备回归，再决定升级与模型路由。",
-      "whoShouldCare": "Swift应用开发者、Mac本地模型维护者，以及负责模型切换、数据边界与设备性能验收的工程团队。",
-      "readerUse": "本地AI工程团队：将候选版本放入独立测试环境，固定模型、设备与输入，保留结果后决定是否进入生产。",
-      "nextCheck": "由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
+      "id": "agent-pki-2026-10-21",
+      "category": "product",
+      "label": "产品",
+      "title": "AWS与Keyfactor提出Agent身份架构：签名、委托和撤销分别核验",
+      "body": "AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。",
+      "summary": "AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。",
+      "detailBody": "来源事实：AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。\n核验边界：参考架构不等于安全认证，也不证明所有MCP部署缺少认证；实际撤销时延和失败策略仍需测试。",
+      "trend": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。",
+      "detailTrend": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
+      "whyItMatters": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。",
+      "whyRanked": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
+      "detailWhyRanked": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
+      "topReason": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
+      "impact": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。",
+      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
+      "readerUse": "工程与评测团队：独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
+      "nextCheck": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
       "followUpQuestions": [
-        "独立开发者的同配置复测日志是否支持兼容性判断？",
-        "网络记录是否显示模型切换后发生意外云端请求？"
+        "独立复测或审计记录是否支持该方案在目标任务上使用？",
+        "失败路径与版本变化是否改变原有验收结论？"
       ],
-      "evidenceThreshold": "至少需要独立测试日志与复现代码，才能升级为已验证的兼容性或性能结论。由独立开发者对照PyTorch发布记录，在相同Mac、模型与精度下复测2.14和2.15候选包，保留内存和错误日志。",
-      "claimBoundary": "原文性能数字属贡献团队测试，文内加速表述存在不同口径；不采用统一倍率，也不把2.16预览当成已发布功能。 不证明所有Mac工作负载都获得同等收益。",
-      "counterEvidence": "核对复测记录时，若复测出现CPU回退、数值偏差或峰值内存回升，应推迟生产升级并提交最小复现。 应下调部署成熟度判断。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/mps-pytorch-2-15",
-      "originalUrl": "https://huggingface.co/blog/mps-pytorch-2-15",
+      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
+      "claimBoundary": "参考架构不等于安全认证，也不证明所有MCP部署缺少认证；实际撤销时延和失败策略仍需测试。",
+      "counterEvidence": "核对测试记录与审计报告：第三方红队报告若发现撤销后仍可调用或失败时放行，应下调身份控制有效性判断。",
+      "source": "AWS Machine Learning Blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/",
+      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/",
       "sourceRole": "厂商主张",
       "sourceType": "official",
       "trustLevel": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog：Hugging Face的PyTorch团队介绍2.15 MPS改进，包含FP8支持，并提供候选版本测试指引。 这份模型工程说明仅核对作者主张，不证明实际部署收益。原文性能数字属贡献团队测试，文内加速表述存在不同口径；不采用统一倍率，也不把2.16预览当成已发布功能。",
+      "provenance": "AWS Machine Learning Blog：AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。 本文为作者发布的模型或Agent说明，仅核对作者主张。参考架构不等于安全认证，也不证明所有MCP部署缺少认证；实际撤销时延和失败策略仍需测试。",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-10-20",
+      "time": "2026-10-20（原文日期）",
+      "tags": [
+        "产品",
+        "Agent治理"
+      ],
+      "companies": [
+        "AWS",
+        "Keyfactor"
+      ],
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+      }
+    },
+    {
+      "id": "laplace-trainium-2026-10-21",
+      "category": "model",
+      "label": "模型",
+      "title": "Laplace 3B迁移Trainium2：固定状态内存仍需检索质量验收",
+      "body": "AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
+      "summary": "AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
+      "detailBody": "来源事实：AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。\n核验边界：固定的是循环状态而非全部运行内存；厂商吞吐测试不能证明同质量下优于其他架构。",
+      "trend": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。",
+      "detailTrend": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
+      "whyItMatters": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。",
+      "whyRanked": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
+      "detailWhyRanked": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
+      "topReason": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
+      "impact": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。",
+      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
+      "readerUse": "工程与评测团队：第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
+      "nextCheck": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
+      "followUpQuestions": [
+        "独立复测或审计记录是否支持该方案在目标任务上使用？",
+        "失败路径与版本变化是否改变原有验收结论？"
+      ],
+      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
+      "claimBoundary": "固定的是循环状态而非全部运行内存；厂商吞吐测试不能证明同质量下优于其他架构。",
+      "counterEvidence": "核对测试记录与审计报告：独立长文检索测试若显示准确率下降或总内存仍超预算，应下调部署价值判断。",
+      "source": "AWS Machine Learning Blog",
+      "sourceName": "AWS Machine Learning Blog",
+      "sourceId": "aws-machine-learning-blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/",
+      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/",
+      "sourceRole": "厂商主张",
+      "sourceType": "official",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "provenance": "AWS Machine Learning Blog：AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。 本文为作者发布的模型或Agent说明，仅核对作者主张。固定的是循环状态而非全部运行内存；厂商吞吐测试不能证明同质量下优于其他架构。",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-10-20",
+      "time": "2026-10-20（原文日期）",
+      "tags": [
+        "模型",
+        "模型评测"
+      ],
+      "companies": [
+        "AWS",
+        "i14"
+      ],
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+      },
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+      }
+    },
+    {
+      "id": "torchtpu-2026-10-21",
+      "category": "tool",
+      "label": "工具",
+      "title": "TorchTPU接入Hugging Face：PyTorch可原生使用TPU",
+      "body": "Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
+      "summary": "Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
+      "detailBody": "来源事实：Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。\n核验边界：公告证明集成说明已发布，不证明所有模型可直接迁移或TPU成本优于GPU。",
+      "trend": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。",
+      "detailTrend": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
+      "whyItMatters": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。",
+      "whyRanked": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
+      "detailWhyRanked": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
+      "topReason": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
+      "impact": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。",
+      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
+      "readerUse": "工程与评测团队：第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
+      "nextCheck": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
+      "followUpQuestions": [
+        "独立复测或审计记录是否支持该方案在目标任务上使用？",
+        "失败路径与版本变化是否改变原有验收结论？"
+      ],
+      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
+      "claimBoundary": "公告证明集成说明已发布，不证明所有模型可直接迁移或TPU成本优于GPU。",
+      "counterEvidence": "核对测试记录与审计报告：独立复测日志若出现算子失败、数值偏差或成本上升，应下调迁移收益判断。",
+      "source": "Hugging Face Blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceId": "huggingface-blog",
+      "sourceUrl": "https://huggingface.co/blog/hf-torchtpu",
+      "originalUrl": "https://huggingface.co/blog/hf-torchtpu",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "provenance": "Hugging Face Blog：Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。 本文为作者发布的模型或Agent说明，仅核对作者主张。公告证明集成说明已发布，不证明所有模型可直接迁移或TPU成本优于GPU。",
       "verificationStatus": "已核验",
       "publishedAt": "2026-10-20",
       "time": "2026-10-20（原文日期）",
       "tags": [
         "工具",
-        "本地AI"
+        "模型评测"
       ],
       "companies": [
         "Hugging Face",
-        "Apple"
+        "Google"
       ],
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 3,
-        "evidenceQuality": 3,
+        "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+        "total": 19,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 3,
-        "evidenceQuality": 3,
+        "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      }
-    },
-    {
-      "id": "microsoft-agentic-insider-2026-10-20",
-      "category": "product",
-      "label": "产品",
-      "title": "微软提出Guardian Agents治理路径：效果待客户审计",
-      "body": "微软介绍将Project Perception用于内部Agent治理，并提出Guardian Agents监督方案。",
-      "summary": "微软介绍将Project Perception用于内部Agent治理，并提出Guardian Agents监督方案。",
-      "detailBody": "来源事实：微软介绍将Project Perception用于内部Agent治理，并提出Guardian Agents监督方案。\n核验边界：官方文章证明微软提出方案，不证明逐次监督已全面部署，也不能把风险叙事当作所有Agent都会失控的结论。",
-      "trend": "Agent治理的关注点开始从外部攻击延伸到内部授权行为。",
-      "detailTrend": "Agent治理的关注点开始从外部攻击延伸到内部授权行为。额外监督层意味着管理对象从模型回答扩展到执行过程，但新增控制层也带来可用性和误阻断成本。",
-      "whyItMatters": "Agent治理的关注点开始从外部攻击延伸到内部授权行为。额外监督层意味着管理对象从模型回答扩展到执行过程，但新增控制层也带来可用性和误阻断成本。",
-      "whyRanked": "检查客户侧部署范围、独立安全审计及红队复测，量化越权阻断率、误报和业务延迟。",
-      "detailWhyRanked": "安全与平台负责人需要把这条信号转成可执行的验收任务。检查客户侧部署范围、独立安全审计及红队复测，量化越权阻断率、误报和业务延迟。\n来源提供了具体事件的核对入口，但采购或上线决策还需要把功能可用、实际收益与责任范围分别验收，避免用一次公告替代持续的业务记录。",
-      "topReason": "检查客户侧部署范围、独立安全审计及红队复测，量化越权阻断率、误报和业务延迟。",
-      "impact": "安全与平台负责人可据此更新供应商评估与验收清单，先验证范围再调整部署。",
-      "whoShouldCare": "安全与平台负责人，尤其是正在评估供应商、负责生产部署验收和持续运营风险控制的项目负责人。",
-      "readerUse": "团队使用方法：安全与平台负责人可将下一步核验项目列入本周检查，保留对照配置与原始记录。",
-      "nextCheck": "检查客户侧部署范围、独立安全审计及红队复测，量化越权阻断率、误报和业务延迟。",
-      "followUpQuestions": [
-        "哪些原始记录能够验证本条的执行范围？",
-        "独立复测或客户审计是否支持当前判断？"
-      ],
-      "evidenceThreshold": "需要独立记录支持后才能升级为已验证的效果判断。检查客户侧部署范围、独立安全审计及红队复测，量化越权阻断率、误报和业务延迟。",
-      "claimBoundary": "官方文章证明微软提出方案，不证明逐次监督已全面部署，也不能把风险叙事当作所有Agent都会失控的结论。",
-      "counterEvidence": "核对记录时，若客户审计发现绕过路径或误阻断使业务不可用，应下调防护有效性判断。",
-      "source": "Official Microsoft Blog",
-      "sourceName": "Official Microsoft Blog",
-      "sourceId": "microsoft-official-blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
-      "originalUrl": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "recommended",
-      "provenance": "Official Microsoft Blog：微软介绍将Project Perception用于内部Agent治理，并提出Guardian Agents监督方案。 厂商主张。官方文章证明微软提出方案，不证明逐次监督已全面部署，也不能把风险叙事当作所有Agent都会失控的结论。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-19",
-      "time": "2026-10-19（原文日期）",
-      "tags": [
-        "产品",
-        "安全治理"
-      ],
-      "companies": [
-        "Microsoft"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      }
-    },
-    {
-      "id": "vllm-push-kv-2026-10-20",
-      "category": "tool",
-      "label": "工具",
-      "title": "AWS介绍vLLM推送式KV传输：优化首字延迟需同配置复测",
-      "body": "AWS介绍vLLM推送式NIXL连接器及其预填充与解码分离测试。",
-      "summary": "AWS介绍vLLM推送式NIXL连接器及其预填充与解码分离测试。",
-      "detailBody": "来源事实：AWS介绍vLLM推送式NIXL连接器及其预填充与解码分离测试。\n核验边界：厂商测试依赖具体模型、网络与缓存配置；不证明所有部署都有同等加速，不能等同于已验证生产收益。",
-      "trend": "推理性能的竞争延伸到节点之间的协调开销。",
-      "detailTrend": "推理性能的竞争延伸到节点之间的协调开销。改变缓存传输时机意味着首字等待可以成为独立优化目标，但更早选择解码节点也会影响调度灵活性。",
-      "whyItMatters": "推理性能的竞争延伸到节点之间的协调开销。改变缓存传输时机意味着首字等待可以成为独立优化目标，但更早选择解码节点也会影响调度灵活性。",
-      "whyRanked": "核对vLLM上游版本与变更记录，由第三方在相同负载、前缀缓存配置和网络上复测首字与逐字延迟。",
-      "detailWhyRanked": "推理工程与采购团队需要把这条信号转成可执行的验收任务。核对vLLM上游版本与变更记录，由第三方在相同负载、前缀缓存配置和网络上复测首字与逐字延迟。\n来源提供了具体事件的核对入口，但采购或上线决策还需要把功能可用、实际收益与责任范围分别验收，避免用一次公告替代持续的业务记录。",
-      "topReason": "核对vLLM上游版本与变更记录，由第三方在相同负载、前缀缓存配置和网络上复测首字与逐字延迟。",
-      "impact": "推理工程与采购团队可据此更新供应商评估与验收清单，先验证范围再调整部署。",
-      "whoShouldCare": "推理工程与采购团队，尤其是正在评估供应商、负责生产部署验收和持续运营风险控制的项目负责人。",
-      "readerUse": "团队使用方法：推理工程与采购团队可将下一步核验项目列入本周检查，保留对照配置与原始记录。",
-      "nextCheck": "核对vLLM上游版本与变更记录，由第三方在相同负载、前缀缓存配置和网络上复测首字与逐字延迟。",
-      "followUpQuestions": [
-        "哪些原始记录能够验证本条的执行范围？",
-        "独立复测或客户审计是否支持当前判断？"
-      ],
-      "evidenceThreshold": "需要独立记录支持后才能升级为已验证的效果判断。核对vLLM上游版本与变更记录，由第三方在相同负载、前缀缓存配置和网络上复测首字与逐字延迟。",
-      "claimBoundary": "厂商测试依赖具体模型、网络与缓存配置；不证明所有部署都有同等加速，不能等同于已验证生产收益。",
-      "counterEvidence": "核对记录时，若上游版本缺失相应功能，或独立同配置测试延迟收益消失，应下调可部署性与性能判断。",
-      "source": "AWS Machine Learning Blog",
-      "sourceName": "AWS Machine Learning Blog",
-      "sourceId": "aws-machine-learning-blog",
-      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/push-based-kv-transfer-to-improve-ttft-and-tpot-for-disaggregated-inference-in-vllm/",
-      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/push-based-kv-transfer-to-improve-ttft-and-tpot-for-disaggregated-inference-in-vllm/",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "recommended",
-      "provenance": "AWS Machine Learning Blog：AWS介绍vLLM推送式NIXL连接器及其预填充与解码分离测试。 厂商主张。厂商测试依赖具体模型、网络与缓存配置；不证明所有部署都有同等加速，不能等同于已验证生产收益。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-19",
-      "time": "2026-10-19（原文日期）",
-      "tags": [
-        "工具",
-        "推理基础设施"
-      ],
-      "companies": [
-        "AWS",
-        "vLLM"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      }
-    },
-    {
-      "id": "deepgram-trainium-2026-10-20",
-      "category": "product",
-      "label": "产品",
-      "title": "Deepgram与AWS披露Nova-3迁移案例：限定离线批量场景",
-      "body": "AWS披露与Deepgram将Nova-3迁移到Trainium2的离线批量推理案例。",
-      "summary": "AWS披露与Deepgram将Nova-3迁移到Trainium2的离线批量推理案例。",
-      "detailBody": "来源事实：AWS披露与Deepgram将Nova-3迁移到Trainium2的离线批量推理案例。\n核验边界：这是参与方联合叙述，不是独立性能证明；离线吞吐结果不能外推到实时语音延迟或所有语言。",
-      "trend": "语音服务的成本竞争延伸到编译、内核和运行时。",
-      "detailTrend": "语音服务的成本竞争延伸到编译、内核和运行时。单一模型迁移案例意味着优化空间来自整个服务栈，不能仅用芯片型号解释最终经济性。 批量作业和实时交互有不同的资源约束，所以单位音频成本与响应速度必须保持不同口径。",
-      "whyItMatters": "语音服务的成本竞争延伸到编译、内核和运行时。单一模型迁移案例意味着优化空间来自整个服务栈，不能仅用芯片型号解释最终经济性。",
-      "whyRanked": "取得Deepgram客户侧同质量账单与错误率记录，并由第三方按相同音频、批量大小和价格复测。",
-      "detailWhyRanked": "推理工程与采购团队需要把这条信号转成可执行的验收任务。取得Deepgram客户侧同质量账单与错误率记录，并由第三方按相同音频、批量大小和价格复测。\n来源提供了具体事件的核对入口，但采购或上线决策还需要把功能可用、实际收益与责任范围分别验收，避免用一次公告替代持续的业务记录。",
-      "topReason": "取得Deepgram客户侧同质量账单与错误率记录，并由第三方按相同音频、批量大小和价格复测。",
-      "impact": "推理工程与采购团队可据此更新供应商评估与验收清单，先验证范围再调整部署。",
-      "whoShouldCare": "推理工程与采购团队，尤其是正在评估供应商、负责生产部署验收和持续运营风险控制的项目负责人。",
-      "readerUse": "团队使用方法：推理工程与采购团队可将下一步核验项目列入本周检查，保留对照配置与原始记录。",
-      "nextCheck": "取得Deepgram客户侧同质量账单与错误率记录，并由第三方按相同音频、批量大小和价格复测。",
-      "followUpQuestions": [
-        "哪些原始记录能够验证本条的执行范围？",
-        "独立复测或客户审计是否支持当前判断？"
-      ],
-      "evidenceThreshold": "需要独立记录支持后才能升级为已验证的效果判断。取得Deepgram客户侧同质量账单与错误率记录，并由第三方按相同音频、批量大小和价格复测。",
-      "claimBoundary": "这是参与方联合叙述，不是独立性能证明；离线吞吐结果不能外推到实时语音延迟或所有语言。",
-      "counterEvidence": "核对记录时，若独立复测的词错误率升高或同口径成本优势消失，应下调迁移收益判断。",
-      "source": "AWS Machine Learning Blog",
-      "sourceName": "AWS Machine Learning Blog",
-      "sourceId": "aws-machine-learning-blog",
-      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-deepgram-optimized-voice-ai-at-scale-with-aws-trainium/",
-      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/how-deepgram-optimized-voice-ai-at-scale-with-aws-trainium/",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "recommended",
-      "provenance": "AWS Machine Learning Blog：AWS披露与Deepgram将Nova-3迁移到Trainium2的离线批量推理案例。 厂商主张。这是参与方联合叙述，不是独立性能证明；离线吞吐结果不能外推到实时语音延迟或所有语言。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-19",
-      "time": "2026-10-19（原文日期）",
-      "tags": [
-        "产品",
-        "推理基础设施"
-      ],
-      "companies": [
-        "AWS",
-        "Deepgram"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 3,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 17,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      }
-    },
-    {
-      "id": "opencode-security-2026-10-20",
-      "category": "tool",
-      "label": "工具",
-      "title": "OpenCode安全事件报道：先核对凭据与账单暴露",
-      "body": "TechCrunch报道OpenCode遭入侵，并出现用户AI账户异常费用。",
-      "summary": "TechCrunch报道OpenCode遭入侵，并出现用户AI账户异常费用。",
-      "detailBody": "来源事实：TechCrunch报道OpenCode遭入侵，并出现用户AI账户异常费用。\n核验边界：本条仅确认媒体报道存在；未取得完整官方事后报告，不确认攻击归因、全部受影响范围或损失总额。",
-      "trend": "本站判断：开发工具的便利性伴随凭据托管责任。",
-      "detailTrend": "本站判断：开发工具的便利性伴随凭据托管责任。模型服务与工具平台分属不同主体时，异常调用的归因与损失核算需要分别进行。 这意味着平台风险可能跨越工具与模型供应商边界，责任划分比单一功能评价更复杂。",
-      "whyItMatters": "本站判断：开发工具的便利性伴随凭据托管责任。模型服务与工具平台分属不同主体时，异常调用的归因与损失核算需要分别进行。",
-      "whyRanked": "核对OpenCode正式事件报告、账户通知及模型供应商调用和账单记录；以时间线关联验证异常费用。",
-      "detailWhyRanked": "安全与平台负责人需要把这条信号转成可执行的验收任务。核对OpenCode正式事件报告、账户通知及模型供应商调用和账单记录；以时间线关联验证异常费用。\n来源提供了具体事件的核对入口，但采购或上线决策还需要把功能可用、实际收益与责任范围分别验收，避免用一次公告替代持续的业务记录。",
-      "topReason": "核对OpenCode正式事件报告、账户通知及模型供应商调用和账单记录；以时间线关联验证异常费用。",
-      "impact": "安全与平台负责人可据此更新供应商评估与验收清单，先验证范围再调整部署。",
-      "whoShouldCare": "安全与平台负责人，尤其是正在评估供应商、负责生产部署验收和持续运营风险控制的项目负责人。",
-      "readerUse": "团队使用方法：安全与平台负责人可将下一步核验项目列入本周检查，保留对照配置与原始记录。",
-      "nextCheck": "核对OpenCode正式事件报告、账户通知及模型供应商调用和账单记录；以时间线关联验证异常费用。",
-      "followUpQuestions": [
-        "哪些原始记录能够验证本条的执行范围？",
-        "独立复测或客户审计是否支持当前判断？"
-      ],
-      "evidenceThreshold": "需要独立记录支持后才能升级为已验证的效果判断。核对OpenCode正式事件报告、账户通知及模型供应商调用和账单记录；以时间线关联验证异常费用。",
-      "claimBoundary": "本条仅确认媒体报道存在；未取得完整官方事后报告，不确认攻击归因、全部受影响范围或损失总额。",
-      "counterEvidence": "核对记录时，若官方事件报告或账户审计否定关联，应修正暴露范围；不能用社区截图计算总体损失。此时应下调事件关联判断。",
-      "source": "TechCrunch AI",
-      "sourceName": "TechCrunch AI",
-      "sourceId": "techcrunch-ai",
-      "sourceUrl": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
-      "originalUrl": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
-      "sourceRole": "媒体背景",
-      "sourceType": "reliable_media",
-      "trustLevel": "reliable_media",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "must-read",
-      "provenance": "TechCrunch AI：TechCrunch报道OpenCode遭入侵，并出现用户AI账户异常费用。 本条仅确认媒体报道存在；未取得完整官方事后报告，不确认攻击归因、全部受影响范围或损失总额。 完整事实与上下文保留在原文。 账户权限边界仍待官方核对。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-19",
-      "time": "2026-10-19（原文日期）",
-      "tags": [
-        "工具",
-        "安全治理"
-      ],
-      "companies": [
-        "OpenCode"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      }
-    },
-    {
-      "id": "tenstorrent-series-e-2026-10-20",
-      "category": "funding",
-      "label": "融资",
-      "title": "Tenstorrent宣布15亿美元E轮融资，量产与交付仍需跟踪",
-      "body": "Tenstorrent宣布完成15亿美元E轮融资，投后估值62亿美元。",
-      "summary": "Tenstorrent宣布完成15亿美元E轮融资，投后估值62亿美元。",
-      "detailBody": "来源事实：Tenstorrent宣布完成15亿美元E轮融资，投后估值62亿美元。\n核验边界：官方公告核对公司披露的融资金额与估值；不证明资金已转化为产能、订单兑现或性能优势。",
-      "trend": "AI算力竞争需要持续资本投入。",
-      "detailTrend": "AI算力竞争需要持续资本投入。融资增加了扩展供给的资源空间，但资本规模与可交付设备之间仍隔着制造、软件适配和客户验收。",
-      "whyItMatters": "AI算力竞争需要持续资本投入。融资增加了扩展供给的资源空间，但资本规模与可交付设备之间仍隔着制造、软件适配和客户验收。",
-      "whyRanked": "核对投资方正式披露、后续财务文件和客户验收记录，再查看同任务独立硬件评测。",
-      "detailWhyRanked": "推理工程与采购团队需要把这条信号转成可执行的验收任务。核对投资方正式披露、后续财务文件和客户验收记录，再查看同任务独立硬件评测。\n来源提供了具体事件的核对入口，但采购或上线决策还需要把功能可用、实际收益与责任范围分别验收，避免用一次公告替代持续的业务记录。",
-      "topReason": "核对投资方正式披露、后续财务文件和客户验收记录，再查看同任务独立硬件评测。",
-      "impact": "推理工程与采购团队可据此更新供应商评估与验收清单，先验证范围再调整部署。",
-      "whoShouldCare": "推理工程与采购团队，尤其是正在评估供应商、负责生产部署验收和持续运营风险控制的项目负责人。",
-      "readerUse": "团队使用方法：推理工程与采购团队可将下一步核验项目列入本周检查，保留对照配置与原始记录。",
-      "nextCheck": "核对投资方正式披露、后续财务文件和客户验收记录，再查看同任务独立硬件评测。",
-      "followUpQuestions": [
-        "哪些原始记录能够验证本条的执行范围？",
-        "独立复测或客户审计是否支持当前判断？"
-      ],
-      "evidenceThreshold": "需要独立记录支持后才能升级为已验证的效果判断。核对投资方正式披露、后续财务文件和客户验收记录，再查看同任务独立硬件评测。",
-      "claimBoundary": "官方公告核对公司披露的融资金额与估值；不证明资金已转化为产能、订单兑现或性能优势。",
-      "counterEvidence": "核对记录时，若投资方披露不一致、交付延误或客户验收未达标，应下调扩产兑现判断。",
-      "source": "Tenstorrent Newsroom",
-      "sourceName": "Tenstorrent Newsroom",
-      "sourceId": "tenstorrent-newsroom",
-      "sourceUrl": "https://tenstorrent.com/newsroom/tenstorrent-announces-series-e",
-      "originalUrl": "https://tenstorrent.com/newsroom/tenstorrent-announces-series-e",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "Tenstorrent Newsroom：Tenstorrent宣布完成15亿美元E轮融资，投后估值62亿美元。 官方公告核对公司披露的融资金额与估值；不证明资金已转化为产能、订单兑现或性能优势。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-19",
-      "time": "2026-10-19（原文日期）",
-      "tags": [
-        "融资",
-        "推理基础设施"
-      ],
-      "companies": [
-        "Tenstorrent"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      }
-    },
-    {
-      "id": "torchneuron-2026-10-20",
-      "category": "tool",
-      "label": "工具",
-      "title": "TorchNeuron预告公开测试：Trainium接入原生PyTorch工作流",
-      "body": "Hugging Face介绍TorchNeuron原生后端，并预告10月20日起公开测试。",
-      "summary": "Hugging Face介绍TorchNeuron原生后端，并预告10月20日起公开测试。",
-      "detailBody": "来源事实：Hugging Face介绍TorchNeuron原生后端，并预告10月20日起公开测试。\n核验边界：公告证明集成说明和测试计划，不证明此刻所有区域可用，也不证明所有模型无修改运行。",
-      "trend": "硬件选择的门槛不仅在芯片价格，也在迁移成本。",
-      "detailTrend": "硬件选择的门槛不仅在芯片价格，也在迁移成本。原生框架接口意味着跨硬件实验更容易纳入现有开发流程，但迁移工作量仍取决于实际模型。",
-      "whyItMatters": "硬件选择的门槛不仅在芯片价格，也在迁移成本。原生框架接口意味着跨硬件实验更容易纳入现有开发流程，但迁移工作量仍取决于实际模型。",
-      "whyRanked": "核对公开测试包版本与发布记录，并由独立开发者复现目标模型的训练和推理，记录编译失败及精度偏差。",
-      "detailWhyRanked": "推理工程与采购团队需要把这条信号转成可执行的验收任务。核对公开测试包版本与发布记录，并由独立开发者复现目标模型的训练和推理，记录编译失败及精度偏差。\n来源提供了具体事件的核对入口，但采购或上线决策还需要把功能可用、实际收益与责任范围分别验收，避免用一次公告替代持续的业务记录。",
-      "topReason": "核对公开测试包版本与发布记录，并由独立开发者复现目标模型的训练和推理，记录编译失败及精度偏差。",
-      "impact": "推理工程与采购团队可据此更新供应商评估与验收清单，先验证范围再调整部署。",
-      "whoShouldCare": "推理工程与采购团队，尤其是正在评估供应商、负责生产部署验收和持续运营风险控制的项目负责人。",
-      "readerUse": "团队使用方法：推理工程与采购团队可将下一步核验项目列入本周检查，保留对照配置与原始记录。",
-      "nextCheck": "核对公开测试包版本与发布记录，并由独立开发者复现目标模型的训练和推理，记录编译失败及精度偏差。",
-      "followUpQuestions": [
-        "哪些原始记录能够验证本条的执行范围？",
-        "独立复测或客户审计是否支持当前判断？"
-      ],
-      "evidenceThreshold": "需要独立记录支持后才能升级为已验证的效果判断。核对公开测试包版本与发布记录，并由独立开发者复现目标模型的训练和推理，记录编译失败及精度偏差。",
-      "claimBoundary": "公告证明集成说明和测试计划，不证明此刻所有区域可用，也不证明所有模型无修改运行。",
-      "counterEvidence": "核对记录时，若发布包未开放、目标模型编译失败或复现精度偏离，应下调兼容性判断。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/hf-torchneuron",
-      "originalUrl": "https://huggingface.co/blog/hf-torchneuron",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog：Hugging Face介绍TorchNeuron原生后端，并预告10月20日起公开测试。 公告证明集成说明和测试计划，不证明此刻所有区域可用，也不证明所有模型无修改运行。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-19",
-      "time": "2026-10-19（原文日期）",
-      "tags": [
-        "工具",
-        "推理基础设施"
-      ],
-      "companies": [
-        "AWS",
-        "Hugging Face"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先核对执行范围与独立记录，不将来源声誉等同于效果证明。"
+        "total": 19,
+        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
       }
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "算力迁移与Agent治理，都需要独立验收",
-    "summary": "本期八条信号覆盖集成、融资、凭据风险与工程方案；官方来源偏多，效果仍需复测。",
-    "cta": "查看8条信号",
+    "headline": "模型能迁移，Agent能连接，下一步怎样验收？",
+    "summary": "五条模型工程与Agent核验信号：发布事实、研究结论和厂商方案分开阅读。",
+    "cta": "查看5条信号",
     "watchPoints": [
       {
-        "title": "迁移是否可复现",
-        "body": "工程团队核对迁移兼容性与同质量成本。"
+        "title": "模型如何验收",
+        "body": "部署团队检查迁移后的正确性与总成本。"
       },
       {
-        "title": "凭据与授权是否受控",
-        "body": "安全团队核对凭据暴露与Agent授权边界。"
+        "title": "Agent如何验收",
+        "body": "安全与评测团队检查改判、授权和撤销路径。"
       },
       {
-        "title": "扩产是否兑现",
-        "body": "采购团队对照投资方披露、交付文件与客户验收，区分融资和产能。"
+        "title": "研究结论如何复核",
+        "body": "评测团队检查公开数据与成对扰动结果，区分合成场景和实际业务。"
       }
     ]
   },
   "deepBriefing": {
     "kicker": "17点任务｜实际08点采集",
-    "title": "八条算力与Agent治理核验线索",
-    "subtitle": "区分原文事实、本站判断与尚待验证的效果。",
-    "dateLabel": "2026年10月20日｜08点实际采集",
-    "status": "已发布｜8条安全信号",
-    "overview": "本期发布8条安全非重复信号；少于10条是质量门槛结果，未用重复报道、旧事件、社区讨论与弱证据营销补数。",
+    "title": "五条模型与Agent验收线索",
+    "subtitle": "区分原文事实、本站判断与待验证效果。",
+    "dateLabel": "2026年10月21日｜08点实际采集",
+    "status": "已发布｜5条安全信号",
+    "overview": "本期发布5条安全非重复信号；少于10条是质量门槛结果，未用旧闻、重复事件、社区讨论与同类营销教程补数。",
     "timeline": [
       {
         "label": "1",
-        "title": "迁移是否可复现",
-        "body": "工程团队核对迁移兼容性与同质量成本。"
+        "title": "模型如何验收",
+        "body": "部署团队检查迁移后的正确性与总成本。"
       },
       {
         "label": "2",
-        "title": "凭据与授权是否受控",
-        "body": "安全团队核对凭据暴露与Agent授权边界。"
+        "title": "Agent如何验收",
+        "body": "安全与评测团队检查改判、授权和撤销路径。"
       },
       {
         "label": "3",
-        "title": "扩产是否兑现",
-        "body": "采购团队对照投资方披露、交付文件与客户验收，区分融资和产能。"
+        "title": "研究结论如何复核",
+        "body": "评测团队检查公开数据与成对扰动结果，区分合成场景和实际业务。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "6",
+        "value": "5",
         "label": "安全非重复信号"
       },
       {
-        "value": "5",
-        "label": "官方来源"
+        "value": "3",
+        "label": "厂商主张"
       },
       {
         "value": "1",
-        "label": "媒体线索"
+        "label": "研究作者原文"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "迁移是否可复现",
-        "title": "迁移是否可复现",
-        "body": "工程团队核对迁移兼容性与同质量成本。",
-        "soWhat": "把可核验的执行记录作为调整判断的依据。"
+        "label": "模型如何验收",
+        "title": "模型如何验收",
+        "body": "部署团队检查迁移后的正确性与总成本。",
+        "soWhat": "用独立记录更新判断，保留失败路径。"
       },
       {
         "number": "02",
-        "label": "凭据与授权是否受控",
-        "title": "凭据与授权是否受控",
-        "body": "安全团队核对凭据暴露与Agent授权边界。",
-        "soWhat": "把可核验的执行记录作为调整判断的依据。"
+        "label": "Agent如何验收",
+        "title": "Agent如何验收",
+        "body": "安全与评测团队检查改判、授权和撤销路径。",
+        "soWhat": "用独立记录更新判断，保留失败路径。"
       },
       {
         "number": "03",
-        "label": "扩产是否兑现",
-        "title": "扩产是否兑现",
-        "body": "采购团队对照投资方披露、交付文件与客户验收，区分融资和产能。",
-        "soWhat": "把可核验的执行记录作为调整判断的依据。"
+        "label": "研究结论如何复核",
+        "title": "研究结论如何复核",
+        "body": "评测团队检查公开数据与成对扰动结果，区分合成场景和实际业务。",
+        "soWhat": "用独立记录更新判断，保留失败路径。"
       }
     ],
     "actions": [
-      "工程团队核对迁移兼容性与同质量成本。",
-      "安全团队核对凭据暴露与Agent授权边界。"
+      "部署团队检查迁移后的正确性与总成本。",
+      "安全与评测团队检查改判、授权和撤销路径。"
     ],
     "coverageLimits": [
       {
         "label": "采集范围",
-        "body": "17点任务实际08点采集，无同日晨版，以10月19日23点复核为基线；日期精度原文不能证明全部发生于基线之后，不宣称覆盖未来17点。"
+        "body": "17点任务实际08点执行，无同日晨版；以10月20日23点版为去重基线。原文仅有日期，不证明全部发生于基线之后，也不覆盖未来17点。"
       },
       {
         "label": "证据范围",
-        "body": "来源偏向官方：5/6，其中3条为厂商主张；媒体1/6。AWS直接来源2/6，连同HF集成共3条涉及AWS。"
+        "body": "来源偏向官方：5/5；AWS占3/5，HF平台2/5，其中FairStress作者为Ai2。缺少独立效果验证。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "Hugging Face介绍TorchNeuron原生后端，并预告10月20日起公开测试。",
-        "Tenstorrent宣布完成15亿美元E轮融资，投后估值62亿美元。",
-        "TechCrunch报道OpenCode遭入侵，并出现用户AI账户异常费用。",
-        "微软介绍将Project Perception用于内部Agent治理，并提出Guardian Agents监督方案。",
-        "AWS披露与Deepgram将Nova-3迁移到Trainium2的离线批量推理案例。",
-        "AWS介绍vLLM推送式NIXL连接器及其预填充与解码分离测试。"
+        "Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
+        "Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
+        "AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
+        "AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
+        "AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。"
       ],
       "editorialJudgment": [
-        "本站判断：部署便利性与实际经济性应分别验收。",
-        "本站判断：Agent权限需要独立于模型能力评价。"
+        "本站判断：接口可用与结果正确需要分开验收。",
+        "本站判断：发现工具不等于获得授权。"
       ],
       "unknowns": [
-        "融资和集成公告不证明交付或性能优势。",
-        "厂商方案与媒体线索仍需客户记录、独立测试及事件报告。"
+        "集成和架构说明不证明生产收益。",
+        "合成评测不能直接推断真实人群或业务效果。"
       ]
     },
     "references": [
       {
         "label": "Hugging Face Blog官方原文",
-        "url": "https://huggingface.co/blog/hf-torchneuron"
-      },
-      {
-        "label": "Tenstorrent Newsroom官方原文",
-        "url": "https://tenstorrent.com/newsroom/tenstorrent-announces-series-e"
-      },
-      {
-        "label": "TechCrunch AI媒体原文",
-        "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/"
-      },
-      {
-        "label": "Official Microsoft Blog官方原文",
-        "url": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/"
+        "url": "https://huggingface.co/blog/allenai/fairstress"
       },
       {
         "label": "AWS Machine Learning Blog官方原文",
-        "url": "https://aws.amazon.com/blogs/machine-learning/how-deepgram-optimized-voice-ai-at-scale-with-aws-trainium/"
+        "url": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/"
       },
       {
         "label": "AWS Machine Learning Blog官方原文",
-        "url": "https://aws.amazon.com/blogs/machine-learning/push-based-kv-transfer-to-improve-ttft-and-tpot-for-disaggregated-inference-in-vllm/"
+        "url": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/"
+      },
+      {
+        "label": "AWS Machine Learning Blog官方原文",
+        "url": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/"
+      },
+      {
+        "label": "Hugging Face Blog官方原文",
+        "url": "https://huggingface.co/blog/hf-torchtpu"
       }
     ]
   }
