@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 2, TOP3 Visual Briefing
-- Last indexed run: 2026-10-19 11:02 JST (20:00 scheduled run)
+- Last indexed run: 2026-10-20 11:03 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Current Cycle Day 4 Completion
@@ -126,8 +126,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
-- Continue with Day 8: implement the smallest comparative TOP3 visual cue.
-- If Day 8 is already complete, continue with Day 9: official-source confirmed facts versus unproven outcomes.
+- Current-cycle Day 8 complete: TOP3 uses the existing label as a bordered Chinese signal cue, separated from the date; category is not confidence. No additional evidence sentences or inferred classification.
+- Continue with Day 9: official-source confirmed facts versus unproven outcomes.
+- If Day 9 is already complete, continue with Day 10: media-backed original-source dependency.
 
 ## Update Rules
 

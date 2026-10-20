@@ -571,7 +571,7 @@ function updateTopStories(items) {
             ${score ? `<p class="top-score"><b>${score.toFixed(1)}</b><span>/5</span></p>` : ""}
           </div>
           <div class="top-story-body">
-            <p class="eyebrow">${escapeHtml(item.label)} · ${escapeHtml(item.time)}</p>
+            <p class="eyebrow top-signal-context"><span class="top-signal-cue">${escapeHtml(item.label || "未分类")}信号</span><span class="top-signal-time">${escapeHtml(item.time)}</span></p>
             <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
             <p class="top-summary">${escapeHtml(getItemSummary(item))}</p>
             <dl class="top-brief-list" aria-label="TOP3 入选理由与核验边界">

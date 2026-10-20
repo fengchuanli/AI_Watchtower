@@ -5434,3 +5434,23 @@ h3 {
   color: var(--fg-primary);
   font-weight: 700;
 }
+
+/* TOP3 分类比较：文字标记只表示信号类别，不表示可信度或强弱。 */
+.top-story .top-signal-context {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  letter-spacing: 0;
+}
+
+.top-signal-cue {
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.top-signal-time {
+  color: var(--fg-secondary);
+  font-weight: 400;
+}

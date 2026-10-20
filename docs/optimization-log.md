@@ -1,3 +1,14 @@
+## 2026-10-20 11:03:13 JST（20:00 scheduled content optimization）
+
+- Focus: Current-cycle Day 8；TOP3 最小类别比较提示。
+- Changed files: app.js、styles.css、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：首页“今日 TOP3”标题上方，既有类别显示为“产品信号”等带边框文字标记，时间独立显示；窄屏允许换行，不增加证据段落。
+- Boundary: 直接复用 label，不按关键词推断安全/政策等新分类；统一样式不表示可信度或信号强弱；新闻数据及来源边界未改。
+- VisionHub briefing scorecard: done。fiveSecondUnderstanding partial（首屏整体仍长）；top3ReaderUse pass；sourceBoundaryVisible pass；originalSourceDependency pass；mobileBurden partial（支持换行但未实测）；continuityUse pass（未变）；visualAidPurpose pass（类别与时间分离便于比较）。
+- Verification: node --check app.js、validate-data/site/pages、派生一致性、HTML解析、git diff --check 通过；VM检查当前类别、HTML转义及空态通过（首次测试环境缺URLSearchParams，补齐后通过）。未做浏览器视觉实测。
+- Pull: 沙箱DNS失败，授权重试成功；编辑前工作区干净，origin/main 已最新。
+- Commit/push: 本实现提交后推送 origin/main；哈希在后续完成记录及自动化memory中记录。
+
 ## 2026-10-20 08:05:12 JST
 
 - Focus: 17:00任务实际08点采集；新增6条算力工程与Agent治理信号。无同日晨版，以10月19日23点复核为基线；日期精度原文不证明全部事件发生于基线之后，不宣称覆盖未来17点。
