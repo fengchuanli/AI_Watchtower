@@ -1,3 +1,14 @@
+## 2026-10-21 11:03:07 JST（20:00 scheduled content optimization）
+
+- Focus: Current-cycle Day 9；区分 TOP3 官方厂商发布事实与未经独立核验的效果。
+- Changed files: app.js、styles.css、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：首页“今日 TOP3”的 AWS Agent Registry 与 PKI 卡片显示“官方 / 厂商主张”，独立一行提示“发布事实已确认 · 效果待核验”；下方保留具体尚未证明内容和独立核验路径，评分折叠内状态也保持一致。
+- Boundary: 仅 sourceType=official、sourceRole=厂商主张、claimStatus=confirmed 同时满足时使用此提示；不将其他状态升级，不改新闻事实、归档数据或来源链接。不新增证据段落，仅分开显示现有来源行。
+- VisionHub briefing scorecard: 编辑前 sourceBoundaryVisible / visualAidPurpose partial，编辑后 pass；top3ReaderUse / originalSourceDependency / continuityUse pass（保留）；fiveSecondUnderstanding / mobileBurden partial（首页仍长，本次支持断行但未浏览器实测）。
+- Verification: node --check app.js、validate-data/site/pages、派生一致性、HTMLParser、git diff --check 通过；VM验证当前TOP3、厂商限定条件、disputed与媒体不升级、HTML转义及空态通过。未做浏览器视觉验收。日志脚本首次因旧Python缺zoneinfo失败，改用标准timezone后补齐，无网站影响。
+- Pull: 沙箱 DNS 失败，授权重试成功，编辑前 main 与 origin/main 同步且工作区干净。
+- Implementation commit: `bc9f505`（【VisionHub网站风格优化】区分TOP3厂商发布事实与效果证据），已推送 origin/main；最终完成记录提交见自动化 memory。
+
 ## 2026-10-21 08:04 JST｜17点新闻任务
 
 - 焦点：发布5条模型工程与Agent核验信号：TorchTPU、FairStress、Laplace 3B、Agent Registry、X.509身份架构。17点任务实际08点采集，无同日晨版；以10月20日23点版为去重基线，日期精度原文不证明均发生于该基线之后。
