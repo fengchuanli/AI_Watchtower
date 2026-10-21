@@ -1,3 +1,15 @@
+## 2026-10-22 08:05:41 JST｜17点新闻任务实际08点采集
+
+- Focus：新增3条安全非重复信号：IBM Granite Speech系列更新、NVIDIA Kumo Relational、Anthropic信托成员任命。无同日晨版，以10月21日23点版为去重基线；原文为10月21日日期精度，不保证全部晚于基线，不声称覆盖未来17点。
+- Pull：编辑前拉取origin/main，沙箱DNS失败后授权联网重试成功，工作区原本干净。
+- Sources：优先HF/AWS RSS但XML解析不支持，改核对登记的HF、Anthropic、AWS、Google与TechCrunch公开索引及作者原文。3/3官方平台作者原文，含1条厂商主张；HF平台2/3来自IBM与NVIDIA不同作者，页面披露集中度与独立证据缺口。来源登记130项不变。未使用付费墙、登录墙正文或社区讨论作事实。
+- Candidate intake：3条原始URL通过report-duplicate-candidates，无重复URL或近标题，人工事件复查manual-clear。sourceBackedFact分别为语音系列更新、关系预测模型介绍、信托任命；aiRelevance分别为语音验收、预测工程成本、监督权限；proofBoundary为效果未独立验证；nextIndependentCheck为目标录音人工标注、时间隔离数据库复测、信托独立披露及董事文件；copyrightPosture为短事实与本站解读；draftingDecision=draft。未声称中文转写支持或免历史标签。
+- Batch decision：publish-short-batch。TorchNeuron性能分析为教程，增量有限；VocabX论文尚未公开且指标待定，未选入；不重复昨日检索仿真、公益股份等事件；媒体收购与政策标题缺已核对原始材料，未发布。未凑10条。厂商TOP3首屏理由明确第三方复测路径。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3、更多新闻流、全部新闻列表、归档页及3个详情页显示模型与治理中文解读、来源可信度、影响与下一步核验；当前版和归档同步，134期/1286条。
+- Verification：app.js语法、validate-data/site/pages、派生一致性、全部data JSON及根目录HTML解析、git diff --check；草稿按字段要求修正文案后检查，未改验证器，未做浏览器视觉验收。
+- Commit note：【新闻更新】发布17点AI新闻：3条模型与治理核验信号。检查通过后提交并推送origin main，实际结果写入自动化memory。
+
 ## 2026-10-21 23:04:40 JST｜08点任务实际23点补充
 
 - Focus：保留今日5条，新增2条NVIDIA作者原文：Nemotron 3.5检索组件、Cosmos3-H-Dreams手术研究仿真。共7条；原文仅有日期，不推断精确上线时间。

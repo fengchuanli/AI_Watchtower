@@ -7,815 +7,512 @@
     {
       "id": "model",
       "label": "模型",
-      "description": "本期用于核对AWS相关模型信号；实际效果仍需独立复测。"
+      "description": "本期用于核对IBM与NVIDIA相关模型信号；实际效果仍需独立验证。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期用于核对AWS相关产品信号；实际效果仍需独立复测。"
+      "description": "本期用于核对产品相关产品信号；实际效果仍需独立验证。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期用于核对Ai2相关研究信号；实际效果仍需独立复测。"
+      "description": "本期用于核对研究相关研究信号；实际效果仍需独立验证。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期用于核对AWS相关工具信号；实际效果仍需独立复测。"
+      "description": "本期用于核对工具相关工具信号；实际效果仍需独立验证。"
     },
     {
       "id": "funding",
       "label": "融资",
-      "description": "本期用于核对融资相关融资信号；实际效果仍需独立复测。"
+      "description": "本期用于核对融资相关融资信号；实际效果仍需独立验证。"
     },
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期用于核对政策相关政策信号；实际效果仍需独立复测。"
+      "description": "本期用于核对Anthropic相关政策信号；实际效果仍需独立验证。"
     }
   ],
-  "updatedAt": "2026-10-21",
-  "editorNote": "七条模型工程、Agent与仿真信号：发布事实与实际效果分开验收。",
+  "updatedAt": "2026-10-22",
+  "editorNote": "三条语音、关系数据模型与治理信号，区分发布事实和效果证据。",
   "edition": {
-    "id": "news-2300-2026-10-21",
-    "date": "2026-10-21",
+    "id": "news-1700-2026-10-22",
+    "date": "2026-10-22",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "23:00补充版",
-    "itemCount": 7,
-    "note": "七条模型工程、Agent核验与仿真信号",
-    "operationalStatus": "08点任务实际23点执行；已同步origin/main。补充2条NVIDIA作者原文，保留5条；RSS解析受限，不足10条未补重复或弱来源。",
-    "editorialInterpretation": "本期发布7条安全非重复信号，其中本次新增2条、保留5条；少于10条是质量门槛结果，未用旧闻、重复事件、社区讨论与同类营销教程补数。",
+    "archiveLabel": "17:00新闻版",
+    "itemCount": 3,
+    "note": "三条语音、关系数据模型与治理信号，区分发布事实和效果证据。",
+    "operationalStatus": "17点任务实际08点采集，无同日晨版，以昨日23点版去重。已拉取origin/main；RSS解析受限，核对公开索引与原文。3条合格，未补重复或弱证据；日期原文不保证晚于基线。",
+    "editorialInterpretation": "本期发布3条安全非重复信号；少于10条是质量门槛结果，未用重复事件、社区讨论与同类营销教程补数。",
     "readerFrame": {
-      "headline": "模型能迁移，Agent能连接，下一步怎样验收？",
-      "whyItMatters": "本期把模型兼容性、决策稳定性与调用授权放入验收清单，帮助工程团队区分可用入口和已证实效果。",
+      "headline": "新模型和新监督者，怎样证明实际有效？",
+      "whyItMatters": "本期提供模型评测与公司治理两个核验入口，帮助读者判断何时可以升级信任。因为发布与效果之间仍有证据缺口，团队需要据此更新验收清单。",
       "useThisIssueFor": [
-        "部署团队检查迁移后的正确性与总成本。",
-        "安全与评测团队检查改判、授权和撤销路径。"
+        "模型团队核对语音错误与关系预测的独立测试清单。",
+        "采购与治理团队核对信托权限和实际决策记录。"
       ],
       "notProvenYet": [
-        "集成和架构说明不证明生产收益。",
-        "合成评测不能直接推断真实人群或业务效果。"
+        "发布事实不证明真实任务收益。",
+        "治理任命不证明监督已经有效或模型更安全。"
       ],
       "mobile": {
-        "headline": "从接入转向验收",
-        "summary": "七条信号，检查模型质量、Agent调用与仿真边界。",
+        "headline": "模型与治理如何验收",
+        "summary": "三条信号：核对语音、关系预测与监督记录。",
         "primaryUses": [
-          "工程团队查迁移",
-          "安全团队查授权"
+          "工程团队查效果",
+          "治理团队查记录"
         ],
-        "proofBoundary": "集成与参考架构不证明生产效果，仍需独立复测。"
+        "proofBoundary": "发布与任命已公告，效果仍需独立证据。"
       }
     },
     "changeSummary": {
-      "headline": "相较今日早间采集，补充检索与仿真两条原文",
+      "headline": "相较昨日23点版，新增模型与治理核验入口",
       "freshFacts": [
-        "新增：NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
-        "新增：NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。"
+        "新增：IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
+        "新增：NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
+        "新增：Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。"
       ],
       "repeatedContext": [
-        "重复背景：今日已采集的模型迁移、公平性评测与Agent身份5条保留，不计为本次新增。",
-        "重复背景：昨日本地模型接口与监督方案仍待独立复测。"
+        "重复背景：此前检索与仿真模型仍需独立复测。",
+        "重复背景：此前公益股份承诺与本次信托任命不是同一事件。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对模型工程与评测",
-        "count": 3,
-        "meaning": "用来检查兼容性、内存与决策稳定性测试清单。"
+        "label": "核对语音与关系预测",
+        "count": 2,
+        "meaning": "用来检查语音错误、说话人归属与关系预测的独立测试清单。"
       },
       {
-        "label": "核对工具发现与身份",
-        "count": 2,
-        "meaning": "用来检查审批、凭据、委托与撤销记录。"
-      },
-      {
-        "label": "核对检索与仿真",
-        "count": 2,
-        "meaning": "用来检查检索总成本与仿真动作一致性的验收清单。"
+        "label": "核对治理权限与记录",
+        "count": 1,
+        "meaning": "用来检查信托权限文件、成员构成与实际决策记录。"
       }
     ],
     "sourceRisk": {
-      "label": "工程作者来源集中",
-      "note": "来源集中于官方平台作者：7/7；HF平台4/7，AWS 3/7；新增2条均为NVIDIA厂商主张，缺少独立效果验证。",
-      "nextCheck": "核对第三方检索任务账单、机器人实验记录、专家评审及客户安全审计。"
+      "label": "作者原文集中",
+      "note": "来源集中于作者原文。3/3为官方或厂商作者原文；HF平台2/3，分别由IBM与NVIDIA撰写，Anthropic 1/3。缺少独立效果证据。",
+      "nextCheck": "核对第三方模型复测、企业任务数据与信托独立披露。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期是工程验收入口，来源集中于厂商与研究作者。",
-      "doNotConclude": "不能推断TPU普遍更便宜、模型公平性已解决或Agent身份架构已经全面有效。",
-      "useInstead": "应该用第三方复测数据与客户审计更新部署判断。"
+      "body": "本期是模型与治理核验入口，来源集中于公告作者。",
+      "doNotConclude": "不能推断新模型全面领先、企业收益已实现或监督机制已经有效。",
+      "useInstead": "应该用第三方复测与独立治理记录更新判断。"
     },
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方与作者原文",
-        "count": 7,
-        "role": "官方平台作者原文，包括1条研究作者原文、5条厂商主张与1条集成发布说明。"
+        "count": 3,
+        "role": "两条官方发布事实及一条厂商主张，效果不作独立确认。"
       }
     ],
     "topicGroups": [
       {
-        "id": "infrastructure",
-        "label": "核对模型工程与评测",
-        "count": 3,
-        "itemIds": [
-          "torchtpu-2026-10-21",
-          "fairstress-2026-10-21",
-          "laplace-trainium-2026-10-21"
-        ],
-        "meaning": "用来检查兼容性、内存与决策稳定性测试清单。"
-      },
-      {
-        "id": "agent",
-        "label": "核对工具发现与身份",
-        "count": 2,
-        "itemIds": [
-          "agent-registry-2026-10-21",
-          "agent-pki-2026-10-21"
-        ],
-        "meaning": "用来检查审批、凭据、委托与撤销记录。"
-      },
-      {
         "id": "model",
-        "label": "核对检索与仿真",
+        "label": "核对语音与关系预测",
         "count": 2,
         "itemIds": [
-          "nemotron-retrieval-2026-10-21",
-          "cosmos-surgery-2026-10-21"
+          "granite-speech-2026-10-22",
+          "kumo-relational-2026-10-22"
         ],
-        "meaning": "用来检查检索总成本与仿真动作一致性的验收清单。"
+        "meaning": "用来检查语音错误、说话人归属与关系预测的独立测试清单。"
+      },
+      {
+        "id": "policy",
+        "label": "核对治理权限与记录",
+        "count": 1,
+        "itemIds": [
+          "anthropic-stubbs-2026-10-22"
+        ],
+        "meaning": "用来检查信托权限文件、成员构成与实际决策记录。"
       }
     ],
     "trendNotes": [
       {
-        "topic": "infrastructure",
-        "label": "核对模型工程与评测",
-        "note": "跨期看，从昨日部署入口进一步转向核对模型工程与评测。",
-        "boundary": "需独立复测与客户审计，不能仅凭新增说明升级效果结论。"
+        "topic": "model",
+        "label": "核对语音与关系预测",
+        "note": "跨期看，观察对象从接入入口扩展到核对语音与关系预测。",
+        "boundary": "仍需第三方复测数据，不能以发布公告替代模型效果。"
       },
       {
-        "topic": "agent",
-        "label": "核对工具发现与身份",
-        "note": "跨期看，从昨日部署入口进一步转向核对工具发现与身份。",
-        "boundary": "授权效果需独立安全审计与撤销日志，不能以发现成功替代调用许可。"
+        "topic": "policy",
+        "label": "核对治理权限与记录",
+        "note": "跨期看，观察对象从接入入口扩展到核对治理权限与记录。",
+        "boundary": "仍需独立治理文件与审计记录，不能以任命推断监督有效。"
       }
     ],
     "topicContinuity": [
       {
-        "topic": "infrastructure",
-        "label": "核对模型工程与评测",
+        "topic": "model",
+        "label": "核对语音与关系预测",
         "status": "stronger",
-        "previousPattern": "此前关注算力迁移和Agent监督方案。",
-        "currentSignal": "本期新增核对模型工程与评测的原文与测试对象。",
-        "signalDirection": "增强：核验入口更具体，效果尚未升级。",
-        "stillUnproven": "仍需独立代码复现、性能测试与安全审计，不证明生产成熟度。"
+        "previousPattern": "此前关注模型组件发布与公益治理承诺。",
+        "currentSignal": "本期新增核对语音与关系预测的原文入口。",
+        "signalDirection": "增强：新增核验对象，效果证据尚未升级。",
+        "stillUnproven": "仍需第三方测试与独立披露，不证明部署或治理效果。"
       },
       {
-        "topic": "agent",
-        "label": "核对工具发现与身份",
+        "topic": "policy",
+        "label": "核对治理权限与记录",
         "status": "stronger",
-        "previousPattern": "此前关注算力迁移和Agent监督方案。",
-        "currentSignal": "本期新增核对工具发现与身份的原文与测试对象。",
-        "signalDirection": "增强：核验入口更具体，效果尚未升级。",
-        "stillUnproven": "仍需独立代码复现、性能测试与安全审计，不证明生产成熟度。"
+        "previousPattern": "此前关注模型组件发布与公益治理承诺。",
+        "currentSignal": "本期新增核对治理权限与记录的原文入口。",
+        "signalDirection": "增强：新增核验对象，效果证据尚未升级。",
+        "stillUnproven": "仍需第三方测试与独立披露，不证明部署或治理效果。"
       }
     ],
     "companyContinuity": [
       {
-        "company": "AWS",
-        "label": "模型状态与Agent调用",
-        "lastMention": "此前收录Nova-3迁移与KV传输工程。",
-        "whatChanged": "增强：新增Laplace状态内存案例及工具发现、身份控制方案。",
-        "stillUnproven": "仍需客户与第三方测试，不证明迁移收益及安全控制有效。"
+        "company": "NVIDIA",
+        "label": "从检索到关系预测",
+        "lastMention": "此前收录检索组件与生成仿真。",
+        "whatChanged": "增强：新增关系数据预测模型的厂商原文。",
+        "stillUnproven": "仍需独立时间切分测试，不能推断企业收益。需要第三方数据或治理文件复核。"
       },
       {
-        "company": "Hugging Face",
-        "label": "原生设备后端",
-        "lastMention": "此前发布TorchNeuron及本地模型接口说明。",
-        "whatChanged": "增强：新增TorchTPU集成与兼容性核验入口。",
-        "stillUnproven": "仍需第三方同模型复测，不能推断所有设备与模型行为一致。"
+        "company": "Anthropic",
+        "label": "从公益承诺到治理任命",
+        "lastMention": "此前收录公益股份承诺。",
+        "whatChanged": "增强：新增长期利益信托成员任命公告。",
+        "stillUnproven": "仍需独立披露与决策记录，不能推断监督已有效。需要第三方数据或治理文件复核。"
       }
     ],
     "sourceConcentration": {
       "sourceId": "huggingface-blog",
       "sourceName": "Hugging Face Blog",
-      "count": 4,
-      "share": "4/7",
-      "note": "HF平台占4/7，作者分别来自HF、Ai2和NVIDIA；新增2条同属NVIDIA，不代表独立交叉验证。",
-      "nextCheck": "核对第三方检索任务账单、机器人实验记录、专家评审及客户安全审计。"
+      "count": 2,
+      "share": "2/3",
+      "note": "3/3为官方或厂商作者原文；HF平台2/3，分别由IBM与NVIDIA撰写，Anthropic 1/3。缺少独立效果证据。",
+      "nextCheck": "核对第三方模型复测、企业任务数据与信托独立披露。"
     }
   },
   "items": [
     {
-      "id": "nemotron-retrieval-2026-10-21",
-      "category": "model",
-      "label": "模型",
-      "title": "NVIDIA推出Nemotron 3.5检索组件：Agent省成本仍需端到端复测",
-      "body": "NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
-      "summary": "NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
-      "detailBody": "来源事实：NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。\n核验边界：模型与厂商测试说明可核对，不证明真实企业语料上的总成本下降或全面领先。",
-      "trend": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。",
-      "detailTrend": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。\n本站判断：发布入口扩大了可测试范围，验证结果才决定是否适合目标任务。应把失败样本与成功演示一同纳入验收，检查适用范围是否与团队任务一致。",
-      "whyItMatters": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。",
-      "whyRanked": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
-      "detailWhyRanked": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。\n应保存版本、输入、输出与失败样本，区分演示结果和部署证据。原文提供了可追踪的模型与技术入口；本站建议先建立小规模对照实验，再判断是否扩大部署或投入。",
-      "topReason": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
-      "impact": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。",
-      "whoShouldCare": "负责部署检索模型、评估机器人生成仿真与整理失败样本的工程团队、研发负责人及安全审计人员。",
-      "readerUse": "工程与研究团队：第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
-      "nextCheck": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
+      "id": "anthropic-stubbs-2026-10-22",
+      "category": "policy",
+      "label": "政策",
+      "title": "Christopher Stubbs加入Anthropic长期利益信托：关注治理如何落到决策",
+      "body": "Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。",
+      "summary": "Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。",
+      "detailBody": "来源事实：Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。\n核验边界：公告支持任命和公司对权限的说明，不证明信托已行使多数任命权，也不证明模型风险下降。",
+      "trend": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。",
+      "detailTrend": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。\n本站判断：先明确目标任务与失败条件，再决定是否调整部署或治理判断。来源提供了核对入口，实际效果还需要独立记录；不能把公告存在本身当作结果验证。",
+      "whyItMatters": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。",
+      "whyRanked": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+      "detailWhyRanked": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。\n应保存核对日期、版本与原始记录，区分公告、测量和本站判断。遇到与主张冲突的证据，应更新结论并保留此前判断依据，避免将一个场景的观察推广到所有组织。",
+      "topReason": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+      "impact": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。",
+      "whoShouldCare": "企业AI采购负责人、模型工程团队与治理研究者，可按目标任务更新核验清单。",
+      "readerUse": "企业AI团队用于更新核验清单：核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+      "nextCheck": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
       "followUpQuestions": [
-        "独立复测或审计记录是否支持该方案在目标任务上使用？",
-        "失败路径与版本变化是否改变原有验收结论？"
+        "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+        "失败样本或后续披露是否改变原有适用范围与核验结论？"
       ],
-      "evidenceThreshold": "至少需要取得独立复测与专家审计记录后，才可升级为目标任务有效结论。第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
-      "claimBoundary": "模型与厂商测试说明可核对，不证明真实企业语料上的总成本下降或全面领先。",
-      "counterEvidence": "核对独立测试记录：第三方复测若显示重排增加的成本超过搜索节省，或相关性与成功率下降，应下调收益判断。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval",
-      "originalUrl": "https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog：NVIDIA作者在Hugging Face发布的原文，已核对日期与发布主张。模型与厂商测试说明可核对，不证明真实企业语料上的总成本下降或全面领先。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-21",
-      "time": "2026-10-21（原文日期）",
-      "tags": [
-        "模型",
-        "独立评测"
-      ],
-      "companies": [
-        "NVIDIA"
-      ],
-      "selectionScore": {
-        "impact": 3,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
-      },
-      "editorScore": {
-        "impact": 3,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
-      }
-    },
-    {
-      "id": "fairstress-2026-10-21",
-      "category": "research",
-      "label": "研究",
-      "title": "Ai2发布FairStress：公平性评测加入受劝说后的决策稳定性",
-      "body": "Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
-      "summary": "Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
-      "detailBody": "来源事实：Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。\n核验边界：作者采用以平等为中心的特定公平定义；合成场景不证明真实招聘或医疗系统的歧视程度。",
-      "trend": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。",
-      "detailTrend": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
-      "whyItMatters": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。",
-      "whyRanked": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
-      "detailWhyRanked": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
-      "topReason": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
-      "impact": "评测团队可把初次回答和被施压后的改判分别记录，避免一次正确选择掩盖不对称的决策过程。",
-      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
-      "readerUse": "工程与评测团队：独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
-      "nextCheck": "独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
-      "followUpQuestions": [
-        "独立复测或审计记录是否支持该方案在目标任务上使用？",
-        "失败路径与版本变化是否改变原有验收结论？"
-      ],
-      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。独立研究团队复现公开代码与数据，并在不同语言、模型版本和任务上检查改判差异。",
-      "claimBoundary": "作者采用以平等为中心的特定公平定义；合成场景不证明真实招聘或医疗系统的歧视程度。",
-      "counterEvidence": "核对测试记录与审计报告：独立复现数据若显示结论随提示模板或场景抽样反转，应下调跨场景泛化判断。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/allenai/fairstress",
-      "originalUrl": "https://huggingface.co/blog/allenai/fairstress",
-      "sourceRole": "研究原文",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "reported",
-      "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog：Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。 本文为作者发布的模型或Agent说明，仅核对作者主张。作者采用以平等为中心的特定公平定义；合成场景不证明真实招聘或医疗系统的歧视程度。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-20",
-      "time": "2026-10-20（原文日期）",
-      "tags": [
-        "研究",
-        "模型评测"
-      ],
-      "companies": [
-        "Ai2"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      }
-    },
-    {
-      "id": "agent-registry-2026-10-21",
-      "category": "tool",
-      "label": "工具",
-      "title": "AWS演示运行时发现工具：目录返回连接信息，授权仍须另行处理",
-      "body": "AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
-      "summary": "AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
-      "detailBody": "来源事实：AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。\n核验边界：示例说明连接流程，不证明生产规模收益；发现结果不包含调用凭据，不能视为已获授权。",
-      "trend": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。",
-      "detailTrend": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
-      "whyItMatters": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。",
-      "whyRanked": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
-      "detailWhyRanked": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
-      "topReason": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
-      "impact": "平台团队可用客户侧调用日志核对动态工具发现的准确率，并将目录审批与调用凭据管理分别验收。",
-      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
-      "readerUse": "工程与评测团队：独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
-      "nextCheck": "独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
-      "followUpQuestions": [
-        "独立复测或审计记录是否支持该方案在目标任务上使用？",
-        "失败路径与版本变化是否改变原有验收结论？"
-      ],
-      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。独立安全团队复核示例代码和客户侧调用日志，测试未审批记录、错误匹配及无凭据调用。",
-      "claimBoundary": "示例说明连接流程，不证明生产规模收益；发现结果不包含调用凭据，不能视为已获授权。",
-      "counterEvidence": "核对测试记录与审计报告：审计日志若显示未审批工具被调用或发现结果误配权限，应下调治理成熟度判断。",
-      "source": "AWS Machine Learning Blog",
-      "sourceName": "AWS Machine Learning Blog",
-      "sourceId": "aws-machine-learning-blog",
-      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/",
-      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "AWS Machine Learning Blog：AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。 本文为作者发布的模型或Agent说明，仅核对作者主张。示例说明连接流程，不证明生产规模收益；发现结果不包含调用凭据，不能视为已获授权。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-20",
-      "time": "2026-10-20（原文日期）",
-      "tags": [
-        "工具",
-        "Agent治理"
-      ],
-      "companies": [
-        "AWS"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      }
-    },
-    {
-      "id": "agent-pki-2026-10-21",
-      "category": "product",
-      "label": "产品",
-      "title": "AWS与Keyfactor提出Agent身份架构：签名、委托和撤销分别核验",
-      "body": "AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。",
-      "summary": "AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。",
-      "detailBody": "来源事实：AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。\n核验边界：参考架构不等于安全认证，也不证明所有MCP部署缺少认证；实际撤销时延和失败策略仍需测试。",
-      "trend": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。",
-      "detailTrend": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
-      "whyItMatters": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。",
-      "whyRanked": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
-      "detailWhyRanked": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
-      "topReason": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
-      "impact": "安全团队可把身份、权限和撤销传播拆成独立验收项，通过第三方红队记录判断多Agent调用边界。",
-      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
-      "readerUse": "工程与评测团队：独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
-      "nextCheck": "独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
-      "followUpQuestions": [
-        "独立复测或审计记录是否支持该方案在目标任务上使用？",
-        "失败路径与版本变化是否改变原有验收结论？"
-      ],
-      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。独立审计团队测试请求重放、委托越权、证书撤销与OCSP不可用场景，并保存攻击和拒绝日志。",
-      "claimBoundary": "参考架构不等于安全认证，也不证明所有MCP部署缺少认证；实际撤销时延和失败策略仍需测试。",
-      "counterEvidence": "核对测试记录与审计报告：第三方红队报告若发现撤销后仍可调用或失败时放行，应下调身份控制有效性判断。",
-      "source": "AWS Machine Learning Blog",
-      "sourceName": "AWS Machine Learning Blog",
-      "sourceId": "aws-machine-learning-blog",
-      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/",
-      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "AWS Machine Learning Blog：AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。 本文为作者发布的模型或Agent说明，仅核对作者主张。参考架构不等于安全认证，也不证明所有MCP部署缺少认证；实际撤销时延和失败策略仍需测试。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-20",
-      "time": "2026-10-20（原文日期）",
-      "tags": [
-        "产品",
-        "Agent治理"
-      ],
-      "companies": [
-        "AWS",
-        "Keyfactor"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      }
-    },
-    {
-      "id": "laplace-trainium-2026-10-21",
-      "category": "model",
-      "label": "模型",
-      "title": "Laplace 3B迁移Trainium2：固定状态内存仍需检索质量验收",
-      "body": "AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
-      "summary": "AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
-      "detailBody": "来源事实：AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。\n核验边界：固定的是循环状态而非全部运行内存；厂商吞吐测试不能证明同质量下优于其他架构。",
-      "trend": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。",
-      "detailTrend": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
-      "whyItMatters": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。",
-      "whyRanked": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
-      "detailWhyRanked": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
-      "topReason": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
-      "impact": "长文档工程团队可将状态内存列为容量指标，同时用独立长上下文检索测试检查信息压缩代价。",
-      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
-      "readerUse": "工程与评测团队：第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
-      "nextCheck": "第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
-      "followUpQuestions": [
-        "独立复测或审计记录是否支持该方案在目标任务上使用？",
-        "失败路径与版本变化是否改变原有验收结论？"
-      ],
-      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。第三方复测同长度输入的总内存、检索准确率与并发吞吐，并核对i14模型配置。",
-      "claimBoundary": "固定的是循环状态而非全部运行内存；厂商吞吐测试不能证明同质量下优于其他架构。",
-      "counterEvidence": "核对测试记录与审计报告：独立长文检索测试若显示准确率下降或总内存仍超预算，应下调部署价值判断。",
-      "source": "AWS Machine Learning Blog",
-      "sourceName": "AWS Machine Learning Blog",
-      "sourceId": "aws-machine-learning-blog",
-      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/",
-      "originalUrl": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "AWS Machine Learning Blog：AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。 本文为作者发布的模型或Agent说明，仅核对作者主张。固定的是循环状态而非全部运行内存；厂商吞吐测试不能证明同质量下优于其他架构。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-20",
-      "time": "2026-10-20（原文日期）",
-      "tags": [
-        "模型",
-        "模型评测"
-      ],
-      "companies": [
-        "AWS",
-        "i14"
-      ],
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      },
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 3,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
-      }
-    },
-    {
-      "id": "cosmos-surgery-2026-10-21",
-      "category": "model",
-      "label": "模型",
-      "title": "NVIDIA介绍Cosmos3-H-Dreams：手术生成仿真仍是研究工具",
-      "body": "NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。",
-      "summary": "NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。",
-      "detailBody": "来源事实：NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。\n核验边界：这是研究仿真器；原文明确未验证患者护理用途，不证明临床安全或自主手术能力。",
-      "trend": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。",
-      "detailTrend": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。\n本站判断：发布入口扩大了可测试范围，验证结果才决定是否适合目标任务。应把失败样本与成功演示一同纳入验收，检查适用范围是否与团队任务一致。",
-      "whyItMatters": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。",
-      "whyRanked": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
-      "detailWhyRanked": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。\n应保存版本、输入、输出与失败样本，区分演示结果和部署证据。原文提供了可追踪的模型与技术入口；本站建议先建立小规模对照实验，再判断是否扩大部署或投入。",
-      "topReason": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
-      "impact": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。",
-      "whoShouldCare": "负责部署检索模型、评估机器人生成仿真与整理失败样本的工程团队、研发负责人及安全审计人员。",
-      "readerUse": "工程与研究团队：独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
-      "nextCheck": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
-      "followUpQuestions": [
-        "独立复测或审计记录是否支持该方案在目标任务上使用？",
-        "失败路径与版本变化是否改变原有验收结论？"
-      ],
-      "evidenceThreshold": "至少需要取得独立复测与专家审计记录后，才可升级为目标任务有效结论。独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
-      "claimBoundary": "这是研究仿真器；原文明确未验证患者护理用途，不证明临床安全或自主手术能力。",
-      "counterEvidence": "核对独立测试记录：独立测试若发现动作不一致、解剖结构漂移或组织形变偏离实测，应下调仿真可信度。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
-      "originalUrl": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
-      "sourceRole": "厂商主张",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog：NVIDIA作者在Hugging Face发布的原文，已核对日期与发布主张。这是研究仿真器；原文明确未验证患者护理用途，不证明临床安全或自主手术能力。",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-10-20",
-      "time": "2026-10-20（原文日期）",
-      "tags": [
-        "模型",
-        "独立评测"
-      ],
-      "companies": [
-        "NVIDIA"
-      ],
-      "selectionScore": {
-        "impact": 3,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
-      },
-      "editorScore": {
-        "impact": 3,
-        "novelty": 4,
-        "narrativeStrength": 3,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 18,
-        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
-      }
-    },
-    {
-      "id": "torchtpu-2026-10-21",
-      "category": "tool",
-      "label": "工具",
-      "title": "TorchTPU接入Hugging Face：PyTorch可原生使用TPU",
-      "body": "Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
-      "summary": "Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
-      "detailBody": "来源事实：Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。\n核验边界：公告证明集成说明已发布，不证明所有模型可直接迁移或TPU成本优于GPU。",
-      "trend": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。",
-      "detailTrend": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。\n本站判断：应固定任务、版本与失败条件比较结果，先验证可重复性，再讨论是否扩大部署。",
-      "whyItMatters": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。",
-      "whyRanked": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
-      "detailWhyRanked": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。\n这条信号给工程与评测团队提供具体的核验对象，适合补充已有验收清单。应保存输入、配置、输出与异常记录，避免把一份发布说明或案例直接当作成熟度证明。",
-      "topReason": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
-      "impact": "迁移团队获得新的兼容性测试入口；统一接口仍不能消除算子、编译与分布式执行差异。",
-      "whoShouldCare": "负责模型部署、Agent平台及评测验收的工程团队与安全审计人员。",
-      "readerUse": "工程与评测团队：第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
-      "nextCheck": "第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
-      "followUpQuestions": [
-        "独立复测或审计记录是否支持该方案在目标任务上使用？",
-        "失败路径与版本变化是否改变原有验收结论？"
-      ],
-      "evidenceThreshold": "至少需要取得独立复测日志、公开代码或客户侧审计记录后，才能升级为目标任务已验证结论。第三方开发者固定模型与精度，对照GPU和TPU的结果正确性、编译耗时及账单。",
-      "claimBoundary": "公告证明集成说明已发布，不证明所有模型可直接迁移或TPU成本优于GPU。",
-      "counterEvidence": "核对测试记录与审计报告：独立复测日志若出现算子失败、数值偏差或成本上升，应下调迁移收益判断。",
-      "source": "Hugging Face Blog",
-      "sourceName": "Hugging Face Blog",
-      "sourceId": "huggingface-blog",
-      "sourceUrl": "https://huggingface.co/blog/hf-torchtpu",
-      "originalUrl": "https://huggingface.co/blog/hf-torchtpu",
+      "evidenceThreshold": "至少需要取得独立复测数据或治理记录后，才可升级为目标场景有效的验证结论。核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+      "claimBoundary": "公告支持任命和公司对权限的说明，不证明信托已行使多数任命权，也不证明模型风险下降。",
+      "counterEvidence": "核对独立复测或披露记录：若后续独立披露与权限说明不一致，或重大风险决策缺少可追踪监督记录，应下调治理有效性的判断。据此下调效果判断。",
+      "source": "Anthropic Newsroom",
+      "sourceName": "Anthropic Newsroom",
+      "sourceId": "anthropic-news",
+      "sourceUrl": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+      "originalUrl": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
       "sourceRole": "官方核对",
       "sourceType": "official",
       "trustLevel": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "provenance": "Hugging Face Blog：Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。 本文为作者发布的模型或Agent说明，仅核对作者主张。公告证明集成说明已发布，不证明所有模型可直接迁移或TPU成本优于GPU。",
+      "provenance": "Anthropic Newsroom：Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。公告支持任命和公司对权限的说明，不证明信托已行使多数任命权，也不证明模型风险下降。",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-10-20",
-      "time": "2026-10-20（原文日期）",
+      "publishedAt": "2026-10-21",
+      "time": "2026-10-21（原文日期）",
       "tags": [
-        "工具",
-        "模型评测"
+        "政策",
+        "独立核验"
       ],
       "companies": [
-        "Hugging Face",
-        "Google"
+        "Anthropic"
       ],
       "selectionScore": {
-        "impact": 4,
+        "impact": 3,
         "novelty": 4,
         "narrativeStrength": 3,
         "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 19,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+        "total": 18,
+        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
       },
       "editorScore": {
-        "impact": 4,
+        "impact": 3,
         "novelty": 4,
         "narrativeStrength": 3,
         "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 19,
-        "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+        "total": 18,
+        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+      }
+    },
+    {
+      "id": "granite-speech-2026-10-22",
+      "category": "model",
+      "label": "模型",
+      "title": "IBM更新Granite Speech：转写、翻译与说话人归属分别验收",
+      "body": "IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
+      "summary": "IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
+      "detailBody": "来源事实：IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。\n核验边界：官方发布与模型入口可核对；厂商性能结果不证明中文转写支持、所有口音效果或生产收益。",
+      "trend": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。",
+      "detailTrend": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。\n本站判断：先明确目标任务与失败条件，再决定是否调整部署或治理判断。来源提供了核对入口，实际效果还需要独立记录；不能把公告存在本身当作结果验证。",
+      "whyItMatters": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。",
+      "whyRanked": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+      "detailWhyRanked": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。\n应保存核对日期、版本与原始记录，区分公告、测量和本站判断。遇到与主张冲突的证据，应更新结论并保留此前判断依据，避免将一个场景的观察推广到所有组织。",
+      "topReason": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+      "impact": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。",
+      "whoShouldCare": "企业AI采购负责人、模型工程团队与治理研究者，可按目标任务更新核验清单。",
+      "readerUse": "企业AI团队用于更新核验清单：第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+      "nextCheck": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+      "followUpQuestions": [
+        "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+        "失败样本或后续披露是否改变原有适用范围与核验结论？"
+      ],
+      "evidenceThreshold": "至少需要取得独立复测数据或治理记录后，才可升级为目标场景有效的验证结论。第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+      "claimBoundary": "官方发布与模型入口可核对；厂商性能结果不证明中文转写支持、所有口音效果或生产收益。",
+      "counterEvidence": "核对独立复测或披露记录：若目标录音的错误率、归属错误或延迟上升，应缩小适用范围并保留旧模型回退。据此下调效果判断。",
+      "source": "Hugging Face Blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceId": "huggingface-blog",
+      "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+      "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "provenance": "Hugging Face Blog：IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。官方发布与模型入口可核对；厂商性能结果不证明中文转写支持、所有口音效果或生产收益。",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-10-21",
+      "time": "2026-10-21（原文日期）",
+      "tags": [
+        "模型",
+        "独立核验"
+      ],
+      "companies": [
+        "IBM"
+      ],
+      "selectionScore": {
+        "impact": 3,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+      },
+      "editorScore": {
+        "impact": 3,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+      }
+    },
+    {
+      "id": "kumo-relational-2026-10-22",
+      "category": "model",
+      "label": "模型",
+      "title": "NVIDIA推出Kumo Relational：数据库预测从训练转向上下文适配",
+      "body": "NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
+      "summary": "NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
+      "detailBody": "来源事实：NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。\n核验边界：已核对厂商发布主张；无需任务训练不等于无需历史标签，厂商基准领先不证明企业业务收益。",
+      "trend": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。",
+      "detailTrend": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。\n本站判断：先明确目标任务与失败条件，再决定是否调整部署或治理判断。来源提供了核对入口，实际效果还需要独立记录；不能把公告存在本身当作结果验证。",
+      "whyItMatters": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。",
+      "whyRanked": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+      "detailWhyRanked": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。\n应保存核对日期、版本与原始记录，区分公告、测量和本站判断。遇到与主张冲突的证据，应更新结论并保留此前判断依据，避免将一个场景的观察推广到所有组织。",
+      "topReason": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+      "impact": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。",
+      "whoShouldCare": "企业AI采购负责人、模型工程团队与治理研究者，可按目标任务更新核验清单。",
+      "readerUse": "企业AI团队用于更新核验清单：第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+      "nextCheck": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+      "followUpQuestions": [
+        "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+        "失败样本或后续披露是否改变原有适用范围与核验结论？"
+      ],
+      "evidenceThreshold": "至少需要取得独立复测数据或治理记录后，才可升级为目标场景有效的验证结论。第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+      "claimBoundary": "已核对厂商发布主张；无需任务训练不等于无需历史标签，厂商基准领先不证明企业业务收益。",
+      "counterEvidence": "核对独立复测或披露记录：若独立时间切分后优势消失、发现信息泄漏或准备成本过高，应下调替换生产流程的判断。据此下调效果判断。",
+      "source": "Hugging Face Blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceId": "huggingface-blog",
+      "sourceUrl": "https://huggingface.co/blog/nvidia/kumo-relational",
+      "originalUrl": "https://huggingface.co/blog/nvidia/kumo-relational",
+      "sourceRole": "厂商主张",
+      "sourceType": "official",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "provenance": "Hugging Face Blog：NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。已核对厂商发布主张；无需任务训练不等于无需历史标签，厂商基准领先不证明企业业务收益。",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-10-21",
+      "time": "2026-10-21（原文日期）",
+      "tags": [
+        "模型",
+        "独立核验"
+      ],
+      "companies": [
+        "NVIDIA"
+      ],
+      "selectionScore": {
+        "impact": 3,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+      },
+      "editorScore": {
+        "impact": 3,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "作者原文支持发布主张；真实任务效果待独立复测。"
       }
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "模型能迁移，Agent能连接，下一步怎样验收？",
-    "summary": "七条模型工程、Agent与仿真信号：发布事实与实际效果分开验收。",
-    "cta": "查看7条信号",
+    "headline": "新模型和新监督者，怎样证明实际有效？",
+    "summary": "三条语音、关系数据模型与治理信号，区分发布事实和效果证据。",
+    "cta": "查看3条信号",
     "watchPoints": [
       {
-        "title": "模型如何验收",
-        "body": "部署团队检查迁移后的正确性与总成本。"
+        "title": "核对语音与关系预测",
+        "body": "模型团队核对语音错误与关系预测的独立测试清单。"
       },
       {
-        "title": "Agent如何验收",
-        "body": "安全与评测团队检查改判、授权和撤销路径。"
+        "title": "核对治理权限与记录",
+        "body": "采购与治理团队核对信托权限和实际决策记录。"
       },
       {
-        "title": "研究结论如何复核",
-        "body": "评测团队检查公开数据与成对扰动结果，区分合成场景和实际业务。"
+        "title": "区分事实与效果",
+        "body": "检查作者主张与独立结果是否一致，并保存反例。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "08点任务｜实际23点补充",
-    "title": "七条模型与Agent验收线索",
+    "kicker": "17点任务｜实际08点采集",
+    "title": "三条模型与治理核验线索",
     "subtitle": "区分原文事实、本站判断与待验证效果。",
-    "dateLabel": "2026年10月21日｜23点补充采集",
-    "status": "已发布｜7条安全信号",
-    "overview": "本期发布7条安全非重复信号，其中本次新增2条、保留5条；少于10条是质量门槛结果，未用旧闻、重复事件、社区讨论与同类营销教程补数。",
+    "dateLabel": "2026年10月22日｜08点采集",
+    "status": "已发布｜3条安全信号",
+    "overview": "本期发布3条安全非重复信号；少于10条是质量门槛结果，未用重复事件、社区讨论与同类营销教程补数。",
     "timeline": [
       {
         "label": "1",
-        "title": "模型如何验收",
-        "body": "部署团队检查迁移后的正确性与总成本。"
+        "title": "核对语音与关系预测",
+        "body": "模型团队核对语音错误与关系预测的独立测试清单。"
       },
       {
         "label": "2",
-        "title": "Agent如何验收",
-        "body": "安全与评测团队检查改判、授权和撤销路径。"
+        "title": "核对治理权限与记录",
+        "body": "采购与治理团队核对信托权限和实际决策记录。"
       },
       {
         "label": "3",
-        "title": "研究结论如何复核",
-        "body": "评测团队检查公开数据与成对扰动结果，区分合成场景和实际业务。"
+        "title": "区分事实与效果",
+        "body": "检查作者主张与独立结果是否一致，并保存反例。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "7",
+        "value": "3",
         "label": "安全非重复信号"
       },
       {
-        "value": "5",
+        "value": "1",
         "label": "厂商主张"
       },
       {
-        "value": "1",
-        "label": "研究作者原文"
+        "value": "2",
+        "label": "官方发布事实"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "模型如何验收",
-        "title": "模型如何验收",
-        "body": "部署团队检查迁移后的正确性与总成本。",
+        "label": "核对语音与关系预测",
+        "title": "核对语音与关系预测",
+        "body": "模型团队核对语音错误与关系预测的独立测试清单。",
         "soWhat": "用独立记录更新判断，保留失败路径。"
       },
       {
         "number": "02",
-        "label": "Agent如何验收",
-        "title": "Agent如何验收",
-        "body": "安全与评测团队检查改判、授权和撤销路径。",
+        "label": "核对治理权限与记录",
+        "title": "核对治理权限与记录",
+        "body": "采购与治理团队核对信托权限和实际决策记录。",
         "soWhat": "用独立记录更新判断，保留失败路径。"
       },
       {
         "number": "03",
-        "label": "研究结论如何复核",
-        "title": "研究结论如何复核",
-        "body": "评测团队检查公开数据与成对扰动结果，区分合成场景和实际业务。",
+        "label": "区分事实与效果",
+        "title": "区分事实与效果",
+        "body": "检查作者主张与独立结果是否一致，并保存反例。",
         "soWhat": "用独立记录更新判断，保留失败路径。"
       }
     ],
     "actions": [
-      "部署团队检查迁移后的正确性与总成本。",
-      "安全与评测团队检查改判、授权和撤销路径。"
+      "模型团队核对语音错误与关系预测的独立测试清单。",
+      "采购与治理团队核对信托权限和实际决策记录。"
     ],
     "coverageLimits": [
       {
         "label": "采集范围",
-        "body": "08点任务实际23点执行；以今日已有5条和历史去重，新增2条。原文仅有日期，不推断精确发布时间；本次核对并非全市场穷尽采集。"
+        "body": "17点任务实际08点采集，无同日晨版，以昨日23点版去重。已拉取origin/main；RSS解析受限，核对公开索引与原文。3条合格，未补重复或弱证据；日期原文不保证晚于基线。"
       },
       {
         "label": "证据范围",
-        "body": "来源集中于官方平台作者：7/7；HF平台4/7，AWS 3/7；新增2条均为NVIDIA厂商主张，缺少独立效果验证。"
+        "body": "来源集中于作者原文。3/3为官方或厂商作者原文；HF平台2/3，分别由IBM与NVIDIA撰写，Anthropic 1/3。缺少独立效果证据。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
-        "Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
-        "AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
-        "AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
-        "AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。",
-        "NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
-        "NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。"
+        "IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
+        "NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
+        "Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。"
       ],
       "editorialJudgment": [
-        "本站判断：接口可用与结果正确需要分开验收。",
-        "本站判断：发现工具不等于获得授权。"
+        "本站判断：模型上线和治理任命都只是可核验的起点。",
+        "本站判断：独立结果决定是否升级效果判断。"
       ],
       "unknowns": [
-        "集成和架构说明不证明生产收益。",
-        "合成评测不能直接推断真实人群或业务效果。"
+        "发布事实不证明真实任务收益。",
+        "治理任命不证明监督已经有效或模型更安全。"
       ]
     },
     "references": [
       {
-        "label": "Hugging Face Blog官方原文",
-        "url": "https://huggingface.co/blog/allenai/fairstress"
+        "label": "Anthropic官方作者发布说明与核验原文",
+        "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust"
       },
       {
-        "label": "AWS Machine Learning Blog官方原文",
-        "url": "https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/"
+        "label": "IBM官方作者发布说明与核验原文",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
       },
       {
-        "label": "AWS Machine Learning Blog官方原文",
-        "url": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/"
-      },
-      {
-        "label": "AWS Machine Learning Blog官方原文",
-        "url": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/"
-      },
-      {
-        "label": "Hugging Face Blog官方原文",
-        "url": "https://huggingface.co/blog/hf-torchtpu"
-      },
-      {
-        "label": "NVIDIA Nemotron检索模型作者原文",
-        "url": "https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval"
-      },
-      {
-        "label": "NVIDIA Cosmos手术仿真作者原文",
-        "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams"
+        "label": "NVIDIA官方作者发布说明与核验原文",
+        "url": "https://huggingface.co/blog/nvidia/kumo-relational"
       }
     ]
   }

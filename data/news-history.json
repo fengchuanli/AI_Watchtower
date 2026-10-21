@@ -1,8 +1,362 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-21",
-  "totalItems": 1283,
+  "updatedAt": "2026-10-22",
+  "totalItems": 1286,
   "editions": [
+    {
+      "id": "news-1700-2026-10-22",
+      "date": "2026-10-22",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00新闻版",
+      "itemCount": 3,
+      "note": "三条语音、关系数据模型与治理信号，区分发布事实和效果证据。",
+      "operationalStatus": "17点任务实际08点采集，无同日晨版，以昨日23点版去重。已拉取origin/main；RSS解析受限，核对公开索引与原文。3条合格，未补重复或弱证据；日期原文不保证晚于基线。",
+      "editorialInterpretation": "本期发布3条安全非重复信号；少于10条是质量门槛结果，未用重复事件、社区讨论与同类营销教程补数。",
+      "readerFrame": {
+        "headline": "新模型和新监督者，怎样证明实际有效？",
+        "whyItMatters": "本期提供模型评测与公司治理两个核验入口，帮助读者判断何时可以升级信任。因为发布与效果之间仍有证据缺口，团队需要据此更新验收清单。",
+        "useThisIssueFor": [
+          "模型团队核对语音错误与关系预测的独立测试清单。",
+          "采购与治理团队核对信托权限和实际决策记录。"
+        ],
+        "notProvenYet": [
+          "发布事实不证明真实任务收益。",
+          "治理任命不证明监督已经有效或模型更安全。"
+        ],
+        "mobile": {
+          "headline": "模型与治理如何验收",
+          "summary": "三条信号：核对语音、关系预测与监督记录。",
+          "primaryUses": [
+            "工程团队查效果",
+            "治理团队查记录"
+          ],
+          "proofBoundary": "发布与任命已公告，效果仍需独立证据。"
+        }
+      },
+      "changeSummary": {
+        "headline": "相较昨日23点版，新增模型与治理核验入口",
+        "freshFacts": [
+          "新增：IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
+          "新增：NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
+          "新增：Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。"
+        ],
+        "repeatedContext": [
+          "重复背景：此前检索与仿真模型仍需独立复测。",
+          "重复背景：此前公益股份承诺与本次信托任命不是同一事件。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对语音与关系预测",
+          "count": 2,
+          "meaning": "用来检查语音错误、说话人归属与关系预测的独立测试清单。"
+        },
+        {
+          "label": "核对治理权限与记录",
+          "count": 1,
+          "meaning": "用来检查信托权限文件、成员构成与实际决策记录。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "作者原文集中",
+        "note": "来源集中于作者原文。3/3为官方或厂商作者原文；HF平台2/3，分别由IBM与NVIDIA撰写，Anthropic 1/3。缺少独立效果证据。",
+        "nextCheck": "核对第三方模型复测、企业任务数据与信托独立披露。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期是模型与治理核验入口，来源集中于公告作者。",
+        "doNotConclude": "不能推断新模型全面领先、企业收益已实现或监督机制已经有效。",
+        "useInstead": "应该用第三方复测与独立治理记录更新判断。"
+      },
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方与作者原文",
+          "count": 3,
+          "role": "两条官方发布事实及一条厂商主张，效果不作独立确认。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "model",
+          "label": "核对语音与关系预测",
+          "count": 2,
+          "itemIds": [
+            "granite-speech-2026-10-22",
+            "kumo-relational-2026-10-22"
+          ],
+          "meaning": "用来检查语音错误、说话人归属与关系预测的独立测试清单。"
+        },
+        {
+          "id": "policy",
+          "label": "核对治理权限与记录",
+          "count": 1,
+          "itemIds": [
+            "anthropic-stubbs-2026-10-22"
+          ],
+          "meaning": "用来检查信托权限文件、成员构成与实际决策记录。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "model",
+          "label": "核对语音与关系预测",
+          "note": "跨期看，观察对象从接入入口扩展到核对语音与关系预测。",
+          "boundary": "仍需第三方复测数据，不能以发布公告替代模型效果。"
+        },
+        {
+          "topic": "policy",
+          "label": "核对治理权限与记录",
+          "note": "跨期看，观察对象从接入入口扩展到核对治理权限与记录。",
+          "boundary": "仍需独立治理文件与审计记录，不能以任命推断监督有效。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "model",
+          "label": "核对语音与关系预测",
+          "status": "stronger",
+          "previousPattern": "此前关注模型组件发布与公益治理承诺。",
+          "currentSignal": "本期新增核对语音与关系预测的原文入口。",
+          "signalDirection": "增强：新增核验对象，效果证据尚未升级。",
+          "stillUnproven": "仍需第三方测试与独立披露，不证明部署或治理效果。"
+        },
+        {
+          "topic": "policy",
+          "label": "核对治理权限与记录",
+          "status": "stronger",
+          "previousPattern": "此前关注模型组件发布与公益治理承诺。",
+          "currentSignal": "本期新增核对治理权限与记录的原文入口。",
+          "signalDirection": "增强：新增核验对象，效果证据尚未升级。",
+          "stillUnproven": "仍需第三方测试与独立披露，不证明部署或治理效果。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "NVIDIA",
+          "label": "从检索到关系预测",
+          "lastMention": "此前收录检索组件与生成仿真。",
+          "whatChanged": "增强：新增关系数据预测模型的厂商原文。",
+          "stillUnproven": "仍需独立时间切分测试，不能推断企业收益。需要第三方数据或治理文件复核。"
+        },
+        {
+          "company": "Anthropic",
+          "label": "从公益承诺到治理任命",
+          "lastMention": "此前收录公益股份承诺。",
+          "whatChanged": "增强：新增长期利益信托成员任命公告。",
+          "stillUnproven": "仍需独立披露与决策记录，不能推断监督已有效。需要第三方数据或治理文件复核。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "huggingface-blog",
+        "sourceName": "Hugging Face Blog",
+        "count": 2,
+        "share": "2/3",
+        "note": "3/3为官方或厂商作者原文；HF平台2/3，分别由IBM与NVIDIA撰写，Anthropic 1/3。缺少独立效果证据。",
+        "nextCheck": "核对第三方模型复测、企业任务数据与信托独立披露。"
+      },
+      "items": [
+        {
+          "id": "anthropic-stubbs-2026-10-22",
+          "category": "policy",
+          "label": "政策",
+          "title": "Christopher Stubbs加入Anthropic长期利益信托：关注治理如何落到决策",
+          "body": "Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。",
+          "summary": "Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。",
+          "detailBody": "来源事实：Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。\n核验边界：公告支持任命和公司对权限的说明，不证明信托已行使多数任命权，也不证明模型风险下降。",
+          "trend": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。",
+          "detailTrend": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。\n本站判断：先明确目标任务与失败条件，再决定是否调整部署或治理判断。来源提供了核对入口，实际效果还需要独立记录；不能把公告存在本身当作结果验证。",
+          "whyItMatters": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。",
+          "whyRanked": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+          "detailWhyRanked": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。\n应保存核对日期、版本与原始记录，区分公告、测量和本站判断。遇到与主张冲突的证据，应更新结论并保留此前判断依据，避免将一个场景的观察推广到所有组织。",
+          "topReason": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+          "impact": "企业采购与治理观察者可把人员构成和决策权分开核对；增加科学背景成员提供监督入口，不能直接证明商业压力下的制衡有效。",
+          "whoShouldCare": "企业AI采购负责人、模型工程团队与治理研究者，可按目标任务更新核验清单。",
+          "readerUse": "企业AI团队用于更新核验清单：核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+          "nextCheck": "核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+          "followUpQuestions": [
+            "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+            "失败样本或后续披露是否改变原有适用范围与核验结论？"
+          ],
+          "evidenceThreshold": "至少需要取得独立复测数据或治理记录后，才可升级为目标场景有效的验证结论。核对信托独立披露、董事任命文件及后续重大风险决策记录，检查监督意见是否实际改变公司行动。",
+          "claimBoundary": "公告支持任命和公司对权限的说明，不证明信托已行使多数任命权，也不证明模型风险下降。",
+          "counterEvidence": "核对独立复测或披露记录：若后续独立披露与权限说明不一致，或重大风险决策缺少可追踪监督记录，应下调治理有效性的判断。据此下调效果判断。",
+          "source": "Anthropic Newsroom",
+          "sourceName": "Anthropic Newsroom",
+          "sourceId": "anthropic-news",
+          "sourceUrl": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+          "originalUrl": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Anthropic Newsroom：Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。公告支持任命和公司对权限的说明，不证明信托已行使多数任命权，也不证明模型风险下降。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-21",
+          "time": "2026-10-21（原文日期）",
+          "tags": [
+            "政策",
+            "独立核验"
+          ],
+          "companies": [
+            "Anthropic"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          }
+        },
+        {
+          "id": "granite-speech-2026-10-22",
+          "category": "model",
+          "label": "模型",
+          "title": "IBM更新Granite Speech：转写、翻译与说话人归属分别验收",
+          "body": "IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
+          "summary": "IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
+          "detailBody": "来源事实：IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。\n核验边界：官方发布与模型入口可核对；厂商性能结果不证明中文转写支持、所有口音效果或生产收益。",
+          "trend": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。",
+          "detailTrend": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。\n本站判断：先明确目标任务与失败条件，再决定是否调整部署或治理判断。来源提供了核对入口，实际效果还需要独立记录；不能把公告存在本身当作结果验证。",
+          "whyItMatters": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。",
+          "whyRanked": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+          "detailWhyRanked": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。\n应保存核对日期、版本与原始记录，区分公告、测量和本站判断。遇到与主张冲突的证据，应更新结论并保留此前判断依据，避免将一个场景的观察推广到所有组织。",
+          "topReason": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+          "impact": "语音团队可以按任务选择模型，但识别文字正确不代表说话人归属正确；会议与客服验收需要分别统计错误。",
+          "whoShouldCare": "企业AI采购负责人、模型工程团队与治理研究者，可按目标任务更新核验清单。",
+          "readerUse": "企业AI团队用于更新核验清单：第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+          "nextCheck": "第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+          "followUpQuestions": [
+            "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+            "失败样本或后续披露是否改变原有适用范围与核验结论？"
+          ],
+          "evidenceThreshold": "至少需要取得独立复测数据或治理记录后，才可升级为目标场景有效的验证结论。第三方团队用带人工标注的目标语言、噪声与多人录音，复测词错误率、说话人归属、延迟和设备成本。",
+          "claimBoundary": "官方发布与模型入口可核对；厂商性能结果不证明中文转写支持、所有口音效果或生产收益。",
+          "counterEvidence": "核对独立复测或披露记录：若目标录音的错误率、归属错误或延迟上升，应缩小适用范围并保留旧模型回退。据此下调效果判断。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+          "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog：IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。官方发布与模型入口可核对；厂商性能结果不证明中文转写支持、所有口音效果或生产收益。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-21",
+          "time": "2026-10-21（原文日期）",
+          "tags": [
+            "模型",
+            "独立核验"
+          ],
+          "companies": [
+            "IBM"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          }
+        },
+        {
+          "id": "kumo-relational-2026-10-22",
+          "category": "model",
+          "label": "模型",
+          "title": "NVIDIA推出Kumo Relational：数据库预测从训练转向上下文适配",
+          "body": "NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
+          "summary": "NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
+          "detailBody": "来源事实：NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。\n核验边界：已核对厂商发布主张；无需任务训练不等于无需历史标签，厂商基准领先不证明企业业务收益。",
+          "trend": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。",
+          "detailTrend": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。\n本站判断：先明确目标任务与失败条件，再决定是否调整部署或治理判断。来源提供了核对入口，实际效果还需要独立记录；不能把公告存在本身当作结果验证。",
+          "whyItMatters": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。",
+          "whyRanked": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+          "detailWhyRanked": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。\n应保存核对日期、版本与原始记录，区分公告、测量和本站判断。遇到与主张冲突的证据，应更新结论并保留此前判断依据，避免将一个场景的观察推广到所有组织。",
+          "topReason": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+          "impact": "数据团队可比较新任务的准备成本；免任务训练仍需要整理数据库权限、时间切分与标签，不能等同零工程投入。",
+          "whoShouldCare": "企业AI采购负责人、模型工程团队与治理研究者，可按目标任务更新核验清单。",
+          "readerUse": "企业AI团队用于更新核验清单：第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+          "nextCheck": "第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+          "followUpQuestions": [
+            "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+            "失败样本或后续披露是否改变原有适用范围与核验结论？"
+          ],
+          "evidenceThreshold": "至少需要取得独立复测数据或治理记录后，才可升级为目标场景有效的验证结论。第三方数据团队在时间隔离的企业数据库上，与现有树模型和关系模型比较准确率、校准、延迟及总成本。",
+          "claimBoundary": "已核对厂商发布主张；无需任务训练不等于无需历史标签，厂商基准领先不证明企业业务收益。",
+          "counterEvidence": "核对独立复测或披露记录：若独立时间切分后优势消失、发现信息泄漏或准备成本过高，应下调替换生产流程的判断。据此下调效果判断。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/kumo-relational",
+          "originalUrl": "https://huggingface.co/blog/nvidia/kumo-relational",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog：NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。已核对厂商发布主张；无需任务训练不等于无需历史标签，厂商基准领先不证明企业业务收益。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-21",
+          "time": "2026-10-21（原文日期）",
+          "tags": [
+            "模型",
+            "独立核验"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-21",
       "date": "2026-10-21",
