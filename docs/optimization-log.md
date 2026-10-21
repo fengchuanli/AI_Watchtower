@@ -1,3 +1,16 @@
+## 2026-10-21 23:04:40 JST｜08点任务实际23点补充
+
+- Focus：保留今日5条，新增2条NVIDIA作者原文：Nemotron 3.5检索组件、Cosmos3-H-Dreams手术研究仿真。共7条；原文仅有日期，不推断精确上线时间。
+- Pull：编辑前已拉取origin/main；首次DNS失败，授权联网重试成功，无预存未推送提交。
+- Sources：优先尝试HF/AWS RSS，工具XML解析受限，转查登记的HF、AWS、Anthropic、Google及TechCrunch公开索引。仅取作者原文短事实；未使用登录墙、付费墙正文或社区讨论。检索模型与手术仿真分别为不同任务入口，厂商性能与临床用途均未升级为独立事实。
+- Candidate intake：两条均manual-clear（当前/历史URL及事件主题人工比对无重复）；sourceBackedFact为作者发布模型说明；aiRelevance为检索成本与仿真验收；proofBoundary为效果未独立复测；nextIndependentCheck为第三方任务账单、机器人实验及外科专家评审；copyrightPosture为短摘要及原创解读；draftingDecision=draft。优先级8/10，新增两条低于既有核心TOP3评分。
+- Batch decision：publish-short-batch / draft-with-caveat。HF平台4/7但作者不同，新增2条均来自NVIDIA；不继续叠加同厂商旁支文章或未经原始文件核实的媒体标题凑10条。覆盖非穷尽，缺口保留于页面。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页简报与更多新闻流显示7条，新增检索与手术仿真详情页；全部新闻列表与归档页同步23:00补充版，保留来源链接、核验边界和下一步证据。
+- Archive mirror：当前版与最新归档元数据、顺序和条目完全一致；133期/1283条。派生文件已重建并通过--check。
+- Verification：node --check app.js、validate-data/site/pages、派生一致性、全部data JSON与根目录HTML解析、git diff --check通过。修正草稿排序及必填文案后通过，未改验证器；未做浏览器视觉测试。早期去重命令误读已有/tmp候选文件，该报告不用于本次筛选，最终采用明确的两条人工去重记录。
+- Commit note：【新闻更新】补充23点AI新闻：新增2条检索与仿真信号。验证完成后提交并推送origin main，结果写入自动化memory。
+
 ## 2026-10-21 11:03:07 JST（20:00 scheduled content optimization）
 
 - Focus: Current-cycle Day 9；区分 TOP3 官方厂商发布事实与未经独立核验的效果。

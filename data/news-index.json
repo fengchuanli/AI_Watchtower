@@ -2,16 +2,32 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-10-21",
-  "totalItems": 1281,
+  "totalItems": 1283,
   "editions": [
     {
-      "id": "news-1700-2026-10-21",
+      "id": "news-2300-2026-10-21",
       "date": "2026-10-21",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "17:00任务版",
+      "archiveLabel": "23:00补充版",
       "archiveStatus": "published",
-      "itemCount": 5,
+      "itemCount": 7,
       "items": [
+        {
+          "id": "nemotron-retrieval-2026-10-21",
+          "title": "NVIDIA推出Nemotron 3.5检索组件：Agent省成本仍需端到端复测",
+          "category": "model",
+          "label": "模型",
+          "time": "2026-10-21（原文日期）",
+          "publishedAt": "2026-10-21",
+          "body": "NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
+          "impact": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "模型与厂商测试说明可核对，不证明真实企业语料上的总成本下降或全面领先。"
+        },
         {
           "id": "fairstress-2026-10-21",
           "title": "Ai2发布FairStress：公平性评测加入受劝说后的决策稳定性",
@@ -75,6 +91,22 @@
           "sourceRole": "厂商主张",
           "trustLevel": "official",
           "sourceCaveat": "固定的是循环状态而非全部运行内存；厂商吞吐测试不能证明同质量下优于其他架构。"
+        },
+        {
+          "id": "cosmos-surgery-2026-10-21",
+          "title": "NVIDIA介绍Cosmos3-H-Dreams：手术生成仿真仍是研究工具",
+          "category": "model",
+          "label": "模型",
+          "time": "2026-10-20（原文日期）",
+          "publishedAt": "2026-10-20",
+          "body": "NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。",
+          "impact": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "这是研究仿真器；原文明确未验证患者护理用途，不证明临床安全或自主手术能力。"
         },
         {
           "id": "torchtpu-2026-10-21",

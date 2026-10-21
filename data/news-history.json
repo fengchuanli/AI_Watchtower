@@ -1,18 +1,18 @@
 {
   "version": 1,
   "updatedAt": "2026-10-21",
-  "totalItems": 1281,
+  "totalItems": 1283,
   "editions": [
     {
-      "id": "news-1700-2026-10-21",
+      "id": "news-2300-2026-10-21",
       "date": "2026-10-21",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00任务版",
-      "itemCount": 5,
-      "note": "五条模型工程、评测与Agent身份新信号",
-      "operationalStatus": "已同步origin/main；17点任务实际08点采集，无同日晨版，以昨日23点版去重。RSS解析受限，已核对公开原文；不足10条未补弱来源。",
-      "editorialInterpretation": "本期发布5条安全非重复信号；少于10条是质量门槛结果，未用旧闻、重复事件、社区讨论与同类营销教程补数。",
+      "archiveLabel": "23:00补充版",
+      "itemCount": 7,
+      "note": "七条模型工程、Agent核验与仿真信号",
+      "operationalStatus": "08点任务实际23点执行；已同步origin/main。补充2条NVIDIA作者原文，保留5条；RSS解析受限，不足10条未补重复或弱来源。",
+      "editorialInterpretation": "本期发布7条安全非重复信号，其中本次新增2条、保留5条；少于10条是质量门槛结果，未用旧闻、重复事件、社区讨论与同类营销教程补数。",
       "readerFrame": {
         "headline": "模型能迁移，Agent能连接，下一步怎样验收？",
         "whyItMatters": "本期把模型兼容性、决策稳定性与调用授权放入验收清单，帮助工程团队区分可用入口和已证实效果。",
@@ -26,7 +26,7 @@
         ],
         "mobile": {
           "headline": "从接入转向验收",
-          "summary": "五条信号，分别检查模型质量与Agent调用边界。",
+          "summary": "七条信号，检查模型质量、Agent调用与仿真边界。",
           "primaryUses": [
             "工程团队查迁移",
             "安全团队查授权"
@@ -35,17 +35,14 @@
         }
       },
       "changeSummary": {
-        "headline": "相较昨日23点版，增加模型评测与身份核验入口",
+        "headline": "相较今日早间采集，补充检索与仿真两条原文",
         "freshFacts": [
-          "新增：Hugging Face介绍TorchTPU原生后端及Transformers、Diffusers和Kernels的TPU支持。",
-          "新增：Ai2发布FairStress基准，用成对身份变化与对抗性前缀评估模型决策是否同样稳定。",
-          "新增：AWS与i14介绍Laplace 3B在Trainium2上的训练和推理，称每序列循环状态固定为29.5 MB。",
-          "新增：AWS发布Agent Registry运行时发现示例，通过发现、实例化、执行三步连接MCP服务与A2A Agent。",
-          "新增：AWS与Keyfactor展示基于X.509 PKI的Agent参考架构，组合签名请求、用户委托、受众限定令牌与撤销检查。"
+          "新增：NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
+          "新增：NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。"
         ],
         "repeatedContext": [
-          "重复背景：昨日TorchNeuron和本地AI接口已归档，本期不重复发布。",
-          "重复背景：昨日内部Agent监督仍待客户部署与安全审计。"
+          "重复背景：今日已采集的模型迁移、公平性评测与Agent身份5条保留，不计为本次新增。",
+          "重复背景：昨日本地模型接口与监督方案仍待独立复测。"
         ]
       },
       "coverageMix": [
@@ -58,12 +55,17 @@
           "label": "核对工具发现与身份",
           "count": 2,
           "meaning": "用来检查审批、凭据、委托与撤销记录。"
+        },
+        {
+          "label": "核对检索与仿真",
+          "count": 2,
+          "meaning": "用来检查检索总成本与仿真动作一致性的验收清单。"
         }
       ],
       "sourceRisk": {
         "label": "工程作者来源集中",
-        "note": "来源偏向官方：5/5；AWS占3/5，HF平台2/5，其中FairStress作者为Ai2。缺少独立效果验证。",
-        "nextCheck": "核对第三方性能与公平性复现、客户调用日志和安全审计。"
+        "note": "来源集中于官方平台作者：7/7；HF平台4/7，AWS 3/7；新增2条均为NVIDIA厂商主张，缺少独立效果验证。",
+        "nextCheck": "核对第三方检索任务账单、机器人实验记录、专家评审及客户安全审计。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
@@ -75,8 +77,8 @@
         {
           "family": "official",
           "label": "官方与作者原文",
-          "count": 5,
-          "role": "登记来源均属官方平台；包括1条研究作者原文和3条厂商主张。"
+          "count": 7,
+          "role": "官方平台作者原文，包括1条研究作者原文、5条厂商主张与1条集成发布说明。"
         }
       ],
       "topicGroups": [
@@ -100,6 +102,16 @@
             "agent-pki-2026-10-21"
           ],
           "meaning": "用来检查审批、凭据、委托与撤销记录。"
+        },
+        {
+          "id": "model",
+          "label": "核对检索与仿真",
+          "count": 2,
+          "itemIds": [
+            "nemotron-retrieval-2026-10-21",
+            "cosmos-surgery-2026-10-21"
+          ],
+          "meaning": "用来检查检索总成本与仿真动作一致性的验收清单。"
         }
       ],
       "trendNotes": [
@@ -153,14 +165,80 @@
         }
       ],
       "sourceConcentration": {
-        "sourceId": "aws-machine-learning-blog",
-        "sourceName": "AWS Machine Learning Blog",
-        "count": 3,
-        "share": "3/5",
-        "note": "AWS占3/5，覆盖一个模型案例和两项Agent方案，不能视为跨厂商市场统计。",
-        "nextCheck": "核对独立研究、客户审计和第三方工程复测。"
+        "sourceId": "huggingface-blog",
+        "sourceName": "Hugging Face Blog",
+        "count": 4,
+        "share": "4/7",
+        "note": "HF平台占4/7，作者分别来自HF、Ai2和NVIDIA；新增2条同属NVIDIA，不代表独立交叉验证。",
+        "nextCheck": "核对第三方检索任务账单、机器人实验记录、专家评审及客户安全审计。"
       },
       "items": [
+        {
+          "id": "nemotron-retrieval-2026-10-21",
+          "category": "model",
+          "label": "模型",
+          "title": "NVIDIA推出Nemotron 3.5检索组件：Agent省成本仍需端到端复测",
+          "body": "NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
+          "summary": "NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。",
+          "detailBody": "来源事实：NVIDIA发布Nemotron 3.5 Embed、Rerank与Parse模型，覆盖多模态检索、重排和文档抽取。\n核验边界：模型与厂商测试说明可核对，不证明真实企业语料上的总成本下降或全面领先。",
+          "trend": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。",
+          "detailTrend": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。\n本站判断：发布入口扩大了可测试范围，验证结果才决定是否适合目标任务。应把失败样本与成功演示一同纳入验收，检查适用范围是否与团队任务一致。",
+          "whyItMatters": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。",
+          "whyRanked": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
+          "detailWhyRanked": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。\n应保存版本、输入、输出与失败样本，区分演示结果和部署证据。原文提供了可追踪的模型与技术入口；本站建议先建立小规模对照实验，再判断是否扩大部署或投入。",
+          "topReason": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
+          "impact": "检索团队可以分别定位召回、排序和解析错误；是否减少Agent重复搜索，必须连同新增推理开销一起衡量。",
+          "whoShouldCare": "负责部署检索模型、评估机器人生成仿真与整理失败样本的工程团队、研发负责人及安全审计人员。",
+          "readerUse": "工程与研究团队：第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
+          "nextCheck": "第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
+          "followUpQuestions": [
+            "独立复测或审计记录是否支持该方案在目标任务上使用？",
+            "失败路径与版本变化是否改变原有验收结论？"
+          ],
+          "evidenceThreshold": "至少需要取得独立复测与专家审计记录后，才可升级为目标任务有效结论。第三方团队固定语料、Agent模型与任务，比较检索相关性、任务成功率、端到端延迟和总账单。",
+          "claimBoundary": "模型与厂商测试说明可核对，不证明真实企业语料上的总成本下降或全面领先。",
+          "counterEvidence": "核对独立测试记录：第三方复测若显示重排增加的成本超过搜索节省，或相关性与成功率下降，应下调收益判断。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval",
+          "originalUrl": "https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog：NVIDIA作者在Hugging Face发布的原文，已核对日期与发布主张。模型与厂商测试说明可核对，不证明真实企业语料上的总成本下降或全面领先。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-21",
+          "time": "2026-10-21（原文日期）",
+          "tags": [
+            "模型",
+            "独立评测"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          }
+        },
         {
           "id": "fairstress-2026-10-21",
           "category": "research",
@@ -425,6 +503,72 @@
             "readerUtility": 4,
             "total": 18,
             "note": "优先原文可核对性与独立验收路径；效果不随公告自动升级。"
+          }
+        },
+        {
+          "id": "cosmos-surgery-2026-10-21",
+          "category": "model",
+          "label": "模型",
+          "title": "NVIDIA介绍Cosmos3-H-Dreams：手术生成仿真仍是研究工具",
+          "body": "NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。",
+          "summary": "NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。",
+          "detailBody": "来源事实：NVIDIA介绍基于手术视频与机器人运动记录训练的Cosmos3-H-Dreams，提供交互式生成仿真的模型与代码入口。\n核验边界：这是研究仿真器；原文明确未验证患者护理用途，不证明临床安全或自主手术能力。",
+          "trend": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。",
+          "detailTrend": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。\n本站判断：发布入口扩大了可测试范围，验证结果才决定是否适合目标任务。应把失败样本与成功演示一同纳入验收，检查适用范围是否与团队任务一致。",
+          "whyItMatters": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。",
+          "whyRanked": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
+          "detailWhyRanked": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。\n应保存版本、输入、输出与失败样本，区分演示结果和部署证据。原文提供了可追踪的模型与技术入口；本站建议先建立小规模对照实验，再判断是否扩大部署或投入。",
+          "topReason": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
+          "impact": "机器人研究团队获得可检查动作与图像一致性的实验对象；画面真实与组织力学准确需要不同验收标准。",
+          "whoShouldCare": "负责部署检索模型、评估机器人生成仿真与整理失败样本的工程团队、研发负责人及安全审计人员。",
+          "readerUse": "工程与研究团队：独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
+          "nextCheck": "独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
+          "followUpQuestions": [
+            "独立复测或审计记录是否支持该方案在目标任务上使用？",
+            "失败路径与版本变化是否改变原有验收结论？"
+          ],
+          "evidenceThreshold": "至少需要取得独立复测与专家审计记录后，才可升级为目标任务有效结论。独立机器人实验室与外科专家对照实测轨迹、组织形变及长时序误差，公开复现记录和专家评审。",
+          "claimBoundary": "这是研究仿真器；原文明确未验证患者护理用途，不证明临床安全或自主手术能力。",
+          "counterEvidence": "核对独立测试记录：独立测试若发现动作不一致、解剖结构漂移或组织形变偏离实测，应下调仿真可信度。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+          "originalUrl": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog：NVIDIA作者在Hugging Face发布的原文，已核对日期与发布主张。这是研究仿真器；原文明确未验证患者护理用途，不证明临床安全或自主手术能力。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-20",
+          "time": "2026-10-20（原文日期）",
+          "tags": [
+            "模型",
+            "独立评测"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 4,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 18,
+            "note": "作者原文支持发布主张；真实任务效果待独立复测。"
           }
         },
         {
