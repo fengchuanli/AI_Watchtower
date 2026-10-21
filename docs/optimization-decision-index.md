@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 2, TOP3 Visual Briefing
-- Last indexed run: 2026-10-20 11:03 JST (20:00 scheduled run)
+- Last indexed run: 2026-10-21 11:03 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Current Cycle Day 4 Completion
@@ -127,8 +127,9 @@ These compact anchors keep validation and future automation aware of the most im
 ## Next Useful Task
 
 - Current-cycle Day 8 complete: TOP3 uses the existing label as a bordered Chinese signal cue, separated from the date; category is not confidence. No additional evidence sentences or inferred classification.
-- Continue with Day 9: official-source confirmed facts versus unproven outcomes.
-- If Day 9 is already complete, continue with Day 10: media-backed original-source dependency.
+- Current-cycle Day 9 complete: official vendor TOP3 cards distinguish confirmed publication facts from unproven outcomes; existing sourceRole is visible alongside source type. Current AWS Agent Registry and PKI cards retain their explicit claimBoundary and independent nextCheck.
+- Continue with Day 10: media-backed original-source dependency.
+- If Day 10 is already complete, continue with Day 11: document TOP3 visual-cue guidance.
 
 ## Update Rules
 

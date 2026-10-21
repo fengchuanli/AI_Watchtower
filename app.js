@@ -511,6 +511,15 @@ function getClaimStatus(item) {
   return item.claimStatus || item.verificationStatus;
 }
 
+// A confirmed vendor publication is not independent proof of its outcomes.
+function getTopClaimCue(item) {
+  const isVendorPublication = item.sourceType === "official" && item.sourceRole === "厂商主张";
+  if (isVendorPublication && item.claimStatus === "confirmed") {
+    return "发布事实已确认 · 效果待核验";
+  }
+  return getClaimStatus(item);
+}
+
 const dependencyLabels = {
   "must-read": "必须读原文",
   recommended: "建议读原文",
@@ -556,7 +565,7 @@ function updateTopStories(items) {
       const detailUrl = getDetailUrl(item);
       const sourceName = getSourceName(item);
       const sourceType = getSourceType(item);
-      const claimStatus = getClaimStatus(item);
+      const claimStatus = getTopClaimCue(item);
       const topReason = getTopReason(item);
       const compactTopReason = getCompactTopReason(item);
       const readerUse = getReaderUse(item);
@@ -585,7 +594,7 @@ function updateTopStories(items) {
               </div>
               <div class="top-proof-step">
                 <dt>来源边界</dt>
-                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)} · ${escapeHtml(claimStatus)}<span class="top-source-dependency">${escapeHtml(getOriginalDependencyLabel(item))}</span></dd>
+                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)}${item.sourceRole && item.sourceRole !== sourceType ? ` / ${escapeHtml(item.sourceRole)}` : ""}<span class="top-claim-cue">${escapeHtml(claimStatus)}</span><span class="top-source-dependency">${escapeHtml(getOriginalDependencyLabel(item))}</span></dd>
               </div>
               <div class="top-proof-step">
                 <dt>尚未证明</dt>
