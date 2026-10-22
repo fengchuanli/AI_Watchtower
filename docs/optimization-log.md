@@ -1,3 +1,15 @@
+## 2026-10-23 08:09 JST｜17点新闻任务实际08点采集
+
+- Focus：新增4条：Agent Skills捐赠AAIF、生命科学研究招募、ThinkingBox终态奖励训练、OlmoEarth遥感嵌入。无同日晨版，以昨日23点版去重；日期精度不保证事件晚于基线，不声称覆盖未来17点。
+- Pull：编辑前同步origin/main，DNS失败后授权联网成功，工作区原本干净。
+- Sources：HF/AWS RSS解析受限，核对登记的Anthropic、HF、AWS、Google、TechCrunch公开索引与四篇作者原文；未使用付费墙、登录墙正文及社区事实。
+- Candidate intake：4条URL去重脚本通过，历史事件人工复核manual-clear。sourceBackedFact为捐赠、招募、训练方案及遥感发布；aiRelevance为标准治理、科研协作、Agent可靠性及模型部署；proofBoundary为发布不等于效果；nextIndependentCheck为AAIF文件、学术机构成果、跨框架复测及地面真值；copyrightPosture为短事实与本站判断；draftingDecision=draft。优先级17。
+- Batch decision：publish-short-batch，4/4作者原文，含1条厂商主张。Anthropic 2条，HF平台2条分属Microsoft与Ai2；来源130项不变。重复IBM/NVIDIA公告、常规教程、社区帖及未核对原文的媒体线索未入选，不凑10条，不声称全网无更多新闻。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3、更多新闻流、全部新闻列表、归档及4个详情页可见中文事件、影响、来源边界与下一步核验；归档135期/1292条。
+- Verification：app.js语法、validate-data/site/pages、派生一致性、全部data JSON及根目录HTML解析、git diff --check通过。字段文案按现有契约修正，未修改验证器，未做浏览器视觉验收。日志生成首次因Python缺少zoneinfo失败，改为直接记录JST时间后补齐。
+- Commit note：【新闻更新】发布17点AI新闻：4条标准治理与科研工具信号。补齐日志后合并进本次未推送提交；普通推送DNS失败，授权联网重试结果写入memory。
+
 ## 2026-10-22 23:05 JST｜08点任务实际23点补充
 
 - Focus：保留今日3条，新增2条：IBM时序集成方案、NVIDIA SimReady仿真资产库；原文日期分别为10月22日、21日，不推断精确发布时间。
