@@ -1,3 +1,15 @@
+## 2026-10-22 23:05 JST｜08点任务实际23点补充
+
+- Focus：保留今日3条，新增2条：IBM时序集成方案、NVIDIA SimReady仿真资产库；原文日期分别为10月22日、21日，不推断精确发布时间。
+- Pull：编辑前同步origin/main，首次DNS失败后授权联网重试成功；无预存未推送提交。
+- Sources：优先HF/AWS RSS但XML解析不支持，转查登记的HF、Anthropic、AWS、Google及TechCrunch公开索引和作者原文。未使用登录墙、付费墙正文或社区讨论作事实。
+- Candidate intake：两条URL通过去重报告并经人工事件对照manual-clear；sourceBackedFact为集成方案说明、仿真资产库介绍；aiRelevance为预测选型与仿真准备；proofBoundary为效果未独立验证；nextIndependentCheck为时间隔离回测、真机实验、设备参数与逐项许可；copyrightPosture为短事实加本站判断；draftingDecision=draft。优先级17，低于既有核心条目18。
+- Batch decision：publish-short-batch / draft-with-caveat。5条中HF平台4条，IBM与NVIDIA各2条，Anthropic 1条；全部作者原文，缺独立效果证据。未加入同厂商Microduck教程、重复信托公告、过时媒体索引或同类营销凑10条。覆盖范围有限，不声称全网无其他新闻。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页本期摘要及更多新闻流、全部新闻列表、归档页与新增2个详情页可见预测集成与仿真资产中文解读；本期共5条，核心TOP3评分优先级保留。归档同步为134期/1288条。
+- Verification：草稿按字段要求修正文案及同日排序；app.js语法、validate-data/site/pages、派生一致性、全部data JSON与根目录HTML解析、git diff --check；全部通过。未修改验证器，未做浏览器视觉验收。
+- Commit note：【新闻更新】补充23点AI新闻：新增2条预测与仿真信号。检查通过后提交并尝试推送origin main，实际结果写入自动化memory。
+
 ## 2026-10-22 11:03:14 JST（20:00 scheduled content optimization）
 
 - Focus: Current-cycle Day 10；媒体 TOP3 原文依赖入口。

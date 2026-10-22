@@ -1,20 +1,20 @@
 {
   "version": 1,
   "updatedAt": "2026-10-22",
-  "totalItems": 1286,
+  "totalItems": 1288,
   "editions": [
     {
-      "id": "news-1700-2026-10-22",
+      "id": "news-2300-2026-10-22",
       "date": "2026-10-22",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "17:00新闻版",
-      "itemCount": 3,
-      "note": "三条语音、关系数据模型与治理信号，区分发布事实和效果证据。",
-      "operationalStatus": "17点任务实际08点采集，无同日晨版，以昨日23点版去重。已拉取origin/main；RSS解析受限，核对公开索引与原文。3条合格，未补重复或弱证据；日期原文不保证晚于基线。",
-      "editorialInterpretation": "本期发布3条安全非重复信号；少于10条是质量门槛结果，未用重复事件、社区讨论与同类营销教程补数。",
+      "archiveLabel": "23:00补充版",
+      "itemCount": 5,
+      "note": "五条模型、仿真工具与治理信号，区分作者发布事实和独立效果证据。",
+      "operationalStatus": "08点任务实际23点补充，保留今日3条，新增2条。已同步main；RSS解析受限，核对公开索引及作者原文。合格不足10条，不补重复或营销；日期原文不保证全部晚于上次运行。",
+      "editorialInterpretation": "本期发布5条安全非重复信号，其中保留今日3条、新增2条；少于10条是质量门槛结果，未用重复事件、社区讨论与同类营销教程补数。",
       "readerFrame": {
-        "headline": "新模型和新监督者，怎样证明实际有效？",
+        "headline": "模型、仿真与治理，怎样证明实际有效？",
         "whyItMatters": "本期提供模型评测与公司治理两个核验入口，帮助读者判断何时可以升级信任。因为发布与效果之间仍有证据缺口，团队需要据此更新验收清单。",
         "useThisIssueFor": [
           "模型团队核对语音错误与关系预测的独立测试清单。",
@@ -26,7 +26,7 @@
         ],
         "mobile": {
           "headline": "模型与治理如何验收",
-          "summary": "三条信号：核对语音、关系预测与监督记录。",
+          "summary": "五条信号：核对预测、仿真、语音与监督记录。",
           "primaryUses": [
             "工程团队查效果",
             "治理团队查记录"
@@ -35,22 +35,21 @@
         }
       },
       "changeSummary": {
-        "headline": "相较昨日23点版，新增模型与治理核验入口",
+        "headline": "在今日3条基础上，新增预测集成与仿真资产核验入口",
         "freshFacts": [
-          "新增：IBM发布Granite Speech 5.0 2B，并更新Turbo CTC与4.1 2B Plus，分别面向转写翻译、快速转写和说话人归属。",
-          "新增：NVIDIA介绍Kumo Relational关系数据基础模型，称其通过上下文示例直接对关联表进行预测，无需为每项任务单独训练。",
-          "新增：Anthropic宣布物理学家Christopher Stubbs加入长期利益信托；公告说明该信托具有任命多数董事的权限。"
+          "新增：IBM Research发布Granite时序集成方案说明，将四个预训练模型组合为统一预测接口，输出点预测与分位数预测。",
+          "新增：NVIDIA作者介绍SimReady Central，在Hugging Face汇集面向机器人与AI工厂仿真的OpenUSD资产，并提供按仿真需求检查资产属性的路径。"
         ],
         "repeatedContext": [
-          "重复背景：此前检索与仿真模型仍需独立复测。",
-          "重复背景：此前公益股份承诺与本次信托任命不是同一事件。"
+          "重复背景：今日已收录语音模型、关系预测与信托任命。",
+          "重复背景：发布和作者示例不等于独立效果证据。"
         ]
       },
       "coverageMix": [
         {
-          "label": "核对语音与关系预测",
-          "count": 2,
-          "meaning": "用来检查语音错误、说话人归属与关系预测的独立测试清单。"
+          "label": "核对模型与仿真效果",
+          "count": 4,
+          "meaning": "用来检查语音、关系预测、时序集成与仿真资产的独立测试。"
         },
         {
           "label": "核对治理权限与记录",
@@ -60,12 +59,12 @@
       ],
       "sourceRisk": {
         "label": "作者原文集中",
-        "note": "来源集中于作者原文。3/3为官方或厂商作者原文；HF平台2/3，分别由IBM与NVIDIA撰写，Anthropic 1/3。缺少独立效果证据。",
-        "nextCheck": "核对第三方模型复测、企业任务数据与信托独立披露。"
+        "note": "来源集中于作者原文。5/5为官方或厂商作者原文；HF平台4/5，IBM与NVIDIA各2条，Anthropic 1条。缺少独立效果证据，不代表全市场共识。",
+        "nextCheck": "核对第三方预测回测、真机实验与独立治理记录。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
-        "body": "本期是模型与治理核验入口，来源集中于公告作者。",
+        "body": "本期提供模型、仿真与治理核验入口，来源集中于公告作者。",
         "doNotConclude": "不能推断新模型全面领先、企业收益已实现或监督机制已经有效。",
         "useInstead": "应该用第三方复测与独立治理记录更新判断。"
       },
@@ -73,18 +72,19 @@
         {
           "family": "official",
           "label": "官方与作者原文",
-          "count": 3,
-          "role": "两条官方发布事实及一条厂商主张，效果不作独立确认。"
+          "count": 5,
+          "role": "两条官方发布事实及三条厂商主张，效果不作独立确认。"
         }
       ],
       "topicGroups": [
         {
           "id": "model",
           "label": "核对语音与关系预测",
-          "count": 2,
+          "count": 3,
           "itemIds": [
             "granite-speech-2026-10-22",
-            "kumo-relational-2026-10-22"
+            "kumo-relational-2026-10-22",
+            "granite-ensemble-2026-10-22"
           ],
           "meaning": "用来检查语音错误、说话人归属与关系预测的独立测试清单。"
         },
@@ -96,6 +96,15 @@
             "anthropic-stubbs-2026-10-22"
           ],
           "meaning": "用来检查信托权限文件、成员构成与实际决策记录。"
+        },
+        {
+          "id": "developer-tooling",
+          "label": "核对仿真资产适配",
+          "count": 1,
+          "itemIds": [
+            "simready-central-2026-10-22"
+          ],
+          "meaning": "用来检查设备参数、资产许可和真机对照。"
         }
       ],
       "trendNotes": [
@@ -151,12 +160,78 @@
       "sourceConcentration": {
         "sourceId": "huggingface-blog",
         "sourceName": "Hugging Face Blog",
-        "count": 2,
-        "share": "2/3",
-        "note": "3/3为官方或厂商作者原文；HF平台2/3，分别由IBM与NVIDIA撰写，Anthropic 1/3。缺少独立效果证据。",
-        "nextCheck": "核对第三方模型复测、企业任务数据与信托独立披露。"
+        "count": 4,
+        "share": "4/5",
+        "note": "来源集中：5/5为官方或厂商作者原文；HF平台4/5，IBM与NVIDIA各2条，Anthropic 1条。缺少独立效果证据，不代表全市场共识。",
+        "nextCheck": "核对第三方预测回测、真机实验与独立治理记录。"
       },
       "items": [
+        {
+          "id": "granite-ensemble-2026-10-22",
+          "category": "model",
+          "label": "模型",
+          "title": "IBM时序集成方案：减少模型选择负担，仍需检验区间可靠性",
+          "body": "IBM Research发布Granite时序集成方案说明，将四个预训练模型组合为统一预测接口，输出点预测与分位数预测。",
+          "summary": "IBM Research发布Granite时序集成方案说明，将四个预训练模型组合为统一预测接口，输出点预测与分位数预测。",
+          "detailBody": "来源事实：IBM Research发布Granite时序集成方案说明，将四个预训练模型组合为统一预测接口，输出点预测与分位数预测。\n核验边界：作者说明支持方案与接口存在，不证明每条时间序列均改善；集成不保证区间校准，也不代表今天才首次发布成员模型。",
+          "trend": "需求预测团队可据此比较集成方案和单模型的维护成本；本站判断，减少选型步骤是否值得额外运行开销，需要在实际业务窗口测量。",
+          "detailTrend": "需求预测团队可据此比较集成方案和单模型的维护成本；本站判断，减少选型步骤是否值得额外运行开销，需要在实际业务窗口测量。\n本站判断：先保留现有基线，在限定场景建立对照实验。把集成与调试工时也算入成本，记录失败样本；若业务条件或硬件发生变化，应重新核对而非沿用旧结果。",
+          "whyItMatters": "需求预测团队可据此比较集成方案和单模型的维护成本；本站判断，减少选型步骤是否值得额外运行开销，需要在实际业务窗口测量。",
+          "whyRanked": "核对第三方在时间隔离业务数据上的回测记录，对照强单模型的误差、区间实际覆盖率、延迟和内存占用。",
+          "detailWhyRanked": "核对第三方在时间隔离业务数据上的回测记录，对照强单模型的误差、区间实际覆盖率、延迟和内存占用。\n核验时保存数据切分、软件版本和测量口径，先比较同一任务上的结果，再讨论是否扩大使用范围。来源作者的演示提供复现入口，独立团队的失败记录同样应纳入判断。",
+          "topReason": "核对第三方在时间隔离业务数据上的回测记录，对照强单模型的误差、区间实际覆盖率、延迟和内存占用。",
+          "impact": "需求预测团队可据此比较集成方案和单模型的维护成本；本站判断，减少选型步骤是否值得额外运行开销，需要在实际业务窗口测量。",
+          "whoShouldCare": "正在评估预测模型或机器人仿真部署的企业工程团队，可用于制定目标任务验收与成本对照清单。",
+          "readerUse": "工程团队用于更新核验清单：核对第三方在时间隔离业务数据上的回测记录，对照强单模型的误差、区间实际覆盖率、延迟和内存占用。",
+          "nextCheck": "核对第三方在时间隔离业务数据上的回测记录，对照强单模型的误差、区间实际覆盖率、延迟和内存占用。",
+          "followUpQuestions": [
+            "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+            "失败样本或后续披露是否改变原有适用范围与核验结论？"
+          ],
+          "evidenceThreshold": "至少需要第三方复测数据和目标环境的对照记录，才可升级为目标任务效果已验证的结论。核对第三方在时间隔离业务数据上的回测记录，对照强单模型的误差、区间实际覆盖率、延迟和内存占用。",
+          "claimBoundary": "作者说明支持方案与接口存在，不证明每条时间序列均改善；集成不保证区间校准，也不代表今天才首次发布成员模型。",
+          "counterEvidence": "核对第三方复测记录：若独立回测显示区间持续漏覆盖，或增加运行成本却无业务误差改善，应下调集成方案的采用优先级。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+          "originalUrl": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog上的厂商作者说明：IBM Research发布Granite时序集成方案说明，将四个预训练模型组合为统一预测接口，输出点预测与分位数预测。该工作流的适用边界为：作者说明支持方案与接口存在，不证明每条时间序列均改善；集成不保证区间校准，也不代表今天才首次发布成员模型。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-22",
+          "time": "2026-10-22（原文日期）",
+          "tags": [
+            "模型",
+            "独立核验"
+          ],
+          "companies": [
+            "IBM"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "作者说明可核对，实际收益需第三方复测；不替代当前核心TOP3。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "作者说明可核对，实际收益需第三方复测；不替代当前核心TOP3。"
+          }
+        },
         {
           "id": "anthropic-stubbs-2026-10-22",
           "category": "policy",
@@ -287,6 +362,72 @@
             "readerUtility": 4,
             "total": 18,
             "note": "作者原文支持发布主张；真实任务效果待独立复测。"
+          }
+        },
+        {
+          "id": "simready-central-2026-10-22",
+          "category": "tool",
+          "label": "工具",
+          "title": "NVIDIA介绍SimReady资产库：仿真素材复用仍需物理校验",
+          "body": "NVIDIA作者介绍SimReady Central，在Hugging Face汇集面向机器人与AI工厂仿真的OpenUSD资产，并提供按仿真需求检查资产属性的路径。",
+          "summary": "NVIDIA作者介绍SimReady Central，在Hugging Face汇集面向机器人与AI工厂仿真的OpenUSD资产，并提供按仿真需求检查资产属性的路径。",
+          "detailBody": "来源事实：NVIDIA作者介绍SimReady Central，在Hugging Face汇集面向机器人与AI工厂仿真的OpenUSD资产，并提供按仿真需求检查资产属性的路径。\n核验边界：作者原文支持资产库及工作流说明，不证明资产适配所有物理引擎、真实设备或工厂，也不证明仿真结果可直接迁移。",
+          "trend": "机器人与数字孪生团队可把素材准备转为资产选型和验证；本站判断，视觉上能拼成场景只是起点，验收应覆盖目标设备和运行环境。",
+          "detailTrend": "机器人与数字孪生团队可把素材准备转为资产选型和验证；本站判断，视觉上能拼成场景只是起点，验收应覆盖目标设备和运行环境。\n本站判断：先保留现有基线，在限定场景建立对照实验。把集成与调试工时也算入成本，记录失败样本；若业务条件或硬件发生变化，应重新核对而非沿用旧结果。",
+          "whyItMatters": "机器人与数字孪生团队可把素材准备转为资产选型和验证；本站判断，视觉上能拼成场景只是起点，验收应覆盖目标设备和运行环境。",
+          "whyRanked": "核对第三方实验室的真机对照、设备厂商参数和资产逐项许可，记录目标引擎下碰撞、摩擦及尺寸误差。",
+          "detailWhyRanked": "核对第三方实验室的真机对照、设备厂商参数和资产逐项许可，记录目标引擎下碰撞、摩擦及尺寸误差。\n核验时保存数据切分、软件版本和测量口径，先比较同一任务上的结果，再讨论是否扩大使用范围。来源作者的演示提供复现入口，独立团队的失败记录同样应纳入判断。",
+          "topReason": "核对第三方实验室的真机对照、设备厂商参数和资产逐项许可，记录目标引擎下碰撞、摩擦及尺寸误差。",
+          "impact": "机器人与数字孪生团队可把素材准备转为资产选型和验证；本站判断，视觉上能拼成场景只是起点，验收应覆盖目标设备和运行环境。",
+          "whoShouldCare": "正在评估预测模型或机器人仿真部署的企业工程团队，可用于制定目标任务验收与成本对照清单。",
+          "readerUse": "工程团队用于更新核验清单：核对第三方实验室的真机对照、设备厂商参数和资产逐项许可，记录目标引擎下碰撞、摩擦及尺寸误差。",
+          "nextCheck": "核对第三方实验室的真机对照、设备厂商参数和资产逐项许可，记录目标引擎下碰撞、摩擦及尺寸误差。",
+          "followUpQuestions": [
+            "第三方复测或独立治理记录能否支持该主张在目标场景成立？",
+            "失败样本或后续披露是否改变原有适用范围与核验结论？"
+          ],
+          "evidenceThreshold": "至少需要第三方复测数据和目标环境的对照记录，才可升级为目标任务效果已验证的结论。核对第三方实验室的真机对照、设备厂商参数和资产逐项许可，记录目标引擎下碰撞、摩擦及尺寸误差。",
+          "claimBoundary": "作者原文支持资产库及工作流说明，不证明资产适配所有物理引擎、真实设备或工厂，也不证明仿真结果可直接迁移。",
+          "counterEvidence": "核对第三方复测记录：若独立真机实验与模拟轨迹持续偏离，或设备参数、资产许可不满足项目要求，应降低该资产的复用等级。",
+          "source": "Hugging Face Blog",
+          "sourceName": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+          "originalUrl": "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+          "sourceRole": "厂商主张",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Hugging Face Blog上的厂商作者说明：NVIDIA作者介绍SimReady Central，在Hugging Face汇集面向机器人与AI工厂仿真的OpenUSD资产，并提供按仿真需求检查资产属性的路径。该工作流的适用边界为：作者原文支持资产库及工作流说明，不证明资产适配所有物理引擎、真实设备或工厂，也不证明仿真结果可直接迁移。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-21",
+          "time": "2026-10-21（原文日期）",
+          "tags": [
+            "工具",
+            "独立核验"
+          ],
+          "companies": [
+            "NVIDIA"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "作者说明可核对，实际收益需第三方复测；不替代当前核心TOP3。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "作者说明可核对，实际收益需第三方复测；不替代当前核心TOP3。"
           }
         },
         {

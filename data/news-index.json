@@ -2,16 +2,32 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-10-22",
-  "totalItems": 1286,
+  "totalItems": 1288,
   "editions": [
     {
-      "id": "news-1700-2026-10-22",
+      "id": "news-2300-2026-10-22",
       "date": "2026-10-22",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "17:00新闻版",
+      "archiveLabel": "23:00补充版",
       "archiveStatus": "published",
-      "itemCount": 3,
+      "itemCount": 5,
       "items": [
+        {
+          "id": "granite-ensemble-2026-10-22",
+          "title": "IBM时序集成方案：减少模型选择负担，仍需检验区间可靠性",
+          "category": "model",
+          "label": "模型",
+          "time": "2026-10-22（原文日期）",
+          "publishedAt": "2026-10-22",
+          "body": "IBM Research发布Granite时序集成方案说明，将四个预训练模型组合为统一预测接口，输出点预测与分位数预测。",
+          "impact": "需求预测团队可据此比较集成方案和单模型的维护成本；本站判断，减少选型步骤是否值得额外运行开销，需要在实际业务窗口测量。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "作者说明支持方案与接口存在，不证明每条时间序列均改善；集成不保证区间校准，也不代表今天才首次发布成员模型。"
+        },
         {
           "id": "anthropic-stubbs-2026-10-22",
           "title": "Christopher Stubbs加入Anthropic长期利益信托：关注治理如何落到决策",
@@ -43,6 +59,22 @@
           "sourceRole": "官方核对",
           "trustLevel": "official",
           "sourceCaveat": "官方发布与模型入口可核对；厂商性能结果不证明中文转写支持、所有口音效果或生产收益。"
+        },
+        {
+          "id": "simready-central-2026-10-22",
+          "title": "NVIDIA介绍SimReady资产库：仿真素材复用仍需物理校验",
+          "category": "tool",
+          "label": "工具",
+          "time": "2026-10-21（原文日期）",
+          "publishedAt": "2026-10-21",
+          "body": "NVIDIA作者介绍SimReady Central，在Hugging Face汇集面向机器人与AI工厂仿真的OpenUSD资产，并提供按仿真需求检查资产属性的路径。",
+          "impact": "机器人与数字孪生团队可把素材准备转为资产选型和验证；本站判断，视觉上能拼成场景只是起点，验收应覆盖目标设备和运行环境。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+          "sourceRole": "厂商主张",
+          "trustLevel": "official",
+          "sourceCaveat": "作者原文支持资产库及工作流说明，不证明资产适配所有物理引擎、真实设备或工厂，也不证明仿真结果可直接迁移。"
         },
         {
           "id": "kumo-relational-2026-10-22",
