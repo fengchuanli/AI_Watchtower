@@ -540,6 +540,18 @@ function getOriginalDependency(item) {
   return /media|媒体/.test(sourceType) ? "must-read" : "recommended";
 }
 
+function renderTopSourceDependency(item) {
+  const label = escapeHtml(getOriginalDependencyLabel(item));
+  if (getOriginalDependency(item) !== "must-read") {
+    return `<span class="top-source-dependency">${label}</span>`;
+  }
+  const url = item.originalUrl || item.sourceUrl;
+  const sourceLink = isValidSourceUrl(url)
+    ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${getSourceName(item)}：完整事实请读原文（在新窗口打开）`)}">完整事实请读原文 ↗</a>`
+    : "完整事实请读原文";
+  return `<span class="top-source-dependency top-source-required">${sourceLink}<small>本站仅作简报；完整事实、采访、图表与上下文请以原文为准。</small></span>`;
+}
+
 function getThreeLineSummary(item) {
   return [
     { label: "发生了什么", body: getItemSummary(item) },
@@ -594,7 +606,7 @@ function updateTopStories(items) {
               </div>
               <div class="top-proof-step">
                 <dt>来源边界</dt>
-                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)}${item.sourceRole && item.sourceRole !== sourceType ? ` / ${escapeHtml(item.sourceRole)}` : ""}<span class="top-claim-cue">${escapeHtml(claimStatus)}</span><span class="top-source-dependency">${escapeHtml(getOriginalDependencyLabel(item))}</span></dd>
+                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)}${item.sourceRole && item.sourceRole !== sourceType ? ` / ${escapeHtml(item.sourceRole)}` : ""}<span class="top-claim-cue">${escapeHtml(claimStatus)}</span>${renderTopSourceDependency(item)}</dd>
               </div>
               <div class="top-proof-step">
                 <dt>尚未证明</dt>

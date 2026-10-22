@@ -1,3 +1,14 @@
+## 2026-10-22 11:03:14 JST（20:00 scheduled content optimization）
+
+- Focus: Current-cycle Day 10；媒体 TOP3 原文依赖入口。
+- Changed files: app.js、styles.css、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：首页 TOP3 的 must-read 卡片在来源边界中直接显示“完整事实请读原文”链接和简短上下文提示，无需展开评分或进入详情；当前三条均为官方 recommended 来源，因此本期首页无新增提示，媒体条目入选时生效。
+- Review: 使用既有历史媒体条目 opencode-security-2026-10-20 验证；未更改新闻数据、排名、来源事实。链接仅允许 HTTP(S)，保留新窗口说明、转义、键盘焦点与换行。
+- Verification: node --check app.js；validate-data/site/pages；build-derived-data --check；根目录 HTML 解析；git diff --check；VM 验证历史媒体链接及折叠前位置、当前官方分支、危险 URL、来源名转义、空状态。全部通过；未做浏览器视觉验收。
+- VisionHub briefing scorecard: fiveSecondUnderstanding partial（首屏仍长）；top3ReaderUse pass（原有用途保留）；sourceBoundaryVisible pass；originalSourceDependency pass（直接原文入口）；mobileBurden partial（仅必读分支增加短提示，未实测布局）；continuityUse partial（未复核）；visualAidPurpose pass（文字链接明确阅读路径）。
+- Pull: 沙箱 DNS 失败后授权联网重试成功，origin/main 已同步，编辑前工作区干净。
+- Commit / Push: 检查完成后提交，最终结果见下方记录。
+
 ## 2026-10-22 08:05:41 JST｜17点新闻任务实际08点采集
 
 - Focus：新增3条安全非重复信号：IBM Granite Speech系列更新、NVIDIA Kumo Relational、Anthropic信托成员任命。无同日晨版，以10月21日23点版为去重基线；原文为10月21日日期精度，不保证全部晚于基线，不声称覆盖未来17点。

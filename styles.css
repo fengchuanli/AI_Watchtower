@@ -5462,3 +5462,22 @@ h3 {
   font-weight: 600;
   overflow-wrap: anywhere;
 }
+
+/* Required originals remain reachable on the card face, before score details. */
+.top-source-required a {
+  display: inline-block;
+  padding-block: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.top-source-required a:focus-visible {
+  outline: 2px solid var(--state-info);
+  outline-offset: 3px;
+}
+.top-source-required small {
+  display: block;
+  color: var(--fg-secondary);
+  font-weight: 400;
+  line-height: 1.6;
+}
