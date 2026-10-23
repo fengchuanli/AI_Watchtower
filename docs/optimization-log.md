@@ -10,6 +10,18 @@
 - Verification：app.js语法、validate-data/site/pages、派生一致性、全部data JSON及根目录HTML解析、git diff --check通过。字段文案按现有契约修正，未修改验证器，未做浏览器视觉验收。日志生成首次因Python缺少zoneinfo失败，改为直接记录JST时间后补齐。
 - Commit note：【新闻更新】发布17点AI新闻：4条标准治理与科研工具信号。补齐日志后合并进本次未推送提交；普通推送DNS失败，授权联网重试结果写入memory。
 
+
+## 2026-10-23 11:04:39 JST（20:00 scheduled content optimization）
+
+- Focus: Current-cycle Day 11；TOP3 视觉提示编辑指引。
+- Changed files: docs/homepage-edition-preflight.md、docs/news-data-format.md、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Review: 对照 app.js 的同日 TOP3、厂商发布状态与 must-read 分支，明确分类不代表可信度、发布事实不代表效果获证实、原文入口和证据边界不能藏入折叠；补充字段对应、误读示例和手机人工检查条件。未修改新闻数据或运行时代码。
+- Verification: node --check app.js；validate-data/site/pages；build-derived-data --check；6 个根目录 HTML 解析；git diff --check，全部通过。未做浏览器视觉验收；人工规则不等于新增自动拦截。日志写入初次遇到 stdin 编码错误，显式声明 UTF-8 后修正。
+- Pull: 沙箱 DNS 失败，授权联网重试成功，origin/main 已同步，编辑前工作区干净。
+- Next: Day 12 最小确定性漂移校验，随后 Day 13 媒体详情页复核。
+- Commit / Push: 规则提交 `0e6b389`；推送结果及最终日志提交记录于自动化 memory。
+
 ## 2026-10-22 23:05 JST｜08点任务实际23点补充
 
 - Focus：保留今日3条，新增2条：IBM时序集成方案、NVIDIA SimReady仿真资产库；原文日期分别为10月22日、21日，不推断精确发布时间。
