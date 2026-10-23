@@ -36,17 +36,17 @@
     }
   ],
   "updatedAt": "2026-10-23",
-  "editorNote": "四条标准治理、Agent训练与科研工具信号，区分发布事实和效果证据。",
+  "editorNote": "五条标准治理、兼容性与科研工具信号，区分发布事实和效果证据。",
   "edition": {
-    "id": "news-1700-2026-10-23",
+    "id": "news-2300-2026-10-23",
     "date": "2026-10-23",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "17:00版（实际08点采集）",
-    "itemCount": 4,
-    "note": "四条标准治理、Agent训练与科研工具信号，区分发布事实和效果证据。",
-    "operationalStatus": "17点任务实际08点采集，无同日晨版；检查登记来源索引与原文，RSS解析受限。以昨日23点版去重，日期原文不保证晚于基线；不覆盖未来17点。",
-    "editorialInterpretation": "本期发布4条安全非重复信号；少于10条是质量门槛结果，未用旧闻、社区讨论或未核对的媒体线索补数。",
+    "archiveLabel": "23:00补充版",
+    "itemCount": 5,
+    "note": "五条标准治理、兼容性与科研工具信号，区分发布事实和效果证据。",
+    "operationalStatus": "08点任务实际23点执行，保留同日4条，新增1条兼容性查询。RSS解析受限，已查索引多为重复或旧闻；不足10条不补数，覆盖非穷尽。",
+    "editorialInterpretation": "本期发布5条安全非重复信号；少于10条是质量门槛结果，未用旧闻、社区讨论或未核对的媒体线索补数。",
     "readerFrame": {
       "headline": "标准与研究工具发布后，怎样核对实际价值？",
       "whyItMatters": "新发布提供工程与研究入口，但能否可靠使用仍取决于独立记录。团队可据此更新验收清单与协作边界。",
@@ -60,7 +60,7 @@
       ],
       "mobile": {
         "headline": "标准与科研如何验收",
-        "summary": "四条信号：查治理、数据库终态、科研复现与地图真值。",
+        "summary": "五条信号：查标准治理、硬件兼容、数据库终态、科研复现与地图真值。",
         "primaryUses": [
           "工程团队查兼容",
           "研究团队查复现"
@@ -69,8 +69,9 @@
       }
     },
     "changeSummary": {
-      "headline": "新增标准捐赠、研究招募、终态训练与遥感嵌入",
+      "headline": "新增Trainium兼容性查询，保留同日四条",
       "freshFacts": [
+        "新增：Hugging Face发布Trainium模型支持查询页面，提供测试结果、软件版本与复现脚本；通过测试只表示有限生成检查成功。",
         "新增：Anthropic宣布将Agent Skills标准的名称、标志、GitHub组织与域名捐赠给AAIF，并提出版本发布、提案流程和安全指南路线图。",
         "新增：Anthropic开放生命科学客座研究项目申请，计划开展8至12周合作，并共同发布成果及开放配套数据和代码。",
         "新增：Microsoft与Hugging Face作者发布ThinkingBox训练方案，用数据库最终状态检查作为Agent后训练奖励，并报告重复成功改善而至少一次成功覆盖略降。",
@@ -84,7 +85,7 @@
     "coverageMix": [
       {
         "label": "核对工程与标准核验",
-        "count": 2,
+        "count": 3,
         "meaning": "用来更新验收清单：工程团队核对标准治理、平台兼容性与数据库错误副作用。"
       },
       {
@@ -95,7 +96,7 @@
     ],
     "sourceRisk": {
       "label": "作者原文集中",
-      "note": "来源集中于作者原文。4/4为官方或作者原文；Anthropic 2条，HF平台2条分别来自Microsoft与Ai2。没有独立效果报道，不代表全市场共识。",
+      "note": "来源集中：5/5为官方或作者原文；HF平台3条来自不同作者，Anthropic 2条。缺少独立效果报道，不代表全市场共识。",
       "nextCheck": "核对AAIF记录、独立业务复测、学术实验与地面真值。"
     },
     "overreadBoundary": {
@@ -108,18 +109,19 @@
       {
         "family": "official",
         "label": "官方与作者原文",
-        "count": 4,
-        "role": "三条发布事实及一条厂商实验主张，不独立确认效果。"
+        "count": 5,
+        "role": "四条发布事实及一条厂商实验主张，不独立确认效果。"
       }
     ],
     "topicGroups": [
       {
         "id": "developer-tooling",
         "label": "工具核验",
-        "count": 2,
+        "count": 3,
         "itemIds": [
           "agent-skills-aaif-2026-10-23",
-          "thinkingbox-training-2026-10-23"
+          "thinkingbox-training-2026-10-23",
+          "trainium-model-support-2026-10-23"
         ],
         "meaning": "用来检查发布范围、独立复测与实际适用条件。"
       },
@@ -162,7 +164,7 @@
         "label": "标准与Agent工程",
         "status": "stronger",
         "previousPattern": "此前关注组件发布、仿真资产与治理任命。",
-        "currentSignal": "本期新增标准与Agent工程的原文入口。",
+        "currentSignal": "本期新增标准治理、Agent训练与Trainium模型兼容性查询入口。",
         "signalDirection": "增强：新增核验对象，实际效果证据尚未升级。",
         "stillUnproven": "仍需独立数据和第三方复测，不能推断生产或科研效果。"
       },
@@ -193,15 +195,82 @@
       }
     ],
     "sourceConcentration": {
-      "sourceId": "anthropic-news",
-      "sourceName": "Anthropic News",
-      "count": 2,
-      "share": "2/4",
-      "note": "来源集中：4/4为官方或作者原文；Anthropic 2条，HF平台2条分别来自Microsoft与Ai2。没有独立效果报道，不代表全市场共识。",
+      "sourceId": "huggingface-blog",
+      "sourceName": "Hugging Face Blog",
+      "count": 3,
+      "share": "3/5",
+      "note": "来源集中：5/5为官方或作者原文；HF平台3条来自不同作者，Anthropic 2条。缺少独立效果报道，不代表全市场共识。",
       "nextCheck": "核对AAIF记录、独立业务复测、学术实验与地面真值。"
     }
   },
   "items": [
+    {
+      "id": "trainium-model-support-2026-10-23",
+      "category": "tool",
+      "label": "工具",
+      "title": "Trainium模型兼容性可查询：测试通过不等于生产性能达标",
+      "body": "Hugging Face发布Trainium模型支持查询页面，提供测试结果、软件版本与复现脚本；通过测试只表示有限生成检查成功。",
+      "summary": "Hugging Face发布Trainium模型支持查询页面，提供测试结果、软件版本与复现脚本；通过测试只表示有限生成检查成功。",
+      "detailBody": "来源事实：Hugging Face发布Trainium模型支持查询页面，提供测试结果、软件版本与复现脚本；通过测试只表示有限生成检查成功。\n核验边界：作者测试不证明生产吞吐量、长文本质量或全部模型兼容；未测试与不兼容需要区分。",
+      "trend": "部署团队可以先查目标模型与软件版本，再决定是否投入迁移验证。本站判断，兼容性清单降低的是试验入口的不确定性，不能替代容量规划和业务验收。",
+      "detailTrend": "部署团队可以先查目标模型与软件版本，再决定是否投入迁移验证。本站判断，兼容性清单降低的是试验入口的不确定性，不能替代容量规划和业务验收。\n本站判断：采购或迁移前应固定模型、编译器和库版本，用自己的业务输入进行对照。只有把失败样本与完整资源消耗一起记录，才有条件判断更换硬件是否值得。",
+      "whyItMatters": "部署团队可以先查目标模型与软件版本，再决定是否投入迁移验证。本站判断，兼容性清单降低的是试验入口的不确定性，不能替代容量规划和业务验收。",
+      "whyRanked": "核对第三方在目标Trainium实例上的复现日志，比较长序列输出、并发吞吐量、错误率与完整账单。",
+      "detailWhyRanked": "核对第三方在目标Trainium实例上的复现日志，比较长序列输出、并发吞吐量、错误率与完整账单。\n验收记录需公开测试配置、运行次数和失败条件，避免把一次短输出成功当成长期稳定服务。独立客户数据才能支持成本或可靠性结论。",
+      "topReason": "核对第三方在目标Trainium实例上的复现日志，比较长序列输出、并发吞吐量、错误率与完整账单。",
+      "impact": "部署团队可以先查目标模型与软件版本，再决定是否投入迁移验证。本站判断，兼容性清单降低的是试验入口的不确定性，不能替代容量规划和业务验收。",
+      "whoShouldCare": "正在评估AWS Trainium模型迁移的推理工程团队，可用于确定兼容性试验范围与采购验收清单。",
+      "readerUse": "推理工程团队先按版本查询目标模型，再用自己的负载验证运行质量与成本。",
+      "nextCheck": "核对第三方在目标Trainium实例上的复现日志，比较长序列输出、并发吞吐量、错误率与完整账单。",
+      "followUpQuestions": [
+        "目标模型在相同软件版本下能否由第三方复现？",
+        "客户长序列和并发测试是否出现短生成检查没有发现的失败？"
+      ],
+      "evidenceThreshold": "至少需要第三方固定版本复现日志和客户侧业务负载数据，才可升级为目标场景兼容性与性能已验证。",
+      "claimBoundary": "作者测试不证明生产吞吐量、长文本质量或全部模型兼容；未测试与不兼容需要区分。",
+      "counterEvidence": "若第三方复现日志显示同版本运行失败，或客户长序列与并发测试出现质量退化，应下调兼容性外推判断。",
+      "source": "Hugging Face Blog",
+      "sourceName": "Hugging Face Blog",
+      "sourceId": "huggingface-blog",
+      "sourceUrl": "https://huggingface.co/blog/torch-neuronx-model-support",
+      "originalUrl": "https://huggingface.co/blog/torch-neuronx-model-support",
+      "sourceRole": "官方核对",
+      "sourceType": "official",
+      "trustLevel": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "provenance": "Hugging Face Blog作者原文说明：Hugging Face发布Trainium模型支持查询页面，提供测试结果、软件版本与复现脚本；通过测试只表示有限生成检查成功。核验边界：作者测试不证明生产吞吐量、长文本质量或全部模型兼容；未测试与不兼容需要区分。",
+      "verificationStatus": "已核验",
+      "publishedAt": "2026-10-23",
+      "time": "2026-10-23（原文日期）",
+      "tags": [
+        "工具",
+        "独立核验"
+      ],
+      "companies": [
+        "AWS",
+        "Hugging Face"
+      ],
+      "selectionScore": {
+        "impact": 3,
+        "novelty": 3,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 17,
+        "note": "原文支持发布事实，实际效果仍需独立记录与复测。"
+      },
+      "editorScore": {
+        "impact": 3,
+        "novelty": 3,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 17,
+        "note": "原文支持发布事实，实际效果仍需独立记录与复测。"
+      }
+    },
     {
       "id": "agent-skills-aaif-2026-10-23",
       "category": "tool",

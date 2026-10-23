@@ -2,16 +2,32 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-10-23",
-  "totalItems": 1292,
+  "totalItems": 1293,
   "editions": [
     {
-      "id": "news-1700-2026-10-23",
+      "id": "news-2300-2026-10-23",
       "date": "2026-10-23",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "17:00版（实际08点采集）",
+      "archiveLabel": "23:00补充版",
       "archiveStatus": "published",
-      "itemCount": 4,
+      "itemCount": 5,
       "items": [
+        {
+          "id": "trainium-model-support-2026-10-23",
+          "title": "Trainium模型兼容性可查询：测试通过不等于生产性能达标",
+          "category": "tool",
+          "label": "工具",
+          "time": "2026-10-23（原文日期）",
+          "publishedAt": "2026-10-23",
+          "body": "Hugging Face发布Trainium模型支持查询页面，提供测试结果、软件版本与复现脚本；通过测试只表示有限生成检查成功。",
+          "impact": "部署团队可以先查目标模型与软件版本，再决定是否投入迁移验证。本站判断，兼容性清单降低的是试验入口的不确定性，不能替代容量规划和业务验收。",
+          "source": "Hugging Face Blog",
+          "sourceId": "huggingface-blog",
+          "sourceUrl": "https://huggingface.co/blog/torch-neuronx-model-support",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "作者测试不证明生产吞吐量、长文本质量或全部模型兼容；未测试与不兼容需要区分。"
+        },
         {
           "id": "agent-skills-aaif-2026-10-23",
           "title": "Agent Skills移交AAIF：开放标准进入共同治理阶段",
