@@ -98,3 +98,24 @@ The header navigation and the small `手机先读` cue should mirror this split:
 ## Day 7 TOP3 Visual Briefing Shape
 
 Use existing fields only. The eyebrow carries signal type (`label`); the card retains minimum fact, why-now rationale and reader use (`readerUse`). A shared left rule groups source role/status, proof boundary (`claimBoundary`) and next-check artifact (`nextCheck`) into one evidence path. Keep all three text labels visible on mobile; color alone must not convey certainty. Show `originalDependency` beside the source so media-backed full-fact dependency is visible without opening scoring details. Never infer confidence from rank or source type, truncate boundary sentences, or invent an artifact when the field is absent. This initial shape adds one explicit boundary row; Day 8 should review comparative cues without duplicating these sentences.
+
+## TOP3 Visual Cue Editorial Review (Day 11)
+
+逐张检查页面实际选出的同日 TOP3（包含同日历史批次），不要只检查当前 `items` 的前三条。视觉提示复用既有字段，不新增置信度字段，也不把排名当作事实证明。
+
+| 卡片位置 / 字段 | 编辑检查 | 不应出现的表达 |
+| --- | --- | --- |
+| 信号标签 `label` | 只说明既有新闻类别；与日期分开，保持简短中文。 | 把“安全”类别写成“已安全”，或用“第一名”暗示证据最充分。 |
+| 来源边界 `sourceType`、`sourceRole`、`claimStatus` | 保留来源角色和声明状态；官方来源不自动等于独立验证。 | 把厂商主张写成本站确认的效果。 |
+| 尚未证明 `claimBoundary` | 点名该来源尚未支持的结果；与最小事实区分，不重复整段摘要。 | 用“值得关注”等泛泛措辞替代具体证据缺口。 |
+| 读者用途 `readerUse` | 说明读者可据此核对的一个决定或清单。 | 把待验证性能写成采购或部署保证。 |
+| 下一步核验 `nextCheck` | 指向既有字段中的具体文件、测试或独立证据路径；保留未知状态。 | 虚构已存在的审计、客户结果或第三方复测。 |
+| 原文依赖 `originalDependency`、`originalUrl` / `sourceUrl` | `must-read` 在评分折叠前提供“完整事实请读原文”及上下文提示。 | 将本站简报描述为媒体全文的替代品。 |
+
+现有渲染分支必须准确保留：只有 `sourceType: official`、`sourceRole: 厂商主张` 且 `claimStatus: confirmed` 同时满足，才使用“发布事实已确认 · 效果待核验”；其他组合继续使用对应声明状态，不为统一外观强行升级。该短标签仍不能替代具体的 `claimBoundary`。
+
+示例（仅说明写法，不是新增新闻）：厂商发布模型说明，可以确认“发布说明”这一动作；不能据此写成“模型效果已获独立验证”。媒体卡片则保留报道状态与必读原文入口，不因进入 TOP3 改成官方确认。
+
+发布前在 390px 与 768px 核对标签、来源、边界、下一步核验是否可读：不能只靠颜色表达状态，不能截断边界句子，不能把原文入口藏到评分详情中；避免新增与现有证据行重复的解释段落。原文链接只接受 HTTP(S)，新窗口说明、键盘焦点和长文本换行应保留；缺失有效链接时保留提醒并修正数据，不编造地址。
+
+本条是人工编辑规则。现有数据和页面检查不能证明来源事实、独立性或真实手机阅读负担；未实际检查浏览器时不得记录视觉验收通过。Day 12 再补最小确定性漂移校验，不把本条当作已实现的自动拦截。

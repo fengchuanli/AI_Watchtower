@@ -8,6 +8,8 @@ Before committing a news publication, use `docs/current-to-history-publication-c
 
 Homepage `今日 TOP3` is a daily ranking. The page may combine the current `data/news.json` edition with same-date editions in `data/news-history.json`, then rank the best three by editorial score, reader utility, impact, evidence quality, narrative strength, and freshness. The current feed itself should stay sorted newest-first for the news flow; TOP3 selection should not be confused with current-batch order.
 
+TOP3 视觉提示发布前应按 [TOP3 Visual Cue Editorial Review](homepage-edition-preflight.md#top3-visual-cue-editorial-review-day-11) 逐张核对：类别不代表可信度，官方发布不代表效果获证实，媒体原文依赖不得因排名而降低。规则复用既有字段，不新增数据结构。
+
 All item fields must follow `docs/copyright-safety.md`. The data model should help readers understand the news, but it must not turn source articles into full Chinese replacements. Use source fields for minimum necessary facts, and use editorial fields for AI Watchtower's own interpretation, trend reading, reader use, and verification boundary.
 
 Before a semi-automated gathering run drafts item fields, use `docs/candidate-source-checklist.md` to confirm the candidate URL, source identity, source role, duplicate status, freshness posture, copyright/paywall safety, and source-owner concentration risk. Only candidates that pass that gate should be turned into the structured fields below.
