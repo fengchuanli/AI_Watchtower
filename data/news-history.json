@@ -1,8 +1,294 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23",
-  "totalItems": 1293,
+  "updatedAt": "2026-10-24",
+  "totalItems": 1295,
   "editions": [
+    {
+      "id": "news-1700-2026-10-24",
+      "date": "2026-10-24",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "17:00任务｜实际08点采集",
+      "itemCount": 2,
+      "note": "两条近期产品发布补充：核对Agent登录授权与设计生成入口，不将公告视为效果证明。",
+      "operationalStatus": "17点任务实际08点检查登记来源；RSS解析受限，已核对公开索引与原文。无同日晨版，以昨日23点版去重，2条近期补充不代表晨版后增量。",
+      "editorialInterpretation": "本期发布2条安全非重复信号；少于10条是质量门槛结果，未用旧闻、社区讨论、传闻或重复来源补数。两条10月22日原文为近期补充。",
+      "readerFrame": {
+        "headline": "Agent登录与设计生成入口，如何核对可用范围？",
+        "whyItMatters": "两条近期产品发布补充：核对Agent登录授权与设计生成入口，不将公告视为效果证明。",
+        "useThisIssueFor": [
+          "Agent开发与安全团队可先核对账户地区、伙伴接入状态和授权日志。",
+          "设计与产品团队可用真实中文海报和API负载评估可编辑性、质量及返工成本。"
+        ],
+        "notProvenYet": [
+          "公告不证明所有伙伴已上线，也不证明登录后的Agent行为安全；.eu和.ca账户当前不受支持，各集成防护不同。",
+          "发布不证明中文排版准确或设计质量普遍领先；原文关于MCP可用性的概述与细项不一致，按细项的Coming Soon处理，不列为已上线。"
+        ],
+        "mobile": {
+          "headline": "登录与设计入口核验",
+          "summary": "两条近期补充：查授权范围、集成进度、设计盲测与实际成本。",
+          "primaryUses": [
+            "安全团队查权限",
+            "设计团队查质量"
+          ],
+          "proofBoundary": "发布事实已核对，安全与效果仍需独立审计和第三方测试。"
+        }
+      },
+      "changeSummary": {
+        "headline": "新增两条近期发布核验，未冒充晨版后增量",
+        "freshFacts": [
+          "新增：1Password宣布Agent登录授权平台，由用户批准后代填凭据；当前支持.com个人及家庭账户，伙伴集成按不同进度推出。",
+          "新增：Canva宣布自研Craft图像模型在产品与公共API提供，采用先规划构图再渲染的流程；原文将MCP接入列为即将推出。"
+        ],
+        "repeatedContext": [
+          "重复背景：此前Agent Skills与Trainium兼容性发布不再收录。",
+          "重复背景：产品公告不等于独立效果证据。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对工具入口",
+          "count": 1,
+          "meaning": "用来更新验收清单：Agent开发与安全团队可先核对账户地区、伙伴接入状态和授权日志。"
+        },
+        {
+          "label": "核对模型入口",
+          "count": 1,
+          "meaning": "用来更新验收清单：设计与产品团队可用真实中文海报和API负载评估可编辑性、质量及返工成本。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源集中",
+        "note": "来源集中：2/2为官方发布，分别来自1Password与Canva；没有独立效果验证。",
+        "nextCheck": "核对第三方安全审计、独立设计师盲测与客户运行日志。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "两条近期补充只提供产品核验入口。",
+        "doNotConclude": "不能推断全部集成可用、Agent操作安全或设计效果领先。",
+        "useInstead": "应该用第三方审计、盲测及客户日志更新判断。"
+      },
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方发布原文",
+          "count": 2,
+          "role": "核对发布事实，不独立确认安全或质量效果。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "developer-tooling",
+          "label": "登录授权核验",
+          "count": 1,
+          "itemIds": [
+            "1password-agents-2026-10-24"
+          ],
+          "meaning": "用来更新验收清单：Agent开发与安全团队可先核对账户地区、伙伴接入状态和授权日志。"
+        },
+        {
+          "id": "model",
+          "label": "设计模型核验",
+          "count": 1,
+          "itemIds": [
+            "canva-craft-2026-10-24"
+          ],
+          "meaning": "用来更新验收清单：设计与产品团队可用真实中文海报和API负载评估可编辑性、质量及返工成本。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "developer-tooling",
+          "label": "登录授权核验",
+          "note": "跨期看，Agent工程从标准互操作继续延伸到登录授权。",
+          "boundary": "仍需第三方审计记录确认凭据隔离及撤销效果。"
+        },
+        {
+          "topic": "model",
+          "label": "设计模型核验",
+          "note": "跨期看，模型部署核验扩展至设计生成与编辑入口。",
+          "boundary": "仍需独立设计师测试数据确认中文排版与返工成本。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "developer-tooling",
+          "label": "登录授权核验",
+          "status": "stronger",
+          "previousPattern": "此前关注标准治理与模型部署兼容性。",
+          "currentSignal": "本期新增官方产品发布原文与适用范围。",
+          "signalDirection": "增强：增加核验对象，不代表效果证据升级。",
+          "stillUnproven": "仍需第三方审计、独立评测和客户日志验证生产效果。"
+        },
+        {
+          "topic": "model",
+          "label": "设计模型核验",
+          "status": "stronger",
+          "previousPattern": "此前关注标准治理与模型部署兼容性。",
+          "currentSignal": "本期新增官方产品发布原文与适用范围。",
+          "signalDirection": "增强：增加核验对象，不代表效果证据升级。",
+          "stillUnproven": "仍需第三方审计、独立评测和客户日志验证生产效果。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "1Password",
+          "label": "新增产品核验入口",
+          "lastMention": "此前归档未收录本次产品发布原文，本期不推断公司整体趋势。",
+          "whatChanged": "本期新增：1Password宣布Agent登录授权平台，由用户批准后代填凭据；当前支持.com个人及家庭账户，伙伴集成按不同进度推出。",
+          "stillUnproven": "核对伙伴实际发布记录及第三方安全审计，测试拒绝授权、断开集成和会话撤销后是否仍能操作。仍需独立数据验证效果。"
+        },
+        {
+          "company": "Canva",
+          "label": "新增产品核验入口",
+          "lastMention": "此前归档未收录本次产品发布原文，本期不推断公司整体趋势。",
+          "whatChanged": "本期新增：Canva宣布自研Craft图像模型在产品与公共API提供，采用先规划构图再渲染的流程；原文将MCP接入列为即将推出。",
+          "stillUnproven": "核对独立设计师盲测与客户API运行日志，检查中文细字、局部修改一致性、失败率及单位成品成本。仍需独立数据验证效果。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "1password-blog",
+        "sourceName": "1Password Blog",
+        "count": 1,
+        "share": "1/2",
+        "note": "来源集中：2/2为官方发布，分别来自1Password与Canva；没有独立效果验证。",
+        "nextCheck": "核对第三方安全审计、独立设计师盲测与客户运行日志。"
+      },
+      "items": [
+        {
+          "id": "1password-agents-2026-10-24",
+          "category": "tool",
+          "label": "工具",
+          "title": "1Password发布Agent登录授权平台：集成范围与登录后权限仍需分开核验",
+          "body": "1Password宣布Agent登录授权平台，由用户批准后代填凭据；当前支持.com个人及家庭账户，伙伴集成按不同进度推出。",
+          "summary": "1Password宣布Agent登录授权平台，由用户批准后代填凭据；当前支持.com个人及家庭账户，伙伴集成按不同进度推出。",
+          "detailBody": "来源事实：1Password宣布Agent登录授权平台，由用户批准后代填凭据；当前支持.com个人及家庭账户，伙伴集成按不同进度推出。\n核验边界：公告不证明所有伙伴已上线，也不证明登录后的Agent行为安全；.eu和.ca账户当前不受支持，各集成防护不同。",
+          "trend": "本站判断，登录凭据与模型输入分离可改变账号接入流程。工程团队仍需分别验收授权、撤销与登录后操作权限，避免把登录许可当成任务内所有操作的许可。",
+          "detailTrend": "本站判断，登录凭据与模型输入分离可改变账号接入流程。工程团队仍需分别验收授权、撤销与登录后操作权限，避免把登录许可当成任务内所有操作的许可。\n本站判断：保留原始输入、失败样本和人工复核记录，才能比较不同方案在同一任务上的表现。",
+          "whyItMatters": "本站判断，登录凭据与模型输入分离可改变账号接入流程。工程团队仍需分别验收授权、撤销与登录后操作权限，避免把登录许可当成任务内所有操作的许可。",
+          "whyRanked": "核对伙伴实际发布记录及第三方安全审计，测试拒绝授权、断开集成和会话撤销后是否仍能操作。",
+          "detailWhyRanked": "核对伙伴实际发布记录及第三方安全审计，测试拒绝授权、断开集成和会话撤销后是否仍能操作。\n独立记录需要明确版本、测试条件与失败路径；单次演示不能替代持续验收。本次原文仅确认产品发布，伙伴功能与用户任务之间仍有验收距离；需逐项核对可用范围，避免用厂商演示替代生产环境中的失败率和完整操作记录。",
+          "topReason": "核对伙伴实际发布记录及第三方安全审计，测试拒绝授权、断开集成和会话撤销后是否仍能操作。",
+          "impact": "本站判断，登录凭据与模型输入分离可改变账号接入流程。工程团队仍需分别验收授权、撤销与登录后操作权限，避免把登录许可当成任务内所有操作的许可。",
+          "whoShouldCare": "正在评估1Password产品接入的开发者、企业采购团队与安全团队。",
+          "readerUse": "Agent开发与安全团队可先核对账户地区、伙伴接入状态和授权日志。",
+          "nextCheck": "核对伙伴实际发布记录及第三方安全审计，测试拒绝授权、断开集成和会话撤销后是否仍能操作。",
+          "followUpQuestions": [
+            "第三方复测记录能否确认1Password所述功能及适用边界？",
+            "客户侧日志是否显示未覆盖的失败条件？"
+          ],
+          "evidenceThreshold": "至少需要第三方审计与用户侧访问日志确认凭据隔离和撤销效果，才可升级为特定集成安全效果已验证。",
+          "claimBoundary": "公告不证明所有伙伴已上线，也不证明登录后的Agent行为安全；.eu和.ca账户当前不受支持，各集成防护不同。",
+          "counterEvidence": "若独立审计记录发现凭据进入模型上下文，或撤销后仍可继续访问，应下调安全效果判断。",
+          "source": "1Password Blog",
+          "sourceName": "1Password Blog",
+          "sourceId": "1password-blog",
+          "sourceUrl": "https://1password.com/blog/1password-for-ai-agents",
+          "originalUrl": "https://1password.com/blog/1password-for-ai-agents",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "1Password Blog：官方原文核对发布事实：1Password宣布Agent登录授权平台，由用户批准后代填凭据；当前支持.com个人及家庭账户，伙伴集成按不同进度推出。核验边界：公告不证明所有伙伴已上线，也不证明登录后的Agent行为安全；.eu和.ca账户当前不受支持，各集成防护不同。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-22",
+          "time": "2026-10-22（近期补充，非今晨增量）",
+          "tags": [
+            "工具",
+            "独立核验"
+          ],
+          "companies": [
+            "1Password"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "原文支持发布事实，实际效果仍需独立记录与复测。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "原文支持发布事实，实际效果仍需独立记录与复测。"
+          }
+        },
+        {
+          "id": "canva-craft-2026-10-24",
+          "category": "model",
+          "label": "模型",
+          "title": "Canva推出Craft图像模型：设计规划进入生成流程，MCP接入仍待上线",
+          "body": "Canva宣布自研Craft图像模型在产品与公共API提供，采用先规划构图再渲染的流程；原文将MCP接入列为即将推出。",
+          "summary": "Canva宣布自研Craft图像模型在产品与公共API提供，采用先规划构图再渲染的流程；原文将MCP接入列为即将推出。",
+          "detailBody": "来源事实：Canva宣布自研Craft图像模型在产品与公共API提供，采用先规划构图再渲染的流程；原文将MCP接入列为即将推出。\n核验边界：发布不证明中文排版准确或设计质量普遍领先；原文关于MCP可用性的概述与细项不一致，按细项的Coming Soon处理，不列为已上线。",
+          "trend": "本站判断，构图规划与设计编辑入口相结合，为营销团队提供新的生成试验对象。采购前应使用真实版式与修改任务测试，而非仅看示例图或厂商引用的榜单。",
+          "detailTrend": "本站判断，构图规划与设计编辑入口相结合，为营销团队提供新的生成试验对象。采购前应使用真实版式与修改任务测试，而非仅看示例图或厂商引用的榜单。\n本站判断：保留原始输入、失败样本和人工复核记录，才能比较不同方案在同一任务上的表现。",
+          "whyItMatters": "本站判断，构图规划与设计编辑入口相结合，为营销团队提供新的生成试验对象。采购前应使用真实版式与修改任务测试，而非仅看示例图或厂商引用的榜单。",
+          "whyRanked": "核对独立设计师盲测与客户API运行日志，检查中文细字、局部修改一致性、失败率及单位成品成本。",
+          "detailWhyRanked": "核对独立设计师盲测与客户API运行日志，检查中文细字、局部修改一致性、失败率及单位成品成本。\n独立记录需要明确版本、测试条件与失败路径；单次演示不能替代持续验收。本次原文仅确认产品发布，伙伴功能与用户任务之间仍有验收距离；需逐项核对可用范围，避免用厂商演示替代生产环境中的失败率和完整操作记录。",
+          "topReason": "核对独立设计师盲测与客户API运行日志，检查中文细字、局部修改一致性、失败率及单位成品成本。",
+          "impact": "本站判断，构图规划与设计编辑入口相结合，为营销团队提供新的生成试验对象。采购前应使用真实版式与修改任务测试，而非仅看示例图或厂商引用的榜单。",
+          "whoShouldCare": "正在评估Canva图像生成API接入、中文营销版式与返工成本的设计团队和企业采购负责人。",
+          "readerUse": "设计与产品团队可用真实中文海报和API负载评估可编辑性、质量及返工成本。",
+          "nextCheck": "核对独立设计师盲测与客户API运行日志，检查中文细字、局部修改一致性、失败率及单位成品成本。",
+          "followUpQuestions": [
+            "第三方复测记录能否确认Canva所述功能及适用边界？",
+            "客户侧日志是否显示未覆盖的失败条件？"
+          ],
+          "evidenceThreshold": "至少需要独立设计师对照评测和客户侧完整成本记录，才可升级为特定设计工作流质量或效率优势已验证。",
+          "claimBoundary": "发布不证明中文排版准确或设计质量普遍领先；原文关于MCP可用性的概述与细项不一致，按细项的Coming Soon处理，不列为已上线。",
+          "counterEvidence": "若第三方复测记录出现文字错误、局部修改破坏布局或返工成本上升，应下调工作流收益判断。",
+          "source": "Canva Newsroom",
+          "sourceName": "Canva Newsroom",
+          "sourceId": "canva-newsroom",
+          "sourceUrl": "https://www.canva.com/newsroom/news/canva-craft/",
+          "originalUrl": "https://www.canva.com/newsroom/news/canva-craft/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Canva Newsroom：官方原文核对发布事实：Canva宣布自研Craft图像模型在产品与公共API提供，采用先规划构图再渲染的流程；原文将MCP接入列为即将推出。核验边界：发布不证明中文排版准确或设计质量普遍领先；原文关于MCP可用性的概述与细项不一致，按细项的Coming Soon处理，不列为已上线。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-10-22",
+          "time": "2026-10-22（近期补充，非今晨增量）",
+          "tags": [
+            "模型",
+            "独立核验"
+          ],
+          "companies": [
+            "Canva"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "原文支持发布事实，实际效果仍需独立记录与复测。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "原文支持发布事实，实际效果仍需独立记录与复测。"
+          }
+        }
+      ]
+    },
     {
       "id": "news-2300-2026-10-23",
       "date": "2026-10-23",
