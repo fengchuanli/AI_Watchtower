@@ -1,3 +1,15 @@
+## 2026-10-25 08:03:58 JST｜17点任务实际08点采集
+
+- Focus：发布2条安全非重复信号：Block Dessa纯语音展示与NVIDIA Kumo Forecast历史检索预测。无同日晨版，以10月24日23点版去重；Kumo为10月21日近期补充，不声称基线后发生。
+- Pull：编辑前拉取origin/main；普通DNS失败，授权联网重试成功，工作区原先干净。
+- Sources：优先尝试HF、AWS、Google RSS，解析受限；检查登记Anthropic、HF、Google、AWS与TechCrunch公开入口。媒体Dessa线索替换为Block官方原文；官方页面未标发布时间，以10月24日媒体发现日期登记并明确标注。未使用付费或登录墙正文、社交帖子和社区评论。
+- Candidate intake：Block/sourceId=block-research、NVIDIA/sourceId=huggingface-blog；均为厂商主张，confirmed仅限厂商作出展示或方法说明。下一证据为独立语音安全报告、设备实测、固定时间窗口预测回测与数据审计。两条URL脚本无重复，人工核对事件与Kumo Relational不同；duplicateStatus=manual-clear；copyrightPosture=最小来源事实加本站判断；priorityScore=17；draftingDecision=draft。
+- Batch decision：publish-partial-batch，2条；重复Agent Skills、LitPivot、Trainium与SimReady不重发，通用教程、未核对媒体线索及社区文章不补数。2/2厂商原文集中风险已披露，第一屏明确第三方验证路径。Block为新所有者标签，登记来源133项。
+- Changed files：data/news.json、data/news-history.json、data/sources.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3区域（本日2条）、新闻流、全部新闻、归档与两条详情页显示事件、影响、来源置信度、核验边界与下一步检查；137期/1298条。
+- Verification：app.js语法、validate-data/site/pages、派生数据--check、JSON与HTML解析、git diff --check通过。初稿字段按既有契约修正，未改验证器；未做浏览器视觉验收。
+- Commit note：【新闻更新】发布17点AI新闻：2条语音交互与时序预测信号。推送结果记录automation memory。
+
 ## 2026-10-24 23:03:11 JST｜08点任务实际23点补充
 
 - Focus：保留今日2条，新增1条Ai2 LitPivot文献驱动提案修订研究；作者17人实验不证明跨学科科研创新收益。
