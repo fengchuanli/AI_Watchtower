@@ -6,8 +6,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
-- Current phase: Phase 2, TOP3 Visual Briefing
-- Last indexed run: 2026-10-23 11:02:27 JST (20:00 scheduled run)
+- Current phase: Phase 3, Detail-Page Article Consistency
+- Last indexed run: 2026-10-24 11:00 JST (20:00 scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Current Cycle Day 4 Completion
@@ -130,7 +130,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 9 complete: official vendor TOP3 cards distinguish confirmed publication facts from unproven outcomes; existing sourceRole is visible alongside source type. Current AWS Agent Registry and PKI cards retain their explicit claimBoundary and independent nextCheck.
 - Current-cycle Day 10 complete: must-read TOP3 cards expose a direct original-source link and a compact full-facts/context reminder before score details. Historical media item opencode-security-2026-10-20 verified; current official-only TOP3 is unchanged.
 - Current-cycle Day 11 complete: homepage preflight and data-format guidance map each visual cue to existing fields, preserve vendor publication/outcome boundaries and must-read links, and distinguish manual review from automated checks.
-- Continue with Day 12: minimal certainty-drift validation guard. Then Day 13: media-backed detail-page briefing review.
+- Current-cycle Day 12 complete: `validate-site.mjs` runs real TOP3 rendering fixtures via `check-top3-cues.mjs` to guard vendor certainty, reported/disputed/unclear states, visible proof/next checks, category labels, missing boundaries, and must-read links.
+- Continue with Day 13: media-backed detail-page briefing review.
 
 ## Update Rules
 

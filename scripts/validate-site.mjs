@@ -1,3 +1,4 @@
+import { checkTop3Cues } from "./check-top3-cues.mjs";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 
@@ -8,6 +9,7 @@ const tagsHtml = readFileSync("tags.html", "utf8");
 const archiveHtml = readFileSync("archive.html", "utf8");
 const notFoundHtml = readFileSync("404.html", "utf8");
 const appJs = readFileSync("app.js", "utf8");
+checkTop3Cues(appJs);
 const newsJson = readFileSync("data/news.json", "utf8");
 const detailJs = readFileSync("news-detail.js", "utf8");
 const allNewsJs = readFileSync("all-news.js", "utf8");

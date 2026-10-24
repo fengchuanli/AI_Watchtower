@@ -119,3 +119,9 @@ Use existing fields only. The eyebrow carries signal type (`label`); the card re
 发布前在 390px 与 768px 核对标签、来源、边界、下一步核验是否可读：不能只靠颜色表达状态，不能截断边界句子，不能把原文入口藏到评分详情中；避免新增与现有证据行重复的解释段落。原文链接只接受 HTTP(S)，新窗口说明、键盘焦点和长文本换行应保留；缺失有效链接时保留提醒并修正数据，不编造地址。
 
 本条是人工编辑规则。现有数据和页面检查不能证明来源事实、独立性或真实手机阅读负担；未实际检查浏览器时不得记录视觉验收通过。Day 12 再补最小确定性漂移校验，不把本条当作已实现的自动拦截。
+
+## TOP3 Certainty Regression Guard
+
+`node scripts/validate-site.mjs` invokes `scripts/check-top3-cues.mjs` against the real homepage renderer using isolated fixtures. It checks the pre-expansion vendor publication/outcome distinction, non-confirmed statuses, category cue, proof boundary and next check, missing-boundary fallback, and media must-read link/context reminder. Fixtures run even when today's TOP3 contains no media item.
+
+This is a rendering regression check, not a fact checker or browser layout test. It cannot establish whether a source supports a claim, catch every misleading phrase, or prove that CSS keeps a cue visible on a phone; retain editorial source review and mobile QA.

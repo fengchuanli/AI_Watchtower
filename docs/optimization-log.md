@@ -1,3 +1,13 @@
+## 2026-10-24 11:03:31 JST（20:00 scheduled content optimization）
+
+- Focus: Current-cycle Day 12；TOP3 确定性提示最小回归校验，支持 VisionHub 视觉简报方向。
+- Changed files: scripts/check-top3-cues.mjs、scripts/validate-site.mjs、docs/homepage-edition-preflight.md、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Review: 使用真实渲染器与隔离样本，检查展开前的厂商发布/效果区分、reported/disputed/unclear 状态、分类提示、证据边界、后续核验、缺失边界提醒与媒体原文链接。即使当天无媒体 TOP3，仍校验该分支；不替代事实判断或手机视觉检查。
+- Verification: app.js 语法、validate-site/data/pages、派生数据一致性、6 个 HTML 解析通过；三项人为退化（效果确证、删除边界、移除原文入口）均被新校验拒绝；git diff --check。未做浏览器视觉验收。
+- Pull: sandbox DNS 失败后授权联网重试成功，编辑前 origin/main 已同步且工作区干净。
+- Commit: 待提交；使用【网站优化】，因本次仅增加校验与规则，无直接 UI 变化。
+
 ## 2026-10-24 08:06 JST｜17点任务实际08点采集
 
 - Focus：新增2条近期补充：1Password Agent登录授权、Canva Craft设计模型。原文为10月22日；无同日晨版，以昨日23点版去重，不冒充晨版后增量。
