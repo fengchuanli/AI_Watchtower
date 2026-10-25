@@ -1,3 +1,14 @@
+## 2026-10-25 11:01 JST｜20点内容优化：媒体详情页短简报
+
+- Focus：完成当前周期 Day 13，审读历史条目 `opencode-security-2026-10-20` 的语气、段落密度与来源替代风险。删除泛化采购验收话术和重复核验清单；本站解读聚焦记录归属，趋势聚焦跨平台责任，影响与用法明确到实际使用团队。
+- 网站可见变化：从全部新闻进入 OpenCode 安全事件详情页，可见更短的“为什么值得关注”、趋势判断和读者用法；全部新闻的影响摘要同步更新。
+- 来源边界：最小来源事实、reported 状态、must-read 原文依赖、来源链接及 claimBoundary 均保持；未新增外部事实、采访或背景复述。本次为既有材料编辑审读，不是事件状态重新核验。
+- Changed files：`data/news-history.json`、派生 `data/news-index.json`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- Verification：app.js / news-detail.js 语法、validate-data、validate-site、validate-pages、派生数据 freshness、六个 HTML 解析、媒体最小事实长度与 reported/must-read 断言、git diff --check 全部通过。未进行浏览器视觉检查。
+- VisionHub review：删除无关采购模板、缩短连续段落；保留原创解释和完整事实原文入口。本次不改变页面布局。
+- Sync：编辑前普通 pull 因 DNS 失败；授权联网重试已同步 origin/main。提交与推送结果见后续记录。
+- Next：Day 14，官方、研究或监管来源详情页文章连贯性审读。
+
 ## 2026-10-25 08:03:58 JST｜17点任务实际08点采集
 
 - Focus：发布2条安全非重复信号：Block Dessa纯语音展示与NVIDIA Kumo Forecast历史检索预测。无同日晨版，以10月24日23点版去重；Kumo为10月21日近期补充，不声称基线后发生。

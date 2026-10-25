@@ -131,7 +131,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 10 complete: must-read TOP3 cards expose a direct original-source link and a compact full-facts/context reminder before score details. Historical media item opencode-security-2026-10-20 verified; current official-only TOP3 is unchanged.
 - Current-cycle Day 11 complete: homepage preflight and data-format guidance map each visual cue to existing fields, preserve vendor publication/outcome boundaries and must-read links, and distinguish manual review from automated checks.
 - Current-cycle Day 12 complete: `validate-site.mjs` runs real TOP3 rendering fixtures via `check-top3-cues.mjs` to guard vendor certainty, reported/disputed/unclear states, visible proof/next checks, category labels, missing boundaries, and must-read links.
-- Continue with Day 13: media-backed detail-page briefing review.
+- Current-cycle Day 13 complete: OpenCode media-backed historical detail page removes generic procurement language and repeated next checks; interpretation, trend and reader use focus on account records while reported/must-read and original facts stay unchanged.
+- Continue with Day 14: official, research or regulator-backed detail-page article review.
 
 ## Update Rules
 
