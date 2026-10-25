@@ -6,7 +6,7 @@
 - Changed files：`data/news-history.json`、派生 `data/news-index.json`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
 - Verification：app.js / news-detail.js 语法、validate-data、validate-site、validate-pages、派生数据 freshness、六个 HTML 解析、媒体最小事实长度与 reported/must-read 断言、git diff --check 全部通过。未进行浏览器视觉检查。
 - VisionHub review：删除无关采购模板、缩短连续段落；保留原创解释和完整事实原文入口。本次不改变页面布局。
-- Sync：编辑前普通 pull 因 DNS 失败；授权联网重试已同步 origin/main。提交与推送结果见后续记录。
+- Sync：编辑前普通 pull 因 DNS 失败；授权联网重试已同步 origin/main。内容提交 `21a615b` 已成功推送 origin/main；本日志收尾提交可由 Git 历史定位。
 - Next：Day 14，官方、研究或监管来源详情页文章连贯性审读。
 
 ## 2026-10-25 08:03:58 JST｜17点任务实际08点采集
