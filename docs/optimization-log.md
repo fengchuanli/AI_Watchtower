@@ -1,3 +1,13 @@
+## 2026-10-25 23:02:39 JST｜08点任务实际23点复核
+
+- Focus：新增0条，保留今日Block Dessa与Kumo Forecast两条；未找到满足时效、核验与去重要求的新候选，不补足10条。保留既有版本ID及137期/1298条归档。
+- Pull：编辑前同步origin/main，普通DNS失败后授权联网成功；工作区干净，无未推送提交。
+- Sources：优先尝试HF与AWS RSS，工具不支持XML；检查登记Anthropic、Ai2、HF、Google、AWS、TechCrunch公开索引。近期LitPivot、Trainium、Skills、OlmoEarth等已收录；AWS仅通用导航、媒体索引旧闻。社区文章未当作事实，较早教程与营销不补数；未用付费或登录墙正文。覆盖有限，不声称全网无新增。
+- Changed files：data/news.json、data/news-history.json、data/news-today.json、docs/optimization-log.md。
+- 网站可见变化：首页本期运行说明及归档对应版本显示23点复核、零新增与来源覆盖限制；首页TOP3区域、新闻流、全部新闻和详情页继续保留今日2条。
+- Verification：app.js语法、validate-data/site/pages、派生数据--check、全体data JSON及根目录HTML解析通过；git diff --check提交前执行。未改验证器，未做浏览器视觉测试。
+- Commit note：【新闻更新】复核23点AI新闻：新增0条，保留2条语音与预测信号；推送结果记录automation memory。
+
 ## 2026-10-25 11:01 JST｜20点内容优化：媒体详情页短简报
 
 - Focus：完成当前周期 Day 13，审读历史条目 `opencode-security-2026-10-20` 的语气、段落密度与来源替代风险。删除泛化采购验收话术和重复核验清单；本站解读聚焦记录归属，趋势聚焦跨平台责任，影响与用法明确到实际使用团队。
