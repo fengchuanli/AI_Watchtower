@@ -7,7 +7,7 @@
 - Verification：app.js / news-detail.js 语法、validate-data/site/pages、派生数据 freshness、六个 HTML 解析、限定修改字段和来源事实长度断言、git diff --check 通过。初稿 readerUse 按校验要求补明语音产品团队，未改校验器。未进行浏览器视觉检查。
 - VisionHub review：移除泛化采购段落，趋势拆为两段，后续问题从通用复测改为语音场景；不增加新闻事实或改动页面布局。
 - Sync：普通 pull 因 DNS 失败，授权联网重试成功；编辑前 main 已同步且工作区干净。
-- Commit：待本次提交后记录。
+- Commit：内容提交 `21bd357` 已成功推送 origin/main；日志收尾提交可由 Git 历史定位。
 - Next：Day 15，详情页避免重复趋势标签的行文规则。
 
 ## 2026-10-26 08:02:40 JST｜17点任务实际08点复核
