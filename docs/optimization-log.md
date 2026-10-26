@@ -1,3 +1,15 @@
+## 2026-10-26 23:06:45 JST｜08点任务实际23点采集
+
+- Focus：新增1条Anthropic IPO申报官方公告；当前版扩充为25—26日滚动版，保留昨日2条工程观察的原始日期，不重复建立历史条目。137期/1299条，净增1条。
+- Sources：优先尝试HF/AWS RSS，工具不支持XML；核对登记Anthropic、Ai2、HF、Google、AWS、TechCrunch索引及Anthropic原文。Google/AWS返回内容有限，媒体索引时效不足；其他近期内容已归档、较早或社区来源，不补足10条。未用付费墙或登录墙正文。
+- Evidence：官方公告仅核验公司作出申报说明，未逐项核验SEC文件；发行规模、定价与生效状态均保留公告边界。与9月29日招股书媒体背景区分，不重述未核对财务数字、不推断IPO完成。SEC定向搜索未取得可核验原件。
+- Archive：在当前版上滚动扩充并将版本日期更新至26日，原25日两条保留ID、来源及发布时间；历史不复制旧条目。来源3/3为官方或作者原文，三家各1条，明确集中风险。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3、简报和详情页新增Anthropic申报解读；新闻流、全部新闻与归档显示25—26日滚动版3条（新增1条），旧条目日期不变。
+- Verification：app.js语法、validate-data/site/pages及派生数据一致性通过；JSON/HTML解析与git diff --check提交前执行。初稿结构与文案已按既有校验约束修正，未改验证器，未做浏览器视觉验收。
+- Pull：编辑前origin/main已同步；普通DNS失败后授权重试成功。
+- Commit note：【新闻更新】补充23点AI新闻：新增1条Anthropic申报信号；推送结果记入automation memory。
+
 ## 2026-10-26 11:04:12 JST（20:00 scheduled content optimization）
 
 - Focus：当前周期 Day 14，审读 Dessa 官方来源详情页，让读者影响、趋势和下一步核验各自承担清楚的文章段落。
