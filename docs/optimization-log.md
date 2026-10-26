@@ -1,3 +1,15 @@
+## 2026-10-27 08:04:15 JST｜17点任务实际08点采集
+
+- Focus：publish-partial-batch；新增1条Hugging Face官方团队工具链汇总，延续3条申报与模型观察。无同日晨版，以26日23点版为比较基线；原文仅标26日且汇总近几周变化，不推断全部发生于基线之后。
+- Sources：优先尝试HF、AWS、Google RSS，工具不支持XML；核对登记HF、Anthropic、Ai2、Google、AWS、TechCrunch公开索引和HF原文。Google/AWS正文有限，媒体索引时效不足；不声称覆盖全市场。重复公告、既有OlmoEarth/LitPivot观察、较早无新触发材料和社区线索未用于补足10条。
+- Evidence：官方团队身份与功能说明已核对；沙箱保持实验性边界，不引用性能提升或使用率作为独立结论。下一步为第三方固定版本复测、任务日志和安全审计。未使用付费墙、登录墙正文。候选脚本查重无重复URL/近似标题，人工核对当前与历史未见同一功能汇总。
+- Archive：滚动扩充最新归档，旧3条保留ID、来源与日期，不新增重复历史条目；137期/1300条。4个作者所有者，HF平台承载2/4，来源集中说明可见。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页TOP3候选与更多新闻流、全部新闻列表、归档页及新详情页出现HF工具链解读；滚动版标明新增1条、延续3条，原有新闻日期不变。
+- Verification：初稿按现有校验器修正文案分工、段落长度、排序和引用标签，未修改验证器；提交前运行app.js语法、validate-data/site/pages、派生数据--check、JSON/HTML解析及git diff --check，结果写入automation memory。未做浏览器视觉验收。
+- Pull：编辑前origin/main已同步；普通DNS失败后授权重试成功。
+- Commit note：【新闻更新】发布17点AI新闻：新增1条HF工具链信号；推送结果记入automation memory。
+
 ## 2026-10-26 23:06:45 JST｜08点任务实际23点采集
 
 - Focus：新增1条Anthropic IPO申报官方公告；当前版扩充为25—26日滚动版，保留昨日2条工程观察的原始日期，不重复建立历史条目。137期/1299条，净增1条。
