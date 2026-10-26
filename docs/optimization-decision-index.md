@@ -132,7 +132,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 11 complete: homepage preflight and data-format guidance map each visual cue to existing fields, preserve vendor publication/outcome boundaries and must-read links, and distinguish manual review from automated checks.
 - Current-cycle Day 12 complete: `validate-site.mjs` runs real TOP3 rendering fixtures via `check-top3-cues.mjs` to guard vendor certainty, reported/disputed/unclear states, visible proof/next checks, category labels, missing boundaries, and must-read links.
 - Current-cycle Day 13 complete: OpenCode media-backed historical detail page removes generic procurement language and repeated next checks; interpretation, trend and reader use focus on account records while reported/must-read and original facts stay unchanged.
-- Continue with Day 14: official, research or regulator-backed detail-page article review.
+- Current-cycle Day 14 complete: Dessa official-source detail page separates reader impact, voice-interaction trend and concrete third-party follow-up questions; original facts and vendor proof boundary remain unchanged.
+- Continue with Day 15: detail-page voice rule to avoid repeated trend labels.
 
 ## Update Rules
 

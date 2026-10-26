@@ -1,3 +1,15 @@
+## 2026-10-26 11:04:12 JST（20:00 scheduled content optimization）
+
+- Focus：当前周期 Day 14，审读 Dessa 官方来源详情页，让读者影响、趋势和下一步核验各自承担清楚的文章段落。
+- 网站可见变化：Dessa 详情页的“为什么值得关注”、趋势判断和读者用法改为短段落；后续问题明确中文口音、噪声、打断、身份混淆及第三方测试记录。
+- 来源边界：只编辑 detailWhyRanked、detailTrend、readerUse、followUpQuestions；最小事实、来源链接、厂商主张、confirmed 状态与 claimBoundary 不变。本次为既有材料编辑审读，不是事件状态重新核验。
+- Changed files：data/news.json、data/news-history.json、派生 data/news-today.json、docs/optimization-decision-index.md、docs/optimization-log.md。
+- Verification：app.js / news-detail.js 语法、validate-data/site/pages、派生数据 freshness、六个 HTML 解析、限定修改字段和来源事实长度断言、git diff --check 通过。初稿 readerUse 按校验要求补明语音产品团队，未改校验器。未进行浏览器视觉检查。
+- VisionHub review：移除泛化采购段落，趋势拆为两段，后续问题从通用复测改为语音场景；不增加新闻事实或改动页面布局。
+- Sync：普通 pull 因 DNS 失败，授权联网重试成功；编辑前 main 已同步且工作区干净。
+- Commit：待本次提交后记录。
+- Next：Day 15，详情页避免重复趋势标签的行文规则。
+
 ## 2026-10-26 08:02:40 JST｜17点任务实际08点复核
 
 - Focus：新增0条，保留10月25日版2条语音与预测信号；无同日晨版，以10月25日23点复核为基线，不创建空版或把昨日条目标成今日新闻。
