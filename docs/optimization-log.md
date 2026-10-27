@@ -6,7 +6,7 @@
 - 来源边界：未改新闻数据、来源或声明状态；规则要求人工判断连接词，保留条件与原文依赖，不自动删除正文前缀。
 - Verification：app.js / news-detail.js 语法、validate-data/site/pages、派生数据 --check、六个 HTML 解析、git diff --check 通过；未做浏览器视觉验收。
 - Sync：普通 pull 遇到 DNS 失败，授权重试成功，编辑前 main 已同步且工作区干净。
-- Commit：本条随实现提交，哈希在提交后补录；推送待执行。
+- Commit：实现提交 `e0b9533` 已推送 origin/main；日志收尾提交由 Git 历史定位。
 - Next：Day 16，审读详情页开头与结尾，避免重复同一主张。
 
 ## 2026-10-27 08:04:15 JST｜17点任务实际08点采集
