@@ -133,7 +133,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 12 complete: `validate-site.mjs` runs real TOP3 rendering fixtures via `check-top3-cues.mjs` to guard vendor certainty, reported/disputed/unclear states, visible proof/next checks, category labels, missing boundaries, and must-read links.
 - Current-cycle Day 13 complete: OpenCode media-backed historical detail page removes generic procurement language and repeated next checks; interpretation, trend and reader use focus on account records while reported/must-read and original facts stay unchanged.
 - Current-cycle Day 14 complete: Dessa official-source detail page separates reader impact, voice-interaction trend and concrete third-party follow-up questions; original facts and vendor proof boundary remain unchanged.
-- Continue with Day 15: detail-page voice rule to avoid repeated trend labels.
+- Current-cycle Day 15 complete: 通用详情页趋势标题精简为“可能带来的变化”，保留推断状态；详情页审读指南与数据规范要求正文直接解释变化，人工去除重复套语且保留条件与来源边界。
+- Continue with Day 16: review detail-page opening and ending rhythm.
 
 ## Update Rules
 

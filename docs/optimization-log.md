@@ -1,3 +1,14 @@
+## 2026-10-27 11:02:46 JST（20:00 scheduled content optimization）
+
+- Focus：当前周期 Day 15，精简详情页趋势标题并明确避免重复趋势套语的行文规则。
+- 网站可见变化：通用详情页第三节标题改为“可能带来的变化”，章节标记为“03 · 趋势判断”；保留推断状态与尚未证实提示，减少标题层重复条件句。
+- Changed files：news-detail.js、docs/detail-page-review-guide.md、docs/news-data-format.md、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 来源边界：未改新闻数据、来源或声明状态；规则要求人工判断连接词，保留条件与原文依赖，不自动删除正文前缀。
+- Verification：app.js / news-detail.js 语法、validate-data/site/pages、派生数据 --check、六个 HTML 解析、git diff --check 通过；未做浏览器视觉验收。
+- Sync：普通 pull 遇到 DNS 失败，授权重试成功，编辑前 main 已同步且工作区干净。
+- Commit：本条随实现提交，哈希在提交后补录；推送待执行。
+- Next：Day 16，审读详情页开头与结尾，避免重复同一主张。
+
 ## 2026-10-27 08:04:15 JST｜17点任务实际08点采集
 
 - Focus：publish-partial-batch；新增1条Hugging Face官方团队工具链汇总，延续3条申报与模型观察。无同日晨版，以26日23点版为比较基线；原文仅标26日且汇总近几周变化，不推断全部发生于基线之后。

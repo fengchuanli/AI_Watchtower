@@ -1572,8 +1572,8 @@ function renderDetail(item, data) {
 
   const classicTrendSection = `
         <section class="detail-block incident-block detail-primary-section" id="incident-trend">
-          <span>03 · 可能带来的变化</span>
-          <h2>如果后续被证实，会改变什么</h2>
+          <span>03 · 趋势判断</span>
+          <h2>可能带来的变化</h2>
           ${renderSourceStatus("趋势推断｜尚未被证据锁定", "这是对走向的推断，不是已经发生的事实。")}
           <div class="detail-prose">
             ${renderDetailProse(item.detailTrend)}

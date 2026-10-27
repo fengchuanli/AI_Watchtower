@@ -151,6 +151,16 @@ evidenceThreshold：需要客户上线记录、审计日志样例和第三方法
 
 Stop and split when `detailTrend` reads like "趋势 + 对读者怎么用 + 下一步要看什么" in one paragraph. That shape slows mobile scanning and makes fact, interpretation, proof boundary, and next action harder to distinguish.
 
+## Trend Voice Without Repeated Labels
+
+趋势段落直接写清“什么正在变化、为什么”，不要在已有趋势标题后，每段再加“这意味着”“趋势上看”或“从趋势角度看”。通用详情页用“03 · 趋势判断”定位章节、“可能带来的变化”提出阅读问题，保留“趋势推断｜尚未被证据锁定”的状态提示；正文无需再次解释自己是趋势段。
+
+- 同一段的“这意味着”若只引出已有判断，人工删去套语；若承接具体因果、对比或条件，则保留必要连接。
+- 不自动剥离正文前缀，不批量改写历史条目；不得删去“可能”“如果”“尚未”等会影响确定性的词。
+- 示意：把“从趋势角度看，这意味着语音交互可能从单轮问答转向连续对话”写成“语音交互可能从单轮问答转向连续对话”。这是行文示例，不是新增新闻判断。
+- `detailTrend` 保留走向与条件；读者行动留给 `readerUse`，证据要求留给 `nextCheck`。来源角色、声明状态、原文依赖和核验边界不因精简而省略。
+- 人工连读章节标题、状态提示与首段，确认没有重复开场；自动校验不能判断必要因果连接，不为这些短语设置一律禁用规则。
+
 ## Source-Type Adjustments
 
 Official, research, regulator, and reliable-media items need different review pressure.

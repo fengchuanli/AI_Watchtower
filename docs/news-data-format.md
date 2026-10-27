@@ -177,6 +177,8 @@ Before publishing, apply the opening-sentence choice from `docs/detail-page-revi
 
 The detail page derives a source-boundary panel from existing item fields rather than adding a separate claim layer. `provenance` is shown as what the linked source can directly support, `detailTrend` is shown as AI Watchtower's interpretation, and `claimBoundary` is shown as what the item still cannot prove. Keep these fields written so a reader can distinguish source-backed facts from editorial judgment without leaving the page. The source reference should read as `source owner + supported source fact + boundary`, not only the source owner.
 
+Apply the Trend Voice Without Repeated Labels rule in `docs/detail-page-review-guide.md`: start trend prose with the concrete change rather than repeating “这意味着” after a trend heading. Preserve conditional language and source boundaries; review manually instead of automatically stripping prefixes.
+
 Use this split test before saving `detailTrend`: if one paragraph answers more than one of these questions, move the extra answer to its dedicated field.
 
 - Trend meaning: what broader AI product, policy, research, infrastructure, or market direction this item suggests.
