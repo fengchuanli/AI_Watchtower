@@ -1,28 +1,30 @@
 {
   "version": 1,
   "updatedAt": "2026-11-02",
-  "totalItems": 1305,
+  "totalItems": 1306,
   "editions": [
     {
       "id": "news-0800-2026-11-02",
       "date": "2026-11-02",
       "timezone": "Asia/Tokyo",
       "archiveStatus": "published",
-      "archiveLabel": "10月末—11月初｜08点情报版",
-      "itemCount": 4,
-      "note": "收录4条官方可核验信号，聚焦训练偏好、模型行为、Agent监测与本地部署。",
-      "operationalStatus": "已核对官方原文与历史URL去重；远端拉取因SSH公钥拒绝未完成。近期安全非重复来源不足，不用旧闻、社区讨论或营销叙事补足10条。",
-      "editorialInterpretation": "本期发布 4 条安全非重复信号，少于10条是质量门槛结果；未用旧闻、社区讨论、传闻、重复公告或营销叙事补数。控制披露不替代独立测试。",
+      "archiveLabel": "11月2日｜08点情报版",
+      "itemCount": 5,
+      "note": "收录5条可核验信号，新增Google区域AI技能平台，并保留既有治理与本地运行观察。",
+      "operationalStatus": "已核对登记的官方与可靠来源并完成历史URL去重；本次仅发现1条11月2日可安全新增信号。远端拉取因SSH公钥拒绝未完成；未用旧稿、社区讨论、付费墙或营销叙事补数。",
+      "editorialInterpretation": "本期发布 5 条安全非重复信号，少于10条是质量门槛结果；未用旧稿、付费墙、登录墙、社区讨论、重复公告或营销叙事补数。新增平台上线不等于学习或就业成果已获独立验证。",
       "readerFrame": {
-        "headline": "高权限 Agent 上线前，治理与运行证据怎样对齐？",
-        "whyItMatters": "从内容训练偏好到 Agent 监测与本地资源调度，控制声明正在变成部署验收清单。",
+        "headline": "治理控制之外，AI 技能供给如何进入可核对的交付环节？",
+        "whyItMatters": "本期新增区域技能平台：控制、设备与人才供给都应以实施和结果证据而非单一公告验收。",
         "useThisIssueFor": [
+          "相关团队可将此事登记进区域技能供给观察表，并按下一步核验路径：核对平台公开的地区覆盖、课程完成与可审计的学习结果数据，并等待独立教育机构或参与者报告。",
           "相关团队可将此事登记进变更台账，并按下一步核验路径：核对IETF规范进展、OpenAI实施公告及其他参与方的实际支持范围。",
           "相关团队可将此事登记进变更台账，并按下一步核验路径：核对更新版 Model Spec、产品行为变更记录及独立评测中的遵循率。",
           "相关团队可将此事登记进变更台账，并按下一步核验路径：核对独立红队结果、误报漏报指标、告警到人工处置的审计记录及外部部署覆盖范围。",
           "相关团队可将此事登记进变更台账，并按下一步核验路径：核对独立设备测试、实际功耗与延迟日志、驱动版本兼容性及本地数据隔离审计。"
         ],
         "notProvenYet": [
+          "尚未获独立验证：已核验的是Google发布该平台、其功能描述与公开目标；尚未独立验证学习完成率、就业结果、覆盖人数或 AI 助手在低带宽环境的实际效果。 仍需以公开运营数据和独立教育评估核对。",
           "尚未获独立验证：已核验的是OpenAI宣布将支持该自愿信号及其计划实施方向；尚未验证跨提供商执行一致性或法律效力。 仍需以标准组织文件和跨提供商测试核对。",
           "尚未获独立验证：已核验的是公开规范的结构与新增指引；文章明确说明模型尚未完全反映该规范，不能据此认定部署行为已达标。",
           "尚未获独立验证：已核验的是OpenAI对内部监测架构与案例的披露；未独立验证其召回率、跨产品覆盖或对外部客户环境的实际效果。 仍需以独立红队和审计记录核对。",
@@ -39,8 +41,9 @@
         }
       },
       "changeSummary": {
-        "headline": "较10月27日版新增4条治理与本地运行信号",
+        "headline": "11月2日新增1条区域AI技能供给信号",
         "freshFacts": [
+          "本次新增核对：Google于11月2日在非洲上线 Skilling Africa with Google 学习平台，整合15项以上培训项目，并加入名为 SCOUT 的 AI 学习助手；官方称该平台计划到2030年触达300万人。",
           "本次新增核对：OpenAI于10月30日表示，将在未来数月支持一项共同的 robots.txt 信号，让网站运营者向多个参与的 AI 提供商表达内容用于基础模型训练的偏好。",
           "本次新增核对：OpenAI于10月29日更新公开 Model Spec，将指导原则围绕忠于人类意图、最小化伤害、诚实透明、人类能动性与关怀五项价值组织，并新增情境、监督与能动性相关指引。",
           "本次新增核对：OpenAI于10月29日介绍其前沿模型失配监测体系：覆盖训练、评测、内部使用及部分外部工具调用，并以激活探针、模型审阅、调查代理和自动化调查分层处理告警。",
@@ -53,9 +56,9 @@
       },
       "coverageMix": [
         {
-          "label": "核对治理控制",
-          "count": 3,
-          "meaning": "用来更新训练数据、模型行为和 Agent 监测的审计清单。"
+          "label": "核对治理与技能交付",
+          "count": 4,
+          "meaning": "用来更新训练、模型行为、Agent监测与区域人才供给的核验台账。"
         },
         {
           "label": "核对本地部署",
@@ -65,8 +68,8 @@
       ],
       "sourceRisk": {
         "label": "官方来源集中",
-        "note": "来源所有者集中风险：4/4为官方原文，其中OpenAI占3/4；适合核对其自身发布与控制设计，不构成独立有效性结论。",
-        "nextCheck": "核对IETF标准组织材料、独立红队报告、第三方设备实测与客户侧审计记录。"
+        "note": "来源所有者集中风险：5/5为官方原文，其中OpenAI占3/5；适合核对各自发布，不构成独立有效性或市场普及结论。",
+        "nextCheck": "核对标准组织材料、独立红队、第三方设备实测、公开运营数据与客户侧审计记录。"
       },
       "overreadBoundary": {
         "label": "不要把本期读成全市场结论",
@@ -78,8 +81,8 @@
         {
           "family": "official",
           "label": "官方原文",
-          "count": 4,
-          "role": "核对发布和披露事实；需独立测试、审计或标准材料补证实际效果。"
+          "count": 5,
+          "role": "核对发布和披露事实；需独立测试、审计、运营数据或标准材料补证实际效果。"
         }
       ],
       "topicGroups": [
@@ -95,13 +98,22 @@
         },
         {
           "id": "developer-tooling",
-          "label": "Agent运行控制",
+          "label": "Agent与本地运行控制",
           "count": 2,
           "itemIds": [
             "openai-misalignment-monitoring-2026-10-29",
             "nvidia-rtx-spark-local-ai-2026-10-28"
           ],
           "meaning": "用来检查动作日志、资源调度、设备实测与隔离审计。"
+        },
+        {
+          "id": "enterprise",
+          "label": "区域AI技能交付",
+          "count": 1,
+          "itemIds": [
+            "google-skilling-africa-2026-11-02"
+          ],
+          "meaning": "用来核对培训供给、低带宽可达性与结果数据。"
         }
       ],
       "trendNotes": [
@@ -158,12 +170,79 @@
         "sourceId": "openai-news",
         "sourceName": "OpenAI News",
         "count": 3,
-        "share": "3/4",
-        "note": "来源所有者集中风险：4/4为官方原文，OpenAI占3/4；本期用于核对发布事实，不作为独立效果背书。",
-        "nextCheck": "补查IETF材料、独立红队、第三方设备测试和客户侧审计记录。"
+        "share": "3/5",
+        "note": "来源所有者集中风险：5/5为官方原文，OpenAI占3/5；本期用于核对发布事实，不作为独立效果背书。",
+        "nextCheck": "补查标准组织材料、独立红队、第三方设备测试、公开运营数据与教育评估。"
       },
       "statusLabel": "已发布",
       "items": [
+        {
+          "id": "google-skilling-africa-2026-11-02",
+          "category": "product",
+          "label": "产品",
+          "title": "Google在非洲推出技能学习平台：以 AI 学习助手连接培训与低带宽访问",
+          "body": "Google于11月2日在非洲上线 Skilling Africa with Google 学习平台，整合15项以上培训项目，并加入名为 SCOUT 的 AI 学习助手；官方称该平台计划到2030年触达300万人。",
+          "summary": "Google于11月2日在非洲上线 Skilling Africa with Google 学习平台，整合15项以上培训项目，并加入名为 SCOUT 的 AI 学习助手；官方称该平台计划到2030年触达300万人。",
+          "detailBody": "来源事实：Google于11月2日在非洲上线 Skilling Africa with Google 学习平台，整合15项以上培训项目，并加入名为 SCOUT 的 AI 学习助手；官方称该平台计划到2030年触达300万人。\n核验边界：已核验的是Google发布该平台、其功能描述与公开目标；尚未独立验证学习完成率、就业结果、覆盖人数或 AI 助手在低带宽环境的实际效果。",
+          "trend": "本站判断，面向区域规模的 AI 普及不只取决于模型能力，也取决于课程、终端条件和可衡量的学习结果能否一起落地。",
+          "detailTrend": "该平台把既有培训项目、低带宽访问与 AI 学习助手放在同一入口，提供了观察 AI 技能普及交付方式的官方样本。它不证明培训会转化为就业或生产率，也不证明 AI 助手能在所有语言、设备与网络条件下稳定发挥作用。",
+          "whyItMatters": "对教育、公共部门和企业培训负责人而言，这是一项可追踪的区域 AI 技能供给动作；应将平台上线与实际覆盖、完成和后续成果分开核对。",
+          "whyRanked": "核对平台公开的地区覆盖、课程完成与可审计的学习结果数据，并等待独立教育机构或参与者报告。",
+          "detailWhyRanked": "本站解读：该项发布影响 AI 人才供给与低连接地区的使用条件，因此值得纳入区域采用观察。核对平台公开的地区覆盖、课程完成与可审计的学习结果数据，并等待独立教育机构或参与者报告。；不能将官方目标直接当作实际采用或经济成果。",
+          "topReason": "核对平台公开的地区覆盖、课程完成与可审计的学习结果数据，并等待独立教育机构或参与者报告。",
+          "impact": "对教育、公共部门和企业培训负责人而言，这是一项可追踪的区域 AI 技能供给动作；应将平台上线与实际覆盖、完成和后续成果分开核对。",
+          "whoShouldCare": "负责 AI 人才培养的教育机构、公共部门、企业学习团队与非洲市场运营负责人。",
+          "readerUse": "相关团队可将此事登记进区域技能供给观察表，并按下一步核验路径：核对平台公开的地区覆盖、课程完成与可审计的学习结果数据，并等待独立教育机构或参与者报告。",
+          "nextCheck": "核对平台公开的地区覆盖、课程完成与可审计的学习结果数据，并等待独立教育机构或参与者报告。",
+          "followUpQuestions": [
+            "核对平台公开的地区覆盖、课程完成与可审计的学习结果数据，并等待独立教育机构或参与者报告。哪些公开数据能证明平台的地区覆盖与完成情况？",
+            "是否有独立评估能区分课程参与、学习成果与实际就业或生产率变化？"
+          ],
+          "evidenceThreshold": "需要地区级注册、完成、留存与结果数据，以及独立教育评估或参与方报告，才能升级为采用效果或人才供给改善的结论。",
+          "claimBoundary": "已核验的是Google发布该平台、其功能描述与公开目标；尚未独立验证学习完成率、就业结果、覆盖人数或 AI 助手在低带宽环境的实际效果。 不能由官方目标推出实际采用、就业改善或 AI 辅导质量已获验证。",
+          "counterEvidence": "若公开覆盖数据、独立评估或参与者报告显示访问、完成率或学习结果未达预期，应下调其作为区域 AI 技能采用信号的判断。",
+          "source": "Google Keyword AI",
+          "sourceName": "Google Keyword AI",
+          "sourceId": "google-keyword-ai",
+          "sourceUrl": "https://blog.google/intl/en-africa/unlocking-africas-ai-potential-introducing-skilling-africa-with-google/",
+          "originalUrl": "https://blog.google/intl/en-africa/unlocking-africas-ai-potential-introducing-skilling-africa-with-google/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+      "provenance": "Google Keyword AI 原文支持的具体事实是：Google于11月2日在非洲推出 Skilling Africa with Google 区域学习平台，整合15项以上培训项目，并加入名为 SCOUT 的 AI 学习助手；官方称该平台计划到2030年触达300万人。已核验的是Google发布该平台、其功能描述与公开目标；尚未独立验证学习完成率、就业结果、覆盖人数或 AI 助手在低带宽环境的实际效果。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-11-02",
+          "time": "2026-11-02",
+          "tags": [
+            "AI技能",
+            "教育",
+            "低带宽"
+          ],
+          "companies": [
+            "Google"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "官方原文可确认平台上线和公开目标；规模成果与学习效果仍需独立数据。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "官方原文可确认平台上线和公开目标；规模成果与学习效果仍需独立数据。"
+          }
+        },
         {
           "id": "openai-training-preferences-2026-10-30",
           "category": "policy",

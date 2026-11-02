@@ -11116,3 +11116,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、JSON 解析、HTML 结构检查和 `git diff --check` 全部通过。
 - Sync：编辑前尝试 `git pull --rebase --autostash origin main`，因远端 SSH 公钥被拒绝而未完成；提交后将尝试推送。
 - Commit note：【新闻更新】发布08点AI新闻：4条治理与Agent运行信号。
+
+## 2026-11-02 23:05 JST｜08点新闻情报补充
+
+- Focus：补入一条11月2日可直接核对的区域 AI 技能供给信号：Google 在非洲上线 Skilling Africa with Google，并披露其整合培训项目、AI 学习助手与2030年覆盖目标。
+- Sources：遵循 `data/sources.json` 与 `docs/source-policy.md`，使用 Google Keyword AI 官方原文；复核 OpenAI、Anthropic、Google、AWS、Meta 等登记来源，其他最新可读材料主要停在10月。未使用付费墙、登录墙、社区讨论或传闻。
+- Evidence：新增条目只确认平台上线、功能描述和官方目标；学习完成、就业结果、覆盖人数及低带宽实际效果均保留为待独立核验。5条而非10条为质量门槛结果，不用旧稿、重复公告或营销叙事补数。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页及新增详情页可见 Google 区域 AI 技能平台信号；首页简报新增区域技能交付的核验路径。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、JSON解析、HTML结构检查和 `git diff --check` 均通过。
+- Sync：编辑前尝试 `git pull --ff-only origin main`，GitHub SSH 公钥认证被拒，未能确认远端是否有新提交。
+- Commit note：待提交【新闻更新】发布08点AI新闻：5条治理、运行与技能供给信号；推送需具备 origin 的 SSH 写入凭据。
