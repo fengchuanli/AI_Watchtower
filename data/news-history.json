@@ -1,8 +1,363 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-02",
-  "totalItems": 1306,
+  "updatedAt": "2026-11-03",
+  "totalItems": 1309,
   "editions": [
+    {
+      "id": "news-1700-2026-11-03",
+      "date": "2026-11-03",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "11月3日｜17点情报版",
+      "itemCount": 3,
+      "note": "收录3条可核验的算力、电网、Agent编排与企业网络信号；所有实际成效仍待独立记录。",
+      "operationalStatus": "已检查官方来源并完成历史URL去重；远端拉取因 SSH 公钥认证被拒未完成。",
+      "editorialInterpretation": "本期发布3条安全非重复信号，少于10条是质量门槛结果；未用旧稿、付费墙、社区讨论或营销叙事补数。公告不等于运行效果。",
+      "readerFrame": {
+        "headline": "从算力园区到 Agent：AI 能否落地取决于谁掌控真实世界的约束？",
+        "whyItMatters": "本期聚焦电网响应、确定性工作流与跨环境网络；三者都是模型进入高权限场景前必须可审计的边界。",
+        "useThisIssueFor": [
+          "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 Georgia Power 的协议和监管文件、园区实际投运时间、可削减负荷的测试记录，以及成本是否由园区而非普通用户承担。",
+          "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 AgentCore Gateway 与 Step Functions 的官方说明文件、支持区域和价格，随后在隔离环境测试身份传递、参数校验、审批绕过与失败回滚。",
+          "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 Microsoft Marketplace 的实际可用条目、双方发布的联合技术与销售范围，以及客户侧的延迟、可用性、安全审计和成本数据。"
+        ],
+        "notProvenYet": [
+          "尚未获独立验证：已核验的是OpenAI宣布该计划及其披露的佐治亚州安排；园区尚在开发，仍需独立运行记录验证1000MW可调节能力、响应效果和客户节省。",
+          "尚未获独立验证：已核验的是AWS宣布的连接方式与工作流职责划分；仍需独立验证各类工作流的权限隔离、失败处理、成本或生产稳定性。",
+          "尚未获独立验证：已核验的是双方宣布扩展共售与探索方向；仍需独立验证新增能力的上线范围、客户使用规模、网络性能或 Agent 治理效果。"
+        ],
+        "mobile": {
+          "headline": "先查运行约束",
+          "summary": "3条官方信号，分别看电网承诺、工作流权限与网络治理。",
+          "primaryUses": [
+            "基础设施团队查协议",
+            "平台团队查权限与日志"
+          ],
+          "proofBoundary": "公告可确认计划与功能；实际响应、可靠性和客户结果仍需独立记录。"
+        }
+      },
+      "changeSummary": {
+        "headline": "11月3日新增3条 AI 基础设施与控制面信号",
+        "freshFacts": [
+          "本次新增核对：OpenAI于11月2日宣布 Grid Protectors Program，称将与公用事业、监管方和政策制定者为未来算力园区设计需求响应安排；其佐治亚州拟建园区协议包含最高1000MW的可调节负荷承诺。",
+          "本次新增核对：AWS于11月2日汇总称，Step Functions 工作流现可通过 Amazon Bedrock AgentCore Gateway 作为 AI Agent 工具调用；Agent 决定何时调用及传入参数，预定义工作流仍按既有步骤执行。",
+          "本次新增核对：Microsoft与Lumen于11月2日宣布扩展共售合作，计划让企业在 Azure 现代化与 AI 项目中更早联动网络连接、安全、数据移动和基础设施规划，并探索将更多 Lumen 能力带入 Azure 与 Microsoft Marketplace。"
+        ],
+        "repeatedContext": [
+          "重复背景：未重复11月2日早间的技能平台、训练偏好、Model Spec、失配监测或本地设备信号。",
+          "重复背景：官方公告和合作计划均不替代运行日志、合同条款、客户数据或独立审计。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对基础设施约束",
+          "count": 2,
+          "meaning": "用来检查算力园区的电力安排及企业跨环境网络的可用性和治理。"
+        },
+        {
+          "label": "核对 Agent 编排",
+          "count": 1,
+          "meaning": "用来检查工作流调用、权限边界、审批与可回放日志。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源集中",
+        "note": "3/3全部为官方原文，来自OpenAI、AWS与Microsoft；可核对发布事实，不构成独立效果验证。",
+        "nextCheck": "核对公用事业和监管材料、服务正式文档、客户部署记录、独立网络测试与运行审计。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成全市场结论",
+        "body": "本期确认的是园区承诺、服务连接能力和合作规划，而非已经实现的电网韧性、Agent安全或企业采用成效。",
+        "doNotConclude": "不能由公告推导1000MW已稳定响应、所有工作流已安全开放，或合作已改善客户网络性能。",
+        "useInstead": "应该用合同与监管文件、权限和运行日志、正式可用性说明及独立测试更新判断。"
+      },
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方原文",
+          "count": 3,
+          "role": "核对发布、计划与服务连接事实；实际效果仍需合同、日志、审计或客户侧证据。"
+        }
+      ],
+      "topicGroups": [
+        {
+          "id": "infrastructure",
+          "label": "算力与企业网络约束",
+          "count": 2,
+          "itemIds": [
+            "openai-grid-protectors-2026-11-02",
+            "microsoft-lumen-ai-ready-networks-2026-11-02"
+          ],
+          "meaning": "用来检查电网安排、数据连接、身份与网络治理是否支撑AI工作负载。"
+        },
+        {
+          "id": "agent",
+          "label": "Agent受控编排",
+          "count": 1,
+          "itemIds": [
+            "aws-step-functions-agent-tools-2026-11-02"
+          ],
+          "meaning": "用来检查Agent调用既有工作流时的权限、审批、输入验证与回放日志。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "infrastructure",
+          "label": "AI基础设施进入运行约束层",
+          "note": "跨期看，算力扩张的判断连续依赖电力弹性与跨环境数据连接。",
+          "boundary": "计划与合作仍不证明现场可靠性；下一步核对合同、监管材料、可用性公告、网络测试和运行日志。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent接入确定性流程",
+          "note": "跨期看，既有工作流再次成为Agent可控执行的连接点。",
+          "boundary": "连接能力仍不证明调用安全；下一步核对服务文档、租户配置、审批记录和失败回滚测试，而非只看公告。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "infrastructure",
+          "label": "AI基础设施进入运行约束层",
+          "status": "stronger",
+          "previousPattern": "此前关注本地运行与算力设备的可复测边界。",
+          "currentSignal": "本期新增电网需求响应与企业网络规划两个官方信号。",
+          "signalDirection": "增强：算力可用性被放进电力和网络控制面。",
+          "stillUnproven": "仍需合同、监管材料、运行日志和独立网络测试；公告不能证明韧性或成本结果。"
+        },
+        {
+          "topic": "agent",
+          "label": "Agent接入确定性流程",
+          "status": "stronger",
+          "previousPattern": "此前关注Agent监测与工具调用的可观测性。",
+          "currentSignal": "本期新增既有Step Functions工作流作为Agent工具的连接方式。",
+          "signalDirection": "增强：执行边界可保留在确定性编排中。",
+          "stillUnproven": "仍需通过官方服务文档、配置审计与运行日志验证身份传递、参数校验、审批与失败回滚，不可由架构说明推出生产安全。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "新增算力园区电网承诺",
+          "lastMention": "此前关注训练偏好、Model Spec和失配监测。",
+          "whatChanged": "本期新增未来算力园区的需求响应计划与佐治亚州披露安排。",
+          "stillUnproven": "园区尚未投运，响应量、速度、成本分担和客户影响需看公用事业与监管记录。"
+        },
+        {
+          "company": "AWS",
+          "label": "新增Agent工作流连接能力",
+          "lastMention": "此前关注Agent架构与边缘部署。",
+          "whatChanged": "本期新增Step Functions可作为Agent工具调用的官方说明。",
+          "stillUnproven": "权限隔离、失败处理、成本与生产可靠性尚未核验；需看正式服务文档、配置审计和目标环境日志。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "official-mixed",
+        "sourceName": "OpenAI、AWS与Microsoft官方原文",
+        "count": 1,
+        "share": "1/3（单一来源最高占比）",
+        "note": "3条均为官方原文但所有者分散；它们只支持各自的发布事实，不互相验证效果。",
+        "nextCheck": "补查公用事业/监管文件、服务文档、客户部署记录、独立测试和审计。"
+      },
+      "statusLabel": "已发布",
+      "items": [
+        {
+          "id": "aws-step-functions-agent-tools-2026-11-02",
+          "category": "tool",
+          "label": "工具",
+          "title": "AWS让 Step Functions 成为 Agent 工具：模型调用不改写既有审批顺序",
+          "body": "AWS于11月2日汇总称，Step Functions 工作流现可通过 Amazon Bedrock AgentCore Gateway 作为 AI Agent 工具调用；Agent 决定何时调用及传入参数，预定义工作流仍按既有步骤执行。",
+          "summary": "AWS于11月2日汇总称，Step Functions 工作流现可通过 Amazon Bedrock AgentCore Gateway 作为 AI Agent 工具调用；Agent 决定何时调用及传入参数，预定义工作流仍按既有步骤执行。",
+          "detailBody": "来源事实：AWS于11月2日汇总称，Step Functions 工作流现可通过 Amazon Bedrock AgentCore Gateway 作为 AI Agent 工具调用；Agent 决定何时调用及传入参数，预定义工作流仍按既有步骤执行。\n核验边界：已核验的是AWS宣布的连接方式与工作流职责划分；仍需独立验证各类工作流的权限隔离、失败处理、成本或生产稳定性。",
+          "trend": "本站判断，企业 Agent 落地的关键正在从让模型生成流程，转向把已有、可审计的流程作为受约束工具暴露给模型。",
+          "detailTrend": "把工作流接到 Agent 不会自动带来业务正确性；它只把调用入口与既有编排相连。这个设计把模型的作用收窄到触发时机和参数选择，同时使关键路径仍由确定的状态机执行。对于退款、删除和资源变更等任务，连接方式本身不改变既有业务步骤。",
+          "whyItMatters": "对已有 Step Functions 自动化资产的团队，这降低了将确定性流程接入 Agent 的改造门槛，同时也要求重新审查 Agent 获得了哪些调用权限。",
+          "whyRanked": "它把 Agent 的自由裁量限制在触发与参数层，把关键步骤留在确定性编排中，适合作为企业 Agent 控制面的检查点。",
+          "detailWhyRanked": "本站解读：它把 Agent 的自由裁量限制在触发与参数层，把关键步骤留在确定性编排中，适合作为企业 Agent 控制面的检查点。 已核验的是AWS宣布的连接方式与工作流职责划分；仍需独立验证各类工作流的权限隔离、失败处理、成本或生产稳定性。",
+          "topReason": "核对 AgentCore Gateway 与 Step Functions 的官方说明文件、支持区域和价格，随后在隔离环境测试身份传递、参数校验、审批绕过与失败回滚。",
+          "impact": "平台团队应先列出可被 Agent 调用的工作流、输入范围、权限边界、人工审批与可回放日志，而不是把现有流程默认视作安全可调用。",
+          "whoShouldCare": "AWS 平台工程、企业自动化、风险控制和负责高权限 Agent 上线的团队。",
+          "readerUse": "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 AgentCore Gateway 与 Step Functions 的官方说明文件、支持区域和价格，随后在隔离环境测试身份传递、参数校验、审批绕过与失败回滚。",
+          "nextCheck": "核对 AgentCore Gateway 与 Step Functions 的官方说明文件、支持区域和价格，随后在隔离环境测试身份传递、参数校验、审批绕过与失败回滚。",
+          "followUpQuestions": [
+            "应核对正式公告、服务文件、合同、审计记录或测试日志：核对 AgentCore Gateway 与 Step Functions 的官方说明文件、支持区域和价格，随后在隔离环境测试身份传递、参数校验、审批绕过与失败回滚。？",
+            "是否有独立运营数据、审计、监管文件或客户侧记录能检验该信号的实际效果？"
+          ],
+          "evidenceThreshold": "需要官方服务文档、租户级权限配置审计及真实工作流测试日志，才能升级为可安全复用的企业 Agent 编排结论。",
+          "claimBoundary": "已核验的是AWS宣布的连接方式与工作流职责划分；仍需独立验证各类工作流的权限隔离、失败处理、成本或生产稳定性。",
+          "counterEvidence": "若正式服务文件、权限配置审计或测试日志显示身份无法细粒度传递、输入校验可被绕过或失败回滚不可靠，应下调其作为受控 Agent 集成模式的判断。",
+          "source": "AWS News Blog",
+          "sourceName": "AWS News Blog",
+          "sourceId": "aws-news-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-1-terra-on-bedrock-step-functions-as-agent-tools-and-more-november-2-2026/",
+          "originalUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-1-terra-on-bedrock-step-functions-as-agent-tools-and-more-november-2-2026/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "AWS News Blog 原文支持的事实是：AWS称 Step Functions 工作流可通过 Amazon Bedrock AgentCore Gateway 作为 Agent 工具调用，并说明模型触发与预定义工作流执行的职责划分。实际权限与生产效果仍须看服务文档和部署记录。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-11-02",
+          "time": "2026-11-02",
+          "tags": [
+            "Agent",
+            "工作流",
+            "MCP"
+          ],
+          "companies": [
+            "AWS"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 3,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 20,
+            "note": "官方原文可核对连接能力；权限、安全和运行效果需要目标环境测试。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 16
+          }
+        },
+        {
+          "id": "microsoft-lumen-ai-ready-networks-2026-11-02",
+          "category": "product",
+          "label": "产品",
+          "title": "Microsoft与Lumen扩展共售：把企业 AI 的网络、数据与治理纳入同一规划",
+          "body": "Microsoft与Lumen于11月2日宣布扩展共售合作，计划让企业在 Azure 现代化与 AI 项目中更早联动网络连接、安全、数据移动和基础设施规划，并探索将更多 Lumen 能力带入 Azure 与 Microsoft Marketplace。",
+          "summary": "Microsoft与Lumen于11月2日宣布扩展共售合作，计划让企业在 Azure 现代化与 AI 项目中更早联动网络连接、安全、数据移动和基础设施规划，并探索将更多 Lumen 能力带入 Azure 与 Microsoft Marketplace。",
+          "detailBody": "来源事实：Microsoft与Lumen于11月2日宣布扩展共售合作，计划让企业在 Azure 现代化与 AI 项目中更早联动网络连接、安全、数据移动和基础设施规划，并探索将更多 Lumen 能力带入 Azure 与 Microsoft Marketplace。\n核验边界：已核验的是双方宣布扩展共售与探索方向；仍需独立验证新增能力的上线范围、客户使用规模、网络性能或 Agent 治理效果。",
+          "trend": "本站判断，企业 AI 的部署摩擦常出现在模型之外：跨云、数据中心和办公地点的数据连接、可见性与身份控制会决定 Agent 能否进入高价值流程。",
+          "detailTrend": "这是双方的商业与技术协作计划，不是已验证的客户成果。它值得关注的原因是把网络改造放进 AI 架构前置阶段，而不是在模型上线后补救。对分布式 Agent 而言，跨环境连接还必须与身份、数据驻留、访问策略和故障隔离共同评审，不能只依据共售声明假设能力已经一致可用。",
+          "whyItMatters": "对采用 Azure 的企业，这提示 AI 项目的架构评审需要把网络策略、数据移动、身份和 Agent 治理一起纳入，而不能只由模型团队单独决策。",
+          "whyRanked": "该合作明确把混合与多云网络作为 AI 工作负载的前置条件，为企业评审分布式 Agent 的基础设施依赖提供了具体观察点。",
+          "detailWhyRanked": "本站解读：该合作明确把混合与多云网络作为 AI 工作负载的前置条件，为企业评审分布式 Agent 的基础设施依赖提供了具体观察点。 已核验的是双方宣布扩展共售与探索方向；仍需独立验证新增能力的上线范围、客户使用规模、网络性能或 Agent 治理效果。",
+          "topReason": "核对 Microsoft Marketplace 的实际可用条目、双方发布的联合技术与销售范围，以及客户侧的延迟、可用性、安全审计和成本数据。",
+          "impact": "企业架构团队应检查跨环境数据路径、策略一致性、可观测性和 Marketplace 采购边界，并把这些检查纳入 Agent 上线门槛。",
+          "whoShouldCare": "Azure 架构师、网络与安全负责人、企业 AI 平台团队和多云治理人员。",
+          "readerUse": "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 Microsoft Marketplace 的实际可用条目、双方发布的联合技术与销售范围，以及客户侧的延迟、可用性、安全审计和成本数据。",
+          "nextCheck": "核对 Microsoft Marketplace 的实际可用条目、双方发布的联合技术与销售范围，以及客户侧的延迟、可用性、安全审计和成本数据。",
+          "followUpQuestions": [
+            "应核对正式公告、服务文件、合同、审计记录或测试日志：核对 Microsoft Marketplace 的实际可用条目、双方发布的联合技术与销售范围，以及客户侧的延迟、可用性、安全审计和成本数据。？",
+            "是否有独立运营数据、审计、监管文件或客户侧记录能检验该信号的实际效果？"
+          ],
+          "evidenceThreshold": "需要正式产品可用性说明、客户部署架构、独立网络测试或审计记录，才能升级为该合作已提升企业 AI 可靠性或采用速度的结论。",
+          "claimBoundary": "已核验的是双方宣布扩展共售与探索方向；仍需独立验证新增能力的上线范围、客户使用规模、网络性能或 Agent 治理效果。",
+          "counterEvidence": "若 Marketplace 供给、客户部署记录或独立测试未显示可用能力与可衡量改善，应下调其作为企业 AI 网络成熟度信号的判断。",
+          "source": "Microsoft Source",
+          "sourceName": "Microsoft Source",
+          "sourceId": "microsoft-source",
+          "sourceUrl": "https://news.microsoft.com/source/2026/11/02/lumen-and-microsoft-expand-collaboration-to-co-sell-enterprise-ai-ready-networks/",
+          "originalUrl": "https://news.microsoft.com/source/2026/11/02/lumen-and-microsoft-expand-collaboration-to-co-sell-enterprise-ai-ready-networks/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "Microsoft Source 原文支持的具体事实是：Microsoft与Lumen宣布扩展共售合作，并计划围绕 Azure、企业网络现代化、AI基础设施和 Agent 治理开展联合规划。客户效果、可用范围和技术结果不由该公告独立证明。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-11-02",
+          "time": "2026-11-02",
+          "tags": [
+            "企业AI",
+            "网络",
+            "混合云"
+          ],
+          "companies": [
+            "Microsoft",
+            "Lumen"
+          ],
+          "selectionScore": {
+            "impact": 3,
+            "novelty": 3,
+            "narrativeStrength": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17,
+            "note": "官方公告可核对合作与计划；实际部署、性能和客户成果仍需补证。"
+          },
+          "editorScore": {
+            "impact": 3,
+            "novelty": 3,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 14
+          }
+        },
+        {
+          "id": "openai-grid-protectors-2026-11-02",
+          "category": "policy",
+          "label": "政策",
+          "title": "OpenAI推出电网响应计划：把未来算力园区的用电弹性写入社区承诺",
+          "body": "OpenAI于11月2日宣布 Grid Protectors Program，称将与公用事业、监管方和政策制定者为未来算力园区设计需求响应安排；其佐治亚州拟建园区协议包含最高1000MW的可调节负荷承诺。",
+          "summary": "OpenAI于11月2日宣布 Grid Protectors Program，称将与公用事业、监管方和政策制定者为未来算力园区设计需求响应安排；其佐治亚州拟建园区协议包含最高1000MW的可调节负荷承诺。",
+          "detailBody": "来源事实：OpenAI于11月2日宣布 Grid Protectors Program，称将与公用事业、监管方和政策制定者为未来算力园区设计需求响应安排；其佐治亚州拟建园区协议包含最高1000MW的可调节负荷承诺。\n核验边界：已核验的是OpenAI宣布该计划及其披露的佐治亚州安排；园区尚在开发，仍需独立运行记录验证1000MW可调节能力、响应效果和客户节省。",
+          "trend": "本站判断，AI算力扩张的约束正从芯片与云资源延伸到电力接入、峰时调度与成本分担；可中断负荷将成为大型园区是否可被社区接受的可核对条件。",
+          "detailTrend": "这是一项园区建设与用电安排的官方承诺，而非已运行的电网服务。对采购和政策团队而言，关键不在口号，而在合同如何界定削减量、响应速度、持续时间、补偿与违约责任；还要核对负荷削减会否影响园区自身服务，以及监管方如何衡量普通用户的实际账单影响。",
+          "whyItMatters": "对关注算力基础设施的企业、地方政府和电力用户而言，这提供了一个把 AI 数据中心负荷与电网韧性分开核验的具体样本。",
+          "whyRanked": "1000MW承诺使算力园区的电力影响首次具备可追踪的合同与监管核验路径，值得进入基础设施风险台账。",
+          "detailWhyRanked": "本站解读：1000MW承诺使算力园区的电力影响首次具备可追踪的合同与监管核验路径，值得进入基础设施风险台账。 已核验的是OpenAI宣布该计划及其披露的佐治亚州安排；园区尚在开发，仍需独立运行记录验证1000MW可调节能力、响应效果和客户节省。",
+          "topReason": "核对 Georgia Power 的协议和监管文件、园区实际投运时间、可削减负荷的测试记录，以及成本是否由园区而非普通用户承担。",
+          "impact": "园区开发和云采购不应只比较 GPU 供给；还应把接入成本、需求响应条款、峰时削减能力和对其他用户的影响列入验收。",
+          "whoShouldCare": "算力园区选址团队、公用事业监管观察者、云采购负责人和关注电网容量的地方机构。",
+          "readerUse": "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 Georgia Power 的协议和监管文件、园区实际投运时间、可削减负荷的测试记录，以及成本是否由园区而非普通用户承担。",
+          "nextCheck": "核对 Georgia Power 的协议和监管文件、园区实际投运时间、可削减负荷的测试记录，以及成本是否由园区而非普通用户承担。",
+          "followUpQuestions": [
+            "应核对正式公告、服务文件、合同、审计记录或测试日志：核对 Georgia Power 的协议和监管文件、园区实际投运时间、可削减负荷的测试记录，以及成本是否由园区而非普通用户承担。？",
+            "是否有独立运营数据、审计、监管文件或客户侧记录能检验该信号的实际效果？"
+          ],
+          "evidenceThreshold": "需要公用事业或监管方公开的协议条款、投运后需求响应测试和账单影响数据，才能升级为已验证的电网韧性或用户成本改善结论。",
+          "claimBoundary": "已核验的是OpenAI宣布该计划及其披露的佐治亚州安排；园区尚在开发，仍需独立运行记录验证1000MW可调节能力、响应效果和客户节省。",
+          "counterEvidence": "若监管文件、测试记录或账单数据未支持承诺的响应量、速度或成本分担，应下调其作为算力与电网协同样本的判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/grid-protectors-program/",
+          "originalUrl": "https://openai.com/index/grid-protectors-program/",
+          "sourceRole": "官方核对",
+          "sourceType": "official",
+          "trustLevel": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "provenance": "OpenAI News 原文支持的具体事实是：OpenAI在11月2日宣布 Grid Protectors Program，并披露其未来数据中心园区在佐治亚州的最高1000MW可调节负荷安排。原文不构成需求响应效果、客户节省或其他地区执行情况的独立证明。",
+          "verificationStatus": "已核验",
+          "publishedAt": "2026-11-02",
+          "time": "2026-11-02",
+          "tags": [
+            "算力",
+            "电网",
+            "需求响应"
+          ],
+          "companies": [
+            "OpenAI"
+          ],
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方原文可核对计划和披露安排；实际电网与成本结果仍待独立运行证据。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 16
+          }
+        }
+      ]
+    },
     {
       "id": "news-0800-2026-11-02",
       "date": "2026-11-02",
@@ -212,7 +567,7 @@
           "sourceReliability": "high",
           "claimStatus": "confirmed",
           "originalDependency": "recommended",
-      "provenance": "Google Keyword AI 原文支持的具体事实是：Google于11月2日在非洲推出 Skilling Africa with Google 区域学习平台，整合15项以上培训项目，并加入名为 SCOUT 的 AI 学习助手；官方称该平台计划到2030年触达300万人。已核验的是Google发布该平台、其功能描述与公开目标；尚未独立验证学习完成率、就业结果、覆盖人数或 AI 助手在低带宽环境的实际效果。",
+          "provenance": "Google Keyword AI 原文支持的具体事实是：Google于11月2日在非洲推出 Skilling Africa with Google 区域学习平台，整合15项以上培训项目，并加入名为 SCOUT 的 AI 学习助手；官方称该平台计划到2030年触达300万人。已核验的是Google发布该平台、其功能描述与公开目标；尚未独立验证学习完成率、就业结果、覆盖人数或 AI 助手在低带宽环境的实际效果。",
           "verificationStatus": "已核验",
           "publishedAt": "2026-11-02",
           "time": "2026-11-02",
