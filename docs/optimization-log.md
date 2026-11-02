@@ -11106,3 +11106,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：app.js 语法、data/site/pages 验证、派生数据一致性、JSON/HTML 解析与 git diff --check 均通过。
 - Sync：编辑前尝试 `git pull --ff-only origin main`；网络 DNS 重试后 GitHub SSH 公钥认证被拒，未能确认远端是否有新提交。
 - Commit note：待提交的草稿采用【新闻更新】分类标题；推送需具备 origin 的 SSH 写入凭据。
+## 2026-11-02 15:34:48 JST｜08点新闻情报更新
+
+- Focus：发布4条有官方原文可核对的治理与本地运行信号：训练偏好标准、Model Spec、前沿 Agent 失配监测，以及 RTX Spark 本地 AI 更新。
+- Sources：遵循 `data/sources.json` 与 `docs/source-policy.md`，核对 OpenAI 与 NVIDIA 官方页面；已排除早于上次采集窗口、已归档、只有索引入口或无法提供充分原文边界的候选。未用付费墙、登录墙、社区讨论或传闻。
+- Evidence：前三条是官方发布/披露，第四条为明确标注的厂商主张；所有条目保留原始 URL、事实边界、影响判断、反证路径与下一步独立核验。4条而非10条是质量门槛结果，不以旧闻、重复公告或营销文案补数。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页及四个详情页可见11月2日08点中文情报版；首页简报显示治理、监测与本地部署的核验路径。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、JSON 解析、HTML 结构检查和 `git diff --check` 全部通过。
+- Sync：编辑前尝试 `git pull --rebase --autostash origin main`，因远端 SSH 公钥被拒绝而未完成；提交后将尝试推送。
+- Commit note：【新闻更新】发布08点AI新闻：4条治理与Agent运行信号。
