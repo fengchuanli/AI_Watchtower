@@ -6,7 +6,7 @@
 - Changed files：news-detail.js、styles.css、docs/optimization-decision-index.md、docs/optimization-log.md。
 - Verification：news-detail.js / app.js 语法、validate-data/site/pages、派生数据 freshness、git diff --check 通过。未进行浏览器视觉检查。
 - Sync：编辑前普通 pull 因 GitHub DNS 失败；授权联网重试后 SSH publickey 被拒绝，未能确认远端更新。保留已有未提交新闻数据改动，仅提交本轮非冲突详情页代码与记录。
-- Commit：待本轮提交；推送将仅在凭据可用时尝试。
+- Commit：详情页实现提交 `56e258d`（【VisionHub网站风格优化】收紧详情页核验结尾路径）。普通 push 因 DNS 失败；授权联网重试后 SSH publickey 被拒绝，暂未推送。
 
 ## 2026-10-27 23:04:57 JST｜08点任务实际23点补充
 
