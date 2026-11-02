@@ -1,3 +1,14 @@
+## 2026-10-27 23:04:57 JST｜08点任务实际23点补充
+
+- Focus：新增1条AWS边缘视觉SDK v3参考架构观察，延续4条已有信号；137期/1301条，保留旧条目原始日期与ID。
+- Sources：尝试HF RSS，解析工具不支持XML；核对登记Anthropic、HF、AWS、Google和TechCrunch公开索引及AWS原文。跳过既有HF汇总与IPO事件、社区线索及未获原文核验的媒体标题，未使用付费墙或登录墙正文。覆盖有限，不补足10条。
+- Evidence：仅核对官方参考架构说明，未运行示例；不推断SDK当日首发或真实工厂效果。下一步检查客户设备日志、第三方复测和版本回滚。当前与历史未见同URL或同架构事件。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页更多新闻流、全部新闻列表、归档页与AWS新详情页可见边缘视觉解读；简报标记新增1条、延续4条，共5条。
+- Verification：app.js语法、data/site/pages验证、派生数据一致性、JSON/HTML解析与git diff --check；初稿按现有校验器修正元数据及核验文案，未修改验证器；未做浏览器视觉验收。
+- Sync：编辑前已同步origin/main，普通DNS失败后授权重试成功。
+- Commit note：【新闻更新】补充23点AI新闻：新增1条边缘视觉交付信号；推送结果记录于automation memory。
+
 ## 2026-10-27 11:02:46 JST（20:00 scheduled content optimization）
 
 - Focus：当前周期 Day 15，精简详情页趋势标题并明确避免重复趋势套语的行文规则。
@@ -11075,3 +11086,13 @@ Use this file to record every automated or manual optimization. New entries go a
   - Site repository was clean before planning work.
   - Plan covers about 30 days with two daily passes.
 - Commit: Included in the planning commit.
+## 2026-11-02 15:27:31 JST｜17点新闻情报预检
+
+- Focus：核对登记的官方与可靠来源，未发现可安全确认为本日午后新增、且不与归档重复的 AI 信号；不以 10 月末旧文、社区贴文或弱证据补足数量。
+- Sources：检查 OpenAI、Anthropic、Google DeepMind、AWS、Hugging Face 与 Meta 的公开索引及可读原文；最新可读条目仍主要停在 10 月末。未使用付费墙或登录墙正文。
+- Evidence：未发布新的 11 月 2 日新闻；原有 10 月 27 日 AWS 边缘视觉架构草稿保持独立的厂商主张边界，不将它改写成当日突发。下一次应优先核对带明确发布日期的官方公告、监管文本或独立测试。
+- Changed files：docs/optimization-log.md（本次预检记录）；数据文件保留已有的 10 月 27 日草稿，未用不合格候选覆盖。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部新闻列表、归档页或详情页内容；站内仍展示已有的 10 月 27 日草稿更新。
+- Verification：app.js 语法、data/site/pages 验证、派生数据一致性、JSON/HTML 解析与 git diff --check 均通过。
+- Sync：编辑前尝试 `git pull --ff-only origin main`；网络 DNS 重试后 GitHub SSH 公钥认证被拒，未能确认远端是否有新提交。
+- Commit note：待提交的草稿采用【新闻更新】分类标题；推送需具备 origin 的 SSH 写入凭据。
