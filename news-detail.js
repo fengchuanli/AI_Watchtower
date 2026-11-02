@@ -468,19 +468,6 @@ function renderReadingNote(label, body) {
   `;
 }
 
-function getVerifySteps(item) {
-  const questions = Array.isArray(item.followUpQuestions) ? item.followUpQuestions : [];
-  return [item.nextCheck, ...questions].filter(Boolean);
-}
-
-function getTakeaway(item) {
-  return {
-    headline: getDetailWhyItMatters(item),
-    boundary: item.claimBoundary,
-    firstStep: item.nextCheck,
-  };
-}
-
 function getSourceEntries(item, data) {
   const entries = [
     {
@@ -1535,8 +1522,6 @@ function renderDetail(item, data) {
   const sourceReminder = getDetailSourceReminder(item);
   const mediaOriginalCallout = getMediaOriginalCallout(item);
 
-  const takeaway = getTakeaway(item);
-  const verifySteps = getVerifySteps(item);
   const sourceEntries = getSourceEntries(item, data);
   const isMedia = isMediaSourcedItem(item);
 
@@ -1580,14 +1565,6 @@ function renderDetail(item, data) {
           </div>
           <p class="detail-so-what"><strong>对普通读者</strong>${escapeHtml(item.impact)}</p>
         </section>`;
-
-  const takeawayBlock = `
-    <section class="detail-takeaway" aria-label="一句话结论">
-      <p class="eyebrow">Takeaway</p>
-      <p class="takeaway-headline">${escapeHtml(takeaway.headline)}</p>
-      <p class="takeaway-boundary">但目前还证明不了：${escapeHtml(takeaway.boundary)}</p>
-      <p class="takeaway-step"><b>先做这一件</b>${escapeHtml(takeaway.firstStep)}</p>
-    </section>`;
 
   // 主图：技术类条目优先画架构对比，其次是流程图，再次是关系图。三者都没有就不出现。
   // 没有逐节拆解时，图排在正文最前面——这类条目的文字都是通用模板，
@@ -1696,11 +1673,20 @@ function renderDetail(item, data) {
 
         <section class="detail-block incident-block detail-primary-section" id="incident-next">
           <span>05 · 接下来要看哪里</span>
-          <h2>你可以自己核对的几件事</h2>
-          ${renderSourceStatus("行动清单｜按顺序做", "不需要全部做完；第一条通常就能判断这条要不要继续跟。")}
-          <ol class="detail-verify-steps">
-            ${verifySteps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}
-          </ol>
+          <h2>先查这一件，再决定要不要继续跟</h2>
+          ${renderSourceStatus("行动路径｜先后分开", "先看最关键的核验入口；下面两问只在需要继续追踪时再看。")}
+          <div class="detail-next-first-step">
+            <strong>先做这一件</strong>
+            <p>${escapeHtml(item.nextCheck)}</p>
+          </div>
+          ${followUpQuestions.length
+            ? `<div class="detail-follow-up">
+                <p>再核对两个具体问题</p>
+                <ol>
+                  ${followUpQuestions.slice(0, 2).map((question) => `<li>${escapeHtml(question)}</li>`).join("")}
+                </ol>
+              </div>`
+            : ""}
         </section>
 
         ${renderTrendChart(item, detailTrends)}
@@ -1717,8 +1703,6 @@ function renderDetail(item, data) {
         </section>
       </div>
     </section>
-
-    ${hasDepth ? "" : takeawayBlock}
 
     <section class="detail-sources" id="detail-sources" aria-label="情报来源与日期">
       <div>

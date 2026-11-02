@@ -4342,37 +4342,50 @@ h3 {
   color: var(--fg-primary);
 }
 
-/* 自己怎么核对：编号步骤 */
-.detail-verify-steps {
-  display: grid;
-  gap: var(--space-3);
+/* 结尾先给一个可执行核验入口，再放可选的编辑追问，避免重复总结整篇文章。 */
+.detail-next-first-step {
+  max-width: 72ch;
   margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: verify;
+  padding: var(--space-4);
+  background: var(--tint-ok);
+  border: 1px solid var(--tint-ok-border);
+  border-radius: var(--radius-md);
 }
 
-.detail-verify-steps li {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: var(--space-3);
-  align-items: start;
+.detail-next-first-step strong,
+.detail-follow-up > p {
+  display: block;
+  margin: 0 0 var(--space-2);
+  color: var(--state-ok);
+  font-size: var(--text-sm);
+  font-weight: 900;
+}
+
+.detail-next-first-step p {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--fg-primary);
+  font-size: var(--text-base);
+  line-height: 1.75;
+}
+
+.detail-follow-up {
   max-width: 72ch;
-  padding: var(--space-3) var(--space-4);
-  background: var(--bg-inset);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  margin-top: var(--space-4);
+}
+
+.detail-follow-up > p {
+  color: var(--fg-muted);
+}
+
+.detail-follow-up ol {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding-left: 1.5rem;
   color: var(--fg-secondary);
   font-size: var(--text-base);
   line-height: 1.75;
-  counter-increment: verify;
-}
-
-.detail-verify-steps li::before {
-  content: counter(verify, decimal-leading-zero);
-  color: var(--accent);
-  font-size: var(--text-sm);
-  font-weight: 900;
 }
 
 /* 目录：带序号 */
@@ -4387,51 +4400,6 @@ h3 {
   font-size: var(--text-xs);
   font-style: normal;
   font-weight: 900;
-}
-
-/* 一句话结论 */
-.detail-takeaway {
-  width: min(1180px, calc(100% - 48px));
-  margin: var(--space-7) auto 0;
-  padding: var(--space-6);
-  background: var(--bg-deep);
-  border: 1px solid var(--tint-warn-border);
-  border-radius: var(--radius-lg);
-}
-
-.takeaway-headline {
-  max-width: 60ch;
-  margin: 0 0 var(--space-3);
-  font-family: var(--font-serif);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.takeaway-boundary {
-  max-width: 68ch;
-  margin: 0 0 var(--space-4);
-  color: var(--state-risk);
-  font-size: var(--text-base);
-  line-height: 1.75;
-}
-
-.takeaway-step {
-  display: flex;
-  gap: var(--space-3);
-  flex-wrap: wrap;
-  max-width: 72ch;
-  margin: 0;
-  padding-top: var(--space-4);
-  color: var(--fg-secondary);
-  border-top: 1px solid var(--border);
-  font-size: var(--text-base);
-  line-height: 1.75;
-}
-
-.takeaway-step b {
-  flex: none;
-  color: var(--accent);
 }
 
 /* 情报来源与日期 */
@@ -4493,7 +4461,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .detail-takeaway,
   .detail-sources {
     width: min(1180px, calc(100% - 32px));
   }

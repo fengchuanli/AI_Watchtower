@@ -1,3 +1,13 @@
+## 2026-11-02 15:28:55 JST（20:00 scheduled content optimization）
+
+- Focus：当前周期 Day 16，收紧通用详情页的结尾节奏：先给一个可执行核验入口，再补两个需要继续追踪时才看的具体问题，随后回到来源清单。
+- 网站可见变化：所有通用新闻详情页的“接下来要看哪里”现在突出“先做这一件”，把两条后续核验问题降为第二步；原来临近来源区重复影响、边界与下一步的 Takeaway 区块已移除，手机读者可更快结束或进入来源核对。
+- 来源边界：只调整既有 `nextCheck` 与 `followUpQuestions` 的呈现顺序；未改新闻事实、趋势判断、核验边界、原文链接、来源角色或编辑评分。
+- Changed files：news-detail.js、styles.css、docs/optimization-decision-index.md、docs/optimization-log.md。
+- Verification：news-detail.js / app.js 语法、validate-data/site/pages、派生数据 freshness、git diff --check 通过。未进行浏览器视觉检查。
+- Sync：编辑前普通 pull 因 GitHub DNS 失败；授权联网重试后 SSH publickey 被拒绝，未能确认远端更新。保留已有未提交新闻数据改动，仅提交本轮非冲突详情页代码与记录。
+- Commit：待本轮提交；推送将仅在凭据可用时尝试。
+
 ## 2026-10-27 23:04:57 JST｜08点任务实际23点补充
 
 - Focus：新增1条AWS边缘视觉SDK v3参考架构观察，延续4条已有信号；137期/1301条，保留旧条目原始日期与ID。
