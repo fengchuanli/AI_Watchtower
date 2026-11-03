@@ -2,16 +2,15 @@
   "version": 1,
   "generatedFrom": "data/news-history.json",
   "updatedAt": "2026-11-03",
-  "totalItems": 1309,
+  "totalItems": 1311,
   "editions": [
     {
-      "id": "news-1700-2026-11-03",
+      "id": "news-0800-2026-11-03",
       "date": "2026-11-03",
       "timezone": "Asia/Tokyo",
-      "archiveLabel": "11月3日｜17点情报版",
+      "archiveLabel": "11月3日｜08点情报版",
       "archiveStatus": "published",
-      "itemCount": 3,
-      "statusLabel": "已发布",
+      "itemCount": 5,
       "items": [
         {
           "id": "aws-step-functions-agent-tools-2026-11-02",
@@ -44,6 +43,38 @@
           "sourceRole": "官方核对",
           "trustLevel": "official",
           "sourceCaveat": "已核验的是双方宣布扩展共售与探索方向；仍需独立验证新增能力的上线范围、客户使用规模、网络性能或 Agent 治理效果。"
+        },
+        {
+          "id": "openai-lifeval-everyday-agent-evaluation-2026-11-02",
+          "title": "OpenAI发布 LifeVal：把“日常办事”纳入个人 Agent 的任务评测",
+          "category": "research",
+          "label": "研究",
+          "time": "2026-11-02",
+          "publishedAt": "2026-11-02",
+          "body": "OpenAI于11月2日发布 LifeVal，称该评测覆盖育儿、政府服务、预算、学校准备、购物等用户希望 AI 协助的日常任务，用于跟踪模型在这些任务上的进展。",
+          "impact": "产品、评测与信任安全团队应把任务成功率与拒绝、澄清、人工接管、错误成本和可达性一起记录，避免用单一基准成绩替代端到端服务质量。",
+          "source": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/lifeval/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "已核验的是OpenAI发布评测及其任务定位；尚未独立验证任务集代表性、评分可靠性、真实用户结果或模型在高风险情境下的表现，仍需独立复现与用户侧记录。"
+        },
+        {
+          "id": "openai-pando-git-scaling-2026-11-02",
+          "title": "OpenAI披露 Pando：用兼容 Git 的后端承接高并发 Agent 协作",
+          "category": "tool",
+          "label": "工具",
+          "time": "2026-11-02",
+          "publishedAt": "2026-11-02",
+          "body": "OpenAI于11月2日介绍其内部 Git 后端 Pando：它保持 Git 协议与客户端兼容，按分支并行处理写入、复用包文件供读取；OpenAI称该系统已支撑其单体仓库的生产开发。",
+          "impact": "平台与开发效率负责人应把并发分支数、推送失败率、拉取延迟、缓存命中和一致性需求写进 Agent 开发平台的容量与回滚演练，而不是只增加运行 Agent 的数量。",
+          "source": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/scaling-git-at-openai/",
+          "sourceRole": "官方核对",
+          "trustLevel": "official",
+          "sourceCaveat": "已核验的是OpenAI对架构、内部部署及披露指标的说明；并未独立核验该设计在其他组织、代码库或云环境中的可靠性与成本。"
         },
         {
           "id": "openai-grid-protectors-2026-11-02",
