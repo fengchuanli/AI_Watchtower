@@ -135,7 +135,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 14 complete: Dessa official-source detail page separates reader impact, voice-interaction trend and concrete third-party follow-up questions; original facts and vendor proof boundary remain unchanged.
 - Current-cycle Day 15 complete: 通用详情页趋势标题精简为“可能带来的变化”，保留推断状态；详情页审读指南与数据规范要求正文直接解释变化，人工去除重复套语且保留条件与来源边界。
 - Current-cycle Day 16 complete: 通用详情页将结尾改为“先做这一件”核验入口，再列两个具体追问，移除临近来源区重复的 Takeaway 总结；事实、趋势、边界、原文链接与编辑评分不变。
-- Continue with Day 17: review whether current detail pages need a small mobile paragraph-density or anchor-label guard.
+- Current-cycle Day 17 complete: 手机宽度下的通用详情页正文现在以更清晰的段落留白和 16px / 1.9 行距呈现；`detail-page-review-guide.md` 与 `validate-site.mjs` 守住这一阅读节奏，未改新闻事实、来源或原文边界。
+- Next useful task: Day 18，记录本轮详情页可读性护栏的预期误报与人工审读缺口。
 
 ## Update Rules
 

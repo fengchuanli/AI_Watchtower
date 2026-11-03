@@ -196,6 +196,10 @@ A useful detail page should be easy to scan on a phone.
 - Move long caveats into `claimBoundary`, `provenance`, or `nextCheck` instead of repeating them in every section.
 - If a sentence needs more than one semicolon, split it or convert it into a follow-up question.
 
+### Phone Paragraph-Density Guard
+
+On screens at or below 620px, the three primary article sections (`事件简述`、`这件事怎么理解`、`趋势判断`) must keep visible space between prose blocks and use a 16px / 1.9 line-height reading rhythm. This is a presentation guard, not permission to make source facts longer: keep the existing short-field and copyright boundaries, then split an overloaded idea into its dedicated field instead of shrinking text or packing paragraphs together.
+
 ## Stop Conditions
 
 Hold or rewrite the item when:
