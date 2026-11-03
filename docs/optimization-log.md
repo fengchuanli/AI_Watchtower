@@ -5,8 +5,8 @@
 - 来源边界：仅调整既有正文的呈现节奏与审读/校验规则；未改新闻事实、趋势判断文字、来源链接、原文依赖、声明状态或编辑评分。
 - Changed files：styles.css、docs/detail-page-review-guide.md、scripts/validate-site.mjs、docs/optimization-decision-index.md、docs/optimization-log.md。
 - Verification：`node --check news-detail.js`、`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check`、六个静态 HTML 页的 Python HTMLParser 和 `git diff --check` 均通过。未进行浏览器视觉检查。
-- Sync：编辑前普通 pull 因 GitHub DNS 失败；授权联网重试后 SSH publickey 被拒绝，未能确认远端更新。提交后将按同一网络边界尝试 push。
-- Commit：待创建（【VisionHub网站风格优化】加强详情页手机正文阅读节奏）。
+- Sync：编辑前普通 pull 因 GitHub DNS 失败；授权联网重试后 SSH publickey 被拒绝，未能确认远端更新。提交后普通 push 再次遇 DNS，授权联网重试仍被 SSH publickey 拒绝；本地 `main` 领先 `origin/main` 7 个提交。
+- Commit：`d7b7f8e`（【VisionHub网站风格优化】加强详情页手机正文阅读节奏）。
 - Next：Day 18，记录本轮详情页可读性护栏的预期误报与人工审读缺口。
 
 ## 2026-11-02 15:28:55 JST（20:00 scheduled content optimization）
