@@ -1,3 +1,14 @@
+## 2026-11-05 08:12:00 JST（17:00 news intelligence run）
+
+- Focus：发布3条可核验且未重复的 OpenAI 官方信号：Pierre 代码协作工具拟收购、Daybreak Red 在 AWS GovCloud（US-East）的受审批准入，以及带动态验证与人工审阅的 Linux 安全研究管线。`draft-with-caveat`：3/3来自同一官方来源，未用旧闻、付费/登录墙正文、社区讨论或营销内容补足10条。
+- Sources & boundary：原始页面为 OpenAI News；已核对公告、访问条件和作者方法披露。交易整合、政府客户部署、合规/防御成效及 Linux 研究结果仍分别需要交割与产品文件、AWS 服务/合同资料、维护者记录、独立复现和审计。
+- Archive mirror：已将 `news-1700-2026-11-05` 镜像到 `data/news-history.json` 最新期；archive-diff: skipped-one-edition（当日没有可比较的08点归档版）。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页和3个新详情页可查看中文事件、影响、来源置信度、证据边界及下一步核验；首页明确显示单一官方来源集中。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量数据 JSON 解析和 `git diff --check` 均通过；未做浏览器视觉验收。
+- Sync：编辑前 `git pull --ff-only origin main` 已同步；普通网络 DNS 失败后授权网络重试成功。
+- Commit note：【新闻更新】发布17点AI新闻：3条编码协作与安全控制面信号。
+
 ## 2026-11-03 11:05:42 JST（20:00 scheduled content optimization）
 
 - Focus：当前周期 Day 17，为通用详情页补齐手机正文段落密度护栏；在不改变事实、来源与核验边界的前提下，让核心解读段落更容易逐段扫读。
@@ -11138,6 +11149,17 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、JSON解析、HTML结构检查和 `git diff --check` 均通过。
 - Sync：编辑前尝试 `git pull --ff-only origin main`，GitHub SSH 公钥认证被拒，未能确认远端是否有新提交。
 - Commit note：待提交【新闻更新】发布08点AI新闻：5条治理、运行与技能供给信号；推送需具备 origin 的 SSH 写入凭据。
+
+## 2026-11-04 17:00 JST｜17点新闻情报更新
+
+- Focus：发布3条可复跑的模型工程与评测信号：Hugging Face 的模型集成契约（MIC）、AI2 的 StateBench 长上下文状态跟踪评测，以及 CWE-bench v2 安全修复任务集。
+- Sources：遵循 `data/sources.json` 与 `docs/source-policy.md`，核对 Hugging Face Blog 上的工程原文、AI2 研究发布与 CWE-bench 项目发布；已完成历史 URL 与标题去重。未使用付费墙、登录墙、社区讨论、传闻或随机页面正文。
+- Evidence：3条均只确认其发布者提供的方法、数据/代码或运行入口与作者报告。MIC 的跨模型覆盖、StateBench 的真实任务外推、CWE-bench 的未见漏洞与现实防御能力，均保留为待独立复现、持出集、人工审查与生产记录核验。3条而非10条是质量门槛结果，不用旧稿或弱证据补数。
+- Changed files：`data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页及3个详情页可见11月4日17点中文情报版；首页简报聚焦状态错误、回归测试和安全修复的独立核验路径。
+- Verification：待执行 `node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、JSON/HTML 解析与 `git diff --check`。
+- Sync：编辑前两次尝试 `git pull --ff-only origin main`；首次 DNS 解析失败，授权网络重试后 SSH 公钥认证被拒，未能确认远端是否有新提交。
+- Commit note：待提交【新闻更新】发布17点AI新闻：3条模型评测与工程可靠性信号；推送需具备 origin 的 SSH 写入凭据。
 
 ## 2026-11-03 17:00 JST｜17点新闻情报更新
 
