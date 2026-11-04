@@ -1815,6 +1815,7 @@ if (
   !/Vendor-claim checks/.test(editorialValidatorLimits) ||
   !/Promoted-item briefing checks/.test(editorialValidatorLimits) ||
   !/Chinese readability and mobile length checks/.test(editorialValidatorLimits) ||
+  !/Day 18 Detail-Page Readability Guard Review/.test(editorialValidatorLimits) ||
   !/Source-reference labels/.test(editorialValidatorLimits) ||
   !/Current Guard Review \(2026-10-08\)/.test(editorialValidatorLimits) ||
   !/Expected false positives/.test(editorialValidatorLimits) ||
@@ -1825,6 +1826,8 @@ if (
   !/厂商主张/.test(editorialValidatorLimits) ||
   !/visionhubAudiencePattern/.test(editorialValidatorLimits) ||
   !/Repeated detail-page sentence-lead checks/.test(editorialValidatorLimits) ||
+  !/A compact paragraph can contain several short clauses/.test(editorialValidatorLimits) ||
+  !/Validators cannot judge whether a visible line break, scroll distance, jump-navigation row, or section pause feels calm at 390px and 768px/.test(editorialValidatorLimits) ||
   !/copyright substitution risk/.test(editorialValidatorLimits) ||
   !/180 Chinese characters/.test(editorialValidatorLimits) ||
   !/docs\/source-policy\.md/.test(editorialValidatorLimits) ||

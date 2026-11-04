@@ -52,6 +52,24 @@ The validators protect the product goal: Chinese readers should get a clear, sou
 - Some English product names are allowed, but visible structural labels should stay Chinese-readable unless the English phrase is the actual product or source name.
 - Metadata line-length limits are intentionally conservative so homepage source context remains glanceable.
 
+### Day 18 Detail-Page Readability Guard Review
+
+The paragraph-length, repeated-lead, and mobile type-rhythm guards protect a phone reader from meeting the same explanation as one dense wall. They are not a license to shorten away the source boundary, original-source dependency, downgrade signal, or next evidence object.
+
+Expected false positives for this guard:
+
+- A necessary product, policy, model, benchmark, or organization name can make two otherwise different sentence leads look alike. Rewrite the second sentence around its distinct editorial job first; keep both only when one states a separately source-backed fact and the other carries a non-repeatable condition or limitation.
+- A Chinese sentence may exceed 180 characters when it must keep a source limitation and a concrete proof artifact together. Split at the fact/interpretation/boundary/next-check boundary; do not delete the limitation, turn it into vague “持续关注”, or mechanically cut a legal, technical, or source name.
+- A compact paragraph can contain several short clauses without being hard to read, while a shorter paragraph can still be confusing when it mixes fact, trend, reader action, and proof work. Review the paragraph's job, not character count alone.
+- CSS checks can pass even when real mobile wrapping makes an uncommon English model name, long URL-like artifact, or unbreakable identifier visually awkward. Keep the Chinese explanation readable and verify a representative narrow screen before changing type size or overflow rules.
+
+Human-review gaps for this guard:
+
+- Validators cannot tell whether two similar leads are necessary factual distinctions, whether a transition preserves the intended causal condition, or whether an edit accidentally changes certainty. Read the three primary sections in order and compare them with the source boundary before publishing.
+- Validators cannot judge whether a visible line break, scroll distance, jump-navigation row, or section pause feels calm at 390px and 768px. Use browser or screenshot QA whenever prose rendering, section order, or mobile CSS changes.
+- Validators cannot decide whether a shorter media-backed page still leaves enough reason to open the original article. For `must-read` items, confirm that interviews, figures, charts, full quotations, and context remain explicitly assigned to the original source.
+- Validators cannot replace copyright, source-support, or reader-utility review. A page that passes density checks is still held when it becomes a translated substitute, overstates a vendor outcome, or gives no concrete reader decision.
+
 ## Current Guard Review (2026-10-08)
 
 The Day 25 and Day 26 guards are intentionally narrow because they protect the most reader-visible VisionHub-style regressions from this cycle: homepage first-screen understanding and detail-page narrative repetition. Keep the guards unless the failure is a vocabulary or threshold mismatch rather than a missing editorial job.
