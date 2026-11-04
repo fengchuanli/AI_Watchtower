@@ -11160,3 +11160,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、JSON解析、HTML结构检查和 `git diff --check` 全部通过。
 - Sync：编辑前尝试 `git pull --ff-only origin main`；远端SSH公钥认证被拒，未能确认远端是否有新提交。
 - Commit note：【新闻更新】发布08点AI新闻：5条Agent协作与任务评测信号。
+## 2026-11-04 11:01:57 JST（20:00 scheduled content optimization）
+
+- Focus：当前周期 Day 18，记录详情页手机可读性护栏的预期误报与人工审读缺口，避免为通过字符数、重复句首或样式规则而损失来源边界与核验信息。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Changed files：docs/editorial-validator-limits.md、scripts/validate-site.mjs、docs/optimization-decision-index.md、docs/optimization-log.md。
+- Verification：`node --check scripts/validate-site.mjs`、`node --check news-detail.js`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 通过；`node scripts/validate-site.mjs` 被本轮之外的当前11月4日新闻数据 TOP3 文案/首页边界记录问题拦住，未修改该批数据。
+- Sync：编辑前尝试 `git fetch origin main`，因 GitHub DNS 解析失败未能同步远端；保留既有待提交新闻数据改动，不纳入本轮提交。
+- Commit：`37da932`（【VisionHub网站风格优化】补齐详情页可读性审读护栏）。
+- Next：Day 19，审视08:00 / 17:00正常发布路径并移除或重排一个拖慢安全普通更新的步骤。
