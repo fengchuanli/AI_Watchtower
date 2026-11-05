@@ -7,231 +7,301 @@
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期用来让治理团队追踪安全准入与责任链；未单列政策来源仍需继续核对。"
+      "description": "本期用来让基建与教育团队核对 OpenAI 园区许可、供电责任和 Google 教师培训实施；仍需履约或成效的独立证据。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期用来让平台团队核对 Codex 代码协作与审阅工具链的交易边界；公告仍不证明已经整合。"
+      "description": "本期用来让工业团队核对 NVIDIA 半导体 Agent 的仿真、签核与质量追溯；仍需产线改善证据。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期用来让合规团队核对 Daybreak Red 在 AWS GovCloud 的准入条件；官方可用性说明仍不证明真实部署效果。"
+      "description": "本期用来让推理平台团队核对 NVIDIA GPU 内存、KV Cache、延迟和账单；仍需成本优势证据。"
     },
     {
       "id": "model",
       "label": "模型",
-      "description": "本期用来让评测团队继续查模型证据；未收录模型新来源事实，仍需继续核对。"
+      "description": "本期未收录模型新来源事实，仍需继续核对。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期用来让安全团队核对 Linux 安全研究方法与人工审阅；作者结果仍需独立复现。"
+      "description": "本期未收录研究新来源事实，仍需继续核对。"
     },
     {
       "id": "funding",
       "label": "融资",
-      "description": "本期用来让市场团队继续查资本证据；未收录融资新来源事实，仍需继续核对。"
+      "description": "本期未收录融资新来源事实，仍需继续核对。"
     }
   ],
-  "updatedAt": "2026-11-05",
-  "editorNote": "11月5日17点版：收录 OpenAI 的编码协作、受限云网络安全与 Linux 安全研究信号；官方披露可核对发布与方法，不等于整合、部署或防御效果。",
+  "updatedAt": "2026-11-06",
+  "editorNote": "11月6日17点版：追踪 AI 规模化落到供电许可、内存缓存、教师培训与工业验证；公告和厂商案例只支持发布事实，结果仍待独立证据。",
   "edition": {
-    "id": "news-1700-2026-11-05",
-    "date": "2026-11-05",
+    "id": "news-1700-2026-11-06",
+    "date": "2026-11-06",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "11月5日｜17点情报版",
-    "itemCount": 3,
-    "note": "收录3条 OpenAI 官方的编码协作、受限云安全与 Linux 研究信号。",
-    "operationalStatus": "编辑前已同步 origin/main；检查登记官方来源与历史 URL/标题去重，未用付费墙、登录墙或社区内容。",
-    "editorialInterpretation": "本期发布 3 条安全非重复信号，少于10条是质量门槛结果；未用旧闻、付费墙、登录墙、社区讨论或营销叙事补数。官方公告与研究披露不等于整合、部署或防御效果。",
+    "archiveLabel": "11月6日｜17点情报版",
+    "itemCount": 4,
+    "note": "收录4条 AI 基础设施、推理内存、教育采用与工业 Agent 官方信号。",
+    "operationalStatus": "编辑前已同步 origin/main；检查登记官方来源、历史 URL/标题去重，未用付费墙、登录墙或社区内容。",
+    "editorialInterpretation": "本期发布4条安全非重复信号，少于10条是质量门槛结果；未用旧闻、付费墙、登录墙、社区讨论、重复事件或常规营销补数。两条 NVIDIA 厂商叙事不等于性能、成本或产线成效。",
     "readerFrame": {
-      "headline": "AI 编码与安全能力进入生产，先看协作控制面、受限准入和人审验证。",
-      "whyItMatters": "本期把代码协作工具、政府云安全模型与 Linux 安全研究并列，重点不是宣称能力已落地，而是检查谁能访问、谁来审阅、何处留下可追责证据。",
+      "headline": "AI 规模化的约束落到电力、内存、培训与制造验证，先看可审计的执行证据。",
+      "whyItMatters": "本期覆盖算力园区、长上下文推理、教育培训与半导体制造：发布计划可指明检查点，不能替代合同、遥测、教育记录或客户质量数据。",
       "useThisIssueFor": [
-        "开发平台团队核对代码审阅、历史留存与工具迁移边界。",
-        "安全与合规团队拆分区域可用、身份审批、日志与人工复核。",
-        "开源维护与红队团队将候选发现、动态复现、补丁审核和披露分开计量。"
+        "基础设施团队核对园区的供电、许可和社区协议。",
+        "推理平台团队用固定负载复测内存、缓存、延迟与成本。",
+        "教育和工业团队将培训或 Agent 输出接入结果、签核与审计。"
       ],
       "notProvenYet": [
-        "尚未获独立验证：Pierre 交易能否完成，以及何时、以何种范围进入 Codex。",
-        "尚未获独立验证：Daybreak Red 在真实政府工作流中的合规与防御成效。",
-        "尚未获独立验证：OpenAI 的 Linux 研究结果能否由维护者记录和第三方复现支持。"
+        "尚未获独立验证：OpenAI 的基础设施承诺在具体园区的履约和成本承担。",
+        "尚未获独立验证：NVIDIA 内存设计的跨平台成本改善或晶圆厂质量收益。",
+        "尚未获独立验证：Google 培训扩展是否转化为有效、公平的课堂采用。"
       ],
       "mobile": {
-        "headline": "先查谁能访问与谁来验证",
-        "summary": "3条官方信号，覆盖代码协作、受限云安全与漏洞研究。",
+        "headline": "先查计划有没有执行证据",
+        "summary": "4条官方信号，覆盖园区、推理、教育与制造。",
         "primaryUses": [
-          "平台团队查代码控制面",
-          "合规团队查准入与日志",
-          "安全团队查人审与复现"
+          "基建团队查许可供电",
+          "平台团队查缓存账单",
+          "教育工厂团队查签核结果"
         ],
-        "proofBoundary": "公告与方法仍不能替代交割、条款、维护者记录或独立审计。"
+        "proofBoundary": "公司公告和案例不能替代合同、遥测、教育记录或客户质量审计。"
       }
     },
     "changeSummary": {
-      "headline": "11月5日17点新增3条 AI 编码与安全控制面信号",
+      "headline": "11月6日17点新增4条 AI 基础设施与可审计部署信号",
       "freshFacts": [
-        "本次新增核对：OpenAI 宣布拟收购 Pierre，并称 Codex 已使用其代码浏览与差异审阅库。",
-        "本次新增核对：OpenAI 称获批准客户可在 AWS GovCloud（US-East）通过 Daybreak Red 使用 GPT‑5.6 Cyber。",
-        "本次新增核对：OpenAI 披露 Linux 安全研究管线，以动态验证和人工审阅作为报告前关口。"
+        "本次新增核对：OpenAI 发布基础设施社区与供电责任框架。",
+        "本次新增核对：NVIDIA 将内存与 KV Cache 争用列为 AI 工厂约束。",
+        "本次新增核对：Google 扩展 AI 教师培训地区与课程模块。",
+        "本次新增核对：NVIDIA 描述半导体制造中的仿真与 Agent 工作流。"
       ],
       "repeatedContext": [
-        "重复背景：未重发11月4日的模型工程回归、长上下文状态跟踪或安全修复评测。",
-        "重复背景：官方的交易、产品和研究说明只能核对其声明与方法，不能代替客户、维护者或独立审计结果。"
+        "重复背景：未重发11月5日的 OpenAI 编码协作、受限云安全或 Linux 安全研究。",
+        "重复背景：官方计划和厂商案例可核对发布与主张，不等于真实部署、成本、教育或制造效果。"
       ]
     },
     "coverageMix": [
       {
-        "label": "查代码协作的交割与产品证据",
-        "count": 1,
-        "meaning": "用来核对代码审阅、历史留存、开源维护与迁移是否有正式产品和交割证据。"
+        "label": "核对园区许可与推理遥测",
+        "count": 2,
+        "meaning": "用来核对园区供电、社区责任及长上下文推理的内存与成本数据。"
       },
       {
-        "label": "验证受限安全能力的治理与结果",
+        "label": "核对培训实施与产线签核",
         "count": 2,
-        "meaning": "用来核对审批、云开通、日志、人审、维护者记录与独立复现是否支持安全结论。"
+        "meaning": "用来核对教育培训和工业 Agent 是否有实施记录、人工签核与可审计结果。"
       }
     ],
     "sourceRisk": {
-      "label": "单一官方来源集中",
-      "note": "单一来源集中：3/3来自 OpenAI News；可核对公司公告、访问条件和作者方法披露，不构成独立效果验证。",
-      "nextCheck": "补查交割文件、AWS 正式服务文档、Linux 维护者记录、客户审计和独立安全复现。"
+      "label": "厂商来源与 NVIDIA 集中",
+      "note": "来源集中：官方来源占4/4，其中 NVIDIA AI Blog 占2/4；可核对发布与厂商主张，不构成独立性能、成本或采用验证。",
+      "nextCheck": "补查地方与公用事业文件、客户遥测/账单、教育部门记录、产线质量审计和独立评测。"
     },
     "overreadBoundary": {
       "label": "不要把本期读成全市场结论",
-      "body": "本期是 OpenAI 的工具、访问与安全研究雷达，不是 Codex 整合、政府部署或 Linux 防御效果的独立评测。",
-      "doNotConclude": "不能由本期推出 Pierre 已完成整合、任何政府机构已安全部署 Daybreak，或 AI 已可靠解决大规模 Linux 漏洞。",
-      "useInstead": "应该用交割与产品条款、AWS 服务文件、维护者接受记录、固定环境复现与第三方审计更新判断。"
+      "body": "本期是 AI 规模化约束的观察，不是园区履约、推理性价比、教学成效或制造良率的独立评测。",
+      "doNotConclude": "不能由本期推出 OpenAI 已解决地方能源问题、NVIDIA 已降低所有推理成本、培训已改善学习或 Agent 已提升晶圆厂良率。",
+      "useInstead": "应该用许可和合同、固定负载遥测、教育部门与独立研究、客户质量和工艺对照记录来更新判断。"
     },
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方原文",
-        "count": 3,
-        "role": "用于核对 OpenAI 的交易、产品访问与研究方法声明；整合、客户效果和安全结论仍需独立来源。"
+        "count": 4,
+        "role": "用于核对 OpenAI、Google、NVIDIA 发布的框架、课程、架构与案例说明；效果和履约仍需外部证据。"
       }
     ],
     "topicGroups": [
       {
-        "id": "developer-tooling",
-        "label": "检查编码协作控制面",
-        "count": 1,
+        "id": "infrastructure",
+        "label": "核对算力与推理的物理约束",
+        "count": 2,
         "itemIds": [
-          "openai-daybreak-red-aws-govcloud-2026-11-04"
+          "openai-responsible-ai-infrastructure-2026-11-05",
+          "nvidia-memory-full-stack-codesign-2026-11-05"
         ],
-        "meaning": "用来核对交易交割、代码审阅、版本历史与迁移证据。"
+        "meaning": "用来核对供电、许可、内存、缓存、延迟和成本。"
       },
       {
         "id": "policy",
-        "label": "核对安全准入与验证责任",
+        "label": "核对采用的执行与结果",
         "count": 2,
         "itemIds": [
-          "openai-pierre-acquisition-2026-11-04",
-          "openai-linux-security-pipeline-2026-11-04"
+          "google-ai-educator-series-expansion-2026-11-03",
+          "nvidia-ai-semiconductor-fabs-2026-11-03"
         ],
-        "meaning": "用来核对受限访问、人工审查、维护者确认和独立审计。"
+        "meaning": "用来核对培训、人工签核、试验、质量与审计记录。"
       }
     ],
     "trendNotes": [
       {
-        "topic": "developer-tooling",
-        "label": "编码 Agent 向协作基础设施延伸",
-        "note": "跨期看，Agent 生产化从工作流调用与 Git 并发进一步延伸到代码审阅、历史与大规模协作界面。",
-        "boundary": "交易公告不证明产品整合或效率收益；仍需交割、正式文档、客户迁移记录与审计材料。"
+        "topic": "infrastructure",
+        "label": "算力约束延展",
+        "note": "跨期看，算力扩张从云端访问控制延展到园区能源与推理内存两类物理约束。",
+        "boundary": "官方说明不证明成本或性能，仍需第三方审计、客户遥测、账单与基准数据。"
       },
       {
-        "topic": "policy",
-        "label": "安全能力的证据链仍需人审和外部记录",
-        "note": "跨期看，受限云模型与漏洞研究都把访问审批、动态验证和人工审阅放在能力声明旁边。",
-        "boundary": "官方陈述不等于安全有效；仍需 AWS 条款、维护者记录、授权演练和独立复现。"
+        "topic": "deployment",
+        "label": "行业采用必须进入人审与结果闭环",
+        "note": "跨期看，安全模型的人审与审批逻辑延展到教育培训和工业 Agent 的实施、签核与结果记录。",
+        "boundary": "课程上线和案例叙述不等于学习、质量或生产效率已获证实；仍需实施与审计材料。"
       }
     ],
     "topicContinuity": [
       {
-        "topic": "developer-tooling",
-        "label": "Agent控制面扩展到代码审阅与历史",
+        "topic": "infrastructure",
+        "label": "算力控制面延伸到能源与内存",
         "status": "stronger",
-        "previousPattern": "此前关注 Agent 并发协作、工作流权限和模型集成回归。",
-        "currentSignal": "本期新增 OpenAI 拟收购 Pierre 的公告，连接代码浏览、差异审阅与代码历史服务。",
-        "signalDirection": "增强：编码 Agent 的控制面从调用与回归验证延伸到审阅和版本基础设施。",
-        "stillUnproven": "仍需交割公告、正式产品文档、开源维护记录与客户迁移审计，不能由交易声明推出落地范围。"
+        "previousPattern": "此前关注受限云访问、代码协作和生产控制面。",
+        "currentSignal": "本期新增园区社区/供电框架与 GPU 内存、KV Cache 约束说明。",
+        "signalDirection": "增强：AI 扩张的关键检查点从模型入口延展到物理容量、成本和地方许可。",
+        "stillUnproven": "仍需项目合同、供电文件、负载遥测和独立成本对照，不能由公司说明推出履约或性价比。"
       },
       {
         "topic": "policy",
-        "label": "安全模型与安全研究都依赖可追责关口",
+        "label": "行业 AI 采用依赖可审计实施链",
         "status": "stronger",
-        "previousPattern": "此前关注代码安全评测、授权工作流和生产控制面。",
-        "currentSignal": "本期新增受审批准入的政府云安全模型与含动态验证、人审的 Linux 研究管线。",
-        "signalDirection": "增强：高风险能力的上线和结论都需要审批、日志、验证与人工责任链。",
-        "stillUnproven": "仍需 AWS 服务/合同文件、维护者记录、独立复现与第三方审计，不能由官方说明推出防御效果。"
+        "previousPattern": "此前关注高风险安全能力的审批、日志和人工复核。",
+        "currentSignal": "本期教育培训与晶圆厂 Agent 都要求把工具输出接入教学规则、工程签核和结果记录。",
+        "signalDirection": "增强：行业采用的可信度取决于实施、人工责任和结果证据，而不只看功能发布。",
+        "stillUnproven": "仍需教育部门材料、课堂结果、客户部署日志、质量审计和工艺对照。"
       }
     ],
     "companyContinuity": [
       {
         "company": "OpenAI",
-        "label": "新增编码协作与安全控制面信号",
-        "lastMention": "此前关注 Pando 的 Git 扩展、日常任务评测与电网计划。",
-        "whatChanged": "本期新增 Pierre 交易、Daybreak Red 的 GovCloud 准入与 Linux 安全研究方法披露。",
-        "stillUnproven": "交易整合、客户部署、模型安全效果和研究结论仍需交割文件、AWS/客户记录、维护者接受与独立审计。"
+        "label": "基础设施叙事扩展到地方治理",
+        "lastMention": "此前关注编码协作、受限云安全与研究验证。",
+        "whatChanged": "本期新增基础设施社区参与和供电责任框架。",
+        "stillUnproven": "具体园区的许可、成本承担与社区履约仍需地方、公用事业和独立执行文件。"
       },
       {
-        "company": "AWS",
-        "label": "安全模型可用性进入受限云核验",
-        "lastMention": "此前关注 Agent 工作流与既有云控制面的连接。",
-        "whatChanged": "本期出现 OpenAI 对 AWS GovCloud（US-East）准入路径的披露。",
-        "stillUnproven": "区域服务条件、合同责任、日志与真实部署仍需 AWS 原始文档、客户侧审计和授权测试记录。"
+        "company": "NVIDIA",
+        "label": "推理与工业验证",
+        "lastMention": "此前关注本地 AI、仿真资产和基础设施平台。",
+        "whatChanged": "本期新增内存/KV Cache 约束及半导体制造 Agent 案例。",
+        "stillUnproven": "成本、性能、良率和客户规模仍需固定负载、客户侧和独立质量数据。"
       }
     ],
     "sourceConcentration": {
-      "sourceId": "openai-news",
-      "sourceName": "OpenAI News",
-      "count": 3,
-      "share": "3/3",
-      "note": "单一来源集中：OpenAI News 提供3/3条；它能证明公司作出公告和披露，不能独立证明整合、部署或安全效果。",
-      "nextCheck": "补查交割/监管文件、AWS 文档、Linux 维护者记录、客户审计和独立复现。"
+      "sourceId": "nvidia-blog-ai",
+      "sourceName": "NVIDIA AI Blog",
+      "count": 2,
+      "share": "2/4",
+      "note": "来源集中：NVIDIA AI Blog 提供2/4条，属于厂商技术/案例说明；它不能独立证明成本或制造效果。",
+      "nextCheck": "优先补查客户遥测、工厂质量记录和独立评测，以降低厂商叙事集中风险。"
     }
   },
   "items": [
     {
-      "id": "openai-daybreak-red-aws-govcloud-2026-11-04",
+      "id": "nvidia-memory-full-stack-codesign-2026-11-05",
       "category": "product",
       "label": "产品",
-      "title": "OpenAI将 Daybreak Red 带入 AWS GovCloud：受审批准入才可使用 GPT‑5.6 Cyber",
-      "body": "OpenAI 于11月4日称，获批准客户现可通过 AWS GovCloud（US-East）的 Daybreak Red 使用 GPT‑5.6 Cyber；公告将其定位为授权漏洞研究、验证与安全测试用途，并称访问还需 Daybreak 审批和 AWS 开通。",
-      "summary": "OpenAI 于11月4日称，获批准客户现可通过 AWS GovCloud（US-East）的 Daybreak Red 使用 GPT‑5.6 Cyber；公告将其定位为授权漏洞研究、验证与安全测试用途，并称访问还需 Daybreak 审批和 AWS 开通。",
-      "detailBody": "来源事实：OpenAI 于11月4日称，获批准客户现可通过 AWS GovCloud（US-East）的 Daybreak Red 使用 GPT‑5.6 Cyber；公告将其定位为授权漏洞研究、验证与安全测试用途，并称访问还需 Daybreak 审批和 AWS 开通。\n核验边界：已核验的是 OpenAI 对区域、准入、用途与其数据处理说明的公开陈述；该公告不证明任何机构已部署、模型在真实政府网络中的安全性、合规结论或防御成效。",
-      "trend": "本站判断，高能力网络安全模型的部署差异不只在模型本身，也在身份核验、授权范围、云环境和人工审查是否能把能力锁进可追责的工作流。",
-      "detailTrend": "公告明确把访问放在获批准客户与 AWS 开通的双重条件下，说明高风险模型的可用性与治理控制面同步推进。区域上线只是访问路径的变化，并不等于采购即用、合规结论或安全效果已经得到确认。这使可用性不再只是模型标签，而是由身份、环境与操作范围共同决定的服务状态。",
-      "whyItMatters": "政府安全团队和为其供货的云/工具团队可据此更新服务可用性清单，并把模型审批、AWS 账户开通、人工复核与数据处理承诺拆开验收。",
-      "whyRanked": "它给出了网络安全模型在受限云环境中的具体区域与准入路径，帮助读者把“可用”拆解为模型能力、身份审批、云开通和人工复核四个不同问题。",
-      "detailWhyRanked": "本站解读：它给出了网络安全模型在受限云环境中的具体区域与准入路径，值得纳入政府安全工具观察表。已核验的是 OpenAI 的发布说明；真实可用范围、采购状态、审核效果与安全产出仍需要 AWS 文档、客户记录和独立审计。 OpenAI 原文还写明 Daybreak 审批并不会自动开通 AWS 模型访问，需另行完成 AWS 侧配置。",
-      "topReason": "核对 AWS Bedrock 的正式区域/服务文档、Daybreak 条款与审批要求，并在授权隔离环境测试日志、权限、数据保留和人工复核流程。",
-      "whoShouldCare": "政府与关键基础设施安全团队、云合规负责人、受监管行业采购团队及授权红队管理者。",
-      "readerUse": "目标读者：政府与关键基础设施安全团队、云合规负责人、受监管行业采购团队及授权红队管理者。 可将此信号纳入变更台账，并按下一步核验路径：核对 AWS Bedrock 的正式区域/服务文档、Daybreak 条款与审批要求，并在授权隔离环境测试日志、权限、数据保留和人工复核流程。",
-      "nextCheck": "核对 AWS Bedrock 的正式区域/服务文档、Daybreak 条款与审批要求，并在授权隔离环境测试日志、权限、数据保留和人工复核流程。",
+      "title": "NVIDIA强调 AI 工厂的“内存阶梯”：模型权重与 KV Cache 争用成为成本控制变量",
+      "body": "NVIDIA 于11月5日说明其 AI 工厂采用 GPU、CPU、网络、存储与软件协同设计，并把模型权重和 KV Cache 对高带宽内存的争用列为长上下文和 Agent 工作负载的关键约束。",
+      "detailBody": "来源事实：NVIDIA 于11月5日描述其全栈内存协同设计，并指出模型权重与 KV Cache 会争用 GPU 高带宽内存。\n核验边界：已核验的是厂商对架构取向和约束的说明；未核验其方案在不同模型、上下文长度或客户负载下的性能、成本和供货改善。 读者应将公告中的具体发布事实与后续独立验证材料分开保存。",
+      "trend": "长上下文与 Agent 把推理瓶颈从单次算力扩展到内存、缓存和存储层级；采购比较需要从峰值算力转向每任务的延迟、容量与成本。",
+      "detailTrend": "当上下文变长、并发增多时，内存容量和 KV Cache 管理会直接影响可承载任务数。全栈协同设计是厂商路线，不是跨平台成本优势的独立证据；真实取舍仍需固定工作负载测量。 这要求采购与运营评审把公开路线图转换为固定条件下的可复核数据，而非直接外推到其他环境。",
+      "whyItMatters": "平台团队应在模型选型和容量规划中记录上下文长度、并发、缓存命中、显存占用和每任务成本，避免只按 GPU 规格下结论。",
+      "whyRanked": "它把 Agent 推理的实际资源约束落到可观测的内存与缓存指标，适合作为生产容量评审的检查项。",
+      "detailWhyRanked": "本站解读：内存不再只是硬件规格表的一行。对长上下文 Agent，权重、缓存、网络和存储的配置会共同决定并发和经济性；厂商叙述需要客户负载或独立基准来检验。 NVIDIA AI Blog 原文是本条发布事实的核对入口，完整的执行、性能或效果证据仍须另查。",
+      "topReason": "用固定模型、上下文和并发回放，对比显存、P95 延迟、吞吐与每任务成本。",
+      "whoShouldCare": "负责推理平台、容量规划、成本治理和长上下文 Agent 交付的工程团队，应将内存与缓存作为独立验收维度。",
+      "readerUse": "目标读者：负责推理平台、容量和成本治理的工程团队。可在压测模板中增加 KV Cache 占用、淘汰率、P95 延迟和单位任务成本。",
+      "nextCheck": "检查客户侧固定版本压测、显存/KV Cache 遥测、P95 延迟、吞吐和账单数据，并与替代架构对照。",
       "followUpQuestions": [
-        "AWS 的服务文档和合同如何界定区域、日志、数据保留及模型访问责任？",
-        "获批准机构是否能提供经审计的授权演练、人工复核和误用处置记录？"
+        "在相同模型、上下文长度和并发下，客户侧遥测显示的 KV Cache 占用与淘汰率是多少？",
+        "独立基准是否同时披露 P95 延迟、吞吐、能耗和单位任务成本？"
       ],
-      "evidenceThreshold": "至少需要 AWS 原始服务文档、审批与合同条款、授权用户的审计记录和独立安全评估，才能升级为已确认的真实可用性与治理效果结论。",
-      "claimBoundary": "已核验的是 OpenAI 对区域、准入、用途与其数据处理说明的公开陈述；该公告不证明任何机构已部署、模型在真实政府网络中的安全性、合规结论或防御成效。",
-      "counterEvidence": "若 AWS 服务文档、准入条款或审计记录与公告范围不一致，或授权测试显示权限、日志或人工复核不能满足要求，应下调该区域可用性信号。",
-      "sourceUrl": "https://openai.com/index/daybreak-red-aws-govcloud/",
-      "originalUrl": "https://openai.com/index/daybreak-red-aws-govcloud/",
-      "provenance": "OpenAI News 公告称 GPT‑5.6 Cyber 网络安全模型可在 AWS GovCloud（US-East）经 Daybreak Red 向获批准客户提供，并说明需要 Daybreak 审批和 AWS 开通；它不是 AWS 合同、独立安全审计或客户部署记录。",
+      "evidenceThreshold": "至少需要客户负载遥测、可复现跨平台基准和账单/能耗记录，才能升级为已验证的性能或成本优势结论。",
+      "claimBoundary": "该技术说明不证明 NVIDIA 的方案已降低任一客户的成本、内存压力或供货风险。",
+      "counterEvidence": "若独立回放显示替代方案在相同负载下取得相近或更好延迟与成本，或客户遥测未见缓存压力改善，应下调该架构优势判断。；应以独立基准报告、客户侧遥测或审计记录作为判定依据。",
+      "sourceUrl": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+      "provenance": "NVIDIA AI Blog 的厂商主张：介绍 AI 推理中模型权重与 KV Cache 的内存争用及全栈设计；它不是客户基准、账单或独立性能审计。",
       "tags": [
-        "网络安全",
-        "AWS GovCloud",
-        "政府云",
-        "模型治理"
+        "推理基础设施",
+        "GPU内存",
+        "KV Cache",
+        "长上下文"
+      ],
+      "companies": [
+        "NVIDIA"
+      ],
+      "source": "NVIDIA AI Blog",
+      "sourceId": "nvidia-blog-ai",
+      "sourceRole": "厂商主张",
+      "trustLevel": "official",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 4,
+        "narrativeStrength": 3,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 19,
+        "note": "厂商技术说明明确资源约束；性能和成本需独立负载证据。"
+      },
+      "impact": "推理容量规划必须把内存和缓存遥测与算力规格并列审查。",
+      "publishedAt": "2026-11-05",
+      "summary": "NVIDIA 于11月5日说明其 AI 工厂采用 GPU、CPU、网络、存储与软件协同设计，并把模型权重和 KV Cache 对高带宽内存的争用列为长上下文和 Agent 工作负载的关键约束。",
+      "originalUrl": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+      "sourceName": "NVIDIA AI Blog",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "verificationStatus": "已核验",
+      "time": "2026-11-05",
+      "editorScore": {
+        "impact": 4,
+        "novelty": 4,
+        "evidenceQuality": 3,
+        "readerUtility": 5,
+        "total": 16
+      }
+    },
+    {
+      "id": "openai-responsible-ai-infrastructure-2026-11-05",
+      "category": "policy",
+      "label": "政策",
+      "title": "OpenAI公布基础设施社区承诺：把供电责任、地方参与和项目收益写入建设框架",
+      "body": "OpenAI 于11月5日发布基础设施建设框架，提出社区参与、开发方承担供电成本及与项目所在地共享就业和商业机会等承诺，并披露在俄亥俄州 Pike County 的联合投入。",
+      "detailBody": "来源事实：OpenAI 于11月5日公布 AI 基础设施社区承诺，主张居民应能参与园区开发、开发方应承担供电成本，并披露其与 SB Energy 在俄亥俄州的联合投入。\n核验边界：已核验的是 OpenAI 发布了这套框架和所列承诺；并不证明每个项目已签约、地方收益实现，或供电成本已由开发方实际承担。 读者应将公告中的具体发布事实与后续独立验证材料分开保存。",
+      "trend": "AI 算力扩张的竞争开始同时受制于电力、地方许可和社区信任；公开承诺能定义谈判议程，却不能替代合同、监管程序和项目执行记录。",
+      "detailTrend": "大型 AI 园区的可行性不再只看芯片和融资。供电责任、地方参与及收益分配会影响许可节奏和长期运营成本；企业公告只是把这些问题前置，真正边界仍由合同、监管和社区程序决定。 这要求采购与运营评审把公开路线图转换为固定条件下的可复核数据，而非直接外推到其他环境。",
+      "whyItMatters": "数据中心选址、能源和政府事务团队应把承诺拆成供电协议、许可条件、社区资金与可审计交付物，而不是把框架当作项目已落地。",
+      "whyRanked": "它把 AI 基础设施的非算力约束明确到电力责任和地方参与，为算力扩张提供了可核验的治理清单。",
+      "detailWhyRanked": "本站解读：这不是一条单纯的企业公益消息，而是算力建设如何取得地方许可和能源正当性的控制面。当前可核验的是公司提出了框架；电价、并网、就业和社区收益仍须由项目文件回答。 OpenAI News 原文是本条发布事实的核对入口，完整的执行、性能或效果证据仍须另查。",
+      "topReason": "先核对具体园区的并网协议、许可公示、社区协议和实际用电成本承担。",
+      "whoShouldCare": "负责 AI 数据中心选址、能源采购、地方政府关系和基础设施合规的团队，需要把这些公开承诺转成项目级验收项。",
+      "readerUse": "目标读者：负责数据中心选址、能源采购和地方沟通的基础设施团队。可将供电责任、许可、社区协议和交付指标列入每个园区的证据台账。",
+      "nextCheck": "核对 Pike County 及其他相关园区的并网/供电协议、许可公示、社区利益协议与独立执行报告。",
+      "followUpQuestions": [
+        "地方许可或公用事业文件如何界定新增负荷、费用承担与并网时间表？",
+        "社区协议是否披露了就业、资金用途和可审计的履约节点？"
+      ],
+      "evidenceThreshold": "至少需要地方许可、公用事业协议、社区利益协议和独立履约记录，才能升级为已确认的项目治理与成本承担结论。",
+      "claimBoundary": "该框架不证明任何单一园区已获批、已建成，或已实现所述社区与电力结果。",
+      "counterEvidence": "若许可、公用事业或社区文件未包含相应责任，或执行报告显示成本与收益未兑现，应下调该框架的实际约束力判断。；应以独立基准报告、客户侧遥测或审计记录作为判定依据。",
+      "sourceUrl": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/",
+      "provenance": "OpenAI News 发布数据中心基础设施治理框架与 Pike County 联合投入说明；它不是地方许可、供电合同或独立履约审计。",
+      "tags": [
+        "AI基础设施",
+        "数据中心",
+        "能源治理",
+        "社区许可"
       ],
       "companies": [
         "OpenAI",
-        "AWS"
+        "SB Energy"
       ],
+      "source": "OpenAI News",
+      "sourceId": "openai-news",
+      "sourceRole": "官方核对",
+      "trustLevel": "official",
       "selectionScore": {
         "impact": 5,
         "novelty": 4,
@@ -239,289 +309,293 @@
         "evidenceQuality": 4,
         "readerUtility": 5,
         "total": 22,
-        "note": "官方产品公告明确区域和准入边界；真实采购、合规和防御效果仍需独立材料。"
+        "note": "官方框架把基础设施的能源与社区约束具体化；项目履约仍需外部文件。"
       },
+      "impact": "算力建设评审应同时追踪容量、供电责任、地方许可和社区协议四条证据链。",
+      "publishedAt": "2026-11-05",
+      "summary": "OpenAI 于11月5日发布基础设施建设框架，提出社区参与、开发方承担供电成本及与项目所在地共享就业和商业机会等承诺，并披露在俄亥俄州 Pike County 的联合投入。",
+      "originalUrl": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "verificationStatus": "已核验",
+      "time": "2026-11-05",
       "editorScore": {
         "impact": 5,
         "novelty": 4,
         "evidenceQuality": 4,
         "readerUtility": 5,
         "total": 18
-      },
-      "impact": "高风险 AI 工具的上线评审应把服务区域、身份验证、访问审批、日志与人工复核列为不可互相替代的控制项。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
+      }
+    },
+    {
+      "id": "google-ai-educator-series-expansion-2026-11-03",
+      "category": "policy",
+      "label": "政策",
+      "title": "Google扩展 AI 教师培训：把课程、地区上线与课堂监督一起纳入教育采用观察",
+      "body": "Google 于11月3日称，将 AI Educator Series 扩展至巴西、墨西哥、西班牙、澳大利亚和撒哈拉以南非洲，并公布11月面向美国教师的互动评估、游戏化学习和作业设计模块。",
+      "detailBody": "来源事实：Google 于11月3日宣布扩展 AI Educator Series 的地区覆盖，并列出新的教师培训模块。\n核验边界：已核验的是 Google 发布了地区和课程计划；不证明学校已规模部署、教师掌握度提高，或学生学习效果得到独立评估。 读者应将公告中的具体发布事实与后续独立验证材料分开保存。",
+      "trend": "教育 AI 的扩散正在从工具可用转向教师能力、课堂任务设计与人类监督；培训上线是采用前置条件，不是效果证据。",
+      "detailTrend": "学校采用 AI 的瓶颈常在工作流与教学设计而非账号开通。课程覆盖能让人追踪培训供给和治理内容，但真实课堂价值仍要看完成率、使用方式和独立学习评估。 这要求采购与运营评审把公开路线图转换为固定条件下的可复核数据，而非直接外推到其他环境。",
+      "whyItMatters": "教育管理者应将培训地区、课程内容、教师完成记录、课堂使用规范和学习结果分开核对，避免把报名人数当作教学成效。",
+      "whyRanked": "它提供了跨区域教育 AI 能力建设的具体项目与课程入口，便于观察采用治理是否先于大规模工具推广。",
+      "detailWhyRanked": "本站解读：该公告的价值在于显示教育采用不只是模型接入，还需把评估设计、数据准确性和人工监督教学化。公司公布的扩展并不能代替地方教育部门和学校的实施记录。 Google Keyword AI 原文是本条发布事实的核对入口，完整的执行、性能或效果证据仍须另查。",
+      "topReason": "优先查各地教育部门文件、教师完成率、课堂规范及独立学习结果。",
+      "whoShouldCare": "负责学校 AI 政策、教师发展、采购和学习评估的教育主管部门与校方团队，可据此安排培训与验收证据。",
+      "readerUse": "目标读者：负责学校 AI 政策、教师发展与学习评估的团队。可把课程上线、完成率、课堂规则与结果评估拆为不同的实施指标。",
+      "nextCheck": "核对各地教育部门的合作文件、教师完成率、课堂 AI 使用规范和独立学习结果评估。",
+      "followUpQuestions": [
+        "相关教育部门是否发布了覆盖对象、数据处理和课堂监督要求的正式文件？",
+        "是否有按地区和学科分组的教师完成率及独立学习结果评估？"
+      ],
+      "evidenceThreshold": "至少需要教育部门文件、培训完成数据、课堂实施记录和独立学习评估，才能升级为已验证的教育采用或教学效果结论。",
+      "claimBoundary": "课程扩展不证明教师已有效使用 AI，也不证明学生成绩、参与度或公平性改善。",
+      "counterEvidence": "若合作方未确认地区实施、完成率偏低或独立评估未见学习改善，应收窄该培训扩展的实际采用判断。；应以独立基准报告、客户侧遥测或审计记录作为判定依据。",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/google-ai-educator-series-global-expansion-november-2026/",
+      "provenance": "Google Keyword AI Google 官方博客宣布 AI Educator Series 的新增地区及11月培训模块；它不是教育部门的实施证明或独立教学效果研究。",
+      "tags": [
+        "教育AI",
+        "教师培训",
+        "课堂治理",
+        "Gemini"
+      ],
+      "companies": [
+        "Google"
+      ],
+      "source": "Google Keyword AI",
+      "sourceId": "google-keyword-ai",
       "sourceRole": "官方核对",
-      "sourceType": "official",
       "trustLevel": "official",
+      "selectionScore": {
+        "impact": 4,
+        "novelty": 3,
+        "narrativeStrength": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 18,
+        "note": "官方课程与地区计划可核对；采用和学习效果仍需教育侧材料。"
+      },
+      "impact": "教育 AI 评估应把培训供给、课堂治理和学习结果拆开，而非把地区上线等同于成效。",
+      "publishedAt": "2026-11-03",
+      "summary": "Google 于11月3日称，将 AI Educator Series 扩展至巴西、墨西哥、西班牙、澳大利亚和撒哈拉以南非洲，并公布11月面向美国教师的互动评估、游戏化学习和作业设计模块。",
+      "originalUrl": "https://blog.google/products-and-platforms/products/education/google-ai-educator-series-global-expansion-november-2026/",
+      "sourceName": "Google Keyword AI",
+      "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
       "verificationStatus": "已核验",
-      "publishedAt": "2026-11-04",
-      "time": "2026-11-04"
+      "time": "2026-11-03",
+      "editorScore": {
+        "impact": 4,
+        "novelty": 3,
+        "evidenceQuality": 4,
+        "readerUtility": 4,
+        "total": 15
+      }
     },
     {
-      "id": "openai-pierre-acquisition-2026-11-04",
+      "id": "nvidia-ai-semiconductor-fabs-2026-11-03",
       "category": "tool",
       "label": "工具",
-      "title": "OpenAI拟收购 Pierre：把代码浏览、差异审阅与 Git 存储带入 Codex",
-      "body": "OpenAI 于11月4日宣布拟收购 Pierre Computer Company；其称 Codex 已使用 Pierre 的 Trees 与 Diffs 开源库，并计划在交易完成后把 Code Storage 的功能逐步带入 Codex，同时让 Pierre 的开源项目继续开源。",
-      "summary": "OpenAI 于11月4日宣布拟收购 Pierre Computer Company；其称 Codex 已使用 Pierre 的 Trees 与 Diffs 开源库，并计划在交易完成后把 Code Storage 的功能逐步带入 Codex，同时让 Pierre 的开源项目继续开源。",
-      "detailBody": "来源事实：OpenAI 于11月4日宣布拟收购 Pierre Computer Company；其称 Codex 已使用 Pierre 的 Trees 与 Diffs 开源库，并计划在交易完成后把 Code Storage 的功能逐步带入 Codex，同时让 Pierre 的开源项目继续开源。\n核验边界：已核验的是 OpenAI 宣布拟收购、现有库使用和交易完成前双方仍独立的安排；交易尚受常规交割与监管批准条件约束，尚不能据此认定整合已完成、产品路线已落地或客户已获得新能力。",
-      "trend": "本站判断，编码 Agent 的竞争正向代码状态、审阅界面与版本历史等协作控制面延伸；模型能力之外，团队如何检查和追溯大量并行变更会成为产品差异的一部分。",
-      "detailTrend": "本次公告连接了代码浏览、差异审阅、Git 存储与 Codex 的长期协作方向，但它仍是一项待交割交易声明。工程负责人应把它视为工具链观察信号，而非替代自有代码托管、审阅权限、留存和迁移评估的依据。 后续产品是否保留原有开源与服务边界，应以交割公告、正式产品文档和开源仓库记录为准。",
-      "whyItMatters": "使用编码 Agent 的平台与开发团队可提前检查大规模并行变更时的审阅吞吐、代码历史保留、访问控制与迁移退出路径，而不应仅比较模型生成质量。",
-      "whyRanked": "该交易把 Codex 已用的代码审阅组件与代码历史服务放进同一产品路线，直接关联 AI 编码从生成代码走向管理并行工程工作的基础设施。",
-      "detailWhyRanked": "本站解读：该交易把 Codex 已用的代码审阅组件与代码历史服务放进同一产品路线，提示编码 Agent 的差异化将延伸到协作基础设施。已核验的是 OpenAI 的公告和其列出的交割条件；尚不能据此推出产品整合时间、客户迁移规模或开发效率提升。 原文还明确称交易需满足监管批准等常规交割条件，且交易完成前双方保持独立。",
-      "topReason": "跟踪交易交割公告、Codex 与 Code Storage 的正式产品文档、开源仓库维护状态及客户侧迁移与审计说明。",
-      "whoShouldCare": "开发平台负责人、代码托管与 DevSecOps 团队、采用编码 Agent 的工程管理者及开源维护者。",
-      "readerUse": "目标读者：开发平台负责人、代码托管与 DevSecOps 团队、采用编码 Agent 的工程管理者及开源维护者。 可将此信号纳入变更台账，并按下一步核验路径：跟踪交易交割公告、Codex 与 Code Storage 的正式产品文档、开源仓库维护状态及客户侧迁移与审计说明。",
-      "nextCheck": "跟踪交易交割公告、Codex 与 Code Storage 的正式产品文档、开源仓库维护状态及客户侧迁移与审计说明。",
+      "title": "NVIDIA描绘半导体工厂的 Agent 工作流：把仿真、缺陷分析与工程决策接入同一验证链",
+      "body": "NVIDIA 于11月3日介绍半导体制造中的加速仿真、学习型物理模型和 Agent 工作流，并以 Advantest 使用 NeMo Switchyard 自动化选择流程为例，主张可缩短工程响应时间。",
+      "detailBody": "来源事实：NVIDIA 于11月3日介绍在半导体制造中使用加速仿真、学习型物理模型和 AI Agent，并列出 Advantest 的案例。\n核验边界：已核验的是 NVIDIA 对方案和案例的描述；未核验不同晶圆厂的良率、响应时间、质量或投资回报改善。 读者应将公告中的具体发布事实与后续独立验证材料分开保存。",
+      "trend": "物理 AI 进入制造的关键不只是生成建议，而是让仿真、试验、质量追溯与工程签核形成闭环；案例叙事需要工厂侧指标验证。",
+      "detailTrend": "晶圆厂改变工艺的代价很高，AI 建议只有与仿真、实验和质量记录相连才具备可执行性。厂商案例可提示工作流方向，但不能外推为普遍良率或效率结论。 这要求采购与运营评审把公开路线图转换为固定条件下的可复核数据，而非直接外推到其他环境。",
+      "whyItMatters": "制造数字化和质量团队应要求每个 Agent 建议都保留数据版本、仿真条件、人工签核、试验结果与质量影响记录。",
+      "whyRanked": "它把 Agent 应用放进半导体制造这一高成本验证场景，明确了从建议到可执行工程决策所需的证据链。",
+      "detailWhyRanked": "本站解读：制造 AI 的真正门槛是可追溯验证而非演示速度。该案例可用于设计工厂内的评估框架；实际收益必须由客户产线、质量和安全记录证明。 NVIDIA AI Blog 原文是本条发布事实的核对入口，完整的执行、性能或效果证据仍须另查。",
+      "topReason": "检查客户侧在固定工艺与产品上的响应时间、良率、误报、人工签核和质量追溯记录。",
+      "whoShouldCare": "负责半导体制造工程、质量系统、工业数据平台和工艺变更审批的团队，应把 Agent 输出纳入既有验证与追溯流程。",
+      "readerUse": "目标读者：负责制造工程、质量与工艺变更审批的团队。可为 Agent 建议建立数据版本、仿真、签核、试验和质量结果的闭环记录。",
+      "nextCheck": "核对 Advantest 或其他工厂的客户侧部署范围、固定工艺对照、良率/误报数据和人工签核记录。",
       "followUpQuestions": [
-        "交易何时完成，哪些 Code Storage 功能会以何种产品和数据治理条件进入 Codex？",
-        "开源项目的维护、许可、兼容性与企业客户迁移是否有可审计的正式说明？"
+        "客户是否公布了使用场景、对照工艺和可审计的响应时间或良率指标？",
+        "质量系统能否追溯每次 Agent 建议的数据版本、仿真条件、签核与最终试验结果？"
       ],
-      "evidenceThreshold": "至少需要交割公告、正式产品/服务条款、开源仓库维护记录以及客户侧迁移或审计材料，才能升级为已确认的整合范围与实际影响结论。",
-      "claimBoundary": "已核验的是 OpenAI 宣布拟收购、现有库使用和交易完成前双方仍独立的安排；交易尚受常规交割与监管批准条件约束，尚不能据此认定整合已完成、产品路线已落地或客户已获得新能力。",
-      "counterEvidence": "若交割公告、正式产品文件或开源仓库维护记录显示交易未完成、整合范围收窄或维护安排改变，应下调其对 Codex 工具链变化的判断。",
-      "sourceUrl": "https://openai.com/index/openai-to-acquire-pierre/",
-      "originalUrl": "https://openai.com/index/openai-to-acquire-pierre/",
-      "provenance": "OpenAI News 的公告宣布拟收购 Pierre，并说明 Codex 已使用其 Trees/Diffs 代码库、交易完成前双方独立及开源项目将继续开源；它不证明整合已完成或外部客户效果。",
+      "evidenceThreshold": "至少需要客户侧部署记录、固定工艺对照、质量审计和第三方制造验证，才能升级为已验证的效率或质量改善结论。",
+      "claimBoundary": "该厂商案例不证明 AI Agent 已在其他晶圆厂提升良率、缩短周期或安全替代工程师判断。",
+      "counterEvidence": "若客户侧对照显示质量、误报或返工未改善，或缺少工艺变更追溯，应下调该工作流的生产价值判断。；应以独立基准报告、客户侧遥测或审计记录作为判定依据。",
+      "sourceUrl": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/",
+      "provenance": "NVIDIA AI Blog 的厂商主张：NVIDIA AI Blog NVIDIA Blog 介绍半导体制造中的仿真、物理模型和 Agent 工作流，并描述 Advantest 的使用案例；它不是客户质量审计或独立制造评测。",
       "tags": [
-        "Codex",
-        "代码审阅",
-        "Git",
-        "开发工具"
+        "工业AI",
+        "半导体制造",
+        "物理AI",
+        "Agent治理"
       ],
       "companies": [
-        "OpenAI",
-        "Pierre"
+        "NVIDIA",
+        "Advantest"
       ],
+      "source": "NVIDIA AI Blog",
+      "sourceId": "nvidia-blog-ai",
+      "sourceRole": "厂商主张",
+      "trustLevel": "official",
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 21,
-        "note": "官方交易公告清楚说明范围与交割边界；实际整合和客户效果仍待后续文件验证。"
+        "evidenceQuality": 3,
+        "readerUtility": 4,
+        "total": 19,
+        "note": "厂商案例展示高约束制造工作流；质量与效率需要客户侧验证。"
       },
+      "impact": "工业 Agent 的验收重点应落在可追溯的仿真、签核、试验和质量结果，而非演示速度。",
+      "publishedAt": "2026-11-03",
+      "summary": "NVIDIA 于11月3日介绍半导体制造中的加速仿真、学习型物理模型和 Agent 工作流，并以 Advantest 使用 NeMo Switchyard 自动化选择流程为例，主张可缩短工程响应时间。",
+      "originalUrl": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/",
+      "sourceName": "NVIDIA AI Blog",
+      "sourceType": "official",
+      "sourceReliability": "high",
+      "claimStatus": "confirmed",
+      "originalDependency": "recommended",
+      "verificationStatus": "已核验",
+      "time": "2026-11-03",
       "editorScore": {
         "impact": 4,
         "novelty": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 17
-      },
-      "impact": "编码 Agent 的采购和平台设计应把代码审阅、版本历史、权限、留存与退出能力列为同等重要的评估项。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-11-04",
-      "time": "2026-11-04"
-    },
-    {
-      "id": "openai-linux-security-pipeline-2026-11-04",
-      "category": "research",
-      "label": "研究",
-      "title": "OpenAI披露 Linux 安全研究管线：自动发现后仍以动态验证和人工审阅为关口",
-      "body": "OpenAI 于11月4日披露一套受控环境中的 Linux 内核研究管线，称其将候选发现、动态复现、可利用性评估和补丁生成串联，并由人类研究人员审阅后再向维护者报告；文中报告的运行数据属于其自身研究结果。",
-      "summary": "OpenAI 于11月4日披露一套受控环境中的 Linux 内核研究管线，称其将候选发现、动态复现、可利用性评估和补丁生成串联，并由人类研究人员审阅后再向维护者报告；文中报告的运行数据属于其自身研究结果。",
-      "detailBody": "来源事实：OpenAI 于11月4日披露一套受控环境中的 Linux 内核研究管线，称其将候选发现、动态复现、可利用性评估和补丁生成串联，并由人类研究人员审阅后再向维护者报告；文中报告的运行数据属于其自身研究结果。\n核验边界：已核验的是 OpenAI 对研究流程、受控环境和人工审阅步骤的公开披露；其报告的发现数量、成本、补丁质量与更广泛安全影响尚未由 Linux 维护者、独立复现或公开审计独立确认。",
-      "trend": "本站判断，AI 辅助漏洞研究正在把瓶颈从“能否提出候选”推向复现、优先级、补丁审核与负责任披露；自动化规模增长不会消除这些治理环节。",
-      "detailTrend": "这份研究描述了从候选发现到人工报告的多步链路，提示安全团队需要记录每一关的证据与失败模式。它不构成对任一模型的通用安全能力排名，也不应让组织跳过隔离、授权、人工审查和披露协调。 后续是否形成可复用防御收益，应以维护者侧漏洞/补丁记录、独立复现报告和第三方审计为准。",
-      "whyItMatters": "开源维护者、应用安全团队和 AI 代码工具采购者可据此审视自己的漏洞工作流：候选、复现、影响评估、补丁与维护者沟通应各有独立的审计证据。",
-      "whyRanked": "它把 AI 安全研究的工作拆成可核验的验证与人工审阅节点，适合帮助读者识别“发现量”与可负责任修复之间的差距。",
-      "detailWhyRanked": "本站解读：它把 AI 安全研究的工作拆成候选、动态验证、影响评估、补丁与人工审阅节点，能帮助团队设计更可审计的安全流程。已核验的是 OpenAI 的方法披露；作者报告的结果与经济性不能替代维护者确认、独立复现和生产安全结论。 OpenAI 原文把候选发现、动态复现、可利用性评估、补丁生成与人类研究人员审阅分开披露。",
-      "topReason": "等待 Linux 维护者的漏洞/补丁记录、独立团队在隔离环境的复现、公开方法与审计材料，再评估发现质量和修复价值。",
-      "whoShouldCare": "Linux 与开源维护者、应用安全负责人、授权红队、漏洞响应团队及评估 AI 编码工具的工程管理者。",
-      "readerUse": "目标读者：Linux 与开源维护者、应用安全负责人、授权红队、漏洞响应团队及评估 AI 编码工具的工程管理者。 可将此信号纳入变更台账，并按下一步核验路径：等待 Linux 维护者的漏洞/补丁记录、独立团队在隔离环境的复现、公开方法与审计材料，再评估发现质量和修复价值。",
-      "nextCheck": "等待 Linux 维护者的漏洞/补丁记录、独立团队在隔离环境的复现、公开方法与审计材料，再评估发现质量和修复价值。",
-      "followUpQuestions": [
-        "哪些发现和补丁获得 Linux 维护者接受，且能以公开记录追溯？",
-        "独立研究者在相同或不同内核配置下能否复现方法、质量和成本边界？"
-      ],
-      "evidenceThreshold": "至少需要维护者侧的补丁/漏洞记录、独立复现、固定环境运行日志与第三方安全审计，才能将作者报告升级为可外推结论。",
-      "claimBoundary": "已核验的是 OpenAI 对研究流程、受控环境和人工审阅步骤的公开披露；其报告的发现数量、成本、补丁质量与更广泛安全影响仍需 Linux 维护者、独立复现或公开审计确认。",
-      "counterEvidence": "若 Linux 维护者记录拒绝大量报告、独立复现报告无法得到相似结果，或审计日志显示补丁质量与风险分级存在系统偏差，应显著下调其对防御效率的解读。",
-      "sourceUrl": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
-      "originalUrl": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
-      "provenance": "OpenAI News 的安全研究原文披露 Linux 内核研究管线、受控环境与人工审阅步骤，并报告作者观察到的结果；它不替代 Linux 维护者确认、独立复现或生产安全审计。",
-      "tags": [
-        "网络安全",
-        "Linux",
-        "漏洞研究",
-        "代码Agent"
-      ],
-      "companies": [
-        "OpenAI",
-        "Linux"
-      ],
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 5,
-        "narrativeStrength": 5,
         "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 23,
-        "note": "官方研究方法和人审链路可核对；作者报告结果需维护者记录、独立复现与审计升级。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 5,
-        "evidenceQuality": 3,
-        "readerUtility": 5,
-        "total": 18
-      },
-      "impact": "安全团队应将 AI 产生的漏洞候选与动态复现、影响评估、人工审查、补丁质量和负责任披露分别计量，避免将扫描量等同于安全收益。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "sourceType": "official",
-      "trustLevel": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "verificationStatus": "已核验",
-      "publishedAt": "2026-11-04",
-      "time": "2026-11-04"
+        "readerUtility": 4,
+        "total": 15
+      }
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "从编码协作到漏洞研究：能力要进入生产，控制面必须先可追责。",
-    "summary": "本期聚焦代码审阅与历史、受限云安全模型、Linux 安全研究；三者共同指向访问、验证和人工责任链。",
-    "cta": "查看3条信号",
+    "headline": "AI 规模化先过资源与执行证据关",
+    "summary": "园区供电、推理内存、教师培训与工业 Agent 都需要从发布计划走到可审计的执行记录。",
+    "cta": "查看4条信号",
     "watchPoints": [
       {
-        "title": "代码协作",
-        "body": "查交割、产品条款、开源维护和迁移审计，不把拟收购当成已集成。"
+        "title": "园区与供电",
+        "body": "查许可、并网和社区协议，不把企业框架当作履约。"
       },
       {
-        "title": "受限云安全",
-        "body": "查 AWS 区域、审批、日志和人工复核，不把可用公告当成合规或防御结果。"
+        "title": "推理内存",
+        "body": "查固定负载遥测和账单，不把架构说明当作成本优势。"
       },
       {
-        "title": "漏洞研究",
-        "body": "查维护者接受、独立复现和审计，不把作者发现量当成安全收益。"
+        "title": "行业采用",
+        "body": "查教育结果与产线质量，不把培训或案例当作成效。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "11月5日｜17点情报版",
-    "title": "AI 进入高责任流程：谁获准使用，谁来验证，谁为结果留痕？",
-    "subtitle": "本期的交易、政府云安全与 Linux 研究看似不同，却都把模型能力之外的协作、准入与人工责任放到前台。",
-    "dateLabel": "2026年11月5日｜17:00 JST",
-    "status": "已发布｜3条安全非重复信号",
-    "overview": "本期发布3条安全非重复信号，少于10条是质量门槛结果；未用旧闻、付费墙、登录墙、社区讨论或营销叙事补数。官方公告与研究披露不等于整合、部署或防御效果。",
+    "kicker": "11月6日｜17点情报版",
+    "title": "AI 规模化：资源、流程与结果都要留下证据",
+    "subtitle": "4条官方信号指向相同原则：计划与案例只定义检查点，履约、性能和采用仍要由外部记录证明。",
+    "dateLabel": "2026年11月6日｜17:00 JST",
+    "status": "已发布｜4条安全非重复信号",
+    "overview": "本期发布4条安全非重复信号，少于10条是质量门槛结果；未用旧闻、付费墙、登录墙、社区讨论、重复事件或常规营销补数。两条 NVIDIA 厂商叙事不等于性能、成本或产线成效。",
     "timeline": [
       {
         "label": "1",
-        "title": "OpenAI将 Daybreak Red 带入 AWS GovCloud：受审批准入才可使用 GPT‑5.6 Cyber",
-        "body": "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 AWS Bedrock 的正式区域/服务文档、Daybreak 条款与审批要求，并在授权隔离环境测试日志、权限、数据保留和人工复核流程。"
+        "title": "NVIDIA强调 AI 工厂的“内存阶梯”：模型权重与 KV Cache 争用成为成本控制变量",
+        "body": "检查客户侧固定版本压测、显存/KV Cache 遥测、P95 延迟、吞吐和账单数据，并与替代架构对照。"
       },
       {
         "label": "2",
-        "title": "OpenAI拟收购 Pierre：把代码浏览、差异审阅与 Git 存储带入 Codex",
-        "body": "相关团队可将此事登记进变更台账，并按下一步核验路径：跟踪交易交割公告、Codex 与 Code Storage 的正式产品文档、开源仓库维护状态及客户侧迁移与审计说明。"
+        "title": "OpenAI公布基础设施社区承诺：把供电责任、地方参与和项目收益写入建设框架",
+        "body": "核对 Pike County 及其他相关园区的并网/供电协议、许可公示、社区利益协议与独立执行报告。"
       },
       {
         "label": "3",
-        "title": "OpenAI披露 Linux 安全研究管线：自动发现后仍以动态验证和人工审阅为关口",
-        "body": "相关团队可将此事登记进变更台账，并按下一步核验路径：等待 Linux 维护者的漏洞/补丁记录、独立团队在隔离环境的复现、公开方法与审计材料，再评估发现质量和修复价值。"
+        "title": "Google扩展 AI 教师培训：把课程、地区上线与课堂监督一起纳入教育采用观察",
+        "body": "核对各地教育部门的合作文件、教师完成率、课堂 AI 使用规范和独立学习结果评估。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "3",
+        "value": "4",
         "label": "本期信号"
       },
       {
-        "value": "3",
+        "value": "4",
         "label": "官方原文"
       },
       {
-        "value": "3",
-        "label": "11月4日发布"
+        "value": "2",
+        "label": "NVIDIA 厂商叙事"
       }
     ],
     "sections": [
       {
         "number": "01",
         "label": "产品",
-        "title": "OpenAI将 Daybreak Red 带入 AWS GovCloud：受审批准入才可使用 GPT‑5.6 Cyber",
-        "body": "公告明确把访问放在获批准客户与 AWS 开通的双重条件下，说明高风险模型的可用性与治理控制面同步推进。区域上线只是访问路径的变化，并不等于采购即用、合规结论或安全效果已经得到确认。这使可用性不再只是模型标签，而是由身份、环境与操作范围共同决定的服务状态。",
-        "soWhat": "核对 AWS Bedrock 的正式区域/服务文档、Daybreak 条款与审批要求，并在授权隔离环境测试日志、权限、数据保留和人工复核流程。"
+        "title": "NVIDIA强调 AI 工厂的“内存阶梯”：模型权重与 KV Cache 争用成为成本控制变量",
+        "body": "当上下文变长、并发增多时，内存容量和 KV Cache 管理会直接影响可承载任务数。全栈协同设计是厂商路线，不是跨平台成本优势的独立证据；真实取舍仍需固定工作负载测量。 这要求采购与运营评审把公开路线图转换为固定条件下的可复核数据，而非直接外推到其他环境。",
+        "soWhat": "检查客户侧固定版本压测、显存/KV Cache 遥测、P95 延迟、吞吐和账单数据，并与替代架构对照。"
       },
       {
         "number": "02",
-        "label": "工具",
-        "title": "OpenAI拟收购 Pierre：把代码浏览、差异审阅与 Git 存储带入 Codex",
-        "body": "本次公告连接了代码浏览、差异审阅、Git 存储与 Codex 的长期协作方向，但它仍是一项待交割交易声明。工程负责人应把它视为工具链观察信号，而非替代自有代码托管、审阅权限、留存和迁移评估的依据。 后续产品是否保留原有开源与服务边界，应以交割公告、正式产品文档和开源仓库记录为准。",
-        "soWhat": "跟踪交易交割公告、Codex 与 Code Storage 的正式产品文档、开源仓库维护状态及客户侧迁移与审计说明。"
+        "label": "政策",
+        "title": "OpenAI公布基础设施社区承诺：把供电责任、地方参与和项目收益写入建设框架",
+        "body": "大型 AI 园区的可行性不再只看芯片和融资。供电责任、地方参与及收益分配会影响许可节奏和长期运营成本；企业公告只是把这些问题前置，真正边界仍由合同、监管和社区程序决定。 这要求采购与运营评审把公开路线图转换为固定条件下的可复核数据，而非直接外推到其他环境。",
+        "soWhat": "核对 Pike County 及其他相关园区的并网/供电协议、许可公示、社区利益协议与独立执行报告。"
       },
       {
         "number": "03",
-        "label": "研究",
-        "title": "OpenAI披露 Linux 安全研究管线：自动发现后仍以动态验证和人工审阅为关口",
-        "body": "这份研究描述了从候选发现到人工报告的多步链路，提示安全团队需要记录每一关的证据与失败模式。它不构成对任一模型的通用安全能力排名，也不应让组织跳过隔离、授权、人工审查和披露协调。 后续是否形成可复用防御收益，应以维护者侧漏洞/补丁记录、独立复现报告和第三方审计为准。",
-        "soWhat": "等待 Linux 维护者的漏洞/补丁记录、独立团队在隔离环境的复现、公开方法与审计材料，再评估发现质量和修复价值。"
+        "label": "政策",
+        "title": "Google扩展 AI 教师培训：把课程、地区上线与课堂监督一起纳入教育采用观察",
+        "body": "学校采用 AI 的瓶颈常在工作流与教学设计而非账号开通。课程覆盖能让人追踪培训供给和治理内容，但真实课堂价值仍要看完成率、使用方式和独立学习评估。 这要求采购与运营评审把公开路线图转换为固定条件下的可复核数据，而非直接外推到其他环境。",
+        "soWhat": "核对各地教育部门的合作文件、教师完成率、课堂 AI 使用规范和独立学习结果评估。"
       }
     ],
     "actions": [
-      "相关团队可将此事登记进变更台账，并按下一步核验路径：核对 AWS Bedrock 的正式区域/服务文档、Daybreak 条款与审批要求，并在授权隔离环境测试日志、权限、数据保留和人工复核流程。",
-      "相关团队可将此事登记进变更台账，并按下一步核验路径：跟踪交易交割公告、Codex 与 Code Storage 的正式产品文档、开源仓库维护状态及客户侧迁移与审计说明。",
-      "相关团队可将此事登记进变更台账，并按下一步核验路径：等待 Linux 维护者的漏洞/补丁记录、独立团队在隔离环境的复现、公开方法与审计材料，再评估发现质量和修复价值。"
+      "目标读者：负责推理平台、容量和成本治理的工程团队。可在压测模板中增加 KV Cache 占用、淘汰率、P95 延迟和单位任务成本。",
+      "目标读者：负责数据中心选址、能源采购和地方沟通的基础设施团队。可将供电责任、许可、社区协议和交付指标列入每个园区的证据台账。",
+      "目标读者：负责学校 AI 政策、教师发展与学习评估的团队。可把课程上线、完成率、课堂规则与结果评估拆为不同的实施指标。"
     ],
     "coverageLimits": [
       {
         "label": "采集范围",
-        "body": "编辑前已同步 origin/main；检查登记官方来源与历史 URL/标题去重，未用付费墙、登录墙或社区内容。"
+        "body": "编辑前已同步 origin/main；检查登记官方来源、历史 URL/标题去重，未用付费墙、登录墙或社区内容。"
       },
       {
         "label": "证据范围",
-        "body": "3/3来自 OpenAI News，可核对公司公告、访问条件和作者方法披露，不构成独立效果验证。"
+        "body": "来源集中：官方来源占4/4，其中 NVIDIA AI Blog 占2/4；可核对发布与厂商主张，不构成独立性能、成本或采用验证。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI 于11月4日称，获批准客户现可通过 AWS GovCloud（US-East）的 Daybreak Red 使用 GPT‑5.6 Cyber；公告将其定位为授权漏洞研究、验证与安全测试用途，并称访问还需 Daybreak 审批和 AWS 开通。",
-        "OpenAI 于11月4日宣布拟收购 Pierre Computer Company；其称 Codex 已使用 Pierre 的 Trees 与 Diffs 开源库，并计划在交易完成后把 Code Storage 的功能逐步带入 Codex，同时让 Pierre 的开源项目继续开源。",
-        "OpenAI 于11月4日披露一套受控环境中的 Linux 内核研究管线，称其将候选发现、动态复现、可利用性评估和补丁生成串联，并由人类研究人员审阅后再向维护者报告；文中报告的运行数据属于其自身研究结果。"
+        "NVIDIA 于11月5日说明其 AI 工厂采用 GPU、CPU、网络、存储与软件协同设计，并把模型权重和 KV Cache 对高带宽内存的争用列为长上下文和 Agent 工作负载的关键约束。",
+        "OpenAI 于11月5日发布基础设施建设框架，提出社区参与、开发方承担供电成本及与项目所在地共享就业和商业机会等承诺，并披露在俄亥俄州 Pike County 的联合投入。",
+        "Google 于11月3日称，将 AI Educator Series 扩展至巴西、墨西哥、西班牙、澳大利亚和撒哈拉以南非洲，并公布11月面向美国教师的互动评估、游戏化学习和作业设计模块。",
+        "NVIDIA 于11月3日介绍半导体制造中的加速仿真、学习型物理模型和 Agent 工作流，并以 Advantest 使用 NeMo Switchyard 自动化选择流程为例，主张可缩短工程响应时间。"
       ],
       "editorialJudgment": [
-        "本站判断，编码 Agent 的生产差异将越来越取决于可审计的代码协作基础设施，而非单一生成能力。",
-        "本站判断，高风险网络安全模型的可用性必须与区域、身份、授权和人工复核一起评估。",
-        "本站判断，AI 辅助漏洞研究的规模化不会取消动态验证、维护者协调和人类责任。"
+        "长上下文与 Agent 把推理瓶颈从单次算力扩展到内存、缓存和存储层级；采购比较需要从峰值算力转向每任务的延迟、容量与成本。",
+        "AI 算力扩张的竞争开始同时受制于电力、地方许可和社区信任；公开承诺能定义谈判议程，却不能替代合同、监管程序和项目执行记录。",
+        "教育 AI 的扩散正在从工具可用转向教师能力、课堂任务设计与人类监督；培训上线是采用前置条件，不是效果证据。",
+        "物理 AI 进入制造的关键不只是生成建议，而是让仿真、试验、质量追溯与工程签核形成闭环；案例叙事需要工厂侧指标验证。"
       ],
       "unknowns": [
-        "已核验的是 OpenAI 对区域、准入、用途与其数据处理说明的公开陈述；该公告不证明任何机构已部署、模型在真实政府网络中的安全性、合规结论或防御成效。",
-        "已核验的是 OpenAI 宣布拟收购、现有库使用和交易完成前双方仍独立的安排；交易尚受常规交割与监管批准条件约束，尚不能据此认定整合已完成、产品路线已落地或客户已获得新能力。",
-        "已核验的是 OpenAI 对研究流程、受控环境和人工审阅步骤的公开披露；其报告的发现数量、成本、补丁质量与更广泛安全影响仍需 Linux 维护者、独立复现或公开审计确认。"
+        "该技术说明不证明 NVIDIA 的方案已降低任一客户的成本、内存压力或供货风险。",
+        "该框架不证明任何单一园区已获批、已建成，或已实现所述社区与电力结果。",
+        "课程扩展不证明教师已有效使用 AI，也不证明学生成绩、参与度或公平性改善。",
+        "该厂商案例不证明 AI Agent 已在其他晶圆厂提升良率、缩短周期或安全替代工程师判断。"
       ]
     },
     "references": [
       {
-        "label": "OpenAI News宣布 GovCloud 准入",
-        "url": "https://openai.com/index/daybreak-red-aws-govcloud/"
+        "label": "OpenAI 发布数据中心治理框架",
+        "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/"
       },
       {
-        "label": "OpenAI News宣布拟收购 Pierre",
-        "url": "https://openai.com/index/openai-to-acquire-pierre/"
+        "label": "NVIDIA 说明推理内存与 KV Cache",
+        "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/"
       },
       {
-        "label": "OpenAI News披露 Linux 研究管线",
-        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+        "label": "Google 宣布扩展教师 AI 培训",
+        "url": "https://blog.google/products-and-platforms/products/education/google-ai-educator-series-global-expansion-november-2026/"
+      },
+      {
+        "label": "NVIDIA 介绍半导体 Agent 工作流",
+        "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/"
       }
     ]
   }

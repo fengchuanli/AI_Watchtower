@@ -11212,3 +11212,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量数据 JSON 解析、6 个静态 HTML 解析与 `git diff --check` 均通过。
 - Sync：编辑前 `git pull --ff-only origin main` 已同步。
 - Commit note：【新闻更新】复核08点AI新闻：0条已覆盖的安全控制面信号。
+## 2026-11-06 17:00 JST（news intelligence run）
+
+- Focus：发布4条可核验的官方信号：OpenAI 的基础设施社区/供电责任框架、NVIDIA 对推理内存与 KV Cache 约束的说明、Google AI Educator Series 地区扩展，以及 NVIDIA 的半导体制造 Agent 案例。短版是质量门槛结果；未用旧闻、付费/登录墙正文、社区讨论、重复事件或常规营销补数。
+- Sources & boundary：均为官方原文；OpenAI/Google 页面核对发布事实，NVIDIA 两条标为厂商主张。园区履约、成本/性能、教学成效和制造质量仍须地方文件、客户遥测、教育侧记录、质量审计与独立评测。
+- Archive mirror：已将 `news-1700-2026-11-06` 镜像到 `data/news-history.json` 最新期，并重建新闻索引、当日镜像和趋势数据。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页和4个新详情页可查看中文事件、影响、来源置信度、证据边界及下一步核验；首页同时提示 NVIDIA 厂商来源集中。
+- Verification：`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check`、全量数据 JSON 解析和 `git diff --check` 均通过；未做浏览器视觉验收。
+- Sync：编辑前普通 pull 因 DNS 失败；授权网络重试后已同步 origin/main。
+- Commit note：【新闻更新】发布17点AI新闻：4条基础设施与可审计部署信号。
+
