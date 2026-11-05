@@ -2,16 +2,22 @@
 
 Use this checklist before a semi-automated news run promotes a discovered URL into `data/news.json`. If the workflow feels too technical, start with `docs/candidate-workflow-plain-language-guide.md`, then use this checklist as the source gate. It is a gate for source candidates, not a replacement for the lightweight intake record in `docs/candidate-intake-format.md`, the hold/reject vocabulary in `docs/candidate-hold-reject-reasons.md`, the held-candidate ledger in `docs/held-candidate-review-note.md`, the priority ranking in `docs/candidate-priority-rubric.md`, the source-diversity triage note in `docs/source-diversity-triage-note.md`, the original-source replacement guide in `docs/original-source-replacement-guide.md`, the field-level handoff in `docs/candidate-to-news-handoff.md`, or `docs/editorial-checklist.md` after drafting.
 
+## Normal Run Fast Entry
+
+For a routine 08:00 or 17:00 update, do not open the separate plain-language guide before every candidate. Write this six-part note directly in the candidate scratch record, then continue with this checklist: **发生了什么 / 为什么值得看 / 还不能证明什么 / 最安全的来源 / 本批次是否安全 / draft、hold 或 reject**. The source gate below remains mandatory; this change only removes a duplicate reading step when the editor already knows the vocabulary.
+
+Open `docs/candidate-workflow-plain-language-guide.md` when a new editor needs examples, a candidate is hard to classify, or a batch needs a written handoff. It remains the teaching reference, not a per-candidate prerequisite for an ordinary run.
+
 ## Workflow Entry Order
 
 Use these entry points in order, so editors do not choose between two similar-looking pre-draft documents:
 
-1. Start with `docs/candidate-workflow-plain-language-guide.md` when a human needs to decide what happened, why it matters, what is unproven, and whether the item should be drafted, held, or rejected.
-2. Use this source checklist only after that first judgment, to decide whether the URL and source role are safe enough to enter intake.
+1. Write the six-part fast-entry note above; open `docs/candidate-workflow-plain-language-guide.md` only when its examples or handoff wording are needed.
+2. Use this source checklist to decide whether the URL and source role are safe enough to enter intake.
 3. Use `docs/candidate-intake-format.md` only after the URL passes this source gate, to record the structured fields that later map into `data/news.json`.
 4. Use `docs/candidate-to-news-handoff.md` only for candidates already marked `draft`; held and rejected candidates should stay in intake notes or `docs/held-candidate-review-note.md`.
 
-If a run has only one minute for candidate triage, do not skip directly to public copy. Write the plain-language note first, apply this checklist as the hard gate, then fill the intake scratch block only for candidates that survive.
+If a run has only one minute for candidate triage, do not skip directly to public copy. Write the six-part fast-entry note, apply this checklist as the hard gate, then fill the intake scratch block only for candidates that survive.
 
 ## 1. Candidate Identity
 

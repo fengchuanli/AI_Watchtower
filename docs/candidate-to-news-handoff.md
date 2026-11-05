@@ -8,13 +8,12 @@ This is a drafting checklist, not a new content source. If the intake record can
 
 During a normal news update, use this as the shortest editor path from candidate scan to public copy. This is the must-read path; older optimization decisions and specialized review notes are background unless a step below explicitly triggers them.
 
-1. Write the plain-language note from `docs/candidate-workflow-plain-language-guide.md`: what happened, why it matters, what is unproven, safest source, batch safety, and `draft` / `hold` / `reject`.
+1. Write the six-part fast-entry note in `docs/candidate-source-checklist.md`: what happened, why it matters, what is unproven, safest source, batch safety, and `draft` / `hold` / `reject`. Open the separate plain-language guide only when its examples or handoff wording are needed.
 2. Apply `docs/candidate-source-checklist.md` as the hard source gate for source role, timestamp, copyright/paywall safety, duplicate risk, original-source need, and concentration risk.
-3. Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists; otherwise record a manual current/history URL and near-title check.
-4. Fill `docs/candidate-intake-format.md` only for surviving candidates, keeping `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, and `draftingDecision` short.
-5. Rank only draftable candidates with `docs/candidate-priority-rubric.md`; use `docs/source-diversity-triage-note.md` when one owner, source family, evidence mode, company, geography, or narrative angle dominates the safe set.
-6. Draft `data/news.json` from the field mapping below, then apply `docs/editorial-checklist.md`, `docs/homepage-edition-preflight.md`, and `docs/current-to-history-publication-checklist.md`.
-7. Rebuild derived data through the derived-data rebuild gate from `docs/update-run-checklist.md`: after the current edition and newest history mirror are final, run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, then the normal validators before commit and push status logging.
+3. Run `node scripts/report-duplicate-candidates.mjs <candidate-file.json>` when a batch file exists; otherwise record a manual current/history URL and near-title check. Fill `docs/candidate-intake-format.md` only for survivors, keeping `sourceBackedFact`, `aiRelevance`, `proofBoundary`, `nextIndependentCheck`, `duplicateStatus`, `copyrightPosture`, and `draftingDecision` short.
+4. Open `docs/candidate-priority-rubric.md` only when draftable candidates exceed available slots or their order is genuinely unclear. Open `docs/source-diversity-triage-note.md` only when one owner, source family, evidence mode, company, geography, or narrative angle dominates the safe set. A small, clearly safe batch does not need a separate ranking pass.
+5. Draft `data/news.json` from the field mapping below, then apply `docs/editorial-checklist.md`, `docs/homepage-edition-preflight.md`, and `docs/current-to-history-publication-checklist.md`.
+6. Rebuild derived data through the derived-data rebuild gate from `docs/update-run-checklist.md`: after the current edition and newest history mirror are final, run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, then the normal validators before commit and push status logging.
 
 Stop the shortest path rather than drafting when a candidate still needs a stronger original source, has unresolved duplicate status, depends on media article structure, lacks a concrete next check, or would only pad a weak batch.
 

@@ -7,7 +7,7 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 3, Detail-Page Article Consistency
-- Last indexed run: 2026-10-24 11:03:31 JST (20:00 scheduled run)
+- Last indexed run: 2026-11-05 20:00 JST (scheduled run)
 - Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
 
 ## Current Cycle Day 4 Completion
@@ -137,7 +137,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 16 complete: 通用详情页将结尾改为“先做这一件”核验入口，再列两个具体追问，移除临近来源区重复的 Takeaway 总结；事实、趋势、边界、原文链接与编辑评分不变。
 - Current-cycle Day 17 complete: 手机宽度下的通用详情页正文现在以更清晰的段落留白和 16px / 1.9 行距呈现；`detail-page-review-guide.md` 与 `validate-site.mjs` 守住这一阅读节奏，未改新闻事实、来源或原文边界。
 - Current-cycle Day 18 complete: `docs/editorial-validator-limits.md` now records expected false positives and human-review gaps for detail paragraph length, repeated sentence leads, and mobile type rhythm; the guard remains discoverable through `scripts/validate-site.mjs` so copy is not distorted merely to satisfy a pattern.
-- Next useful task: Day 19，审视08:00 / 17:00正常发布路径，移除或重排一个拖慢安全普通更新的步骤。
+- Current-cycle Day 19 complete: ordinary 08:00 / 17:00 runs now write the six-part plain-language judgment inline in the source checklist instead of opening a separate guide for every candidate; priority/mix review is conditional on excess candidates, unclear order, or concentration risk. Source, duplicate, copyright, editorial, homepage/archive, derived-data, validation, commit, and push gates remain required.
+- Next useful task: Day 20，让 current/history 镜像、派生数据生成和校验状态更容易复制到新闻更新日志，且不漏记文件。
 
 ## Update Rules
 

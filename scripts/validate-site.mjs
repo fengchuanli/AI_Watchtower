@@ -838,9 +838,10 @@ if (
 
 if (
   !/Candidate Source Checklist/.test(candidateSourceChecklist) ||
+  !/Normal Run Fast Entry/.test(candidateSourceChecklist) ||
   !/Workflow Entry Order/.test(candidateSourceChecklist) ||
-  !/plain-language note first/.test(candidateSourceChecklist) ||
-  !/source checklist only after that first judgment/.test(candidateSourceChecklist) ||
+  !/six-part fast-entry note/.test(candidateSourceChecklist) ||
+  !/not a per-candidate prerequisite for an ordinary run/.test(candidateSourceChecklist) ||
   !/Candidate Identity/.test(candidateSourceChecklist) ||
   !/Source Role/.test(candidateSourceChecklist) ||
   !/Minimum Evidence/.test(candidateSourceChecklist) ||
@@ -1064,10 +1065,12 @@ if (
   !/Normal 08:00 \/ 17:00 Shortest Path/.test(candidateToNewsHandoff) ||
   !/must-read path/.test(candidateToNewsHandoff) ||
   !/conditional docs only at the branch point/.test(candidateToNewsHandoff) ||
-  !/plain-language note/.test(candidateToNewsHandoff) ||
+  !/six-part fast-entry note/.test(candidateToNewsHandoff) ||
   !/source gate/.test(candidateToNewsHandoff) ||
   !/report-duplicate-candidates\.mjs/.test(candidateToNewsHandoff) ||
-  !/Rank only draftable candidates/.test(candidateToNewsHandoff) ||
+  !/six-part fast-entry note/.test(candidateToNewsHandoff) ||
+  !/only when draftable candidates exceed available slots/.test(candidateToNewsHandoff) ||
+  !/A small, clearly safe batch does not need a separate ranking pass/.test(candidateToNewsHandoff) ||
   !/Rebuild derived data/.test(candidateToNewsHandoff) ||
   !/Pre-Draft Gate/.test(candidateToNewsHandoff) ||
   !/Field Mapping/.test(candidateToNewsHandoff) ||
@@ -1090,6 +1093,9 @@ if (
   !/shortest candidate-to-news path/.test(updateRunChecklist) ||
   !/Normal News Update Must-Read Path/.test(updateRunChecklist) ||
   !/do not scan older optimization logs/.test(updateRunChecklist) ||
+  !/Do not add a separate ranking pass when every surviving candidate fits the edition/.test(updateRunChecklist) ||
+  !/six-part fast-entry note/.test(candidateSourceChecklist) ||
+  !/not a per-candidate prerequisite for an ordinary run/.test(candidateSourceChecklist) ||
   !/Open conditional documents only when their trigger appears/.test(updateRunChecklist) ||
   !/普通 08:00 \/ 17:00 新闻更新必读路径/.test(readme) ||
   !/Day 18[\s\S]*Normal News Update Must-Read Path[\s\S]*candidate-to-news handoff[\s\S]*conditional/.test(
