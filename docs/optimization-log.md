@@ -1,3 +1,14 @@
+## 2026-11-05 20:00 JST（scheduled content optimization）
+
+- Focus：当前周期 Day 19，缩短安全的 08:00／17:00 日常发布入口：编辑可直接在来源清单写六项中文判断，不必为每个候选再打开单独的入门说明；当候选数量不超版面且无集中风险时，不再强制单独进行优先级排序。
+- 来源与安全边界：来源、版权/付费墙、重复、原始来源替换、来源集中、编辑审读、首页与归档镜像、派生数据、校验、提交和推送关口均保留。复杂候选、新编辑交接、候选超额、排序不清或来源集中时，仍按触发条件打开相应专项文档。
+- Changed files：docs/candidate-source-checklist.md、docs/candidate-to-news-handoff.md、docs/update-run-checklist.md、scripts/validate-site.mjs、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Verification：`node --check scripts/validate-site.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 均通过。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步，工作区干净后开始编辑。
+- Commit：`03026da`（【网站优化】压缩日常新闻发布路径）。
+- Next：Day 20，让 current/history 镜像、派生数据生成和校验状态更容易复制到新闻更新日志，且不漏记文件。
+
 ## 2026-11-05 08:12:00 JST（17:00 news intelligence run）
 
 - Focus：发布3条可核验且未重复的 OpenAI 官方信号：Pierre 代码协作工具拟收购、Daybreak Red 在 AWS GovCloud（US-East）的受审批准入，以及带动态验证与人工审阅的 Linux 安全研究管线。`draft-with-caveat`：3/3来自同一官方来源，未用旧闻、付费/登录墙正文、社区讨论或营销内容补足10条。
