@@ -54,7 +54,7 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Archive diff | For 17:00 JST runs, confirm `docs/archive-diff-summary-format.md` was applied and say whether the morning/evening comparison was done, skipped because only one same-day edition exists, skipped because the update was correction-only with no reader-facing story change, or blocked by archive drift. |
 | Monthly continuity snapshot | Near the end of a plan window, use `docs/monthly-continuity-snapshot.md` when recurring companies, topics, unresolved claims, or resolved checks should inform the next plan, standing editorial rules, or a future public continuity component. Record `done`, `not-needed`, or `blocked`, and do not add fresh source claims from the snapshot. If a public component is being considered, add `publicContinuityHandoff` and separate ready cards from `archive-only` and `do-not-publish` patterns before any homepage UI work. |
 | Rollback check | If bad data was detected, confirm `docs/bad-data-rollback-note.md` was applied and say whether rollback was corrected, not needed, or blocked. |
-| Derived data | After `data/news.json` and the newest `data/news-history.json` edition are aligned, run `node scripts/build-derived-data.mjs` before validation so `data/news-index.json` and `data/news-today.json` are regenerated from the final current/history state. Then run `node scripts/build-derived-data.mjs --check` and `node scripts/validate-data.mjs`; do not commit if either derived file is stale, missing, or based on the pre-mirror edition. |
+| Derived data | After `data/news.json` and the newest `data/news-history.json` edition are aligned, run `node scripts/build-derived-data.mjs` before validation so `data/news-index.json`, `data/news-today.json`, and `data/trends.json` are regenerated from the final current/history state. Then run `node scripts/build-derived-data.mjs --check` and `node scripts/validate-data.mjs`; do not commit if any derived file is stale, missing, or based on the pre-mirror edition. Copy the four-line **新闻更新日志可复制状态块** from `docs/current-to-history-publication-checklist.md` instead of separately remembering mirror, derived, and validator file names. |
 | Duplicate copy repair | 若校验报出字段重复，跑 `node scripts/repair-duplicate-copy.mjs` 后重新校验。 |
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
@@ -73,8 +73,10 @@ Candidate intake: done - 3 draft, 4 hold, 2 reject; holds mainly need original-s
 Held-candidate review: done - 4 holds recorded with holdUntilJst, recheckTrigger, freshnessLimit, staleFallback, and nextEditorAction.
 Duplicate reporting: done - manual-clear for 3 drafts; one near-title-review held until a new source action is named.
 Drafting: done - public copy uses minimum source facts and original Chinese interpretation.
-Validation: done - build-derived-data, validate-data, validate-site, validate-pages, HTML parse, JSON parse, diff check.
-Derived data: done - rebuilt data/news-index.json and data/news-today.json after archive mirror; --check passed.
+Archive mirror: done - data/news.json ↔ data/news-history.json; edition ID, reader/source framing, item count, and item order match.
+Derived data: done - data/news-index.json, data/news-today.json, data/trends.json rebuilt; `node scripts/build-derived-data.mjs --check` passed.
+Validation: done - `node scripts/validate-data.mjs` passed; `node scripts/validate-site.mjs` passed; `node scripts/validate-pages.mjs` passed.
+Publication readiness: ready - mirror, derived data, and required validators passed.
 Archive diff: done - morning/evening editions compared for source posture and proof-boundary change.
 Push: blocked-dns
 Commit title: 【新闻更新】发布17点AI新闻：3条研究与产品信号

@@ -138,7 +138,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 17 complete: 手机宽度下的通用详情页正文现在以更清晰的段落留白和 16px / 1.9 行距呈现；`detail-page-review-guide.md` 与 `validate-site.mjs` 守住这一阅读节奏，未改新闻事实、来源或原文边界。
 - Current-cycle Day 18 complete: `docs/editorial-validator-limits.md` now records expected false positives and human-review gaps for detail paragraph length, repeated sentence leads, and mobile type rhythm; the guard remains discoverable through `scripts/validate-site.mjs` so copy is not distorted merely to satisfy a pattern.
 - Current-cycle Day 19 complete: ordinary 08:00 / 17:00 runs now write the six-part plain-language judgment inline in the source checklist instead of opening a separate guide for every candidate; priority/mix review is conditional on excess candidates, unclear order, or concentration risk. Source, duplicate, copyright, editorial, homepage/archive, derived-data, validation, commit, and push gates remain required.
-- Next useful task: Day 20，让 current/history 镜像、派生数据生成和校验状态更容易复制到新闻更新日志，且不漏记文件。
+- Current-cycle Day 20 complete: `docs/current-to-history-publication-checklist.md` now provides a four-line 新闻更新日志可复制状态块. It records the current/history mirror, all three derived files (`data/news-index.json`, `data/news-today.json`, `data/trends.json`), and the data/site/pages validators together; handoff and run-checklist instructions direct editors to copy it rather than omit a file under time pressure.
+- Next useful task: Day 21，改进重复候选或暂缓候选输出，让编辑更快判断 reject、hold、replace-source 或 publish。
 
 ## Update Rules
 

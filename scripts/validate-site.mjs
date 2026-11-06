@@ -1328,16 +1328,23 @@ if (
   !/Derived data/.test(updateRunChecklist) ||
   !/data\/news-index\.json/.test(updateRunChecklist) ||
   !/data\/news-today\.json/.test(updateRunChecklist) ||
+  !/data\/trends\.json/.test(updateRunChecklist) ||
   !/build-derived-data\.mjs --check/.test(updateRunChecklist) ||
+  !/新闻更新日志可复制状态块/.test(updateRunChecklist) ||
   !/derived-data rebuild gate/.test(candidateToNewsHandoff) ||
+  !/新闻更新日志可复制状态块/.test(candidateToNewsHandoff) ||
+  !/新闻更新日志可复制状态块/.test(currentToHistoryPublicationChecklist) ||
+  !/data\/trends\.json/.test(currentToHistoryPublicationChecklist) ||
+  !/Publication readiness/.test(currentToHistoryPublicationChecklist) ||
   !/current-to-history-publication-checklist\.md/.test(updateRunChecklist) ||
   !/current-to-history-publication-checklist\.md/.test(candidateToNewsHandoff) ||
   !/current-to-history-publication-checklist\.md/.test(newsDataFormat) ||
   !/current-to-history-publication-checklist\.md/.test(readme) ||
   !/Day 8[\s\S]*current-to-history-publication-checklist\.md/.test(optimizationDecisionIndex) ||
-  !/Day 14[\s\S]*data\/news-index\.json[\s\S]*data\/news-today\.json/.test(optimizationDecisionIndex)
+  !/Day 14[\s\S]*data\/news-index\.json[\s\S]*data\/news-today\.json/.test(optimizationDecisionIndex) ||
+  !/Current-cycle Day 20[\s\S]*新闻更新日志可复制状态块[\s\S]*data\/trends\.json/.test(optimizationDecisionIndex)
 ) {
-  errors.push("News publication workflow must mirror current/history and then rebuild/check derived news-index and news-today data before validation.");
+  errors.push("News publication workflow must mirror current/history, copy the status block, and rebuild/check news-index, news-today, and trends before validation.");
 }
 
 if (

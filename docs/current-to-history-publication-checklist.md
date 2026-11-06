@@ -9,9 +9,9 @@ This is a publication check, not a license to republish old material as new. If 
 After the mirror fields below are correct, regenerate the reader-facing derived files before any validation or commit:
 
 1. Run `node scripts/build-derived-data.mjs` after the final `data/news.json` and newest `data/news-history.json` changes are saved.
-2. Confirm both `data/news-index.json` and `data/news-today.json` changed or remained identical for the right reason. `data/news-index.json` feeds all-news, tag, and archive scanning; `data/news-today.json` feeds the same-day homepage/detail support path.
+2. Confirm `data/news-index.json`, `data/news-today.json`, and `data/trends.json` changed or remained identical for the right reason. `data/news-index.json` feeds all-news, tag, and archive scanning; `data/news-today.json` feeds the same-day homepage/detail support path; `data/trends.json` carries the derived trend view.
 3. Run `node scripts/build-derived-data.mjs --check` before `node scripts/validate-data.mjs`. Treat either derived-file mismatch as a publication blocker, not a cleanup task after commit.
-4. Record a compact log note such as `Derived data: done - rebuilt data/news-index.json and data/news-today.json after archive mirror; --check passed.`
+4. Copy the **新闻更新日志可复制状态块** below into the run note, replacing only the bracketed result words. This makes the current/history mirror, all three derived files, and each validation command visible together.
 
 Do not run the rebuild before the archive mirror is final and then forget to rerun it. The derived files must reflect the committed current/history pair.
 
@@ -57,7 +57,7 @@ The newest `data/news-history.json` edition should match the current `data/news.
 2. Copy the completed current edition into the newest `data/news-history.json` entry, keeping the current item order unchanged.
 3. Update `data/news-history.json` `updatedAt` and `totalItems` after the newest edition is correct.
 4. Check that no older history edition repeats a current `sourceUrl` or near-duplicate title unless the current item has a valid `freshSourceFact`.
-5. Run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, so `data/news-index.json` and `data/news-today.json` reflect the final current/history pair.
+5. Run `node scripts/build-derived-data.mjs`, then `node scripts/build-derived-data.mjs --check`, so `data/news-index.json`, `data/news-today.json`, and `data/trends.json` reflect the final current/history pair.
 6. Run `node scripts/validate-data.mjs` and treat any archive-readiness or derived-data mismatch as a publication blocker.
 7. Open or parse `archive.html`, `all-news.html`, and `news-detail.html` when page behavior changed or when an archived detail link was affected.
 8. For 17:00 JST editions, check whether `docs/archive-diff-summary-format.md` should produce a morning/evening comparison or a skipped reason. For correction-only updates, apply its correction-only decision before deciding whether the reader-facing story changed.
@@ -74,7 +74,18 @@ Do not commit the publication until the drift is resolved when:
 - A current item has different `claimBoundary`, `provenance`, `originalDependency`, `nextCheck`, `evidenceThreshold`, or `counterEvidence` in history.
 - The archive would show an older batch as the newest edition after the homepage has advanced.
 - A repeated current/history URL is being used as fresh news without a concrete `freshSourceFact`.
-- `data/news-index.json` or `data/news-today.json` was not rebuilt and checked after the final current/history mirror.
+- `data/news-index.json`, `data/news-today.json`, or `data/trends.json` was not rebuilt and checked after the final current/history mirror.
+
+## 新闻更新日志可复制状态块
+
+Paste this four-line block into every news update log after the final mirror and checks. Keep all file names and commands even when a file was unchanged; state `unchanged-after-rebuild` rather than silently omitting it. Replace bracketed values with a short result or blocker.
+
+```text
+Archive mirror: [done / corrected / not-needed / blocked] - data/news.json ↔ data/news-history.json; edition ID, reader/source framing, item count, and item order [match / reason].
+Derived data: [done / blocked] - data/news-index.json, data/news-today.json, data/trends.json [rebuilt / unchanged-after-rebuild]; `node scripts/build-derived-data.mjs --check` [passed / failed].
+Validation: [done / blocked] - `node scripts/validate-data.mjs` [passed / failed]; `node scripts/validate-site.mjs` [passed / failed]; `node scripts/validate-pages.mjs` [passed / failed].
+Publication readiness: [ready / blocked] - [one short reason; name the failed mirror, derived file, or validator when blocked].
+```
 
 ## Compact Log Note
 
