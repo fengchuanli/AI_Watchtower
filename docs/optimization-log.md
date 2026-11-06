@@ -11233,3 +11233,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前普通 pull 因 DNS 失败；授权网络重试后已同步 origin/main。
 - Commit note：【新闻更新】发布17点AI新闻：4条基础设施与可审计部署信号。
 
+## 2026-11-06 23:04 JST｜08点新闻情报更新
+
+- Focus：发布2条可核验的11月5日官方信号：OpenAI 的 GPT‑6 Cyber 发布及其授权范围/安全控制披露，以及其披露的澳洲高校 ChatGPT Edu 分阶段接入、培训与课程评估安排。
+- Sources & boundary：遵循 `data/sources.json` 与 `docs/source-policy.md`，使用 OpenAI News 原始页面；GPT‑6 Cyber 仅核对产品、评测披露和访问框架，高校条目标为厂商主张。未使用付费墙、登录墙、社区讨论、传闻、旧闻或重复 URL。2条而非10条是质量门槛结果，未用常规营销或弱证据补数。
+- Archive mirror：done - `data/news.json` ↔ `data/news-history.json`；`news-0800-2026-11-06` 的元数据、读者/来源边界、条目数量与顺序一致。Derived data: done - `data/news-index.json`、`data/news-today.json`、`data/trends.json` 已重建；`node scripts/build-derived-data.mjs --check` passed。
+- Changed files：`data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页和2个详情页可查看 GPT‑6 Cyber 的授权/审计核验路径，以及高校教育 AI 的课程/评估治理边界；首页提示本批次单一 OpenAI 来源集中。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量 JSON 解析与 `git diff --check` 通过；静态 HTML 解析将在提交前按实际页面清单复跑。
+- Sync：编辑前 `git pull --ff-only origin main` 已同步。
+- Commit note：【新闻更新】发布08点AI新闻：2条网络安全与教育治理信号。
+
