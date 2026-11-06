@@ -1,3 +1,13 @@
+## 2026-11-06 11:07:27 JST（20:00 scheduled content optimization）
+
+- Focus：当前周期 Day 20，把 current/history 镜像、派生数据生成和校验结果收束为可直接复制进新闻更新日志的四行状态块，减少日常 08:00／17:00 发布时遗漏文件或只记录部分校验的风险。
+- Changed files：docs/current-to-history-publication-checklist.md、docs/update-run-checklist.md、docs/candidate-to-news-handoff.md、scripts/validate-site.mjs、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Verification：`git diff --check`、`node --check scripts/validate-site.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `node scripts/build-derived-data.mjs --check` 均通过。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步，工作区干净后开始编辑。
+- Commit：`4ce0482`（【网站优化】固化新闻更新状态记录）。本日志收尾提交见 Git 历史。
+- Next：Day 21，改进重复候选或暂缓候选输出，让编辑更快判断 reject、hold、replace-source 或 publish。
+
 ## 2026-11-05 20:00 JST（scheduled content optimization）
 
 - Focus：当前周期 Day 19，缩短安全的 08:00／17:00 日常发布入口：编辑可直接在来源清单写六项中文判断，不必为每个候选再打开单独的入门说明；当候选数量不超版面且无集中风险时，不再强制单独进行优先级排序。
