@@ -11275,3 +11275,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步，工作基线为最新 `origin/main`。
 - Commit note：【新闻更新】发布08点AI新闻：0条无新增官方信号。
 
+## 2026-11-08 17:00 JST｜17点新闻情报更新
+
+- Focus：按恢复政策只复核 11 月 8 日 00:00–17:00 JST 当前窗口，不倒填 11 月 7 日漏跑批次。未找到足以发布的新增条目：Google AI RSS 最新可见单项为 11 月 5 日，Hugging Face Blog RSS 最新为 11 月 6 日，arXiv cs.AI 当日源未给出可用新项；OpenAI、Anthropic、Google DeepMind 与 NVIDIA 的官方新闻面也未显示可在本窗口内核验的新增原始事实。
+- Sources & boundary：遵循 `data/sources.json` 与 `docs/source-policy.md`，优先读取登记 RSS，再保守复核官方新闻入口；未使用付费墙、登录墙正文、VentureBeat 的访问校验页、社区讨论、传闻、预告或旧闻。搜索范围有限，只说明已查入口没有合格候选，不代表全网不存在新闻。
+- Archive mirror：not-needed；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 及派生数据保持不变，避免制造无来源的当前版或归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页；读者继续看到 11 月 6 日 08 点已发布的网络安全与教育治理信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 解析与 `git diff --check` 通过。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步，工作基线为最新 `origin/main`。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
