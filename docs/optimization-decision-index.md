@@ -139,7 +139,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 18 complete: `docs/editorial-validator-limits.md` now records expected false positives and human-review gaps for detail paragraph length, repeated sentence leads, and mobile type rhythm; the guard remains discoverable through `scripts/validate-site.mjs` so copy is not distorted merely to satisfy a pattern.
 - Current-cycle Day 19 complete: ordinary 08:00 / 17:00 runs now write the six-part plain-language judgment inline in the source checklist instead of opening a separate guide for every candidate; priority/mix review is conditional on excess candidates, unclear order, or concentration risk. Source, duplicate, copyright, editorial, homepage/archive, derived-data, validation, commit, and push gates remain required.
 - Current-cycle Day 20 complete: `docs/current-to-history-publication-checklist.md` now provides a four-line 新闻更新日志可复制状态块. It records the current/history mirror, all three derived files (`data/news-index.json`, `data/news-today.json`, `data/trends.json`), and the data/site/pages validators together; handoff and run-checklist instructions direct editors to copy it rather than omit a file under time pressure.
-- Next useful task: Day 21，改进重复候选或暂缓候选输出，让编辑更快判断 reject、hold、replace-source 或 publish。
+- Current-cycle Day 21 complete: `scripts/report-duplicate-candidates.mjs` now gives every candidate a copyable `Triage Queue` with `duplicateStatus`, recommended `draftingDecision`, a standardized `decisionReason`, and `nextAction`; a no-match result is explicitly `continue-source-gate`, never an automatic publish. The source checklist keeps source, proof-boundary, copyright, and batch gates intact.
+- Next useful task: Day 22，明确优化运行中本地领先、推送暂缓与无关新闻提交的边界，避免状态不清导致误推。
 
 ## Update Rules
 

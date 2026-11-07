@@ -199,6 +199,71 @@ The report compares candidate source URLs and near-matching titles against the c
 data/news.json, and data/news-history.json before drafting.`);
 }
 
+function getTriageDecision(candidate, report) {
+  const isSameCandidate = (record) =>
+    record.id === candidate.id &&
+    record.sourceKey === candidate.sourceKey &&
+    record.titleKey === candidate.titleKey;
+  const sourceMatches = report.sourceMatches.filter((match) => isSameCandidate(match.candidate));
+  const titleMatches = report.titleMatches.filter((match) => isSameCandidate(match.candidate));
+
+  if (sourceMatches.length) {
+    if (candidate.sourceBackedFact) {
+      return {
+        duplicateStatus: "repeated-url",
+        draftingDecision: "hold",
+        decisionReason:
+          "hold-duplicate-review: 同一来源 URL 已出现；先核对该页面是否实质更新，并把新的来源事实写清楚。",
+        nextAction: "核对页面更新时间与新动作；没有新来源事实则改为 reject-repeated-source-fact。",
+      };
+    }
+
+    return {
+      duplicateStatus: "repeated-url",
+      draftingDecision: "reject",
+      decisionReason:
+        "reject-repeated-source-fact: 同一来源 URL 已在当前、归档或本批候选中出现，且未写明新的来源事实。",
+      nextAction: "停止起草；仅当同一页面有可命名的实质更新时，重新以 hold-duplicate-review 进入核对。",
+    };
+  }
+
+  if (titleMatches.length) {
+    return {
+      duplicateStatus: "near-title-review",
+      draftingDecision: "hold",
+      decisionReason:
+        "hold-duplicate-review: 标题接近当前、归档或同批条目；先逐项对比来源直接支持的新事实。",
+      nextAction: "写明新的官方公告、filing、审计、模型卡、客户指标、监管文本、论文修订或独立评测；否则不进入起草。",
+    };
+  }
+
+  return {
+    duplicateStatus: "manual-clear",
+    draftingDecision: "continue-source-gate",
+    decisionReason: "重复核查未发现 URL 或近似标题命中；仍需完成来源、证据边界、版权和批次结构检查。",
+    nextAction: "继续来源门槛；这不是自动发布许可。",
+  };
+}
+
+function printTriageQueue(candidates, report) {
+  console.log("## Triage Queue");
+  console.log("");
+  console.log("Copy the matching four lines into the intake scratch record; the recommended decision only resolves duplicate risk, not source, copyright, or batch gates.");
+  console.log("");
+
+  for (const candidate of candidates) {
+    const record = makeRecord(candidate, "candidate");
+    const triage = getTriageDecision(record, report);
+    console.log(`- ${describeRecord(record)}${record.title ? `｜${record.title}` : ""}`);
+    console.log(`  duplicateStatus: ${triage.duplicateStatus}`);
+    console.log(`  draftingDecision: ${triage.draftingDecision}`);
+    console.log(`  decisionReason: ${triage.decisionReason}`);
+    console.log(`  nextAction: ${triage.nextAction}`);
+  }
+
+  console.log("");
+}
+
 function printReport(report) {
   const duplicateCount = report.sourceMatches.length + report.titleMatches.length;
 
@@ -209,9 +274,11 @@ function printReport(report) {
   );
   console.log("");
 
+  printTriageQueue(report.candidates, report);
+
   if (!duplicateCount) {
     console.log("No repeated source URLs or near-matching titles found.");
-    console.log("Action: mark duplicateStatus as manual-clear if current/history were also checked.");
+    console.log("Action: mark duplicateStatus as manual-clear if current/history were also checked; continue the remaining source gate before drafting.");
     return;
   }
 
@@ -262,7 +329,7 @@ try {
   const publishedItems = getPublishedItems(readJson(currentPath), readJson(historyPath));
   const report = buildReport(candidates, publishedItems);
 
-  printReport(report);
+  printReport({ ...report, candidates });
   process.exit(report.sourceMatches.length || report.titleMatches.length ? 1 : 0);
 } catch (error) {
   console.error(error.message);

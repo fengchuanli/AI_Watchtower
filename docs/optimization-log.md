@@ -11255,3 +11255,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前 `git fetch origin main` 与 `git pull --ff-only origin main` 因 GitHub DNS 解析失败未完成；提交后将尝试推送。
 - Commit note：【新闻更新】发布17点AI新闻：0条来源访问受限信号。
 
+## 2026-11-07 10:59 JST（20:00 scheduled content optimization）
+
+- Focus：当前周期 Day 21，缩短候选重复/暂缓判断路径。`report-duplicate-candidates.mjs` 现在为每个候选输出可复制的 `Triage Queue`：`duplicateStatus`、建议 `draftingDecision`、标准化 `decisionReason` 与下一步动作。没有命中时明确为 `continue-source-gate`，不把“无重复”误作可直接发布；重复 URL 在未写明新来源事实时建议拒绝，近似标题或声称更新时先暂缓核对。
+- Changed files：`scripts/report-duplicate-candidates.mjs`、`scripts/validate-site.mjs`、`docs/candidate-source-checklist.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：无，属于规则/校验/计划更新；后续读者可见新闻将更清楚地区分新事实、重复信号与待核对内容。
+- Verification：`node --check scripts/report-duplicate-candidates.mjs`、`node --check scripts/validate-site.mjs`、无重复与重复 URL 候选报告演练、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过。
+- Sync：编辑前 `git pull --ff-only origin main` 因 GitHub DNS 解析失败未完成；本地 `main` 在开始时已领先 `origin/main` 1 个提交，未覆盖或混入该待推送提交。
+- Commit：待创建【网站优化】优化候选重复核对分诊输出；创建后将尝试推送。
+

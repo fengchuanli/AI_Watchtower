@@ -1524,11 +1524,16 @@ if (
   !/near-title-review/.test(candidateSourceChecklist) ||
   !/fresh-source-fact/.test(candidateSourceChecklist) ||
   !/manual-clear/.test(candidateSourceChecklist) ||
-  !/Review actions/.test(candidateSourceChecklist) ||
+  !/Triage Queue/.test(candidateSourceChecklist) ||
   !/same page was materially updated/.test(candidateSourceChecklist) ||
   !/report-duplicate-candidates\.mjs/.test(editorialChecklist) ||
   !/Duplicate Candidate Report/.test(duplicateCandidateReportJs) ||
   !/Review actions: repeated-url usually rejects/.test(duplicateCandidateReportJs) ||
+  !/Triage Queue/.test(duplicateCandidateReportJs) ||
+  !/getTriageDecision/.test(duplicateCandidateReportJs) ||
+  !/continue-source-gate/.test(duplicateCandidateReportJs) ||
+  !/reject-repeated-source-fact/.test(duplicateCandidateReportJs) ||
+  !/hold-duplicate-review/.test(duplicateCandidateReportJs) ||
   !/Candidate sourceBackedFact/.test(duplicateCandidateReportJs) ||
   !/hold-duplicate-review until the exact source-backed fact is compared/.test(duplicateCandidateReportJs) ||
   !/getTitleSimilarity/.test(duplicateCandidateReportJs) ||
