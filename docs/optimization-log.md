@@ -11296,3 +11296,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Commit：`995e3dd`（【网站优化】明确本地领先推送暂缓边界）。
 - Next：Day 23，复核远程同步日志中 `blocked-dns`、approval-required、already-up-to-date 与 `pushed` 的表述一致性。
 
+## 2026-11-08 23:00 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策跳过已错过的 08:00 批次回填，仅复核本次执行时可见的 11 月 8 日当前窗口（17:00–23:00 JST）AI 信号。未找到能在登记来源中安全核验、且不与现有归档重复的新增事实；不以旧闻、预告、付费/登录墙正文、社区讨论或厂商营销补数。
+- Sources & boundary：编辑前已 `git pull --ff-only origin main` 并确认基线一致。优先复核登记的 OpenAI News、Anthropic News、Google AI 与 Hugging Face Blog/RSS 入口；可读索引中的最新合格发布仍为 11 月 6 日或更早。检索范围只说明这些已查入口未出现合格候选，不代表全网不存在新闻；未把预定于 11 月 10 日的 Anthropic 活动写成已发布产品事实。
+- Archive mirror：not-needed；无充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免制造无来源的当前版或归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页；读者继续看到 11 月 6 日 08 点已发布的网络安全与教育治理信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 解析与 `git diff --check` 已通过。
+- Remote sync：Before editing: pulled - `git pull --ff-only origin main` 成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 提交前 `origin/main...HEAD` 为 0/0；本次只推送此提交。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
