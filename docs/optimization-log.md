@@ -11307,3 +11307,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Remote sync：Before editing: pulled - `git pull --ff-only origin main` 成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 提交前 `origin/main...HEAD` 为 0/0；本次只推送此提交。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-09 17:00 JST｜17点新闻情报更新
+
+- Focus：按恢复政策仅复核 11 月 9 日 00:00–17:00 JST 当前窗口，未倒填此前漏跑批次；未找到能由登记来源安全核验、且不与现有归档重复的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：遵循 `data/sources.json` 与 `docs/source-policy.md`，优先核对 OpenAI、Anthropic、Google DeepMind、Hugging Face、NVIDIA、AWS 等官方/RSS 入口。可读索引中的最新合格发布停在 11 月 6 日或更早；未把 Anthropic 11 月 10 日活动预告、旧闻、付费/登录墙正文、社区讨论、传闻或厂商叙事当作当日事实。检索范围仅说明已查入口未出现合格候选，不代表全网没有新闻。
+- Archive mirror：not-needed；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免制造无来源的当前版或归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页；读者继续看到 11 月 6 日 08 点已发布的网络安全与教育治理信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量 JSON、Python `html.parser` 静态 HTML 解析及 `git diff --check` 均通过；未做浏览器视觉验收。
+- Remote sync：Before editing: pulled - `git pull --ff-only origin main` 在授权网络重试后成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 提交前无本地专有提交；本次仅推送此提交。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
