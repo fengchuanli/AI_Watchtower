@@ -1408,6 +1408,9 @@ if (
   !/Push Notes/.test(remoteSyncLogConvention) ||
   !/Stop Conditions/.test(remoteSyncLogConvention) ||
   !/Minimum Log Wording/.test(remoteSyncLogConvention) ||
+  !/Scoped Push-Held Rule/.test(remoteSyncLogConvention) ||
+  !/push-held-unrelated-ahead/.test(remoteSyncLogConvention) ||
+  !/git rev-list --left-right --count origin\/main\.\.\.HEAD/.test(remoteSyncLogConvention) ||
   !/blocked-dns/.test(remoteSyncLogConvention) ||
   !/blocked-auth/.test(remoteSyncLogConvention) ||
   !/blocked-conflict/.test(remoteSyncLogConvention) ||
@@ -1416,6 +1419,9 @@ if (
   !/git pull --ff-only origin main/.test(remoteSyncLogConvention) ||
   !/git push origin main/.test(remoteSyncLogConvention) ||
   !/remote-sync-log-convention\.md/.test(updateRunChecklist) ||
+  !/pushScopeAudit/.test(updateRunChecklist) ||
+  !/Push scope audit/.test(updateRunChecklist) ||
+  !/push-held-unrelated-ahead/.test(updateRunChecklist) ||
   !/remote-sync-log-convention\.md/.test(badDataRollbackNote) ||
   !/remote-sync-log-convention\.md/.test(readme) ||
   !/Day 10[\s\S]*remote-sync-log-convention\.md/.test(optimizationDecisionIndex)

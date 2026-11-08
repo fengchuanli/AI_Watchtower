@@ -102,6 +102,17 @@ Continue locally, with an explicit log note, when:
 - The task is documentation, content framing, validation, or data cleanup that can be verified locally.
 - The run can create a normal forward commit without rewriting history.
 
+## Scoped Push-Held Rule
+
+Before an optimization run commits, compare its starting point with `origin/main` using `git rev-list --left-right --count origin/main...HEAD` and inspect any local-only commits with `git log --oneline origin/main..HEAD`. This is a publication-scope check, not a quality check: a clean working tree does not prove that every ahead commit belongs to this run.
+
+- **No local-only commits at start:** after a successful pull, the run may commit its validated files and attempt `git push origin main`.
+- **Only commits clearly owned by this same run:** record their short hashes and scope in the log; after validation, the run may push the contiguous set.
+- **Any earlier or unrelated commit is ahead:** commit this run's own scoped files if safe, but set `Push: not-attempted-with-reason - push-held-unrelated-ahead`. Do not push `main`, because that would also publish work outside the run's authority.
+- **Remote moved or pull diverged:** use the existing `blocked-conflict` or `blocked-non-fast-forward` value; do not force push or rewrite history.
+
+For `push-held-unrelated-ahead`, the log must name: (1) the ahead count, (2) the short hashes or a concise description of the unrelated range, (3) the current run's local commit hash when one exists, and (4) the next safe action: pull/reconcile or obtain explicit approval to publish the whole contiguous range. A later run may push only after it repeats the scope audit; it must not assume that an earlier held commit became authorized merely because the network recovered.
+
 ## Minimum Log Wording
 
 For a normal local-only run with DNS failure, use this shape:
@@ -118,4 +129,12 @@ For a clean synced run, use this shape:
 - Remote sync:
   - Before editing: pulled - local branch fast-forwarded from `origin/main`.
   - After commit: pushed - `origin main` accepted commit `<short-hash>`.
+```
+
+For a run that must not publish unrelated earlier work, use this shape:
+
+```text
+- Remote sync:
+  - Before editing: pulled - local branch matched `origin/main`; scope audit found 2 pre-existing local commits ahead (`abc1234`, `def5678`) outside this run.
+  - After commit: not-attempted-with-reason - push-held-unrelated-ahead; local commit `<short-hash>` remains unpushed because `git push origin main` would also publish the two unrelated commits. Next safe action: reconcile the range or obtain explicit approval to publish it together.
 ```

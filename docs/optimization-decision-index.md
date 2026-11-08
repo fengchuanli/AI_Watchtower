@@ -6,9 +6,9 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
-- Current phase: Phase 3, Detail-Page Article Consistency
-- Last indexed run: 2026-11-05 20:00 JST (scheduled run)
-- Network status: Latest 20:00 run first hit sandbox GitHub DNS failure, then pulled successfully after network authorization. Local `main` matched `origin/main` before editing.
+- Current phase: Phase 4, Publishing Path And Remote Sync
+- Last indexed run: 2026-11-08 20:00 JST (scheduled run)
+- Network status: This run pulled successfully and began with local `main` matching `origin/main`. Push scope must be audited before every later publish; a recovered network does not authorize unrelated local-ahead commits.
 
 ## Current Cycle Day 4 Completion
 
@@ -140,7 +140,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 19 complete: ordinary 08:00 / 17:00 runs now write the six-part plain-language judgment inline in the source checklist instead of opening a separate guide for every candidate; priority/mix review is conditional on excess candidates, unclear order, or concentration risk. Source, duplicate, copyright, editorial, homepage/archive, derived-data, validation, commit, and push gates remain required.
 - Current-cycle Day 20 complete: `docs/current-to-history-publication-checklist.md` now provides a four-line 新闻更新日志可复制状态块. It records the current/history mirror, all three derived files (`data/news-index.json`, `data/news-today.json`, `data/trends.json`), and the data/site/pages validators together; handoff and run-checklist instructions direct editors to copy it rather than omit a file under time pressure.
 - Current-cycle Day 21 complete: `scripts/report-duplicate-candidates.mjs` now gives every candidate a copyable `Triage Queue` with `duplicateStatus`, recommended `draftingDecision`, a standardized `decisionReason`, and `nextAction`; a no-match result is explicitly `continue-source-gate`, never an automatic publish. The source checklist keeps source, proof-boundary, copyright, and batch gates intact.
-- Next useful task: Day 22，明确优化运行中本地领先、推送暂缓与无关新闻提交的边界，避免状态不清导致误推。
+- Current-cycle Day 22 complete: `docs/remote-sync-log-convention.md` now requires a scope audit with `git rev-list --left-right --count origin/main...HEAD` and the local-only log before any push. Unrelated pre-existing commits require `not-attempted-with-reason - push-held-unrelated-ahead`, with hashes/count and a reconcile-or-approval next action; `docs/update-run-checklist.md` makes the audit a status row and `scripts/validate-site.mjs` keeps the rule discoverable.
+- Next useful task: Day 23，复核远程同步日志中 `blocked-dns`、approval-required、already-up-to-date 与 `pushed` 的表述是否一致，并修正最小一处歧义。
 
 ## Update Rules
 

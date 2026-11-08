@@ -11286,3 +11286,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步，工作基线为最新 `origin/main`。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-08 10:58 JST（20:00 scheduled content optimization）
+
+- Focus：完成当前周期 Day 22，明确优化和新闻运行中的本地领先与推送暂缓边界。远程同步约定现在要求在提交前用 `git rev-list --left-right --count origin/main...HEAD` 及本地专有提交列表做发布范围审计；工作树干净不再被误认为可以安全推送。
+- Changed files：`docs/remote-sync-log-convention.md`、`docs/update-run-checklist.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Verification：`git diff --check`、`node --check scripts/validate-site.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 均通过；本次开始前 `origin/main...HEAD` 为 0/0，确认无预先存在的本地领先提交。
+- Remote sync：Before editing: pulled - `git pull --ff-only origin main` 成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 本次提交前无其他 local-only commit；提交后将仅推送本次连续范围。
+- Commit：待创建 `【网站优化】明确本地领先推送暂缓边界`；创建后记录最终哈希并尝试推送。
+- Next：Day 23，复核远程同步日志中 `blocked-dns`、approval-required、already-up-to-date 与 `pushed` 的表述一致性。
+

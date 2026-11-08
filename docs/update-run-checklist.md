@@ -29,6 +29,7 @@ Record these fields at the top of the editor note for the run:
 - `runTimeJst`: Planned update time, such as `2026-07-04 17:00 JST`.
 - `runType`: `morning-news` or `evening-news`.
 - `remoteSyncBefore`: `pulled`, `blocked-dns`, `blocked-auth`, `blocked-conflict`, or `not-attempted-with-reason`; follow `docs/remote-sync-log-convention.md`.
+- `pushScopeAudit`: before committing, record the `origin/main...HEAD` ahead count and whether every ahead commit belongs to this run. Use `clear`, `same-run-only`, or `push-held-unrelated-ahead`; a clean worktree alone is not `clear`.
 - `sourceWindow`: The previous edition time and the current cutoff used to decide freshness.
 - `targetReaderQuestion`: One short Chinese question the batch should help readers answer today.
 - `shortBatchReason`: Required when fewer than 10 safe current-news items are published.
@@ -59,7 +60,8 @@ Use these status values for each step: `done`, `partial`, `blocked`, or `not-nee
 | Data validation | Record `node scripts/validate-data.mjs` result and item/source counts. |
 | Site validation | Record `node scripts/validate-site.mjs`, `node scripts/validate-pages.mjs`, and any HTML/JSON parsing used. |
 | Commit | Record the local commit message and whether the log can include the final hash without amending itself. News runs must use a `【新闻更新】` title prefix and the log must include `网站可见变化`, naming homepage TOP3, more news feed, all-news, archive, or detail pages where readers can see the update. If commit is blocked, use `blocked-validation`, `blocked-dirty-unrelated`, `blocked-git-error`, or `not-needed` from `docs/failure-status-wording-guide.md`. |
-| Push | Record `pushed`, `blocked-dns`, `blocked-auth`, `blocked-non-fast-forward`, or `not-attempted-with-reason` using `docs/remote-sync-log-convention.md`; if publication is unsafe, add the publication blocker value from `docs/failure-status-wording-guide.md`. |
+| Push scope audit | Before the run's commit, run `git rev-list --left-right --count origin/main...HEAD` and inspect `git log --oneline origin/main..HEAD` when ahead is nonzero. `clear` or documented `same-run-only` may push after validation. If any pre-existing commit is unrelated, record `push-held-unrelated-ahead`, the ahead hashes/count, and the next safe action; do not use `git push origin main` because it would publish the whole contiguous range. |
+| Push | Record `pushed`, `blocked-dns`, `blocked-auth`, `blocked-non-fast-forward`, or `not-attempted-with-reason` using `docs/remote-sync-log-convention.md`; for a scope hold use `not-attempted-with-reason - push-held-unrelated-ahead`, not a vague pending status. If publication is unsafe, add the publication blocker value from `docs/failure-status-wording-guide.md`. |
 
 ## Minimum Editor Note
 
@@ -68,6 +70,7 @@ When time is short, leave this compact note before drafting or committing:
 ```text
 Run: 2026-07-04 17:00 JST, evening-news
 Remote before: blocked-dns
+Push scope audit: clear - 0 local-only commits ahead of origin/main before this run.
 Source discovery: done - checked official AI labs, registered media/research surfaces, and current-history duplicate URLs.
 Candidate intake: done - 3 draft, 4 hold, 2 reject; holds mainly need original-source confirmation.
 Held-candidate review: done - 4 holds recorded with holdUntilJst, recheckTrigger, freshnessLimit, staleFallback, and nextEditorAction.
