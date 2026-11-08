@@ -11293,6 +11293,6 @@ Use this file to record every automated or manual optimization. New entries go a
 - 网站可见变化：无，属于规则/校验/计划更新。
 - Verification：`git diff --check`、`node --check scripts/validate-site.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 均通过；本次开始前 `origin/main...HEAD` 为 0/0，确认无预先存在的本地领先提交。
 - Remote sync：Before editing: pulled - `git pull --ff-only origin main` 成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 本次提交前无其他 local-only commit；提交后将仅推送本次连续范围。
-- Commit：待创建 `【网站优化】明确本地领先推送暂缓边界`；创建后记录最终哈希并尝试推送。
+- Commit：`995e3dd`（【网站优化】明确本地领先推送暂缓边界）。
 - Next：Day 23，复核远程同步日志中 `blocked-dns`、approval-required、already-up-to-date 与 `pushed` 的表述一致性。
 
