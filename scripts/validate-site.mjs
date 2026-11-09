@@ -1931,13 +1931,20 @@ if (
   !/function updateContinuityBrief/.test(appJs) ||
   !/function getTopicContinuityReaderUse/.test(appJs) ||
   !/function getCompanyContinuityReaderUse/.test(appJs) ||
+  !/function getContinuityArchiveLink/.test(appJs) ||
   !/continuity-reader-use/.test(appJs) ||
+  !/continuity-archive-link/.test(appJs) ||
+  !/回看公司历史背景/.test(appJs) ||
+  !/回看全部历史背景/.test(appJs) ||
   !/topicContinuity[\s\S]*companyContinuity/.test(appJs) ||
   !/\.continuity-brief-grid/.test(styles) ||
   !/\.continuity-reader-use/.test(styles) ||
+  !/\.continuity-archive-link/.test(styles) ||
   !/public continuity brief derives from `topicContinuity` and `companyContinuity` only/.test(newsDataFormat) ||
   !/Topic cards should expose a compact reader-use cue/.test(newsDataFormat) ||
   !/Company cards should also expose a compact reader-use cue/.test(newsDataFormat) ||
+  !/clearly labelled historical-background route/.test(newsDataFormat) ||
+  !/existing company tag only where available/.test(homepageEditionPreflight) ||
   !/Reader-Useful Topic Signals/.test(topicContinuityReviewNote) ||
   !/publicContinuityBrief/.test(homepageEditionPreflight)
 ) {

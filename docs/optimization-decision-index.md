@@ -6,9 +6,9 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
-- Current phase: Phase 4, Publishing Path And Remote Sync
-- Last indexed run: 2026-11-08 20:00 JST (scheduled run)
-- Network status: This run pulled successfully and began with local `main` matching `origin/main`. Push scope must be audited before every later publish; a recovered network does not authorize unrelated local-ahead commits.
+- Current phase: Phase 5, Reader-Visible Continuity And Next Cycle
+- Last indexed run: 2026-11-09 11:07 JST (scheduled run, delayed)
+- Network status: This run's `git pull --ff-only origin main` was blocked by GitHub DNS resolution. The local worktree began clean; before pushing, retry the remote and audit `origin/main...HEAD` so this scoped change is not mixed with unrelated local-only commits.
 
 ## Current Cycle Day 4 Completion
 
@@ -141,7 +141,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 20 complete: `docs/current-to-history-publication-checklist.md` now provides a four-line 新闻更新日志可复制状态块. It records the current/history mirror, all three derived files (`data/news-index.json`, `data/news-today.json`, `data/trends.json`), and the data/site/pages validators together; handoff and run-checklist instructions direct editors to copy it rather than omit a file under time pressure.
 - Current-cycle Day 21 complete: `scripts/report-duplicate-candidates.mjs` now gives every candidate a copyable `Triage Queue` with `duplicateStatus`, recommended `draftingDecision`, a standardized `decisionReason`, and `nextAction`; a no-match result is explicitly `continue-source-gate`, never an automatic publish. The source checklist keeps source, proof-boundary, copyright, and batch gates intact.
 - Current-cycle Day 22 complete: `docs/remote-sync-log-convention.md` now requires a scope audit with `git rev-list --left-right --count origin/main...HEAD` and the local-only log before any push. Unrelated pre-existing commits require `not-attempted-with-reason - push-held-unrelated-ahead`, with hashes/count and a reconcile-or-approval next action; `docs/update-run-checklist.md` makes the audit a status row and `scripts/validate-site.mjs` keeps the rule discoverable.
-- Next useful task: Day 23，复核远程同步日志中 `blocked-dns`、approval-required、already-up-to-date 与 `pushed` 的表述是否一致，并修正最小一处歧义。
+- Current-cycle Day 25 complete: 首页 `本期连续观察` 的每张主题/公司卡现在都有明确的历史背景入口；主题和未设标签的公司回到全部历史，只有既有 OpenAI、Anthropic、Google、Meta 标签才进入对应公司页。入口只说明归档背景，不新增事实或让旧条目看似当前警报。
+- Next useful task: Day 26，使用当前/历史字段为一个公司或主题原型设计月度跨版连续观察，先限定为可降级的 reader-facing shape。
 
 ## Update Rules
 

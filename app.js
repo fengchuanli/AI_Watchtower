@@ -716,6 +716,7 @@ function updateContinuityBrief(edition = {}) {
     change: note.signalDirection || note.currentSignal,
     proof: note.stillUnproven,
     readerUse: getTopicContinuityReaderUse(note),
+    archiveLink: getContinuityArchiveLink("topic", note),
   }));
   const companyCards = (edition.companyContinuity || []).slice(0, 2).map((note) => ({
     type: "公司",
@@ -724,6 +725,7 @@ function updateContinuityBrief(edition = {}) {
     change: note.whatChanged,
     proof: note.stillUnproven,
     readerUse: getCompanyContinuityReaderUse(note),
+    archiveLink: getContinuityArchiveLink("company", note),
   }));
   const cards = [...topicCards, ...companyCards].filter((card) => card.change && card.proof);
 
@@ -754,6 +756,7 @@ function updateContinuityBrief(edition = {}) {
               <p>${escapeHtml(card.change)}</p>
               ${card.readerUse ? `<p class="continuity-reader-use">怎么用：${escapeHtml(card.readerUse)}</p>` : ""}
               <em>${escapeHtml(getContinuityProofLabel(card))}：${escapeHtml(card.proof)}</em>
+              <a class="continuity-archive-link" href="${escapeHtml(card.archiveLink.href)}">${escapeHtml(card.archiveLink.label)} →</a>
             </article>
           `,
         )
@@ -761,6 +764,24 @@ function updateContinuityBrief(edition = {}) {
     </div>
     </details>
   `;
+}
+
+function getContinuityArchiveLink(type, note = {}) {
+  if (type === "company") {
+    const companyTags = {
+      OpenAI: "openai",
+      Anthropic: "anthropic",
+      Google: "google",
+      Meta: "meta",
+    };
+    const tagId = companyTags[note.company];
+
+    if (tagId) {
+      return { href: `./tags.html?tag=${encodeURIComponent(tagId)}`, label: "回看公司历史背景" };
+    }
+  }
+
+  return { href: "./all-news.html", label: "回看全部历史背景" };
 }
 
 function getContinuityProofLabel(card = {}) {

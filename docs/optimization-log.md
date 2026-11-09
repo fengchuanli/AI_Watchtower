@@ -11318,3 +11318,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Remote sync：Before editing: pulled - `git pull --ff-only origin main` 在授权网络重试后成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 提交前无本地专有提交；本次仅推送此提交。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-09 11:07 JST（20:00 scheduled content optimization，延迟执行）
+
+- Focus：完成当前周期 Day 25，给 VisionHub 风格的首页“本期连续观察”补上可回看的历史路径。主题卡与没有既有标签的公司卡统一指向全部新闻历史；仅 OpenAI、Anthropic、Google、Meta 使用已存在的公司标签页。入口明确写为历史背景，不新增新闻事实、不把归档条目写成当前警报。
+- Changed files：`app.js`、`styles.css`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“深度简报”末尾的“本期连续观察”每张卡片新增“回看公司历史背景”或“回看全部历史背景”链接；OpenAI 可直达既有公司标签页，其余卡片可从全部历史继续回看，不会把旧批次误作今日信号。
+- Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过。
+- Sync：编辑前 `git pull --ff-only origin main` 因 GitHub DNS 解析失败未完成；提交后将重试推送。
+- Commit：待创建【VisionHub网站风格优化】补连续观察历史回看入口；最终 hash 将以 `git log -1` 为准。
+
