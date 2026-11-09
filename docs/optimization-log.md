@@ -11324,6 +11324,6 @@ Use this file to record every automated or manual optimization. New entries go a
 - Changed files：`app.js`、`styles.css`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
 - 网站可见变化：首页“深度简报”末尾的“本期连续观察”每张卡片新增“回看公司历史背景”或“回看全部历史背景”链接；OpenAI 可直达既有公司标签页，其余卡片可从全部历史继续回看，不会把旧批次误作今日信号。
 - Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过。
-- Sync：编辑前 `git pull --ff-only origin main` 因 GitHub DNS 解析失败未完成；提交后将重试推送。
-- Commit：待创建【VisionHub网站风格优化】补连续观察历史回看入口；最终 hash 将以 `git log -1` 为准。
+- Sync：编辑前 `git pull --ff-only origin main` 因 GitHub DNS 解析失败未完成；提交后 `git push origin main` 同样因 GitHub DNS 解析失败被阻断，本地提交保留待网络恢复后推送。
+- Commit：`8016f40`（【VisionHub网站风格优化】补连续观察历史回看入口）。
 
