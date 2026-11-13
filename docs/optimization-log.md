@@ -11355,6 +11355,6 @@ Use this file to record every automated or manual optimization. New entries go a
 - Changed files：`docs/optimization-log.md`。
 - 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页；读者继续看到现有已发布版。
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 解析与 `git diff --check` 通过。
-- Remote sync：Before editing: pulled - 授权网络重试后成功同步。Push scope audit: blocked - `origin/main...HEAD` 显示 0/3，存在 3 个非本次本地提交；本次提交不会擅自把它们一并推送。
+- Remote sync：Before editing: 授权网络重试后成功同步。提交前已确认工作树干净、`origin/main...HEAD` 为 0/0；本次仅推送这条独立新闻运行记录。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
