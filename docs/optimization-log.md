@@ -11334,7 +11334,7 @@ Use this file to record every automated or manual optimization. New entries go a
 - 网站可见变化：首页“深度简报”末尾的“本期连续观察”卡片新增可展开的“跨版脉络（归档背景）”，读者可先看本期信号，再按需回看卡片已说明的此前背景，避免将归档上下文误读成当前警报或月度结论。
 - Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过。
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线已与 `origin/main` 对齐。
-- Commit：待创建；创建后补记功能提交哈希，并在网络可用时推送。
+- Commit：`729fdf2`（【VisionHub网站风格优化】补连续观察跨版脉络）；下方日志状态补记提交与推送结果。
 
 ## 2026-11-13 17:00 JST｜17点新闻情报更新
 
