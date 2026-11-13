@@ -11333,8 +11333,8 @@ Use this file to record every automated or manual optimization. New entries go a
 - Changed files：`app.js`、`styles.css`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
 - 网站可见变化：首页“深度简报”末尾的“本期连续观察”卡片新增可展开的“跨版脉络（归档背景）”，读者可先看本期信号，再按需回看卡片已说明的此前背景，避免将归档上下文误读成当前警报或月度结论。
 - Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过。
-- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线已与 `origin/main` 对齐。
-- Commit：`729fdf2`（【VisionHub网站风格优化】补连续观察跨版脉络）；下方日志状态补记提交与推送结果。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线已与 `origin/main` 对齐。首次普通 push 同样受 DNS 阻断；授权网络重试后已将连续提交推送至 `origin/main`（至 `8d9ca2e`）。
+- Commit：`729fdf2`（【VisionHub网站风格优化】补连续观察跨版脉络）；日志补记提交 `8d9ca2e`（【网站优化】补记跨版脉络提交状态）。
 
 ## 2026-11-13 17:00 JST｜17点新闻情报更新
 
