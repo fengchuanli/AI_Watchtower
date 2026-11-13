@@ -12,6 +12,8 @@ TOP3 视觉提示发布前应按 [TOP3 Visual Cue Editorial Review](homepage-edi
 
 All item fields must follow `docs/copyright-safety.md`. The data model should help readers understand the news, but it must not turn source articles into full Chinese replacements. Use source fields for minimum necessary facts, and use editorial fields for AI Watchtower's own interpretation, trend reading, reader use, and verification boundary.
 
+Homepage continuity cards may offer an optional collapsed `跨版脉络（归档背景）` line. It is a cross-edition reading aid, not a monthly trend claim: topic cards may render only `topicContinuity[].previousPattern`, and company cards may render only `companyContinuity[].lastMention`. Keep it distinct from the current change and proof boundary, label it as archive background, and do not derive dates, appearance counts, market momentum, or new source facts from the archive.
+
 Before a semi-automated gathering run drafts item fields, use `docs/candidate-source-checklist.md` to confirm the candidate URL, source identity, source role, duplicate status, freshness posture, copyright/paywall safety, and source-owner concentration risk. Only candidates that pass that gate should be turned into the structured fields below.
 
 ## Feed Metadata

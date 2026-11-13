@@ -713,6 +713,7 @@ function updateContinuityBrief(edition = {}) {
     type: "主题",
     label: note.label,
     status: getContinuityStatusLabel(note.status),
+    previous: note.previousPattern,
     change: note.signalDirection || note.currentSignal,
     proof: note.stillUnproven,
     readerUse: getTopicContinuityReaderUse(note),
@@ -722,6 +723,7 @@ function updateContinuityBrief(edition = {}) {
     type: "公司",
     label: note.company,
     status: note.label,
+    previous: note.lastMention,
     change: note.whatChanged,
     proof: note.stillUnproven,
     readerUse: getCompanyContinuityReaderUse(note),
@@ -754,6 +756,7 @@ function updateContinuityBrief(edition = {}) {
               <span>${escapeHtml(card.type)} · ${escapeHtml(card.status)}</span>
               <h4>${escapeHtml(card.label)}</h4>
               <p>${escapeHtml(card.change)}</p>
+              ${card.previous ? `<details class="continuity-history-context"><summary>跨版脉络（归档背景）</summary><p>${escapeHtml(card.previous)}</p></details>` : ""}
               ${card.readerUse ? `<p class="continuity-reader-use">怎么用：${escapeHtml(card.readerUse)}</p>` : ""}
               <em>${escapeHtml(getContinuityProofLabel(card))}：${escapeHtml(card.proof)}</em>
               <a class="continuity-archive-link" href="${escapeHtml(card.archiveLink.href)}">${escapeHtml(card.archiveLink.label)} →</a>

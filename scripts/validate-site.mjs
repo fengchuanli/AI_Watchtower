@@ -678,6 +678,17 @@ if (
 }
 
 if (
+  !/previous: note\.previousPattern/.test(appJs) ||
+  !/previous: note\.lastMention/.test(appJs) ||
+  !/跨版脉络（归档背景）/.test(appJs) ||
+  !/continuity-history-context/.test(styles) ||
+  !/previousPattern.*lastMention/s.test(newsDataFormat) ||
+  !/跨版脉络（归档背景）/.test(homepageEditionPreflight)
+) {
+  errors.push("Homepage continuity cards must keep their optional cross-edition context limited to existing archive-background fields.");
+}
+
+if (
   !/<meta name="description" content="AI Watchtower 全部 AI 新闻列表，按时间顺序整理进入本站的当前与归档线索，旧批次只作背景回看。"/.test(allNewsHtml) ||
   !/<meta name="application-name" content="AI Watchtower" \/>/.test(allNewsHtml) ||
   !/<meta property="og:title" content="全部 AI 新闻 \| AI Watchtower" \/>/.test(allNewsHtml) ||

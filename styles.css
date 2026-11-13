@@ -1251,6 +1251,27 @@ h3 {
   font-style: normal;
 }
 
+.continuity-history-context {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border);
+}
+
+.continuity-history-context summary {
+  cursor: pointer;
+  color: var(--fg-secondary);
+  font-size: var(--text-sm);
+  font-weight: 750;
+}
+
+.continuity-history-context p {
+  margin-top: var(--space-2);
+}
+
+.continuity-history-context summary:focus-visible {
+  outline: 2px solid var(--state-info);
+  outline-offset: 3px;
+}
+
 .continuity-archive-link {
   align-self: start;
   margin-top: 2px;

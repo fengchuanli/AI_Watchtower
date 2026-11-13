@@ -11327,6 +11327,15 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前 `git pull --ff-only origin main` 因 GitHub DNS 解析失败未完成；提交后 `git push origin main` 同样因 GitHub DNS 解析失败被阻断，本地提交保留待网络恢复后推送。
 - Commit：`8016f40`（【VisionHub网站风格优化】补连续观察历史回看入口）。
 
+## 2026-11-13 19:09 JST（20:00 scheduled content optimization，延迟执行）
+
+- Focus：完成当前周期 Day 26，为 VisionHub 风格首页的“本期连续观察”加入可降级的跨版阅读层。每张卡片现可展开“跨版脉络（归档背景）”：主题卡只复用已发布的 `previousPattern`，公司卡只复用已发布的 `lastMention`，与本期变化、读者用途和核验边界分开呈现；不生成月份计数、市场动量或新来源事实。
+- Changed files：`app.js`、`styles.css`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“深度简报”末尾的“本期连续观察”卡片新增可展开的“跨版脉络（归档背景）”，读者可先看本期信号，再按需回看卡片已说明的此前背景，避免将归档上下文误读成当前警报或月度结论。
+- Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线已与 `origin/main` 对齐。
+- Commit：待创建；创建后补记功能提交哈希，并在网络可用时推送。
+
 ## 2026-11-13 17:00 JST｜17点新闻情报更新
 
 - Focus：按恢复政策仅复核 11 月 13 日 00:00–17:00 JST 当前窗口，不倒填 11 月 10–12 日漏跑批次；未找到可由登记来源在该窗口内安全核验、且不与既有归档重复的新增 AI 事实，因此不发布新条目。
@@ -11337,4 +11346,15 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 解析与 `git diff --check` 均通过。
 - Remote sync：Before editing: pulled - `git pull --ff-only origin main` 在授权网络重试后成功，远端基线已同步。Push scope audit: guarded - 提交后发现 `origin/main..HEAD` 含本次新闻提交及 2 个早前本地提交，且工作区出现本次未触碰的未提交修改；为避免把混合范围发布到远端，本次不推送，待原改动归属确认后再处理。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
+## 2026-11-13 19:09 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策跳过 11 月 9—12 日的漏跑批次，仅核对本次 11 月 13 日 00:00—08:00 JST 窗口；没有发布可安全核验、非重复的当前 AI 事实，不以漏跑日材料回填。
+- Sources & boundary：编辑前授权网络已 `git pull --ff-only origin main` 并确认远端基线；复核登记的 OpenAI Developers、Google AI、Hugging Face Blog 与 Google Workspace RSS。可读的最新条目主要为 11 月 12 日或更早，按恢复政策不进入本批；未使用付费墙、登录墙正文、社区讨论、传闻、预告或常规营销材料。检索范围仅说明已查来源的结果，不代表全网没有新闻。
+- Archive mirror：not-needed；`data/news.json`、`data/news-history.json` 和派生数据保持不变，避免把非当前窗口内容写成当前版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页；读者继续看到现有已发布版。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 解析与 `git diff --check` 通过。
+- Remote sync：Before editing: pulled - 授权网络重试后成功同步。Push scope audit: blocked - `origin/main...HEAD` 显示 0/3，存在 3 个非本次本地提交；本次提交不会擅自把它们一并推送。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 

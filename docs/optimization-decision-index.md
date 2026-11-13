@@ -142,7 +142,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 21 complete: `scripts/report-duplicate-candidates.mjs` now gives every candidate a copyable `Triage Queue` with `duplicateStatus`, recommended `draftingDecision`, a standardized `decisionReason`, and `nextAction`; a no-match result is explicitly `continue-source-gate`, never an automatic publish. The source checklist keeps source, proof-boundary, copyright, and batch gates intact.
 - Current-cycle Day 22 complete: `docs/remote-sync-log-convention.md` now requires a scope audit with `git rev-list --left-right --count origin/main...HEAD` and the local-only log before any push. Unrelated pre-existing commits require `not-attempted-with-reason - push-held-unrelated-ahead`, with hashes/count and a reconcile-or-approval next action; `docs/update-run-checklist.md` makes the audit a status row and `scripts/validate-site.mjs` keeps the rule discoverable.
 - Current-cycle Day 25 complete: 首页 `本期连续观察` 的每张主题/公司卡现在都有明确的历史背景入口；主题和未设标签的公司回到全部历史，只有既有 OpenAI、Anthropic、Google、Meta 标签才进入对应公司页。入口只说明归档背景，不新增事实或让旧条目看似当前警报。
-- Next useful task: Day 26，使用当前/历史字段为一个公司或主题原型设计月度跨版连续观察，先限定为可降级的 reader-facing shape。
+- Current-cycle Day 26 complete: 首页“本期连续观察”卡片现在可按需展开“跨版脉络（归档背景）”，主题仅复用 `previousPattern`，公司仅复用 `lastMention`；它把此前归档上下文和本期变化分开，不生成月份计数、市场趋势或任何新来源事实。`app.js`、`styles.css`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md` 与 `scripts/validate-site.mjs` 守住这一可降级的跨版阅读层。
+- Next useful task: Day 27，为已解决/已退休的旧核验补一个公开呈现规则，确保历史不确定性不会看似仍在发生。
 
 ## Update Rules
 
