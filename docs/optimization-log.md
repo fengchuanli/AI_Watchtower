@@ -11327,3 +11327,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前 `git pull --ff-only origin main` 因 GitHub DNS 解析失败未完成；提交后 `git push origin main` 同样因 GitHub DNS 解析失败被阻断，本地提交保留待网络恢复后推送。
 - Commit：`8016f40`（【VisionHub网站风格优化】补连续观察历史回看入口）。
 
+## 2026-11-13 17:00 JST｜17点新闻情报更新
+
+- Focus：按恢复政策仅复核 11 月 13 日 00:00–17:00 JST 当前窗口，不倒填 11 月 10–12 日漏跑批次；未找到可由登记来源在该窗口内安全核验、且不与既有归档重复的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：遵循 `data/sources.json` 与 `docs/source-policy.md`，授权网络复核 OpenAI Developers RSS、Google AI RSS、Hugging Face Blog RSS 与 arXiv cs.AI/cs.CL RSS。OpenAI 与 Google 可见条目均早于当前窗口；Hugging Face 最新条目为 11 月 12 日，按恢复政策不作为漏跑日回填；arXiv 当日 RSS 未给出条目。未使用付费墙、登录墙正文、社区讨论、传闻、预告、旧闻或厂商营销材料补数；检索范围仅说明已查入口未出现合格候选，不代表全网没有新闻。
+- Archive mirror：not-needed；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免制造无来源的当前版或归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到 11 月 6 日 08 点已发布的网络安全与教育治理信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 解析与 `git diff --check` 均通过。
+- Remote sync：Before editing: pulled - `git pull --ff-only origin main` 在授权网络重试后成功，远端基线已同步。Push scope audit: guarded - 提交后发现 `origin/main..HEAD` 含本次新闻提交及 2 个早前本地提交，且工作区出现本次未触碰的未提交修改；为避免把混合范围发布到远端，本次不推送，待原改动归属确认后再处理。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
