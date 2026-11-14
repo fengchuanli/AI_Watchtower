@@ -11379,3 +11379,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Remote sync：Before editing: pulled - 授权网络重试后已同步，工作基线与 `origin/main` 一致；提交后仅推送本次独立提交。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-14 23:04 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策跳过已错过的08:00时段回填，仅复核本次执行时可见的11月14日17:00–23:04 JST当前窗口；未发布新条目，避免把漏跑时段、常规文档更新或未经外部验证的研究预印本伪装成当前产业事实。
+- Sources & boundary：编辑前已在授权网络下 `git pull --ff-only origin main`，基线与远端一致。依据 `data/sources.json` 与 `docs/source-policy.md` 核对 OpenAI Developers、Google AI、Hugging Face 的登记 RSS，以及 arXiv cs.AI/cs.CL/cs.CV RSS。OpenAI 开发者条目均早于窗口；其余官方源未出现可安全提升为新闻的当前非重复事实。arXiv 在窗口内有多篇预印本，但均仅支持作者报告的方法与结果，缺少可优先发布的独立复现、同行评议或部署证据，保留为研究观察而不写成已验证突破。未使用付费/登录墙正文、社区讨论、传闻、预告或厂商营销材料补数；检索范围仅说明已查来源的结果，不代表全网没有新闻。
+- Archive mirror：not-needed；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免制造无来源的当前版或归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到现有已发布版。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、全量 JSON、静态 HTML 解析与 `git diff --check` 均通过。
+- Remote sync：Before editing: pulled - 普通网络解析失败后，授权联网重试成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 提交前 `origin/main...HEAD` 为 0/0；本次只推送这条独立新闻运行记录。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
