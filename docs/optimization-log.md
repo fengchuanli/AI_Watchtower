@@ -11286,6 +11286,16 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步，工作基线为最新 `origin/main`。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-14 11:04 JST（20:00 scheduled content optimization，延迟执行）
+
+- Focus：完成当前周期 Day 27，强化 VisionHub 风格首页“本期连续观察”对已解决/已退休旧核验的首屏状态。公司卡不再只沿用自由文本标签；当既有当前/归档字段已表明旧问题被回答、替换或退休时，卡片首行直接显示“已回答旧问题”，再保留“已回答后仍需看”的较小证据缺口。
+- Changed files：`app.js`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“深度简报”末尾的“本期连续观察”中，未来命中已解决/已退休表述的公司卡会在首行状态直接显示“已回答旧问题”；读者不必展开跨版脉络或读到证据边界后才知道旧风险已不再是当前问题。
+- Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线与 `origin/main` 一致。
+- Commit：`b557ce3`（【VisionHub网站风格优化】明确已回答连续观察状态）。本日志收尾提交将在推送范围审计后创建。
+- Next：Day 28，跑一遍首页 -> TOP3 -> 详情 -> 标签/归档的读者路径 QA，并修复最小的混淆提示。
+
 ## 2026-11-08 10:58 JST（20:00 scheduled content optimization）
 
 - Focus：完成当前周期 Day 22，明确优化和新闻运行中的本地领先与推送暂缓边界。远程同步约定现在要求在提交前用 `git rev-list --left-right --count origin/main...HEAD` 及本地专有提交列表做发布范围审计；工作树干净不再被误认为可以安全推送。
