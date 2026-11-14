@@ -722,7 +722,7 @@ function updateContinuityBrief(edition = {}) {
   const companyCards = (edition.companyContinuity || []).slice(0, 2).map((note) => ({
     type: "公司",
     label: note.company,
-    status: note.label,
+    status: getCompanyContinuityStatus(note),
     previous: note.lastMention,
     change: note.whatChanged,
     proof: note.stillUnproven,
@@ -788,13 +788,20 @@ function getContinuityArchiveLink(type, note = {}) {
 }
 
 function getContinuityProofLabel(card = {}) {
-  const text = `${card.status || ""} ${card.change || ""} ${card.proof || ""}`;
-
-  if (/已解决|已回答|已退休|已退役|resolved|retired|retire-/.test(text)) {
+  if (isRetiredContinuity(card)) {
     return "已回答后仍需看";
   }
 
   return "仍需核验";
+}
+
+function isRetiredContinuity(note = {}) {
+  const text = `${note.status || ""} ${note.label || ""} ${note.change || note.whatChanged || ""} ${note.proof || note.stillUnproven || ""}`;
+  return /已解决|已回答|已退休|已退役|resolved|retired|retire-/.test(text);
+}
+
+function getCompanyContinuityStatus(note = {}) {
+  return isRetiredContinuity(note) ? "已回答旧问题" : note.label || "连续观察";
 }
 
 function getContinuityStatusLabel(status) {

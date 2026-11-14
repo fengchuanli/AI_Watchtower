@@ -2102,9 +2102,11 @@ if (
   !/Public Display Rule/.test(nextCheckRetirementNote) ||
   !/已回答后仍需看/.test(nextCheckRetirementNote) ||
   !/function getContinuityProofLabel/.test(appJs) ||
+  !/function getCompanyContinuityStatus/.test(appJs) ||
   !/已回答旧问题/.test(appJs) ||
   !/resolved\/retired-check archive entry/.test(newsDataFormat) ||
-  !/resolved\/retired 旧问题先标明已回答/.test(homepageEditionPreflight) ||
+  !/compact first-line status must say `已回答旧问题`/.test(newsDataFormat) ||
+  !/resolved\/retired 旧问题在卡片首行标明“已回答旧问题”/.test(homepageEditionPreflight) ||
   !/resolved-check label/.test(currentToHistoryPublicationChecklist) ||
   !/retire-resolved[\s\S]*retire-replaced[\s\S]*retire-downgraded[\s\S]*keep-open/.test(
     nextCheckRetirementNote,
