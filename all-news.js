@@ -12,6 +12,7 @@ const allCategoryOption = {
 let loadedHistory = null;
 let selectedCategory = "all";
 let selectedSort = "newest";
+const selectedEditionKey = new URLSearchParams(window.location.search).get("edition")?.trim() || "";
 
 function sortHistoryEditions(editions, sortOrder = "newest") {
   return [...editions].sort((a, b) => {
@@ -106,7 +107,9 @@ function getEditionBatchStatus(edition, latestEdition) {
 function getFilteredHistoryItems(history) {
   const latestEdition = getLatestEdition(history);
 
-  return history.editions.flatMap((edition) => {
+  return history.editions
+    .filter((edition) => !selectedEditionKey || getEditionKey(edition) === selectedEditionKey)
+    .flatMap((edition) => {
     const batchStatus = getEditionBatchStatus(edition, latestEdition);
     const items = selectedCategory === "all"
       ? edition.items
@@ -119,7 +122,7 @@ function getFilteredHistoryItems(history) {
       archiveLabel: edition.archiveLabel,
       batchStatus,
     }));
-  });
+    });
 }
 
 function sortHistoryFlatItems(items, sortOrder = "newest") {
@@ -263,19 +266,37 @@ function renderHistory(history) {
   const filteredItems = getFilteredHistoryItems(history);
   const sortedItems = sortHistoryFlatItems(filteredItems, selectedSort);
   const latestEdition = getLatestEdition(history);
+  const selectedEdition = selectedEditionKey
+    ? history.editions.find((edition) => getEditionKey(edition) === selectedEditionKey)
+    : null;
   const archivedEditionCount = Math.max(history.editions.length - 1, 0);
   const categoryLabel =
     getHistoryCategories(history).find((category) => category.id === selectedCategory)?.label || "全部";
   const sortLabel = selectedSort === "oldest" ? "最早新闻优先" : "最新新闻优先";
 
-  historyMeta.textContent = `目前共 ${history.editions.length} 个抓取批次 · ${history.totalItems || filteredItems.length} 条 AI 新闻 · 当前首页批次：${latestEdition.date} · ${latestEdition.archiveLabel}`;
-  historyResultNote.textContent = `当前显示：${categoryLabel} · ${sortedItems.length} 条 AI 新闻 · ${sortLabel}。本页只显示题目，点击进入对应期次的站内解读；当前首页批次会用小标签标出，${archivedEditionCount} 个历史批次只用于回看背景。`;
+  const editionScope = selectedEdition
+    ? `已定位期次：${selectedEdition.date} · ${selectedEdition.archiveLabel}`
+    : selectedEditionKey
+      ? "未找到指定期次"
+    : `目前共 ${history.editions.length} 个抓取批次 · ${history.totalItems || filteredItems.length} 条 AI 新闻`;
+  const scopeAction = selectedEdition || selectedEditionKey
+    ? ' <a class="text-link" href="./all-news.html">查看全部期次</a>'
+    : "";
+  const resultDescription = selectedEdition
+    ? "已只显示此期内容。"
+    : selectedEditionKey
+      ? "这个期次链接可能已失效或尚未收录。"
+      : `当前首页批次会用小标签标出，${archivedEditionCount} 个历史批次只用于回看背景。`;
+
+  historyMeta.textContent = `${editionScope} · 当前首页批次：${latestEdition.date} · ${latestEdition.archiveLabel}`;
+  historyResultNote.innerHTML = `当前显示：${escapeHtml(categoryLabel)} · ${sortedItems.length} 条 AI 新闻 · ${escapeHtml(sortLabel)}。本页只显示题目，点击进入对应期次的站内解读；${escapeHtml(resultDescription)}${scopeAction}`;
   renderHistoryControls(history);
 
   if (!sortedItems.length) {
     historyList.innerHTML = `
       <div class="feed-state" role="status">
-        <p>这个分类暂时没有历史 AI 新闻。</p>
+        <p>${selectedEdition || selectedEditionKey ? "这个期次没有符合当前分类的 AI 新闻。" : "这个分类暂时没有历史 AI 新闻。"}</p>
+        ${selectedEdition || selectedEditionKey ? '<p><a class="text-link" href="./all-news.html">查看全部期次</a></p>' : ""}
       </div>
     `;
     return;

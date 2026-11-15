@@ -120,7 +120,7 @@ function renderEditionCard(edition, currentEdition) {
   const timeLabel = getEditionTimeLabel(edition.archiveLabel);
   const status = getStatusLabel(edition, currentEdition);
   const itemCount = Number.isInteger(edition.itemCount) ? edition.itemCount : edition.items?.length || 0;
-  const detailUrl = `./all-news.html`;
+  const detailUrl = `./all-news.html?edition=${encodeURIComponent(getEditionKey(edition))}`;
 
   return `
     <article class="archive-edition-card">
@@ -131,7 +131,7 @@ function renderEditionCard(edition, currentEdition) {
         <em class="archive-status ${escapeHtml(status.tone)}">${escapeHtml(status.label)}</em>
         <em>${escapeHtml(getArchiveStatusLabel(edition.archiveStatus))} · ${escapeHtml(itemCount)} 条</em>
       </div>
-      <a class="text-link" href="${detailUrl}" aria-label="${escapeHtml(`查看 ${edition.archiveLabel} 的全部 AI 新闻题目`)}">查看题目列表</a>
+      <a class="text-link" href="${detailUrl}" aria-label="${escapeHtml(`查看 ${edition.archiveLabel} 的全部 AI 新闻题目`)}">只看本期题目</a>
     </article>
   `;
 }
