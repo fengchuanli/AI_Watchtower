@@ -7,8 +7,8 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 5, Reader-Visible Continuity And Next Cycle
-- Last indexed run: 2026-11-09 11:07 JST (scheduled run, delayed)
-- Network status: This run's `git pull --ff-only origin main` was blocked by GitHub DNS resolution. The local worktree began clean; before pushing, retry the remote and audit `origin/main...HEAD` so this scoped change is not mixed with unrelated local-only commits.
+- Last indexed run: 2026-11-15 11:06 JST (scheduled run, delayed)
+- Network status: `git pull --ff-only origin main` succeeded after an authorized network retry; the worktree started aligned with `origin/main`. Push only the scoped commits after the final log/validation update.
 
 ## Current Cycle Day 4 Completion
 
@@ -144,7 +144,8 @@ These compact anchors keep validation and future automation aware of the most im
 - Current-cycle Day 25 complete: 首页 `本期连续观察` 的每张主题/公司卡现在都有明确的历史背景入口；主题和未设标签的公司回到全部历史，只有既有 OpenAI、Anthropic、Google、Meta 标签才进入对应公司页。入口只说明归档背景，不新增事实或让旧条目看似当前警报。
 - Current-cycle Day 26 complete: 首页“本期连续观察”卡片现在可按需展开“跨版脉络（归档背景）”，主题仅复用 `previousPattern`，公司仅复用 `lastMention`；它把此前归档上下文和本期变化分开，不生成月份计数、市场趋势或任何新来源事实。`app.js`、`styles.css`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md` 与 `scripts/validate-site.mjs` 守住这一可降级的跨版阅读层。
 - Current-cycle Day 27 complete: 连续观察卡对已解决/已退休的公司旧核验，会在卡片首行直接显示“已回答旧问题”；读者在展开归档脉络或读到剩余证据缺口前，已能区分旧问题与当前仍需核验的范围。`app.js`、`docs/news-data-format.md`、`docs/homepage-edition-preflight.md` 与 `scripts/validate-site.mjs` 守住这一首页可见状态。
-- Next useful task: Day 28，跑一遍首页 -> TOP3 -> 详情 -> 标签/归档的读者路径 QA，并修复最小的混淆提示。
+- Current-cycle Day 28 complete: 读者从“期次归档”进入某张当前/历史卡片时，现会定位到该期的紧凑题目列表，不再落入未筛选的跨期列表；列表清楚说明已定位期次，并提供“查看全部期次”出口。使用 `id + archiveLabel` 的组合键避免同名期次误定位。`all-news.js`、`archive.js`、`archive.html`、`docs/local-preview-qa.md` 与 `scripts/validate-site.mjs` 守住这条归档阅读路径。
+- Next useful task: Day 29，复盘当前周期的 VisionHub 风格首页、TOP3、详情页、发布路径与连续观察改进，并列出下一周期仍需处理的阅读摩擦。
 
 ## Update Rules
 

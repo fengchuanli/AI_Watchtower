@@ -2302,6 +2302,18 @@ if (
   errors.push("All-news title rows must distinguish the latest capture batch from archived batches without large batch panels.");
 }
 
+if (
+  !/const selectedEditionKey = new URLSearchParams\(window\.location\.search\)\.get\("edition"\)/.test(allNewsJs) ||
+  !/getEditionKey\(edition\) === selectedEditionKey/.test(allNewsJs) ||
+  !/已定位期次/.test(allNewsJs) ||
+  !/查看全部期次/.test(allNewsJs) ||
+  !/all-news\.html\?edition=\$\{encodeURIComponent\(getEditionKey\(edition\)\)\}/.test(archiveJs) ||
+  !/只看本期题目/.test(archiveJs) ||
+  !/只看本期题目[\s\S]*查看全部期次/.test(localPreviewQa)
+) {
+  errors.push("Archive reader paths must open the selected edition's title list and provide a clear return to all editions.");
+}
+
 
 if (
   !/Leadership and capital shock/.test(sourcePolicy) ||

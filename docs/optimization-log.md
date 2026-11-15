@@ -11401,3 +11401,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Remote sync：Before editing: pulled - 普通网络解析失败后，授权联网重试成功，工作基线与 `origin/main` 一致。Push scope audit: clear - 提交前 `origin/main...HEAD` 为 0/0；本次只推送这条独立新闻运行记录。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-15 11:06 JST（20:00 scheduled content optimization，延迟执行）
+
+- Focus：完成当前周期 Day 28 的首页 -> TOP3 -> 详情 -> 标签/归档读者路径 QA。发现“期次归档”卡片此前总是落到未筛选的全部题目列表，读者无法确认刚选的期次；现改为直达本期期次题目，并保留跨期回看的清楚出口。
+- Changed files：`all-news.js`、`archive.js`、`archive.html`、`docs/local-preview-qa.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：读者在“期次归档”页点任一当前或历史批次的“只看本期题目”，会只看到该期题目和“已定位期次”说明；需要比较其他批次时可点“查看全部期次”回到完整列表。
+- Verification：`node --check all-news.js`、`node --check archive.js`、`node --check app.js`、期次组合键唯一性检查、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过；未做浏览器视觉验收。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，工作基线与 `origin/main` 一致。最终推送将在日志提交后按仅本次范围审计。
+- Commit：`c90afdc`（【VisionHub网站风格优化】归档直达本期期次题目）。
+

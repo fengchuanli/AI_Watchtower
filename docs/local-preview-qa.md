@@ -31,6 +31,7 @@ Follow the primary Chinese-reader path:
 3. Return to the homepage through normal navigation.
 4. Open `全部 AI 新闻`, change category and sort controls, then open one archived detail page.
 5. Open `公司标签` and confirm OpenAI, Anthropic, Google, and Meta pages show useful empty or populated states.
+6. Open `期次归档`, choose one current or historical card, and confirm `只看本期题目` only lists that edition; use `查看全部期次` to return to the cross-edition title list.
 
 The site should keep original sources secondary; readers should be able to understand each item through the in-site Chinese explanation first.
 
