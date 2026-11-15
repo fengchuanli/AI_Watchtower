@@ -11407,6 +11407,6 @@ Use this file to record every automated or manual optimization. New entries go a
 - Changed files：`all-news.js`、`archive.js`、`archive.html`、`docs/local-preview-qa.md`、`scripts/validate-site.mjs`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
 - 网站可见变化：读者在“期次归档”页点任一当前或历史批次的“只看本期题目”，会只看到该期题目和“已定位期次”说明；需要比较其他批次时可点“查看全部期次”回到完整列表。
 - Verification：`node --check all-news.js`、`node --check archive.js`、`node --check app.js`、期次组合键唯一性检查、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 均通过；未做浏览器视觉验收。
-- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，工作基线与 `origin/main` 一致。最终推送将在日志提交后按仅本次范围审计。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，工作基线与 `origin/main` 一致。提交前范围审计为 `0 2`，仅含本次两条提交；普通 push 因 DNS 失败，授权网络重试后已推送至 `origin/main`（`555f6bd`）。
 - Commit：`c90afdc`（【VisionHub网站风格优化】归档直达本期期次题目）。
 
