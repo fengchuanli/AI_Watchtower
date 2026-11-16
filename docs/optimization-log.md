@@ -11449,3 +11449,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Remote sync：Before editing: pulled - 普通网络因 DNS 失败；授权网络重试后 `git pull --ff-only origin main` 成功，工作基线与远端一致。Push scope audit: clear - 提交前已确认 `origin/main...HEAD` 为 0/0；本次仅推送此运行记录。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-17 17:00 JST｜17点新闻情报更新
+
+- Focus：仅核对 11 月 17 日 00:00–17:00 JST 当前窗口；没有找到可由登记来源安全核验、且不与现有归档重复的新增 AI 事实，因此不发布新条目，也不以 11 月 16 日材料回填。
+- Sources & boundary：编辑前授权网络下 `git pull --ff-only origin main` 成功，基线已同步。依据 `data/sources.json` 与 `docs/source-policy.md` 拉取 OpenAI Developers、Google AI、Hugging Face Blog 的登记 RSS，并核对 arXiv cs.AI/cs.CL/cs.CV 研究 RSS；同时参照已登记官方入口的既有更新。Google AI 最新可见条目为 11 月 16 日 23:00 JST 前，Hugging Face 与 arXiv 可见条目均在 11 月 16 日，OpenAI Developers 的最新 RSS 条目更早；不满足本批次当前窗口。预印本仅支持作者披露的方法与结果，且未见可优先写入的独立复现、同行评议或部署证据。未使用付费/登录墙正文、社区讨论、传闻、预告、旧闻或常规营销材料补数；检索范围只说明已查登记入口的结果，不代表全网没有新闻。
+- Candidate intake / duplicate / partial batch：无候选通过来源、时间窗口、重复和证据边界门槛；manual-clear，`hold-no-safe-batch`，不建立无来源的候选或归档版。Archive mirror：not-needed；Archive diff：skipped-one-edition（本日没有已发布的 08:00 归档版）。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到现有已发布的网络安全与教育治理信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 结构解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍未通过既有跨页导航文案断言（`Cross-page navigation copy...`）；本次仅改运行日志，未修改或掩盖该基线问题。
+- Remote sync：Before editing: pulled - 授权网络重试后成功同步。Push scope audit：待本次提交前复核；随后仅推送本次独立新闻运行记录（网络允许时）。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
