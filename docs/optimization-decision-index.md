@@ -7,12 +7,13 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-10-11 through 2026-11-09
 - Current phase: Phase 5, Reader-Visible Continuity And Next Cycle
-- Last indexed run: 2026-11-15 11:06 JST (scheduled run, delayed)
-- Network status: `git pull --ff-only origin main` and the final scoped push both succeeded after authorized network retries; `555f6bd` is on `origin/main`.
+- Last indexed run: 2026-11-16 20:00 JST
+- Network status: authorized-network `git pull --ff-only origin main` succeeded before this run; the Day 29 documentation commit is pending its scoped push.
 
-## Current Cycle Day 4 Completion
+## Current Cycle Day 29 Completion
 
-- Complete: mobile continuity with multiple cards defaults to collapsed; summary retains labels/statuses and a repetition boundary. Single cards and desktop default open. Reader choice is not reset on resize.
+- Complete: `docs/monthly-optimization-summary.md` now records the 2026-10-11 to 2026-11-09 cycle's VisionHub-style mobile first-screen, TOP3 evidence cue, detail briefing, safer daily publishing path, and reader-visible archive continuity improvements. It also names the remaining phone-density, visual-comparison, narrative-consistency, monthly-continuity, manual-fact, and remote-sync gaps.
+- Next useful task: Day 30 — write the next 30-day plan before another reader-facing improvement.
 - Commit: see latest optimization log entry.
 
 ## Recent Plan-Day Decisions

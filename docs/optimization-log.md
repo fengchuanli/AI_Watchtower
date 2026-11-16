@@ -22,7 +22,7 @@
 - 来源与安全边界：来源、版权/付费墙、重复、原始来源替换、来源集中、编辑审读、首页与归档镜像、派生数据、校验、提交和推送关口均保留。复杂候选、新编辑交接、候选超额、排序不清或来源集中时，仍按触发条件打开相应专项文档。
 - Changed files：docs/candidate-source-checklist.md、docs/candidate-to-news-handoff.md、docs/update-run-checklist.md、scripts/validate-site.mjs、docs/optimization-decision-index.md、docs/optimization-log.md。
 - 网站可见变化：无，属于规则/校验/计划更新。
-- Verification：`node --check scripts/validate-site.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 均通过。
+- Verification：`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 通过；`node scripts/validate-site.mjs` 仍被既有跨页导航文案断言阻断（`Cross-page navigation copy...`），本次未改页面或掩盖该基线问题。
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步，工作区干净后开始编辑。
 - Commit：`03026da`（【网站优化】压缩日常新闻发布路径）。
 - Next：Day 20，让 current/history 镜像、派生数据生成和校验状态更容易复制到新闻更新日志，且不漏记文件。
@@ -11427,4 +11427,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到现有已发布版。
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析、静态 HTML 解析与 `git diff --check` 已通过。`node scripts/validate-site.mjs` 未通过其既有跨页导航文案断言（`Cross-page navigation copy...`）；本次仅改运行日志，未掩盖或改动该站点基线问题。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
+## 2026-11-16 20:00 JST（scheduled content optimization）
+
+- Focus：完成当前周期 Day 29，复盘 2026-10-11 至 2026-11-09 的 VisionHub 风格中文简报改进：手机首屏、TOP3 证据提示、详情页短简报、日常发布路径和归档连续观察；明确下一周期仍需处理的手机密度、视觉比较、文章一致性、月度连续观察、人工事实判断与远程同步边界。
+- Changed files：docs/monthly-optimization-summary.md、scripts/validate-site.mjs、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：无，属于规则/校验/计划更新。
+- Verification：`node --check scripts/validate-site.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 均通过。
+- Sync：编辑前普通 pull 因 DNS 失败；授权网络重试后 `origin/main` 已同步。提交与推送结果见本条后续更新及 automation memory。
+- Commit：待本次提交生成。
+- Next：Day 30，先在 docs/optimization-plan.md 写出下一轮 30 天优化计划，再继续执行新周期的首项任务。
 
