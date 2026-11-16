@@ -11435,6 +11435,6 @@ Use this file to record every automated or manual optimization. New entries go a
 - 网站可见变化：无，属于规则/校验/计划更新。
 - Verification：`node --check scripts/validate-site.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 均通过。
 - Sync：编辑前普通 pull 因 DNS 失败；授权网络重试后 `origin/main` 已同步。提交与推送结果见本条后续更新及 automation memory。
-- Commit：待本次提交生成。
+- Commit：`8f68efe`（【网站优化】复盘本轮简报阅读体验）。本日志收尾提交见 Git 历史。
 - Next：Day 30，先在 docs/optimization-plan.md 写出下一轮 30 天优化计划，再继续执行新周期的首项任务。
 
