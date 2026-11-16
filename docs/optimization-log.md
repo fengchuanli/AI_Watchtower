@@ -11438,3 +11438,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Commit：`8f68efe`（【网站优化】复盘本轮简报阅读体验）。本日志收尾提交见 Git 历史。
 - Next：Day 30，先在 docs/optimization-plan.md 写出下一轮 30 天优化计划，再继续执行新周期的首项任务。
 
+## 2026-11-16 23:00 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策跳过错过的08:00时段回填，仅复核 11 月 16 日 17:00–23:00 JST 当前窗口；未找到能由登记来源安全核验、且不与现有归档重复的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：编辑前已在授权网络下同步 `origin/main`。依据 `data/sources.json` 与 `docs/source-policy.md` 核对 OpenAI Developers、Google AI、Hugging Face 的登记 RSS，以及 arXiv cs.AI/cs.CL/cs.CV 研究 RSS，并交叉查看 OpenAI、Anthropic、Google DeepMind 官方新闻索引。官方可见更新均早于当前窗口；arXiv 的当日预印本仅支持作者披露的方法和结果，缺少同行评议、独立复现或部署证据，未被写成已验证突破。未使用付费/登录墙正文、社区讨论、传闻、预告、旧闻或厂商营销材料补数；检索范围仅说明已查入口的结果，不代表全网没有新闻。
+- Archive mirror：not-needed；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免把不在当前窗口或证据不足的材料写成当前版和归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到现有已发布版。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、全量新闻 JSON 解析及 `git diff --check` 通过。`node scripts/validate-site.mjs` 未通过既有跨页导航文案断言（`Cross-page navigation copy...`）；本次仅改运行日志，未掩盖或改动该站点基线问题。
+- Remote sync：Before editing: pulled - 普通网络因 DNS 失败；授权网络重试后 `git pull --ff-only origin main` 成功，工作基线与远端一致。Push scope audit: clear - 提交前已确认 `origin/main...HEAD` 为 0/0；本次仅推送此运行记录。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
