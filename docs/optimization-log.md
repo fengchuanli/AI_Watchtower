@@ -11469,5 +11469,6 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仅保留既有跨页导航文案断言失败（`Cross-page navigation copy...`）；本轮未改相关跨页导航，也未掩盖该基线问题。
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试成功，基线与 `origin/main` 一致。
 - Commit：本条日志所在提交（【VisionHub网站风格优化】直达今日TOP3阅读路径）；提交前后 `origin/main...HEAD` 为 0/1，本次为唯一待推送本地提交。
+- Push：已推送 `d1a1ae0` 至 `origin/main`。
 - Next：Day 1，在 390px 审读 Hero、5 秒要点与 Today Briefing，删除最小的重复指引以进一步缩短到 TOP3 的路径。
 
