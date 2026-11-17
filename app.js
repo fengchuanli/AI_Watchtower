@@ -347,8 +347,9 @@ function updateTodayKey(briefing, edition) {
   const dateLabel = edition?.date ? `${edition.date} · ` : "";
   todayKeyText.textContent = `${dateLabel}${headline}`;
 
-  if (todayKeyLink && briefing.cta) {
-    todayKeyLink.textContent = `${briefing.cta} →`;
+  if (todayKeyLink) {
+    todayKeyLink.href = "#top3";
+    todayKeyLink.textContent = "看今日 TOP3 →";
   }
 }
 

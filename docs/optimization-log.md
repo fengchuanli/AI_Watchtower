@@ -11460,3 +11460,14 @@ Use this file to record every automated or manual optimization. New entries go a
 - Remote sync：Before editing: pulled - 授权网络重试后成功同步。Push scope audit：待本次提交前复核；随后仅推送本次独立新闻运行记录（网络允许时）。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-17 11:06 JST（20:00 scheduled content optimization，延迟执行）
+
+- Focus：上一周期已于 11 月 9 日结束，先续写 2026-11-17 至 12-16 的 30 天 VisionHub 风格简报计划；随后完成新周期 Day 0。将首页“5 秒今日要点”的唯一行动从深度简报改为直达“今日 TOP3”，让手机读者在看到本期结论后先进入同日排名、来源边界与下一步核验，而不是跳过第一层判断。
+- Changed files：`docs/optimization-plan.md`、`index.html`、`app.js`、`docs/optimization-log.md`。
+- 网站可见变化：首页 Hero 下方“5 秒今日要点”右侧链接现在显示“看今日 TOP3 →”，点击后直达“今日 TOP3”；即使新闻数据中的简报 CTA 使用泛化文案，该首屏行动仍保持明确的排名阅读路径。
+- VisionHub briefing scorecard：done；Five-second understanding: pass - 结论带保留本期标题且下一步明确；TOP3 reader use: pass - 读者仍先进入含用途、来源边界与核验路径的排名卡；Source boundary visible: pass - 未移动或弱化 TOP3 边界；Original source dependency: pass - 未改原文依赖呈现；Mobile burden: pass - 少一次深层跳转；Continuity use: pass - 未改连续观察语义；Visual aid purpose: pass - 本次仅澄清阅读路径，不添加装饰。
+- Verification：`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仅保留既有跨页导航文案断言失败（`Cross-page navigation copy...`）；本轮未改相关跨页导航，也未掩盖该基线问题。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试成功，基线与 `origin/main` 一致。
+- Commit：本条日志所在提交（【VisionHub网站风格优化】直达今日TOP3阅读路径）；提交前后 `origin/main...HEAD` 为 0/1，本次为唯一待推送本地提交。
+- Next：Day 1，在 390px 审读 Hero、5 秒要点与 Today Briefing，删除最小的重复指引以进一步缩短到 TOP3 的路径。
+
