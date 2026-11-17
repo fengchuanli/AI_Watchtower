@@ -11438,6 +11438,16 @@ Use this file to record every automated or manual optimization. New entries go a
 - Commit：`8f68efe`（【网站优化】复盘本轮简报阅读体验）。本日志收尾提交见 Git 历史。
 - Next：Day 30，先在 docs/optimization-plan.md 写出下一轮 30 天优化计划，再继续执行新周期的首项任务。
 
+## 2026-11-17 23:06 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策不回填错过时段；核对当前可见、可追溯的一手材料后，发布 4 条 11 月 16 日 OpenAI 官方信号，覆盖医疗 Agent、CSAM 内容安全、学术研究者访问与科研使用研究。
+- Sources & boundary：编辑前授权网络下 `git pull --ff-only origin main` 成功。依据 `data/sources.json` 与 `docs/source-policy.md` 核对 OpenAI 官方新闻索引与原文，并检索 Anthropic、Google 与 Hugging Face 的登记入口；本批只采用 OpenAI News 可直接核对的发布、计划与方法披露。未使用付费/登录墙正文、社区讨论、传闻、旧档、重复 URL 或常规营销补数。4/4 同一官方来源集中，医疗成效、跨平台内容安全表现与科研因果影响均保留外部核验边界。
+- Archive mirror：已将 `news-0800-2026-11-17` 镜像至 `data/news-history.json` 最新期；首页与归档版条目、排序及期次元数据一致。
+- Changed files：`data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页和 4 个详情页现可查看中文事件、影响、来源置信度、证据边界与下一步核验；首页明确显示单一官方来源集中。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、全量相关 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍只报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本轮未改或掩盖该基线问题。
+- Commit note：【新闻更新】发布08点AI新闻：4条医疗安全与科研信号。
+
 ## 2026-11-16 23:00 JST｜08点新闻情报更新（延迟执行）
 
 - Focus：按恢复政策跳过错过的08:00时段回填，仅复核 11 月 16 日 17:00–23:00 JST 当前窗口；未找到能由登记来源安全核验、且不与现有归档重复的新增 AI 事实，因此不发布新条目。
