@@ -11482,3 +11482,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Push：已推送 `d1a1ae0` 至 `origin/main`。
 - Next：Day 1，在 390px 审读 Hero、5 秒要点与 Today Briefing，删除最小的重复指引以进一步缩短到 TOP3 的路径。
 
+## 2026-11-18 08:07:19 JST（17:00 news intelligence update，延迟执行）
+
+- Focus：在当前日窗口内新增1条可核验、非重复的官方信号：OpenAI 披露通过 Daybreak 为北约核心机构提供获授权网络防御模型访问，并给出其所述最高月度 token 用量；保留11月16日四条近期医疗、内容安全与科研信号。未将接入或用量写成防御效果。
+- Sources & boundary：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后已同步。检查 OpenAI、Anthropic、Google、Hugging Face 与 NVIDIA 的官方/登记入口；只采用 OpenAI News 原文，未使用付费墙、登录墙正文、随机抓取页或社区讨论。来源集中为 OpenAI 5/5，后续须以 NCIA/北约说明、独立安全审计与维护方修复记录补证。
+- Changed files：data/news.json、data/news-history.json、data/news-index.json、data/news-today.json、data/trends.json、docs/optimization-log.md。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页和北约网络防御详情页新增中文事件、影响、来源置信度、证据边界与下一步核验；本期显示5条官方信号与单一来源集中提示。
+- Verification：`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check`、6份数据 JSON 解析、6个静态 HTML 壳解析及 `git diff --check` 通过。`node scripts/validate-site.mjs` 运行后仍被既有跨页导航文案断言阻断，本轮未改页面或掩盖该基线问题；未做浏览器视觉验收。
+- Commit note：【新闻更新】发布17点AI新闻：5条网络防御与安全科研信号。
+
