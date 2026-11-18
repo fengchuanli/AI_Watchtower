@@ -1,3 +1,13 @@
+## 2026-11-19 08:05 JST｜17点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策只检查上一轮已完成复核（11月18日23:05 JST）之后至本次运行的当前窗口；未找到同时满足登记来源、时间边界、非重复与可写成站内简报条件的新增 AI 事实，因此不以 11 月 18 日旧材料回填。
+- Sources & boundary：编辑前授权网络下 `git pull --ff-only origin main` 成功。依据 `data/sources.json` 与 `docs/source-policy.md` 核对 OpenAI、Anthropic、Google 与 NVIDIA 的官方索引及可访问原文，并对 3 个 OpenAI 候选运行 URL/标题重复报告，均为 `manual-clear`。其中 Codex 沙箱、模型辅助芯片设计和 Le Figaro 合作页面均明确标为 11 月 18 日，无法证明发生在上一轮窗口之后，按 `reject-stale-no-current-hook` 暂不发布；未使用付费/登录墙正文、随机抓取页、社区讨论、传闻或常规营销材料补数。检索范围仅说明已查入口，不代表全网没有新闻。
+- Candidate intake / duplicate / partial batch：3 个候选的重复报告无 URL 或近似标题命中，但时间门槛未过；`hold-no-safe-batch`，不创建以旧日期冒充当前的首页或归档版。Archive mirror：not-needed；archive-diff：skipped-one-edition（本日没有可比较的08点归档版）。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到现有已发布的网络防御、医疗、安全与科研信号。
+- Verification：数据保持不变；`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、全量数据 JSON 解析、静态 HTML 解析与 `git diff --check` 已通过。`node scripts/validate-site.mjs` 仍报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本次未改页面或掩盖该基线问题。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
 ## 2026-11-18 11:07 JST（20:00 scheduled content optimization，提前执行）
 
 - Focus：当前 30 天计划 Day 1，审计 390px 首页 Hero、五秒要点与今日简报之间的引导。移除今日简报观察点后的重复“手机先读”三步流程卡；五秒要点保留为唯一明确的下一步动作，直达同页今日 TOP3，不改变新闻事实、来源、排名或证据边界。
