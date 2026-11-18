@@ -127,6 +127,9 @@ These compact anchors keep validation and future automation aware of the most im
 
 ## Next Useful Task
 
+- Current-cycle Day 1 complete: 390px 首页移除了今日深挖 watch points 后重复的“手机先读”三步流程卡；Hero、五秒要点和今日简报中，唯一明确的下一步引导是五秒要点的“看今日 TOP3 →”，因此读者不会在 TOP3 前再次阅读同一条路径说明。`index.html`、`styles.css`、`docs/homepage-edition-preflight.md` 与 `scripts/validate-site.mjs` 同步守住这一直接阅读路径。
+- Next useful task: Day 2 — make the Today Briefing CTA say whether it opens ranked signals, a reader job, or deeper context; avoid ambiguous “查看” labels.
+
 - Current-cycle Day 8 complete: TOP3 uses the existing label as a bordered Chinese signal cue, separated from the date; category is not confidence. No additional evidence sentences or inferred classification.
 - Current-cycle Day 9 complete: official vendor TOP3 cards distinguish confirmed publication facts from unproven outcomes; existing sourceRole is visible alongside source type. Current AWS Agent Registry and PKI cards retain their explicit claimBoundary and independent nextCheck.
 - Current-cycle Day 10 complete: must-read TOP3 cards expose a direct original-source link and a compact full-facts/context reminder before score details. Historical media item opencode-security-2026-10-20 verified; current official-only TOP3 is unchanged.

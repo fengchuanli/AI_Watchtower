@@ -492,12 +492,9 @@ if (
   homepageExploreIndex <= homepageTop3Index ||
   homepageExploreIndex >= homepageDeepBriefingIndex ||
   !homepageNavOrderPattern.test(html) ||
-  !/class="first-read-path"/.test(html) ||
-  !/手机先读/.test(html) ||
-  !/先判断[\s\S]*今日重点与 TOP3/.test(html) ||
-  !/再选择[\s\S]*按目的阅读或深度简报/.test(html) ||
-  !/最后补齐[\s\S]*更多新闻流与资料库/.test(html) ||
-  !/\.first-read-path/.test(styles) ||
+  !/id="todayKeyLink" href="#top3">看今日 TOP3 →<\/a>/.test(html) ||
+  !/todayKeyLink\.href = "#top3"/.test(appJs) ||
+  !/todayKeyLink\.textContent = "看今日 TOP3 →"/.test(appJs) ||
   !/briefingHeadline/.test(appJs) ||
   !/briefingSummary/.test(appJs) ||
   !/updateTodayBriefing\(data\.briefing\);/.test(appJs) ||
@@ -507,13 +504,13 @@ if (
   !/First-Screen Reader Order Guard/.test(homepageEditionPreflight) ||
   !/hero -> today briefing -> TOP3 -> purpose navigation -> deep briefing -> compact feed/.test(homepageEditionPreflight) ||
   !/purpose navigation should sit after TOP3 and before deep briefing/.test(homepageEditionPreflight) ||
-  !/Day 0 Mobile First-Screen Audit/.test(homepageEditionPreflight) ||
+  !/Day 1 Mobile First-Screen Audit/.test(homepageEditionPreflight) ||
   !/Before TOP3[\s\S]*hero, 5 秒今日要点, 今日深挖 watch points/.test(homepageEditionPreflight) ||
   !/After TOP3[\s\S]*按目的阅读, 分类最新, 深度简报, 连续观察, 更多新闻流, 资料库/.test(homepageEditionPreflight) ||
-  !/今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流/.test(homepageEditionPreflight) ||
+  !/今日重点` -> `5 秒要点直达今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流/.test(homepageEditionPreflight) ||
   !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
-  !/Day 0[\s\S]*手机首屏/.test(optimizationDecisionIndex) ||
-  !/Current handoff is Day 2/.test(optimizationDecisionIndex)
+  !/Current-cycle Day 1[\s\S]*5 秒要点/.test(optimizationDecisionIndex) ||
+  !/Next useful task: Day 2/.test(optimizationDecisionIndex)
 ) {
   errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, purpose navigation, deep briefing, then compact non-TOP3 feed.");
 }

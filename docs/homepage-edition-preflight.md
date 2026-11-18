@@ -77,7 +77,7 @@ This order lets a phone reader see the daily promise, the short "what changed to
 
 The guard also checks that `app.js` still renders `briefingHeadline`, `briefingSummary`, the same-day TOP3 ranking, and the compact feed that removes items already covered by TOP3. If any of those pieces move, update this note and the validator together so homepage structure still starts from reader understanding rather than editor operations.
 
-## Day 0 Mobile First-Screen Audit
+## Day 1 Mobile First-Screen Audit
 
 For the 2026-10-11 through 2026-11-09 cycle, the phone first-screen audit keeps this module split:
 
@@ -87,7 +87,7 @@ For the 2026-10-11 through 2026-11-09 cycle, the phone first-screen audit keeps 
 | TOP3 decision | 今日 TOP3 ranking cards and the immediate all-news follow-up | Decide the three strongest signals first, then offer a fast title-only escape hatch. |
 | After TOP3 | 按目的阅读, 分类最新, 深度简报, 连续观察, 更多新闻流, 资料库 | Let readers choose depth, background, source boundaries, continuity, or full history after the first ranking decision. |
 
-The header navigation and the small `手机先读` cue should mirror this split: `今日重点` -> `今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流`. The cue belongs below the Today Briefing watch points because it marks the path without delaying the TOP3 cards. If future work moves modules, keep the audit table, header order, and visible cue synchronized.
+The header navigation and the five-second takeaway should mirror this split: `今日重点` -> `5 秒要点直达今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流`. At 390px, do not repeat this three-step instruction below the Today Briefing: the takeaway link is the one explicit next action, so TOP3 follows the watch points without another process card. If future work moves modules, keep the audit table, header order, takeaway action, and validator synchronized.
 
 ## Continuity Mobile Disclosure Rule
 
