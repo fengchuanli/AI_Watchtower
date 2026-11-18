@@ -11501,3 +11501,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check`、6份数据 JSON 解析、6个静态 HTML 壳解析及 `git diff --check` 通过。`node scripts/validate-site.mjs` 运行后仍被既有跨页导航文案断言阻断，本轮未改页面或掩盖该基线问题；未做浏览器视觉验收。
 - Commit note：【新闻更新】发布17点AI新闻：5条网络防御与安全科研信号。
 
+## 2026-11-18 23:05 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策跳过漏跑时段回填，只复核上一已发布版（08:07 JST）之后至本次运行的当前窗口；没有发现同时满足来源、时间、非重复和事件简报证据门槛的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后确认已同步。依据 `data/sources.json` 与 `docs/source-policy.md` 拉取 OpenAI Developers、Google AI、Hugging Face、VentureBeat、The Verge、Google Workspace、Google Cloud、AWS Open Source、PyTorch 及 arXiv cs.AI/cs.CL/cs.CV/cs.CR/cs.SE/cs.LG/cs.MA 的登记 RSS，并核对 NVIDIA Newsroom 与 Suno 官方原文。Google Tasks、Google Drive 分类与 NVIDIA 财报公告的可见发布时间早于本窗口；Suno Visuals 原文标注为 11 月17日；The Verge 的后续报道不以媒体转述替代早于窗口的 NVIDIA 原始财报。arXiv 当前材料均为作者预印本，缺少同行评议、独立复现或部署证据，未写成已验证新闻。未使用付费/登录墙正文、随机抓取页、社区讨论、传闻、旧闻或营销材料补数；检索范围仅说明已查登记入口的结果，不代表全网没有新闻。
+- Archive mirror：not-needed；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免把窗口外或证据不足材料写成当前版和归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到已发布的网络防御、医疗、安全与科研信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、全量相关 JSON 解析、6 个现存静态 HTML 壳解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍只报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本轮未改页面或掩盖该基线问题。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
