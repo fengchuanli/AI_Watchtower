@@ -1,3 +1,13 @@
+## 2026-11-18 11:07 JST（20:00 scheduled content optimization，提前执行）
+
+- Focus：当前 30 天计划 Day 1，审计 390px 首页 Hero、五秒要点与今日简报之间的引导。移除今日简报观察点后的重复“手机先读”三步流程卡；五秒要点保留为唯一明确的下一步动作，直达同页今日 TOP3，不改变新闻事实、来源、排名或证据边界。
+- Changed files：index.html、styles.css、scripts/validate-site.mjs、docs/homepage-edition-preflight.md、docs/optimization-decision-index.md、docs/optimization-log.md。
+- 网站可见变化：首页手机读者读完今日简报的三个观察点后，会直接到达今日 TOP3；不再先看一张重复“先判断／再选择／最后补齐”的流程卡。五秒要点的“看今日 TOP3 →”是清楚且唯一的前置行动。
+- Verification：`git diff --check`、`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `node scripts/build-derived-data.mjs --check` 通过。`node scripts/validate-site.mjs` 的本轮首页直达 TOP3 守卫通过；该脚本仍报告既有的跨页导航文案断言，未在本轮改动或掩盖。未进行浏览器视觉验收。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后确认 `origin/main` 已是最新。
+- Commit：`546a18c`（【VisionHub网站风格优化】收紧手机TOP3前置路径）。本日志收尾提交与推送状态见 Git 历史。
+- Next：Day 2，让 Today Briefing CTA 说明其打开的是排名信号、读者任务还是深度背景，避免含糊“查看”。
+
 ## 2026-11-15 23:06 JST（08:00 news intelligence update，延迟执行）
 
 - Focus：遵循恢复策略，仅检查上次完成时间 23:04 JST 之后的当前窗口；已同步 `origin/main`，优先复核登记 RSS（OpenAI Developers、Google AI、Hugging Face、arXiv cs.AI/cs.CL/cs.CV）及历史 URL/标题。未发现可在该两分钟窗口内确认、非重复且具独立叙事价值的 AI 信号；VentureBeat RSS 返回访问验证页，未将其内容作为来源。

@@ -509,7 +509,7 @@ if (
   !/After TOP3[\s\S]*按目的阅读, 分类最新, 深度简报, 连续观察, 更多新闻流, 资料库/.test(homepageEditionPreflight) ||
   !/今日重点` -> `5 秒要点直达今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流/.test(homepageEditionPreflight) ||
   !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
-  !/Current-cycle Day 1[\s\S]*5 秒要点/.test(optimizationDecisionIndex) ||
+  !/Current-cycle Day 1[\s\S]*五秒要点/.test(optimizationDecisionIndex) ||
   !/Next useful task: Day 2/.test(optimizationDecisionIndex)
 ) {
   errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, purpose navigation, deep briefing, then compact non-TOP3 feed.");
