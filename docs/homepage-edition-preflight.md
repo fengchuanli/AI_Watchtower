@@ -89,6 +89,10 @@ For the 2026-10-11 through 2026-11-09 cycle, the phone first-screen audit keeps 
 
 The header navigation and the five-second takeaway should mirror this split: `今日重点` -> `5 秒要点直达今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流`. At 390px, do not repeat this three-step instruction below the Today Briefing: the takeaway link is the one explicit next action, so TOP3 follows the watch points without another process card. If future work moves modules, keep the audit table, header order, takeaway action, and validator synchronized.
 
+## Day 2 Today Briefing CTA Destination Rule
+
+The Today Briefing CTA must name both the reader action and the page area it opens. Use a concrete destination such as `在新闻流查看 2 条相关信号 →`, `看今日 TOP3 的排名信号 →`, `读本期深度简报 →`, or `按目的继续阅读 →`; do not use a bare `查看`, `更多`, or `了解` label. The visible wording and accessible name must match. When the CTA remains linked to `#feed`, it must say `新闻流` so readers know it opens the non-TOP3 signal list rather than ranked signals or a deeper explanation. `scripts/validate-site.mjs` checks the current briefing data for a destination and an action verb.
+
 ## Continuity Mobile Disclosure Rule
 
 - 连续观察没有有效卡片时不显示；只有一条时默认展开。

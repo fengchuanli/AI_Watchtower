@@ -103,6 +103,7 @@ function validateVisionhubBriefingRuntimeData() {
   const items = Array.isArray(currentNewsData.items) ? currentNewsData.items : [];
   const promotedItems = items.slice(0, Math.min(items.length, 3));
   const briefingSummary = [briefing.headline, briefing.summary, briefing.cta].filter(Boolean).join("\n");
+  const briefingCta = String(briefing.cta || "");
 
   if (
     !hasChineseText(briefingSummary) ||
@@ -113,6 +114,15 @@ function validateVisionhubBriefingRuntimeData() {
   ) {
     errors.push(
       "VisionHub briefing scorecard runtime guard requires a compact Chinese today briefing with one headline, summary, CTA, and exactly three watch points.",
+    );
+  }
+
+  if (
+    !/(新闻流|TOP3|深度简报|按目的阅读)/.test(briefingCta) ||
+    !/(查看|阅读|进入|前往|继续)/.test(briefingCta)
+  ) {
+    errors.push(
+      "VisionHub briefing scorecard runtime guard requires the Today Briefing CTA to name both its reader action and destination, rather than a vague 查看 label.",
     );
   }
 
@@ -497,6 +507,8 @@ if (
   !/todayKeyLink\.textContent = "看今日 TOP3 →"/.test(appJs) ||
   !/briefingHeadline/.test(appJs) ||
   !/briefingSummary/.test(appJs) ||
+  !/briefingCta\.setAttribute\("aria-label", briefing\.cta\);/.test(appJs) ||
+  !/id="briefingCta" aria-label="在新闻流查看相关信号">在新闻流查看相关信号 →<\/a>/.test(html) ||
   !/updateTodayBriefing\(data\.briefing\);/.test(appJs) ||
   !/const dailyTopItems = getDailyTopStories\(data, history\);/.test(appJs) ||
   !/updateTopStories\(dailyTopItems\);/.test(appJs) ||
@@ -510,7 +522,8 @@ if (
   !/今日重点` -> `5 秒要点直达今日 TOP3` -> `按目的阅读` -> `深度简报` -> `最新新闻流/.test(homepageEditionPreflight) ||
   !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
   !/Current-cycle Day 1[\s\S]*五秒要点/.test(optimizationDecisionIndex) ||
-  !/Next useful task: Day 2/.test(optimizationDecisionIndex)
+  !/Current-cycle Day 2 complete[\s\S]*新闻流/.test(optimizationDecisionIndex) ||
+  !/Next useful task: Day 3/.test(optimizationDecisionIndex)
 ) {
   errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, purpose navigation, deep briefing, then compact non-TOP3 feed.");
 }

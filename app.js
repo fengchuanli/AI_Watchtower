@@ -442,6 +442,7 @@ function updateTodayBriefing(briefing) {
 
   if (briefingCta) {
     briefingCta.textContent = briefing.cta;
+    briefingCta.setAttribute("aria-label", briefing.cta);
   }
 
   briefingWatchPoints.innerHTML = briefing.watchPoints
