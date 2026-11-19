@@ -11521,3 +11521,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、全量相关 JSON 解析、6 个现存静态 HTML 壳解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍只报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本轮未改页面或掩盖该基线问题。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-19 10:57 JST（20:00 scheduled content optimization）
+
+- Focus：完成当前 30 天计划 Day 2。将首页 Today Briefing 的模糊 CTA 从“查看2条信号”改为明确说明目的地的“在新闻流查看 2 条相关信号 →”；它仍链接 `#feed`，因此读者不会把非 TOP3 新闻流误认为排名信号、按目的阅读或深度简报。
+- Changed files：`index.html`、`app.js`、`data/news.json`、`scripts/validate-site.mjs`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“今日深挖”右侧现在明确写出会在新闻流打开 2 条相关信号；辅助技术也会读出同一目的地，不再只有含糊的“查看”。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 已通过本轮 Today Briefing CTA 守卫，但仍报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本轮未改或掩盖该基线问题。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试成功，基线与 `origin/main` 一致。
+- Commit：`c32389e`（【VisionHub网站风格优化】明确今日简报CTA去向）。
+
