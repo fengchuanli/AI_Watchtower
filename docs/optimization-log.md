@@ -1,3 +1,14 @@
+## 2026-11-20 17:00 JST｜17点新闻情报更新
+
+- Focus：编辑前已同步 `origin/main`；按恢复政策只检查当前可证明时效的官方、RSS 与可靠来源，不补做错过批次。OpenAI Help Center 的 11 月 19 日 Health 跨端渐进开放说明通过官方、时间、版权和当前/历史 URL/标题去重门槛，但本期只剩这 1 条安全候选。
+- Sources & boundary：优先核对登记 RSS 与 OpenAI、Anthropic、Google、Hugging Face 等官方入口；未使用付费墙、登录墙正文、随机抓取页、社区讨论、传闻、旧模型稿或常规营销材料。Health 页面只能核对 Android/桌面/dots/sites、Health Connect、美国套餐范围和渐进开放，不能证明实际可用性、健康建议质量、隐私实践或临床结果。
+- Candidate intake / duplicate / partial batch：`node scripts/report-duplicate-candidates.mjs` 对 Health 候选给出 `manual-clear`。按短批次门槛审阅后决定 `hold-no-safe-batch`：站内当前数据校验要求至少两个正计数 `coverageMix` 分组且总数必须等于当前条目数，单条版无法成为可提交的有效首页结构；未用同页的例行移动端界面更新强凑第二条。候选保留为后续官方隐私、权限或独立安全材料的背景线索，不以今日新闻发布。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到现有已发布的网络防御、医疗、安全与科研信号。
+- Archive mirror：not-needed - `data/news.json` 未改变，`data/news-history.json` 保持不变；派生数据未重建。
+- Verification：已在撤回未通过结构校验的单条草稿后，对保留数据运行 `node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、JSON 解析与 `git diff --check`。`node scripts/validate-site.mjs` 仍报告既有的 Today Briefing CTA、跨页导航文案与首页 feed metadata 断言；本次未改页面或掩盖基线问题。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无安全批次。
+
 ## 2026-11-19 08:05 JST｜17点新闻情报更新（延迟执行）
 
 - Focus：按恢复政策只检查上一轮已完成复核（11月18日23:05 JST）之后至本次运行的当前窗口；未找到同时满足登记来源、时间边界、非重复与可写成站内简报条件的新增 AI 事实，因此不以 11 月 18 日旧材料回填。
