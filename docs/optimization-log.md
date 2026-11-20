@@ -1,3 +1,13 @@
+## 2026-11-20 11:00 JST（20:00 scheduled content optimization）
+
+- Focus：完成当前 30 天计划 Day 3，压缩首页 Hero 的首屏来源／信任提示。把“区分来源用途、说明入选理由、列出下一步核对项”的流程式枚举，收束为读者先需要知道的一件事：信号有来源，且仍有需要核对之处。具体来源角色、入选理由与下一步证据继续留在随后 TOP3 卡片和详情页，不改变新闻事实、来源、排名或声明边界。
+- Changed files：`index.html`、`scripts/validate-site.mjs`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页首屏标题下的说明现为“每日梳理有来源的 AI 信号，说明今天的变化与仍需核对之处。”；手机读者可更快进入今日重点，同时仍先看到来源依据与未决核验的边界。
+- Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 已通过本轮 Hero 信任提示守卫，但仍报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本轮未改动或掩盖该基线问题。未进行浏览器视觉验收。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线与 `origin/main` 一致。
+- Commit：待本次提交后补记。
+- Next：Day 4，测试仅有 1 至 2 条信号的首页首屏，确保其仍显得有意图且不过度解释。
+
 ## 2026-11-20 17:00 JST｜17点新闻情报更新
 
 - Focus：编辑前已同步 `origin/main`；按恢复政策只检查当前可证明时效的官方、RSS 与可靠来源，不补做错过批次。OpenAI Help Center 的 11 月 19 日 Health 跨端渐进开放说明通过官方、时间、版权和当前/历史 URL/标题去重门槛，但本期只剩这 1 条安全候选。

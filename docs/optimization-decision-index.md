@@ -5,10 +5,16 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 ## Current Plan Window
 
 - Plan: `docs/optimization-plan.md`
-- Window: 2026-10-11 through 2026-11-09
-- Current phase: Phase 5, Reader-Visible Continuity And Next Cycle
-- Last indexed run: 2026-11-16 20:00 JST
-- Network status: authorized-network `git pull --ff-only origin main` succeeded before this run; the Day 29 documentation commit is pending its scoped push.
+- Window: 2026-11-17 through 2026-12-16
+- Current phase: Phase 1, Make The First Decision Obvious
+- Last indexed run: 2026-11-20 20:00 JST
+- Network status: authorized-network `git pull --ff-only origin main` succeeded before this run; the baseline matched `origin/main`.
+
+## Current Cycle Day 3 Completion
+
+- Complete: The homepage hero now says `每日梳理有来源的 AI 信号，说明今天的变化与仍需核对之处。` It preserves the first-screen source and uncertainty cue, while dropping the process-heavy list of source roles, selection reasons, and next checks that readers see again on TOP3 and detail pages.
+- Guard: `scripts/validate-site.mjs` requires this compact hero cue to retain source grounding and an unresolved-verification boundary, without restoring the repeated workflow phrases.
+- Next useful task: Day 4 — test a one- or two-signal edition so its first screen stays intentional without extra explanation.
 
 ## Current Cycle Day 29 Completion
 

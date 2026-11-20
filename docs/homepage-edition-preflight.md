@@ -93,6 +93,10 @@ The header navigation and the five-second takeaway should mirror this split: `�
 
 The Today Briefing CTA must name both the reader action and the page area it opens. Use a concrete destination such as `在新闻流查看 2 条相关信号 →`, `看今日 TOP3 的排名信号 →`, `读本期深度简报 →`, or `按目的继续阅读 →`; do not use a bare `查看`, `更多`, or `了解` label. The visible wording and accessible name must match. When the CTA remains linked to `#feed`, it must say `新闻流` so readers know it opens the non-TOP3 signal list rather than ranked signals or a deeper explanation. `scripts/validate-site.mjs` checks the current briefing data for a destination and an action verb.
 
+## Day 3 First-Screen Trust Cue Rule
+
+The hero's single trust cue should help a first-time reader decide whether to keep reading, not explain the editorial workflow. Keep one short sentence that says the signals have sources and that some points still need verification—for example, `每日梳理有来源的 AI 信号，说明今天的变化与仍需核对之处。` Do not repeat the later card-level process of sorting source roles, explaining selection reasons, and listing next checks. Those concrete boundaries belong with the relevant TOP3 card and detail page, where the source and claim can be named. `scripts/validate-site.mjs` keeps this cue compact and protects both its source grounding and open-question boundary.
+
 ## Continuity Mobile Disclosure Rule
 
 - 连续观察没有有效卡片时不显示；只有一条时默认展开。

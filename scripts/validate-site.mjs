@@ -207,6 +207,18 @@ const twitterImage = getMetaContent("name", "twitter:image");
 const socialImageAlt = getMetaContent("property", "og:image:alt");
 const twitterImageAlt = getMetaContent("name", "twitter:image:alt");
 
+const heroCopyMatch = html.match(/<p class="hero-copy">\s*([^<]+?)\s*<\/p>/);
+const heroCopy = heroCopyMatch?.[1]?.trim() || "";
+
+if (
+  !/来源/.test(heroCopy) ||
+  !/仍需核对/.test(heroCopy) ||
+  /区分来源用途|说明入选理由|列出下一步核对项/.test(heroCopy) ||
+  heroCopy.length > 34
+) {
+  errors.push("First-screen hero trust cue must stay concise, name source grounding and unresolved verification, and avoid repeating later process copy.");
+}
+
 if (socialImage !== "./assets/ai-intel-hero.jpg" || twitterImage !== socialImage) {
   errors.push("Social preview image metadata must use the optimized hero JPEG consistently.");
 }
