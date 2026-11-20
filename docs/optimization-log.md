@@ -5,7 +5,7 @@
 - 网站可见变化：首页首屏标题下的说明现为“每日梳理有来源的 AI 信号，说明今天的变化与仍需核对之处。”；手机读者可更快进入今日重点，同时仍先看到来源依据与未决核验的边界。
 - Verification：`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 已通过本轮 Hero 信任提示守卫，但仍报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本轮未改动或掩盖该基线问题。未进行浏览器视觉验收。
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线与 `origin/main` 一致。
-- Commit：待本次提交后补记。
+- Commit：`17c1129`（【VisionHub网站风格优化】收紧首屏信任提示）。
 - Next：Day 4，测试仅有 1 至 2 条信号的首页首屏，确保其仍显得有意图且不过度解释。
 
 ## 2026-11-20 17:00 JST｜17点新闻情报更新
