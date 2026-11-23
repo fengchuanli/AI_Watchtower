@@ -47,6 +47,16 @@
 - Verification：数据保持不变；`node --check app.js`、`node scripts/validate-data.mjs`、`node scripts/validate-site.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check`、6 份数据 JSON 解析、6 个静态 HTML 壳解析及 `git diff --check` 均通过。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-23 22:20 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：依恢复政策跳过漏跑批次，只检查上一已发布新闻版之后到本次运行的当前窗口；未发现同时满足登记来源、可证明发布时间、非重复与站内事件简报证据门槛的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：编辑前执行 `git pull --ff-only origin main`，但当前环境无法解析 `github.com`，未能远端同步；本地工作区干净。依据 `data/sources.json` 与 `docs/source-policy.md` 复核 OpenAI、Anthropic、Google AI/DeepMind、NVIDIA 的官方索引与登记 RSS/原文入口，以及 Hugging Face、AWS 和 arXiv 研究入口。当前可见的高影响官方材料主要标注为 11 月 19 日或更早，无法可靠证明发生在本轮起点之后，故不回填；arXiv 材料仍为作者预印本，未将其写成已验证新闻。未使用付费/登录墙正文、随机抓取页、社区讨论、传闻、旧闻或营销材料补数；检索范围仅说明已查入口的结果，不代表全网没有新闻。
+- Archive mirror：not-needed；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免把窗口外或证据不足材料写入当前版和归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到已发布的网络防御、医疗、安全与科研信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份数据 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有跨页导航文案断言与 `styles.css` 未定义 `--top-story-count`；本轮未改页面或样式，未掩盖该基线问题。静态 HTML 壳由 `validate-pages.mjs` 通过 6 页检查。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
 ## 2026-11-06 11:07:27 JST（20:00 scheduled content optimization）
 
 - Focus：当前周期 Day 20，把 current/history 镜像、派生数据生成和校验结果收束为可直接复制进新闻更新日志的四行状态块，减少日常 08:00／17:00 发布时遗漏文件或只记录部分校验的风险。
