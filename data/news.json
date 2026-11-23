@@ -7,17 +7,17 @@
     {
       "id": "policy",
       "label": "政策",
-      "description": "本期用来核对 OpenAI 对北约网络防御接入的披露；仍需独立审计与北约原文验证。"
+      "description": "本期未收录政策新事实；仍需核对官方文件。"
     },
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期用来核对 OpenAI ChatGPT 医疗 Agent 的权限与记录；仍需外部验证。"
+      "description": "本期核对 Linux 运行时漏洞缓解工具；实际防护仍需独立测试。"
     },
     {
       "id": "product",
       "label": "产品",
-      "description": "本期用来核对 OpenAI ChatGPT 医疗与 CSAM 产品发布；不直接证明效果。"
+      "description": "本期未收录产品新事实；仍需核对官方原文。"
     },
     {
       "id": "model",
@@ -27,7 +27,7 @@
     {
       "id": "research",
       "label": "研究",
-      "description": "本期用来核对 OpenAI 研究者访问与使用研究；仍需独立验证。"
+      "description": "本期核对 DeepMind 的形式化验证量子算法研究；收益仍需复现。"
     },
     {
       "id": "funding",
@@ -35,485 +35,293 @@
       "description": "本期未收录融资新事实；仍需核对官方文件。"
     }
   ],
-  "updatedAt": "2026-11-18",
-  "editorNote": "11月18日17点版：新增一条 OpenAI 对北约网络防御接入的官方披露，并保留11月16日医疗、安全与科研信号；官方材料不替代北约、审计方或独立效果证据。",
+  "updatedAt": "2026-11-24",
+  "editorNote": "11月24日17点版：新增运行时漏洞缓解与形式化验证科学 Agent 两条官方信号；发布与研究披露不替代生产审计、独立复现或硬件实验。",
   "edition": {
-    "id": "news-1700-2026-11-18",
-    "date": "2026-11-18",
+    "id": "news-1700-2026-11-24",
+    "date": "2026-11-24",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "11月18日｜17点情报版",
-    "itemCount": 5,
-    "note": "新增北约网络防御接入披露，保留4条近期官方信号。",
-    "operationalStatus": "编辑前已拉取并同步 origin/main；检查 OpenAI 官方新闻索引及原文，并以当前与历史 URL/标题去重；未用付费墙、登录墙或社区内容。",
-    "editorialInterpretation": "本期发布5条安全非重复信号，少于10条是质量门槛结果；未用旧稿、付费墙、登录墙、社区讨论、重复、弱证据或营销补数；不将官方发布或自述用量当成独立效果。",
+    "archiveLabel": "11月24日｜17点情报版",
+    "itemCount": 2,
+    "note": "新增两条可核验信号：运行时漏洞缓解与形式化验证科学 Agent。",
+    "operationalStatus": "已同步 origin/main；检查官方原文、论文/代码入口，并以当前与历史 URL/标题去重。",
+    "editorialInterpretation": "本期发布2条安全非重复信号，少于10条是质量门槛结果；未用旧稿、付费墙、登录墙、社区讨论、重复或营销材料补数。",
     "readerFrame": {
-        "headline": "从北约网络防御到医疗与科研：接入事实仍要拆成授权、审计与外部结果。",
-        "whyItMatters": "本期新增官方披露的北约网络防御接入，并保留医疗、内容安全与科研材料；它们能确认发布、接入或方法，不能替代使用方、平台或独立研究的结果证据。",
+      "headline": "当 Agent 进入生产防御与科学搜索，证明链、审批与复现比能力口号更关键。",
+      "whyItMatters": "Shirudo 把运行时防护的审批、签名与证明放在前台；DeepMind 则把 Agent 搜索和形式化证明相连。两者都能确认发布或研究披露，不能替代生产审计、独立复现或硬件验证。",
       "useThisIssueFor": [
-          "安全团队核对授权范围、审计记录、补丁验证与回滚。",
-        "内容安全团队核对模型卡、人工审核与透明度报告。",
-        "科研团队核对资格、数据治理、人工复核与客观产出。"
+        "安全团队核对护盾权限、签名、回滚和误拦截。",
+        "研究团队核对规格、证明、代码复现和硬件假设。"
       ],
       "notProvenYet": [
-          "尚未获独立验证：Daybreak 支持是否在不同北约环境中提升网络防御质量或缩短修复周期。",
-        "尚未获独立验证：CSAM 分类器的跨平台准确性、偏差与实际保护效果。",
-        "尚未获独立验证：学术访问或自报使用能普遍提升科研公平性、质量或发现速度。"
+        "尚未独立证明 Shirudo 在多种生产负载中能安全降低漏洞风险。",
+        "尚未独立证明量子算法节约可转化为近期硬件或科学应用收益。"
       ],
       "mobile": {
-        "headline": "先核对权限、评估与结果",
-        "summary": "5条官方信号，覆盖网络防御、医疗、安全与科研 AI。",
+        "headline": "先看证明链与回滚",
+        "summary": "2条官方信号，覆盖运行时防护与可验证科学 Agent。",
         "primaryUses": [
-          "安全团队查授权与审计",
-          "安全团队查人工审核",
-          "科研团队查客观产出"
+          "安全团队查审批与回滚",
+          "研究团队查证明与复现"
         ],
-        "proofBoundary": "发布、计划与使用研究不能替代医院审计、平台透明度或独立科研结果。"
+        "proofBoundary": "尚未证明其具备跨环境生产防护或量子硬件收益。"
       }
     },
     "changeSummary": {
-        "headline": "11月18日17点新增1条北约网络防御接入信号",
+      "headline": "11月24日17点新增2条安全与科学 Agent 信号",
       "freshFacts": [
-        "本期新增：OpenAI 披露通过 Daybreak 向北约核心机构提供网络防御模型访问，并给出其所述月度 token 用量。",
-        "本期新增：OpenAI 发布 CSAM 检测、干预与支持工具。",
-        "本期新增：OpenAI 扩展研究者访问计划并发布科研使用研究。"
+        "本期新增：OpenAI 与 Cisco 发布开源 Shirudo，用 eBPF 护盾尝试缩短 Linux 补丁空窗。",
+        "本期新增：DeepMind 发布由 Agent 团队和 Lean 验证支持的量子算法优化研究与开源框架。"
       ],
       "repeatedContext": [
-        "延续背景：官方功能、计划或自报研究不等于独立效果。",
-        "仍是背景：需医院、平台、参与机构与独立研究材料升级判断。"
+        "延续背景：官方披露与受控测试不等于生产防护效果。",
+        "仍是边界：数学证明与资源估算不等于量子硬件上的现实收益。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对安全授权与医疗控制清单",
-        "count": 3,
-        "meaning": "用来更新授权范围、人工审核、审计、补丁验证与回滚清单。"
+        "label": "核对 Linux 护盾审批与回滚",
+        "count": 1,
+        "meaning": "用来更新安全团队的 eBPF 权限、签名、审计、误拦截和撤销检查。"
       },
       {
-        "label": "核对科研 AI 访问与结果清单",
-        "count": 2,
-        "meaning": "用来检查资格、数据治理、复核与客观科研产出。"
+        "label": "核对科学 Agent 证明与复现",
+        "count": 1,
+        "meaning": "用来检查研究团队的公开规格、证明产物、代码复跑与硬件映射假设。"
       }
     ],
     "sourceFamilies": [
       {
         "family": "official",
         "label": "官方原文",
-        "count": 5,
-        "role": "用于核对 OpenAI 的产品、安全、网络防御接入、计划和研究披露；实际效果仍需外部证据。"
+        "count": 2,
+        "role": "用于核对发布与研究披露；生产、安全和科学成效仍需外部证据。"
       }
     ],
     "sourceRisk": {
-      "label": "单一官方来源集中",
-      "note": "来源集中：5/5 来自 OpenAI News；可核对发布、接入与研究披露，但不构成网络防御、医疗、内容安全或科研效果的独立验证。",
-      "nextCheck": "补查北约/NCIA 说明、独立安全审计、医院与插件方实施文件、模型卡、平台报告、参与机构数据以及独立研究。"
+      "label": "官方来源集中",
+      "note": "2/2为官方原文，来源集中于发布方自述，不能独立证明实际成效。",
+      "nextCheck": "复核独立安全复现报告、运维审计日志、论文复跑和硬件实验数据。"
     },
     "overreadBoundary": {
-      "label": "不要把本期读成全市场结论",
-      "body": "本期是网络防御接入、受监管部署与科研使用的核验雷达，不是网络防御、医疗安全、内容保护或科学发现效果的独立评测。",
-      "doNotConclude": "不能由本期推出 Daybreak 已提升北约网络防御、Agent 已在医疗机构安全有效、分类器已跨平台降低伤害，或学术访问已提升科研产出。",
-      "useInstead": "应该用北约/NCIA 说明、独立安全审计、医院审计、模型卡、平台透明度、参与机构数据和独立对照研究更新判断。"
+      "label": "不要把本期读成已验证成效",
+      "body": "本期是运行时防护控制面与科学 Agent 可验证工作流的核验雷达，不是生产安全或量子应用效果评测。",
+      "doNotConclude": "不能由本期推出 Shirudo 已普遍降低 Linux 漏洞风险，或 Agent 优化已推动近期量子硬件与科学成果。",
+      "useInstead": "应该用代码复现记录、独立安全测试报告、运维审计日志、论文审读、资源数据和硬件实验更新判断。"
     },
     "topicGroups": [
       {
-        "id": "agent",
-        "label": "核对医疗 Agent 授权与审计",
-        "count": 1,
-        "itemIds": [
-          "openai-chatgpt-healthcare-agents-2026-11-16"
-        ],
-        "meaning": "用来检查连接器权限、人工签核和审计回滚。"
-      },
-      {
-        "id": "policy",
-        "label": "核对网络防御授权与审计",
-        "count": 1,
-        "itemIds": [
-          "openai-nato-cyber-defenses-2026-11-17"
-        ],
-        "meaning": "用来检查授权资产范围、操作日志、补丁验证和独立安全审计。"
-      },
-      {
         "id": "developer-tooling",
-        "label": "核对内容安全与科研验证清单",
-        "count": 3,
+        "label": "核对运行时安全控制面",
+        "count": 1,
         "itemIds": [
-          "openai-csam-safety-tools-2026-11-16",
-          "openai-scientists-chatgpt-study-2026-11-16",
-          "openai-academic-researcher-access-2026-11-16"
+          "openai-cisco-shirudo-linux-security-2026-11-23"
         ],
-        "meaning": "用来更新审核、数据治理、复核与客观产出检查。"
+        "meaning": "用来检查 Agent 生成防护规则的权限、签名、审计和回滚。"
+      },
+      {
+        "id": "agent",
+        "label": "核对科学 Agent 证明链",
+        "count": 1,
+        "itemIds": [
+          "deepmind-agent-formal-quantum-algorithms-2026-11-23"
+        ],
+        "meaning": "用来检查 Agent 搜索结果能否由规格、证明和复现链支撑。"
       }
     ],
     "trendNotes": [
       {
-        "topic": "受监管Agent治理",
-        "label": "受监管 Agent 治理延续",
-        "note": "跨期看，Agent 的采用信号持续从能力展示转向权限、审计、人工签核与回滚等部署控制。",
-        "boundary": "不证明控制面已在真实医疗环境有效，仍需医院审计、工作流日志与独立临床安全评估。"
+        "topic": "可审计 Agent",
+        "label": "Agent 交付物走向可审计",
+        "note": "跨期看，Agent 产出正接入签名、证明或公开复现入口，让人类团队能核对并决定是否采用。",
+        "boundary": "这不证明控制或证明链在所有生产和科研环境中都足够有效，仍需独立审计与复现记录。"
       },
       {
-        "topic": "科研AI证据边界",
-        "label": "科研 AI 证据边界延续",
-        "note": "跨期看，科研 AI 同时出现访问扩展与使用量化，显示采用讨论正从工具供给延伸到方法与结果。",
-        "boundary": "不证明访问或使用数据等于科研质量改善，仍需参与机构数据、独立复现与客观产出研究。"
+        "topic": "运行时安全",
+        "label": "运行时控制面延续",
+        "note": "归档连续关注 Agent 的权限、日志和人工复核；本期将运行时护盾的审批与可撤销性推进到开源工程对象。",
+        "boundary": "不证明开源运行时已在关键负载中可靠防护，仍需第三方复测、生产日志和审计数据。"
       }
     ],
     "topicContinuity": [
       {
         "topic": "agent",
-        "label": "受监管 Agent 控制面增强",
+        "label": "Agent 的可验证交付增强",
         "status": "stronger",
-        "previousPattern": "此前归档持续关注 Agent 能力、授权边界与可审计工作流。",
-        "currentSignal": "本期新增官方医疗发布，将跨系统计算机操作、权限设置、人工复核和审计日志并列。",
-        "signalDirection": "控制面官方原文增强，但独立医疗成效证据未增强。",
-        "stillUnproven": "仍需医院实施文件、隐私审计、工作流日志和独立临床安全评估。"
+        "previousPattern": "此前归档持续关注 Agent 的权限、审计和人工复核。",
+        "currentSignal": "本期新增运行时护盾的操作员批准与科学算法的 Lean 证明入口。",
+        "signalDirection": "可审计性与可复现性线索增强，实际成效证据未同步增强。",
+        "stillUnproven": "仍需生产审计、独立复现报告、硬件实验数据与可量化结果。"
       },
       {
         "topic": "developer-tooling",
-        "label": "科研 AI 方法信号延续",
+        "label": "安全控制面工程化",
         "status": "stronger",
-        "previousPattern": "此前归档持续将科研 AI 的能力声明与可复现、人工复核要求区分。",
-        "currentSignal": "本期新增研究者访问计划和带方法披露的使用研究，提供规模与任务分布线索。",
-        "signalDirection": "访问与描述性证据增强，但因果科研产出证据仍未解决。",
-        "stillUnproven": "仍需参与机构覆盖数据、独立复现和以论文、数据或实验周期为终点的对照研究。"
+        "previousPattern": "此前归档持续将 Agent 工具的权限、日志与回滚列为部署前提。",
+        "currentSignal": "本期新增公开的 eBPF 护盾、签名、TPM 记录与操作员批准链路。",
+        "signalDirection": "工程控制面披露增强，但跨负载的安全效果证据未增强。",
+        "stillUnproven": "仍需独立安全复测、生产日志、维护者记录和外部审计。"
       }
     ],
     "companyContinuity": [
       {
-        "company": "Cigna Healthcare",
-        "label": "医疗工作流接入信号",
-        "lastMention": "此前归档连续关注受监管 Agent 的授权、审计与人工复核。",
-        "whatChanged": "本期 OpenAI 新增披露 Cigna Healthcare 位于其医疗 Agent 部署工作流的案例名单中。",
-        "stillUnproven": "尚未证明其部署成效，仍需 Cigna Healthcare 的官方实施文件、审计日志和独立安全指标。"
+        "company": "OpenAI",
+        "label": "安全工具外部化线索",
+        "lastMention": "此前归档关注 OpenAI 的模型安全、网络防御与控制面披露。",
+        "whatChanged": "本期新增与 Cisco 共同开源的 Linux 运行时护盾项目。",
+        "stillUnproven": "仍需独立复现、生产审计和维护者记录确认其实际防护价值。"
       },
       {
-        "company": "Protect Children",
-        "label": "儿童安全协作线索",
-        "lastMention": "此前归档连续将安全发布与独立儿童保护证据区分。",
-        "whatChanged": "本期 OpenAI 新增说明其 CSAM 安全工作获得 Protect Children 等组织和学术顾问的输入。",
-        "stillUnproven": "不证明外部组织已验证效果，仍需 Protect Children 原文、独立测试报告和平台审核数据。"
+        "company": "Google DeepMind",
+        "label": "科学 Agent 可验证性线索",
+        "lastMention": "此前归档持续将科学 AI 的能力披露与复现、方法和结果区分。",
+        "whatChanged": "本期新增 Agent 团队结合 Lean 证明器优化量子算法的公开研究与框架。",
+        "stillUnproven": "仍需论文复跑、第三方资源评估与硬件实验确认其应用收益。"
       }
     ],
     "sourceConcentration": {
-      "sourceId": "openai-news",
-      "sourceName": "OpenAI News",
-      "count": 5,
-      "share": "5/5",
-      "note": "本期全部集中于 OpenAI News；它可核对发布、接入与研究披露，不能替代外部实施和效果材料。",
-      "nextCheck": "优先补查北约/NCIA、独立安全审计、医院与插件方、儿童安全机构和平台、参与高校/实验室及独立研究原文。"
+      "sourceId": "official-multi-owner",
+      "sourceName": "官方多来源",
+      "count": 2,
+      "share": "2/2",
+      "note": "均为官方材料，但来自两个所有者；发布与研究事实已核对，效果仍待独立验证。",
+      "nextCheck": "优先补查 Cisco/维护者记录、独立安全测试、论文复跑与硬件实验。"
     }
   },
   "items": [
     {
-      "id": "openai-nato-cyber-defenses-2026-11-17",
-      "category": "policy",
-      "label": "政策",
-      "title": "OpenAI 披露 Daybreak 支持北约网络防御：接入规模需回到授权与审计核验",
-      "body": "OpenAI 于11月17日称，正通过 Daybreak 向北约核心机构提供获授权网络防御工作所需的模型访问，并披露北约月度使用量最高可达3000亿原始输入与输出 token。",
-      "detailBody": "来源事实：OpenAI 称其与北约通信与信息局（NCIA）合作，经 Daybreak 为北约核心机构提供获授权的网络防御模型访问，并披露其所述最高月度 token 使用量。\n核验边界：已核对 OpenAI 的发布与自述范围；未独立核对 NCIA 的部署范围、授权资产、任务结果、漏洞修复质量或该用量的计量口径。",
-      "trend": "前沿模型进入政府网络防御后，关键不只是模型能力，而是授权资产范围、人工批准、日志留存、漏洞验证和跨组织责任如何被审计。",
-      "detailTrend": "网络防御部署正从实验性工具使用走向跨组织的授权访问与运行治理，模型接入需要被放进既有的权限和责任结构。OpenAI 所述 token 用量可以说明接入活动，却不能说明告警质量、修复速度或防御结果；部署责任也不会被用量指标覆盖。",
-      "whyItMatters": "政府安全、关键信息基础设施与供应商治理团队需要把模型接入与授权边界、工具调用记录、人工复核和补丁回归测试一起评估。",
-      "whyRanked": "这条披露把前沿模型的网络防御使用带入北约核心机构场景，直接关联政府安全采购、供应链责任与可审计部署。",
-      "detailWhyRanked": "本站解读：OpenAI 原文将 NCIA 合作、Daybreak 接入和所述最高月度 token 用量放在同一披露中，因此它是政府网络防御采用的可核对信号。它仍不能替代任务级安全效果；只有 NCIA 说明、授权范围、独立审计和修复记录才能区分“已接入”与“已改善防御”。",
-      "topReason": "先核对 NCIA 原文、授权范围、操作日志、独立审计与补丁验证记录。",
-      "whoShouldCare": "负责政府网络安全、关键基础设施、供应商风险、攻防授权和安全审计的团队应关注。",
-      "readerUse": "目标读者：政府与关键基础设施安全团队。可检查模型可访问资产、人工批准点、日志留存、漏洞验证和事件回滚安排。",
-      "nextCheck": "核对 NCIA 或北约的部署说明、授权任务范围、独立安全审计、维护方补丁记录及可公开的处置质量指标。",
+      "id": "openai-cisco-shirudo-linux-security-2026-11-23",
+      "category": "tool",
+      "label": "工具",
+      "title": "OpenAI 与 Cisco 开源 Shirudo：先用可审计护盾缩短 Linux 补丁空窗",
+      "body": "OpenAI 与 Cisco 于11月23日发布开源 Shirudo，称可在 Linux 服务不停机时，用经批准的 eBPF 护盾临时阻断已知漏洞路径，直到永久补丁完成部署。",
+      "summary": "Shirudo 把漏洞修复前的临时防护做成可签名、可验证的 eBPF 护盾，但真实生产可靠性仍待外部检验。",
+      "detailBody": "来源事实：OpenAI 与 Cisco 发布开源 Shirudo，说明它以 eBPF 在运行中的 Linux 系统上加载临时护盾；原文展示了对 Java4Shell 的受控测试，称 Elasticsearch 无需重启即可拒绝恶意输入。两家公司还说明护盾须经操作员批准，并使用签名、内核验证和 TPM 记录。",
+      "trend": "Agent 安全工具正从发现漏洞走向受人类控制的运行时缓解；验收重点会落在误拦截、回滚和审计证据，而不是“自动修复”口号。",
+      "detailTrend": "这类运行时控制把“补丁发布前怎么办”变成独立的安全工程问题：模型可以提出或测试临时规则，但上线权、最小权限和可撤销性仍在运维团队手中。若能跨内核、负载与漏洞类型稳定工作，它会补足传统补丁流程的时间差，而不会取代补丁管理。",
+      "whyItMatters": "对不能轻易停机的 Linux 服务，临时防护的价值取决于能否在拦截攻击时保住合法流量，并留下可复核的部署记录。",
+      "whyRanked": "它将 AI 辅助防御与 eBPF、签名和硬件证明放进同一开源运行时，直接关联生产系统的漏洞响应控制面。",
+      "detailWhyRanked": "本站收录的原因是 OpenAI News 与 Cisco Newsroom 同时披露了同一工程对象：开源代码、eBPF 护盾、操作员批准、签名校验和 TPM 记录。两家公司在受控场景中的演示不等于已证明所有生产系统都安全有效；读者应把它当作运行时缓解方案的早期信号。",
+      "topReason": "先核对代码、内核兼容性、误拦截率和独立部署审计，再判断是否适合关键工作负载。",
+      "whoShouldCare": "负责高可用 Linux 服务、漏洞响应和内核安全基线的安全平台主管与 SRE 团队应关注。",
+      "impact": "安全团队可把“临时护盾”纳入紧急变更清单，同时保留补丁、回滚、签名验证和业务流量验收。",
+      "readerUse": "生产安全与 SRE 团队可检查 eBPF 权限、护盾审批人、TPM 证明、误拦截监测和撤销路径。",
+      "nextCheck": "优先核对 Shirudo 代码、独立复现的漏洞测试、合法流量误拦截指标及真实运维团队的审计记录。",
       "followUpQuestions": [
-        "NCIA 是否公开模型可访问的资产范围、人工批准节点和日志保留要求？",
-        "独立审计或维护方记录能否说明模型协助发现的问题是否被正确验证、修复并避免误处置？"
+        "Shirudo 的代码与发布文档是否列出支持的内核版本、护盾撤销步骤和权限模型？",
+        "独立安全团队能否公布针对多类漏洞与正常业务流量的误拦截、延迟和回滚测试记录？"
       ],
-      "evidenceThreshold": "需要 NCIA/北约部署文件、授权与审计记录、独立红队或安全审计，以及维护方确认的漏洞验证和修复指标，才能升级为已验证的防御成效。",
-      "claimBoundary": "OpenAI 的合作与用量披露不证明 Daybreak 已在不同北约环境中提升检测准确性、缩短修复周期或降低网络风险。",
-      "counterEvidence": "若 NCIA 文件、独立审计或维护方记录显示授权范围受限、误报处置成本高、修复未改善或存在治理缺口，应下调该部署信号的实际防御价值。",
-      "sourceUrl": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/",
-      "provenance": "OpenAI News 官方原文披露其与 NCIA 的合作、Daybreak 接入和所述 token 用量；部署成效、授权边界与安全结果仍需北约或独立材料验证。",
-      "tags": ["网络安全", "政府AI", "授权治理", "安全审计"],
-      "companies": ["OpenAI", "NATO", "NCIA"],
-      "source": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "trustLevel": "official",
-      "selectionScore": {"impact": 5, "novelty": 4, "narrativeStrength": 4, "evidenceQuality": 4, "readerUtility": 5, "total": 22, "note": "官方原文可核对合作与接入披露；防御效果仍需北约、审计方与维护方材料。"},
-      "impact": "将模型用于政府网络防御时，采购与治理需把授权范围、日志、人工复核、漏洞验证和补丁回归设为同等重要的验收项。",
-      "publishedAt": "2026-11-17",
-      "summary": "OpenAI 于11月17日称，正通过 Daybreak 向北约核心机构提供获授权网络防御工作的模型访问，并披露其所述最高月度用量。",
-      "originalUrl": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/",
+      "evidenceThreshold": "需要独立复现报告、生产环境的误拦截/可用性指标、签名与 TPM 审计记录，才能升级为已验证的运行时防护成效。",
+      "claimBoundary": "官方演示与开源发布不证明 Shirudo 已在不同内核、应用负载和攻击类型中可靠降低风险。",
+      "counterEvidence": "若独立复测报告、生产审计日志或回滚记录发现护盾易绕过、显著误拦截合法请求或审计链不完整，应下调其生产防护价值。",
+      "source": "OpenAI News / Cisco Newsroom",
       "sourceName": "OpenAI News",
+      "sourceId": "openai-news",
+      "sourceUrl": "https://openai.com/index/introducing-shirudo/",
+      "originalUrl": "https://openai.com/index/introducing-shirudo/",
+      "sourceRole": "官方核对",
+      "provenance": "OpenAI News 的官方发布可核对 OpenAI 与 Cisco 宣布开源 Shirudo 代码、采用 eBPF 运行时、操作员批准、签名、TPM 记录及 Java4Shell 受控测试；跨环境防护效果仍需独立复现与运维审计。",
+      "trustLevel": "来源层级：官方，高可信",
+      "verificationStatus": "已核验",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "verificationStatus": "已核验",
-      "time": "2026-11-17",
-      "editorScore": {"impact": 5, "novelty": 4, "evidenceQuality": 4, "readerUtility": 5, "total": 18}
-    },
-    {
-      "id": "openai-csam-safety-tools-2026-11-16",
-      "category": "product",
-      "label": "产品",
-      "title": "OpenAI 发布 CSAM 检测与干预工具：将分类、人工复核与执法支持并列",
-      "body": "OpenAI 于11月16日发布面向儿童性剥削和虐待材料（CSAM）的图像分类器、产品干预与开发者资源，并说明该工具面向获准组织的人工复核流程。",
-      "detailBody": "来源事实：OpenAI 宣布发布 CSAM 图像分类器、产品内干预和开发者资源，并说明获准组织可申请使用分类器以协助人工复核。\n核验边界：已核对官方发布与其自述的测试、访问路径；未独立核对不同内容、地区和运营环境中的检出率、公平性或执法结果。",
-      "trend": "内容安全能力正从模型拒答扩展到分类、人工处置、申诉与外部协作链路；任何自动化指标都需要按真实审核流程复核。",
-      "detailTrend": "高风险内容治理正在从模型拒答扩展到分类、人工处置与外部协作链路。单一分类分数不足以描述处置质量与系统风险，干预机制与分流路径也会影响实际运营负担。这意味着治理能力会更多地取决于分类结果如何进入人工判断、限制措施与支持资源之间的连续流程。",
-      "whyItMatters": "平台安全与信任团队应把分类器放入人工复核、申诉、事件报告和数据治理流程，而非把厂商测试指标直接当成生产效果。",
-      "whyRanked": "该发布把检测工具、行为干预和执法支持放进同一安全运营框架，涉及高风险内容治理的责任链。",
-      "detailWhyRanked": "本站解读：高风险内容安全须同时看检测、人工判断和处置后果。读者应以模型卡、独立测试和平台透明度报告，而不是单一供应商数字，评估真实风险。原文是发布与方法的事实入口，外部文件和可观察结果才决定能否升级判断。原文同时保留了范围与限制的说明，读者可据此区分已披露事实和待验证影响。",
-      "topReason": "先核对模型卡、人工复核协议、误报/漏报记录和独立安全测试。",
-      "whoShouldCare": "负责内容安全、儿童保护、信任与安全、合规和审核运营的团队应关注。",
-      "readerUse": "目标读者：内容安全与审核运营团队。可检查人工复核阈值、升级路径、申诉机制、访问治理和透明度报告。",
-      "nextCheck": "核对分类器模型卡、独立儿童安全组织测试、平台审核透明度报告和执法/保护机构的实施反馈。",
-      "followUpQuestions": [
-        "模型卡是否按内容类型、地区和阈值披露误报与漏报？",
-        "独立儿童安全机构能否发布人工复核记录、误报率和漏报率等测试结果？"
-      ],
-      "evidenceThreshold": "需要公开模型卡、独立儿童安全组织测试、平台透明度报告和人工审核记录，才能升级为已验证的安全运营效果。",
-      "claimBoundary": "OpenAI 的测试和合作披露不证明分类器在所有平台、内容类型或地区都能安全有效地降低伤害。",
-      "counterEvidence": "若独立儿童安全机构测试、平台透明度报告或人工审核记录显示漏报、误报或处置失效，应下调其保护价值。",
-      "sourceUrl": "https://openai.com/index/strengthening-online-child-safety/",
-      "provenance": "OpenAI News 官方原文披露 CSAM 图像分类模型、干预工具与申请路径；完整事实以原文为准，跨平台效果仍待外部验证。",
-      "tags": [
-        "内容安全",
-        "儿童保护",
-        "分类器",
-        "审核治理"
-      ],
       "companies": [
         "OpenAI",
-        "Protect Children"
+        "Cisco"
       ],
-      "source": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "trustLevel": "official",
+      "tags": [
+        "网络安全",
+        "Linux",
+        "eBPF",
+        "运行时防护"
+      ],
+      "publishedAt": "2026-11-23T16:36:00-05:00",
+      "time": "11/24",
       "selectionScore": {
-        "impact": 4,
+        "impact": 5,
         "novelty": 4,
         "narrativeStrength": 4,
         "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方原文可核对发布或研究披露；实际效果与外部影响仍需独立材料。"
+        "readerUtility": 5,
+        "total": 22,
+        "note": "官方发布与开源项目可核对；受控测试不等同生产防护效果。"
       },
-      "impact": "内容安全采购应同时评审分类性能、人工复核、申诉与可审计处置，不以供应商自测替代运营证据。",
-      "publishedAt": "2026-11-16",
-      "summary": "OpenAI 于11月16日发布面向儿童性剥削和虐待材料（CSAM）的图像分类器、产品干预与开发者资源，并说明该工具面向获准组织的人工复核流程。",
-      "originalUrl": "https://openai.com/index/strengthening-online-child-safety/",
-      "sourceName": "OpenAI News",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "verificationStatus": "已核验",
-      "time": "2026-11-16",
       "editorScore": {
-        "impact": 4,
+        "impact": 5,
         "novelty": 4,
         "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 16
+        "readerUtility": 5,
+        "total": 18
       }
     },
     {
-      "id": "openai-scientists-chatgpt-study-2026-11-16",
+      "id": "deepmind-agent-formal-quantum-algorithms-2026-11-23",
       "category": "research",
       "label": "研究",
-      "title": "OpenAI 发布科学家使用研究：描述 1,819 名参与者的任务分布与自报预期",
-      "body": "OpenAI 于11月16日发布对学术研究者计划参与者的使用研究，分析1,819名科学家的58万余条科学相关消息与问卷；报告将生产率和发现速度相关结果明确为参与者自报或预期。",
-      "detailBody": "来源事实：OpenAI 发布一项使用研究，分析1,819名学术研究者计划参与者的58万余条科学相关消息，并结合问卷描述任务分布与参与者预期。\n核验边界：已核对研究样本、方法披露和作者的限制说明；自报生产率与预期发现速度不构成因果证明。研究同时说明相关生产率和发现速度结果来自参与者自报或预期。",
-      "trend": "科研工作流的 AI 使用可以被量化观察，但“使用频率”与“科学发现加速”之间仍隔着实验能力、资金、人力与独立结果验证。",
-      "detailTrend": "使用研究有助于界定哪些任务被辅助、研究者是否保持复核，却不能直接回答研究质量或因果生产率。研究机构应把自报结果与可复现产出和对照设计分开阅读。因此，部署讨论正在从单次功能体验转向可记录的控制与结果链条；这仍需要外部材料验证。",
-      "whyItMatters": "科研团队可将这份研究用作工作流审计线索：记录 AI 参与的阅读、写作、分析和代码环节，同时保留人工复核与可复现证据。",
-      "whyRanked": "它给出一份带样本和方法说明的科研使用观察，同时清楚保留自报与因果边界。",
-      "detailWhyRanked": "本站解读：这类研究的价值在于暴露工作流与验证缺口，而不是证明 AI 已经普遍加速科学发现。读者应优先寻找独立、预注册或客观产出指标。原文是发布与方法的事实入口，外部文件和可观察结果才决定能否升级判断。原文同时保留了范围与限制的说明，读者可据此区分已披露事实和待验证影响。",
-      "topReason": "先核对样本代表性、任务分类方法与独立产出指标，避免将自报预期当成因果效果。",
-      "whoShouldCare": "高校科研管理者、研究诚信负责人、资助方和科学工具开发团队应关注。",
-      "readerUse": "目标读者：科研管理与研究方法团队。可据此设计 AI 使用记录、人工复核节点和可复现性检查，而不把自报效率视作产出结论。",
-      "nextCheck": "核对完整论文、独立复现、预注册对照研究以及论文、数据或实验周期等客观产出指标。",
+      "title": "DeepMind 用 Agent 团队与形式化验证优化量子算法：结果仍待硬件与同行检验",
+      "body": "Google DeepMind 于11月23日发布研究称，Gemini 4 Agent 团队在 Lean 形式化验证下优化了若干量子电路，并开放了量子算法 Lean 库、问题规格和已验证解。",
+      "summary": "DeepMind 报告 Agent 团队找出并形式化验证量子算法改进，开放框架；算法节约尚未等同于量子硬件上的实际收益。",
+      "detailBody": "来源事实：Google DeepMind 与 Google Quantum AI 发布研究，称多个 Agent 团队提出量子算法改进，再以 Lean 证明器验证；原文列举聚变、化学模拟、Grover 实现与 arcsin 例程的资源成本改进，并链接论文和开源 Lean 框架。",
+      "trend": "科学 Agent 的可用边界正在从“提出候选答案”转向“让关键中间结果可机器验证”；这会提高搜索过程的可审计性，但不消除实验与工程验证。",
+      "detailTrend": "把多 Agent 搜索与形式化证明接在一起，能把候选算法的数学正确性和最终性能价值拆开处理：前者可由 Lean 证明器逐项核对，后者仍受硬件、误差校正、编译器和应用工作负载制约。DeepMind 把 Lean 库、问题规格和已验证解开放出来，使外部团队能检查 Agent 如何产生候选方案。对科学研发而言，这种可复跑的规格与证明链比单次资源数字更值得持续跟踪。",
+      "whyItMatters": "它展示了研究团队怎样把 Agent 产出的算法候选接入可复核证明链，同时明确量子硬件可行性仍是另一道门槛。",
+      "whyRanked": "该研究同时给出可读论文与开源 Lean 框架，使读者可以区分已形式化验证的算法性质与尚未验证的现实计算收益。",
+      "detailWhyRanked": "本站将其视为科学研发工作流信号，而非量子性能已落地的结论。Google DeepMind Blog 的原文提供了任务、资源指标、论文和开源 Lean 入口，足以核对“研究团队作出这些披露”；但早期容错量子设备、编译路线和真实应用收益仍需论文审读、代码复现与硬件实验补强。",
+      "topReason": "先复跑公开 Lean 规格与论文资源估算，再看是否出现可复现的硬件或第三方算法验证。",
+      "whoShouldCare": "从事量子算法、科学计算和可验证 Agent 工作流的研究负责人及研发平台团队应关注。",
+      "impact": "研发团队可把形式化规格、证明产物与基准复现列为 Agent 参与科学设计时的交付物，而非只保存最终答案。",
+      "readerUse": "研究与工程团队可检查开放 Lean 库、问题规格、复跑成本与硬件映射假设是否完整。",
+      "nextCheck": "核对论文方法、公开代码可复现性、第三方资源估算复跑，以及后续量子硬件或编译器实验。",
       "followUpQuestions": [
-        "样本是否代表不同学科、地区和研究资源条件？",
-        "独立对照研究能否验证对研究质量、周期和可复现性的影响？"
+        "论文和 Lean 仓库是否给出可复跑的规格、证明版本与资源估算脚本？",
+        "独立团队能否在不同编译假设或量子硬件约束下复现原文列出的资源节约？"
       ],
-      "evidenceThreshold": "需要完整方法论文、独立复现、预注册对照研究和论文/数据/实验周期等客观产出指标，才能升级为 AI 加速科学发现的结论。",
-      "claimBoundary": "该研究描述特定计划参与者的使用与自报预期，不证明 ChatGPT 对科研生产率或发现速度存在普遍因果效应。",
-      "counterEvidence": "若独立复现论文、预注册对照研究或客观产出数据发现样本偏差或无改善，应收窄其外推范围。",
-      "sourceUrl": "https://openai.com/index/science-at-the-frontier/",
-      "provenance": "OpenAI News 官方原文披露对1,819名科学家和58万余条消息的使用研究及方法限制；完整事实以原文为准，因果影响仍待外部验证。",
-      "tags": [
-        "科研AI",
-        "使用研究",
-        "研究方法",
-        "可复现性"
-      ],
-      "companies": [
-        "OpenAI"
-      ],
-      "source": "OpenAI News",
-      "sourceId": "openai-news",
+      "evidenceThreshold": "需要同行评议报告或独立技术审读、公开代码复现记录、第三方资源评估数据及硬件/编译实验报告，才能升级为已验证的量子计算实用收益。",
+      "claimBoundary": "形式化证明可支持特定算法性质，不证明这些改进已在近期量子硬件上实现，或已带来聚变和药物研发结果。",
+      "counterEvidence": "若第三方复现报告、代码运行记录或硬件映射数据显示资源估算依赖不可实现假设、证明无法复跑或节约被抵消，应收窄其应用价值判断。",
+      "source": "Google DeepMind Blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceId": "google-deepmind-blog",
+      "sourceUrl": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+      "originalUrl": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
       "sourceRole": "官方核对",
-      "trustLevel": "official",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方原文可核对发布或研究披露；实际效果与外部影响仍需独立材料。"
-      },
-      "impact": "研究机构应把 AI 使用记录、人工复核和客观产出评估并置，防止将主观效率感受当成科研效果。",
-      "publishedAt": "2026-11-16",
-      "summary": "OpenAI 于11月16日发布对学术研究者计划参与者的使用研究，分析1,819名科学家的58万余条科学相关消息与问卷；报告将生产率和发现速度相关结果明确为参与者自报或预期。",
-      "originalUrl": "https://openai.com/index/science-at-the-frontier/",
-      "sourceName": "OpenAI News",
+      "provenance": "Google DeepMind Blog 的官方研究页可核对其与 Google Quantum AI 发布 Agent 团队、Lean 形式化验证、所列资源改进以及论文和代码入口；硬件可行性与应用收益仍需外部验证。",
+      "trustLevel": "来源层级：官方研究，高可信",
+      "verificationStatus": "已核验",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
-      "verificationStatus": "已核验",
-      "time": "2026-11-16",
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 16
-      }
-    },
-    {
-      "id": "openai-academic-researcher-access-2026-11-16",
-      "category": "research",
-      "label": "研究",
-      "title": "OpenAI 扩展学术研究者计划：拟向全球研究人员提供最高 20 万个免费名额",
-      "body": "OpenAI 于11月16日宣布扩大 ChatGPT for Academic Researchers 计划，称将向全球研究人员提供最高20万个免费访问名额，并披露下一轮的申请与资格安排。",
-      "detailBody": "来源事实：OpenAI 宣布扩大 ChatGPT for Academic Researchers 计划，目标是向全球研究人员提供最高20万个免费访问名额，并说明计划资格、申请安排和默认不用于训练的设置。\n核验边界：已核对官方计划与访问条件；未独立核对实际覆盖、学科公平性、持续使用率或研究产出。",
-      "trend": "科研 AI 的竞争正在从模型能力延展到访问分配、培训与数据治理；名额扩大本身不等于科研生产率或公平性已被验证。",
-      "detailTrend": "研究者访问计划能降低试用门槛，但其价值仍取决于资格规则、机构支持、数据政策和可复现研究实践。项目规模是官方承诺，不能替代实际覆盖和成果评估。因此，部署讨论正在从单次功能体验转向可记录的控制与结果链条；这仍需要外部材料验证。",
-      "whyItMatters": "科研管理者应同时核对资格、数据处理、协作者访问与机构支持，避免把免费名额直接读成公平采用或科学产出。",
-      "whyRanked": "它提供了科研 AI 访问规模和治理条件的官方信号，影响高校与实验室的工具引入路径。",
-      "detailWhyRanked": "本站解读：研究机构需要将访问计划放入数据治理、研究诚信和培训设计中评估。下一步应寻找参与机构的覆盖数据和独立产出研究。原文是发布与方法的事实入口，外部文件和可观察结果才决定能否升级判断。原文同时保留了范围与限制的说明，读者可据此区分已披露事实和待验证影响。",
-      "topReason": "先核对资格规则、数据政策、机构支持与参与者覆盖数据。",
-      "whoShouldCare": "高校科研管理者、实验室负责人、数据治理人员和研究诚信团队应关注。",
-      "readerUse": "目标读者：高校和实验室管理者。可据此核对申请资格、协作者权限、数据处理和培训支持是否满足本地要求。",
-      "nextCheck": "核对参与机构公告、申请与资格文件、使用覆盖数据及独立研究产出评估，再判断计划的公平性和科研影响。",
-      "followUpQuestions": [
-        "参与机构能否发布地区、学科、资格与名额覆盖的数据文件？",
-        "参与机构能否提供持续使用、研究诚信和科研产出的独立数据？"
-      ],
-      "evidenceThreshold": "需要参与机构覆盖数据、数据治理文件和独立研究产出评估，才能升级为已验证的科研采用或生产率结论。",
-      "claimBoundary": "OpenAI 的计划公告不证明免费访问已公平覆盖不同研究群体，或已提升研究质量、速度和可复现性。",
-      "counterEvidence": "若参与机构数据表明覆盖失衡、数据治理不足或未出现可核对的使用与产出，应下调其科研采用意义。",
-      "sourceUrl": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
-      "provenance": "OpenAI News 官方原文宣布最高20万个学术研究者免费访问名额，并说明资格与数据设置；完整事实以原文为准，覆盖结果仍待外部验证。",
-      "tags": [
-        "科研AI",
-        "学术访问",
-        "数据治理",
-        "高等教育"
-      ],
       "companies": [
-        "OpenAI"
+        "Google DeepMind",
+        "Google Quantum AI"
       ],
-      "source": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "trustLevel": "official",
+      "tags": [
+        "科学智能",
+        "量子计算",
+        "形式化验证",
+        "多Agent"
+      ],
+      "publishedAt": "2026-11-23T09:00:00-08:00",
+      "time": "11/24",
       "selectionScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 5,
         "narrativeStrength": 4,
         "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 20,
-        "note": "官方原文可核对发布或研究披露；实际效果与外部影响仍需独立材料。"
+        "total": 21,
+        "note": "官方研究页、论文与开源入口可核对；资源收益仍需独立复现和硬件验证。"
       },
-      "impact": "高校应把工具准入、数据治理与培训资源作为同一套科研 AI 采用检查项。",
-      "publishedAt": "2026-11-16",
-      "summary": "OpenAI 于11月16日宣布扩大 ChatGPT for Academic Researchers 计划，称将向全球研究人员提供最高20万个免费访问名额，并披露下一轮的申请与资格安排。",
-      "originalUrl": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
-      "sourceName": "OpenAI News",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "verificationStatus": "已核验",
-      "time": "2026-11-16",
       "editorScore": {
         "impact": 4,
-        "novelty": 4,
+        "novelty": 5,
         "evidenceQuality": 4,
         "readerUtility": 4,
-        "total": 16
-      }
-    },
-    {
-      "id": "openai-chatgpt-healthcare-agents-2026-11-16",
-      "category": "product",
-      "label": "产品",
-      "title": "OpenAI 扩展医疗工作流：计算机操作 Agent 与 20 余款插件进入 ChatGPT for Healthcare",
-      "body": "OpenAI 于11月16日宣布，ChatGPT for Healthcare 可用计算机操作 Agent、改进的临床检索和20余款医疗插件；其说明将访问控制、审计日志和人工复核列为受监管部署条件。",
-      "detailBody": "来源事实：OpenAI 宣布在 ChatGPT for Healthcare 中提供计算机操作 Agent、临床检索改进和20余款医疗插件，并说明医疗机构可设置应用访问范围、人工复核与审计日志。\n核验边界：已核对的是官方披露的功能、可用性和部署条件；未独立核对插件互操作性、临床安全性、合规实施或患者结局。",
-      "trend": "医疗 AI 的部署重点正从单点问答转向跨系统执行，但可用性必须与权限、日志、人工签核和本地合规控制一起验收。",
-      "detailTrend": "医疗 Agent 正在从对话辅助转向跨系统执行。权限分层、人工复核与记录留痕将成为工作流设计的一部分，并改变医疗软件连接时的责任划分与操作边界。这意味着系统设计将更强调操作前后的一致性、角色切换的可见性，以及跨应用任务的中断恢复能力。",
-      "whyItMatters": "医疗信息化与合规团队应先验证最小权限、人工签核、审计留痕和连接系统的责任边界，再评估跨系统自动化。",
-      "whyRanked": "这是把 Agent 从对话界面接入医疗软件的官方产品信号，直接牵动受监管部署的授权和审计设计。",
-      "detailWhyRanked": "本站解读：跨系统执行的价值不只在模型回答，而在于谁能访问什么、哪些动作必须人工确认、故障如何追溯。医院应以受控试点和本地治理材料判断可部署范围。原文是发布与方法的事实入口，外部文件和可观察结果才决定能否升级判断。原文同时保留了范围与限制的说明，读者可据此区分已披露事实和待验证影响。",
-      "topReason": "先在受控试点核对最小权限、人工签核、审计日志和异常回滚。",
-      "whoShouldCare": "医院信息化、临床运营、隐私合规和医疗软件团队应关注连接器权限与人工复核。",
-      "readerUse": "目标读者：医疗机构的信息化与合规团队。可将应用白名单、人工批准、审计日志、异常回滚和患者数据保护写入试点评审。",
-      "nextCheck": "核对医院或插件方的实施文件、BAA 与隐私审计、真实工作流日志及独立临床安全评估，再判断是否扩大部署。",
-      "followUpQuestions": [
-        "哪些跨系统动作必须由临床人员确认，日志能否完整追溯？",
-        "医院或插件方能否提供隐私审计、异常率和受控试点结果？"
-      ],
-      "evidenceThreshold": "需要医院侧实施文件、隐私/安全审计、可追溯工作流日志与独立临床安全结果，才能升级为已验证的医疗部署成效。",
-      "claimBoundary": "OpenAI 的产品发布不证明这些 Agent 或插件已在不同医疗机构安全、合规地改善临床或运营结果。",
-      "counterEvidence": "若医院审计报告、权限日志或独立临床安全评估显示越权、错误或不可追溯操作，应下调其部署价值。",
-      "sourceUrl": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare/",
-      "provenance": "OpenAI News 官方原文披露 ChatGPT for Healthcare 的计算机操作 Agent、临床检索和插件扩展；完整事实以原文为准，实际效果仍待外部验证。",
-      "tags": [
-        "医疗AI",
-        "计算机操作",
-        "插件",
-        "合规治理"
-      ],
-      "companies": [
-        "OpenAI",
-        "Cigna Healthcare"
-      ],
-      "source": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceRole": "官方核对",
-      "trustLevel": "official",
-      "selectionScore": {
-        "impact": 4,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方原文可核对发布或研究披露；实际效果与外部影响仍需独立材料。"
-      },
-      "impact": "受监管 Agent 上线应将权限、人工签核、审计和回滚作为与功能同等的验收条件。",
-      "publishedAt": "2026-11-16",
-      "summary": "OpenAI 于11月16日宣布，ChatGPT for Healthcare 可用计算机操作 Agent、改进的临床检索和20余款医疗插件；其说明将访问控制、审计日志和人工复核列为受监管部署条件。",
-      "originalUrl": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare/",
-      "sourceName": "OpenAI News",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "verificationStatus": "已核验",
-      "time": "2026-11-16",
-      "editorScore": {
-        "impact": 4,
-        "novelty": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 16
+        "total": 17
       }
     }
   ],

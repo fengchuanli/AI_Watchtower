@@ -1,8 +1,298 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18",
-  "totalItems": 1328,
+  "updatedAt": "2026-11-24",
+  "totalItems": 1330,
   "editions": [
+    {
+      "id": "news-1700-2026-11-24",
+      "date": "2026-11-24",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "11月24日｜17点情报版",
+      "itemCount": 2,
+      "note": "新增两条可核验信号：运行时漏洞缓解与形式化验证科学 Agent。",
+      "operationalStatus": "已同步 origin/main；检查官方原文、论文/代码入口，并以当前与历史 URL/标题去重。",
+      "editorialInterpretation": "本期发布2条安全非重复信号，少于10条是质量门槛结果；未用旧稿、付费墙、登录墙、社区讨论、重复或营销材料补数。",
+      "readerFrame": {
+        "headline": "当 Agent 进入生产防御与科学搜索，证明链、审批与复现比能力口号更关键。",
+        "whyItMatters": "Shirudo 把运行时防护的审批、签名与证明放在前台；DeepMind 则把 Agent 搜索和形式化证明相连。两者都能确认发布或研究披露，不能替代生产审计、独立复现或硬件验证。",
+        "useThisIssueFor": [
+          "安全团队核对护盾权限、签名、回滚和误拦截。",
+          "研究团队核对规格、证明、代码复现和硬件假设。"
+        ],
+        "notProvenYet": [
+          "尚未独立证明 Shirudo 在多种生产负载中能安全降低漏洞风险。",
+          "尚未独立证明量子算法节约可转化为近期硬件或科学应用收益。"
+        ],
+        "mobile": {
+          "headline": "先看证明链与回滚",
+          "summary": "2条官方信号，覆盖运行时防护与可验证科学 Agent。",
+          "primaryUses": [
+            "安全团队查审批与回滚",
+            "研究团队查证明与复现"
+          ],
+          "proofBoundary": "尚未证明其具备跨环境生产防护或量子硬件收益。"
+        }
+      },
+      "changeSummary": {
+        "headline": "11月24日17点新增2条安全与科学 Agent 信号",
+        "freshFacts": [
+          "本期新增：OpenAI 与 Cisco 发布开源 Shirudo，用 eBPF 护盾尝试缩短 Linux 补丁空窗。",
+          "本期新增：DeepMind 发布由 Agent 团队和 Lean 验证支持的量子算法优化研究与开源框架。"
+        ],
+        "repeatedContext": [
+          "延续背景：官方披露与受控测试不等于生产防护效果。",
+          "仍是边界：数学证明与资源估算不等于量子硬件上的现实收益。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对 Linux 护盾审批与回滚",
+          "count": 1,
+          "meaning": "用来更新安全团队的 eBPF 权限、签名、审计、误拦截和撤销检查。"
+        },
+        {
+          "label": "核对科学 Agent 证明与复现",
+          "count": 1,
+          "meaning": "用来检查研究团队的公开规格、证明产物、代码复跑与硬件映射假设。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方原文",
+          "count": 2,
+          "role": "用于核对发布与研究披露；生产、安全和科学成效仍需外部证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "官方来源集中",
+        "note": "2/2为官方原文，来源集中于发布方自述，不能独立证明实际成效。",
+        "nextCheck": "复核独立安全复现报告、运维审计日志、论文复跑和硬件实验数据。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成已验证成效",
+        "body": "本期是运行时防护控制面与科学 Agent 可验证工作流的核验雷达，不是生产安全或量子应用效果评测。",
+        "doNotConclude": "不能由本期推出 Shirudo 已普遍降低 Linux 漏洞风险，或 Agent 优化已推动近期量子硬件与科学成果。",
+        "useInstead": "应该用代码复现记录、独立安全测试报告、运维审计日志、论文审读、资源数据和硬件实验更新判断。"
+      },
+      "topicGroups": [
+        {
+          "id": "developer-tooling",
+          "label": "核对运行时安全控制面",
+          "count": 1,
+          "itemIds": [
+            "openai-cisco-shirudo-linux-security-2026-11-23"
+          ],
+          "meaning": "用来检查 Agent 生成防护规则的权限、签名、审计和回滚。"
+        },
+        {
+          "id": "agent",
+          "label": "核对科学 Agent 证明链",
+          "count": 1,
+          "itemIds": [
+            "deepmind-agent-formal-quantum-algorithms-2026-11-23"
+          ],
+          "meaning": "用来检查 Agent 搜索结果能否由规格、证明和复现链支撑。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "可审计 Agent",
+          "label": "Agent 交付物走向可审计",
+          "note": "跨期看，Agent 产出正接入签名、证明或公开复现入口，让人类团队能核对并决定是否采用。",
+          "boundary": "这不证明控制或证明链在所有生产和科研环境中都足够有效，仍需独立审计与复现记录。"
+        },
+        {
+          "topic": "运行时安全",
+          "label": "运行时控制面延续",
+          "note": "归档连续关注 Agent 的权限、日志和人工复核；本期将运行时护盾的审批与可撤销性推进到开源工程对象。",
+          "boundary": "不证明开源运行时已在关键负载中可靠防护，仍需第三方复测、生产日志和审计数据。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "Agent 的可验证交付增强",
+          "status": "stronger",
+          "previousPattern": "此前归档持续关注 Agent 的权限、审计和人工复核。",
+          "currentSignal": "本期新增运行时护盾的操作员批准与科学算法的 Lean 证明入口。",
+          "signalDirection": "可审计性与可复现性线索增强，实际成效证据未同步增强。",
+          "stillUnproven": "仍需生产审计、独立复现报告、硬件实验数据与可量化结果。"
+        },
+        {
+          "topic": "developer-tooling",
+          "label": "安全控制面工程化",
+          "status": "stronger",
+          "previousPattern": "此前归档持续将 Agent 工具的权限、日志与回滚列为部署前提。",
+          "currentSignal": "本期新增公开的 eBPF 护盾、签名、TPM 记录与操作员批准链路。",
+          "signalDirection": "工程控制面披露增强，但跨负载的安全效果证据未增强。",
+          "stillUnproven": "仍需独立安全复测、生产日志、维护者记录和外部审计。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "安全工具外部化线索",
+          "lastMention": "此前归档关注 OpenAI 的模型安全、网络防御与控制面披露。",
+          "whatChanged": "本期新增与 Cisco 共同开源的 Linux 运行时护盾项目。",
+          "stillUnproven": "仍需独立复现、生产审计和维护者记录确认其实际防护价值。"
+        },
+        {
+          "company": "Google DeepMind",
+          "label": "科学 Agent 可验证性线索",
+          "lastMention": "此前归档持续将科学 AI 的能力披露与复现、方法和结果区分。",
+          "whatChanged": "本期新增 Agent 团队结合 Lean 证明器优化量子算法的公开研究与框架。",
+          "stillUnproven": "仍需论文复跑、第三方资源评估与硬件实验确认其应用收益。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "official-multi-owner",
+        "sourceName": "官方多来源",
+        "count": 2,
+        "share": "2/2",
+        "note": "均为官方材料，但来自两个所有者；发布与研究事实已核对，效果仍待独立验证。",
+        "nextCheck": "优先补查 Cisco/维护者记录、独立安全测试、论文复跑与硬件实验。"
+      },
+      "statusLabel": "17:00 JST 实讯",
+      "editorNote": "11月24日17点版：新增运行时漏洞缓解与形式化验证科学 Agent 两条官方信号；发布与研究披露不替代生产审计、独立复现或硬件实验。",
+      "items": [
+        {
+          "id": "openai-cisco-shirudo-linux-security-2026-11-23",
+          "category": "tool",
+          "label": "工具",
+          "title": "OpenAI 与 Cisco 开源 Shirudo：先用可审计护盾缩短 Linux 补丁空窗",
+          "body": "OpenAI 与 Cisco 于11月23日发布开源 Shirudo，称可在 Linux 服务不停机时，用经批准的 eBPF 护盾临时阻断已知漏洞路径，直到永久补丁完成部署。",
+          "summary": "Shirudo 把漏洞修复前的临时防护做成可签名、可验证的 eBPF 护盾，但真实生产可靠性仍待外部检验。",
+          "detailBody": "来源事实：OpenAI 与 Cisco 发布开源 Shirudo，说明它以 eBPF 在运行中的 Linux 系统上加载临时护盾；原文展示了对 Java4Shell 的受控测试，称 Elasticsearch 无需重启即可拒绝恶意输入。两家公司还说明护盾须经操作员批准，并使用签名、内核验证和 TPM 记录。",
+          "trend": "Agent 安全工具正从发现漏洞走向受人类控制的运行时缓解；验收重点会落在误拦截、回滚和审计证据，而不是“自动修复”口号。",
+          "detailTrend": "这类运行时控制把“补丁发布前怎么办”变成独立的安全工程问题：模型可以提出或测试临时规则，但上线权、最小权限和可撤销性仍在运维团队手中。若能跨内核、负载与漏洞类型稳定工作，它会补足传统补丁流程的时间差，而不会取代补丁管理。",
+          "whyItMatters": "对不能轻易停机的 Linux 服务，临时防护的价值取决于能否在拦截攻击时保住合法流量，并留下可复核的部署记录。",
+          "whyRanked": "它将 AI 辅助防御与 eBPF、签名和硬件证明放进同一开源运行时，直接关联生产系统的漏洞响应控制面。",
+          "detailWhyRanked": "本站收录的原因是 OpenAI News 与 Cisco Newsroom 同时披露了同一工程对象：开源代码、eBPF 护盾、操作员批准、签名校验和 TPM 记录。两家公司在受控场景中的演示不等于已证明所有生产系统都安全有效；读者应把它当作运行时缓解方案的早期信号。",
+          "topReason": "先核对代码、内核兼容性、误拦截率和独立部署审计，再判断是否适合关键工作负载。",
+          "whoShouldCare": "负责高可用 Linux 服务、漏洞响应和内核安全基线的安全平台主管与 SRE 团队应关注。",
+          "impact": "安全团队可把“临时护盾”纳入紧急变更清单，同时保留补丁、回滚、签名验证和业务流量验收。",
+          "readerUse": "生产安全与 SRE 团队可检查 eBPF 权限、护盾审批人、TPM 证明、误拦截监测和撤销路径。",
+          "nextCheck": "优先核对 Shirudo 代码、独立复现的漏洞测试、合法流量误拦截指标及真实运维团队的审计记录。",
+          "followUpQuestions": [
+            "Shirudo 的代码与发布文档是否列出支持的内核版本、护盾撤销步骤和权限模型？",
+            "独立安全团队能否公布针对多类漏洞与正常业务流量的误拦截、延迟和回滚测试记录？"
+          ],
+          "evidenceThreshold": "需要独立复现报告、生产环境的误拦截/可用性指标、签名与 TPM 审计记录，才能升级为已验证的运行时防护成效。",
+          "claimBoundary": "官方演示与开源发布不证明 Shirudo 已在不同内核、应用负载和攻击类型中可靠降低风险。",
+          "counterEvidence": "若独立复测报告、生产审计日志或回滚记录发现护盾易绕过、显著误拦截合法请求或审计链不完整，应下调其生产防护价值。",
+          "source": "OpenAI News / Cisco Newsroom",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/introducing-shirudo/",
+          "originalUrl": "https://openai.com/index/introducing-shirudo/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI News 的官方发布可核对 OpenAI 与 Cisco 宣布开源 Shirudo 代码、采用 eBPF 运行时、操作员批准、签名、TPM 记录及 Java4Shell 受控测试；跨环境防护效果仍需独立复现与运维审计。",
+          "trustLevel": "来源层级：官方，高可信",
+          "verificationStatus": "已核验",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "companies": [
+            "OpenAI",
+            "Cisco"
+          ],
+          "tags": [
+            "网络安全",
+            "Linux",
+            "eBPF",
+            "运行时防护"
+          ],
+          "publishedAt": "2026-11-23T16:36:00-05:00",
+          "time": "11/24",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方发布与开源项目可核对；受控测试不等同生产防护效果。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 18
+          }
+        },
+        {
+          "id": "deepmind-agent-formal-quantum-algorithms-2026-11-23",
+          "category": "research",
+          "label": "研究",
+          "title": "DeepMind 用 Agent 团队与形式化验证优化量子算法：结果仍待硬件与同行检验",
+          "body": "Google DeepMind 于11月23日发布研究称，Gemini 4 Agent 团队在 Lean 形式化验证下优化了若干量子电路，并开放了量子算法 Lean 库、问题规格和已验证解。",
+          "summary": "DeepMind 报告 Agent 团队找出并形式化验证量子算法改进，开放框架；算法节约尚未等同于量子硬件上的实际收益。",
+          "detailBody": "来源事实：Google DeepMind 与 Google Quantum AI 发布研究，称多个 Agent 团队提出量子算法改进，再以 Lean 证明器验证；原文列举聚变、化学模拟、Grover 实现与 arcsin 例程的资源成本改进，并链接论文和开源 Lean 框架。",
+          "trend": "科学 Agent 的可用边界正在从“提出候选答案”转向“让关键中间结果可机器验证”；这会提高搜索过程的可审计性，但不消除实验与工程验证。",
+          "detailTrend": "把多 Agent 搜索与形式化证明接在一起，能把候选算法的数学正确性和最终性能价值拆开处理：前者可由 Lean 证明器逐项核对，后者仍受硬件、误差校正、编译器和应用工作负载制约。DeepMind 把 Lean 库、问题规格和已验证解开放出来，使外部团队能检查 Agent 如何产生候选方案。对科学研发而言，这种可复跑的规格与证明链比单次资源数字更值得持续跟踪。",
+          "whyItMatters": "它展示了研究团队怎样把 Agent 产出的算法候选接入可复核证明链，同时明确量子硬件可行性仍是另一道门槛。",
+          "whyRanked": "该研究同时给出可读论文与开源 Lean 框架，使读者可以区分已形式化验证的算法性质与尚未验证的现实计算收益。",
+          "detailWhyRanked": "本站将其视为科学研发工作流信号，而非量子性能已落地的结论。Google DeepMind Blog 的原文提供了任务、资源指标、论文和开源 Lean 入口，足以核对“研究团队作出这些披露”；但早期容错量子设备、编译路线和真实应用收益仍需论文审读、代码复现与硬件实验补强。",
+          "topReason": "先复跑公开 Lean 规格与论文资源估算，再看是否出现可复现的硬件或第三方算法验证。",
+          "whoShouldCare": "从事量子算法、科学计算和可验证 Agent 工作流的研究负责人及研发平台团队应关注。",
+          "impact": "研发团队可把形式化规格、证明产物与基准复现列为 Agent 参与科学设计时的交付物，而非只保存最终答案。",
+          "readerUse": "研究与工程团队可检查开放 Lean 库、问题规格、复跑成本与硬件映射假设是否完整。",
+          "nextCheck": "核对论文方法、公开代码可复现性、第三方资源估算复跑，以及后续量子硬件或编译器实验。",
+          "followUpQuestions": [
+            "论文和 Lean 仓库是否给出可复跑的规格、证明版本与资源估算脚本？",
+            "独立团队能否在不同编译假设或量子硬件约束下复现原文列出的资源节约？"
+          ],
+          "evidenceThreshold": "需要同行评议报告或独立技术审读、公开代码复现记录、第三方资源评估数据及硬件/编译实验报告，才能升级为已验证的量子计算实用收益。",
+          "claimBoundary": "形式化证明可支持特定算法性质，不证明这些改进已在近期量子硬件上实现，或已带来聚变和药物研发结果。",
+          "counterEvidence": "若第三方复现报告、代码运行记录或硬件映射数据显示资源估算依赖不可实现假设、证明无法复跑或节约被抵消，应收窄其应用价值判断。",
+          "source": "Google DeepMind Blog",
+          "sourceName": "Google DeepMind Blog",
+          "sourceId": "google-deepmind-blog",
+          "sourceUrl": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+          "originalUrl": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+          "sourceRole": "官方核对",
+          "provenance": "Google DeepMind Blog 的官方研究页可核对其与 Google Quantum AI 发布 Agent 团队、Lean 形式化验证、所列资源改进以及论文和代码入口；硬件可行性与应用收益仍需外部验证。",
+          "trustLevel": "来源层级：官方研究，高可信",
+          "verificationStatus": "已核验",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "companies": [
+            "Google DeepMind",
+            "Google Quantum AI"
+          ],
+          "tags": [
+            "科学智能",
+            "量子计算",
+            "形式化验证",
+            "多Agent"
+          ],
+          "publishedAt": "2026-11-23T09:00:00-08:00",
+          "time": "11/24",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 5,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方研究页、论文与开源入口可核对；资源收益仍需独立复现和硬件验证。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 5,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-11-18",
       "date": "2026-11-18",
@@ -186,19 +476,39 @@
           "whoShouldCare": "负责政府网络安全、关键基础设施、供应商风险、攻防授权和安全审计的团队应关注。",
           "readerUse": "目标读者：政府与关键基础设施安全团队。可检查模型可访问资产、人工批准点、日志留存、漏洞验证和事件回滚安排。",
           "nextCheck": "核对 NCIA 或北约的部署说明、授权任务范围、独立安全审计、维护方补丁记录及可公开的处置质量指标。",
-          "followUpQuestions": ["NCIA 是否公开模型可访问的资产范围、人工批准节点和日志保留要求？", "独立审计或维护方记录能否说明模型协助发现的问题是否被正确验证、修复并避免误处置？"],
+          "followUpQuestions": [
+            "NCIA 是否公开模型可访问的资产范围、人工批准节点和日志保留要求？",
+            "独立审计或维护方记录能否说明模型协助发现的问题是否被正确验证、修复并避免误处置？"
+          ],
           "evidenceThreshold": "需要 NCIA/北约部署文件、授权与审计记录、独立红队或安全审计，以及维护方确认的漏洞验证和修复指标，才能升级为已验证的防御成效。",
           "claimBoundary": "OpenAI 的合作与用量披露不证明 Daybreak 已在不同北约环境中提升检测准确性、缩短修复周期或降低网络风险。",
           "counterEvidence": "若 NCIA 文件、独立审计或维护方记录显示授权范围受限、误报处置成本高、修复未改善或存在治理缺口，应下调该部署信号的实际防御价值。",
           "sourceUrl": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/",
           "provenance": "OpenAI News 官方原文披露其与 NCIA 的合作、Daybreak 接入和所述 token 用量；部署成效、授权边界与安全结果仍需北约或独立材料验证。",
-          "tags": ["网络安全", "政府AI", "授权治理", "安全审计"],
-          "companies": ["OpenAI", "NATO", "NCIA"],
+          "tags": [
+            "网络安全",
+            "政府AI",
+            "授权治理",
+            "安全审计"
+          ],
+          "companies": [
+            "OpenAI",
+            "NATO",
+            "NCIA"
+          ],
           "source": "OpenAI News",
           "sourceId": "openai-news",
           "sourceRole": "官方核对",
           "trustLevel": "official",
-          "selectionScore": {"impact": 5, "novelty": 4, "narrativeStrength": 4, "evidenceQuality": 4, "readerUtility": 5, "total": 22, "note": "官方原文可核对合作与接入披露；防御效果仍需北约、审计方与维护方材料。"},
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方原文可核对合作与接入披露；防御效果仍需北约、审计方与维护方材料。"
+          },
           "impact": "将模型用于政府网络防御时，采购与治理需把授权范围、日志、人工复核、漏洞验证和补丁回归设为同等重要的验收项。",
           "publishedAt": "2026-11-17",
           "summary": "OpenAI 于11月17日称，正通过 Daybreak 向北约核心机构提供获授权网络防御工作的模型访问，并披露其所述最高月度用量。",
@@ -210,7 +520,13 @@
           "originalDependency": "recommended",
           "verificationStatus": "已核验",
           "time": "2026-11-17",
-          "editorScore": {"impact": 5, "novelty": 4, "evidenceQuality": 4, "readerUtility": 5, "total": 18}
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 18
+          }
         },
         {
           "id": "openai-csam-safety-tools-2026-11-16",

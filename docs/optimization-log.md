@@ -11601,3 +11601,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份数据 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有跨页导航文案断言；本次未修改或掩盖该基线问题。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-24 17:00 JST｜17点新闻情报更新
+
+- Focus：编辑前已同步 `origin/main`；按当日窗口发布2条有一手材料、可交叉核对且不与历史 URL/标题重复的信号：OpenAI/Cisco 开源 Linux 运行时护盾 Shirudo，以及 Google DeepMind 以 Agent 团队和 Lean 形式化验证优化量子算法的研究。短批次未以旧闻、付费/登录墙、传闻、社区讨论或营销材料补数。
+- Sources & boundary：Shirudo 使用 OpenAI 官方发布并由 Cisco Newsroom 对照；可核对开源、eBPF、操作员批准、签名、TPM 记录与受控 Java4Shell 测试，不能证明跨负载生产防护成效。DeepMind 使用官方研究页、论文与代码入口；可核对 Agent/Lean 方法和资源估算披露，不能证明近期硬件或科学应用收益。
+- Candidate intake / archive mirror：`publish-partial-batch`；2 条均通过来源、时效、URL/标题重复和站内事件简报门槛。最新首页版已镜像到 `data/news-history.json`（`news-1700-2026-11-24`）；派生索引、今日简表与趋势数据已重建。
+- Changed files：`data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页和两个详情页现在可读到中文事件说明、影响、来源边界、置信度与下一步核验；首页明确显示官方来源集中及生产/硬件成效尚待独立证据。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、5 份数据 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有跨页导航文案和首页 feed metadata 断言；本轮未改页面实现或掩盖该基线问题。
+- Commit note：【新闻更新】发布17点AI新闻：2条安全与科学Agent信号。
+
