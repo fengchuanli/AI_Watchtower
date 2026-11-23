@@ -11591,3 +11591,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Commit：`350329a`（【VisionHub网站风格优化】适配短版首页重点）。
 - Next：Day 5，在 390px 与 768px 运行手机阅读路径 QA，并修正一个最小可见的点击、间距或层级问题。
 
+## 2026-11-23 23:03 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：依恢复政策跳过漏跑批次，只检查上一已发布新闻版（22:21 JST）之后的当前窗口；未发现同时满足登记来源、可证明发布时间、非重复与站内事件简报证据门槛的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：编辑前已在授权网络下 `git pull --ff-only origin main` 并确认无远端差异。依据 `data/sources.json` 与 `docs/source-policy.md` 拉取 OpenAI Developers、Google AI、Hugging Face 与 arXiv cs.AI 的登记公开 RSS；官方 RSS 未出现可证实晚于上一版的高影响事实。arXiv 可见的 11 月 23 日条目发布时间早于上一版，且只支持作者披露的方法和结果、尚无同行评议或独立复现，未写成已验证新闻。未使用付费/登录墙正文、随机抓取页、社区讨论、传闻、旧闻或营销材料补数；检索范围仅说明已查入口，不代表全网没有新闻。
+- Candidate intake / duplicate / partial batch：无候选通过当前窗口、来源、重复与证据边界门槛；`hold-no-safe-batch`。Archive mirror：not-needed；`data/news.json`、`data/news-history.json` 与派生数据保持不变。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到现有已发布的网络防御、医疗、安全与科研信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份数据 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有跨页导航文案断言；本次未修改或掩盖该基线问题。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
