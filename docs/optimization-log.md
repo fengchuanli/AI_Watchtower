@@ -11581,3 +11581,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份数据 JSON 解析、6 个静态 HTML 壳解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍只报告既有跨页导航文案断言（`Cross-page navigation copy...`）；本轮未改页面或掩盖该基线问题。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-23 22:25 JST（20:00 scheduled content optimization，延迟执行）
+
+- Focus：完成当前 30 天计划 Day 4，针对只有 1 至 2 条已入选信号的首页首屏做短版处理。短版不再把实际条目称作“今日 TOP3”或承诺三条排名：标题改为“本期重点”，5 秒入口显示对应数量，读完后的入口只邀请读者按需补充归档背景。仍保留相同的来源边界、尚未证明和下一步核验卡片；不新增新闻事实，也不把少量条目解释成市场沉寂。
+- Changed files：`index.html`、`app.js`、`styles.css`、`scripts/check-top3-cues.mjs`、`scripts/validate-site.mjs`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页在本期仅有 1 或 2 条可发布重点时，会显示“本期重点”和准确条数，而非空置的 TOP3；读者读完后可选择进入全部新闻补背景。3 条时继续显示“今日 TOP3”。
+- Verification：`node --check app.js`、`node --check scripts/check-top3-cues.mjs`、`node --check scripts/validate-site.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 通过。`scripts/check-top3-cues.mjs` 已覆盖 1、2、3 条真实渲染分支。`node scripts/validate-site.mjs` 的本轮短版守卫通过；脚本仍报告既有跨页导航文案断言（`Cross-page navigation copy...`），本轮未改动或掩盖该基线问题。未进行浏览器视觉验收。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试成功，基线与 `origin/main` 一致。
+- Commit：`350329a`（【VisionHub网站风格优化】适配短版首页重点）。
+- Next：Day 5，在 390px 与 768px 运行手机阅读路径 QA，并修正一个最小可见的点击、间距或层级问题。
+
