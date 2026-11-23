@@ -5,6 +5,7 @@
    ============================================================ */
 :root {
   color-scheme: dark;
+  --top-story-count: 3;
 
   /* ---- 底色阶（深蓝，越小越深） ---- */
   --navy-900: #060a12;
@@ -678,6 +679,12 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+/* 1–2 条版不伪装成空缺的 TOP3：按实际重点数收束版面。 */
+.top-stories.is-short-edition {
+  grid-template-columns: repeat(var(--top-story-count), minmax(0, 1fr));
+  max-width: min(100%, 780px);
 }
 
 .top3-followup {

@@ -4,10 +4,20 @@ import { runInNewContext } from "node:vm";
 // Exercise the real renderer without network loading or browser startup.
 export function checkTop3Cues(appJs) {
   assert.match(appJs, /loadNews\(\);\s*$/);
-  const target = { innerHTML: "" };
+  const target = {
+    innerHTML: "",
+    classList: { toggle: () => {} },
+    style: { setProperty: () => {} },
+  };
+  const shortEditionNodes = {
+    "#top3Heading": { textContent: "" },
+    "#top3Summary": { textContent: "" },
+    "#top3FollowupTitle": { textContent: "" },
+    "#top3FollowupCopy": { textContent: "" },
+  };
   const context = {
     document: {
-      querySelector: (selector) => selector === "#topStories" ? target : null,
+      querySelector: (selector) => (selector === "#topStories" ? target : shortEditionNodes[selector] || null),
       querySelectorAll: () => [],
     },
     URL, URLSearchParams,
@@ -39,4 +49,12 @@ export function checkTop3Cues(appJs) {
   assert.match(media, /完整事实、采访、图表与上下文请以原文为准/);
   const missing = render({ ...base, claimBoundary: "" });
   assert.match(missing, /证据边界未标注，请先核对原文/);
+
+  context.updateTopStories([base]);
+  assert.equal(shortEditionNodes["#top3Heading"].textContent, "本期重点");
+  assert.match(shortEditionNodes["#top3Summary"].textContent, /仅 1 条信号达到首页解读门槛/);
+  context.updateTopStories([base, { ...base, id: "cue-fixture-two" }]);
+  assert.equal(shortEditionNodes["#top3Heading"].textContent, "本期重点");
+  context.updateTopStories([base, { ...base, id: "cue-fixture-two" }, { ...base, id: "cue-fixture-three" }]);
+  assert.equal(shortEditionNodes["#top3Heading"].textContent, "今日 TOP3");
 }

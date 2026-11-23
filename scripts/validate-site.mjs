@@ -516,7 +516,7 @@ if (
   !homepageNavOrderPattern.test(html) ||
   !/id="todayKeyLink" href="#top3">看今日 TOP3 →<\/a>/.test(html) ||
   !/todayKeyLink\.href = "#top3"/.test(appJs) ||
-  !/todayKeyLink\.textContent = "看今日 TOP3 →"/.test(appJs) ||
+  !/todayKeyLink\.textContent = topItemCount > 2 \? "看今日 TOP3 →" : `看本期 \$\{topItemCount\} 条重点 →`/.test(appJs) ||
   !/briefingHeadline/.test(appJs) ||
   !/briefingSummary/.test(appJs) ||
   !/briefingCta\.setAttribute\("aria-label", briefing\.cta\);/.test(appJs) ||
@@ -535,7 +535,13 @@ if (
   !/First-screen reader-order checks/.test(editorialValidatorLimits) ||
   !/Current-cycle Day 1[\s\S]*五秒要点/.test(optimizationDecisionIndex) ||
   !/Current-cycle Day 2 complete[\s\S]*新闻流/.test(optimizationDecisionIndex) ||
-  !/Next useful task: Day 3/.test(optimizationDecisionIndex)
+  !/Next useful task: Day 5/.test(optimizationDecisionIndex) ||
+  !/Day 4 Short-Edition First-Screen Rule/.test(homepageEditionPreflight) ||
+  !/function updateTopBriefingPresentation\(topItemCount\)/.test(appJs) ||
+  !/classList\.toggle\("is-short-edition", isShortEdition\)/.test(appJs) ||
+  !/id="top3Heading"/.test(html) ||
+  !/id="top3Summary"/.test(html) ||
+  !/\.top-stories\.is-short-edition/.test(styles)
 ) {
   errors.push("Homepage first-screen order must keep a VisionHub-style reader path: hero, today briefing, TOP3, purpose navigation, deep briefing, then compact non-TOP3 feed.");
 }

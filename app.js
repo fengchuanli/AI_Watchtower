@@ -25,6 +25,10 @@ const briefingSummary = document.querySelector("#briefingSummary");
 const briefingCta = document.querySelector("#briefingCta");
 const briefingWatchPoints = document.querySelector("#briefingWatchPoints");
 const topStories = document.querySelector("#topStories");
+const top3Heading = document.querySelector("#top3Heading");
+const top3Summary = document.querySelector("#top3Summary");
+const top3FollowupTitle = document.querySelector("#top3FollowupTitle");
+const top3FollowupCopy = document.querySelector("#top3FollowupCopy");
 const heroSignalCount = document.querySelector("#heroSignalCount");
 const heroSourceCount = document.querySelector("#heroSourceCount");
 const heroChecklistMode = document.querySelector("#heroChecklistMode");
@@ -172,7 +176,7 @@ async function loadNews() {
     const dailyTopItems = getDailyTopStories(data, history);
     dailyTopStoryIds = new Set(dailyTopItems.map((item) => item.id));
     updateTodayBriefing(data.briefing);
-    updateTodayKey(data.briefing, data.edition);
+    updateTodayKey(data.briefing, data.edition, dailyTopItems.length);
     updateTopStories(dailyTopItems);
     updateCategoryHighlights(news);
     updateDeepBriefing(data.deepBriefing);
@@ -332,7 +336,7 @@ function isValidSourceUrl(sourceUrl) {
   }
 }
 
-function updateTodayKey(briefing, edition) {
+function updateTodayKey(briefing, edition, topItemCount = 3) {
   if (!todayKeyText) {
     return;
   }
@@ -349,7 +353,36 @@ function updateTodayKey(briefing, edition) {
 
   if (todayKeyLink) {
     todayKeyLink.href = "#top3";
-    todayKeyLink.textContent = "看今日 TOP3 →";
+    todayKeyLink.textContent = topItemCount > 2 ? "看今日 TOP3 →" : `看本期 ${topItemCount} 条重点 →`;
+  }
+}
+
+function updateTopBriefingPresentation(topItemCount) {
+  const isShortEdition = topItemCount > 0 && topItemCount < 3;
+
+  if (top3Heading) {
+    top3Heading.textContent = isShortEdition ? "本期重点" : "今日 TOP3";
+  }
+
+  if (top3Summary) {
+    top3Summary.textContent = isShortEdition
+      ? `本期仅 ${topItemCount} 条信号达到首页解读门槛；先看已入选重点，再按需浏览更多新闻。`
+      : "先看新闻本身，再按需展开编辑判断，帮助你快速知道今天最值得关注的三条。";
+  }
+
+  if (top3FollowupTitle) {
+    top3FollowupTitle.textContent = isShortEdition ? "还想补充背景？" : "想继续看更多？";
+  }
+
+  if (top3FollowupCopy) {
+    top3FollowupCopy.textContent = isShortEdition
+      ? "本期重点已读完；可进入全部 AI 新闻，只看标题快速补齐背景。"
+      : "看完今天最重要的 3 条后，可以直接进入全部 AI 新闻，只看标题快速扫一遍。";
+  }
+
+  if (topStories) {
+    topStories.classList.toggle("is-short-edition", isShortEdition);
+    topStories.style.setProperty("--top-story-count", String(Math.max(1, topItemCount)));
   }
 }
 
@@ -570,9 +603,12 @@ function updateTopStories(items) {
   const topItems = Array.isArray(items) ? items : [];
 
   if (!topItems.length) {
+    updateTopBriefingPresentation(0);
     topStories.innerHTML = '<p class="feed-state">暂无 TOP3，新闻数据加载后会自动生成。</p>';
     return;
   }
+
+  updateTopBriefingPresentation(topItems.length);
 
   topStories.innerHTML = topItems
     .map((item, index) => {

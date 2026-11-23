@@ -97,6 +97,10 @@ The Today Briefing CTA must name both the reader action and the page area it ope
 
 The hero's single trust cue should help a first-time reader decide whether to keep reading, not explain the editorial workflow. Keep one short sentence that says the signals have sources and that some points still need verification—for example, `每日梳理有来源的 AI 信号，说明今天的变化与仍需核对之处。` Do not repeat the later card-level process of sorting source roles, explaining selection reasons, and listing next checks. Those concrete boundaries belong with the relevant TOP3 card and detail page, where the source and claim can be named. `scripts/validate-site.mjs` keeps this cue compact and protects both its source grounding and open-question boundary.
 
+## Day 4 Short-Edition First-Screen Rule
+
+When the current edition has one or two eligible same-day signals, the homepage must not call them `TOP3` or promise three ranked items. Keep the same `#top3` destination and evidence-card structure, but switch the visible heading to `本期重点`; the five-second link must say `看本期 1 条重点 →` or `看本期 2 条重点 →`. State only that the displayed count met the homepage briefing threshold, then offer the all-news list as optional background. Do not invent an absence reason, claim that the market was quiet, or add a compensating process explanation. At three items, restore the normal `今日 TOP3` wording. `scripts/validate-site.mjs` checks the runtime branch and its low-count rendering fixture.
+
 ## Continuity Mobile Disclosure Rule
 
 - 连续观察没有有效卡片时不显示；只有一条时默认展开。
