@@ -5,7 +5,7 @@
 - 网站可见变化：手机与平板读者可在首页 Hero 后更容易点按“看本期 2 条重点 →”进入本期重点；该入口保持唯一、直接且显示当前短版数量。
 - Verification：已对 390px（单列、五秒要点纵向布局）与 768px（窄平板布局）对应的响应式规则作静态审计；`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/check-top3-cues.mjs` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 已通过本轮 Day 5 触控目标守卫，但仍报告既有的跨页导航文案与首页 feed metadata 断言；本轮未改动或掩盖这些基线问题。可用浏览器环境禁止访问本地 `file:` 预览，故未将本轮记为浏览器视觉验收。
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试成功，基线与 `origin/main` 一致。
-- Commit：待本日志收尾提交。
+- Commit：`9deb178`（【VisionHub网站风格优化】扩大首页重点入口触控区）。
 - Next：Day 6，审计读者能否在看到评分细节前按读者任务比较每张 TOP3 卡片。
 
 ## 2026-11-20 11:00 JST（20:00 scheduled content optimization）
