@@ -1,3 +1,13 @@
+## 2026-11-24 10:57 JST（20:00 scheduled content optimization，延迟执行）
+
+- Focus：完成当前 30 天计划 Day 5 的 390px / 768px 首页阅读路径审计。五秒今日要点是今日简报之前唯一明确的下一步动作，但原本的文字链接没有可验证的最小触控高度；将其改为垂直居中的 44px 触控目标，不新增说明、不改变 `#top3` 目的地，也不改动新闻、排名、来源或证据边界。
+- Changed files：`styles.css`、`scripts/validate-site.mjs`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：手机与平板读者可在首页 Hero 后更容易点按“看本期 2 条重点 →”进入本期重点；该入口保持唯一、直接且显示当前短版数量。
+- Verification：已对 390px（单列、五秒要点纵向布局）与 768px（窄平板布局）对应的响应式规则作静态审计；`node --check app.js`、`node --check scripts/validate-site.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/check-top3-cues.mjs` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 已通过本轮 Day 5 触控目标守卫，但仍报告既有的跨页导航文案与首页 feed metadata 断言；本轮未改动或掩盖这些基线问题。可用浏览器环境禁止访问本地 `file:` 预览，故未将本轮记为浏览器视觉验收。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试成功，基线与 `origin/main` 一致。
+- Commit：待本日志收尾提交。
+- Next：Day 6，审计读者能否在看到评分细节前按读者任务比较每张 TOP3 卡片。
+
 ## 2026-11-20 11:00 JST（20:00 scheduled content optimization）
 
 - Focus：完成当前 30 天计划 Day 3，压缩首页 Hero 的首屏来源／信任提示。把“区分来源用途、说明入选理由、列出下一步核对项”的流程式枚举，收束为读者先需要知道的一件事：信号有来源，且仍有需要核对之处。具体来源角色、入选理由与下一步证据继续留在随后 TOP3 卡片和详情页，不改变新闻事实、来源、排名或声明边界。

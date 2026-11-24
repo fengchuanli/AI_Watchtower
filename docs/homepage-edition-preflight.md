@@ -101,6 +101,10 @@ The hero's single trust cue should help a first-time reader decide whether to ke
 
 When the current edition has one or two eligible same-day signals, the homepage must not call them `TOP3` or promise three ranked items. Keep the same `#top3` destination and evidence-card structure, but switch the visible heading to `本期重点`; the five-second link must say `看本期 1 条重点 →` or `看本期 2 条重点 →`. State only that the displayed count met the homepage briefing threshold, then offer the all-news list as optional background. Do not invent an absence reason, claim that the market was quiet, or add a compensating process explanation. At three items, restore the normal `今日 TOP3` wording. `scripts/validate-site.mjs` checks the runtime branch and its low-count rendering fixture.
 
+## Day 5 Mobile Reading-Path Tap Rule
+
+At 390px and 768px, the five-second takeaway remains the one explicit action before the ranked briefing. Its link must keep a 44px-or-taller touch target even when the short-edition text changes from `看今日 TOP3 →` to `看本期 1 条重点 →` or `看本期 2 条重点 →`. The larger tap area must not add a second instruction, change the `#top3` destination, or hide the count. This is a tap-area correction, not a claim about the current edition's evidence.
+
 ## Continuity Mobile Disclosure Rule
 
 - 连续观察没有有效卡片时不显示；只有一条时默认展开。

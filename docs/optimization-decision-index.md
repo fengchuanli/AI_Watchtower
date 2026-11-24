@@ -7,14 +7,21 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-11-17 through 2026-12-16
 - Current phase: Phase 1, Make The First Decision Obvious
-- Last indexed run: 2026-11-23 20:00 JST
+- Last indexed run: 2026-11-24 10:57 JST
 - Network status: authorized-network `git pull --ff-only origin main` succeeded before this run; the baseline matched `origin/main`.
+
+## Current Cycle Day 5 Completion
+
+- Complete: The five-second takeaway link now has a 44px-tall touch target at both 390px and 768px. It keeps the same direct route to the ranked briefing and retains the short-edition count, so the primary mobile action is easier to tap without adding another instruction.
+- QA boundary: Responsive CSS was reviewed at the 390px and 768px breakpoints; the available browser environment blocks local-file preview, so this is not recorded as browser visual acceptance.
+- Guard: `scripts/validate-site.mjs` requires the takeaway link's `inline-flex`, vertical centering, and 44px minimum target; `docs/homepage-edition-preflight.md` records the reading-path rule.
+- Next useful task: Day 6 — audit whether each TOP3 card can be compared by reader job before the reader sees score details.
 
 ## Current Cycle Day 4 Completion
 
 - Complete: A one- or two-signal homepage now changes `今日 TOP3` to `本期重点`, gives the five-second link the matching count, and tightens the follow-up invitation to optional background. The same evidence cards and `#top3` destination remain, but readers are no longer promised three rankings when the quality gate publishes a short edition.
 - Guard: `scripts/check-top3-cues.mjs` exercises the real renderer for one-, two-, and three-item cases; `scripts/validate-site.mjs` keeps the Day 4 rule discoverable.
-- Next useful task: Day 5 — run the 390px / 768px mobile reading-path QA and fix the smallest visible tap, spacing, or hierarchy problem.
+- Next useful task: Day 6 — audit whether each TOP3 card can be compared by reader job before the reader sees score details.
 
 ## Current Cycle Day 3 Completion
 
