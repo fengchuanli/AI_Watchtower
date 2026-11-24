@@ -11631,3 +11631,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、5 份数据 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有跨页导航文案和首页 feed metadata 断言；本轮未改页面实现或掩盖该基线问题。
 - Commit note：【新闻更新】发布17点AI新闻：2条安全与科学Agent信号。
 
+## 2026-11-25 08:13 JST｜17点新闻情报更新（延迟执行）
+
+- Focus：编辑前已在授权网络下执行 `git pull --ff-only origin main` 并确认同步。依据 `data/sources.json` 与 `docs/source-policy.md` 复核官方入口；收录 OpenAI 11 月 24 日两项科学研究披露（GPT-6 蛋白设计、Astra 搜索遥远行星），并补录 11 月 23 日 GPT-6.2 ChatGPT 系统卡。3 条均通过当前与历史 URL/标题去重；本期不把厂商研究、候选或系统卡表述写成独立的科学、发现或安全成效。
+- Sources & boundary：仅使用 OpenAI News 与 OpenAI Deployment Safety Hub 的公开原始页面；未使用付费墙、登录墙正文、随机抓取页、社区讨论、传闻、旧稿或常规营销材料。蛋白项目的湿实验披露仍需第三方复现与功能/安全数据；天文候选仍需候选目录、后续观测与同行审读；系统卡只能核对发布方版本、阈值与防护口径，仍需外部红队、日志与审计。
+- Archive mirror：新增 `news-1700-2026-11-25`，镜像至 `data/news-history.json` 并重建 `data/news-index.json`、`data/news-today.json`、`data/trends.json`；归档累计 146 期 / 1333 条。短批次为质量门槛结果，未用旧稿、付费墙、登录墙、社区讨论、重复、弱证据或营销材料补数。
+- Changed files：`data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页 TOP3 与更多新闻流、全部新闻列表、归档页和三条对应详情页现在显示 11 月 25 日的蛋白设计、天文搜索和 GPT-6.2 系统卡解读；每条保留原始链接，并明确下一步核验路径。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有的跨页导航文案与首页 feed metadata 断言；本轮仅修复了本批 Astra 条目的下一步证据路径，未改页面实现或掩盖其余基线断言。
+- Commit note：【新闻更新】发布17点AI新闻：3条科学 Agent 与部署安全信号。
+

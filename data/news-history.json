@@ -1,8 +1,364 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24",
-  "totalItems": 1330,
+  "updatedAt": "2026-11-25",
+  "totalItems": 1333,
   "editions": [
+    {
+      "id": "news-1700-2026-11-25",
+      "date": "2026-11-25",
+      "timezone": "Asia/Tokyo",
+      "archiveStatus": "published",
+      "archiveLabel": "11月25日｜17点情报版",
+      "itemCount": 3,
+      "note": "新增两条科学 Agent 信号，并补录一份 GPT-6.2 部署安全系统卡。",
+      "operationalStatus": "已同步 origin/main；已检查 OpenAI News 与 Deployment Safety Hub 的官方日期、原始 URL、来源角色和历史去重。",
+      "editorialInterpretation": "本期发布3条安全非重复信号，少于10条是质量门槛结果；围绕科学研究与部署治理选择官方原始材料，未用旧稿、付费墙、登录墙、社区讨论、重复、弱证据或营销材料补数。",
+      "readerFrame": {
+        "headline": "科学 Agent 与前沿模型的结论，都要穿过实验、观测与部署审计。",
+        "whyItMatters": "OpenAI 的蛋白设计与天文搜索材料指向可检验的科学工作流，GPT-6.2 系统卡则披露了能力分级与防护。三者都能核对发布方说了什么，不能替代湿实验、独立观测或外部安全审计。",
+        "useThisIssueFor": [
+          "科学团队核对方法、数据、盲测与独立复现。",
+          "治理团队核对系统卡版本、访问控制与红队证据。"
+        ],
+        "notProvenYet": [
+          "尚未独立证明 GPT-6 的蛋白设计能稳定转化为实验或临床结果。",
+          "尚未独立证明 Astra 的候选已成为天文发现，或 GPT-6.2 防护在真实环境中有效。"
+        ],
+        "mobile": {
+          "headline": "先看证据链，不看能力口号",
+          "summary": "3条官方信号，覆盖科学 Agent 与模型部署安全。",
+          "primaryUses": [
+            "科研团队查复现与观测",
+            "治理团队查版本与审计"
+          ],
+          "proofBoundary": "尚未证明实验转化、行星发现或跨环境部署防护。"
+        }
+      },
+      "changeSummary": {
+        "headline": "11月25日17点新增3条科学与部署治理信号",
+        "freshFacts": [
+          "本期新增：OpenAI 发布 GPT-6 蛋白设计与 Astra 天文搜索两项科学研究页。",
+          "本期新增：OpenAI Deployment Safety Hub 的 GPT-6.2 ChatGPT 系统卡，列出发布方的能力分级与部署防护。"
+        ],
+        "repeatedContext": [
+          "延续边界：官方研究披露不等于独立实验、观测或临床验证。",
+          "延续边界：系统卡不是外部安全认证，仍需版本化审计与红队。"
+        ]
+      },
+      "coverageMix": [
+        {
+          "label": "核对科学 Agent 的复现链",
+          "count": 2,
+          "meaning": "用来检查方法、数据、候选筛选、湿实验/观测与第三方复跑。"
+        },
+        {
+          "label": "核对模型部署安全链",
+          "count": 1,
+          "meaning": "用来检查系统卡版本、阈值、访问控制、监测和外部红队。"
+        }
+      ],
+      "sourceFamilies": [
+        {
+          "family": "official",
+          "label": "官方研究与系统卡",
+          "count": 3,
+          "role": "用于核对发布方的研究、版本和评测披露；实际效果仍需外部证据。"
+        }
+      ],
+      "sourceRisk": {
+        "label": "单一发布方集中",
+        "note": "3/3来自同一发布方的官方研究与系统卡：它们是核对发布事实的雷达，不是科学转化或部署安全的独立证据。",
+        "nextCheck": "复核公开方法、第三方复跑、湿实验/观测、独立红队和审计材料。"
+      },
+      "overreadBoundary": {
+        "label": "不要把本期读成已验证成效",
+        "body": "本期是科学 Agent 与模型部署治理的核验雷达，不是药物、天文发现或网络安全效果评测。",
+        "doNotConclude": "不能由本期推出 GPT-6 已产出可用蛋白或确认行星，也不能推出 GPT-6.2 已在所有环境安全部署。",
+        "useInstead": "应该用方法与数据、独立复现、湿实验、后续观测、红队报告和版本化审计更新判断。"
+      },
+      "topicGroups": [
+        {
+          "id": "agent",
+          "label": "核对科学 Agent 的复现链",
+          "count": 2,
+          "itemIds": [
+            "openai-gpt6-protein-design-2026-11-24",
+            "openai-astra-distant-planets-2026-11-24"
+          ],
+          "meaning": "用来检查数据、方法、实验或观测能否复跑候选结论。"
+        },
+        {
+          "id": "model",
+          "label": "核对模型部署安全",
+          "count": 1,
+          "itemIds": [
+            "openai-gpt62-chatgpt-preparedness-2026-11-23"
+          ],
+          "meaning": "用来更新系统卡版本、权限、监测与外部红队检查清单。"
+        }
+      ],
+      "trendNotes": [
+        {
+          "topic": "科学智能",
+          "label": "跨版科学 Agent 证据链延长",
+          "note": "跨版看，归档中的可验证 Agent 线索持续从候选生成走向可由实验、观测或证明复查的交付物；本期新增两项科学研究披露。",
+          "boundary": "这不证明候选已转化为发现或产品；仍需公开数据、论文、实验记录与第三方复现。"
+        },
+        {
+          "topic": "模型安全",
+          "label": "跨版系统卡成为部署入口",
+          "note": "连续归档显示，高风险模型的发布材料越来越把能力分级、评测和防护写进可回溯版本；本期新增 GPT-6.2 系统卡。",
+          "boundary": "这不证明真实部署安全；仍需独立红队报告、访问日志、审计和事故复盘。"
+        }
+      ],
+      "topicContinuity": [
+        {
+          "topic": "agent",
+          "label": "科学 Agent 复现链",
+          "status": "stronger",
+          "previousPattern": "此前归档持续关注 Agent 的权限、证明与人类复核。",
+          "currentSignal": "本期新增两项官方科学研究原文，分别把候选交给湿实验与后续观测核验。",
+          "signalDirection": "可检验的交付物线索增强，独立成效证据仍未增强。",
+          "stillUnproven": "仍需公开数据、论文、实验日志和第三方复现确认结果。"
+        },
+        {
+          "topic": "model",
+          "label": "模型部署治理材料",
+          "status": "stronger",
+          "previousPattern": "此前归档将系统卡、访问控制、监测和红队列为上线前提。",
+          "currentSignal": "本期新增 GPT-6.2 ChatGPT 官方系统卡，列出能力分级与部署防护。",
+          "signalDirection": "可审阅的官方版本材料增强，独立安全保证仍未增强。",
+          "stillUnproven": "仍需第三方红队报告、访问日志、外部审计与事故复盘。"
+        }
+      ],
+      "companyContinuity": [
+        {
+          "company": "OpenAI",
+          "label": "科学研究披露延续",
+          "lastMention": "此前归档持续关注 OpenAI 的安全控制面、模型系统卡与科学应用。",
+          "whatChanged": "本期新增两项科学研究原文，将蛋白候选与天文候选置于实验或观测复查路径。",
+          "stillUnproven": "仍不证明实际转化；需第三方论文、数据、实验日志和观测报告。"
+        },
+        {
+          "company": "Onava",
+          "label": "实验合作方进入证据链",
+          "lastMention": "此前归档中的科学 AI 线索持续将合作实验与模型生成区分开来。",
+          "whatChanged": "本期新增 Onava 参与测试 GPT-6.2 设计候选的官方研究披露，补入湿实验环节。",
+          "stillUnproven": "仍不证明功能或转化价值；需第三方实验报告、原始数据和复现论文。"
+        }
+      ],
+      "sourceConcentration": {
+        "sourceId": "openai-official",
+        "sourceName": "OpenAI 官方研究与部署安全材料",
+        "count": 3,
+        "share": "3/3",
+        "note": "均为 OpenAI 官方材料；发布事实已核对，科学与安全成效仍待独立验证。",
+        "nextCheck": "优先补查公开技术材料、第三方复跑、湿实验/观测和外部红队审计。"
+      },
+      "statusLabel": "已发布",
+      "editorNote": "11月25日17点版：新增蛋白设计、天文搜索两条科学信号，并补录 GPT-6.2 部署安全系统卡；官方披露不替代湿实验、独立观测或外部安全审计。",
+      "items": [
+        {
+          "id": "openai-gpt6-protein-design-2026-11-24",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI 披露 GPT-6 蛋白设计能力：候选分子仍须湿实验与独立复现",
+          "body": "OpenAI 于11月24日发布科学研究页，报告 GPT-6.2 设计的部分蛋白候选在与 Onava 的实验中显示结合迹象；页面披露的是发布方研究，不能替代功能、临床或独立复现证据。",
+          "summary": "OpenAI 将 GPT-6 的蛋白设计研究及合作方实验公开为可核对的科学信号；能否转化为稳定功能、药物或临床结果，仍取决于更多湿实验与独立复现。",
+          "detailBody": "来源事实：OpenAI 于11月24日发布蛋白设计研究。原文称，合作方 Onava 测试了基于 GPT-6.2 设计的候选，并在五个目标上观察到结合迹象。\n\n原文还说明，实验前由专用模型协助提供序列和筛选候选；这意味着公开结果是组合工作流，而非 GPT-6.2 独自端到端完成的证明。\n\n结合只是走向实用研究工具或药物的一步；本站不把该披露延伸为蛋白功能、药物或临床效果已经成立。",
+          "trend": "前沿模型的科学能力叙事正在从通用问答转向可实验检验的设计任务；真正的分水岭仍是公开方法、盲测和湿实验能否支持。",
+          "detailTrend": "蛋白设计一类任务把模型输出与实验结果之间的距离暴露得更清楚：模型可以提出候选或辅助筛选，但候选是否表达、折叠、稳定并具备目标功能，必须由实验流程回答。对研发团队而言，值得跟踪的不是单一发布结论，而是数据划分、基线、失败案例、盲测设计和可重复的湿实验记录。若后续材料只有内部评测而没有外部复验，这仍应视为研究信号而非已验证的转化能力。",
+          "whyItMatters": "它把“模型能做科学设计”落回可检验的蛋白任务，同时提醒读者区分模型评测与实验、临床或商业结果。",
+          "whyRanked": "原始研究页给出了 OpenAI 的正式披露入口，且蛋白设计是能由外部实验复核的高影响方向。",
+          "detailWhyRanked": "OpenAI 原文不仅给出研究题目，还披露了与 Onava 的实验合作、候选测试与限制段落，读者可沿原始页进入论文和方法线索。该来源只能核对发布方披露；第三方湿实验、功能读出和复现材料仍是判断转化价值的必要条件。",
+          "topReason": "先查评测设定、公开材料和独立湿实验，再判断其是否改变蛋白研发决策。",
+          "whoShouldCare": "负责蛋白工程、计算生物学或药物早研筛选的研发负责人，正在评估模型候选如何进入湿实验队列时应关注。",
+          "impact": "研发团队可把模型候选与实验验证分成两条可审计工作流，并预先定义盲测、失败样本和复现门槛。",
+          "readerUse": "科学 AI 团队可检查训练/评测边界、候选筛选标准、湿实验协议和外部复验计划。",
+          "nextCheck": "优先查看 OpenAI 后续技术材料、独立团队的固定任务复跑、盲测湿实验和失败案例披露。",
+          "followUpQuestions": [
+            "原始材料是否说明数据泄漏防护、任务划分、基线和失败案例？",
+            "独立实验室能否在预注册或盲测条件下复现候选蛋白的目标性质？"
+          ],
+          "evidenceThreshold": "需要可审读方法、独立基准复跑、预注册或盲测湿实验与失败率数据，才能升级为可验证的蛋白设计成效。",
+          "claimBoundary": "OpenAI 的研究披露不证明 GPT-6 已产出可用药物、稳定蛋白或临床收益，也不证明结果可泛化到其他目标。",
+          "counterEvidence": "若第三方湿实验报告显示结合结果无法复现、候选缺乏功能或稳定性指标，或论文方法无法复跑，应下调其研发价值判断。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+          "originalUrl": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI News 的官方科学页可核对发布日期、研究题目及发布方对 GPT-6 蛋白设计能力的披露；实验转化与外部有效性仍需独立证据。",
+          "trustLevel": "来源层级：官方研究，高可信",
+          "verificationStatus": "已核验",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "companies": [
+            "OpenAI",
+            "Onava"
+          ],
+          "tags": [
+            "科学智能",
+            "蛋白设计",
+            "生物技术",
+            "模型评测"
+          ],
+          "publishedAt": "2026-11-24T09:00:00-08:00",
+          "time": "11/25",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 21,
+            "note": "官方研究披露可核对；实验与转化效果仍需外部复现。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 17
+          }
+        },
+        {
+          "id": "openai-astra-distant-planets-2026-11-24",
+          "category": "research",
+          "label": "研究",
+          "title": "OpenAI 用 Astra 搜索遥远行星：天文候选仍要经过观测确认",
+          "body": "OpenAI 于11月24日发布以 Astra 搜索遥远行星的科学页面；该披露可核对其研究方向，但候选天体是否成立仍需独立观测与同行审读。",
+          "summary": "Astra 被用于天文搜索的官方披露提示 Agent 可进入科学工作流；候选并不等于已发现，后续观测与可复现分析才是结论门槛。",
+          "detailBody": "来源事实：OpenAI 于11月24日发布“Searching for distant planets with Astra”，将 Astra 用于遥远行星搜索的研究工作公开。原文支持“发布方进行了该研究披露”，不支持把任何候选直接写成已证实的行星发现。",
+          "trend": "科学 Agent 的价值正在从生成解释延伸到筛选观测线索；越接近发现声明，越需要数据、误差模型与外部复核。",
+          "detailTrend": "天文搜索适合检验 Agent 工作流，因为原始观测、筛选规则和后续望远镜验证能形成相对清晰的证据链。模型或 Agent 可以帮助整理候选、提出优先级或发现模式，但“候选”与“确认”之间仍隔着信噪比、仪器系统误差、替代解释和独立观测。对科学机构而言，合理的部署指标应包括漏检率、误报率、人工审稿负担及是否能复跑完整筛选流程。",
+          "whyItMatters": "它把 Agent 的科学应用放入能被观测数据和后续验证约束的场景，而非只停留在演示。",
+          "whyRanked": "官方原文及时披露了一个可追踪的科学搜索用例，并天然要求区分候选、观测和确认。",
+          "detailWhyRanked": "OpenAI 原文将项目表述为利用公共望远镜数据寻找线索，并专门解释确认行星所需的后续步骤。它还说明该工作由两名业余天文爱好者使用 Codex 与 Astra 完成，研究对象是公共望远镜数据。这些来源事实使读者能区分工作流披露、候选与确认；外部观测、候选目录和同行审读仍决定科研结论。",
+          "topReason": "先查候选筛选规则、数据来源和独立观测计划，再评价 Astra 的科研贡献。",
+          "whoShouldCare": "天文数据团队、科学计算负责人和建设 Agent 科研流程的研发组织应关注。",
+          "impact": "团队可将候选生成、人工复核、数据版本与独立观测安排纳入同一条科学审计链。",
+          "readerUse": "科研平台团队可检查数据许可、候选阈值、误报处理、人工复核与后续观测的交接记录。",
+      "nextCheck": "优先核对公开研究技术材料、候选清单与 NASA Exoplanet Archive 的后续状态，并查看独立天文团队的观测确认报告。",
+          "followUpQuestions": [
+            "原始数据、候选筛选阈值和误报控制是否足以让外部团队复跑？",
+            "是否有独立观测报告、候选目录或同行审读将相关信号从候选升级为确认？"
+          ],
+          "evidenceThreshold": "需要公开或可审读的数据与方法、独立复跑、后续观测和同行审读，才能升级为已验证的天文发现或科研效率结论。",
+          "claimBoundary": "官方研究页不证明 Astra 已确认新的行星，也不证明其在其他科学任务中稳定优于既有分析流程。",
+          "counterEvidence": "若独立复跑发现候选依赖数据偏差、误报率不可接受、后续观测未支持或人工成本未下降，应收窄其科研工作流价值。",
+          "source": "OpenAI News",
+          "sourceName": "OpenAI News",
+          "sourceId": "openai-news",
+          "sourceUrl": "https://openai.com/index/searching-for-distant-planets-with-astra/",
+          "originalUrl": "https://openai.com/index/searching-for-distant-planets-with-astra/",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI News 的官方科学页可核对项目标题、日期和发布方对 Astra 天文搜索工作的披露；候选确认与效率收益仍需观测和第三方验证。",
+          "trustLevel": "来源层级：官方研究，高可信",
+          "verificationStatus": "已核验",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "companies": [
+            "OpenAI"
+          ],
+          "tags": [
+            "科学智能",
+            "天文学",
+            "Agent",
+            "数据分析"
+          ],
+          "publishedAt": "2026-11-24T09:00:00-08:00",
+          "time": "11/25",
+          "selectionScore": {
+            "impact": 4,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 20,
+            "note": "官方研究披露可核对；发现与效率结论仍需观测和独立复现。"
+          },
+          "editorScore": {
+            "impact": 4,
+            "novelty": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 4,
+            "total": 16
+          }
+        },
+        {
+          "id": "openai-gpt62-chatgpt-preparedness-2026-11-23",
+          "category": "model",
+          "label": "模型",
+          "title": "OpenAI 发布 GPT-6.2 ChatGPT 安全评估：阈值与防护仍需外部审计",
+          "body": "OpenAI 11月23日的 GPT-6.2 ChatGPT 系统卡称，该版本在网络安全能力上达到其“关键”阈值，并说明将采用相应部署防护；这些是官方评估与治理口径。",
+          "summary": "系统卡让读者可核对 OpenAI 对 GPT-6.2 的能力分级、评测与防护说明；它不是独立安全认证，也不替代真实世界红队与事件记录。",
+          "detailBody": "来源事实：OpenAI Deployment Safety Hub 发布 GPT-6.2 ChatGPT 系统卡，说明该版本面向 Plus 与 Pro 的 ChatGPT 部署，并列出其对网络安全、生物化学和自我改进能力的阈值判断及部署防护。本站仅将这些内容表述为 OpenAI 的安全评估与发布说明。",
+          "trend": "当模型能力进入更高风险区间，产品发布的核心信息不再只是性能，而是评测口径、阈值、防护和可追责的部署边界。",
+          "detailTrend": "系统卡的价值在于把发布方如何判断风险、采用哪些评测和部署防护写成可回溯材料；它不能自动等同于第三方安全认证。尤其是网络安全能力，离线基准、受控工具环境与真实组织的攻击面并不相同。采购方和平台方应把系统卡视为尽调起点：核对版本绑定、访问控制、滥用监测、事件响应和独立红队，而不是将内部阈值标签转换成风险已经消失的结论。",
+          "whyItMatters": "该披露使模型能力分级与部署防护可被外部审阅，也凸显了安全声明必须接受版本化验证。",
+          "whyRanked": "它是官方一手系统卡，直接涉及模型部署、网络安全能力分级和防护措施，适合纳入高风险模型的核对清单。",
+          "detailWhyRanked": "系统卡逐项给出面向 ChatGPT 的版本、发布方能力判断、评测表和防护章节，读者可核对其适用范围。原文明确将该版本称为 GPT-6.2（11月23日），并说明面向 Plus 与 Pro 用户的 ChatGPT 发布，同时列出网络安全、生物化学及自我改进能力的判断。它的可验证价值是发布方安全口径，而不是外部认证；访问日志、红队与审计仍应决定部署信心。",
+          "topReason": "先核对系统卡的版本、评测范围和外部红队，再决定如何调整访问与监测控制。",
+          "whoShouldCare": "负责模型接入、网络安全、AI 治理和高风险工作流的企业负责人应关注。",
+          "impact": "组织可把系统卡版本、供应商防护承诺、内部权限与事件响应测试纳入模型上线门禁。",
+          "readerUse": "安全和治理团队可核对评测适用范围、访问限制、监测信号、升级路径与独立测试要求。",
+          "nextCheck": "优先查看对应版本的完整系统卡、外部红队或审计材料、产品访问规则及后续安全事件和补丁说明。",
+          "followUpQuestions": [
+            "系统卡中的评测和防护是否与实际启用的产品版本、工具权限和地区一致？",
+            "是否有独立红队、事故披露或审计材料能检验官方防护在真实环境中的表现？"
+          ],
+          "evidenceThreshold": "需要独立红队报告、版本化访问控制证据、监测/响应审计和真实事件复盘，才能升级为已验证的部署安全成效。",
+          "claimBoundary": "OpenAI 的阈值判断和系统卡不证明 GPT-6.2 在所有环境都安全，也不证明既有防护能阻止全部网络、生物化学或自主行为风险。",
+          "counterEvidence": "若独立测试、事故记录或版本差异显示评测无法覆盖实际工具权限、滥用路径或监测失效，应下调对部署防护的信心。",
+          "source": "OpenAI Deployment Safety Hub",
+          "sourceName": "OpenAI Deployment Safety Hub",
+          "sourceId": "openai-deployment-safety",
+          "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf",
+          "originalUrl": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf",
+          "sourceRole": "官方核对",
+          "provenance": "OpenAI Deployment Safety Hub 的 GPT-6.2 ChatGPT 模型系统卡可核对：该模型版本面向 Plus/Pro ChatGPT、发布方将网络安全评为关键阈值，并说明生物化学、自我改进评估与部署防护；外部安全效果仍需独立审计。",
+          "trustLevel": "来源层级：官方系统卡，高可信",
+          "verificationStatus": "已核验",
+          "sourceType": "official",
+          "sourceReliability": "high",
+          "claimStatus": "confirmed",
+          "originalDependency": "recommended",
+          "companies": [
+            "OpenAI"
+          ],
+          "tags": [
+            "模型安全",
+            "系统卡",
+            "网络安全",
+            "部署治理"
+          ],
+          "publishedAt": "2026-11-23T16:00:00-08:00",
+          "time": "11/24",
+          "selectionScore": {
+            "impact": 5,
+            "novelty": 4,
+            "narrativeStrength": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 22,
+            "note": "官方系统卡可核对发布方评测与防护口径；不是独立安全认证。"
+          },
+          "editorScore": {
+            "impact": 5,
+            "novelty": 4,
+            "evidenceQuality": 4,
+            "readerUtility": 5,
+            "total": 18
+          }
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-11-24",
       "date": "2026-11-24",
