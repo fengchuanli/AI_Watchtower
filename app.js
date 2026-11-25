@@ -386,22 +386,6 @@ function updateTopBriefingPresentation(topItemCount) {
   }
 }
 
-function getScoreOutOfFive(item) {
-  const score = getEditorScore(item);
-  const total = Number(score?.total);
-
-  if (!Number.isFinite(total) || total <= 0) {
-    return null;
-  }
-
-  const dimensionCount = ["impact", "novelty", "narrativeStrength", "evidenceQuality", "readerUtility"].filter(
-    (key) => Number.isFinite(Number(score?.[key])),
-  ).length;
-
-  const maxTotal = (dimensionCount || 5) * 5;
-  return Math.round((total / maxTotal) * 50) / 10;
-}
-
 function updateCategoryHighlights(items) {
   if (!categoryHighlights) {
     return;
@@ -515,6 +499,10 @@ function getReaderUse(item) {
   return item.readerUse || item.whoShouldCare || item.impact;
 }
 
+function getReaderAudience(item) {
+  return item.whoShouldCare || item.readerUse || item.impact;
+}
+
 function getEditorScore(item) {
   return item.editorScore || item.selectionScore;
 }
@@ -618,29 +606,27 @@ function updateTopStories(items) {
       const claimStatus = getTopClaimCue(item);
       const topReason = getTopReason(item);
       const compactTopReason = getCompactTopReason(item);
+      const readerAudience = getReaderAudience(item);
       const readerUse = getReaderUse(item);
       const nextCheck = item.nextCheck;
-
-      const score = getScoreOutOfFive(item);
 
       return `
         <article class="top-story">
           <div class="top-story-head">
             <span class="top-rank">${String(index + 1).padStart(2, "0")}</span>
-            ${score ? `<p class="top-score"><b>${score.toFixed(1)}</b><span>/5</span></p>` : ""}
           </div>
           <div class="top-story-body">
             <p class="eyebrow top-signal-context"><span class="top-signal-cue">${escapeHtml(item.label || "未分类")}信号</span><span class="top-signal-time">${escapeHtml(item.time)}</span></p>
             <h3><a href="${detailUrl}">${escapeHtml(item.title)}</a></h3>
             <p class="top-summary">${escapeHtml(getItemSummary(item))}</p>
+            <div class="top-reader-job" aria-label="这条信号适合谁以及如何使用">
+              <p><strong>适合谁先看</strong><span>${escapeHtml(readerAudience)}</span></p>
+              <p><strong>现在怎么用</strong><span>${escapeHtml(readerUse)}</span></p>
+            </div>
             <dl class="top-brief-list" aria-label="TOP3 入选理由与核验边界">
               <div>
                 <dt>为什么现在</dt>
                 <dd>${escapeHtml(compactTopReason || getWhyItMatters(item))}</dd>
-              </div>
-              <div>
-                <dt>读者用途</dt>
-                <dd>${escapeHtml(readerUse)}</dd>
               </div>
               <div class="top-proof-step">
                 <dt>来源边界</dt>

@@ -2819,6 +2819,30 @@ h3 {
   font-weight: 750;
 }
 
+.top-reader-job {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  background: var(--tint-link);
+  border: 1px solid var(--tint-link-border);
+  border-radius: 8px;
+}
+
+.top-reader-job p {
+  display: grid;
+  grid-template-columns: minmax(72px, 0.28fr) minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.top-reader-job strong {
+  color: var(--accent);
+  font-size: 12px;
+}
+
 .top-editor-details strong {
   display: block;
   margin-bottom: 4px;
@@ -3042,6 +3066,11 @@ h3 {
   }
 
   .top-brief-list div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .top-reader-job p {
     grid-template-columns: 1fr;
     gap: 4px;
   }
@@ -3385,30 +3414,12 @@ h3 {
   font-weight: 800;
 }
 
-/* TOP3 排行：序号 + 5 分制评分 */
+/* TOP3 排行：序号；评分保留在可展开的编辑判断中。 */
 .top-story-head {
   display: grid;
   gap: var(--space-2);
   align-content: start;
   justify-items: center;
-}
-
-.top-score {
-  margin: 0;
-  color: var(--accent);
-  font-size: var(--text-xs);
-  font-weight: 800;
-  text-align: center;
-}
-
-.top-score b {
-  display: block;
-  font-size: var(--text-lg);
-  line-height: 1.1;
-}
-
-.top-score span {
-  color: var(--fg-muted);
 }
 
 .top-trust {

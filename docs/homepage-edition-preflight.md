@@ -105,6 +105,10 @@ When the current edition has one or two eligible same-day signals, the homepage 
 
 At 390px and 768px, the five-second takeaway remains the one explicit action before the ranked briefing. Its link must keep a 44px-or-taller touch target even when the short-edition text changes from `看今日 TOP3 →` to `看本期 1 条重点 →` or `看本期 2 条重点 →`. The larger tap area must not add a second instruction, change the `#top3` destination, or hide the count. This is a tap-area correction, not a claim about the current edition's evidence.
 
+## Day 6 TOP3 Reader-Job Comparison Rule
+
+Before any expandable score detail, each TOP3 card must expose two distinct existing fields: `whoShouldCare` as `适合谁先看`, followed by `readerUse` as `现在怎么用`. This lets readers compare cards by their work context and immediate checklist before judging rank or editorial scoring. Keep these two lines together immediately after the minimum fact; do not derive audiences from category, source type, rank, or title, and do not use them to imply an outcome has been verified. The rank marker remains a reading order, while `展开评分与原文依赖` stays the optional editorial-detail layer. At narrow widths, both rows may stack their labels above the text, but neither may be hidden or converted into a color-only cue.
+
 ## Continuity Mobile Disclosure Rule
 
 - 连续观察没有有效卡片时不显示；只有一条时默认展开。

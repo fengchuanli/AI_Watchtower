@@ -11641,3 +11641,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有的跨页导航文案与首页 feed metadata 断言；本轮仅修复了本批 Astra 条目的下一步证据路径，未改页面实现或掩盖其余基线断言。
 - Commit note：【新闻更新】发布17点AI新闻：3条科学 Agent 与部署安全信号。
 
+## 2026-11-25 20:00 JST｜内容优化
+
+- Focus：完成当前 30 天计划 Day 6。首页 TOP3 原先把数值评分放在卡片首部，读者尚未知道这条信号适合谁或能用于什么核对时，就先遇到编辑分数。现将评分保留在“展开评分与原文依赖”内，并在最小事实后连续显示已有的“适合谁先看”和“现在怎么用”；不改新闻、排名、来源、证据边界或原文依赖。
+- Changed files：`app.js`、`styles.css`、`scripts/check-top3-cues.mjs`、`scripts/validate-site.mjs`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“今日 TOP3”或短版“本期重点”的每张卡片，现在会在摘要后先列出适合关注的读者工作场景和可执行的核对用途；评分改为按需展开，读者能先按任务比较各卡。
+- Verification：`node --check app.js`、`node --check scripts/check-top3-cues.mjs`、`node --check scripts/validate-site.mjs`、`node scripts/check-top3-cues.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 的本轮 TOP3 读者任务与评分折叠守卫通过；脚本仍报告既有首页阅读路径、跨页导航文案、feed metadata 三项基线断言，本轮未修改或掩盖这些问题。未做浏览器视觉验收。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线与 `origin/main` 一致。
+- Commit：待创建（【VisionHub网站风格优化】前置TOP3读者任务比较）。
+

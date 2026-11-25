@@ -28,7 +28,8 @@ export function checkTop3Cues(appJs) {
     sourceName: "校验来源", sourceType: "official", sourceRole: "厂商主张",
     claimStatus: "confirmed", originalDependency: "recommended",
     sourceUrl: "https://example.com/source", claimBoundary: "尚无独立效果证据",
-    nextCheck: "等待第三方测试报告",
+    nextCheck: "等待第三方测试报告", whoShouldCare: "负责安全采购与上线审批的团队应关注。",
+    readerUse: "可用它核对验收清单与第三方测试要求。",
   };
   const render = (item) => {
     context.updateTopStories([item]);
@@ -39,6 +40,9 @@ export function checkTop3Cues(appJs) {
   assert.match(official, /尚无独立效果证据/);
   assert.match(official, /等待第三方测试报告/);
   assert.match(official, /class="top-signal-cue">安全信号<\/span>/);
+  assert.match(official, /适合谁先看[\s\S]*负责安全采购与上线审批的团队应关注。/);
+  assert.match(official, /现在怎么用[\s\S]*可用它核对验收清单与第三方测试要求。/);
+  assert.doesNotMatch(official, /top-score/, "Scores must stay in expandable editorial details.");
   for (const claimStatus of ["reported", "disputed", "unclear"]) {
     const output = render({ ...base, claimStatus });
     assert.doesNotMatch(output, /发布事实已确认/);

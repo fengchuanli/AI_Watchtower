@@ -466,18 +466,23 @@ if (
   !/function getWhyItMatters/.test(appJs) ||
   !/function getCompactTopReason/.test(appJs) ||
   !/function getReaderUse/.test(appJs) ||
+  !/function getReaderAudience/.test(appJs) ||
   !/class="top-summary"/.test(appJs) ||
+  !/class="top-reader-job"/.test(appJs) ||
   !/class="top-brief-list"/.test(appJs) ||
   !/为什么现在/.test(appJs) ||
-  !/读者用途/.test(appJs) ||
+  !/适合谁先看/.test(appJs) ||
+  !/现在怎么用/.test(appJs) ||
   !/来源边界/.test(appJs) ||
   !/下一步核验/.test(appJs) ||
   !/class="top-editor-details"/.test(appJs) ||
   !/展开评分与原文依赖/.test(appJs) ||
+  /class="top-score"/.test(appJs) ||
+  !/\.top-reader-job/.test(styles) ||
   !/\.top-brief-list/.test(styles) ||
   !/\.top-editor-details/.test(styles)
 ) {
-  errors.push("Homepage TOP3 must show title, minimum fact, why now, reader use, source boundary, next-check path, and keep scoring details expandable.");
+  errors.push("Homepage TOP3 must show title, minimum fact, reader job, why now, source boundary, next-check path, and keep scoring details expandable.");
 }
 
 if (
