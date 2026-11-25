@@ -11650,3 +11650,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 失败；授权网络重试后成功，基线与 `origin/main` 一致。
 - Commit：`1213747`（【VisionHub网站风格优化】前置TOP3读者任务比较）；本条完成记录另行提交。
 
+## 2026-11-25 23:03 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：编辑前已在授权网络下执行 `git pull --ff-only origin main` 并确认同步。仓库已有 2026-11-25 17:00 JST 新闻版；依恢复政策只检查该版之后至本次运行的当前窗口，未发现同时满足来源、时效、非重复与事件简报门槛的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：依据 `data/sources.json` 与 `docs/source-policy.md` 拉取全部登记公开 RSS：OpenAI Developers、Google AI、Hugging Face、arXiv（cs.AI/cs.CL/cs.CV/cs.CR/cs.SE/cs.LG/cs.MA）、VentureBeat、The Verge、WIRED Security、Google Workspace、Google Cloud、Apple、AWS 与 PyTorch。窗口内唯一直接相关候选为 Hugging Face 承载的 IBM Research「An Indic Voice Agent with CUGA」合作方文章；该页面只能说明作者发布了项目说明，未给出可独立核对的上线范围、评测、采用或外部复现，且不足以构成本站事件简报，故保留为未发布线索。Google Workspace、Google AI、The Verge 与 WIRED 的其余可见条目均早于 17:00 JST 或不构成新 AI 事实；arXiv 的可见条目为作者预印本，未以已验证成效发布。部分登记入口返回 429/404，未改用随机抓取页补数。未使用付费/登录墙正文、社区讨论、传闻、旧闻或营销材料。
+- Candidate intake / archive mirror：`hold-no-safe-batch`；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免把弱证据或窗口外材料写入当前版和归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到 11 月 25 日已发布的科学 Agent 与部署安全信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份相关 JSON 解析、6 个现存静态 HTML 壳解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有首页阅读路径、跨页导航文案及 feed metadata 三项断言；本轮未改页面或数据结构，未掩盖这些基线问题。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
