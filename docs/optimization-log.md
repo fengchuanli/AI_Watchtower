@@ -1,3 +1,17 @@
+## 2026-11-26 17:00 JST｜AI 新闻情报更新
+
+- Focus：编辑前在授权网络下完成 `git pull --ff-only origin main`，以11月25日17点版为去重基线，检查登记的官方/可靠来源。发布 Anthropic Messages API 从 Python 迁至 Rust 的工程验证报告，以及 AWS 为 MCP Server 提供 EMA/ID-JAG、企业 IdP、IAM 与 CloudTrail 核对路径的两条当前信号。
+- Sources & boundary：仅使用 `data/sources.json` 登记的 Anthropic Engineering 与 AWS Security Blog 原始公开页面；两项均为官方核对，未把内部性能指标、配置能力、社区讨论、旧稿、付费/登录墙正文或营销材料写成独立成效。性能、权限与安全结论分别保留独立基准、客户侧指标、配置审计、CloudTrail 日志、拒绝测试与渗透测试边界。
+- Candidate intake / duplicate / partial batch：两条候选均通过原始 URL、发布日期、来源角色和历史 URL/标题人工去重（manual-clear）。`publish-partial-batch`：仅两条通过来源、重复、核验边界和版权安全门槛；未以旧闻、重复、社区线索或弱证据补数。
+- Changed files：`data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`data/trends.json`、`docs/optimization-log.md`。
+- 网站可见变化：首页 TOP3/更多新闻流、全部 AI 新闻列表、归档页和两条详情页现在可查看生产 API 验证与 MCP 企业授权的中文解读、影响、来源边界和下一步核验。
+- Archive mirror：done - `data/news.json` ↔ `data/news-history.json`；edition ID、reader/source framing、item count 和 item order match。
+- Derived data：done - `data/news-index.json`、`data/news-today.json`、`data/trends.json` rebuilt；`node scripts/build-derived-data.mjs --check` passed。
+- Validation：done - `node scripts/validate-data.mjs` passed；`node scripts/validate-pages.mjs` passed；`node scripts/validate-site.mjs` reports existing first-screen order、跨页导航文案与 homepage feed metadata assertions。
+- Publication readiness：ready - current/history mirror、derived data 与数据/页面校验均通过；未改页面实现或掩盖既有 site-validator 基线。
+- Archive diff：skipped-one-edition - 2026-11-26 仅有一版归档，因此未写晨晚对比。
+- Commit note：【新闻更新】发布17点AI新闻：2条生产验证与Agent授权信号。
+
 ## 2026-11-24 23:05 JST｜08点新闻情报更新（延迟执行）
 
 - Focus：编辑前已在授权网络下同步 `origin/main`。以远端现有的 `news-1700-2026-11-24`（当日17点、2条）为时间与去重基线，只检查其后至23:05 JST 的当前窗口，不倒灌漏跑批次或覆盖更晚版。登记的 OpenAI Developers、Google AI、Hugging Face、arXiv cs.AI、Google Workspace 与 PyTorch RSS 未出现可证明在窗口内发布、非重复并足以写成站内事件简报的新增 AI 事实；arXiv 当天 RSS 为空，PyTorch 返回非 RSS 页面。

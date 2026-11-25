@@ -12,7 +12,7 @@
     {
       "id": "tool",
       "label": "工具",
-      "description": "本期未收录工具新事实；仍需核对官方原文。"
+      "description": "本期用 Anthropic Messages API 的 Rust 迁移核对工具与平台工程验证；性能仍需独立复现。"
     },
     {
       "id": "product",
@@ -22,12 +22,12 @@
     {
       "id": "model",
       "label": "模型",
-      "description": "本期用 GPT-6.2 ChatGPT 系统卡更新部署尽调清单；官方防护仍需审计。"
+      "description": "本期未收录该类新事实；仍需核对官方原文。"
     },
     {
       "id": "research",
       "label": "研究",
-      "description": "本期用 OpenAI GPT-6 蛋白设计与 Astra 天文搜索核对研究线索；实验和观测仍需复现。"
+      "description": "本期未收录该类新事实；仍需核对官方原文。"
     },
     {
       "id": "funding",
@@ -35,489 +35,417 @@
       "description": "本期未收录融资新事实；仍需核对官方文件。"
     }
   ],
-  "updatedAt": "2026-11-25",
-  "editorNote": "11月25日17点版：新增蛋白设计、天文搜索两条科学信号，并补录 GPT-6.2 部署安全系统卡；官方披露不替代湿实验、独立观测或外部安全审计。",
+  "updatedAt": "2026-11-26",
+  "editorNote": "11月26日17点版：新增 Anthropic Messages API Rust 迁移与 AWS MCP 企业授权两条信号；官方内部指标和配置说明不替代独立可靠性、成本或安全验证。",
   "edition": {
-    "id": "news-1700-2026-11-25",
-    "date": "2026-11-25",
+    "id": "news-1700-2026-11-26",
+    "date": "2026-11-26",
     "timezone": "Asia/Tokyo",
     "archiveStatus": "published",
-    "archiveLabel": "11月25日｜17点情报版",
-    "itemCount": 3,
-    "note": "新增两条科学 Agent 信号，并补录一份 GPT-6.2 部署安全系统卡。",
-    "operationalStatus": "已同步 origin/main；已检查 OpenAI News 与 Deployment Safety Hub 的官方日期、原始 URL、来源角色和历史去重。",
-    "editorialInterpretation": "本期发布3条安全非重复信号，少于10条是质量门槛结果；围绕科学研究与部署治理选择官方原始材料，未用旧稿、付费墙、登录墙、社区讨论、重复、弱证据或营销材料补数。",
+    "archiveLabel": "11月26日｜17点情报版",
+    "itemCount": 2,
+    "note": "新增两条生产 API 验证与 Agent 授权信号。",
+    "operationalStatus": "已同步 origin/main；已检查 Anthropic Engineering 与 AWS Security Blog 的官方日期、原始 URL、来源角色和历史去重。",
+    "editorialInterpretation": "本期发布2条安全非重复信号，少于10条是质量门槛结果；未用旧闻、重复或弱证据补数。",
     "readerFrame": {
-      "headline": "科学 Agent 与前沿模型的结论，都要穿过实验、观测与部署审计。",
-      "whyItMatters": "OpenAI 的蛋白设计与天文搜索材料指向可检验的科学工作流，GPT-6.2 系统卡则披露了能力分级与防护。三者都能核对发布方说了什么，不能替代湿实验、独立观测或外部安全审计。",
+      "headline": "Agent 接入生产系统前，先验证改写与授权链。",
+      "whyItMatters": "Anthropic 的 API 迁移与 AWS 的 MCP 授权材料都把上线焦点放在可核对的验证、权限与审计；两者均为发布方原文，不证明跨环境性能或安全成效。",
       "useThisIssueFor": [
-        "科学团队核对方法、数据、盲测与独立复现。",
-        "治理团队核对系统卡版本、访问控制与红队证据。"
+        "平台团队核对回放、影子流量、差异阈值与回滚。",
+        "安全团队核对 IdP、IAM、短期令牌、拒绝测试与审计日志。"
       ],
       "notProvenYet": [
-        "尚未独立证明 GPT-6 的蛋白设计能稳定转化为实验或临床结果。",
-        "尚未独立证明 Astra 的候选已成为天文发现，或 GPT-6.2 防护在真实环境中有效。"
+        "尚未独立证明 API 性能改善可泛化到其他模型服务或客户环境。",
+        "尚未证明 EMA 接入能自动阻止所有 Agent 越权、提示注入或配置错误。"
       ],
       "mobile": {
-        "headline": "先看证据链，不看能力口号",
-        "summary": "3条官方信号，覆盖科学 Agent 与模型部署安全。",
+        "headline": "验证授权再上线",
+        "summary": "2条官方工程/安全信号，覆盖 API 迁移与 MCP 权限链。",
         "primaryUses": [
-          "科研团队查复现与观测",
-          "治理团队查版本与审计"
+          "平台团队查影子流量与回滚",
+          "安全团队查 IAM 与审计"
         ],
-        "proofBoundary": "尚未证明实验转化、行星发现或跨环境部署防护。"
+        "proofBoundary": "尚未证明跨环境性能或所有 Agent 接入安全。"
       }
     },
     "changeSummary": {
-      "headline": "11月25日17点新增3条科学与部署治理信号",
+      "headline": "11月26日17点新增2条生产验证与授权信号",
       "freshFacts": [
-        "本期新增：OpenAI 发布 GPT-6 蛋白设计与 Astra 天文搜索两项科学研究页。",
-        "本期新增：OpenAI Deployment Safety Hub 的 GPT-6.2 ChatGPT 系统卡，列出发布方的能力分级与部署防护。"
+        "本期新增：Anthropic 发布 Messages API 从 Python 迁至 Rust 的工程报告，并披露影子比对与内部指标。",
+        "本期新增：AWS 发布 EMA/ID-JAG 接入 AWS MCP Server 的企业授权与 IAM 审计路径。"
       ],
       "repeatedContext": [
-        "延续边界：官方研究披露不等于独立实验、观测或临床验证。",
-        "延续边界：系统卡不是外部安全认证，仍需版本化审计与红队。"
+        "延续边界：官方内部指标不是独立可靠性、成本或安全认证。",
+        "延续边界：配置能力不等于企业实际最小权限或 Agent 接入安全已获验证。"
       ]
     },
     "coverageMix": [
       {
-        "label": "核对科学 Agent 的复现链",
-        "count": 2,
-        "meaning": "用来检查方法、数据、候选筛选、湿实验/观测与第三方复跑。"
+        "label": "核对生产迁移的验证环",
+        "count": 1,
+        "meaning": "用来检查基准实现、回放/影子流量、差异分类、人工审批和回滚。"
       },
       {
-        "label": "核对模型部署安全链",
+        "label": "核对 Agent 访问的授权链",
         "count": 1,
-        "meaning": "用来检查系统卡版本、阈值、访问控制、监测和外部红队。"
+        "meaning": "用来检查企业 IdP、IAM、短期令牌、拒绝测试与审计日志。"
       }
     ],
     "sourceFamilies": [
       {
         "family": "official",
-        "label": "官方研究与系统卡",
-        "count": 3,
-        "role": "用于核对发布方的研究、版本和评测披露；实际效果仍需外部证据。"
+        "label": "官方工程与安全原文",
+        "count": 2,
+        "role": "用于核对发布方的系统变更、配置路径和内部指标；通用效果仍需独立证据。"
       }
     ],
     "sourceRisk": {
-      "label": "单一发布方集中",
-      "note": "3/3来自同一发布方的官方研究与系统卡：它们是核对发布事实的雷达，不是科学转化或部署安全的独立证据。",
-      "nextCheck": "复核公开方法、第三方复跑、湿实验/观测、独立红队和审计材料。"
+      "label": "官方来源集中",
+      "note": "官方来源集中：2/2为不同发布方官方材料，不是外部认证。",
+      "nextCheck": "复核独立基准、客户侧服务指标、配置审计、CloudTrail 日志、事故记录与渗透测试。"
     },
     "overreadBoundary": {
-      "label": "不要把本期读成已验证成效",
-      "body": "本期是科学 Agent 与模型部署治理的核验雷达，不是药物、天文发现或网络安全效果评测。",
-      "doNotConclude": "不能由本期推出 GPT-6 已产出可用蛋白或确认行星，也不能推出 GPT-6.2 已在所有环境安全部署。",
-      "useInstead": "应该用方法与数据、独立复现、湿实验、后续观测、红队报告和版本化审计更新判断。"
+      "label": "不要把本期读成通用上线保证",
+      "body": "本期是生产系统迁移与 Agent 授权控制的核验雷达，不是 Rust、MCP 或 Agent 的通用性能与安全排行榜。",
+      "doNotConclude": "不能由本期推出所有 Python 服务迁至 Rust 都会节省70% CPU，或所有接入 EMA 的 Agent 都不会越权。",
+      "useInstead": "应该用独立基准、客户侧指标、IdP/IAM 配置审计、CloudTrail 日志、拒绝测试和回滚演练更新判断。"
     },
     "topicGroups": [
       {
-        "id": "agent",
-        "label": "核对科学 Agent 的复现链",
-        "count": 2,
-        "itemIds": [
-          "openai-gpt6-protein-design-2026-11-24",
-          "openai-astra-distant-planets-2026-11-24"
-        ],
-        "meaning": "用来检查数据、方法、实验或观测能否复跑候选结论。"
-      },
-      {
-        "id": "model",
-        "label": "核对模型部署安全",
+        "id": "infrastructure",
+        "label": "核对生产迁移的验证环",
         "count": 1,
         "itemIds": [
-          "openai-gpt62-chatgpt-preparedness-2026-11-23"
+          "anthropic-messages-api-rust-2026-11-25"
         ],
-        "meaning": "用来更新系统卡版本、权限、监测与外部红队检查清单。"
+        "meaning": "用来检查模型 API 改写时的回放、影子流量、人工审阅和回滚证据。"
+      },
+      {
+        "id": "developer-tooling",
+        "label": "核对 Agent 访问的授权链",
+        "count": 1,
+        "itemIds": [
+          "aws-enterprise-managed-authorization-mcp-2026-11-25"
+        ],
+        "meaning": "用来检查 MCP 接入时的企业 IdP、IAM、短期令牌和审计证据。"
       }
     ],
     "trendNotes": [
       {
-        "topic": "科学智能",
-        "label": "跨版科学 Agent 证据链延长",
-        "note": "跨版看，归档中的可验证 Agent 线索持续从候选生成走向可由实验、观测或证明复查的交付物；本期新增两项科学研究披露。",
-        "boundary": "这不证明候选已转化为发现或产品；仍需公开数据、论文、实验记录与第三方复现。"
+        "topic": "模型基础设施",
+        "label": "Agent 编码的瓶颈转向验证与放行",
+        "note": "归档中的 Agent 工程线索持续提示：生成代码的速度提升后，生产迁移更依赖等价性验证、观测、人工审批和回滚。",
+        "boundary": "这不证明 Agent 生成的迁移已经普遍可靠；仍需独立运行日志、事故复盘与跨环境复现。"
       },
       {
-        "topic": "模型安全",
-        "label": "跨版系统卡成为部署入口",
-        "note": "连续归档显示，高风险模型的发布材料越来越把能力分级、评测和防护写进可回溯版本；本期新增 GPT-6.2 系统卡。",
-        "boundary": "这不证明真实部署安全；仍需独立红队报告、访问日志、审计和事故复盘。"
+        "topic": "Agent 安全",
+        "label": "授权链成为工具接入边界",
+        "note": "跨期看，归档持续把 Agent 的权限、身份和人类复核视为上线前提；本期新增企业 IdP 到 IAM 的官方配置路径。",
+        "boundary": "这不证明配置已在真实企业阻止越权；仍需配置审计、CloudTrail 日志与独立渗透测试。"
       }
     ],
     "topicContinuity": [
       {
-        "topic": "agent",
-        "label": "科学 Agent 复现链",
+        "topic": "infrastructure",
+        "label": "生产系统验证链",
         "status": "stronger",
         "previousPattern": "此前归档持续关注 Agent 的权限、证明与人类复核。",
-        "currentSignal": "本期新增两项官方科学研究原文，分别把候选交给湿实验与后续观测核验。",
-        "signalDirection": "可检验的交付物线索增强，独立成效证据仍未增强。",
-        "stillUnproven": "仍需公开数据、论文、实验日志和第三方复现确认结果。"
+        "currentSignal": "本期新增 Anthropic 官方工程原文，披露以影子流量、差异指纹和人工审阅验证生产 API 迁移。",
+        "signalDirection": "可审阅的验证方法材料增强，跨环境效果证据仍未增强。",
+        "stillUnproven": "仍需独立基准、客户侧指标、事故记录和回滚演练报告确认。"
       },
       {
-        "topic": "model",
-        "label": "模型部署治理材料",
+        "topic": "developer-tooling",
+        "label": "代码 Agent 的授权责任",
         "status": "stronger",
-        "previousPattern": "此前归档将系统卡、访问控制、监测和红队列为上线前提。",
-        "currentSignal": "本期新增 GPT-6.2 ChatGPT 官方系统卡，列出能力分级与部署防护。",
-        "signalDirection": "可审阅的官方版本材料增强，独立安全保证仍未增强。",
-        "stillUnproven": "仍需第三方红队报告、访问日志、外部审计与事故复盘。"
+        "previousPattern": "此前归档将代码 Agent 的生成、评测与人工审核视为同一治理链。",
+        "currentSignal": "本期 AWS 原文把企业 IdP、短期断言、IAM 角色和 CloudTrail 检查纳入 MCP 接入路径。",
+        "signalDirection": "官方授权配置材料增强，独立上线安全证据仍未增强。",
+        "stillUnproven": "仍需 IdP/IAM 配置审计、CloudTrail 日志、拒绝测试和独立渗透报告。"
       }
     ],
     "companyContinuity": [
       {
-        "company": "OpenAI",
-        "label": "科学研究披露延续",
-        "lastMention": "此前归档持续关注 OpenAI 的安全控制面、模型系统卡与科学应用。",
-        "whatChanged": "本期新增两项科学研究原文，将蛋白候选与天文候选置于实验或观测复查路径。",
-        "stillUnproven": "仍不证明实际转化；需第三方论文、数据、实验日志和观测报告。"
+        "company": "Anthropic",
+        "label": "Agent 工程验证披露增强",
+        "lastMention": "此前归档关注 Anthropic 的 Agent 标准、评估与治理材料。",
+        "whatChanged": "本期新增其官方工程报告，描述 Messages API 的 Rust 迁移及分层验证、人工审阅路径。",
+        "stillUnproven": "仍不证明性能、可靠性或安全收益可迁移到其他团队；需独立基准、客户指标与事故日志。"
       },
       {
-        "company": "Onava",
-        "label": "实验合作方进入证据链",
-        "lastMention": "此前归档中的科学 AI 线索持续将合作实验与模型生成区分开来。",
-        "whatChanged": "本期新增 Onava 参与测试 GPT-6.2 设计候选的官方研究披露，补入湿实验环节。",
-        "stillUnproven": "仍不证明功能或转化价值；需第三方实验报告、原始数据和复现论文。"
+        "company": "Amazon Web Services",
+        "label": "MCP 授权控制路径新增",
+        "lastMention": "此前归档持续关注云平台为 Agent 提供权限、隔离与审计控制的材料。",
+        "whatChanged": "本期新增 AWS 对 EMA/ID-JAG、IAM 和 CloudTrail 授权/核对路径的官方说明。",
+        "stillUnproven": "仍不证明实际接入已最小权限；需 IdP/IAM 配置审计、CloudTrail 日志与独立渗透测试。"
       }
     ],
     "sourceConcentration": {
-      "sourceId": "openai-official",
-      "sourceName": "OpenAI 官方研究与部署安全材料",
-      "count": 3,
-      "share": "3/3",
-      "note": "均为 OpenAI 官方材料；发布事实已核对，科学与安全成效仍待独立验证。",
-      "nextCheck": "优先补查公开技术材料、第三方复跑、湿实验/观测和外部红队审计。"
+      "sourceId": "mixed-official",
+      "sourceName": "Anthropic Engineering 与 AWS Security Blog",
+      "count": 2,
+      "share": "2/2",
+      "note": "本期2条来自不同发布方的官方工程/安全材料；发布事实已核对，通用工程与安全成效仍待独立验证。",
+      "nextCheck": "优先补查独立性能测试、客户侧服务指标、配置审计、CloudTrail 日志和渗透测试。"
     }
   },
   "items": [
     {
-      "id": "openai-gpt6-protein-design-2026-11-24",
-      "category": "research",
-      "label": "研究",
-      "title": "OpenAI 披露 GPT-6 蛋白设计能力：候选分子仍须湿实验与独立复现",
-      "body": "OpenAI 于11月24日发布科学研究页，报告 GPT-6.2 设计的部分蛋白候选在与 Onava 的实验中显示结合迹象；页面披露的是发布方研究，不能替代功能、临床或独立复现证据。",
-      "summary": "OpenAI 将 GPT-6 的蛋白设计研究及合作方实验公开为可核对的科学信号；能否转化为稳定功能、药物或临床结果，仍取决于更多湿实验与独立复现。",
-      "detailBody": "来源事实：OpenAI 于11月24日发布蛋白设计研究。原文称，合作方 Onava 测试了基于 GPT-6.2 设计的候选，并在五个目标上观察到结合迹象。\n\n原文还说明，实验前由专用模型协助提供序列和筛选候选；这意味着公开结果是组合工作流，而非 GPT-6.2 独自端到端完成的证明。\n\n结合只是走向实用研究工具或药物的一步；本站不把该披露延伸为蛋白功能、药物或临床效果已经成立。",
-      "trend": "前沿模型的科学能力叙事正在从通用问答转向可实验检验的设计任务；真正的分水岭仍是公开方法、盲测和湿实验能否支持。",
-      "detailTrend": "蛋白设计一类任务把模型输出与实验结果之间的距离暴露得更清楚：模型可以提出候选或辅助筛选，但候选是否表达、折叠、稳定并具备目标功能，必须由实验流程回答。对研发团队而言，值得跟踪的不是单一发布结论，而是数据划分、基线、失败案例、盲测设计和可重复的湿实验记录。若后续材料只有内部评测而没有外部复验，这仍应视为研究信号而非已验证的转化能力。",
-      "whyItMatters": "它把“模型能做科学设计”落回可检验的蛋白任务，同时提醒读者区分模型评测与实验、临床或商业结果。",
-      "whyRanked": "原始研究页给出了 OpenAI 的正式披露入口，且蛋白设计是能由外部实验复核的高影响方向。",
-      "detailWhyRanked": "OpenAI 原文不仅给出研究题目，还披露了与 Onava 的实验合作、候选测试与限制段落，读者可沿原始页进入论文和方法线索。该来源只能核对发布方披露；第三方湿实验、功能读出和复现材料仍是判断转化价值的必要条件。",
-      "topReason": "先查评测设定、公开材料和独立湿实验，再判断其是否改变蛋白研发决策。",
-      "whoShouldCare": "负责蛋白工程、计算生物学或药物早研筛选的研发负责人，正在评估模型候选如何进入湿实验队列时应关注。",
-      "impact": "研发团队可把模型候选与实验验证分成两条可审计工作流，并预先定义盲测、失败样本和复现门槛。",
-      "readerUse": "科学 AI 团队可检查训练/评测边界、候选筛选标准、湿实验协议和外部复验计划。",
-      "nextCheck": "优先查看 OpenAI 后续技术材料、独立团队的固定任务复跑、盲测湿实验和失败案例披露。",
+      "id": "anthropic-messages-api-rust-2026-11-25",
+      "category": "tool",
+      "label": "工具",
+      "title": "Anthropic 将 Messages API 迁至 Rust：发布方称需用生产影子流量验证 Agent 改写",
+      "body": "Anthropic 于11月25日发布工程报告，称其已将服务 Claude、Claude Code 与 Cowork 的 Messages API 从 Python 迁至 Rust，并以生产影子比对、分层验证与人工评审控制迁移风险。",
+      "summary": "Anthropic 把高流量模型 API 的 Rust 迁移作为一个“先验证、后放量”的工程案例公开；官方披露的性能改善不能替代独立可用性、成本或安全评测。",
+      "detailBody": "来源事实：Anthropic 于11月25日发布工程报告，称其将 Messages API 从 Python 迁至 Rust。该接口被 Claude、Claude Code 与 Cowork 使用；原文称 API 流量从2024年初到2026年秋季约增长1,800倍。\n\n为核对新旧实现，团队让同一模型输出被重放到 Rust 路径，并按请求处理阶段记录差异；修复先在沙箱中验证，再由人工审阅后在影子生产流量中观察。原文称迁移后每请求 CPU 约降70%，中位首 token 时间约降20%。\n\n这些数字是 Anthropic 对自身环境、流量和指标口径的披露，不能直接推出其他团队、其他模型 API 或客户侧体验会取得同等改善。",
+      "trend": "当 Agent 降低重写代码的生成成本后，生产系统迁移的关键约束转向等价性验证、隐私保护的观测与人工放行，而不是单次生成速度。",
+      "detailTrend": "这份工程报告的可迁移部分不是“把服务改用 Rust 就会提速”，而是把验证分成可快速失败的本地检查、影子流量上的外层验证和人类审阅。对采用代码 Agent 的团队，这提示上线门槛应包含回放/对照、差异分类、回滚能力、隐私边界和批准责任。供应商的内部性能叙述仍需用自身服务等级、错误率、成本和事故记录核对。",
+      "whyItMatters": "它把 Agent 编程的重点从“能否写出迁移代码”移到“能否证明新旧行为等价并安全放量”，对运行高流量模型服务的团队尤其直接。",
+      "whyRanked": "官方工程原文提供了发布日期、系统范围、验证路径及量化结果，是检查 Agent 参与生产迁移如何设置验证环的较完整一手案例。",
+      "detailWhyRanked": "报告披露了旧实现作为比较基准、请求只计费一次的限制、差异指纹、沙箱到影子流量的分层过程，以及人工审阅拒绝不适合上线的修复案例。它可支持“Anthropic 如此描述其迁移方法与结果”，但不构成独立可靠性认证；读者仍须查看自身的延迟分位数、错误率、隐私和回滚演练记录。",
+      "topReason": "先核对新旧路径的回放覆盖、差异阈值、人工批准和回滚演练，再评价 Agent 改写是否可扩大到关键服务。",
+      "whoShouldCare": "负责模型 API、推理网关、开发者平台或代码 Agent 上线治理的工程负责人和 SRE/安全团队。",
+      "impact": "团队可把“生产系统改写”拆成可审计门槛：基准实现、影子流量、隐私最小化差异记录、人工审批、分批放量和回滚。",
+      "readerUse": "平台工程团队可用本条复查迁移项目是否有独立于 Agent 生成结果的等价性验证、生产观测和人工放行责任。",
+      "nextCheck": "检查 Anthropic 后续服务可用性/事故记录及独立基准；在自身环境以固定流量回放、错误率、p95/p99 延迟、成本和回滚演练验证是否成立。",
       "followUpQuestions": [
-        "原始材料是否说明数据泄漏防护、任务划分、基线和失败案例？",
-        "独立实验室能否在预注册或盲测条件下复现候选蛋白的目标性质？"
+        "影子比对的请求回放记录、功能覆盖清单、差异阈值与人工审批记录是否可供审计？",
+        "客户侧的错误率、尾延迟、账单与事故记录是否支持发布方所述性能改善？"
       ],
-      "evidenceThreshold": "需要可审读方法、独立基准复跑、预注册或盲测湿实验与失败率数据，才能升级为可验证的蛋白设计成效。",
-      "claimBoundary": "OpenAI 的研究披露不证明 GPT-6 已产出可用药物、稳定蛋白或临床收益，也不证明结果可泛化到其他目标。",
-      "counterEvidence": "若第三方湿实验报告显示结合结果无法复现、候选缺乏功能或稳定性指标，或论文方法无法复跑，应下调其研发价值判断。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
-      "originalUrl": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      "evidenceThreshold": "需要可复核的版本化性能口径、客户或独立运行记录、错误/事故数据及第三方复现实验，才能升级为已验证的通用工程成效。",
+      "claimBoundary": "Anthropic 的工程报告只能证明其发布了该迁移方法与内部结果；不证明 Rust 迁移或 Agent 编码会在其他服务中带来同等性能、可靠性、成本或安全收益。",
+      "counterEvidence": "若独立基准、客户侧 p95/p99 延迟与错误率记录、事故复盘或回滚演练结果显示未改善，或关键回放与隐私控制无法复核，应下调该工程方法的外推价值。",
+      "source": "Anthropic Engineering",
+      "sourceName": "Anthropic Engineering",
+      "sourceId": "anthropic-engineering",
+      "sourceUrl": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "originalUrl": "https://www.anthropic.com/research/migrating-api-to-rust",
       "sourceRole": "官方核对",
-      "provenance": "OpenAI News 的官方科学页可核对发布日期、研究题目及发布方对 GPT-6 蛋白设计能力的披露；实验转化与外部有效性仍需独立证据。",
-      "trustLevel": "来源层级：官方研究，高可信",
+      "provenance": "Anthropic Engineering 官方工程原文可核对发布日期、Messages API 迁移、其描述的验证流程与内部指标；性能、可靠性与客户体验仍需独立或客户侧证据。",
+      "trustLevel": "来源层级：官方工程原文，高可信",
       "verificationStatus": "已核验",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
       "companies": [
-        "OpenAI",
-        "Onava"
+        "Anthropic"
       ],
       "tags": [
-        "科学智能",
-        "蛋白设计",
-        "生物技术",
-        "模型评测"
+        "模型基础设施",
+        "代码 Agent",
+        "工程验证",
+        "API"
       ],
-      "publishedAt": "2026-11-24T09:00:00-08:00",
+      "publishedAt": "2026-11-25T00:00:00-08:00",
       "time": "11/25",
       "selectionScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
         "evidenceQuality": 4,
-        "readerUtility": 4,
+        "readerUtility": 5,
         "total": 21,
-        "note": "官方研究披露可核对；实验与转化效果仍需外部复现。"
+        "note": "官方工程原文披露了验证路径与内部指标；跨环境成效仍待独立核对。"
       },
       "editorScore": {
-        "impact": 5,
+        "impact": 4,
         "novelty": 4,
         "evidenceQuality": 4,
-        "readerUtility": 4,
+        "readerUtility": 5,
         "total": 17
       }
     },
     {
-      "id": "openai-astra-distant-planets-2026-11-24",
-      "category": "research",
-      "label": "研究",
-      "title": "OpenAI 用 Astra 搜索遥远行星：天文候选仍要经过观测确认",
-      "body": "OpenAI 于11月24日发布以 Astra 搜索遥远行星的科学页面；该披露可核对其研究方向，但候选天体是否成立仍需独立观测与同行审读。",
-      "summary": "Astra 被用于天文搜索的官方披露提示 Agent 可进入科学工作流；候选并不等于已发现，后续观测与可复现分析才是结论门槛。",
-      "detailBody": "来源事实：OpenAI 于11月24日发布“Searching for distant planets with Astra”，将 Astra 用于遥远行星搜索的研究工作公开。原文支持“发布方进行了该研究披露”，不支持把任何候选直接写成已证实的行星发现。",
-      "trend": "科学 Agent 的价值正在从生成解释延伸到筛选观测线索；越接近发现声明，越需要数据、误差模型与外部复核。",
-      "detailTrend": "天文搜索适合检验 Agent 工作流，因为原始观测、筛选规则和后续望远镜验证能形成相对清晰的证据链。模型或 Agent 可以帮助整理候选、提出优先级或发现模式，但“候选”与“确认”之间仍隔着信噪比、仪器系统误差、替代解释和独立观测。对科学机构而言，合理的部署指标应包括漏检率、误报率、人工审稿负担及是否能复跑完整筛选流程。",
-      "whyItMatters": "它把 Agent 的科学应用放入能被观测数据和后续验证约束的场景，而非只停留在演示。",
-      "whyRanked": "官方原文及时披露了一个可追踪的科学搜索用例，并天然要求区分候选、观测和确认。",
-      "detailWhyRanked": "OpenAI 原文将项目表述为利用公共望远镜数据寻找线索，并专门解释确认行星所需的后续步骤。它还说明该工作由两名业余天文爱好者使用 Codex 与 Astra 完成，研究对象是公共望远镜数据。这些来源事实使读者能区分工作流披露、候选与确认；外部观测、候选目录和同行审读仍决定科研结论。",
-      "topReason": "先查候选筛选规则、数据来源和独立观测计划，再评价 Astra 的科研贡献。",
-      "whoShouldCare": "天文数据团队、科学计算负责人和建设 Agent 科研流程的研发组织应关注。",
-      "impact": "团队可将候选生成、人工复核、数据版本与独立观测安排纳入同一条科学审计链。",
-      "readerUse": "科研平台团队可检查数据许可、候选阈值、误报处理、人工复核与后续观测的交接记录。",
-      "nextCheck": "优先核对公开研究技术材料、候选清单与 NASA Exoplanet Archive 的后续状态，并查看独立天文团队的观测确认报告。",
+      "id": "aws-enterprise-managed-authorization-mcp-2026-11-25",
+      "category": "tool",
+      "label": "工具",
+      "title": "AWS 为 MCP Server 增加企业托管授权：Agent 权限仍要由 IAM 与审计日志验证",
+      "body": "AWS 于11月25日发布安全博客，介绍 Enterprise-Managed Authorization（EMA）与 ID-JAG 如何让企业 IdP 为访问 AWS MCP Server 的 AI Agent 签发短期授权，并由 IAM 角色限制具体操作。",
+      "summary": "AWS 把 Agent 访问云资源的授权从逐个用户同意转向企业 IdP 策略、短期令牌与 IAM；这是官方配置路径，不等于已证明所有 Agent 集成安全。",
+      "detailBody": "来源事实：AWS 于11月25日发布安全博客，介绍 AWS Sign-In 对 Enterprise-Managed Authorization（EMA）及 Identity Assertion JWT Authorization Grant（ID-JAG）的支持。\n\n原文以 Claude 和 Okta 为示例：企业 IdP 可在策略判断后签发短期断言，再由 AWS Sign-In 换取与 IAM 角色关联的 OAuth 访问令牌。\n\n原文强调，登录 AI 应用并不会自动取得 AWS 资源权限；实际操作仍由 IAM 角色和条件控制。它建议用 CloudTrail 检查令牌签发，并测试允许与拒绝访问路径。\n\n这是 AWS 对其产品集成和建议控制面的官方说明，不能替代真实配置审计、第三方安全测试或对具体 Agent/MCP 工具调用的权限评估。",
+      "trend": "MCP 将 Agent 接到企业资源后，身份、授权与可审计令牌链会成为比“能否连上工具”更重要的上线条件。",
+      "detailTrend": "MCP 将 Agent 接到企业资源后，身份、授权与可审计令牌链会成为比“能否连上工具”更重要的上线条件。EMA 将跨应用的授权决策拉回企业已有 IdP 和 IAM 控制面，同时要求把 Agent 权限、资源标识、令牌时效、角色条件与审计记录逐项绑定。对安全团队，关键是以允许/拒绝测试和日志复核权限边界，而不是把产品支持当成安全结果。",
+      "whyItMatters": "它给出了 AI Agent 访问云资源时可由企业集中治理的一条授权路径，并明确区分身份验证与资源授权。",
+      "whyRanked": "AWS 官方安全原文提供了发布日期、授权链、IAM 边界及可验证日志路径，适合转化为 MCP 接入的权限核对清单。",
+      "detailWhyRanked": "AWS 官方安全原文说明了从企业 IdP 到 ID-JAG、AWS Sign-In、OAuth 令牌、IAM 角色与 CloudTrail 检查的具体链路。该材料可以核对产品配置说明；企业是否实际达到最小权限、日志覆盖与抗越权能力，仍需配置审计和独立测试。",
+      "topReason": "先核对 IdP 策略、IAM 最小权限、短期令牌、CloudTrail 记录和拒绝测试，再让 Agent 接触生产资源。",
+      "whoShouldCare": "负责企业身份、云平台安全、MCP Server 或 Agent 工具接入的 IAM 与安全工程团队。",
+      "impact": "团队可将 Agent 接入纳入既有 IdP/IAM 审批，并把令牌签发、角色条件、允许/拒绝测试与审计日志设为上线证据。",
+      "readerUse": "云安全团队可用本条检查 Agent 是否被单独识别、授权是否短期且最小化，以及失败访问是否进入审计记录。",
+      "nextCheck": "检查 AWS 官方产品文档、企业 IdP 策略、IAM 角色/条件、CloudTrail 令牌事件与独立渗透测试，确认实际权限链和拒绝路径。",
       "followUpQuestions": [
-        "原始数据、候选筛选阈值和误报控制是否足以让外部团队复跑？",
-        "是否有独立观测报告、候选目录或同行审读将相关信号从候选升级为确认？"
+        "企业 IdP 策略、IAM 角色条件和短期令牌配置是否能由配置快照与 CloudTrail 日志复核？",
+        "独立渗透测试报告是否覆盖提示注入、代理混淆、越权工具调用和被拒绝访问路径？"
       ],
-      "evidenceThreshold": "需要公开或可审读的数据与方法、独立复跑、后续观测和同行审读，才能升级为已验证的天文发现或科研效率结论。",
-      "claimBoundary": "官方研究页不证明 Astra 已确认新的行星，也不证明其在其他科学任务中稳定优于既有分析流程。",
-      "counterEvidence": "若独立复跑发现候选依赖数据偏差、误报率不可接受、后续观测未支持或人工成本未下降，应收窄其科研工作流价值。",
-      "source": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "openai-news",
-      "sourceUrl": "https://openai.com/index/searching-for-distant-planets-with-astra/",
-      "originalUrl": "https://openai.com/index/searching-for-distant-planets-with-astra/",
+      "evidenceThreshold": "需要可审计的 IdP/IAM 配置快照、CloudTrail 令牌与拒绝事件、独立渗透测试报告和定期权限复核，才能升级为已验证的 Agent 访问控制成效。",
+      "claimBoundary": "AWS 的配置说明不证明所有接入 EMA 的 Agent 或 MCP Server 都安全，也不证明企业现有 IdP/IAM 策略已实现最小权限。",
+      "counterEvidence": "若配置审计、CloudTrail 日志、拒绝测试或独立渗透报告发现越权令牌、角色条件缺失或工具调用可绕过策略，应下调该控制路径的安全信心。",
+      "source": "AWS Security Blog",
+      "sourceName": "AWS Security Blog",
+      "sourceId": "aws-security-blog",
+      "sourceUrl": "https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/",
+      "originalUrl": "https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/",
       "sourceRole": "官方核对",
-      "provenance": "OpenAI News 的官方科学页可核对项目标题、日期和发布方对 Astra 天文搜索工作的披露；候选确认与效率收益仍需观测和第三方验证。",
-      "trustLevel": "来源层级：官方研究，高可信",
+      "provenance": "AWS Security Blog 官方原文说明：AWS Sign-In 支持 EMA 与 ID-JAG，企业 IdP 的短期断言可换取受 IAM 角色约束的 OAuth 令牌，以控制 Agent 对 AWS MCP Server 资源的权限；实际安全效果仍需配置审计与独立测试。",
+      "trustLevel": "来源层级：官方安全文档，高可信",
       "verificationStatus": "已核验",
       "sourceType": "official",
       "sourceReliability": "high",
       "claimStatus": "confirmed",
       "originalDependency": "recommended",
       "companies": [
-        "OpenAI"
+        "Amazon Web Services"
       ],
       "tags": [
-        "科学智能",
-        "天文学",
-        "Agent",
-        "数据分析"
+        "MCP",
+        "Agent 安全",
+        "身份与访问管理",
+        "云安全"
       ],
-      "publishedAt": "2026-11-24T09:00:00-08:00",
+      "publishedAt": "2026-11-25T00:00:00-08:00",
       "time": "11/25",
       "selectionScore": {
         "impact": 4,
         "novelty": 4,
         "narrativeStrength": 4,
         "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 20,
-        "note": "官方研究披露可核对；发现与效率结论仍需观测和独立复现。"
+        "readerUtility": 5,
+        "total": 21,
+        "note": "官方安全原文可核对授权链与配置路径；实际权限控制仍需配置审计和独立测试。"
       },
       "editorScore": {
         "impact": 4,
         "novelty": 4,
         "evidenceQuality": 4,
-        "readerUtility": 4,
-        "total": 16
-      }
-    },
-    {
-      "id": "openai-gpt62-chatgpt-preparedness-2026-11-23",
-      "category": "model",
-      "label": "模型",
-      "title": "OpenAI 发布 GPT-6.2 ChatGPT 安全评估：阈值与防护仍需外部审计",
-      "body": "OpenAI 11月23日的 GPT-6.2 ChatGPT 系统卡称，该版本在网络安全能力上达到其“关键”阈值，并说明将采用相应部署防护；这些是官方评估与治理口径。",
-      "summary": "系统卡让读者可核对 OpenAI 对 GPT-6.2 的能力分级、评测与防护说明；它不是独立安全认证，也不替代真实世界红队与事件记录。",
-      "detailBody": "来源事实：OpenAI Deployment Safety Hub 发布 GPT-6.2 ChatGPT 系统卡，说明该版本面向 Plus 与 Pro 的 ChatGPT 部署，并列出其对网络安全、生物化学和自我改进能力的阈值判断及部署防护。本站仅将这些内容表述为 OpenAI 的安全评估与发布说明。",
-      "trend": "当模型能力进入更高风险区间，产品发布的核心信息不再只是性能，而是评测口径、阈值、防护和可追责的部署边界。",
-      "detailTrend": "系统卡的价值在于把发布方如何判断风险、采用哪些评测和部署防护写成可回溯材料；它不能自动等同于第三方安全认证。尤其是网络安全能力，离线基准、受控工具环境与真实组织的攻击面并不相同。采购方和平台方应把系统卡视为尽调起点：核对版本绑定、访问控制、滥用监测、事件响应和独立红队，而不是将内部阈值标签转换成风险已经消失的结论。",
-      "whyItMatters": "该披露使模型能力分级与部署防护可被外部审阅，也凸显了安全声明必须接受版本化验证。",
-      "whyRanked": "它是官方一手系统卡，直接涉及模型部署、网络安全能力分级和防护措施，适合纳入高风险模型的核对清单。",
-      "detailWhyRanked": "系统卡逐项给出面向 ChatGPT 的版本、发布方能力判断、评测表和防护章节，读者可核对其适用范围。原文明确将该版本称为 GPT-6.2（11月23日），并说明面向 Plus 与 Pro 用户的 ChatGPT 发布，同时列出网络安全、生物化学及自我改进能力的判断。它的可验证价值是发布方安全口径，而不是外部认证；访问日志、红队与审计仍应决定部署信心。",
-      "topReason": "先核对系统卡的版本、评测范围和外部红队，再决定如何调整访问与监测控制。",
-      "whoShouldCare": "负责模型接入、网络安全、AI 治理和高风险工作流的企业负责人应关注。",
-      "impact": "组织可把系统卡版本、供应商防护承诺、内部权限与事件响应测试纳入模型上线门禁。",
-      "readerUse": "安全和治理团队可核对评测适用范围、访问限制、监测信号、升级路径与独立测试要求。",
-      "nextCheck": "优先查看对应版本的完整系统卡、外部红队或审计材料、产品访问规则及后续安全事件和补丁说明。",
-      "followUpQuestions": [
-        "系统卡中的评测和防护是否与实际启用的产品版本、工具权限和地区一致？",
-        "是否有独立红队、事故披露或审计材料能检验官方防护在真实环境中的表现？"
-      ],
-      "evidenceThreshold": "需要独立红队报告、版本化访问控制证据、监测/响应审计和真实事件复盘，才能升级为已验证的部署安全成效。",
-      "claimBoundary": "OpenAI 的阈值判断和系统卡不证明 GPT-6.2 在所有环境都安全，也不证明既有防护能阻止全部网络、生物化学或自主行为风险。",
-      "counterEvidence": "若独立测试、事故记录或版本差异显示评测无法覆盖实际工具权限、滥用路径或监测失效，应下调对部署防护的信心。",
-      "source": "OpenAI Deployment Safety Hub",
-      "sourceName": "OpenAI Deployment Safety Hub",
-      "sourceId": "openai-deployment-safety",
-      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf",
-      "originalUrl": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf",
-      "sourceRole": "官方核对",
-      "provenance": "OpenAI Deployment Safety Hub 的 GPT-6.2 ChatGPT 模型系统卡可核对：该模型版本面向 Plus/Pro ChatGPT、发布方将网络安全评为关键阈值，并说明生物化学、自我改进评估与部署防护；外部安全效果仍需独立审计。",
-      "trustLevel": "来源层级：官方系统卡，高可信",
-      "verificationStatus": "已核验",
-      "sourceType": "official",
-      "sourceReliability": "high",
-      "claimStatus": "confirmed",
-      "originalDependency": "recommended",
-      "companies": [
-        "OpenAI"
-      ],
-      "tags": [
-        "模型安全",
-        "系统卡",
-        "网络安全",
-        "部署治理"
-      ],
-      "publishedAt": "2026-11-23T16:00:00-08:00",
-      "time": "11/24",
-      "selectionScore": {
-        "impact": 5,
-        "novelty": 4,
-        "narrativeStrength": 4,
-        "evidenceQuality": 4,
         "readerUtility": 5,
-        "total": 22,
-        "note": "官方系统卡可核对发布方评测与防护口径；不是独立安全认证。"
-      },
-      "editorScore": {
-        "impact": 5,
-        "novelty": 4,
-        "evidenceQuality": 4,
-        "readerUtility": 5,
-        "total": 18
+        "total": 17
       }
     }
   ],
   "briefing": {
     "label": "今日简报",
-    "headline": "科学 Agent 的候选，必须走完实验、观测与审计",
-    "summary": "两项科学研究与一份系统卡都提供了可核对的官方起点；它们尚不是实验、发现或安全成效的独立证明。",
-    "cta": "在新闻流查看 3 条相关信号 →",
+    "headline": "先验证改写与授权链，再让 Agent 进入生产",
+    "summary": "Anthropic 的 API 迁移与 AWS 的 MCP 企业授权材料，分别提供回放/影子流量与 IdP/IAM/审计的核对起点；两者均非外部效果认证。",
+    "cta": "在新闻流查看 2 条生产验证与授权信号 →",
     "watchPoints": [
       {
-        "title": "实验与观测",
-        "body": "查数据、筛选阈值、盲测、失败样本与独立复跑。"
+        "title": "迁移验证",
+        "body": "查回放覆盖、影子流量、差异阈值、人工审批与回滚。"
       },
       {
-        "title": "部署边界",
-        "body": "查系统卡版本、访问控制、监测与事件响应。"
+        "title": "授权边界",
+        "body": "查企业 IdP、IAM 最小权限、短期令牌与拒绝测试。"
       },
       {
         "title": "独立证据",
-        "body": "查湿实验、后续观测、外部红队和审计，不只看公告。"
+        "body": "查客户侧指标、配置审计、CloudTrail 日志、事故与渗透测试。"
       }
     ]
   },
   "deepBriefing": {
-    "kicker": "17点情报版｜科学 Agent 与部署治理",
-    "title": "能力进入科学与高风险部署：证据链要比演示更长",
-    "subtitle": "两项科学研究页与一份系统卡提供官方核对入口，但结论仍必须由实验、观测与独立安全审计完成。",
-    "dateLabel": "2026年11月25日 17:00 JST",
-    "status": "已发布｜3条官方信号",
-    "overview": "本期把官方材料转成两类检查单：科学团队核对候选、数据和复现；治理团队核对版本、阈值、防护与外部测试。",
+    "kicker": "17点情报版｜生产验证与 Agent 授权",
+    "title": "Agent 进入生产，验证环与授权链必须同时闭合",
+    "subtitle": "Anthropic 的 API 迁移与 AWS 的 MCP 企业授权说明提供两个官方核对入口；性能、可靠性与安全成效仍待独立证据。",
+    "dateLabel": "2026年11月26日 17:00 JST",
+    "status": "已发布｜2条官方工程/安全信号",
+    "overview": "本期把两份官方原文转换为上线检查单：用基准实现和影子流量验证改写，用企业 IdP、IAM、短期令牌和审计日志约束 Agent 访问。",
     "timeline": [
       {
         "label": "1",
-        "title": "蛋白候选进入实验",
-        "body": "OpenAI 公开蛋白设计研究与合作方结合测试；下一步看功能、稳定性与独立复现。"
+        "title": "Messages API 迁移公开",
+        "body": "Anthropic 称其将 Messages API 从 Python 迁至 Rust，并以影子流量比对新旧实现。"
       },
       {
         "label": "2",
-        "title": "天文信号等待确认",
-        "body": "Astra 参与公共数据搜索；候选仍须通过后续观测与同行审读。"
+        "title": "验证后逐步放量",
+        "body": "原文描述沙箱、人工审阅、生产影子流量与回滚相关的验证过程。"
       },
       {
         "label": "3",
-        "title": "系统卡进入尽调",
-        "body": "GPT-6.2 系统卡披露阈值与防护；上线前仍要核对版本与外部红队。"
+        "title": "MCP 接入加入企业授权链",
+        "body": "AWS 说明企业 IdP 可通过 EMA/ID-JAG 与 IAM 为 Agent 发放受限短期令牌。"
       }
     ],
     "keyNumbers": [
       {
-        "value": "3",
+        "value": "2",
         "label": "本期官方原始材料"
       },
       {
-        "value": "2",
-        "label": "科学研究信号"
+        "value": "约70%",
+        "label": "Anthropic 所述每请求 CPU 降幅"
       },
       {
-        "value": "1",
-        "label": "部署安全系统卡"
+        "value": "IAM",
+        "label": "AWS 授权边界的执行控制面"
       }
     ],
     "sections": [
       {
         "number": "01",
-        "label": "科学候选",
-        "title": "实验与观测才是分界线",
-        "body": "模型提出或筛选候选不等于科学结论。",
-        "soWhat": "把数据版本、阈值、盲测和失败样本列入复现包。"
+        "label": "迁移事实",
+        "title": "发布方称已完成 Python 到 Rust 的核心 API 迁移",
+        "body": "原文可核对迁移对象、服务范围与内部流量背景。",
+        "soWhat": "把版本、变更范围和基准实现纳入迁移档案。"
       },
       {
         "number": "02",
-        "label": "部署治理",
-        "title": "系统卡是尽调起点",
-        "body": "发布方评测和防护需要绑定具体版本与权限。",
-        "soWhat": "将系统卡、访问控制和红队报告放入上线门禁。"
+        "label": "验证环",
+        "title": "影子流量与人工审阅比“生成代码”更接近上线门槛",
+        "body": "报告描述差异指纹、沙箱验证、影子流量与人工审批的分层过程。",
+        "soWhat": "为关键路径设置回放、差异阈值、批准和回滚门槛。"
       },
       {
         "number": "03",
-        "label": "证据边界",
-        "title": "同一发布方材料不能互相独立验证",
-        "body": "本期材料均来自 OpenAI，适合核对其披露而非证明外部成效。",
-        "soWhat": "优先寻找论文、实验记录、观测报告与第三方审计。"
+        "label": "授权边界",
+        "title": "身份验证不是资源授权",
+        "body": "AWS 说明 AI 应用登录后仍要由企业 IdP、短期断言和 IAM 角色控制对 MCP Server 的访问。",
+        "soWhat": "测试允许/拒绝路径，并保留 CloudTrail 令牌与操作记录。"
       }
     ],
     "actions": [
       {
-        "title": "科研团队",
-        "body": "复查数据、筛选规则、实验协议与外部复现计划。"
+        "title": "平台团队",
+        "body": "核对功能回放、尾延迟、错误率、容量和回滚演练。"
       },
       {
-        "title": "治理团队",
-        "body": "绑定系统卡版本，复查权限、日志、红队与响应路径。"
+        "title": "安全团队",
+        "body": "核对 IdP/IAM 配置、短期令牌、CloudTrail 记录与越权测试。"
       }
     ],
     "coverageLimits": [
       {
         "label": "时间窗口",
-        "body": "本期聚焦11月23日至24日可核对的官方材料，不代表完整市场清单。"
+        "body": "本期聚焦11月25日可核对的两份官方工程/安全原文，不代表完整市场清单。"
       },
       {
-        "label": "来源集中",
-        "body": "3条均由 OpenAI 发布，不能作为科学转化或部署安全的独立证明。"
+        "label": "来源边界",
+        "body": "两条均为厂商官方材料，不能作为通用性能、可靠性或安全结论。"
       }
     ],
     "sourceFrame": {
       "sourceFacts": [
-        "OpenAI 发布两篇11月24日科学研究页。",
-        "OpenAI Deployment Safety Hub 发布 GPT-6.2 ChatGPT 系统卡。"
+        "Anthropic 发布 Messages API 迁至 Rust 的工程报告。",
+        "AWS 发布 EMA/ID-JAG 接入 AWS MCP Server 的企业授权说明。"
       ],
       "editorialJudgment": [
-        "实验、观测与审计是将候选升级为结论的必要环节。",
-        "系统卡应作为部署尽调起点，而不是安全认证。"
+        "生产迁移的核心风险在等价性验证与放量控制，而不只是代码生成。",
+        "Agent 访问云资源应将身份、授权、令牌、角色和审计连成可核查链。"
       ],
       "unknowns": [
-        "候选蛋白能否在独立实验中显示功能、稳定性与安全性。",
-        "天文候选和部署防护能否经外部观测、红队与审计支持。"
+        "其他环境的 CPU、尾延迟、错误率、成本和可用性是否改善。",
+        "EMA 接入能否在真实组织中阻断越权、提示注入与配置错误。"
       ]
     },
     "references": [
       {
-        "label": "OpenAI：GPT-6 蛋白设计研究与实验披露",
-        "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+        "label": "Anthropic 官方工程原文：披露 Messages API Rust 迁移与验证流程",
+        "url": "https://www.anthropic.com/research/migrating-api-to-rust"
       },
       {
-        "label": "OpenAI：Astra 遥远行星搜索研究披露",
-        "url": "https://openai.com/index/searching-for-distant-planets-with-astra/"
-      },
-      {
-          "label": "OpenAI：GPT-6.2 模型系统卡阈值与防护",
-        "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf"
+        "label": "AWS Security Blog 官方原文：说明 MCP 企业授权、IAM 与审计路径",
+        "url": "https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/"
       }
     ]
   }

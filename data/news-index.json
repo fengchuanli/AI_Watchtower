@@ -1,9 +1,51 @@
 {
   "version": 1,
   "generatedFrom": "data/news-history.json",
-  "updatedAt": "2026-11-25",
-  "totalItems": 1333,
+  "updatedAt": "2026-11-26",
+  "totalItems": 1335,
   "editions": [
+    {
+      "id": "news-1700-2026-11-26",
+      "date": "2026-11-26",
+      "timezone": "Asia/Tokyo",
+      "archiveLabel": "11月26日｜17点情报版",
+      "archiveStatus": "published",
+      "itemCount": 2,
+      "items": [
+        {
+          "id": "anthropic-messages-api-rust-2026-11-25",
+          "title": "Anthropic 将 Messages API 迁至 Rust：发布方称需用生产影子流量验证 Agent 改写",
+          "category": "tool",
+          "label": "工具",
+          "time": "11/25",
+          "publishedAt": "2026-11-25T00:00:00-08:00",
+          "body": "Anthropic 于11月25日发布工程报告，称其已将服务 Claude、Claude Code 与 Cowork 的 Messages API 从 Python 迁至 Rust，并以生产影子比对、分层验证与人工评审控制迁移风险。",
+          "impact": "团队可把“生产系统改写”拆成可审计门槛：基准实现、影子流量、隐私最小化差异记录、人工审批、分批放量和回滚。",
+          "source": "Anthropic Engineering",
+          "sourceId": "anthropic-engineering",
+          "sourceUrl": "https://www.anthropic.com/research/migrating-api-to-rust",
+          "sourceRole": "官方核对",
+          "trustLevel": "来源层级：官方工程原文，高可信",
+          "sourceCaveat": "Anthropic 的工程报告只能证明其发布了该迁移方法与内部结果；不证明 Rust 迁移或 Agent 编码会在其他服务中带来同等性能、可靠性、成本或安全收益。"
+        },
+        {
+          "id": "aws-enterprise-managed-authorization-mcp-2026-11-25",
+          "title": "AWS 为 MCP Server 增加企业托管授权：Agent 权限仍要由 IAM 与审计日志验证",
+          "category": "tool",
+          "label": "工具",
+          "time": "11/25",
+          "publishedAt": "2026-11-25T00:00:00-08:00",
+          "body": "AWS 于11月25日发布安全博客，介绍 Enterprise-Managed Authorization（EMA）与 ID-JAG 如何让企业 IdP 为访问 AWS MCP Server 的 AI Agent 签发短期授权，并由 IAM 角色限制具体操作。",
+          "impact": "团队可将 Agent 接入纳入既有 IdP/IAM 审批，并把令牌签发、角色条件、允许/拒绝测试与审计日志设为上线证据。",
+          "source": "AWS Security Blog",
+          "sourceId": "aws-security-blog",
+          "sourceUrl": "https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/",
+          "sourceRole": "官方核对",
+          "trustLevel": "来源层级：官方安全文档，高可信",
+          "sourceCaveat": "AWS 的配置说明不证明所有接入 EMA 的 Agent 或 MCP Server 都安全，也不证明企业现有 IdP/IAM 策略已实现最小权限。"
+        }
+      ]
+    },
     {
       "id": "news-1700-2026-11-25",
       "date": "2026-11-25",
