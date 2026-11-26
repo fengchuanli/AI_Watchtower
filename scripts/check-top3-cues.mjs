@@ -36,7 +36,9 @@ export function checkTop3Cues(appJs) {
     return target.innerHTML.split('<details class="top-editor-details">')[0];
   };
   const official = render(base);
-  assert.match(official, /发布事实已确认 · 效果待核验/, "Vendor outcomes must remain unverified before expansion");
+  assert.match(official, /来源角色<\/strong>厂商主张/);
+  assert.match(official, /事实状态<\/strong>发布事实已确认/);
+  assert.match(official, /结论证据<\/strong>独立成效仍待核验/, "Vendor outcomes must remain unverified before expansion");
   assert.match(official, /尚无独立效果证据/);
   assert.match(official, /等待第三方测试报告/);
   assert.match(official, /class="top-signal-cue">安全信号<\/span>/);
@@ -46,7 +48,7 @@ export function checkTop3Cues(appJs) {
   for (const claimStatus of ["reported", "disputed", "unclear"]) {
     const output = render({ ...base, claimStatus });
     assert.doesNotMatch(output, /发布事实已确认/);
-    assert.ok(output.includes(`class="top-claim-cue">${claimStatus}</span>`));
+    assert.match(output, /事实状态<\/strong>/);
   }
   const media = render({ ...base, sourceType: "reliable_media", sourceRole: "媒体背景", claimStatus: "reported", originalDependency: "must-read" });
   assert.match(media, /href="https:\/\/example.com\/source"[^>]*>完整事实请读原文/);

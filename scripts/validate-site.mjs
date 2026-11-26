@@ -474,15 +474,19 @@ if (
   !/适合谁先看/.test(appJs) ||
   !/现在怎么用/.test(appJs) ||
   !/来源边界/.test(appJs) ||
+  !/来源角色/.test(appJs) ||
+  !/事实状态/.test(appJs) ||
+  !/结论证据/.test(appJs) ||
   !/下一步核验/.test(appJs) ||
   !/class="top-editor-details"/.test(appJs) ||
   !/展开评分与原文依赖/.test(appJs) ||
   /class="top-score"/.test(appJs) ||
   !/\.top-reader-job/.test(styles) ||
   !/\.top-brief-list/.test(styles) ||
+  !/\.top-source-frame/.test(styles) ||
   !/\.top-editor-details/.test(styles)
 ) {
-  errors.push("Homepage TOP3 must show title, minimum fact, reader job, why now, source boundary, next-check path, and keep scoring details expandable.");
+  errors.push("Homepage TOP3 must show title, minimum fact, reader job, why now, distinct source-role/fact-status/outcome-evidence cues, next-check path, and keep scoring details expandable.");
 }
 
 if (

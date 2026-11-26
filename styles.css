@@ -5420,12 +5420,29 @@ h3 {
   font-weight: 400;
 }
 
-/* Keep publication status distinct from source identity and outcome evidence. */
-.top-claim-cue {
-  display: block;
-  margin-top: 4px;
-  font-weight: 600;
+/* Keep source role, publication status, and outcome evidence distinct. */
+.top-source-frame {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: baseline;
+}
+
+.top-source-frame > span:not(.top-source-dependency) {
+  display: inline-flex;
+  gap: 4px;
   overflow-wrap: anywhere;
+}
+
+.top-source-frame strong {
+  color: var(--fg-primary);
+  font-weight: 800;
+}
+
+.top-source-name {
+  flex-basis: 100%;
+  color: var(--fg-primary);
+  font-weight: 700;
 }
 
 /* Required originals remain reachable on the card face, before score details. */

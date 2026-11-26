@@ -534,13 +534,31 @@ function getClaimStatus(item) {
   return item.claimStatus || item.verificationStatus;
 }
 
+const claimStatusLabels = {
+  confirmed: "来源事实已核验",
+  reported: "媒体报道，待官方确认",
+  rumored: "传闻，待核验",
+  disputed: "存在争议",
+  unclear: "状态未明",
+};
+
 // A confirmed vendor publication is not independent proof of its outcomes.
-function getTopClaimCue(item) {
+function getTopFactCue(item) {
   const isVendorPublication = item.sourceType === "official" && item.sourceRole === "厂商主张";
   if (isVendorPublication && item.claimStatus === "confirmed") {
-    return "发布事实已确认 · 效果待核验";
+    return "发布事实已确认";
   }
-  return getClaimStatus(item);
+  const status = getClaimStatus(item);
+  return claimStatusLabels[String(status)] || status || "状态未标注";
+}
+
+function getTopOutcomeEvidenceCue(item) {
+  const isVendorPublication = item.sourceType === "official" && item.sourceRole === "厂商主张";
+  return isVendorPublication ? "独立成效仍待核验" : "结论范围请看「尚未证明」";
+}
+
+function getTopSourceRole(item, sourceType) {
+  return item.sourceRole || sourceType || "未标注";
 }
 
 const dependencyLabels = {
@@ -603,7 +621,10 @@ function updateTopStories(items) {
       const detailUrl = getDetailUrl(item);
       const sourceName = getSourceName(item);
       const sourceType = getSourceType(item);
-      const claimStatus = getTopClaimCue(item);
+      const claimStatus = getClaimStatus(item);
+      const factCue = getTopFactCue(item);
+      const outcomeEvidenceCue = getTopOutcomeEvidenceCue(item);
+      const sourceRole = getTopSourceRole(item, sourceType);
       const topReason = getTopReason(item);
       const compactTopReason = getCompactTopReason(item);
       const readerAudience = getReaderAudience(item);
@@ -630,7 +651,7 @@ function updateTopStories(items) {
               </div>
               <div class="top-proof-step">
                 <dt>来源边界</dt>
-                <dd>${escapeHtml(sourceName)} · ${escapeHtml(sourceType)}${item.sourceRole && item.sourceRole !== sourceType ? ` / ${escapeHtml(item.sourceRole)}` : ""}<span class="top-claim-cue">${escapeHtml(claimStatus)}</span>${renderTopSourceDependency(item)}</dd>
+                <dd class="top-source-frame"><span class="top-source-name">来源：${escapeHtml(sourceName)}</span><span><strong>来源角色</strong>${escapeHtml(sourceRole)}</span><span><strong>事实状态</strong>${escapeHtml(factCue)}</span><span><strong>结论证据</strong>${escapeHtml(outcomeEvidenceCue)}</span>${renderTopSourceDependency(item)}</dd>
               </div>
               <div class="top-proof-step">
                 <dt>尚未证明</dt>

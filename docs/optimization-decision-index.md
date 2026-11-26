@@ -148,7 +148,8 @@ These compact anchors keep validation and future automation aware of the most im
 
 - Current-cycle Day 1 complete: 390px 首页移除了今日深挖 watch points 后重复的“手机先读”三步流程卡；Hero、五秒要点和今日简报中，唯一明确的下一步引导是五秒要点的“看今日 TOP3 →”，因此读者不会在 TOP3 前再次阅读同一条路径说明。`index.html`、`styles.css`、`docs/homepage-edition-preflight.md` 与 `scripts/validate-site.mjs` 同步守住这一直接阅读路径。
 - Current-cycle Day 6 complete: TOP3 cards now show `适合谁先看` and `现在怎么用` together after the minimum fact, using the existing `whoShouldCare` and `readerUse` fields. The numeric score no longer occupies the card face; it remains under `展开评分与原文依赖`, so readers can compare work context and checklists before optional editorial scoring.
-- Next useful task: Day 7 — refine one compact TOP3 label so source role, claim state, and outcome evidence cannot be confused.
+- Current-cycle Day 7 complete: TOP3 `来源边界` now uses separate compact text labels for `来源角色`、`事实状态` and `结论证据`. Vendor cards can confirm the publication fact while separately retaining `独立成效仍待核验`; other source states are not upgraded. The existing `尚未证明` row remains the specific evidence boundary.
+- Next useful task: Day 8 — review a vendor-backed TOP3 card and keep publication facts visually distinct from unverified outcomes using existing fields only.
 
 - Current-cycle Day 8 complete: TOP3 uses the existing label as a bordered Chinese signal cue, separated from the date; category is not confidence. No additional evidence sentences or inferred classification.
 - Current-cycle Day 9 complete: official vendor TOP3 cards distinguish confirmed publication facts from unproven outcomes; existing sourceRole is visible alongside source type. Current AWS Agent Registry and PKI cards retain their explicit claimBoundary and independent nextCheck.

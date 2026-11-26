@@ -133,7 +133,7 @@ Use existing fields only. The eyebrow carries signal type (`label`); the card re
 | 下一步核验 `nextCheck` | 指向既有字段中的具体文件、测试或独立证据路径；保留未知状态。 | 虚构已存在的审计、客户结果或第三方复测。 |
 | 原文依赖 `originalDependency`、`originalUrl` / `sourceUrl` | `must-read` 在评分折叠前提供“完整事实请读原文”及上下文提示。 | 将本站简报描述为媒体全文的替代品。 |
 
-现有渲染分支必须准确保留：只有 `sourceType: official`、`sourceRole: 厂商主张` 且 `claimStatus: confirmed` 同时满足，才使用“发布事实已确认 · 效果待核验”；其他组合继续使用对应声明状态，不为统一外观强行升级。该短标签仍不能替代具体的 `claimBoundary`。
+来源边界行必须把三件事拆成紧凑的文字标签：`来源角色`（材料在本站扮演什么角色）、`事实状态`（来源支持到哪一步）和`结论证据`（不能把发布或报道误读为独立成效）。只有 `sourceType: official`、`sourceRole: 厂商主张` 且 `claimStatus: confirmed` 同时满足，才可显示“发布事实已确认”；其相邻的结论证据必须仍写“独立成效仍待核验”。其他组合使用对应的事实状态，且不为统一外观强行升级。三个标签都不能替代具体的 `claimBoundary`。
 
 示例（仅说明写法，不是新增新闻）：厂商发布模型说明，可以确认“发布说明”这一动作；不能据此写成“模型效果已获独立验证”。媒体卡片则保留报道状态与必读原文入口，不因进入 TOP3 改成官方确认。
 
