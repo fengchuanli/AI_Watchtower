@@ -1,3 +1,15 @@
+## 2026-11-26 22:58 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：编辑前在授权网络下完成 `git pull --ff-only origin main` 并确认同步。远端已有 `news-1700-2026-11-26`，因此依恢复政策仅检查17:00 JST 之后至本次运行的当前窗口；不倒灌漏跑批次，也不覆盖当日已发布的两条生产验证与 Agent 授权信号。
+- Sources & boundary：依据 `data/sources.json` 与 `docs/source-policy.md` 拉取登记公开 RSS，并以对应原始页复核。Hugging Face 在窗口内出现 `llama.cpp × AMD` 基准仪表板和 NVIDIA 的 Nemotron 3.5 Parse 训练/推理文章：前者属于社区项目的公开基准入口，尚无独立运行与广泛采用证据；后者可核对 NVIDIA 发布了数据集、配方及其内部测量，但性能数字仍是厂商主张，未取得独立基准、复现或客户侧材料。两者均不宜替代当前首页的已核验事件简报。未使用付费/登录墙正文、随机抓取页、社区讨论、传闻、旧稿或营销材料补数。
+- Candidate intake / duplicate / partial batch：`hold-no-safe-batch`；上述候选分别以 `hold-source-role-unclear` 与 `hold-independent-proof-missing` 留作后续核对线索，未进入当前版或归档。`data/news.json`、`data/news-history.json` 及派生数据保持不变。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到11月26日17点版的生产 API 验证与 MCP 企业授权简报。
+- Archive mirror：not-needed - data/news.json 未改变，data/news-history.json 保持不变；派生数据无需重建且 `node scripts/build-derived-data.mjs --check` 通过。
+- Validation：done - `node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 通过；`node scripts/validate-site.mjs` 仍报告既有首页首屏顺序、跨页导航文案与 homepage feed metadata 断言。
+- Publication readiness：ready - 无数据发布，保留现有 current/history 镜像与派生数据；本轮未改页面实现或掩盖既有 site-validator 基线。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
 ## 2026-11-26 17:00 JST｜AI 新闻情报更新
 
 - Focus：编辑前在授权网络下完成 `git pull --ff-only origin main`，以11月25日17点版为去重基线，检查登记的官方/可靠来源。发布 Anthropic Messages API 从 Python 迁至 Rust 的工程验证报告，以及 AWS 为 MCP Server 提供 EMA/ID-JAG、企业 IdP、IAM 与 CloudTrail 核对路径的两条当前信号。
