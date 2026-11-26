@@ -11680,6 +11680,6 @@ Use this file to record every automated or manual optimization. New entries go a
 - Changed files：`app.js`、`styles.css`、`scripts/check-top3-cues.mjs`、`scripts/validate-site.mjs`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
 - 网站可见变化：首页“今日 TOP3”或短版“本期重点”的每张卡片，现将来源在本站的角色、该来源支持的事实状态和结论证据范围分开显示；读者不会把“已发布”误读成“效果已获独立验证”。
 - Verification：`node --check app.js`、`node --check scripts/check-top3-cues.mjs`、`node --check scripts/validate-site.mjs`、`node scripts/check-top3-cues.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 的本轮 TOP3 标签守卫通过；脚本仍报告既有首页阅读路径、跨页导航文案、feed metadata 三项基线断言，本轮未修改或掩盖这些问题。未做浏览器视觉验收。
-- Sync：编辑前 `git pull --ff-only origin main` 因 DNS 无法解析 `github.com` 失败，未能同步或推送。
+- Sync：编辑前 `git pull --ff-only origin main` 因 DNS 无法解析 `github.com` 失败，未能同步；完成本地校验后，授权网络下 `git push origin main` 成功。
 - Commit：`9f6816c`（【VisionHub网站风格优化】明确TOP3来源与证据标签）。
 
