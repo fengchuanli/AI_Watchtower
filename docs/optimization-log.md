@@ -11695,3 +11695,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Sync：编辑前 `git pull --ff-only origin main` 因 DNS 无法解析 `github.com` 失败，未能同步；完成本地校验后，授权网络下 `git push origin main` 成功。
 - Commit：`9f6816c`（【VisionHub网站风格优化】明确TOP3来源与证据标签）。
 
+## 2026-11-27 08:06 JST｜17点新闻情报更新（延迟执行）
+
+- Focus：按恢复政策跳过漏跑时段回填，只复核上一已发布新闻版（2026-11-26 17:00 JST）之后至本次运行的当前窗口；未发现同时满足登记来源、可证明发布时间、非重复与站内事件简报证据门槛的新增 AI 事实，因此不发布新条目。
+- Sources & boundary：编辑前普通 `git pull --ff-only origin main` 因 DNS 无法解析失败；授权网络重试后确认分支已同步。依据 `data/sources.json` 与 `docs/source-policy.md` 检查 OpenAI Developers、Google AI、Hugging Face、AWS Open Source 与 PyTorch 的登记公开 RSS，并交叉核对 OpenAI、Anthropic、Google、NVIDIA 的官方公开入口。窗口内唯一直接相关候选为 ggml-org 在 Hugging Face 托管的 AMD Ryzen/Radeon llama.cpp 基准看板说明（11月26日 20:37 JST）；该项目方文章可核对看板、公开工作流和其测试口径，不能独立证明跨硬件性能、真实部署效果或更广泛采用，故保留为未发布线索。其余可见官方和 RSS 条目早于上一版或不足以构成当前 AI 事件简报。未使用付费/登录墙正文、随机抓取页、社区讨论、传闻、旧闻或营销材料补数；检索范围仅说明已查登记入口的结果，不代表全网没有新闻。
+- Candidate intake / archive mirror：`hold-no-safe-batch`；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免将单方基准叙述写入当前版和归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到 11 月 26 日已发布的生产验证与 Agent 授权信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、相关数据 JSON 解析、静态 HTML 壳解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍只报告既有首页阅读路径、跨页导航文案及 feed metadata 三项断言；本轮未改页面实现或掩盖基线问题。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
