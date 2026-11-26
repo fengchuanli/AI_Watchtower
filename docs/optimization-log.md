@@ -11674,3 +11674,12 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份相关 JSON 解析、6 个现存静态 HTML 壳解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有首页阅读路径、跨页导航文案及 feed metadata 三项断言；本轮未改页面或数据结构，未掩盖这些基线问题。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-26 10:59 JST｜内容优化
+
+- Focus：完成当前 30 天计划 Day 7。首页 TOP3 的“来源边界”原先将来源名称/角色、声明状态和效果边界连在同一行，读者容易把官方发布或媒体报道误读为独立结果。现使用既有 `sourceRole`、`claimStatus` 与 `claimBoundary`，拆为紧凑的“来源角色”“事实状态”“结论证据”文字标签；厂商主张仅在发布事实已确认时显示“发布事实已确认”，并紧邻保留“独立成效仍待核验”。未新增新闻事实、排名、来源或证据结论。
+- Changed files：`app.js`、`styles.css`、`scripts/check-top3-cues.mjs`、`scripts/validate-site.mjs`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“今日 TOP3”或短版“本期重点”的每张卡片，现将来源在本站的角色、该来源支持的事实状态和结论证据范围分开显示；读者不会把“已发布”误读成“效果已获独立验证”。
+- Verification：`node --check app.js`、`node --check scripts/check-top3-cues.mjs`、`node --check scripts/validate-site.mjs`、`node scripts/check-top3-cues.mjs`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、`node scripts/build-derived-data.mjs --check` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 的本轮 TOP3 标签守卫通过；脚本仍报告既有首页阅读路径、跨页导航文案、feed metadata 三项基线断言，本轮未修改或掩盖这些问题。未做浏览器视觉验收。
+- Sync：编辑前 `git pull --ff-only origin main` 因 DNS 无法解析 `github.com` 失败，未能同步或推送。
+- Commit：`9f6816c`（【VisionHub网站风格优化】明确TOP3来源与证据标签）。
+
