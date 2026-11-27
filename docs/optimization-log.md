@@ -11717,3 +11717,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、相关数据 JSON 解析、静态 HTML 壳解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍只报告既有首页阅读路径、跨页导航文案及 feed metadata 三项断言；本轮未改页面实现或掩盖基线问题。
 - Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-27 23:02 JST｜08点新闻情报更新（延迟执行）
+
+- Focus：编辑前已在授权网络下执行 `git pull --ff-only origin main` 并确认同步。按恢复政策跳过漏跑时段回填，只审查上一已发布新闻版（2026-11-26 17:00 JST）之后至本次运行的当前窗口；没有新增条目通过当前新闻的来源、时效、非重复和站内事件简报门槛。
+- Sources & boundary：依据 `data/sources.json` 与 `docs/source-policy.md` 检查登记公开 RSS：OpenAI Developers、Google AI、Hugging Face、AWS Open Source、Google Workspace、PyTorch 与 Apple Newsroom，并交叉核对公开原始页。窗口内唯一直接相关候选是 Hugging Face 于11月27日发布的 Trainium3/LTX-2.5 视频生成运行文章；它可核对发布方给出了该运行路径，却以厂商/合作方性能叙述为核心，缺少独立基准、可比成本口径或客户侧部署结果，故按 `hold-proof-boundary-missing` 保留为未发布线索。Google Workspace 的 MCP/CLI 说明虽在窗口内更新，原始发布日为11月24日且未显示窗口内新增事实，未把更新日期误写成新事件。未使用付费/登录墙正文、随机抓取页、社区讨论、传闻、旧闻或营销材料补数。
+- Candidate intake / archive mirror：`hold-no-safe-batch`；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免把单方基础设施性能叙述或旧发布误写进当前版和归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到 11 月 26 日已发布的生产验证与 Agent 授权信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份相关 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有首页阅读路径、跨页导航文案与 feed metadata 三项断言；本轮未改页面或掩盖这些基线问题。
+- Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
+
