@@ -1,3 +1,15 @@
+## 2026-11-27 10:57 JST（20:00 scheduled content optimization，提前执行）
+
+- Focus：完成当前 30 天计划 Day 8。审读首页本期重点中的 Anthropic 官方工程材料：它可核对发布方发布了迁移方法和内部结果，却不构成对 CPU、延迟、可靠性、成本或安全成效的独立证明。将既有 `sourceRole` 从宽泛的“官方核对”校正为“厂商主张”，不新增事实、不改排名、原文链接、声明状态、`claimBoundary` 或下一步核验。
+- Changed files：`data/news.json`、`data/news-history.json`、`data/news-index.json`、`data/news-today.json`、`docs/homepage-edition-preflight.md`、`docs/optimization-decision-index.md`、`docs/optimization-log.md`。
+- 网站可见变化：首页“本期重点”中的 Anthropic Rust 迁移卡现在在评分详情之前并列显示“来源角色：厂商主张”“事实状态：发布事实已确认”“结论证据：独立成效仍待核验”；全部新闻与归档中的来源角色同步为“厂商主张”。
+- Source boundary：仅把发布方自身的工程结果归入厂商主张；官方发布事实仍可核对，但不把内部指标升级为跨环境性能、可靠性、成本或安全结论。预检规则明确不得为了统一卡片外观而重标官方文件、监管记录、变更日志或可独立核对的运行事实。
+- Mirror / derived data：done - 当前版与历史版的 Anthropic 条目同步；运行 `node scripts/build-derived-data.mjs` 重建列表与今日派生数据，随后 `--check` 通过。
+- Verification：`node --check app.js`、`node --check scripts/check-top3-cues.mjs`、`node --check scripts/validate-site.mjs`、`node scripts/check-top3-cues.mjs`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs` 与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍输出既有的首页首屏顺序、跨页导航文案、homepage feed metadata 三项基线提示；本轮未改动或掩盖它们。
+- Sync：编辑前普通 `git pull --ff-only origin main` 因 DNS 无法解析失败；授权网络重试成功，`main` 与 `origin/main` 同步后开始编辑。
+- Commit：`45d5a9b`（【VisionHub网站风格优化】明确厂商卡片成效边界）。本日志收尾提交与推送状态见 Git 历史。
+- Next：Day 9，审读一张媒体来源 TOP3 卡片，保留原文依赖提示且不把卡片做成外链墙。
+
 ## 2026-11-26 22:58 JST｜08点新闻情报更新（延迟执行）
 
 - Focus：编辑前在授权网络下完成 `git pull --ff-only origin main` 并确认同步。远端已有 `news-1700-2026-11-26`，因此依恢复政策仅检查17:00 JST 之后至本次运行的当前窗口；不倒灌漏跑批次，也不覆盖当日已发布的两条生产验证与 Agent 授权信号。
