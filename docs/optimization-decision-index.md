@@ -6,9 +6,16 @@ This index is a short companion to `docs/optimization-log.md`. It helps daily op
 
 - Plan: `docs/optimization-plan.md`
 - Window: 2026-11-17 through 2026-12-16
-- Current phase: Phase 1, Make The First Decision Obvious
-- Last indexed run: 2026-11-24 10:57 JST
+- Current phase: Phase 2, Strengthen TOP3 Comparison
+- Last indexed run: 2026-11-27 20:00 JST
 - Network status: authorized-network `git pull --ff-only origin main` succeeded before this run; the baseline matched `origin/main`.
+
+## Current Cycle Day 8 Completion
+
+- Complete: The current Anthropic TOP3 card now identifies its own engineering report as `厂商主张`. The card therefore keeps the verified publication separate from its internal performance outcome: `发布事实已确认` sits beside `独立成效仍待核验` before readers open score details.
+- Boundary: Only the source-role framing changed. The release fact, rank, original link, claim boundary, and independent benchmark/customer/incident checks remain unchanged; the current/history mirror and generated views stay aligned.
+- Guard: `scripts/check-top3-cues.mjs` exercises this exact vendor-publication distinction in the real homepage renderer; the Day 8 preflight rule prevents relabeling unrelated official records merely for a uniform visual treatment.
+- Next useful task: Day 9 — review a media-backed TOP3 card and keep the original-source dependency prominent without turning the card into an external-link wall.
 
 ## Current Cycle Day 5 Completion
 

@@ -146,3 +146,9 @@ Use existing fields only. The eyebrow carries signal type (`label`); the card re
 `node scripts/validate-site.mjs` invokes `scripts/check-top3-cues.mjs` against the real homepage renderer using isolated fixtures. It checks the pre-expansion vendor publication/outcome distinction, non-confirmed statuses, category cue, proof boundary and next check, missing-boundary fallback, and media must-read link/context reminder. Fixtures run even when today's TOP3 contains no media item.
 
 This is a rendering regression check, not a fact checker or browser layout test. It cannot establish whether a source supports a claim, catch every misleading phrase, or prove that CSS keeps a cue visible on a phone; retain editorial source review and mobile QA.
+
+## Day 8 Vendor-Backed Card Review
+
+When an official TOP3 source reports its own implementation or internal result, classify that existing `sourceRole` as `厂商主张` rather than leaving it under the broader `官方核对`. This does not downgrade the directly observable release fact: a confirmed official source may still show `发布事实已确认`. It does make the neighboring `结论证据` cue explicitly say `独立成效仍待核验`, so a reader cannot mistake the publisher's CPU, latency, reliability, cost, safety, or adoption result for outside proof.
+
+Use this only when the item itself presents the publisher's own outcome. Do not relabel an official filing, regulator record, changelog, or independently verifiable operating fact merely to obtain a uniform card shape. Keep `claimBoundary` and `nextCheck` specific to the missing independent artifact; this compact cue is a reading aid, not a replacement for the underlying evidence boundary.
