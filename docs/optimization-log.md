@@ -11727,3 +11727,13 @@ Use this file to record every automated or manual optimization. New entries go a
 - Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份相关 JSON 解析与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍报告既有首页阅读路径、跨页导航文案与 feed metadata 三项断言；本轮未改页面或掩盖这些基线问题。
 - Commit note：【新闻更新】发布08点AI新闻：0条当前窗口无新增信号。
 
+## 2026-11-28 07:58 JST｜17点新闻情报更新（提前执行）
+
+- Focus：编辑前已在授权网络下执行 `git pull --ff-only origin main` 并确认同步。按恢复政策跳过漏跑时段回填，只检查上一轮 08 点审查后至当前运行时刻的登记来源；没有新增条目通过时效、来源、非重复与站内事件简报门槛。
+- Sources & boundary：依据 `data/sources.json` 与 `docs/source-policy.md` 拉取全部登记公开 RSS：OpenAI Developers、Google AI、Hugging Face、arXiv（cs.AI/cs.CL/cs.CV/cs.CR/cs.SE/cs.LG/cs.MA）、VentureBeat、The Verge、WIRED Security、Google Workspace、Google Cloud、Apple、AWS 与 PyTorch。可见的 Hugging Face Trainium3/LTX-2.5 文章已在上一轮按单方性能叙述留作线索；Google Workspace 的 MCP/CLI 说明原始发布于 11 月 24 日；Apple Health AI Usage Study 公开页虽在 feed 中可见，但原文标注为 11 月 15 日，均不写成当前窗口新闻。arXiv 新稿只支持作者预印本主张，未以已验证结果发布。未使用付费/登录墙正文、随机抓取页、社区讨论、传闻、旧闻或营销材料补数。
+- Candidate intake / archive mirror：`hold-no-safe-batch`；没有充分来源的新事实，`data/news.json`、`data/news-history.json` 与派生数据保持不变，避免把旧发布、单方性能描述或未复现预印本误写进当前版和归档版。
+- Changed files：`docs/optimization-log.md`。
+- 网站可见变化：本次无新增首页 TOP3、更多新闻流、全部 AI 新闻列表、归档页或详情页内容；读者继续看到 11 月 26 日已发布的生产验证与 Agent 授权信号。
+- Verification：`node --check app.js`、`node scripts/build-derived-data.mjs --check`、`node scripts/validate-data.mjs`、`node scripts/validate-pages.mjs`、6 份相关数据 JSON 解析、4 个现存静态 HTML 壳检查与 `git diff --check` 通过。`node scripts/validate-site.mjs` 仍只报告既有首页阅读路径、跨页导航文案与 feed metadata 三项断言；本轮未改页面或掩盖基线问题。
+- Commit note：【新闻更新】发布17点AI新闻：0条当前窗口无新增信号。
+
